@@ -150,6 +150,9 @@ const AISustainableTechnology = createLazyComponent(() => import('./pages/servic
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AIQuantumMachineLearning'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
+const AIBusinessIntelligencePlatform = createLazyComponent(() => import('./pages/services/AIBusinessIntelligencePlatform'));
+const AICustomerExperiencePlatform = createLazyComponent(() => import('./pages/services/AICustomerExperiencePlatform'));
+const ComprehensiveInnovativeServices2025 = createLazyComponent(() => import('./pages/ComprehensiveInnovativeServices2025'));
 const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
 const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-content-creation'));
@@ -433,6 +436,8 @@ function App() {
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
                     <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                    <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+                    <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
                     <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
@@ -447,6 +452,7 @@ function App() {
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
+                    <Route path="/comprehensive-innovative-services-2025" element={<ComprehensiveInnovativeServices2025 />} />
 
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />

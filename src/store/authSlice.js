@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { safeStorage } from '../utils/safeStorage';
 
-// Async thunk for login
+// Async thunks
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async (credentials, { rejectWithValue }) => {
@@ -8,21 +9,6 @@ export const loginUser = createAsyncThunk(
       // Simulate API call
       const response = await new Promise((resolve) => {
         setTimeout(() => {
-<<<<<<< HEAD
-          if (credentials.email && credentials.password) {
-            resolve({
-              user: {
-                id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user'
-              },
-              token: 'mock-jwt-token'
-            });
-          } else {
-            reject(new Error('Invalid credentials'));
-
-=======
           resolve({
             user: {
               id: 1,
@@ -32,22 +18,20 @@ export const loginUser = createAsyncThunk(
             },
             token: 'mock-jwt-token'
           });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, 1000);
       });
 
-      // Store token in localStorage
-      localStorage.setItem('token', response.token);
-      localStorage.setItem('user', JSON.stringify(response.user));
+      // Store token
+      safeStorage.setItem('token', response.token);
+      safeStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
-// Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
   async (userData, { rejectWithValue }) => {
@@ -55,90 +39,80 @@ export const signupUser = createAsyncThunk(
       // Simulate API call
       const response = await new Promise((resolve) => {
         setTimeout(() => {
-          if (userData.email && userData.password && userData.name) {
-            resolve({
-              user: {
-                id: Date.now(),
-                email: userData.email,
-                name: userData.name,
-                role: 'user'
-              },
-              token: 'mock-jwt-token'
-            });
-          } else {
-<<<<<<< HEAD
-            reject(new Error('Invalid user data'));
-
-=======
-            throw new Error('Invalid user data');
-          }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          resolve({
+            user: {
+              id: 1,
+              email: userData.email,
+              name: userData.name,
+              role: 'user'
+            },
+            token: 'mock-jwt-token'
+          });
         }, 1000);
       });
 
-      // Store token in localStorage
-      localStorage.setItem('token', response.token);
-      localStorage.setItem('user', JSON.stringify(response.user));
+      // Store token
+      safeStorage.setItem('token', response.token);
+      safeStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
-// Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => {
-        setTimeout(resolve, 500);
-      });
-      
-      return null;
+      // Clear storage
+      safeStorage.removeItem('token');
+      safeStorage.removeItem('user');
+      return true;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
-// Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
     try {
-      const token = localStorage.getItem('token');
-      const user = localStorage.getItem('user');
+      const token = safeStorage.getItem('token');
+      const user = safeStorage.getItem('user');
 
-      if (token && user) {
-        return {
-          user: JSON.parse(user),
-          token
-        };
-      } else {
-        throw new Error('No auth data found');
+      if (!token || !user) {
+        throw new Error('No authentication data found');
+      }
 
+      // Simulate API call to verify token
+      const response = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            user: JSON.parse(user),
+            token: token
+          });
+        }, 500);
+      });
+
+      return response;
     } catch (error) {
+      // Clear invalid data
+      safeStorage.removeItem('token');
+      safeStorage.removeItem('user');
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
 const initialState = {
   user: null,
-  token: null,
+  token: safeStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
-
-
-
-
-
-
-
 };
 
 const authSlice = createSlice({
@@ -154,7 +128,7 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-
+    }
   },
   extraReducers: (builder) => {
     // Login
@@ -228,12 +202,16 @@ const authSlice = createSlice({
         state.user = null;
         state.token = null;
       });
-
+  }
 });
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
+export const selectUser = (state) => state.auth.user;
+export const selectToken = (state) => state.auth.token;
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
+export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
 
-export default authSlice.reducer;}}}}}}}}}}}}}
+export default authSlice.reducer;

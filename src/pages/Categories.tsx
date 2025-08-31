@@ -1,64 +1,168 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight export default function Categories(...args: any[]): any {
-=======
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import {
+  Server,
+  Users,
+  Building,
+  Database,
+  Cloud,
+  Shield,
+  Brain,
+  Zap,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Palette,
+  Smartphone,
+  Rocket,
+  Target,
+  Lightbulb,
+  Code,
+  Network,
+  Eye,
+  Star,
+  ArrowRight,
+  BarChart,
+  PieChart,
+  LineChart,
+  Settings,
+  Tool,
+  Briefcase,
+  Home,
+  Car,
+  Truck,
+  Plane,
+  Ship,
+  Leaf,
+  Gauge,
+  ShieldAlert,
+  UserCheck,
+  Users2,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserCheck2,
+  UserClock,
+  UserStar,
+  UserHeart,
+  UserShield,
+  UserZap,
+  TrendingUp,
+  TrendingDown,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserCheck,
+  UserClock,
+  UserStar,
+  UserHeart
+} from 'lucide-react';
 
-export default function Categories(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+interface Category {
+  id: string;
+  name: string;
+  icon: React.ComponentType<any>;
+  color: string;
+  count: number;
+  description: string;
+}
+
+interface SubCategory {
+  name: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  services: number;
+  talent: number;
+  equipment: number;
+}
+
+const Categories: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const mainCategories = [
+  const mainCategories: Category[] = [
     {
       id: 'all',
       name: 'All Categories',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-zion-cyan to-zion-blue',
-      count: 0
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500',
+      count: 0,
+      description: 'Explore all our technology categories and services'
     },
     {
       id: 'ai-ml',
       name: 'AI & Machine Learning',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-zion-purple to-zion-pink',
-      count: 45
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      count: 45,
+      description: 'Advanced artificial intelligence and machine learning solutions'
     },
     {
       id: 'cloud',
       name: 'Cloud & Infrastructure',
-      icon: <Cloud className="w-8 h-8" />,
-      color: 'from-zion-blue to-zion-cyan',
-      count: 32
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      count: 32,
+      description: 'Cloud computing, infrastructure, and DevOps solutions'
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
-      icon: <Shield className="w-8 h-8" />,
-      color: 'from-zion-red to-zion-orange',
-      count: 28
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      count: 28,
+      description: 'Security, compliance, and threat protection services'
     },
     {
       id: 'data',
       name: 'Data & Analytics',
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-zion-green to-zion-emerald',
-      count: 36
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      count: 36,
+      description: 'Data analytics, business intelligence, and insights'
     },
     {
       id: 'development',
       name: 'Development',
-      icon: <Code className="w-8 h-8" />,
-      color: 'from-zion-indigo to-zion-purple',
-      count: 41
-
+      icon: Code,
+      color: 'from-indigo-500 to-purple-500',
+      count: 41,
+      description: 'Software development, APIs, and technical solutions'
+    },
+    {
+      id: 'iot',
+      name: 'IoT & Edge Computing',
+      icon: Network,
+      color: 'from-yellow-500 to-orange-500',
+      count: 24,
+      description: 'Internet of Things and edge computing solutions'
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: Cpu,
+      color: 'from-violet-500 to-purple-500',
+      count: 12,
+      description: 'Quantum computing and quantum-safe solutions'
+    }
   ];
 
-  const subCategories = {
+  const subCategories: Record<string, SubCategory[]> = {
     'ai-ml': [
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
-        icon: <Brain className="w-6 h-6" />,
+        icon: Brain,
         services: 12,
         talent: 8,
         equipment: 3
@@ -66,7 +170,7 @@ export default function Categories(...args: any[]): any {
       {
         name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
-        icon: <Eye className="w-6 h-6" />,
+        icon: Eye,
         services: 9,
         talent: 6,
         equipment: 4
@@ -74,7 +178,7 @@ export default function Categories(...args: any[]): any {
       {
         name: 'Machine Learning Platforms',
         description: 'ML model training, deployment, and management',
-        icon: <Cpu className="w-6 h-6" />,
+        icon: Cpu,
         services: 15,
         talent: 12,
         equipment: 7
@@ -82,350 +186,432 @@ export default function Categories(...args: any[]): any {
       {
         name: 'AI Consulting',
         description: 'Strategic AI implementation and optimization',
-        icon: <Target className="w-6 h-6" />,
+        icon: Target,
         services: 8,
         talent: 5,
         equipment: 1
-
+      }
     ],
     'cloud': [
       {
         name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
-        icon: <Rocket className="w-6 h-6" />,
+        icon: Rocket,
         services: 11,
         talent: 7,
         equipment: 2
       },
       {
         name: 'DevOps & CI/CD',
-        description: 'Automated deployment and infrastructure management',
-        icon: <Zap className="w-6 h-6" />,
+        description: 'Automated deployment and continuous integration',
+        icon: Code,
         services: 14,
         talent: 9,
         equipment: 3
       },
       {
+        name: 'Container Orchestration',
+        description: 'Kubernetes, Docker, and container management',
+        icon: Server,
+        services: 8,
+        talent: 6,
+        equipment: 4
+      },
+      {
         name: 'Serverless Computing',
-        description: 'Event-driven and serverless architecture',
-        icon: <Cloud className="w-6 h-6" />,
-        services: 7,
+        description: 'Function-as-a-Service and event-driven architecture',
+        icon: Zap,
+        services: 6,
         talent: 4,
         equipment: 1
-
+      }
     ],
     'cybersecurity': [
       {
         name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
-        icon: <Shield className="w-6 h-6" />,
-        services: 13,
+        icon: Shield,
+        services: 10,
         talent: 8,
         equipment: 5
       },
       {
+        name: 'Identity & Access Management',
+        description: 'User authentication and authorization solutions',
+        icon: Lock,
+        services: 7,
+        talent: 5,
+        equipment: 2
+      },
+      {
         name: 'Compliance & Governance',
-        description: 'Security compliance and policy management',
-        icon: <Lock className="w-6 h-6" />,
+        description: 'Regulatory compliance and security governance',
+        icon: UserCheck,
         services: 9,
         talent: 6,
-        equipment: 2
+        equipment: 1
       },
       {
         name: 'Penetration Testing',
         description: 'Security assessment and vulnerability testing',
-        icon: <Target className="w-6 h-6" />,
-        services: 6,
+        icon: Target,
+        services: 5,
         talent: 4,
         equipment: 3
-
+      }
     ],
     'data': [
       {
         name: 'Business Intelligence',
-        description: 'Data visualization and business analytics',
-        icon: <BarChart3 className="w-6 h-6" />,
-        services: 18,
-        talent: 11,
+        description: 'Data visualization and reporting solutions',
+        icon: BarChart3,
+        services: 12,
+        talent: 8,
         equipment: 4
       },
       {
         name: 'Big Data Processing',
         description: 'Large-scale data processing and analytics',
-        icon: <Database className="w-6 h-6" />,
-        services: 12,
-        talent: 8,
+        icon: Database,
+        services: 10,
+        talent: 7,
         equipment: 6
       },
       {
-        name: 'Data Engineering',
-        description: 'Data pipeline development and ETL processes',
-        icon: <Network className="w-6 h-6" />,
-        services: 6,
+        name: 'Data Warehousing',
+        description: 'Data storage and management solutions',
+        icon: Server,
+        services: 8,
         talent: 5,
+        equipment: 3
+      },
+      {
+        name: 'Predictive Analytics',
+        description: 'Machine learning for predictive insights',
+        icon: UserTrendingUp,
+        services: 9,
+        talent: 6,
         equipment: 2
-
+      }
     ],
-    'development'[
+    'development': [
       {
         name: 'Web Development',
         description: 'Frontend and backend web applications',
-        icon: <Code className="w-6 h-6" />,
-        services: 22,
-        talent: 15,
+        icon: Code,
+        services: 15,
+        talent: 12,
         equipment: 3
       },
       {
         name: 'Mobile Development',
         description: 'iOS and Android mobile applications',
-        icon: <Smartphone className="w-6 h-6" />,
-        services: 16,
-        talent: 12,
-        equipment: 2
+        icon: Smartphone,
+        services: 11,
+        talent: 9,
+        equipment: 4
       },
       {
         name: 'API Development',
-<<<<<<< HEAD
         description: 'RESTful APIs and microservices',
-        icon: <Network className="w-6 h-6" />,
+        icon: Network,
         services: 13,
         talent: 8,
+        equipment: 2
+      },
+      {
+        name: 'DevOps Engineering',
+        description: 'Infrastructure automation and deployment',
+        icon: Settings,
+        services: 10,
+        talent: 7,
+        equipment: 5
+      }
+    ],
+    'iot': [
+      {
+        name: 'IoT Platforms',
+        description: 'Internet of Things device management',
+        icon: Network,
+        services: 8,
+        talent: 6,
+        equipment: 7
+      },
+      {
+        name: 'Edge Computing',
+        description: 'Distributed computing at the network edge',
+        icon: Cpu,
+        services: 6,
+        talent: 4,
+        equipment: 5
+      },
+      {
+        name: 'Sensor Networks',
+        description: 'Connected sensor systems and monitoring',
+        icon: Gauge,
+        services: 5,
+        talent: 3,
+        equipment: 8
+      },
+      {
+        name: 'Smart Cities',
+        description: 'Urban infrastructure and smart city solutions',
+        icon: Building,
+        services: 7,
+        talent: 5,
+        equipment: 4
+      }
+    ],
+    'quantum': [
+      {
+        name: 'Quantum Algorithms',
+        description: 'Quantum computing algorithms and applications',
+        icon: Brain,
+        services: 4,
+        talent: 3,
+        equipment: 2
+      },
+      {
+        name: 'Quantum Security',
+        description: 'Quantum-safe cryptography and security',
+        icon: Shield,
+        services: 3,
+        talent: 2,
         equipment: 1
-
+      },
+      {
+        name: 'Quantum Simulation',
+        description: 'Quantum simulation and modeling',
+        icon: Cpu,
+        services: 2,
+        talent: 2,
+        equipment: 1
+      },
+      {
+        name: 'Quantum Consulting',
+        description: 'Quantum computing strategy and implementation',
+        icon: Target,
+        services: 3,
+        talent: 2,
+        equipment: 0
+      }
     ]
-=======
-        description: 'RESTful APIs and microservices',;
-        icon: <Network className="w-6 h-6" />,;
-        services: 13,;
-        talent: 8,;
-        equipment: 1;
-      };
-    ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const featuredItems = [
-    {
-      type: 'service',
-      title: 'AI-Powered Business Intelligence Platform',
-      category: 'AI & Machine Learning',
-      rating: 4.9,
-      price: '$2,500/month',
-      featured: true
-    },
-    {
-      type: 'talent',
-      title: 'Senior AI Engineer',
-      category: 'AI & Machine Learning',
-      rating: 4.8,
-      price: '$150/hour',
-      featured: true
-    },
-    {
-<<<<<<< HEAD
-      type: 'equipment',
-      title: 'High-Performance GPU Cluster',
-      category: 'AI & Machine Learning',
-      rating: 4.7,
-      price: '$15,000/month',
-      featured: true
-
-=======
-      type: 'equipment',;
-      title: 'High-Performance GPU Cluster',;
-      category: 'AI & Machine Learning',;
-      rating: 4.7,;
-      price: '$15,000/month',;
-      featured: true;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
-
-  const getCategoryCount = (categoryId: anystring)  => {
+  const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'all') {
-      return Object.values(subCategories).flat().reduce((total, sub) =>
-        total + sub.services + sub.talent + sub.equipment, 0
-      );
-<<<<<<< HEAD
-
-=======
+      return {
+        services: mainCategories.reduce((sum, cat) => sum + cat.count, 0),
+        talent: mainCategories.reduce((sum, cat) => sum + cat.count * 0.7, 0),
+        equipment: mainCategories.reduce((sum, cat) => sum + cat.count * 0.3, 0)
+      };
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    return subCategories[categoryId]?.reduce((total, sub) =>
-      total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0};
-
-  // Update counts
-<<<<<<< HEAD
-  mainCategories.forEach(cat = > {;
-    cat.count = getCategoryCount(cat.id)});
-=======
-  mainCategories.forEach(cat = > {;
-    cat.count = getCategoryCount(cat.id);
-  });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    
+    const subs = subCategories[categoryId] || [];
+    return {
+      services: subs.reduce((sum, sub) => sum + sub.services, 0),
+      talent: subs.reduce((sum, sub) => sum + sub.talent, 0),
+      equipment: subs.reduce((sum, sub) => sum + sub.equipment, 0)
+    };
+  };
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Browse Categories
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Explore our comprehensive collection of services, talent, and equipment organized into logical categories for easy discovery.
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Service Categories - Zion Tech Group"
+        description="Explore our comprehensive range of technology services across AI, cloud computing, cybersecurity, data analytics, and more."
+        keywords="service categories, AI services, cloud computing, cybersecurity, data analytics, Zion Tech Group"
+      />
 
-      {/* Main Categories */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Main Categories
-          </h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {mainCategories.map((category)   => (
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, currentColor 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Service Categories
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Explore our comprehensive range of technology services across multiple domains, 
+              from AI and machine learning to cybersecurity and quantum computing.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Category Navigation */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+          >
+            {mainCategories.map((category, index) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`text-left p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                className={`p-6 rounded-2xl border transition-all duration-300 text-left ${
                   activeCategory === category.id
-                    ? 'border-zion-cyan bg-zion-cyan/10'
-                    : 'border-zion-slate-light bg-zion-slate hover:border-zion-cyan/50'
+                    ? 'border-blue-500 bg-blue-500/10'
+                    : 'border-slate-600/20 bg-slate-800/50 hover:border-slate-500/40'
                 }`}
-
-                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-4`}>
-                  {category.icon}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <category.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-zion-slate-light text-sm mb-3">
-                  {category.count} total items available
-                </p>
-                <div className="flex items-center gap-2 text-zion-cyan text-sm font-medium">
-                  Browse Category
-                  <ArrowRight className="w-4 h-4" />
+                <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+                <p className="text-gray-400 text-sm mb-3">{category.description}</p>
+                <div className="text-blue-400 text-sm font-medium">
+                  {category.count} services
                 </div>
               </button>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Sub Categories */}
-      {activeCategory !== 'all' && subCategories[activeCategory] && (
-        <div className="py-16 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
-            </h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {subCategories[activeCategory].map((subCategory, index)   => (
-                <div
-                  key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+      {/* Category Details */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto">
+          {activeCategory !== 'all' && subCategories[activeCategory] && (
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  {mainCategories.find(c => c.id === activeCategory)?.name} Services
+                </h2>
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                  Discover our specialized services in {mainCategories.find(c => c.id === activeCategory)?.name.toLowerCase()}
+                </p>
+              </motion.div>
 
-                  <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
-
-                  <div className="grid grid-cols-3 gap-3 text-center">
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-cyan font-bold text-lg">{subCategory.services}</div>
-                      <div className="text-zion-slate-light text-xs">Services</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                {subCategories[activeCategory].map((subCategory, index) => (
+                  <motion.div
+                    key={subCategory.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                    className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/20 hover:border-slate-500/40 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                        <subCategory.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2">{subCategory.name}</h3>
+                        <p className="text-gray-300 text-sm">{subCategory.description}</p>
+                      </div>
                     </div>
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-purple font-bold text-lg">{subCategory.talent}</div>
-                      <div className="text-zion-slate-light text-xs">Talent</div>
+
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-blue-400">{subCategory.services}</div>
+                        <div className="text-gray-400 text-sm">Services</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-400">{subCategory.talent}</div>
+                        <div className="text-gray-400 text-sm">Experts</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-purple-400">{subCategory.equipment}</div>
+                        <div className="text-gray-400 text-sm">Tools</div>
+                      </div>
                     </div>
-                    <div className="bg-zion-slate-light/20 rounded-lg p-3">
-                      <div className="text-zion-orange font-bold text-lg">{subCategory.equipment}</div>
-                      <div className="text-zion-slate-light text-xs">Equipment</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
-      {/* Featured Items */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Featured Items
-          </h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
-            {featuredItems.map((item, index)   => (
-              <div
-                key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                {item.featured && (
-                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
-                    Featured
-                  </div>
-                )}
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{item.category}</p>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white font-medium">{item.rating}</span>
-                  </div>
-                  <span className="text-zion-cyan font-semibold">{item.price}</span>
-                </div>
-
-                <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
-                  View Details
-                </button>
+                    <Link
+                      to={`/services?category=${activeCategory}&subcategory=${subCategory.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      Explore Services
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
+
+          {/* Category Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-16"
+          >
+            <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/20">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                {activeCategory === 'all' ? 'All Categories' : mainCategories.find(c => c.id === activeCategory)?.name} Overview
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {Object.entries(getCategoryStats(activeCategory)).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-4xl font-bold text-blue-400 mb-2">{Math.round(value)}</div>
+                    <div className="text-gray-300 capitalize">{key}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Browse All CTA */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Use our advanced search to find specific services, talent, or equipment, or contact us for custom solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/search"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-
-              Advanced Search
-            </a>
-            <a
-              href="/contact"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-
-              Contact Us
-<<<<<<< HEAD
-            </a>
-          </div>
+      {/* CTA Section */}
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Explore our services in detail or contact our team to discuss your specific needs 
+              and find the perfect solution for your business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Browse All Services
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <Users className="w-5 h-5 mr-2" />
+                Contact Our Team
+              </Link>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
-  )};
-=======;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};
+
+export default Categories;

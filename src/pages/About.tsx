@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-const About: React.FC = (): JSX.Element => {
-=======
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO   } from '@/components/SEO';
-import { Users, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { 
+  Users, 
   Target, 
   Award, 
   Globe, 
@@ -23,9 +21,9 @@ import { Users,
   Cloud,
   Lock,
   Database
-  } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function About(...args: any[]): any {
+const About: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -35,25 +33,25 @@ export default function About(...args: any[]): any {
 
   const values = [
     {
-      icon: Innovation,
+      icon: Lightbulb,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Excellence,
+      icon: Award,
       title: 'Excellence in Execution',
       description: 'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Partnership,
+      icon: Heart,
       title: 'Partnership Approach',
       description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Security,
+      icon: Shield,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'
@@ -94,7 +92,7 @@ export default function About(...args: any[]): any {
   const milestones = [
     {
       year: '2018',
-      title: 'Comp Founded',
+      title: 'Company Founded',
       description: 'Zion Tech Group established with a vision to democratize AI technology.'
     },
     {
@@ -119,13 +117,12 @@ export default function About(...args: any[]): any {
     }
   ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to democratize AI technology and transform businesses through innovative solutions. Meet our expert team and discover our journey."
-        keywords="about Zion Tech Group, AI comp, technology team, comp mission, digital transformation"
+        keywords="about Zion Tech Group, AI company, technology team, company mission, digital transformation"
         canonical="https://ziontechgroup.com/about"
       />
 
@@ -137,57 +134,25 @@ export default function About(...args: any[]): any {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             About Zion Tech Group
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Link 
               to="/contact" 
@@ -210,16 +175,8 @@ export default function About(...args: any[]): any {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -259,16 +216,8 @@ export default function About(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -280,8 +229,8 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <motion.div 
                 key={index}
                 className="text-center group"
@@ -320,8 +269,8 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
               <motion.div
                 key={index}
                 className="text-center group"
@@ -346,16 +295,8 @@ export default function About(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -367,27 +308,15 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index)   => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 className="group"
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-2xl font-bold text-white">
@@ -416,16 +345,8 @@ export default function About(...args: any[]): any {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -433,7 +354,7 @@ export default function About(...args: any[]): any {
               Our Journey
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Key milestones that have shaped our comp and driven our growth
+              Key milestones that have shaped our company and driven our growth
             </p>
           </motion.div>
           
@@ -444,22 +365,10 @@ export default function About(...args: any[]): any {
                 <motion.div
                   key={index}
                   className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                  initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition = {
-  { duration: 0.8,
-  delay: index * 0.2 
-
-}}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
@@ -477,4 +386,6 @@ export default function About(...args: any[]): any {
       </section>
     </div>
   );
-}
+};
+
+export default About;

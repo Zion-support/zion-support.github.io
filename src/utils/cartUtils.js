@@ -1,294 +1,338 @@
-// Cart utility functions for managing shopping cart state and operations
-
-// Local storage keys
-const CART_EXPIRY_KEY = 'zion_cart_expiry';
-
-// Cart expiry time (24 hours)
-const CART_EXPIRY_TIME = 24 * 60 * 60 * 1000;
-
 /**
- * Get cart from localStorage
- * @returns {Array} Cart items array
+ * Cart Utilities for Zion Tech Group
+ * Handles cart operations, calculations, and storage
  */
-export const getCartFromStorage = () => {
-  try {
-    const cartData = localStorage.getItem(CART_STORAGE_KEY);
-    const expiryData = localStorage.getItem(CART_EXPIRY_KEY);
 
-    if (!cartData || !expiryData) {
-      return [];
-<<<<<<< HEAD
-=======
-    }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    const expiry = parseInt(expiryData);
-    const now = Date.now();
-
-    // Check if cart has expired
-    if (now > expiry) {
-      clearCartFromStorage();
-      return [];
-<<<<<<< HEAD
-
-    return JSON.parse(cartData);
-  } catch (error) {
-<<<<<<< HEAD
-    // // // console.error('Error reading cart from storage:', error);
-=======
-    // // // // // // // console.error('Error reading cart from storage:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-    }
-
-    return JSON.parse(cartData);
-  } catch (error) {
-    // // // // console.error('Error reading cart from storage:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    return [];
-
-};
-
-/**
- * Save cart to localStorage
- * @param {Array} cart - Cart items array
- */
-export const saveCartToStorage = (cart) => {
-  try {
-    const expiry = Date.now() + CART_EXPIRY_TIME;
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
-    localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error saving cart to storage:', error);
-
-=======
-    // // // // // // // console.error('Error saving cart to storage:', error);
-=======
-    // // // // console.error('Error saving cart to storage:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-};
-
-/**
- * Clear cart from localStorage
- */
-export const clearCartFromStorage = () => {
-  try {
-    localStorage.removeItem(CART_STORAGE_KEY);
-    localStorage.removeItem(CART_EXPIRY_KEY);
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error clearing cart from storage:', error);
-
-=======
-    // // // // // // // console.error('Error clearing cart from storage:', error);
-=======
-    // // // // console.error('Error clearing cart from storage:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-};
+// Storage key for cart data
+const CART_STORAGE_KEY = 'zion_cart';
 
 /**
  * Add item to cart
- * @param {Array} currentCart - Current cart items
+ * @param {Array} cart - Current cart items
  * @param {Object} item - Item to add
  * @returns {Array} Updated cart
  */
-export const addToCart = (currentCart, item) => {
+export const addToCart = (cart, item) => {
   if (!item || !item.id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Invalid item provided to addToCart');
-=======
-    // // // // // // // console.error('Invalid item provided to addToCart');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-    return currentCart;
-=======
-    // // // // console.error('Invalid item provided to addToCart');
-    return currentCart;
+    return cart;
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
+  const existingItem = cart.find(cartItem => cartItem.id === item.id);
+  
+  if (existingItem) {
+    return cart.map(cartItem =>
+      cartItem.id === item.id
+        ? { ...cartItem, quantity: cartItem.quantity + (item.quantity || 1) }
+        : cartItem
+    );
+  }
 
-  if (existingItemIndex >= 0) {
-    // Item already exists, update quantity
-    const updatedCart = [...currentCart];
-    updatedCart[existingItemIndex] = {
-      ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1)
-    };
-    return updatedCart;
-  } else {
-    // Add new item
-    return [...currentCart, {
-      ...item,
-      quantity: item.quantity || 1,
-      addedAt: new Date().toISOString()
-    }];
-
+  return [...cart, { ...item, quantity: item.quantity || 1 }];
 };
 
 /**
  * Remove item from cart
- * @param {Array} currentCart - Current cart items
- * @param {string|number} itemId - ID of item to remove
+ * @param {Array} cart - Current cart items
+ * @param {string} itemId - ID of item to remove
  * @returns {Array} Updated cart
  */
-export const removeFromCart = (currentCart, itemId) => {
-  return currentCart.filter(item => item.id !== itemId);
+export const removeFromCart = (cart, itemId) => {
+  return cart.filter(item => item.id !== itemId);
 };
 
 /**
  * Update item quantity in cart
- * @param {Array} currentCart - Current cart items
- * @param {string|number} itemId - ID of item to update
+ * @param {Array} cart - Current cart items
+ * @param {string} itemId - ID of item to update
  * @param {number} quantity - New quantity
  * @returns {Array} Updated cart
  */
-export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
+export const updateCartItemQuantity = (cart, itemId, quantity) => {
   if (quantity <= 0) {
-    return removeFromCart(currentCart, itemId);
-<<<<<<< HEAD
-=======
+    return removeFromCart(cart, itemId);
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  return currentCart.map(item =>
-    item.id === itemId
-      ? { ...item, quantity, updatedAt: new Date().toISOString() }
-      : item
+  return cart.map(item =>
+    item.id === itemId ? { ...item, quantity } : item
   );
 };
 
 /**
- * Calculate cart total
- * @param {Array} cart - Cart items array
- * @returns {Object} Total information
+ * Clear cart
+ * @returns {Array} Empty cart
  */
-export const calculateCartTotal = (cart) => {
-  if (!Array.isArray(cart) || cart.length === 0) {
-    return {
-      subtotal: 0,
-      tax: 0,
-      total: 0,
-      itemCount: 0
-    };
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export const clearCart = () => {
+  return [];
+};
 
-  const subtotal = cart.reduce((sum, item) => {
-    const price = parseFloat(item.price) || 0;
-    const quantity = parseInt(item.quantity) || 0;
-    return sum + (price * quantity);
-  }, 0);
-
-  // Calculate tax (example: 8.5%)
-  const total = subtotal + tax;
-
-  const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
-
-  return {
-    subtotal: Math.round(subtotal * 100) / 100,
-    tax: Math.round(tax * 100) / 100,
-    total: Math.round(total * 100) / 100,
-    itemCount
-  };
+/**
+ * Get cart item count
+ * @param {Array} cart - Cart items
+ * @returns {number} Total item count
+ */
+export const getCartItemCount = (cart) => {
+  return cart.reduce((total, item) => total + (item.quantity || 1), 0);
 };
 
 /**
  * Check if cart is empty
- * @param {Array} cart - Cart items array
+ * @param {Array} cart - Cart items
  * @returns {boolean} True if cart is empty
  */
 export const isCartEmpty = (cart) => {
-  return !Array.isArray(cart) || cart.length === 0;
+  return !cart || cart.length === 0;
 };
 
 /**
- * Get cart item by ID
- * @param {Array} cart - Cart items array
- * @param {string|number} itemId - ID of item to find
- * @returns {Object|null} Cart item or null if not found
+ * Calculate cart subtotal
+ * @param {Array} cart - Cart items
+ * @returns {number} Subtotal amount
  */
-export const getCartItemById = (cart, itemId) => {
-  return cart.find(item => item.id === itemId) || null;
+export const calculateCartSubtotal = (cart) => {
+  return cart.reduce((subtotal, item) => {
+    const price = parseFloat(item.price) || 0;
+    const quantity = parseInt(item.quantity) || 1;
+    return subtotal + (price * quantity);
+  }, 0);
+};
+
+/**
+ * Calculate tax amount
+ * @param {number} subtotal - Cart subtotal
+ * @param {number} taxRate - Tax rate as decimal (e.g., 0.08 for 8%)
+ * @returns {number} Tax amount
+ */
+export const calculateTax = (subtotal, taxRate = 0.08) => {
+  return subtotal * taxRate;
+};
+
+/**
+ * Calculate shipping cost
+ * @param {Array} cart - Cart items
+ * @param {number} baseShipping - Base shipping cost
+ * @param {number} freeShippingThreshold - Threshold for free shipping
+ * @returns {number} Shipping cost
+ */
+export const calculateShipping = (cart, baseShipping = 10, freeShippingThreshold = 100) => {
+  const subtotal = calculateCartSubtotal(cart);
+  return subtotal >= freeShippingThreshold ? 0 : baseShipping;
+};
+
+/**
+ * Calculate cart total
+ * @param {Array} cart - Cart items
+ * @param {Object} options - Calculation options
+ * @returns {Object} Cart totals
+ */
+export const calculateCartTotal = (cart, options = {}) => {
+  const {
+    taxRate = 0.08,
+    baseShipping = 10,
+    freeShippingThreshold = 100
+  } = options;
+
+  const subtotal = calculateCartSubtotal(cart);
+  const tax = calculateTax(subtotal, taxRate);
+  const shipping = calculateShipping(cart, baseShipping, freeShippingThreshold);
+  const total = subtotal + tax + shipping;
+
+  return {
+    subtotal,
+    tax,
+    shipping,
+    total,
+    itemCount: getCartItemCount(cart),
+    uniqueItems: cart.length
+  };
 };
 
 /**
  * Validate cart item
- * @param {Object} item - Item to validate
+ * @param {Object} item - Cart item to validate
  * @returns {boolean} True if item is valid
  */
 export const validateCartItem = (item) => {
-  if (!item) return false;
-
-  const requiredFields = ['id', 'name', 'price'];
-  const hasRequiredFields = requiredFields.every(field => item.hasOwnProperty(field));
-
-  if (!hasRequiredFields) return false;
-
-  const price = parseFloat(item.price);
-  const quantity = parseInt(item.quantity) || 1;
-
-  return !isNaN(price) && price >= 0 && quantity > 0;
+  return item &&
+    typeof item === 'object' &&
+    item.id &&
+    typeof item.id === 'string' &&
+    item.price !== undefined &&
+    !isNaN(parseFloat(item.price)) &&
+    item.quantity !== undefined &&
+    !isNaN(parseInt(item.quantity)) &&
+    parseInt(item.quantity) > 0;
 };
 
 /**
- * Merge carts (useful for guest to user conversion)
+ * Validate cart
+ * @param {Array} cart - Cart to validate
+ * @returns {boolean} True if cart is valid
+ */
+export const validateCart = (cart) => {
+  return Array.isArray(cart) && cart.every(validateCartItem);
+};
+
+/**
+ * Get cart item by ID
+ * @param {Array} cart - Cart items
+ * @param {string} itemId - Item ID to find
+ * @returns {Object|null} Cart item or null
+ */
+export const getCartItem = (cart, itemId) => {
+  return cart.find(item => item.id === itemId) || null;
+};
+
+/**
+ * Check if item exists in cart
+ * @param {Array} cart - Cart items
+ * @param {string} itemId - Item ID to check
+ * @returns {boolean} True if item exists
+ */
+export const isItemInCart = (cart, itemId) => {
+  return cart.some(item => item.id === itemId);
+};
+
+/**
+ * Get cart items by category
+ * @param {Array} cart - Cart items
+ * @param {string} category - Category to filter by
+ * @returns {Array} Filtered cart items
+ */
+export const getCartItemsByCategory = (cart, category) => {
+  return cart.filter(item => item.category === category);
+};
+
+/**
+ * Get cart items by price range
+ * @param {Array} cart - Cart items
+ * @param {number} minPrice - Minimum price
+ * @param {number} maxPrice - Maximum price
+ * @returns {Array} Filtered cart items
+ */
+export const getCartItemsByPriceRange = (cart, minPrice, maxPrice) => {
+  return cart.filter(item => {
+    const price = parseFloat(item.price) || 0;
+    return price >= minPrice && price <= maxPrice;
+  });
+};
+
+/**
+ * Sort cart items
+ * @param {Array} cart - Cart items
+ * @param {string} sortBy - Sort field ('name', 'price', 'quantity', 'date')
+ * @param {string} sortOrder - Sort order ('asc' or 'desc')
+ * @returns {Array} Sorted cart items
+ */
+export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {
+  const sortedCart = [...cart];
+  
+  sortedCart.sort((a, b) => {
+    let aValue, bValue;
+    
+    switch (sortBy) {
+      case 'price':
+        aValue = parseFloat(a.price) || 0;
+        bValue = parseFloat(b.price) || 0;
+        break;
+      case 'quantity':
+        aValue = parseInt(a.quantity) || 0;
+        bValue = parseInt(b.quantity) || 0;
+        break;
+      case 'name':
+        aValue = (a.name || a.title || '').toLowerCase();
+        bValue = (b.name || b.title || '').toLowerCase();
+        break;
+      case 'date':
+        aValue = new Date(a.addedAt || 0);
+        bValue = new Date(b.addedAt || 0);
+        break;
+      default:
+        aValue = a[sortBy];
+        bValue = b[sortBy];
+    }
+    
+    if (sortOrder === 'desc') {
+      return aValue < bValue ? 1 : aValue > bValue ? -1 : 0;
+    }
+    
+    return aValue > bValue ? 1 : aValue < bValue ? -1 : 0;
+  });
+  
+  return sortedCart;
+};
+
+/**
+ * Filter cart items
+ * @param {Array} cart - Cart items
+ * @param {Object} filters - Filter criteria
+ * @returns {Array} Filtered cart items
+ */
+export const filterCartItems = (cart, filters = {}) => {
+  return cart.filter(item => {
+    for (const [key, value] of Object.entries(filters)) {
+      if (value === undefined || value === null) continue;
+      
+      switch (key) {
+        case 'category':
+          if (item.category !== value) return false;
+          break;
+        case 'minPrice':
+          if ((parseFloat(item.price) || 0) < value) return false;
+          break;
+        case 'maxPrice':
+          if ((parseFloat(item.price) || 0) > value) return false;
+          break;
+        case 'inStock':
+          if (item.inStock !== value) return false;
+          break;
+        case 'search':
+          const searchTerm = value.toLowerCase();
+          const itemText = `${item.name || ''} ${item.title || ''} ${item.description || ''}`.toLowerCase();
+          if (!itemText.includes(searchTerm)) return false;
+          break;
+        default:
+          if (item[key] !== value) return false;
+      }
+    }
+    return true;
+  });
+};
+
+/**
+ * Merge two carts
  * @param {Array} cart1 - First cart
  * @param {Array} cart2 - Second cart
  * @returns {Array} Merged cart
  */
 export const mergeCarts = (cart1, cart2) => {
-  if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
-    return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  const mergedCart = [...cart1];
-
+  const merged = [...cart1];
+  
   cart2.forEach(item2 => {
-    const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
-
-    if (existingItemIndex >= 0) {
-      // Merge quantities
-      mergedCart[existingItemIndex].quantity += item2.quantity;
-      mergedCart[existingItemIndex].updatedAt = new Date().toISOString();
+    const existingIndex = merged.findIndex(item1 => item1.id === item2.id);
+    
+    if (existingIndex >= 0) {
+      merged[existingIndex] = {
+        ...merged[existingIndex],
+        quantity: (merged[existingIndex].quantity || 1) + (item2.quantity || 1)
+      };
     } else {
-      // Add new item
-      mergedCart.push({
-        ...item2,
-        addedAt: new Date().toISOString()
-      });
-
+      merged.push(item2);
+    }
   });
-
-  return mergedCart;
+  
+  return merged;
 };
 
 /**
  * Format price for display
  * @param {number} price - Price to format
- * @param {string} currency - Currency code (default: USD)
+ * @param {string} currency - Currency code
  * @returns {string} Formatted price
  */
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
-<<<<<<< HEAD
-=======
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -323,17 +367,9 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error exporting cart data:', error);
-=======
-    // // // // // // // console.error('Error exporting cart data:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-    // // // // console.error('Error exporting cart data:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    console.error('Error exporting cart data:', error);
     return '[]';
-
+  }
 };
 
 /**
@@ -346,20 +382,12 @@ export const importCartData = (cartData) => {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item));
-
+    }
     return [];
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error importing cart data:', error);
-=======
-    // // // // // // // console.error('Error importing cart data:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-    // // // // console.error('Error importing cart data:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    console.error('Error importing cart data:', error);
     return [];
-
+  }
 };
 
 /**
@@ -370,7 +398,7 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
-
+  }
   return CART_STORAGE_KEY;
 };
 
@@ -382,4 +410,4 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
-};}}}}}}}}}}}}}}}}
+};

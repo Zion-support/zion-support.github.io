@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Contact: React.FC = (): JSX.Element => {
-=======
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Phone, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Phone, 
   Mail, 
   MapPin, 
   Clock, 
@@ -14,9 +12,9 @@ import { Phone,
   User,
   MessageSquare,
   Building
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function Contact(...args: any[]): any {
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,14 +43,14 @@ export default function Contact(...args: any[]): any {
   ];
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<any>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -77,9 +75,14 @@ export default function Contact(...args: any[]): any {
 
   const isFormValid = formData.name && formData.email && formData.message;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <SEO 
+        title="Contact Us - Zion Tech Group"
+        description="Get in touch with Zion Tech Group. Contact us for AI solutions, technology consulting, and digital transformation services."
+        keywords="contact Zion Tech Group, AI consulting, technology services, digital transformation"
+      />
+      
       <div className="container mx-auto px-4 py-24">
         {/* Header Section */}
         <motion.div
@@ -108,27 +111,7 @@ export default function Contact(...args: any[]): any {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-=======
-import React from 'react';
-
-const Contact: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <div className="container mx-auto px-4 py-24 text-center text-white">
-        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Contact Us
-        </h1>
-        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-          We'd love to hear about your project. Reach us via any of the channels below.
-        </p>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
-              <div className="space-y-4 text-left">
-                <div className="flex items-center space-x-3">
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
-                  <span className="text-2xl">📞</span>
+                  <Phone className="w-6 h-6 text-cyan-400" />
                   <div>
                     <p className="text-white font-medium">Phone</p>
                     <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg">
@@ -137,7 +120,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">✉️</span>
+                  <Mail className="w-6 h-6 text-cyan-400" />
                   <div>
                     <p className="text-white font-medium">Email</p>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 text-lg">
@@ -146,14 +129,14 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">📍</span>
+                  <MapPin className="w-6 h-6 text-cyan-400" />
                   <div>
                     <p className="text-white font-medium">Address</p>
                     <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">🕒</span>
+                  <Clock className="w-6 h-6 text-cyan-400" />
                   <div>
                     <p className="text-white font-medium">Business Hours</p>
                     <p className="text-gray-300">Mon-Fri: 9AM-6PM EST</p>
@@ -167,44 +150,26 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Quick Links</h3>
               <div className="grid grid-cols-1 gap-3">
                 <a href="/services" className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <span className="text-xl">🚀</span>
+                  <Building className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300 hover:text-white transition-colors duration-300">
                     Our Services
                   </span>
                 </a>
                 <a href="/about" className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <span className="text-xl">🏢</span>
+                  <User className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300 hover:text-white transition-colors duration-300">
                     About Us
                   </span>
                 </a>
-                <a href="/case-studies" className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <span className="text-xl">📊</span>
+                <a href="/partners" className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300">
+                  <MessageSquare className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300 hover:text-white transition-colors duration-300">
-                    Case Studies
+                    Partnerships
                   </span>
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
-              📞 Call Now
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
-              ✉️ Send Email
-            </a>
-          </div>
-=======
 
-<<<<<<< HEAD
             {/* Response Time */}
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30">
               <h3 className="text-2xl font-bold text-white mb-4">Fast Response Guarantee</h3>
@@ -279,14 +244,14 @@ const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="comp" className="block text-white font-medium mb-2">
+                  <label htmlFor="company" className="block text-white font-medium mb-2">
                     Company
                   </label>
                   <input
                     type="text"
-                    id="comp"
-                    name="comp"
-                    value={formData.comp}
+                    id="company"
+                    name="company"
+                    value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="Your company name"
@@ -317,9 +282,9 @@ const Contact: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:border-cyan-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 >
-                  {serviceOptions.map((option)  => (
+                  {serviceOptions.map((option) => (
                     <option key={option.value} value={option.value} className="bg-slate-800 text-white">
                       {option.label}
                     </option>
@@ -366,7 +331,6 @@ const Contact: React.FC = () => {
               </button>
             </form>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
 
         {/* CTA Section */}
@@ -406,7 +370,6 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-}
-=======
+};
+
 export default Contact;
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
