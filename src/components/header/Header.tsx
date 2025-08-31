@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
 import { Logo } from './Logo';
+import { GlobalSearch } from '../search/GlobalSearch';
 import { Menu, X } from 'lucide-react';
 
 export function Header() {
@@ -29,6 +30,9 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <MainNavigation className="hidden lg:flex" />
+
+          {/* Global Search */}
+          <GlobalSearch />
 
           {/* Mobile Menu Button */}
           <button

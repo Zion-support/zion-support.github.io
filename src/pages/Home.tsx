@@ -1,6 +1,8 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { TestimonialsSection } from '../components/testimonials/TestimonialsSection';
+import { SEOHead } from '../components/SEO/SEOHead';
 import {
   Users,
   TrendingUp,
@@ -573,11 +575,48 @@ const CTASection = () => {
 // Main Home Component
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <CTASection />
-    </div>
+    <>
+      <SEOHead
+        title="AI-Powered Technology Solutions & Enterprise Automation"
+        description="Transform your business with Zion Tech Group's cutting-edge AI services, cybersecurity solutions, and digital transformation expertise. Leading provider of enterprise automation and technology innovation."
+        keywords={[
+          'AI services',
+          'enterprise automation',
+          'cybersecurity solutions',
+          'digital transformation',
+          'quantum computing',
+          'blockchain solutions',
+          'cloud services',
+          'healthcare technology',
+          'financial technology'
+        ]}
+        canonicalUrl="https://ziontechgroup.com"
+        ogType="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Zion Tech Group - AI & Technology Solutions",
+          "description": "Leading provider of AI-powered technology solutions, enterprise automation, and digital transformation services.",
+          "url": "https://ziontechgroup.com",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "AI-powered technology solutions and enterprise automation services",
+            "url": "https://ziontechgroup.com",
+            "sameAs": [
+              "https://linkedin.com/company/ziontechgroup",
+              "https://twitter.com/ziontechgroup"
+            ]
+          }
+        }}
+      />
+      <div className="min-h-screen bg-zion-blue-dark">
+        <HeroSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <TestimonialsSection />
+        <CTASection />
+      </div>
+    </>
   );
 }

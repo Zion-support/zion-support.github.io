@@ -21,6 +21,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { PerformanceMonitor } from './components/performance/PerformanceMonitor';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -433,6 +434,9 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor />
           </div>
         </Router>
       </ErrorBoundary>
