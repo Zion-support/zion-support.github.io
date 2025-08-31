@@ -9,7 +9,46 @@ import {
   Twitter, 
   Github,
   Facebook,
-  Instagram
+  Instagram,
+  Store,
+  Brain,
+  Zap,
+  Server,
+  Shield,
+  Cloud,
+  Users,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Rocket,
+  Target,
+  Calendar,
+  Handshake,
+  BookOpen,
+  Video,
+  GraduationCap,
+  Lightbulb,
+  Eye,
+  Workflow,
+  Atom,
+  MessageCircle,
+  PenTool,
+  TrendingUp,
+  Lock,
+  Cpu,
+  Network,
+  Database,
+  Monitor,
+  Smartphone,
+  Code,
+  Palette,
+  Settings,
+  Cog,
+  BarChart,
+  Activity,
+  Wifi,
+  HardDrive
 } from 'lucide-react';
 
 export function Footer() {
@@ -17,29 +56,62 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "AI & Automation",
+      icon: Brain,
       links: [
-        { name: "AI Solutions", href: "/ai-services" },
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
+        { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Content Studio", href: "/services/ai-content-creation-studio" },
+        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Support Automation", href: "/services/ai-customer-support-automation" },
+        { name: "Customer Experience AI", href: "/services/ai-customer-experience-analytics-platform" },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform" },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
+        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Supply Chain AI", href: "/services/ai-supply-chain-optimization" },
+        { name: "AI Website Chatbot", href: "/services/website-ai-chatbot" }
+      ]
+    },
+    {
+      title: "IT & Infrastructure",
+      icon: Server,
+      links: [
+        { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
-        { name: "Digital Transformation", href: "/services/digital-transformation" },
+        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
+        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
         { name: "IT Infrastructure", href: "/services/it-infrastructure" },
-        { name: "Micro SaaS", href: "/micro-saas" }
+        { name: "Digital Transformation", href: "/services/digital-transformation" }
       ]
     },
     {
       title: "Solutions",
+      icon: Target,
       links: [
-        { name: "Enterprise", href: "/solutions/enterprise" },
-        { name: "Healthcare", href: "/solutions/healthcare" },
-        { name: "Finance", href: "/solutions/finance" },
-        { name: "Manufacturing", href: "/solutions/manufacturing" },
-        { name: "Retail", href: "/solutions/retail" },
-        { name: "Government", href: "/solutions/government" }
+        { name: "Enterprise Solutions", href: "/enterprise" },
+        { name: "Industry Solutions", href: "/solutions" },
+        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive" },
+        { name: "AI Interview Assessment", href: "/services/interview-assessment-ai" },
+        { name: "Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
+        { name: "AI Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Marketplace", href: "/marketplace" },
+        { name: "Talent", href: "/talent" }
       ]
     },
     {
       title: "Company",
+      icon: Building2,
       links: [
         { name: "About Us", href: "/about" },
         { name: "Careers", href: "/careers" },
@@ -51,15 +123,25 @@ export function Footer() {
     },
     {
       title: "Resources",
+      icon: FileText,
       links: [
         { name: "Blog", href: "/blog" },
         { name: "Documentation", href: "/docs" },
         { name: "White Papers", href: "/white-papers" },
         { name: "Webinars", href: "/webinars" },
         { name: "Training", href: "/training" },
-        { name: "Research", href: "/research-development" }
+        { name: "Research", href: "/research-development" },
+        { name: "Services Catalog", href: "/services-catalog" },
+        { name: "AI Services Showcase", href: "/ai-services-showcase" }
       ]
     }
+  ];
+
+  const quickActions = [
+    { name: "Request Quote", href: "/request-quote", icon: TrendingUp, color: "from-blue-500 to-cyan-500" },
+    { name: "Get Started", href: "/signup", icon: Rocket, color: "from-purple-500 to-pink-500" },
+    { name: "Browse Marketplace", href: "/marketplace", icon: Store, color: "from-green-500 to-emerald-500" },
+    { name: "Find Experts", href: "/talent", icon: Users, color: "from-orange-500 to-red-500" }
   ];
 
   const socialLinks = [
@@ -74,7 +156,7 @@ export function Footer() {
     <footer className="bg-zinc-900 border-t border-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -89,7 +171,7 @@ export function Footer() {
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Mail className="w-4 h-4" />
                 <span>contact@ziontechgroup.com</span>
@@ -103,23 +185,57 @@ export function Footer() {
                 <span>San Francisco, CA</span>
               </div>
             </div>
+
+            {/* Quick Actions */}
+            <div className="space-y-2">
+              <h4 className="text-white font-semibold mb-3">Quick Actions</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {quickActions.map((action) => (
+                  <Link
+                    key={action.name}
+                    to={action.href}
+                    className="flex items-center space-x-2 px-3 py-2 bg-zinc-800/50 hover:bg-zinc-700/50 rounded-lg transition-colors group"
+                  >
+                    <div className={`w-6 h-6 bg-gradient-to-r ${action.color} rounded-md flex items-center justify-center`}>
+                      <action.icon className="w-3 h-3 text-white" />
+                    </div>
+                    <span className="text-xs text-zinc-300 group-hover:text-white transition-colors">
+                      {action.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-white font-semibold mb-4 flex items-center">
+                <section.icon className="w-4 h-4 mr-2 text-zion-cyan" />
+                {section.title}
+              </h3>
               <ul className="space-y-2">
-                {section.links.map((link) => (
+                {section.links.slice(0, 8).map((link) => (
                   <li key={link.name}>
                     <Link 
                       to={link.href} 
-                      className="text-zinc-400 hover:text-white transition-colors text-sm"
+                      className="text-zinc-400 hover:text-white transition-colors text-sm hover:translate-x-1 transform transition-transform"
                     >
                       {link.name}
                     </Link>
                   </li>
                 ))}
+                {section.links.length > 8 && (
+                  <li>
+                    <Link 
+                      to={`/${section.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium"
+                    >
+                      View All {section.title} →
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
@@ -141,7 +257,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-white transition-colors hover:scale-110 transform"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />

@@ -13,12 +13,9 @@ import {
   Zap,
   Users,
   CheckCircle
-<<<<<<< HEAD
+} from 'lucide-react';
+
 export default function Signup() {
-=======
- } from 'lucide-react';
-export default function Signup(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -31,52 +28,32 @@ export default function Signup(...args[]):  {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-<<<<<<< HEAD
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
-      ...formData,;
-      [e.target.name]: e.target.value;
-    })};
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    setFormData({;
-      ...formData,;
-      [e.target.name]: e.target.value;
+      ...formData,
+      [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');
-<<<<<<< HEAD
       return;
-
+    }
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-
-=======
-      return}
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.log('Signup attempt:', formData);
-=======
-    // // // // // // // console.log('Signup attempt:', formData);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+    console.log('Signup attempt:', formData);
     setIsLoading(false);
   };
-=======
-    console.log('Signup attempt:', formData);
-    setIsLoading(false)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
   const features = [
     {
       icon: <Shield className="h-6 w-6 text-zion-cyan" />,
@@ -86,30 +63,20 @@ export default function Signup(...args[]):  {
     {
       icon: <Zap className="h-6 w-6 text-zion-purple" />,
       title: "Lightning Fast",
-<<<<<<< HEAD
       description: "Optimized performance for seamless user experience across all devices"
     },
     {
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
       title: "Team Collaboration",
       description: "Built-in tools for seamless team communication and project management"
-
-=======
-      description: "Optimized performance for seamless user experience across all devices";
-    },;
-    {;
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,;
-      title: "Team Collaboration",;
-      description: "Built-in tools for seamless team communication and project management";
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
-  const benefits = [;
-    "Access to cutting-edge AI solutions",;
-    "24/7 customer support",;
-    "Free consultation session",;
-    "Exclusive partner discounts",;
-    "Early access to new features",;
+  const benefits = [
+    "Access to cutting-edge AI solutions",
+    "24/7 customer support",
+    "Free consultation session",
+    "Exclusive partner discounts",
+    "Early access to new features",
     "Dedicated account manager";
   ];
   return (
@@ -154,44 +121,10 @@ export default function Signup(...args[]):  {
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -290,7 +223,7 @@ export default function Signup(...args[]):  {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-
+                  >
                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                   </button>
                 </div>
@@ -315,7 +248,7 @@ export default function Signup(...args[]):  {
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-
+                  >
                     {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                   </button>
                 </div>
@@ -346,7 +279,7 @@ export default function Signup(...args[]):  {
               type="submit"
               disabled={isLoading || !agreedToTerms}
               className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-
+            >
               {isLoading ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -373,7 +306,7 @@ export default function Signup(...args[]):  {
               <button
                 type="button"
                 className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover:bg-zion-purple/20 transition-all duration-300"
-
+              >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                   <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -385,7 +318,7 @@ export default function Signup(...args[]):  {
               <button
                 type="button"
                 className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover:bg-zion-purple/20 transition-all duration-300"
-
+              >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
@@ -399,7 +332,7 @@ export default function Signup(...args[]):  {
                 <Link
                   to="/login"
                   className="text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
-
+                >
                   Sign in here
                 </Link>
               </p>
@@ -411,44 +344,10 @@ export default function Signup(...args[]):  {
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
-            initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the AI Revolution
             </h2>
@@ -462,44 +361,10 @@ export default function Signup(...args[]):  {
                 <motion.div
                   key={feature.title}
                   className="flex items-start gap-4"
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
-
-=======
-                  initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.8,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
-
-}}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {feature.icon}
                   </div>
@@ -518,44 +383,10 @@ export default function Signup(...args[]):  {
                   <motion.div
                     key={benefit}
                     className="flex items-center gap-3"
-<<<<<<< HEAD
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
-
-=======
-                    initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-                    animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                    transition = {
-  { duration: 0.8,
-  delay: 1 + index * 0.1 
-
-
-
-
-
-
-}}
                   >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <span className="text-zion-slate-light">{benefit}</span>
                   </motion.div>
@@ -565,44 +396,10 @@ export default function Signup(...args[]):  {
             {/* Stats */}
             <motion.div
               className="grid grid-cols-3 gap-8 text-center"
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
-
-=======
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 1.5 
-
-
-
-
-
-
-}}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
                 <div className="text-zion-slate-light text-sm">Happy Clients</div>
@@ -615,23 +412,10 @@ export default function Signup(...args[]):  {
                 <div className="text-3xl font-bold text-white mb-1">99.9%</div>
                 <div className="text-zion-slate-light text-sm">Uptime</div>
               </div>
-<<<<<<< HEAD
             </motion.div>
           </motion.div>
         </div>
       </div>
     </div>
-  )};
-=======;
-            </motion.div>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
