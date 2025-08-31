@@ -82,8 +82,6 @@ export function Header({ className }: HeaderProps) {
         { name: 'Healthcare', href: '/solutions/healthcare' },
         { name: 'Financial Services', href: '/solutions/financial' },
         { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Transportation & Logistics', href: '/solutions/transportation' },
         { name: 'Education', href: '/solutions/education' }
       ]
     },
@@ -94,19 +92,13 @@ export function Header({ className }: HeaderProps) {
         { name: 'Our Team', href: '/about/team' },
         { name: 'Our Story', href: '/about/story' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News', href: '/news' },
         { name: 'Contact', href: '/contact' }
       ]
     },
     {
       title: 'Resources',
       items: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Documentation', href: '/docs' },
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
         { name: 'Training', href: '/training' },
         { name: 'Research & Development', href: '/research-development' }
       ]
