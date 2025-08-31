@@ -111,37 +111,37 @@ export default function Services() {
 
   const featuredServices = [
     {
-      title: "AI Legal Document Analysis",
-      description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
-      price: "From $299/month",
-      features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
-      href: "/services/ai-legal-document-analysis",
-      color: "from-blue-400 to-purple-500",
+      title: "AI Legal Document Automation Platform",
+      description: "Transform legal practice with AI-powered document automation, contract generation, and compliance monitoring",
+      price: "From $199/month",
+      features: ["AI Document Analysis", "Smart Contract Generation", "Compliance Monitoring"],
+      href: "/services/ai-legal-document-automation-platform",
+      color: "from-cyan-400 to-blue-500",
       popular: true
     },
     {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
+      title: "AI Healthcare Analytics Platform",
+      description: "Revolutionize healthcare delivery with AI-powered analytics and predictive health insights",
+      price: "From $299/month",
+      features: ["Predictive Analytics", "Clinical Decision Support", "Population Health"],
+      href: "/services/ai-healthcare-analytics-platform",
       color: "from-green-400 to-blue-500"
     },
     {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
+      title: "AI Financial Risk Management Platform",
+      description: "Transform financial risk management with AI-powered analytics and real-time monitoring",
       price: "From $399/month",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
-      href: "/services/ai-supply-chain-optimization-enhanced",
-      color: "from-blue-400 to-indigo-500"
+      features: ["Risk Prediction", "Portfolio Optimization", "Regulatory Compliance"],
+      href: "/services/ai-financial-risk-management-platform",
+      color: "from-purple-400 to-pink-500"
     },
     {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500"
+      title: "AI Supply Chain Optimization Platform",
+      description: "Optimize supply chains with AI-powered demand forecasting and logistics optimization",
+      price: "From $299/month",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
+      href: "/services/ai-supply-chain-optimization-platform",
+      color: "from-orange-400 to-red-500"
     }
   ];
 

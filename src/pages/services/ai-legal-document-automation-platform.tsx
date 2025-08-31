@@ -1,35 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
   FileText, 
   Scale, 
   Shield, 
   Zap, 
   CheckCircle, 
-  ArrowRight, 
-  Brain, 
   Clock, 
-  Users, 
-  Target,
-  Lock,
-  Search,
-  Edit,
-  Download,
-  Share2,
-  AlertTriangle,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  Eye,
-  Settings,
-  Filter,
-  Globe,
-  Database,
-  TrendingUp,
   DollarSign,
+  Users,
+  Globe,
+  Lock,
+  Brain,
+  Search,
+  Edit3,
+  Download,
+  Upload,
+  BarChart3,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
   Star,
+  Award,
+  TrendingUp,
+  Eye,
+  FileCheck,
+  AlertTriangle,
+  Calendar,
+  Target,
+  Rocket,
   Play
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -37,241 +38,248 @@ import { Link } from 'react-router-dom';
 export default function AILegalDocumentAutomationPlatform() {
   const features = [
     {
-      icon: Brain,
       title: "AI-Powered Document Analysis",
-      description: "Advanced NLP and machine learning algorithms that understand legal language, context, and requirements",
-      benefits: ["Intelligent contract review", "Automated clause identification", "Risk assessment", "Compliance checking"]
+      description: "Advanced NLP algorithms analyze legal documents with 99.2% accuracy",
+      icon: Brain,
+      benefits: ["Extract key clauses automatically", "Identify potential risks", "Highlight compliance issues", "Generate executive summaries"]
     },
     {
+      title: "Smart Contract Generation",
+      description: "Generate legally compliant contracts based on industry standards and jurisdiction",
       icon: FileText,
-      title: "Smart Document Generation",
-      description: "Generate legally compliant documents from templates with AI-powered customization and validation",
-      benefits: ["Template library", "Custom clause insertion", "Legal compliance validation", "Multi-jurisdiction support"]
+      benefits: ["Template library with 500+ contracts", "Jurisdiction-specific compliance", "Real-time legal updates", "Custom clause builder"]
     },
     {
-      icon: Search,
-      title: "Intelligent Contract Review",
-      description: "Automated analysis of contracts to identify risks, missing clauses, and compliance issues",
-      benefits: ["Risk scoring", "Missing clause detection", "Compliance gap analysis", "Automated recommendations"]
-    },
-    {
+      title: "Automated Compliance Monitoring",
+      description: "Continuous monitoring of regulatory changes and compliance requirements",
       icon: Shield,
-      title: "Compliance & Risk Management",
-      description: "Ensure documents meet regulatory requirements and identify potential legal risks automatically",
-      benefits: ["Regulatory compliance", "Risk assessment", "Audit trails", "Compliance reporting"]
+      benefits: ["Real-time regulatory updates", "Compliance scoring", "Risk assessment", "Audit trail generation"]
     },
     {
-      icon: Zap,
+      title: "Intelligent Document Review",
+      description: "AI-powered review system that catches errors and suggests improvements",
+      icon: Search,
+      benefits: ["Error detection with 95% accuracy", "Style consistency checking", "Legal precedent suggestions", "Version control tracking"]
+    },
+    {
       title: "Workflow Automation",
-      description: "Streamline legal document processes with automated approvals, routing, and notifications",
-      benefits: ["Approval workflows", "Automated routing", "Deadline tracking", "Integration with legal tools"]
+      description: "Streamline legal processes with intelligent automation",
+      icon: Zap,
+      benefits: ["Approval workflows", "Deadline tracking", "Task assignment", "Progress monitoring"]
     },
     {
+      title: "Advanced Security & Privacy",
+      description: "Enterprise-grade security with SOC 2 Type II compliance",
       icon: Lock,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and comprehensive audit logging",
-      benefits: ["End-to-end encryption", "Role-based access", "Audit trails", "SOC 2 compliance"]
+      benefits: ["End-to-end encryption", "Role-based access control", "Audit logging", "GDPR compliance"]
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: "Starter",
-      price: "$399",
+      name: "Legal Professional",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small law firms and legal departments",
+      description: "Perfect for individual lawyers and small law firms",
       features: [
-        "Up to 10 users",
-        "Basic document templates",
-        "AI contract review (100/month)",
+        "Document analysis (100 documents/month)",
+        "Basic contract templates (50 templates)",
+        "Compliance monitoring",
         "Email support",
-        "Standard security",
-        "Basic compliance checking"
+        "Basic security features",
+        "Mobile app access",
+        "Standard integrations"
       ],
-      cta: "Start Free Trial",
-      popular: false
+      popular: false,
+      savings: null
     },
     {
-      name: "Professional",
-      price: "$899",
+      name: "Law Firm",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing legal practices",
+      description: "Ideal for growing law firms and legal departments",
       features: [
-        "Up to 50 users",
-        "Advanced templates & clauses",
-        "AI contract review (500/month)",
-        "Priority support",
-        "Advanced security features",
-        "Full compliance suite",
+        "Everything in Legal Professional",
+        "Document analysis (500 documents/month)",
+        "Advanced contract templates (200+ templates)",
+        "AI-powered review system",
         "Workflow automation",
-        "API access"
+        "Priority support",
+        "Advanced security",
+        "API access",
+        "Custom branding",
+        "Team collaboration (10 users)"
       ],
-      cta: "Get Started",
-      popular: true
+      popular: true,
+      savings: "Save 20% annually"
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
+      name: "Enterprise Legal",
+      price: "$1,299",
       period: "/month",
-      description: "For large law firms and corporate legal departments",
+      description: "Comprehensive solution for large law firms and corporations",
       features: [
-        "Unlimited users",
-        "Custom template creation",
-        "Unlimited AI analysis",
+        "Everything in Law Firm",
+        "Unlimited document analysis",
+        "Full template library (500+ templates)",
+        "Advanced AI review system",
+        "Custom workflow creation",
         "24/7 dedicated support",
+        "Enterprise security",
         "Custom integrations",
+        "White-label solutions",
+        "Unlimited users",
         "Advanced analytics",
-        "Multi-jurisdiction support",
-        "Custom training"
+        "Compliance reporting"
       ],
-      cta: "Contact Sales",
-      popular: false
+      popular: false,
+      savings: "Save 25% annually"
     }
   ];
 
   const useCases = [
     {
-      industry: "Law Firms",
-      description: "Streamline contract review, automate document generation, and improve client service delivery",
-      metrics: ["90% faster contract review", "70% reduction in errors", "50% cost savings"]
+      title: "Contract Management",
+      description: "Streamline contract creation, review, and management processes",
+      icon: FileText,
+      benefits: ["Reduce contract review time by 80%", "Improve accuracy by 95%", "Standardize contract language", "Track contract lifecycle"]
     },
     {
-      industry: "Corporate Legal",
-      description: "Standardize legal processes, ensure compliance, and reduce legal spend across the organization",
-      metrics: ["80% process automation", "95% compliance rate", "60% time savings"]
+      title: "Compliance Monitoring",
+      description: "Stay ahead of regulatory changes and maintain compliance",
+      icon: Shield,
+      benefits: ["Real-time regulatory updates", "Automated compliance checks", "Risk assessment reports", "Audit trail generation"]
     },
     {
-      industry: "Real Estate",
-      description: "Automate lease agreements, purchase contracts, and legal document processing",
-      metrics: ["85% faster document processing", "75% error reduction", "Enhanced compliance"]
+      title: "Legal Research",
+      description: "AI-powered research assistant for case law and legal precedents",
+      icon: Search,
+      benefits: ["Faster research completion", "Comprehensive case analysis", "Precedent identification", "Citation management"]
     },
     {
-      industry: "Healthcare",
-      description: "Ensure HIPAA compliance, automate consent forms, and streamline legal documentation",
-      metrics: ["100% compliance rate", "90% faster processing", "Reduced legal risks"]
+      title: "Document Review",
+      description: "Efficient review of legal documents with AI assistance",
+      icon: Eye,
+      benefits: ["Error detection", "Consistency checking", "Version control", "Collaborative review"]
     }
   ];
 
-  const benefits = [
-    "Reduce legal document processing time by 80%",
-    "Eliminate 95% of manual errors in legal documents",
-    "Ensure 100% regulatory compliance automatically",
-    "Save up to $50,000 annually in legal costs",
-    "Improve client satisfaction with faster turnaround",
-    "Reduce legal risks through automated validation"
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      title: "Managing Partner",
+      company: "Johnson & Associates Law Firm",
+      content: "This platform has revolutionized our contract management process. We've reduced review time by 80% and improved accuracy significantly.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      title: "General Counsel",
+      company: "TechCorp Solutions",
+      content: "The AI-powered compliance monitoring has been invaluable. We're always ahead of regulatory changes now.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      title: "Senior Attorney",
+      company: "Rodriguez Legal Services",
+      content: "The document analysis features are incredibly accurate. It's like having an expert legal assistant available 24/7.",
+      rating: 5
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Legal Document Automation Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your legal practice with AI-powered document automation, contract generation, and compliance monitoring. Reduce costs and improve efficiency." />
+        <meta name="keywords" content="AI legal automation, legal document management, contract generation, compliance monitoring, legal tech, law firm software" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-legal-document-automation-platform" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6"
-            >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
-              AI-Powered Legal Technology
-            </motion.div>
+              Industry Leading Legal Tech Solution
+            </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Legal Document
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Legal Document
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Automation Platform
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your legal practice with AI-powered document automation, intelligent contract review, 
-              and automated compliance management. Save time, reduce errors, and ensure regulatory compliance.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your legal practice with cutting-edge AI technology. Automate document analysis, 
+              generate compliant contracts, and maintain regulatory compliance with unprecedented efficiency.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
               >
-                <span className="flex items-center gap-2">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Start Free Trial
+                <Rocket className="ml-2 w-5 h-5" />
               </Link>
-              
-              <button className="inline-flex items-center px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300">
-                <span className="flex items-center gap-2">
-                  Watch Demo
-                  <Play className="w-5 h-5" />
-                </span>
-              </button>
-            </div>
-
-            {/* Key Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center"
-                >
-                  <CheckCircle className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-gray-300 text-sm">{benefit}</p>
-                </motion.div>
-              ))}
+              <Link
+                to="#demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+              >
+                Watch Demo
+                <Play className="ml-2 w-5 h-5" />
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Key Benefits */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Legal Technology Features
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AI Legal Platform?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to modernize your legal practice and deliver exceptional client service
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of legal practice with AI-powered automation that saves time, 
+              reduces costs, and improves accuracy.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                
+                <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -283,117 +291,172 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent Pricing
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing Plans
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that best fits your legal practice needs and scale as you grow
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your legal practice needs. All plans include our core AI features 
+              with enterprise-grade security and support.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingTiers.map((tier, index) => (
               <motion.div
-                key={plan.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
-                  plan.popular 
-                    ? 'border-blue-500/50 bg-gradient-to-br from-slate-800/50 to-blue-900/20' 
-                    : 'border-slate-700/50'
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-500 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
+                    : 'border-white/10'
                 }`}
               >
-                {plan.popular && (
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400 ml-1">{tier.period}</span>
                   </div>
-                  <p className="text-gray-400">{plan.description}</p>
+                  <p className="text-gray-300">{tier.description}</p>
+                  {tier.savings && (
+                    <div className="mt-2">
+                      <span className="text-cyan-400 text-sm font-medium">{tier.savings}</span>
+                    </div>
+                  )}
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
-                  {plan.cta}
-                </button>
+                <Link
+                  to="/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Use Cases */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industry-Specific Solutions
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Real-World Applications
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored legal automation solutions for different industries and practice areas
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how leading law firms and legal departments are transforming their practices 
+              with our AI-powered platform.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={useCase.industry}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-gray-400 mb-4">{useCase.description}</p>
-                
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join hundreds of satisfied legal professionals who have transformed their practices 
+              with our AI-powered platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <h4 className="text-blue-400 font-medium mb-2">Key Benefits:</h4>
-                  <ul className="space-y-1">
-                    {useCase.metrics.map((metric, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <Target className="w-3 h-3 text-blue-400 mr-2" />
-                        {metric}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-white font-semibold">{testimonial.name}</p>
+                  <p className="text-cyan-400 text-sm">{testimonial.title}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </motion.div>
             ))}
@@ -402,43 +465,90 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Legal Practice?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Join hundreds of law firms and legal departments that have already revolutionized their document processes with AI-powered automation
+            <p className="text-xl text-gray-300 mb-8">
+              Join the future of legal technology. Start your free trial today and experience 
+              the power of AI-powered legal automation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
               >
-                <span className="flex items-center gap-2">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Start Free Trial
+                <Rocket className="ml-2 w-5 h-5" />
               </Link>
-              
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300"
+                to="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
-                <span className="flex items-center gap-2">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Call Us Now
+                <Phone className="ml-2 w-5 h-5" />
               </Link>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <p className="text-cyan-400 font-medium">+1 302 464 0950</p>
+              <p className="text-gray-400 text-sm">Available 24/7</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <p className="text-cyan-400 font-medium">kleber@ziontechgroup.com</p>
+              <p className="text-gray-400 text-sm">Response within 2 hours</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-cyan-400 font-medium">364 E Main St STE 1008</p>
+              <p className="text-gray-400 text-sm">Middletown, DE 19709</p>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
