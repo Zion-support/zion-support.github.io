@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   Menu, 
   X, 
@@ -98,103 +97,121 @@ export function MobileMenu({ onClose }) {
       label: 'Solutions',
       icon: Target,
       items: [
-        { label: 'Healthcare', href: '/solutions/healthcare' },
-        { label: 'Financial', href: '/solutions/financial' },
-        { label: 'Manufacturing', href: '/solutions/manufacturing' },
-        { label: 'Government', href: '/solutions/government' },
-        { label: 'Retail', href: '/solutions/retail' },
-      ]
-    },
-    {
-      id: 'company',
-      label: 'Company',
-      icon: Building2,
-      items: [
-        { label: 'About', href: '/about' },
-        { label: 'Contact', href: '/contact' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Partners', href: '/partners' },
+        {
+          label: 'Industry Solutions',
+          icon: Building2,
+          items: [
+            { label: 'Healthcare', href: '/solutions/healthcare' },
+            { label: 'Finance', href: '/solutions/finance' },
+            { label: 'Manufacturing', href: '/solutions/manufacturing' },
+            { label: 'Retail', href: '/solutions/retail' },
+            { label: 'Education', href: '/solutions/education' },
+            { label: 'Government', href: '/solutions/government' },
+          ]
+        },
+        {
+          label: 'Technology Solutions',
+          icon: Network,
+          items: [
+            { label: 'Cloud Solutions', href: '/solutions/cloud' },
+            { label: 'AI & ML', href: '/solutions/ai-ml' },
+            { label: 'Blockchain', href: '/solutions/blockchain' },
+            { label: 'IoT', href: '/solutions/iot' },
+            { label: 'Cybersecurity', href: '/solutions/cybersecurity' },
+            { label: 'Data Analytics', href: '/solutions/data-analytics' },
+          ]
+        }
       ]
     }
   ];
 
   const directLinks = [
-    { href: '/get-started', label: 'Get Started' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/support', label: 'Support' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/help', label: 'Support' },
+    { href: '/get-started', label: 'Get Started' },
+    { href: '/request-quote', label: 'Request Quote' },
   ];
 
-  const contactInfo = [
-    { icon: Phone, label: '+1 302 464 0950', href: 'tel:+1 302 464 0950' },
-    { icon: Mail, label: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, label: '364 E Main St STE 1008 Middletown DE 19709' },
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-      <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-gradient-to-b from-zion-blue-dark via-zion-slate-dark to-zion-blue-dark border-l border-zion-purple/30 shadow-2xl">
+    <div className="fixed inset-0 z-50 lg:hidden">
+      {/* Backdrop */}
+      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
+      
+      {/* Menu Panel */}
+      <div className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-slate-900 shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
+        <div className="flex items-center justify-between p-6 border-b border-slate-700">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-            <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
+            <span className="text-white font-semibold">Zion Tech Group</span>
           </div>
-          <button 
-            onClick={onClose} 
-            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-all duration-300"
+          <button
+            onClick={onClose}
+            className="p-2 text-gray-400 hover:text-white transition-colors"
           >
-            <X className="w-6 h-6"/>
+            <X className="w-6 h-6" />
           </button>
         </div>
 
-        {/* Navigation Content */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="p-6 space-y-6">
-            {/* Main Navigation Sections */}
+        {/* Navigation */}
+        <div className="flex-1 overflow-y-auto py-6">
+          <nav className="space-y-2 px-6">
+            {/* Main Navigation */}
             {navigationSections.map((section) => (
-              <div key={section.id} className="space-y-3">
+              <div key={section.id} className="space-y-2">
                 <button
-                  onClick={() => {
-                    if (section.id === 'services') toggleServices();
-                    if (section.id === 'solutions') toggleSolutions();
-                  }}
-                  className="flex items-center justify-between w-full p-3 text-left text-white hover:bg-zion-purple/10 rounded-lg transition-all duration-300 group"
+                  onClick={section.id === 'services' ? toggleServices : toggleSolutions}
+                  className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
+                    (section.id === 'services' && isServicesOpen) || 
+                    (section.id === 'solutions' && isSolutionsOpen)
+                      ? 'bg-slate-800 text-white'
+                      : 'text-gray-300 hover:bg-slate-800 hover:text-white'
+                  }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <section.icon className="w-5 h-5 text-zion-cyan" />
-                    <span className="font-semibold">{section.label}</span>
+                    <section.icon className="w-5 h-5" />
+                    <span className="font-medium">{section.label}</span>
                   </div>
-                  {(section.id === 'services' && isServicesOpen) || (section.id === 'solutions' && isSolutionsOpen) ? (
-                    <ChevronDown className="w-4 h-4 text-zion-purple transition-transform duration-300" />
+                  {(section.id === 'services' && isServicesOpen) || 
+                   (section.id === 'solutions' && isSolutionsOpen) ? (
+                    <ChevronDown className="w-5 h-5" />
                   ) : (
-                    <ChevronRight className="w-4 h-4 text-zion-purple transition-transform duration-300" />
+                    <ChevronRight className="w-5 h-5" />
                   )}
                 </button>
                 
-                {section.id === 'services' && isServicesOpen && (
+                {/* Submenu */}
+                {((section.id === 'services' && isServicesOpen) || 
+                  (section.id === 'solutions' && isSolutionsOpen)) && (
                   <div className="ml-6 space-y-2">
-                    {section.items.map((item, index) => (
-                      <div key={index} className="space-y-2">
-                        <div className="flex items-center space-x-2 text-zion-cyan font-medium text-sm">
-                          <item.icon className="w-4 h-4" />
-                          <span>{item.label}</span>
+                    {section.items.map((category, categoryIndex) => (
+                      <div key={categoryIndex} className="space-y-2">
+                        <div className="flex items-center space-x-2 text-sm text-gray-400">
+                          <category.icon className="w-4 h-4" />
+                          <span>{category.label}</span>
                         </div>
-                        <div className="ml-4 space-y-1">
-                          {item.items.map((subItem, subIndex) => (
+                        <div className="ml-6 space-y-1">
+                          {category.items.map((item, itemIndex) => (
                             <Link
-                              key={subIndex}
-                              to={subItem.href}
+                              key={itemIndex}
+                              to={item.href}
                               onClick={onClose}
-                              className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                                isActive(subItem.href)
-                                  ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                                  : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                              className={`block p-2 rounded text-sm transition-colors ${
+                                isActive(item.href)
+                                  ? 'text-purple-400 bg-purple-400/10'
+                                  : 'text-gray-400 hover:text-white hover:bg-slate-800'
                               }`}
                             >
-                              {subItem.label}
+                              {item.label}
                             </Link>
                           ))}
                         </div>
@@ -202,206 +219,62 @@ export function MobileMenu({ onClose }) {
                     ))}
                   </div>
                 )}
-
-                {section.id === 'solutions' && isSolutionsOpen && (
-                  <div className="ml-6 space-y-1">
-                    {section.items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        onClick={onClose}
-                        className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                          isActive(item.href)
-                            ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-
-                {section.id === 'company' && (
-                  <div className="ml-6 space-y-1">
-                    {section.items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        onClick={onClose}
-                        className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                          isActive(item.href)
-                            ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
 
             {/* Direct Links */}
-            <div className="space-y-3">
-              <h3 className="text-zion-purple font-semibold text-sm uppercase tracking-wide">Quick Links</h3>
-              <div className="space-y-2">
-                {directLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    onClick={onClose}
-                    className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                      isActive(link.href)
-                        ? 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30'
-                        : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+            <div className="pt-4 border-t border-slate-700">
+              {directLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  to={link.href}
+                  onClick={onClose}
+                  className={`block p-3 rounded-lg transition-colors ${
+                    isActive(link.href)
+                      ? 'text-purple-400 bg-purple-400/10'
+                      : 'text-gray-300 hover:bg-slate-800 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-
-            {/* Contact Information */}
-            <div className="space-y-3">
-              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide">Contact Info</h3>
-              <div className="space-y-3">
-                {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center space-x-3 text-zion-slate-light text-sm">
-                    <contact.icon className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                    {contact.href ? (
-                      <a 
-                        href={contact.href}
-                        className="hover:text-zion-cyan transition-colors"
-                      >
-                        {contact.label}
-                      </a>
-                    ) : (
-                      <span>{contact.label}</span>
-                    )}
-=======
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import User from 'lucide-react/dist/esm/icons/user';
-import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
-import Home from 'lucide-react/dist/esm/icons/home';
-import Store from 'lucide-react/dist/esm/icons/store';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Settings from 'lucide-react/dist/esm/icons/settings';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-export function MobileMenu({ className }) {
-        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') })}
-    return (<div className = {
-  cn("md:hidden",
-  className)
-}>
-=======
-  const { user, isAuthenticated } = useAuth();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const navigationItems = [
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },
-  ];
-  if (isAuthenticated) {
-    navigationItems.push({ 
-      href: '/dashboard', 
-      label: 'Dashboard', 
-      icon: Settings, 
-      matches: (path) => path.startsWith('/dashboard') 
-    });
-  }
-  return (
-    <div className = {
-  cn("md:hidden",
-  className)
-}>
-      {/* Mobile menu button */}
-      <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
-        {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
-      </Button>
-      {/* Mobile menu overlay */}
-      {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
-            <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-              <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20">
-                <X className="h-5 w-5"/>
-              </Button>
-            </div>
-            {/* Navigation items */}
-            <nav className="p-4 space-y-2">
-              {navigationItems.map((item) => {
-                const Icon = item.icon;
-                const isActive = item.matches(location.pathname);
-                return (
-                  <Link 
-                    key={item.href} 
-                    to={item.href} 
-                    onClick={toggleMenu} 
-                    className = {
-  cn(
-                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
-  isActive
-                        ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover:bg-zion-purple/10 hover:text-zion-cyan"
-                    )
-}
-                  >
-                    <Icon className="w-5 h-5"/>
-                    <span className="font-medium">{item.label}</span>
-                  </Link>)})}
-            </nav>
-            {/* User section */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
-              {isAuthenticated ? (<div className="space-y-3">
-                  <div className="flex items-center gap-3 px-4 py-2">
-                    <User className="h-5 w-5 text-zion-cyan"/>
-                    <span className="text-white font-medium">
-                      {user?.email || 'User'}
-                    </span>
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-<<<<<<< HEAD
+          </nav>
         </div>
 
-        {/* Footer CTA */}
-        <div className="p-6 border-t border-zion-purple/20 space-y-3">
-          <Link
-            to="/get-started"
-            onClick={onClose}
-            className="block w-full px-4 py-3 text-center bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
-          >
-            Get Started
-            <ArrowRight className="w-4 h-4 ml-2 inline" />
-          </Link>
-          <Link
-            to="/contact"
-            onClick={onClose}
-            className="block w-full px-4 py-3 text-center border-2 border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300"
-          >
-            Contact Sales
-          </Link>
+        {/* Footer */}
+        <div className="border-t border-slate-700 p-6 space-y-4">
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3 text-sm text-gray-400">
+              <Phone className="w-4 h-4" />
+              <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                {contactInfo.phone}
+              </a>
+            </div>
+            <div className="flex items-center space-x-3 text-sm text-gray-400">
+              <Mail className="w-4 h-4" />
+              <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className="flex items-start space-x-3 text-sm text-gray-400">
+              <MapPin className="w-4 h-4 mt-0.5" />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
+          
+          <div className="pt-4 border-t border-slate-700">
+            <Link
+              to="/contact"
+              onClick={onClose}
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 px-4 rounded-lg font-medium text-center hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Get Started</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-=======
-        </div>)}
-    </div>)}
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
