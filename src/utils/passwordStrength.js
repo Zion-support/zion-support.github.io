@@ -59,7 +59,7 @@ export const hasNumbers = (password) => {
  * @returns {boolean} True if contains special characters
  */
 export const hasSpecialChars = (password) => {
-  return /[!@#$%^&*()_+\-=[\]{ /* empty */ };':"\\|,.<>/?]/.test(password);
+  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 /**
  * Check password length
@@ -104,6 +104,8 @@ export const getPatternPenalty = (password) => {
   }
   // Check for sequential characters
   for (let i = 0; i < password.length - 2; i++) {
+    const char1 = password.charCodeAt(i);
+    const char2 = password.charCodeAt(i + 1);
     const char3 = password.charCodeAt(i + 2);
     if (char2 === char1 + 1 && char3 === char2 + 1) {
       penalty += 1;
@@ -208,7 +210,7 @@ export const getPasswordFeedback = (password, strength) => {
  * @param {Object} requirements - Requirements object
  * @returns {Object} Validation result
  */
-export const validatePassword = (password, requirements = { /* empty */ }) => {
+export const validatePassword = (password, requirements = {}) => {
   const {
     minLength = 8,
     requireLowercase = true,

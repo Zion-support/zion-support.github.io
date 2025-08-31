@@ -1,9 +1,13 @@
 import React, { createContext, useContext, useState } from 'react';
-const MessagingProvider({ children }) {
+
+const MessagingContext = createContext();
+
+export function MessagingProvider({ children }) {
     const [messages, setMessages] = useState([]);
+    
     const sendMessage = (content) => {
         const newMessage = {
-  id: Date.now().toString(),
+            id: Date.now().toString(),
             content,
             timestamp: new Date(),
             isRead: false,
@@ -11,10 +15,13 @@ const MessagingProvider({ children }) {
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {
-        setMessages(prev => prev.map(msg => msg.id === id ? { ...msg, isRead: true } : msg))};
+        setMessages(prev => prev.map(msg => msg.id === id ? { ...msg, isRead: true } : msg));
+    };
+    
     const unreadCount = messages.filter(msg => !msg.isRead).length;
-    return (<MessagingContext.Provider value = {
-  {
+    
+    return (
+        <MessagingContext.Provider value={{
             messages,
             unreadCount,
             sendMessage,

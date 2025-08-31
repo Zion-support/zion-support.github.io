@@ -1,422 +1,558 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   PenTool,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-  Database,
-  Cloud,
-  Lock,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Workflow,
-  Target,
-  Rocket,
-  Award,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  BarChart3,
-  FileText,
   Image,
   Video,
   Music,
-  Code,
+  FileText,
+  Brain,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Pause,
+  Download,
+  Share2,
+  Settings,
   Palette,
   Type,
-  Layout,
+  Layers,
+  Sparkles,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronRight,
+  Globe,
+  Target,
+  Lightbulb,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  BarChart3,
+  Workflow,
+  MessageCircle,
   Eye,
   Search,
-  Settings
+  Filter,
+  Grid,
+  List,
+  BookOpen,
+  Camera,
+  Mic,
+  Edit3,
+  Copy,
+  Trash2,
+  Save,
+  Upload,
+  Download as DownloadIcon,
+  Share,
+  Lock,
+  Unlock,
+  EyeOff,
+  EyeOn,
+  RefreshCw,
+  RotateCcw,
+  RotateCw,
+  Crop,
+  Scissors,
+  Move,
+  ZoomIn,
+  ZoomOut,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  FullscreenExit,
+  Volume2,
+  VolumeX,
+  SkipBack,
+  SkipForward,
+  Repeat,
+  Shuffle,
+  Heart,
+  ThumbsUp,
+  ThumbsDown,
+  MessageSquare,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Plus,
+  Minus,
+  X,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  Calendar,
+  Clock as ClockIcon,
+  Tag,
+  Hash,
+  AtSign,
+  Hash as HashIcon,
+  DollarSign as DollarSignIcon,
+  Percent,
+  PieChart,
+  BarChart,
+  LineChart,
+  Activity,
+  TrendingUp as TrendingUpIcon,
+  TrendingDown,
+  Minus as MinusIcon,
+  Plus as PlusIcon,
+  Divide,
+  Equal,
+  Infinity,
+  Zap as ZapIcon,
+  Battery,
+  Wifi,
+  Signal,
+  Bluetooth,
+  WifiOff,
+  SignalOff,
+  BluetoothOff,
+  BatteryOff,
+  BatteryCharging,
+  BatteryFull,
+  BatteryLow,
+  BatteryMedium,
+  BatteryEmpty,
+  BatteryHalf,
+  BatteryQuarter,
+  BatteryThreeQuarters,
+  BatteryOneQuarter,
+  BatteryTwoThirds,
+  BatteryOneThird,
+  BatteryTwoThirds as BatteryTwoThirdsIcon,
+  BatteryOneThird as BatteryOneThirdIcon,
+  BatteryQuarter as BatteryQuarterIcon,
+  BatteryThreeQuarters as BatteryThreeQuartersIcon,
+  BatteryHalf as BatteryHalfIcon,
+  BatteryEmpty as BatteryEmptyIcon,
+  BatteryLow as BatteryLowIcon,
+  BatteryMedium as BatteryMediumIcon,
+  BatteryFull as BatteryFullIcon,
+  BatteryCharging as BatteryChargingIcon,
+  BatteryOff as BatteryOffIcon,
+  WifiOff as WifiOffIcon,
+  SignalOff as SignalOffIcon,
+  BluetoothOff as BluetoothOffIcon,
+  Wifi as WifiIcon,
+  Signal as SignalIcon,
+  Bluetooth as BluetoothIcon,
+  ShoppingCart
 } from 'lucide-react';
 
-export default function AIContentCreationStudio() {
+const AIContentCreationStudio: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedTemplate, setSelectedTemplate] = useState<string | null>(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Writing",
-      description: "Generate high-quality content with advanced language models"
+      icon: <Brain className="w-8 h-8" />,
+      title: 'AI-Powered Content Generation',
+      description: 'Advanced language models create high-quality, engaging content tailored to your brand voice and audience.',
+      benefits: ['10x faster content creation', 'Consistent brand messaging', 'SEO-optimized content']
     },
     {
-      icon: Image,
-      title: "AI Image Generation",
-      description: "Create stunning visuals from text descriptions"
+      icon: <Image className="w-8 h-8" />,
+      title: 'Visual Content Creation',
+      description: 'Generate stunning images, graphics, and visual assets using state-of-the-art AI image generation.',
+      benefits: ['Custom brand visuals', 'Multiple style options', 'High-resolution output']
     },
     {
-      icon: Video,
-      title: "AI Video Creation",
-      description: "Generate engaging video content automatically"
+      icon: <Video className="w-8 h-8" />,
+      title: 'Video & Animation',
+      description: 'Create professional videos, animations, and motion graphics with AI-powered tools.',
+      benefits: ['Professional quality', 'Multiple formats', 'Custom branding']
     },
     {
-      icon: Music,
-      title: "AI Music Composition",
-      description: "Create original music tracks and sound effects"
+      icon: <Music className="w-8 h-8" />,
+      title: 'Audio & Voice Generation',
+      description: 'Generate natural-sounding voiceovers, music, and audio content for your projects.',
+      benefits: ['Natural voice synthesis', 'Multiple languages', 'Custom music creation']
+    }
+  ];
+
+  const templates = [
+    {
+      id: 'blog-post',
+      name: 'Blog Post Generator',
+      description: 'Create engaging blog posts with SEO optimization',
+      icon: <FileText className="w-6 h-6" />,
+      category: 'Writing'
     },
     {
-      icon: Code,
-      title: "AI Code Generation",
-      description: "Generate code snippets and documentation"
+      id: 'social-media',
+      name: 'Social Media Content',
+      description: 'Generate posts for all major social platforms',
+      icon: <Share2 className="w-6 h-6" />,
+      category: 'Social'
     },
     {
-      icon: Palette,
-      title: "AI Design Tools",
-      description: "Create logos, graphics, and visual designs"
+      id: 'email-marketing',
+      name: 'Email Marketing',
+      description: 'Create compelling email campaigns',
+      icon: <Mail className="w-6 h-6" />,
+      category: 'Marketing'
+    },
+    {
+      id: 'product-description',
+      name: 'Product Descriptions',
+      description: 'Write compelling product copy',
+      icon: <Tag className="w-6 h-6" />,
+      category: 'E-commerce'
+    },
+    {
+      id: 'ad-copy',
+      name: 'Advertising Copy',
+      description: 'Generate high-converting ad content',
+      icon: <Target className="w-6 h-6" />,
+      category: 'Advertising'
+    },
+    {
+      id: 'video-script',
+      name: 'Video Scripts',
+      description: 'Create engaging video content scripts',
+      icon: <Video className="w-6 h-6" />,
+      category: 'Video'
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for individual creators and freelancers",
+      name: 'Starter',
+      price: 99,
+      period: 'month',
       features: [
-        "Up to 100 AI content generations/month",
-        "Basic AI models",
-        "Standard templates",
-        "Email support",
-        "Basic analytics",
-        "5GB storage"
+        'Up to 100 content pieces/month',
+        'Basic AI models',
+        'Standard templates',
+        'Email support',
+        'Basic analytics'
       ],
-      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
+      name: 'Professional',
+      price: 299,
+      period: 'month',
       features: [
-        "Up to 1,000 AI content generations/month",
-        "Advanced AI models",
-        "Custom templates",
-        "Priority support",
-        "Advanced analytics",
-        "25GB storage",
-        "Team collaboration"
+        'Up to 500 content pieces/month',
+        'Advanced AI models',
+        'Premium templates',
+        'Priority support',
+        'Advanced analytics',
+        'Custom branding',
+        'API access'
       ],
-      cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations and agencies",
+      name: 'Enterprise',
+      price: 799,
+      period: 'month',
       features: [
-        "Unlimited AI content generations",
-        "Custom AI models",
-        "White-label solution",
-        "24/7 dedicated support",
-        "Advanced analytics & reporting",
-        "100GB storage",
-        "API access"
+        'Unlimited content creation',
+        'Custom AI models',
+        'White-label solutions',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security',
+        'SLA guarantee'
       ],
-      cta: "Contact Sales",
       popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Content Creation Speed",
-      description: "Generate content 10x faster than manual creation",
-      metric: "10x",
-      icon: Zap
-    },
-    {
-      title: "Cost Reduction",
-      description: "Reduce content creation costs significantly",
-      metric: "60-80%",
-      icon: DollarSign
-    },
-    {
-      title: "Quality Improvement",
-      description: "AI-enhanced content with better engagement",
-      metric: "40-60%",
-      icon: Star
-    },
-    {
-      title: "24/7 Availability",
-      description: "Create content anytime, anywhere",
-      metric: "Always On",
-      icon: Clock
     }
   ];
 
   const useCases = [
     {
-      title: "Marketing Content",
-      description: "Create engaging social media posts, ads, and campaigns",
-      icon: TrendingUp
+      title: 'Marketing Teams',
+      description: 'Create consistent, engaging content across all channels',
+      icon: <Target className="w-6 h-6" />
     },
     {
-      title: "Blog & Articles",
-      description: "Generate SEO-optimized blog posts and articles",
-      icon: FileText
+      title: 'Content Creators',
+      description: 'Scale your content production without sacrificing quality',
+      icon: <PenTool className="w-6 h-6" />
     },
     {
-      title: "Product Descriptions",
-      description: "Create compelling product descriptions and copy",
-      icon: Target
+      title: 'E-commerce Businesses',
+      description: 'Generate product descriptions and marketing copy at scale',
+      icon: <ShoppingCart className="w-6 h-6" />
     },
     {
-      title: "Email Marketing",
-      description: "Generate personalized email campaigns",
-      icon: Mail
-    },
-    {
-      title: "Visual Content",
-      description: "Create graphics, logos, and visual assets",
-      icon: Image
-    },
-    {
-      title: "Video Content",
-      description: "Generate video scripts and content",
-      icon: Video
+      title: 'Agencies',
+      description: 'Deliver high-quality content for multiple clients efficiently',
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
-  const integrations = [
-    "WordPress", "Shopify", "Mailchimp", "HubSpot", "Salesforce", 
-    "Canva", "Figma", "Adobe Creative Suite", "Social Media Platforms"
-  ];
+  const handleGenerateContent = () => {
+    if (!selectedTemplate) return;
+    
+    setIsGenerating(true);
+    // Simulate content generation
+    setTimeout(() => {
+      setGeneratedContent('This is a sample generated content that demonstrates the AI Content Creation Studio capabilities. The content is tailored to your specific requirements and optimized for your target audience.');
+      setIsGenerating(false);
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-400 to-blue-600 rounded-2xl mb-6 shadow-2xl shadow-green-400/25">
-              <PenTool className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              New AI-Powered Service
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
+            >
               AI Content Creation Studio
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your content creation with AI-powered tools. Generate high-quality 
-              text, images, videos, and designs in minutes, not hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
+            >
+              Revolutionize your content creation with AI-powered tools that generate high-quality text, 
+              images, videos, and audio content in seconds. Scale your content production without 
+              compromising on quality or creativity.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
+                className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors text-lg"
               >
-                Start Free Trial
+                Start Creating Today
               </Link>
-              <Link
-                to="/demo"
-                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-white transition-all duration-300"
+              <a
+                href="tel:+13024640950"
+                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors text-lg"
               >
-                Request Demo
-              </Link>
-            </div>
-          </motion.div>
+                Call: +1 302 464 0950
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful AI Content Creation Tools
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our studio provides everything you need to create professional content 
-              with the power of artificial intelligence.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our AI Content Creation Studio combines cutting-edge artificial intelligence with 
+              intuitive design to deliver professional-quality content at scale.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                transition={{ delay: index * 0.1 }}
+                className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-8 hover:border-zion-cyan/50 transition-all"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center text-zion-cyan flex-shrink-0">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-zion-slate-light mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-zion-cyan flex items-center">
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 bg-zinc-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Interactive Demo Section */}
+      <section className="py-20 bg-zion-blue-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Content Creation for Every Need
+              Try Our AI Content Generator
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From marketing campaigns to educational content, our AI studio handles it all
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Experience the power of AI content creation with our interactive demo. 
+              Select a template and watch as AI generates professional content in seconds.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-zion-blue-darker border border-zion-purple/30 rounded-lg p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Template Selection */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Choose Template</h3>
+                  <div className="space-y-3">
+                    {templates.map((template) => (
+                      <button
+                        key={template.id}
+                        onClick={() => setSelectedTemplate(template.id)}
+                        className={`w-full p-4 text-left rounded-lg border transition-all ${
+                          selectedTemplate === template.id
+                            ? 'border-zion-cyan bg-zion-cyan/10'
+                            : 'border-zion-purple/20 hover:border-zion-purple/40'
+                        }`}
+                      >
+                        <div className="flex items-center space-x-3">
+                          <div className="text-zion-cyan">{template.icon}</div>
+                          <div>
+                            <h4 className="font-semibold text-white">{template.name}</h4>
+                            <p className="text-sm text-zion-slate-light">{template.description}</p>
+                            <span className="inline-block px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded mt-1">
+                              {template.category}
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Content Creation?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of AI-powered content creation
-            </p>
-          </motion.div>
+                {/* Content Generation */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Generated Content</h3>
+                  <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-4 min-h-[200px]">
+                    {isGenerating ? (
+                      <div className="flex items-center justify-center h-full">
+                        <div className="text-center">
+                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+                          <p className="text-zion-cyan">Generating content...</p>
+                        </div>
+                      </div>
+                    ) : generatedContent ? (
+                      <div>
+                        <p className="text-zion-slate-light mb-4">{generatedContent}</p>
+                        <div className="flex space-x-2">
+                          <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded text-sm font-semibold hover:bg-zion-cyan-light transition-colors">
+                            Copy
+                          </button>
+                          <button className="bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded text-sm font-semibold hover:bg-zion-purple/30 transition-colors">
+                            Edit
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="text-center text-zion-slate-light h-full flex items-center justify-center">
+                        <p>Select a template and click generate to create content</p>
+                      </div>
+                    )}
+                  </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <button
+                    onClick={handleGenerateContent}
+                    disabled={!selectedTemplate || isGenerating}
+                    className={`w-full mt-4 px-6 py-3 rounded-lg font-semibold transition-colors ${
+                      selectedTemplate && !isGenerating
+                        ? 'bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light'
+                        : 'bg-zion-purple/20 text-zion-slate-light cursor-not-allowed'
+                    }`}
+                  >
+                    {isGenerating ? 'Generating...' : 'Generate Content'}
+                  </button>
                 </div>
-                <div className="text-3xl font-bold text-green-400 mb-2">{benefit.metric}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="py-16 px-4 bg-zinc-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Works with your favorite tools and platforms
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-xl p-4 text-center hover:border-green-400/50 transition-all duration-300"
-              >
-                <span className="text-gray-300 font-medium">{integration}</span>
-              </motion.div>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your content creation needs
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Flexible pricing plans designed to scale with your content creation needs. 
+              Start small and grow as your business expands.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-zinc-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+                transition={{ delay: index * 0.1 }}
+                className={`relative bg-zion-blue-dark border rounded-lg p-8 ${
                   plan.popular 
-                    ? 'border-green-400/50 shadow-2xl shadow-green-400/25' 
-                    : 'border-zinc-700/50'
+                    ? 'border-zion-cyan ring-2 ring-zion-cyan/20' 
+                    : 'border-zion-purple/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -424,25 +560,70 @@ export default function AIContentCreationStudio() {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">
+                    ${plan.price}
+                    <span className="text-lg text-zion-slate-light">/{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  {plan.cta}
-                </button>
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
+                    plan.popular
+                      ? 'bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light'
+                      : 'bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-zion-blue-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Perfect For Every Business
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Whether you're a startup, enterprise, or agency, our AI Content Creation Studio 
+              helps you create professional content that drives results.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center text-zion-cyan mx-auto mb-4">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -450,62 +631,84 @@ export default function AIContentCreationStudio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Content Creation?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators and businesses already using our AI studio 
-              to create amazing content faster than ever before.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/demo"
-                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-white transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
+            <div className="bg-zion-blue-dark border border-zion-cyan/30 rounded-lg p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Content Creation?
+              </h2>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+                Join thousands of businesses that are already using AI to create better content faster. 
+                Get started today with a free consultation and demo.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Link
+                  to="/contact"
+                  className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors text-lg"
+                >
+                  Start Free Trial
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors text-lg"
+                >
+                  Call: +1 302 464 0950
+                </a>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-zion-cyan mb-2">24/7</div>
+                  <div className="text-zion-slate-light">Support Available</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-zion-cyan mb-2">99.9%</div>
+                  <div className="text-zion-slate-light">Uptime Guarantee</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-zion-cyan mb-2">30-Day</div>
+                  <div className="text-zion-slate-light">Money Back Guarantee</div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-16 px-4 bg-zinc-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-green-400 mb-4" />
-              <p className="text-white font-semibold">Phone</p>
-              <p className="text-gray-300">+1 302 464 0950</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-green-400 mb-4" />
-              <p className="text-white font-semibold">Email</p>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-green-400 mb-4" />
-              <p className="text-white font-semibold">Address</p>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+      {/* Contact Information */}
+      <section className="py-20 bg-zion-blue-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <p className="text-zion-slate-light">+1 302 464 0950</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIContentCreationStudio;

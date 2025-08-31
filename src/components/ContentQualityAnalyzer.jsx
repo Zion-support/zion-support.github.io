@@ -85,6 +85,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             default:
                 return <Info className="w-4 h-4 text-gray-400"/>}
     };
+
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'high':
@@ -96,6 +97,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             default:
                 return 'text-gray-400'}
     };
+
     const getStatusColor = (status) => {
         switch (status) {
             case 'resolved':
@@ -107,10 +109,18 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             default:
                 return 'text-gray-400'}
     };
+
     const filteredIssues = contentIssues.filter(issue => {
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesFilter && matchesSearch});
+        return matchesFilter && matchesSearch;
+    });
+
+    const matchesFilter = selectedFilter === 'all' || 
+        filterOptions.severity.includes(selectedFilter) ||
+        filterOptions.status.includes(selectedFilter) ||
+        filterOptions.type.includes(selectedFilter);
+
     const getIssueTypeLabel = (type) => {
         switch (type) {
             case 'missing_title':

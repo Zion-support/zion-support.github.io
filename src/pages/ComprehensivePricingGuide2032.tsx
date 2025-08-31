@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { allInnovativeServices2032 } from '../data/innovativeServices2032';
+import { 
+  innovativeAIServices2032, 
+  innovativeITServices2032, 
+  innovativeMicroSaasServices2032 
+} from '../data/innovativeServices2032';
 import {
   DollarSign,
   TrendingUp,
@@ -117,13 +121,13 @@ const ComprehensivePricingGuide2032: React.FC = () => {
     let services = [];
     
     if (selectedCategory === 'all' || selectedCategory === 'ai') {
-      services.push(...allInnovativeServices2032.aiServices);
+      services.push(...innovativeAIServices2032);
     }
     if (selectedCategory === 'all' || selectedCategory === 'it') {
-      services.push(...allInnovativeServices2032.itServices);
+      services.push(...innovativeITServices2032);
     }
     if (selectedCategory === 'all' || selectedCategory === 'saas') {
-      services.push(...allInnovativeServices2032.microSaasServices);
+      services.push(...innovativeMicroSaasServices2032);
     }
 
     if (searchTerm) {
