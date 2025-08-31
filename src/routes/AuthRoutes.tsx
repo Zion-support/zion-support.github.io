@@ -1,10 +1,11 @@
 
-import { Route, Routes  } from 'react-router-dom.ts';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
@@ -14,6 +15,11 @@ const AuthRoutes = () => {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/update-password" element={<UpdatePassword />} />
+      <Route path="/onboarding" element={<Onboarding />} />
+      <Route path="/talent-onboarding" element={<TalentOnboarding />} />
+      <Route path="/service-onboarding" element={<ServiceOnboarding />} />
 
       {/* Protected routes that require authentication */}
       <Route
@@ -22,7 +28,7 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
-
+        }
       />
 
       <Route
@@ -31,29 +37,19 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
-
+        }
       />
 
       <Route
         path="/settings"
-<<<<<<< HEAD
         element={
           <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
-
+        }
       />
     </Routes>
-=======
-        element={;
-          <ProtectedRoute>;
-            <div>Settings</div>;
-          </ProtectedRoute>;
-        };
-      />;
-    </Routes>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 
-export default AuthRoutes;}}}
+export default AuthRoutes;
