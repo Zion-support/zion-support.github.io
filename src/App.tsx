@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Layout Components
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -44,6 +48,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative Services 2025
+const AIBusinessProcessAutomation = createLazyComponent(() => import('./pages/services/AI-Business-Process-Automation'));
+const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Data-Analytics-Platform'));
+const AICustomerExperiencePlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -82,12 +91,15 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Header */}
+            <Header />
+            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
             
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -118,6 +130,11 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-business-process-automation" element={<AIBusinessProcessAutomation />} />
+                    <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
+                    <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
@@ -186,6 +203,9 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+            
+            {/* Footer */}
+            <Footer />
           </div>
         </Router>
       </ErrorBoundary>
