@@ -86,6 +86,10 @@ const ComprehensivePricingGuide2026 = lazy(() => import('./pages/ComprehensivePr
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
+// 2028 Ultimate Innovative Services
+const UltimateInnovativeServicesShowcase2028 = lazy(() => import('./pages/UltimateInnovativeServicesShowcase2028'));
+const ComprehensivePricingGuide2028 = lazy(() => import('./pages/ComprehensivePricingGuide2028'));
+
 // New Innovative Services
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
@@ -420,8 +424,10 @@ function App() {
                   {/* Showcase Routes */}
                   <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
                   <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+                  <Route path="/ultimate-innovative-services-2028" element={<UltimateInnovativeServicesShowcase2028 />} />
                   <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                   <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                  <Route path="/comprehensive-pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
                   <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
 
                   {/* 2029 Cutting-Edge Services */}
