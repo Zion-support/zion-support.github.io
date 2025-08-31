@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { EnhancedSEO } from '../components/EnhancedSEO';
 import {
   Users,
   TrendingUp,
@@ -658,6 +659,11 @@ const CTASection = React.memo(() => {
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
+      <EnhancedSEO 
+        title="Zion Tech Group - AI, Cloud, Cybersecurity Solutions"
+        description="Zion Tech Group provides cutting-edge AI, cloud, and cybersecurity solutions to transform your business. Learn more about our services."
+        keywords="AI, Cloud, Cybersecurity, Technology Solutions, Digital Transformation"
+      />
       <HeroSection />
       <StatisticsSection />
       <ServicesPreviewSection />

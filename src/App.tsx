@@ -10,12 +10,12 @@ import { Footer } from './components/layout/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
 import { AIContentOptimizer } from './components/AIContentOptimizer';
 import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
-import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
