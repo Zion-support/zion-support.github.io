@@ -1,31 +1,9 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp import { SEO              } from '../components/SEO';
-=======
-<<<<<<< HEAD
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp              } from 'lucide-react.ts';
-import SEO from '../components/SEO';
-=======
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp              } from 'lucide-react.ts';
-import { SEO              } from '../components/SEO';
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 interface ServiceStatus {
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -34,6 +12,7 @@ interface ServiceStatus {
   lastUpdated: string;
   description: string;
   icon: React.ComponentType<any>;
+}
 
 interface Incident {
   id: string;
@@ -44,31 +23,19 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
+}
 
-const services: ServiceStatus[] = [;
+const services: ServiceStatus[] = [
   {
-id: 'api',;
-name: 'API Services',;
-status: 'operational',;
-uptime: 99.99,;
-responseTime: 45,;
-lastUpdated: '2025-08-27T16:48:00Z',;
-description: 'Core API endpoints and microservices',;
-icon: Server;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-},
+    id: 'api',
+    name: 'API Services',
+    status: 'operational',
+    uptime: 99.99,
+    responseTime: 45,
+    lastUpdated: '2025-08-27T16:48:00Z',
+    description: 'Core API endpoints and microservices',
+    icon: Server
+  },
   {
     id: 'database',
     name: 'Database Systems',
@@ -98,27 +65,7 @@ icon: Server;
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Authentication, authorization, and threat detection',
     icon: Shield
-  },
-  {
-    id: 'ai',
-    name: 'AI Services',
-    status: 'operational',
-    uptime: 99.92,
-    responseTime: 320,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Machine learning models and AI processing',
-    icon: Brain
-  },
-  {
-    id: 'analytics',
-    name: 'Analytics Platform',
-    status: 'operational',
-    uptime: 99.89,
-    responseTime: 95,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Data analytics and reporting systems',
-    icon: BarChart3
-
+  }
 ];
 
 const incidents: Incident[] = [
@@ -131,10 +78,10 @@ const incidents: Incident[] = [
     startTime: '2025-08-27T14:00:00Z',
     affectedServices: ['database', 'analytics'],
     endTime: '2025-08-27T16:00:00Z'
-
+  }
 ];
 
-const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+const getStatusColor = (status: any) => {
   switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
@@ -146,10 +93,10 @@ const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceSt
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+  }
 };
 
-const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+const getStatusIcon = (status: any) => {
   switch (status) {
     case 'operational':
       return CheckCircle;
@@ -161,10 +108,10 @@ const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceSta
       return Clock;
     default:
       return Clock;
-
+  }
 };
 
-const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyIncident['severity'])              => {
+const getSeverityColor = (severity: any) => {
   switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
@@ -176,10 +123,10 @@ const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyIncid
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+  }
 };
 
-export default function SystemStatus(...args: any[]): any {
+export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -219,7 +166,7 @@ export default function SystemStatus(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-
+          >
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
             System Status
           </motion.div>
@@ -229,7 +176,7 @@ export default function SystemStatus(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-
+          >
             System Status
           </motion.h1>
 
@@ -245,30 +192,6 @@ export default function SystemStatus(...args: any[]): any {
       </div>
 
       {/* Overall Status */}
-<<<<<<< HEAD
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center">
-              <div className="flex items-center justify-center gap-4 mb-6">
-                {getStatusIcon(systemStatus.overall)}
-                <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
-                  <div className="text-zion-slate-light">Uptime (30 days)</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-500 mb-2">{services.length}</div>
-                  <div className="text-zion-slate-light">Services</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-500 mb-2">0</div>
-                  <div className="text-zion-slate-light">Active Incidents</div>
-                </div>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -315,7 +238,7 @@ export default function SystemStatus(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6"
 
-          {services.map((service, index)              => (
+          {services.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -517,8 +440,4 @@ export default function SystemStatus(...args: any[]): any {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}}}}}}}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

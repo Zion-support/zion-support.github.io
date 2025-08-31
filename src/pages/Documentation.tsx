@@ -1,9 +1,6 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter export default function Documentation(...args: any[]): any {
-=======
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
 import { Search, 
   BookOpen, 
   Code, 
@@ -21,10 +18,9 @@ import { Search,
   Cloud,
   Shield,
   Rocket
-             } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function Documentation(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -100,13 +96,6 @@ export default function Documentation(...args: any[]): any {
       version: 'v1.5.0',
       status: 'Stable',
       endpoints: 18
-    },
-    {
-      name: 'SDKs & Libraries',
-      description: 'Client libraries for popular programming languages',
-      version: 'v2.0.0',
-      status: 'Stable',
-      languages: 8
     }
   ];
 
@@ -146,7 +135,7 @@ export default function Documentation(...args: any[]): any {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: anyanyanyanyanyanyanyanyanyanyanyanyanydocCategories.filter(category              => category.id === selectedCategory);
+    ? docCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyanydocCategories.filter(category              => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -164,8 +153,6 @@ export default function Documentation(...args: any[]): any {
         keywords="documentation, API docs, user guides, tutorials, Zion Tech Group"
         canonical="https://ziontechgroup.com/documentation"
       />
-<<<<<<< HEAD
-=======
       lastUpdated: '2025-01-10',
       views: 7890,
       rating: 4.6,
@@ -179,23 +166,13 @@ export default function Documentation(...args: any[]): any {
       category: 'examples',
       type: 'examples',
       difficulty: 'intermediate',
-<<<<<<< HEAD
       readTime: '30 min',
       lastUpdated: '2025-01-08',
       views: 5670,
       rating: 4.5,
       featured: false,
       tags: ['python', 'sdk', 'examples']
-
-=======
-      readTime: '30 min',;
-      lastUpdated: '2025-01-08',;
-      views: 5670,;
-      rating: 4.5,;
-      featured: false,;
-      tags: ['python', 'sdk', 'examples'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const featuredResources = [
@@ -213,23 +190,13 @@ export default function Documentation(...args: any[]): any {
       link: '/api-playground',
       featured: true
     },
-<<<<<<< HEAD
     {
       title: 'Community Forum',
       description: 'Connect with other developers and get help',
       type: 'community',
       link: '/community',
       featured: false
-
-=======
-    {;
-      title: 'Community Forum',;
-      description: 'Connect with other developers and get help',;
-      type: 'community',;
-      link: '/community',;
-      featured: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   const getDifficultyColor = (difficulty: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -288,7 +255,6 @@ export default function Documentation(...args: any[]): any {
         </div>
       </div>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-=======
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
       {/* Hero Section */}
@@ -343,46 +309,6 @@ export default function Documentation(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-            {/* Categories and Sort */}
-            <div className="flex flex-col lg:flex-row gap-6 mb-8">
-              {/* Categories */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                      activeCategory === category.id
-                        ? 'bg-zion-cyan text-zion-slate-dark'
-                        : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                    }`}
-
-                    {category.icon}
-                    {category.name}
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Sort Options */}
-              <div className="flex items-center gap-2">
-                <span className="text-zion-slate-light">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {sortOptions.map((option)              => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-=======
       {/* Search Results */}
       {searchQuery && (
         <section className="py-12 bg-slate-800/50">
@@ -511,7 +437,6 @@ export default function Documentation(...args: any[]): any {
                   </div>
                 </motion.div>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </section>
@@ -520,64 +445,8 @@ export default function Documentation(...args: any[]): any {
       {/* API Documentation */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Featured Resources
-          </h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredResources.map((resource, index)              => (
-              <div
-                key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                {resource.featured && (
-                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
-                    Featured
-                  </div>
-                )}
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
-                <a
-                  href={resource.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-
-                  {resource.type === 'portal' ? 'Visit Portal' : 'Learn More'}
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
           <motion.div 
             className="text-center mb-16"
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Documentation Items */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Documentation Library
-          </h2>
-
-          {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6 max-w-6xl mx-auto">
-              {filteredItems.map((item)              => (
-                <div
-                  key={item.id}
-                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
-                    item.featured ? 'ring-2 ring-zion-cyan' : ''
-                  }`}
-<<<<<<< HEAD
-
-=======
-                >
-=======
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -602,8 +471,6 @@ export default function Documentation(...args: any[]): any {
                 className="group"
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">{api.name}</h3>
@@ -615,28 +482,12 @@ export default function Documentation(...args: any[]): any {
                       {api.status}
                     </span>
                   </div>
-<<<<<<< HEAD
-
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{item.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
-                    ))}
-=======
                   
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-slate-400 text-sm">Version: {api.version}</span>
                     <span className="text-slate-400 text-sm">
                       {api.endpoints ? `${api.endpoints} endpoints` : `${api.languages} languages`}
                     </span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                   
                   <div className="flex space-x-3">
@@ -836,60 +687,5 @@ export default function Documentation(...args: any[]): any {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )}
-=======
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No documentation found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need More Help?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our support team is here to help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/support"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-
-              Contact Support
-            </a>
-            <a
-              href="/help"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-<<<<<<< HEAD
-
-              Help Center
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
-            >;
-              Help Center;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-=======
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}}}}}}}
+}

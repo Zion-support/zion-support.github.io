@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
-import { Badge              } from '@/components/ui/badge';
-import { Button              } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Check,
   X,
   Star,
@@ -23,47 +23,42 @@ import { Check,
   MapPin,
   ExternalLink,
   DollarSign,
-  Clock
-<<<<<<< HEAD
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS              } from '@/data/expandedServices';
-=======
- } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS               } from '@/data/expandedServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Group services by category for better organization
-<<<<<<< HEAD
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (!acc[service.category]) {;
-    acc[service.category] = [];
-<<<<<<< HEAD
+  Clock,
+  Cloud,
+  Brain,
+  Database
+} from 'lucide-react';
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from '@/data/expandedServices';
 
+// Group services by category for better organization
+const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
+  if (!acc[service.category]) {
+    acc[service.category] = [];
+  }
   acc[service.category].push(service);
   return acc;
-}, { /* empty */ } as { [key: string]: typeof EXPANDED_SERVICES });
-=======
-  }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  acc[service.category].push(service);
-  return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}, {} as { [key: string]: typeof EXPANDED_SERVICES });
+
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
-  "24/7 Support",;
-  "Global Coverage",;
-  "Custom Integration",;
-  "Training & Documentation",;
-  "Regular Updates",;
-  "Security Compliance",;
-  "Scalable Architecture";
+  "24/7 Support",
+  "Global Coverage",
+  "Custom Integration",
+  "Training & Documentation",
+  "Regular Updates",
+  "Security Compliance",
+  "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args: any[]): any {
+
+export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all'
     ? EXPANDED_SERVICES
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+
+  const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -78,213 +73,17 @@ export default function ServicesPricingPage(...args: any[]): any {
       'Digital Transformation': <Building className="h-5 w-5" />,
       'Edge Computing': <Globe className="h-5 w-5" />,
       'API Management': <Zap className="h-5 w-5" />,
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,;
-      'Mobile Development': <Smartphone className="h-5 w-5" />,;
-      'E-commerce': <ShoppingCart className="h-5 w-5" />,;
-      'Healthcare Technology': <Heart className="h-5 w-5" />,;
-      'FinTech': <TrendingUp className="h-5 w-5" />,;
-      'Education Technology': <GraduationCap className="h-5 w-5" />,;
-      'Supply Chain': <Truck className="h-5 w-5" />;
+      'Blockchain & Web3': <Zap className="h-5 w-5" />,
+      'Mobile Development': <Smartphone className="h-5 w-5" />,
+      'E-commerce': <ShoppingCart className="h-5 w-5" />,
+      'Healthcare Technology': <Heart className="h-5 w-5" />,
+      'FinTech': <TrendingUp className="h-5 w-5" />,
+      'Education Technology': <GraduationCap className="h-5 w-5" />,
+      'Supply Chain': <Truck className="h-5 w-5" />
     };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />};
-=======
-import { motion              } from 'framer-motion.ts';
-import { Check, 
-  Star, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Globe,
-  Mail,
-  Phone,
-  ArrowRight,
-  Users,
-  Clock,
-  Award
-             } from 'lucide-react.ts';
-import { SEO              } from '@/components/SEO';
-import { Button              } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
-
-const ServicesPricingPage: React.FC = (): JSX.Element => {
-  const [selectedPlan, setSelectedPlan] = useState('starter');
-  const [billingCycle, setBillingCycle] = useState('monthly');
-
-  const pricingPlans = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: { monthly: 299, annual: 2999 },
-      features: [
-        'AI Business Intelligence Dashboard',
-        'Basic Machine Learning Models',
-        'Email Support',
-        '5 User Licenses',
-        'Standard Security Features',
-        'Monthly Reports'
-      ],
-      popular: false,
-      icon: Brain
-    },
-    {
-      id: 'professional',
-      name: 'Professional',
-      description: 'Advanced features for growing businesses',
-      price: { monthly: 799, annual: 7999 },
-      features: [
-        'Everything in Starter',
-        'Advanced AI Analytics',
-        'Custom ML Model Training',
-        'Priority Support',
-        '25 User Licenses',
-        'Advanced Security',
-        'Real-time Monitoring',
-        'API Access'
-      ],
-      popular: true,
-      icon: Zap
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      description: 'Full-scale solutions for large organizations',
-      price: { monthly: 1999, annual: 19999 },
-      features: [
-        'Everything in Professional',
-        'Custom AI Solutions',
-        'Dedicated Support Team',
-        'Unlimited User Licenses',
-        'Enterprise Security',
-        'Custom Integrations',
-        'SLA Guarantees',
-        'On-site Training'
-      ],
-      popular: false,
-      icon: Shield
-    }
-  ];
-
-  const serviceCategories = [
-    {
-      name: 'AI Solutions',
-      description: 'Machine learning, automation, and intelligent systems',
-      startingPrice: 299,
-      icon: Brain,
-      features: [
-        'AI Business Intelligence',
-        'Predictive Analytics',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Custom ML Models'
-      ]
-    },
-    {
-      name: 'Cloud & DevOps',
-      description: 'Scalable infrastructure and automated deployment',
-      startingPrice: 199,
-      icon: Cloud,
-      features: [
-        'Cloud Migration',
-        'CI/CD Pipelines',
-        'Infrastructure as Code',
-        'Monitoring & Alerting',
-        'Security & Compliance'
-      ]
-    },
-    {
-      name: 'Cybersecurity',
-      description: 'Advanced threat protection and compliance',
-      startingPrice: 399,
-      icon: Shield,
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Compliance Management',
-        'Incident Response',
-        'Security Training'
-      ]
-    },
-    {
-      name: 'Data & Analytics',
-      description: 'Data processing, analysis, and visualization',
-      startingPrice: 249,
-      icon: Database,
-      features: [
-        'Data Warehousing',
-        'Business Intelligence',
-        'Data Visualization',
-        'ETL Processes',
-        'Performance Analytics'
-      ]
-    }
-  ];
-
-  const addOns = [
-    {
-      name: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring',
-      price: { monthly: 199, annual: 1999 },
-      icon: Clock
-    },
-    {
-      name: 'Custom Development',
-      description: 'Tailored solutions for specific business needs',
-      price: { monthly: 499, annual: 4999 },
-      icon: Zap
-    },
-    {
-      name: 'Training & Certification',
-      description: 'Comprehensive training programs for your team',
-      price: { monthly: 299, annual: 2999 },
-      icon: Users
-    },
-    {
-      name: 'Advanced Security',
-      description: 'Enhanced security features and compliance',
-      price: { monthly: 399, annual: 3999 },
-      icon: Shield
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Chen',
-      role: 'CTO, TechFlow Inc.',
-      content: 'Zion Tech Group transformed our infrastructure with their AI solutions. The pricing is transparent and the value is incredible.',
-      rating: 5,
-      company: 'TechFlow Inc.'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'VP Engineering, DataSphere',
-      content: 'Their enterprise plan gave us everything we needed at a fraction of the cost of building in-house.',
-      rating: 5,
-      company: 'DataSphere'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Research Director, Quantum Labs',
-      content: 'The professional plan exceeded our expectations. Great ROI and excellent support.',
-      rating: 5,
-      company: 'Quantum Labs'
-    }
-  ];
-
-  const calculatePrice = (plan: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
-    return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
+    return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
 
-  const calculateSavings = (plan: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
-    if (billingCycle === 'annual') {
-      return Math.round((plan.price.monthly * 12 - plan.price.annual) / (plan.price.monthly * 12) * 100);
-    }
-    return 0;
-  };
-
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   return (
     <>
       <SEO 
@@ -399,69 +198,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                       }`}>
                         <plan.icon className="w-8 h-8" />
                       </div>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                  <Button
-                    className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
-
-=======
-                    onClick = {
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
-  '_blank')
-
-
-
-
-
-
-}
-                  >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                    Get Custom Quote
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-        {/* Service Categories Tabs */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Services by Category</h2>
-          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-white/10 border-white/20">
-              <TabsTrigger value="all" className="text-white data-[state=active]:bg-zion-purple">
-                All Services
-              </TabsTrigger>
-              {categories.slice(0, 5).map(category => (
-                <TabsTrigger key={category} value={category} className="text-white data-[state=active]:bg-zion-purple">
-                  {category.split(' ')[0]}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)               => (
-                  <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex items-center gap-2">
-                          <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                            {getCategoryIcon(service.category)}
-                          </div>
-                          <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                            {service.price && service.price <= 4999 ? 'Starter' :
-                             service.price && service.price <= 9999 ? 'Professional' :
-                             service.price && service.price <= 25000 ? 'Enterprise' : 'Custom'}
-                          </Badge>
-                        </div>
-                      </div>
-                      <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
-                      <CardDescription className="text-zion-cyan-light line-clamp-3">
-                        {service.description}
-=======
                       
                       <CardTitle className="text-2xl font-bold text-white">
                         {plan.name}
@@ -469,7 +205,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                       
                       <CardDescription className="text-zion-cyan-light">
                         {plan.description}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                       </CardDescription>
                       
                       <div className="mt-6">
@@ -488,75 +223,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                     </CardHeader>
                     
                     <CardContent>
-<<<<<<< HEAD
-                      <div className="space-y-4">
-                        {/* Pricing and Details */}
-                        <div className="space-y-2">
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Price:</span>
-                            <span className="font-semibold text-zion-cyan text-lg">
-                              ${service.price?.toLocaleString()}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Availability:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Clock className="h-3 w-3" />
-                              {service.availability}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Location:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Globe className="h-3 w-3" />
-                              {service.location}
-                            </span>
-                          </div>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {service.tags.slice(0, 3).map((tag, index) => (
-                            <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        {/* Rating and AI Score */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                            <span className="text-sm">{service.rating}</span>
-                            <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
-                          </div>
-                          {service.aiScore && (
-                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                              AI Score: {service.aiScore}
-                            </Badge>
-                          )}
-                        </div>
-                        {/* Action Buttons */}
-                        <div className="flex gap-2">
-                          <Button
-                            className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                            onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
-
-                            <Mail className="h-4 w-4 mr-2" />
-                            Get Quote
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-<<<<<<< HEAD
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </div>
-=======
-                            onClick = {
-  () => window.open('https://ziontechgroup.com',
-  '_blank')
-=======
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-3">
@@ -584,7 +250,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
         {/* Service Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -766,7 +431,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-zion-cyan-light">{testimonial.role}</div>
                         <div className="text-xs text-zion-cyan-light">{testimonial.comp}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
                     </CardContent>
                   </Card>
@@ -841,62 +505,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               </Card>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        {/* Pricing FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What's included in the pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support.
-                  Custom integrations and additional features can be added based on your requirements.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
-                  Contact us for a personalized quote tailored to your business needs.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments,
-                  and monthly/annual subscription options for ongoing services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
-                  within the first 30 days, we'll work to make it right or provide a refund.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-=======
         </section>
-
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
         {/* Contact CTA Section */}
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white mx-4 sm:mx-6 lg:mx-8 mb-20">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
@@ -908,7 +517,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
-
+            >
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
@@ -917,7 +526,7 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
               onClick={() => window.open('tel:+13024640950', '_blank')}
-
+            >
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </Button>
@@ -926,10 +535,6 @@ const ServicesPricingPage: React.FC = (): JSX.Element => {
       </div>
     </>
   );
-<<<<<<< HEAD
-</div></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
 };
 
 export default ServicesPricingPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

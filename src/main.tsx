@@ -1,7 +1,7 @@
-import React from 'react.ts'
-import ReactDOM from 'react-dom/client.ts'
-import { BrowserRouter as Router  } from 'react-router-dom.ts'
-import { HelmetProvider  } from 'react-helmet-async.ts'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import './index.css'
 
@@ -10,7 +10,7 @@ const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: any'/',
+                  scope: '/',
       });
       
       if (registration.installing) {
@@ -46,7 +46,7 @@ const registerServiceWorker = async () => {
 };
 
 // Performance monitoring
-const reportWebVitals = (metric: anyany)  => {
+const reportWebVitals = (metric: any) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metric);
   }
