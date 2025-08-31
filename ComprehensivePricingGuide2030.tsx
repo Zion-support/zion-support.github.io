@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  TrendingUp,
-  Brain,
-  Server,
-  Globe,
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-=======
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -31,7 +13,6 @@ import { CheckCircle,
   Mail, 
   Phone, 
   MapPin, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ExternalLink,
   DollarSign,
   CreditCard,
@@ -53,30 +34,10 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
-<<<<<<< HEAD
-import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
-import { SEO } from '@/components/SEO';
-=======
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const ComprehensivePricingGuide2030: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricingModel, setSelectedPricingModel] = useState('all');
-
-  const services = INNOVATIVE_SERVICES_2025;
-
-<<<<<<< HEAD
-  const cats = services.reduce((acc, service) => {
-      if (!acc.includes(service.category)) {;
-        acc.push(service.category)};
-      return acc}, [] as string[]);
-    return ['all', ...cats]}, [services]);
-=======
   const cats = services.reduce((acc, service) => {;
       if (!acc.includes(service.category)) {;
         acc.push(service.category);
@@ -85,26 +46,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     }, [] as string[]);
     return ['all', ...cats];
   }, [services]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
   const filtered = services;
 
     if (selectedCategory !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(service => service.category === selectedCategory);
-
-    if (selectedPricingModel !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
-=======
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)};
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
@@ -123,12 +76,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       case 'Quantum Computing':
         return Rocket;
       default:
-<<<<<<< HEAD
-        return Zap;
-
-=======
         return Zap}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const getCategoryColor = (category: string)  => {
@@ -148,12 +96,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       case 'Quantum Computing':
         return 'from-indigo-600 to-purple-600';
       default:
-<<<<<<< HEAD
-        return 'from-gray-600 to-slate-600';
-
-=======
         return 'from-gray-600 to-slate-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const pricingTiers = [
@@ -206,15 +149,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Advanced security features',
         'SLA guarantees',
         'Dedicated account manager',
-<<<<<<< HEAD
-        'Custom development',
-        'On-premise deployment options'
-      ],
-      color: 'from-indigo-500 to-purple-600',
-      popular: false,
-      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'
-
-=======
         'Custom development',;
         'On-premise deployment options';
       ],;
@@ -222,7 +156,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       popular: false,;
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const marketInsights = [
@@ -247,21 +180,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       description: 'IoT market by 2027',
       color: 'from-green-500 to-emerald-600'
     },
-<<<<<<< HEAD
-    {
-      title: 'Quantum Computing',
-      value: '$65.0B',
-      growth: '+48.2%',
-      description: 'Quantum market by 2030',
-      color: 'from-indigo-500 to-purple-600'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
-        title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
-=======
     {;
       title: 'Quantum Computing',;
       value: '$65.0B',;
@@ -275,7 +193,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group" 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Explore our innovative service pricing with market analysis, ROI calculations, and flexible pricing tiers for AI, Cloud, IoT, and Quantum Computing solutions."
       />
 
@@ -284,11 +201,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-<<<<<<< HEAD
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-=======
             <motion.h1 
               initial = {
   { opacity: 0,
@@ -310,7 +222,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.8 }}
               className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
 
@@ -320,12 +231,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <br />
               <span className="text-white">2030</span>
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-=======
             <motion.p 
               initial = {
   { opacity: 0,
@@ -357,18 +262,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
 
               Transparent pricing for cutting-edge technology solutions.
               Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -400,7 +298,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="flex flex-wrap justify-center gap-4"
 
               <Link
@@ -424,11 +321,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       {/* Market Insights */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.h2 
             initial = {
   { opacity: 0,
@@ -450,7 +342,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
 
@@ -508,11 +399,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       {/* Pricing Tiers */}
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.h2 
             initial = {
   { opacity: 0,
@@ -534,7 +420,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
 
@@ -626,11 +511,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       {/* Service Pricing Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.h2 
             initial = {
   { opacity: 0,
@@ -652,7 +532,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
 
@@ -664,15 +543,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-
-              {categories.map(category => (
-=======
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -681,33 +554,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-
-              {pricingModels.map(model => (
-=======
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {pricingModels.map(model  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
                 </option>
               ))}
             </select>
-<<<<<<< HEAD
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)  => {;
-=======;
           </div>;
 ;
           {/* Services Grid */};
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">;
             {filteredServices.map((service, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
 
@@ -815,18 +674,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                     <Link
                       to="/contact"
                       className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-                    >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                      Get Quote
-                    </Link>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                     >;
                       Get Quote;
                     </Link>;
@@ -834,7 +681,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
 
           {filteredServices.length = == 0 && (;
@@ -843,20 +689,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <button;
                 onClick={() => {;
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPricingModel('all')}}
-                className = "text-cyan-400 hover:text-cyan-300 transition-colors";
-=======;
                   setSelectedPricingModel('all');
                 }}
-<<<<<<< HEAD
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-
-=======
                 className = "text-cyan-400 hover:text-cyan-300 transition-colors"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear all filters
               </button>
             </div>
@@ -868,11 +704,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.h2 
               initial = {
   { opacity: 0,
@@ -894,18 +725,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
 
               Calculate Your ROI
             </motion.h2>
-<<<<<<< HEAD
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-=======
             <motion.p 
               initial = {
   { opacity: 0,
@@ -937,19 +761,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-xl text-slate-300 mb-8"
 
               Use our ROI calculator to estimate the return on investment for our services.
               Most clients see returns within 3-6 months.
             </motion.p>
-<<<<<<< HEAD
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-=======
             
             <motion.div 
               initial = {
@@ -982,7 +798,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -1016,11 +831,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.h2 
               initial = {
   { opacity: 0,
@@ -1042,18 +852,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
 
               Ready to Get Started?
             </motion.h2>
-<<<<<<< HEAD
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-=======
             <motion.p 
               initial = {
   { opacity: 0,
@@ -1085,19 +888,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-xl text-slate-300 mb-8"
 
               Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
-<<<<<<< HEAD
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-=======
             
             <motion.div 
               initial = {
@@ -1130,7 +925,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="grid md:grid-cols-3 gap-8 mb-12"
 
               <div className="flex flex-col items-center">
@@ -1163,12 +957,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>
             </motion.div>
 
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -1200,7 +988,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="flex flex-wrap justify-center gap-4"
 
               <Link
@@ -1241,14 +1028,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="text-sm text-slate-400">
               All pricing includes comprehensive support, documentation, and integration assistance.
               Custom enterprise solutions available with volume discounts and dedicated support.
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -1256,6 +1035,5 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ComprehensivePricingGuide2030;}}}}}}}}

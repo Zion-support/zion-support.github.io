@@ -548,17 +548,10 @@ export const ultimateInnovativeServices2025 = [
             professional: '$3,799/month',
             enterprise: 'Custom pricing'
         },
-<<<<<<< HEAD
-        specialFeatures: ['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
-        industryFocus: ['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
-        compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR']
-
-=======
         specialFeatures['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
         industryFocus['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
         compliance['SOC 2 Type II', 'ISO 27001', 'GDPR']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export default ultimateInnovativeServices2025;
 }

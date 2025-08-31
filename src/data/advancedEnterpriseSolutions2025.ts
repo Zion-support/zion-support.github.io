@@ -1,5 +1,4 @@
 export interface EnterpriseSolution {
-
   id: string;
   title: string;
   description: string;
@@ -23,12 +22,7 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-<<<<<<< HEAD
-  support: string;
-
-=======
   support: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
     id: 'enterprise-cloud-migration',
@@ -38,7 +32,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Cloud',
     color: 'from-blue-500 to-cyan-600',
     category: 'cloud',
-    features[
+    features: [
       'Cloud readiness assessment',
       'Migration strategy planning',
       'Multi-cloud architecture design',
@@ -46,13 +40,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Performance optimization',
       'Cost optimization strategies'
     ],
-    benefits[
+    benefits: [
       '40% reduction in infrastructure costs',
       '99.9% uptime guarantee',
       'Scalable architecture',
       'Improved security posture'
     ],
-    useCases[
+    useCases: [
       'Large enterprises',
       'Financial institutions',
       'Healthcare organizations',
@@ -65,7 +59,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-18 months',
-    technologies['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],
+    technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],
     enterpriseScore: 98,
     marketPrice: '$50,000-$500,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -81,7 +75,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Shield',
     color: 'from-red-500 to-orange-600',
     category: 'security',
-    features[
+    features: [
       'Zero-trust architecture',
       'Advanced threat detection',
       'Incident response automation',
@@ -89,13 +83,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Security awareness training',
       'Vulnerability assessment'
     ],
-    benefits[
+    benefits: [
       '99.99% threat detection rate',
       'Reduced security incidents',
       'Compliance automation',
       'Improved security posture'
     ],
-    useCases[
+    useCases: [
       'Fortune 500 companies',
       'Financial services',
       'Healthcare systems',
@@ -108,7 +102,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '3-12 months',
-    technologies['SIEM', 'EDR', 'XDR', 'Zero Trust', 'AI/ML', 'Automation'],
+    technologies: ['SIEM', 'EDR', 'XDR', 'Zero Trust', 'AI/ML', 'Automation'],
     enterpriseScore: 99,
     marketPrice: '$75,000-$750,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -124,7 +118,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Rocket',
     color: 'from-purple-500 to-pink-600',
     category: 'transformation',
-    features[
+    features: [
       'Digital maturity assessment',
       'Transformation roadmap',
       'Process optimization',
@@ -132,13 +126,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Change management',
       'ROI measurement'
     ],
-    benefits[
+    benefits: [
       '30% operational efficiency improvement',
       'Enhanced customer experience',
       'Competitive advantage',
       'Future-ready organization'
     ],
-    useCases[
+    useCases: [
       'Traditional enterprises',
       'Manufacturing companies',
       'Retail chains',
@@ -151,7 +145,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '12-36 months',
-    technologies['AI/ML', 'Cloud Computing', 'IoT', 'Blockchain', 'RPA', 'Analytics'],
+    technologies: ['AI/ML', 'Cloud Computing', 'IoT', 'Blockchain', 'RPA', 'Analytics'],
     enterpriseScore: 97,
     marketPrice: '$100,000-$1,000,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -167,7 +161,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'BarChart3',
     color: 'from-green-500 to-emerald-600',
     category: 'analytics',
-    features[
+    features: [
       'Real-time data processing',
       'Predictive analytics',
       'Machine learning models',
@@ -175,13 +169,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Automated reporting',
       'Data governance'
     ],
-    benefits[
+    benefits: [
       'Data-driven decision making',
       'Improved operational efficiency',
       'Predictive insights',
       'Automated business processes'
     ],
-    useCases[
+    useCases: [
       'Financial services',
       'Healthcare systems',
       'Manufacturing',
@@ -194,7 +188,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '4-12 months',
-    technologies['Apache Spark', 'Kafka', 'TensorFlow', 'Tableau', 'Power BI', 'Python'],
+    technologies: ['Apache Spark', 'Kafka', 'TensorFlow', 'Tableau', 'Power BI', 'Python'],
     enterpriseScore: 96,
     marketPrice: '$60,000-$600,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -210,7 +204,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Zap',
     color: 'from-yellow-500 to-orange-600',
     category: 'automation',
-    features[
+    features: [
       'RPA implementation',
       'Workflow automation',
       'Process optimization',
@@ -218,13 +212,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Monitoring & analytics',
       'Continuous improvement'
     ],
-    benefits[
+    benefits: [
       '70% process efficiency improvement',
       'Reduced manual errors',
       'Cost savings',
       'Scalable operations'
     ],
-    useCases[
+    useCases: [
       'Finance & accounting',
       'Human resources',
       'Customer service',
@@ -237,7 +231,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '3-9 months',
-    technologies['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'RPA'],
+    technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'RPA'],
     enterpriseScore: 94,
     marketPrice: '$40,000-$400,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -253,7 +247,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Network',
     color: 'from-indigo-500 to-purple-600',
     category: 'integration',
-    features[
+    features: [
       'API development',
       'Data integration',
       'System connectivity',
@@ -261,13 +255,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Error handling',
       'Performance monitoring'
     ],
-    benefits[
+    benefits: [
       'Unified data view',
       'Automated workflows',
       'Improved efficiency',
       'Reduced manual work'
     ],
-    useCases[
+    useCases: [
       'ERP integration',
       'CRM systems',
       'Legacy system modernization',
@@ -280,7 +274,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '2-8 months',
-    technologies['MuleSoft', 'Boomi', 'Apache Camel', 'Node.js', 'Python', 'APIs'],
+    technologies: ['MuleSoft', 'Boomi', 'Apache Camel', 'Node.js', 'Python', 'APIs'],
     enterpriseScore: 93,
     marketPrice: '$35,000-$350,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -296,7 +290,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Server',
     color: 'from-gray-500 to-slate-600',
     category: 'infrastructure',
-    features[
+    features: [
       'Infrastructure assessment',
       'Modernization planning',
       'Performance optimization',
@@ -304,13 +298,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Scalability improvements',
       'Cost optimization'
     ],
-    benefits[
+    benefits: [
       'Improved performance',
       'Reduced operational costs',
       'Enhanced security',
       'Scalable architecture'
     ],
-    useCases[
+    useCases: [
       'Data centers',
       'Network infrastructure',
       'Storage systems',
@@ -323,7 +317,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-18 months',
-    technologies['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
+    technologies: ['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
     enterpriseScore: 95,
     marketPrice: '$80,000-$800,000+',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -339,7 +333,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     icon: 'Users',
     color: 'from-teal-500 to-cyan-600',
     category: 'consulting',
-    features[
+    features: [
       'Technology strategy',
       'Architecture planning',
       'Vendor selection',
@@ -347,13 +341,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'ROI analysis',
       'Implementation guidance'
     ],
-    benefits[
+    benefits: [
       'Optimized technology investments',
       'Reduced risks',
       'Improved efficiency',
       'Strategic alignment'
     ],
-    useCases[
+    useCases: [
       'Technology strategy',
       'Digital transformation',
       'System selection',
@@ -366,34 +360,19 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       custom: 'Contact us'
     },
     estimatedTime: '1-6 months',
-    technologies['Strategy frameworks', 'Architecture tools', 'Analysis methods', 'Best practices'],
+    technologies: ['Strategy frameworks', 'Architecture tools', 'Analysis methods', 'Best practices'],
     enterpriseScore: 96,
     marketPrice: '$25,000-$250,000+',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     sla: 'Consulting success guarantee',
     support: 'Strategic advisory team'
-
 ];
-<<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
-  if (category === 'All') {;
-    return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
-export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-=======
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
 };
-export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
+export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

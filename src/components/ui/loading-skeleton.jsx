@@ -1,30 +1,11 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 export function Skeleton({ className, ...props }) {
-<<<<<<< HEAD
-    return (<div className={cn("animate-pulse rounded-md bg-zion-slate/20", className)} {...props}/>);
-
-=======
-<<<<<<< HEAD
     return (<div className = {
   cn("animate-pulse rounded-md bg-zion-slate/20",
   className)
-
-} {...props}/>)}
-=======
-    return (<div className = {
-  cn("animate-pulse rounded-md bg-zion-slate/20",
-  className)
-
-
-
-
-
-
 } {...props}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function CardSkeleton() {
     return (<div className="rounded-lg border border-zion-slate/20 p-6 space-y-4">
       <Skeleton className="h-4 w-3/4"/>
@@ -34,12 +15,7 @@ export function CardSkeleton() {
         <Skeleton className="h-6 w-16"/>
         <Skeleton className="h-6 w-20"/>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ProfileSkeleton() {
     return (<div className="space-y-6">
       <div className="flex items-center space-x-4">
@@ -57,18 +33,8 @@ export function ProfileSkeleton() {
       <div className="flex flex-wrap gap-2">
         {Array.from({ length: 5 }).map((_, i) => (<Skeleton key={i} className="h-6 w-20"/>))}
       </div>
-<<<<<<< HEAD
-    </div>);
-
-export function GridSkeleton({ count = 6 }) {
-    return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i}/>))}
-    </div>);
-</div></Card>}}}}
-=======
     </div>)}
 export function GridSkeleton({ count = 6 }) {
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i}/>))}
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

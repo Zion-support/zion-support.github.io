@@ -4,11 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-// // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
-=======
 // // // // // // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 // Define the replacements
 const replacements = [
@@ -86,32 +82,17 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD
-      // // // console.log(`✅ Fixed: ${filePath}`);
-=======
       // // // // // // // console.log(`✅ Fixed: ${filePath}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return true;
 
   } catch (error) {
-<<<<<<< HEAD
-    // // // console.error(`❌ Error processing ${filePath}:`, error.message);
-
-=======
     // // // // // // // console.error(`❌ Error processing ${filePath}:`, error.message);
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   return false;
 
 // Function to find all TypeScript/JavaScript files
-<<<<<<< HEAD
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
-
-=======
 function files = [];
   
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
 
@@ -135,17 +116,10 @@ function files = [];
 // Main execution
 try {
   const projectRoot = process.cwd();
-<<<<<<< HEAD
-  // // // console.log(`📁 Scanning project root: ${projectRoot}\n`);
-
-  const files = findFiles(projectRoot);
-  // // // console.log(`📋 Found ${files.length} files to process\n`);
-=======
   // // // // // // // console.log(`📁 Scanning project root: ${projectRoot}\n`);
 
   const files = findFiles(projectRoot);
   // // // // // // // console.log(`📋 Found ${files.length} files to process\n`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   const fixedCount = 0;
 
@@ -153,20 +127,6 @@ try {
     if (processFile(file)) {
       fixedCount++;
 
-<<<<<<< HEAD
-
-  // // // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
-
-  if (fixedCount > 0) {
-    // // // console.log('\n📝 Next steps:');
-    // // // console.log('1. Review the changes');
-    // // // console.log('2. Test the build: npm run build');
-    // // // console.log('3. Fix any remaining issues manually');
-    // // // console.log('4. Commit and push changes');
-
-} catch (error) {
-  // // // console.error('❌ Script failed:', error.message);
-=======
   // // // // // // // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
 
   if (fixedCount > 0) {
@@ -179,6 +139,5 @@ try {
 
 } catch (error) {
   // // // // // // // console.error('❌ Script failed:', error.message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 }}}}}}}}}}}}}}))))

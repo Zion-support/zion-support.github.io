@@ -38,12 +38,7 @@ export interface FuturisticInnovation2031 {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
-<<<<<<< HEAD
-  marketDisruption: string;
-
-=======
   marketDisruption: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const futuristicInnovations2031: FuturisticInnovation2031[] = [
   // AI CONSCIOUSNESS EVOLUTION PLATFORM
   {

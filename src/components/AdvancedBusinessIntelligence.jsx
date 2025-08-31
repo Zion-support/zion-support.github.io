@@ -1,116 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity const mockMetrics = [
-    {
-        id: 'revenue',
-        name: 'Monthly Revenue',
-        value: 2847500,
-        target: 3000000,
-        unit: 'USD',
-        trend: 'up',
-        change: 8.5,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'customers',
-        name: 'Active Customers',
-        value: 15420,
-        target: 15000,
-        unit: 'Users',
-        trend: 'up',
-        change: 12.3,
-        category: 'Customer',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'satisfaction',
-        name: 'Customer Satisfaction',
-        value: 94.2,
-        target: 90,
-        unit: '%',
-        trend: 'up',
-        change: 2.1,
-        category: 'Customer',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'efficiency',
-        name: 'Operational Efficiency',
-        value: 87.5,
-        target: 85,
-        unit: '%',
-        trend: 'up',
-        change: 1.8,
-        category: 'Operations',
-        priority: 'medium',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: 'costs',
-        name: 'Operating Costs',
-        value: 1250000,
-        target: 1200000,
-        unit: 'USD',
-        trend: 'down',
-        change: -3.2,
-        category: 'Financial',
-        priority: 'high',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-
-];
-=======
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const mockInsights = [
-    {
-        id: 'insight-1',
-        type: 'prediction',
-        title: 'Revenue Growth Prediction',
-        description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
-        confidence: 87,
-        impact: 'high',
-        category: 'Financial',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        actionable: true,
-        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
-    },
-    {
-        id: 'insight-2',
-        type: 'anomaly',
-        title: 'Customer Churn Anomaly',
-        description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
-        confidence: 92,
-        impact: 'high',
-        category: 'Customer',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        actionable: true,
-        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
-    },
-    {
-        id: 'insight-3',
-        type: 'opportunity',
-        title: 'Market Expansion Opportunity',
-        description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
-        confidence: 78,
-        impact: 'medium',
-        category: 'Growth',
-        timestamp: '2024-01-15T08:45:00.000Z',
-        actionable: true,
-<<<<<<< HEAD
-        actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-
-=======
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockModels = [
     {
         id: 'model-1',
@@ -138,7 +30,6 @@ const mockModels = [
         status: 'training',
         predictions: 15420,
         category: 'Customer Analytics'
-
 ];
 export function AdvancedBusinessIntelligence() {
     const [isOpen, setIsOpen] = useState(false);
@@ -171,12 +62,7 @@ export function AdvancedBusinessIntelligence() {
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-<<<<<<< HEAD
-            return () => clearInterval(interval);
-
-=======
             return () => clearInterval(interval)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -185,12 +71,7 @@ export function AdvancedBusinessIntelligence() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
-<<<<<<< HEAD
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-
-=======
                 return <Activity className="w-4 h-4 text-gray-500"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -199,12 +80,7 @@ export function AdvancedBusinessIntelligence() {
             case 'medium':
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:
-<<<<<<< HEAD
-                return 'border-green-500 bg-green-50 dark:bg-green-900/20';
-
-=======
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getInsightIcon = (type) => {
         switch (type) {
@@ -217,12 +93,7 @@ export function AdvancedBusinessIntelligence() {
             case 'risk':
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:
-<<<<<<< HEAD
-                return <Zap className="w-5 h-5 text-purple-500"/>;
-
-=======
                 return <Zap className="w-5 h-5 text-purple-500"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const formatValue = (value, unit) => {
         if (unit === 'USD') {
@@ -231,20 +102,6 @@ export function AdvancedBusinessIntelligence() {
                 currency: 'USD',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
-<<<<<<< HEAD
-            }).format(value);
-
-        if (unit === '%') {
-            return `${value.toFixed(1)}%`;
-
-        return new Intl.NumberFormat('en-US').format(value);
-    };
-    if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
-        <Brain className="w-6 h-6"/>
-      </button>);
-
-=======
             }).format(value)}
         if (unit === '%') {
             return `${value.toFixed(1)}%`}
@@ -253,7 +110,6 @@ export function AdvancedBusinessIntelligence() {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
         <Brain className="w-6 h-6"/>
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -263,12 +119,7 @@ export function AdvancedBusinessIntelligence() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -294,7 +145,6 @@ export function AdvancedBusinessIntelligence() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -326,7 +176,6 @@ export function AdvancedBusinessIntelligence() {
           </div>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
@@ -343,7 +192,6 @@ export function AdvancedBusinessIntelligence() {
               {tab.label}
             </button>)})}
       </div>
-
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -373,7 +221,6 @@ export function AdvancedBusinessIntelligence() {
                     </div>)}
                 </div>))}
             </div>
-
             {/* Quick Actions */}
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">
@@ -395,7 +242,6 @@ export function AdvancedBusinessIntelligence() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'insights' && (<div className="space-y-4">
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -425,7 +271,6 @@ export function AdvancedBusinessIntelligence() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'models' && (<div className="space-y-4">
             {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-between mb-3">
@@ -460,7 +305,6 @@ export function AdvancedBusinessIntelligence() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>
@@ -469,9 +313,4 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -70,7 +70,6 @@ export default function CybersecuritySuite() {
                 "API access & integrations"
             ],
             popular: false
-
     ];
     const securityServices = [
         {
@@ -92,7 +91,6 @@ export default function CybersecuritySuite() {
             title: "Incident Response",
             description: "Rapid incident response with automated playbooks and expert security team support.",
             icon: <Shield className="h-8 w-8 text-zion-purple"/>
-
     ];
     const complianceFrameworks = [
         "GDPR (General Data Protection Regulation)",
@@ -106,7 +104,6 @@ export default function CybersecuritySuite() {
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
@@ -133,7 +130,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Security Services */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -145,7 +141,6 @@ export default function CybersecuritySuite() {
               Our cybersecurity suite covers every aspect of modern security needs, from threat detection to compliance management.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {securityServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-center">
                 <CardContent className="p-6">
@@ -159,7 +154,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -171,7 +165,6 @@ export default function CybersecuritySuite() {
               Our platform combines cutting-edge technology with expert security knowledge to deliver unmatched protection.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
                 <CardContent className="p-6">
@@ -184,7 +177,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
@@ -196,7 +188,6 @@ export default function CybersecuritySuite() {
               Our platform helps you meet and maintain compliance with major industry standards and regulations.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {complianceFrameworks.map((framework, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
@@ -207,7 +198,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -219,7 +209,6 @@ export default function CybersecuritySuite() {
               Choose the security level that matches your business needs and budget. All plans include our core security features.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-red-500 border-2 scale-105' : 'border-red-500/20'} bg-zion-slate/50 hover:border-red-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -250,7 +239,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
@@ -277,9 +265,4 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card>}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

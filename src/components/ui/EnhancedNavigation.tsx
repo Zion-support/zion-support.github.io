@@ -17,6 +17,7 @@ import {
   Brain,
   Shield
 } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 interface NavigationItem {
   name: string;
@@ -277,8 +278,64 @@ export const EnhancedNavigation: React.FC = () => {
                 </button>
               </form>
 
+              {/* Search */}
+              <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                <Search className="w-5 h-5" />
+              </button>
+
+              {/* Theme Toggle */}
+              <ThemeToggle />
+
+              {/* Contact Info */}
+              <div className="flex items-center space-x-4">
+                {contactInfo.slice(0, 2).map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.href}
+                    className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    <contact.icon className="w-4 h-4" />
+                    <span className="hidden xl:inline">{contact.text}</span>
+                  </a>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <Link
+                to="/contact"
+                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
+            >
+              <div className="px-4 py-6 space-y-6">
+                {/* Mobile Navigation Items */}
+=======
               {/* Mobile Navigation */}
               <div className="space-y-4">
+>>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (
@@ -327,6 +384,7 @@ export const EnhancedNavigation: React.FC = () => {
                     )}
                   </div>
                 ))}
+
               </div>
 
               {/* Mobile CTA */}

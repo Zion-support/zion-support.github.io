@@ -1,54 +1,29 @@
-<<<<<<< HEAD
-// Service Worker Registration Utility
-export function registerServiceWorker() {
+// Service Worker Registration and Management
+export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      // Use development service worker in development mode
-      const isDev = import.meta.env.DEV;
-      const swUrl = isDev ? '/sw-dev.js' : '/sw.js';
-
-<<<<<<< HEAD
-      // // // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
-=======
-      // // // // // // // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-
-      navigator.serviceWorker
-        .register(swUrl)
-        .then((registration) => {
-<<<<<<< HEAD
-          // // // console.log('SW registered: ', registration);
-=======
-          // // // // // // // console.log('SW registered: ', registration);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-
-          // Handle updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-<<<<<<< HEAD
-                  // // // console.log('New content is available; please refresh.');
-
-=======
-                  // // // // // // // console.log('New content is available; please refresh.');
-                }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              });
-
-          });
-        })
-        .catch((registrationError) => {
-<<<<<<< HEAD
-          // // // console.error('SW registration failed: ', registrationError);
-=======
-          // // // // // // // console.error('SW registration failed: ', registrationError);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+    console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+    navigator.serviceWorker
+      .register(swUrl)
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available
+                console.log('New content is available; please refresh.');
+              }
+            });
+          }
         });
-    });
-
+      })
+      .catch((registrationError) => {
+        console.error('SW registration failed: ', registrationError);
+      });
+  }
+}
 
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -57,17 +32,13 @@ export function unregisterServiceWorker() {
         registration.unregister();
       })
       .catch((error) => {
-<<<<<<< HEAD
-        // // // console.error(error.message);
-=======
-        // // // // // // // console.error(error.message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+        console.error(error.message);
       });
-}}}}}}
-=======
+  }
+}
+
 // Service Worker for Zion Tech Group
 // Handles caching, offline functionality, and performance optimization
-
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_ASSETS = [
   '/',
@@ -99,13 +70,6 @@ self.addEventListener('install', (event: ExtendableEvent) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
   );
 });
 
@@ -121,9 +85,6 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
     })
   );
 });
@@ -132,17 +93,17 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
 self.addEventListener('fetch', (event: FetchEvent) => {
   const { request } = event;
   const url = new URL(request.url);
-
+  
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-
+  
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-
+  
   // Handle different types of requests
   if (isStaticAsset(request)) {
     event.respondWith(cacheFirst(request, CACHE_NAME));
@@ -155,74 +116,35 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
 
-// Cache First Strategy
-async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
-  const cache = await caches.open(cacheName);
-  const cachedResponse = await cache.match(request);
-  
-  if (cachedResponse) {
-    // Update cache in background
-    fetch(request).then(response => {
-      if (response.ok) {
-        cache.put(request, response);
-      }
-    }).catch(() => {
-      // Silently fail background update
-    });
-    
-    return cachedResponse;
-  }
-  
-  // Fetch from network if no cache
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    return new Response('Offline', { status: 503 });
-  }
-}
-
-// Network First Strategy
-async function networkFirst(request: Request, cacheName: string): Promise<Response> {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    // Fall back to cache
-    const cache = await caches.open(cacheName);
-    const cachedResponse = await cache.match(request);
-    
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    return new Response('Offline', { status: 503 });
-  }
-}
-
-// Helper functions to determine request type
+// Helper functions
 function isStaticAsset(request: Request): boolean {
   const url = new URL(request.url);
   return STATIC_ASSETS.some(asset => url.pathname === asset);
-}
-
-function isDynamicRoute(request: Request): boolean {
-  const url = new URL(request.url);
-  return DYNAMIC_ROUTES.some(route => url.pathname === route);
-}
-
-function isAPIRequest(request: Request): boolean {
-  const url = new URL(request.url);
-  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
 }
 
 function isImage(request: Request): boolean {
@@ -233,101 +155,148 @@ function isFont(request: Request): boolean {
   return request.destination === 'font';
 }
 
+function isAPIRequest(request: Request): boolean {
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
+}
+
+function isDynamicRoute(request: Request): boolean {
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route));
+}
+
+// Cache strategies
+async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
+  const cache = await caches.open(cacheName);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    // Return a fallback response if both cache and network fail
+    return new Response('Offline content not available', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
+  }
+}
+
+async function networkFirst(request: Request, cacheName: string): Promise<Response> {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    const cache = await caches.open(cacheName);
+    const cachedResponse = await cache.match(request);
+    
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return a fallback response if both network and cache fail
+    return new Response('Content not available offline', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
+  }
+}
+// Helper functions to determine request type
+function isStaticAsset(request: Request): boolean {
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
+}
+function isDynamicRoute(request: Request): boolean {
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname === route);
+}
+function isAPIRequest(request: Request): boolean {
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
+}
+function isImage(request: Request): boolean {
+  return request.destination === 'image';
+}
+function isFont(request: Request): boolean {
+  return request.destination === 'font';
+}
 // Background sync for offline actions
 self.addEventListener('sync', (event: SyncEvent) => {
   console.log('Background sync triggered:', event.tag);
-  
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
 });
-
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
     console.log('Performing background sync...');
-    
     // Example: Sync offline data
     const offlineData = await getOfflineData();
     if (offlineData.length > 0) {
       await syncOfflineData(offlineData);
     }
-    
     console.log('Background sync completed successfully');
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
-
 // Handle push notifications
 self.addEventListener('push', (event: PushEvent) => {
   console.log('Push notification received:', event);
-  
   const options = {
-    body: event.data?.text() || 'New notification from Zion Tech Group',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View',
-        icon: '/icon-192x192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
+    }
   };
-  
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
-
 // Handle notification clicks
 self.addEventListener('notificationclick', (event: NotificationEvent) => {
   console.log('Notification clicked:', event);
-  
   event.notification.close();
-  
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
     );
   }
 });
-
 // Handle message events from main thread
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
   console.log('Message received in service worker:', event.data);
-  
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
-  
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
 });
-
 // Utility functions for offline data management
 async function getOfflineData(): Promise<any[]> {
   // Implementation for retrieving offline data
   return [];
 }
-
 async function syncOfflineData(data: any[]): Promise<void> {
   // Implementation for syncing offline data
   console.log('Syncing offline data:', data);
 }
-
 // Export for testing purposes
 export {};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

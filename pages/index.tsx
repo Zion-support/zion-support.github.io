@@ -1,10 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock export default function Index() {
-	const features = [
-=======
 import { 
   ArrowRight, 
   Zap, 
@@ -41,14 +35,12 @@ import {
 
 export default function Index() {
 	const heroFeatures = [
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 		{
 			icon: Brain,
 			title: 'AI-Powered Solutions',
 			description: 'Advanced machine learning and artificial intelligence for business transformation',
 			href: '/services/ai-business-intelligence',
 			color: 'from-blue-500 to-purple-600'
-=======
 import Link from 'next/link'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
 
@@ -69,17 +61,9 @@ export default function Index(...args[]):  {
 			description: 'Serverless infrastructure, Kubernetes orchestration, and DevOps automation.',
 			href: '/services#cloud',
 			color: 'from-cyan-600 to-blue-700'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 		},
 		{
 			icon: Shield,
-<<<<<<< HEAD
-			title: 'Cybersecurity',
-			description: 'Zero-trust architecture, compliance frameworks, and threat intelligence.',
-<<<<<<< HEAD
-			href: '/services#cybersecurity'
-
-=======
 			title: 'Cybersecurity Platform',
 			description: 'Enterprise-grade security with AI threat detection and zero-trust architecture',
 			href: '/services/ai-cybersecurity-platform',
@@ -178,8 +162,6 @@ export default function Index(...args[]):  {
 			position: "Founder, StartupFlow",
 			company: "StartupFlow"
 		}
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
 			href: '/services#cybersecurity',
 			color: 'from-red-600 to-orange-700'
 		},
@@ -220,45 +202,11 @@ export default function Index(...args[]):  {
 		'Real-time data analytics and insights',
 		'Quantum computing and emerging technologies',
 		'24/7 expert support and consultation'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	]
 
 	return (
 		<>
 			{/* Hero Section */}
-<<<<<<< HEAD
-			<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 sm:py-32 overflow-hidden">
-				{/* Background Elements */}
-				<div className="absolute inset-0 bg-black/40"></div>
-				<div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-					<div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-					<div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-					<div className="absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-				</div>
-
-				<div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-4xl text-center">
-						<div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">
-							<Zap className="w-4 h-4 text-blue-300" />
-							<span>Leading Technology Solutions Provider</span>
-						</div>
-						
-						<h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-							Building the Future of
-							<span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-								Business Technology
-							</span>
-						</h1>
-						
-						<p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-							Zion Tech Group delivers cutting-edge AI, cybersecurity, and micro SAAS solutions that transform how businesses operate and compete in the digital economy.
-						</p>
-						
-						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-							<Link
-								to="/services"
-<<<<<<< HEAD
-=======
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
@@ -271,41 +219,23 @@ export default function Index(...args[]):  {
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
 								href="/services"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 
-=======
 								className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
 							>
-<<<<<<< HEAD
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-								Explore Our Services
-								<ArrowRight className="w-5 h-5" />
-=======
 								<span className="relative z-10">Explore Our Services</span>
 								<div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 							</Link>
 							
 							<Link
-<<<<<<< HEAD
-								to="/contact"
-<<<<<<< HEAD
-								className="text-sm font-semibold leading-6 text-gray-900"
-
-								Get in Touch <span aria-hidden="true">→</span>
-=======
 								className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
 							>
 								Get in Touch
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
 								href="/contact"
 								className="text-sm font-semibold leading-6 text-gray-900"
 							>
 								Get in Touch 
 								<ArrowRight className="ml-2 h-5 w-5 inline transition-transform group-hover:translate-x-1" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 							</Link>
 						</div>
 
@@ -331,13 +261,6 @@ export default function Index(...args[]):  {
 
 			{/* Stats Section */}
 			<section className="py-16 bg-white">
-<<<<<<< HEAD
-				<div className="max-w-7xl mx-auto px-6 lg:px-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-						{stats.map((stat, index) => (
-							<div key={index} className="text-center">
-								<div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
-=======
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 						{stats.map((stat) => (
@@ -346,7 +269,6 @@ export default function Index(...args[]):  {
 									<stat.icon className="h-8 w-8 text-blue-600" />
 								</div>
 								<div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 								<div className="text-gray-600">{stat.label}</div>
 							</div>
 						))}
@@ -354,46 +276,6 @@ export default function Index(...args[]):  {
 				</div>
 			</section>
 
-<<<<<<< HEAD
-			{/* Services Section */}
-			<section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
-							Comprehensive Technology Services
-						</h2>
-						<p className="text-xl text-gray-600 leading-relaxed">
-							From AI-powered business intelligence to enterprise cybersecurity, we provide the tools and expertise 
-							to accelerate your digital transformation journey.
-						</p>
-					</div>
-
-					<div className="space-y-16">
-						{services.map((serviceCategory, categoryIndex) => (
-							<div key={categoryIndex}>
-								<h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-									{serviceCategory.category}
-								</h3>
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-									{serviceCategory.items.map((service, serviceIndex) => (
-										<div key={serviceIndex} className="group">
-											<Link to={service.href} className="block">
-												<div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-													<h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-														{service.name}
-													</h4>
-													<p className="text-gray-600 text-sm mb-4 leading-relaxed">
-														{service.description}
-													</p>
-													<div className="flex items-center justify-between">
-														<span className="text-blue-600 font-semibold text-sm">{service.price}</span>
-														<ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-													</div>
-												</div>
-											</Link>
-										</div>
-									))}
-=======
 			{/* Features Section */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -408,17 +290,7 @@ export default function Index(...args[]):  {
 							<div key={feature.title} className="text-center group">
 								<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<feature.icon className="h-8 w-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 								</div>
-<<<<<<< HEAD
-								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-								<p className="text-gray-600 mb-6">{feature.description}</p>
-								<Link
-									href={feature.href}
-									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-
-									Learn More <ArrowRight className="ml-2 h-4 w-4" />
-=======
 							</div>
 						))}
 					</div>
@@ -462,7 +334,6 @@ export default function Index(...args[]):  {
 											Learn More <ArrowRight className="ml-2 w-4 h-4" />
 										</div>
 									</div>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 								</Link>
 							</div>
 						))}
@@ -470,21 +341,6 @@ export default function Index(...args[]):  {
 				</div>
 			</section>
 
-<<<<<<< HEAD
-			{/* Testimonials Section */}
-			<section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
-							What Our Clients Say
-						</h2>
-						<p className="text-xl text-gray-600 leading-relaxed">
-							Discover how we've helped businesses across industries achieve their technology goals 
-							and drive measurable business outcomes.
-						</p>
-<<<<<<< HEAD
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-=======
 			{/* Benefits Section */}
 			<section className="py-24 sm:py-32 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -549,7 +405,6 @@ export default function Index(...args[]):  {
 							Let's discuss how our AI, cloud, and cybersecurity solutions can help you achieve your technology goals.
 						</p>
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 							<Link
 								href="/contact"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -559,11 +414,6 @@ export default function Index(...args[]):  {
 							<Link
 								href="/about"
 								className="text-sm font-semibold leading-6 text-gray-900"
-<<<<<<< HEAD
-
-								Learn More <span aria-hidden="true">→</span>
-							</Link>
-=======
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -628,7 +478,6 @@ export default function Index(...args[]):  {
 						<div className="flex items-center justify-center gap-3 text-blue-100">
 							<MapPin className="w-5 h-5 text-blue-300" />
 							<span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 						</div>
 					</div>
 				</div>
@@ -636,7 +485,6 @@ export default function Index(...args[]):  {
 		</>
 	)
 }}}
-=======
 							>
 								Learn More About Us
 							</Link>
@@ -647,4 +495,3 @@ export default function Index(...args[]):  {
 		</>;
 	);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
