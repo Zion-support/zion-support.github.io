@@ -453,6 +453,70 @@ const ServicesSection = () => {
           </motion.div>
         </div>
 
+        {/* 2025 Innovation Highlight */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-emerald-900/30 via-teal-900/30 to-cyan-900/30 rounded-3xl p-8 border border-emerald-500/30"
+          >
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium mb-4">
+                <Sparkles className="w-4 h-4" />
+                New for 2025
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Revolutionary 2025 Services
+              </h3>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Discover our latest AI-powered business intelligence, cybersecurity, cloud solutions, and industry-specific platforms designed for the future
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">AI Business Intelligence</h4>
+                <p className="text-gray-400 text-sm">Predictive Analytics</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-teal-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Cybersecurity</h4>
+                <p className="text-gray-400 text-sm">AI Threat Intelligence</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Cloud & DevOps</h4>
+                <p className="text-gray-400 text-sm">Cost Optimization</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="w-8 h-8 text-blue-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Data Analytics</h4>
+                <p className="text-gray-400 text-sm">Real-time Insights</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/new-innovative-services-2025"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300"
+              >
+                Explore 2025 Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -612,10 +676,30 @@ const CTASection = () => {
               </a>
               
               <Link
-                to="/innovative-services-showcase-2033"
+                to="/new-innovative-services-2025"
                 className="px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
               >
-                Explore Services
+                New 2025 Services
+              </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+              <Link
+                to="/comprehensive-pricing-guide-2025"
+                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/25"
+              >
+                <span className="flex items-center gap-2">
+                  <DollarSign className="w-5 h-5" />
+                  View Pricing Guide
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+              
+              <Link
+                to="/innovative-services-showcase-2033"
+                className="px-8 py-4 border-2 border-emerald-400/50 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400/10 hover:border-emerald-400 transition-all duration-300"
+              >
+                All Services
               </Link>
             </div>
 

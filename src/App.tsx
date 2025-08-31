@@ -99,6 +99,9 @@ const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
+
+// New Innovative Services Showcase 2025
+const NewInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/NewInnovativeServicesShowcase2025'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
 const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
@@ -345,6 +348,9 @@ function App() {
                     <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
                     <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
                     <Route path="/services/ai-space-technology-platform" element={<ModernLayout><AISpaceTechnologyPlatform /></ModernLayout>} />
+
+                    {/* New Innovative Services Showcase 2025 */}
+                    <Route path="/new-innovative-services-2025" element={<ModernLayout><NewInnovativeServicesShowcase2025 /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
