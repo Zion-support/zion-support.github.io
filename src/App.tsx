@@ -19,8 +19,8 @@ import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
 // Layout Components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { AppFooter } from './components/layout/AppFooter';
 
 // Enhanced lazy loading with preloading hints
