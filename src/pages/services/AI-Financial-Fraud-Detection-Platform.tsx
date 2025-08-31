@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Bot, 
+  Shield, 
   Brain, 
   Zap, 
   CheckCircle, 
   ArrowRight,
+  AlertTriangle,
   BarChart3,
   Lock,
   Globe,
@@ -16,105 +17,99 @@ import {
   TrendingUp,
   Eye,
   Search,
-  Settings,
+  DollarSign,
   Clock,
   Users,
+  Activity,
+  Fingerprint,
   Database,
   Cpu,
   Network,
-  Smartphone,
-  Cog,
-  Workflow,
-  Automation,
-  Robot,
-  Target,
-  LineChart,
-  Gauge,
-  Zap as ZapIcon
+  Smartphone
 } from 'lucide-react';
 
-const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
+const AIFinancialFraudDetectionPlatform: React.FC = () => {
   const features = [
-    "AI-Powered Process Automation & Orchestration",
-    "Intelligent Decision Making & Business Logic",
-    "Autonomous Resource Allocation & Optimization",
-    "Predictive Maintenance & Proactive Monitoring",
-    "Self-Healing Systems & Error Recovery",
-    "Adaptive Learning & Continuous Improvement",
-    "Multi-Department Workflow Automation",
-    "Real-time Performance Analytics & Insights",
-    "Intelligent Customer Service & Support",
-    "Automated Compliance & Risk Management"
+    "Real-time AI Fraud Detection & Prevention",
+    "Advanced Machine Learning Algorithms",
+    "Behavioral Analysis & Pattern Recognition",
+    "Multi-channel Transaction Monitoring",
+    "Instant Risk Scoring & Alerts",
+    "Automated Fraud Investigation Workflows",
+    "Compliance & Regulatory Reporting",
+    "Custom Rule Engine & Business Logic",
+    "API Integration & Webhook Support",
+    "Comprehensive Audit Trail & Analytics"
   ];
 
   const benefits = [
-    "Increase operational efficiency by 60%",
-    "Reduce operational costs by 40-50%",
-    "Eliminate 80% of manual tasks",
-    "Improve decision accuracy by 90%",
-    "Enable 24/7 autonomous operations"
+    "Reduce fraud losses by 90%",
+    "Detect threats in under 100ms",
+    "False positive rate below 0.1%",
+    "Save $2M+ annually on fraud prevention",
+    "24/7 automated protection"
   ];
 
   const useCases = [
-    "Manufacturing & Production",
-    "Financial Services & Banking",
+    "Banking & Financial Services",
     "E-commerce & Retail",
-    "Healthcare & Pharmaceuticals",
-    "Logistics & Transportation",
-    "Energy & Utilities",
-    "Telecommunications",
-    "Professional Services"
+    "Insurance Claims Processing",
+    "Healthcare Billing",
+    "Cryptocurrency Exchanges",
+    "Payment Processors",
+    "Gaming & Gambling",
+    "Travel & Hospitality"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$799",
+      price: "$499",
       period: "/month",
-      description: "Perfect for small to medium businesses",
+      description: "Perfect for small financial institutions",
       features: [
-        "Up to 10 automated processes",
-        "Basic AI decision making",
-        "Standard workflow automation",
+        "Up to 10,000 transactions/month",
+        "Basic AI fraud detection",
+        "Standard risk scoring",
+        "Email alerts",
         "Basic reporting",
-        "Email support",
-        "Standard integrations"
+        "Email support"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for growing enterprises",
+      description: "Ideal for growing financial businesses",
       features: [
-        "Up to 50 automated processes",
-        "Advanced AI decision making",
-        "Complex workflow automation",
+        "Up to 100,000 transactions/month",
+        "Advanced AI algorithms",
+        "Custom risk models",
+        "Real-time alerts",
         "Advanced analytics",
         "API access",
         "Priority support",
-        "Custom integrations",
-        "Multi-department support"
+        "Custom integrations"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$4,999",
+      price: "$3,999",
       period: "/month",
       description: "For large organizations with complex needs",
       features: [
-        "Unlimited automated processes",
+        "Unlimited transactions",
         "Full AI suite",
         "Custom development",
         "24/7 dedicated support",
         "Advanced security",
         "White-label options",
         "Dedicated success manager",
-        "Custom AI model training"
+        "Custom ML model training"
       ],
       cta: "Contact Sales",
       popular: false
@@ -122,41 +117,30 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   ];
 
   const technicalSpecs = [
-    "AI Models: Custom Business Logic ML Models, Deep Learning Networks",
-    "Security: SOC 2 Type II, ISO 27001, GDPR compliant",
-    "Performance: Real-time processing, 99.99% uptime SLA",
-    "Integrations: ERP, CRM, HR, Finance, IoT devices",
-    "Scalability: Handles 100M+ operations/day",
-    "Compliance: SOX, PCI DSS, HIPAA, ISO 9001 ready"
+    "AI Models: Custom Fraud Detection ML Models, Deep Learning Networks",
+    "Security: SOC 2 Type II, PCI DSS, GDPR, HIPAA compliant",
+    "Performance: Sub-100ms response time, 99.99% uptime SLA",
+    "Integrations: RESTful API, GraphQL, Webhooks, SDKs",
+    "Scalability: Handles 1M+ transactions/second",
+    "Compliance: FFIEC, GLBA, SOX, Basel III ready"
   ];
 
-  const automationAreas = [
-    "Finance & Accounting",
-    "Human Resources",
-    "Customer Service",
-    "Sales & Marketing",
-    "Operations & Logistics",
-    "IT & Infrastructure",
-    "Compliance & Legal",
-    "Research & Development"
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Financial Services",
-    "Retail",
-    "Healthcare",
-    "Logistics",
-    "Energy",
-    "Telecommunications",
-    "Professional Services"
+  const fraudTypes = [
+    "Credit Card Fraud",
+    "Identity Theft",
+    "Account Takeover",
+    "Money Laundering",
+    "Insurance Fraud",
+    "Healthcare Fraud",
+    "Cryptocurrency Fraud",
+    "Synthetic Identity Fraud"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -165,22 +149,22 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="bg-purple-600/20 p-3 rounded-full">
-                <Bot className="h-8 w-8 text-purple-400" />
+              <div className="bg-red-600/20 p-3 rounded-full">
+                <Shield className="h-8 w-8 text-red-400" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Business Operations Platform
+              AI Financial Fraud Detection Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with fully autonomous AI operations. Increase efficiency by 60%, 
-              reduce costs by 50%, and enable 24/7 autonomous decision-making.
+              Protect your business with the most advanced AI-powered fraud detection system. 
+              Detect threats in real-time with 90% accuracy and reduce fraud losses by millions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="h-5 w-5" />
@@ -207,10 +191,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Autonomous Operations
+              Unmatched Fraud Protection
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Leverage cutting-edge AI to automate your entire business
+              Leverage cutting-edge AI to protect your business from financial fraud
             </p>
           </motion.div>
 
@@ -221,10 +205,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all duration-300"
               >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-purple-400" />
+                <div className="bg-red-600/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-red-400" />
                 </div>
                 <p className="text-white text-lg font-medium">{benefit}</p>
               </motion.div>
@@ -246,7 +230,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
               Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to automate your business operations
+              Everything you need to detect and prevent financial fraud
             </p>
           </motion.div>
 
@@ -259,8 +243,8 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start gap-4"
               >
-                <div className="bg-purple-600/20 p-2 rounded-lg mt-1">
-                  <CheckCircle className="h-5 w-5 text-purple-400" />
+                <div className="bg-red-600/20 p-2 rounded-lg mt-1">
+                  <CheckCircle className="h-5 w-5 text-red-400" />
                 </div>
                 <span className="text-white text-lg">{feature}</span>
               </motion.div>
@@ -269,7 +253,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Automation Areas */}
+      {/* Fraud Types */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -279,62 +263,26 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Automation
+              Comprehensive Fraud Coverage
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Automate every aspect of your business operations
+              Protect against all types of financial fraud
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {automationAreas.map((area, index) => (
+            {fraudTypes.map((fraudType, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
+                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-red-500/50 transition-all duration-300 text-center"
               >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Automation className="h-6 w-6 text-purple-400" />
+                <div className="bg-red-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="h-6 w-6 text-red-400" />
                 </div>
-                <h3 className="text-white font-semibold">{area}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries */}
-      <section className="py-20 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Tailored solutions for every industry
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
-              >
-                <div className="bg-blue-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Cog className="h-6 w-6 text-blue-400" />
-                </div>
-                <h3 className="text-white font-semibold">{industry}</h3>
+                <h3 className="text-white font-semibold">{fraudType}</h3>
               </motion.div>
             ))}
           </div>
@@ -342,7 +290,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20">
+      <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,7 +302,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your automation needs
+              Choose the plan that fits your security needs
             </p>
           </motion.div>
 
@@ -367,13 +315,13 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-purple-500/50 bg-purple-600/10' 
+                    ? 'border-red-500/50 bg-red-600/10' 
                     : 'border-white/10'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -391,7 +339,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-red-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -402,7 +350,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                      ? 'bg-red-600 hover:bg-red-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                   }`}
                 >
@@ -415,7 +363,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-white/5">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -424,10 +372,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Perfect For Every Business
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Versatile solutions for diverse business needs
+              Protecting businesses across all sectors
             </p>
           </motion.div>
 
@@ -438,10 +386,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
+                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-red-500/50 transition-all duration-300 text-center"
               >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Settings className="h-6 w-6 text-purple-400" />
+                <div className="bg-red-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="h-6 w-6 text-red-400" />
                 </div>
                 <h3 className="text-white font-semibold">{useCase}</h3>
               </motion.div>
@@ -451,7 +399,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20">
+      <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -460,10 +408,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Technology
+              Enterprise-Grade Security
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built with the latest AI and automation technologies
+              Built with the highest security and compliance standards
             </p>
           </motion.div>
 
@@ -487,7 +435,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+      <section className="py-20 bg-gradient-to-r from-red-600/20 to-orange-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -495,16 +443,16 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Protect Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already operating autonomously
+              Join thousands of organizations already protected by our AI fraud detection
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg"
               >
                 Start Free Trial
               </motion.button>
@@ -533,17 +481,17 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-purple-400 mb-4" />
+                <Phone className="h-8 w-8 text-red-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-purple-400 mb-4" />
+                <Mail className="h-8 w-8 text-red-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-purple-400 mb-4" />
+                <MapPin className="h-8 w-8 text-red-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
@@ -555,4 +503,4 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousBusinessOperationsPlatform;
+export default AIFinancialFraudDetectionPlatform;

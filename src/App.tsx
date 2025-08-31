@@ -123,6 +123,13 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// New Innovative AI Services 2025
+const AIIntelligentContractManagementPlatform = createLazyComponent(() => import('./pages/services/AI-Intelligent-Contract-Management-Platform'));
+const AIFinancialFraudDetectionPlatform = createLazyComponent(() => import('./pages/services/AI-Financial-Fraud-Detection-Platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization-Platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+
 // New Innovative Services 2025 - Additional
 const AICustomerJourneyOrchestrationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-journey-orchestration-platform'));
 const QuantumEnhancedCybersecurityOperationsCenter = createLazyComponent(() => import('./pages/services/quantum-enhanced-cybersecurity-operations-center'));
@@ -393,6 +400,13 @@ function App() {
                   <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                   <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                   <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
+                  
+                  {/* New Innovative AI Services */}
+                  <Route path="/services/ai-intelligent-contract-management-platform" element={<AIIntelligentContractManagementPlatform />} />
+                  <Route path="/services/ai-financial-fraud-detection-platform" element={<AIFinancialFraudDetectionPlatform />} />
+                  <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                  <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                  <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
 
                   {/* New AI Service Routes */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />

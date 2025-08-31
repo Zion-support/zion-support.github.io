@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Bot, 
+  FileText, 
   Brain, 
+  Shield, 
   Zap, 
   CheckCircle, 
   ArrowRight,
+  Clock,
+  Users,
   BarChart3,
   Lock,
   Globe,
@@ -13,108 +16,96 @@ import {
   Phone,
   Mail,
   MapPin,
+  Star,
   TrendingUp,
   Eye,
   Search,
-  Settings,
-  Clock,
-  Users,
-  Database,
-  Cpu,
-  Network,
-  Smartphone,
-  Cog,
-  Workflow,
-  Automation,
-  Robot,
-  Target,
-  LineChart,
-  Gauge,
-  Zap as ZapIcon
+  FileCheck,
+  AlertTriangle,
+  Calendar,
+  DollarSign
 } from 'lucide-react';
 
-const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
+const AIIntelligentContractManagementPlatform: React.FC = () => {
   const features = [
-    "AI-Powered Process Automation & Orchestration",
-    "Intelligent Decision Making & Business Logic",
-    "Autonomous Resource Allocation & Optimization",
-    "Predictive Maintenance & Proactive Monitoring",
-    "Self-Healing Systems & Error Recovery",
-    "Adaptive Learning & Continuous Improvement",
-    "Multi-Department Workflow Automation",
-    "Real-time Performance Analytics & Insights",
-    "Intelligent Customer Service & Support",
-    "Automated Compliance & Risk Management"
+    "AI-Powered Contract Analysis & Risk Assessment",
+    "Intelligent Clause Extraction & Classification",
+    "Automated Compliance Monitoring & Alerts",
+    "Smart Contract Templates & Generation",
+    "Real-time Collaboration & Approval Workflows",
+    "Advanced Search & Semantic Understanding",
+    "Contract Lifecycle Management Automation",
+    "Multi-language Support & Translation",
+    "Integration with Legal & Business Systems",
+    "Advanced Analytics & Reporting Dashboard"
   ];
 
   const benefits = [
-    "Increase operational efficiency by 60%",
-    "Reduce operational costs by 40-50%",
-    "Eliminate 80% of manual tasks",
-    "Improve decision accuracy by 90%",
-    "Enable 24/7 autonomous operations"
+    "Reduce contract review time by 80%",
+    "Identify risks 10x faster with AI analysis",
+    "Ensure 99.9% compliance accuracy",
+    "Save $50,000+ annually on legal costs",
+    "Accelerate deal closure by 60%"
   ];
 
   const useCases = [
-    "Manufacturing & Production",
-    "Financial Services & Banking",
-    "E-commerce & Retail",
-    "Healthcare & Pharmaceuticals",
-    "Logistics & Transportation",
-    "Energy & Utilities",
-    "Telecommunications",
-    "Professional Services"
+    "Enterprise Contract Management",
+    "Legal Department Automation",
+    "Procurement & Vendor Management",
+    "Real Estate Contract Processing",
+    "Employment Agreement Management",
+    "M&A Due Diligence",
+    "Regulatory Compliance Monitoring",
+    "Contract Performance Tracking"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$799",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small to medium businesses",
+      description: "Perfect for small legal teams and startups",
       features: [
-        "Up to 10 automated processes",
-        "Basic AI decision making",
-        "Standard workflow automation",
-        "Basic reporting",
+        "Up to 100 contracts",
+        "Basic AI analysis",
+        "Standard templates",
         "Email support",
-        "Standard integrations"
+        "Basic reporting"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,999",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing enterprises",
+      description: "Ideal for growing legal departments",
       features: [
-        "Up to 50 automated processes",
-        "Advanced AI decision making",
-        "Complex workflow automation",
+        "Up to 1,000 contracts",
+        "Advanced AI analysis",
+        "Custom templates",
+        "Priority support",
         "Advanced analytics",
         "API access",
-        "Priority support",
-        "Custom integrations",
-        "Multi-department support"
+        "Multi-user collaboration"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$4,999",
+      price: "$1,999",
       period: "/month",
       description: "For large organizations with complex needs",
       features: [
-        "Unlimited automated processes",
+        "Unlimited contracts",
         "Full AI suite",
         "Custom development",
         "24/7 dedicated support",
         "Advanced security",
+        "Custom integrations",
         "White-label options",
-        "Dedicated success manager",
-        "Custom AI model training"
+        "Dedicated success manager"
       ],
       cta: "Contact Sales",
       popular: false
@@ -122,41 +113,19 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   ];
 
   const technicalSpecs = [
-    "AI Models: Custom Business Logic ML Models, Deep Learning Networks",
-    "Security: SOC 2 Type II, ISO 27001, GDPR compliant",
-    "Performance: Real-time processing, 99.99% uptime SLA",
-    "Integrations: ERP, CRM, HR, Finance, IoT devices",
-    "Scalability: Handles 100M+ operations/day",
-    "Compliance: SOX, PCI DSS, HIPAA, ISO 9001 ready"
-  ];
-
-  const automationAreas = [
-    "Finance & Accounting",
-    "Human Resources",
-    "Customer Service",
-    "Sales & Marketing",
-    "Operations & Logistics",
-    "IT & Infrastructure",
-    "Compliance & Legal",
-    "Research & Development"
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Financial Services",
-    "Retail",
-    "Healthcare",
-    "Logistics",
-    "Energy",
-    "Telecommunications",
-    "Professional Services"
+    "AI Models: GPT-4, Claude 3.5, Custom Legal LLMs",
+    "Security: SOC 2 Type II, GDPR, HIPAA compliant",
+    "Uptime: 99.9% SLA guarantee",
+    "Integrations: DocuSign, Salesforce, Microsoft 365, Slack",
+    "API: RESTful API with GraphQL support",
+    "Mobile: iOS and Android apps"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -165,22 +134,22 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="bg-purple-600/20 p-3 rounded-full">
-                <Bot className="h-8 w-8 text-purple-400" />
+              <div className="bg-blue-600/20 p-3 rounded-full">
+                <Brain className="h-8 w-8 text-blue-400" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Business Operations Platform
+              AI Intelligent Contract Management Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with fully autonomous AI operations. Increase efficiency by 60%, 
-              reduce costs by 50%, and enable 24/7 autonomous decision-making.
+              Revolutionize your contract management with AI-powered analysis, risk assessment, and automation. 
+              Reduce legal costs by 70% while ensuring 100% compliance accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="h-5 w-5" />
@@ -207,10 +176,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Autonomous Operations
+              Transform Your Contract Management
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Leverage cutting-edge AI to automate your entire business
+              Leverage cutting-edge AI to streamline your entire contract lifecycle
             </p>
           </motion.div>
 
@@ -221,10 +190,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-purple-400" />
+                <div className="bg-blue-600/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-blue-400" />
                 </div>
                 <p className="text-white text-lg font-medium">{benefit}</p>
               </motion.div>
@@ -243,10 +212,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to automate your business operations
+              Everything you need to manage contracts intelligently
             </p>
           </motion.div>
 
@@ -259,82 +228,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start gap-4"
               >
-                <div className="bg-purple-600/20 p-2 rounded-lg mt-1">
-                  <CheckCircle className="h-5 w-5 text-purple-400" />
+                <div className="bg-blue-600/20 p-2 rounded-lg mt-1">
+                  <CheckCircle className="h-5 w-5 text-blue-400" />
                 </div>
                 <span className="text-white text-lg">{feature}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Automation Areas */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Automation
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Automate every aspect of your business operations
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {automationAreas.map((area, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
-              >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Automation className="h-6 w-6 text-purple-400" />
-                </div>
-                <h3 className="text-white font-semibold">{area}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries */}
-      <section className="py-20 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Tailored solutions for every industry
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
-              >
-                <div className="bg-blue-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Cog className="h-6 w-6 text-blue-400" />
-                </div>
-                <h3 className="text-white font-semibold">{industry}</h3>
               </motion.div>
             ))}
           </div>
@@ -351,10 +248,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your automation needs
+              Choose the plan that fits your organization's needs
             </p>
           </motion.div>
 
@@ -367,13 +264,13 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-purple-500/50 bg-purple-600/10' 
+                    ? 'border-blue-500/50 bg-blue-600/10' 
                     : 'border-white/10'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -391,7 +288,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -402,7 +299,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                   }`}
                 >
@@ -424,7 +321,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Perfect For Every Business
+              Perfect For Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Versatile solutions for diverse business needs
@@ -438,10 +335,10 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center"
+                className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 text-center"
               >
-                <div className="bg-purple-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Settings className="h-6 w-6 text-purple-400" />
+                <div className="bg-blue-600/20 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <FileText className="h-6 w-6 text-blue-400" />
                 </div>
                 <h3 className="text-white font-semibold">{useCase}</h3>
               </motion.div>
@@ -463,7 +360,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
               Enterprise-Grade Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built with the latest AI and automation technologies
+              Built with the latest AI and security technologies
             </p>
           </motion.div>
 
@@ -487,7 +384,7 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -495,16 +392,16 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Transform Your Contract Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already operating autonomously
+              Join thousands of organizations already using AI to streamline their legal processes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg"
               >
                 Start Free Trial
               </motion.button>
@@ -533,17 +430,17 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-purple-400 mb-4" />
+                <Phone className="h-8 w-8 text-blue-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-purple-400 mb-4" />
+                <Mail className="h-8 w-8 text-blue-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-purple-400 mb-4" />
+                <MapPin className="h-8 w-8 text-blue-400 mb-4" />
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
@@ -555,4 +452,4 @@ const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousBusinessOperationsPlatform;
+export default AIIntelligentContractManagementPlatform;

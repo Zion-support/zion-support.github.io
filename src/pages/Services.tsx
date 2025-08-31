@@ -192,6 +192,61 @@ const Services: React.FC = (): JSX.Element => {
     },
     {
       category: 'ai',
+      icon: FileText,
+      title: "AI Intelligent Contract Management Platform",
+      description: "Revolutionize your contract management with AI-powered analysis, risk assessment, and automation.",
+      features: ["AI Contract Analysis", "Risk Assessment", "Compliance Monitoring", "Automated Workflows"],
+      pricing: "$299 - $1,999/month",
+      color: "from-blue-500 to-purple-500",
+      featured: true,
+      href: "/services/ai-intelligent-contract-management-platform"
+    },
+    {
+      category: 'security',
+      icon: Shield,
+      title: "AI Financial Fraud Detection Platform",
+      description: "Protect your business with the most advanced AI-powered fraud detection system.",
+      features: ["Real-time Detection", "90% Accuracy", "Multi-channel Monitoring", "Automated Response"],
+      pricing: "$499 - $3,999/month",
+      color: "from-red-500 to-orange-500",
+      featured: true,
+      href: "/services/ai-financial-fraud-detection-platform"
+    },
+    {
+      category: 'ai',
+      icon: Truck,
+      title: "AI Supply Chain Optimization Platform",
+      description: "Transform your supply chain with AI-powered optimization and real-time analytics.",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Cost Reduction"],
+      pricing: "$399 - $2,499/month",
+      color: "from-green-500 to-blue-500",
+      featured: true,
+      href: "/services/ai-supply-chain-optimization-platform"
+    },
+    {
+      category: 'ai',
+      icon: Heart,
+      title: "AI Healthcare Analytics Platform",
+      description: "Transform healthcare delivery with AI-powered analytics and predictive insights.",
+      features: ["Patient Risk Assessment", "Clinical Decision Support", "Population Health", "Cost Optimization"],
+      pricing: "$599 - $3,999/month",
+      color: "from-blue-500 to-green-500",
+      featured: true,
+      href: "/services/ai-healthcare-analytics-platform"
+    },
+    {
+      category: 'ai',
+      icon: Bot,
+      title: "AI Autonomous Business Operations Platform",
+      description: "Transform your business with fully autonomous AI operations and intelligent automation.",
+      features: ["Process Automation", "Intelligent Decision Making", "24/7 Operations", "Cost Reduction"],
+      pricing: "$799 - $4,999/month",
+      color: "from-purple-500 to-blue-500",
+      featured: true,
+      href: "/services/ai-autonomous-business-operations-platform"
+    },
+    {
+      category: 'ai',
       icon: Brain,
       title: "AI Development & Strategy",
       description: "Custom AI models, machine learning solutions, and strategic AI roadmapping for your business.",
