@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight export default function Privacy() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react'
 
 
 export default function Privacy(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	return (
 		<>
 			{/* Hero Section */}
@@ -237,14 +231,6 @@ export default function Privacy(...args[]):  {
 
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
-<<<<<<< HEAD
-					</Link>
-				</div>
-			</section>
-		</>
-	)
-}}
-=======
 					</Link>;
 				</div>;
 			</section>;
@@ -252,4 +238,3 @@ export default function Privacy(...args[]):  {
 	);
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -64,12 +64,7 @@ export interface ExpandedServicePricing {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // 1. CYBERSECURITY SERVICES PRICING
 export const cybersecurityPricing: ExpandedServicePricing[] = [
@@ -1155,16 +1150,6 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 
 // Helper functions
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-=======
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
@@ -1176,29 +1161,12 @@ export const getPricingByCategory = (category: string): ExpandedServicePricing[]
 export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export const searchPricing = (query: string): ExpandedServicePricing[] => {;
   const lowercaseQuery = query.toLowerCase();
-<<<<<<< HEAD
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
-=======
-<<<<<<< HEAD
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > ;
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||;
     pricing.category.toLowerCase().includes(lowercaseQuery) ||;
     pricing.subcategory.toLowerCase().includes(lowercaseQuery);
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}}}}}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

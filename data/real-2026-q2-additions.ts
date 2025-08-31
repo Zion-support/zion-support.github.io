@@ -241,16 +241,6 @@ export const real2026Q2Additions = [
     integrations['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors['Atera', 'NinjaOne'],
     price: '$4',
-<<<<<<< HEAD
-    period: '/device/month',
-    trialDays: 14,
-    setupTime: 'Fast',
-    marketPosition: 'Cost-effective RMM for partners and IT teams',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-
-];}
-=======
     period: '/device/month',;
     trialDays: 14,;
     setupTime: 'Fast',;
@@ -259,4 +249,3 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
   };
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

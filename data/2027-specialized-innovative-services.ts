@@ -34,11 +34,7 @@ export interface SpecializedInnovativeService2027 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [
   // SPACE TECHNOLOGY SERVICES
@@ -563,16 +559,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 ];
 
 // Helper functions for service management
-<<<<<<< HEAD
-export const getSpecializedServiceById = (id: string) => {;
-  return specializedInnovativeServices2027.find(service => service.id === id)};
-
-export const getSpecializedServicesByCategory = (category: string) => {;
-  return specializedInnovativeServices2027.filter(service => service.category === category)};
-
-export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular)};
-=======
 export const getSpecializedServiceById = (id: string) => {;
   return specializedInnovativeServices2027.find(service => service.id === id);
 };
@@ -584,7 +570,6 @@ export const getSpecializedServicesByCategory = (category: string) => {;
 export const getSpecializedPopularServices = () => {;
   return specializedInnovativeServices2027.filter(service => service.popular);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return specializedInnovativeServices2027.filter(service => {;
@@ -593,23 +578,11 @@ export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: n
 
 export const searchSpecializedServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-<<<<<<< HEAD
-  return specializedInnovativeServices2027.filter(service =>
-=======
-<<<<<<< HEAD
-  return specializedInnovativeServices2027.filter(service = > 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery);
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default specializedInnovativeServices2027;}}

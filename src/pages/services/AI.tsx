@@ -22,13 +22,8 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
-<<<<<<< HEAD
-export default function AIServices() {
-=======
  } from 'lucide-react';
-
 export default function AIServices(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
@@ -75,15 +70,6 @@ export default function AIServices(...args[]):  {
       icon: Cloud,
       features[
         "ML pipeline automation",
-<<<<<<< HEAD
-        "Model versioning and deployment",
-        "Scalable training infrastructure",
-        "Monitoring and alerting systems"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-
-=======
         "Model versioning and deployment",;
         "Scalable training infrastructure",;
         "Monitoring and alerting systems";
@@ -91,9 +77,7 @@ export default function AIServices(...args[]):  {
       price: "From $6,000",;
       duration: "4-10 weeks";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const aiTechnologies = [;
     { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
     { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
@@ -102,7 +86,6 @@ export default function AIServices(...args[]):  {
     { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
     { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
-
   const useCases = [
     {
       industry: "Healthcare",
@@ -119,25 +102,13 @@ export default function AIServices(...args[]):  {
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-<<<<<<< HEAD
-    {
-      industry: "Retail",
-      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
-      icon: ShoppingCart
-<<<<<<< HEAD
-
-=======
     };
-=======;
     {;
       industry: "Retail",;
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
       icon: ShoppingCart;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -158,7 +129,6 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -169,7 +139,6 @@ export default function AIServices(...args[]):  {
             </div>
           </div>
         </div>
-
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
@@ -177,7 +146,6 @@ export default function AIServices(...args[]):  {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -189,13 +157,11 @@ export default function AIServices(...args[]):  {
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -205,7 +171,6 @@ export default function AIServices(...args[]):  {
                     <p className="text-slate-400">{service.description}</p>
                   </div>
                 </div>
-
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
@@ -214,7 +179,6 @@ export default function AIServices(...args[]):  {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
@@ -223,7 +187,6 @@ export default function AIServices(...args[]):  {
                   <Link
                     to="/contact"
                     className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-
                     Get Quote
                   </Link>
                 </div>
@@ -232,7 +195,6 @@ export default function AIServices(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -244,13 +206,11 @@ export default function AIServices(...args[]):  {
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
@@ -261,7 +221,6 @@ export default function AIServices(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -273,13 +232,11 @@ export default function AIServices(...args[]):  {
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
                   <useCase.icon className="h-6 w-6 text-white" />
                 </div>
@@ -297,7 +254,6 @@ export default function AIServices(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -312,33 +268,18 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
                 Explore All Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div></div>}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -35,11 +35,7 @@ export interface CuttingEdgeComprehensiveService2027 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveService2027[] = [
   // AI-POWERED INNOVATIVE SERVICES
@@ -668,16 +664,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
 ];
 
 // Helper functions for service management
-<<<<<<< HEAD
-export const getServiceById = (id: string) => {;
-  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id)};
-
-export const getServicesByCategory = (category: string) => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)};
-
-export const getPopularServices = () => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular)};
-=======
 export const getServiceById = (id: string) => {;
   return cuttingEdgeComprehensiveServices2027.find(service => service.id === id);
 };
@@ -689,7 +675,6 @@ export const getServicesByCategory = (category: string) => {;
 export const getPopularServices = () => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => {;
@@ -698,18 +683,6 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 export const searchServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-<<<<<<< HEAD
-  return cuttingEdgeComprehensiveServices2027.filter(service =>
-=======
-<<<<<<< HEAD
-  return cuttingEdgeComprehensiveServices2027.filter(service = > 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||;
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  )};
-=======
   return cuttingEdgeComprehensiveServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -717,6 +690,5 @@ export const searchServices = (query: string) => {;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default cuttingEdgeComprehensiveServices2027;}}

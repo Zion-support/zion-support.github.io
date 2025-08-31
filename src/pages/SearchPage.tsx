@@ -48,29 +48,7 @@ import {
   GraduationCap,
   TestTube
 } from 'lucide-react';
-
-<<<<<<< HEAD
-const SearchPage: React.FC = () => {
-	const [query, setQuery] = useState('')
-	return (
-		<div className="min-h-screen bg-slate-950 text-white py-16">
-			<SEO title="Search" description="Search Zion Tech Group content and services." />
-			<div className="container mx-auto max-w-3xl px-6">
-				<h1 className="text-3xl font-bold mb-6">Search</h1>
-				<input
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-					placeholder="Search..."
-					className="w-full rounded-md bg-slate-900 border border-slate-700 px-4 py-2 outline-none focus:ring-2 focus:ring-sky-600"
-				/>
-			</div>
-		</div>
-	)
-
-export default SearchPage}
-=======
 interface SearchResult {
-
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -81,7 +59,6 @@ interface SearchResult {
   tags: string[];
   featured?: boolean;
 }
-
 const mockSearchResults: SearchResult[] = [
   {
     id: '1',
@@ -162,7 +139,6 @@ const mockSearchResults: SearchResult[] = [
     path: '/talent/devops-specialist'
   }
 ];
-
 const categories = [
   { id: 'all', name: 'All Categories', icon: Grid, count: 0 },
   { id: 'services', name: 'Services', icon: Code, count: 0 },
@@ -170,7 +146,6 @@ const categories = [
   { id: 'equipment', name: 'Equipment', icon: Cpu, count: 0 },;
   { id: 'companies', name: 'Companies', icon: Building, count: 0 };
 ];
-
 const filters = {
   type['service', 'talent', 'equipment', 'comp'],
   category['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
@@ -179,16 +154,13 @@ const filters = {
   rating['4.5+', '4.0+',
   '3.5+'];
 ;
-
 };
-
 export default function SearchPage(...args[]):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isSearching, setIsSearching] = useState(false);
-
   // All searchable content
   const allContent: SearchResult[] = [
     // Main Pages
@@ -204,7 +176,6 @@ export default function SearchPage(...args[]):  {
     { id: 'faq', title: 'FAQ', description: 'Frequently asked questions', path: '/faq', category: 'Main Pages', icon: HelpCircle, tags: ['faq', 'questions', 'help'] },
     { id: 'help', title: 'Help Center', description: 'Support and documentation', path: '/help', category: 'Main Pages', icon: HelpCircle, tags: ['help', 'support', 'documentation'] },
     { id: 'sitemap', title: 'Sitemap', description: 'Complete site navigation', path: '/sitemap', category: 'Main Pages', icon: MapPin, tags: ['navigation', 'sitemap', 'structure'] },
-
     // Core Services
     { id: 'services', title: 'Services Overview', description: 'All our services', path: '/services', category: 'Core Services', icon: Zap, tags: ['services', 'overview', 'all'] },
     { id: 'services2026', title: '2026 Services', description: 'Revolutionary AI & Quantum Solutions', path: '/services2026', category: 'Core Services', icon: Star, tags: ['2026', 'ai', 'quantum', 'revolutionary'], featured: true },
@@ -215,7 +186,6 @@ export default function SearchPage(...args[]):  {
     { id: 'comprehensive-services', title: 'Comprehensive Services', description: 'Full-service solutions', path: '/comprehensive-services', category: 'Core Services', icon: Zap, tags: ['comprehensive', 'full-service', 'complete'] },
     { id: 'mobile-launch', title: 'Mobile Launch', description: 'Mobile app development', path: '/mobile-launch', category: 'Core Services', icon: Smartphone, tags: ['mobile', 'app', 'development'] },
     { id: 'analytics', title: 'Analytics', description: 'Data analytics services', path: '/analytics', category: 'Core Services', icon: BarChart3, tags: ['analytics', 'data', 'insights'] },
-
     // AI & Machine Learning
     { id: 'ai-bi', title: 'AI Business Intelligence', description: 'Advanced analytics & ML insights', path: '/services/ai-business-intelligence', category: 'AI & ML', icon: Brain, tags: ['ai', 'business intelligence', 'analytics', 'ml'] },
     { id: 'ai-compliance', title: 'AI Compliance Assistant', description: 'Automated regulatory compliance', path: '/services/ai-compliance-assistant', category: 'AI & ML', icon: Shield, tags: ['ai', 'compliance', 'regulatory', 'automation'] },
@@ -230,7 +200,6 @@ export default function SearchPage(...args[]):  {
     { id: 'ai-quantum', title: 'AI Quantum Hybrid Platform', description: 'Quantum-AI integration', path: '/services/ai-quantum-hybrid-platform', category: 'AI & ML', icon: Atom, tags: ['ai', 'quantum', 'hybrid', 'integration'] },
     { id: 'ai-cybersecurity', title: 'AI Cybersecurity Platform', description: 'AI-powered security', path: '/services/ai-cybersecurity-platform', category: 'AI & ML', icon: Shield, tags: ['ai', 'cybersecurity', 'security', 'platform'] },
     { id: 'ai-healthcare', title: 'AI Healthcare Platform', description: 'Healthcare AI solutions', path: '/services/ai-healthcare-platform', category: 'AI & ML', icon: Heart, tags: ['ai', 'healthcare', 'medical', 'platform'] },
-
     // Cloud & DevOps
     { id: 'cloud-devops', title: 'Cloud DevOps', description: 'Infrastructure automation & scaling', path: '/services/cloud-devops', category: 'Cloud & DevOps', icon: Cloud, tags: ['cloud', 'devops', 'infrastructure', 'automation'] },
     { id: 'it-infrastructure', title: 'IT Infrastructure', description: 'Enterprise infrastructure solutions', path: '/services/it-infrastructure', category: 'Cloud & DevOps', icon: Server, tags: ['it', 'infrastructure', 'enterprise', 'solutions'] },
@@ -238,25 +207,21 @@ export default function SearchPage(...args[]):  {
     { id: 'cloud-finops', title: 'Cloud FinOps Optimizer', description: 'Financial operations automation', path: '/services/cloud-finops-optimizer', category: 'Cloud & DevOps', icon: BarChart3, tags: ['cloud', 'finops', 'financial', 'automation'] },
     { id: 'digital-twin', title: 'Digital Twin', description: 'Virtual system replicas', path: '/services/digital-twin', category: 'Cloud & DevOps', icon: Eye, tags: ['digital twin', 'virtual', 'replicas', 'simulation'] },
     { id: 'digital-transformation', title: 'Digital Transformation', description: 'Strategic technology consulting', path: '/services/digital-transformation', category: 'Cloud & DevOps', icon: Zap, tags: ['digital transformation', 'strategy', 'consulting'] },
-
     // Cybersecurity
     { id: 'security-headers', title: 'Security Headers & CSP', description: 'Web security hardening', path: '/services/security-headers-csp', category: 'Cybersecurity', icon: Lock, tags: ['security', 'headers', 'csp', 'web security'] },
     { id: 'dsr-portal', title: 'DSR Privacy Portal', description: 'GDPR/CCPA compliance', path: '/services/dsr-portal', category: 'Cybersecurity', icon: Shield, tags: ['dsr', 'privacy', 'gdpr', 'ccpa', 'compliance'] },
     { id: 'zero-trust', title: 'Zero Trust Network Access', description: 'Advanced security architecture', path: '/services/zero-trust-network-access', category: 'Cybersecurity', icon: Shield, tags: ['zero trust', 'network', 'security', 'architecture'] },
     { id: 'ai-cyber', title: 'AI Cybersecurity', description: 'AI-powered security solutions', path: '/services/ai-cybersecurity', category: 'Cybersecurity', icon: Shield, tags: ['ai', 'cybersecurity', 'security', 'ai-powered'] },
-
     // Emerging Technologies
     { id: 'quantum-computing', title: 'Quantum Computing', description: 'Next-gen computational power', path: '/services/quantum-computing', category: 'Emerging Tech', icon: Atom, tags: ['quantum', 'computing', 'next-gen', 'computational'] },
     { id: 'iot-edge', title: 'IoT Edge Computing', description: 'Smart device networks', path: '/services/iot-edge-computing', category: 'Emerging Tech', icon: Network, tags: ['iot', 'edge computing', 'smart devices', 'networks'] },
     { id: 'quantum-ml', title: 'Quantum Machine Learning', description: 'Quantum ML algorithms', path: '/services/quantum-machine-learning', category: 'Emerging Tech', icon: Atom, tags: ['quantum', 'machine learning', 'ml', 'algorithms'] },
     { id: 'sustainable-tech', title: 'Sustainable Technology', description: 'Green tech solutions', path: '/services/sustainable-technology', category: 'Emerging Tech', icon: Heart, tags: ['sustainable', 'green tech', 'environmental', 'solutions'] },
-
     // Data & Analytics
     { id: 'data-analytics', title: 'Data Analytics', description: 'Business intelligence & insights', path: '/services/data-analytics', category: 'Data & Analytics', icon: BarChart3, tags: ['data', 'analytics', 'business intelligence', 'insights'] },
     { id: 'business-intelligence', title: 'Business Intelligence', description: 'Performance metrics & reporting', path: '/services/business-intelligence', category: 'Data & Analytics', icon: TrendingUp, tags: ['business intelligence', 'bi', 'metrics', 'reporting'] },
     { id: 'ai-predictive', title: 'AI Predictive Maintenance', description: 'Predictive analytics', path: '/services/ai-predictive-maintenance', category: 'Data & Analytics', icon: TrendingUp, tags: ['ai', 'predictive', 'maintenance', 'analytics'] },
     { id: 'website-analytics', title: 'Website Analytics', description: 'Web performance tracking', path: '/services/website-analytics', category: 'Data & Analytics', icon: BarChart3, tags: ['website', 'analytics', 'performance', 'tracking'] },
-
     // Micro SaaS Solutions
     { id: 'micro-saas-platform', title: 'Micro SaaS Platform', description: 'Niche software solutions', path: '/services/micro-saas-solutions', category: 'Micro SaaS', icon: ShoppingCart, tags: ['micro saas', 'platform', 'niche', 'software'] },
     { id: 'micro-crm', title: 'Micro CRM', description: 'Customer relationship management', path: '/services/micro-crm', category: 'Micro SaaS', icon: Users, tags: ['micro crm', 'customer', 'relationship', 'management'] },
@@ -264,7 +229,6 @@ export default function SearchPage(...args[]):  {
     { id: 'email-sequencer', title: 'Email Sequencer', description: 'Email automation tools', path: '/services/email-sequencer', category: 'Micro SaaS', icon: MessageCircle, tags: ['email', 'sequencer', 'automation', 'tools'] },
     { id: 'podcast-transcription', title: 'Podcast Transcription', description: 'Audio processing services', path: '/services/podcast-transcription', category: 'Micro SaaS', icon: MessageCircle, tags: ['podcast', 'transcription', 'audio', 'processing'] },
     { id: 'returns-management', title: 'Returns Management', description: 'E-commerce returns handling', path: '/services/returns-management', category: 'Micro SaaS', icon: ShoppingCart, tags: ['returns', 'management', 'e-commerce', 'handling'] },
-
     // Industry Solutions
     { id: 'enterprise-solutions', title: 'Enterprise Solutions', description: 'Large business solutions', path: '/solutions/enterprise', category: 'Industry Solutions', icon: Building, tags: ['enterprise', 'solutions', 'large business', 'corporate'] },
     { id: 'healthcare-solutions', title: 'Healthcare Solutions', description: 'Healthcare industry solutions', path: '/solutions/healthcare', category: 'Industry Solutions', icon: Heart, tags: ['healthcare', 'solutions', 'medical', 'industry'] },
@@ -272,14 +236,12 @@ export default function SearchPage(...args[]):  {
     { id: 'financial-solutions', title: 'Financial Solutions', description: 'Financial services technology', path: '/solutions/financial', category: 'Industry Solutions', icon: DollarSign, tags: ['financial', 'solutions', 'fintech', 'technology'] },
     { id: 'government-solutions', title: 'Government Solutions', description: 'Public sector technology', path: '/solutions/government', category: 'Industry Solutions', icon: Building, tags: ['government', 'solutions', 'public sector', 'technology'] },
     { id: 'retail-solutions', title: 'Retail Solutions', description: 'Retail technology solutions', path: '/solutions/retail', category: 'Industry Solutions', icon: ShoppingCart, tags: ['retail', 'solutions', 'technology', 'commerce'] },
-
     // Marketplace
     { id: 'marketplace', title: 'Marketplace', description: 'Digital marketplace', path: '/marketplace', category: 'Marketplace', icon: ShoppingCart, tags: ['marketplace', 'digital', 'platform'] },
     { id: 'marketplace-products', title: 'Products', description: 'Digital products', path: '/marketplace/products', category: 'Marketplace', icon: Package, tags: ['products', 'digital', 'marketplace'] },
     { id: 'marketplace-talent', title: 'Talent', description: 'Expert talent pool', path: '/marketplace/talent', category: 'Marketplace', icon: Users, tags: ['talent', 'experts', 'pool', 'marketplace'] },
     { id: 'marketplace-equipment', title: 'Equipment', description: 'Technology equipment', path: '/marketplace/equipment', category: 'Marketplace', icon: Server, tags: ['equipment', 'technology', 'hardware', 'marketplace'] },
     { id: 'marketplace-services', title: 'Services', description: 'Professional services', path: '/marketplace/services', category: 'Marketplace', icon: Zap, tags: ['services', 'professional', 'marketplace'] },
-
     // Resources
     { id: 'documentation', title: 'Documentation', description: 'Technical documentation', path: '/docs', category: 'Resources', icon: FileText, tags: ['documentation', 'technical', 'docs', 'guides'] },
     { id: 'developers', title: 'Developers', description: 'Developer resources', path: '/developers', category: 'Resources', icon: Code, tags: ['developers', 'resources', 'api', 'sdk'] },
@@ -289,18 +251,14 @@ export default function SearchPage(...args[]):  {
     { id: 'support', title: 'Support', description: 'Technical support', path: '/support', category: 'Resources', icon: HelpCircle, tags: ['support', 'technical', 'help', 'assistance'] },
     { id: 'research-development', title: 'Research & Development', description: 'R&D initiatives', path: '/research-development', category: 'Resources', icon: TestTube, tags: ['research', 'development', 'r&d', 'initiatives'] }
   ];
-
   // Available categories
   const categories = ['all', ...Array.from(new Set(allContent.map(item => item.category)))];
-
   // Available tags
   const allTags = Array.from(new Set(allContent.flatMap(item => item.tags)));
   const popularTags = allTags.slice(0, 20); // Show top 20 tags
-
   // Filtered results
   const filteredResults = useMemo(() => {
     let results = allContent;
-
     // Filter by search query
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -311,22 +269,18 @@ export default function SearchPage(...args[]):  {
         item.category.toLowerCase().includes(query)
       );
     }
-
     // Filter by category
     if (selectedCategory !== 'all') {
       results = results.filter(item => item.category === selectedCategory);
     }
-
     // Filter by tags
     if (selectedTags.length > 0) {
       results = results.filter(item =>
         selectedTags.some(tag => item.tags.includes(tag))
       );
     }
-
     return results;
   }, [searchQuery, selectedCategory, selectedTags]);
-
   // Handle search
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -336,7 +290,6 @@ export default function SearchPage(...args[]):  {
       setTimeout(() => setIsSearching(false), 1000);
     }
   };
-
   // Handle tag selection
   const toggleTag = (tag: string) => {
     setSelectedTags(prev => 
@@ -345,7 +298,6 @@ export default function SearchPage(...args[]):  {
         : [...prev, tag]
     );
   };
-
   // Clear all filters
   const clearFilters = () => {
     setSelectedCategory('all');
@@ -353,7 +305,6 @@ export default function SearchPage(...args[]):  {
     setSearchQuery('');
     setSearchParams({});
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -374,14 +325,12 @@ export default function SearchPage(...args[]):  {
             Find the services, solutions, and information you need across our comprehensive platform
           </p>
         </motion.div>
-
         {/* Search Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
           <form onSubmit={handleSearch} className="max-w-4xl mx-auto">
             <div className="relative">
@@ -403,7 +352,6 @@ export default function SearchPage(...args[]):  {
             </div>
           </form>
         </motion.div>
-
         {/* Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -414,7 +362,6 @@ export default function SearchPage(...args[]):  {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <span className="text-white font-medium">Filters:</span>
-              
               {/* Category Filter */}
               <select
                 value={selectedCategory}
@@ -427,7 +374,6 @@ export default function SearchPage(...args[]):  {
                   </option>
                 ))}
               </select>
-
               {/* Clear Filters */}
               {(selectedCategory !== 'all' || selectedTags.length > 0) && (
                 <button
@@ -438,7 +384,6 @@ export default function SearchPage(...args[]):  {
                 </button>
               )}
             </div>
-
             {/* Tag Filters */}
             <div className="flex flex-wrap gap-2">
               {popularTags.map(tag => (
@@ -457,7 +402,6 @@ export default function SearchPage(...args[]):  {
             </div>
           </div>
         </motion.div>
-
         {/* Search Results */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -471,7 +415,6 @@ export default function SearchPage(...args[]):  {
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
             </p>
           </div>
-
           {/* Results Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
@@ -495,15 +438,12 @@ export default function SearchPage(...args[]):  {
                         <Star className="w-5 h-5 text-yellow-400" />
                       )}
                     </div>
-                    
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {result.title}
                     </h3>
-                    
                     <p className="text-sm text-slate-400 mb-4 group-hover:text-slate-300 transition-colors">
                       {result.description}
                     </p>
-                    
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
                         {result.category}
@@ -515,7 +455,6 @@ export default function SearchPage(...args[]):  {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {filteredResults.length === 0 && (
             <motion.div
@@ -543,4 +482,3 @@ export default function SearchPage(...args[]):  {
     </div>
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
