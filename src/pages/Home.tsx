@@ -381,6 +381,30 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    },
+    {
+      icon: DollarSign,
+      title: "AI Financial Advisor",
+      description: "Autonomous AI-powered financial advice and portfolio optimization",
+      href: "/services/ai-autonomous-financial-advisor",
+      color: "from-green-500 to-cyan-500",
+      features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"]
+    },
+    {
+      icon: Heart,
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered medical diagnostics and health analytics",
+      href: "/services/ai-autonomous-healthcare-diagnostics",
+      color: "from-red-500 to-blue-500",
+      features: ["Medical Imaging", "Disease Detection", "Predictive Analytics", "Clinical Support"]
+    },
+    {
+      icon: Shield,
+      title: "AI Cybersecurity Operations",
+      description: "Autonomous AI-powered cybersecurity and threat response",
+      href: "/services/ai-autonomous-cybersecurity-operations",
+      color: "from-orange-500 to-red-500",
+      features: ["Threat Detection", "Autonomous Response", "Zero Trust", "24/7 Monitoring"]
     }
   ];
 

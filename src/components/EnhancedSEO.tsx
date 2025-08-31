@@ -66,6 +66,34 @@ export const SEOConfigs = {
     description: "Ready to transform your business? Contact Zion Tech Group for a free consultation on AI solutions and technology services.",
     keywords: ["contact", "consultation", "get started", "support", "help"],
     ogType: "website"
+  },
+  aiAutonomousFinancialAdvisor: {
+    title: "AI Autonomous Financial Advisor - Zion Tech Group",
+    description: "Revolutionary AI-powered autonomous financial advisor providing investment analysis, portfolio optimization, and risk management with 24/7 monitoring.",
+    keywords: ["AI financial advisor", "autonomous investment", "portfolio optimization", "risk management", "financial AI", "investment analysis"],
+    ogType: "website",
+    canonical: "https://ziontechgroup.com/services/ai-autonomous-financial-advisor"
+  },
+  aiAutonomousHealthcareDiagnostics: {
+    title: "AI Autonomous Healthcare Diagnostics - Zion Tech Group",
+    description: "Cutting-edge AI-powered healthcare diagnostics platform for medical imaging analysis, disease detection, and predictive health analytics.",
+    keywords: ["AI healthcare", "medical diagnostics", "medical imaging", "disease detection", "health analytics", "AI medicine"],
+    ogType: "website",
+    canonical: "https://ziontechgroup.com/services/ai-autonomous-healthcare-diagnostics"
+  },
+  aiAutonomousCybersecurityOperations: {
+    title: "AI Autonomous Cybersecurity Operations - Zion Tech Group",
+    description: "Advanced AI-powered autonomous cybersecurity platform providing 24/7 threat detection, autonomous response, and zero-trust security architecture.",
+    keywords: ["AI cybersecurity", "autonomous security", "threat detection", "zero trust", "cybersecurity AI", "security automation"],
+    ogType: "website",
+    canonical: "https://ziontechgroup.com/services/ai-autonomous-cybersecurity-operations"
+  },
+  innovativeServicesShowcase2027: {
+    title: "Innovative Services Showcase 2027 - Zion Tech Group",
+    description: "Discover Zion Tech Group's latest innovative AI services, autonomous operations platforms, and cutting-edge technology solutions for 2027.",
+    keywords: ["innovative services", "AI services 2027", "autonomous operations", "technology showcase", "AI innovation", "future technology"],
+    ogType: "website",
+    canonical: "https://ziontechgroup.com/innovative-services-showcase-2027"
   }
 };
 
@@ -92,7 +120,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
         {/* Basic Meta Tags */}
         <title>{fullTitle}</title>
         <meta name="description" content={metaDescription} />
-        {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')}} />}
+        {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
         
         {/* Canonical URL */}
         {canonical && <link rel="canonical" href={canonical} />}
