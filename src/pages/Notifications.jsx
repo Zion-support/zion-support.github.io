@@ -144,5 +144,5 @@ export default function NotificationsPage() {
         </div>
       </main>
       
-    </>);
-}
+    </>
+})

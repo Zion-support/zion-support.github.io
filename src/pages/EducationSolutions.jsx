@@ -24,7 +24,6 @@ import {
   Monitor,
   Brain,
   Code
-} from 'lucide-react';
 
 const educationSolutions = [
   {

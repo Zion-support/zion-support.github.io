@@ -35,16 +35,16 @@ const EquipmentPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -56,13 +56,13 @@ const EquipmentPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -71,10 +71,10 @@ const EquipmentPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -85,7 +85,6 @@ const EquipmentPage = () => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }, []);
 
   const EquipmentFilterControls = () => (
     <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg">

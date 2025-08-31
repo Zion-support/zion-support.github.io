@@ -469,7 +469,7 @@ export default function AIContentMarketingSuite() {
                 step: '04',
                 title: 'Launch & Optimize',
                 description: 'Go live with continuous monitoring and ongoing optimization support'
-              }
+})
             ].map((phase, index) => (
               <motion.div
                 key={index}

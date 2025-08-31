@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { CheckCircle, Cookie, ExternalLink, Eye, EyeOff, Info, Settings, Shield, XCircle } from 'lucide-react';
 
 interface CookieCategory {
   id: string;

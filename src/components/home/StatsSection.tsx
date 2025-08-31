@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { TrendingUp, Award, Users, Clock } from 'lucide-react';
+import { Award, Clock, TrendingUp, Users } from 'lucide-react';
 
 interface Stat {
   number: string;
@@ -21,26 +21,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
@@ -55,8 +37,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             if (current >= targetNumber) {
               current = targetNumber;
               clearInterval(countTimer);
-            }
-            
+})
             setCounts(prev => ({
               ...prev,
               [stat.label]: Math.floor(current)
@@ -66,7 +47,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       }, 500);
 
       return () => clearTimeout(timer);
-    }
+})
   }, [isInView, stats]);
 
   return (

@@ -301,6 +301,6 @@ const AICodeReviewAssistant = () => {
           </div>
         </section>
       </div>
-    </>);
+    </>
 };
 export default AICodeReviewAssistant;

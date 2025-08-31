@@ -110,8 +110,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       default: // relevance
         // Keep original order for relevance
         break;
-    }
-
+})
     return results;
   }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
 
@@ -131,16 +130,16 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -152,13 +151,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -167,10 +166,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

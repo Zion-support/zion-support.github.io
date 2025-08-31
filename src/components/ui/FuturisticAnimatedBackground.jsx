@@ -5,26 +5,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
     const particlesRef = useRef([]);
     const animationRef = useRef(null);
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -59,7 +41,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 this.alpha = Math.random() * 0.8 + 0.2;
                 this.life = Math.random() * 100 + 50;
                 this.maxLife = this.life;
-            }
+})
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
@@ -78,7 +60,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                     this.y = canvas.height;
                 if (this.y > canvas.height)
                     this.y = 0;
-            }
+})
             draw() {
                 if (!ctx)
                     return;
@@ -90,16 +72,16 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 if (variant === 'matrix') {
                     // Matrix-style particles
                     ctx.fillRect(this.x, this.y, this.size, this.size * 2);
-                }
+})
                 else {
                     // Circular particles
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                     ctx.fill();
-                }
+})
                 ctx.restore();
-            }
-        }
+})
+})
         function getParticleColor() {
             const colors = {
                 cyberpunk: ['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
@@ -108,12 +90,12 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 matrix: ['#00ff41', '#00ff00', '#39ff14', '#7fff00', '#bfff00']
             };
             return colors[variant][Math.floor(Math.random() * colors[variant].length)];
-        }
+})
         // Initialize particles
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         for (let i = 0; i < particleCount; i++) {
             particlesRef.current.push(new Particle());
-        }
+})
         // Animation loop
         const animate = () => {
             if (!ctx || !canvas)
@@ -128,12 +110,12 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 // Remove dead particles and add new ones
                 if (particle.life <= 0) {
                     particlesRef.current[index] = new Particle();
-                }
+})
             });
             // Draw connecting lines between nearby particles
             if (variant !== 'matrix') {
                 drawConnections();
-            }
+})
             // Add special effects based on variant
             addSpecialEffects();
             animationRef.current = requestAnimationFrame(animate);
@@ -153,10 +135,10 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                         ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y);
                         ctx.lineTo(particlesRef.current[j].x, particlesRef.current[j].y);
                         ctx.stroke();
-                    }
-                }
-            }
-        }
+})
+})
+})
+})
         function addSpecialEffects() {
             if (!ctx || !canvas)
                 return;
@@ -170,14 +152,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                     ctx.moveTo(x, 0);
                     ctx.lineTo(x, canvas.height);
                     ctx.stroke();
-                }
+})
                 for (let y = 0; y < canvas.height; y += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(canvas.width, y);
                     ctx.stroke();
-                }
-            }
+})
+})
             // Add wave effect for quantum variant
             if (variant === 'quantum') {
                 const time = Date.now() * 0.001;
@@ -188,13 +170,13 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                     const y = canvas.height / 2 + Math.sin(x * 0.01 + time) * 50;
                     if (x === 0) {
                         ctx.moveTo(x, y);
-                    }
+})
                     else {
                         ctx.lineTo(x, y);
-                    }
-                }
+})
+})
                 ctx.stroke();
-            }
+})
             // Add scan line effect for neon variant
             if (variant === 'neon') {
                 const scanLineY = (Date.now() * 0.1) % canvas.height;
@@ -207,14 +189,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 ctx.lineTo(canvas.width, scanLineY);
                 ctx.stroke();
                 ctx.shadowBlur = 0;
-            }
-        }
+})
+})
         animate();
         return () => {
             window.removeEventListener('resize', resizeCanvas);
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current);
-            }
+})
         };
     }, [variant, intensity]);
     return (<div className={`fixed inset-0 -z-10 overflow-hidden ${className}`}>

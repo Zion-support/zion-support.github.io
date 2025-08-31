@@ -38,16 +38,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -59,13 +59,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -74,10 +74,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -94,7 +94,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   const baseLinks: NavigationLink[] = [
     {

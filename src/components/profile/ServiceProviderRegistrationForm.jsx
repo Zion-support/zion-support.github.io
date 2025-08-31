@@ -102,8 +102,8 @@ export function ServiceProviderRegistrationForm() {
                         bio: formData.bio,
                         services: serviceTags,
                         location: formData.location
-                    }
-                }
+})
+})
             });
             if (error) {
                 throw new Error(error.message);
@@ -113,8 +113,7 @@ export function ServiceProviderRegistrationForm() {
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional services for your profile.",
             });
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
@@ -167,8 +166,8 @@ export function ServiceProviderRegistrationForm() {
                                 bio: values.bio,
                                 services: serviceTags,
                                 location: values.location
-                            }
-                        }
+})
+})
                     });
                     if (aiData) {
                         finalSummary = aiData.summary || values.bio;
@@ -176,8 +175,7 @@ export function ServiceProviderRegistrationForm() {
                         const aiServices = aiData.services || [];
                         finalServices = [...new Set([...serviceTags, ...aiServices])];
                     }
-                }
-                catch (error) {
+  } catch (error) {
                     console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
                 }
@@ -239,10 +237,9 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
               `
-                        }
+})
                     });
-                }
-                catch (emailError) {
+  } catch (emailError) {
                     console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
                 }
@@ -255,8 +252,7 @@ export function ServiceProviderRegistrationForm() {
             setTimeout(() => {
                 window.location.href = "/service-dashboard";
             }, 1500);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",

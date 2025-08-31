@@ -20,16 +20,16 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -41,13 +41,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -56,10 +56,10 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -71,7 +71,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };

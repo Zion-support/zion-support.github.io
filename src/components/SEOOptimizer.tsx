@@ -89,7 +89,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         impact: 'low',
         fixable: true,
         category: 'accessibility'
-      }
+})
     ],
     suggestions: [
       {
@@ -115,7 +115,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         priority: 'low',
         effort: 'low',
         estimatedImpact: 5
-      }
+})
     ],
     metrics: {
       pageSpeed: 78,
@@ -127,7 +127,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         lcp: 2.8,
         fid: 45,
         cls: 0.08
-      }
+})
     },
     lastUpdated: new Date()
   }), []);
@@ -160,16 +160,16 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -181,13 +181,13 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -196,10 +196,10 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -549,7 +549,6 @@ export const useSEOOptimization = () => {
     // Implement actual optimization logic here
     await new Promise(resolve => setTimeout(resolve, 3000));
     setIsOptimizing(false);
-  }, []);
 
   return {
     analysis,

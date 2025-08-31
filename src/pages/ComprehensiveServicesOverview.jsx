@@ -85,11 +85,11 @@ export default function ComprehensiveServicesOverview() {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
+})
         // Category filter
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+})
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
@@ -111,8 +111,8 @@ export default function ComprehensiveServicesOverview() {
                         return price > 3000;
                     });
                     break;
-            }
-        }
+})
+})
     });
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
@@ -380,5 +380,5 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>
+})

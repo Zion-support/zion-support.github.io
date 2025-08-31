@@ -48,7 +48,7 @@ const UltimateServicesShowcase2026 = () => {
             case 'name':
             default:
                 return a.name.localeCompare(b.name);
-        }
+})
     });
     const getCategoryIcon = (category) => {
         const icons = {

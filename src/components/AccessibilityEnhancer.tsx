@@ -48,16 +48,16 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -69,13 +69,13 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -84,10 +84,10 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -100,11 +100,10 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const parsed = JSON.parse(savedSettings);
         setSettings({ ...DEFAULT_SETTINGS, ...parsed });
         applySettings({ ...DEFAULT_SETTINGS, ...parsed });
-      } catch (error) {
+  } catch (error) {
         console.warn('Failed to parse accessibility settings:', error);
       }
     }
-  }, []);
 
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -152,7 +151,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     } else {
       document.body.classList.remove('keyboard-navigation');
     }
-  }, []);
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
     const newSettings = { ...settings, [key]: value };

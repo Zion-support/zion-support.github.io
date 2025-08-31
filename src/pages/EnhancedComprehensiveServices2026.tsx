@@ -102,7 +102,6 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
     });
 
     return services;
-  }, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
@@ -136,8 +135,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         // Sort by innovation level if available, otherwise by rating
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
         break;
-    }
-
+})
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
@@ -165,7 +163,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         return <Satellite className="w-6 h-6" />;
       default:
         return <Lightbulb className="w-6 h-6" />;
-    }
+})
   };
 
   const getStatusColor = (status: string) => {
@@ -180,7 +178,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
         return 'bg-purple-100 text-purple-800';
       default:
         return 'bg-gray-100 text-gray-800';
-    }
+})
   };
 
   const getInnovationBadge = (service: Service) => {
@@ -188,7 +186,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel === 'Cutting-Edge') {
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
-    }
+})
     return null;
   };
 

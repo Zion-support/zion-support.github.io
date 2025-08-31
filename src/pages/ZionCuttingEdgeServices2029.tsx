@@ -26,9 +26,8 @@ export default function ZionCuttingEdgeServices2029() {
         matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
       } else {
         matchesPrice = service.pricing.starter >= min;
-      }
-    }
-    
+})
+})
     return matchesSearch && matchesCategory && matchesPrice;
   });
 

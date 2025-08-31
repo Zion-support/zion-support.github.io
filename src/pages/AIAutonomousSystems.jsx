@@ -576,7 +576,6 @@ import {
   Shield,
   Zap,
   Cpu
-} from 'lucide-react';
 
 const autonomousSystemsSolutions = [
   {

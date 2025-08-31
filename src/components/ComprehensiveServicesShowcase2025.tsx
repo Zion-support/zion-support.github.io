@@ -67,7 +67,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return a.category.localeCompare(b.category);
       default:
         return 0;
-    }
+})
   });
 
   const handleServiceClick = (service: any) => {
@@ -305,7 +305,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             className={viewMode === 'grid' 
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
-            }
+})
           >
             {sortedServices.map((service) => (
               <motion.div

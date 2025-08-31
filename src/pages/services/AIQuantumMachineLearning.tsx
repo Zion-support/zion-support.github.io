@@ -1,4 +1,4 @@
-import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe } from 'lucide-react';
+import { ArrowRight, Atom, BarChart3, Brain, Check, Clock, ExternalLink, Globe, Mail, Phone, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
 export default function AIQuantumMachineLearning() {
   const features = [

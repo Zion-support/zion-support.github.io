@@ -63,7 +63,7 @@ export default function EnhancedAccessibilityEnhancer({
       text: '#000000',
       primary: '#3b82f6',
       secondary: '#64748b'
-    }
+})
   });
 
   const [features, setFeatures] = useState<AccessibilityFeature[]>([
@@ -138,7 +138,7 @@ export default function EnhancedAccessibilityEnhancer({
       enabled: false,
       wcagLevel: 'AAA',
       impact: 'medium'
-    }
+})
   ]);
 
   const [activeFeatures, setActiveFeatures] = useState<string[]>([]);
@@ -169,8 +169,7 @@ export default function EnhancedAccessibilityEnhancer({
       body.style.removeProperty('--zion-text');
       body.style.removeProperty('--zion-primary');
       body.style.removeProperty('--zion-secondary');
-    }
-
+})
     // Large text mode
     if (newSettings.largeText) {
       root.style.fontSize = '18px';
@@ -180,8 +179,7 @@ export default function EnhancedAccessibilityEnhancer({
       root.style.fontSize = '16px';
       root.style.setProperty('--zion-font-size', '16px');
       root.style.setProperty('--zion-line-height', '1.5');
-    }
-
+})
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.style.setProperty('--zion-reduced-motion', 'reduce');
@@ -189,16 +187,14 @@ export default function EnhancedAccessibilityEnhancer({
     } else {
       root.style.removeProperty('--zion-reduced-motion');
       document.body.classList.remove('reduced-motion');
-    }
-
+})
     // Custom colors
     if (newSettings.colorScheme === 'custom') {
       root.style.setProperty('--zion-custom-bg', newSettings.customColors.background);
       root.style.setProperty('--zion-custom-text', newSettings.customColors.text);
       root.style.setProperty('--zion-custom-primary', newSettings.customColors.primary);
       root.style.setProperty('--zion-custom-secondary', newSettings.customColors.secondary);
-    }
-
+})
     // Dyslexia friendly
     if (newSettings.dyslexiaFriendly) {
       body.style.setProperty('--zion-font-family', 'OpenDyslexic, Arial, sans-serif');
@@ -208,17 +204,14 @@ export default function EnhancedAccessibilityEnhancer({
       body.style.removeProperty('--zion-font-family');
       body.style.removeProperty('--zion-letter-spacing');
       body.style.removeProperty('--zion-word-spacing');
-    }
-
+})
     // Focus indicators
     if (newSettings.focusIndicators) {
       body.classList.add('enhanced-focus');
     } else {
       body.classList.remove('enhanced-focus');
-    }
-
+})
     setSettings(newSettings);
-  }, []);
 
   // Initialize voice recognition
   useEffect(() => {
@@ -236,16 +229,16 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -257,13 +250,13 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -272,10 +265,10 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -310,7 +303,6 @@ export default function EnhancedAccessibilityEnhancer({
 
       setVoiceRecognition(recognition);
     }
-  }, []);
 
   // Handle voice commands
   const handleVoiceCommand = useCallback((command: string) => {
@@ -327,7 +319,6 @@ export default function EnhancedAccessibilityEnhancer({
     } else if (command.includes('reduced motion')) {
       toggleFeature('reduced-motion');
     }
-  }, []);
 
   // Toggle accessibility features
   const toggleFeature = useCallback((featureId: string) => {
@@ -396,16 +387,16 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -417,13 +408,13 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -432,10 +423,10 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -474,16 +465,16 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -495,13 +486,13 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -510,10 +501,10 @@ export default function EnhancedAccessibilityEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -543,7 +534,6 @@ export default function EnhancedAccessibilityEnhancer({
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   // Save settings to localStorage
   const saveSettings = useCallback(async () => {
@@ -551,7 +541,7 @@ export default function EnhancedAccessibilityEnhancer({
     try {
       localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate save
-    } catch (error) {
+  } catch (error) {
       console.error('Failed to save settings:', error);
     } finally {
       setIsLoading(false);
@@ -569,7 +559,7 @@ export default function EnhancedAccessibilityEnhancer({
         applyAccessibilitySettings(parsedSettings);
       }
       await new Promise(resolve => setTimeout(resolve, 500)); // Simulate load
-    } catch (error) {
+  } catch (error) {
       console.error('Failed to load settings:', error);
     } finally {
       setIsLoading(false);

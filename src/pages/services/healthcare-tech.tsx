@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, CheckCircle, Database, Download, Globe, Heart, Mail, Play, Settings, Shield, Stethoscope, Target, Users, Zap } from 'lucide-react';
 
 export default function HealthcareTech() {
   return (
@@ -93,7 +92,7 @@ export default function HealthcareTech() {
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function HealthcareTech() {
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
-                }
+})
               ].map((application, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -280,7 +279,7 @@ export default function HealthcareTech() {
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
-                }
+})
               ].map((compliance, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -335,7 +334,7 @@ export default function HealthcareTech() {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">

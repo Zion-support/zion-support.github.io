@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Bookmark, Calendar, Clock, Eye, Filter, Heart, MessageCircle, MoreHorizontal, Plus, Search, Share2, Star, Tag, TrendingUp, User, Users } from 'lucide-react';
 
 interface CommunityPost {
   id: string;
@@ -212,7 +211,7 @@ const Community: React.FC = () => {
         return b.views - a.views;
       default:
         return 0;
-    }
+})
   });
 
   const getCategoryColor = (categoryId: string) => {

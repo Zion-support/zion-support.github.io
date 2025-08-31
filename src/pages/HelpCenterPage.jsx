@@ -219,5 +219,5 @@ export default function HelpCenterPage() {
           </section>
         </div>
       </main>
-    </>);
-}
+    </>
+})

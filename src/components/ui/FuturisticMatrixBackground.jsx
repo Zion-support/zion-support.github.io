@@ -2,26 +2,8 @@ import React, { useEffect, useRef } from 'react';
 export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00ff88', speed = 2, className = '' }) => {
     const canvasRef = useRef(null);
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -44,7 +26,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         // Initialize drops
         for (let i = 0; i < columns; i++) {
             drops[i] = 1;
-        }
+})
         // Animation variables
         let animationId;
         let frameCount = 0;
@@ -70,14 +52,14 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 // Reset drop to top when it reaches bottom
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
-                }
+})
                 // Move drop down
                 drops[i]++;
-            }
+})
             // Add floating particles for high intensity
             if (intensity === 'high') {
                 drawFloatingParticles(ctx, frameCount);
-            }
+})
             frameCount++;
             animationId = requestAnimationFrame(draw);
         };
@@ -91,7 +73,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 ctx.arc(x, y, size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(0, 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
                 ctx.fill();
-            }
+})
         };
         // Start animation
         draw();

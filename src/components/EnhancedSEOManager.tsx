@@ -17,26 +17,8 @@ interface EnhancedSEOManagerProps {
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title
@@ -48,7 +30,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name', 'description');
         document.head.appendChild(metaDesc);
-      }
+})
       metaDesc.setAttribute('content', seoData.description);
       
       // Update keywords
@@ -57,7 +39,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
-      }
+})
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
@@ -67,7 +49,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           ogTag = document.createElement('meta');
           ogTag.setAttribute('property', property);
           document.head.appendChild(ogTag);
-        }
+})
         ogTag.setAttribute('content', content);
       };
       
@@ -84,7 +66,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           twitterTag = document.createElement('meta');
           twitterTag.setAttribute('name', name);
           document.head.appendChild(twitterTag);
-        }
+})
         twitterTag.setAttribute('content', content);
       };
       
@@ -100,10 +82,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           canonical = document.createElement('link');
           canonical.setAttribute('rel', 'canonical');
           document.head.appendChild(canonical);
-        }
+})
         canonical.setAttribute('href', seoData.canonicalUrl);
-      }
-      
+})
       // Add structured data
       if (seoData.structuredData) {
         let script = document.querySelector('script[type="application/ld+json"]');
@@ -111,9 +92,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           script = document.createElement('script');
           script.setAttribute('type', 'application/ld+json');
           document.head.appendChild(script);
-        }
+})
         script.textContent = JSON.stringify(seoData.structuredData);
-      }
+})
     };
     
     updateMetaTags();

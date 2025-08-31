@@ -49,9 +49,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           break;
         default:
           services = INNOVATIVE_SERVICES_2025;
-      }
-    }
-    
+})
+})
     return services.slice(0, maxServices);
   }, [activeTab, category, maxServices]);
 

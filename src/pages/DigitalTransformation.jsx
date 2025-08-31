@@ -242,7 +242,7 @@ export default function DigitalTransformation() {
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
-            }
+})
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">

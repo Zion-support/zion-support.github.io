@@ -24,7 +24,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 const value = String(item[col.key]).toLowerCase();
                 return value.includes(searchQuery.toLowerCase());
             }));
-        }
+})
         // Apply filters
         filters.forEach(filter => {
             result = result.filter(item => {
@@ -42,13 +42,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     case 'regex':
                         try {
                             return new RegExp(filterValue, 'i').test(value);
-                        }
+})
                         catch {
                             return false;
-                        }
+})
                     default:
                         return true;
-                }
+})
             });
         });
         // Apply sorting
@@ -62,7 +62,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     return sortConfig.direction === 'asc' ? 1 : -1;
                 return 0;
             });
-        }
+})
         return result;
     }, [data, searchQuery, filters, sortConfig, columns]);
     // Pagination
@@ -85,7 +85,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 return prev.direction === 'asc'
                     ? { key, direction: 'desc' }
                     : null;
-            }
+})
             return { key, direction: 'asc' };
         });
         trackEvent('table', 'column_sorted', String(key));
@@ -96,7 +96,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             const newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
                 newFilters.push({ key, value, operator });
-            }
+})
             return newFilters;
         });
         trackEvent('table', 'filter_applied', String(key), undefined, { operator, value });
@@ -107,10 +107,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const newSelection = new Set(selectedItems);
         if (checked) {
             newSelection.add(itemKey);
-        }
+})
         else {
             newSelection.delete(itemKey);
-        }
+})
         setSelectedItems(newSelection);
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)));
     }, [selectedItems, onSelectionChange, data]);
@@ -120,22 +120,22 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
             onSelectionChange?.(paginatedData);
-        }
+})
         else {
             setSelectedItems(new Set());
             onSelectionChange?.([]);
-        }
+})
     }, [paginatedData, onSelectionChange]);
     // Export data
     const handleExport = useCallback(() => {
         if (onExport) {
             onExport(processedData);
-        }
+})
         else {
             // Default CSV export
             const csvContent = generateCSV(processedData, columns);
             downloadCSV(csvContent, 'table-export.csv');
-        }
+})
         trackEvent('table', 'data_exported', 'export_completed', processedData.length);
     }, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content

@@ -28,16 +28,16 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -49,13 +49,13 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,10 +64,10 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -85,8 +85,7 @@ export default function CheckoutPage() {
                     throw new Error('Failed to fetch product');
                 const data = await res.json();
                 setProduct(data);
-            }
-            catch (err) {
+  } catch (err) {
                 console.error('Failed to load product', err);
                 setError(err.message);
                 const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;

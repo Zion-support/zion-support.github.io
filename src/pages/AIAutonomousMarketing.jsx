@@ -162,6 +162,6 @@ const AIAutonomousMarketing = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousMarketing;

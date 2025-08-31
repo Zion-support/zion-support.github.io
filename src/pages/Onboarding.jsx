@@ -75,8 +75,7 @@ export default function Onboarding() {
                 : "/talent-dashboard";
             // Redirect to dashboard
             navigate(dashboardRoute);
-        }
-        catch (error) {
+  } catch (error) {
             console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
@@ -128,5 +127,5 @@ export default function Onboarding() {
         </div>
       </div>
       
-    </>);
-}
+    </>
+})

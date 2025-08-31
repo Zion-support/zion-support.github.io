@@ -46,16 +46,16 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -67,13 +67,13 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -82,10 +82,10 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -112,16 +112,16 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -133,13 +133,13 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -148,10 +148,10 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -161,7 +161,7 @@ export function ChatBotPanel() {
         if (inputRef.current) {
             inputRef.current.focus();
         }
-    }, []);
+
     const handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
             return;
@@ -196,8 +196,7 @@ export function ChatBotPanel() {
                 // Reset failed attempts if successful
                 setFailedAttempts(0);
             }
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
@@ -235,8 +234,7 @@ export function ChatBotPanel() {
                 success: true,
                 message: data.message
             };
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error in AI chat:", error);
             return {
                 success: false,
@@ -266,8 +264,7 @@ export function ChatBotPanel() {
                     timestamp: m.timestamp
                 }))
             });
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Failed to log support escalation:", error);
         }
     };

@@ -1,5 +1,4 @@
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { ArrowRight, Briefcase, Building, Clock, Filter, MapPin, Search as SearchIcon, Server, Star, Users } from 'lucide-react';
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -100,16 +99,16 @@ export default function Search() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -121,13 +120,13 @@ export default function Search() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -136,10 +135,10 @@ export default function Search() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

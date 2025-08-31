@@ -38,8 +38,7 @@ const ContactForm = () => {
             });
             setSubmitStatus('success');
             setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
-        catch (error) {
+  } catch (error) {
             setSubmitStatus('error');
             setTimeout(() => setSubmitStatus('idle'), 5000);
         }

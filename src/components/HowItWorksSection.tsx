@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle, Clock, FileText, Rocket, Search, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const steps = [
   {

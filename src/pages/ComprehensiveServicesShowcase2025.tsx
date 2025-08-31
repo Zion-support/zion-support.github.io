@@ -72,7 +72,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;
-    }
+})
   });
 
   const handleServiceClick = (service: any) => {
@@ -423,7 +423,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 icon: Zap,
                 title: "Rapid Implementation",
                 description: "Get up and running in weeks, not months, with our proven implementation methodology."
-              }
+})
             ].map((feature, index) => (
               <motion.div
                 key={index}

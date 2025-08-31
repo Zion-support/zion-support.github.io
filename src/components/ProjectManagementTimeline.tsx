@@ -62,16 +62,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -83,13 +83,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -98,10 +98,10 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -224,7 +224,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
     setProjects(sampleProjects);
     setFilteredProjects(sampleProjects);
-  }, []);
 
   // Filter projects
   useEffect(() => {
@@ -242,16 +241,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -263,13 +262,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -278,10 +277,10 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

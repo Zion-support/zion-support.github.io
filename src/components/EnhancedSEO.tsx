@@ -148,14 +148,14 @@ export function EnhancedSEO({
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-              }
+})
             },
             "datePublished": publishedTime,
             "dateModified": modifiedTime || publishedTime,
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": url
-            }
+})
           })}
         </script>
       )}
@@ -177,7 +177,7 @@ export function EnhancedSEO({
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Zion Tech Group Services"
-            }
+})
           })}
         </script>
       )}

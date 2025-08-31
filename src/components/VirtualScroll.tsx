@@ -50,7 +50,7 @@ export function VirtualScroll<T>({
     if (containerRef.current) {
       const scrollTop = index * itemHeight;
       containerRef.current.scrollTop = scrollTop;
-    }
+})
   }, [itemHeight]);
 
   // Scroll to top
@@ -74,16 +74,16 @@ export function VirtualScroll<T>({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -95,13 +95,13 @@ export function VirtualScroll<T>({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -110,10 +110,10 @@ export function VirtualScroll<T>({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

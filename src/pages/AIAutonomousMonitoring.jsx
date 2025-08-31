@@ -168,6 +168,6 @@ const AIAutonomousMonitoring = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousMonitoring;

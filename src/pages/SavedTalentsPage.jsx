@@ -25,16 +25,16 @@ export default function SavedTalentsPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -46,13 +46,13 @@ export default function SavedTalentsPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -61,10 +61,10 @@ export default function SavedTalentsPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -106,8 +106,7 @@ export default function SavedTalentsPage() {
                     const talentProfiles = data.map(item => item.talent_profile);
                     setSavedTalents(talentProfiles);
                 }
-            }
-            catch (error) {
+  } catch (error) {
                 console.error("Error fetching saved talents:", error);
                 toast({
                     title: "Error",
@@ -184,8 +183,7 @@ export default function SavedTalentsPage() {
                     });
                 }
             }
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error toggling saved talent:", error);
             toast({
                 title: "Error",
@@ -208,5 +206,5 @@ export default function SavedTalentsPage() {
           </div>)}
       </div>
       
-    </>);
+    </>
 }

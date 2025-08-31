@@ -23,11 +23,10 @@ const SEOOptimizer = ({ content, onOptimize }) => {
         } else if (titleLength > 0) {
           score += 10;
           newRecommendations.push('Optimize title length (30-60 characters)');
-        }
+})
       } else {
         newRecommendations.push('Add a title tag');
-      }
-      
+})
       // Check meta description
       const metaMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
       if (metaMatch) {
@@ -37,11 +36,10 @@ const SEOOptimizer = ({ content, onOptimize }) => {
         } else if (metaLength > 0) {
           score += 10;
           newRecommendations.push('Optimize meta description length (120-160 characters)');
-        }
+})
       } else {
         newRecommendations.push('Add a meta description');
-      }
-      
+})
       // Check headings
       const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
       const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
@@ -52,8 +50,7 @@ const SEOOptimizer = ({ content, onOptimize }) => {
         newRecommendations.push('Add more heading structure (H1, H2, H3)');
       } else {
         newRecommendations.push('Add heading structure to your content');
-      }
-      
+})
       // Check images with alt text
       const images = content.match(/<img[^>]*>/gi) || [];
       const imagesWithAlt = images.filter(img => img.includes('alt='));
@@ -63,9 +60,8 @@ const SEOOptimizer = ({ content, onOptimize }) => {
         } else {
           score += 10;
           newRecommendations.push('Add alt text to all images');
-        }
-      }
-      
+})
+})
       // Check internal links
       const internalLinks = content.match(/href="\/[^"]*"/g) || [];
       if (internalLinks.length >= 2) {
@@ -75,15 +71,14 @@ const SEOOptimizer = ({ content, onOptimize }) => {
         newRecommendations.push('Add more internal links');
       } else {
         newRecommendations.push('Add internal links to related pages');
-      }
-      
+})
       setSeoScore(score);
       setRecommendations(newRecommendations);
       setIsAnalyzing(false);
       
       if (onOptimize) {
         onOptimize({ score, recommendations: newRecommendations });
-      }
+})
     }, 2000);
   };
 

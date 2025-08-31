@@ -17,10 +17,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       setIsVisible(false);
     } else {
       setIsVisible(true);
-    }
-    
+})
     (window as any).lastScrollTop = scrollTop;
-  }, []);
 
   React.useEffect(() => {
   // TODO: Add dependencies if needed
@@ -37,16 +35,16 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -58,13 +56,13 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -73,10 +71,10 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -188,7 +186,6 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       top: 0,
       behavior: 'smooth'
     });
-  }, []);
 
   // Toggle expanded state
   const toggleExpanded = useCallback(() => {

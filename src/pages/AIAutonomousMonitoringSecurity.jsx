@@ -168,6 +168,6 @@ const AIAutonomousMonitoringSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousMonitoringSecurity;

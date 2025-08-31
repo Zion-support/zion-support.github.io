@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { ArrowRight, Brain, Calendar, CheckCircle, Clock, Cloud, Mail, MapPin, MessageCircle, Phone, Rocket, Shield, Star, Users, Video, Zap } from 'lucide-react';
 
 interface DemoFormData {
   firstName: string;
@@ -65,7 +64,7 @@ const ScheduleDemo: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
-    } catch (error) {
+  } catch (error) {
       console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);

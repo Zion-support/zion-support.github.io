@@ -88,7 +88,7 @@ export default function News() {
       category.count = newsArticles.length;
     } else {
       category.count = newsArticles.filter(article => article.category === category.id).length;
-    }
+})
   });
 
   const filteredArticles = newsArticles.filter(article => {

@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { BookOpen, Brain, Briefcase, Building, ChevronDown, ChevronRight, Cloud, FileText, HelpCircle, Home, Menu, MessageCircle, Rocket, Server, Target, Users, X, Zap } from 'lucide-react';
 
 export const MobileSidebarToggle: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

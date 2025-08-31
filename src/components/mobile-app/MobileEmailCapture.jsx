@@ -20,7 +20,7 @@ export const MobileEmailCapture = () => {
       } else {
         setStatus('error');
         setTimeout(() => setStatus('idle'), 3000);
-      }
+})
     }, 1000);
   };
 

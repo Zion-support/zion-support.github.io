@@ -1,4 +1,4 @@
-import { RefreshCw, X, CheckCircle } from 'lucide-react';
+import { CheckCircle, RefreshCw, X } from 'lucide-react';
 
 export function PWAUpdater() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
@@ -19,16 +19,16 @@ export function PWAUpdater() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -40,13 +40,13 @@ export function PWAUpdater() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -55,10 +55,10 @@ export function PWAUpdater() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -75,7 +75,6 @@ export function PWAUpdater() {
       // Check for updates
       checkForUpdates();
     }
-  }, []);
 
   const checkForUpdates = async () => {
     try {
@@ -85,7 +84,7 @@ export function PWAUpdater() {
           setUpdateAvailable(true);
         });
       }
-    } catch (error) {
+  } catch (error) {
       console.log('Service worker not available');
     }
   };
@@ -95,7 +94,7 @@ export function PWAUpdater() {
     try {
       // Reload the page to apply updates
       window.location.reload();
-    } catch (error) {
+  } catch (error) {
       console.error('Update failed:', error);
       setIsUpdating(false);
     }

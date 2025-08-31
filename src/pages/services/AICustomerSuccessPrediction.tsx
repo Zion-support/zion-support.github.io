@@ -468,7 +468,7 @@ export default function AICustomerSuccessPrediction() {
                 step: '04',
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
-              }
+})
             ].map((phase, index) => (
               <motion.div
                 key={index}

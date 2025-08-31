@@ -162,6 +162,6 @@ const AIConsumerWillingnessToUse = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIConsumerWillingnessToUse;

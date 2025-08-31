@@ -17,7 +17,7 @@ export default function VideoCall() {
             name: 'You',
             isVideoEnabled: true,
             isMuted: false
-        }
+})
     ]);
     const handleJoinCall = () => {
         setIsJoining(true);
@@ -75,5 +75,5 @@ export default function VideoCall() {
           </div>)}
       </main>
       
-    </>);
-}
+    </>
+})

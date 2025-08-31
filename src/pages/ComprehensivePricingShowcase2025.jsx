@@ -44,14 +44,14 @@ const ComprehensivePricingShowcase2025 = () => {
             const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
                 return price >= range.min && price <= range.max;
-            }
+})
             else if (range.max) {
                 return price <= range.max;
-            }
+})
             else if (range.min) {
                 return price >= range.min;
-            }
-        }
+})
+})
         return true;
     });
     const getServiceTypeColor = (type) => {

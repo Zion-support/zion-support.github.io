@@ -576,7 +576,6 @@ import {
   Shield,
   Zap,
   Server
-} from 'lucide-react';
 
 const infrastructureSolutions = [
   {

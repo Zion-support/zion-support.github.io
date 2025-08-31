@@ -168,6 +168,6 @@ const AIAutonomousMicroserviceSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousMicroserviceSecurity;

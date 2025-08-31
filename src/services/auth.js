@@ -42,7 +42,7 @@ class AuthService {
         user: mockUser,
         token: mockToken
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Login failed');
     }
   }
@@ -80,7 +80,7 @@ class AuthService {
         user: mockUser,
         token: mockToken
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Registration failed');
     }
   }
@@ -98,7 +98,7 @@ class AuthService {
       localStorage.removeItem('user');
       
       return true;
-    } catch (error) {
+  } catch (error) {
       throw new Error('Logout failed');
     }
   }
@@ -139,7 +139,7 @@ class AuthService {
       localStorage.setItem('token', newToken);
       
       return newToken;
-    } catch (error) {
+  } catch (error) {
       throw new Error('Token refresh failed');
     }
   }
@@ -159,7 +159,7 @@ class AuthService {
         message: 'Password reset email sent successfully',
         email: email
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Password reset request failed');
     }
   }
@@ -178,7 +178,7 @@ class AuthService {
       return {
         message: 'Password reset successfully'
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Password reset failed');
     }
   }
@@ -204,7 +204,7 @@ class AuthService {
       localStorage.setItem('user', JSON.stringify(updatedUser));
       
       return updatedUser;
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Profile update failed');
     }
   }
@@ -227,7 +227,7 @@ class AuthService {
       return {
         message: 'Password changed successfully'
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Password change failed');
     }
   }
@@ -252,7 +252,7 @@ class AuthService {
       return {
         message: 'Email verified successfully'
       };
-    } catch (error) {
+  } catch (error) {
       throw new Error(error.message || 'Email verification failed');
     }
   }

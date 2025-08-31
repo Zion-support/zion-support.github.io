@@ -9,7 +9,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   const categories = useMemo(() => {
     const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
     return ['all', ...Array.from(cats)];
-  }, []);
 
   const filteredServices = useMemo(() => {
     let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
@@ -17,8 +16,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
+})
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -26,8 +24,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
-    }
-
+})
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -41,7 +38,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
           return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default:
           return 0;
-      }
+})
     });
 
     return filtered;
@@ -53,8 +50,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+})
+})
   };
 
   const itemVariants = {
@@ -64,8 +61,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
-    }
+})
+})
   };
 
   return (

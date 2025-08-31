@@ -526,7 +526,7 @@ export default function CybersecuritySolutions() {
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
-              }
+})
             ].map((phase, index) => (
               <motion.div 
                 key={index}

@@ -157,16 +157,16 @@ export const EnhancedServiceShowcase: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -178,13 +178,13 @@ export const EnhancedServiceShowcase: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -193,10 +193,10 @@ export const EnhancedServiceShowcase: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -218,7 +218,6 @@ export const EnhancedServiceShowcase: React.FC = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
 
   const filteredServices = selectedCategory === 'All Services' 
     ? services 

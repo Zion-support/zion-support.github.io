@@ -88,8 +88,7 @@ export default function TenantOnboarding() {
                 custom_domain: "",
                 is_co_branded: true
             });
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
@@ -252,5 +251,5 @@ export default function TenantOnboarding() {
         </div>
       </main>
       
-    </>);
-}
+    </>
+})

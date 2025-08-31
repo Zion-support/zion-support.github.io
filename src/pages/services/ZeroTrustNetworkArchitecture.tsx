@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
+import { Activity, AlertTriangle, BarChart3, CheckCircle, Cloud, Database, Eye, FileText, Fingerprint, Globe, Key, Laptop, Lock, Network, RefreshCw, Server, Settings, Shield, ShieldCheck, Smartphone, Tablet, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function ZeroTrustNetworkArchitecture() {
   const features = [

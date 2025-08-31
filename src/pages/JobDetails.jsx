@@ -33,18 +33,18 @@ export default function JobDetails() {
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>);
-    }
+      </>
+})
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
-        }
+})
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
             toast.error("Only job seekers can apply for jobs");
             return;
-        }
+})
         setIsApplyModalOpen(true);
     };
     const handleApplySuccess = async (appliedJobId) => {
@@ -154,5 +154,5 @@ export default function JobDetails() {
                 budget: job.budget,
                 client_id: job.client_id
             }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>);
-}
+    </>
+})

@@ -35,7 +35,7 @@ export default function ComprehensiveServicesLanding2030() {
         return b.aiScore - a.aiScore;
       default:
         return 0;
-    }
+})
   });
 
   const getCategoryIcon = (category: string) => {

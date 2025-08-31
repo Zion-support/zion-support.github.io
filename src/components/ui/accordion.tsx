@@ -37,7 +37,7 @@ export function Accordion({
             isOpen: openItems.includes(child.props.value),
             onToggle: () => handleToggle(child.props.value)
           });
-        }
+})
         return child;
       })}
     </div>
@@ -63,7 +63,7 @@ export function AccordionItem({
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { isOpen, onToggle });
-        }
+})
         return child;
       })}
     </div>

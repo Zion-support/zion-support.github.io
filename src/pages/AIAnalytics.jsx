@@ -23,7 +23,6 @@ import {
   FileText,
   PieChart,
   LineChart
-} from 'lucide-react';
 
 const aiAnalyticsSolutions = [
   {

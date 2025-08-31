@@ -25,9 +25,9 @@ export default function CaseStudy() {
           <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-12 mb-4"/>
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
-          <div className="prose prose-invert" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: study.content }}/>
+          <div className="prose prose-invert" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: study.content }}/>
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>
-    </>);
-}
+    </>
+})

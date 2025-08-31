@@ -1,4 +1,4 @@
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
+import { Award, Briefcase, Cpu, Database, Globe, Lightbulb, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const Consulting = () => {
   const consultingServices = [

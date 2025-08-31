@@ -75,7 +75,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
-    }
+})
   ], []);
 
   const nextSlide = useCallback(() => {
@@ -101,16 +101,16 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -122,13 +122,13 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -137,10 +137,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -427,16 +427,16 @@ const Home = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -448,13 +448,13 @@ const Home = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -463,10 +463,10 @@ const Home = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -474,7 +474,6 @@ const Home = () => {
   };
 }, []);, []);
     setIsVisible(true);
-  }, []);
 
   const handleGetStarted = () => {
     // Handle get started action

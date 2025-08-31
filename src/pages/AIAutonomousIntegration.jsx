@@ -168,6 +168,6 @@ const AIAutonomousIntegration = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousIntegration;

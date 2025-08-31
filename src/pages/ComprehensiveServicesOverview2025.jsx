@@ -326,7 +326,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
                     </div>
-                  </>);
+                  </>
             })()}
             </div>
           </div>

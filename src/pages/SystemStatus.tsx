@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { Activity, AlertCircle, BarChart3, CheckCircle, Clock, Database, Globe, Server, Shield, TrendingUp, XCircle, Zap } from 'lucide-react';
 
 interface ServiceStatus {
   id: string;
@@ -163,16 +162,16 @@ export default function SystemStatus() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -184,13 +183,13 @@ export default function SystemStatus() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -199,10 +198,10 @@ export default function SystemStatus() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -214,7 +213,6 @@ export default function SystemStatus() {
     }, 30000); // Update every 30 seconds
 
     return () => clearInterval(interval);
-  }, []);
 
   const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 

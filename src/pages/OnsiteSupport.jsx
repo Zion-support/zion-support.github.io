@@ -576,7 +576,6 @@ import {
   Shield,
   Zap,
   Wrench
-} from 'lucide-react';
 
 const onsiteSupportSolutions = [
   {

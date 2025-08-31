@@ -52,7 +52,7 @@ export default function RevolutionaryServicesShowcase2030() {
         break;
       default:
         comparison = 0;
-    }
+})
     return sortOrder === 'asc' ? comparison : -comparison;
   });
 
@@ -166,7 +166,7 @@ export default function RevolutionaryServicesShowcase2030() {
     if (typeof roi === 'string') {
       const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
       return sum + roiNumber;
-    }
+})
     return sum;
   }, 0) / REVOLUTIONARY_SERVICES_2030.length;
 

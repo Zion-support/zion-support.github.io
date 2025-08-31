@@ -469,7 +469,7 @@ export default function AICybersecurityPlatform() {
                 step: '04',
                 title: 'Go Live',
                 description: 'Activate full protection with continuous monitoring and ongoing support'
-              }
+})
             ].map((phase, index) => (
               <motion.div
                 key={index}

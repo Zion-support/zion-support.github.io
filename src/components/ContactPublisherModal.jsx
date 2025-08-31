@@ -24,16 +24,16 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -45,13 +45,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -60,10 +60,10 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -103,8 +103,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             onClose(); // Close modal
             setSubject(''); // Clear subject
             setMessage(''); // Clear message
-        }
-        catch (err) {
+  } catch (err) {
             console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed

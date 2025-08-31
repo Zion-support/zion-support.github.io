@@ -41,16 +41,16 @@ export function CollaborationPlatform() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -62,13 +62,13 @@ export function CollaborationPlatform() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -77,10 +77,10 @@ export function CollaborationPlatform() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -91,7 +91,7 @@ export function CollaborationPlatform() {
             setMeetingDuration(prev => prev + 1);
         }, 1000);
         return () => clearInterval(interval);
-    }, []);
+
     const toggleVideo = () => {
         setLocalUser(prev => ({ ...prev, isVideoOn: !prev.isVideoOn }));
     };

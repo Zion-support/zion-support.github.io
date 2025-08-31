@@ -44,7 +44,7 @@ export const safeStorage = {
   getItem: (key) => {
     try {
       return localStorage.getItem(key);
-    } catch (error) {
+  } catch (error) {
       console.warn('Failed to get item from localStorage:', error);
       return null;
     }
@@ -54,7 +54,7 @@ export const safeStorage = {
     try {
       localStorage.setItem(key, value);
       return true;
-    } catch (error) {
+  } catch (error) {
       console.warn('Failed to set item in localStorage:', error);
       return false;
     }
@@ -64,7 +64,7 @@ export const safeStorage = {
     try {
       localStorage.removeItem(key);
       return true;
-    } catch (error) {
+  } catch (error) {
       console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
@@ -74,7 +74,7 @@ export const safeStorage = {
     try {
       localStorage.clear();
       return true;
-    } catch (error) {
+  } catch (error) {
       console.warn('Failed to clear localStorage:', error);
       return false;
     }

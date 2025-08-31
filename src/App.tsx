@@ -1,5 +1,3 @@
-const {/*_404 = {/*_404;
-const <mAIN_80 = <mAIN_80;
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Sidebar } from './components/Sidebar';
@@ -8,6 +6,8 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+const {/*_404 = {/*_404;
+const <mAIN_80 = <mAIN_80;
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));

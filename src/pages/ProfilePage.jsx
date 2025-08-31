@@ -29,16 +29,16 @@ export default function ProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -50,13 +50,13 @@ export default function ProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -65,10 +65,10 @@ export default function ProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -88,8 +88,7 @@ export default function ProfilePage() {
                     throw error;
                 }
                 setProfileData(data);
-            }
-            catch (error) {
+  } catch (error) {
                 console.error("Error fetching profile:", error);
                 setIsError(true);
                 toast({
@@ -222,5 +221,5 @@ export default function ProfilePage() {
         </div>
       </div>
       
-    </>);
+    </>
 }

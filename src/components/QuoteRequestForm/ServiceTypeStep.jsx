@@ -36,16 +36,16 @@ export function ServiceTypeStep({ formData, updateFormData }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -57,13 +57,13 @@ export function ServiceTypeStep({ formData, updateFormData }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -72,10 +72,10 @@ export function ServiceTypeStep({ formData, updateFormData }) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -104,8 +104,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setError(null);
                     setLoading(false);
                     return;
-                }
-                catch (err) {
+  } catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
                             console.error('Failed to load services:', err);

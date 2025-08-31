@@ -255,6 +255,6 @@ const Mobile = () => {
           </div>
         </main>
       </div>
-    </>);
+    </>
 };
 export default Mobile;

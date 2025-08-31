@@ -1,4 +1,4 @@
-import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Building, Check, ExternalLink, Home, Mail, Phone, Shield, Target, Zap } from 'lucide-react';
 
 export default function AIRealEstate() {
   const features = [

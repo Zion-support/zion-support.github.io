@@ -34,7 +34,7 @@ const SitemapGenerator = ({ onGenerate }) => {
       
       if (onGenerate) {
         onGenerate(sitemap);
-      }
+})
     }, 2000);
   };
 

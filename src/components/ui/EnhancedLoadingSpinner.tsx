@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
+import { Brain, Globe, Loader2, Rocket, Zap } from 'lucide-react';
 
 interface EnhancedLoadingSpinnerProps {
   message?: string;
@@ -49,16 +49,16 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -70,13 +70,13 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -85,10 +85,10 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -118,16 +118,16 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -139,13 +139,13 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -154,10 +154,10 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -171,22 +171,19 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     sm: 'h-4 w-4 border-2',
     md: 'h-6 w-6 border-2',
     lg: 'h-8 w-8 border-3',
-    xl: 'h-12 w-12 border-4',
-  };
+    xl: 'h-12 w-12 border-4'};
 
   const spinnerColorClasses = {
     default: 'border-t-blue-500',
     ai: 'border-t-purple-500',
     tech: 'border-t-cyan-500',
-    global: 'border-t-green-500',
-  };
+    global: 'border-t-green-500'};
 
   const iconMap = {
     default: Loader2,
     ai: Brain,
     tech: Zap,
-    global: Globe,
-  };
+    global: Globe};
 
   const IconComponent = iconMap[variant];
 
@@ -256,8 +253,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   isOpen,
   message,
   progress,
-  variant = 'default',
-}) => {
+  variant = 'default'}) => {
   return (
     <AnimatePresence>
       {isOpen && (

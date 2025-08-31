@@ -198,5 +198,5 @@ export default function CommunityPage() {
           </TabsContent>
         </Tabs>
       </div>
-    </>);
-}
+    </>
+})

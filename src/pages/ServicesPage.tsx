@@ -73,7 +73,7 @@ export default function ServicesPage() {
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
       default:
         return 0;
-    }
+})
   });
 
   const getCategoryIcon = (category: string) => {

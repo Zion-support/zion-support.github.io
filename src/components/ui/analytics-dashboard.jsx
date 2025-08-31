@@ -29,16 +29,16 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -50,13 +50,13 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -65,10 +65,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -109,7 +109,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             growth: prev.growth + (Math.random() * 2 - 1)
         }));
         setIsLoading(false);
-    }, []);
+
     if (!enabled)
         return null;
     return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>

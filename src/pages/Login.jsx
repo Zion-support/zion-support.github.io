@@ -18,26 +18,8 @@ export default function Login() {
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
     const queryString = location.search;
@@ -49,35 +31,17 @@ export default function Login() {
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
-    }
+})
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
-    }
+})
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
 
   // Render LoginContent if not authenticated and auth is not loading

@@ -130,7 +130,7 @@ export const QuoteRequestForm = () => {
         agreeToTerms: false,
         agreeToMarketing: false
       });
-    } catch (error) {
+  } catch (error) {
       console.error('Error submitting quote request:', error);
       setErrors({ submit: 'Failed to submit request. Please try again.' });
     } finally {

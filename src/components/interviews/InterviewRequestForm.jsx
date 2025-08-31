@@ -72,8 +72,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
             onClose();
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",

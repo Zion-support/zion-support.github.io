@@ -37,8 +37,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             toast.success('Message sent!');
             form.reset();
             onClose();
-        }
-        catch (err) {
+  } catch (err) {
             toast.error(err?.message || 'Failed to send message');
         }
         finally {

@@ -303,6 +303,6 @@ const IncidentResponsePlatform = () => {
           </div>
         </section>
       </div>
-    </>);
+    </>
 };
 export default IncidentResponsePlatform;

@@ -118,7 +118,7 @@ const AdvancedAIServicesHub: React.FC = () => {
         return b.status === 'active' ? 1 : -1;
       default:
         return 0;
-    }
+})
   });
 
   return (

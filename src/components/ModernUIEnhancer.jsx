@@ -23,16 +23,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -44,13 +44,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -59,10 +59,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -84,7 +84,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         updateDeviceType();
         window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType);
-    }, []);
+
     // Scroll effects
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -101,16 +101,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -122,13 +122,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -137,10 +137,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -189,16 +189,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -210,13 +210,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -225,10 +225,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -238,7 +238,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme);
-    }, []);
+
     const applyTheme = (theme) => {
         const root = document.documentElement;
         if (theme === 'auto') {
@@ -279,16 +279,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -300,13 +300,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -315,10 +315,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -478,16 +478,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -499,13 +499,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -514,10 +514,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -675,6 +675,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                     ease: "linear",
                 }}/>))}
         </div>)}
-    </>);
+    </>
 };
 export default ModernUIEnhancer;

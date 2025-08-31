@@ -37,8 +37,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 status: 'external',
                 responseTime: Date.now() - startTime
             };
-        }
-        catch (error) {
+  } catch (error) {
             return {
                 url,
                 status: 'broken',
@@ -69,16 +68,16 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -90,13 +89,13 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -105,10 +104,10 @@ const LinkHealthChecker = ({ links, className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

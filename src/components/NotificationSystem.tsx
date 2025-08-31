@@ -75,16 +75,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -96,13 +96,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -111,10 +111,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -143,16 +143,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -164,13 +164,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -179,10 +179,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -208,16 +208,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -229,13 +229,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -244,10 +244,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -279,7 +279,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
         audioRef.current.play().catch(() => {
           // Ignore autoplay restrictions
         });
-      } catch (error) {
+  } catch (error) {
         console.warn('Could not play notification sound:', error);
       }
     }
@@ -290,7 +290,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     if (settings.vibration && 'vibrate' in navigator) {
       try {
         navigator.vibrate(200);
-      } catch (error) {
+  } catch (error) {
         console.warn('Could not trigger vibration:', error);
       }
     }
@@ -319,24 +319,20 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   // Dismiss notification
   const dismissNotification = useCallback((id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
 
   // Mark notification as read
   const markAsRead = useCallback((id: string) => {
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
-  }, []);
 
   // Mark all as read
   const markAllAsRead = useCallback(() => {
     setNotifications(prev => prev.map(n => ({ ...n, read: true })));
-  }, []);
 
   // Clear all notifications
   const clearAll = useCallback(() => {
     setNotifications([]);
-  }, []);
 
   // Get notification icon
   const getNotificationIcon = (type: NotificationType, priority: string) => {
@@ -397,7 +393,6 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   // Update settings
   const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {
     setSettings(prev => ({ ...prev, ...newSettings }));
-  }, []);
 
   // Expose addNotification method globally for external use
   useEffect(() => {
@@ -415,16 +410,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -436,13 +431,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -451,10 +446,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -689,7 +684,6 @@ export const useNotifications = () => {
     if ((window as any).addNotification) {
       (window as any).addNotification(notification);
     }
-  }, []);
 
   return { addNotification };
 };

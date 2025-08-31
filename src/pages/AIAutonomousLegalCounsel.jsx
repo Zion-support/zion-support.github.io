@@ -172,6 +172,6 @@ const AIAutonomousLegalCounsel = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousLegalCounsel;

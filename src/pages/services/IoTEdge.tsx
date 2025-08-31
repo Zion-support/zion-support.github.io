@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from 'lucide-react';
+import { ArrowRight, BarChart3, Cloud, Cpu, Database, Globe, Shield, Smartphone, Wifi, Zap } from 'lucide-react';
 
 export default function IoTEdge() {
   const features = [
@@ -27,7 +27,7 @@ export default function IoTEdge() {
 
   const services = [
     {
-      title: 'IoT Device Management',
+      title: 'IoT Monitor Management',
       description: 'Centralized management and monitoring of connected devices',
       icon: Smartphone
     },

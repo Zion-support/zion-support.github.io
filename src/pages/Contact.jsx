@@ -15,7 +15,6 @@ import {
   Facebook,
   Instagram,
   Github
-} from 'lucide-react';
 
 const contactMethods = [
   {

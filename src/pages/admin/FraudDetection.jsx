@@ -45,8 +45,7 @@ export default function FraudDetection() {
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
             };
             setStats(newStats);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
@@ -73,16 +72,16 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -94,13 +93,13 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -109,10 +108,10 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -120,7 +119,7 @@ export default function FraudDetection() {
   };
 }, []);, []);
         fetchFraudFlags();
-    }, []);
+
     // Apply filters
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -137,16 +136,16 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -158,13 +157,13 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -173,10 +172,10 @@ export default function FraudDetection() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -227,8 +226,7 @@ export default function FraudDetection() {
             });
             // Refresh the data
             fetchFraudFlags();
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",

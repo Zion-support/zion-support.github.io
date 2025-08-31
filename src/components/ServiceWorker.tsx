@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from 'lucide-react';
+import { AlertCircle, CheckCircle, Download, Wifi, WifiOff } from 'lucide-react';
 
 interface ServiceWorkerState {
   isInstalled: boolean;
@@ -17,26 +17,8 @@ export function ServiceWorker() {
   });
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Register service worker
@@ -59,9 +41,9 @@ export function ServiceWorker() {
                     isInstalling: false,
                     hasUpdate: true 
                   }));
-                }
+})
               });
-            }
+})
           });
 
           // Handle updates
@@ -72,8 +54,7 @@ export function ServiceWorker() {
         .catch((registrationError) => {
           console.log('SW registration failed: ', registrationError);
         });
-    }
-
+})
     // Online/offline detection
     const handleOnline = () => setSwState(prev => ({ ...prev, isOnline: true }));
     const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
@@ -85,14 +66,13 @@ export function ServiceWorker() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, []);
 
   const handleUpdate = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
       });
-    }
+})
   };
 
   if (!swState.isInstalled) return null;
@@ -135,6 +115,5 @@ export function ServiceWorker() {
       )}
     </AnimatePresence>
   );
-}
-
+})
 export default ServiceWorker;

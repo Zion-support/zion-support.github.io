@@ -13,20 +13,17 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
+})
     if (selectedSubcategory !== 'all') {
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory);
-    }
-
+})
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
-    }
-
+})
     // Sort services
     switch (sortBy) {
       case 'price-low':
@@ -56,8 +53,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
           return aIndex - bIndex;
         });
-    }
-
+})
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 

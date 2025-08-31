@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, Bot, CheckCircle, Clock, Database, Download, Mail, MessageCircle, Play, Settings, Shield, Target, Users, Zap } from 'lucide-react';
 
 export default function AIAutoEmailResponder() {
   return (
@@ -93,7 +92,7 @@ export default function AIAutoEmailResponder() {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function AIAutoEmailResponder() {
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
-                }
+})
               ].map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -211,7 +210,7 @@ export default function AIAutoEmailResponder() {
                   step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -325,7 +324,7 @@ export default function AIAutoEmailResponder() {
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
-                }
+})
               ].map((integration, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">

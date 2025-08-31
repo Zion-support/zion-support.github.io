@@ -81,7 +81,7 @@ export default function UltimateInnovativeServices2026() {
         return bROI - aROI;
       default:
         return 0;
-    }
+})
   });
 
   const toggleServiceExpansion = (serviceId: string) => {

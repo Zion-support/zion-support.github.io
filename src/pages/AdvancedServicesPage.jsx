@@ -31,7 +31,7 @@ export default function AdvancedServicesPage() {
                 return (b.aiScore || 0) - (a.aiScore || 0);
             default:
                 return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        }
+})
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">

@@ -21,7 +21,6 @@ import {
   Server,
   Palette,
   Cpu
-} from 'lucide-react';
 
 const startupSolutions = [
   {

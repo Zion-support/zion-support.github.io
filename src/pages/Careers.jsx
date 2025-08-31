@@ -195,5 +195,5 @@ export default function Careers() {
           </div>
         </div>
       </main>
-    </>);
-}
+    </>
+})

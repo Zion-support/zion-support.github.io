@@ -29,16 +29,16 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -50,13 +50,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -65,10 +65,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -104,16 +104,16 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -125,13 +125,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -140,10 +140,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -277,8 +277,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 setValidation({});
                 setProgress(0);
             }, 5000);
-        }
-        catch (error) {
+  } catch (error) {
             // Track submission error
             if (enableAnalytics) {
                 trackEvent('form', 'submission_error', 'form_failed', undefined, {
@@ -294,7 +293,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     // Toggle password visibility
     const togglePasswordVisibility = useCallback((fieldName) => {
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }));
-    }, []);
+
     // Get field icon
     const getFieldIcon = useCallback((field) => {
         switch (field.type) {
@@ -304,7 +303,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             case 'select': return <Building className="w-4 h-4"/>;
             default: return <User className="w-4 h-4"/>;
         }
-    }, []);
+
     // Render field
     const renderField = useCallback((field) => {
         const fieldValue = formData[field.name];

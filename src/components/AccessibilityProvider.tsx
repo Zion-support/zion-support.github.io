@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon } from 'lucide-react';
+import { Braille, Moon, SkipForward, Sun, Volume2, VolumeX } from 'lucide-react';
 
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -53,16 +53,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -74,13 +74,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -89,10 +89,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -108,7 +108,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
     setVoiceNavigation(savedVoiceNavigation);
-  }, []);
 
   // Apply accessibility settings to document
   useEffect(() => {
@@ -126,16 +125,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -147,13 +146,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -162,10 +161,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -208,16 +207,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -229,13 +228,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -244,10 +243,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -281,7 +280,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   const toggleHighContrast = () => {
     const newValue = !highContrast;
@@ -330,8 +328,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,
-  };
+    toggleVoiceNavigation};
 
   return (
     <AccessibilityContext.Provider value={value}>
@@ -455,16 +452,16 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -476,13 +473,13 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -491,10 +488,10 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

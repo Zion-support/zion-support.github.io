@@ -189,6 +189,6 @@ const AIAutonomousDecisionPlatform = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousDecisionPlatform;

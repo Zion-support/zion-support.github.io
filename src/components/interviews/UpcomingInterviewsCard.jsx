@@ -25,16 +25,16 @@ export function UpcomingInterviewsCard() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -46,13 +46,13 @@ export function UpcomingInterviewsCard() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -61,10 +61,10 @@ export function UpcomingInterviewsCard() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -82,8 +82,7 @@ export function UpcomingInterviewsCard() {
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
                 setUpcomingInterviews(upcoming);
-            }
-            catch (error) {
+  } catch (error) {
                 console.error("Error loading upcoming interviews:", error);
             }
             finally {
@@ -91,7 +90,7 @@ export function UpcomingInterviewsCard() {
             }
         };
         loadInterviews();
-    }, []);
+
     if (isLoading) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>

@@ -307,7 +307,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
-              }
+})
             ].map((feature, index) => (
               <motion.div
                 key={index}

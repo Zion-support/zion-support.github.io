@@ -37,7 +37,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 });
                 seoScore -= 10;
                 engagementScore -= 10;
-            }
+})
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
                 issues.push({
@@ -53,7 +53,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 });
                 engagementScore -= 5;
                 seoScore -= 3;
-            }
+})
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
                 issues.push({
@@ -69,7 +69,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 });
                 readabilityScore -= 5;
                 engagementScore -= 3;
-            }
+})
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
                 const level = parseInt(element.tagName.charAt(1));
@@ -89,9 +89,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             impact: 'accessibility'
                         });
                         seoScore -= 3;
-                    }
-                }
-            }
+})
+})
+})
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {};
@@ -114,8 +114,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             impact: 'seo'
                         });
                         seoScore -= 5;
-                    }
-                }
+})
+})
             });
             // Check for proper meta descriptions
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
@@ -133,7 +133,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'seo'
                     });
                     seoScore -= 5;
-                }
+})
                 else if (content.length > 160) {
                     issues.push({
                         id: `long-meta-${index}`,
@@ -147,8 +147,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'seo'
                     });
                     seoScore -= 2;
-                }
-            }
+})
+})
             // Check for broken links
             if (element.tagName === 'A') {
                 const href = element.getAttribute('href');
@@ -165,8 +165,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'engagement'
                     });
                     engagementScore -= 3;
-                }
-            }
+})
+})
             // Check for images without alt text
             if (element.tagName === 'IMG') {
                 const alt = element.getAttribute('alt');
@@ -184,8 +184,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     });
                     seoScore -= 8;
                     engagementScore -= 5;
-                }
-            }
+})
+})
         });
         // Generate suggestions based on analysis
         if (wordCount < 300) {
@@ -198,7 +198,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
             });
-        }
+})
         if (readabilityScore < 80) {
             suggestions.push({
                 id: 'improve-readability',
@@ -209,7 +209,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
             });
-        }
+})
         if (seoScore < 80) {
             suggestions.push({
                 id: 'seo-optimization',
@@ -220,7 +220,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
             });
-        }
+})
         if (engagementScore < 80) {
             suggestions.push({
                 id: 'engagement-improvement',
@@ -231,7 +231,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
             });
-        }
+})
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
@@ -259,7 +259,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         if (issue.element.textContent?.trim() === '') {
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
                             fixedCount++;
-                        }
+})
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
@@ -267,8 +267,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             if (!img.alt) {
                                 img.alt = 'Image';
                                 fixedCount++;
-                            }
-                        }
+})
+})
                         break;
                     case 'short-meta':
                     case 'long-meta':
@@ -277,13 +277,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     case 'broken-link':
                         // These would require more complex logic to fix
                         break;
-                }
-            }
+})
+})
         });
         if (fixedCount > 0) {
             // Re-analyze content after fixes
             setTimeout(analyzeContent, 500);
-        }
+})
         return fixedCount;
     }, [analysis, analyzeContent]);
     // Highlight element in page
@@ -302,7 +302,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             element.classList.remove('content-highlight');
             setSelectedElement(null);
         }, 3000);
-    }, []);
+
     // Auto-analyze content
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -319,16 +319,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -340,13 +340,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -355,10 +355,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -640,6 +640,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           transition: all 0.3s ease !important;
         }
       `}</style>
-    </>);
+    </>
 };
 export default ContentQualityEnhancer;

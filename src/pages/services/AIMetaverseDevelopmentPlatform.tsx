@@ -1,5 +1,4 @@
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { ArrowRight, Brain, CheckCircle, Eye, Globe, Shield, Sparkles, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AIMetaverseDevelopmentPlatform() {
   const features = [

@@ -168,6 +168,6 @@ const AIAutonomousRiskManagement = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousRiskManagement;

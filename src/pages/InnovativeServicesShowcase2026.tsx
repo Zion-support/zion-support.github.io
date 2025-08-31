@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import { ArrowRight, Cpu, Database, Filter, Globe, Leaf, Lock, Mail, MapPin, Phone, Search, Shield, Star, TrendingUp, Zap } from 'lucide-react';
 
 const InnovativeServicesShowcase2026: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,13 +18,11 @@ const InnovativeServicesShowcase2026: React.FC = () => {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
-    }
-
+})
     // Filter by category
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
+})
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -38,7 +34,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
           return 0;
-      }
+})
     });
 
     return filtered;

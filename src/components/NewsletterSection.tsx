@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Bell, CheckCircle, Mail, TrendingUp, Zap } from 'lucide-react';
 
 const NewsletterSection: React.FC = () => {
   const [email, setEmail] = useState('');

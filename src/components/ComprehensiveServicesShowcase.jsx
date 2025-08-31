@@ -267,7 +267,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'],
       color: 'from-orange-500 to-red-500',
       href: '/services/microsaas'
-    }
+})
   ];
 
   const solutions = [
@@ -326,7 +326,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       icon: Brain,
       category: 'ai',
       href: '/solutions/ai-business-intelligence'
-    }
+})
   ];
 
   const filteredServices = activeCategory === 'all' 
@@ -583,12 +583,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
         </div>
       </></div>
     </div>))};
-}
-
+})
 interface ServiceCardProps {service}: any;
   getCategoryIcon: (category: string) => React.ReactNode;
-}
-
+})
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
   return (
     <Card className="group hover:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50">
@@ -668,7 +666,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
       </CardContent>
     </Card>
   );
-}
+})
                 </div>
                 
                 <div className="mb-4">
@@ -725,8 +723,7 @@ interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
   onServiceClick: (service: InnovativeMicroSaasService) => void;
-}
-
+})
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => {}
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
@@ -746,7 +743,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
       'Web Development': <Monitor className="w-5 h-5"/>
     };
     return iconMap[category] || <Star className="w-5 h-5"/>;
-  }, []);
 
   const getCategoryColor = useCallback((category: string) => {}
     const colorMap: {[key]}: string]: string } = {'AI & Business Intelligence'}: 'from-purple-500 to-pink-500',
@@ -763,7 +759,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
       'Web Development': 'from-orange-500 to-red-500'
     };
     return colorMap[category] || 'from-blue-500 to-purple-500';
-  }, []);
 
   const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
     setIsLiked(!isLiked);
@@ -776,7 +771,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             url: service.websiteUrl
         })};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
-    }
+})
   }, [service]);
 
   if (viewMode === 'grid') {}
@@ -863,8 +858,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
         </AnimatePresence>
       </motion.div>
     );
-  }
-
+})
   // List View
   return (
     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
@@ -978,12 +972,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
         service.category.toLowerCase().includes(searchLower)
       );
-    }
-
+})
     // Filter by category
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
-    }
-
+})
     // Sort services
     filtered.sort((a, b) => {}
       switch (sortBy) {}
@@ -997,7 +989,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           return a.title.localeCompare(b.title);
         default:
           return 0;
-      }
+})
     });
 
     return filtered;
@@ -1006,12 +998,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
     console.log('Service clicked:', service);
-  }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all');
     setSortBy('rating');
-  }, []);
 
   // Keyboard navigation support
   useEffect(() => {
@@ -1029,16 +1019,16 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -1050,13 +1040,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -1065,10 +1055,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -1082,7 +1072,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
@@ -1203,5 +1192,5 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 };
 
 export default ComprehensiveServicesShowcase;
-    </></></></></></></></>);
+    </></></></></></></></>
 };

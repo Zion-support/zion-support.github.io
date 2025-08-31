@@ -63,11 +63,9 @@ const PerformanceOptimizer: React.FC = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
 
   const stopMonitoring = useCallback(() => {
     setIsMonitoring(false);
-  }, []);
 
   // Generate optimization suggestions
   useEffect(() => {
@@ -85,16 +83,16 @@ const PerformanceOptimizer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -106,13 +104,13 @@ const PerformanceOptimizer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -121,10 +119,10 @@ const PerformanceOptimizer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -180,7 +178,6 @@ const PerformanceOptimizer: React.FC = () => {
     ];
 
     setOptimizations(suggestions);
-  }, []);
 
   const applyOptimization = useCallback((id: string) => {
     setActiveOptimizations(prev => [...prev, id]);
@@ -189,7 +186,6 @@ const PerformanceOptimizer: React.FC = () => {
     setTimeout(() => {
       setActiveOptimizations(prev => prev.filter(opt => opt !== id));
     }, 3000);
-  }, []);
 
   const getPerformanceStatus = (score: number) => {
     if (score >= 90) return { status: 'Excellent', color: 'bg-green-500', icon: CheckCircle };

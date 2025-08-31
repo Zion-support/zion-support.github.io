@@ -1,4 +1,4 @@
-import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail } from 'lucide-react';
+import { ArrowRight, BarChart2, Check, Mail, MessageSquare, Phone, Smartphone, Users } from 'lucide-react';
 
 export default function MobileSurvey() {
   const features = [

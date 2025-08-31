@@ -46,16 +46,16 @@ export default function EditPostPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -67,13 +67,13 @@ export default function EditPostPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -82,10 +82,10 @@ export default function EditPostPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -139,8 +139,7 @@ export default function EditPostPage() {
             });
             // Redirect back to the post
             navigate(`/community/post/${postId}`);
-        }
-        catch (error) {
+  } catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem updating your post",

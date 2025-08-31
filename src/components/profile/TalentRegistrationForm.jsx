@@ -101,8 +101,8 @@ export function TalentRegistrationForm() {
                         bio: formData.bio,
                         skills: skillTags,
                         location: formData.location
-                    }
-                }
+})
+})
             });
             if (error) {
                 throw new Error(error.message);
@@ -112,8 +112,7 @@ export function TalentRegistrationForm() {
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional skills for your profile.",
             });
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
@@ -138,9 +137,9 @@ export function TalentRegistrationForm() {
                     categorySkills.forEach(skill => {
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
                             newSkills.push(skill);
-                        }
+})
                     });
-                }
+})
             });
             if (newSkills.length > 0) {
                 setSkillTags([...skillTags, ...newSkills]);
@@ -176,10 +175,9 @@ export function TalentRegistrationForm() {
             </div>
           </div>
           `
-                }
+})
             });
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Failed to send notification email:", error);
         }
     };
@@ -212,8 +210,8 @@ export function TalentRegistrationForm() {
                                 bio: values.bio,
                                 skills: skillTags,
                                 location: values.location
-                            }
-                        }
+})
+})
                     });
                     if (aiData) {
                         finalSummary = aiData.summary;
@@ -226,15 +224,14 @@ export function TalentRegistrationForm() {
                                 categorySkills.forEach(skill => {
                                     if (typeof skill === 'string' && skill) {
                                         aiSkills.push(skill);
-                                    }
+})
                                 });
-                            }
+})
                         });
                         // Create a unique set of skills
                         finalSkills = [...new Set([...skillTags, ...aiSkills])];
                     }
-                }
-                catch (error) {
+  } catch (error) {
                     console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
                     finalSummary = "";
@@ -256,7 +253,7 @@ export function TalentRegistrationForm() {
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {
                     sendEnhancementNotification(user.id, userEmail);
-                }
+})
                 setIsSubmitting(false);
             }, 1500);
             // Here would be the actual code to save the profile to Supabase
@@ -278,8 +275,7 @@ export function TalentRegistrationForm() {
       
             if (error) throw error;
             */
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",

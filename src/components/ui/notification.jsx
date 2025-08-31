@@ -16,7 +16,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
         setNotifications(prev => prev.filter(n => n.id !== id));
-    }, []);
+
     const addNotification = useCallback((notification) => {
         const newNotification = {
             ...notification,
@@ -34,11 +34,11 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
             setTimeout(() => {
                 removeNotification(newNotification.id);
             }, newNotification.duration);
-        }
+})
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {
         setNotifications([]);
-    }, []);
+
     const value = {
         notifications,
         addNotification,
@@ -49,7 +49,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
       {children}
       <NotificationContainer position={position}/>
     </NotificationContext.Provider>);
-}
+})
 function NotificationContainer({ position }) {
     const { notifications, clearAll } = useNotifications();
     const getPositionClasses = (pos) => {
@@ -68,7 +68,7 @@ function NotificationContainer({ position }) {
                 return 'bottom-4 left-1/2 transform -translate-x-1/2';
             default:
                 return 'top-4 right-4';
-        }
+})
     };
     if (notifications.length === 0)
         return null;
@@ -93,7 +93,7 @@ function NotificationContainer({ position }) {
         </AnimatePresence>
       </div>
     </div>);
-}
+})
 function NotificationItem({ notification }) {
     const { removeNotification } = useNotifications();
     const getIcon = (type) => {
@@ -108,7 +108,7 @@ function NotificationItem({ notification }) {
                 return <Info className="w-5 h-5 text-blue-400"/>;
             default:
                 return <Info className="w-5 h-5 text-blue-400"/>;
-        }
+})
     };
     const getTypeClasses = (type) => {
         switch (type) {
@@ -122,7 +122,7 @@ function NotificationItem({ notification }) {
                 return 'border-blue-500/30 bg-blue-500/10';
             default:
                 return 'border-zion-blue-light/30 bg-zion-blue/10';
-        }
+})
     };
     const getProgressColor = (type) => {
         switch (type) {
@@ -136,7 +136,7 @@ function NotificationItem({ notification }) {
                 return 'bg-blue-400';
             default:
                 return 'bg-zion-cyan';
-        }
+})
     };
     return (<motion.div layout initial={{ opacity: 0, x: 300, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.8 }} transition={{
             type: "spring",
@@ -181,18 +181,18 @@ function NotificationItem({ notification }) {
         {notification.timestamp.toLocaleTimeString()}
       </div>
     </motion.div>);
-}
+})
 // Convenience functions for quick notifications
 export function showSuccess(title, message, options) {
     // This would be called from the context
     return { type: 'success', title, message, ...options };
-}
+})
 export function showError(title, message, options) {
     return { type: 'error', title, message, ...options };
-}
+})
 export function showWarning(title, message, options) {
     return { type: 'warning', title, message, ...options };
-}
+})
 export function showInfo(title, message, options) {
     return { type: 'info', title, message, ...options };
-}
+})

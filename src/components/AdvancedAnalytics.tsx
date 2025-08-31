@@ -90,7 +90,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
           ...prev,
           formSubmissions: prev.formSubmissions + 1
         }));
-      }
+})
     };
 
     // Track user agent
@@ -100,15 +100,14 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
-      }
-      
+})
       setAnalyticsData(prev => {
         const existingDevice = prev.userAgents.find(d => d.device === device);
         if (existingDevice) {
           existingDevice.count++;
         } else {
           prev.userAgents.push({ device, count: 1 });
-        }
+})
         return { ...prev };
       });
     };
@@ -125,10 +124,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
             existingSource.count++;
           } else {
             prev.referrers.push({ source, count: 1 });
-          }
+})
           return { ...prev };
         });
-      }
+})
     };
 
     // Initialize tracking
@@ -152,7 +151,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       } else {
         // Page is visible, resume tracking
         setIsTracking(true);
-      }
+})
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -183,16 +182,16 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -204,13 +203,13 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -219,10 +218,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -249,16 +248,16 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -270,13 +269,13 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -285,10 +284,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -324,16 +323,16 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -345,13 +344,13 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -360,10 +359,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

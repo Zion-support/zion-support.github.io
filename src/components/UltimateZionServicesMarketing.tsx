@@ -264,8 +264,8 @@ const UltimateZionServicesMarketing: React.FC = () => {
                 transition: {
                   staggerChildren: 0.1,
                   delayChildren: 0.2
-                }
-              }
+})
+})
             }} 
             initial="hidden" 
             whileInView="visible" 
@@ -280,7 +280,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
                     opacity: 1,
                     y: 0,
                     transition: { duration: 0.5 }
-                  }
+})
                 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
               >

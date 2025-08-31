@@ -1,6 +1,6 @@
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp } from 'lucide-react';
+import { Activity, ArrowRight, BarChart3, Brain, CheckCircle, Clock, Database, DollarSign, ExternalLink, Heart, Lock, Mail, Phone, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const AIHealthcareAnalyticsPlatform: React.FC = () => {
   const features = [

@@ -27,16 +27,16 @@ const EnhancedAccessibility = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -48,13 +48,13 @@ const EnhancedAccessibility = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -63,10 +63,10 @@ const EnhancedAccessibility = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -80,8 +80,7 @@ const EnhancedAccessibility = () => {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
                 applySettings({ ...settings, ...parsed });
-            }
-            catch (error) {
+  } catch (error) {
                 console.warn('Failed to load accessibility settings:', error);
             }
         }
@@ -90,7 +89,7 @@ const EnhancedAccessibility = () => {
         if (prefersReducedMotion) {
             setSettings(prev => ({ ...prev, reducedMotion: true }));
         }
-    }, []);
+
     const applySettings = (newSettings) => {
         const root = document.documentElement;
         // High contrast mode
@@ -319,6 +318,6 @@ const EnhancedAccessibility = () => {
 
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-    </>);
+    </>
 };
 export default EnhancedAccessibility;

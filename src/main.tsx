@@ -20,6 +20,6 @@ try {
   registerServiceWorker().catch(error => {
     console.warn('Service worker registration failed:', error);
   });
-} catch (error) {
+  } catch (error) {
   console.warn('Service worker registration error:', error);
 }

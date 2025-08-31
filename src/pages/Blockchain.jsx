@@ -35,7 +35,6 @@ import {
   Building,
   Car,
   Plane
-} from 'lucide-react';
 
 const blockchainSolutions = [
   {

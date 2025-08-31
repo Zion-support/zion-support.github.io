@@ -33,7 +33,7 @@ const ContentOptimizer = ({ content, onOptimize }) => {
       
       if (onOptimize) {
         onOptimize(optimized);
-      }
+})
     }, 2000);
   };
 

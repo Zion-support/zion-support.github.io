@@ -46,7 +46,6 @@ import {
   Cloud,
   Battery,
   Thermometer
-} from 'lucide-react';
 
 const sustainabilitySolutions = [
   {

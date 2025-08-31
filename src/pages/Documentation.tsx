@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, BookOpen, Code, Database, Api, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Api, BookOpen, Brain, ChevronRight, Cloud, Code, Database, Download, ExternalLink, FileText, Globe, Lock, Search, Shield, Users, Zap } from 'lucide-react';
 
 interface DocSection {
   id: string;

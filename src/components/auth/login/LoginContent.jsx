@@ -21,7 +21,7 @@ export function LoginContent() {
     try {
       await login(email, password);
       navigate('/dashboard');
-    } catch (err) {
+  } catch (err) {
       setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);

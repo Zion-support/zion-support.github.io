@@ -1,4 +1,4 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Check, ExternalLink, Mail, Phone, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AIPredictiveAnalytics() {
   const features = [

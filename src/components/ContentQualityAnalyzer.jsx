@@ -66,16 +66,16 @@ const ContentQualityAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -87,13 +87,13 @@ const ContentQualityAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -102,10 +102,10 @@ const ContentQualityAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -114,7 +114,7 @@ const ContentQualityAnalyzer = () => {
 }, []);, []);
         setContentIssues(sampleIssues);
         generateReport(sampleIssues);
-    }, []);
+
     const generateReport = (issues) => {
         const totalPages = 79; // From analysis report
         const pagesWithIssues = issues.length;
@@ -407,6 +407,6 @@ const ContentQualityAnalyzer = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
+    </>
 };
 export default ContentQualityAnalyzer;

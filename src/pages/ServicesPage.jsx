@@ -598,16 +598,16 @@ export default function ServicesPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -619,13 +619,13 @@ export default function ServicesPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -634,10 +634,10 @@ export default function ServicesPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -648,7 +648,7 @@ export default function ServicesPage() {
             setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
         }, 120000);
         return () => clearInterval(interval);
-    }, []);
+
     return (<div className="min-h-screen bg-background">
       <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">

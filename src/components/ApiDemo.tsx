@@ -30,16 +30,16 @@ const ApiDemo: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -51,13 +51,13 @@ const ApiDemo: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,10 +66,10 @@ const ApiDemo: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -78,13 +78,12 @@ const ApiDemo: React.FC = () => {
 }, []);, []);
     checkHealth();
     fetchUsers();
-  }, []);
 
   const checkHealth = async () => {
     try {
       const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
-    } catch (err) {
+  } catch (err) {
       setHealthStatus('❌ API Unhealthy');
     }
   };
@@ -98,7 +97,7 @@ const ApiDemo: React.FC = () => {
       if (response.success && response.data) {
         setUsers(response.data);
       }
-    } catch (err) {
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
     } finally {
       setLoading(false);
@@ -122,7 +121,7 @@ const ApiDemo: React.FC = () => {
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });
       }
-    } catch (err) {
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user');
     } finally {
       setLoading(false);

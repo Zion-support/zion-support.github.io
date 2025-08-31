@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Activity, ArrowRight, BarChart, BarChart3, CheckCircle, DollarSign, Globe, Mail, Monitor, PieChart, Shield, Smartphone, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AffiliateMarketingTracker() {
   const features = [

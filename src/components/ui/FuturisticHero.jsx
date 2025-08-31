@@ -21,16 +21,16 @@ export default function FuturisticHero() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -42,13 +42,13 @@ export default function FuturisticHero() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -57,10 +57,10 @@ export default function FuturisticHero() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -72,7 +72,7 @@ export default function FuturisticHero() {
         };
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+
     const floatingIcons = [
         { icon: <Star className="w-6 h-6"/>, delay: 0, color: 'text-yellow-400' },
         { icon: <Zap className="w-6 h-6"/>, delay: 0.5, color: 'text-cyan-400' },

@@ -1,4 +1,4 @@
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from 'lucide-react';
+import { BarChart3, Cloud, Cpu, Database, Globe, Server, Shield, Zap } from 'lucide-react';
 
 const CloudServices = () => {
   const cloudServices = [

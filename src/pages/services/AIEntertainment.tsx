@@ -1,4 +1,4 @@
-import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Check, ExternalLink, Mail, Phone, Play, Shield, Target, Video, Zap } from 'lucide-react';
 
 export default function AIEntertainment() {
   const features = [

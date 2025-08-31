@@ -168,6 +168,6 @@ const AIAutonomousCompliance = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousCompliance;

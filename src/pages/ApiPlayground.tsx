@@ -1,4 +1,4 @@
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { AlertCircle, ArrowRight, Award, BarChart3, BookOpen, Brain, Calendar, CheckCircle, CheckCircle2, Cloud, Code, Copy, Cpu, Database, DollarSign, Download, ExternalLink, Eye, FileText, Filter, Globe, Info, Lightbulb, Lock, MapPin, Microscope, Network, Palette, Play, RefreshCw, Rocket, Search, Settings, Shield, Smartphone, Star, Target, Terminal, TrendingUp, Zap, Zap as ZapIcon } from 'lucide-react';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -172,7 +172,7 @@ export default function ApiPlayground() {
     },
     {
       id: 5,
-      name: 'IoT Device Management',
+      name: 'IoT Monitor Management',
       description: 'Manage IoT devices, monitor sensors, and control actuators.',
       category: 'iot',
       method: 'GET',
@@ -183,9 +183,9 @@ export default function ApiPlayground() {
       rateLimit: '300 requests/hour',
       authentication: 'API Key',
       parameters: [
-        { name: 'location', type: 'string', required: false, description: 'Device location' },
-        { name: 'type', type: 'string', required: false, description: 'Device type' },
-        { name: 'status', type: 'string', required: false, description: 'Device status' }
+        { name: 'location', type: 'string', required: false, description: 'Monitor location' },
+        { name: 'type', type: 'string', required: false, description: 'Monitor type' },
+        { name: 'status', type: 'string', required: false, description: 'Monitor status' }
       ],
       requestExample: {
         location: "building-a",

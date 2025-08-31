@@ -18,30 +18,12 @@ export default function WishlistPage() {
     const navigate = useNavigate();
     
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
             navigate('/login');
-        }
+})
     }, [user, isAuthLoading, navigate]);
     
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
@@ -69,7 +51,7 @@ export default function WishlistPage() {
                 if (fav.item_type === 'talent') {
                     const talent = talentMap[fav.item_id];
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { }} onBook={() => { }} isAuthenticated={true}/>) : null;
-                }
+})
                 const item = productMap[fav.item_id];
                 return item ? (<div key={fav.item_id} className="relative">
                 <ProductListingCard listing={item}/>

@@ -45,16 +45,16 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,13 +66,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -81,10 +81,10 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -164,7 +164,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const resetTimeline = useCallback(() => {
         setCurrentEventIndex(0);
         setIsPlaying(false);
-    }, []);
+
     // Export timeline
     const exportTimeline = useCallback(() => {
         const dataStr = JSON.stringify(filteredEvents, null, 2);
@@ -188,7 +188,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         else {
             navigator.clipboard.writeText(window.location.href);
         }
-    }, []);
+
     if (!enabled || filteredEvents.length === 0)
         return null;
     return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={timelineRef}>

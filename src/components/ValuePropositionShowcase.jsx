@@ -15,7 +15,6 @@ import {
   Clock,
   Users,
   BarChart3
-} from 'lucide-react';
 
 const valueMetrics = [
   {

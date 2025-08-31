@@ -26,7 +26,6 @@ import {
   Code,
   Truck,
   FileText
-} from 'lucide-react';
 
 const onsiteServices = [
   {

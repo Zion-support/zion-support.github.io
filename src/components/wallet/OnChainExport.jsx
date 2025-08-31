@@ -37,8 +37,7 @@ export function OnChainExport() {
                 title: "Wallet connected",
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
             });
-        }
-        catch (error) {
+  } catch (error) {
             toast({
                 title: "Connection failed",
                 description: error.message || "Could not connect to wallet",
@@ -57,8 +56,7 @@ export function OnChainExport() {
                 title: "Tokens exported",
                 description: "Your ZION$ tokens have been exported to your wallet",
             });
-        }
-        catch (error) {
+  } catch (error) {
             setExportStatus('error');
             toast({
                 title: "Export failed",

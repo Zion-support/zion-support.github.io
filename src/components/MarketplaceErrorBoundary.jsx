@@ -11,8 +11,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
             // Re-call SWR mutate('*') to refresh all cached data
             await mutate(() => true, undefined, { revalidate: true });
             resetErrorBoundary();
-        }
-        catch (retryError) {
+  } catch (retryError) {
             console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
         }

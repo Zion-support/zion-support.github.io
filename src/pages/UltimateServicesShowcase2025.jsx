@@ -38,7 +38,7 @@ const UltimateServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             default:
                 return 0;
-        }
+})
     });
     const formatPrice = (price) => {
         if (price >= 1000) {

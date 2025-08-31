@@ -412,7 +412,7 @@ export default function Help() {
                 description: 'Software, tools, and resources for your projects',
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
-              }
+})
             ].map((resource, index) => (
               <motion.a
                 key={index}

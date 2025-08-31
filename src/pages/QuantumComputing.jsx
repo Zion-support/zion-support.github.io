@@ -28,7 +28,6 @@ import {
   Gauge,
   Network,
   Server
-} from 'lucide-react';
 
 const quantumSolutions = [
   {

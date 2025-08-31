@@ -62,7 +62,7 @@ export default function RevolutionaryServices2030() {
         return parseFloat(b.marketSize.replace(/[^0-9.]/g, '')) - parseFloat(a.marketSize.replace(/[^0-9.]/g, ''));
       default:
         return b.featured ? 1 : -1;
-    }
+})
   });
 
   const getServiceIcon = (category: string) => {

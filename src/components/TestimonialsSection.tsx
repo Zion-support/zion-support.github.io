@@ -1,2 +1,2 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe } from 'lucide-react';
+import { Building, ChevronLeft, ChevronRight, Globe, Quote, Star, User } from 'lucide-react';

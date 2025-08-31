@@ -1,6 +1,5 @@
 import { SEO } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
-// removed duplicate old section
+import { CheckCircle, Database, PlugZap, TrendingUp } from 'lucide-react';
 
 
 const AiLeadScoring: React.FC = () => {

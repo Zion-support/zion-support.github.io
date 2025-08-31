@@ -25,16 +25,16 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -46,13 +46,13 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -61,10 +61,10 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -101,8 +101,7 @@ export default function CartPage() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty }),
                 });
-            }
-            catch (err) {
+  } catch (err) {
                 console.error('Failed to update cart', err);
             }
         }
@@ -123,16 +122,16 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -144,13 +143,13 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -159,10 +158,10 @@ export default function CartPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -189,8 +188,7 @@ export default function CartPage() {
                 amount: subtotal,
             });
             setDiscount(res.data.discount || 0);
-        }
-        catch (e) {
+  } catch (e) {
             setDiscount(0);
         }
     };

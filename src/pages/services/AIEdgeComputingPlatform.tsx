@@ -1,4 +1,4 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, DollarSign, ExternalLink, Globe, Mail, Monitor, Network, Phone, Target, TrendingUp, Wifi, Zap } from 'lucide-react';
 
 export default function AIEdgeComputingPlatform() {
   const features = [

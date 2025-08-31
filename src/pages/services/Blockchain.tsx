@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Link as RouterLink } from 'react-router-dom';
+import { ArrowRight, BarChart3, CheckCircle, Clock, Cpu, Database, Eye, Globe, Link, Lock, Network, Shield, Smartphone, Target, Users, Zap } from 'lucide-react';
 
 export default function Blockchain() {
   const features = [

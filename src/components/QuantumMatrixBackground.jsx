@@ -4,26 +4,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
     const canvasRef = useRef(null);
     const particlesRef = useRef(null);
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -48,7 +30,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 color: colors[Math.floor(Math.random() * colors.length)],
                 quantumState: Math.random()
             });
-        }
+})
         // Quantum entanglement effect
         const entangleParticles = () => {
             for (let i = 0; i < particles.length; i += 2) {
@@ -65,9 +47,9 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                         ctx.strokeStyle = `rgba(34, 221, 210, ${0.3 * (1 - distance / 100)})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
-                    }
-                }
-            }
+})
+})
+})
         };
         // Neural network connections
         const drawNeuralConnections = () => {
@@ -84,9 +66,9 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                         ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * strength})`;
                         ctx.lineWidth = strength * 2;
                         ctx.stroke();
-                    }
-                }
-            }
+})
+})
+})
         };
         // Animation loop
         const animate = () => {
@@ -101,7 +83,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 if (Math.random() < 0.001 * intensityMultiplier) {
                     particle.x = Math.random() * canvas.width;
                     particle.y = Math.random() * canvas.height;
-                }
+})
                 // Wrap around edges
                 if (particle.x < 0)
                     particle.x = canvas.width;
@@ -131,7 +113,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             if (showParticles) {
                 drawNeuralConnections();
                 entangleParticles();
-            }
+})
             requestAnimationFrame(animate);
         };
         animate();

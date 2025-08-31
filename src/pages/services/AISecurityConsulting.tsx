@@ -1,4 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Check, Database, ExternalLink, FileText, Mail, Phone, Shield, Target, Zap } from 'lucide-react';
 
 export default function AISecurityConsulting() {
   const features = [

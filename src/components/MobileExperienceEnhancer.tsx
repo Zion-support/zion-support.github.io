@@ -144,7 +144,7 @@ export function MobileExperienceEnhancer({
       enabled: false,
       priority: 'low',
       impact: 'low'
-    }
+})
   ]);
 
   const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
@@ -174,16 +174,16 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -195,13 +195,13 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -210,10 +210,10 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -274,7 +274,6 @@ export function MobileExperienceEnhancer({
       window.removeEventListener('resize', detectDevice);
       window.removeEventListener('orientationchange', detectDevice);
     };
-  }, []);
 
   // Touch gesture handling
   useEffect(() => {
@@ -292,16 +291,16 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -313,13 +312,13 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -328,10 +327,10 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -464,8 +463,7 @@ export function MobileExperienceEnhancer({
       const totalFeatures = features.length;
       const score = Math.round((enabledFeatures / totalFeatures) * 100);
       setMobileScore(score);
-      
-    } catch (error) {
+  } catch (error) {
       console.error('Mobile optimization failed:', error);
     } finally {
       setIsOptimizing(false);
@@ -488,7 +486,7 @@ export function MobileExperienceEnhancer({
     try {
       localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
       await new Promise(resolve => setTimeout(resolve, 1000));
-    } catch (error) {
+  } catch (error) {
       console.error('Failed to save mobile settings:', error);
     } finally {
       setIsOptimizing(false);
@@ -505,12 +503,11 @@ export function MobileExperienceEnhancer({
         setSettings(parsedSettings);
       }
       await new Promise(resolve => setTimeout(resolve, 500));
-    } catch (error) {
+  } catch (error) {
       console.error('Failed to load mobile settings:', error);
     } finally {
       setIsOptimizing(false);
     }
-  }, []);
 
   // Reset to default settings
   const resetSettings = useCallback(() => {
@@ -536,7 +533,6 @@ export function MobileExperienceEnhancer({
     setTouchGestures([]);
     setActiveGestures([]);
     setMobileScore(0);
-  }, []);
 
   // Calculate mobile score on mount and when features change
   useEffect(() => {
@@ -554,16 +550,16 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -575,13 +571,13 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -590,10 +586,10 @@ export function MobileExperienceEnhancer({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

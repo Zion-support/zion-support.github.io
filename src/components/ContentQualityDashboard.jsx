@@ -54,20 +54,20 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
                     images: ['/images/contact-office.jpg'],
                     links: ['/services', '/about', '/team']
-                }
+})
             ];
             for (const page of samplePages) {
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links);
-            }
+})
             const newReport = contentAnalyzer.generateReport();
             setReport(newReport);
-        }
+})
         catch (error) {
             console.error('Error analyzing pages:', error);
-        }
+})
         finally {
             setIsLoading(false);
-        }
+})
     }, [contentAnalyzer]);
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -84,16 +84,16 @@ const ContentQualityDashboard = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -105,13 +105,13 @@ const ContentQualityDashboard = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -120,10 +120,10 @@ const ContentQualityDashboard = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

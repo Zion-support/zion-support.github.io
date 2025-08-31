@@ -14,13 +14,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
     // Apply search filter
     if (searchQuery) {
       services = searchServices(searchQuery);
-    }
-
+})
     // Apply category filter
     if (selectedCategory !== 'all') {
       services = getServicesByCategory(selectedCategory as ZionService['category']);
-    }
-
+})
     // Apply price filter
     services = getServicesByPriceRange(priceRange[0], priceRange[1]);
 
@@ -33,7 +31,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
           return a.category.localeCompare(b.category);
         default:
           return a.title.localeCompare(b.title);
-      }
+})
     });
 
     return services;

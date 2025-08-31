@@ -1,4 +1,4 @@
-import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Check, ExternalLink, Globe, Leaf, Mail, Phone, Shield, Target, Zap } from 'lucide-react';
 
 export default function AIEnergyOptimization() {
   const features = [

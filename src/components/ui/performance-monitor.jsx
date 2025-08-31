@@ -46,10 +46,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     };
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                     onAlert?.('fps', fps, thresholds.fps);
-                }
+})
                 frameCount = 0;
                 lastTime = currentTime;
-            }
+})
             requestAnimationFrame(countFrame);
         };
         requestAnimationFrame(countFrame);
@@ -74,8 +74,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('memory', percentage, thresholds.memory);
-            }
-        }
+})
+})
     }, [thresholds.memory, onAlert]);
     const measureRenderTime = useCallback(() => {
         const start = performance.now();
@@ -94,7 +94,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('renderTime', renderTime, thresholds.renderTime);
-            }
+})
         });
     }, [thresholds.renderTime, onAlert]);
     const measureNetworkLatency = useCallback(async () => {
@@ -117,12 +117,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('networkLatency', latency, thresholds.networkLatency);
-            }
-        }
+})
+})
         catch {
             // Network error, set high latency
             setMetrics(prev => ({ ...prev, networkLatency: 999 }));
-        }
+})
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
@@ -144,7 +144,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
-        }
+})
         if (diskUsage > thresholds.diskUsage) {
             const alert = {
                 id: `disk-${Date.now()}`,
@@ -155,7 +155,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
             onAlert?.('diskUsage', diskUsage, thresholds.diskUsage);
-        }
+})
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
@@ -173,16 +173,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -194,13 +194,13 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -209,10 +209,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -245,16 +245,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -266,13 +266,13 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -281,10 +281,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -311,16 +311,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -332,13 +332,13 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -347,10 +347,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -362,7 +362,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
         return () => clearInterval(interval);
-    }, []);
+
     const getMetricColor = (metric, value, threshold) => {
         if (metric === 'FPS') {
             return value >= threshold ? 'text-green-400' : 'text-red-400';

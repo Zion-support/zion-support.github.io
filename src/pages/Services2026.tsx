@@ -35,13 +35,11 @@ const Services2026: React.FC = () => {
         s.category.toLowerCase().includes(q) ||
         s.tags?.some(t => t.toLowerCase().includes(q))
       );
-    }
-    
+})
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(s => s.category === selectedCategory);
-    }
-    
+})
     // Sort services
     switch (sortBy) {
       case 'price':
@@ -59,7 +57,7 @@ const Services2026: React.FC = () => {
         });
       default:
         return filtered;
-    }
+})
   }, [query, selectedCategory, sortBy, allServices]);
 
   const featuredServices = allServices.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);

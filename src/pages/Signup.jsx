@@ -107,8 +107,7 @@ export default function Signup() {
                             mergeFields: { FNAME: data.displayName }
                         });
                         await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
-                    }
-                    catch (err) {
+  } catch (err) {
                         console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
@@ -304,6 +303,6 @@ export default function Signup() {
         </div>
       </div>
       
-    </>);
+    </>
     };
-}
+})

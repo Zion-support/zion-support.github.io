@@ -8,30 +8,12 @@ export default function Profile() {
     const { user, isLoading, logout } = useAuth();
     const navigate = useNavigate();
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
             navigate("/login?redirect=/profile");
-        }
+})
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
@@ -40,8 +22,8 @@ export default function Profile() {
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>);
-    }
+      </>
+})
     if (!user) {
         return (<>
         
@@ -55,8 +37,8 @@ export default function Profile() {
           </div>
         </div>
         
-      </>);
-    }
+      </>
+})
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
@@ -84,7 +66,7 @@ export default function Profile() {
         </div>
       </div>
       
-    </>);
-}
+    </>
+})
 ;
 export default Profile;

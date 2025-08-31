@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, GitFork, Server, Shield, Sparkles, Zap } from 'lucide-react';
 
 export default function AIDevOpsAutomationPlatform() {
   const features = [

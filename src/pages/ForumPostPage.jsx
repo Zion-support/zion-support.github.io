@@ -372,5 +372,5 @@ export default function ForumPostPage() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </>
+})

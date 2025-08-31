@@ -1,5 +1,4 @@
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { ArrowRight, Award, BookOpen, Brain, Calendar, Clock, Cloud, Database, Download, Eye, FileText, Filter, Globe, Search, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 
 export default function WhitePapers() {

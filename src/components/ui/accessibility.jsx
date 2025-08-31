@@ -28,16 +28,16 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -49,13 +49,13 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,10 +64,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -121,16 +121,16 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -142,13 +142,13 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -157,10 +157,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -177,12 +177,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 // Silently handle parsing errors
             }
         }
-    }, []);
+
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
         setSettings(newSettings);
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    }, []);
+
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
@@ -360,7 +360,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       </AnimatePresence>
 
       {/* Screen Reader Only Class */}
-      <style // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{
+      <style // TODO: Sanitize content before using dangerouslySetInnerHTML={{
             __html: `
           .sr-only {
             position: absolute;
@@ -436,5 +436,5 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>
         </defs>
       </svg>
-    </>);
+    </>
 }

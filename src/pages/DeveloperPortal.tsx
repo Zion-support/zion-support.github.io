@@ -1,6 +1,6 @@
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock } from 'lucide-react';
+import { Activity, BarChart3, BookOpen, Brain, Cloud, Code, Cpu, Database, Download, ExternalLink, Github, Globe, Lock, Network, Play, Rocket, Shield, Terminal, Users, Zap } from 'lucide-react';
 
 const DeveloperPortal: React.FC = () => {
   const tools = [

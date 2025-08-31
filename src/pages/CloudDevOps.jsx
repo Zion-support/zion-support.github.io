@@ -23,7 +23,6 @@ import {
   FileText,
   Truck,
   Wrench
-} from 'lucide-react';
 
 const cloudDevOpsSolutions = [
   {

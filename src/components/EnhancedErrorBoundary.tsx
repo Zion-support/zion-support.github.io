@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, Bug, Home, RefreshCw, Shield, Zap } from 'lucide-react';
 
 interface Props {
   children: ReactNode;

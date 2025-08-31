@@ -43,12 +43,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
                 top: (startIndex + index) * itemHeight,
                 height: itemHeight,
                 width: '100%'
-            }
+})
         }));
     }, [items, scrollTop, itemHeight, containerHeight]);
     const handleScroll = useCallback((e) => {
         setScrollTop(e.currentTarget.scrollTop);
-    }, []);
+
     return (<div style={{ height: containerHeight, overflow: 'auto' }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
       <div style={{ height: items.length * itemHeight, position: 'relative' }}>
         {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">
@@ -72,7 +72,7 @@ export function PerformanceOptimizations() {
     ]);
     const handleItemClick = useCallback((item) => {
         console.log('Item clicked:', item);
-    }, []);
+
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
                 id: Date.now(),
@@ -80,7 +80,7 @@ export function PerformanceOptimizations() {
                 description: `Description ${prev.length + 1}`,
                 value: Math.floor(Math.random() * 1000)
             }]);
-    }, []);
+
     return (<div className="space-y-8 p-6">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-zion-blue mb-4">
@@ -153,4 +153,4 @@ export function PerformanceOptimizations() {
         </div>
       </div>
     </div>);
-}
+})

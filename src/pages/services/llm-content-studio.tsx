@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, BookOpen, CheckCircle, Database, Download, Mail, PenTool, Play, Settings, Shield, Sparkles, Target, Users, Zap } from 'lucide-react';
 
 export default function LLMContentStudio() {
   return (
@@ -93,7 +92,7 @@ export default function LLMContentStudio() {
                   icon: Shield,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function LLMContentStudio() {
                   description: "Stories, scripts, and creative content projects.",
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
-                }
+})
               ].map((contentType, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -267,7 +266,7 @@ export default function LLMContentStudio() {
                   step: "04",
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -368,7 +367,7 @@ export default function LLMContentStudio() {
                   metric: "ROI",
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
-                }
+})
               ].map((metric, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">

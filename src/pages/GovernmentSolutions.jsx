@@ -23,7 +23,6 @@ import {
   Brain,
   Code,
   Globe2
-} from 'lucide-react';
 
 const governmentSolutions = [
   {

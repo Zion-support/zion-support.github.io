@@ -61,16 +61,16 @@ const LinkHealthMonitor = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -82,13 +82,13 @@ const LinkHealthMonitor = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -97,10 +97,10 @@ const LinkHealthMonitor = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -109,7 +109,7 @@ const LinkHealthMonitor = () => {
 }, []);, []);
         setLinkStatuses(sampleLinks);
         generateReport(sampleLinks);
-    }, []);
+
     const generateReport = (links) => {
         const totalLinks = links.length;
         const healthyLinks = links.filter(l => l.status === 'healthy').length;
@@ -313,6 +313,6 @@ const LinkHealthMonitor = () => {
             </div>
           </motion.div>
         </motion.div>)}
-    </>);
+    </>
 };
 export default LinkHealthMonitor;

@@ -53,16 +53,16 @@ export default function UpdatePassword() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -74,13 +74,13 @@ export default function UpdatePassword() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -89,10 +89,10 @@ export default function UpdatePassword() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -148,8 +148,7 @@ export default function UpdatePassword() {
             setTimeout(() => {
                 navigate("/login");
             }, 3000);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Password update error:", error);
             toast({
                 title: "Password update failed",
@@ -247,5 +246,5 @@ export default function UpdatePassword() {
         </div>
       </div>
       
-    </>);
+    </>
 }

@@ -24,16 +24,16 @@ function InterviewsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -45,13 +45,13 @@ function InterviewsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -60,10 +60,10 @@ function InterviewsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -75,7 +75,7 @@ function InterviewsContent() {
             await fetchInterviews();
         };
         loadInterviews();
-    }, []);
+
     // Filter interviews based on status and date
     const now = new Date();
     const today = startOfDay(now);
@@ -183,7 +183,7 @@ function InterviewsContent() {
         </Tabs>
       </main>
       
-    </>);
+    </>
 }
 export default function Interviews() {
     return (<ProtectedRoute>

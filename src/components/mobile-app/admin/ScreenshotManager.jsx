@@ -44,7 +44,7 @@ export const ScreenshotManager = ({ platform }) => {
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {
                 URL.revokeObjectURL(removed.url);
-            }
+})
             return filtered;
         });
     };

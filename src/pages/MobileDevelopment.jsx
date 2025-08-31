@@ -44,7 +44,6 @@ import {
   Cloud,
   Settings,
   Palette
-} from 'lucide-react';
 
 const mobileDevelopmentSolutions = [
   {

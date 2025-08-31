@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift } from 'lucide-react';
+import { AlertCircle, CheckCircle, Gift, Mail, Send, Shield, Zap } from 'lucide-react';
 
 interface NewsletterFormData {
   email: string;
@@ -83,8 +83,7 @@ export const EnhancedNewsletter: React.FC = () => {
         });
         setStatus('idle');
       }, 3000);
-      
-    } catch (error) {
+  } catch (error) {
       setStatus('error');
       console.error('Newsletter subscription error:', error);
     }

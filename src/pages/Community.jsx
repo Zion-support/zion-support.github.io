@@ -23,6 +23,6 @@ const Community = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default Community;

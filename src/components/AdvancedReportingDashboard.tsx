@@ -68,16 +68,16 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -89,13 +89,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -104,10 +104,10 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -229,7 +229,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     setReports(sampleReports);
     setFilteredReports(sampleReports);
-  }, []);
 
   // Filter and sort reports
   useEffect(() => {
@@ -247,16 +246,16 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -268,13 +267,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -283,10 +282,10 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

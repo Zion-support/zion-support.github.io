@@ -23,6 +23,6 @@ const OpenApp = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default OpenApp;

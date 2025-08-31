@@ -19,16 +19,16 @@ export function SiteHealthDashboard() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -40,13 +40,13 @@ export function SiteHealthDashboard() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -55,10 +55,10 @@ export function SiteHealthDashboard() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -278,7 +278,7 @@ export function SiteHealthDashboard() {
             setIsLoading(false);
         };
         performHealthCheck();
-    }, []);
+
     const getStatusColor = (status) => {
         switch (status) {
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';

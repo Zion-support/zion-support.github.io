@@ -26,20 +26,19 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       // Generate suggestions based on analysis
       if (wordCount < 300) {
         analysisResult.suggestions.push('Consider adding more content for better SEO');
-      }
+})
       if (analysisResult.averageWordsPerSentence > 25) {
         analysisResult.suggestions.push('Break down long sentences for better readability');
-      }
+})
       if (paragraphCount < 3) {
         analysisResult.suggestions.push('Add more paragraphs to improve content structure');
-      }
-      
+})
       setAnalysis(analysisResult);
       setIsAnalyzing(false);
       
       if (onAnalysisComplete) {
         onAnalysisComplete(analysisResult);
-      }
+})
     }, 2000);
   };
 

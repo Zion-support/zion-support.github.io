@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Cloud, Cpu, Database, Eye, Globe, HardDrive, Lock, Monitor, Network, Server } from 'lucide-react';
 
 
 export default function DigitalTwin() {

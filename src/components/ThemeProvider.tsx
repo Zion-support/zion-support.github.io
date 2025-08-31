@@ -27,8 +27,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
         return saved;
-      }
-    }
+})
+})
     return 'system';
   });
 
@@ -49,16 +49,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -70,13 +70,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -85,10 +85,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -141,16 +141,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -162,13 +162,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -177,10 +177,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

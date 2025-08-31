@@ -158,6 +158,6 @@ const AIAutonomousData = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousData;

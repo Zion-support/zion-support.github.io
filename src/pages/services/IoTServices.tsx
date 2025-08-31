@@ -1,9 +1,9 @@
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lucide-react';
+import { Activity, BarChart3, Cog, Database, Globe, Shield, Wifi, Zap } from 'lucide-react';
 
 const IoTServices = () => {
   const iotServices = [
     {
-      title: "IoT Device Development",
+      title: "IoT Monitor Development",
       description: "Custom IoT device design and development for your specific use case.",
       price: "From $15,000/project",
       features: ["Hardware design", "Firmware development", "Sensor integration", "Power management"],
@@ -42,7 +42,7 @@ const IoTServices = () => {
       name: "Security & Privacy",
       description: "Enterprise-grade IoT security solutions",
       icon: Shield,
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
+      features: ["Monitor authentication", "Data encryption", "Secure updates", "Privacy compliance"]
     }
   ];
 

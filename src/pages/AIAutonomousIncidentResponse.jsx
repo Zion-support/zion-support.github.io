@@ -168,6 +168,6 @@ const AIAutonomousIncidentResponse = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousIncidentResponse;

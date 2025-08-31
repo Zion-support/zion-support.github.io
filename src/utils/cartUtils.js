@@ -223,7 +223,7 @@ export const mergeCarts = (cart1, cart2) => {
         ...item2,
         addedAt: new Date().toISOString()
       });
-    }
+})
   });
   
   return mergedCart;

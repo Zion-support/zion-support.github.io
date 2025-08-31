@@ -116,7 +116,6 @@ import {
   Bluetooth,
   Battery,
   Signal
-} from 'lucide-react';
 
 const contentCreationSolutions = [
   {

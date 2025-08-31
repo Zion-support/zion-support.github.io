@@ -11,7 +11,6 @@ import {
   ArrowRight,
   Filter,
   Search
-} from 'lucide-react';
 
 const testimonials = [
   {

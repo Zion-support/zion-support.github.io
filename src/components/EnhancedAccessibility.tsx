@@ -53,8 +53,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.style.removeProperty('--text-secondary');
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--bg-secondary');
-    }
-
+})
     // Large text
     if (newSettings.largeText) {
       root.style.fontSize = '18px';
@@ -62,29 +61,25 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     } else {
       root.style.fontSize = '16px';
       root.style.lineHeight = '1.5';
-    }
-
+})
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.style.setProperty('--reduced-motion', 'reduce');
     } else {
       root.style.removeProperty('--reduced-motion');
-    }
-
+})
     // Focus indicator
     if (newSettings.focusIndicator) {
       root.style.setProperty('--focus-ring', '2px solid #3b82f6');
     } else {
       root.style.setProperty('--focus-ring', 'none');
-    }
-
+})
     // Color blind support
     if (newSettings.colorBlind) {
       root.classList.add('color-blind-support');
     } else {
       root.classList.remove('color-blind-support');
-    }
-
+})
     // Dyslexia support
     if (newSettings.dyslexia) {
       root.style.fontFamily = 'OpenDyslexic, Arial, sans-serif';
@@ -94,11 +89,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.style.fontFamily = '';
       root.style.letterSpacing = '';
       root.style.wordSpacing = '';
-    }
-
+})
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
 
   // Load saved settings on mount
   useEffect(() => {
@@ -116,16 +109,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -137,13 +130,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -152,10 +145,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -186,7 +179,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     }, 1000);
 
     setAnnouncements(prev => [...prev, message]);
-  }, []);
 
   // Enhanced keyboard navigation
   useEffect(() => {
@@ -204,16 +196,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -225,13 +217,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -240,10 +232,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -312,16 +304,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -333,13 +325,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -348,10 +340,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -404,16 +396,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -425,13 +417,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -440,10 +432,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -462,7 +454,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         skipLink.parentNode.removeChild(skipLink);
       }
     };
-  }, []);
 
   // Quick accessibility actions
   const quickActions = [

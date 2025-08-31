@@ -75,8 +75,7 @@ export const AuthProvider = ({ children }) => {
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
             return { error: null };
-        }
-        catch (err) {
+  } catch (err) {
             return { error: err?.message || 'Registration failed' };
         }
     };
@@ -96,26 +95,8 @@ export const AuthProvider = ({ children }) => {
         return result;
     };
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         // Clean up any potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
@@ -141,30 +122,30 @@ export const AuthProvider = ({ children }) => {
                                 navigate(location.pathname, { state: {}, replace: true });
                                 // Navigate to checkout
                                 navigate('/checkout', { replace: true });
-                            }
+})
                             else if (next) {
                                 navigate(decodeURIComponent(next), { replace: true });
-                            }
+})
                             // --- END MODIFICATION ---
-                        }
-                    }
+})
+})
                     else if (error) {
                         console.error("Error fetching user profile:", error);
                         setUser(null);
-                    }
-                }
+})
+})
                 catch (error) {
                     console.error("Error fetching user profile:", error);
                     setUser(null);
-                }
-            }
+})
+})
             else {
                 setUser(false);
                 // Show logout toast when user logs out
                 if (event === 'SIGNED_OUT') {
                     handleSignedOut();
-                }
-            }
+})
+})
             setIsLoading(false);
         });
         return () => {

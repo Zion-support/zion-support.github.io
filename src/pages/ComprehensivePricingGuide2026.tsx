@@ -14,8 +14,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
     
     if (selectedService !== 'all') {
       filtered = filtered.filter(service => service.serviceName === selectedService);
-    }
-    
+})
     return filtered;
   }, [selectedService]);
 

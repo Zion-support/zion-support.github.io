@@ -24,5 +24,5 @@ export default function ServiceOnboarding() {
         </div>
       </div>
       
-    </>);
-}
+    </>
+})

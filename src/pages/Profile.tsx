@@ -111,7 +111,7 @@ const Profile: React.FC = () => {
       
       setSuccess('Profile updated successfully!');
       setIsEditing(false);
-    } catch (err) {
+  } catch (err) {
       setError('Failed to update profile. Please try again.');
     } finally {
       setIsLoading(false);
@@ -144,7 +144,7 @@ const Profile: React.FC = () => {
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
-    } catch (err) {
+  } catch (err) {
       setError('Failed to change password. Please try again.');
     } finally {
       setIsLoading(false);

@@ -1,4 +1,4 @@
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
+import { Cpu, Database, Globe, Package, Rocket, Settings, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 const MicroSAAS = () => {
   const microsaasServices = [

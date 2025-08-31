@@ -117,7 +117,7 @@ export function SEO({
             "@type": "Service",
             "name": "AI Business Intelligence",
             "description": "Advanced analytics and machine learning insights"
-          }
+})
         },
         {
           "@type": "Offer",
@@ -125,7 +125,7 @@ export function SEO({
             "@type": "Service",
             "name": "Quantum Computing Solutions",
             "description": "Next-generation computational power"
-          }
+})
         },
         {
           "@type": "Offer",
@@ -133,8 +133,8 @@ export function SEO({
             "@type": "Service",
             "name": "Micro SAAS Platform",
             "description": "Scalable software solutions"
-          }
-        }
+})
+})
       ]
     },
     "areaServed": {
@@ -149,14 +149,14 @@ export function SEO({
         "longitude": -75.7163
       },
       "geoRadius": "50000"
-    }
+})
   }), []);
 
   // Merge custom structured data with default
   const finalStructuredData = useMemo(() => {
     if (structuredData) {
       return { ...defaultStructuredData, ...structuredData };
-    }
+})
     return defaultStructuredData;
   }, [structuredData, defaultStructuredData]);
 
@@ -283,31 +283,13 @@ export function SEO({
     {
       type: "application/ld+json",
       innerHTML: JSON.stringify(finalStructuredData)
-    }
+})
   ], [finalStructuredData]);
 
   // Performance optimization: Add resource hints
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     // Add resource hints for better performance
     const addResourceHints = () => {
       // Preload critical CSS
@@ -334,7 +316,6 @@ export function SEO({
     // Add resource hints after component mounts
     const timer = setTimeout(addResourceHints, 100);
     return () => clearTimeout(timer);
-  }, []);
 
   return (
     <Helmet>
@@ -369,8 +350,7 @@ export function SEO({
             justify-content: center;
             color: white;
             text-align: center;
-          }
-          
+})
           /* Optimize font loading */
           @font-face {
             font-family: 'Orbitron';
@@ -378,30 +358,27 @@ export function SEO({
             src: url('/fonts/orbitron-v16-latin-400.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
-          }
-          
+})
           @font-face {
             font-family: 'Orbitron';
             font-display: swap;
             src: url('/fonts/orbitron-v16-latin-600.woff2') format('woff2');
             font-weight: 600;
             font-style: normal;
-          }
-          
+})
           /* Reduce layout shift */
           img {
             max-width: 100%;
             height: auto;
-          }
-          
+})
           /* Optimize animations */
           @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important;
-            }
-          }
+})
+})
         `}
       </style>
       
@@ -422,11 +399,10 @@ export function SEO({
                     name: 'load',
                     value: Math.round(loadTime)
                   });
-                }
-              }
+})
+})
             });
-          }
-          
+})
           // Core Web Vitals monitoring
           if ('web-vital' in window) {
             import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -436,12 +412,10 @@ export function SEO({
               getLCP(console.log);
               getTTFB(console.log);
             });
-          }
+})
         `}
       </script>
     </Helmet>
   );
-}
-
-
+})
 export default SEO;

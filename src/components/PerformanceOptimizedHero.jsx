@@ -32,16 +32,16 @@ const PerformanceOptimizedHero = memo(() => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -53,13 +53,13 @@ const PerformanceOptimizedHero = memo(() => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -68,10 +68,10 @@ const PerformanceOptimizedHero = memo(() => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -84,7 +84,7 @@ const PerformanceOptimizedHero = memo(() => {
             clearTimeout(timer);
             clearTimeout(loadTimer);
         };
-    }, []);
+
     const stats = [
         { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },
         { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },

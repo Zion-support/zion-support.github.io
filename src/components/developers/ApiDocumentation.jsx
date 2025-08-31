@@ -49,7 +49,7 @@ export function ApiDocumentation() {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
+})
 });
 
 const data = await response.json();
@@ -59,8 +59,7 @@ console.log(data);`,
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 response = requests.get(
     'https://ziontechgroup.com/api/v1/jobs',
     params={'limit': 10, 'category': 'development'},
@@ -93,7 +92,7 @@ print(data)`
     "total": 42,
     "page": 1,
     "limit": 10
-  }
+})
 }`
         }}/>
             
@@ -109,7 +108,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
+})
 });
 
 const data = await response.json();
@@ -119,8 +118,7 @@ console.log(data);`,
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 job_id = 'job_abc123'
 response = requests.get(
     f'https://ziontechgroup.com/api/v1/jobs/{job_id}',
@@ -147,7 +145,7 @@ print(data)`
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
     "application_count": 12
-  }
+})
 }`
         }}/>
             
@@ -204,8 +202,7 @@ import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 payload = {
     'title': 'Senior React Developer',
     'description': 'We need an experienced React developer...',
@@ -217,8 +214,7 @@ payload = {
         'currency': 'USD'
     },
     'deadline': '2025-06-30T23:59:59Z'
-}
-
+})
 response = requests.post(
     'https://ziontechgroup.com/api/v1/jobs',
     headers=headers,
@@ -244,7 +240,7 @@ print(data)`
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
     "deadline": "2025-06-30T23:59:59Z"
-  }
+})
 }`
         }}/>
           </TabsContent>
@@ -264,7 +260,7 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
+})
 });
 
 const data = await response.json();
@@ -274,8 +270,7 @@ console.log(data);`,
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 response = requests.get(
     'https://ziontechgroup.com/api/v1/talent',
     params={'skills': 'react,typescript'},
@@ -302,7 +297,7 @@ print(data)`
     "total": 28,
     "page": 1,
     "limit": 20
-  }
+})
 }`
         }}/>
             
@@ -318,7 +313,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
+})
 });
 
 const data = await response.json();
@@ -328,8 +323,7 @@ console.log(data);`,
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 talent_id = 'talent_abc123'
 response = requests.get(
     f'https://ziontechgroup.com/api/v1/talent/{talent_id}',
@@ -356,16 +350,16 @@ print(data)`
         "description": "Built a modern e-commerce platform using React...",
         "technologies": ["react", "redux", "node.js"],
         "image_url": "https://example.com/portfolio/123.jpg"
-      }
+})
     ],
     "certifications": [
       {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
-      }
+})
     ]
-  }
+})
 }`
         }}/>
           </TabsContent>
@@ -423,8 +417,7 @@ import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 payload = {
     'talent_id': 'talent_abc123',
     'project_name': 'E-commerce Website Redesign',
@@ -435,8 +428,7 @@ payload = {
     'budget_max': 12000,
     'requester_name': 'John Doe',
     'requester_email': 'john@example.com'
-}
-
+})
 response = requests.post(
     'https://ziontechgroup.com/api/v1/quotes',
     headers=headers,
@@ -462,7 +454,7 @@ print(data)`
     "requester_email": "john@example.com",
     "status": "new",
     "created_at": "2025-05-16T14:30:15Z"
-  }
+})
 }`
         }}/>
             
@@ -479,7 +471,7 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
+})
 });
 
 const data = await response.json();
@@ -489,8 +481,7 @@ console.log(data);`,
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-}
-
+})
 response = requests.get(
     'https://ziontechgroup.com/api/v1/quotes',
     headers=headers
@@ -518,7 +509,7 @@ print(data)`
     "total": 5,
     "page": 1,
     "limit": 20
-  }
+})
 }`
         }}/>
           </TabsContent>
@@ -549,8 +540,7 @@ function verifyWebhookSignature(payload, signature, secret) {
     Buffer.from(signature),
     Buffer.from(expectedSignature)
   );
-}
-
+})
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
@@ -559,8 +549,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature');
-  }
-  
+})
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
@@ -613,7 +602,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "applied_at": "2025-05-16T15:28:30Z",
     "status": "new",
     "match_score": 85
-  }
+})
 }`} language="json" showLineNumbers={true}/>
             </div>
           </TabsContent>
@@ -687,9 +676,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
       {
         "field": "project_name",
         "message": "Project name is required"
-      }
+})
     ]
-  }
+})
 }`} language="json"/>
               
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>

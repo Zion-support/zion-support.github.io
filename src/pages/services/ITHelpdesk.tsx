@@ -1,4 +1,4 @@
-import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Check, Clock, Cpu, LifeBuoy, Mail, Phone, Shield, Ticket } from 'lucide-react';
 
 export default function ITHelpdesk() {
   const features = [

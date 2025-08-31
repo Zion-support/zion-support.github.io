@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, CheckCircle, Cpu, Database, Download, Globe, Mail, Play, Settings, Shield, Target, Users, Wifi, Zap } from 'lucide-react';
 
 export default function IoTEdge() {
   return (
@@ -71,7 +70,7 @@ export default function IoTEdge() {
                 },
                 {
                   icon: Wifi,
-                  title: "Device Connectivity",
+                  title: "Monitor Connectivity",
                   description: "Seamless connectivity across multiple protocols and network types."
                 },
                 {
@@ -81,7 +80,7 @@ export default function IoTEdge() {
                 },
                 {
                   icon: Settings,
-                  title: "Device Management",
+                  title: "Monitor Management",
                   description: "Centralized management and monitoring of all IoT devices and sensors."
                 },
                 {
@@ -93,7 +92,7 @@ export default function IoTEdge() {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -137,7 +136,7 @@ export default function IoTEdge() {
                   title: "Healthcare IoT",
                   description: "Patient monitoring, medical device management, and remote healthcare delivery.",
                   icon: Users,
-                  benefits: ["Patient monitoring", "Device management", "Remote care"]
+                  benefits: ["Patient monitoring", "Monitor management", "Remote care"]
                 },
                 {
                   title: "Energy Management",
@@ -156,7 +155,7 @@ export default function IoTEdge() {
                   description: "Inventory management, supply chain optimization, and customer experience.",
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
-                }
+})
               ].map((application, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -258,7 +257,7 @@ export default function IoTEdge() {
                 {
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
-                }
+})
               ].map((technology, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -305,7 +304,7 @@ export default function IoTEdge() {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">

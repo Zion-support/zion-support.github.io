@@ -41,16 +41,16 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -62,13 +62,13 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -77,10 +77,10 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -119,7 +119,7 @@ export const useVirtualScroll = (items, options) => {
                 setState(prev => ({ ...prev, isScrolling: false }));
             }, 150);
         });
-    }, []);
+
     // Scroll to specific index
     const scrollToIndex = useCallback((index, align = 'start') => {
         if (!containerRef.current || index < 0 || index >= items.length)
@@ -161,7 +161,7 @@ export const useVirtualScroll = (items, options) => {
     // Get current scroll position
     const getScrollTop = useCallback(() => {
         return containerRef.current?.scrollTop || 0;
-    }, []);
+
     // Get visible range
     const getVisibleRange = useCallback(() => {
         return {
@@ -189,16 +189,16 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -210,13 +210,13 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -225,10 +225,10 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -269,16 +269,16 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -290,13 +290,13 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -305,10 +305,10 @@ export const useVirtualScroll = (items, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -323,7 +323,7 @@ export const useVirtualScroll = (items, options) => {
                 clearTimeout(scrollTimeoutRef.current);
             }
         };
-    }, []);
+
     // Container props
     const containerProps = {
         ref: containerRef,
@@ -376,16 +376,16 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -397,13 +397,13 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -412,10 +412,10 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -486,16 +486,16 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -507,13 +507,13 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -522,10 +522,10 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -588,16 +588,16 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -609,13 +609,13 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -624,10 +624,10 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

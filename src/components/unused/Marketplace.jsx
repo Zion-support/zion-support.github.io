@@ -232,19 +232,19 @@ export default function Marketplace() {
         let matchesPrice = true;
         if (selectedPriceRange === 'free') {
             matchesPrice = product.price === 0;
-        }
+})
         else if (selectedPriceRange === 'under-100') {
             matchesPrice = product.price < 100;
-        }
+})
         else if (selectedPriceRange === '100-500') {
             matchesPrice = product.price >= 100 && product.price <= 500;
-        }
+})
         else if (selectedPriceRange === '500-1000') {
             matchesPrice = product.price >= 500 && product.price <= 1000;
-        }
+})
         else if (selectedPriceRange === 'over-1000') {
             matchesPrice = product.price > 1000;
-        }
+})
         return matchesSearch && matchesCategory && matchesPrice;
     });
     const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -261,7 +261,7 @@ export default function Marketplace() {
                 return b.rating - a.rating;
             default:
                 return b.featured ? 1 : -1;
-        }
+})
     });
     const formatPrice = (price, currency) => {
         if (price === 0)

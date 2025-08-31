@@ -162,6 +162,6 @@ const AIAutonomousCustomerService = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousCustomerService;

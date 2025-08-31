@@ -331,7 +331,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 icon: <Shield className="w-8 h-8" />,
                 title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
-              }
+})
             ].map((feature, index) => (
               <motion.div
                 key={index}

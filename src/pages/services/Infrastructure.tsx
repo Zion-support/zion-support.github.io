@@ -1,4 +1,4 @@
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } from 'lucide-react';
+import { BarChart3, Cpu, Database, HardDrive, Network, Server, Shield, Zap } from 'lucide-react';
 
 const InfrastructureServices = () => {
   const infrastructureServices = [

@@ -168,6 +168,6 @@ const AIAutonomousEdgeSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousEdgeSecurity;

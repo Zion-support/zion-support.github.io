@@ -36,7 +36,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         results.forEach(result => {
             if (onLinkIssue) {
                 onLinkIssue(result);
-            }
+})
         });
     };
     // Fix a broken link
@@ -110,16 +110,16 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -131,13 +131,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -146,10 +146,10 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

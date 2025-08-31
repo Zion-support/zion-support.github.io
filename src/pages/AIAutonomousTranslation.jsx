@@ -168,6 +168,6 @@ const AIAutonomousTranslation = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousTranslation;

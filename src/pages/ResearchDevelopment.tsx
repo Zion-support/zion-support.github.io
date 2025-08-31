@@ -402,7 +402,7 @@ const ResearchDevelopment: React.FC = () => {
                 icon: Database,
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
-              }
+})
             ].map((lab, index) => (
               <motion.div
                 key={lab.title}

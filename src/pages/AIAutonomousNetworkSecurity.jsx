@@ -168,6 +168,6 @@ const AIAutonomousNetworkSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousNetworkSecurity;

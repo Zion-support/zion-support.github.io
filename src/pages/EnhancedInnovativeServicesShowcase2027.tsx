@@ -35,7 +35,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default:
         return a.title.localeCompare(b.title);
-    }
+})
   });
 
   const getCategoryIcon = (category: string) => {

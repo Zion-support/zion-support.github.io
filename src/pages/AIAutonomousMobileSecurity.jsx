@@ -168,6 +168,6 @@ const AIAutonomousMobileSecurity = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousMobileSecurity;

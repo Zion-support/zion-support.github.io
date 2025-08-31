@@ -168,6 +168,6 @@ const AIAutonomousRobotics = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousRobotics;

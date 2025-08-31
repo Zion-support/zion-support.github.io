@@ -436,7 +436,7 @@ export default function DataAnalytics() {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve analytics capabilities'
-              }
+})
             ].map((phase, index) => (
               <motion.div
                 key={index}

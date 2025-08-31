@@ -21,7 +21,6 @@ import {
   Clock,
   Eye,
   AlertTriangle
-} from 'lucide-react';
 
 const healthcareSolutions = [
   {

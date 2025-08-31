@@ -105,7 +105,7 @@ export default function AllServices2027() {
                 return b.aiScore - a.aiScore;
             default:
                 return 0;
-        }
+})
     });
 
     return (

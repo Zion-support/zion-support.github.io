@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from 'lucide-react';
+import { CheckCircle, Clock, Cloud, Cpu, Database, Globe, Monitor, Network, Server, Shield, Smartphone, Target, TrendingUp, Users, Wifi, Zap } from 'lucide-react';
 
 const IoTEdgeComputing: React.FC = () => {
   const features = [

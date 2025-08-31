@@ -28,16 +28,16 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -49,13 +49,13 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,10 +64,10 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -80,12 +80,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-            }
-            catch (error) {
+  } catch (error) {
                 console.error('Failed to parse accessibility settings:', error);
             }
         }
-    }, []);
+
     useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -101,16 +100,16 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -122,13 +121,13 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -137,10 +136,10 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -393,6 +392,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
+    </>
 };
 export default AccessibilityPanel;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, MessageSquare, Sparkles, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AIMarketingAutomationPersonalization() {
   const features = [

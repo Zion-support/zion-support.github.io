@@ -30,16 +30,16 @@ export default function ProfileDetail() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -51,13 +51,13 @@ export default function ProfileDetail() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,10 +66,10 @@ export default function ProfileDetail() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -97,8 +97,7 @@ export default function ProfileDetail() {
                     return;
                 }
                 setProfileData(data);
-            }
-            catch (err) {
+  } catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
                     title: "Error",
@@ -272,5 +271,5 @@ export default function ProfileDetail() {
         </div>
       </div>
       
-    </>);
+    </>
 }

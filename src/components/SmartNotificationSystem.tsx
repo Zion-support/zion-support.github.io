@@ -42,7 +42,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         action: {
           label: 'Get Started',
           onClick: () => console.log('Get Started clicked')
-        }
+})
       },
       {
         id: '2',
@@ -56,7 +56,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         action: {
           label: 'View Details',
           onClick: () => console.log('View Details clicked')
-        }
+})
       },
       {
         id: '3',
@@ -80,13 +80,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         action: {
           label: 'Update Now',
           onClick: () => console.log('Update Now clicked')
-        }
-      }
+})
+})
     ];
 
     setNotifications(sampleNotifications);
     setUnreadCount(sampleNotifications.filter(n => !n.read).length);
-  }, []);
 
   // Initialize with sample notifications
   useEffect(() => {
@@ -104,16 +103,16 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -125,13 +124,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -140,10 +139,10 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -171,16 +170,16 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -192,13 +191,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -207,10 +206,10 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -236,7 +235,6 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
     }, 60000); // Check every minute
 
     return () => clearInterval(interval);
-  }, []);
 
   // Mark notification as read
   const markAsRead = useCallback((id: string) => {
@@ -247,7 +245,6 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       setUnreadCount(updated.filter(n => !n.read).length);
       return updated;
     });
-  }, []);
 
   // Mark all as read
   const markAllAsRead = useCallback(() => {
@@ -256,7 +253,6 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       setUnreadCount(0);
       return updated;
     });
-  }, []);
 
   // Remove notification
   const removeNotification = useCallback((id: string) => {
@@ -265,13 +261,11 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       setUnreadCount(filtered.filter(n => !n.read).length);
       return filtered;
     });
-  }, []);
 
   // Clear all notifications
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);
     setUnreadCount(0);
-  }, []);
 
   // Toggle mute
   const toggleMute = useCallback(() => {

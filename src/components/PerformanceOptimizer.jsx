@@ -6,62 +6,25 @@ export const PerformanceOptimizer = ({ children }) => {
 
     // Preload critical resources
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const preloadCriticalResources = () => {
             // Note: CSS is already handled by Vite build process
             // Fonts are loaded via Google Fonts CDN in index.html
         };
         preloadCriticalResources();
-    }, []);
 
     // Optimize images on route change
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy';
-                }
+})
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
                 // Add error handling
@@ -76,7 +39,7 @@ export const PerformanceOptimizer = ({ children }) => {
             requestIdleCallback(optimizeImages);
         } else {
             setTimeout(optimizeImages, 100);
-        }
+})
     }, [location.pathname]);
 
     // Memoize expensive computations
@@ -90,62 +53,23 @@ export const PerformanceOptimizer = ({ children }) => {
                 // Handle scroll-based optimizations here
                 window.scrollTimeout = null;
             }, 16); // ~60fps
-        }
-    }, []);
-
+})
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
 
     // Service Worker registration for caching
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
             // Check if service worker is already registered
             if (navigator.serviceWorker.controller) {
                 return; // Already active
-            }
-
+})
             navigator.serviceWorker
                 .register('/sw.js', {
                     scope: '/',
@@ -162,39 +86,19 @@ export const PerformanceOptimizer = ({ children }) => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
                                     console.log('New service worker available');
-                                }
+})
                             });
-                        }
+})
                     });
                 })
                 .catch((registrationError) => {
                     console.warn('SW registration failed: ', registrationError);
                 });
-        }
-    }, []);
-
+})
     // Intersection Observer for lazy loading
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -204,8 +108,8 @@ export const PerformanceOptimizer = ({ children }) => {
                             target.src = target.dataset.src;
                             target.removeAttribute('data-src');
                             observer.unobserve(target);
-                        }
-                    }
+})
+})
                 });
             }, {
                 rootMargin: '50px',
@@ -217,7 +121,7 @@ export const PerformanceOptimizer = ({ children }) => {
             lazyImages.forEach((img) => observer.observe(img));
 
             return () => observer.disconnect();
-        }
+})
     }, [location.pathname]);
 
     return <>{optimizedChildren}</>;
@@ -230,8 +134,7 @@ if (typeof window !== 'undefined') {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time
         }, { priority: 'background' });
-    }
-
+})
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
@@ -239,9 +142,8 @@ if (typeof window !== 'undefined') {
             // Trigger garbage collection if available
             if ('gc' in window) {
                 window.gc();
-            }
-        }
-    }
-}
-
+})
+})
+})
+})
 export default PerformanceOptimizer;

@@ -46,7 +46,6 @@ import {
   Antenna,
   Router,
   Tower
-} from 'lucide-react';
 
 const fiveGSolutions = [
   {

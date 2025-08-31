@@ -241,7 +241,7 @@ export default function EmergingTech2030() {
                   title: 'Enterprise Security',
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
-                }
+})
               ].map((feature, index) => (
                 <motion.div
                   key={index}

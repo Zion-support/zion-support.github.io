@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Activity, AlertTriangle, CheckCircle, Clock, TrendingUp, Zap } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -38,42 +38,36 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.fcp < 3000) score += 50;
       else if (metrics.fcp < 4000) score += 25;
       totalMetrics++;
-    }
-
+})
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
       if (metrics.lcp < 2500) score += 100;
       else if (metrics.lcp < 4000) score += 50;
       else if (metrics.lcp < 5000) score += 25;
       totalMetrics++;
-    }
-
+})
     // FID scoring (0-100)
     if (metrics.fid !== null) {
       if (metrics.fid < 100) score += 100;
       else if (metrics.fid < 300) score += 50;
       else if (metrics.fid < 500) score += 25;
       totalMetrics++;
-    }
-
+})
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
       if (metrics.cls < 0.1) score += 100;
       else if (metrics.cls < 0.25) score += 50;
       else if (metrics.cls < 0.4) score += 25;
       totalMetrics++;
-    }
-
+})
     // TTFB scoring (0-100)
     if (metrics.ttfb !== null) {
       if (metrics.ttfb < 800) score += 100;
       else if (metrics.ttfb < 1800) score += 50;
       else if (metrics.ttfb < 3000) score += 25;
       totalMetrics++;
-    }
-
+})
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
-  }, []);
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
@@ -111,7 +105,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return { status: 'needs-improvement', color: 'text-yellow-400', icon: <AlertTriangle className="w-4 h-4" /> };
     } else {
       return { status: 'poor', color: 'text-red-400', icon: <AlertTriangle className="w-4 h-4" /> };
-    }
+})
   };
 
   useEffect(() => {
@@ -129,16 +123,16 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -150,13 +144,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -165,10 +159,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -231,7 +225,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.disconnect();
       };
     }
-  }, []);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -248,16 +241,16 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -269,13 +262,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -284,10 +277,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -313,16 +306,16 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -334,13 +327,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -349,10 +342,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -361,7 +354,6 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 }, []);, []);
     const timer = setTimeout(() => setIsVisible(true), 1000);
     return () => clearTimeout(timer);
-  }, []);
 
   if (!isVisible) return null;
 

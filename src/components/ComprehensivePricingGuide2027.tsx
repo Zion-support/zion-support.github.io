@@ -24,16 +24,16 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -45,13 +45,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -60,10 +60,10 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -85,7 +85,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
 
   // Combine all services
   const allServices = [

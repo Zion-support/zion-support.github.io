@@ -132,7 +132,7 @@ export default function CaseStudies() {
       industry.count = caseStudies.length;
     } else {
       industry.count = caseStudies.filter(cs => cs.industry === industry.id).length;
-    }
+})
   });
 
   services.forEach(service => {
@@ -140,7 +140,7 @@ export default function CaseStudies() {
       service.count = caseStudies.length;
     } else {
       service.count = caseStudies.filter(cs => cs.service === service.id).length;
-    }
+})
   });
 
   const filteredCaseStudies = caseStudies.filter(cs => {

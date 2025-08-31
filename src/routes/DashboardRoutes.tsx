@@ -12,7 +12,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/client-dashboard" 
@@ -20,7 +20,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/talent-dashboard" 
@@ -28,7 +28,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-        }
+})
       />
       <Route 
         path="/creator-dashboard" 
@@ -36,7 +36,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/analytics" 
@@ -44,7 +44,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/project/:id/milestones" 
@@ -52,7 +52,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        } 
+})
       />
       <Route
         path="/project/:id"
@@ -60,7 +60,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/project/:id/room"
@@ -68,7 +68,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/messages"
@@ -76,7 +76,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Messages Page</div>
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/inbox" 
@@ -84,7 +84,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Inbox Page</div>
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/payments" 
@@ -92,7 +92,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/interviews" 
@@ -100,7 +100,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/notifications" 
@@ -108,7 +108,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/applications/track" 
@@ -116,7 +116,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        } 
+})
       />
       <Route
         path="/hiring-tracker"
@@ -124,7 +124,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/projects"
@@ -132,7 +132,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/portfolio-builder"
@@ -140,7 +140,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        } 
+})
       />
       <Route 
         path="/referrals" 
@@ -148,7 +148,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Referrals Page</div>
           </ProtectedRoute>
-        } 
+})
       />
       <Route
         path="/developers"
@@ -156,7 +156,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/wallet"
@@ -164,7 +164,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Wallet Page</div>
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/orders"
@@ -172,7 +172,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/orders/:orderId"
@@ -180,7 +180,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
-        }
+})
       />
       <Route
         path="/dashboard/api-access"
@@ -188,7 +188,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        } 
+})
       />
       <Route
         path="/contract-builder"
@@ -196,7 +196,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        } 
+})
       />
     </Routes>
   );

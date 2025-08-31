@@ -43,16 +43,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,13 +64,13 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -79,10 +79,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -95,11 +95,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         const parsed = JSON.parse(savedSettings);
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
-      } catch (error) {
+  } catch (error) {
         console.error('Failed to parse accessibility settings:', error);
       }
     }
-  }, []);
 
   // Apply accessibility settings to the document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
@@ -171,7 +170,6 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
 
     // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
 
   // Handle keyboard navigation
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
@@ -206,7 +204,6 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         }
         break;
     }
-  }, []);
 
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
@@ -293,16 +290,16 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -314,13 +311,13 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -329,10 +326,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

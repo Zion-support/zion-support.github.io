@@ -21,10 +21,10 @@ export const loginUser = createAsyncThunk(
       });
       
       return response;
-    } catch (error) {
+  } catch (error) {
       return rejectWithValue(error.message);
-    }
-  }
+})
+})
 );
 
 // Async thunk for signup
@@ -47,7 +47,7 @@ export const signupUser = createAsyncThunk(
             });
           } else {
             reject(new Error('Invalid user data'));
-          }
+})
         }, 1000);
       });
       
@@ -56,10 +56,10 @@ export const signupUser = createAsyncThunk(
       localStorage.setItem('user', JSON.stringify(response.user));
       
       return response;
-    } catch (error) {
+  } catch (error) {
       return rejectWithValue(error.message);
-    }
-  }
+})
+})
 );
 
 // Async thunk for logout
@@ -73,10 +73,10 @@ export const logoutUser = createAsyncThunk(
       });
       
       return null;
-    } catch (error) {
+  } catch (error) {
       return rejectWithValue(error.message);
-    }
-  }
+})
+})
 );
 
 // Async thunk for checking auth status
@@ -94,11 +94,11 @@ export const checkAuthStatus = createAsyncThunk(
         };
       } else {
         throw new Error('No auth data found');
-      }
-    } catch (error) {
+})
+  } catch (error) {
       return rejectWithValue(error.message);
-    }
-  }
+})
+})
 );
 
 const initialState = {
@@ -122,7 +122,7 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-    }
+})
   },
   extraReducers: (builder) => {
     // Login
@@ -196,7 +196,7 @@ const authSlice = createSlice({
         state.user = null;
         state.token = null;
       });
-  }
+})
 });
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;

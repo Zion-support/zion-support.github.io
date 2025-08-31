@@ -1,4 +1,4 @@
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
+import { ArrowRight, BarChart3, Check, ExternalLink, Eye, Globe, Heart, Mail, MessageSquare, Phone, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AICustomerExperienceAnalytics() {
   const features = [

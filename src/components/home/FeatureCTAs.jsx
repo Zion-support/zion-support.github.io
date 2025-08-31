@@ -13,7 +13,6 @@ import {
   TrendingUp,
   Award,
   Globe
-} from 'lucide-react';
 
 export function FeatureCTAs() {
   const features = [

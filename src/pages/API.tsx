@@ -1,6 +1,6 @@
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
+import { Activity, BarChart3, BookOpen, Code, Cpu, Database, Download, ExternalLink, Globe, Network, Play, Rocket, Shield, Terminal, Users, Zap } from 'lucide-react';
 
 const API: React.FC = () => {
   const endpoints = [

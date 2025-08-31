@@ -27,7 +27,7 @@ export const QrCodeDownload = () => {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
+  } catch (err) {
       console.error('Failed to copy: ', err);
     }
   };
@@ -43,7 +43,7 @@ export const QrCodeDownload = () => {
           text: text,
           url: url
         });
-      } catch (err) {
+  } catch (err) {
         console.error('Error sharing:', err);
       }
     } else {

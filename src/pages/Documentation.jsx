@@ -23,6 +23,6 @@ const Documentation = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default Documentation;

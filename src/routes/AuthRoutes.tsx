@@ -15,7 +15,7 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
-        }
+})
       />
       
       <Route
@@ -24,7 +24,7 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
-        }
+})
       />
       
       <Route
@@ -33,7 +33,7 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
-        }
+})
       />
     </Routes>
   );

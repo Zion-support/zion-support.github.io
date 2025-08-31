@@ -58,7 +58,7 @@ export const EnterpriseDashboard = () => {
             change: -5,
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date()
-        }
+})
     ]);
     const [serviceStatuses] = useState([
         {
@@ -92,7 +92,7 @@ export const EnterpriseDashboard = () => {
             uptime: 99.99,
             responseTime: 2,
             errorRate: 0.001
-        }
+})
     ]);
     const [securityAlerts] = useState([
         {
@@ -116,7 +116,7 @@ export const EnterpriseDashboard = () => {
             status: 'resolved',
             affected: ['user-789'],
             source: 'Access Control System'
-        }
+})
     ]);
     const [userActivities] = useState([
         {
@@ -140,7 +140,7 @@ export const EnterpriseDashboard = () => {
             ipAddress: '192.168.1.101',
             userAgent: 'Firefox/89.0.2',
             status: 'success'
-        }
+})
     ]);
     // Refresh data
     const refreshData = useCallback(async () => {
@@ -155,16 +155,16 @@ export const EnterpriseDashboard = () => {
                 tab: activeTab,
                 dateRange
             });
-        }
+})
         catch (error) {
             console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-        }
+})
         finally {
             setIsRefreshing(false);
-        }
+})
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
@@ -182,16 +182,16 @@ export const EnterpriseDashboard = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -203,13 +203,13 @@ export const EnterpriseDashboard = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -218,10 +218,10 @@ export const EnterpriseDashboard = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

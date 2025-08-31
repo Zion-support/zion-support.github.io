@@ -26,7 +26,7 @@ export function AIChatAssistant() {
             type: 'assistant',
             content: "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?",
             timestamp: new Date()
-        }
+})
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
@@ -51,16 +51,16 @@ export function AIChatAssistant() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -72,13 +72,13 @@ export function AIChatAssistant() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -87,10 +87,10 @@ export function AIChatAssistant() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

@@ -54,16 +54,16 @@ export function KanbanBoard({ jobId }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -75,13 +75,13 @@ export function KanbanBoard({ jobId }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -90,10 +90,10 @@ export function KanbanBoard({ jobId }) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -141,8 +141,7 @@ export function KanbanBoard({ jobId }) {
                 title: "Status updated",
                 description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`,
             });
-        }
-        catch (error) {
+  } catch (error) {
             // Revert the UI changes if the database update fails
             toast({
                 title: "Failed to update status",

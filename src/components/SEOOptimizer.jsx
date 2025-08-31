@@ -36,7 +36,7 @@ const SEOOptimizer = () => {
                     images: ['/images/ai-solutions.jpg'],
                     links: ['/services', '/about', '/contact'],
                     keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
-                }
+})
             ];
             const pageAnalyses = samplePages.map(page => {
                 const score = calculateSEOScore(page);
@@ -78,14 +78,13 @@ const SEOOptimizer = () => {
                 pageAnalyses,
                 summary
             });
-        }
+})
         catch (error) {
             console.error('Error analyzing SEO:', error);
-        }
+})
         finally {
             setIsAnalyzing(false);
-        }
-    }, []);
+})
     useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -101,16 +100,16 @@ const SEOOptimizer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -122,13 +121,13 @@ const SEOOptimizer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -137,10 +136,10 @@ const SEOOptimizer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

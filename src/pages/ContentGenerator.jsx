@@ -40,16 +40,16 @@ export default function ContentGenerator() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -61,13 +61,13 @@ export default function ContentGenerator() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -76,10 +76,10 @@ export default function ContentGenerator() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -108,8 +108,7 @@ export default function ContentGenerator() {
                 throw error;
             setPreviewContent(data);
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.");
         }
@@ -139,8 +138,7 @@ export default function ContentGenerator() {
             if (error)
                 throw error;
             toast.success(`Test newsletter sent to ${testEmail}!`);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.");
         }
@@ -153,7 +151,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
         
-      </>);
+      </>
     }
     return (<>
       
@@ -247,7 +245,7 @@ export default function ContentGenerator() {
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
-                                <div className="prose prose-invert max-w-none" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{
+                                <div className="prose prose-invert max-w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML={{
                 __html: previewContent.body
                     .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -312,7 +310,7 @@ export default function ContentGenerator() {
                               <h2 className="text-xl font-bold">{previewContent.subject}</h2>
                               <p className="text-gray-500 text-sm mt-2">{previewContent.previewText}</p>
                               <div className="border-t border-gray-200 my-4"></div>
-                              <div className="prose max-w-none" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
+                              <div className="prose max-w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
                               <div className="mt-6">
                                 <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">
                                   {previewContent.cta || "Visit Zion Marketplace"}
@@ -356,5 +354,5 @@ export default function ContentGenerator() {
         </div>
       </div>
       
-    </>);
+    </>
 }

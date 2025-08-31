@@ -81,7 +81,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       changeType: 'neutral',
       icon: <Activity className="w-5 h-5" />,
       color: 'text-purple-400'
-    }
+})
   ]);
 
   // Simulate data refresh

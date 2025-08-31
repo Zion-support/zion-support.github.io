@@ -18,8 +18,7 @@ function ReviewsModerationContent() {
             await new Promise(resolve => setTimeout(resolve, 1000));
             setReviews([]);
             setIsLoading(false);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error fetching reviews:", error);
             toast({
                 title: "Error",
@@ -44,16 +43,16 @@ function ReviewsModerationContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -65,13 +64,13 @@ function ReviewsModerationContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -80,10 +79,10 @@ function ReviewsModerationContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -141,7 +140,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>);
+    </>
 }
 export default function ReviewsModeration() {
     return (<ProtectedRoute>

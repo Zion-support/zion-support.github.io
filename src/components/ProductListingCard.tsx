@@ -3,10 +3,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ProductListing } from '@/types/listings';
 import { DollarSign } from 'lucide-react';
-import { RatingStars } from '@/components/RatingStars';
-import { FavoriteButton } from '@/components/FavoriteButton';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -75,7 +71,7 @@ export function ProductListingCard({
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           handleViewListing();
-        }
+})
       }}
     >
       {/* Image */}
@@ -88,7 +84,7 @@ export function ProductListingCard({
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             handleViewListing();
-          }
+})
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}

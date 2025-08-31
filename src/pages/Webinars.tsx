@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+import { ArrowRight, Award, BookOpen, Brain, Calendar, CheckCircle, Clock, Cloud, Database, Download, ExternalLink, Filter, Globe, Play, Search, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 
 
 
@@ -78,16 +78,16 @@ export default function Webinars() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -99,13 +99,13 @@ export default function Webinars() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -114,10 +114,10 @@ export default function Webinars() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -135,7 +135,6 @@ export default function Webinars() {
         type.count = webinars.filter(w => w.type === type.id).length;
       }
     });
-  }, []);
 
   const filteredWebinars = webinars.filter(webinar => {
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

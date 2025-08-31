@@ -40,7 +40,7 @@ export default function Login() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Redirect to dashboard or handle successful login
       window.location.href = '/dashboard';
-    } catch (error) {
+  } catch (error) {
       console.error('Login failed:', error);
     } finally {
       setIsLoading(false);

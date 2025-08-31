@@ -576,7 +576,6 @@ import {
   Shield,
   Zap,
   Brain
-} from 'lucide-react';
 
 const soc2Solutions = [
   {

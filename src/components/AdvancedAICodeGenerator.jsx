@@ -40,7 +40,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
       const result = await response.json();
       setData(result);
-    } catch (err) {
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
@@ -62,16 +62,16 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -83,13 +83,13 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -98,10 +98,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -313,7 +313,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
+  } catch (error) {
       console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
     }
@@ -324,7 +324,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
+  } catch (error) {
       console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };

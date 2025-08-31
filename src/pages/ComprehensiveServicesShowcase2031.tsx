@@ -91,7 +91,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default:
         return 0;
-    }
+})
   });
 
   const getCategoryIcon = (category: string) => {

@@ -87,16 +87,16 @@ export function TestimonialCarousel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -108,13 +108,13 @@ export function TestimonialCarousel() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -123,10 +123,10 @@ export function TestimonialCarousel() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -138,7 +138,7 @@ export function TestimonialCarousel() {
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+
     const slideVariants = {
         enter: (direction) => ({
             x: direction > 0 ? 1000 : -1000,

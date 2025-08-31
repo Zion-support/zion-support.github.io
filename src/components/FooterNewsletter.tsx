@@ -1,4 +1,4 @@
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { CheckCircle, Mail, Send } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ export const FooterNewsletter: React.FC = () => {
       
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
-    } catch (error) {
+  } catch (error) {
       console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);

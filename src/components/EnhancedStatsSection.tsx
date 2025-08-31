@@ -77,29 +77,11 @@ export default function EnhancedStatsSection() {
   });
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     if (inView) {
       controls.start('visible');
-    }
+})
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {
@@ -113,7 +95,7 @@ export default function EnhancedStatsSection() {
       if (current >= numericValue) {
         current = numericValue;
         clearInterval(timer);
-      }
+})
       setCountedValues(prev => ({
         ...prev,
         [target]: Math.floor(current)
@@ -124,26 +106,8 @@ export default function EnhancedStatsSection() {
   };
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
     if (inView) {
       stats.forEach((stat) => {
         const timer = setTimeout(() => {
@@ -151,7 +115,7 @@ export default function EnhancedStatsSection() {
         }, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer);
       });
-    }
+})
   }, [inView]);
 
   return (
@@ -175,8 +139,8 @@ export default function EnhancedStatsSection() {
               y: 0,
               transition: {
                 duration: 0.6
-              }
-            }
+})
+})
           }}
           className="text-center mb-16"
         >
@@ -202,8 +166,8 @@ export default function EnhancedStatsSection() {
                   transition: {
                     duration: 0.6,
                     delay: index * 0.1
-                  }
-                }
+})
+})
               }}
               className="group relative"
             >
@@ -276,8 +240,8 @@ export default function EnhancedStatsSection() {
               transition: {
                 duration: 0.6,
                 delay: 0.6
-              }
-            }
+})
+})
           }}
           className="mt-16"
         >

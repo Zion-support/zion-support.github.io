@@ -18,7 +18,7 @@ export default function ProjectRoom() {
             isHost: true,
             isVideoEnabled: true,
             isMuted: false
-        }
+})
     ]);
     const startVideoCall = () => {
         setIsInCall(true);
@@ -201,5 +201,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
       
-    </>);
-}
+    </>
+})

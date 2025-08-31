@@ -69,16 +69,16 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -90,13 +90,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -105,10 +105,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -210,7 +210,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
     setResources(sampleResources);
     setFilteredResources(sampleResources);
-  }, []);
 
   // Filter resources
   useEffect(() => {
@@ -228,16 +227,16 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -249,13 +248,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -264,10 +263,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

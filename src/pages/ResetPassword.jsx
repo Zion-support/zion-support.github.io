@@ -28,16 +28,16 @@ export default function ResetPasswordPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -49,13 +49,13 @@ export default function ResetPasswordPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,10 +64,10 @@ export default function ResetPasswordPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -102,8 +102,7 @@ export default function ResetPasswordPage() {
             await resetPassword(token, password);
             toast.success('Password has been reset successfully!');
             navigate('/login'); // Redirect to login page on success
-        }
-        catch (err) {
+  } catch (err) {
             // Ensure err.message is a string.
             const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
             setError(errorMessage);

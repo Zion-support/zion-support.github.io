@@ -28,16 +28,16 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -49,13 +49,13 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,10 +64,10 @@ export default function CheckoutPage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -116,16 +116,14 @@ export default function CheckoutPage() {
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
                         });
-                    }
-                    catch (e) {
+  } catch (e) {
                         console.error('Failed to add points', e);
                     }
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
                 navigate(`/orders/${result.id}`);
             }
-        }
-        catch (err) {
+  } catch (err) {
             console.error('Payment failed', err);
         }
     };

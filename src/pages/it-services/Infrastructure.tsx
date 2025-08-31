@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle, Cloud, Cpu, Database, Globe, Network, Server, Shield, Users, Zap } from 'lucide-react';
 
 export default function Infrastructure() {
   const features = [

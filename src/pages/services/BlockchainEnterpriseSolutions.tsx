@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
+import { AlertTriangle, BarChart3, Bitcoin, CheckCircle, Cloud, Database, Ethereum, FileText, Globe, Laptop, Link, Lock, Network, RefreshCw, Server, Settings, Shield, Smartphone, Tablet, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function BlockchainEnterpriseSolutions() {
   const features = [

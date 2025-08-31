@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, Calculator, CheckCircle, Database, DollarSign, Download, Mail, PieChart, Play, Settings, Shield, Target, TrendingUp, Users } from 'lucide-react';
 
 export default function FinOpsAdvisor() {
   return (
@@ -93,7 +92,7 @@ export default function FinOpsAdvisor() {
                   icon: Database,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function FinOpsAdvisor() {
                   description: "Optimize support plans, licensing, and service agreements.",
                   icon: Shield,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
-                }
+})
               ].map((area, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -206,7 +205,7 @@ export default function FinOpsAdvisor() {
                   step: "03",
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -321,7 +320,7 @@ export default function FinOpsAdvisor() {
                   description: "REST APIs for custom integrations and automated workflows.",
                   icon: Settings,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
-                }
+})
               ].map((tool, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -376,7 +375,7 @@ export default function FinOpsAdvisor() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">

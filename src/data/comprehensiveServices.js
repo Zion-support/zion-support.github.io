@@ -336,7 +336,7 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
       baseCost += customization.price * months;
     } else if (customization.type === 'oneTime') {
       baseCost += customization.price;
-    }
+})
   });
   
   return baseCost;

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, Search, HelpCircle, MessageCircle, Phone, Mail, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronDown, Globe, HelpCircle, Mail, MessageCircle, Phone, Search } from 'lucide-react';
 
 interface FAQItem {
   question: string;

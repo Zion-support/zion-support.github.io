@@ -1,4 +1,4 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Check, ExternalLink, Mail, Phone, Route, Shield, Target, Truck, Zap } from 'lucide-react';
 
 export default function AITransportation() {
   const features = [

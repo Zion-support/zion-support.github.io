@@ -30,16 +30,16 @@ export default function AccountSettings() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -51,13 +51,13 @@ export default function AccountSettings() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,10 +66,10 @@ export default function AccountSettings() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -84,11 +84,10 @@ export default function AccountSettings() {
                 setDidHandle(parsed.didHandle || '');
                 setEnableBackup(!!parsed.enableBackup);
             }
-        }
-        catch (e) {
+  } catch (e) {
             console.error('Error loading account settings', e);
         }
-    }, []);
+
     const handleSave = () => {
         setIsSubmitting(true);
         // Simulate API call
@@ -97,8 +96,7 @@ export default function AccountSettings() {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
                 console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
-            }
-            catch (e) {
+  } catch (e) {
                 console.error('Failed to save settings', e);
                 toast.error('Failed to save settings');
             }
@@ -131,13 +129,11 @@ export default function AccountSettings() {
                 if (ensName) {
                     setDidHandle(ensName);
                 }
-            }
-            catch (error) {
+  } catch (error) {
                 console.error('ENS lookup error:', error);
             }
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-        }
-        catch (error) {
+  } catch (error) {
             toast.error(error.message || 'Failed to connect wallet');
         }
     };
@@ -276,5 +272,5 @@ export default function AccountSettings() {
         </div>
       </main>
       
-    </>);
+    </>
 }

@@ -45,16 +45,16 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,13 +66,13 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -81,10 +81,10 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -103,7 +103,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
     console.log('Hero CTA clicked');
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },

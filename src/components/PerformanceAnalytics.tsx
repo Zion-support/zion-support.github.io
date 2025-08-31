@@ -72,7 +72,7 @@ const PerformanceAnalytics: React.FC = () => {
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap
-      }
+})
     ];
 
     const alerts = [
@@ -93,7 +93,6 @@ const PerformanceAnalytics: React.FC = () => {
       alerts,
       recommendations
     };
-  }, []);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -110,16 +109,16 @@ const PerformanceAnalytics: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -131,13 +130,13 @@ const PerformanceAnalytics: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -146,10 +145,10 @@ const PerformanceAnalytics: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

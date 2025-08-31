@@ -436,7 +436,7 @@ export default function GreenIT() {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
-              }
+})
             ].map((phase, index) => (
               <motion.div
                 key={index}

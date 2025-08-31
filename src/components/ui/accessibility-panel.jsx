@@ -32,16 +32,16 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -53,13 +53,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -68,10 +68,10 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -149,16 +149,16 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -170,13 +170,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -185,10 +185,10 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -232,7 +232,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             setNotifications(prev => [notification, ...prev.slice(0, 2)]);
             return newSettings;
         });
-    }, []);
+
     const resetToDefaults = useCallback(() => {
         const defaultSettings = {
             highContrast: false,
@@ -252,7 +252,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             timestamp: Date.now()
         };
         setNotifications(prev => [notification, ...prev.slice(0, 2)]);
-    }, []);
+
     const increaseFontSize = useCallback(() => {
         updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
     }, [settings.fontSize, updateSetting]);
@@ -275,16 +275,16 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -296,13 +296,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -311,10 +311,10 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -506,7 +506,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
       </div>
 
       {/* CSS Variables for Accessibility */}
-      <style // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{
+      <style // TODO: Sanitize content before using dangerouslySetInnerHTML={{
             __html: `
           :root {
             --font-size: ${settings.fontSize}px;
@@ -570,6 +570,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
           }
         `
         }}/>
-    </>);
+    </>
 };
 export default AccessibilityPanel;

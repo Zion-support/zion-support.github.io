@@ -23,7 +23,6 @@ import {
   Truck,
   Wrench,
   Cpu
-} from 'lucide-react';
 
 const iotEdgeSolutions = [
   {

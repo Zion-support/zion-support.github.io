@@ -1,4 +1,4 @@
-import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, CheckCircle, Cpu, Database, DollarSign, ExternalLink, Globe, Leaf, Mail, Phone, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
 export default function AIESGCompliancePlatform() {
   const features = [

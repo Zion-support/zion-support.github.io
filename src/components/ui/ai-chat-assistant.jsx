@@ -17,8 +17,8 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             metadata: {
                 confidence: 0.95,
                 suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
-            }
-        }
+})
+})
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -43,16 +43,16 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -64,13 +64,13 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -79,10 +79,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -107,16 +107,16 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -128,13 +128,13 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -143,10 +143,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -173,16 +173,16 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -194,13 +194,13 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -209,10 +209,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -300,7 +300,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     const handleSuggestionClick = useCallback((suggestion) => {
         setInputValue(suggestion);
         inputRef.current?.focus();
-    }, []);
+
     // Clear chat
     const clearChat = () => {
         setMessages([messages[0]]); // Keep welcome message

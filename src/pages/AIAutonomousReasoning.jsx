@@ -168,6 +168,6 @@ const AIAutonomousReasoning = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousReasoning;

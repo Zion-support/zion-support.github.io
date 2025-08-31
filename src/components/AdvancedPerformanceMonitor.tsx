@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info } from 'lucide-react';
+import { Activity, AlertTriangle, CheckCircle, Info, TrendingUp, XCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   fps: number;
@@ -47,13 +47,11 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
         lastTime = currentTime;
-      }
-      
+})
       requestAnimationFrame(countFrames);
     };
 
     requestAnimationFrame(countFrames);
-  }, []);
 
   // Memory monitoring
   const measureMemory = useCallback(() => {
@@ -61,9 +59,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       const memory = (performance as any).memory;
       const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
-    }
-  }, []);
-
+})
   // Load time monitoring
   const measureLoadTime = useCallback(() => {
     if (typeof window !== 'undefined') {
@@ -71,10 +67,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         setMetrics(prev => ({ ...prev, loadTime }));
-      }
-    }
-  }, []);
-
+})
+})
   // Network latency monitoring
   const measureNetworkLatency = useCallback(async () => {
     try {
@@ -83,12 +77,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       const end = performance.now();
       const latency = end - start;
       setMetrics(prev => ({ ...prev, networkLatency: latency }));
-    } catch (error) {
+  } catch (error) {
       // If health check fails, use a default value
       setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-    }
-  }, []);
-
+})
   // CPU usage estimation
   const estimateCPUUsage = useCallback(() => {
     let lastTime = performance.now();
@@ -103,13 +95,11 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
         lastTime = currentTime;
-      }
-      
+})
       requestAnimationFrame(measureFrame);
     };
     
     requestAnimationFrame(measureFrame);
-  }, []);
 
   // Performance alerts
   const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {
@@ -133,8 +123,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.fps,
         timestamp: Date.now()
       });
-    }
-
+})
     if (metrics.memory > 100) {
       newAlerts.push({
         id: `memory-${Date.now()}`,
@@ -144,8 +133,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.memory,
         timestamp: Date.now()
       });
-    }
-
+})
     if (metrics.loadTime > 3000) {
       newAlerts.push({
         id: `load-${Date.now()}`,
@@ -155,8 +143,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.loadTime,
         timestamp: Date.now()
       });
-    }
-
+})
     if (metrics.networkLatency > 1000) {
       newAlerts.push({
         id: `network-${Date.now()}`,
@@ -166,13 +153,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.networkLatency,
         timestamp: Date.now()
       });
-    }
-
+})
     if (newAlerts.length > 0) {
       setAlerts(prev => [...prev, ...newAlerts]);
-    }
-  }, []);
-
+})
   // Auto-hide alerts after 5 seconds
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -189,16 +173,16 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -210,13 +194,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -225,10 +209,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -258,16 +242,16 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -279,13 +263,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -294,10 +278,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

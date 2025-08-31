@@ -402,7 +402,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 icon: Clock,
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
-              }
+})
             ].map((benefit, index) => (
               <motion.div
                 key={index}

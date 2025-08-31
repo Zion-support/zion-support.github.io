@@ -25,7 +25,6 @@ import {
   Tag,
   Brain,
   Code
-} from 'lucide-react';
 
 const retailSolutions = [
   {

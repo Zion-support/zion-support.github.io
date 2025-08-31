@@ -121,16 +121,16 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -142,13 +142,13 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -157,10 +157,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -354,7 +354,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setProjects(sampleProjects);
     setMessages(sampleMessages);
     setFiles(sampleFiles);
-  }, []);
 
   // Get status color and icon
   const getStatusDisplay = (status: string) => {

@@ -16,7 +16,7 @@ export default function InstantMessaging() {
     return (<>
       <SEO title="Instant Messaging" description="Negotiate deals and collaborate instantly with real-time chat." keywords="real-time messaging, Socket.IO chat, project communication" canonical="https://app.ziontechgroup.com/features/instant-messaging"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -50,5 +50,5 @@ export default function InstantMessaging() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>
+})

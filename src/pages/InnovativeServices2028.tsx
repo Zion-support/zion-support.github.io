@@ -27,7 +27,7 @@ export default function InnovativeServices2028() {
         return a.name.localeCompare(b.name);
       default:
         return 0;
-    }
+})
   });
 
   const getCategoryIcon = (categoryName: string) => {

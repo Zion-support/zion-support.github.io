@@ -250,7 +250,7 @@ const AIAutonomousBusinessOperations = () => {
                 icon: Target,
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
-              }
+})
             ].map((benefit, index) => (
               <motion.div
                 key={benefit.title}

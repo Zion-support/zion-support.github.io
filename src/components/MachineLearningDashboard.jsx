@@ -31,7 +31,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
             setShowCreateModel(false);
             trackEvent('ml', 'dashboard', 'model_created');
-        }
+})
     }, [newModelForm, createModel, trackEvent]);
     const handleStartTraining = useCallback(async (modelId) => {
         const hyperparameters = {
@@ -43,10 +43,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         try {
             await startTraining(modelId, hyperparameters);
             trackEvent('ml', 'dashboard', 'training_started');
-        }
+})
         catch (error) {
             console.error('Training failed:', error);
-        }
+})
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {
         stopTraining(jobId);
@@ -68,21 +68,21 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 console.log('Prediction result:', result);
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml', 'dashboard', 'prediction_made');
-            }
+})
             catch (error) {
                 console.error('Prediction failed:', error);
-            }
-        }
+})
+})
     }, [predictionForm, makePrediction, trackEvent]);
     const handleExportModel = useCallback((modelId) => {
         try {
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
             trackEvent('ml', 'dashboard', 'model_exported');
-        }
+})
         catch (error) {
             console.error('Export failed:', error);
-        }
+})
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
         const file = event.target.files?.[0];
@@ -94,13 +94,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     importModel(modelData);
                     setShowImportModel(false);
                     trackEvent('ml', 'dashboard', 'model_imported');
-                }
+})
                 catch (error) {
                     console.error('Import failed:', error);
-                }
+})
             };
             reader.readAsText(file);
-        }
+})
     }, [importModel, trackEvent]);
     const getStatusColor = (status) => {
         switch (status) {

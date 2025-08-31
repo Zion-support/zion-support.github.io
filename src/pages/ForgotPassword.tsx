@@ -29,7 +29,7 @@ const ForgotPassword: React.FC = () => {
       
       setSuccess('Verification code sent to your email!');
       setStep('verification');
-    } catch (err) {
+  } catch (err) {
       setError('Failed to send verification code. Please try again.');
     } finally {
       setIsLoading(false);
@@ -52,7 +52,7 @@ const ForgotPassword: React.FC = () => {
       
       setSuccess('Code verified! Please set your new password.');
       setStep('reset');
-    } catch (err) {
+  } catch (err) {
       setError('Invalid verification code. Please try again.');
     } finally {
       setIsLoading(false);
@@ -81,7 +81,7 @@ const ForgotPassword: React.FC = () => {
       setTimeout(() => {
         window.location.href = '/login';
       }, 2000);
-    } catch (err) {
+  } catch (err) {
       setError('Failed to reset password. Please try again.');
     } finally {
       setIsLoading(false);

@@ -55,7 +55,7 @@ export const AICodeGenerator = () => {
         if (generatedCode) {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
-        }
+})
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
     }, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
@@ -85,10 +85,10 @@ export const AICodeGenerator = () => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
-        }
+})
         catch (error) {
             console.error('Failed to copy code:', error);
-        }
+})
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
@@ -311,7 +311,7 @@ export const AICodeGenerator = () => {
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
                           </div>);
-                    }
+})
                     return null;
                 })}
                   </div>

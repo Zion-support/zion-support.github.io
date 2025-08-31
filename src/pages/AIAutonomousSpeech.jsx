@@ -168,6 +168,6 @@ const AIAutonomousSpeech = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousSpeech;

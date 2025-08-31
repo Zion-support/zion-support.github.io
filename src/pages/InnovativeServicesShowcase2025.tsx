@@ -339,7 +339,7 @@ export default function InnovativeServicesShowcase2025() {
                 icon: Clock,
                 title: 'Rapid Implementation',
                 description: 'Quick deployment and onboarding with minimal disruption to your operations.'
-              }
+})
             ].map((item, index) => (
               <motion.div
                 key={item.title}

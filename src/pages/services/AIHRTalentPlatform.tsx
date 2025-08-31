@@ -1,4 +1,4 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from 'lucide-react';
+import { ArrowRight, Award, Briefcase, CheckCircle, ExternalLink, Mail, Phone, Search, Shield, Sparkles, Target, TrendingUp, Users } from 'lucide-react';
 
 export default function AIHRTalentPlatform() {
   const features = [

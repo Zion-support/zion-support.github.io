@@ -53,7 +53,7 @@ export default function InnovativeServices2027() {
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
       default:
         return 0;
-    }
+})
   });
 
   return (

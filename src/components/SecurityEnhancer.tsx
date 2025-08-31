@@ -63,16 +63,16 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -84,13 +84,13 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -99,10 +99,10 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -140,7 +140,6 @@ const SecurityEnhancer: React.FC = () => {
     ];
 
     setThreats(sampleThreats);
-  }, []);
 
   // Generate security checks
   useEffect(() => {
@@ -158,16 +157,16 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -179,13 +178,13 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -194,10 +193,10 @@ const SecurityEnhancer: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -248,7 +247,6 @@ const SecurityEnhancer: React.FC = () => {
     ];
 
     setSecurityChecks(checks);
-  }, []);
 
   const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
@@ -266,7 +264,6 @@ const SecurityEnhancer: React.FC = () => {
     }));
 
     setIsScanning(false);
-  }, []);
 
   const mitigateThreat = useCallback((threatId: string) => {
     setThreats(prev => prev.map(threat => 
@@ -274,7 +271,6 @@ const SecurityEnhancer: React.FC = () => {
         ? { ...threat, status: 'mitigated' as const }
         : threat
     ));
-  }, []);
 
   const resolveThreat = useCallback((threatId: string) => {
     setThreats(prev => prev.map(threat => 
@@ -282,7 +278,6 @@ const SecurityEnhancer: React.FC = () => {
         ? { ...threat, status: 'resolved' as const }
         : threat
     ));
-  }, []);
 
   const getThreatIcon = (type: SecurityThreat['type']) => {
     switch (type) {

@@ -359,7 +359,7 @@ const Match: React.FC = () => {
                 title: "Get Recommendations",
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
-              }
+})
             ].map((step, index) => (
               <motion.div
                 key={index}

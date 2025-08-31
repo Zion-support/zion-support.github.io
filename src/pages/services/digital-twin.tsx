@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, CheckCircle, Cpu, Database, Download, Eye, Globe, Mail, Play, Settings, Target, Users, Zap } from 'lucide-react';
 
 export default function DigitalTwin() {
   return (
@@ -93,7 +92,7 @@ export default function DigitalTwin() {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -137,7 +136,7 @@ export default function DigitalTwin() {
                   title: "Healthcare",
                   description: "Patient monitoring, medical device management, and treatment optimization.",
                   icon: Users,
-                  benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
+                  benefits: ["Patient monitoring", "Monitor management", "Treatment optimization"]
                 },
                 {
                   title: "Energy & Utilities",
@@ -156,7 +155,7 @@ export default function DigitalTwin() {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-                }
+})
               ].map((application, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">

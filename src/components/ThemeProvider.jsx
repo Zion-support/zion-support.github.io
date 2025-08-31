@@ -22,16 +22,16 @@ export function ThemeProvider({ children }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -43,13 +43,13 @@ export function ThemeProvider({ children }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -58,10 +58,10 @@ export function ThemeProvider({ children }) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -71,7 +71,7 @@ export function ThemeProvider({ children }) {
         const root = window.document.documentElement;
         root.classList.remove("light", "dark");
         root.classList.add("dark");
-    }, []);
+
     const value = {
         theme,
         setTheme: () => { },

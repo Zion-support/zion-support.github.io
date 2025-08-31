@@ -97,7 +97,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     });
 
     return services;
-  }, []);
 
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
@@ -127,8 +126,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
-    }
-
+})
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
@@ -156,7 +154,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         return <Satellite className="w-6 h-6" />;
       default:
         return <Lightbulb className="w-6 h-6" />;
-    }
+})
   };
 
   const getStatusColor = (status: string) => {
@@ -171,7 +169,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         return 'bg-purple-100 text-purple-800';
       default:
         return 'bg-gray-100 text-gray-800';
-    }
+})
   };
 
   return (

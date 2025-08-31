@@ -169,7 +169,7 @@ export const calculateSearchMetrics = (results, searchTime) => {
     results.forEach(result => {
         if (result.category) {
             categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
-        }
+})
     });
     const topCategories = Array.from(categoryCount.entries())
         .map(([category, count]) => ({ category, count }))

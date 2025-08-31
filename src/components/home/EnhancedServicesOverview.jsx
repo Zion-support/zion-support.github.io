@@ -197,7 +197,7 @@ const EnhancedServicesOverview = () => {
                     count: ENHANCED_SERVICES.filter(s => s.category === service.category).length,
                     icon: getCategoryIcon(service.category)
                 });
-            }
+})
             return acc;
         }, []).map((cat, index) => (<div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover:border-zion-purple/50 transition-colors">
                 <div className="text-zion-cyan mb-2 flex justify-center">

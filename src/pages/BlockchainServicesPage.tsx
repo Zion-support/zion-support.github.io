@@ -340,7 +340,7 @@ const BlockchainServicesPage = () => {
                 icon: Globe,
                 title: "Multi-Chain Support",
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
-              }
+})
             ].map((feature, index) => (
               <motion.div
                 key={index}

@@ -41,7 +41,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             case 'name':
             default:
                 return a.name.localeCompare(b.name);
-        }
+})
     });
     const getCategoryIcon = (category) => {
         const icons = {

@@ -188,8 +188,7 @@ export function ProductSubmissionForm() {
             });
             // Redirect to product page
             navigate(`/marketplace/listing/${productRecord.id}`);
-        }
-        catch (error) {
+  } catch (error) {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",

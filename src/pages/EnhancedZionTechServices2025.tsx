@@ -25,7 +25,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
         return b.aiScore - a.aiScore;
       default:
         return a.title.localeCompare(b.title);
-    }
+})
   });
 
   return (

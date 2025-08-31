@@ -2,26 +2,8 @@ import React, { useEffect, useRef } from 'react';
 export function FuturisticBackground({ variant = 'particles', intensity = 'medium', className = '' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -60,7 +42,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     opacity: Math.random() * 0.8 + 0.2,
                     color: colors[Math.floor(Math.random() * colors.length)]
                 });
-            }
+})
             // Animation loop
             const animate = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -107,14 +89,14 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                                 ctx.globalAlpha = (150 - distance) / 150 * 0.3;
                                 ctx.lineWidth = 1;
                                 ctx.stroke();
-                            }
-                        }
+})
+})
                     });
                 });
                 requestAnimationFrame(animate);
             };
             animate();
-        }
+})
         // Grid system
         if (variant === 'grid') {
             const gridSize = intensity === 'high' ? 20 : intensity === 'medium' ? 30 : 40;
@@ -129,13 +111,13 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     ctx.moveTo(x, 0);
                     ctx.lineTo(x, canvas.height);
                     ctx.stroke();
-                }
+})
                 for (let y = 0; y < canvas.height; y += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(canvas.width, y);
                     ctx.stroke();
-                }
+})
                 // Animated grid points
                 const time = Date.now() * 0.001;
                 for (let x = 0; x < canvas.width; x += gridSize) {
@@ -146,12 +128,12 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                         ctx.fillStyle = '#00ffff';
                         ctx.globalAlpha = 0.8 * pulse;
                         ctx.fill();
-                    }
-                }
+})
+})
                 requestAnimationFrame(animate);
             };
             animate();
-        }
+})
         // Wave system
         if (variant === 'waves') {
             const animate = () => {
@@ -169,17 +151,17 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                             Math.sin(x * 0.005 + time * 0.5 + i) * 50;
                         if (x === 0) {
                             ctx.moveTo(x, y);
-                        }
+})
                         else {
                             ctx.lineTo(x, y);
-                        }
-                    }
+})
+})
                     ctx.stroke();
-                }
+})
                 requestAnimationFrame(animate);
             };
             animate();
-        }
+})
         // Matrix system
         if (variant === 'matrix') {
             const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
@@ -188,7 +170,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             const columns = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < columns; i++) {
                 drops[i] = 1;
-            }
+})
             const animate = () => {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -199,13 +181,13 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
                     if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                         drops[i] = 0;
-                    }
+})
                     drops[i]++;
-                }
+})
                 requestAnimationFrame(animate);
             };
             animate();
-        }
+})
         return () => {
             window.removeEventListener('resize', resizeCanvas);
         };

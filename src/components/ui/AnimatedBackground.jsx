@@ -2,26 +2,8 @@ import React, { useEffect, useRef } from 'react';
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
     const canvasRef = useRef(null);
     useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -46,7 +28,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                     size: Math.random() * 2 + 1,
                     opacity: Math.random() * 0.5 + 0.1,
                 });
-            }
+})
         };
         const drawGrid = () => {
             const gridSize = 40;
@@ -59,14 +41,14 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canvas.height);
                 ctx.stroke();
-            }
+})
             // Horizontal lines
             for (let y = offset; y < canvas.height; y += gridSize) {
                 ctx.beginPath();
                 ctx.moveTo(0, y);
                 ctx.lineTo(canvas.width, y);
                 ctx.stroke();
-            }
+})
         };
         const drawParticles = () => {
             particles.forEach((particle, index) => {
@@ -98,7 +80,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                         ctx.strokeStyle = `rgba(139, 21, 233, ${0.1 * (1 - distance / 100)})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
-                    }
+})
                 });
             });
         };
@@ -117,13 +99,13 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                         layer * 30;
                     if (x === 0) {
                         ctx.moveTo(x, y);
-                    }
+})
                     else {
                         ctx.lineTo(x, y);
-                    }
-                }
+})
+})
                 ctx.stroke();
-            }
+})
         };
         const drawMatrix = () => {
             const time = Date.now() * 0.001;
@@ -136,7 +118,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
                 const char = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
                 ctx.fillText(char, x, y);
-            }
+})
         };
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -153,7 +135,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                 case 'matrix':
                     drawMatrix();
                     break;
-            }
+})
             animationFrameId = requestAnimationFrame(animate);
         };
         resizeCanvas();

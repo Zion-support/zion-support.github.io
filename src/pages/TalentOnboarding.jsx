@@ -24,5 +24,5 @@ export default function TalentOnboarding() {
         </div>
       </div>
       
-    </>);
-}
+    </>
+})

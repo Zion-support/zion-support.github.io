@@ -22,16 +22,16 @@ export const useAICodeGeneration = () => {
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
                 generatedCode = generateReactTypeScriptCode(prompt, options);
-            }
+})
             else if (options.language === 'javascript' && options.framework === 'express') {
                 generatedCode = generateExpressCode(prompt, options);
-            }
+})
             else if (options.language === 'python') {
                 generatedCode = generatePythonCode(prompt, options);
-            }
+})
             else {
                 generatedCode = generateGenericCode(prompt, options);
-            }
+})
             setGeneratedCode(generatedCode);
             // Add to history
             const historyItem = {
@@ -51,16 +51,16 @@ export const useAICodeGeneration = () => {
                 target: options.target,
                 quality: options.quality
             });
-        }
+})
         catch (error) {
             console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-        }
+})
         finally {
             setIsGenerating(false);
-        }
+})
     }, [trackEvent]);
     // Analyze existing code
     const analyzeCode = useCallback(async (code, language) => {
@@ -86,16 +86,16 @@ export const useAICodeGeneration = () => {
                 security: analysis.security,
                 performance: analysis.performance
             });
-        }
+})
         catch (error) {
             console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-        }
+})
         finally {
             setIsAnalyzing(false);
-        }
+})
     }, [trackEvent]);
     // Apply a code suggestion
     const applySuggestion = useCallback((suggestion) => {
@@ -130,17 +130,17 @@ export const useAICodeGeneration = () => {
                 case 'accessibility':
                     optimizedCode = optimizeForAccessibility(code);
                     break;
-            }
+})
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
             return optimizedCode;
-        }
+})
         catch (error) {
             console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code;
-        }
+})
     }, [trackEvent]);
     // Generate tests for code
     const generateTests = useCallback(async (code, language) => {
@@ -150,23 +150,23 @@ export const useAICodeGeneration = () => {
             let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
                 testCode = generateJestTests(code);
-            }
+})
             else if (language === 'python') {
                 testCode = generatePytestTests(code);
-            }
+})
             else {
                 testCode = generateGenericTests(code, language);
-            }
+})
             trackEvent('ai_code_generation', 'tests_generated', language, testCode.length);
             return testCode;
-        }
+})
         catch (error) {
             console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests';
-        }
+})
     }, [trackEvent]);
     // Generate documentation for code
     const generateDocs = useCallback(async (code, language) => {
@@ -176,23 +176,23 @@ export const useAICodeGeneration = () => {
             let docs = '';
             if (language === 'typescript' || language === 'javascript') {
                 docs = generateJSDoc(code);
-            }
+})
             else if (language === 'python') {
                 docs = generatePythonDoc(code);
-            }
+})
             else {
                 docs = generateGenericDocs(code, language);
-            }
+})
             trackEvent('ai_code_generation', 'docs_generated', language, docs.length);
             return docs;
-        }
+})
         catch (error) {
             console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation';
-        }
+})
     }, [trackEvent]);
     // Clear generation history
     const clearHistory = useCallback(() => {
@@ -211,15 +211,15 @@ export const useAICodeGeneration = () => {
                 timestamp: new Date().toISOString()
             }, null, 2);
             filename = 'generated-code.json';
-        }
+})
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
             filename = 'generated-code.md';
-        }
+})
         else {
             exportContent = generatedCode;
             filename = 'generated-code.txt';
-        }
+})
         const blob = new Blob([exportContent], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -243,7 +243,7 @@ export const useAICodeGeneration = () => {
             imports,
             dependencies
         };
-    }, []);
+
     // Helper functions for code generation
     const generateReactTypeScriptCode = (prompt, options) => {
         return `import React, { useState, useEffect, useCallback } from 'react';
@@ -251,8 +251,7 @@ import { motion } from 'framer-motion';
 
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
-}
-
+})
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
 
@@ -271,16 +270,16 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -292,13 +291,13 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -307,10 +306,10 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -318,11 +317,9 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   };
 }, []);, []);
     // TODO: Implement initialization logic
-  }, []);
 
   const handleAction = useCallback(() => {
     // TODO: Implement action handler
-  }, []);
 
   return (
     <motion.div
@@ -631,16 +628,16 @@ def generated_function():
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -652,13 +649,13 @@ def generated_function():
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -667,10 +664,10 @@ def generated_function():
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -682,7 +679,7 @@ def generated_function():
                 clearTimeout(generationTimeoutRef.current);
             }
         };
-    }, []);
+
     return {
         // State
         isGenerating,

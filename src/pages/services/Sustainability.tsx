@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Leaf, Zap, Globe, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu } from 'lucide-react';
+import { ArrowRight, BarChart3, Cloud, Cpu, Database, Globe, Heart, Leaf, Shield, Zap } from 'lucide-react';
 
 export default function Sustainability() {
   const features = [

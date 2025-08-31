@@ -64,19 +64,19 @@ export function PrimaryNav() {
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
                 navigate(`/marketplace/listing/${sugg.id}`);
-            }
+})
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
                 navigate(sugg.slug);
-            }
+})
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
                 navigate(`/blog/${sugg.slug}`);
-            }
+})
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }
+})
             setQuery('');
             // Track analytics event
             if (typeof window !== 'undefined' && window.gtag) {
@@ -85,7 +85,7 @@ export function PrimaryNav() {
                     suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug
                 });
-            }
+})
         }} searchSuggestions={suggestions}/>
             </form>
             
@@ -139,5 +139,5 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
-}
+    </>
+})

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Award, BarChart3, Bell, BookOpen, Calendar, CheckCircle, Clock, Cloud, Database, FileText, Globe, Server, Settings, Shield, Smartphone, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function EmployeeSchedulingSaaS() {
   const features = [

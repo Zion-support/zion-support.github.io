@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Database, Download, Globe, Mail, PieChart, Play, Shield, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function AIBusinessIntelligence() {
   return (
@@ -93,7 +92,7 @@ export default function AIBusinessIntelligence() {
                   icon: Shield,
                   title: "Data Security",
                   description: "Enterprise-grade security with encryption, access controls, and compliance features."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -209,7 +208,7 @@ export default function AIBusinessIntelligence() {
                   description: "Analyze usage patterns, predict feature adoption, and optimize product roadmaps.",
                   icon: Target,
                   benefits: ["Usage analytics", "Feature adoption", "Product optimization"]
-                }
+})
               ].map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">

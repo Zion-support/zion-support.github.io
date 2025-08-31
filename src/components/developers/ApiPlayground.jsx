@@ -48,8 +48,7 @@ export function ApiPlayground({ method, path, params = [] }) {
             const res = await fetch(url, options);
             const text = await res.text();
             setResponse(text);
-        }
-        catch (err) {
+  } catch (err) {
             setResponse(err.message);
         }
         finally {

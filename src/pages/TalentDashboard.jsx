@@ -177,10 +177,10 @@ function TalentDashboardContent() {
         </div>
       </main>
       
-    </>);
-}
+    </>
+})
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>);
-}
+})

@@ -90,14 +90,14 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                     "logo": {
                         "@type": "ImageObject",
                         "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-                    }
+})
                 },
                 "datePublished": publishedTime,
                 "dateModified": modifiedTime || publishedTime,
                 "mainEntityOfPage": {
                     "@type": "WebPage",
                     "@id": url
-                }
+})
             })}
         </script>)}
     </Helmet>);

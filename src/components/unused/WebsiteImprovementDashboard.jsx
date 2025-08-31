@@ -23,7 +23,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             canonical: false,
             ogTags: false,
             twitterTags: false
-        }
+})
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
@@ -49,7 +49,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         };
         setMetrics(mockMetrics);
         setIsAnalyzing(false);
-    }, []);
+
     // Analyze SEO
     const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
@@ -74,11 +74,11 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 canonical: true,
                 ogTags: Math.random() > 0.2,
                 twitterTags: Math.random() > 0.4
-            }
+})
         };
         setSeoAnalysis(mockSEO);
         setIsAnalyzing(false);
-    }, []);
+
     // Analyze accessibility
     const analyzeAccessibility = useCallback(async () => {
         setIsAnalyzing(true);
@@ -97,7 +97,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         };
         setAccessibilityReport(mockAccessibility);
         setIsAnalyzing(false);
-    }, []);
+
     // Run comprehensive analysis
     const runFullAnalysis = useCallback(async () => {
         await Promise.all([
@@ -137,16 +137,16 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -158,13 +158,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -173,10 +173,10 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -526,6 +526,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
+    </>
 };
 export default WebsiteImprovementDashboard;

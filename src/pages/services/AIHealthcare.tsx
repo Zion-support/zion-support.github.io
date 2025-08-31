@@ -1,4 +1,4 @@
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 } from 'lucide-react';
+import { Activity, ArrowRight, BarChart3, Brain, Check, ExternalLink, Heart, Mail, Phone, Shield, Target, Zap } from 'lucide-react';
 
 export default function AIHealthcare() {
   const features = [

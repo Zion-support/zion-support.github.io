@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building } from 'lucide-react';
+import { Building, Cable, Cloud, Cpu, Database, DollarSign, ExternalLink, LifeBuoy, Server, Shield, Wrench } from 'lucide-react';
 
 const ITServices: React.FC = () => {
   const offerings = [

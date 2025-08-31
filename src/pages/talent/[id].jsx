@@ -23,16 +23,16 @@ export default function TalentProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -44,13 +44,13 @@ export default function TalentProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -59,10 +59,10 @@ export default function TalentProfilePage() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -81,8 +81,7 @@ export default function TalentProfilePage() {
                     throw new Error('Failed to load profile');
                 const data = await res.json();
                 setProfile(data.profile);
-            }
-            catch (err) {
+  } catch (err) {
                 setError('Profile not found');
             }
             finally {
@@ -122,5 +121,5 @@ export default function TalentProfilePage() {
             </div>)}
         </div>
       </main>
-    </>);
+    </>
 }

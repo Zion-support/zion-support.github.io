@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
-import { GradientHeading } from './ui/GradientHeading';
+import { Bot, CheckCircle, Clock, Globe, Rocket, Star, TrendingDown, Users } from 'lucide-react';
 
 interface Benefit {
   title: string;

@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, Brain, Calculator, CheckCircle, Clock, Database, Download, Eye, Globe, Mail, PieChart, Play, Settings, Shield, Target, TrendingUp, Truck, Users, Zap } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
   return (
@@ -93,7 +92,7 @@ export default function AISupplyChainOptimization() {
                   icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function AISupplyChainOptimization() {
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-                }
+})
               ].map((area, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -227,7 +226,7 @@ export default function AISupplyChainOptimization() {
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-                }
+})
               ].map((capability, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -334,7 +333,7 @@ export default function AISupplyChainOptimization() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">

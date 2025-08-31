@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, BookOpen, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, Database, DollarSign, Download, ExternalLink, Eye, FileText, Filter, Globe, GraduationCap, Lightbulb, Lock, MapPin, Microscope, Network, Palette, Play, Rocket, Search, Shield, Smartphone, Star, Star as StarIcon, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function Training() {
 	return (

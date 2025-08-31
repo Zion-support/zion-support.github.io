@@ -38,42 +38,42 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         link.error = 'Target element not found';
                         link.fixable = true;
                         link.suggestedFix = 'Add missing element or fix anchor reference';
-                    }
+})
                     else {
                         link.status = 'healthy';
-                    }
-                }
+})
+})
                 else if (href.startsWith('javascript:')) {
                     // JavaScript links
                     link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
                     link.fixable = false;
-                }
+})
                 else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
                     // Protocol links
                     link.status = 'healthy';
                     link.fixable = false;
-                }
+})
                 else if (href.startsWith('http')) {
                     // External links - will be checked
                     link.status = 'unknown';
                     link.fixable = true;
-                }
+})
                 else if (href.startsWith('/')) {
                     // Internal relative links
                     link.status = 'unknown';
                     link.fixable = true;
-                }
+})
                 else {
                     // Other relative links
                     link.status = 'unknown';
                     link.fixable = true;
-                }
+})
                 links.push(link);
-            }
+})
         });
         return links;
-    }, []);
+
     // Check if a link is working
     const checkLink = useCallback(async (link) => {
         if (link.url.startsWith('#')) {
@@ -81,14 +81,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             const targetElement = document.querySelector(link.url);
             if (targetElement) {
                 return { ...link, status: 'healthy', lastChecked: new Date() };
-            }
+})
             else {
                 return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() };
-            }
-        }
+})
+})
         if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
             return { ...link, status: 'healthy', lastChecked: new Date() };
-        }
+})
         try {
             // For external and internal links, we'll simulate checking
             // In a real implementation, you'd make actual HTTP requests
@@ -97,7 +97,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 // Simulate internal link check
                 await new Promise(resolve => setTimeout(resolve, 100));
                 return { ...link, status: 'healthy', lastChecked: new Date() };
-            }
+})
             else {
                 // Simulate external link check
                 await new Promise(resolve => setTimeout(resolve, 200));
@@ -105,12 +105,12 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 const random = Math.random();
                 if (random < 0.1) { // 10% chance of broken external link
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() };
-                }
+})
                 else {
                     return { ...link, status: 'healthy', lastChecked: new Date() };
-                }
-            }
-        }
+})
+})
+})
         catch (error) {
             return {
                 ...link,
@@ -118,8 +118,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 error: error instanceof Error ? error.message : 'Unknown error',
                 lastChecked: new Date()
             };
-        }
-    }, []);
+})
     // Check all links
     const checkAllLinks = useCallback(async () => {
         setIsChecking(true);
@@ -164,8 +163,8 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             // Small delay between batches
             if (i + batchSize < allLinks.length) {
                 await new Promise(resolve => setTimeout(resolve, 100));
-            }
-        }
+})
+})
         setIsChecking(false);
     }, [findAllLinks, checkLink]);
     // Auto-fix broken links
@@ -187,8 +186,8 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     // Insert before the link
                     link.element.parentNode?.insertBefore(placeholder, link.element);
                     fixedCount++;
-                }
-            }
+})
+})
             else if (link.element && link.url.startsWith('/')) {
                 // Fix broken internal links by updating to a working page
                 const workingPages = ['/', '/about', '/services', '/contact', '/home'];
@@ -197,13 +196,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
                     fixedCount++;
-                }
-            }
+})
+})
         });
         if (fixedCount > 0) {
             // Re-check links after fixes
             setTimeout(checkAllLinks, 1000);
-        }
+})
         return fixedCount;
     }, [links, checkAllLinks]);
     // Highlight broken link in page
@@ -222,7 +221,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         setTimeout(() => {
             link.element?.classList.remove('broken-link-highlight');
         }, 3000);
-    }, []);
+
     // Auto-check links
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -239,16 +238,16 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -260,13 +259,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -275,10 +274,10 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -527,6 +526,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           50% { opacity: 0.7; }
         }
       `}</style>
-    </>);
+    </>
 };
 export default BrokenLinkFixer;

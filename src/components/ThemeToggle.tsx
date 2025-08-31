@@ -1,5 +1,4 @@
-import { Sun, Moon, Monitor } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Monitor, Moon, Sun } from 'lucide-react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -26,16 +25,16 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -47,13 +46,13 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -62,10 +61,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -77,7 +76,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     if (savedTheme) {
       setTheme(savedTheme);
     }
-  }, []);
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -94,16 +92,16 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -115,13 +113,13 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -130,10 +128,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

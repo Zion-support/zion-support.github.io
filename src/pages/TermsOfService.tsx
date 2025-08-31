@@ -11,7 +11,6 @@ import { Helmet } from 'react-helmet-async';
   Scale,
   Gavel,
   BookOpen
-} from 'lucide-react';
 
 const TermsOfService = () => {
   const lastUpdated = '2025-01-15';

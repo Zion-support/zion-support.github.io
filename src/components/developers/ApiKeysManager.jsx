@@ -204,7 +204,7 @@ export default function ApiKeysManager() {
             if (showRegenerateConfirm) {
                 regenerateApiKey(showRegenerateConfirm);
                 setShowRegenerateConfirm(null);
-            }
+})
         }} className="bg-blue-600 hover:bg-blue-700">
               Regenerate Key
             </AlertDialogAction>
@@ -229,7 +229,7 @@ export default function ApiKeysManager() {
             if (showDeleteConfirm) {
                 deleteApiKey(showDeleteConfirm);
                 setShowDeleteConfirm(null);
-            }
+})
         }} className="bg-red-600 hover:bg-red-700">
               Delete Key
             </AlertDialogAction>

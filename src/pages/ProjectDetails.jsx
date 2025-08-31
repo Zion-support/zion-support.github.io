@@ -45,16 +45,16 @@ function ProjectDetailsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -66,13 +66,13 @@ function ProjectDetailsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -81,10 +81,10 @@ function ProjectDetailsContent() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -126,8 +126,7 @@ function ProjectDetailsContent() {
             if (error)
                 throw error;
             setNotes(data || []);
-        }
-        catch (err) {
+  } catch (err) {
             console.error("Error fetching project notes:", err);
         }
     };
@@ -153,8 +152,7 @@ function ProjectDetailsContent() {
                 title: "Note added",
                 description: "Your note has been added to the project.",
             });
-        }
-        catch (err) {
+  } catch (err) {
             console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
@@ -591,7 +589,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>);
+    </>
 }
 export default function ProjectDetails() {
     return (<ProtectedRoute>

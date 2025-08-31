@@ -1,6 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar, Database, Network, BarChart3, Wifi, HeartPulse, Leaf, User, Award, Lightbulb, Handshake, BookOpen as BookOpenIcon, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon2, Factory } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { ThemeToggle } from '../components/ThemeToggle';
+import { ArrowRight, Atom, Award, BarChart3, BookOpen, BookOpen as BookOpenIcon, BookOpen as BookOpenIcon2, Brain, Building, Building2, Calendar, Calendar as CalendarIcon, ChevronDown, Cloud, Code, Code as CodeIcon, Cpu, Database, DollarSign, DollarSign as DollarSignIcon, Factory, FileText, FileText as FileTextIcon, Globe, Handshake, Heart, HeartHandshake, HeartPulse, HelpCircle, HelpCircle as HelpCircleIcon, Leaf, Lightbulb, Lock, Mail, MapPin, Menu, MessageCircle, Network, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, Shield as ShieldIcon, ShoppingCart, Star, Target, TrendingUp, User, Users, Users as UsersIcon, Users as UsersIcon2, Wifi, Workflow, X, Zap } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,16 +24,16 @@ export function AppHeader() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -47,13 +45,13 @@ export function AppHeader() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -62,10 +60,10 @@ export function AppHeader() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -78,7 +76,6 @@ export function AppHeader() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -197,7 +194,7 @@ export function AppHeader() {
           name: 'IoT Edge Computing', 
           href: '/services/iot-edge-computing', 
           icon: Wifi, 
-          description: 'Smart Device Networks',
+          description: 'Smart Monitor Networks',
           featured: true
         },
         { 
@@ -493,7 +490,7 @@ export function AppHeader() {
               </Link>
             </div>
             
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">

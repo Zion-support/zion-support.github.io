@@ -53,13 +53,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 break;
             default:
                 return 0;
-        }
+})
         if (sortOrder === 'asc') {
             return aValue > bValue ? 1 : -1;
-        }
+})
         else {
             return aValue < bValue ? 1 : -1;
-        }
+})
     });
     // Auto-play carousel
     useEffect(() => {
@@ -77,16 +77,16 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -98,13 +98,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -113,10 +113,10 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {

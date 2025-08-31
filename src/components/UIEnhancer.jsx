@@ -20,16 +20,16 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -41,13 +41,13 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -56,10 +56,10 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -207,6 +207,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </div>
         </div>
       </motion.div>
-    </>);
+    </>
 };
 export default UIEnhancer;

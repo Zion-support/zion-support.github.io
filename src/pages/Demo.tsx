@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Play, Pause, RotateCcw, Download, Share2, Star, Users, Zap, Brain, Cloud, Shield, ShoppingCart, MessageCircle, BarChart3, Code, Globe, ArrowRight, CheckCircle, XCircle, Loader2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, BarChart3, Brain, CheckCircle, Cloud, Code, Download, Globe, Loader2, MessageCircle, Pause, Play, RotateCcw, Share2, Shield, ShoppingCart, Star, Users, XCircle, Zap } from 'lucide-react';
 
 interface DemoService {
   id: string;

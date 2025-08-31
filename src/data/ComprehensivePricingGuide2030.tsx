@@ -29,7 +29,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1];
       } else {
         return service.price >= priceRange[0] && service.price <= priceRange[1];
-      }
+})
     });
 
     // Filter by category

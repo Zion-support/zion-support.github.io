@@ -6,29 +6,11 @@ function withAuth(Component) {
         const router = useNavigate();
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
         useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
-  // TODO: Add dependencies if needed
-}, []);
+    // TODO: Add dependencies if needed
+
             if (!isLoggedIn) {
                 navigate('/login?next=/community/new');
-            }
+})
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
             return null;

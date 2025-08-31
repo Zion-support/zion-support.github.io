@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Activity, ArrowRight, BarChart3, CheckCircle, Database, Download, Globe, Link as LinkIcon, Lock, Mail, Play, Settings, Shield, Target, Users, Zap } from 'lucide-react';
 
 export default function BlockchainEnterpriseSolutions() {
   return (
@@ -93,7 +92,7 @@ export default function BlockchainEnterpriseSolutions() {
                   icon: Globe,
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
-                }
+})
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
@@ -156,7 +155,7 @@ export default function BlockchainEnterpriseSolutions() {
                   description: "Peer-to-peer energy trading and renewable energy certificates.",
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
-                }
+})
               ].map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
@@ -321,7 +320,7 @@ export default function BlockchainEnterpriseSolutions() {
                   step: "04",
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
-                }
+})
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">

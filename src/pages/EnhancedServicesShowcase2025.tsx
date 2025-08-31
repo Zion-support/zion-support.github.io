@@ -36,7 +36,7 @@ export default function EnhancedServicesShowcase2025() {
             return a.name.localeCompare(b.name);
           default:
             return 0;
-        }
+})
       });
   }, [searchTerm, selectedCategory, sortBy]);
 

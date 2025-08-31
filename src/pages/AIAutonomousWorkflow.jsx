@@ -168,6 +168,6 @@ const AIAutonomousWorkflow = () => {
           </div>
         </div>
       </div>
-    </>);
+    </>
 };
 export default AIAutonomousWorkflow;

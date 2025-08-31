@@ -1,4 +1,4 @@
-import { Workflow, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Cpu, Globe } from 'lucide-react';
+import { ArrowRight, BarChart3, Check, Clock, Cpu, ExternalLink, Globe, Mail, Phone, Target, Workflow, Zap } from 'lucide-react';
 
 export default function AIWorkflowOrchestrator() {
   const features = [

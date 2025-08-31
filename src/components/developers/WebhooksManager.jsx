@@ -42,16 +42,16 @@ export function WebhooksManager() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -63,13 +63,13 @@ export function WebhooksManager() {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -78,10 +78,10 @@ export function WebhooksManager() {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -89,7 +89,7 @@ export function WebhooksManager() {
   };
 }, []);, []);
         fetchWebhooks();
-    }, []);
+
     const handleCreateWebhook = async () => {
         if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0)
             return;

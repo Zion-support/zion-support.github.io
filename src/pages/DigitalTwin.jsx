@@ -38,7 +38,6 @@ import {
   Layers,
   RefreshCw,
   AlertTriangle
-} from 'lucide-react';
 
 const digitalTwinSolutions = [
   {

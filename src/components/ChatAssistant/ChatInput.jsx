@@ -19,16 +19,16 @@ export function ChatInput({ onSend, disabled = false }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -40,13 +40,13 @@ export function ChatInput({ onSend, disabled = false }) {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -55,10 +55,10 @@ export function ChatInput({ onSend, disabled = false }) {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -67,7 +67,7 @@ export function ChatInput({ onSend, disabled = false }) {
 }, []);, []);
         // Focus input when component mounts
         inputRef.current?.focus();
-    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (message.trim() && !disabled) {

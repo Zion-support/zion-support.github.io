@@ -72,7 +72,7 @@ export const BundleAnalyzer = () => {
                         gzipSize: 0,
                         type: 'vendor',
                         optimization: 'critical'
-                    }
+})
                 ],
                 recommendations: [
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
@@ -85,14 +85,13 @@ export const BundleAnalyzer = () => {
                 lastUpdated: new Date()
             };
             setAnalysis(mockAnalysis);
-        }
+})
         catch (error) {
             console.error('Bundle analysis failed:', error);
-        }
+})
         finally {
             setIsAnalyzing(false);
-        }
-    }, []);
+})
     useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -108,16 +107,16 @@ export const BundleAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -129,13 +128,13 @@ export const BundleAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -144,10 +143,10 @@ export const BundleAnalyzer = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -359,5 +358,5 @@ export const BundleAnalyzer = () => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>);
+    </>
 };

@@ -382,7 +382,7 @@ const MicroSAASServices2028: React.FC = () => {
         case 'popularity':
         default:
           return b.popular ? 1 : -1;
-      }
+})
     });
 
   return (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
+import { Atom, Brain, Cloud, Loader2, Zap } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -101,8 +101,7 @@ export function EnhancedLoadingSpinner({
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: 360,
-              }}
+                rotate: 360}}
               transition={{
                 duration: 3,
                 repeat: Infinity,
@@ -114,8 +113,7 @@ export function EnhancedLoadingSpinner({
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: -360,
-              }}
+                rotate: -360}}
               transition={{
                 duration: 4,
                 repeat: Infinity,
@@ -168,8 +166,7 @@ export function EnhancedLoadingSpinner({
             className="w-2 h-2 bg-gray-400 rounded-full"
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5],
-            }}
+              opacity: [0.5, 1, 0.5]}}
             transition={{
               duration: 1.5,
               repeat: Infinity,

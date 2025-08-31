@@ -511,7 +511,7 @@ export default function QuantumTechnology() {
                 title: "Deployment & Optimization",
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
-              }
+})
             ].map((phase, index) => (
               <motion.div 
                 key={index}

@@ -71,8 +71,7 @@ const LaunchToolkitPage = () => {
             }
             const zipBlob = await zip.generateAsync({ type: 'blob' });
             saveAs(zipBlob, 'Zion_Launch_Toolkit.zip');
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error creating ZIP:", error);
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
         }
@@ -95,16 +94,16 @@ const LaunchToolkitPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
-}, []);;
+
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -116,13 +115,13 @@ const LaunchToolkitPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
-}, []);;
+
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -131,10 +130,10 @@ const LaunchToolkitPage = () => {
   return () => {
     // Cleanup function
   };
-}, []);;
+
 }, []);, []);
   // TODO: Add dependencies if needed
-}, []);
+
   // TODO: Add dependencies if needed
 
   return () => {
@@ -151,8 +150,7 @@ const LaunchToolkitPage = () => {
                 }
                 const text = await response.text();
                 setExplainerCopy(text);
-            }
-            catch (error) {
+  } catch (error) {
                 console.error("Error loading explainer copy:", error);
                 setExplainerCopy('Could not load explainer copy.');
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.');
@@ -176,8 +174,7 @@ const LaunchToolkitPage = () => {
             }
             const text = await response.text();
             setSelectedTemplateContent(text);
-        }
-        catch (error) {
+  } catch (error) {
             console.error("Error loading template:", error);
             setSelectedTemplateContent('');
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.');

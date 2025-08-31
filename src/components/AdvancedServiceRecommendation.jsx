@@ -276,10 +276,10 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
-                }
+})
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
-                }
+})
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{goal}</span>
               </label>))}
@@ -293,10 +293,10 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
-                }
+})
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
-                }
+})
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{challenge}</span>
               </label>))}

@@ -1,4 +1,4 @@
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, BookOpen, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, Database, DollarSign, Download, ExternalLink, Eye, FileText, Filter, FlaskConical, Globe, Lightbulb, Lock, MapPin, Microscope, Network, Palette, Rocket, Search, Shield, Smartphone, Star, Star as StarIcon, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');

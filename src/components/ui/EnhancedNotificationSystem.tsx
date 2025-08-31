@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell } from 'lucide-react';
+import { AlertCircle, AlertTriangle, Bell, CheckCircle, Info, X } from 'lucide-react';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 

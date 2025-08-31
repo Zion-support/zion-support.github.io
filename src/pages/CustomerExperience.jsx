@@ -70,7 +70,6 @@ import {
   Users,
   Settings,
   Palette
-} from 'lucide-react';
 
 const customerExperienceSolutions = [
   {

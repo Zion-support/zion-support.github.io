@@ -271,7 +271,6 @@ export default function ServicesOverview() {
   // Flatten all services from the catalog
   const allServices = useMemo(() => {
     return servicesCatalog.flatMap(category => category.items);
-  }, []);
 
   // Calculate service counts for each category
   const categoriesWithCounts = useMemo(() => {
@@ -507,4 +506,4 @@ export default function ServicesOverview() {
       </div>
     </>
   );
-}
+})

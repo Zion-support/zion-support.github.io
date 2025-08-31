@@ -134,7 +134,7 @@ export const getPatternPenalty = (password) => {
   keyboardPatterns.forEach(pattern => {
     if (password.toLowerCase().includes(pattern)) {
       penalty += 3;
-    }
+})
   });
   
   return penalty;
