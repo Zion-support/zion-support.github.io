@@ -66,6 +66,10 @@ const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('
 const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
 const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
 
+// New Innovative Services 2028
+const AIAutonomousBusinessManager = createLazyComponent(() => import('./pages/services/ai-autonomous-business-manager'));
+const QuantumAIHybridPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-hybrid-platform'));
+
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
 
@@ -173,6 +177,10 @@ function App() {
                     <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
                     <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
                     <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+
+                    {/* New Innovative Services 2028 */}
+                    <Route path="/services/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                    <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
