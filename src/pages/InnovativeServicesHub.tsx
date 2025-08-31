@@ -399,9 +399,9 @@ export default function InnovativeServicesHub() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
+        staggerChildren: 0.1
+      }
+    }
   };
   const itemVariants = {
     hidden: { y: 20,
@@ -411,9 +411,9 @@ export default function InnovativeServicesHub() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
+        duration: 0.5
+      }
+    }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
