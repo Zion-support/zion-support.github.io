@@ -85,6 +85,8 @@ const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Docs = createLazyComponent(() => import('./pages/Documentation'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const ROICalculator = createLazyComponent(() => import('./pages/tools/ROICalculator'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
@@ -329,9 +331,11 @@ function App() {
                     <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
                     <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
                     <Route path="/docs" element={<ModernLayout><Docs /></ModernLayout>} />
-                    <Route path="/white-papers" element={<ModernLayout><WhitePapers /></ModernLayout>} />
-                    <Route path="/webinars" element={<ModernLayout><Webinars /></ModernLayout>} />
-                    <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
+                            <Route path="/white-papers" element={<ModernLayout><WhitePapers /></ModernLayout>} />
+        <Route path="/webinars" element={<ModernLayout><Webinars /></ModernLayout>} />
+                <Route path="/community" element={<ModernLayout><Community /></ModernLayout>} />
+        <Route path="/tools/roi-calculator" element={<ModernLayout><ROICalculator /></ModernLayout>} />
+        <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
                     <Route path="/research-development" element={<ModernLayout><ResearchDevelopment /></ModernLayout>} />
                     <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
                     <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
