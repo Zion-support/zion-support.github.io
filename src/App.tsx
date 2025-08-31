@@ -45,10 +45,14 @@ const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
 // New AI Services 2025
-const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
-const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+
+// New Micro SAAS Services 2025
+const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
+const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -132,8 +136,12 @@ function App() {
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+
+                    {/* New Micro SAAS Services 2025 */}
+                    <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                    <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
