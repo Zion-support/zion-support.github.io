@@ -1,642 +1,294 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Check, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Shield, 
+  Rocket, 
   Brain, 
-  Cloud, 
-  Cpu,
-  Users,
-  Database,
-  Globe,
+  Shield, 
+  Zap, 
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
   Clock,
-  HelpCircle,
-  MessageCircle,
   Phone,
   Mail,
-  Play,
-  Download,
-  BookOpen,
-  Video,
-  TrendingUp,
-  Award
+  MapPin
 } from 'lucide-react';
 
-const GetStarted = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
+export default function GetStarted() {
   const steps = [
     {
-      id: 1,
-      title: 'Choose Your Plan',
-      description: 'Select the plan that best fits your business needs',
-      icon: Star,
-      color: 'from-blue-500 to-cyan-500'
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: "Discovery & Assessment",
+      description: "We analyze your current technology stack and identify opportunities for improvement.",
+      duration: "1-2 weeks"
     },
     {
-      id: 2,
-      title: 'Create Account',
-      description: 'Set up your account and complete your profile',
-      icon: Shield,
-      color: 'from-purple-500 to-pink-500'
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      title: "Solution Design",
+      description: "Our experts design a customized solution tailored to your specific needs and goals.",
+      duration: "2-3 weeks"
     },
     {
-      id: 3,
-      title: 'Configure Services',
-      description: 'Customize your AI services and integrations',
-      icon: Brain,
-      color: 'from-green-500 to-emerald-500'
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Implementation",
+      description: "We implement the solution with minimal disruption to your business operations.",
+      duration: "4-8 weeks"
     },
     {
-      id: 4,
-      title: 'Start Building',
-      description: 'Begin creating and deploying your AI solutions',
-      icon: Zap,
-      color: 'from-orange-500 to-red-500'
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      title: "Training & Support",
+      description: "Comprehensive training for your team and ongoing support to ensure success.",
+      duration: "Ongoing"
     }
   ];
 
-  const plans = [
+  const services = [
     {
-      id: 'starter',
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: 79,
-      features: [
-        'AI Content Generation (100 requests/month)',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '5GB Storage',
-        'Standard API Access'
-      ],
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      popular: false
+      category: "AI & Automation",
+      services: [
+        "AI Enterprise Automation Platform",
+        "AI Data Analytics Platform",
+        "AI Business Intelligence",
+        "AI Cybersecurity Platform"
+      ]
     },
     {
-      id: 'professional',
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: 239,
-      features: [
-        'AI Content Generation (1000 requests/month)',
-        'Advanced Analytics & Reporting',
-        'Priority Email Support',
-        '50GB Storage',
-        'Full API Access',
-        'Custom AI Model Training'
-      ],
-      icon: Star,
-      color: 'from-purple-500 to-pink-500',
-      popular: true
+      category: "IT & Infrastructure",
+      services: [
+        "IT Infrastructure Management",
+        "Cloud & DevOps Solutions",
+        "Cybersecurity Services",
+        "Digital Transformation"
+      ]
     },
     {
-      id: 'enterprise',
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      price: 799,
-      features: [
-        'Unlimited AI Content Generation',
-        'Custom AI Model Development',
-        'Dedicated Account Manager',
-        'Unlimited Storage',
-        'Custom API Development',
-        '24/7 Phone Support'
-      ],
-      icon: Shield,
-      color: 'from-emerald-500 to-teal-500',
-      popular: false
+      category: "Micro SaaS Solutions",
+      services: [
+        "AI Sales Copilot",
+        "Cloud FinOps Optimizer",
+        "AI Compliance Assistant",
+        "Micro SaaS Platform"
+      ]
     }
   ];
-
-  const onboardingFeatures = [
-    {
-      title: 'Quick Setup Wizard',
-      description: 'Get up and running in under 10 minutes with our guided setup process',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Pre-built Templates',
-      description: 'Start with industry-specific templates and customize as needed',
-      icon: BookOpen,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Comprehensive video guides for every feature and workflow',
-      icon: Video,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 support from our team of AI and technology experts',
-      icon: HelpCircle,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const resources = [
-    {
-      title: 'Getting Started Guide',
-      description: 'Complete step-by-step guide to get you up and running',
-      icon: BookOpen,
-      href: '/help/getting-started',
-      type: 'Guide'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Visual walkthroughs of key features and workflows',
-      icon: Video,
-      href: '/help/videos',
-      type: 'Video'
-    },
-    {
-      title: 'API Documentation',
-      description: 'Comprehensive API reference and integration guides',
-      icon: Cpu,
-      href: '/docs/api',
-      type: 'Technical'
-    },
-    {
-      title: 'Best Practices',
-      description: 'Learn from our experts about optimal AI implementation',
-      icon: TrendingUp,
-      href: '/help/best-practices',
-      type: 'Guide'
-    }
-  ];
-
-  const nextStep = () => {
-    if (currentStep < steps.length) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case 1:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Choose Your Plan</h3>
-              <p className="text-gray-300">Select the plan that best fits your business needs and budget</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {plans.map((plan) => (
-                <div
-                  key={plan.id}
-                  onClick={() => setSelectedPlan(plan.id)}
-                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 cursor-pointer transition-all duration-300 ${
-                    selectedPlan === plan.id
-                      ? 'border-cyan-500/50 ring-2 ring-cyan-500/30'
-                      : 'border-slate-700/50 hover:border-cyan-500/30'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
-                      <plan.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h4 className="text-xl font-semibold text-white mb-1">{plan.name}</h4>
-                    <p className="text-gray-300 text-sm mb-3">{plan.description}</p>
-                    <div className="text-2xl font-bold text-white">${plan.price}/month</div>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-4">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className="w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium">
-                    Select Plan
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      
-      case 2:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Create Your Account</h3>
-              <p className="text-gray-300">Set up your account and complete your profile</p>
-            </div>
-            
-            <div className="max-w-md mx-auto">
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
-                  <input
-                    type="password"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Create a strong password"
-                  />
-                </div>
-                
-                <button
-                  type="button"
-                  onClick={nextStep}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-                >
-                  Create Account
-                </button>
-              </form>
-            </div>
-          </div>
-        );
-      
-      case 3:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Configure Your Services</h3>
-              <p className="text-gray-300">Customize your AI services and set up integrations</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">AI Service Configuration</h4>
-                <div className="space-y-3">
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Content Generation</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Data Analytics</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Predictive Modeling</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Natural Language Processing</span>
-                  </label>
-                </div>
-              </div>
-              
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">Integration Setup</h4>
-                <div className="space-y-3">
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">CRM Integration</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Email Marketing</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Social Media</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Web Analytics</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button
-                onClick={nextStep}
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-              >
-                Continue Configuration
-              </button>
-            </div>
-          </div>
-        );
-      
-      case 4:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">You're All Set!</h3>
-              <p className="text-gray-300">Your account is ready. Start building amazing AI-powered solutions!</p>
-            </div>
-            
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Check className="w-10 h-10 text-white" />
-              </div>
-              <h4 className="text-2xl font-bold text-white mb-4">Welcome to Zion Tech Group!</h4>
-              <p className="text-gray-300 mb-6">
-                Your account has been successfully created and configured. You now have access to our powerful AI platform.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  to="/dashboard"
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-                >
-                  Go to Dashboard
-                </Link>
-                <Link
-                  to="/help/getting-started"
-                  className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold"
-                >
-                  View Tutorials
-                </Link>
-              </div>
-            </div>
-          </div>
-        );
-      
-      default:
-        return null;
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get Started in
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                {' '}Minutes
+              Get Started with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                {" "}Zion Tech Group
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses already using our AI-powered solutions. 
-              Get up and running in under 10 minutes with our simple onboarding process.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. 
+              Our expert team will guide you through every step of your digital transformation journey.
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => setCurrentStep(1)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold text-lg"
-              >
-                Start Now
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Talk to Sales
+                <Phone className="w-5 h-5 inline mr-2" />
+                Schedule a Consultation
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+              >
+                <Rocket className="w-5 h-5 inline mr-2" />
+                Explore Our Services
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
 
-      {/* Progress Steps */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between mb-12">
+      {/* Why Choose Zion Tech Group */}
+      <div className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver results that transform your business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Proven Expertise</h3>
+              <p className="text-gray-300">15+ years of experience in enterprise technology solutions</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Clock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
+              <p className="text-gray-300">Round-the-clock support to ensure your success</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+              <p className="text-gray-300">Bank-level security and compliance standards</p>
+            </div>
+            
+            <div className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50">
+              <Rocket className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
+              <p className="text-gray-300">Always at the forefront of emerging technologies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Getting Started Process */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Your Journey to Digital Transformation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We've streamlined our process to get you up and running quickly while ensuring 
+              every solution is perfectly tailored to your needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
-              <div key={step.id} className="flex items-center">
-                <div className={`relative ${index < steps.length - 1 ? 'mr-8' : ''}`}>
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      currentStep >= step.id
-                        ? `bg-gradient-to-br ${step.color}`
-                        : 'bg-slate-700/50 border border-slate-600/50'
-                    }`}
-                  >
-                    {currentStep > step.id ? (
-                      <Check className="w-6 h-6 text-white" />
-                    ) : (
-                      <step.icon className={`w-6 h-6 ${
-                        currentStep >= step.id ? 'text-white' : 'text-gray-400'
-                      }`} />
-                    )}
+              <div key={index} className="relative">
+                <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 relative z-10">
+                  <div className="mb-4">{step.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 mb-3">{step.description}</p>
+                  <div className="inline-flex items-center text-cyan-400 text-sm">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {step.duration}
                   </div>
-                  
-                  {index < steps.length - 1 && (
-                    <div className={`absolute top-1/2 left-full w-8 h-0.5 transform -translate-y-1/2 ${
-                      currentStep > step.id ? 'bg-cyan-500' : 'bg-slate-700/50'
-                    }`} />
-                  )}
                 </div>
                 
-                <div className="text-center">
-                  <h3 className={`text-sm font-semibold ${
-                    currentStep >= step.id ? 'text-white' : 'text-gray-400'
-                  }`}>
-                    {step.title}
-                  </h3>
-                  <p className={`text-xs ${
-                    currentStep >= step.id ? 'text-gray-300' : 'text-gray-500'
-                  }`}>
-                    {step.description}
-                  </p>
-                </div>
+                {/* Connection Line */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transform -translate-y-1/2 z-0"></div>
+                )}
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Step Content */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          {renderStepContent()}
+      {/* Our Services Overview */}
+      <div className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Solutions for Every Need
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI-powered automation to enterprise infrastructure, we have the expertise 
+              and solutions to drive your business forward.
+            </p>
+          </div>
           
-          {/* Navigation */}
-          {currentStep > 1 && currentStep < steps.length && (
-            <div className="flex justify-between mt-12">
-              <button
-                onClick={prevStep}
-                className="px-6 py-3 border border-slate-600 text-gray-300 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
-              >
-                Previous Step
-              </button>
-              <button
-                onClick={nextStep}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-              >
-                Next Step
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Onboarding Features */}
-      <section className="py-20 px-6 bg-slate-800/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our comprehensive onboarding process ensures you get the most out of our platform
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {onboardingFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
-              </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {services.map((category, index) => (
+              <div key={index} className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50">
+                <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
+                  {category.category === "AI & Automation" && <Brain className="w-6 h-6 mr-2 text-cyan-400" />}
+                  {category.category === "IT & Infrastructure" && <Shield className="w-6 h-6 mr-2 text-purple-400" />}
+                  {category.category === "Micro SaaS Solutions" && <Zap className="w-6 h-6 mr-2 text-yellow-400" />}
+                  {category.category}
+                </h3>
+                <ul className="space-y-3">
+                  {category.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mt-4 font-medium"
+                >
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Resources Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Access our comprehensive library of guides, tutorials, and documentation
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <resource.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full">
-                    {resource.type}
-                  </span>
-                  <Link
-                    to={resource.href}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group-hover:translate-x-1"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
+      {/* Next Steps */}
+      <div className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Take the first step towards transforming your business. Our team is ready to help 
+            you navigate the path to digital excellence.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <p className="text-gray-300 mb-3">Speak directly with our experts</p>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                +1 (302) 464-0950
+              </a>
+            </div>
+            
+            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <p className="text-gray-300 mb-3">Send us a detailed message</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
+              <MapPin className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 mb-3">Schedule an in-person meeting</p>
+              <span className="text-yellow-400 font-medium">
+                Delaware, USA
+              </span>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            >
+              Start Your Journey
+            </Link>
+            <Link
+              to="/case-studies"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+            >
+              View Case Studies
+            </Link>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => setCurrentStep(1)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold text-lg"
-              >
-                Start Free Trial
-              </button>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   );
-};
-
-export default GetStarted;
+}

@@ -61,6 +61,13 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
+// Support and onboarding pages
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Status = createLazyComponent(() => import('./pages/Status'));
+
 // New AI Services 2025 - Combined from both versions
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
@@ -268,6 +275,11 @@ function App() {
                     <Route path="/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/get-started" element={<GetStarted />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/status" element={<Status />} />
 
                     {/* 404 Page */}
                     <Route
