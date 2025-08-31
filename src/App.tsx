@@ -12,6 +12,7 @@ import { EnhancedSidebar } from './components/EnhancedSidebar';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { SecurityEnhancer } from './components/SecurityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
@@ -114,6 +115,9 @@ function App() {
 
             {/* Enhanced Accessibility */}
             <EnhancedAccessibilityEnhancer enabled={true} />
+
+            {/* Security Enhancer */}
+            <SecurityEnhancer enabled={true} />
 
             {/* Mobile Experience Enhancer */}
             <MobileExperienceEnhancer enabled={true} />
