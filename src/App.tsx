@@ -174,6 +174,7 @@ const Terms = createLazyComponent(() => import('./pages/Terms'));
 const Cookies = createLazyComponent(() => import('./pages/Cookies'));
 const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
 const Security = createLazyComponent(() => import('./pages/Security'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 const Compliance = createLazyComponent(() => import('./pages/Compliance'));
 
 // Additional pages from main branch
@@ -374,6 +375,7 @@ function App() {
                     <Route path="/cookies" element={<ModernLayout><Cookies /></ModernLayout>} />
                     <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
                     <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
+                    <Route path="/sitemap" element={<ModernLayout><Sitemap /></ModernLayout>} />
                     <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
 
                     {/* New pages we created */}
