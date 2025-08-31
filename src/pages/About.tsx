@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -59,45 +58,8 @@ const About = () => {
       description: 'We strive for excellence in everything we do, from code to customer service',
       icon: Star,
       color: 'from-purple-500 to-pink-500'
-=======
-import { 
-  Brain, 
-  Rocket, 
-  Shield, 
-  Users, 
-  Award, 
-  Globe,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Atom,
-  Satellite,
-  Zap,
-  Building,
-  MapPin,
-  Phone,
-  Mail
-} from 'lucide-react';
-
-export default function About() {
-  const values = [
-    {
-      icon: Brain,
-      title: "Innovation First",
-      description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex problems."
-    },
-    {
-      icon: Shield,
-      title: "Trust & Security",
-      description: "Your data and systems are protected with enterprise-grade security measures and zero-trust architecture."
-    },
-    {
-      icon: Users,
-      title: "Client Success",
-      description: "Your success is our success. We're committed to delivering solutions that drive measurable business outcomes."
-    },
+    }
+  ];
     {
       icon: Globe,
       title: "Global Impact",

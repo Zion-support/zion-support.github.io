@@ -1,37 +1,43 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from "./layout/AppHeader";
-import { Footer } from "./components/Footer.jsx";
-import { ChatAssistant } from "./components/ChatAssistant";
+import { Footer } from "./components/layout/Footer";
+// import { ChatAssistant } from "./components/ChatAssistant";
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home.tsx'));
-const About = React.lazy(() => import('./pages/About.tsx'));
-const Contact = React.lazy(() => import('./pages/Contact.tsx'));
-const Blog = React.lazy(() => import('./pages/Blog.tsx'));
-const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
-const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
-const Careers = React.lazy(() => import('./pages/Careers.tsx'));
-const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
-const Terms = React.lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
+// const About = React.lazy(() => import('./pages/About.tsx'));
+// const Contact = React.lazy(() => import('./pages/Contact.tsx'));
+// const Blog = React.lazy(() => import('./pages/BlogPage.tsx'));
+// const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
+// const Login = React.lazy(() => import('./pages/Login.jsx'));
+// const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
+// const Careers = React.lazy(() => import('./pages/Careers.tsx'));
+// const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
+// const Terms = React.lazy(() => import('./pages/Terms.tsx'));
+// const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 // Services pages
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+// const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
 // Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+// const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
 // Support pages
-const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+// const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
+// const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
 // Documentation pages
-const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
-const Webinars = React.lazy(() => import('./pages/Webinars.tsx'));
-const Training = React.lazy(() => import('./pages/Training.tsx'));
-const Research = React.lazy(() => import('./pages/Research.tsx'));
+// const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
+// const Webinars = React.lazy(() => import('./pages/Webinars.tsx'));
+// const Training = React.lazy(() => import('./pages/Training.tsx'));
+// const Research = React.lazy(() => import('./pages/Research.tsx'));
 // Search and categories
-const Search = React.lazy(() => import('./pages/Search.tsx'));
-const Categories = React.lazy(() => import('./pages/Categories.tsx'));
+// const Search = React.lazy(() => import('./pages/Search.tsx'));
+// const Categories = React.lazy(() => import('./pages/Categories.tsx'));
 // API Playground
-const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+// const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+// Additional pages
+// const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.tsx'));
+// const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
+// const Support = React.lazy(() => import('./pages/Support.tsx'));
+// const Security = React.lazy(() => import('./pages/Security.tsx'));
+// const WhitePapers = React.lazy(() => import('./pages/WhitePapers.tsx'));
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -47,18 +53,18 @@ function App() {
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              {/* <Route path="/about" element={<About />} /> */}
+              {/* <Route path="/contact" element={<Contact />} /> */}
               <Route path="/blog" element={<Blog />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
+              {/* <Route path="/terms" element={<Terms />} /> */}
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
+              {/* <Route path="/partners" element={<PartnersPage />} /> */}
+              {/* <Route path="/login" element={<Login />} /> */}
               <Route path="/pricing" element={<ComprehensivePricing />} />
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
@@ -97,7 +103,7 @@ function App() {
           </Suspense>
         </main>
         <Footer />
-        <ChatAssistant />
+        {/* <ChatAssistant /> */}
       </div>
     </Router>
   )}
