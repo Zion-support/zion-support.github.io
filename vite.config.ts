@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import tailwindcss from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,13 +8,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@styles': resolve(__dirname, 'src/styles'),
     },
   },
   build: {
@@ -30,16 +21,14 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'router-vendor': ['react-router-dom'],
           'animation-vendor': ['framer-motion'],
-          'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
-          'icons-vendor': ['lucide-react'],
-          'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -63,32 +52,7 @@ export default defineConfig({
       'react',
       'react-dom',
       'react-router-dom',
-      '@radix-ui/react-accordion',
-      '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-aspect-ratio',
-      '@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox',
-      '@radix-ui/react-context-menu',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label',
-      '@radix-ui/react-popover',
-      '@radix-ui/react-progress',
-      '@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area',
-      '@radix-ui/react-select',
-      '@radix-ui/react-separator',
-      '@radix-ui/react-slider',
-      '@radix-ui/react-slot',
-      '@radix-ui/react-switch',
-      '@radix-ui/react-tabs',
-      '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip',
       'framer-motion',
-      'lucide-react',
-      'clsx',
-      'class-variance-authority',
-      'tailwind-merge',
     ],
   },
   server: {
@@ -96,18 +60,7 @@ export default defineConfig({
     host: true,
     open: true,
   },
-  css: {
-    postcss: {
-      plugins: [
-        tailwindcss,
-        autoprefixer,
-      ],
-    },
-  },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  },
-  esbuild: {
-    jsxInject: `import React from 'react'`,
   },
 })

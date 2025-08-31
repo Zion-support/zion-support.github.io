@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Atom, 
+  Eye, 
   Zap, 
   Shield, 
-  TrendingUp, 
   Users, 
   Globe, 
   Target, 
@@ -25,101 +24,113 @@ import {
   Server,
   Microchip,
   CircuitBoard,
-  Atom
+  Atom,
+  Sparkles,
+  Brain,
+  Heart,
+  Lightbulb,
+  Eye,
+  Brain,
+  Network,
+  Activity,
+  Database,
+  Learning,
+  Perception,
+  Cognition
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIQuantumHybridPlatform() {
+export default function AIConsciousnessSimulationPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Quantum Integration",
-      description: "Seamless integration between classical AI and quantum computing for unprecedented computational power"
+      title: "Consciousness Modeling",
+      description: "Advanced AI models that simulate human consciousness and cognitive processes"
     },
     {
-      icon: Atom,
-      title: "Quantum Advantage",
-      description: "Leverage quantum supremacy for complex optimization problems and cryptography"
+      icon: Eye,
+      title: "Perception Simulation",
+      description: "Realistic simulation of human perception, awareness, and sensory processing"
     },
     {
       icon: Zap,
-      title: "Hybrid Processing",
-      description: "Intelligent routing between classical and quantum systems for optimal performance"
+      title: "Neural Networks",
+      description: "Complex neural network architectures that mimic human brain function"
     },
     {
       icon: Shield,
-      title: "Quantum Security",
-      description: "Post-quantum cryptography and quantum-resistant security protocols"
+      title: "Ethical AI",
+      description: "Built-in ethical frameworks and safety measures for consciousness research"
     }
   ];
 
   const services = [
     {
-      title: "Quantum Machine Learning",
-      description: "Advanced ML algorithms enhanced with quantum computing capabilities",
+      title: "Consciousness Research",
+      description: "Advanced tools for studying consciousness, awareness, and cognitive processes",
       icon: Brain,
-      features: ["Quantum neural networks", "Quantum feature selection", "Quantum clustering algorithms", "Hybrid optimization"]
+      features: ["Consciousness modeling", "Cognitive simulation", "Awareness analysis", "Research tools"]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Next-generation security using quantum key distribution and post-quantum algorithms",
-      icon: Lock,
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Quantum random number generation", "Secure communication"]
+      title: "Neural Architecture Design",
+      description: "Design and optimize neural networks that simulate human consciousness",
+      icon: Network,
+      features: ["Network architecture", "Learning algorithms", "Memory systems", "Optimization tools"]
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems using quantum annealing and variational algorithms",
-      icon: Target,
-      features: ["Quantum annealing", "Variational quantum algorithms", "Portfolio optimization", "Supply chain optimization"]
+      title: "Perception Simulation",
+      description: "Simulate human perception and sensory processing with AI",
+      icon: Eye,
+      features: ["Visual perception", "Auditory processing", "Sensory integration", "Reality simulation"]
     },
     {
-      title: "Hybrid Computing",
-      description: "Intelligent workload distribution between classical and quantum systems",
-      icon: Cpu,
-      features: ["Workload orchestration", "Performance optimization", "Resource management", "Scalability planning"]
+      title: "Cognitive Testing",
+      description: "Test and validate consciousness models with comprehensive cognitive assessments",
+      icon: Lightbulb,
+      features: ["Cognitive testing", "Performance metrics", "Validation tools", "Analysis reports"]
     }
   ];
 
   const technologies = [
-    "Quantum Circuit Design",
-    "Quantum Error Correction",
-    "Hybrid Classical-Quantum Algorithms",
-    "Post-Quantum Cryptography",
-    "Quantum Machine Learning",
-    "Quantum Neural Networks",
-    "Quantum Annealing",
-    "Variational Quantum Eigensolver (VQE)",
-    "Quantum Approximate Optimization Algorithm (QAOA)",
-    "Quantum Key Distribution (QKD)"
+    "Deep Neural Networks",
+    "Recurrent Neural Networks",
+    "Transformer Models",
+    "Attention Mechanisms",
+    "Memory Networks",
+    "Reinforcement Learning",
+    "Cognitive Architecture",
+    "Perception Models",
+    "Awareness Algorithms",
+    "Consciousness Frameworks"
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999",
+      name: "Research",
+      price: "$4,999",
       period: "per month",
-      description: "Perfect for research institutions and startups",
+      description: "Perfect for academic research and consciousness studies",
       features: [
-        "Basic quantum computing access",
-        "AI-Quantum integration tools",
-        "Standard security protocols",
+        "Basic consciousness simulation",
+        "Research tools",
+        "Data analysis",
         "Email support",
-        "5 concurrent users"
+        "5 research projects"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$7,999",
+      name: "Academic",
+      price: "$12,999",
       period: "per month",
-      description: "Ideal for growing enterprises and research teams",
+      description: "Ideal for universities and research institutions",
       features: [
-        "Advanced quantum algorithms",
-        "Custom hybrid solutions",
+        "Advanced consciousness models",
+        "Neural architecture tools",
+        "Perception simulation",
         "Priority support",
-        "Advanced security features",
-        "25 concurrent users",
+        "Unlimited projects",
         "API access"
       ],
       cta: "Get Started",
@@ -127,15 +138,14 @@ export default function AIQuantumHybridPlatform() {
     },
     {
       name: "Enterprise",
-      price: "$19,999",
+      price: "$29,999",
       period: "per month",
-      description: "For large organizations requiring maximum quantum advantage",
+      description: "For large organizations and advanced research",
       features: [
-        "Full quantum computing access",
-        "Custom algorithm development",
+        "Full consciousness platform",
+        "Custom AI models",
         "Dedicated support team",
-        "Advanced security protocols",
-        "Unlimited users",
+        "Advanced analytics",
         "White-label solutions",
         "On-premise deployment"
       ],
@@ -144,18 +154,56 @@ export default function AIQuantumHybridPlatform() {
     }
   ];
 
+  const useCases = [
+    {
+      title: "Academic Research",
+      description: "Advance consciousness research and cognitive science with AI simulation",
+      icon: Brain,
+      benefits: ["Breakthrough research", "Academic publications", "Scientific discovery"]
+    },
+    {
+      title: "AI Development",
+      description: "Develop more human-like AI systems with consciousness simulation",
+      icon: Brain,
+      benefits: ["Human-like AI", "Better user experience", "Advanced capabilities"]
+    },
+    {
+      title: "Psychology Studies",
+      description: "Study human psychology and behavior through AI simulation",
+      icon: Heart,
+      benefits: ["Behavioral insights", "Psychological research", "Treatment development"]
+    },
+    {
+      title: "Philosophy Research",
+      description: "Explore philosophical questions about consciousness and existence",
+      icon: Lightbulb,
+      benefits: ["Philosophical insights", "Existential research", "Consciousness theory"]
+    }
+  ];
+
+  const benefits = [
+    "Advance consciousness research by 100x",
+    "Enable breakthrough discoveries in cognitive science",
+    "Develop more human-like AI systems",
+    "Improve understanding of human psychology",
+    "Accelerate neuroscience research",
+    "Enable ethical AI development",
+    "Advance philosophy of mind",
+    "Improve mental health treatments"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
-        title="AI-Quantum Hybrid Platform - Zion Tech Group"
-        description="Revolutionary AI-Quantum hybrid platform combining classical AI with quantum computing for unprecedented computational power and security."
+        title="AI-Powered Consciousness Simulation Platform - Zion Tech Group"
+        description="Revolutionary AI platform for simulating and understanding consciousness, enabling breakthrough research in cognitive science and AI development."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         </div>
         
@@ -166,26 +214,26 @@ export default function AIQuantumHybridPlatform() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-4">
-                <Atom className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4">
+                <Brain className="w-8 h-8 text-white" />
               </div>
-              <span className="text-purple-400 font-semibold">AI-Quantum Hybrid Platform</span>
+              <span className="text-purple-400 font-semibold">AI Consciousness Simulation Platform</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              The Future of
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"> Computing</span>
+              Understanding
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"> Consciousness</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Unlock unprecedented computational power with our revolutionary AI-Quantum hybrid platform. 
-              Combining classical AI with quantum computing for the next generation of problem-solving.
+              Explore the mysteries of consciousness with our revolutionary AI simulation platform. 
+              Advance cognitive science research and develop more human-like AI systems.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -215,7 +263,7 @@ export default function AIQuantumHybridPlatform() {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the power of AI-Quantum integration with cutting-edge features designed for the future
+              Experience the future of consciousness research with AI-powered simulation and analysis
             </p>
           </motion.div>
           
@@ -229,7 +277,7 @@ export default function AIQuantumHybridPlatform() {
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg w-fit mb-4">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -254,7 +302,7 @@ export default function AIQuantumHybridPlatform() {
               Comprehensive Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From quantum machine learning to post-quantum cryptography, we provide end-to-end AI-Quantum solutions
+              From consciousness research to neural architecture design, we provide end-to-end simulation support
             </p>
           </motion.div>
           
@@ -269,7 +317,7 @@ export default function AIQuantumHybridPlatform() {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="flex items-start mb-6">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mr-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -291,6 +339,94 @@ export default function AIQuantumHybridPlatform() {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Benefits
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Transform consciousness research with measurable improvements and breakthrough discoveries
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                  <h3 className="text-lg font-semibold text-white">Benefit {index + 1}</h3>
+                </div>
+                <p className="text-gray-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Applications
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Transform research across multiple disciplines with consciousness simulation
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.title}</h3>
+                </div>
+                <p className="text-gray-400 mb-6">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Technologies Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,10 +438,10 @@ export default function AIQuantumHybridPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technologies
+              Advanced Technologies
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Built on the latest advancements in quantum computing and artificial intelligence
+              Built on cutting-edge AI and neural network technologies
             </p>
           </motion.div>
           
@@ -340,7 +476,7 @@ export default function AIQuantumHybridPlatform() {
               Competitive Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Access to quantum computing power at competitive market rates
+              Access to consciousness simulation platform at competitive market rates
             </p>
           </motion.div>
           
@@ -360,7 +496,7 @@ export default function AIQuantumHybridPlatform() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -388,7 +524,7 @@ export default function AIQuantumHybridPlatform() {
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
@@ -410,15 +546,15 @@ export default function AIQuantumHybridPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
+              Ready to Explore Consciousness?
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Join the quantum revolution and transform your computational capabilities with our AI-Quantum hybrid platform
+              Join the consciousness research revolution and advance our understanding of the mind with our AI simulation platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />

@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
+  Search, 
+  BookOpen, 
   Brain, 
-  Atom, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -25,101 +26,107 @@ import {
   Server,
   Microchip,
   CircuitBoard,
-  Atom
+  FileText,
+  Library,
+  GraduationCap,
+  Beaker,
+  TestTube,
+  Microscope,
+  Telescope
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIQuantumHybridPlatform() {
+export default function AIAutonomousResearchAssistant() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Quantum Integration",
-      description: "Seamless integration between classical AI and quantum computing for unprecedented computational power"
+      title: "Autonomous Research",
+      description: "AI that independently conducts research, analyzes data, and generates insights without human intervention"
     },
     {
-      icon: Atom,
-      title: "Quantum Advantage",
-      description: "Leverage quantum supremacy for complex optimization problems and cryptography"
+      icon: Search,
+      title: "Intelligent Discovery",
+      description: "Advanced algorithms that discover hidden patterns and connections across vast datasets"
     },
     {
       icon: Zap,
-      title: "Hybrid Processing",
-      description: "Intelligent routing between classical and quantum systems for optimal performance"
+      title: "Real-time Analysis",
+      description: "Instant processing and analysis of research data with continuous learning capabilities"
     },
     {
       icon: Shield,
-      title: "Quantum Security",
-      description: "Post-quantum cryptography and quantum-resistant security protocols"
+      title: "Academic Integrity",
+      description: "Built-in plagiarism detection and citation management for research compliance"
     }
   ];
 
   const services = [
     {
-      title: "Quantum Machine Learning",
-      description: "Advanced ML algorithms enhanced with quantum computing capabilities",
-      icon: Brain,
-      features: ["Quantum neural networks", "Quantum feature selection", "Quantum clustering algorithms", "Hybrid optimization"]
+      title: "Literature Review Automation",
+      description: "Automated comprehensive literature reviews with intelligent source analysis and synthesis",
+      icon: BookOpen,
+      features: ["Automated source discovery", "Intelligent summarization", "Citation management", "Bias detection"]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Next-generation security using quantum key distribution and post-quantum algorithms",
-      icon: Lock,
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Quantum random number generation", "Secure communication"]
+      title: "Data Analysis & Visualization",
+      description: "Advanced statistical analysis with automated chart generation and insight extraction",
+      icon: BarChart3,
+      features: ["Statistical modeling", "Interactive visualizations", "Trend analysis", "Predictive modeling"]
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems using quantum annealing and variational algorithms",
-      icon: Target,
-      features: ["Quantum annealing", "Variational quantum algorithms", "Portfolio optimization", "Supply chain optimization"]
+      title: "Research Methodology Design",
+      description: "AI-powered research design optimization for maximum validity and reliability",
+      icon: Beaker,
+      features: ["Methodology optimization", "Sample size calculation", "Statistical power analysis", "Bias minimization"]
     },
     {
-      title: "Hybrid Computing",
-      description: "Intelligent workload distribution between classical and quantum systems",
-      icon: Cpu,
-      features: ["Workload orchestration", "Performance optimization", "Resource management", "Scalability planning"]
+      title: "Peer Review Assistance",
+      description: "Automated quality assessment and peer review support for research papers",
+      icon: GraduationCap,
+      features: ["Quality scoring", "Methodology validation", "Statistical review", "Citation verification"]
     }
   ];
 
   const technologies = [
-    "Quantum Circuit Design",
-    "Quantum Error Correction",
-    "Hybrid Classical-Quantum Algorithms",
-    "Post-Quantum Cryptography",
-    "Quantum Machine Learning",
-    "Quantum Neural Networks",
-    "Quantum Annealing",
-    "Variational Quantum Eigensolver (VQE)",
-    "Quantum Approximate Optimization Algorithm (QAOA)",
-    "Quantum Key Distribution (QKD)"
+    "Natural Language Processing (NLP)",
+    "Machine Learning Algorithms",
+    "Deep Learning Models",
+    "Statistical Analysis Tools",
+    "Data Mining Techniques",
+    "Semantic Analysis",
+    "Knowledge Graph Construction",
+    "Automated Reasoning",
+    "Pattern Recognition",
+    "Predictive Analytics"
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999",
+      name: "Student",
+      price: "$99",
       period: "per month",
-      description: "Perfect for research institutions and startups",
+      description: "Perfect for students and individual researchers",
       features: [
-        "Basic quantum computing access",
-        "AI-Quantum integration tools",
-        "Standard security protocols",
+        "Basic research assistance",
+        "Literature review support",
+        "Citation management",
         "Email support",
-        "5 concurrent users"
+        "5 research projects"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$7,999",
+      name: "Academic",
+      price: "$299",
       period: "per month",
-      description: "Ideal for growing enterprises and research teams",
+      description: "Ideal for academic institutions and research teams",
       features: [
-        "Advanced quantum algorithms",
-        "Custom hybrid solutions",
+        "Advanced research automation",
+        "Data analysis tools",
+        "Methodology optimization",
         "Priority support",
-        "Advanced security features",
-        "25 concurrent users",
+        "Unlimited projects",
         "API access"
       ],
       cta: "Get Started",
@@ -127,15 +134,14 @@ export default function AIQuantumHybridPlatform() {
     },
     {
       name: "Enterprise",
-      price: "$19,999",
+      price: "$999",
       period: "per month",
-      description: "For large organizations requiring maximum quantum advantage",
+      description: "For large research organizations and corporations",
       features: [
-        "Full quantum computing access",
-        "Custom algorithm development",
+        "Full autonomous research",
+        "Custom AI models",
         "Dedicated support team",
-        "Advanced security protocols",
-        "Unlimited users",
+        "Advanced analytics",
         "White-label solutions",
         "On-premise deployment"
       ],
@@ -144,19 +150,46 @@ export default function AIQuantumHybridPlatform() {
     }
   ];
 
+  const useCases = [
+    {
+      title: "Academic Research",
+      description: "Accelerate academic research with AI-powered literature reviews and data analysis",
+      icon: GraduationCap,
+      benefits: ["10x faster research", "Improved accuracy", "Comprehensive coverage"]
+    },
+    {
+      title: "Market Research",
+      description: "Conduct market research with autonomous data collection and trend analysis",
+      icon: TrendingUp,
+      benefits: ["Real-time insights", "Competitive analysis", "Market forecasting"]
+    },
+    {
+      title: "Scientific Discovery",
+      description: "Accelerate scientific breakthroughs with AI-powered hypothesis generation",
+      icon: Microscope,
+      benefits: ["Pattern discovery", "Hypothesis testing", "Cross-disciplinary insights"]
+    },
+    {
+      title: "Business Intelligence",
+      description: "Transform business data into actionable insights with autonomous analysis",
+      icon: BarChart3,
+      benefits: ["Automated reporting", "Predictive analytics", "Strategic insights"]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
-        title="AI-Quantum Hybrid Platform - Zion Tech Group"
-        description="Revolutionary AI-Quantum hybrid platform combining classical AI with quantum computing for unprecedented computational power and security."
+        title="AI-Powered Autonomous Research Assistant - Zion Tech Group"
+        description="Revolutionary AI research assistant that autonomously conducts research, analyzes data, and generates insights for academic and business applications."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -166,26 +199,26 @@ export default function AIQuantumHybridPlatform() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-4">
-                <Atom className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-full mr-4">
+                <Brain className="w-8 h-8 text-white" />
               </div>
-              <span className="text-purple-400 font-semibold">AI-Quantum Hybrid Platform</span>
+              <span className="text-blue-400 font-semibold">AI Autonomous Research Assistant</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              The Future of
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"> Computing</span>
+              Research
+              <span className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 bg-clip-text text-transparent"> Reimagined</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Unlock unprecedented computational power with our revolutionary AI-Quantum hybrid platform. 
-              Combining classical AI with quantum computing for the next generation of problem-solving.
+              Transform your research capabilities with our AI-powered autonomous research assistant. 
+              Conduct comprehensive research, analyze data, and generate insights automatically.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -215,7 +248,7 @@ export default function AIQuantumHybridPlatform() {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the power of AI-Quantum integration with cutting-edge features designed for the future
+              Experience the future of research with AI-powered automation and intelligent analysis
             </p>
           </motion.div>
           
@@ -227,9 +260,9 @@ export default function AIQuantumHybridPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg w-fit mb-4">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -254,7 +287,7 @@ export default function AIQuantumHybridPlatform() {
               Comprehensive Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From quantum machine learning to post-quantum cryptography, we provide end-to-end AI-Quantum solutions
+              From literature review automation to peer review assistance, we provide end-to-end research support
             </p>
           </motion.div>
           
@@ -266,10 +299,10 @@ export default function AIQuantumHybridPlatform() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className="flex items-start mb-6">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mr-4">
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg mr-4">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -291,7 +324,7 @@ export default function AIQuantumHybridPlatform() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Use Cases Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -302,10 +335,59 @@ export default function AIQuantumHybridPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technologies
+              Research Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Built on the latest advancements in quantum computing and artificial intelligence
+              Transform research across multiple domains with AI-powered automation
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.title}</h3>
+                </div>
+                <p className="text-gray-400 mb-6">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Technologies
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Built on cutting-edge AI and machine learning technologies
             </p>
           </motion.div>
           
@@ -317,7 +399,7 @@ export default function AIQuantumHybridPlatform() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700 text-center hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700 text-center hover:border-blue-500/50 transition-all duration-300"
               >
                 <p className="text-gray-300 text-sm font-medium">{tech}</p>
               </motion.div>
@@ -327,7 +409,7 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -340,7 +422,7 @@ export default function AIQuantumHybridPlatform() {
               Competitive Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Access to quantum computing power at competitive market rates
+              Access to AI-powered research assistance at competitive market rates
             </p>
           </motion.div>
           
@@ -354,13 +436,13 @@ export default function AIQuantumHybridPlatform() {
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
+                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
                     : 'border-gray-700'
-                } hover:border-purple-500/50 transition-all duration-300`}
+                } hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -388,7 +470,7 @@ export default function AIQuantumHybridPlatform() {
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
+                      ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
@@ -401,7 +483,7 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-900/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -410,15 +492,15 @@ export default function AIQuantumHybridPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
+              Ready to Transform Your Research?
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Join the quantum revolution and transform your computational capabilities with our AI-Quantum hybrid platform
+              Join the research revolution and accelerate your discoveries with our AI-powered autonomous research assistant
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />

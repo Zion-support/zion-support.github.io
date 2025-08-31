@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-=======
-import React, { useState, useRef, useEffect, useCallback } from 'react';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -12,29 +8,18 @@ import {
   Mic, 
   MicOff, 
   Send, 
-<<<<<<< HEAD
-=======
   Bot, 
   User, 
   Sparkles,
   Settings,
-  Mic,
-  MicOff,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Paperclip,
-  Bot,
-  User,
-  Settings,
   Lightbulb,
-<<<<<<< HEAD
   Moon,
-  Sun
-=======
+  Sun,
   TrendingUp,
   Shield,
   Clock,
   Star
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 interface ChatMessage {
@@ -61,13 +46,8 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enableSuggestions?: boolean;
 }
 
-<<<<<<< HEAD
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enabled = true,
-=======
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({ 
-  enabled = true, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   position = 'bottom-right',
   theme = 'auto',
   maxMessages = 50,
