@@ -115,7 +115,9 @@ export function AppFooter() {
     { name: "FAQ", href: "/faq", icon: HelpCircle },
     { name: "Status Page", href: "/status", icon: Activity },
     { name: "API Documentation", href: "/api-docs", icon: Code },
-    { name: "Community Forum", href: "/community", icon: Users }
+    { name: "Community Forum", href: "/community", icon: Users },
+    { name: "Training", href: "/training", icon: GraduationCap },
+    { name: "Documentation", href: "/docs", icon: BookOpen }
   ];
 
   const scrollToTop = () => {
@@ -368,6 +370,9 @@ export function AppFooter() {
 
           {/* Additional Links */}
           <div className="mt-8 flex flex-wrap justify-center space-x-8 text-sm text-zion-slate-light">
+            <Link to="/get-started" className="hover:text-zion-cyan transition-colors">Get Started</Link>
+            <Link to="/pricing" className="hover:text-zion-cyan transition-colors">Pricing</Link>
+            <Link to="/contact" className="hover:text-zion-cyan transition-colors">Contact</Link>
             <Link to="/privacy" className="hover:text-zion-cyan transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-zion-cyan transition-colors">Terms of Service</Link>
             <Link to="/cookies" className="hover:text-zion-cyan transition-colors">Cookie Policy</Link>
