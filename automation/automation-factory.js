@@ -30,20 +30,8 @@ class AutomationFactory {
       const status = {
   timestamp: new Date().toISOString(),
         runningScripts: Object.fromEntries(this.runningScripts),
-  <<<<<<< HEAD
         totalScripts: this.scripts.size
-      
-
-};
-      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {
-      this.log(`Error saving status: ${error.message}`)}
-  totalScripts: this.scripts.size
-      
-
-
-
-
-};
+      };
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
     } catch (error) {
       this.log(`Error saving status: ${error.message}`);
@@ -96,19 +84,8 @@ class CodeQualityMonitor {
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
-  <<<<<<< HEAD
       lastUpdated: new Date().toISOString()
-    
-
-};
-    this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
-  lastUpdated: new Date().toISOString()
-    
-
-
-
-
-};
+    };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);

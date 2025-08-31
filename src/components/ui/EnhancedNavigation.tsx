@@ -45,10 +45,7 @@ const navigation: NavigationItem[] = [
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security protocols' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Scalable cloud infrastructure' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' },
-      { name: 'AI Workflow Automation', href: '/services/ai-enterprise-workflow-automation', description: 'Intelligent business process automation' },
-      { name: 'Customer Intelligence', href: '/services/ai-customer-intelligence-platform', description: 'AI-powered customer insights' },
-      { name: 'AI Trading Platform', href: '/services/ai-financial-trading-platform', description: 'Intelligent financial trading' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' }
     ]
   },
   {
@@ -277,13 +274,8 @@ export const EnhancedNavigation: React.FC = () => {
                   <Search className="w-5 h-5" />
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+
+              {/* Search */}
               <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
                 <Search className="w-5 h-5" />
               </button>
@@ -337,6 +329,10 @@ export const EnhancedNavigation: React.FC = () => {
             >
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Navigation Items */}
+=======
+              {/* Mobile Navigation */}
+              <div className="space-y-4">
+>>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (
@@ -385,6 +381,7 @@ export const EnhancedNavigation: React.FC = () => {
                     )}
                   </div>
                 ))}
+
               </div>
 
               {/* Mobile CTA */}

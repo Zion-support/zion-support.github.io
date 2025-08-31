@@ -15,8 +15,7 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
-        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
-  and innovative IT services for the healthcare industry.'
+        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
 };
     static KEYWORD_MAPPINGS = {
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
@@ -50,31 +49,49 @@ export class SEOOptimizer {
             canonicalUrl,
             structuredData
         };
+    }
+
     static generateTitle(path) {
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
+        }
         const pathSegments = path.split('/').filter(Boolean);
-        if (pathSegments.length === 0)
-            return baseTitle;
+        
+        if (path === '/') {
+            return `${this.siteName} - Revolutionary Micro SaaS & AI Solutions`;
+        }
+        
+        if (pathSegments.length === 0) {
+            return this.siteName;
+        }
+        
         const lastSegment = pathSegments[pathSegments.length - 1];
         const formattedSegment = lastSegment
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
         return `${formattedSegment} - ${baseTitle}`;
+    }
+
     static generateDescription(path) {
         return this.DEFAULT_META_DESCRIPTIONS[path] ||
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
+    }
+
     static generateKeywords(path) {
         return this.KEYWORD_MAPPINGS[path] ||
             ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
+    }
+
     static generateCanonicalUrl(path) {
         const baseUrl = 'https://ziontechgroup.com';
         return `${baseUrl}${path}`;
+    }
+
     static generateStructuredData(path) {
         const baseData = {
-  "@context": "https://schema.org",
+            "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -86,6 +103,7 @@ export class SEOOptimizer {
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 }
         };
+
         // Add specific structured data based on page type
         if (path === '/') {
             return {
@@ -108,7 +126,9 @@ export class SEOOptimizer {
                     "telephone": "+1-302-464-0950",
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
+                }
             };
+        }
         if (path.startsWith('/services/')) {
             return {
                 ...baseData,
@@ -117,10 +137,15 @@ export class SEOOptimizer {
                 "provider": {
                     "@type": "Organization",
                     "name": "Zion Tech Group"
+                }
             };
+        }
         return baseData;
+    }
+
     static analyzeContentQuality(content, page) {
         const issues = [];
+        
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
@@ -129,6 +154,7 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             });
+        }
         // Check for missing meta description
         if (!content.includes('name="description"')) {
             issues.push({
@@ -137,6 +163,7 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
+        }
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
@@ -146,6 +173,7 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
             });
+        }
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
@@ -154,16 +182,22 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
+        }
         // Check for minimal content
-        const textContent = content.replace(/<[^>]*>/g, '').trim();
-        if (textContent.length < 300) {
+        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
+        
+        if (wordCount < 300) {
             issues.push({
                 page,
                 issue: 'minimal-content',
                 severity: 'medium',
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value'
+                suggestedFix: 'Add more content to improve SEO and user engagement'
             });
+        }
         return issues;
+    }
+
     static generateMetaTags(seoData) {
         return `
     <title>${seoData.title}</title>
@@ -186,5 +220,7 @@ export class SEOOptimizer {
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
+    }
+}
+
 export const seoOptimizer = new SEOOptimizer();
-}}}}}}}}}}}}}}}}}}}}
