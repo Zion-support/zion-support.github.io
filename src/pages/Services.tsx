@@ -111,37 +111,37 @@ export default function Services() {
 
   const featuredServices = [
     {
+      title: "AI Business Process Automation",
+      description: "Revolutionize business operations with 85% time savings and 60% cost reduction",
+      price: "From $299/month",
+      features: ["Workflow Automation", "AI Decision Making", "Process Optimization"],
+      href: "/services/ai-business-process-automation-platform",
+      color: "from-blue-400 to-purple-500",
+      popular: true
+    },
+    {
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer experiences with 45% satisfaction increase and 35% churn reduction",
+      price: "From $199/month",
+      features: ["Journey Mapping", "Sentiment Analysis", "Predictive Analytics"],
+      href: "/services/ai-customer-experience-analytics-platform",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      title: "AI Financial Risk Management",
+      description: "Advanced risk management with 70% loss reduction and 99.8% fraud detection",
+      price: "From $399/month",
+      features: ["Real-time Monitoring", "Fraud Detection", "Compliance Automation"],
+      href: "/services/ai-financial-risk-management-platform",
+      color: "from-blue-400 to-cyan-500"
+    },
+    {
       title: "AI Legal Document Analysis",
       description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
       price: "From $299/month",
       features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
       href: "/services/ai-legal-document-analysis",
-      color: "from-blue-400 to-purple-500",
-      popular: true
-    },
-    {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
       color: "from-green-400 to-blue-500"
-    },
-    {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
-      price: "From $399/month",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
-      href: "/services/ai-supply-chain-optimization-enhanced",
-      color: "from-blue-400 to-indigo-500"
-    },
-    {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500"
     }
   ];
 

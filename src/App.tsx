@@ -98,6 +98,11 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
 const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-manufacturing-platform'));
 
+// New Innovative AI Services 2026
+const AIBusinessProcessAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-business-process-automation-platform'));
+const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
+const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
+
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
@@ -116,7 +121,6 @@ const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./page
 
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
-const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
 
 // Additional services
 const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-cybersecurity-platform'));
@@ -299,6 +303,9 @@ function App() {
                     <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
                     <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-business-process-automation-platform" element={<ModernLayout><AIBusinessProcessAutomationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
                     <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

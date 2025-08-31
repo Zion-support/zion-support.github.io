@@ -3,96 +3,94 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
-  Users, 
+  Zap, 
+  Workflow, 
   BarChart3, 
-  TrendingUp, 
-  Target, 
-  MessageCircle, 
-  Eye, 
-  Heart,
+  Users, 
+  Shield, 
+  Clock, 
+  DollarSign,
   CheckCircle,
   ArrowRight,
+  Play,
+  Pause,
+  Settings,
+  Monitor,
+  TrendingUp,
+  Target,
+  Rocket,
   Star,
-  Activity,
-  Smartphone,
-  Globe,
-  Zap,
   Phone,
   Mail,
-  MapPin,
-  Monitor,
-  PieChart,
-  LineChart,
-  ShoppingCart
+  MapPin
 } from 'lucide-react';
 
-export default function AICustomerExperienceAnalyticsPlatform() {
+export default function AIBusinessProcessAutomationPlatform() {
   const features = [
-    "Real-time Customer Journey Mapping",
-    "AI-Powered Sentiment Analysis",
-    "Predictive Customer Behavior Modeling",
-    "Multi-channel Experience Tracking",
-    "Automated Customer Feedback Analysis",
-    "Personalization Engine & Recommendations",
-    "Customer Lifetime Value Prediction",
-    "Churn Risk Assessment & Prevention",
-    "Voice & Text Analytics",
-    "Advanced Reporting & Dashboards"
+    "Intelligent Workflow Design & Orchestration",
+    "AI-Powered Decision Making & Routing",
+    "Real-time Process Monitoring & Analytics",
+    "Automated Document Processing & Extraction",
+    "Smart Form Generation & Validation",
+    "Multi-department Process Coordination",
+    "Compliance & Audit Trail Management",
+    "Integration with 100+ Business Systems",
+    "Mobile-First Process Execution",
+    "Predictive Process Optimization"
   ];
 
   const benefits = [
-    "Increase customer satisfaction by 45%",
-    "Reduce customer churn by 35%",
-    "Boost customer lifetime value by 60%",
-    "Improve response time by 80%",
-    "Enhance personalization accuracy by 90%",
-    "Increase conversion rates by 55%"
+    "Reduce manual processing time by 85%",
+    "Increase process accuracy to 99.5%",
+    "Cut operational costs by 60%",
+    "Improve employee productivity by 75%",
+    "Accelerate decision-making by 90%",
+    "Ensure 100% compliance adherence"
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses starting with CX analytics",
+      description: "Perfect for small teams and basic automation needs",
       features: [
-        "Up to 10,000 customer interactions/month",
-        "Basic sentiment analysis",
-        "Standard reporting dashboard",
+        "Up to 10 automated workflows",
+        "Basic AI decision making",
+        "Standard integrations",
         "Email support",
-        "3 user seats"
+        "Basic analytics dashboard"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing companies with advanced CX needs",
+      description: "Ideal for growing businesses with complex processes",
       features: [
-        "Up to 100,000 customer interactions/month",
-        "Advanced AI analytics",
-        "Multi-channel tracking",
+        "Up to 50 automated workflows",
+        "Advanced AI decision making",
+        "100+ system integrations",
         "Priority support",
-        "Custom dashboards",
-        "10 user seats",
-        "API access"
+        "Advanced analytics & reporting",
+        "Custom workflow templates"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,499",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with enterprise-scale CX requirements",
+      description: "For large organizations with enterprise-scale automation",
       features: [
-        "Unlimited customer interactions",
+        "Unlimited automated workflows",
         "Custom AI model training",
-        "Advanced predictive analytics",
+        "Unlimited integrations",
         "24/7 dedicated support",
         "Custom development",
-        "Unlimited user seats",
-        "White-label solutions"
+        "Advanced security features",
+        "Multi-tenant architecture"
       ],
       popular: false
     }
@@ -100,78 +98,51 @@ export default function AICustomerExperienceAnalyticsPlatform() {
 
   const useCases = [
     {
-      title: "E-commerce Customer Journey",
-      description: "Track customer behavior across your online store to optimize conversion funnels and reduce cart abandonment",
-      icon: ShoppingCart,
-      impact: "Increase conversions by 40%"
+      title: "HR Onboarding Automation",
+      description: "Streamline employee onboarding with automated document processing, task assignments, and compliance checks",
+      icon: Users,
+      savings: "Save 15 hours per new hire"
     },
     {
-      title: "Customer Support Optimization",
-      description: "Analyze support interactions to identify pain points and improve response quality and speed",
-      icon: MessageCircle,
-      impact: "Reduce support tickets by 30%"
+      title: "Invoice Processing",
+      description: "Automate invoice capture, approval workflows, and payment processing with AI-powered validation",
+      icon: DollarSign,
+      savings: "Reduce processing time by 80%"
     },
     {
-      title: "Product Experience Enhancement",
-      description: "Understand how customers use your products to identify improvement opportunities and new features",
+      title: "Customer Service Routing",
+      description: "Intelligently route customer inquiries to the right agents based on complexity and expertise",
+      icon: Monitor,
+      savings: "Improve response time by 70%"
+    },
+    {
+      title: "Sales Process Management",
+      description: "Automate lead scoring, follow-up scheduling, and opportunity tracking",
       icon: Target,
-      impact: "Boost product adoption by 50%"
-    },
-    {
-      title: "Marketing Campaign Optimization",
-      description: "Track campaign performance and customer engagement to optimize marketing spend and messaging",
-      icon: TrendingUp,
-      impact: "Improve ROI by 65%"
+      savings: "Increase conversion rates by 40%"
     }
   ];
 
   const stats = [
-    { number: '1M+', label: 'Customer Interactions Analyzed', icon: Activity },
-    { number: '95%', label: 'Sentiment Analysis Accuracy', icon: Brain },
-    { number: '45%', label: 'Average Satisfaction Increase', icon: Star },
-    { number: '35%', label: 'Churn Reduction', icon: TrendingUp }
-  ];
-
-  const analyticsTypes = [
-    {
-      name: "Behavioral Analytics",
-      description: "Track how customers interact with your products and services",
-      icon: Eye,
-      metrics: ["Click patterns", "Navigation paths", "Feature usage", "Session duration"]
-    },
-    {
-      name: "Sentiment Analysis",
-      description: "Understand customer emotions and satisfaction levels",
-      icon: Heart,
-      metrics: ["Emotion detection", "Satisfaction scoring", "Feedback analysis", "Trend identification"]
-    },
-    {
-      name: "Predictive Analytics",
-      description: "Forecast customer behavior and identify opportunities",
-      icon: TrendingUp,
-      metrics: ["Churn prediction", "LTV forecasting", "Next-best-action", "Demand prediction"]
-    },
-    {
-      name: "Journey Analytics",
-      description: "Map complete customer experiences across touchpoints",
-      icon: Globe,
-      metrics: ["Touchpoint mapping", "Journey optimization", "Bottleneck identification", "Experience scoring"]
-    }
+    { number: '500+', label: 'Companies Automated', icon: Users },
+    { number: '10,000+', label: 'Workflows Created', icon: Workflow },
+    { number: '99.5%', label: 'Process Accuracy', icon: CheckCircle },
+    { number: '85%', label: 'Time Savings', icon: Clock }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Experience Analytics Platform - Zion Tech Group</title>
-        <meta name="description" content="Transform customer experiences with AI-powered analytics. Increase satisfaction by 45%, reduce churn by 35%, and boost customer lifetime value by 60%." />
-        <meta name="keywords" content="customer experience analytics, AI analytics, customer journey mapping, sentiment analysis, predictive analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-customer-experience-analytics-platform" />
+        <title>AI Business Process Automation Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your business operations with our AI-powered process automation platform. Reduce costs by 60%, improve accuracy to 99.5%, and accelerate decision-making by 90%." />
+        <meta name="keywords" content="AI automation, business process automation, workflow automation, process optimization, AI decision making" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-business-process-automation-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 py-24">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -180,21 +151,21 @@ export default function AICustomerExperienceAnalyticsPlatform() {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
-                <Brain className="w-4 h-4 mr-2 text-purple-400" />
-                AI-Powered Analytics
+                <Brain className="w-4 h-4 mr-2 text-blue-400" />
+                AI-Powered Automation
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                AI Customer Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Analytics Platform</span>
+                AI Business Process <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Automation Platform</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Unlock the power of customer data with AI-driven analytics that reveal insights, predict behavior, 
-                and transform customer experiences. Drive growth through data-driven decisions.
+                Revolutionize your business operations with intelligent automation that learns, adapts, and optimizes 
+                your processes in real-time. Achieve unprecedented efficiency and accuracy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
                 >
                   Start Free Trial
                 </motion.button>
@@ -224,7 +195,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   className="text-center"
                 >
                   <div className="flex justify-center mb-4">
-                    <stat.icon className="w-12 h-12 text-purple-400" />
+                    <stat.icon className="w-12 h-12 text-blue-400" />
                   </div>
                   <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
@@ -245,10 +216,10 @@ export default function AICustomerExperienceAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Analytics</span>
+                Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive analytics tools powered by artificial intelligence to understand and optimize every aspect of customer experience.
+                Everything you need to automate, optimize, and transform your business processes with AI intelligence.
               </p>
             </motion.div>
 
@@ -260,9 +231,9 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start space-x-4 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+                  className="flex items-start space-x-4 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -274,7 +245,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
           </div>
         </section>
 
-        {/* Analytics Types Section */}
+        {/* Benefits Section */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -285,59 +256,10 @@ export default function AICustomerExperienceAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Analytics <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Types</span>
+                Measurable <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Results</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Four powerful analytics approaches that work together to give you complete customer insights.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {analyticsTypes.map((type, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mr-4">
-                      <type.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white">{type.name}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">{type.description}</p>
-                  <div className="space-y-2">
-                    {type.metrics.map((metric, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span className="text-gray-300 text-sm">{metric}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Measurable <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Impact</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the real results that AI-powered customer experience analytics deliver to your business.
+                See the real impact of AI-powered automation on your business performance and bottom line.
               </p>
             </motion.div>
 
@@ -362,7 +284,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-black/20">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -372,10 +294,10 @@ export default function AICustomerExperienceAnalyticsPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Real-World <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Applications</span>
+                Real-World <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Applications</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how leading companies are using our platform to transform customer experiences and drive business growth.
+                Discover how leading companies are transforming their operations with our AI automation platform.
               </p>
             </motion.div>
 
@@ -387,17 +309,17 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-pink-400/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <useCase.icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm">
-                    {useCase.impact}
+                    {useCase.savings}
                   </div>
                 </motion.div>
               ))}
@@ -406,7 +328,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -419,7 +341,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your customer experience analytics needs. Start small, scale as you grow.
+                Choose the perfect plan for your business automation needs. Start free, scale as you grow.
               </p>
             </motion.div>
 
@@ -475,7 +397,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black/20">
+        <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -484,24 +406,24 @@ export default function AICustomerExperienceAnalyticsPlatform() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Experiences?
+                Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join hundreds of companies that have revolutionized their customer experience with AI-powered analytics. 
-                Start your free trial today and see the impact in just 30 days.
+                Join hundreds of companies that have transformed their operations with AI-powered automation. 
+                Start your free trial today and see the results in just 30 days.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-transparent border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                  className="bg-transparent border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -511,7 +433,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
+        <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
@@ -524,20 +446,20 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                   Need Help Getting Started?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Our customer experience experts are here to help you implement the perfect analytics strategy for your business.
+                  Our automation experts are here to help you design and implement the perfect automation strategy for your business.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                   <div className="flex items-center justify-center space-x-3">
-                    <Phone className="w-6 h-6 text-purple-400" />
+                    <Phone className="w-6 h-6 text-blue-400" />
                     <span className="text-white">+1 302 464 0950</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3">
-                    <Mail className="w-6 h-6 text-purple-400" />
+                    <Mail className="w-6 h-6 text-blue-400" />
                     <span className="text-white">kleber@ziontechgroup.com</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3">
-                    <MapPin className="w-6 h-6 text-purple-400" />
+                    <MapPin className="w-6 h-6 text-blue-400" />
                     <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
@@ -545,7 +467,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="https://ziontechgroup.com/contact"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Contact Us
                     <ArrowRight className="w-5 h-5 ml-2" />
