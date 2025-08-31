@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen import { SEO              } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen               } from 'lucide-react.ts';
 import { SEO               } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function EmployeeSchedulingSaaS(...args: []):  {
   const features = [
     {
@@ -246,20 +231,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Everything you need to manage your workforce efficiently and effectively
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -296,20 +270,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Intelligent tools that make scheduling simple and efficient
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {schedulingCapabilities.map((capability, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {schedulingCapabilities.map((capability, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map((capability, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -346,20 +309,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Flexible scheduling solutions that adapt to your business needs
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -396,20 +348,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Professional scheduling tools that transform how you manage your workforce
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -448,20 +389,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Choose the scheduling plan that fits your business size and needs
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
-=======
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

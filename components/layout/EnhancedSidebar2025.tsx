@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { useNavigate              } from 'react-router-dom.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
-  Phone, Mail, MapPin, ChevronRight, ChevronDown,
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
-  Award, Clock, Heart, Lightbulb, Users, FileText,
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-=======
 import React, { useState, useEffect              } from 'react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
@@ -49,12 +34,6 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-<<<<<<< HEAD
-  category?: string}
-=======
-<<<<<<< HEAD
-  category?: string;
-=======
 category?: string;
 
 
@@ -69,8 +48,6 @@ category?: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const sidebarSections = [
   {
@@ -282,27 +259,8 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-<<<<<<< HEAD
-          { name: 'Training Programs', href: '/training' },;
-=======
-<<<<<<< HEAD
-          { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-
-    ]
-
-];
-
-interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
-
-  isOpen: boolean;
-  onClose: ()              => void;
-=======
 { name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
 },;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
         ];
@@ -320,22 +278,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const toggleSection = (sectionTitle: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionTitle)) {
-<<<<<<< HEAD
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-
-    setExpandedSections(newExpanded);
-  };
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
@@ -349,28 +291,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     );
   );
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const toggleItem = (itemName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemName)) {
-<<<<<<< HEAD
-      newExpanded.delete(itemName);
-    } else {
-      newExpanded.add(itemName);
-
-    setExpandedItems(newExpanded);
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(itemName)} else {
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};

@@ -29,7 +29,7 @@ export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => 
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
+export const updateCartItemQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
   if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
@@ -46,37 +46,32 @@ export const getCartItemCount = (cart: CartItem[]): number => {
   return cart.reduce((total, item) => total + item.quantity, 0);
 };
 
-export const getCartSubtotal = (cart: CartItem[]): number => {
-  return calculateCartTotal(cart);
+export const getCartItemById = (cart: CartItem[], itemId: string): CartItem | undefined => {
+  return cart.find(item => item.id === itemId);
 };
 
-export const getCartTax = (cart: CartItem[], taxRate: number = 0.08): number => {
-  return getCartSubtotal(cart) * taxRate;
-};
-
-export const getCartTotal = (cart: CartItem[], taxRate: number = 0.08): number => {
-  return getCartSubtotal(cart) + getCartTax(cart, taxRate);
-};
-
-export const isCartEmpty = (cart: CartItem[]): boolean => {
-  return cart.length === 0;
+export const isItemInCart = (cart: CartItem[], itemId: string): boolean => {
+  return cart.some(item => item.id === itemId);
 };
 
 export const getCartItemsByType = (cart: CartItem[], type: CartItem['type']): CartItem[] => {
   return cart.filter(item => item.type === type);
 };
 
-export const getCartSummary = (cart: CartItem[]) => {
-  const subtotal = getCartSubtotal(cart);
-  const tax = getCartTax(cart);
-  const total = getCartTotal(cart);
-  const itemCount = getCartItemCount(cart);
+export const getCartItemsByCategory = (cart: CartItem[], category: string): CartItem[] => {
+  return cart.filter(item => item.category === category);
+};
 
-  return {
-    subtotal,
-    tax,
-    total,
-    itemCount,
-    isEmpty: isCartEmpty(cart)
-  };
+export const calculateCartSubtotal = (items: CartItem[]): number => {
+  return calculateCartTotal(items);
+};
+
+export const calculateCartTax = (items: CartItem[], taxRate: number = 0.08): number => {
+  return calculateCartSubtotal(items) * taxRate;
+};
+
+export const calculateCartTotalWithTax = (items: CartItem[], taxRate: number = 0.08): number => {
+  const subtotal = calculateCartSubtotal(items);
+  const tax = calculateCartTax(items, taxRate);
+  return subtotal + tax;
 };

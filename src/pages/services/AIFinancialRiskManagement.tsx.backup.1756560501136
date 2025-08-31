@@ -36,18 +36,6 @@ import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Trendi
       price: '$799/mo',
       details: ['Up to 1,000 accounts', 'Basic AI risk assessment', 'Standard reporting', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Risk Professional',
-      price: '$1,999/mo',
-      details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Enterprise Risk',
-      price: '$5,999/mo',
-      details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
     { 
       name: 'Risk Professional', 
       price: '$1,999/mo', 
@@ -58,7 +46,6 @@ import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Trendi
       price: '$5,999/mo', ;
       details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

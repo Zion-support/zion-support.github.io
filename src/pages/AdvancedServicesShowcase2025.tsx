@@ -1,101 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Shield, 
-  Rocket, 
-  Users, 
-  BarChart3, 
-  Code, 
-  Server, 
-  Globe, 
-  Zap, 
-  Lock, 
-  ShieldCheck,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Target,
-  Handshake,
-  Lightbulb,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Award,
-  TrendingDown,
-  Users2,
-  BarChart,
-  PieChart,
-  Activity,
-  List,
-  Grid,
-  BookOpen,
-  ShoppingCart,
-  Home,
-  Truck
-} from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
-
-const AdvancedServicesShowcase2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
-  const allServices = ADVANCED_INNOVATIVE_SERVICES_2025;
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' },
-    { id: 'AI & Supply Chain', name: 'AI & Supply Chain', count: allServices.filter(s => s.category === 'AI & Supply Chain').length, icon: '📦', color: 'from-zion-blue to-zion-cyan' },
-    { id: 'AI & Financial Technology', name: 'AI & Financial Technology', count: allServices.filter(s => s.category === 'AI & Financial Technology').length, icon: '💰', color: 'from-zion-green to-zion-emerald' },
-    { id: 'AI & Content Marketing', name: 'AI & Content Marketing', count: allServices.filter(s => s.category === 'AI & Content Marketing').length, icon: '✍️', color: 'from-zion-orange to-zion-red' },
-    { id: 'AI & Human Resources', name: 'AI & Human Resources', count: allServices.filter(s => s.category === 'AI & Human Resources').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' },
-    { id: 'AI & IoT', name: 'AI & IoT', count: allServices.filter(s => s.category === 'AI & IoT').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
-    { id: 'AI & Project Management', name: 'AI & Project Management', count: allServices.filter(s => s.category === 'AI & Project Management').length, icon: '📊', color: 'from-zion-purple to-zion-indigo' },
-    { id: 'AI & Customer Experience', name: 'AI & Customer Experience', count: allServices.filter(s => s.category === 'AI & Customer Experience').length, icon: '🎯', color: 'from-zion-blue to-zion-green' },
-    { id: 'AI & DevOps', name: 'AI & DevOps', count: allServices.filter(s => s.category === 'AI & DevOps').length, icon: '⚙️', color: 'from-zion-gray to-zion-blue' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-zion-green to-zion-blue' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-zion-purple to-zion-indigo' },
-    { id: 'AI & Legal Technology', name: 'AI & Legal Technology', count: allServices.filter(s => s.category === 'AI & Legal Technology').length, icon: '⚖️', color: 'from-zion-blue to-zion-purple' },
-    { id: 'AI & Education', name: 'AI & Education', count: allServices.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-zion-green to-zion-blue' },
-    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s => s.category === 'AI & Manufacturing').length, icon: '🏭', color: 'from-zion-gray to-zion-blue' },
-    { id: 'AI & Retail', name: 'AI & Retail', count: allServices.filter(s => s.category === 'AI & Retail').length, icon: '🛒', color: 'from-zion-orange to-zion-red' },
-    { id: 'AI & Real Estate', name: 'AI & Real Estate', count: allServices.filter(s => s.category === 'AI & Real Estate').length, icon: '🏠', color: 'from-zion-blue to-zion-green' },
-    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s => s.category === 'AI & Transportation').length, icon: '🚚', color: 'from-zion-blue to-zion-cyan' },
-    { id: 'AI & Energy', name: 'AI & Energy', count: allServices.filter(s => s.category === 'AI & Energy').length, icon: '⚡', color: 'from-zion-yellow to-zion-green' }
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO               } from '../components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025               } from '../data/advancedMicroSaasServices2025';
-import { SPECIALIZED_IT_SERVICES_2025               } from '../data/specializedITServices2025';
-import { ADVANCED_AI_SERVICES_2025               } from '../data/advancedAIServices2025';
-
-const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [searchTerm, setSearchTerm] = useState<any>('');
-
-  const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),
-    ...SPECIALIZED_IT_SERVICES_2025.map(service               => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),
-    ...ADVANCED_AI_SERVICES_2025.map(service               => ({ ...service, source: 'AI Solutions' }));
-=======;
 import React, { useState } from 'react.ts';
 import { SEO              } from '../components/SEO';
 import { ADVANCED_MICRO_SAAS_SERVICES_2025              } from '../data/advancedMicroSaasServices2025';
@@ -110,8 +12,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
     ...SPECIALIZED_IT_SERVICES_2025.map(service              => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),;
     ...ADVANCED_AI_SERVICES_2025.map(service              => ({ ...service, source: 'AI Solutions' }));
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -393,37 +293,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            >
-              {sortedServices.map((service) => (
-                <motion.div
-                  key={service.id}
-                  variants={itemVariants}
-                  className={`bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    viewMode === 'list' ? 'flex' : ''
-                  }`}
-                >
-                  {/* Service Image */}
-                  <div className={`relative ${viewMode === 'list' ? 'w-48 h-32' : 'h-48'}`}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-zion-cyan text-white px-2 py-1 rounded-full text-xs font-semibold">
-                        {service.aiScore}% AI
-                      </div>
-                    </div>
-                  </div>
-=======
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
@@ -441,7 +310,6 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
                   {service.currency}{service.price.toLocaleString()}
                 </span>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
                   {/* Service Content */}
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>

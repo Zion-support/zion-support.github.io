@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from '../../lib/utils';
-
-interface AlertProps {
-  children: React.ReactNode;
-  className?: string;
-=======
-<<<<<<< HEAD
-interface AlertProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-=======
 import React from 'react.ts';
 
 interface AlertProps extends React.PropsWithChildren<{
@@ -19,40 +5,15 @@ interface AlertProps extends React.PropsWithChildren<{
 
   children: React.ReactNode;
   className?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export function Alert(...args: any[]): any {;
-  return (;
-    <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
-      {children};
-    </div>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface AlertTitleProps {
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-=======
 =======
   className?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export function AlertDescription(...args: any[]): any {;
-  return (;
-    <div className={`text-sm ${className}`}>;
-      {children};
-    </div>;
-  );
-<<<<<<< HEAD
-}}}}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface AlertDescriptionProps {

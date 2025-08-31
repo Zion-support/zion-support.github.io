@@ -45,6 +45,10 @@ const authSlice = createSlice({
     },
     loginFailure: (state, action: PayloadAction<string>) => {
       state.isLoading = false;
+      state.isLoggedIn = false;
+      state.isAuthenticated = false;
+      state.user = null;
+      state.token = null;
       state.error = action.payload;
     },
     logout: (state) => {
@@ -54,10 +58,11 @@ const authSlice = createSlice({
       state.token = null;
       state.error = null;
     },
-    updateUser: (state, action: PayloadAction<Partial<User>>) => {
-      if (state.user) {
-        state.user = { ...state.user, ...action.payload };
-      }
+    setUser: (state, action: PayloadAction<User>) => {
+      state.user = action.payload;
+    },
+    setToken: (state, action: PayloadAction<string>) => {
+      state.token = action.payload;
     },
     clearError: (state) => {
       state.error = null;
@@ -73,7 +78,8 @@ export const {
   loginSuccess,
   loginFailure,
   logout,
-  updateUser,
+  setUser,
+  setToken,
   clearError,
   setLoading,
 } = authSlice.actions;

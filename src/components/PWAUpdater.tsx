@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-interface PWAUpdaterProps {
-=======
 import React, { useEffect, useState } from 'react.ts';
-<<<<<<< HEAD
-import { RefreshCw, X, CheckCircle export function PWAUpdater(...args: any[]): any {
-=======
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info               } from 'lucide-react.ts';
 
 interface PWAUpdaterProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   autoCheck?: boolean;
   checkInterval?: number;
   showUpdatePrompt?: boolean;
@@ -37,12 +27,8 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
           setRegistration(reg);
-<<<<<<< HEAD
-          console.log('Service Worker registered successfully:', reg);
-=======
           console.log('Service Worker registered successfully: anyanyanyanyanyanyanyanyanyanyanyanyanyany', reg);
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // Check for updates
           if (autoCheck) {
             checkForUpdates(reg);
@@ -80,12 +66,8 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
         });
     }
   }, [autoCheck, showUpdatePrompt]);
-<<<<<<< HEAD
-  useEffect(() => {
-=======
 
   useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (autoCheck && registration) {
       const interval = setInterval(() => {
         checkForUpdates(registration);
@@ -93,12 +75,8 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       return () => clearInterval(interval);
     }
   }, [autoCheck, checkInterval, registration]);
-<<<<<<< HEAD
-  const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
-=======
 
   const checkForUpdates = async (reg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyServiceWorkerRegistration)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     try {
       await reg.update();
       console.log('Service Worker update check completed');

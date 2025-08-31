@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target export default function AIBusinessIntelligence(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target              } from 'lucide-react.ts';
 
 export default function AIBusinessIntelligence(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -23,15 +17,6 @@ export default function AIBusinessIntelligence(...args[]: any):  {
     {
       icon: Zap,
       title: 'Automated Intelligence',
-<<<<<<< HEAD
-      description: 'Smart automation of business processes'
-    },
-    {
-      icon: Eye,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and identify opportunities'
-
-=======
       description: 'Smart automation of business processes';
     },;
     {;
@@ -39,7 +24,6 @@ export default function AIBusinessIntelligence(...args[]: any):  {
       title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -56,15 +40,6 @@ export default function AIBusinessIntelligence(...args[]: any):  {
     {
       title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
-<<<<<<< HEAD
-      icon: Database
-    },
-    {
-      title: 'Automated Reporting',
-      description: 'Generate reports automatically with AI insights',
-      icon: Target
-
-=======
       icon: Database;
     },;
     {;
@@ -72,7 +47,6 @@ export default function AIBusinessIntelligence(...args[]: any):  {
       description: 'Generate reports automatically with AI insights',;
       icon: Target;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -564,25 +538,13 @@ export default function AIBusinessIntelligence(...args[]: any):  {
                   Schedule Demo
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Missing icon component
 const CheckCircle = ({ className }: { className?: string }) => (;

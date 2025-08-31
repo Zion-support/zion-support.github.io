@@ -1,20 +1,7 @@
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../src/data/innovativeServices2025";
-const InnovativeServicesShowcase: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices           } from '../data/innovativeServices2025';
-
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
-=======;
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices          } from '../data/innovativeServices2025';
 
 const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -45,23 +32,11 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
     }
-=======
-<<<<<<< HEAD
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-=======
-    }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Filter by price range;
     if (priceRange !== 'all') {;
@@ -70,19 +45,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
       }
     }
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
     // Sort services
     switch (sortBy) {
       case 'rating':
@@ -96,19 +61,10 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
         break;
       case 'launchDate':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
         break}
-    return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
-=======
-<<<<<<< HEAD
-        break;
-=======
-        break}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className = "bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
@@ -248,21 +204,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {categories.map(category          => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category           => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -275,21 +219,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {priceRanges.map(range  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {priceRanges.map(range          => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {priceRanges.map(range           => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
@@ -300,21 +232,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {sortOptions.map(option  => (
-=======
-<<<<<<< HEAD
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-
-                {sortOptions.map(option          => (
-=======
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
               >
                 {sortOptions.map(option           => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>
@@ -365,10 +285,5 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-<<<<<<< HEAD:pages/innovative-services-2025.tsx
-export default InnovativeServicesShowcase;
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesShowcase;}}}}}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894:src/pages/InnovativeServicesShowcase.tsx.backup.1756558699799

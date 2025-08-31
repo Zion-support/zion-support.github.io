@@ -1,296 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEOOptimizer from '../../components/SEOOptimizer';
-import { 
-  Search, 
-  TrendingUp, 
-  BarChart3, 
-  Brain, 
-  Globe, 
-  Target, 
-  Zap, 
-  CheckCircle,
-  Star,
-  Users,
-  ArrowRight,
-  MapPin,
-  Phone,
-  Mail,
-  Play,
-  Eye,
-  Settings,
-  Download,
-  Share2,
-  Filter,
-  AlertTriangle,
-  Clock,
-  DollarSign,
-  Activity,
-  Target as TargetIcon,
-  Rocket,
-  Lightbulb,
-  Cog,
-  BarChart,
-  Network,
-  Server,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Monitor,
-  Smartphone,
-  Globe2,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Shield,
-  BarChart3 as AnalyticsIcon,
-  Search as SearchIcon,
-  TrendingUp as GrowthIcon,
-  CheckCircle as CheckIcon,
-  Star as StarIcon,
-  ArrowRight as ArrowIcon,
-  MapPin as LocationIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  Building2,
-  ShoppingCart,
-  Factory,
-  Leaf,
-  Activity as HealthIcon,
-  Code,
-  Palette,
-  Camera,
-  Video,
-  FileText,
-  Database,
-  Lock,
-  Key,
-  Shield as SecurityIcon,
-  Users as TeamIcon,
-  Calendar,
-  Clock3,
-  Stopwatch,
-  Hourglass,
-  Bell,
-  Info,
-  HelpCircle,
-  Wrench,
-  Tool,
-  Hammer,
-  Screwdriver,
-  Pliers,
-  Saw,
-  Drill,
-  Welder,
-  Crane,
-  Forklift,
-  Excavator,
-  Bulldozer,
-  Tractor,
-  Harvester,
-  Sprayer,
-  Planter,
-  Seeder,
-  Cultivator,
-  Plow,
-  Rake,
-  Shovel,
-  Wheelbarrow,
-  Cart,
-  Pallet,
-  Box,
-  Container,
-  Crate,
-  Barrel,
-  Tank,
-  Silo,
-  Hopper,
-  Conveyor,
-  Belt,
-  Chain,
-  Gear,
-  Motor,
-  Engine,
-  Pump,
-  Valve,
-  Pipe,
-  Hose,
-  Cable,
-  Wire,
-  Circuit,
-  Chip,
-  Sensor,
-  Microphone,
-  Speaker,
-  Display,
-  Keyboard,
-  Mouse,
-  Touchpad,
-  Joystick,
-  Gamepad,
-  Remote,
-  Controller,
-  Switch,
-  Button,
-  Dial,
-  Knob,
-  Lever,
-  Pedal,
-  Handle,
-  Grip,
-  Trigger,
-  Safety,
-  Emergency,
-  Warning,
-  Caution,
-  Danger,
-  Hazard,
-  Toxic,
-  Radioactive,
-  Biohazard,
-  Chemical,
-  Explosive,
-  Flammable,
-  Corrosive,
-  Irritant,
-  Carcinogen,
-  Mutagen,
-  Teratogen,
-  Allergen,
-  Pathogen,
-  Virus,
-  Bacteria,
-  Fungus,
-  Parasite,
-  Prion,
-  Toxin,
-  Venom,
-  Poison,
-  Drug,
-  Medicine,
-  Vaccine,
-  Antibiotic,
-  Antiviral,
-  Antifungal,
-  Antiparasitic,
-  Antitoxin,
-  Antivenom,
-  Antidote,
-  Cure,
-  Treatment,
-  Therapy,
-  Surgery,
-  Transplant,
-  Implant,
-  Prosthesis,
-  Orthosis,
-  Brace,
-  Cast,
-  Bandage,
-  Dressing,
-  Suture,
-  Staple,
-  Clip,
-  Pin,
-  Screw,
-  Plate,
-  Rod,
-  Wire as WireIcon,
-  Nail,
-  Bolt,
-  Nut,
-  Washer,
-  Spring,
-  Bearing,
-  Seal,
-  Gasket,
-  Oring,
-  Filter,
-  Screen,
-  Mesh,
-  Fabric,
-  Textile,
-  Leather,
-  Rubber,
-  Plastic,
-  Metal,
-  Wood,
-  Stone,
-  Glass,
-  Ceramic,
-  Composite,
-  Alloy,
-  Polymer,
-  Fiber,
-  Carbon,
-  Silicon,
-  Aluminum,
-  Steel,
-  Iron,
-  Copper,
-  Gold,
-  Silver,
-  Platinum,
-  Titanium,
-  Tungsten,
-  Chromium,
-  Nickel,
-  Cobalt,
-  Manganese,
-  Molybdenum,
-  Vanadium,
-  Niobium,
-  Tantalum,
-  Rhenium,
-  Osmium,
-  Iridium,
-  Palladium,
-  Rhodium,
-  Ruthenium,
-  Zirconium,
-  Hafnium,
-  Scandium,
-  Yttrium,
-  Lanthanum,
-  Actinium,
-  Thorium,
-  Protactinium,
-  Uranium,
-  Neptunium,
-  Plutonium,
-  Americium,
-  Curium,
-  Berkelium,
-  Californium,
-  Einsteinium,
-  Fermium,
-  Mendelevium,
-  Nobelium,
-  Lawrencium,
-  Rutherfordium,
-  Dubnium,
-  Seaborgium,
-  Bohrium,
-  Hassium,
-  Meitnerium,
-  Darmstadtium,
-  Roentgenium,
-  Copernicium,
-  Nihonium,
-  Flerovium,
-  Moscovium,
-  Livermorium,
-  Tennessine,
-  Oganesson
-} from 'lucide-react';
-<<<<<<< HEAD
-import { Link as RouterLink } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 
 const seoData = {
@@ -300,7 +11,6 @@ const seoData = {
   ogImage: "/images/services/ai-powered-seo.jpg",
   canonicalUrl: "https://ziontechgroup.com/services/ai-powered-seo"
 };
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 export default function AIPoweredSEO(...args: any[]): any {
   const features = [
@@ -481,15 +191,9 @@ export default function AIPoweredSEO(...args: any[]): any {
               Our platform combines machine learning, natural language processing, and predictive analytics to create the most intelligent SEO solution available.
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -526,19 +230,12 @@ export default function AIPoweredSEO(...args: any[]): any {
               Experience unprecedented SEO success with our AI-powered platform that delivers measurable results.
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {benefits.map((benefit, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -643,18 +340,12 @@ export default function AIPoweredSEO(...args: any[]): any {
               Our AI SEO platform is designed to serve diverse industries with specialized optimization strategies.
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
           
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
 =======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Home, 
-=======
 import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { Home, ArrowLeft, Search, Mail, Phone export default function NotFound(...args: any[]): any {
-=======
 import { motion              } from 'framer-motion.ts';
 import { Home, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   MapPin, 
   ArrowRight, 
@@ -49,14 +38,9 @@ import { Home,
   Network,
   Clock,
   Globe
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function NotFound() {
-=======
              } from 'lucide-react.ts';
 
 export default function NotFound(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const popularPages = [
     { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
     { name: 'Services', path: '/services', icon: Zap, description: 'All our services' },

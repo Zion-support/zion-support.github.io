@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Star,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-=======
 import React, { useState, useEffect            } from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { Brain, 
@@ -22,7 +9,6 @@ import { Brain,
   Phone, 
   Mail, 
   MapPin, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ExternalLink,
   TrendingUp,
   Users,
@@ -31,27 +17,12 @@ import { Brain,
   Clock,
   DollarSign,
   Search
-<<<<<<< HEAD
-import { innovativeAIServices2030            } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030            } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030            } from '../data/innovativeCloudDevOpsServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { innovativeAIServices2030             } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030             } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030             } from '../data/innovativeCloudDevOpsServices2030';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { innovativeAIServices2030            } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030            } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030            } from '../data/innovativeCloudDevOpsServices2030';
 
 const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -348,20 +319,10 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-<<<<<<< HEAD
-                  setActiveCategory('all')}}
-                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors";
-=======;
                   setActiveCategory('all');
                 }}
-<<<<<<< HEAD
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-
-=======
                 className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </button>
             </div>
@@ -426,13 +387,8 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
-<<<<<<< HEAD
-
-            ].map((feature, index)            => (
-=======
               }
             ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -575,14 +531,6 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
                 <div className="text-gray-300">Cloud & DevOps</div>
                 <div className="text-gray-300">IT Infrastructure</div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -590,6 +538,5 @@ const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InnovativeServicesShowcase2030;}}

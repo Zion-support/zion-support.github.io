@@ -32,84 +32,51 @@ export interface Service {
     uptime: string;
     security: string[];
   };
-  competitors?: string[];
-  marketSize?: string;
-  compliance?: string[];
+  competitiveAdvantage?: string[];
+  implementationSteps?: string[];
+  successMetrics?: string[];
+  riskMitigation?: string[];
 }
 
-// Map 2026 services to existing service structure
-export function map2026ServicesToExistingStructure(): Service[] {
-  return specializedIndustrySolutions2026.map(service => ({
-    id: service.id,
-    title: service.name,
-    description: service.description,
-    category: service.category,
-    subcategory: service.category, // Use category as subcategory for now
-    price: parseInt(service.price.replace(/[$,]/g, '')), // Convert "$18,999" to 18999
-    currency: "$",
-    pricingModel: "monthly",
-    features: service.features,
-    benefits: [service.roi, service.marketPosition], // Use ROI and market position as benefits
-    useCases: service.useCases,
-    targetAudience: [service.targetAudience], // Convert string to array
-    tags: [service.category, ...service.technology.slice(0, 3)], // Use category and first 3 technologies as tags
-    estimatedDelivery: service.setupTime,
-    supportLevel: "enterprise",
-    marketPrice: service.price + service.period,
-    roi: service.roi,
-    innovationLevel: service.innovationLevel || "high",
+// Function to map services to the new format
+export const mapServiceToNewFormat = (service: any): Service => {
+  return {
+    id: service.id || service.serviceId || `service-${Date.now()}`,
+    title: service.title || service.name || service.serviceName || 'Untitled Service',
+    description: service.description || service.summary || service.overview || 'No description available',
+    category: service.category || service.serviceCategory || 'General',
+    subcategory: service.subcategory || service.serviceSubcategory || 'Standard',
+    price: service.price || service.cost || service.rate || 0,
+    currency: service.currency || 'USD',
+    pricingModel: service.pricingModel || service.pricing || 'Fixed',
+    features: service.features || service.capabilities || service.functionality || [],
+    benefits: service.benefits || service.advantages || service.value || [],
+    useCases: service.useCases || service.applications || service.scenarios || [],
+    targetAudience: service.targetAudience || service.audience || service.users || [],
+    tags: service.tags || service.keywords || service.labels || [],
+    estimatedDelivery: service.estimatedDelivery || service.delivery || service.timeline || 'TBD',
+    supportLevel: service.supportLevel || service.support || service.assistance || 'Standard',
+    marketPrice: service.marketPrice || service.competitivePrice || 'Contact for pricing',
+    roi: service.roi || service.returnOnInvestment || service.benefit || 'Varies',
+    innovationLevel: service.innovationLevel || service.innovation || service.advancement || 'Standard',
     contactInfo: {
-      phone: "+1-555-ZION-TECH",
-      email: "services@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: service.contactInfo?.phone || service.phone || '+1-555-0000',
+      email: service.contactInfo?.email || service.email || 'info@ziontechgroup.com',
+      website: service.contactInfo?.website || service.website || 'https://ziontechgroup.com'
     },
-    technicalSpecs: {
-      technology: service.technology,
+    technicalSpecs: service.technicalSpecs || {
+      technology: service.technology || [],
       integrations: service.integrations || [],
       apiEndpoints: service.apiEndpoints || 0,
-      uptime: service.uptime || "99.9%",
-      security: service.security || ["SOC2", "GDPR", "HIPAA"]
+      uptime: service.uptime || '99.9%',
+      security: service.security || []
     },
-    competitors: service.competitors || [],
-    marketSize: service.marketSize || "Growing",
-    compliance: service.compliance || ["SOC2", "GDPR", "HIPAA"]
-  }));
-}
+    competitiveAdvantage: service.competitiveAdvantage || service.advantages || [],
+    implementationSteps: service.implementationSteps || service.steps || service.process || [],
+    successMetrics: service.successMetrics || service.metrics || service.kpis || [],
+    riskMitigation: service.riskMitigation || service.risks || service.mitigation || []
+  };
+};
 
-// Helper function to get services by category
-export function getServicesByCategory(category: string): Service[] {
-  const allServices = map2026ServicesToExistingStructure();
-  return allServices.filter(service => 
-    service.category.toLowerCase() === category.toLowerCase() ||
-    service.subcategory.toLowerCase() === category.toLowerCase()
-  );
-}
-
-// Helper function to search services
-export function searchServices(query: string): Service[] {
-  const allServices = map2026ServicesToExistingStructure();
-  const searchTerm = query.toLowerCase();
-  
-  return allServices.filter(service =>
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.category.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-  );
-}
-
-// Helper function to get services by price range
-export function getServicesByPriceRange(minPrice: number, maxPrice: number): Service[] {
-  const allServices = map2026ServicesToExistingStructure();
-  return allServices.filter(service => 
-    service.price >= minPrice && service.price <= maxPrice
-  );
-}
-
-// Helper function to get featured services
-export function getFeaturedServices(): Service[] {
-  const allServices = map2026ServicesToExistingStructure();
-  return allServices
-    .filter(service => service.innovationLevel === "high")
-    .slice(0, 6); // Return top 6 featured services
-}
+// Export the specialized solutions
+export { specializedIndustrySolutions2026 };

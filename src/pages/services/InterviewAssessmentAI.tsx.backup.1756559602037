@@ -1,15 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link           } from 'react-router-dom.ts';
-import { FileText, Users, BarChart3, Mic, Video, Shield, DollarSign, ExternalLink const InterviewAssessmentAI: React.FC = (): JSX.Element => {
-	const modules = [
-		{ icon: Mic, title: 'Speech + Transcription', desc: 'Real-time or recorded interviews with diarization and sentiment.' },
-		{ icon: Video, title: 'Video Signals', desc: 'Optional webcam signals with consent and privacy controls.' },
-		{ icon: FileText, title: 'Skills Rubrics', desc: 'Structured, role-based rubrics with calibrated scoring and notes.' },
-		{ icon: BarChart3, title: 'Analytics', desc: 'Funnel metrics, time-to-hire, source quality, DEI insights.' },
-		{ icon: Shield, title: 'Compliance', desc: 'Bias testing, retention policy, candidate opt-out and audit trail.' }
-	];
-=======
 import { motion           } from 'framer-motion.ts';
 import { SEO           } from '../../components/SEO';
 import { Users, 
@@ -64,7 +53,6 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: "Objective assessment algorithms that eliminate unconscious bias in hiring."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Reduce hiring time by 50-70% with automated assessments",
@@ -135,9 +123,6 @@ export default function InterviewAssessmentAI(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-export default InterviewAssessmentAI;}
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -647,4 +632,3 @@ export default InterviewAssessmentAI;}
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

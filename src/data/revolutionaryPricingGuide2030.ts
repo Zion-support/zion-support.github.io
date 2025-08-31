@@ -57,60 +57,6 @@ export interface EnterprisePricing {
   description: string;
   pricing: string;
   features: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  limitations: string[];
-  bestFor: string[];
-  roi: string;
-  marketComparison: string;
-  includedSupport: string;
-  customOptions: string[];
-
-export interface RevolutionaryPricingGuide2030 {
-  serviceId: string;
-  serviceTitle: string;
-  category: string;
-  subcategory: string;
-  marketSize: string;
-  competitors: string[];
-  pricingTiers: RevolutionaryPricingTier2030[];
-enterprisePricing: {;
-    custom: string;
-    features: string[];
-    support: string[];
-    sla: string;
-    roi: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-};
-  marketAnalysis: {
-    averageMarketPrice: string;
-    priceRange: string;
-    valueProposition: string;
-    costSavings: string;
-    competitiveAdvantage: string;
-  };
-  roiCalculator: {
-    implementationCost: string;
-    monthlySavings: string;
-    paybackPeriod: string;
-    threeYearROI: string;
-    fiveYearROI: string;
-  };
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   benefits: string[];
   customizations: string[];
   contactInfo: {
@@ -590,48 +536,7 @@ export const pricingRecommendations = {
     roi: "400-600% within 18 months"
   }
 };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const getPricingGuideByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryPricingGuide2030[]              => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
-};
-
-export const getPricingGuideByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number): RevolutionaryPricingGuide2030[]              => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
-    const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
-    return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
-  });
-};
-
-export const getAllPricingGuides = (): RevolutionaryPricingGuide2030[] => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030;
-};
-
-export const getPricingGuideStats = () => {
-  const totalServices = REVOLUTIONARY_PRICING_GUIDE_2030.length;
-  const totalTiers = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => sum + guide.pricingTiers.length, 0);
-  const averageStarterPrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
-    const starterTier = guide.pricingTiers.find(tier => tier.id === 'starter');
-    return sum + (starterTier?.monthlyPrice || 0);
-  }, 0) / totalServices;
-  const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
-    const enterpriseTier = guide.pricingTiers.find(tier => tier.id === 'enterprise');
-    return sum + (enterpriseTier?.monthlyPrice || 0);
-  }, 0) / totalServices;
-
-  return {
-    totalServices,
-    totalTiers,
-    averageStarterPrice: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round(averageStarterPrice),
-    averageEnterprisePrice: Math.round(averageEnterprisePrice),
-    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide              => guide.category))],
-    subcategories: anyanyanyanyanyanyanyanyanyanyanyanyany[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide              => guide.subcategory))]
-  };
-};}}}}}}}}}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Export all pricing data
 export const allRevolutionaryPricing2030 = {
   microSaas: revolutionaryMicroSaasPricing,

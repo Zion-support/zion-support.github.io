@@ -19,10 +19,7 @@ import { Zap,
   Rocket,
   Target,
   Globe
-<<<<<<< HEAD
-=======
            } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -56,14 +53,6 @@ const MicroSAASPage = () => {
       id: 'user-management',
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
-<<<<<<< HEAD
-      icon: <Users className="w-8 h-8" />,
-      features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
-      pricing: 'Starting from $1,500/month'
-<<<<<<< HEAD
-
-=======
     };
 =======;
       icon: <Users className="w-8 h-8" />,;
@@ -71,32 +60,11 @@ const MicroSAASPage = () => {
       useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;
       pricing: 'Starting from $1,500/month';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const saasBenefits = [;
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -122,7 +90,6 @@ const MicroSAASPage = () => {
         duration: 0.5;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
@@ -185,15 +152,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-<<<<<<< HEAD
-          className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16"
-
-          {saasServices.map((service, index)           => (
-=======
           className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16"
         >
           {saasServices.map((service, index)            => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -457,14 +418,6 @@ const MicroSAASPage = () => {
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
               View SAAS Pricing
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </motion.div>
-      </div>;
-    </div>;
-  )};
-=======
             </Link>;
           </div>;
         </motion.div>;
@@ -472,6 +425,5 @@ const MicroSAASPage = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default MicroSAASPage;
 }}}}}}

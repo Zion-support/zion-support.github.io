@@ -1,7 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Workflow, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Cpu, Globe export default function AIWorkflowOrchestrator(...args: any[]): any {
-=======
 import { motion          } from 'framer-motion.ts';
 import { Workflow, 
   Zap, 
@@ -23,124 +20,12 @@ import { Workflow,
          } from 'lucide-react.ts';
 
 const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
-<<<<<<< HEAD
-    {
-      icon: Brain,
-      title: 'Intelligent Process Mapping',
-      description: 'AI automatically discovers and maps your business processes using natural language processing and workflow analysis.',
-      price: '$299/month'
-    },
-    {
-      icon: Zap,
-      title: 'Smart Automation Triggers',
-      description: 'Automatically trigger workflows based on events, data changes, or time-based conditions with machine learning optimization.',
-      price: '$199/month'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Real-time insights into workflow efficiency, bottlenecks, and optimization opportunities with predictive analytics.',
-      price: '$149/month'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance & Governance',
-      description: 'Built-in compliance frameworks, audit trails, and role-based access control for enterprise security.',
-      price: '$399/month'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams getting started with workflow automation',
-      features: [
-        'Up to 10 workflows',
-        'Basic AI process mapping',
-        'Standard integrations',
-        'Email support',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses with complex workflow needs',
-      features: [
-        'Up to 50 workflows',
-        'Advanced AI orchestration',
-        'Custom integrations',
-        'Priority support',
-        'Advanced analytics',
-        'Compliance features'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large organizations requiring enterprise-grade workflow management',
-      features: [
-        'Unlimited workflows',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Custom compliance frameworks',
-        'Advanced security features'
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-<<<<<<< HEAD
-    'Increase workflow efficiency by 70%',
-    'Reduce manual errors by 85%',
-    'Improve process completion time by 60%',
-    'Reduce operational costs by 45%',
-    'Enable 24/7 automated operations',
-    'Provide real-time process visibility'
-  ];
-
-  const useCases = [
-    'Enterprise process automation',
-    'Manufacturing workflow optimization',
-    'Healthcare process management',
-    'Financial services automation',
-    'Supply chain orchestration',
-    'Customer service workflow automation'
-  ];
-
-  const tiers = [
-    {
-      name: 'Workflow Starter',
-      price: '$499/mo',
-      details: ['Up to 100 workflows', 'Basic AI orchestration', 'Standard reporting', 'Email support']
-    },
-    {
-      name: 'Workflow Professional',
-      price: '$1,299/mo',
-      details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Workflow Enterprise',
-      price: '$3,999/mo',
-      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
     'Reduce manual work by up to 80%',
     'Improve process efficiency by 60%',
     'Cut operational costs by 40%',
     'Ensure 99.9% compliance accuracy',
     'Scale workflows automatically with demand'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -151,45 +36,6 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(120,119,198,0.1)_25%,rgba(120,119,198,0.1)_50%,transparent_50%,transparent_75%,rgba(120,119,198,0.1)_75%)] bg-[length:20px_20px] animate-pulse" />
       </div>
 
-<<<<<<< HEAD
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Workflow Features</h2>
-            <ul className="space-y-3">
-              {features.map((f) => (
-                <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
-                  <span className="text-zion-slate-dark">{f}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
-              <ul className="space-y-2">
-                {benefits.map((b) => (
-                  <li key={b} className="flex items-start">
-                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
-                    <span className="text-zion-slate-dark text-sm">{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-            <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)          => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
-                  <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
-                  <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
-                  </ul>
-                </div>
-=======
       <div className="relative z-10">
         {/* Header Section */}
         <motion.header 
@@ -287,7 +133,6 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
           </div>
@@ -505,25 +350,10 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             </div>
           </div>
           <p className="text-zion-slate-light">
-<<<<<<< HEAD
-            Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.
-          </p>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default AIWorkflowOrchestrator;
-=======
             Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.;
           </p>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

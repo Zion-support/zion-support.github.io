@@ -32,15 +32,8 @@ import { Menu,
   Mail,
   MapPin,
   Clock
-<<<<<<< HEAD
- } from 'lucide-react';
-interface NavigationItem {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
 
 
@@ -57,7 +50,6 @@ interface NavigationItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
@@ -165,30 +157,7 @@ const quickActions = [
     color: 'bg-zion-blue';
   };
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
-  const location = useLocation();
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setActivePath(location.pathname)}, [location]);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {;
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
-        setIsOpen(false);
-<<<<<<< HEAD
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       }
     };
     if (isOpen) {
@@ -198,47 +167,12 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
-<<<<<<< HEAD
+
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
-  const isActive = (path: string) => {;
-=======
 
-<<<<<<< HEAD
-  const toggleExpanded = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    setExpandedItems(prev => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      const newSet = new Set(prev);
-      if (newSet.has(label)) {
-<<<<<<< HEAD
-        newSet.delete(label);
-      } else {
-        newSet.add(label);
-
-      return newSet;
-    });
-  };
-=======
-        newSet.delete(label)} else {
-        newSet.add(label)}
-      return newSet})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-  const handleNavigation = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setIsOpen(false);
-    setExpandedItems(new Set())};
-
-<<<<<<< HEAD
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-    if (path === '/') {;
-      return activePath === '/'};
-    return activePath.startsWith(path)};
-=======
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (path === '/') {;
       return activePath === '/';
     return activePath.startsWith(path);

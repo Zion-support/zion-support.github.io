@@ -1,28 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle           } from '@/components/ui/card';
-import { Badge           } from '@/components/ui/badge';
-import { Button           } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027           } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027           } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap           } from 'lucide-react.ts';
-import { Link           } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle          } from '@/components/ui/card';
 import { Badge          } from '@/components/ui/badge';
 import { Button          } from '@/components/ui/button';
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027          } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027          } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap import { Link          } from 'react-router-dom.ts';
-=======
 import { cuttingEdgeComprehensiveServices2027          } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027          } from '../../data/2027-specialized-innovative-services';
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap          } from 'lucide-react.ts';
 import { Link          } from 'react-router-dom.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -81,15 +64,6 @@ const pricingTiers = [
       'Full AI suite',
       '24/7 dedicated support',
       'Custom development',
-<<<<<<< HEAD
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees'
-    ],
-    popular: false
-
-=======
       'Enterprise analytics',;
       'Dedicated account manager',;
       'Custom training programs',;
@@ -97,7 +71,6 @@ const pricingTiers = [
     ],;
     popular: false;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ComprehensivePricing(...args[]: any):  {
@@ -129,31 +102,13 @@ export default function ComprehensivePricing(...args[]: any):  {
           break;
         case 'over-5000':
           matchesPrice = price >= 5000;
-<<<<<<< HEAD
-          break;
-
-=======
           break}
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const getPriceRangeLabel = (range: anyanyanyanyanyanyanyanyanystring)          => {;
-    switch (range) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'under-1000': return 'Under $1,000';
-      case '1000-3000': return '$1,000 - $3,000';
-      case '3000-5000': return '$3,000 - $5,000';
-      case 'over-5000': return 'Over $5,000';
-<<<<<<< HEAD
-      default: return 'All Prices';
-
-=======
       default: return 'All Prices'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -359,20 +314,10 @@ export default function ComprehensivePricing(...args[]: any):  {
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPriceRange('all')}}
-                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark";
-=======;
                   setSelectedPriceRange('all');
                 }}
-<<<<<<< HEAD
-                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
-
-=======
                 className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear Filters
               </Button>
             </div>
@@ -446,23 +391,10 @@ export default function ComprehensivePricing(...args[]: any):  {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { ChevronDown interface AccordionProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[];
-=======
 import React, { useState  
 } from 'react.ts';
 import { ChevronDown              } from 'lucide-react.ts';
@@ -17,7 +8,6 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function Accordion(...args: any[]): any {
   const [openItems, setOpenItems] = useState<any>(
@@ -73,25 +63,16 @@ export function Accordion(...args: any[]): any {;
 
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
-<<<<<<< HEAD
-  );
-=======
   )}
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: ()             => void;
-=======
   onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionItem(...args: any[]): any {;
   return (;
@@ -102,24 +83,15 @@ export function AccordionItem(...args: any[]): any {;
 
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
-<<<<<<< HEAD
-  );
-=======
   )}
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: ()             => void;
-=======
   onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionTrigger(...args: any[]): any {
   return (
@@ -144,19 +116,11 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;
       />;
     </button>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-  isOpen?: boolean;
-=======
   isOpen?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionContent(...args: any[]): any {
   if (!isOpen) return null;
@@ -175,9 +139,4 @@ export function AccordionContent(...args: any[]): any {;
       {children};
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

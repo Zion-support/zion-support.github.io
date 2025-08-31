@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Shield,
-  Zap,
-  Brain,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
@@ -46,20 +23,9 @@ import { Shield,
   FileText,
   Monitor,
   Activity
-<<<<<<< HEAD
  } from 'lucide-react';
-export default function AICybersecuritySuite(...args[]):  {
-=======
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-import { Button              } from '@/components/ui/button';
-import { Badge              } from '@/components/ui/badge';
-=======
- } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AICybersecuritySuite(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -382,14 +348,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               that protect your business around the clock.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {securityMetrics.map((metric, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -437,14 +398,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               Our cybersecurity suite combines cutting-edge AI technology with industry-leading security practices to deliver unmatched protection
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -492,14 +448,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               Choose the security package that fits your business needs and budget
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -557,14 +508,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               Comprehensive security coverage across all aspects of your digital infrastructure
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map((module, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {securityModules.map((module, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -618,14 +564,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               Experience the advantages of intelligent cybersecurity that adapts to your business needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -674,14 +615,9 @@ export default function AICybersecuritySuite(...args[]: any):  {
               Built on cutting-edge AI and cybersecurity technologies for maximum protection
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
