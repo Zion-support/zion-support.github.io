@@ -101,6 +101,8 @@ export function AppFooter() {
         { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
+        { name: "AI Autonomous Legal Research", href: "/services/ai-autonomous-legal-research-platform" },
+        { name: "AI Sustainability Management", href: "/services/ai-sustainability-management-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
         { name: "AI Supply Chain Intelligence", href: "/services/ai-autonomous-supply-chain-intelligence" },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
