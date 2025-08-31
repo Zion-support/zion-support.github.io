@@ -89,6 +89,12 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
 
+// 2025 Innovative Services
+const AIContentIntelligencePlatform = lazy(() => import('./pages/services/AIContentIntelligencePlatform'));
+const AICybersecurityOperationsCenter = lazy(() => import('./pages/services/AICybersecurityOperationsCenter'));
+const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const IoTEdgeComputingPlatform = lazy(() => import('./pages/services/IoTEdgeComputingPlatform'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -430,6 +436,17 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+                  
+                  {/* 2025 Innovative Services */}
+                  <Route path="/services/ai-content-intelligence-platform" element={<AIContentIntelligencePlatform />} />
+                  <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
+                  <Route path="/services/ai-cybersecurity-operations-center" element={<AICybersecurityOperationsCenter />} />
+                  <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+                  <Route path="/services/iot-edge-computing-platform" element={<IoTEdgeComputingPlatform />} />
+                  
+                  {/* Showcase and Pricing Pages */}
+                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                  <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />

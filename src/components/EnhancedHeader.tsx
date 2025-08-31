@@ -197,85 +197,59 @@ export function EnhancedHeader() {
 
   const serviceCategories = [
     {
-      name: 'AI-Powered Micro SAAS',
-      description: 'Revolutionary AI-powered software solutions',
-      href: '/zion-cutting-edge-services-2029',
+      name: 'AI Content Intelligence Platform',
+      description: 'Advanced AI-powered content analysis and optimization',
+      href: '/services/ai-content-intelligence-platform',
       icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      featured: true
-    },
-    {
-      name: 'AI Content Creation Studio Pro',
-      description: 'Advanced AI content creation platform',
-      href: '/services/AI-Content-Creation-Studio-Pro',
-      icon: PenTool,
       color: 'from-purple-500 to-pink-500',
       featured: true
     },
     {
       name: 'Quantum AI Trading Platform',
-      description: 'Next-generation quantum trading platform',
-      href: '/services/Quantum-AI-Trading-Platform',
+      description: 'Next-generation quantum computing enhanced trading',
+      href: '/services/quantum-ai-trading-platform',
       icon: Atom,
       color: 'from-orange-500 to-red-500',
       featured: true
     },
     {
-      name: 'Micro SAAS Solutions',
-      description: 'Innovative software-as-a-service solutions',
-      href: '/services/micro-saas-solutions',
-      icon: Rocket,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
-      href: '/ai-services',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'IT Infrastructure',
-      description: 'Enterprise-grade IT solutions',
-      href: '/it-services',
-      icon: Server,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      name: 'Quantum Computing',
-      description: 'Next-generation quantum solutions',
-      href: '/services/quantum-computing',
-      icon: Atom,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      name: 'Blockchain Solutions',
-      description: 'Secure blockchain and Web3 services',
-      href: '/services/blockchain-enterprise-solutions',
+      name: 'AI Cybersecurity Operations Center',
+      description: 'Intelligent threat detection and response',
+      href: '/services/ai-cybersecurity-operations-center',
       icon: Shield,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-green-500 to-emerald-500',
+      featured: true
     },
     {
-      name: '2025 Innovative Services',
-      description: 'Latest cutting-edge services',
-      href: '/zion-innovative-services-2025',
-      icon: SparklesIcon,
-      color: 'from-yellow-500 to-orange-500'
+      name: 'Blockchain Enterprise Solutions',
+      description: 'Secure blockchain infrastructure and applications',
+      href: '/services/blockchain-enterprise-solutions',
+      icon: Link,
+      color: 'from-indigo-500 to-purple-500',
+      featured: true
     },
     {
-      name: '2025 Services Showcase',
-      description: 'Comprehensive innovative services showcase',
+      name: 'IoT Edge Computing Platform',
+      description: 'Intelligent edge computing for IoT devices',
+      href: '/services/iot-edge-computing-platform',
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: '2025 Innovative Services Showcase',
+      description: 'Comprehensive cutting-edge services showcase',
       href: '/innovative-services-showcase-2025',
       icon: SparklesIcon,
       color: 'from-cyan-500 to-blue-500',
       featured: true
     },
     {
-      name: '2029 Cutting-Edge Services',
-      description: 'Future-ready innovative services',
-      href: '/zion-cutting-edge-services-2029',
-      icon: SparklesIcon,
-      color: 'from-indigo-500 to-purple-500',
+      name: 'Comprehensive Pricing Guide 2025',
+      description: 'Transparent pricing for all our services',
+      href: '/comprehensive-pricing-guide-2025',
+      icon: DollarSign,
+      color: 'from-yellow-500 to-orange-500',
       featured: true
     }
   ];
