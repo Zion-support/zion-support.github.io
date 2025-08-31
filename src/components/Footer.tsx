@@ -111,7 +111,7 @@ export function Footer(...args: any[]): any {
         { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
         { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
       ]
     },
     {
@@ -137,7 +137,7 @@ export function Footer(...args: any[]): any {
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
 >>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
       ]
     },
     {
@@ -190,7 +190,7 @@ export function Footer(...args: any[]): any {
 =======
 =======
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}

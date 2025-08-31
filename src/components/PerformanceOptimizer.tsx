@@ -364,4 +364,4 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default PerformanceOptimizer;
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+

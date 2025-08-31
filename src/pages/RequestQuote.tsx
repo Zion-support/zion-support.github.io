@@ -74,7 +74,7 @@ import { Calculator,
 } from 'lucide-react';
 
 export default function RequestQuote(...args: any[]): any {
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -904,7 +904,7 @@ export default function RequestQuote(...args: any[]): any {
           </motion.div>
         </div>
       </div>
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
     </div>
   );
 }

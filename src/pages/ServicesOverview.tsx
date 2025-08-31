@@ -14,7 +14,7 @@ import { motion              } from 'framer-motion.ts';
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Rocket,
   Zap,
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   ArrowRight,
   CheckCircle,
   Star,
@@ -25,7 +25,7 @@ import { motion              } from 'framer-motion.ts';
   Mail,
   MapPin
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import INNOVATIVE_SERVICES_2025 from '../data/innovativeServices2025';
@@ -298,7 +298,7 @@ export default function ServicesOverview(...args: any[]): any {
       description: 'Enterprise-grade IT infrastructure and digital transformation solutions',
       count: INNOVATIVE_SERVICES_2025.filter(s => s.category === 'IT Services').length
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
     },
     {
       title: "Cybersecurity & Compliance",
@@ -444,7 +444,7 @@ export default function ServicesOverview(...args: any[]): any {
       case 'Cloud Services': return Cloud;
       case 'Emerging Tech': return Rocket;
       default: return Zap;
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
     }
   ];
 
@@ -875,7 +875,7 @@ export default function ServicesOverview(...args: any[]): any {
                     ? 'border-cyan-500 bg-slate-800/80'
                     : 'border-slate-700 bg-slate-800/50 hover:border-cyan-500/50'
                 }`}
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />

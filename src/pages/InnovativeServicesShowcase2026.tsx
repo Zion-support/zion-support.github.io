@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -102,7 +102,7 @@ import { Brain,
   XCircle,
   Info,
   HelpCircle,
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   ExternalLink,
   Search,
   Filter,
@@ -128,7 +128,7 @@ export default function InnovativeServicesShowcase2026(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 // Import our new service data
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 import { INNOVATIVE_IT_SERVICES_2026 } from '../data/innovativeITServices2026';
 import { INNOVATIVE_AI_SERVICES_2026 } from '../data/innovativeAIServices2026';
@@ -333,7 +333,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
     { value: 'type', label: 'Type' }
   ];
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -612,7 +612,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
         )}
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       </div>
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 
       {/* CTA Section */}
       <section className="py-16 px-4">

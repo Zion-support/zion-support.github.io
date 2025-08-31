@@ -61,7 +61,7 @@ import {
   Activity,
   Workflow,
   Truck
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 } from 'lucide-react';
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
@@ -108,7 +108,7 @@ interface NavigationSection {
 }
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
 export function MainSidebar() {
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -13,7 +13,7 @@ import {
   ArrowRight,
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   CheckCircle,
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   Star,
   Zap,
   Shield,
@@ -196,7 +196,7 @@ export default function ComprehensivePricingGuide2026() {
     { id: 'Micro SAAS', name: 'Micro SAAS', count: allServices.filter(s => s.type === 'Micro SAAS').length },
     { id: 'IT Services', name: 'IT Services', count: allServices.filter(s => s.type === 'IT Services').length },
     { id: 'AI Services', name: 'AI Services', count: allServices.filter(s => s.type === 'AI Services').length }
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   ];
 
   const pricingComparison = [
@@ -255,7 +255,7 @@ export default function ComprehensivePricingGuide2026() {
   }, [allServices]);
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -723,7 +723,7 @@ export default function ComprehensivePricingGuide2026() {
                       +{service.features.length - 3} more features
                     </div>
                   )}
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   {category.name}
@@ -942,7 +942,7 @@ export default function ComprehensivePricingGuide2026() {
               <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 ml-1">
                 ziontechgroup.com
               </a>
->>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
+
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
