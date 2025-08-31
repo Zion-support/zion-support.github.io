@@ -17,6 +17,7 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import Footer from './components/layout/Footer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -46,6 +47,9 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesOverview2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesOverview2025'));
+const InnovativeAIServices2025 = createLazyComponent(() => import('./pages/InnovativeAIServices2025'));
+const MicroSAASSolutionsShowcase2025 = createLazyComponent(() => import('./pages/MicroSAASSolutionsShowcase2025'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -121,6 +125,9 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/comprehensive-services-overview-2025" element={<ComprehensiveServicesOverview2025 />} />
+                    <Route path="/innovative-ai-services-2025" element={<InnovativeAIServices2025 />} />
+                    <Route path="/micro-saas-solutions-showcase-2025" element={<MicroSAASSolutionsShowcase2025 />} />
 
                     {/* 404 Page */}
                     <Route
@@ -186,6 +193,9 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+            
+            {/* Footer */}
+            <Footer />
           </div>
         </Router>
       </ErrorBoundary>

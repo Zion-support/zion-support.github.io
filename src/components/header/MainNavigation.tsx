@@ -44,21 +44,33 @@ export function MainNavigation(...args[]):  {
           <span>Services</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+        {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
             <div className="p-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Brain className="w-4 h-4 mr-2"/>
+                    AI Solutions
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services Overview</Link></li>
+                    <li><Link to="/innovative-ai-services-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Innovative AI Services</Link></li>
+                    <li><Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-suite" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
+                    <li><Link to="/services/ai-marketing-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Marketing</Link></li>
+                  </ul>
+                </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Zap className="w-4 h-4 mr-2"/>
                     Micro SAAS
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
-                    <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
-                    <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
-                    <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
-                    <li><Link to="/services/cloud" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+                    <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS Overview</Link></li>
+                    <li><Link to="/micro-saas-solutions-showcase-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Solutions Showcase</Link></li>
+                    <li><Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Project Manager</Link></li>
+                    <li><Link to="/services/finops-advisor" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps</Link></li>
+                    <li><Link to="/services/soc2-compliance-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">SOC2 Compliance</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -67,16 +79,16 @@ export function MainNavigation(...args[]):  {
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Neural Network</Link></li>
-                    <li><Link to="/autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>
-                    <li><Link to="/ai-powered-it-asset-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Asset Management</Link></li>
-                    <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enhanced Services</Link></li>
+                    <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services Overview</Link></li>
+                    <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+                    <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
                     <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Support</Link></li>
                   </ul>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
-                <Link to="/enhanced-services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                <Link to="/comprehensive-services-overview-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                   View All Services
                   <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
