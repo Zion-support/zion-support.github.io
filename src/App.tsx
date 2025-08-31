@@ -116,6 +116,12 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AIQuantumComputingPlatform'));
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AIEdgeComputingPlatform'));
 
+// 2025 Additional Innovative Services - New
+const AICustomerJourneyOrchestrationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-journey-orchestration-platform'));
+const QuantumEnhancedCybersecurityOperationsCenter = createLazyComponent(() => import('./pages/services/quantum-enhanced-cybersecurity-operations-center'));
+const AIDrivenSustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-driven-sustainability-analytics-platform'));
+const AutonomousDigitalTwinManagementSystem = createLazyComponent(() => import('./pages/services/autonomous-digital-twin-management-system'));
+
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = createLazyComponent(() => import('./pages/InnovativeServicesLanding2025'));
 
@@ -162,6 +168,9 @@ const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pag
 const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 const ComprehensiveServicesOverview2026 = createLazyComponent(() => import('./pages/ComprehensiveServicesOverview2026'));
+
+// 2025 Comprehensive Services Showcase - New
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -346,6 +355,12 @@ function App() {
                     <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                     <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
 
+                    {/* 2025 Additional Innovative Services - New */}
+                    <Route path="/services/ai-customer-journey-orchestration-platform" element={<AICustomerJourneyOrchestrationPlatform />} />
+                    <Route path="/services/quantum-enhanced-cybersecurity-operations-center" element={<QuantumEnhancedCybersecurityOperationsCenter />} />
+                    <Route path="/services/ai-driven-sustainability-analytics-platform" element={<AIDrivenSustainabilityAnalyticsPlatform />} />
+                    <Route path="/services/autonomous-digital-twin-management-system" element={<AutonomousDigitalTwinManagementSystem />} />
+
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
                     <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
@@ -364,6 +379,9 @@ function App() {
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-overview-2026" element={<ComprehensiveServicesOverview2026 />} />
+
+                    {/* 2025 Comprehensive Services Showcase - New */}
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
 
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
