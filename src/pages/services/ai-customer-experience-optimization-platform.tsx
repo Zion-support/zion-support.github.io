@@ -58,152 +58,252 @@ import {
   CheckCircle2, 
   Clock3, 
   Target,
-  Truck,
-  Package,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Bike
+  Heart,
+  Smile,
+  ThumbsUp,
+  Monitor,
+  Smartphone as MobileIcon,
+  Tablet,
+  Laptop,
+  Desktop,
+  Watch,
+  Headphones,
+  Camera,
+  Video,
+  Mic,
+  Map,
+  Navigation,
+  Compass,
+  Calendar,
+  Clock as TimeIcon,
+  Timer,
+  Stopwatch,
+  Hourglass,
+  CalendarDays,
+  CalendarCheck,
+  CalendarX,
+  CalendarPlus,
+  CalendarMinus,
+  CalendarRange,
+  CalendarWeek,
+  CalendarMonth,
+  CalendarYear,
+  CalendarHeart,
+  CalendarStar,
+  CalendarClock,
+  CalendarEvent,
+  CalendarUser,
+  CalendarSettings,
+  CalendarSearch,
+  CalendarEdit,
+  CalendarTrash,
+  CalendarLock,
+  CalendarUnlock,
+  CalendarDownload,
+  CalendarUpload,
+  CalendarShare,
+  CalendarCopy,
+  CalendarPaste,
+  CalendarCut,
+  CalendarMove,
+  CalendarRotate,
+  CalendarFlip,
+  CalendarZoom,
+  CalendarMinimize,
+  CalendarMaximize,
+  CalendarFullscreen,
+  CalendarExitFullscreen,
+  CalendarGrid,
+  CalendarList,
+  CalendarColumns,
+  CalendarRows,
+  CalendarSort,
+  CalendarFilter,
+  CalendarGroup,
+  CalendarUngroup,
+  CalendarSelect,
+  CalendarUnselect,
+  CalendarSelectAll,
+  CalendarUnselectAll,
+  CalendarInvert,
+  CalendarClear,
+  CalendarRefresh,
+  CalendarSync,
+  CalendarCloud,
+  CalendarCloudOff,
+  CalendarWifi,
+  CalendarWifiOff,
+  CalendarBluetooth,
+  CalendarBluetoothOff,
+  CalendarSignal,
+  CalendarSignalOff,
+  CalendarBattery,
+  CalendarBatteryOff,
+  CalendarPower,
+  CalendarPowerOff,
+  CalendarVolume,
+  CalendarVolumeOff,
+  CalendarMute,
+  CalendarUnmute,
+  CalendarPlay,
+  CalendarPause,
+  CalendarStop,
+  CalendarSkipBack,
+  CalendarSkipForward,
+  CalendarRewind,
+  CalendarFastForward,
+  CalendarShuffle,
+  CalendarRepeat,
+  CalendarRepeat1,
+  CalendarRepeatOff,
+  CalendarShuffleOff,
+  CalendarShuffleOn,
+  CalendarRepeatOn,
+  CalendarRepeatOnce,
+  CalendarRepeatAll,
+  CalendarRepeatOff,
+  CalendarShuffleOff,
+  CalendarShuffleOn,
+  CalendarRepeatOn,
+  CalendarRepeatOnce,
+  CalendarRepeatAll
 } from 'lucide-react';
 
-const AISupplyChainOptimizationPlatform: React.FC = () => {
+const AICustomerExperienceOptimizationPlatform: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95%+ accuracy, enabling optimal inventory management and production planning.",
+      title: "AI-Powered Customer Insights",
+      description: "Advanced machine learning algorithms analyze customer behavior patterns, preferences, and sentiment to provide actionable insights for personalized experiences.",
       benefits: [
-        "Multi-factor demand prediction models",
-        "Seasonal and trend analysis",
-        "Real-time demand signal processing",
-        "Automated forecast updates"
+        "Real-time customer behavior analysis",
+        "Predictive customer journey mapping",
+        "Sentiment analysis across all touchpoints",
+        "Personalization recommendations engine"
       ]
     },
     {
-      icon: Workflow,
-      title: "Intelligent Route Optimization",
-      description: "AI algorithms optimize transportation routes, reducing costs by up to 30% while improving delivery times and sustainability.",
+      icon: Eye,
+      title: "Multi-Channel Experience Tracking",
+      description: "Comprehensive monitoring across web, mobile, social media, and offline interactions to create seamless omnichannel experiences.",
       benefits: [
-        "Multi-modal transportation optimization",
-        "Real-time traffic and weather integration",
-        "Dynamic route recalculation",
-        "Carbon footprint reduction"
+        "Cross-platform user journey tracking",
+        "Real-time experience monitoring",
+        "Unified customer profile creation",
+        "Seamless channel transitions"
+      ]
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics & Optimization",
+      description: "Leverage historical data and AI algorithms to predict customer needs and automatically optimize experiences for maximum engagement and satisfaction.",
+      benefits: [
+        "Predictive customer churn prevention",
+        "Automated A/B testing optimization",
+        "Dynamic content personalization",
+        "Performance forecasting and planning"
+      ]
+    },
+    {
+      icon: Users,
+      title: "Personalized Customer Journeys",
+      description: "Create unique, adaptive customer experiences that evolve based on individual preferences, behavior, and real-time interactions.",
+      benefits: [
+        "Dynamic journey orchestration",
+        "Contextual content delivery",
+        "Adaptive user interfaces",
+        "Behavioral trigger automation"
       ]
     },
     {
       icon: BarChart3,
-      title: "Predictive Analytics & Risk Management",
-      description: "Identify potential supply chain disruptions before they occur and implement proactive mitigation strategies.",
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive reporting and analytics tools providing deep insights into customer experience metrics, conversion rates, and ROI.",
       benefits: [
-        "Supplier risk assessment",
-        "Geopolitical risk monitoring",
-        "Natural disaster prediction",
-        "Supply chain resilience scoring"
-      ]
-    },
-    {
-      icon: Network,
-      title: "End-to-End Visibility",
-      description: "Real-time tracking and monitoring across the entire supply chain network, from raw materials to final delivery.",
-      benefits: [
-        "IoT sensor integration",
-        "Blockchain traceability",
-        "Real-time status updates",
-        "Comprehensive audit trails"
-      ]
-    },
-    {
-      icon: Zap,
-      title: "Automated Inventory Management",
-      description: "AI-driven inventory optimization that reduces carrying costs by 25% while maintaining 99.9% service levels.",
-      benefits: [
-        "Dynamic safety stock calculation",
-        "Automated reorder triggers",
-        "Multi-location optimization",
-        "Seasonal demand adaptation"
+        "Real-time performance monitoring",
+        "Custom KPI dashboards",
+        "Advanced segmentation analysis",
+        "ROI measurement and attribution"
       ]
     },
     {
       icon: Shield,
-      title: "Compliance & Sustainability",
-      description: "Ensure regulatory compliance and meet sustainability goals with automated monitoring and reporting.",
+      title: "Privacy-First Design",
+      description: "Built with privacy and compliance at the core, ensuring customer data protection while maintaining personalization capabilities.",
       benefits: [
-        "Regulatory compliance tracking",
-        "Sustainability metrics monitoring",
-        "Automated reporting generation",
-        "ESG performance optimization"
+        "GDPR and CCPA compliance",
+        "Zero-party data collection",
+        "Transparent data usage policies",
+        "Secure data encryption"
       ]
     }
   ];
 
   const useCases = [
     {
-      industry: "Manufacturing",
-      description: "Optimize production schedules, manage raw material procurement, and streamline distribution networks for maximum efficiency and cost savings.",
-      metrics: ["30% reduction in production costs", "40% improvement in on-time delivery", "25% decrease in inventory carrying costs"]
+      industry: "E-commerce",
+      description: "Optimize product recommendations, streamline checkout processes, and create personalized shopping experiences that increase conversion rates and customer lifetime value.",
+      metrics: ["25% increase in conversion rates", "40% improvement in customer retention", "35% boost in average order value"]
     },
     {
-      industry: "Retail & E-commerce",
-      description: "Optimize omnichannel inventory, streamline last-mile delivery, and enhance customer experience through intelligent supply chain management.",
-      metrics: ["35% improvement in order fulfillment", "45% reduction in stockouts", "30% increase in customer satisfaction"]
+      industry: "Financial Services",
+      description: "Enhance digital banking experiences, personalize financial advice, and improve customer satisfaction while maintaining security and compliance standards.",
+      metrics: ["30% improvement in customer satisfaction", "45% reduction in support tickets", "50% increase in digital adoption"]
     },
     {
-      industry: "Healthcare & Pharmaceuticals",
-      description: "Ensure critical medical supplies availability, optimize cold chain logistics, and maintain compliance with strict regulatory requirements.",
-      metrics: ["50% improvement in supply availability", "40% reduction in waste", "99.9% compliance rate"]
+      industry: "Healthcare",
+      description: "Create patient-centric digital experiences, optimize appointment scheduling, and improve patient engagement while ensuring HIPAA compliance.",
+      metrics: ["40% improvement in patient engagement", "35% reduction in no-shows", "50% increase in patient satisfaction"]
     },
     {
-      industry: "Food & Beverage",
-      description: "Optimize perishable goods logistics, reduce food waste, and ensure food safety through intelligent supply chain management.",
-      metrics: ["30% reduction in food waste", "45% improvement in shelf life", "40% decrease in logistics costs"]
+      industry: "Travel & Hospitality",
+      description: "Personalize travel recommendations, optimize booking experiences, and create memorable customer journeys that drive loyalty and repeat business.",
+      metrics: ["30% increase in booking conversions", "45% improvement in customer loyalty", "40% boost in upsell opportunities"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small to medium businesses starting their supply chain optimization journey",
+      description: "Perfect for small businesses starting their customer experience optimization journey",
       features: [
-        "Up to 5,000 SKUs",
-        "Basic demand forecasting",
-        "Route optimization (up to 100 routes/month)",
+        "Up to 10,000 monthly active users",
+        "Basic AI insights and analytics",
+        "3 customer journey templates",
         "Email and chat support",
-        "Standard integrations (10 platforms)",
+        "Standard integrations (5 platforms)",
         "Basic reporting dashboard"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chain operations",
+      description: "Ideal for growing businesses with advanced customer experience needs",
       features: [
-        "Up to 50,000 SKUs",
-        "Advanced AI demand forecasting",
-        "Unlimited route optimization",
+        "Up to 100,000 monthly active users",
+        "Advanced AI insights and predictive analytics",
+        "Unlimited customer journey templates",
         "Priority support with dedicated manager",
-        "Advanced integrations (50+ platforms)",
+        "Advanced integrations (25+ platforms)",
         "Custom reporting and analytics",
-        "Risk management tools",
-        "Multi-location optimization"
+        "A/B testing and optimization tools",
+        "Multi-channel experience tracking"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$3,999",
+      price: "$2,499",
       period: "/month",
-      description: "Comprehensive solution for large organizations with global supply chain networks",
+      description: "Comprehensive solution for large organizations with complex customer experience requirements",
       features: [
-        "Unlimited SKUs and locations",
-        "Custom AI model training",
-        "Advanced risk management",
+        "Unlimited monthly active users",
+        "Custom AI model training and optimization",
+        "Advanced journey orchestration",
         "24/7 dedicated support team",
         "Custom integrations and API access",
         "Advanced security and compliance features",
@@ -217,28 +317,28 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
 
   const testimonials = [
     {
-      name: "David Chen",
-      role: "VP of Supply Chain",
-      company: "Global Manufacturing Corp",
-      content: "The AI Supply Chain Optimization Platform has transformed our operations. We've achieved a 30% reduction in logistics costs and improved our on-time delivery from 85% to 98%.",
+      name: "Sarah Johnson",
+      role: "VP of Customer Experience",
+      company: "Global Retail Corp",
+      content: "The AI Customer Experience Optimization Platform transformed how we understand and serve our customers. We've seen a 40% improvement in customer satisfaction scores and a 35% increase in repeat purchases.",
       rating: 5,
-      avatar: "DC"
+      avatar: "SJ"
     },
     {
-      name: "Lisa Rodriguez",
-      role: "Director of Operations",
-      company: "E-commerce Retail Plus",
-      content: "This platform has revolutionized our inventory management. The AI-powered demand forecasting has reduced our stockouts by 45% and improved our customer satisfaction significantly.",
+      name: "Michael Chen",
+      role: "Director of Digital Strategy",
+      company: "FinTech Innovations",
+      content: "This platform has revolutionized our digital banking experience. The predictive analytics help us anticipate customer needs, resulting in a 50% reduction in support tickets and significantly higher customer engagement.",
       rating: 5,
-      avatar: "LR"
+      avatar: "MC"
     },
     {
-      name: "James Wilson",
-      role: "Head of Logistics",
-      company: "Healthcare Supply Solutions",
-      content: "The platform's risk management capabilities have been invaluable for our pharmaceutical supply chain. We've maintained 99.9% compliance while reducing costs by 25%.",
+      name: "Emily Rodriguez",
+      role: "Head of Patient Experience",
+      company: "Healthcare Plus",
+      content: "Implementing this platform has dramatically improved our patient engagement. The personalized journey mapping and automated optimization have led to a 45% improvement in patient satisfaction and better health outcomes.",
       rating: 5,
-      avatar: "JW"
+      avatar: "ER"
     }
   ];
 
@@ -255,16 +355,16 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Optimization Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization. Demand forecasting, route optimization, risk management, and end-to-end visibility." />
-        <meta name="keywords" content="AI supply chain, supply chain optimization, demand forecasting, route optimization, inventory management, logistics AI" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-optimization-platform" />
+        <title>AI Customer Experience Optimization Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform customer experiences with our AI-powered optimization platform. Personalized journeys, predictive analytics, and seamless omnichannel experiences." />
+        <meta name="keywords" content="AI customer experience, customer journey optimization, predictive analytics, personalization, omnichannel experience" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-customer-experience-optimization-platform" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-green-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 py-24">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -273,26 +373,26 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
-                <Truck className="w-4 h-4 mr-2 text-blue-400" />
-                AI-Powered Supply Chain
+                <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
+                AI-Powered Customer Experience
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                AI Supply Chain <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">Optimization Platform</span>
+                AI Customer Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Optimization Platform</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your supply chain operations with AI-powered optimization, predictive analytics, and intelligent automation. 
-                Reduce costs, improve efficiency, and enhance customer satisfaction through data-driven decision making.
+                Revolutionize customer experiences with AI-powered insights, predictive analytics, and personalized journey optimization. 
+                Create seamless omnichannel experiences that drive engagement, loyalty, and business growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                <button className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
                   <span className="flex items-center gap-2">
                     Start Free Trial
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </button>
                 
-                <button className="px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300">
+                <button className="px-8 py-4 border-2 border-purple-400/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300">
                   <span className="flex items-center gap-2">
                     <Play className="w-4 h-4" />
                     Watch Demo
@@ -314,11 +414,11 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Optimize Every Aspect of Your Supply Chain
+                Transform Customer Experiences with AI
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform combines cutting-edge AI technology with deep supply chain expertise to deliver 
-                measurable improvements in efficiency, cost reduction, and customer satisfaction.
+                Our platform combines cutting-edge AI technology with deep customer insights to create 
+                personalized, engaging experiences that drive measurable business results.
               </p>
             </motion.div>
 
@@ -330,9 +430,9 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   
@@ -342,7 +442,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-300">
-                        <CheckCircle2 className="w-4 h-4 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -354,7 +454,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-green-500/10">
+        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -367,7 +467,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                 Industry-Leading Results
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See how organizations across industries are transforming their supply chain operations 
+                See how organizations across industries are transforming customer experiences 
                 and achieving remarkable business outcomes with our platform.
               </p>
             </motion.div>
@@ -387,7 +487,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   
                   <div className="space-y-3">
                     {useCase.metrics.map((metric, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-blue-400">
+                      <div key={idx} className="flex items-center text-sm text-purple-400">
                         <TrendingUp className="w-4 h-4 mr-3" />
                         <span>{metric}</span>
                       </div>
@@ -413,7 +513,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Choose the perfect plan for your supply chain optimization needs. 
+                Choose the perfect plan for your customer experience optimization needs. 
                 Start with a free trial and scale as you grow.
               </p>
             </motion.div>
@@ -426,13 +526,13 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border hover:border-blue-500/50 transition-all duration-300 ${
-                    plan.popular ? 'border-blue-500 shadow-2xl shadow-blue-500/25 scale-105' : 'border-white/10'
+                  className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border hover:border-purple-400/50 transition-all duration-300 ${
+                    plan.popular ? 'border-purple-500 shadow-2xl shadow-purple-500/25 scale-105' : 'border-white/10'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                         <Star className="w-4 h-4" />
                         Most Popular
                       </span>
@@ -451,7 +551,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-gray-300 text-sm">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -459,8 +559,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
 
                   <button className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-400 hover:to-green-400 transform hover:scale-105'
-                      : 'bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400/20'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-400 hover:to-blue-400 transform hover:scale-105'
+                      : 'bg-transparent border border-purple-400 text-purple-400 hover:bg-purple-400/20'
                   }`}>
                     {plan.popular ? 'Start Free Trial' : 'Get Started'}
                   </button>
@@ -471,7 +571,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-green-500/10">
+        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -484,8 +584,8 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what supply chain leaders have to say 
-                about our AI Supply Chain Optimization Platform.
+                Don't just take our word for it. Here's what industry leaders have to say 
+                about our AI Customer Experience Optimization Platform.
               </p>
             </motion.div>
 
@@ -510,7 +610,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                   </blockquote>
                   
                   <div className="flex items-center justify-center space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       {testimonials[currentTestimonial].avatar}
                     </div>
                     <div className="text-left">
@@ -528,14 +628,14 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
               {/* Navigation Controls */}
               <button
                 onClick={prevTestimonial}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-400/50 transition-all duration-300"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-400/50 transition-all duration-300"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
               <button
                 onClick={nextTestimonial}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-400/50 transition-all duration-300"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-400/50 transition-all duration-300"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -548,7 +648,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentTestimonial 
-                        ? 'bg-blue-400 w-8' 
+                        ? 'bg-purple-400 w-8' 
                         : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                   />
@@ -568,30 +668,30 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <div className="bg-gradient-to-br from-blue-500/20 to-green-500/20 border border-blue-400/30 rounded-3xl p-12 md:p-16">
+              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-3xl p-12 md:p-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Optimize Your Supply Chain?
+                  Ready to Transform Customer Experiences?
                 </h2>
                 <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-                  Join hundreds of organizations that have already transformed their supply chain operations 
-                  with our AI-powered platform. Start your free trial today.
+                  Join hundreds of organizations that have already revolutionized their customer 
+                  experiences with our AI-powered platform. Start your free trial today.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <button className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
                     <span className="flex items-center gap-2">
                       Start Free Trial
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </button>
                   
-                  <button className="px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300">
+                  <button className="px-8 py-4 border-2 border-purple-400/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300">
                     Schedule Demo
                   </button>
                 </div>
                 
                 <div className="flex justify-center">
-                  <button className="group px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300 hover:scale-105">
+                  <button className="group px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300 hover:scale-105">
                     <span className="flex items-center gap-2">
                       <MessageCircle className="w-4 h-4" />
                       Contact Sales Team
@@ -609,7 +709,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
                     <span>24/7 Support</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Target2 className="w-4 h-4 text-green-400" />
+                    <Target className="w-4 h-4 text-purple-400" />
                     <span>Custom Implementation</span>
                   </div>
                 </div>
@@ -622,4 +722,4 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimizationPlatform;
+export default AICustomerExperienceOptimizationPlatform;

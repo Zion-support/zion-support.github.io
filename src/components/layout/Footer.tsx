@@ -66,6 +66,7 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
+<<<<<<< HEAD
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -85,12 +86,27 @@ export function Footer() {
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
+=======
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
+        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
+        { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Supply Chain Optimization Platform", href: "/services/ai-supply-chain-optimization-platform" },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Customer Experience Optimization", href: "/services/ai-customer-experience-optimization-platform" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
+>>>>>>> origin/main
       ]
     },
     {
       title: "Cloud & Infrastructure",
       icon: Cloud,
       links: [
+<<<<<<< HEAD
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
         { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
@@ -99,6 +115,17 @@ export function Footer() {
         { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign },
         { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
+=======
+        { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
+        { name: "Cloud & DevOps", href: "/services/cloud-devops" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Digital Transformation", href: "/services/digital-transformation" },
+        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
+        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "IoT & Edge Computing", href: "/services/iot-edge" },
+        { name: "Cloud FinOps", href: "/services/cloud-finops-optimizer" }
+>>>>>>> origin/main
       ]
     },
     {
@@ -116,6 +143,7 @@ export function Footer() {
       ]
     },
     {
+<<<<<<< HEAD
       title: "Emerging Technologies",
       icon: Sparkles,
       links: [
@@ -166,6 +194,21 @@ export function Footer() {
         { name: "Webinars", href: "/webinars", icon: Monitor },
         { name: "Help & Support", href: "/help", icon: Headphones },
         { name: "Research & Development", href: "/research-development", icon: Lightbulb }
+=======
+      title: "Company & Resources",
+      icon: Building2,
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Leadership", href: "/leadership" },
+        { name: "Careers", href: "/careers" },
+        { name: "News", href: "/news" },
+        { name: "Events", href: "/events" },
+        { name: "Partners", href: "/partners" },
+        { name: "Contact", href: "/contact" },
+        { name: "Blog", href: "/blog" },
+        { name: "Documentation", href: "/docs" },
+        { name: "Case Studies", href: "/case-studies" }
+>>>>>>> origin/main
       ]
     }
   ];
@@ -201,6 +244,7 @@ export function Footer() {
   };
 
   return (
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-zion-slate-darker via-zion-blue-dark to-zion-slate-darker border-t border-zion-purple/30 relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -223,12 +267,27 @@ export function Footer() {
             </div>
             
             <p className="text-zinc-300 mb-8 max-w-md leading-relaxed">
+=======
+    <footer className="bg-zinc-900 border-t border-zinc-800">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <Globe className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            </div>
+            <p className="text-zinc-400 mb-6 max-w-md">
+>>>>>>> origin/main
               Transforming businesses through innovative AI, cloud, and technology solutions. 
-              We help organizations of all sizes accelerate their digital transformation journey 
-              with cutting-edge technology and expert guidance.
+              We help organizations of all sizes accelerate their digital transformation journey.
             </p>
             
             {/* Contact Info */}
+<<<<<<< HEAD
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
                 <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
@@ -251,6 +310,20 @@ export function Footer() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+=======
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <MapPin className="w-4 h-4" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> origin/main
               </div>
             </div>
 
@@ -298,6 +371,7 @@ export function Footer() {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Quick Links Section */}
         <div className="border-t border-zion-purple/20 pt-8 mb-8">
           <div className="flex items-center space-x-2 mb-6">
@@ -328,6 +402,38 @@ export function Footer() {
               <p className="text-zinc-300 text-sm">
                 Get the latest updates on AI innovations, technology trends, and exclusive insights.
               </p>
+=======
+        {/* Additional Resources Section */}
+        <div className="border-t border-zinc-800 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Resources
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/white-papers" className="text-zinc-400 hover:text-white transition-colors">
+                    White Papers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/webinars" className="text-zinc-400 hover:text-white transition-colors">
+                    Webinars
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/training" className="text-zinc-400 hover:text-white transition-colors">
+                    Training
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/research-development" className="text-zinc-400 hover:text-white transition-colors">
+                    Research & Development
+                  </Link>
+                </li>
+              </ul>
+>>>>>>> origin/main
             </div>
             <div className="flex w-full md:w-auto space-x-2">
               <input
@@ -342,9 +448,15 @@ export function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Bar */}
         <div className="border-t border-zion-purple/20 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+=======
+        {/* Bottom Footer */}
+        <div className="border-t border-zinc-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+>>>>>>> origin/main
             {/* Copyright */}
             <div className="text-center lg:text-left">
               <p className="text-zinc-400 text-sm">
