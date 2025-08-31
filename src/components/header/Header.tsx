@@ -135,9 +135,7 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <MobileMenu onClose={closeMobileMenu} />
-        )}
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
 
         {/* Search Functionality */}
         <SearchFunctionality 

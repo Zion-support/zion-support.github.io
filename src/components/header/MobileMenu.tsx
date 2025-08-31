@@ -1,329 +1,417 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  X, 
   ChevronDown, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  Building2, 
-  FileText, 
+  ChevronRight,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Server,
+  Cloud,
+  Lock,
+  BarChart,
+  Cpu,
+  Workflow,
+  Database,
+  Globe,
   Target,
   Rocket,
-  Cloud,
-  Heart,
-  DollarSign,
-  Factory,
-  Briefcase,
-  Award,
-  Handshake,
-  Calendar,
-  BookOpen,
+  Lightbulb,
+  Code,
   Monitor,
-  GraduationCap,
-  Headphones,
-  Sparkles,
-  Satellite,
-  Atom,
+  Smartphone,
+  Network,
+  Wifi,
+  Activity,
+  Eye,
   Search,
-  Layers,
-  Star,
+  Settings,
+  Palette,
   Phone,
   Mail,
-  User,
-  ShoppingBag,
+  MapPin,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Star,
+  Users2,
+  Cog,
+  Menu,
+  ArrowRight,
+  Video,
+  GraduationCap,
+  Handshake,
+  ShoppingCart,
+  Truck,
+  Heart,
+  Scale,
   Home,
-  ArrowRight
+  BookOpen,
+  Briefcase,
+  Calendar,
+  Factory
 } from 'lucide-react';
 
 interface MobileMenuProps {
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export function MobileMenu({ onClose }: MobileMenuProps) {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setExpandedSection(expandedSection === section ? null : section);
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
   };
 
-  const handleLinkClick = () => {
-    onClose();
+  const isSectionExpanded = (section: string) => expandedSections.includes(section);
+
+  const menuVariants = {
+    closed: {
+      x: '100%',
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    },
+    open: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
   };
 
-  const menuSections = [
+  const overlayVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.3
+      }
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.3
+      }
+    }
+  };
+
+  const menuItems = [
     {
-      title: "Services",
+      title: 'Home',
+      href: '/',
+      icon: Home,
+      simple: true
+    },
+    {
+      title: 'Services',
       icon: Zap,
-      items: [
+      sections: [
         {
-          category: "AI & Automation",
+          title: 'AI & Automation',
           icon: Brain,
-          links: [
-            { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard" },
-            { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-            { name: "AI Project Management", href: "/services/ai-project-management-platform" },
-            { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform" },
-            { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-            { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
-            { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
-            { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform" },
-            { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform" },
-            { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform" }
+          items: [
+            { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-dashboard', icon: BarChart3 },
+            { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
+            { name: 'AI Project Management', href: '/services/ai-project-management-platform', icon: Workflow },
+            { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation-platform', icon: TrendingUp },
+            { name: 'AI Enterprise Automation', href: '/services/ai-enterprise-automation-platform', icon: Building2 },
+            { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow },
+            { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', icon: TrendingUp },
+            { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart },
+            { name: 'AI Educational Content', href: '/services/ai-educational-content-creation-platform', icon: BookOpen },
+            { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation-platform', icon: FileText },
+            { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },
+            { name: 'AI Real Estate Analytics', href: '/services/ai-real-estate-investment-analytics-platform', icon: Home },
+            { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', icon: Truck },
+            { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search },
+            { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', icon: Database },
+            { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', icon: Cpu },
+            { name: 'AI Quantum Neural Network', href: '/services/ai-quantum-neural-network-platform', icon: Atom },
+            { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', icon: Satellite },
+            { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield }
           ]
         },
         {
-          category: "Cloud & Infrastructure",
+          title: 'Cloud & Infrastructure',
           icon: Cloud,
-          links: [
-            { name: "Cloud & DevOps", href: "/services/cloud-devops" },
-            { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
-            { name: "Cybersecurity Solutions", href: "/services/cybersecurity" },
-            { name: "Blockchain Enterprise", href: "/services/blockchain-enterprise-solutions" },
-            { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions" },
-            { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" }
+          items: [
+            { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+            { name: 'Infrastructure Management', href: '/services/it-infrastructure-management', icon: Server },
+            { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', icon: Shield },
+            { name: 'Blockchain Enterprise', href: '/services/blockchain-enterprise-solutions', icon: Network },
+            { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', icon: Atom },
+            { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: DollarSign }
           ]
         },
         {
-          category: "Specialized AI",
-          icon: Sparkles,
-          links: [
-            { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
-            { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-            { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform" },
-            { name: "AI Supply Chain", href: "/services/ai-supply-chain-optimization-platform" },
-            { name: "AI HR Platform", href: "/services/ai-hr-platform" },
-            { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" }
-          ]
-        },
-        {
-          category: "Emerging Technologies",
-          icon: Rocket,
-          links: [
-            { name: "AI Space Technology", href: "/services/ai-space-technology-platform" },
-            { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
-            { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform" },
-            { name: "AI-Powered SEO", href: "/services/ai-powered-seo" },
-            { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive" },
-            { name: "2026 Innovation Showcase", href: "/innovative-services-showcase-2026" }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Solutions",
-      icon: Target,
-      items: [
-        {
-          category: "Industry Solutions",
+          title: 'Specialized Solutions',
           icon: Target,
-          links: [
-            { name: "Healthcare Solutions", href: "/solutions/healthcare" },
-            { name: "Financial Services", href: "/solutions/financial" },
-            { name: "Manufacturing", href: "/solutions/manufacturing" },
-            { name: "Government Solutions", href: "/solutions/government" },
-            { name: "Retail Solutions", href: "/solutions/retail" },
-            { name: "Enterprise Solutions", href: "/enterprise" }
+          items: [
+            { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Brain },
+            { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', icon: BarChart3 },
+            { name: 'AI Enterprise Workflow Automation', href: '/services/ai-enterprise-workflow-automation', icon: Workflow },
+            { name: 'AI Quantum Computing Solutions', href: '/services/ai-quantum-computing-solutions', icon: Atom },
+            { name: 'AI Autonomous Financial Advisor', href: '/services/ai-autonomous-financial-advisor-platform', icon: DollarSign },
+            { name: 'AI Autonomous Supply Chain Intelligence', href: '/services/ai-autonomous-supply-chain-intelligence', icon: BarChart3 },
+            { name: 'AI Autonomous Cybersecurity Intelligence', href: '/services/ai-autonomous-cybersecurity-intelligence', icon: Shield }
           ]
         }
       ]
     },
     {
-      title: "Company",
-      icon: Building2,
-      items: [
+      title: 'Solutions',
+      icon: Target,
+      sections: [
         {
-          category: "About Zion Tech",
+          title: 'Industry Solutions',
           icon: Building2,
-          links: [
-            { name: "About Us", href: "/about" },
-            { name: "Leadership Team", href: "/leadership" },
-            { name: "Careers & Jobs", href: "/careers" },
-            { name: "Partners & Alliances", href: "/partners" },
-            { name: "News & Press", href: "/news" },
-            { name: "Events & Webinars", href: "/events" }
+          items: [
+            { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
+            { name: 'Financial Solutions', href: '/solutions/financial', icon: DollarSign },
+            { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Factory },
+            { name: 'Government Solutions', href: '/solutions/government', icon: Building2 },
+            { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }
+          ]
+        },
+        {
+          title: 'Technology Solutions',
+          icon: Cpu,
+          items: [
+            { name: 'Quantum Edge Computing', href: '/solutions/quantum-edge-computing', icon: Atom },
+            { name: 'AI Autonomous Business', href: '/solutions/ai-autonomous-business', icon: Brain },
+            { name: 'Blockchain Web3', href: '/solutions/blockchain-web3', icon: Network },
+            { name: 'IoT Edge Computing', href: '/solutions/iot-edge-computing', icon: Wifi },
+            { name: 'Space Tech', href: '/solutions/space-tech', icon: Satellite }
           ]
         }
       ]
     },
     {
-      title: "Resources",
-      icon: FileText,
-      items: [
+      title: 'Company',
+      icon: Building2,
+      sections: [
         {
-          category: "Knowledge Hub",
-          icon: BookOpen,
-          links: [
-            { name: "Documentation", href: "/docs" },
-            { name: "Blog & Insights", href: "/blog" },
-            { name: "White Papers", href: "/white-papers" },
-            { name: "Case Studies", href: "/case-studies" },
-            { name: "Training & Certification", href: "/training" },
-            { name: "Webinars", href: "/webinars" },
-            { name: "Help & Support", href: "/help" }
+          title: 'About Us',
+          icon: Users,
+          items: [
+            { name: 'About Zion Tech Group', href: '/about', icon: Building2 },
+            { name: 'Leadership Team', href: '/leadership', icon: Users },
+            { name: 'Careers', href: '/careers', icon: Briefcase },
+            { name: 'News & Updates', href: '/news', icon: FileText },
+            { name: 'Events', href: '/events', icon: Calendar }
+          ]
+        },
+        {
+          title: 'Partnerships',
+          icon: Handshake,
+          items: [
+            { name: 'Partners', href: '/partners', icon: Handshake },
+            { name: 'Become a Partner', href: '/partners/join', icon: Users2 }
           ]
         }
       ]
+    },
+    {
+      title: 'Resources',
+      icon: BookOpen,
+      sections: [
+        {
+          title: 'Learning & Insights',
+          icon: GraduationCap,
+          items: [
+            { name: 'Blog', href: '/blog', icon: FileText },
+            { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+            { name: 'White Papers', href: '/white-papers', icon: FileText },
+            { name: 'Research & Development', href: '/research-development', icon: Lightbulb }
+          ]
+        },
+        {
+          title: 'Training & Support',
+          icon: HelpCircle,
+          items: [
+            { name: 'Training Programs', href: '/training', icon: GraduationCap },
+            { name: 'Webinars', href: '/webinars', icon: Video },
+            { name: 'Documentation', href: '/docs', icon: FileText },
+            { name: 'Help Center', href: '/help', icon: HelpCircle }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Support',
+      icon: HelpCircle,
+      simple: true,
+      href: '/support'
+    },
+    {
+      title: 'Contact',
+      icon: Phone,
+      simple: true,
+      href: '/contact'
+    },
+    {
+      title: 'Pricing',
+      icon: DollarSign,
+      simple: true,
+      href: '/pricing'
     }
   ];
 
-  const quickActions = [
-    { name: "Get Started", href: "/get-started", icon: Rocket },
-    { name: "Request Quote", href: "/request-quote", icon: Phone },
-    { name: "Pricing Guide", href: "/pricing", icon: DollarSign },
-    { name: "Marketplace", href: "/marketplace", icon: ShoppingBag }
-  ];
-
   return (
-    <div className="lg:hidden">
-      <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark border-l border-zion-purple/30 shadow-2xl">
-        <div className="flex h-full flex-col">
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Overlay */}
+          <motion.div
+            variants={overlayVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            onClick={onClose}
+          />
+
+          {/* Menu */}
+          <motion.div
+            variants={menuVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-zion-slate-darker to-zion-blue-dark border-l border-zion-purple/30 shadow-2xl z-50 lg:hidden overflow-y-auto custom-scrollbar"
+          >
+            {/* Header */}
+            <div className="sticky top-0 bg-zion-slate-darker/95 backdrop-blur-sm border-b border-zion-purple/20 p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-white font-bold text-lg">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
               </div>
-              <span className="text-lg font-bold text-white">Menu</span>
-            </div>
-            <button
-              onClick={onClose}
-              className="p-2 rounded-lg text-zion-slate-light hover:text-white hover:bg-zion-purple/20 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="flex-1 overflow-y-auto">
-            {/* Home Link */}
-            <div className="p-4 border-b border-zion-purple/10">
-              <Link
-                to="/"
-                onClick={handleLinkClick}
-                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-purple/20 transition-colors group"
-              >
-                <Home className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
-                <span className="text-white font-medium">Home</span>
-              </Link>
             </div>
 
-            {/* Menu Sections */}
+            {/* Menu Items */}
             <div className="p-4 space-y-2">
-              {menuSections.map((section) => (
-                <div key={section.title} className="border border-zion-purple/20 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-4 bg-zion-purple/10 hover:bg-zion-purple/20 transition-colors"
-                  >
-                    <div className="flex items-center space-x-3">
-                      <section.icon className="w-5 h-5 text-zion-cyan" />
-                      <span className="text-white font-medium">{section.title}</span>
-                    </div>
-                    <ChevronDown 
-                      className={`w-4 h-4 text-zion-slate-light transition-transform duration-200 ${
-                        expandedSection === section.title ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  
-                  {expandedSection === section.title && (
-                    <div className="bg-zion-slate-darker">
-                      {section.items.map((item, index) => (
-                        <div key={index} className="p-4 border-t border-zion-purple/10">
-                          <div className="flex items-center space-x-2 mb-3">
-                            <item.icon className="w-4 h-4 text-zion-purple" />
-                            <h4 className="text-zion-purple font-medium text-sm">{item.category}</h4>
-                          </div>
-                          <ul className="space-y-2 ml-6">
-                            {item.links.map((link) => (
-                              <li key={link.name}>
-                                <Link
-                                  to={link.href}
-                                  onClick={handleLinkClick}
-                                  className="flex items-center justify-between py-2 px-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors group"
-                                >
-                                  <span className="text-sm">{link.name}</span>
-                                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
+              {menuItems.map((item, index) => (
+                <div key={item.title}>
+                  {item.simple ? (
+                    <Link
+                      to={item.href || '/'}
+                      onClick={onClose}
+                      className="flex items-center space-x-3 p-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-all duration-200 group"
+                    >
+                      <item.icon className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
+                      <span className="font-medium">{item.title}</span>
+                    </Link>
+                  ) : (
+                    <div>
+                      <button
+                        onClick={() => toggleSection(item.title)}
+                        className="w-full flex items-center justify-between p-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-all duration-200 group"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
+                          <span className="font-medium">{item.title}</span>
                         </div>
-                      ))}
+                        <ChevronDown 
+                          className={`w-5 h-5 text-zion-cyan transition-transform duration-200 ${
+                            isSectionExpanded(item.title) ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+
+                      {/* Submenu */}
+                      <AnimatePresence>
+                        {isSectionExpanded(item.title) && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="ml-6 space-y-1 mt-2">
+                              {item.sections?.map((section, sectionIndex) => (
+                                <div key={sectionIndex} className="mb-4">
+                                  <div className="flex items-center space-x-2 mb-2">
+                                    <section.icon className="w-4 h-4 text-zion-cyan" />
+                                    <span className="text-sm font-medium text-zion-cyan">{section.title}</span>
+                                  </div>
+                                  <div className="space-y-1">
+                                    {section.items.map((subItem, subIndex) => (
+                                      <Link
+                                        key={subIndex}
+                                        to={subItem.href}
+                                        onClick={onClose}
+                                        className="flex items-center space-x-2 p-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors group"
+                                      >
+                                        <subItem.icon className="w-3 h-3 text-zion-cyan group-hover:scale-110 transition-transform" />
+                                        <span>{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   )}
                 </div>
               ))}
             </div>
 
-            {/* Direct Links */}
-            <div className="p-4 border-t border-zion-purple/20">
-              <div className="space-y-2">
-                <Link
-                  to="/pricing"
-                  onClick={handleLinkClick}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-purple/20 transition-colors group"
-                >
-                  <DollarSign className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
-                  <span className="text-white font-medium">Pricing</span>
-                </Link>
-                <Link
-                  to="/contact"
-                  onClick={handleLinkClick}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-purple/20 transition-colors group"
-                >
-                  <Phone className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
-                  <span className="text-white font-medium">Contact</span>
-                </Link>
+            {/* Footer */}
+            <div className="sticky bottom-0 bg-zion-slate-darker/95 backdrop-blur-sm border-t border-zion-purple/20 p-4">
+              <div className="text-center">
+                <div className="flex items-center justify-center space-x-4 mb-3">
+                  <a href="mailto:kleber@ziontechgroup.com" className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors">
+                    <Mail className="w-5 h-5" />
+                  </a>
+                  <a href="tel:+13024640950" className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors">
+                    <Phone className="w-5 h-5" />
+                  </a>
+                </div>
+                <p className="text-xs text-zion-slate-light">
+                  © 2025 Zion Tech Group. All rights reserved.
+                </p>
               </div>
             </div>
-          </div>
-
-          {/* Footer - Quick Actions */}
-          <div className="border-t border-zion-purple/20 p-4">
-            <h4 className="text-white font-semibold mb-3 text-sm">Quick Actions</h4>
-            <div className="grid grid-cols-2 gap-2">
-              {quickActions.map((action) => (
-                <Link
-                  key={action.name}
-                  to={action.href}
-                  onClick={handleLinkClick}
-                  className="flex flex-col items-center space-y-2 p-3 bg-zion-purple/10 rounded-lg border border-zion-purple/20 hover:bg-zion-purple/20 hover:border-zion-cyan/30 transition-all duration-300 group"
-                >
-                  <action.icon className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />
-                  <span className="text-zinc-300 group-hover:text-white transition-colors text-xs font-medium text-center">
-                    {action.name}
-                  </span>
-                </Link>
-              ))}
-            </div>
-
-            {/* Contact Info */}
-            <div className="mt-4 pt-4 border-t border-zion-purple/10">
-              <div className="space-y-2">
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (302) 464-0950</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
 }
