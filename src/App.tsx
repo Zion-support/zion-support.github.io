@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Layout Components
+import { Header } from './components/Header';
+import Footer from './components/Footer';
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -19,10 +23,6 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
-
-// Layout Components
-import Header from './components/Header';
-import Footer from './components/Footer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -95,16 +95,15 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            {/* Enhanced Navigation */}
-            <EnhancedNavigation />
+            {/* Header */}
+            <Header />
             
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
             
-            {/* Main Content */}
-            <main id="main-content" className="flex-1 pt-32">
+            <main id="main-content" className="flex-1 pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -184,8 +183,8 @@ function App() {
               </Suspense>
             </main>
 
-            {/* Enhanced Footer */}
-            <EnhancedFooter />
+            {/* Footer */}
+            <Footer />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
