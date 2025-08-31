@@ -132,6 +132,12 @@ const AutonomousDigitalTwinManagementSystem = createLazyComponent(() => import('
 // Innovative Services Showcase 2025
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 
+// 2025 New Innovative Micro SAAS Services
+const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/AICarbonFootprintManagementPlatform'));
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AIAutonomousBusinessOperationsPlatform'));
+const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/AIMentalHealthSupportPlatform'));
+const AISmartCityPlatform = createLazyComponent(() => import('./pages/services/AISmartCityPlatform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -406,6 +412,12 @@ function App() {
                   <Route path="/services/quantum-enhanced-cybersecurity-operations-center" element={<QuantumEnhancedCybersecurityOperationsCenter />} />
                   <Route path="/services/ai-driven-sustainability-analytics-platform" element={<AIDrivenSustainabilityAnalyticsPlatform />} />
                   <Route path="/services/autonomous-digital-twin-management-system" element={<AutonomousDigitalTwinManagementSystem />} />
+
+                  {/* 2025 New Innovative Micro SAAS Services */}
+                  <Route path="/services/ai-carbon-footprint-management-platform" element={<AICarbonFootprintManagementPlatform />} />
+                  <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                  <Route path="/services/ai-mental-health-support-platform" element={<AIMentalHealthSupportPlatform />} />
+                  <Route path="/services/ai-smart-city-platform" element={<AISmartCityPlatform />} />
 
                   {/* Additional Service Routes */}
                   <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
