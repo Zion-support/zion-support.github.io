@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
-
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,80 +13,13 @@ const EquipmentPage = () => {
   const [filterAvailability, setFilterAvailability] = useState('');
   const [minRating, setMinRating] = useState(0);
   const [showRecommended, setShowRecommended] = useState(false);
-
   const categories = ['Servers', 'Networking', 'Storage', 'Workstations', 'Security'];
   const brandOptions = ['Dell', 'HP', 'Cisco', 'IBM', 'Lenovo'];
   const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
-
   useEffect(() => {
     // Simulate loading
     setTimeout(() => {
-<<<<<<< HEAD
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const EquipmentFilterControls = () => (
-    <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
-      <div className="flex items-center gap-2">
-        <Filter className="h-4 w-4 text-muted-foreground"/>
-        <select
-          value={filterCategory}
-          onChange={(e) => setFilterCategory(e.target.value)}
-          className="bg-background border border-border px-3 py-2 rounded"
-
-          <option value="">All Categories</option>
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>{cat}</option>
-          ))}
-        </select>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <SortAsc className="h-4 w-4 text-muted-foreground"/>
-        <select
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="bg-background border border-border px-3 py-2 rounded"
-
-          <option value="newest">Newest First</option>
-          <option value="price-low">Price: Low to High</option>
-          <option value="price-high">Price: High to Low</option>
-          <option value="rating">Highest Rated</option>
-        </select>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <span className="text-sm">$</span>
-        <input
-          type="number"
-          value={priceRange[0]}
-          onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-          className="w-20 bg-background border border-border px-2 py-1 rounded"
-        />
-        <span>-</span>
-        <input
-          type="number"
-          value={priceRange[1]}
-          onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-          className="w-20 bg-background border border-border px-2 py-1 rounded"
-        />
-      </div>
-
-      <Button
-        variant={showRecommended ? "default" : "outline"}
-        size="sm"
-        onClick={() => setShowRecommended(!showRecommended)}
-
-        <Star className="h-4 w-4 mr-1"/>
-        {showRecommended ? "All Equipment" : "Recommended"}
-      </Button>
-    </div>
-  );
-=======
       setLoading(false)}, 1000)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const EquipmentCard = ({ equipment }) => (
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -126,7 +58,6 @@ const EquipmentPage = () => {
       </CardContent>
     </Card>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-8">
@@ -138,9 +69,7 @@ const EquipmentPage = () => {
             Discover our comprehensive range of enterprise-grade IT equipment, servers, networking solutions, and more.
           </p>
         </div>
-
         <EquipmentFilterControls />
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {loading ? (
             // Loading skeleton
@@ -188,7 +117,6 @@ const EquipmentPage = () => {
                 rating: 4.7,
                 reviewCount: 156,
                 description: "Reliable 2U server with excellent performance and enterprise support."
-
             ].map((equipment, index) => (
               <EquipmentCard key={index} equipment={equipment} />
             ))
@@ -197,12 +125,6 @@ const EquipmentPage = () => {
       </div>
       <Footer />
     </div>
-<<<<<<< HEAD
-  );
-</Card></Card></Card></Card>};
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default EquipmentPage;
 }}

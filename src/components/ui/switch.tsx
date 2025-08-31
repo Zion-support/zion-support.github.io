@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { cn } from '../../utils/cn';
-=======
 import React from 'react';
 import { cn } from "../../utils/cn";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface SwitchProps {
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -12,7 +7,6 @@ interface SwitchProps {
   className?: string;
   id?: string;
   'aria-label'?: string;
-
 export function Switch({
   checked = false,
   onCheckedChange,
@@ -25,9 +19,7 @@ export function Switch({
   const handleToggle = () => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
-
   };
-
   return (
     <button
       type = "button"
@@ -43,16 +35,9 @@ export function Switch({
         disabled && 'opacity-50 cursor-not-allowed',
   className
       )
-
-
-
-
-
-
 }
       id={id}
       {...props}
-
       <span
         className = {
   cn(
@@ -62,9 +47,6 @@ export function Switch({
 ;
 ;
 ;
-
-
-
 };
       />;
     </button>;

@@ -16,7 +16,8 @@ import {
   CreditCard, Wallet, PiggyBank, TrendingDown, BarChart, PieChart, 
   LineChart, ScatterChart, AreaChart, CandlestickChart, GanttChart, 
   Kanban, Calendar, Timer, Stopwatch, AlertTriangle, Search,
-  Globe2, Cpu2, Database2, Network2, Server2, Smartphone2
+  Globe2, Cpu2, Database2, Network2, Server2, Smartphone2,
+  TrendingUp, ExternalLink, Lightbulb, Monitor, ShieldCheck
 } from 'lucide-react';
 
 export default function InnovativeServicesHub() {
@@ -367,33 +368,85 @@ export default function InnovativeServicesHub() {
     }
   });
 
+  const featuredServices = [
+    {
+      title: 'Quantum AI Neural Networks',
+      description: 'Revolutionary AI powered by quantum computing principles',
+      category: 'AI & Quantum',
+      price: '$50,000',
+      roi: '800%',
+      delivery: '6 months'
+    },
+    {
+      title: 'Brain-Computer Interface Platform',
+      description: 'Direct neural interface for human-computer interaction',
+      category: 'Neurotech',
+      price: '$100,000',
+      roi: '1200%',
+      delivery: '12 months'
+    },
+    {
+      title: 'Autonomous Space Mining System',
+      description: 'AI-powered space exploration and resource extraction',
+      category: 'Space Tech',
+      price: '$500,000',
+      roi: '2000%',
+      delivery: '18 months'
+    }
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
+  };
+  const itemVariants = {
+    hidden: { y: 20,
+    opacity: 0 
+},
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5;
+      };
+    };
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 py-20">
+      <motion.div
+        className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             Innovative Services Hub
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto mb-8"
+          <motion.p
+            className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             Discover our cutting-edge portfolio of AI-powered solutions, micro SAAS platforms, and revolutionary IT services
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 text-sm"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link
               to="/contact"
@@ -409,7 +462,7 @@ export default function InnovativeServicesHub() {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Contact Information Banner */}
       <section className="bg-slate-800 py-6">

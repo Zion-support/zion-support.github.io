@@ -9,15 +9,6 @@ import {
   Users,
   Globe,
   ArrowRight,
-<<<<<<< HEAD
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-const AccessibilityAuditor: React.FC = () => {
-  const features = [
-=======
   Star,
   Heart,
   Users,
@@ -28,12 +19,9 @@ const AccessibilityAuditor: React.FC = () => {
   Mail,
   MessageCircle
 } from 'lucide-react';
-
 export default function AccessibilityPage() {
   const currentYear = new Date().getFullYear();
-
   const accessibilityFeatures = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
       category: 'Visual Accessibility',
       icon: Eye,
@@ -69,12 +57,6 @@ export default function AccessibilityPage() {
       ]
     },
     {
-<<<<<<< HEAD
-      title: "Compliance Reporting",
-      description: "Detailed reports with actionable recommendations",
-      icon: "📋"
-
-=======
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: [
@@ -85,9 +67,7 @@ export default function AccessibilityPage() {
         'Step-by-step instructions'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const complianceStandards = [
     {
       standard: 'WCAG 2.1 AA',
@@ -117,16 +97,13 @@ export default function AccessibilityPage() {
       description: 'European accessibility requirements for ICT products and services',
       color: 'text-green-500'
     }
-=======;
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
     },;
     {;
       category: "Technical Accessibility",;
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const accessibilityTools = [
     {
       name: 'Screen Reader Support',
@@ -139,11 +116,6 @@ export default function AccessibilityPage() {
       icon: Smartphone
     },
     {
-<<<<<<< HEAD
-      category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-
-=======
       name: 'Voice Navigation',
       description: 'Voice control support for hands-free navigation and interaction',
       icon: Globe
@@ -153,9 +125,7 @@ export default function AccessibilityPage() {
       description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -165,7 +135,6 @@ export default function AccessibilityPage() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -176,7 +145,6 @@ export default function AccessibilityPage() {
       }
     }
   };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -194,7 +162,6 @@ export default function AccessibilityPage() {
               provide inclusive user experiences.
             </p>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
@@ -208,7 +175,6 @@ export default function AccessibilityPage() {
               ))}
             </div>
           </div>
-
           {/* Compliance Standards */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -222,7 +188,6 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
@@ -242,7 +207,6 @@ export default function AccessibilityPage() {
               ))}
             </div>
           </div>
-
           {/* Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
@@ -254,7 +218,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Initial Assessment</h3>
                 <p className="text-gray-300 text-sm">Comprehensive review of your current accessibility status</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -262,7 +225,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Automated Testing</h3>
                 <p className="text-gray-300 text-sm">Run comprehensive automated accessibility tests</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -270,7 +232,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Manual Review</h3>
                 <p className="text-gray-300 text-sm">Expert manual testing and validation</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -280,7 +241,6 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
@@ -306,7 +266,6 @@ export default function AccessibilityPage() {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Technical Benefits</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -330,7 +289,6 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -343,34 +301,18 @@ export default function AccessibilityPage() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-
                   Get Accessibility Audit
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-
                   View All Services
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-};
-
-export default AccessibilityAuditor;}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

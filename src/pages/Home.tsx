@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import {
   Users,
   TrendingUp,
@@ -654,9 +655,46 @@ const CTASection = () => {
 };
 
 // Main Home Component
-export default function Home() {
+const Home: React.FC = () => {
+  // SEO structured data for the home page
+  const homePageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group - AI-Powered Technology Solutions",
+    "description": "Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions.",
+    "url": "https://ziontechgroup.com",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud computing, and digital transformation services.",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
+    <div className="min-h-screen">
+      <SEO
+        title="AI-Powered Technology Solutions & Digital Transformation"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
+        keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
+        canonical="https://ziontechgroup.com"
+        structuredData={homePageStructuredData}
+      />
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />

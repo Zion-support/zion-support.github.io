@@ -4,12 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink import { SEO } from '@/components/SEO';
-=======
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -30,17 +26,11 @@ export default function AdvancedServicesPage() {
             case 'ai-score':
                 return (b.aiScore || 0) - (a.aiScore || 0);
             default:
-<<<<<<< HEAD
-                return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-
-=======
                 return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
       <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -51,7 +41,6 @@ export default function AdvancedServicesPage() {
             Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services.
             Expert solutions designed for the modern enterprise.
           </p>
-
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
@@ -67,7 +56,6 @@ export default function AdvancedServicesPage() {
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               Get Free Consultation
@@ -78,7 +66,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -87,13 +74,11 @@ export default function AdvancedServicesPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
               <Input placeholder="Search services, technologies, or solutions..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
             </div>
-
             <div className="flex gap-2">
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="all">All Categories</option>
                 {uniqueCategories.map(category => (<option key={category} value={category}>{category}</option>))}
               </select>
-
               <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
@@ -105,7 +90,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -115,7 +99,6 @@ export default function AdvancedServicesPage() {
               Comprehensive solutions across all major technology domains
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300">
                 <CardHeader className="text-center">
@@ -134,7 +117,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -146,13 +128,11 @@ export default function AdvancedServicesPage() {
               Expert solutions with proven results and comprehensive support
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -162,7 +142,6 @@ export default function AdvancedServicesPage() {
               Choose the plan that fits your business needs and budget
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
@@ -187,7 +166,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -197,7 +175,6 @@ export default function AdvancedServicesPage() {
               Proven expertise, innovative solutions, and dedicated support
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -206,7 +183,6 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">AI Expertise</h3>
               <p className="text-zion-slate">Cutting-edge AI solutions with proven results</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-zion-blue"/>
@@ -214,7 +190,6 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-level security and compliance standards</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-zion-blue"/>
@@ -222,7 +197,6 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with industry experience</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-zion-blue"/>
@@ -233,7 +207,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -241,7 +214,6 @@ export default function AdvancedServicesPage() {
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your business forward.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
@@ -252,7 +224,6 @@ export default function AdvancedServicesPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-
           <div className="text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
@@ -263,12 +234,7 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Service Card Component
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -278,7 +244,6 @@ function ServiceCard({ service }) {
             Featured
           </Badge>)}
       </div>
-
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <CardTitle className="text-xl text-zion-blue line-clamp-2">{service.title}</CardTitle>
@@ -289,12 +254,10 @@ function ServiceCard({ service }) {
             <div className="text-sm text-zion-slate">Starting Price</div>
           </div>
         </div>
-
         <CardDescription className="text-zion-slate line-clamp-3">
           {service.description}
         </CardDescription>
       </CardHeader>
-
       <CardContent className="space-y-4">
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -302,7 +265,6 @@ function ServiceCard({ service }) {
               {tag}
             </Badge>))}
         </div>
-
         {/* Service Details */}
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center gap-2 text-zion-slate">
@@ -322,13 +284,11 @@ function ServiceCard({ service }) {
             <span>{service.location}</span>
           </div>
         </div>
-
         {/* Category */}
         <div className="text-sm text-zion-slate">
           <strong>Category:</strong> {service.category}
           {service.subcategory && (<span className="ml-2 text-zion-cyan">• {service.subcategory}</span>)}
         </div>
-
         {/* CTA Buttons */}
         <div className="flex gap-2">
           <Button className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
@@ -339,9 +299,4 @@ function ServiceCard({ service }) {
           </Button>
         </div>
       </CardContent>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}
-=======
     </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

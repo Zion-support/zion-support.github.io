@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Search, MapPin, Briefcase, Star const TalentDirectory = () => {
-=======
 import SEO from "@/components/SEO";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const talents = [
         {
             id: 1,
@@ -73,7 +68,6 @@ const TalentDirectory = () => {
             rating: 4.9,
             projects: 28,
             avatar: "👨‍💻"
-
     ];
     const categories = [
         "All",
@@ -87,7 +81,6 @@ const TalentDirectory = () => {
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -95,90 +88,37 @@ const TalentDirectory = () => {
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }}>
             Top Technology
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
               {" "}Talent
             </span>
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Connect with world-class technology professionals and experts in AI, cloud computing,
-=======
           <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}>
             Connect with world-class technology professionals and experts in AI, cloud computing, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             cybersecurity, and more. Find the perfect talent for your next project.
           </motion.p>
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }} className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
@@ -187,7 +127,6 @@ const TalentDirectory = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-8 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -201,7 +140,6 @@ const TalentDirectory = () => {
           </div>
         </div>
       </section>
-
       {/* Talent Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -211,35 +149,16 @@ const TalentDirectory = () => {
               Discover top-tier technology professionals ready to contribute to your next project
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {talents.map((talent, index) => (<motion.div key={talent.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} viewport={{ once: true }}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -255,7 +174,6 @@ const TalentDirectory = () => {
                     <span className="text-sm text-gray-600">{talent.rating}</span>
                   </div>
                 </div>
-
                 {/* Details */}
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -271,7 +189,6 @@ const TalentDirectory = () => {
                     <span>{talent.projects} projects completed</span>
                   </div>
                 </div>
-
                 {/* Skills */}
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
@@ -281,7 +198,6 @@ const TalentDirectory = () => {
                       </span>))}
                   </div>
                 </div>
-
                 {/* CTA */}
                 <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Connect with {talent.name.split(' ')[0]}
@@ -290,7 +206,6 @@ const TalentDirectory = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">

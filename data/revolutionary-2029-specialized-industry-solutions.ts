@@ -38,12 +38,9 @@ export interface RevolutionarySpecializedIndustryService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] = [
   // AI-Powered Healthcare Platform
@@ -150,13 +147,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     launchDate: '2025-01-08',
     customers: 41,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 320
-
-];
-
-export default revolutionarySpecializedIndustrySolutions2029;}}
-=======
     reviews: 25,
     isNew: true
   },
@@ -608,4 +598,3 @@ export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, max
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

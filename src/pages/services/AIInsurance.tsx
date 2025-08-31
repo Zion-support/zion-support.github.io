@@ -9,25 +9,12 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Integration with major insurance management systems',;
     'Custom AI models for insurance-specific insights';
   ];
-
   const tiers = [
     {
       name: 'Small Insurer',
       price: '$499/mo',
       details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Insurer',
-      price: '$1,299/mo',
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Insurer',
-      price: '$3,999/mo',
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Insurer', 
       price: '$1,299/mo', 
@@ -38,9 +25,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
       price: '$3,999/mo', ;
       details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Automated underwriting and risk assessment',;
     'Claims processing and fraud detection',;
@@ -49,7 +34,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Compliance monitoring and reporting',;
     'Customer retention and cross-selling';
   ];
-
   const benefits = [;
     'Reduce claims processing time by 60-80%',;
     'Improve fraud detection accuracy by 40-60%',;
@@ -58,7 +42,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Enhance customer experience and satisfaction',;
     'Scale insurance operations efficiently';
   ];
-
   const industries = [;
     'Property & Casualty Insurance',;
     'Life & Health Insurance',;
@@ -67,7 +50,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Reinsurance',;
     'Insurance Brokers';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <p className="text-indigo-100 text-xl">Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +100,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['60-80% faster processing', '40-60% fraud detection', '25-40% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +108,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +119,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-blue-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Insurance Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +130,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +141,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your insurance business with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

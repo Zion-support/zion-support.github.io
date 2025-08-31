@@ -19,12 +19,7 @@ const InnovativeServicesShowcase = () => {
             case 'ai':
                 return innovativeAIServices2025;
             default:
-<<<<<<< HEAD
-                return [];
-
-=======
                 return []}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleServiceClick = (service) => {
         setSelectedService(service)};
@@ -61,7 +56,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Tab Navigation */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -74,7 +68,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -99,15 +92,12 @@ const InnovativeServicesShowcase = () => {
                     </div>
                   </div>
                 </div>
-
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.name}
                 </h3>
-
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <div className="flex flex-wrap gap-1">
@@ -119,7 +109,6 @@ const InnovativeServicesShowcase = () => {
                       </span>)}
                   </div>
                 </div>
-
                 <div className="flex justify-between items-center">
                   <div className="text-sm text-gray-400">
                     {activeTab === 'microsaas' && service.userLimit}
@@ -134,7 +123,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -147,12 +135,10 @@ const InnovativeServicesShowcase = () => {
                   </svg>
                 </button>
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Description</h3>
                   <p className="text-gray-300 mb-6">{selectedService.description}</p>
-
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Features</h3>
                   <ul className="space-y-2 mb-6">
                     {selectedService.features.map((feature, idx) => (<li key={idx} className="text-gray-300 flex items-center">
@@ -160,7 +146,6 @@ const InnovativeServicesShowcase = () => {
                         {feature}
                       </li>))}
                   </ul>
-
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Benefits</h3>
                   <ul className="space-y-2 mb-6">
                     {selectedService.benefits.map((benefit, idx) => (<li key={idx} className="text-gray-300 flex items-center">
@@ -169,7 +154,6 @@ const InnovativeServicesShowcase = () => {
                       </li>))}
                   </ul>
                 </div>
-
                 <div>
                   <div className="bg-white/10 rounded-lg p-6 mb-6">
                     <h3 className="text-xl font-semibold text-blue-400 mb-4">Pricing & Details</h3>
@@ -226,7 +210,6 @@ const InnovativeServicesShowcase = () => {
                         </>)}
                     </div>
                   </div>
-
                   <div className="bg-white/10 rounded-lg p-6">
                     <h3 className="text-xl font-semibold text-blue-400 mb-4">Contact Information</h3>
                     <div className="space-y-3">
@@ -249,7 +232,6 @@ const InnovativeServicesShowcase = () => {
                         <span className="text-white">{selectedService.contactInfo.website}</span>
                       </div>
                     </div>
-
                     <div className="mt-6">
                       <a href={`mailto:${selectedService.contactInfo.email}`} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block">
                         Get Started Today
@@ -261,7 +243,6 @@ const InnovativeServicesShowcase = () => {
             </div>
           </div>
         </div>)}
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center px-4">

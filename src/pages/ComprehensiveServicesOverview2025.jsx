@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { allEnhancedServices } from "../data/enhanced-2025-comprehensive-services";
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from "../data/revolutionaryMicroSaasServices2025";
 const ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -19,7 +19,7 @@ const ComprehensiveServicesOverview2025 = () => {
         'Energy & Sustainability',
         'Logistics & Transportation'
     ];
-    const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+    const filteredServices = REVOLUTIONARY_MICRO_SAAS_SERVICES_2025.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
     const getCategoryIcon = (category) => {
         const icons = {
   'AI & Business Intelligence': '🧠',
@@ -33,23 +33,11 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': '⚖️',
             'Marketing & AI': '📢',
             'Energy & Sustainability': '⚡',
-  <<<<<<< HEAD
-            'Logistics & Transportation': '🚚'
-        
-
-};
-        return icons[category] || '🚀'};
-=======
   'Logistics & Transportation': '🚚'
-        
-
-
-
-
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
     const getCategoryColor = (category) => {
         const colors = {
   'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
@@ -63,23 +51,11 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': 'from-gray-500 to-slate-500',
             'Marketing & AI': 'from-pink-500 to-rose-500',
             'Energy & Sustainability': 'from-green-500 to-teal-500',
-  <<<<<<< HEAD
-            'Logistics & Transportation': 'from-orange-500 to-red-500'
-        
-
-};
-        return colors[category] || 'from-gray-500 to-slate-500'};
-=======
   'Logistics & Transportation': 'from-orange-500 to-red-500'
-        
-
-
-
-
 };
         return colors[category] || 'from-gray-500 to-slate-500';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -135,8 +111,8 @@ const ComprehensiveServicesOverview2025 = () => {
                     <span className="text-3xl">{getCategoryIcon(service.category)}</span>
                     <span className="text-sm bg-white/20 px-2 py-1 rounded-full">{service.category}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-white/90 text-sm">{service.tagline}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-white/90 text-sm">{service.description}</p>
                 </div>
                 {/* Service Content */}
                 <div className="p-6">
@@ -144,30 +120,30 @@ const ComprehensiveServicesOverview2025 = () => {
                   {/* Key Metrics */}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="text-center">
-                      <div className="text-lg font-bold text-blue-400">{service.price}</div>
-                      <div className="text-xs text-gray-400">{service.period}</div>
+                      <div className="text-lg font-bold text-blue-400">${service.price}</div>
+                      <div className="text-xs text-gray-400">/{service.pricingModel}</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-lg font-bold text-green-400">{service.rating}/5.0</div>
-                      <div className="text-xs text-gray-400">{service.reviews} reviews</div>
+                      <div className="text-lg font-bold text-green-400">{service.innovationLevel}</div>
+                      <div className="text-xs text-gray-400">Innovation Level</div>
                     </div>
                   </div>
                   {/* Technology Stack */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Technology Stack</h4>
                     <div className="flex flex-wrap gap-1">
-                      {service.technology.slice(0, 3).map((tech, index) => (<span key={index} className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full text-xs">
+                      {service.technicalSpecs?.technology?.slice(0, 3).map((tech, index) => (<span key={index} className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full text-xs">
                           {tech}
-                        </span>))}
+                        </span>)) || <span className="text-gray-400 text-xs">Technology info not available</span>}
                     </div>
                   </div>
                   {/* Market Info */}
                   <div className="grid grid-cols-2 gap-4 text-xs text-gray-400 mb-4">
                     <div>
-                      <span className="text-blue-400">Market:</span> {service.marketSize}
+                      <span className="text-blue-400">ROI:</span> {service.roi}
                     </div>
                     <div>
-                      <span className="text-blue-400">Customers:</span> {service.customers.toLocaleString()}
+                      <span className="text-blue-400">Market Price:</span> {service.marketPrice}
                     </div>
                   </div>
                   {/* CTA Buttons */}
@@ -175,7 +151,7 @@ const ComprehensiveServicesOverview2025 = () => {
                     <button onClick={() => setSelectedService(service.id)} className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
                       View Details
                     </button>
-                    <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
+                    <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
                       Contact
                     </a>
                   </div>
@@ -194,7 +170,7 @@ const ComprehensiveServicesOverview2025 = () => {
           <div className="bg-slate-800 rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               {(() => {
-                const service = allEnhancedServices.find(s => s.id === selectedService);
+                const service = REVOLUTIONARY_MICRO_SAAS_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service)
                     return null;
                 return (<>
@@ -203,7 +179,7 @@ const ComprehensiveServicesOverview2025 = () => {
                       <div className="flex items-center space-x-3">
                         <span className="text-4xl">{getCategoryIcon(service.category)}</span>
                         <div>
-                          <h2 className="text-2xl font-bold text-white">{service.name}</h2>
+                          <h2 className="text-2xl font-bold text-white">{service.title}</h2>
                           <p className="text-blue-400">{service.category}</p>
                         </div>
                       </div>
@@ -216,7 +192,7 @@ const ComprehensiveServicesOverview2025 = () => {
                       {/* Overview */}
                       <div>
                         <h3 className="text-lg font-semibold text-blue-400 mb-2">Overview</h3>
-                        <p className="text-gray-300 mb-2">{service.tagline}</p>
+                        <p className="text-gray-300 mb-2">{service.subcategory}</p>
                         <p className="text-gray-300">{service.description}</p>
                       </div>
                       {/* Key Metrics Grid */}

@@ -9,25 +9,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Real-time orchestration performance tracking',;
     'Custom AI models for orchestration applications';
   ];
-
   const tiers = [
     {
       name: 'Developer',
       price: '$499/mo',
       details: ['Up to 25 workflows', 'Basic AI features', 'Standard orchestration', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,299/mo',
-      details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,299/mo', 
@@ -38,9 +25,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$3,299/mo', ;
       details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Security orchestration optimization',;
     'Security workflow management and execution',;
@@ -49,7 +34,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Orchestration automation and coordination',;
     'Orchestration scaling and management';
   ];
-
   const benefits = [;
     'Improve security orchestration performance by 50-80%',;
     'Reduce orchestration completion time by 40-70%',;
@@ -58,7 +42,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Optimize resource utilization',;
     'Scale security orchestration operations efficiently';
   ];
-
   const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
@@ -67,7 +50,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Media & Entertainment',;
     'Technology & SaaS';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-500 via-violet-500 to-fuchsia-500 py-20 text-center">
@@ -79,7 +61,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <p className="text-purple-100 text-xl">Transform your security orchestration with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +100,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +108,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +119,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-purple-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Security Orchestration Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +130,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +141,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your security orchestration with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -18,7 +18,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   const [suggestions, setSuggestions] = useState([]);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
-
   // Sample search suggestions
   const allSuggestions = [
     { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },
@@ -30,44 +29,25 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
   ];
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsOpen(false);
-<<<<<<< HEAD
-        setActiveIndex(-1);
-
-=======
         setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-
   useEffect(() => {
     if (searchQuery.trim()) {
       const filtered = allSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(searchQuery.toLowerCase())
       );
-<<<<<<< HEAD
-      setSuggestions(filtered);
-    } else {
-      setSuggestions([]);
-
-    setActiveIndex(-1);
-  }, [searchQuery]);
-=======
       setSuggestions(filtered)} else {
       setSuggestions([])}
     setActiveIndex(-1)}, [searchQuery]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
     setIsOpen(true)};
-
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -78,74 +58,44 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
       e.preventDefault();
       if (activeIndex >= 0 && suggestions[activeIndex]) {
-<<<<<<< HEAD
-        handleSuggestionClick(suggestions[activeIndex]);
-      } else if (searchQuery.trim()) {
-        handleSearch(searchQuery);
-
-    } else if (e.key === 'Escape') {
-      setIsOpen(false);
-      setActiveIndex(-1);
-
-=======
         handleSuggestionClick(suggestions[activeIndex])} else if (searchQuery.trim()) {
         handleSearch(searchQuery)}
     } else if (e.key === 'Escape') {
       setIsOpen(false);
       setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const handleSuggestionClick = (suggestion) => {
     setSearchQuery(suggestion.text);
     setIsOpen(false);
     setActiveIndex(-1);
     handleSearch(suggestion.text)};
-
   const handleSearch = (query) => {
     if (query.trim()) {
       // Add to recent searches
       const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
       setRecentSearches(newRecent);
-
       // Store in localStorage
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
-
       // Perform search (in a real app, this would navigate to search results)
-<<<<<<< HEAD
-      // // // console.log('Searching for:', query);
-=======
       // // // // // // // console.log('Searching for:', query);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-
       // Close search
       setIsOpen(false);
-<<<<<<< HEAD
-      setActiveIndex(-1);
-
-=======
       setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const handleRecentSearchClick = (search) => {
     setSearchQuery(search);
     handleSearch(search)};
-
   const handleTrendingSearchClick = (search) => {
     setSearchQuery(search);
     handleSearch(search)};
-
   const clearSearch = () => {
     setSearchQuery('');
     inputRef.current?.focus()};
-
   const removeRecentSearch = (searchToRemove, e) => {
     e.stopPropagation();
     const newRecent = recentSearches.filter(s => s !== searchToRemove);
     setRecentSearches(newRecent);
     localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
-
   return (
     <div className="relative flex-1 max-w-2xl" ref={searchRef}>
       {/* Search Input */}
@@ -167,12 +117,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           <button
             onClick={clearSearch}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
-
             <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
           </button>
         )}
       </div>
-
       {/* Search Dropdown */}
       {isOpen && (
         <div className="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-hidden">
@@ -188,7 +136,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                     className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${
                       index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''
                     }`}
-
                     <suggestion.icon className="w-4 h-4 text-gray-400" />
                     <div className="flex-1">
                       <div className="text-sm font-medium text-gray-900">{suggestion.text}</div>
@@ -199,7 +146,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
               </div>
             </div>
           )}
-
           {/* Recent Searches */}
           {recentSearches.length > 0 && (
             <div className="p-4 border-b border-gray-200">
@@ -213,21 +159,13 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                     key={index}
                     onClick={() => handleRecentSearchClick(search)}
                     className="w-full flex items-center justify-between px-3 py-2 rounded-md text-left hover:bg-gray-50 group"
-
                     <span className="text-sm text-gray-700">{search}</span>
                     <button
                       onClick = {
   (e) => removeRecentSearch(search,
   e)
-
-
-
-
-
-
 }
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
-
                       <X className="w-3 h-3 text-gray-400" />
                     </button>
                   </button>
@@ -235,7 +173,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
               </div>
             </div>
           )}
-
           {/* Trending Searches */}
           <div className="p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
@@ -248,29 +185,21 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                   key={index}
                   onClick={() => handleTrendingSearchClick(search)}
                   className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
-
                   {search}
                 </button>
               ))}
             </div>
           </div>
-
           {/* Search Button */}
           <div className="p-4 bg-gray-50 border-t border-gray-200">
             <button
               onClick={() => handleSearch(searchQuery)}
               disabled={!searchQuery.trim()}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
-
               Search
             </button>
           </div>
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  );
-};}}}}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
