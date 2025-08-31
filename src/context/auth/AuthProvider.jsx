@@ -1,25 +1,38 @@
-import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from "../../integrations/supabase/client";
-import { useAuthOperations } from "../../hooks/useAuthOperations";
-import { AuthContext } from "./AuthContext";
-import { cleanupAuthState } from "../../utils/authUtils";
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthState } from "./useAuthState";
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
-import { mapProfileToUser } from "./profileMapper";
-import { loginUser, registerUser } from "@/services/authService";
-import { safeStorage } from "@/utils/safeStorage";
-import { toast } from "@/hooks/use-toast"; // Import toast
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
-export const AuthProvider = ({ children }) => {
-    const { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens } = useAuthState();
-    const navigate = useNavigate();
-    const location = useLocation();
-    const dispatch = useDispatch();
-    const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
-    const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);
-    // Wrapper for login to match the AuthContextType interface
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { toast } from '@/hooks/use-toast';
+import { safeStorage } from '@/utils/safeStorage';
+import { useEmailAuth } from './useEmailAuth';
+import { registerUser, loginUser } from '@/services/auth';
+
+const AuthContext = createContext();
+
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+    const [tokens, setTokens] = useState({ accessToken: null, refreshToken: null });
+    const [loading, setLoading] = useState(true);
+    const router = useRouter();
+    const location = typeof window !== 'undefined' ? window.location : { search: '' };
+    const { login: loginImpl, signup: signupImpl } = useEmailAuth();
+
+    useEffect(() => {
+        // Check for existing auth data on mount
+        const authData = safeStorage.getItem('auth');
+        if (authData) {
+            try {
+                const { token, user: savedUser } = JSON.parse(authData);
+                if (token && savedUser) {
+                    setTokens({ accessToken: token, refreshToken: null });
+                    setUser(savedUser);
+                }
+            } catch (error) {
+                console.error('Error parsing auth data:', error);
+                safeStorage.removeItem('auth');
+            }
+        }
+        setLoading(false);
+    }, []);
+
     const login = async (email, password) => {
         const { res, data } = await loginUser(email, password); // Calls /api/auth/login
         // Check for specific "Email not confirmed" error first
@@ -59,6 +72,7 @@ export const AuthProvider = ({ children }) => {
         router(next, { replace: true });
         return { error: null }; // Successful login
     };
+
     // Register via backend and persist auth info
     const register = async (name, email, password) => {
         try {
@@ -72,6 +86,7 @@ export const AuthProvider = ({ children }) => {
         catch (err) {
             return { error: err?.message || 'Registration failed' }}
     };
+
     // Wrapper for signup to match the AuthContextType interface
     const signup = async (email, password, userData) => {
         const result = await signupImpl({ email, password, display_name: userData });
@@ -144,6 +159,7 @@ export const AuthProvider = ({ children }) => {
         isLoading,
         isAuthenticated: !!user,
         login,
+        logout,
         register,
         signup,
         logout,

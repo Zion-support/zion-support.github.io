@@ -4,7 +4,7 @@ export interface PricingTier {
   name: string;
   price: number;
   currency: string;
-  billing: string;
+  billingCycle: string;
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -53,7 +53,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Business",
         price: 3999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "Advanced AI-powered data analysis with GPT-4 integration",
           "Automated insight generation with natural language explanations",
@@ -88,7 +88,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Enterprise",
         price: 8999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Business features",
           "Voice-activated queries and commands",
@@ -123,7 +123,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Ultimate",
         price: 12999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Enterprise features",
           "Quantum computing integration",
@@ -187,7 +187,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Professional",
         price: 8999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "Quantum-resistant encryption algorithms",
           "Quantum key distribution (QKD)",
@@ -222,7 +222,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Enterprise",
         price: 15999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Professional features",
           "Multi-cloud security orchestration",
@@ -257,7 +257,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Government",
         price: 25000,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Enterprise features",
           "Top-secret clearance support",
@@ -321,7 +321,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Business",
         price: 5999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "AI-powered demand forecasting with 98% accuracy",
           "Autonomous inventory optimization",
@@ -356,7 +356,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Enterprise",
         price: 12999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Business features",
           "Blockchain-based traceability",
@@ -391,7 +391,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Global",
         price: 18000,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Enterprise features",
           "Global supply chain management",
@@ -455,7 +455,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Professional",
         price: 15999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "Quantum-powered market analysis",
           "Ultra-fast trading execution (<1ms latency)",
@@ -490,7 +490,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Institutional",
         price: 35000,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Professional features",
           "Mobile trading app",
@@ -525,7 +525,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Ultimate",
         price: 50000,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Institutional features",
           "Custom quantum algorithms",
@@ -589,7 +589,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Clinical",
         price: 7999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "AI-powered medical imaging analysis",
           "Real-time disease detection and classification",
@@ -624,7 +624,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Enterprise",
         price: 15999,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Clinical features",
           "Telemedicine integration",
@@ -659,7 +659,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         name: "Research",
         price: 22000,
         currency: "$",
-        billing: "monthly",
+        billingCycle: "monthly",
         features: [
           "All Enterprise features",
           "Advanced research tools",

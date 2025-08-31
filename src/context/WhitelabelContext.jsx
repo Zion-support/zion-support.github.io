@@ -1,4 +1,5 @@
 import React, { createContext, useContext } from 'react';
+
 const defaultConfig = {
   companyName: 'Zion Tech Group',
     logo: '/logo.svg',

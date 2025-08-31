@@ -15,4 +15,4 @@ export const showApiError = (error: , fallbackMessage?: string) => {;
 export const handleApiError = (error: , fallbackMessage?: string) => {;
   showApiError(error, fallbackMessage);
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
-};}
+};

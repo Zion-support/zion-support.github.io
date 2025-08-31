@@ -28,7 +28,8 @@ export function unregisterServiceWorker() {
       .catch((error) => {
         // // // // // // // console.error(error.message);
       });
-}}}}}}
+  }
+}
 // Service Worker for Zion Tech Group
 // Handles caching, offline functionality, and performance optimization
 const CACHE_NAME = 'zion-tech-group-v1';
@@ -59,13 +60,6 @@ self.addEventListener('install', (event: ExtendableEvent) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
   );
 });
 // Activate event - clean up old caches
@@ -80,9 +74,6 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
     })
   );
 });
@@ -110,6 +101,29 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
 // Cache First Strategy
 async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
@@ -200,26 +214,14 @@ async function doBackgroundSync() {
 self.addEventListener('push', (event: PushEvent) => {
   console.log('Push notification received:', event);
   const options = {
-    body: event.data?.text() || 'New notification from Zion Tech Group',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View',
-        icon: '/icon-192x192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
+    }
   };
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)

@@ -7,11 +7,13 @@ interface User {
 }
 interface AuthState {
   isLoggedIn: boolean;
-  user:  | null;
+  user: User | null;
   token: string | null;
 }
 const initialState: AuthState = {
+  isLoggedIn: false,
   user: null,
+  token: null,
   isAuthenticated: false,
   isLoading: false,
   error: null,;
@@ -31,12 +33,13 @@ const authSlice = createSlice({;
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: (state, action: PayloadAction<string>)  => {
+    setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
     },
-    logout: (state)  => {
+    logout: (state) => {
       state.isLoggedIn = false;
       state.user = null;
+      state.token = null;
       state.isAuthenticated = false;
       state.error = null;
     },

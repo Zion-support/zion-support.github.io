@@ -16,8 +16,13 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
+import { Menu, X, ShoppingCart } from '@/components/header/ShoppingCart';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/MiniCartPreview';
+
 export function PrimaryNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { user } = useAuth();
@@ -33,6 +38,7 @@ export function PrimaryNav() {
     catch {
         // context not available
     const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
