@@ -79,12 +79,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Services Portfolio',
       icon: Settings,
       links: [
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete service portfolio' },
-        { name: 'Services Catalog', href: '/services-catalog', icon: FileText, description: 'Browse all services' },
-        { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp, description: 'Compare offerings' },
+        { name: 'Services Overview', href: '/services', icon: BarChart3, description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
         { name: 'IT Services', href: '/it-services', icon: Settings, description: 'Information Technology services' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Software-as-a-Service products' }
+        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Software-as-a-Service products' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Security solutions' }
       ]
     },
     {
@@ -143,14 +143,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       ]
     },
     {
-      id: 'innovative-showcase',
-      title: 'Innovation Hub',
-      icon: Star,
+      id: 'solutions',
+      title: 'Industry Solutions',
+      icon: Building,
       links: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest innovations' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future technologies' },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: BarChart3, description: 'Complete portfolio' },
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Zap, description: 'Emerging technologies' }
+        { name: 'All Solutions', href: '/solutions', icon: BarChart3, description: 'Complete solutions overview' },
+        { name: 'Enterprise', href: '/enterprise', icon: Building, description: 'Enterprise solutions' },
+        { name: 'Healthcare', href: '/healthcare', icon: Heart, description: 'Healthcare technology' },
+        { name: 'Financial', href: '/financial', icon: DollarSign, description: 'Financial solutions' },
+        { name: 'Manufacturing', href: '/manufacturing', icon: Cpu, description: 'Manufacturing solutions' },
+        { name: 'Retail', href: '/retail', icon: ShoppingCart, description: 'Retail technology' },
+        { name: 'Government', href: '/government', icon: Shield, description: 'Government solutions' },
+        { name: 'Education', href: '/education', icon: GraduationCap, description: 'Educational technology' }
       ]
     },
     {
@@ -170,12 +174,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       icon: BookOpen,
       links: [
         { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Get support' },
-        { name: 'Documentation', href: '/documentation', icon: FileText, description: 'Technical docs' },
-        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Learning resources' },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
         { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
         { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Educational events' },
-        { name: 'Case Studies', href: '/case-studies', icon: Award, description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
+        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Learning resources' },
         { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' }
       ]
     },
@@ -189,7 +192,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         { name: 'Partners', href: '/partners', icon: Building, description: 'Strategic partnerships' },
         { name: 'News & Press', href: '/news', icon: FileText, description: 'Latest news' },
         { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Service marketplace' }
       ]
     },
@@ -201,7 +203,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         { name: 'Dashboard', href: '/dashboard', icon: BarChart3, description: 'User dashboard' },
         { name: 'Support Center', href: '/support', icon: HelpCircle, description: 'Technical support' },
         { name: 'Community', href: '/community', icon: Users, description: 'User community' },
-                 { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
+        { name: 'Login', href: '/login', icon: User, description: 'Sign in' },
         { name: 'Sign Up', href: '/signup', icon: Plus, description: 'Create account' }
       ]
     },
@@ -355,11 +357,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           <div className="space-y-2 text-xs text-slate-400">
             <div className="flex items-center space-x-2">
               <Mail className="w-3 h-3" />
-              <span>contact@ziontechgroup.com</span>
+              <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <PhoneCall className="w-3 h-3" />
-              <span>+1 (555) 123-4567</span>
+              <span>+1 (302) 464-0950</span>
             </div>
           </div>
         </div>

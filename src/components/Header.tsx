@@ -177,6 +177,14 @@ export function Header({ className }: HeaderProps) {
                   >
                     <div className="py-2">
                       <Link
+                        to="/dashboard"
+                        className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors"
+                        onClick={() => setIsUserMenuOpen(false)}
+                      >
+                        <BarChart3 className="w-4 h-4" />
+                        <span>Dashboard</span>
+                      </Link>
+                      <Link
                         to="/profile"
                         className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
@@ -269,6 +277,13 @@ export function Header({ className }: HeaderProps) {
                   <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Services</h3>
                   <div className="pl-4 space-y-2">
                     <Link
+                      to="/services"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      All Services
+                    </Link>
+                    <Link
                       to="/ai-services"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
@@ -290,38 +305,45 @@ export function Header({ className }: HeaderProps) {
                       Micro SAAS
                     </Link>
                     <Link
-                      to="/cloud-devops"
+                      to="/solutions"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Cloud & DevOps
+                      Solutions
                     </Link>
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Solutions</h3>
+                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Resources</h3>
                   <div className="pl-4 space-y-2">
                     <Link
-                      to="/enterprise"
+                      to="/case-studies"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Enterprise
+                      Case Studies
                     </Link>
                     <Link
-                      to="/healthcare"
+                      to="/white-papers"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Healthcare
+                      White Papers
                     </Link>
                     <Link
-                      to="/financial"
+                      to="/webinars"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Financial
+                      Webinars
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Blog
                     </Link>
                   </div>
                 </div>
@@ -337,11 +359,11 @@ export function Header({ className }: HeaderProps) {
                       About Us
                     </Link>
                     <Link
-                      to="/contact"
+                      to="/team"
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Contact
+                      Our Team
                     </Link>
                     <Link
                       to="/careers"
@@ -350,6 +372,40 @@ export function Header({ className }: HeaderProps) {
                     >
                       Careers
                     </Link>
+                    <Link
+                      to="/contact"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Support</h3>
+                  <div className="pl-4 space-y-2">
+                    <Link
+                      to="/help"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Help Center
+                    </Link>
+                    <Link
+                      to="/faq"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      FAQ
+                    </Link>
+                    <Link
+                      to="/pricing"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Pricing
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -357,11 +413,11 @@ export function Header({ className }: HeaderProps) {
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-zion-purple/20">
                 <Link
-                  to="/signup"
+                  to="/request-quote"
                   className="block w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-3 px-6 rounded-lg font-medium hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300"
                   onClick={closeMobileMenu}
                 >
-                  Get Started
+                  Get Quote
                 </Link>
               </div>
             </div>
