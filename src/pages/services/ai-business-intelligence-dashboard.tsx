@@ -1,19 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Clock, 
+  BarChart3, 
   TrendingUp, 
+  Users, 
+  DollarSign, 
+  Target, 
   Zap, 
   Shield, 
+  Cloud, 
   Brain, 
   CheckCircle,
   ArrowRight,
   Star,
+  Clock,
   Globe,
   Database,
+  PieChart,
+  LineChart,
   Activity,
   Eye,
   Settings,
@@ -23,117 +27,109 @@ import {
   Search,
   AlertTriangle,
   Lightbulb,
-  Phone,
-  Mail,
-  Chat,
-  Video,
-  FileText,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Smartphone,
-  Lock,
   BarChart,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Workflow,
-  Play
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Settings as SettingsIcon,
+  Download as DownloadIcon,
+  Share2 as Share2Icon,
+  Filter as FilterIcon,
+  Search as SearchIcon,
+  AlertTriangle as AlertTriangleIcon,
+  Lightbulb as LightbulbIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AICustomerSupportAutomation() {
+export default function AIBusinessIntelligenceDashboard() {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand natural language and provide instant, accurate responses 24/7",
-      benefits: ["Natural language processing", "Multi-language support", "Context-aware conversations"]
-    },
-    {
       icon: Brain,
-      title: "Smart Ticket Routing",
-      description: "Automatically categorize and route support tickets to the right agents based on content analysis",
-      benefits: ["Intelligent categorization", "Priority-based routing", "Reduced response times"]
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and anomalies in your data",
+      benefits: ["Predictive insights", "Automated pattern recognition", "Intelligent forecasting"]
     },
     {
-      icon: MessageCircle,
-      title: "Omnichannel Support",
-      description: "Unified support across email, chat, social media, and phone with consistent experience",
-      benefits: ["Channel integration", "Unified customer history", "Seamless transitions"]
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Live, interactive dashboards that update in real-time with customizable widgets and KPIs",
+      benefits: ["Live data streaming", "Customizable widgets", "Mobile-responsive design"]
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
-      description: "Anticipate customer needs and potential issues before they arise using AI algorithms",
-      benefits: ["Issue prevention", "Proactive support", "Customer satisfaction improvement"]
+      description: "Forecast future trends and outcomes using historical data and machine learning models",
+      benefits: ["Revenue forecasting", "Customer behavior prediction", "Risk assessment"]
     },
     {
       icon: Users,
-      title: "Agent Productivity Tools",
-      description: "AI-powered tools that help support agents provide faster, more accurate responses",
-      benefits: ["Response suggestions", "Knowledge base integration", "Performance analytics"]
+      title: "User Behavior Analytics",
+      description: "Deep insights into user interactions, preferences, and engagement patterns",
+      benefits: ["User journey mapping", "Engagement metrics", "Personalization insights"]
+    },
+    {
+      icon: Target,
+      title: "Goal Tracking & KPI Management",
+      description: "Set, monitor, and track progress towards business objectives with automated alerts",
+      benefits: ["Smart goal setting", "Progress tracking", "Automated notifications"]
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamline support processes with intelligent automation and workflow management",
-      benefits: ["Process automation", "Escalation rules", "SLA management"]
+      title: "Automated Reporting",
+      description: "Generate comprehensive reports automatically with customizable templates and scheduling",
+      benefits: ["Scheduled reports", "Custom templates", "Multi-format export"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses starting with AI support",
+      description: "Perfect for small businesses getting started with BI",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "Email & chat support",
-        "Basic analytics",
+        "Up to 5 users",
+        "Basic dashboard templates",
+        "Standard data connectors",
         "Email support",
-        "Standard integrations"
+        "Monthly reports",
+        "Basic AI insights"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing companies with moderate support volume",
+      description: "Ideal for growing companies with advanced analytics needs",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI chatbot",
-        "Omnichannel support",
-        "Advanced analytics",
+        "Up to 25 users",
+        "Advanced dashboard builder",
+        "Unlimited data connectors",
         "Priority support",
+        "Real-time dashboards",
+        "Advanced AI analytics",
         "Custom integrations",
-        "Agent productivity tools",
-        "Multi-language support"
+        "White-label options"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with high support volume and complex needs",
+      description: "For large organizations requiring enterprise-grade BI solutions",
       features: [
-        "Unlimited conversations",
-        "Custom AI models",
-        "Advanced automation",
-        "Predictive analytics",
+        "Unlimited users",
+        "Custom dashboard development",
+        "Advanced security features",
         "24/7 dedicated support",
-        "Custom development",
-        "Advanced security",
+        "Custom AI models",
+        "Advanced data governance",
+        "API access",
         "On-premise deployment"
       ],
       cta: "Contact Sales",
@@ -144,46 +140,23 @@ export default function AICustomerSupportAutomation() {
   const useCases = [
     {
       industry: "E-commerce",
-      description: "Handle product inquiries, order tracking, and returns with intelligent automation",
-      metrics: ["Response time reduction", "Customer satisfaction", "Support cost savings"]
+      description: "Track customer behavior, optimize conversion funnels, and predict inventory needs",
+      metrics: ["Conversion rates", "Customer lifetime value", "Inventory turnover"]
     },
     {
       industry: "SaaS",
-      description: "Provide technical support, feature explanations, and onboarding assistance",
-      metrics: ["Ticket resolution time", "User activation", "Churn reduction"]
+      description: "Monitor user engagement, track feature adoption, and optimize pricing strategies",
+      metrics: ["User activation", "Feature usage", "Churn prediction"]
+    },
+    {
+      industry: "Manufacturing",
+      description: "Optimize production processes, predict maintenance needs, and track quality metrics",
+      metrics: ["Production efficiency", "Equipment uptime", "Quality scores"]
     },
     {
       industry: "Healthcare",
-      description: "Manage appointment scheduling, general inquiries, and basic health information",
-      metrics: ["Patient satisfaction", "Staff efficiency", "Wait time reduction"]
-    },
-    {
-      industry: "Financial Services",
-      description: "Handle account inquiries, transaction support, and basic financial guidance",
-      metrics: ["Support efficiency", "Compliance adherence", "Customer retention"]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Provide instant support around the clock without additional staffing costs"
-    },
-    {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Handle more support requests with faster response times and automated processes"
-    },
-    {
-      icon: Users,
-      title: "Improved Satisfaction",
-      description: "Deliver consistent, accurate, and personalized support experiences"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce support costs while improving service quality and coverage"
+      description: "Analyze patient outcomes, optimize resource allocation, and improve care quality",
+      metrics: ["Patient satisfaction", "Resource utilization", "Outcome metrics"]
     }
   ];
 
@@ -199,18 +172,18 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              AI-Powered Customer Support
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Business Intelligence
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transform Customer Support with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> AI Automation</span>
+              Transform Your Data Into
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Actionable Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Revolutionize your customer support with intelligent AI chatbots, automated workflows, and predictive analytics. 
-              Provide 24/7 support while reducing costs and improving customer satisfaction.
+              Our AI-powered BI dashboard provides real-time insights, predictive analytics, and intelligent recommendations 
+              to help you make data-driven decisions that drive business growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -235,46 +208,6 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose AI-Powered Support?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how AI automation can transform your customer support operations
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,10 +219,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features for Modern Support
+              Powerful Features for Modern Business
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your customer support operations
+              Everything you need to turn your data into actionable business intelligence
             </p>
           </motion.div>
 
@@ -338,7 +271,7 @@ export default function AICustomerSupportAutomation() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that best fits your support needs and scale as you grow
+              Choose the plan that best fits your business needs and scale as you grow
             </p>
           </motion.div>
 
@@ -409,7 +342,7 @@ export default function AICustomerSupportAutomation() {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored support automation for different industries and use cases
+              Tailored BI solutions for different industries and use cases
             </p>
           </motion.div>
 
@@ -453,10 +386,10 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses that have already revolutionized their support operations with AI automation
+              Join thousands of businesses that have already revolutionized their decision-making with AI-powered insights
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -487,15 +420,9 @@ export default function AICustomerSupportAutomation() {
   );
 }
 
-// Missing icon components
-const DollarSign = ({ className }: { className?: string }) => (
+// Missing icon component
+const Play = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-  </svg>
-);
-
-const Target = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );

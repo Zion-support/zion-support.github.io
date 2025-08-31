@@ -50,7 +50,11 @@ export function AppFooter() {
         { name: "AI Project Management", href: "/services/ai-project-management-platform" },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
         { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
-        { name: "AI Quantum Computing", href: "/services/ai-quantum-computing-solutions" }
+        { name: "AI Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
+        { name: "AI Business Intelligence Dashboard", href: "/services/ai-business-intelligence-dashboard" },
+        { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
+        { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
+        { name: "AI Marketing Automation Platform", href: "/services/ai-marketing-automation-platform" }
       ]
     },
     {
