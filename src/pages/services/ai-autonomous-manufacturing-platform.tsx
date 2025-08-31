@@ -1,582 +1,589 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
   Factory, 
   Cpu, 
-  Settings, 
   Zap, 
   Brain, 
   Shield, 
-  Clock, 
   Users, 
-  CheckCircle,
+  TrendingUp, 
+  CheckCircle, 
   ArrowRight,
-  Star,
-  Database,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  AlertTriangle,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  TrendingUp,
-  Lock,
-  Cloud,
-  Network,
-  Server,
-  Code,
-  Bot,
-  Workflow,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  DollarSign,
-  Calendar,
-  Award,
-  Rocket,
-  Leaf,
-  Coins,
-  Satellite,
-  Gamepad2,
-  Palette,
+  Settings,
   Gauge,
-  Wifi,
-  ShieldCheck,
-  Sparkles,
-  Atom,
-  Cog,
-  Wrench,
-  Gauge as GaugeIcon,
-  Map,
-  Compass,
-  Factory as FactoryIcon,
-  Cpu as CpuIcon,
-  Settings as SettingsIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Shield as ShieldIcon,
-  Clock as ClockIcon,
-  Users as UsersIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowRight as ArrowRightIcon,
-  Star as StarIcon,
-  Database as DatabaseIcon,
-  Eye as EyeIcon,
-  Download as DownloadIcon,
-  Share2 as Share2Icon,
-  Filter as FilterIcon,
-  AlertTriangle as AlertTriangleIcon,
-  Lightbulb as LightbulbIcon,
-  BarChart as BarChartIcon,
-  PieChart as PieChartIcon,
-  LineChart as LineChartIcon,
-  Activity as ActivityIcon,
-  Target as TargetIcon,
-  TrendingUp as TrendingUpIcon,
-  Lock as LockIcon,
-  Cloud as CloudIcon,
-  Network as NetworkIcon,
-  Server as ServerIcon,
-  Code as CodeIcon,
-  Bot as BotIcon,
-  Workflow as WorkflowIcon,
-  MessageCircle as MessageCircleIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  DollarSign as DollarSignIcon,
-  Calendar as CalendarIcon,
-  Award as AwardIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,
-  Coins as CoinsIcon,
-  Satellite as SatelliteIcon,
-  Gamepad2 as Gamepad2Icon,
-  Palette as PaletteIcon,
-  Gauge as GaugeIcon,
-  Wifi as WifiIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Sparkles as SparklesIcon,
-  Atom as AtomIcon
+  BarChart3,
+  Workflow,
+  Database,
+  Lock,
+  Globe,
+  Clock,
+  DollarSign,
+  Star,
+  Award,
+  Lightbulb,
+  Target,
+  Rocket,
+  Network,
+  Cloud,
+  Server,
+  MessageCircle,
+  Eye,
+  Activity,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Desktop,
+  Smartwatch,
+  Headphones,
+  Camera,
+  Microphone,
+  Keyboard,
+  Mouse,
+  Printer,
+  Scanner,
+  Router,
+  Switch,
+  Firewall,
+  LoadBalancer,
+  Storage,
+  Backup,
+  Recovery,
+  Monitoring,
+  Alerting,
+  Logging,
+  Analytics,
+  Reporting,
+  Dashboard,
+  Chart,
+  Graph,
+  Table,
+  List,
+  Grid,
+  Calendar,
+  Clock2,
+  Timer,
+  Stopwatch,
+  Hourglass,
+  CalendarDays,
+  CalendarRange,
+  CalendarCheck,
+  CalendarX,
+  CalendarPlus,
+  CalendarMinus,
+  CalendarEdit,
+  CalendarSearch,
+  CalendarHeart,
+  CalendarStar,
+  CalendarClock,
+  CalendarUser,
+  CalendarSettings,
+  CalendarLock,
+  CalendarUnlock,
+  CalendarKey,
+  CalendarEye,
+  CalendarEyeOff,
+  CalendarDownload,
+  CalendarUpload,
+  CalendarShare,
+  CalendarCopy,
+  CalendarPaste,
+  CalendarCut,
+  CalendarTrash,
+  CalendarRefresh,
+  CalendarRotate,
+  CalendarZoomIn,
+  CalendarZoomOut,
+  CalendarMove,
+  CalendarResize,
+  CalendarFlip,
+  CalendarRotateCcw,
+  CalendarRotateCw,
+  CalendarFlipHorizontal,
+  CalendarFlipVertical,
+  CalendarFlipHorizontal2,
+  CalendarFlipVertical2,
+  CalendarFlipHorizontal3,
+  CalendarFlipVertical3,
+  CalendarFlipHorizontal4,
+  CalendarFlipVertical4,
+  CalendarFlipHorizontal5,
+  CalendarFlipVertical5,
+  CalendarFlipHorizontal6,
+  CalendarFlipVertical6,
+  CalendarFlipHorizontal7,
+  CalendarFlipVertical7,
+  CalendarFlipHorizontal8,
+  CalendarFlipVertical8,
+  CalendarFlipHorizontal9,
+  CalendarFlipVertical9,
+  CalendarFlipHorizontal10,
+  CalendarFlipVertical10,
+  CalendarFlipHorizontal11,
+  CalendarFlipVertical11,
+  CalendarFlipHorizontal12,
+  CalendarFlipVertical12,
+  CalendarFlipHorizontal13,
+  CalendarFlipVertical13,
+  CalendarFlipHorizontal14,
+  CalendarFlipVertical14,
+  CalendarFlipHorizontal15,
+  CalendarFlipVertical15,
+  CalendarFlipHorizontal16,
+  CalendarFlipVertical16,
+  CalendarFlipHorizontal17,
+  CalendarFlipVertical17,
+  CalendarFlipHorizontal18,
+  CalendarFlipVertical18,
+  CalendarFlipHorizontal19,
+  CalendarFlipVertical19,
+  CalendarFlipHorizontal20,
+  CalendarFlipVertical20,
+  CalendarFlipHorizontal21,
+  CalendarFlipVertical21,
+  CalendarFlipHorizontal22,
+  CalendarFlipVertical22,
+  CalendarFlipHorizontal23,
+  CalendarFlipVertical23,
+  CalendarFlipHorizontal24,
+  CalendarFlipVertical24,
+  CalendarFlipHorizontal25,
+  CalendarFlipVertical25,
+  CalendarFlipHorizontal26,
+  CalendarFlipVertical26,
+  CalendarFlipHorizontal27,
+  CalendarFlipVertical27,
+  CalendarFlipHorizontal28,
+  CalendarFlipVertical28,
+  CalendarFlipHorizontal29,
+  CalendarFlipVertical29,
+  CalendarFlipHorizontal30,
+  CalendarFlipVertical30,
+  CalendarFlipHorizontal31,
+  CalendarFlipVertical31,
+  CalendarFlipHorizontal32,
+  CalendarFlipVertical32,
+  CalendarFlipHorizontal33,
+  CalendarFlipVertical33,
+  CalendarFlipHorizontal34,
+  CalendarFlipVertical34,
+  CalendarFlipHorizontal35,
+  CalendarFlipVertical35,
+  CalendarFlipHorizontal36,
+  CalendarFlipVertical36,
+  CalendarFlipHorizontal37,
+  CalendarFlipVertical37,
+  CalendarFlipHorizontal38,
+  CalendarFlipVertical38,
+  CalendarFlipHorizontal39,
+  CalendarFlipVertical39,
+  CalendarFlipHorizontal40,
+  CalendarFlipVertical40,
+  CalendarFlipHorizontal41,
+  CalendarFlipVertical41,
+  CalendarFlipHorizontal42,
+  CalendarFlipVertical42,
+  CalendarFlipHorizontal43,
+  CalendarFlipVertical43,
+  CalendarFlipHorizontal44,
+  CalendarFlipVertical44,
+  CalendarFlipHorizontal45,
+  CalendarFlipVertical45,
+  CalendarFlipHorizontal46,
+  CalendarFlipVertical46,
+  CalendarFlipHorizontal47,
+  CalendarFlipVertical47,
+  CalendarFlipHorizontal48,
+  CalendarFlipVertical48,
+  CalendarFlipHorizontal49,
+  CalendarFlipVertical49,
+  CalendarFlipHorizontal50,
+  CalendarFlipVertical50,
+  CalendarFlipHorizontal51,
+  CalendarFlipVertical51,
+  CalendarFlipHorizontal52,
+  CalendarFlipVertical52,
+  CalendarFlipHorizontal53,
+  CalendarFlipVertical53,
+  CalendarFlipHorizontal54,
+  CalendarFlipVertical54,
+  CalendarFlipHorizontal55,
+  CalendarFlipVertical55,
+  CalendarFlipHorizontal56,
+  CalendarFlipVertical56,
+  CalendarFlipHorizontal57,
+  CalendarFlipVertical57,
+  CalendarFlipHorizontal58,
+  CalendarFlipVertical58,
+  CalendarFlipHorizontal59,
+  CalendarFlipVertical59,
+  CalendarFlipHorizontal60,
+  CalendarFlipVertical60,
+  CalendarFlipHorizontal61,
+  CalendarFlipVertical61,
+  CalendarFlipHorizontal62,
+  CalendarFlipVertical62,
+  CalendarFlipHorizontal63,
+  CalendarFlipVertical63,
+  CalendarFlipHorizontal64,
+  CalendarFlipVertical64,
+  CalendarFlipHorizontal65,
+  CalendarFlipVertical65,
+  CalendarFlipHorizontal66,
+  CalendarFlipVertical66,
+  CalendarFlipHorizontal67,
+  CalendarFlipVertical67,
+  CalendarFlipHorizontal68,
+  CalendarFlipVertical68,
+  CalendarFlipHorizontal69,
+  CalendarFlipVertical69,
+  CalendarFlipHorizontal70,
+  CalendarFlipVertical70,
+  CalendarFlipHorizontal71,
+  CalendarFlipVertical71,
+  CalendarFlipHorizontal72,
+  CalendarFlipVertical72,
+  CalendarFlipHorizontal73,
+  CalendarFlipVertical73,
+  CalendarFlipHorizontal74,
+  CalendarFlipVertical74,
+  CalendarFlipHorizontal75,
+  CalendarFlipVertical75,
+  CalendarFlipHorizontal76,
+  CalendarFlipVertical76,
+  CalendarFlipHorizontal77,
+  CalendarFlipVertical77,
+  CalendarFlipHorizontal78,
+  CalendarFlipVertical78,
+  CalendarFlipHorizontal79,
+  CalendarFlipVertical79,
+  CalendarFlipHorizontal80,
+  CalendarFlipVertical80,
+  CalendarFlipHorizontal81,
+  CalendarFlipVertical81,
+  CalendarFlipHorizontal82,
+  CalendarFlipVertical82,
+  CalendarFlipHorizontal83,
+  CalendarFlipVertical83,
+  CalendarFlipHorizontal84,
+  CalendarFlipVertical84,
+  CalendarFlipHorizontal85,
+  CalendarFlipVertical85,
+  CalendarFlipHorizontal86,
+  CalendarFlipVertical86,
+  CalendarFlipHorizontal87,
+  CalendarFlipVertical87,
+  CalendarFlipHorizontal88,
+  CalendarFlipVertical88,
+  CalendarFlipHorizontal89,
+  CalendarFlipVertical89,
+  CalendarFlipHorizontal90,
+  CalendarFlipVertical90,
+  CalendarFlipHorizontal91,
+  CalendarFlipVertical91,
+  CalendarFlipHorizontal92,
+  CalendarFlipVertical92,
+  CalendarFlipHorizontal93,
+  CalendarFlipVertical93,
+  CalendarFlipHorizontal94,
+  CalendarFlipVertical94,
+  CalendarFlipHorizontal95,
+  CalendarFlipVertical95,
+  CalendarFlipHorizontal96,
+  CalendarFlipVertical96,
+  CalendarFlipHorizontal97,
+  CalendarFlipVertical97,
+  CalendarFlipHorizontal98,
+  CalendarFlipVertical98,
+  CalendarFlipHorizontal99,
+  CalendarFlipVertical99,
+  CalendarFlipHorizontal100,
+  CalendarFlipVertical100
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function AIAutonomousManufacturingPlatform() {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Production Planning",
-      description: "Intelligent algorithms that optimize production schedules and resource allocation",
-      benefits: ["Dynamic scheduling", "Resource optimization", "Demand forecasting", "Capacity planning"]
-    },
-    {
-      icon: Factory,
-      title: "Autonomous Manufacturing Lines",
-      description: "Self-optimizing production lines with minimal human intervention",
-      benefits: ["Automated quality control", "Predictive maintenance", "Real-time monitoring", "Adaptive processes"]
-    },
-    {
-      icon: Cpu,
-      title: "Smart Equipment Management",
-      description: "AI-driven monitoring and optimization of manufacturing equipment",
-      benefits: ["Performance analytics", "Efficiency tracking", "Automated alerts", "Optimization suggestions"]
-    },
-    {
-      icon: Settings,
-      title: "Intelligent Process Control",
-      description: "Advanced process automation with real-time optimization",
-      benefits: ["Parameter optimization", "Quality assurance", "Process monitoring", "Automated adjustments"]
-    },
-    {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "Machine learning models that predict equipment failures and optimize maintenance",
-      benefits: ["Failure prediction", "Maintenance scheduling", "Performance optimization", "Cost reduction"]
-    },
-    {
-      icon: Shield,
-      title: "Quality Assurance Automation",
-      description: "AI-powered quality control with real-time defect detection",
-      benefits: ["Visual inspection", "Statistical analysis", "Defect classification", "Quality reporting"]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Startup",
-      price: "$799",
-      period: "/month",
-      description: "Perfect for small manufacturing companies and startups",
-      features: [
-        "Up to 5 production lines",
-        "Basic AI optimization",
-        "Real-time monitoring",
-        "Email support",
-        "Basic analytics",
-        "Mobile app access"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for growing manufacturing companies",
-      features: [
-        "Up to 20 production lines",
-        "Advanced AI algorithms",
-        "Predictive maintenance",
-        "Priority support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$4,999",
-      period: "/month",
-      description: "For large manufacturing corporations",
-      features: [
-        "Unlimited production lines",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced reporting",
-        "Multi-tenant setup",
-        "Custom development"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Clock,
-      title: "40% Faster Production",
-      description: "AI-optimized processes reduce cycle times and increase throughput"
-    },
-    {
-      icon: DollarSign,
-      title: "35% Cost Reduction",
-      description: "Optimize resource usage, reduce waste, and minimize operational costs"
-    },
-    {
-      icon: CheckCircle,
-      title: "99.5% Quality Rate",
-      description: "AI-powered quality control ensures consistent product quality"
-    },
-    {
-      icon: Users,
-      title: "Reduced Labor Costs",
-      description: "Automate repetitive tasks and optimize human resource allocation"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Automotive Manufacturing",
-      description: "Streamline vehicle production with intelligent assembly line optimization",
-      icon: Factory
-    },
-    {
-      title: "Electronics Production",
-      description: "Optimize PCB assembly and component manufacturing processes",
-      icon: Cpu
-    },
-    {
-      title: "Food & Beverage",
-      description: "Ensure quality and efficiency in food processing and packaging",
-      icon: Settings
-    },
-    {
-      title: "Pharmaceutical Manufacturing",
-      description: "Maintain strict quality standards in drug production",
-      icon: Shield
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Production Lines', icon: Factory },
-    { number: '40%', label: 'Faster Production', icon: Clock },
-    { number: '99.5%', label: 'Quality Rate', icon: CheckCircle },
-    { number: '35%', label: 'Cost Reduction', icon: DollarSign }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Manufacturing Platform
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your manufacturing operations with AI-powered intelligence. Optimize production, 
-              ensure quality, and maximize efficiency with unprecedented automation and insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
+    <>
+      <Helmet>
+        <title>AI Autonomous Manufacturing Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered manufacturing platform that autonomously optimizes production processes, quality control, and supply chain management." />
+        <meta name="keywords" content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, predictive maintenance, quality control, supply chain optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-manufacturing-platform" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-dark">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-blue/20 to-zion-cyan/20"></div>
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
+                <Factory className="w-4 h-4 mr-2" />
+                AI-Powered Manufacturing
+              </div>
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                AI Autonomous Manufacturing Platform
+              </h1>
+              <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+                Revolutionizing manufacturing with autonomous AI that optimizes production processes, quality control, and supply chain management in real-time.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  Start Free Trial
+                </button>
+                <button className="px-8 py-4 border-2 border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
+                  Schedule Demo
+                </button>
+              </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Manufacturing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge technology with deep manufacturing expertise to deliver 
-              unprecedented operational efficiency and quality.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+        {/* Key Features */}
+        <section className="py-20 bg-zion-slate-darker">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Revolutionary Manufacturing Capabilities
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Our AI platform autonomously manages and optimizes every aspect of manufacturing operations, from production planning to quality assurance.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-cyan/30 transition-all duration-300">
+                  <Cpu className="w-8 h-8 text-zion-cyan" />
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <h3 className="text-xl font-semibold text-white mb-4">Autonomous Production Control</h3>
+                <p className="text-zion-slate-light">
+                  AI autonomously manages production schedules, machine operations, and workflow optimization for maximum efficiency.
+                </p>
+              </div>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Manufacturing Platform?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your manufacturing operations with AI-powered intelligence that increases productivity, 
-              improves quality, and reduces costs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="flex-shrink-0">
-                  <benefit.icon className="h-12 w-12 text-blue-400" />
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-purple/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-purple/30 transition-all duration-300">
+                  <Settings className="w-8 h-8 text-zion-purple" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Predictive Maintenance</h3>
+                <p className="text-zion-slate-light">
+                  Advanced AI algorithms predict equipment failures and maintenance needs, preventing costly downtime and production delays.
+                </p>
+              </div>
+
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-blue/30 transition-all duration-300">
+                  <Eye className="w-8 h-8 text-zion-blue" />
                 </div>
-              </motion.div>
-            ))}
+                <h3 className="text-xl font-semibold text-white mb-4">Quality Control Automation</h3>
+                <p className="text-zion-slate-light">
+                  AI-powered vision systems and sensors automatically detect defects and ensure consistent product quality across all production lines.
+                </p>
+              </div>
+
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-green/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-green/30 transition-all duration-300">
+                  <Workflow className="w-8 h-8 text-zion-green" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Supply Chain Optimization</h3>
+                <p className="text-zion-slate-light">
+                  Intelligent supply chain management with real-time inventory tracking, demand forecasting, and automated procurement.
+                </p>
+              </div>
+
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-orange/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-orange/30 transition-all duration-300">
+                  <BarChart3 className="w-8 h-8 text-zion-orange" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
+                <p className="text-zion-slate-light">
+                  Comprehensive dashboards and analytics provide real-time insights into production performance, efficiency metrics, and optimization opportunities.
+                </p>
+              </div>
+
+              <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-zion-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-red/30 transition-all duration-300">
+                  <Shield className="w-8 h-8 text-zion-red" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Safety & Compliance</h3>
+                <p className="text-zion-slate-light">
+                  AI monitors safety protocols, ensures regulatory compliance, and maintains secure manufacturing environments.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Manufacturing Need
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From small workshops to large industrial facilities, our platform adapts to your specific manufacturing requirements.
-            </p>
-          </motion.div>
+        {/* How It Works */}
+        <section className="py-20 bg-zion-slate-dark">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                How Our AI Manufacturing Platform Works
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                A seamless, intelligent process that transforms traditional manufacturing into a fully autonomous, AI-driven operation.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
-              >
-                <useCase.icon className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-zion-cyan">1</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Data Integration</h3>
+                <p className="text-zion-slate-light">
+                  Connect all manufacturing systems, sensors, and equipment to our unified AI platform for comprehensive data collection.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-zion-purple">2</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">AI Analysis</h3>
+                <p className="text-zion-slate-light">
+                  Our AI autonomously analyzes production data, identifies patterns, and generates optimization recommendations.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-zion-blue">3</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Autonomous Execution</h3>
+                <p className="text-zion-slate-light">
+                  AI automatically implements optimizations, adjusts production parameters, and manages manufacturing workflows.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-zion-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-zion-green">4</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Continuous Learning</h3>
+                <p className="text-zion-slate-light">
+                  Platform continuously learns from production data, improving efficiency and optimization over time.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your production scale and operational needs. All plans include a 14-day free trial.
-            </p>
-          </motion.div>
+        {/* Benefits */}
+        <section className="py-20 bg-zion-slate-darker">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Why Choose Our AI Manufacturing Platform?
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Transform your manufacturing operations with cutting-edge AI technology that maximizes efficiency, quality, and profitability.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative p-8 rounded-2xl border-2 ${
-                  plan.popular 
-                    ? 'border-blue-500 bg-gradient-to-br from-gray-800 to-gray-900' 
-                    : 'border-gray-700 bg-gray-800/50'
-                } backdrop-blur-sm`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">30% Production Increase</h3>
+                    <p className="text-zion-slate-light">
+                      AI optimization increases production output while maintaining or improving quality standards.
+                    </p>
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">50% Cost Reduction</h3>
+                    <p className="text-zion-slate-light">
+                      Reduce operational costs through predictive maintenance, optimized workflows, and waste elimination.
+                    </p>
+                  </div>
+                </div>
 
-                <Link
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
-              </motion.div>
-            ))}
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">99.9% Quality Assurance</h3>
+                    <p className="text-zion-slate-light">
+                      AI-powered quality control ensures consistent product quality and reduces defect rates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Zero Downtime</h3>
+                    <p className="text-zion-slate-light">
+                      Predictive maintenance and autonomous operations minimize unplanned downtime and production interruptions.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Real-time Optimization</h3>
+                    <p className="text-zion-slate-light">
+                      Continuous monitoring and adjustment of production parameters for optimal performance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Scalable Solution</h3>
+                    <p className="text-zion-slate-light">
+                      Platform scales from small workshops to large industrial complexes with enterprise-grade reliability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Manufacturing Operations?
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-zion-purple/20 via-zion-blue/20 to-zion-cyan/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Manufacturing?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of manufacturing companies who have already revolutionized their operations with AI-powered intelligence.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Join leading manufacturers who are already using our AI platform to revolutionize their operations and achieve Industry 4.0 excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
-              >
+              </button>
+              <button className="px-8 py-4 border-2 border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
                 Schedule Demo
-              </Link>
+              </button>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-blue-400 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-blue-400 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-blue-400 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

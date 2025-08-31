@@ -32,7 +32,7 @@ export function Header() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Support
               </Link>
               <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
