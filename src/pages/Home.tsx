@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PageSEO } from '../components/SEOOptimizer';
 import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
+import { PerformanceDashboard } from '../components/PerformanceDashboard';
+import { EnhancedAnalytics } from '../components/EnhancedAnalytics';
 import {
   Users,
   TrendingUp,
@@ -838,6 +840,10 @@ const FloatingActionButton = React.memo(() => {
         <StatsSection />
         <TestimonialsSection />
         <CTASection />
+        
+        {/* Enhanced Performance & Analytics Components */}
+        <PerformanceDashboard enabled={true} showRealTime={true} />
+        <EnhancedAnalytics enabled={true} showRealTime={true} />
       </div>
     </>
   );
