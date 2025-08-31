@@ -105,7 +105,6 @@ const EdgeComputingSolutions = createLazyComponent(() => import('./pages/service
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
-const AIProjectManagementPlatform = createLazyComponent(() => import('./pages/services/ai-project-management-platform'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 
 // Additional service pages from remote branch
@@ -261,7 +260,6 @@ function App() {
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
-                    <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
                     <Route path="/services/quantum-edge-computing-solutions" element={<QuantumEdgeComputingSolutions />} />
 
                     {/* Additional service routes from remote branch */}
