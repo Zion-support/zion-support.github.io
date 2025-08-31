@@ -64,6 +64,7 @@ const Documentation = createLazyComponent(() => import('./pages/Documentation'))
 const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Status = createLazyComponent(() => import('./pages/Status'));
+const API = createLazyComponent(() => import('./pages/Api'));
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));

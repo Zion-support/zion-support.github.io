@@ -199,6 +199,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'FAQ', href: '/faq' },
       { label: 'Help Center', href: '/help' },
       { label: 'Documentation', href: '/documentation' },
+      { label: 'API Reference', href: '/api' },
       { label: 'API Documentation', href: '/api-docs' },
       { label: 'Developer Portal', href: '/developer' },
       { label: 'Training', href: '/training' },
