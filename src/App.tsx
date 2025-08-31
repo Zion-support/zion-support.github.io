@@ -121,6 +121,7 @@ const QuantumTechnology = createLazyComponent(() => import('./pages/services/Qua
 
 // Other Services
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
+const PodcastTranscriptionInsights = createLazyComponent(() => import('./pages/services/podcast-transcription-insights'));
 
 // New Innovative AI Services 2027
 const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
@@ -394,6 +395,20 @@ function App() {
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                   <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+
+                  {/* Additional service routes from remote branch */}
+                  <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                  <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                  <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                  <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
+                  <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
+                  <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                  <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                  <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                  <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                  <Route path="/services/podcast-transcription-insights" element={<PodcastTranscriptionInsights />} />
 
                   {/* Service Detail Routes */}
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
