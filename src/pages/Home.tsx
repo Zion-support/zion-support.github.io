@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer';
+import { PageSEO } from '../components/SEOOptimizer';
 import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
 import {
   Users,
@@ -675,15 +675,15 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer {...defaultSEO} />
-      <PerformanceOptimizer>
-        <div className="min-h-screen bg-zion-blue-dark">
-          <HeroSection />
-          <ServicesSection />
-          <WhyChooseUsSection />
-          <CTASection />
-        </div>
-      </PerformanceOptimizer>
+      <PageSEO pageType="home" />
+      <div className="min-h-screen bg-zion-blue-dark">
+        <HeroSection />
+        <FeaturesSection />
+        <ServicesSection />
+        <StatsSection />
+        <TestimonialsSection />
+        <CTASection />
+      </div>
     </>
   );
 }

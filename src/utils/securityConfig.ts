@@ -55,8 +55,8 @@ export const securityConfig = {
     'X-Content-Type-Options': 'nosniff',;
     'X-Frame-Options': 'DENY',;
     'X-XSS-Protection': '1; mode = block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',;
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',;
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation()',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
   },
 
@@ -92,19 +92,19 @@ export const securityConfig = {
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: process.env.NODE_ENV = == 'production',
+      secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       sameSite: 'strict',
-    },;
-  },;
+    },
+  },
 };
 
 // Helper function to generate CSP header string
 export const generateCSPHeader = (): string => {
   return Object.entries(securityConfig.csp)
-    .map(([key, values]) => {;
-      if (Array.isArray(values)) {;
+    .map(([key, values]) => {
+      if (Array.isArray(values)) {
         return `${key} ${values.join(' ')}`;
       }
       return `${key} ${values}`;
@@ -113,9 +113,9 @@ export const generateCSPHeader = (): string => {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: , res: , next: ) => {
-  // Set security headers;
-  Object.entries(securityConfig.headers).forEach(([key, value]) => {;
+export const securityMiddleware = (req: any, res: any, next: any) => {
+  // Set security headers
+  Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
 
@@ -135,8 +135,8 @@ export const sanitizeInput = (input: string): string => {
 };
 
 // XSS Protection
-export const escapeHtml = (text: string): string => {;
-  const map: { [key: string]: string } = {;
+export const escapeHtml = (text: string): string => {
+  const map: { [key: string]: string } = {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
@@ -147,11 +147,11 @@ export const escapeHtml = (text: string): string => {;
 };
 
 // CSRF Token generation
-export const generateCSRFToken = (): string => {;
+export const generateCSRFToken = (): string => {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 };
 
 // Validate CSRF Token
-export const validateCSRFToken = (token: string, storedToken: string): boolean => {;
+export const validateCSRFToken = (token: string, storedToken: string): boolean => {
   return token === storedToken && token.length > 0;
 };
