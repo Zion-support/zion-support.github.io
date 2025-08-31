@@ -117,6 +117,7 @@ export function Footer() {
         { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
         { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
+        { name: "Revolutionary Services 2025", href: "/revolutionary-services-showcase-2025", icon: Rocket },
         { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
         { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
         { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }

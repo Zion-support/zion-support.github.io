@@ -225,6 +225,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 <div className="mt-8 pt-6 border-t border-zion-purple/30">
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <Link 
+                      to="/revolutionary-services-showcase-2025" 
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                    >
+                      <span>Revolutionary Services 2025</span>
+                      <Rocket className="w-4 h-4 ml-2" />
+                    </Link>
+                    <Link 
                       to="/comprehensive-services-showcase-2025" 
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
                     >
