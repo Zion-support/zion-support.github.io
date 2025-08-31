@@ -276,5 +276,4 @@ export default function About() {
       </section>
     </div>
   );
-};
-export default About;
+}

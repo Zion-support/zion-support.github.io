@@ -88,6 +88,8 @@ const InnovativeServicesHub = createLazyComponent(() => import('./pages/Innovati
 const NewInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/NewInnovativeServicesShowcase2025'));
 const RevolutionaryServicesShowcase2025 = createLazyComponent(() => import('./pages/RevolutionaryServicesShowcase2025'));
 const UltimateServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2025'));
+const RevolutionaryServicesShowcase2034 = createLazyComponent(() => import('./pages/RevolutionaryServicesShowcase2034'));
+const ComprehensivePricingGuide2034 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2034'));
 
 // Legal and Policy Pages
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
@@ -205,6 +207,8 @@ function App() {
                     <Route path="/new-innovative-services-2025" element={<ModernLayout><NewInnovativeServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/revolutionary-services-showcase-2025" element={<ModernLayout><RevolutionaryServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/ultimate-services-showcase-2025" element={<ModernLayout><UltimateServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/revolutionary-services-showcase-2034" element={<ModernLayout><RevolutionaryServicesShowcase2034 /></ModernLayout>} />
+                    <Route path="/comprehensive-pricing-guide-2034" element={<ModernLayout><ComprehensivePricingGuide2034 /></ModernLayout>} />
 
                     {/* Legal and Policy Pages */}
                     <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />
