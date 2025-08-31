@@ -72,6 +72,10 @@ const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 
+// 2026 Innovative Services
+const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
+const ComprehensivePricingGuide2026 = lazy(() => import('./pages/ComprehensivePricingGuide2026'));
+
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
@@ -290,6 +294,10 @@ function App() {
                   <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/zion-innovative-services-2025" element={<ZionInnovativeServices2025 />} />
+
+                  {/* 2026 Innovative Services Routes */}
+                  <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
+                  <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
 
                   {/* Enhanced Services Showcase 2025 */}
                   <Route path="/enhanced-services-showcase-2025" element={

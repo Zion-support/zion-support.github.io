@@ -98,6 +98,7 @@ import {
   Lake,
   Stream,
   Waterfall,
+  Home,
   Volcano,
   Cave,
   Canyon,
@@ -178,6 +179,8 @@ export function EnhancedHeader() {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Code, hasDropdown: true },
+    { name: 'Innovative Services 2026', href: '/innovative-services-showcase-2026', icon: SparklesIcon, hasDropdown: false },
+    { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2026', icon: DollarSign, hasDropdown: false },
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Server },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
