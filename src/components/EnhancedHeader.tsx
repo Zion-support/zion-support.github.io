@@ -219,11 +219,25 @@ export function EnhancedHeader() {
       color: 'from-blue-500 to-cyan-500'
     },
     {
+      name: 'AI Customer Success',
+      description: 'AI-powered customer success platform',
+      href: '/services/ai-customer-success-platform',
+      icon: Users,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       name: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
       href: '/ai-services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: 'AI Business Intelligence',
+      description: 'AI-powered analytics and insights platform',
+      href: '/services/ai-powered-business-intelligence-platform',
+      icon: BarChart3,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       name: 'IT Infrastructure',
@@ -238,6 +252,13 @@ export function EnhancedHeader() {
       href: '/services/quantum-computing',
       icon: Atom,
       color: 'from-orange-500 to-red-500'
+    },
+    {
+      name: 'Quantum Solutions Platform',
+      description: 'Advanced quantum computing platform',
+      href: '/services/quantum-computing-solutions-platform',
+      icon: Atom,
+      color: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Blockchain Solutions',
@@ -259,6 +280,14 @@ export function EnhancedHeader() {
       href: '/innovative-services-showcase-2025',
       icon: SparklesIcon,
       color: 'from-cyan-500 to-blue-500',
+      featured: true
+    },
+    {
+      name: 'Innovative Services 2025',
+      description: 'Latest cutting-edge services showcase',
+      href: '/innovative-services-showcase-2025',
+      icon: SparklesIcon,
+      color: 'from-yellow-500 to-orange-500',
       featured: true
     },
     {

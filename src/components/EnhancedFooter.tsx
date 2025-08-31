@@ -67,23 +67,24 @@ export function EnhancedFooter() {
     {
       title: 'Featured Services',
       links: [
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-powered-business-intelligence-platform', icon: BarChart3, featured: true },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions-platform', icon: Atom, featured: true },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Users, featured: true },
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true }
       ]
     },
     {
       title: 'Core Services',
       links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-powered-business-intelligence-platform', icon: BarChart3 },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions-platform', icon: Atom },
+        { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users },
         { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }
       ]
     },
     {

@@ -78,9 +78,9 @@ const ServicesShowcase2025 = createLazyComponent(() => import('./pages/services-
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/Innovative-Services-Showcase-2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
-const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
@@ -88,6 +88,10 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 // New Innovative Services
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
+const AIBusinessIntelligencePlatform = lazy(() => import('./pages/services/AI-Powered-Business-Intelligence-Platform'));
+const QuantumComputingSolutionsPlatform = lazy(() => import('./pages/services/Quantum-Computing-Solutions-Platform'));
+const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AI-Customer-Success-Platform'));
+const BlockchainEnterpriseSolutionsPlatform = lazy(() => import('./pages/services/Blockchain-Enterprise-Solutions-Platform'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -423,6 +427,7 @@ function App() {
                   <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                   <Route path="/services-showcase-2025" element={<ServicesShowcase2025 />} />
+                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
 
                   {/* 2029 Cutting-Edge Services */}
                   <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
@@ -431,6 +436,10 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+                  <Route path="/services/ai-powered-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+                  <Route path="/services/quantum-computing-solutions-platform" element={<QuantumComputingSolutionsPlatform />} />
+                  <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                  <Route path="/services/blockchain-enterprise-solutions-platform" element={<BlockchainEnterpriseSolutionsPlatform />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />
