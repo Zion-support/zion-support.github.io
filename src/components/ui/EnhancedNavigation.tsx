@@ -41,12 +41,12 @@ const navigation: NavigationItem[] = [
     href: '/solutions',
     description: 'Industry-specific technology solutions',
     children: [
-      { name: 'Enterprise', href: '/solutions/Enterprise', description: 'Large-scale business solutions' },
-      { name: 'Healthcare', href: '/solutions/Healthcare', description: 'Medical technology innovations' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions', description: 'Fintech and banking solutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions', description: 'Industrial automation' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions', description: 'Public sector technology' },
-      { name: 'Retail', href: '/solutions/RetailSolutions', description: 'E-commerce and retail tech' }
+      { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+      { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology innovations' },
+      { name: 'Financial', href: '/solutions/financial-solutions', description: 'Fintech and banking solutions' },
+      { name: 'Manufacturing', href: '/solutions/manufacturing-solutions', description: 'Industrial automation' },
+      { name: 'Government', href: '/solutions/government-solutions', description: 'Public sector technology' },
+      { name: 'Retail', href: '/solutions/retail-solutions', description: 'E-commerce and retail tech' }
     ]
   },
   {

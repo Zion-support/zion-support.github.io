@@ -3,77 +3,78 @@ import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Building2, 
-  Users, 
   Shield, 
-  Zap, 
-  BarChart3, 
+  Users, 
+  FileText, 
+  Lock, 
   Globe,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Award
 } from 'lucide-react';
 
 const features = [
   {
     icon: Building2,
-    title: 'Enterprise Architecture',
-    description: 'Scalable, secure infrastructure designed for large organizations'
-  },
-  {
-    icon: Users,
-    title: 'Team Collaboration',
-    description: 'Advanced tools for enterprise-wide communication and project management'
+    title: 'Government Infrastructure',
+    description: 'Secure, scalable technology infrastructure for public sector'
   },
   {
     icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security with compliance and governance frameworks'
+    title: 'Security & Compliance',
+    description: 'FedRAMP, FISMA, and government security standards'
   },
   {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'High-performance systems optimized for enterprise workloads'
+    icon: Users,
+    title: 'Citizen Services',
+    description: 'Digital transformation for improved citizen experience'
   },
   {
-    icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Comprehensive business intelligence and reporting capabilities'
+    icon: FileText,
+    title: 'Regulatory Compliance',
+    description: 'Full compliance with government regulations and standards'
+  },
+  {
+    icon: Lock,
+    title: 'Data Protection',
+    description: 'Advanced data security and privacy protection'
   },
   {
     icon: Globe,
-    title: 'Global Deployment',
-    description: 'Multi-region, multi-cloud deployment strategies'
+    title: 'Interoperability',
+    description: 'Seamless integration with existing government systems'
   }
 ];
 
 const solutions = [
   {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes',
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations']
+    title: 'Digital Government Platform',
+    description: 'Comprehensive digital transformation platform for government agencies',
+    features: ['Citizen Portals', 'Service Automation', 'Workflow Management', 'Integration APIs']
   },
   {
-    title: 'Enterprise Data Management',
-    description: 'Centralized data governance and analytics platform',
-    features: ['Data Warehousing', 'Business Intelligence', 'Data Governance', 'Compliance']
+    title: 'Government Cybersecurity',
+    description: 'Advanced security solutions meeting federal requirements',
+    features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', 'Security Training']
   },
   {
-    title: 'Enterprise Security Suite',
-    description: 'Advanced cybersecurity and threat protection',
-    features: ['Zero Trust Architecture', 'Threat Detection', 'Incident Response', 'Compliance']
+    title: 'Data Analytics & Reporting',
+    description: 'Intelligent analytics for government decision-making',
+    features: ['Performance Metrics', 'Trend Analysis', 'Predictive Analytics', 'Compliance Reporting']
   },
   {
-    title: 'Cloud Migration & Management',
-    description: 'Seamless cloud transformation and optimization',
-    features: ['Multi-Cloud Strategy', 'Cost Optimization', 'Performance Monitoring', 'Security']
+    title: 'Cloud Migration Services',
+    description: 'Secure cloud transformation for government operations',
+    features: ['FedRAMP Compliance', 'Multi-Cloud Strategy', 'Cost Optimization', 'Security First']
   }
 ];
 
-export default function EnterpriseSolutions() {
+export default function GovernmentSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
-        title="Enterprise Solutions - Zion Tech Group" 
-        description="Comprehensive enterprise technology solutions for large organizations. Scalable infrastructure, security, and digital transformation services." 
+        title="Government Solutions - Zion Tech Group" 
+        description="Secure, compliant technology solutions for government agencies. Digital transformation, cybersecurity, and citizen services with FedRAMP and FISMA compliance." 
       />
       
       {/* Hero Section */}
@@ -85,12 +86,12 @@ export default function EnterpriseSolutions() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Enterprise Solutions
+            Government Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your enterprise with cutting-edge technology solutions designed for scale, 
-            security, and performance. We help large organizations navigate digital transformation 
-            with confidence.
+            Transform government operations with secure, compliant technology solutions. 
+            Drive digital transformation, enhance citizen services, and ensure 
+            regulatory compliance with FedRAMP and FISMA standards.
           </p>
         </motion.div>
       </section>
@@ -104,10 +105,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group for Government?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our enterprise solutions are built on decades of experience serving Fortune 500 companies 
-            and government agencies worldwide.
+            Our government solutions are built with deep understanding of 
+            public sector requirements, security standards, and citizen needs.
           </p>
         </motion.div>
 
@@ -140,9 +141,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Enterprise Solutions</h2>
+          <h2 className="text-3xl font-bold mb-4">Government Solutions</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Comprehensive solutions designed to address the unique challenges of enterprise organizations.
+            Comprehensive solutions designed to address the unique challenges of 
+            government agencies and public sector organizations.
           </p>
         </motion.div>
 
@@ -171,6 +173,42 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
 
+      {/* Compliance Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Government Compliance & Security</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our solutions meet the highest standards for government security and regulatory compliance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Award className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">FedRAMP Authorized</h3>
+              <p className="text-gray-300">Cloud security authorization for federal agencies</p>
+            </div>
+            <div className="text-center">
+              <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">FISMA Compliant</h3>
+              <p className="text-gray-300">Federal Information Security Management Act compliance</p>
+            </div>
+            <div className="text-center">
+              <Lock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">NIST Standards</h3>
+              <p className="text-gray-300">National Institute of Standards and Technology compliance</p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div
@@ -178,12 +216,12 @@ export default function EnterpriseSolutions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+          className="text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Government Services?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth 
-            for your organization.
+            Let's discuss how our government solutions can drive digital transformation, 
+            enhance citizen services, and ensure compliance for your agency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

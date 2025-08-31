@@ -35,12 +35,12 @@ const footerSections = [
   {
     title: 'Solutions',
     links: [
-      { name: 'Enterprise', href: '/solutions/Enterprise' },
-      { name: 'Healthcare', href: '/solutions/Healthcare' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions' },
-      { name: 'Retail', href: '/solutions/RetailSolutions' }
+      { name: 'Enterprise', href: '/solutions/enterprise' },
+      { name: 'Healthcare', href: '/solutions/healthcare' },
+      { name: 'Financial', href: '/solutions/financial-solutions' },
+      { name: 'Manufacturing', href: '/solutions/manufacturing-solutions' },
+      { name: 'Government', href: '/solutions/government-solutions' },
+      { name: 'Retail', href: '/solutions/retail-solutions' }
     ]
   },
   {

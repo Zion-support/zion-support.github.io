@@ -59,6 +59,16 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+
+// Solution pages
+const EnterpriseSolutions = createLazyComponent(() => import('./pages/solutions/Enterprise'));
+const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -145,6 +155,16 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/careers" element={<Careers />} />
+
+                    {/* Solution Routes */}
+                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                    <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                    <Route path="/solutions/financial-solutions" element={<FinancialSolutions />} />
+                    <Route path="/solutions/manufacturing-solutions" element={<ManufacturingSolutions />} />
+                    <Route path="/solutions/government-solutions" element={<GovernmentSolutions />} />
+                    <Route path="/solutions/retail-solutions" element={<RetailSolutions />} />
 
                     {/* 404 Page */}
                     <Route

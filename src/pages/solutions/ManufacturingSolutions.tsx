@@ -2,78 +2,79 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Building2, 
-  Users, 
-  Shield, 
+  Factory, 
+  Cpu, 
   Zap, 
   BarChart3, 
-  Globe,
+  Shield, 
+  Settings,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Gauge
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Building2,
-    title: 'Enterprise Architecture',
-    description: 'Scalable, secure infrastructure designed for large organizations'
+    icon: Factory,
+    title: 'Smart Manufacturing',
+    description: 'AI-powered production optimization and automation'
   },
   {
-    icon: Users,
-    title: 'Team Collaboration',
-    description: 'Advanced tools for enterprise-wide communication and project management'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security with compliance and governance frameworks'
+    icon: Cpu,
+    title: 'IoT Integration',
+    description: 'Connected devices and real-time monitoring systems'
   },
   {
     icon: Zap,
-    title: 'Performance Optimization',
-    description: 'High-performance systems optimized for enterprise workloads'
+    title: 'Predictive Maintenance',
+    description: 'AI-driven equipment maintenance and failure prevention'
   },
   {
     icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Comprehensive business intelligence and reporting capabilities'
+    title: 'Quality Control',
+    description: 'Advanced analytics for product quality assurance'
   },
   {
-    icon: Globe,
-    title: 'Global Deployment',
-    description: 'Multi-region, multi-cloud deployment strategies'
+    icon: Shield,
+    title: 'Supply Chain Security',
+    description: 'Secure, transparent supply chain management'
+  },
+  {
+    icon: Settings,
+    title: 'Process Optimization',
+    description: 'Continuous improvement and efficiency optimization'
   }
 ];
 
 const solutions = [
   {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes',
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations']
+    title: 'Industrial IoT Platform',
+    description: 'Comprehensive IoT solution for manufacturing operations',
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Remote Management', 'Data Integration']
   },
   {
-    title: 'Enterprise Data Management',
-    description: 'Centralized data governance and analytics platform',
-    features: ['Data Warehousing', 'Business Intelligence', 'Data Governance', 'Compliance']
+    title: 'Quality Management System',
+    description: 'AI-powered quality control and assurance platform',
+    features: ['Automated Inspection', 'Defect Detection', 'Quality Analytics', 'Compliance Reporting']
   },
   {
-    title: 'Enterprise Security Suite',
-    description: 'Advanced cybersecurity and threat protection',
-    features: ['Zero Trust Architecture', 'Threat Detection', 'Incident Response', 'Compliance']
+    title: 'Supply Chain Optimization',
+    description: 'Intelligent supply chain management and optimization',
+    features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment']
   },
   {
-    title: 'Cloud Migration & Management',
-    description: 'Seamless cloud transformation and optimization',
-    features: ['Multi-Cloud Strategy', 'Cost Optimization', 'Performance Monitoring', 'Security']
+    title: 'Manufacturing Analytics',
+    description: 'Advanced analytics for operational insights and optimization',
+    features: ['Performance Metrics', 'Efficiency Analysis', 'Cost Optimization', 'Trend Analysis']
   }
 ];
 
-export default function EnterpriseSolutions() {
+export default function ManufacturingSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
-        title="Enterprise Solutions - Zion Tech Group" 
-        description="Comprehensive enterprise technology solutions for large organizations. Scalable infrastructure, security, and digital transformation services." 
+        title="Manufacturing Solutions - Zion Tech Group" 
+        description="AI-powered manufacturing technology solutions, IoT platforms, quality management, and supply chain optimization for industrial operations." 
       />
       
       {/* Hero Section */}
@@ -85,12 +86,12 @@ export default function EnterpriseSolutions() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Enterprise Solutions
+            Manufacturing Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your enterprise with cutting-edge technology solutions designed for scale, 
-            security, and performance. We help large organizations navigate digital transformation 
-            with confidence.
+            Transform your manufacturing operations with AI-powered automation, 
+            IoT integration, and predictive analytics. Drive efficiency, quality, 
+            and innovation in the Industry 4.0 era.
           </p>
         </motion.div>
       </section>
@@ -104,10 +105,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group for Manufacturing?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our enterprise solutions are built on decades of experience serving Fortune 500 companies 
-            and government agencies worldwide.
+            Our manufacturing solutions are built with deep understanding of 
+            industrial processes, quality requirements, and operational efficiency.
           </p>
         </motion.div>
 
@@ -140,9 +141,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Enterprise Solutions</h2>
+          <h2 className="text-3xl font-bold mb-4">Manufacturing Solutions</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Comprehensive solutions designed to address the unique challenges of enterprise organizations.
+            Comprehensive solutions designed to address the unique challenges of 
+            modern manufacturing and industrial operations.
           </p>
         </motion.div>
 
@@ -171,6 +173,43 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
 
+      {/* Industry 4.0 Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Industry 4.0 Ready</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our solutions are built for the future of manufacturing with cutting-edge 
+              technology and industry best practices.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Cpu className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">AI & Machine Learning</h3>
+              <p className="text-gray-300">Intelligent automation and decision support</p>
+            </div>
+            <div className="text-center">
+              <Gauge className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Real-time Analytics</h3>
+              <p className="text-gray-300">Live monitoring and instant insights</p>
+            </div>
+            <div className="text-center">
+              <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Predictive Capabilities</h3>
+              <p className="text-gray-300">Anticipate issues before they occur</p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div
@@ -178,12 +217,12 @@ export default function EnterpriseSolutions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+          className="text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Manufacturing?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth 
-            for your organization.
+            Let's discuss how our manufacturing solutions can drive efficiency, 
+            improve quality, and optimize your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

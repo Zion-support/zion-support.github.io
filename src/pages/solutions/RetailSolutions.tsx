@@ -2,78 +2,79 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Building2, 
-  Users, 
-  Shield, 
-  Zap, 
+  ShoppingCart, 
+  Store, 
+  Smartphone, 
   BarChart3, 
-  Globe,
+  Users, 
+  Package,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  TrendingUp
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Building2,
-    title: 'Enterprise Architecture',
-    description: 'Scalable, secure infrastructure designed for large organizations'
+    icon: ShoppingCart,
+    title: 'E-commerce Platform',
+    description: 'Modern, scalable online retail solutions'
   },
   {
-    icon: Users,
-    title: 'Team Collaboration',
-    description: 'Advanced tools for enterprise-wide communication and project management'
+    icon: Store,
+    title: 'Omnichannel Retail',
+    description: 'Seamless integration across all sales channels'
   },
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security with compliance and governance frameworks'
-  },
-  {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'High-performance systems optimized for enterprise workloads'
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Optimized mobile shopping experiences'
   },
   {
     icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Comprehensive business intelligence and reporting capabilities'
+    title: 'Retail Analytics',
+    description: 'Data-driven insights for retail optimization'
   },
   {
-    icon: Globe,
-    title: 'Global Deployment',
-    description: 'Multi-region, multi-cloud deployment strategies'
+    icon: Users,
+    title: 'Customer Experience',
+    description: 'Personalized shopping and customer service'
+  },
+  {
+    icon: Package,
+    title: 'Inventory Management',
+    description: 'Smart inventory and supply chain optimization'
   }
 ];
 
 const solutions = [
   {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes',
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations']
+    title: 'E-commerce Platform',
+    description: 'Complete online retail solution with AI-powered features',
+    features: ['Product Management', 'Shopping Cart', 'Payment Processing', 'Order Management']
   },
   {
-    title: 'Enterprise Data Management',
-    description: 'Centralized data governance and analytics platform',
-    features: ['Data Warehousing', 'Business Intelligence', 'Data Governance', 'Compliance']
+    title: 'Retail Analytics Suite',
+    description: 'Comprehensive analytics for retail decision-making',
+    features: ['Sales Analytics', 'Customer Insights', 'Inventory Optimization', 'Performance Metrics']
   },
   {
-    title: 'Enterprise Security Suite',
-    description: 'Advanced cybersecurity and threat protection',
-    features: ['Zero Trust Architecture', 'Threat Detection', 'Incident Response', 'Compliance']
+    title: 'Customer Experience Platform',
+    description: 'Personalized shopping experiences and customer service',
+    features: ['Personalization', 'Recommendations', 'Customer Support', 'Loyalty Programs']
   },
   {
-    title: 'Cloud Migration & Management',
-    description: 'Seamless cloud transformation and optimization',
-    features: ['Multi-Cloud Strategy', 'Cost Optimization', 'Performance Monitoring', 'Security']
+    title: 'Supply Chain Optimization',
+    description: 'Intelligent inventory and supply chain management',
+    features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Logistics Optimization']
   }
 ];
 
-export default function EnterpriseSolutions() {
+export default function RetailSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
-        title="Enterprise Solutions - Zion Tech Group" 
-        description="Comprehensive enterprise technology solutions for large organizations. Scalable infrastructure, security, and digital transformation services." 
+        title="Retail Solutions - Zion Tech Group" 
+        description="AI-powered retail technology solutions, e-commerce platforms, omnichannel retail, and customer experience optimization for modern retail businesses." 
       />
       
       {/* Hero Section */}
@@ -85,12 +86,12 @@ export default function EnterpriseSolutions() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Enterprise Solutions
+            Retail Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your enterprise with cutting-edge technology solutions designed for scale, 
-            security, and performance. We help large organizations navigate digital transformation 
-            with confidence.
+            Transform your retail business with AI-powered e-commerce platforms, 
+            omnichannel solutions, and customer experience optimization. 
+            Drive sales, improve efficiency, and enhance customer satisfaction.
           </p>
         </motion.div>
       </section>
@@ -104,10 +105,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group for Retail?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our enterprise solutions are built on decades of experience serving Fortune 500 companies 
-            and government agencies worldwide.
+            Our retail solutions are built with deep understanding of 
+            customer behavior, market trends, and operational efficiency.
           </p>
         </motion.div>
 
@@ -140,9 +141,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Enterprise Solutions</h2>
+          <h2 className="text-3xl font-bold mb-4">Retail Solutions</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Comprehensive solutions designed to address the unique challenges of enterprise organizations.
+            Comprehensive solutions designed to address the unique challenges of 
+            modern retail and e-commerce operations.
           </p>
         </motion.div>
 
@@ -171,6 +173,43 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
 
+      {/* Omnichannel Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Omnichannel Retail Excellence</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our solutions enable seamless integration across all retail channels 
+              for a unified customer experience.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Store className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Brick & Mortar</h3>
+              <p className="text-gray-300">In-store technology and POS integration</p>
+            </div>
+            <div className="text-center">
+              <Smartphone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Mobile & Web</h3>
+              <p className="text-gray-300">Responsive e-commerce and mobile apps</p>
+            </div>
+            <div className="text-center">
+              <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Marketplace Integration</h3>
+              <p className="text-gray-300">Multi-channel sales and distribution</p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div
@@ -178,12 +217,12 @@ export default function EnterpriseSolutions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+          className="text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Retail Business?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth 
-            for your organization.
+            Let's discuss how our retail solutions can drive sales, 
+            improve customer experience, and optimize your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -2,78 +2,79 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Building2, 
-  Users, 
+  DollarSign, 
+  TrendingUp, 
   Shield, 
-  Zap, 
   BarChart3, 
-  Globe,
+  CreditCard, 
+  Calculator,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Lock
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Building2,
-    title: 'Enterprise Architecture',
-    description: 'Scalable, secure infrastructure designed for large organizations'
+    icon: DollarSign,
+    title: 'Financial Management',
+    description: 'Comprehensive financial planning and management solutions'
   },
   {
-    icon: Users,
-    title: 'Team Collaboration',
-    description: 'Advanced tools for enterprise-wide communication and project management'
+    icon: TrendingUp,
+    title: 'Investment Analytics',
+    description: 'AI-powered investment insights and portfolio optimization'
   },
   {
     icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security with compliance and governance frameworks'
-  },
-  {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'High-performance systems optimized for enterprise workloads'
+    title: 'Regulatory Compliance',
+    description: 'Full compliance with financial regulations and standards'
   },
   {
     icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Comprehensive business intelligence and reporting capabilities'
+    title: 'Risk Management',
+    description: 'Advanced risk assessment and mitigation strategies'
   },
   {
-    icon: Globe,
-    title: 'Global Deployment',
-    description: 'Multi-region, multi-cloud deployment strategies'
+    icon: CreditCard,
+    title: 'Payment Solutions',
+    description: 'Secure, scalable payment processing and management'
+  },
+  {
+    icon: Calculator,
+    title: 'Financial Modeling',
+    description: 'Sophisticated financial modeling and forecasting tools'
   }
 ];
 
 const solutions = [
   {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes',
-    features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations']
+    title: 'AI-Powered Trading Platform',
+    description: 'Advanced algorithmic trading with machine learning insights',
+    features: ['Real-time Market Data', 'Algorithmic Trading', 'Risk Management', 'Performance Analytics']
   },
   {
-    title: 'Enterprise Data Management',
-    description: 'Centralized data governance and analytics platform',
-    features: ['Data Warehousing', 'Business Intelligence', 'Data Governance', 'Compliance']
+    title: 'Financial Compliance Suite',
+    description: 'Comprehensive compliance management for financial institutions',
+    features: ['Regulatory Reporting', 'Audit Trails', 'Compliance Monitoring', 'Document Management']
   },
   {
-    title: 'Enterprise Security Suite',
-    description: 'Advanced cybersecurity and threat protection',
-    features: ['Zero Trust Architecture', 'Threat Detection', 'Incident Response', 'Compliance']
+    title: 'Portfolio Management',
+    description: 'Intelligent portfolio optimization and risk management',
+    features: ['Asset Allocation', 'Risk Assessment', 'Performance Tracking', 'Rebalancing']
   },
   {
-    title: 'Cloud Migration & Management',
-    description: 'Seamless cloud transformation and optimization',
-    features: ['Multi-Cloud Strategy', 'Cost Optimization', 'Performance Monitoring', 'Security']
+    title: 'FinTech Solutions',
+    description: 'Modern financial technology for digital banking and payments',
+    features: ['Digital Banking', 'Payment Processing', 'Blockchain Integration', 'API Management']
   }
 ];
 
-export default function EnterpriseSolutions() {
+export default function FinancialSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
-        title="Enterprise Solutions - Zion Tech Group" 
-        description="Comprehensive enterprise technology solutions for large organizations. Scalable infrastructure, security, and digital transformation services." 
+        title="Financial Solutions - Zion Tech Group" 
+        description="AI-powered financial technology solutions, trading platforms, compliance management, and portfolio optimization for financial institutions." 
       />
       
       {/* Hero Section */}
@@ -85,12 +86,12 @@ export default function EnterpriseSolutions() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Enterprise Solutions
+            Financial Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your enterprise with cutting-edge technology solutions designed for scale, 
-            security, and performance. We help large organizations navigate digital transformation 
-            with confidence.
+            Transform your financial operations with AI-powered trading platforms, 
+            compliance management, and portfolio optimization solutions. 
+            Built for the modern financial landscape.
           </p>
         </motion.div>
       </section>
@@ -104,10 +105,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group for Financial Solutions?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our enterprise solutions are built on decades of experience serving Fortune 500 companies 
-            and government agencies worldwide.
+            Our financial technology solutions are built with deep understanding of 
+            financial markets, regulatory requirements, and institutional needs.
           </p>
         </motion.div>
 
@@ -140,9 +141,10 @@ export default function EnterpriseSolutions() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Enterprise Solutions</h2>
+          <h2 className="text-3xl font-bold mb-4">Financial Solutions</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Comprehensive solutions designed to address the unique challenges of enterprise organizations.
+            Comprehensive solutions designed to address the unique challenges of 
+            financial institutions and trading operations.
           </p>
         </motion.div>
 
@@ -171,6 +173,42 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
 
+      {/* Security Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Financial Security & Compliance</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our solutions meet the highest standards for financial data security and regulatory compliance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Lock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Bank-Level Security</h3>
+              <p className="text-gray-300">256-bit encryption and multi-factor authentication</p>
+            </div>
+            <div className="text-center">
+              <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Regulatory Compliance</h3>
+              <p className="text-gray-300">SOX, PCI-DSS, and financial regulations compliance</p>
+            </div>
+            <div className="text-center">
+              <BarChart3 className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Audit Trails</h3>
+              <p className="text-gray-300">Comprehensive logging and compliance reporting</p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <motion.div
@@ -178,12 +216,12 @@ export default function EnterpriseSolutions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+          className="text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Operations?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth 
-            for your organization.
+            Let's discuss how our financial solutions can drive innovation, 
+            ensure compliance, and optimize performance for your institution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
