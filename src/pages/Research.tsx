@@ -54,6 +54,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
+        }
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -90,6 +91,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
+        }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -119,6 +121,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
+        }
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
