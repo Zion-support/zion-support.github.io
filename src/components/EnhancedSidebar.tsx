@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Home,
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Home,
   Brain,
   Cloud,
   Server,
@@ -41,113 +42,108 @@ import { Home,
   DollarSign,
   Leaf,
   Building,
-  User
-<<<<<<< HEAD
- } from 'lucide-react';
-export const EnhancedSidebar: React.FC = () => {;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-  const toggleSection = (section: string) => {;
-=======
-<<<<<<< HEAD
+  User,
+  Star,
+  Video,
+  GraduationCap
+} from 'lucide-react';
+
 export const EnhancedSidebar: React.FC = (): JSX.Element => {
-=======
-               } from 'lucide-react.ts';
-
-<<<<<<< HEAD
-export const EnhancedSidebar: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
-=======;
-export const EnhancedSidebar: React.FC = (): JSX.Element => {;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section)} else {
-      newExpanded.add(section)}
-    setExpandedSections(newExpanded)};
-<<<<<<< HEAD
-  const isActive = (path: string)  => location.pathname === path;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      newExpanded.delete(section);
+    } else {
+      newExpanded.add(section);
+    }
+    setExpandedSections(newExpanded);
+  };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const navigationSections = [
     {
       title: "Main Navigation",
       icon: Home,
-      items[
-        { name: "Home", href: "/", icon: Home },
-        { name: "Solutions", href: "/solutions", icon: Target },
-        { name: "Services", href: "/services", icon: Zap },
-        { name: "Case Studies", href: "/case-studies", icon: FileText },
-        { name: "Blog", href: "/blog", icon: FileText },
-        { name: "Partners", href: "/partners", icon: Handshake },
-        { name: "About", href: "/about", icon: Users },
-        { name: "Contact", href: "/contact", icon: MessageCircle },
-        { name: "Careers", href: "/careers", icon: Briefcase },
-        { name: "Partners", href: "/partners", icon: Handshake }
-      ]
-    },
-    {
-      title: "Service Areas",
-      icon: Zap,
-      items[
-        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
-        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
-        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
-        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
-        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
-        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
-      ]
-    },
-    {
-      title: "Security & Compliance",
-      icon: Shield,
       items: [
-        { name: "Documentation", href: "/documentation", icon: FileText },
-        { name: "API Reference", href: "/api", icon: Code },
-        { name: "Developer Portal", href: "/developer", icon: Cpu },
-        { name: "Support Center", href: "/help-center", icon: HelpCircle },
-        { name: "FAQ", href: "/faq", icon: HelpCircle },
-        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User },
-        { name: "Support", href: "/support", icon: HelpCircle }
+        { name: "Home", href: "/", icon: Home },
+        { name: "About", href: "/about", icon: Users },
+        { name: "Team", href: "/team", icon: Award },
+        { name: "Leadership", href: "/leadership", icon: Star },
+        { name: "Contact", href: "/contact", icon: MessageCircle }
       ]
+    },
+    {
+      title: "Services",
+      icon: Zap,
+      items: [
+        { name: "All Services", href: "/services", icon: Code },
+        { name: "AI Solutions", href: "/ai-solutions", icon: Brain },
+        { name: "IT Services", href: "/it-services", icon: Server },
+        { name: "Micro SAAS", href: "/micro-saas", icon: Rocket },
+        { name: "Quantum Computing", href: "/services/quantum-computing", icon: Atom }
+      ]
+    },
+    {
+      title: "Solutions",
+      icon: Target,
+      items: [
+        { name: "Enterprise Solutions", href: "/solutions/enterprise", icon: Building },
+        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: HeartPulse },
+        { name: "Financial Solutions", href: "/solutions/financial", icon: TrendingUp },
+        { name: "Manufacturing Solutions", href: "/solutions/manufacturing", icon: Cpu },
+        { name: "Retail Solutions", href: "/solutions/retail", icon: ShoppingCart }
+      ]
+    },
+    {
+      title: "Resources",
+      icon: FileText,
+      items: [
+        { name: "Blog", href: "/blog", icon: BookOpen },
+        { name: "News", href: "/news", icon: FileText },
+        { name: "Documentation", href: "/documentation", icon: HelpCircle },
+        { name: "White Papers", href: "/white-papers", icon: FileText },
+        { name: "Training", href: "/training", icon: GraduationCap }
+      ]
+    },
+    {
+      title: "Events & Media",
+      icon: Calendar,
+      items: [
+        { name: "Events", href: "/events", icon: Calendar },
+        { name: "Webinars", href: "/webinars", icon: Video },
+        { name: "Press", href: "/press", icon: BookOpen },
+        { name: "Case Studies", href: "/case-studies", icon: BarChart3 }
+      ]
+    },
+    {
+      title: "Support",
+      icon: HelpCircle,
+      items: [
+        { name: "Support Center", href: "/support", icon: HelpCircle },
+        { name: "Help Documentation", href: "/documentation", icon: FileText },
+        { name: "Contact Support", href: "/contact", icon: MessageCircle },
+        { name: "FAQ", href: "/faq", icon: HelpCircle }
+      ]
+    },
+    {
+      title: "Company",
+      icon: Building,
+      items: [
+        { name: "Careers", href: "/careers", icon: Briefcase },
+        { name: "Partners", href: "/partners", icon: Handshake },
+        { name: "Privacy Policy", href: "/privacy", icon: Shield },
+        { name: "Terms of Service", href: "/terms", icon: FileText }
+      ]
+    }
   ];
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
     { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
-  ];
-  return (
-    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">
-      <div className="p-6">
-        {/* Logo */}
-        <div className="mb-8">;
-        { name: "Sitemap", href: "/sitemap", icon: Globe },;
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;
-        { name: "Login", href: "/login", icon: User };
-      ];
-    };
-  ];
-  const quickActions = [;
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
   return (
     <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
@@ -173,7 +169,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
               Zion Tech Group
             </h1>
           </Link>
-        </div>
+        </motion.div>
         {/* Quick Actions */}
         <motion.div
           className="mb-8"
@@ -274,68 +270,60 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
                     transition={{ duration: 0.3 }}
                     className="ml-7 mt-2 space-y-1"
                   >
-                    {section.items.map((item) => (
-                      <Link
+                    {section.items.map((item, itemIndex) => (
+                      <motion.div
                         key={item.name}
-                        initial = {
-  { opacity: 0,
-  x: -20 
-}}
-                        animate = {
-  { opacity: 1,
-  x: 0 
-}}
-                        transition = {
-  { duration: 0.2,
-  delay: itemIndex * 0.05 
-}}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
                       >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                        {isActive(item.href) && (
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
-                        )}
-                      </Link>
+                        <Link
+                          to={item.href}
+                          className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-200 group ${
+                            isActive(item.href)
+                              ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
+                              : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                          }`}
+                        >
+                          <item.icon className="w-4 h-4" />
+                          <span className="text-sm">{item.name}</span>
+                          {isActive(item.href) && (
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
+                          )}
+                        </Link>
+                      </motion.div>
                     ))}
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
-        </nav>
+        </div>
+        
         {/* Contact Info */}
         <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-          initial = {
-  { opacity: 0,
-  y: 20 
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-}}
-          transition = {
-  { duration: 0.5,
-  delay: 0.5 
-}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
-          <div className="space-y-2 text-xs text-zion-slate-light">
+          <h3 className="text-sm font-semibold text-cyan-400 mb-3">Need Help?</h3>
+          <div className="space-y-2 text-xs text-slate-300">
             <div className="flex items-center space-x-2">
               <Phone className="w-3 h-3" />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center space-x-3 text-sm text-slate-400">
-              <Mail className="w-4 h-4" />
+            <div className="flex items-center space-x-2">
+              <Mail className="w-3 h-3" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className = "flex items-center space-x-2">
-              <MapPin className="w-3 h-3" />;
-              <span>Middletown, DE</span>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </aside>;
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-3 h-3" />
+              <span>Middletown, DE</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </aside>
   );
 };
