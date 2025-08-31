@@ -97,6 +97,12 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 
+// New Innovative Services Showcase 2034
+const InnovativeServicesShowcase2034 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2034'));
+
+// New Comprehensive Pricing Guide 2034
+const ComprehensivePricingGuide2034 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2034'));
+
 // New Enterprise Services 2025
 const AIBusinessIntelligencePlatformEnterprise = createLazyComponent(() => import('./pages/services/ai-business-intelligence-platform-enterprise'));
 const AICybersecurityThreatDetectionEnterprise = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-detection-enterprise'));
@@ -341,8 +347,14 @@ function App() {
                     {/* Innovative Services Showcase 2032 */}
                     <Route path="/innovative-services-showcase-2032" element={<ModernLayout><InnovativeServicesShowcase2032 /></ModernLayout>} />
 
+                    {/* Innovative Services Showcase 2034 */}
+                    <Route path="/innovative-services-showcase-2034" element={<ModernLayout><InnovativeServicesShowcase2034 /></ModernLayout>} />
+
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2034 */}
+                    <Route path="/comprehensive-pricing-guide-2034" element={<ModernLayout><ComprehensivePricingGuide2034 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
