@@ -10,6 +10,7 @@ import { Footer } from './components/layout/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { MobileOptimizer } from './components/MobileOptimizer';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
@@ -453,6 +454,9 @@ function App() {
 
             {/* Enhanced Accessibility Enhancer */}
             <EnhancedAccessibilityEnhancer enabled={true} />
+
+            {/* Mobile Optimizer */}
+            <MobileOptimizer enabled={true} />
 
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />
