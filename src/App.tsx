@@ -98,6 +98,11 @@ const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages
 
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
+
+// New Innovative Services Showcase 2026
+const AdvancedInnovativeServicesShowcase2026 = createLazyComponent(() => import('./components/AdvancedInnovativeServicesShowcase2026'));
+const ComprehensivePricingGuide2026 = createLazyComponent(() => import('./components/ComprehensivePricingGuide2026'));
+const InnovativeServicesLanding2026 = createLazyComponent(() => import('./pages/InnovativeServicesLanding2026'));
 const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-data-analytics-platform'));
 const ITInfrastructureManagement = createLazyComponent(() => import('./pages/services/it-infrastructure-management'));
 const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./pages/services/micro-saas-solutions-comprehensive'));
@@ -342,6 +347,11 @@ function App() {
                     <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
                     <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
                     <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
+
+                    {/* New Innovative Services 2026 Routes */}
+                    <Route path="/innovative-services-2026" element={<ModernLayout><AdvancedInnovativeServicesShowcase2026 /></ModernLayout>} />
+                    <Route path="/comprehensive-pricing-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
+                    <Route path="/innovative-services-landing-2026" element={<ModernLayout><InnovativeServicesLanding2026 /></ModernLayout>} />
 
                     {/* 404 Page */}
                     <Route
