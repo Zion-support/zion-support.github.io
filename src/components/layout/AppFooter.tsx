@@ -47,16 +47,14 @@ export function AppFooter() {
       color: "text-zion-cyan",
       bgColor: "bg-zion-cyan/20",
       services: [
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Autonomous Logistics Optimization", href: "/services/ai-autonomous-logistics-optimization" },
+        { name: "AI Autonomous Manufacturing Platform", href: "/services/ai-autonomous-manufacturing-platform" },
         { name: "AI Business Intelligence Dashboard", href: "/services/ai-business-intelligence-dashboard" },
         { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
         { name: "AI Marketing Automation Platform", href: "/services/ai-marketing-automation-platform" },
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
-        { name: "Quantum-Enhanced AI Decision Intelligence", href: "/services/quantum-enhanced-ai-decision-intelligence" },
-        { name: "Autonomous AI Business Operations", href: "/services/autonomous-ai-business-operations" }
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" }
       ]
     },
     {
@@ -72,10 +70,7 @@ export function AppFooter() {
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
-        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
-        { name: "Quantum-Enhanced Cybersecurity Operations", href: "/services/quantum-enhanced-cybersecurity-operations" },
-        { name: "AI-Powered Cloud Infrastructure", href: "/services/ai-powered-cloud-infrastructure" },
-        { name: "Blockchain Supply Chain Security", href: "/services/blockchain-supply-chain-security" }
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" }
       ]
     },
     {
@@ -89,12 +84,13 @@ export function AppFooter() {
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI HR Management Platform", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
-        { name: "AI Customer Churn Prevention", href: "/services/ai-customer-churn-prevention" },
-        { name: "Intelligent Content Marketing Automation", href: "/services/intelligent-content-marketing-automation" },
-        { name: "Smart Financial Operations Automation", href: "/services/smart-financial-operations-automation" }
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" }
       ]
     }
   ];
@@ -105,8 +101,7 @@ export function AppFooter() {
     { name: "News & Events", href: "/news", icon: Star },
     { name: "Partners", href: "/partners", icon: Handshake },
     { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-    { name: "Contact", href: "/contact", icon: MessageCircle },
-    { name: "Innovative Services 2026", href: "/innovative-services-showcase-2026", icon: Rocket }
+    { name: "Contact", href: "/contact", icon: MessageCircle }
   ];
 
   const resourceLinks = [
@@ -115,7 +110,8 @@ export function AppFooter() {
     { name: "White Papers", href: "/white-papers", icon: FileText },
     { name: "Webinars", href: "/webinars", icon: Monitor },
     { name: "Training", href: "/training", icon: GraduationCap },
-    { name: "Research & Development", href: "/research-development", icon: Lightbulb }
+    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
+    { name: "Pricing Guide", href: "/pricing-guide" }
   ];
 
   const supportLinks = [
@@ -294,14 +290,14 @@ export function AppFooter() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link 
-              to="/innovative-services-showcase-2032"
+              to="/innovative-services-showcase-2026"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Rocket className="w-6 h-6 text-zion-purple" />
-                <h4 className="text-lg font-semibold text-white">2032 Innovation Showcase</h4>
+                <h4 className="text-lg font-semibold text-white">2026 Innovation Showcase</h4>
               </div>
-              <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
+              <p className="text-zion-slate-light text-sm">Explore our revolutionary AI autonomous platforms and services.</p>
             </Link>
             <Link 
               to="/comprehensive-services-showcase-2025"

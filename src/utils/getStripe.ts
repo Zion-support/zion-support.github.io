@@ -8,4 +8,6 @@ export function getStripe() {
     stripePromise = loadStripe(key);
   }
   return stripePromise;
-}}
+}
+
+export default getStripe;

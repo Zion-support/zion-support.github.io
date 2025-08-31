@@ -56,9 +56,13 @@ export class SEOOptimizer {
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
+        
         const pathSegments = path.split('/').filter(Boolean);
-        if (pathSegments.length === 0)
-            return baseTitle;
+        
+        if (pathSegments.length === 0) {
+            return this.siteName;
+        }
+        
         const lastSegment = pathSegments[pathSegments.length - 1];
         const formattedSegment = lastSegment
             .split('-')
@@ -84,7 +88,7 @@ export class SEOOptimizer {
 
     static generateStructuredData(path) {
         const baseData = {
-  "@context": "https://schema.org",
+            "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -96,6 +100,7 @@ export class SEOOptimizer {
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 }
         };
+
         // Add specific structured data based on page type
         if (path === '/') {
             return {
@@ -137,6 +142,7 @@ export class SEOOptimizer {
 
     static analyzeContentQuality(content, page) {
         const issues = [];
+        
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
@@ -175,13 +181,15 @@ export class SEOOptimizer {
             });
         }
         // Check for minimal content
-        const textContent = content.replace(/<[^>]*>/g, '').trim();
-        if (textContent.length < 300) {
+        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
+        
+        if (wordCount < 300) {
             issues.push({
                 page,
                 issue: 'minimal-content',
                 severity: 'medium',
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value'
+                suggestedFix: 'Add more content to improve SEO and user engagement'
             });
         }
         return issues;

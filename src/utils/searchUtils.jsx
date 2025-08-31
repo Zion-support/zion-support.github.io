@@ -4,10 +4,11 @@
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim())
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escaped})`, 'gi');
     return text.replace(regex, '<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>');
 };
+
 /**
  * Check if a text contains the search term (case-insensitive)
  */
@@ -16,6 +17,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
         return false;
     return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
+
 /**
  * Calculate relevance score for search results
  */
@@ -23,6 +25,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
+    
     // Exact title match gets highest score
     if (title === term)
         score += 100;
@@ -50,10 +53,12 @@ export const calculateRelevanceScore = (result, searchTerm) => {
         score += dateScore;
     return score;
 };
+
 /**
  * Sort search results based on sort option
  */
-export const sortedResults = [...results];
+export const sortResults = (results, sortBy, searchTerm) => {
+    const sortedResults = [...results];
     switch (sortBy) {
         case 'price_asc':
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
@@ -63,6 +68,7 @@ export const sortedResults = [...results];
             return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
         case 'date':
             return sortedResults.sort((a, b) => {
+                const dateA = a.date ? new Date(a.date).getTime() : 0;
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
             });
@@ -71,14 +77,18 @@ export const sortedResults = [...results];
         case 'relevance':
         default:
             return sortedResults.sort((a, b) => {
+                const scoreA = calculateRelevanceScore(a, searchTerm);
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
             });
 };
+
 /**
  * Filter search results based on active filters
  */
-export const filteredResults = [...results];
+export const filterResults = (results, filters) => {
+    let filteredResults = [...results];
+    
     // Filter by type
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
@@ -86,10 +96,12 @@ export const filteredResults = [...results];
     if (filters.category) {
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     // Filter by price range
-    if (filters.minPrice > 0 || filters.maxPrice < 10000) {
+    if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
         filteredResults = filteredResults.filter(result => {
             const price = result.price ?? 0;
-            return price >= filters.minPrice && price <= filters.maxPrice;
+            if (filters.minPrice !== undefined && price < filters.minPrice) return false;
+            if (filters.maxPrice !== undefined && price > filters.maxPrice) return false;
+            return true;
         });
     // Filter by minimum rating
     if (filters.minRating > 0) {
@@ -145,7 +157,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
 /**
- * Calculate search metrics for analytics
+ * Perform fuzzy search on text
  */
 export const calculateSearchMetrics = (results, searchTime) => {
     const totalResults = results.length;
@@ -178,83 +190,32 @@ export const calculateSearchMetrics = (results, searchTime) => {
     };
 };
 /**
- * Debounce function for search input
+ * Get search suggestions based on input
  */
-export const debounce = (func, wait) => {
-    let timeout;
-    return (...args) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func(...args), wait);
-    };
+export const getSearchSuggestions = (query, suggestions, maxResults = 5) => {
+    if (!query.trim()) return [];
+    
+    const queryLower = query.toLowerCase();
+    const matches = suggestions.filter(suggestion => 
+        suggestion.toLowerCase().includes(queryLower)
+    );
+    
+    return matches.slice(0, maxResults);
 };
-/**
- * Extract keywords from search query for better matching
- */
-export const extractKeywords = (query) => {
-    return query
-        .toLowerCase()
-        .split(/[\s,.-]+/)
-        .filter(word => word.length > 2)
-        .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word));
-};
-/**
- * Format search query for display
- */
-export const formatSearchQuery = (query) => {
-    return query.trim().replace(/\s+/g, ' ');
-};
-/**
- * Check if filters are active (not default values)
- */
-export const hasActiveFilters = (filters) => {
-    return (filters.types.length > 0 ||
-        filters.category !== '' ||
-        filters.minPrice > 0 ||
-        filters.maxPrice < 10000 ||
-        filters.minRating > 0 ||
-        filters.sort !== 'relevance');
-};
-/**
- * Get filter count for display
- */
-export const getActiveFilterCount = (filters) => {
-    let count = 0;
-    if (filters.types.length > 0)
-        count += filters.types.length;
-    if (filters.category)
-        count += 1;
-    if (filters.minPrice > 0 || filters.maxPrice < 10000)
-        count += 1;
-    if (filters.minRating > 0)
-        count += 1;
-    if (filters.sort !== 'relevance')
-        count += 1;
-    return count;
-};
-/**
- * Reset filters to default values
- */
-export const getDefaultFilters = () => ({
-    types: [],
-    category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    minRating: 0,
-    sort: 'relevance'
-});
 
 export default {
     highlightSearchTerms,
     matchesSearchTerm,
     calculateRelevanceScore,
-    sortSearchResults,
-    filterSearchResults,
-    generateDynamicSuggestions,
-    calculateSearchMetrics,
-    debounce,
-    extractKeywords,
-    formatSearchQuery,
-    hasActiveFilters,
-    getActiveFilterCount,
-    getDefaultFilters
+    sortResults,
+    filterResults,
+    fuzzySearch,
+    getSearchSuggestions
 };
+export default for;
+export default for;
+export default for;
+export default for;
+export default for;
+export default for;
+export default for;
