@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-08-31T12:16:26.001Z",
+  "timestamp": "2025-08-31T12:26:27.563Z",
   "summary": {
     "systemHealth": 0,
-    "riskFactors": 48,
+    "riskFactors": 49,
     "predictedIssues": 0,
     "recommendations": 0,
     "performanceTrends": 0
@@ -300,6 +300,12 @@
         "severity": "medium",
         "description": "Unable to monitor build health",
         "timestamp": "2025-08-31T12:16:12.407Z"
+      },
+      {
+        "type": "build_monitoring_failure",
+        "severity": "medium",
+        "description": "Unable to monitor build health",
+        "timestamp": "2025-08-31T12:26:15.602Z"
       }
     ],
     "maintenanceHistory": []
@@ -594,6 +600,12 @@
       "severity": "medium",
       "description": "Unable to monitor build health",
       "timestamp": "2025-08-31T12:16:12.407Z"
+    },
+    {
+      "type": "build_monitoring_failure",
+      "severity": "medium",
+      "description": "Unable to monitor build health",
+      "timestamp": "2025-08-31T12:26:15.602Z"
     }
   ]
 }
