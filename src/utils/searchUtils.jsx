@@ -218,7 +218,7 @@ export const hasActiveFilters = (filters) => {
  * Get filter count for display
  */
 export const getActiveFilterCount = (filters) => {
-    const count = 0;
+    let count = 0;
     if (filters.types.length > 0)
         count += filters.types.length;
     if (filters.category)
@@ -242,6 +242,7 @@ export const getDefaultFilters = () => ({
     minRating: 0,
     sort: 'relevance'
 });
+
 export default {
     highlightSearchTerms,
     matchesSearchTerm,
@@ -257,10 +258,3 @@ export default {
     getActiveFilterCount,
     getDefaultFilters
 };
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
