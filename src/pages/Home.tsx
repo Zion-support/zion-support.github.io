@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, MapPin, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, Rocket, Atom } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -93,7 +93,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     {
       title: "Micro SAAS Services",
       description: "Scalable software solutions tailored to your needs",
-      icon: Zap,
+      icon: Rocket,
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
     },
     {
@@ -207,28 +207,28 @@ const StatsSection = React.memo(() => {
       value: "500+",
       label: "Projects Delivered",
       description: "Successfully completed across industries",
-      icon: CheckCircle,
+      icon: "🎯", // Placeholder for CheckCircle icon
       color: "from-green-400 to-emerald-500"
     },
     {
       value: "50+",
       label: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
-      icon: Brain,
+      icon: "🧠", // Placeholder for Brain icon
       color: "from-cyan-400 to-blue-500"
     },
     {
       value: "24/7",
       label: "Support Available",
       description: "Round-the-clock technical assistance",
-      icon: Clock,
+      icon: "⚡", // Placeholder for Clock icon
       color: "from-blue-400 to-indigo-500"
     },
     {
       value: "99.9%",
       label: "Uptime Guarantee",
       description: "Reliable infrastructure and services",
-      icon: Shield,
+      icon: "🛡️", // Placeholder for Shield icon
       color: "from-purple-400 to-pink-500"
     }
   ];
@@ -500,6 +500,109 @@ const CTASection = React.memo(() => {
 
 CTASection.displayName = 'CTASection';
 
+// Innovative Services Section
+const InnovativeServicesSection = () => {
+  const innovativeServices = [
+    {
+      icon: Brain,
+      title: "AI Quantum Neural Network",
+      description: "Revolutionary quantum computing algorithms for neural network optimization",
+      color: "from-purple-500 to-indigo-500",
+      link: "/services/ai-quantum-neural-network-platform",
+      badge: "New"
+    },
+    {
+      icon: Bot,
+      title: "Autonomous Business Operations",
+      description: "AI-powered systems that run your business 24/7 without human intervention",
+      color: "from-cyan-500 to-blue-500",
+      link: "/services/ai-autonomous-business-operations-platform",
+      badge: "New"
+    },
+    {
+      icon: Users,
+      title: "Customer Experience Analytics",
+      description: "AI-powered analytics that understand your customers better than ever",
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-customer-experience-analytics-platform",
+      badge: "New"
+    }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-gradient-to-b from-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Revolutionary AI Services 2025
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the future of artificial intelligence with our cutting-edge platforms
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {innovativeServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <Link to={service.link} className="block">
+                <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                  {service.badge && (
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {service.badge}
+                    </div>
+                  )}
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/innovative-ai-services-showcase-2025"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+          >
+            View All Innovative Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Main Home component
 const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -542,6 +645,7 @@ const Home: React.FC = () => {
         <HeroSection onGetStarted={handleGetStarted} />
         <StatsSection />
         <ServicesPreview />
+        <InnovativeServicesSection />
         <TestimonialsSection />
         <CTASection />
       </main>
