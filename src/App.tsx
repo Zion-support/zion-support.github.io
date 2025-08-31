@@ -16,6 +16,7 @@ import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashbo
 import { AIContentOptimizer } from './components/AIContentOptimizer';
 import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
 import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
+import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
@@ -393,10 +394,13 @@ function App() {
             <AppFooter />
 
             {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
+            <PerformanceOptimizer enabled={true} showMetrics={true} />
 
             {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+            <EnhancedAccessibilityEnhancer enabled={true} autoDetect={true} />
+
+            {/* Theme Switcher */}
+            <ThemeSwitcher enabled={true} autoDetect={true} enableCustomization={true} />
 
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />

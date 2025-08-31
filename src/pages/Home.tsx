@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import {
   Users,
   TrendingUp,
@@ -658,6 +659,31 @@ const CTASection = React.memo(() => {
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
+      {/* SEO Component */}
+      <SEO
+        meta={{
+          title: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          description: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          keywords: ["AI business solutions", "quantum computing", "autonomous operations", "digital transformation", "IT services", "cybersecurity", "machine learning", "neural networks"],
+          ogTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          ogDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          ogImage: "https://ziontechgroup.com/og-image.jpg",
+          ogUrl: "https://ziontechgroup.com",
+          twitterTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          twitterDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          twitterImage: "https://ziontechgroup.com/og-image.jpg",
+          canonicalUrl: "https://ziontechgroup.com",
+          robots: "index, follow",
+          language: "en",
+          author: "Zion Tech Group",
+          viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+          charset: "utf-8"
+        }}
+        showPanel={false}
+        autoOptimize={true}
+        enableAnalytics={true}
+      />
+
       <HeroSection />
       <StatisticsSection />
       <ServicesPreviewSection />
