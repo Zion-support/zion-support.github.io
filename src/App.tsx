@@ -76,6 +76,12 @@ const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/servic
 const ITInfrastructureManagement = createLazyComponent(() => import('./pages/services/it-infrastructure-management'));
 const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./pages/services/micro-saas-solutions-comprehensive'));
 
+// New Innovative AI Services 2025 - Enhanced
+const AIEnterpriseIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-intelligence-platform'));
+const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
+const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
+const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
+
 // New Innovative AI Services 2025 - From remote version
 const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Neural-Network-Platform'));
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
@@ -119,7 +125,7 @@ const Compliance = createLazyComponent(() => import('./pages/Compliance'));
 // Additional pages from main branch
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
-const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
+const DigitalTransformationPage = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
@@ -212,6 +218,12 @@ function App() {
                     <Route path="/services/it-infrastructure-management" element={<ITInfrastructureManagement />} />
                     <Route path="/services/micro-saas-solutions-comprehensive" element={<MicroSaaSSolutionsComprehensive />} />
 
+                    {/* New Innovative AI Services 2025 - Enhanced */}
+                    <Route path="/services/ai-enterprise-intelligence-platform" element={<AIEnterpriseIntelligencePlatform />} />
+                    <Route path="/services/ai-quantum-computing-solutions" element={<AIQuantumComputingSolutions />} />
+                    <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                    <Route path="/services/edge-computing-solutions" element={<EdgeComputingSolutions />} />
+
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
@@ -255,7 +267,7 @@ function App() {
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
                     <Route path="/industry-solutions" element={<IndustrySolutions />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
 
