@@ -56,6 +56,7 @@ export function Footer() {
         { name: "AI Customer Experience", href: "/services/ai-customer-experience-analytics" },
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" }
       ]
@@ -79,7 +80,8 @@ export function Footer() {
         { name: "IT Infrastructure", href: "/services/it-infrastructure" },
         { name: "FinOps Advisor", href: "/services/finops-advisor" },
         { name: "Cloud Migration", href: "/services/cloud-migration-services" },
-        { name: "Edge Computing", href: "/services/iot-edge-computing" }
+        { name: "Edge Computing", href: "/services/iot-edge-computing" },
+        { name: "Edge Computing Solutions", href: "/services/edge-computing-solutions" }
       ]
     },
     {
@@ -113,7 +115,9 @@ export function Footer() {
     { name: "Documentation", href: "/documentation" },
     { name: "API Reference", href: "/api" },
     { name: "Help Center", href: "/help" },
-    { name: "FAQ", href: "/faq" }
+    { name: "FAQ", href: "/faq" },
+    { name: "Services Overview", href: "/services-overview" },
+    { name: "Marketplace", href: "/marketplace" }
   ];
 
   const company = [

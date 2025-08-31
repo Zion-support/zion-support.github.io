@@ -66,7 +66,8 @@ import {
   Award,
   Sparkles,
   TrendingDown,
-  Calendar
+  Calendar,
+  Store
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -319,6 +320,14 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </div>
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-content-creation-studio" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Palette className="w-3 h-3 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Content Creation Studio</span>
+                        </div>
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
@@ -384,6 +393,14 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <div className="flex items-center space-x-2">
                           <Layers className="w-3 h-3 text-zion-purple" />
                           <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Micro SaaS Solutions</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/edge-computing-solutions" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Server className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Edge Computing Solutions</span>
                         </div>
                       </Link>
                     </li>
@@ -614,6 +631,14 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <GraduationCap className="w-4 h-4 text-zion-cyan" />
                     <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Training</span>
                   </Link>
+                  <Link to="/services-overview" className="group flex items-center space-x-2 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                    <BarChart3 className="w-4 h-4 text-zion-cyan" />
+                    <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Services Overview</span>
+                  </Link>
+                  <Link to="/marketplace" className="group flex items-center space-x-2 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                    <Store className="w-4 h-4 text-zion-cyan" />
+                    <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Marketplace</span>
+                  </Link>
                 </div>
                 <div className="pt-4 border-t border-zion-purple/20">
                   <Link to="/help" className="group flex items-center justify-between w-full p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
@@ -640,6 +665,39 @@ export function MainNavigation({ className }: MainNavigationProps) {
         }
       >
         Pricing
+      </NavLink>
+      
+      <NavLink 
+        to="/services-overview" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Services Overview
+      </NavLink>
+      
+      <NavLink 
+        to="/marketplace" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Marketplace
+      </NavLink>
+      
+      <NavLink 
+        to="/request-quote" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Request Quote
       </NavLink>
 
       <NavLink 
