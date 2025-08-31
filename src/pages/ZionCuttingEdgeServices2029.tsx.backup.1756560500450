@@ -30,17 +30,6 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
 
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
-<<<<<<< HEAD
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-
-    let matchesPrice = true;
-=======
   
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -48,7 +37,6 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     
     const matchesPrice = true;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
       if (max) {
@@ -71,13 +59,8 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Zion Tech Group 2029 Cutting-Edge Services | Revolutionary AI, IT & Micro SAAS Solutions"
         description="Discover Zion Tech Group's revolutionary 2029 cutting-edge services including AI-powered quantum computing, autonomous systems, space technology, biotechnology, and more. Transform your business with next-generation solutions."
         keywords="AI services, quantum computing, autonomous systems, space technology, biotechnology, renewable energy, robotics, cybersecurity, Zion Tech Group, cutting-edge technology"
@@ -394,13 +377,8 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
                   setSelectedCategory('all');
                   setPriceRange('all');
                 }}
-<<<<<<< HEAD
-                className="mt-4 text-blue-400 hover:text-blue-300 underline"
-
-=======
                 className = "mt-4 text-blue-400 hover:text-blue-300 underline"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear filters
               </button>
             </div>
@@ -416,11 +394,7 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We're not just another technology company. We're pioneers, innovators, and visionaries
-=======
               We're not just another technology comp. We're pioneers, innovators, and visionaries 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               who are building the future, one breakthrough at a time.
             </p>
           </div>

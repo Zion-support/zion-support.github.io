@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  Users,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Users, 
   MessageSquare, 
@@ -95,14 +78,6 @@ import {
   Server2,
   Phone,
   Mail,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Award,
-  ThumbsUp
-export default function AICustomerSuccessPlatform(...args: any[]): any {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Calendar,
   MessageSquare2,
   UserPlus,
@@ -246,12 +221,8 @@ export default function AICustomerSuccessPlatform(...args: any[]): any {
   UserEditOff,
   UserSearch3,
   UserSearchOff
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
              } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AICustomerSuccessPlatform = () => {
   const features = [
     {
@@ -425,14 +396,9 @@ const AICustomerSuccessPlatform = () => {
               Our platform combines cutting-edge AI with proven customer success methodologies
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -451,48 +417,6 @@ const AICustomerSuccessPlatform = () => {
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Customer Success
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements in customer retention and satisfaction
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-
-                <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-white" />
-                </div>
-                <p className="text-lg text-white font-medium">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -508,14 +432,9 @@ const AICustomerSuccessPlatform = () => {
               See real results with our AI-powered customer success platform
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -546,14 +465,9 @@ const AICustomerSuccessPlatform = () => {
               Tailored solutions for various industries and business models
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -584,14 +498,9 @@ const AICustomerSuccessPlatform = () => {
               Choose the plan that fits your business needs and scale as you grow
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -644,14 +553,9 @@ const AICustomerSuccessPlatform = () => {
               Connect with your existing tools and workflows
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-=======
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
             {integrations.map((integration, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

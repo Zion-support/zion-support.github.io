@@ -1,68 +1,9 @@
-<<<<<<< HEAD
 import React from 'react.ts';
-import { SEO           } from '../../components/SEO';
-import { motion           } from 'framer-motion.ts';
-import { Truck, 
-  Brain, 
-=======
-import React from 'react.ts';
-<<<<<<< HEAD
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe export default function AISupplyChainOptimization(...args: any[]): any {
-  const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain monitoring and analytics',
-    'Intelligent route optimization and logistics planning',
-    'Automated supplier management and risk assessment',
-    'Predictive maintenance and equipment optimization',
-    'Multi-warehouse inventory synchronization',
-    'Advanced cost optimization and budget management',
-    'Intelligent exception handling and alerting',
-    'Comprehensive compliance and audit trails',
-    'Scalable platform for enterprise supply chains'
-  ];
-
-  const benefits = [
-    'Reduce inventory costs by 30%',
-    'Improve delivery times by 40%',
-    'Increase supply chain efficiency by 50%',
-    'Reduce operational costs by 25%',
-    'Enable real-time visibility and control',
-    'Minimize supply chain disruptions'
-  ];
-
-  const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory management',
-    'Healthcare supply chain management',
-    'E-commerce logistics optimization',
-    'Food and beverage supply chains',
-    'Automotive parts management'
-  ];
-
-  const tiers = [
-    {
-      name: 'Supply Chain Starter',
-      price: '$599/mo',
-      details: ['Up to 100 SKUs', 'Basic AI optimization', 'Standard reporting', 'Email support']
-    },
-    {
-      name: 'Supply Chain Professional',
-      price: '$1,599/mo',
-      details: ['Up to 1,000 SKUs', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Supply Chain Enterprise',
-      price: '$4,999/mo',
-      details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-  ];
-=======
 import { SEO          } from '../../components/SEO';
 import { Button          } from '../../components/ui/Button';
 import { Card          } from '../../components/ui/Card';
 import { Badge          } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database          } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AISupplyChainOptimization: React.FC = (): JSX.Element => {
   return (
@@ -100,30 +41,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Supply Chain Features</h2>
-            <ul className="space-y-3">
-              {features.map((f) => (
-                <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
-                  <span className="text-zion-slate-dark">{f}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
-              <ul className="space-y-2">
-                {benefits.map((b) => (
-                  <li key={b} className="flex items-start">
-                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
-                    <span className="text-zion-slate-dark text-sm">{b}</span>
-                  </li>
-                ))}
-=======
       {/* Key Benefits */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -338,7 +255,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Monthly reports
                 </li>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </ul>
               <Button className="w-full bg-green-600 hover:bg-green-700">
                 Get Started
@@ -466,22 +382,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
-<<<<<<< HEAD
-
-          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-            <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)          => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
-                  <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
-                  <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-=======
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
@@ -490,7 +390,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Schedule Demo
             </Button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
           
           <p className="text-sm text-gray-400 mt-6">
@@ -593,32 +492,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Optimize Your Supply Chain?</h2>
-          <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered supply chain optimization today</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
-            <p className="mb-6">Experience the power of AI-driven supply chain optimization with our 14-day free trial</p>
-            <button className="bg-white text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">
-              Start Free Trial
-            </button>
-          </div>
-
-          <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
-            <p className="mb-6">See our platform in action with a personalized demo from our experts</p>
-            <button className="bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-colors">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -626,7 +499,6 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 
 
@@ -669,9 +541,4 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

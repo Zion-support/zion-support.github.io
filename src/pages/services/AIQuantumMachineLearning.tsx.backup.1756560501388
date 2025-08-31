@@ -36,18 +36,6 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
       price: '$1,999/mo',
       details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Quantum Professional',
-      price: '$4,999/mo',
-      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support']
-    },
-    {
-      name: 'Enterprise Quantum',
-      price: '$12,999/mo',
-      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support']
-    },
-=======
     { 
       name: 'Quantum Professional', 
       price: '$4,999/mo', 
@@ -58,7 +46,6 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
       price: '$12,999/mo', ;
       details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

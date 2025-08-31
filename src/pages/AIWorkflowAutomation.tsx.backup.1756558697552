@@ -264,11 +264,8 @@ import { Brain,
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
-=======
           } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const workflowSolutions = [
   {
     id: 1,
@@ -361,14 +358,6 @@ const workflowSolutions = [
       "Resource allocation",
       "Performance tracking"
     ],
-<<<<<<< HEAD
-    price: "From $100,000",
-    timeline: "16-28 weeks",
-    category: "Task Management",
-<<<<<<< HEAD
-    technologies: ["AI", "Task Management", "Optimization", "Analytics"]
-
-=======
     technologies["AI", "Task Management", "Optimization", "Analytics"]
   };
 =======;
@@ -377,8 +366,6 @@ const workflowSolutions = [
     category: "Task Management",;
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowTechnologies = [
@@ -403,15 +390,6 @@ const workflowTechnologies = [
     useCase: "Workflow Control",
     reliability: "High"
   },
-<<<<<<< HEAD
-  {
-    name: "Predictive Analytics",
-    description: "AI-powered analytics for workflow optimization",
-    icon: BarChart3,
-    useCase: "Performance Optimization",
-    reliability: "High"
-
-=======
   {;
     name: "Predictive Analytics",;
     description: "AI-powered analytics for workflow optimization",;
@@ -419,7 +397,6 @@ const workflowTechnologies = [
     useCase: "Performance Optimization",;
     reliability: "High";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -443,15 +420,6 @@ const successStories = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    company: "Healthcare Technology Ltd",
-    industry: "Healthcare",
-    challenge: "Needed AI workflow automation for patient care processes",
-    solution: "Built AI-powered workflow automation system for healthcare",
-    results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",
-    logo: "HTL"
-
-=======
     comp: "Healthcare Technology Ltd",;
     industry: "Healthcare",;
     challenge: "Needed AI workflow automation for patient care processes",;
@@ -459,7 +427,6 @@ const successStories = [
     results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",;
     logo: "HTL";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const processSteps = [
@@ -484,15 +451,6 @@ const processSteps = [
     icon: Wrench,
     duration: "16-40 weeks"
   },
-<<<<<<< HEAD
-  {
-    step: 4,
-    title: "Testing & Optimization",
-    description: "Test systems and optimize performance",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-=======
   {;
     step: 4,;
     title: "Testing & Optimization",;
@@ -500,7 +458,6 @@ const processSteps = [
     icon: Gauge,;
     duration: "4-8 weeks";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowBenefits = [
@@ -523,14 +480,6 @@ const workflowBenefits = [
     examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
-<<<<<<< HEAD
-    title: "Scalability",
-    description: "AI workflows scale efficiently with business growth",
-    icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
-
-=======
     examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
   };
 =======;
@@ -539,8 +488,6 @@ const workflowBenefits = [
     icon: Rocket,;
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIWorkflowAutomation(...args[]: any):  {
@@ -551,7 +498,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
 
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions: anyanyanyanyanyanyanyanyanyworkflowSolutions.filter(solution          => solution.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -1210,23 +1156,10 @@ export default function AIWorkflowAutomation(...args[]: any):  {
 
                 Workflow Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

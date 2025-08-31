@@ -225,12 +225,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     competitors["CloudHealth", "Apptio", "CloudCheckr"],
     roi: "600% within 10 months",
     setupTime: "4-6 weeks",
-<<<<<<< HEAD
-    integrations: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"]
-
-];}
-=======
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"]
   }
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

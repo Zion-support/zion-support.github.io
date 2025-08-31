@@ -39,14 +39,6 @@ export const EnhancedInnovativeServicesShowcase = () => {
             <p className="text-gray-300 mb-4">Advanced security and compliance solutions</p>
             <Link to="/services/cybersecurity" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </Link>;
           </div>;
         </div>;
@@ -54,6 +46,5 @@ export const EnhancedInnovativeServicesShowcase = () => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedInnovativeServicesShowcase;

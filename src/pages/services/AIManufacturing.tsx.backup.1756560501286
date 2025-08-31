@@ -16,18 +16,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
       price: '$599/mo',
       details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Manufacturer',
-      price: '$1,299/mo',
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Manufacturer',
-      price: '$2,999/mo',
-      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Manufacturer', 
       price: '$1,299/mo', 
@@ -38,7 +26,6 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
       price: '$2,999/mo', ;
       details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

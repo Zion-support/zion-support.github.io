@@ -431,11 +431,7 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
-<<<<<<< HEAD
-                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
-=======
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -473,11 +469,7 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
-<<<<<<< HEAD
-                  <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
-=======
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}
@@ -500,13 +492,6 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-    </>)}
-export default function ProjectDetails() {
-    return (<ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>)}
-=======
     </>);
 
 export default function ProjectDetails() {
@@ -514,4 +499,3 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>);
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

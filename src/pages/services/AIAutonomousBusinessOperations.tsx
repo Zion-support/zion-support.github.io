@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Link              } from 'react-router-dom.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  Zap,
-  TrendingUp,
-  Shield,
-  Users,
-  BarChart3,
-  Clock,
-  DollarSign,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Settings, 
   Brain, 
@@ -42,15 +25,9 @@ import {
   Shield,
   Users,
   Workflow
-<<<<<<< HEAD
-} from 'lucide-react';
-const AIAutonomousBusinessOperations: React.FC = () => {
-=======
              } from 'lucide-react.ts';
 
 const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -141,85 +118,8 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
               Our AI platform provides comprehensive business operations capabilities for modern enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {[
-              {
-                icon: Clock,
-                title: "24/7 Operation",
-                description: "Your business never sleeps with continuous AI monitoring and decision-making"
-              },
-              {
-                icon: DollarSign,
-                title: "Cost Reduction",
-                description: "Reduce operational costs by up to 40% through intelligent automation"
-              },
-              {
-                icon: TrendingUp,
-                title: "Increased Efficiency",
-                description: "Boost productivity by 300% with AI-powered process optimization"
-              },
-              {
-                icon: Shield,
-                title: "Risk Mitigation",
-                description: "Proactively identify and address risks before they impact your business"
-              },
-              {
-                icon: Users,
-                title: "Team Empowerment",
-                description: "Free your team to focus on strategic initiatives and innovation"
-              },
-              {
-                icon: Target,
-                title: "Data-Driven Decisions",
-                description: "Make informed decisions based on real-time data and AI insights"
-
-            ].map((benefit, index)              => (
-              <motion.div
-                key={benefit.title}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-
-                <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Platform Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI capabilities designed to transform every aspect of your business operations
-            </p>
-          </motion.div>
-
-          <div className="space-y-12">
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -256,26 +156,7 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
               Experience measurable improvements in operational efficiency and business performance
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)              => (
-              <motion.div
-                key={useCase.industry}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg mr-4">
-                    <useCase.icon className="w-6 h-6 text-purple-400" />
-=======
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -318,89 +199,6 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs and scale as you grow
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)              => (
-              <motion.div
-                key={tier.name}
-                className={`bg-slate-800/50 rounded-xl p-8 border ${
-                  tier.popular
-                    ? 'border-purple-500 ring-2 ring-purple-500/20'
-                    : 'border-slate-700'
-                } hover:border-purple-400 transition-all duration-300`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-
-                {tier.popular && (
-                  <div className="flex items-center justify-center mb-4">
-                    <span className="px-3 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-purple-400">{tier.price}</span>
-                    <span className="text-gray-400 ml-1">{tier.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{tier.description}</p>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  to="/request-quote"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
-
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

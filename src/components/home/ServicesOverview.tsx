@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
-interface Service {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 import React from 'react.ts';
 import { motion   
  
@@ -60,8 +33,6 @@ interface Service {
 
 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   category: string;
 icon: React.ComponentType<{ className?: string;
 
@@ -80,20 +51,9 @@ icon: React.ComponentType<{ className?: string;
 }>;
   color: string;
   items: string[];
-<<<<<<< HEAD
-  description?: string}
-=======
-<<<<<<< HEAD
-  description?: string;
-
-interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
-
-  services: Service[];
-=======
 description?: string;
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
   services: Service[]}
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
@@ -123,14 +83,9 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             Comprehensive technology solutions designed to drive innovation and growth across all industries
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
-          {services.map((service, index)  => (
-=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index)                => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

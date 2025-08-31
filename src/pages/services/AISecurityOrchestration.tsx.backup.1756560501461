@@ -16,18 +16,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$499/mo',
       details: ['Up to 25 workflows', 'Basic AI features', 'Standard orchestration', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,299/mo',
-      details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,299/mo', 
@@ -38,7 +26,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$3,299/mo', ;
       details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

@@ -1,9 +1,5 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-<<<<<<< HEAD
-export interface PricingTier {
-<<<<<<< HEAD
-=======
 
 
 
@@ -18,7 +14,6 @@ export interface PricingTier {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: number;
   currency: string;
@@ -60,20 +55,11 @@ export interface ServicePricing {
 
 =======
 export interface ComprehensivePricingService {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-<<<<<<< HEAD
-  pricingTiers: PricingTier[];
-  marketPrice: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-contactInfo: {;
-=======
   pricing: {
     starter: {
       price: number;
@@ -107,41 +93,13 @@ contactInfo: {;
   implementationTime: string;
   support: string;
   contactInfo: {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     phone: string;
     email: string;
     website: string;
     address: string;
-<<<<<<< HEAD
-  
-
-
-
-
-
-
-
-
-
-
-
-
-};
-  technicalSpecs: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  aiCapabilities: string[];
-  complianceFeatures: string[];
-  scalabilityFeatures: string[];
-=======
   };
   ctaLabel: string;
   href: string;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ComprehensivePricingService[] = [

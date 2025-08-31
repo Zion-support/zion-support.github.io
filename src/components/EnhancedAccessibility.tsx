@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Volume2,
-=======
-<<<<<<< HEAD
-import { AnimatePresence, motion               } from 'framer-motion.ts';
-import { Accessibility,
-    CheckCircle,
-    Contrast,
-    Eye,
-    Info,
-    Keyboard,
-    MousePointer,
-    RotateCcw,
-    Settings,
-    Type,
-    Volume2,
-    X,
-    ZoomIn,
-    ZoomOut
-import React, { useCallback, useEffect, useState               } from 'react.ts';
-=======
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Volume2,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   VolumeX,
   Eye,
   EyeOff,
@@ -34,12 +9,7 @@ import { Volume2,
   Accessibility,
   Settings,
   X
-<<<<<<< HEAD
- } from 'lucide-react';
-interface AccessibilitySettings {
-=======
                } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilitySettings {
 
@@ -57,25 +27,10 @@ interface AccessibilitySettings {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-<<<<<<< HEAD
-  keyboardNavigation: boolean}
-interface EnhancedAccessibilityProps {;
-  enabled?: boolean;
-  showControls?: boolean;
-  className?: string;
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-=======
-<<<<<<< HEAD
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlind: boolean;
-  dyslexia: boolean;
-=======
 keyboardNavigation: boolean;
 
 
@@ -91,11 +46,7 @@ keyboardNavigation: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export const EnhancedAccessibility: React.FC = (): JSX.Element => {
-=======;
 interface EnhancedAccessibilityProps extends React.PropsWithChildren<{}> {
 ;
   enabled?: boolean;
@@ -103,7 +54,6 @@ interface EnhancedAccessibilityProps extends React.PropsWithChildren<{}> {
   className?: string;
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled = true,;
   showControls = true,;
   className = '';
@@ -120,21 +70,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     colorBlind: false,
     dyslexia: false
   });
-<<<<<<< HEAD
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
-=======
   const [currentFocus, setCurrentFocus] = useState<any>(null);
   const [announcements, setAnnouncements] = useState<any>([]);
 
-<<<<<<< HEAD
-  useEffect(()  => {
-    // Apply accessibility settings to document
-    if (settings.highContrast) {
-      document.documentElement.classList.add('high-contrast')} else {
-      document.documentElement.classList.remove('high-contrast')}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
     const root = document.documentElement;
@@ -166,27 +104,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     if (saved) {
       setSettings(JSON.parse(saved))}
   }, []);
-<<<<<<< HEAD
-  const toggleSetting = (key: keyof AccessibilitySettings)  => {
-=======
 
   const toggleSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSettings(prev => ({
       ...prev,;
       [key]: !prev[key];
     }))};
-<<<<<<< HEAD
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.KeyboardEvent)                => {
-    if (e.key === 'Escape') {;
-      setIsOpen(false)};
-  };
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Screen reader announcements
   const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -203,12 +127,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   // Enhanced keyboard navigation
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
-<<<<<<< HEAD
-    const handleKeyDown = (e: KeyboardEvent) => {;
-=======
 
     const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       // Skip if in input/textarea
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -245,12 +165,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   // Focus management
   useEffect(() => {
     if (!settings.focusIndicator) return;
-<<<<<<< HEAD
-    const handleFocusIn = (e: FocusEvent) => {;
-=======
 
     const handleFocusIn = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyFocusEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
@@ -260,12 +176,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
                      target.textContent;
         if (label) announce(`Focused on ${label}`);
     };
-<<<<<<< HEAD
-    const handleFocusOut = (e: FocusEvent) => {;
-=======
 
     const handleFocusOut = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyFocusEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -282,17 +194,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-<<<<<<< HEAD
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-    return () => {
-=======
     skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     return ()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
     };
@@ -310,9 +216,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   ;
   ;
   ;
-<<<<<<< HEAD
-  highContrast: !settings.highContrast ;
-=======
   highContrast: anyanyanyanyanyanyanyanyanyanyanyanyanyany!settings.highContrast ;
 
 
@@ -320,7 +223,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
         applySettings(newSettings);
         announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
@@ -338,9 +240,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
   ;
   ;
   ;
-<<<<<<< HEAD
-  largeText: !settings.largeText ;
-=======
   largeText: anyanyanyanyanyanyanyanyanyanyanyanyanyany!settings.largeText ;
 
 
@@ -348,7 +247,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
         applySettings(newSettings);
         announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
@@ -478,27 +376,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
                   aria-label="Close accessibility panel"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Settings Grid */}
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4 mb-6">
-                {Object.entries(settings).map(([key, value])               => {
-                  const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                  const Icon = key === 'highContrast' ? Contrast :
-                              key === 'largeText' ? Type :
-                              key === 'reducedMotion' ? Eye :
-                              key === 'screenReader' ? Volume2 :
-                              key === 'keyboardNavigation' ? Keyboard :
-                              key === 'focusIndicator' ? MousePointer :
-                              key === 'colorBlind' ? Eye :
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   <X className="w-6 h-6" />;
                 </button>;

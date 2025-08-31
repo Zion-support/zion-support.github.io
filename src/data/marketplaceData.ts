@@ -1,6 +1,4 @@
 export interface MarketplaceItem {
-<<<<<<< HEAD
-=======
 
 
 
@@ -15,7 +13,6 @@ export interface MarketplaceItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -209,24 +206,10 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item               => item.category === 'equipment').length
   },
   {
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item  => item.category === 'services').length
-  };
-    id: 'services',;
-=======
-<<<<<<< HEAD
-    id: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
-    name: 'Services',
-    description: 'Professional services and consulting',
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item              => item.category === 'services').length
-
-=======
     count: anyanyanyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item               => item.category === 'services').length
   };
 =======;
     id: anyanyanyanyanyanyanyanyanyanyanyanyany'services',;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     name: 'Services',;
     description: 'Professional services and consulting',;
     count: marketplaceItems.filter(item              => item.category === 'services').length;

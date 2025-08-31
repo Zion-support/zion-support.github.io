@@ -1,20 +1,9 @@
 // removed duplicate old section
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
-=======
 
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-import { ShoppingCart, Sparkles, CheckCircle, BarChart3 const EcommercePersonalization: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { SEO               } from '@/components/SEO';
 import { ShoppingCart, Sparkles, CheckCircle, BarChart3               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const EcommercePersonalization: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">

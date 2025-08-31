@@ -1,29 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Kanban, 
-  Calendar, 
-  Users, 
-  Target, 
-  Zap, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight,
-  BarChart3,
-  Clock,
-  Globe,
-  Star,
-  Award,
-  TrendingUp,
-  FileText
-} from 'lucide-react';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIProjectManagement(...args: any[]): any {
   const features = [
@@ -214,13 +192,8 @@ export default function AIProjectManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectTypes.map((type, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -257,49 +230,8 @@ export default function AIProjectManagement(...args: any[]): any {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-3"
-              >
-                <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{benefit}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the project management solution that fits your team size and needs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {solutions.map((solution, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -351,8 +283,6 @@ export default function AIProjectManagement(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -390,7 +320,6 @@ export default function AIProjectManagement(...args: any[]): any {
         </div>
       </section>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600/20 to-red-600/20">
         <div className="max-w-4xl mx-auto text-center">

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail import { Link           } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet            } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail            } from 'lucide-react.ts';
 import { Link            } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
@@ -100,13 +94,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   icon: Shield,
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
-<<<<<<< HEAD
-
-              ].map((feature, index)           => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -153,13 +142,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   step: "04",
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
-<<<<<<< HEAD
-
-              ].map((step, index)           => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -243,16 +227,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -261,6 +235,5 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}

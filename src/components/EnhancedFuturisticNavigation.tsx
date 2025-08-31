@@ -217,30 +217,8 @@ import { Menu,
   Chi,
   Psi,
   Omega
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
-=======
                } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20)};
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
@@ -249,31 +227,11 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (searchQuery.trim()) {
-<<<<<<< HEAD
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: string) => {;
-=======
 
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
-=======
   const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
   const navigationItems = [

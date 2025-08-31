@@ -16,18 +16,6 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
       price: '$99/mo',
       details: ['Up to 50 students', 'Basic AI features', 'Standard content', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'School District',
-      price: '$399/mo',
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support']
-    },
-    {
-      name: 'University',
-      price: '$999/mo',
-      details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'School District', 
       price: '$399/mo', 
@@ -38,7 +26,6 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
       price: '$999/mo', ;
       details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

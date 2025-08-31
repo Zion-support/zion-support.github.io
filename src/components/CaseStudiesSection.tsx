@@ -8,60 +8,8 @@ import { TrendingUp,
   ArrowRight,
   Star,
   CheckCircle
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const caseStudies = [
-    {
-      comp: 'TechCorp Solutions',
-      industry: 'Financial Services',
-      challenge: 'Legacy system modernization and digital transformation',
-      solution: 'Implemented AI-powered automation and cloud migration',
-      results[
-        '40% reduction in operational costs',
-        '60% improvement in customer satisfaction',
-        '3x faster transaction processing'
-      ],
-      logo: '🏦',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      comp: 'Global Manufacturing Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Supply chain optimization and predictive maintenance',
-      solution: 'IoT sensors and AI-powered analytics platform',
-      results[
-        '25% reduction in downtime',
-        '30% improvement in supply chain efficiency',
-        '$2M annual cost savings'
-      ],
-      logo: '🏭',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      comp: 'HealthTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Patient data security and compliance management',
-      solution: 'Zero-trust security framework and automated compliance',
-      results[
-        '99.9% security compliance rate',
-        '50% reduction in audit preparation time',
-        'Enhanced patient data protection'
-      ],
-      logo: '🏥',
-<<<<<<< HEAD
-      color: 'from-purple-500 to-pink-500'
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       color: 'from-purple-500 to-pink-500';
     };
   ];
@@ -112,13 +60,8 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
-<<<<<<< HEAD
-export function CaseStudiesSection() {
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function CaseStudiesSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -143,37 +86,10 @@ export function CaseStudiesSection(...args: any[]): any {
             remarkable results through innovative technology solutions.
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div className="grid lg: grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)  => (
-            <motion.div
-=======
 
         <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, index)                => (
             <motion.div
-<<<<<<< HEAD
-              key={study.comp}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
-
-=======
-<<<<<<< HEAD
-              key={study.comp}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {

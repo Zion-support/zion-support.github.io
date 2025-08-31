@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart              } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { BarChart3,
@@ -32,12 +26,8 @@ import { BarChart3,
   Cpu,
   Network,
   FileText
-<<<<<<< HEAD
-import { SEO             } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DataAnalytics(...args: []):  {
   const features = [
@@ -54,15 +44,6 @@ export default function DataAnalytics(...args: []):  {
     {
       icon: BarChart3,
       title: 'Real-time Dashboards',
-<<<<<<< HEAD
-      description: 'Interactive visualizations that provide instant insights into your business performance.'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
-
-=======
       description: 'Interactive visualizations that provide instant insights into your business performance.';
     },;
     {;
@@ -70,7 +51,6 @@ export default function DataAnalytics(...args: []):  {
       title: 'Automated Reporting',;
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const solutions = [
@@ -91,15 +71,6 @@ export default function DataAnalytics(...args: []):  {
       description: 'Discover hidden patterns and relationships in large datasets',
       icon: Search,
       benefits: ['Pattern recognition', 'Anomaly detection', 'Customer segmentation', 'Market insights']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Performance Analytics',
-      description: 'Monitor and optimize business performance across all key metrics',
-      icon: Activity,
-      benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment']
-
-=======
     },;
     {;
       title: 'Performance Analytics',;
@@ -107,7 +78,6 @@ export default function DataAnalytics(...args: []):  {
       icon: Activity,;
       benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -128,15 +98,6 @@ export default function DataAnalytics(...args: []):  {
       description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
       icon: Activity,
       metrics: ['Patient Outcomes', 'Resource Utilization', 'Treatment Success Rate', 'Cost Efficiency']
-<<<<<<< HEAD
-    },
-    {
-      industry: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and production optimization',
-      icon: Cpu,
-      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction']
-
-=======
     },;
     {;
       industry: 'Manufacturing',;
@@ -144,7 +105,6 @@ export default function DataAnalytics(...args: []):  {
       icon: Cpu,;
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -161,15 +121,6 @@ export default function DataAnalytics(...args: []):  {
     {
       icon: Eye,
       title: 'Better Visibility',
-<<<<<<< HEAD
-      description: 'Gain comprehensive visibility into all aspects of your business performance'
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop informed strategies and plans based on predictive analytics and trends'
-
-=======
       description: 'Gain comprehensive visibility into all aspects of your business performance';
     },;
     {;
@@ -177,7 +128,6 @@ export default function DataAnalytics(...args: []):  {
       title: 'Strategic Planning',;
       description: 'Develop informed strategies and plans based on predictive analytics and trends';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

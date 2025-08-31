@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import {
   Bell,
   X,
@@ -25,14 +20,6 @@ import {
   Eye,
   EyeOff,
   Zap,
-<<<<<<< HEAD
-  Shield,
-  Globe
-} from 'lucide-react';
-
-export interface Notification {
-  id: string;
-=======
   TrendingUp,
   Award
 interface Notification {
@@ -52,7 +39,6 @@ interface Notification {
 
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'system';
@@ -60,11 +46,6 @@ interface Notification {
   category: 'user' | 'system' | 'security' | 'performance' | 'update';
   timestamp: Date;
   read: boolean;
-<<<<<<< HEAD
-  archived: boolean;
-  actions?: NotificationAction[];
-  metadata?: Record<string, any>;
-=======
 action?: {;
     label: string;
     onClick: ()               => void;
@@ -85,23 +66,11 @@ action?: {;
 };
   priority: 'low' | 'medium' | 'high';
   category: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   expiresAt?: Date;
 }
 
-<<<<<<< HEAD
-export interface NotificationAction {
-  label: string;
-  action: () => void;
-  variant?: 'primary' | 'secondary' | 'danger';
-  icon?: React.ComponentType<any>;
-}
-
-interface SmartNotificationSystemProps {
-=======
 interface Props extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
   maxNotifications?: number;
   autoDismiss?: boolean;
@@ -110,24 +79,11 @@ interface Props extends React.PropsWithChildren<{}> {
   onNotificationAction?: (notification: Notification, action: string) => void;
 }
 
-<<<<<<< HEAD
-export function SmartNotificationSystem({
-  enabled = true,
-  maxNotifications = 5,
-  autoDismiss = true,
-  autoDismissDelay = 5000,
-  soundEnabled = true,
-  onNotificationAction
-}: SmartNotificationSystemProps) {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-=======
 export function SmartNotificationSystem(...args: any[]): any {;
   const [notifications, setNotifications] = useState<any>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showSettings, setShowSettings] = useState(false);
   const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -141,12 +97,6 @@ export function SmartNotificationSystem(...args: any[]): any {;
     priority: true
   });
 
-<<<<<<< HEAD
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const notificationCount = notifications.filter(n => !n.read).length;
-
-  // Initialize audio for notification sounds
-=======
   // Generate sample notifications
   const generateSampleNotifications = useCallback(() => {
 const sampleNotifications: Notification[] = [;
@@ -161,14 +111,9 @@ priority: 'high',;
 category: 'onboarding',;
 action: {;
 label: 'Get Started',;
-<<<<<<< HEAD
-onClick: ()               => // // console.log('Get Started clicked');
-
-=======
 onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Get Started clicked');
         
 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'2',
@@ -181,13 +126,8 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
         category: 'performance',
         action: {
           label: 'View Details',
-<<<<<<< HEAD
-          onClick: ()               => // // console.log('View Details clicked')
-
-=======
           onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('View Details clicked')
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
         id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'3',
@@ -206,20 +146,9 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
         message: 'Please update your password to maintain account security.',
         timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
         read: false,
-<<<<<<< HEAD
-        priority: 'high',
-        category: 'security',
-        action: {
-          label: 'Update Now',
-<<<<<<< HEAD
-          onClick: ()               => // // console.log('Update Now clicked')
-
-
-=======
           onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Update Now clicked')
         }
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
         priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'high',;
         category: 'security',;
@@ -228,7 +157,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
           onClick: ()               => console.log('Update Now clicked');
         };
       };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
 
     setNotifications(sampleNotifications);
@@ -236,7 +164,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
   }, []);
 
   // Initialize with sample notifications
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3');
@@ -254,11 +181,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
       archived: false
     };
 
-<<<<<<< HEAD
-    setNotifications(prev => {
-      const updated = [newNotification, ...prev];
-      return updated.slice(0, maxNotifications);
-=======
   // Auto-expire notifications
   useEffect(() => {
     const interval = setInterval(() => {;
@@ -282,21 +204,13 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
   }, []);
 
   // Mark notification as read
-<<<<<<< HEAD
-  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    setNotifications(prev => {
-      const updated = prev.map(n =>
-        n.id === id ? { ...n, read: true } : n
-=======
   const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ;
         n.id === id ? { ...n, read: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue } : n;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       );
       setUnreadCount(updated.filter(n               => !n.read).length);
       return updated;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     });
 
     // Play sound if enabled
@@ -344,10 +258,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
   }, []);
 
   // Mark all as read
-<<<<<<< HEAD
-  const markAllAsRead = useCallback(() => {
-    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
-=======
   const markAllAsRead = useCallback(() => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ({ ...n, read: true }));
@@ -363,7 +273,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
       setUnreadCount(filtered.filter(n => !n.read).length);
       return filtered;
     });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }, []);
 
   // Clear all notifications
@@ -381,40 +290,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
   });
 
   // Get notification icon
-<<<<<<< HEAD
-  const getNotificationIcon = (type: Notification['type']) => {
-    switch (type) {
-      case 'success': return CheckCircle;
-      case 'error': return XCircle;
-      case 'warning': return AlertTriangle;
-      case 'info': return Info;
-      case 'system': return Zap;
-      default: return Info;
-    }
-  };
-
-  // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {
-    switch (priority) {
-      case 'critical': return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
-      case 'high': return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
-      case 'medium': return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';
-      case 'low': return 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800';
-      default: return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800';
-    }
-  };
-
-  // Get category icon
-  const getCategoryIcon = (category: Notification['category']) => {
-    switch (category) {
-      case 'user': return Eye;
-      case 'system': return Zap;
-      case 'security': return Shield;
-      case 'performance': return Zap;
-      case 'update': return Globe;
-      default: return Info;
-    }
-=======
   const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification['type'])               => {;
     switch (type) {;
       case 'success':;
@@ -458,7 +333,6 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
     if (minutes < 60) return `${minutes}m ago`;
     if (hours < 24) return `${hours}h ago`;
     return `${days}d ago`;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   // Request notification permission

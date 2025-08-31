@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
-  Atom, Network, Eye, PenTool, Heart, Building, Truck,
-  Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
-  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
-  CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
-  Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
-  Calculator, PieChart, BarChart
-import {
-  revolutionaryMicroSaasServices2025,
-  advancedITInfrastructureServices2025,
-  revolutionaryAIServices2025
-             } from '../data/comprehensiveServices2025';
-=======
 import { Link              } from 'react-router-dom.ts';
 import { DollarSign, 
   Star, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle, 
 =======
 import React, { useState, useEffect } from 'react';
@@ -31,7 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
   Filter, 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Star, 
   Shield, 
   Zap, 
@@ -56,72 +34,10 @@ import {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-  ExternalLink,
-  CheckCircle,
-  Award,
-  Target,
-  Lightbulb,
-  Sparkles,
-  Eye,
-  Heart,
-  DollarSign,
-  Calendar,
-  Settings,
-  Monitor,
-  Smartphone as MobileIcon,
-  Globe as WebIcon,
-  Shield as SecurityIcon,
-  Zap as PerformanceIcon,
-  Brain as AIIcon,
-  Cloud as CloudIcon,
-  Rocket as InnovationIcon,
-  ChevronDown,
-  ChevronUp,
-  Info,
-  AlertCircle,
-  Clock as TimeIcon,
-  Users as TeamIcon,
-  Globe as WorldIcon,
-  Shield as SecurityIcon2,
-  Zap as SpeedIcon,
-  Brain as IntelligenceIcon,
-  Cloud as CloudIcon2,
-  Rocket as LaunchIcon
-} from 'lucide-react';
-import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
-
-<<<<<<< HEAD
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-=======
   Linkedin,
   Twitter,
   Github
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   const serviceCategories = [
@@ -277,7 +193,6 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
     website: 'https://ziontechgroup.com'
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
   technicalSpecs?: {
     technology: string[];
@@ -303,7 +218,6 @@ export function ComprehensivePricingGuide2025() {
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
   const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   const filteredServices = comprehensiveServices2025Enhanced.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -564,16 +478,9 @@ export function ComprehensivePricingGuide2025() {
             </p>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div
-=======
           <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
             {services.map((service, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={service.id}
                 className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
@@ -641,7 +548,6 @@ export function ComprehensivePricingGuide2025() {
                           {getPriceRange(service.price)}
                         </span>
                       </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
@@ -801,16 +707,6 @@ export function ComprehensivePricingGuide2025() {
 
           {/* No Results */}
           {filteredServices.length === 0 && (
-<<<<<<< HEAD
-            <div className="text-center py-16">
-              <div className="w-24 h-24 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Search className="w-12 h-12 text-slate-400" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
-              <p className="text-slate-400 mb-8">
-                Try adjusting your search criteria or filters to find the services you're looking for.
-=======
 
               <div className="text-center">
                 <p className="text-gray-300 mb-4">
@@ -856,7 +752,6 @@ export function ComprehensivePricingGuide2025() {
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </motion.section>
@@ -870,20 +765,6 @@ export function ComprehensivePricingGuide2025() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact Zion Tech Group today to discuss your specific needs and get a customized pricing proposal
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-8 h-8 text-white" />
-=======
           >
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
@@ -892,29 +773,11 @@ export function ComprehensivePricingGuide2025() {
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {category.name}
                   </h2>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Choose the perfect plan for your {category.name.toLowerCase()} needs. All plans include our core capabilities and expert support.
                 </p>
               </div>
-<<<<<<< HEAD
-
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
-                <p className="text-cyan-400">ziontechgroup.com</p>
-=======
               
               <div className="space-y-12">
                 {category.services.map((service, serviceIndex) => (
@@ -1013,7 +876,6 @@ export function ComprehensivePricingGuide2025() {
                     </div>
                   </motion.div>
                 ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
           </motion.section>
@@ -1034,7 +896,6 @@ export function ComprehensivePricingGuide2025() {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Contact our team to discuss your needs and find the perfect solution for your business.
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </p>
               <button
                 onClick={() => {
@@ -1051,7 +912,6 @@ export function ComprehensivePricingGuide2025() {
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             </div>
           )}
         </div>

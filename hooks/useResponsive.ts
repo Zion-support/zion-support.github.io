@@ -19,13 +19,6 @@ interface ResponsiveState {
   orientation: "landscape" | "portrait";
   isMobile: boolean;
   isTablet: boolean;
-<<<<<<< HEAD
-  isDesktop: boolean}
-=======
-<<<<<<< HEAD
-  isDesktop: boolean;
-
-=======
 isDesktop: boolean;
 
 
@@ -40,8 +33,6 @@ isDesktop: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<any>({;
     screenWidth: anyanyanyanyanyanyanyanyanyanyanyanyany1920,;

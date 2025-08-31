@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Workflow,
-  Brain,
-  Zap,
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Helmet              } from 'react-helmet-async.ts';
@@ -18,7 +9,6 @@ import { Workflow,
   BarChart3, 
   Users, 
   Clock,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   ArrowRight,
   Clock,
@@ -29,24 +19,10 @@ import { Workflow,
   Cpu,
   Database,
   Network,
-<<<<<<< HEAD
-  Activity,
-  TrendingUp,
-  Target,
-  Rocket,
-  Star,
-  Award,
-  Globe,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-=======
   Cpu,
   Server,
   ShoppingCart
              } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIWorkflowOrchestrator() {
   const features = [
@@ -215,29 +191,6 @@ export default function AIWorkflowOrchestrator() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-=======
 
 
 
@@ -314,7 +267,6 @@ export default function AIWorkflowOrchestrator() {
                 ))}
               </div>
             </motion.div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -337,99 +289,6 @@ export default function AIWorkflowOrchestrator() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="flex-shrink-0">
-                  {benefit.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {benefit.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. All plans include a 14-day free trial.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-                    : 'border-white/10'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                }`}>
-                  {plan.cta}
-=======
 
 
 
@@ -757,7 +616,6 @@ export default function AIWorkflowOrchestrator() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
                   Start Free Trial
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </button>
               </motion.div>
             ))}
