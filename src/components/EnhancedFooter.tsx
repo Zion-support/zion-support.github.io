@@ -69,6 +69,9 @@ export function EnhancedFooter() {
       links: [
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: 'AI Contract Analyzer', href: '/services/ai-intelligent-contract-analyzer', icon: FileText, featured: true },
+        { name: 'AI Sustainability Analytics', href: '/services/ai-sustainability-analytics-platform', icon: Leaf, featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-predictive-analytics', icon: Heart, featured: true },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
         { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
         { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }

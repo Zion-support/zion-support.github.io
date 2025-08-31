@@ -268,6 +268,30 @@ export function EnhancedHeader() {
       icon: SparklesIcon,
       color: 'from-indigo-500 to-purple-500',
       featured: true
+    },
+    {
+      name: 'AI Contract Analyzer',
+      description: 'Intelligent contract analysis and risk assessment',
+      href: '/services/ai-intelligent-contract-analyzer',
+      icon: FileText,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Sustainability Analytics',
+      description: 'Environmental impact monitoring and ESG compliance',
+      href: '/services/ai-sustainability-analytics-platform',
+      icon: Leaf,
+      color: 'from-green-500 to-emerald-500',
+      featured: true
+    },
+    {
+      name: 'AI Healthcare Analytics',
+      description: 'Predictive healthcare analytics and patient monitoring',
+      href: '/services/ai-healthcare-predictive-analytics',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      featured: true
     }
   ];
 

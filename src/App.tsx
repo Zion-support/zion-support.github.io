@@ -123,6 +123,11 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// New Innovative AI Services 2025
+const AIIntelligentContractAnalyzer = createLazyComponent(() => import('./pages/services/AI-Intelligent-Contract-Analyzer'));
+const AISustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Sustainability-Analytics-Platform'));
+const AIHealthcarePredictiveAnalytics = createLazyComponent(() => import('./pages/services/AI-Healthcare-Predictive-Analytics'));
+
 // New Innovative Services 2025 - Additional
 const AICustomerJourneyOrchestrationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-journey-orchestration-platform'));
 const QuantumEnhancedCybersecurityOperationsCenter = createLazyComponent(() => import('./pages/services/quantum-enhanced-cybersecurity-operations-center'));
@@ -390,6 +395,11 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* New Innovative AI Services 2025 */}
+                  <Route path="/services/ai-intelligent-contract-analyzer" element={<AIIntelligentContractAnalyzer />} />
+                  <Route path="/services/ai-sustainability-analytics-platform" element={<AISustainabilityAnalyticsPlatform />} />
+                  <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
