@@ -131,9 +131,6 @@ export function Header() {
                 Get Started
               </Link>
             </div>
-
-
-            </div>
           </div>
         </div>
 
