@@ -106,6 +106,12 @@ const EdgeComputingSolutions = createLazyComponent(() => import('./pages/service
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
 
+// New Innovative Micro SAAS Services 2026
+const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/ai-legal-document-automation'));
+const AIRealEstateInvestmentAnalytics = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics'));
+const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/ai-supply-chain-risk-management'));
+const AIEducationalContentCreation = createLazyComponent(() => import('./pages/services/ai-educational-content-creation'));
+
 // Additional service pages from remote branch
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
 const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
@@ -259,6 +265,12 @@ function App() {
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-automation" element={<ModernLayout><AILegalDocumentAutomation /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-analytics" element={<ModernLayout><AIRealEstateInvestmentAnalytics /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-risk-management" element={<ModernLayout><AISupplyChainRiskManagement /></ModernLayout>} />
+                    <Route path="/services/ai-educational-content-creation" element={<ModernLayout><AIEducationalContentCreation /></ModernLayout>} />
 
                     {/* Additional service routes from remote branch */}
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />

@@ -111,36 +111,36 @@ export default function Services() {
 
   const featuredServices = [
     {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
+      title: "AI Legal Document Automation",
+      description: "Transform legal practice with AI-powered document generation and analysis",
+      price: "From $299/month",
+      features: ["90% faster document creation", "Smart contract analysis", "Legal research AI"],
+      href: "/services/ai-legal-document-automation",
       color: "from-green-400 to-emerald-500",
       popular: true
     },
     {
-      title: "Cloud FinOps Optimizer",
-      description: "Reduce cloud costs by 40% with AI-powered optimization",
-      price: "From $1,800/month",
-      features: ["Cost Optimization", "Waste Detection", "Real-time Monitoring"],
-      href: "/services/cloud-finops-optimizer",
+      title: "AI Real Estate Investment Analytics",
+      description: "Make smarter real estate decisions with AI-powered market analysis",
+      price: "From $199/month",
+      features: ["Property valuations", "Market insights", "Portfolio optimization"],
+      href: "/services/ai-real-estate-investment-analytics",
       color: "from-blue-400 to-indigo-500"
     },
     {
-      title: "AI Compliance Assistant",
-      description: "Automated compliance monitoring with 90% violation reduction",
-      price: "From $2,500/month",
-      features: ["24/7 Monitoring", "Regulatory Updates", "Risk Assessment"],
-      href: "/services/ai-compliance-assistant",
+      title: "AI Supply Chain Risk Management",
+      description: "Protect your supply chain with AI-powered risk monitoring",
+      price: "From $399/month",
+      features: ["Real-time monitoring", "Risk prediction", "Automated mitigation"],
+      href: "/services/ai-supply-chain-risk-management",
       color: "from-red-400 to-pink-500"
     },
     {
-      title: "AI Healthcare Platform",
-      description: "Revolutionize healthcare with AI-powered diagnostics and patient care",
-      price: "From $3,000/month",
-      features: ["Medical Imaging", "Patient Monitoring", "Drug Discovery"],
-      href: "/services/ai-healthcare-platform",
+      title: "AI Educational Content Creation",
+      description: "Revolutionize education with AI-powered content generation",
+      price: "From $99/month",
+      features: ["Multi-format content", "Interactive learning", "Personalized paths", "90% faster creation"],
+      href: "/services/ai-educational-content-creation",
       color: "from-purple-400 to-pink-500"
     }
   ];
