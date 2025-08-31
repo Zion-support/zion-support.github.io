@@ -34,10 +34,10 @@ const SEOOptimizer = () => {
                     url: '/ai-solutions',
                     title: 'AI Solutions - Artificial Intelligence Services',
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
-                    headings['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],
-                    images['/images/ai-solutions.jpg'],
-                    links['/services', '/about', '/contact'],
-                    keywords['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
+                    headings: ['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],
+                    images: ['/images/ai-solutions.jpg'],
+                    links: ['/services', '/about', '/contact'],
+                    keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
                 }
             ];
 
@@ -85,15 +85,12 @@ const SEOOptimizer = () => {
                 topIssues,
                 pageAnalyses,
                 summary
-            // // // // // // // console.error('Error analyzing SEO:', error);
-        }
-        finally {
+            });
+        } catch (error) {
+            console.error('Error analyzing SEO:', error);
+        } finally {
             setIsAnalyzing(false);
-            })}
-        catch (error) {
-            console.error('Error analyzing SEO:', error)}
-        finally {
-            setIsAnalyzing(false)}
+        }
     }, []);
 
     useEffect(() => {
@@ -108,310 +105,337 @@ const SEOOptimizer = () => {
         // Title optimization (0-20 points)
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
-            score += 20}
-        else if (page.title.length > 0) {
-            score += 10}
+            score += 20;
+        } else if (page.title.length > 0) {
+            score += 10;
+        }
+
         // Meta description (0-15 points)
         maxScore += 15;
         if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {
-            score += 15}
-        else if (page.metaDescription.length > 0) {
-            score += 8}
+            score += 15;
+        } else if (page.metaDescription.length > 0) {
+            score += 8;
+        }
+
         // Headings (0-15 points)
         maxScore += 15;
         if (page.headings.length >= 3) {
-            score += 15}
-        else if (page.headings.length >= 1) {
-            score += 10}
+            score += 15;
+        } else if (page.headings.length >= 1) {
+            score += 10;
+        }
+
         // Images (0-10 points)
         maxScore += 10;
         if (page.images.length >= 2) {
-            score += 10}
-        else if (page.images.length >= 1) {
-            score += 5}
-        // Internal links (0-15 points)
-        maxScore += 15;
-        if (page.links.length >= 3) {
-            score += 15}
-        else if (page.links.length >= 1) {
-            score += 10}
+            score += 10;
+        } else if (page.images.length >= 1) {
+            score += 5;
+        }
+
+        // Links (0-10 points)
+        maxScore += 10;
+        if (page.links.length >= 5) {
+            score += 10;
+        } else if (page.links.length >= 2) {
+            score += 5;
+        }
+
         // Keywords (0-10 points)
         maxScore += 10;
-        if (page.keywords.length >= 3) {
-            score += 10}
-        else if (page.keywords.length >= 1) {
-            score += 5}
-        // URL structure (0-15 points)
-        maxScore += 15;
+        if (page.keywords.length >= 4) {
+            score += 10;
+        } else if (page.keywords.length >= 2) {
+            score += 5;
+        }
+
+        // URL structure (0-10 points)
+        maxScore += 10;
         if (page.url === '/' || page.url.includes('-')) {
-            score += 15}
-        else if (page.url.length > 0) {
-            score += 8;
+            score += 10;
+        } else if (page.url.length <= 50) {
+            score += 5;
+        }
+
         return Math.round((score / maxScore) * 100);
     };
-    const issues = [];
-        if (!page.title || page.title.length < 30) {
-            issues.push('Title is too short (should be 30-60 characters)')}
-        else if (page.title.length > 60) {
-            issues.push('Title is too long (should be 30-60 characters)')}
-        if (!page.metaDescription || page.metaDescription.length < 120) {
-            issues.push('Meta description is too short (should be 120-160 characters)')}
-        else if (page.metaDescription.length > 160) {
-            issues.push('Meta description is too long (should be 120-160 characters)')}
-        if (page.headings.length < 2) {
-            issues.push('Insufficient heading structure (should have at least 2 headings)')}
-        if (page.images.length === 0) {
-            issues.push('No images found (consider adding relevant images with alt text)')}
-        if (page.links.length < 2) {
-            issues.push('Insufficient internal linking (should have at least 2 internal links)')}
-        if (page.keywords.length < 2) {
-            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)')}
-        if (page.url !== '/' && !page.url.includes('-')) {
-            issues.push('URL could be more SEO-friendly (consider using hyphens)')}
-        return issues};
+
+    const identifySEOIssues = (page) => {
+        const issues = [];
+
+        if (page.title.length < 30 || page.title.length > 60) {
+            issues.push('Title length optimization');
+        }
+
+        if (page.metaDescription.length < 120 || page.metaDescription.length > 160) {
+            issues.push('Meta description length');
+        }
+
+        if (page.headings.length < 3) {
+            issues.push('Insufficient heading structure');
+        }
+
+        if (page.images.length < 2) {
+            issues.push('Limited image content');
+        }
+
+        if (page.links.length < 5) {
+            issues.push('Internal linking opportunities');
+        }
+
+        if (page.keywords.length < 4) {
+            issues.push('Keyword optimization');
+        }
+
+        return issues;
+    };
+
     const generateSEORecommendations = (issues) => {
-        const recommendations = [];
-        if (issues.some(issue => issue.includes('Title'))) {
-            recommendations.push('Optimize page titles with relevant keywords and compelling copy')}
-        if (issues.some(issue => issue.includes('Meta description'))) {
-            recommendations.push('Write compelling meta descriptions that accurately describe the page content')}
-        if (issues.some(issue => issue.includes('heading structure'))) {
-            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO')}
-        if (issues.some(issue => issue.includes('No images'))) {
-            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO')}
-        if (issues.some(issue => issue.includes('internal linking'))) {
-            recommendations.push('Add internal links to related pages to improve navigation and SEO')}
-        if (issues.some(issue => issue.includes('keyword targeting'))) {
-            recommendations.push('Research and include relevant keywords naturally throughout the content')}
-        if (issues.some(issue => issue.includes('URL'))) {
-            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}
-        recommendations.push('Ensure content is unique, valuable, and addresses user intent');
-        recommendations.push('Implement structured data markup for better search engine understanding');
-        recommendations.push('Optimize page loading speed for better user experience and SEO');
-        return recommendations;
+        const recommendations = {
+            'Title length optimization': 'Optimize title length between 30-60 characters for better search visibility',
+            'Meta description length': 'Ensure meta descriptions are between 120-160 characters for optimal display',
+            'Insufficient heading structure': 'Add more H2 and H3 headings to improve content structure and readability',
+            'Limited image content': 'Include more relevant images with proper alt text for better user engagement',
+            'Internal linking opportunities': 'Add more internal links to improve site navigation and SEO value',
+            'Keyword optimization': 'Expand keyword targeting to cover more relevant search terms'
+        };
+
+        return issues.map(issue => recommendations[issue] || 'General SEO improvement needed');
     };
 
     const generateSummary = (pageAnalyses, topIssues) => {
-        const totalPages = pageAnalyses.length;
-        const excellentPages = pageAnalyses.filter(page => page.score >= 80).length;
-        const goodPages = pageAnalyses.filter(page => page.score >= 60).length;
-        const poorPages = pageAnalyses.filter(page => page.score < 40).length;
-        let summary = `Analyzed ${totalPages} pages for SEO. `;
-        if (excellentPages > 0) {
-            summary += `${excellentPages} pages have excellent SEO. `}
-        if (goodPages > 0) {
-            summary += `${goodPages} pages have good SEO. `}
-        if (poorPages > 0) {
-            summary += `${poorPages} pages need significant SEO improvement. `}
-        if (topIssues.length > 0) {
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`}
-        return summary};
-    const exportSEOReport = () => {
-        if (!report)
-            return;
-        const csvContent = [
-            ['Page URL', 'Title', 'SEO Score', 'Issues', 'Recommendations'],
-            ...report.pageAnalyses.map(page => [
-                page.pageUrl,
-                page.title,
-                page.score.toString(),
-                page.issues.join('; '),
-                page.recommendations.join('; ')
-            ])
-        ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
-        const blob = new Blob([csvContent], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
+        const totalScore = pageAnalyses.reduce((sum, page) => sum + page.score, 0);
+        const averageScore = Math.round(totalScore / pageAnalyses.length);
+
+        let overallStatus = 'Excellent';
+        if (averageScore < 70) overallStatus = 'Needs Improvement';
+        else if (averageScore < 85) overallStatus = 'Good';
+
+        return {
+            overallStatus,
+            averageScore,
+            totalPages: pageAnalyses.length,
+            topIssues,
+            recommendations: [
+                'Focus on title and meta description optimization',
+                'Improve heading structure across all pages',
+                'Enhance internal linking strategy',
+                'Optimize image content with proper alt text',
+                'Expand keyword targeting for better search visibility'
+            ]
+        };
+    };
+
+    const exportReport = () => {
+        if (!report) return;
+
+        const reportData = {
+            generatedAt: new Date().toISOString(),
+            summary: report.summary,
+            pageAnalyses: report.pageAnalyses
+        };
+
+        const blob = new Blob([JSON.stringify(reportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'seo-optimization-report.csv';
+        a.download = 'seo-analysis-report.json';
+        document.body.appendChild(a);
         a.click();
-        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
     };
 
-    const getScoreColor = (score) => {
-        if (score >= 80)
-            return 'text-green-600 bg-green-50 border-green-200';
-        if (score >= 60)
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-        if (score >= 40)
-            return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200';
-    };
+    if (!isOpen) {
+        return (
+            <button
+                onClick={() => setIsOpen(true)}
+                className="fixed bottom-6 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 z-50"
+                title="Open SEO Optimizer"
+            >
+                <Search className="w-6 h-6" />
+            </button>
+        );
+    }
 
-    const getScoreText = (score) => {
-        if (score >= 80)
-            return 'Excellent';
-        if (score >= 60)
-            return 'Good';
-        if (score >= 40)
-            return 'Fair';
-        return 'Poor';
-    };
-
-    return (<div className="fixed bottom-6 right-24 z-50">
-      {/* Floating Action Button */}
-      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">
-        <Search className="w-6 h-6"/>
-      </button>
-      {/* SEO Optimizer Panel */}
-      {isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <TrendingUp className="w-5 h-5"/>
-                SEO Optimizer
-              </h3>
-              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">
-                ×
-              </button>
-            </div>
-            {/* Summary Stats */}
-            {report && (<div className="grid grid-cols-3 gap-4 mt-3">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">{report.totalPages}</div>
-                  <div className="text-sm text-purple-100">Pages Analyzed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">{report.averageScore}%</div>
-                  <div className="text-sm text-purple-100">Avg SEO Score</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">{report.pagesWithIssues}</div>
-                  <div className="text-sm text-pink-100">Need Optimization</div>
-                </div>
-              </div>)}
-          </div>
-          {/* Content */}
-          <div className="p-4 max-h-[500px] overflow-y-auto">
-            {isAnalyzing ? (<div className="flex items-center justify-center py-8">
-                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"/>
-                <span className="ml-2 text-gray-600">Analyzing SEO...</span>
-              </div>) : report ? (<div className="space-y-4">
-                {/* Top Issues */}
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
-                      <AlertTriangle className="w-4 h-4"/>
-                      Top SEO Issues to Address
-                    </h4>
-                    <div className="space-y-1">
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
-                          • {issue}
-                        </div>))}
-                    </div>
-                  </div>)}
-                {/* Pages Analysis */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
-                  <div className="overflow-x-auto">
-                    <table className="w-full">
-                      <thead className="bg-gray-100 dark:bg-gray-700">
-                        <tr>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Page
-                          </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            SEO Score
-                          </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Status
-                          </th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Issues
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>
-                            <td className="px-4 py-3">
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
-                                {page.title}
-                              </div>
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
-                                {page.pageUrl}
-                              </div>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                              {page.score}%
-                            </td>
-                            <td className="px-4 py-3">
-                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>
-                                {getScoreText(page.score)}
-                              </span>
-                            </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                              {page.issues.length} issues
-                            </td>
-                          </tr>))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                {/* Page Details Modal */}
-                {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          SEO Analysis: {selectedPage.title}
-                        </h3>
-                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                          ×
-                        </button>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">SEO Score</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.score}%</div>
-                          </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headings.length}</div>
-                          </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.images.length}</div>
-                          </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>
-                          </div>
+    return (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div className="bg-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6 border-b border-slate-600">
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                <Search className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                                <h2 className="text-2xl font-bold text-white">SEO Optimizer</h2>
+                                <p className="text-slate-300">Comprehensive SEO analysis and optimization recommendations</p>
+                            </div>
                         </div>
-                        {selectedPage.issues.length > 0 && (<div>
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">SEO Issues Found</h4>
-                            <div className="space-y-2">
-                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">
-                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
-                                  <span>{issue}</span>
-                                </div>))}
-                            </div>
-                          </div>)}
-                        {selectedPage.recommendations.length > 0 && (<div>
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">SEO Recommendations</h4>
-                            <div className="space-y-2">
-                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">
-                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
-                                  <span>{rec}</span>
-                                </div>))}
-                            </div>
-                          </div>)}
-                      </div>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="text-slate-400 hover:text-white transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                     </div>
-                  </div>)}
-              </div>) : (<div className="text-center py-8 text-gray-500">
-                No SEO analysis data available
-              </div>)}
-          </div>
-          {/* Footer Actions */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>
-              {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}
-            </button>
-            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">
-              <Download className="w-4 h-4"/>
-              Export
-            </button>
-          </div>
-        </div>)}
-    </div>)};
+                </div>
+
+                {/* Content */}
+                <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+                    {!report ? (
+                        <div className="flex items-center justify-center py-12">
+                            <div className="text-center">
+                                <RefreshCw className="w-12 h-12 text-cyan-400 animate-spin mx-auto mb-4" />
+                                <p className="text-slate-400">Analyzing your website's SEO...</p>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="space-y-8">
+                            {/* Summary Cards */}
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                    <div className="flex items-center space-x-3 mb-3">
+                                        <TrendingUp className="w-6 h-6 text-green-400" />
+                                        <h3 className="text-lg font-semibold text-white">Overall Score</h3>
+                                    </div>
+                                    <p className="text-3xl font-bold text-green-400">{report.summary.averageScore}%</p>
+                                    <p className="text-slate-400 text-sm">{report.summary.overallStatus}</p>
+                                </div>
+
+                                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                    <div className="flex items-center space-x-3 mb-3">
+                                        <Search className="w-6 h-6 text-blue-400" />
+                                        <h3 className="text-lg font-semibold text-white">Pages Analyzed</h3>
+                                    </div>
+                                    <p className="text-3xl font-bold text-blue-400">{report.totalPages}</p>
+                                    <p className="text-slate-400 text-sm">Total pages</p>
+                                </div>
+
+                                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                    <div className="flex items-center space-x-3 mb-3">
+                                        <AlertTriangle className="w-6 h-6 text-yellow-400" />
+                                        <h3 className="text-lg font-semibold text-white">Issues Found</h3>
+                                    </div>
+                                    <p className="text-3xl font-bold text-yellow-400">{report.pagesWithIssues}</p>
+                                    <p className="text-slate-400 text-sm">Pages with issues</p>
+                                </div>
+
+                                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                    <div className="flex items-center space-x-3 mb-3">
+                                        <Zap className="w-6 h-6 text-cyan-400" />
+                                        <h3 className="text-lg font-semibold text-white">Top Issues</h3>
+                                    </div>
+                                    <p className="text-3xl font-bold text-cyan-400">{report.topIssues.length}</p>
+                                    <p className="text-slate-400 text-sm">Priority issues</p>
+                                </div>
+                            </div>
+
+                            {/* Top Issues */}
+                            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                <h3 className="text-xl font-semibold text-white mb-4">Top SEO Issues</h3>
+                                <div className="space-y-3">
+                                    {report.topIssues.map((issue, index) => (
+                                        <div key={index} className="flex items-center space-x-3 p-3 bg-slate-700/50 rounded-lg">
+                                            <AlertTriangle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                                            <span className="text-slate-300">{issue}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Page Analysis */}
+                            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                                <h3 className="text-xl font-semibold text-white mb-4">Page Analysis</h3>
+                                <div className="space-y-4">
+                                    {report.pageAnalyses.map((page, index) => (
+                                        <div
+                                            key={index}
+                                            className={`p-4 rounded-lg border cursor-pointer transition-all duration-200 ${
+                                                selectedPage === index
+                                                    ? 'border-cyan-500 bg-slate-700/50'
+                                                    : 'border-slate-600 hover:border-slate-500'
+                                            }`}
+                                            onClick={() => setSelectedPage(selectedPage === index ? null : index)}
+                                        >
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <h4 className="text-white font-medium">{page.title}</h4>
+                                                    <p className="text-slate-400 text-sm">{page.pageUrl}</p>
+                                                </div>
+                                                <div className="text-right">
+                                                    <div className={`text-2xl font-bold ${
+                                                        page.score >= 80 ? 'text-green-400' :
+                                                        page.score >= 60 ? 'text-yellow-400' : 'text-red-400'
+                                                    }`}>
+                                                        {page.score}%
+                                                    </div>
+                                                    <p className="text-slate-400 text-sm">SEO Score</p>
+                                                </div>
+                                            </div>
+
+                                            {selectedPage === index && (
+                                                <div className="mt-4 pt-4 border-t border-slate-600">
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        <div>
+                                                            <h5 className="text-white font-medium mb-2">Issues Found</h5>
+                                                            <ul className="space-y-1">
+                                                                {page.issues.map((issue, i) => (
+                                                                    <li key={i} className="text-slate-400 text-sm flex items-center space-x-2">
+                                                                        <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                                                                        <span>{issue}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                        <div>
+                                                            <h5 className="text-white font-medium mb-2">Recommendations</h5>
+                                                            <ul className="space-y-1">
+                                                                {page.recommendations.map((rec, i) => (
+                                                                    <li key={i} className="text-slate-400 text-sm flex items-center space-x-2">
+                                                                        <Zap className="w-4 h-4 text-cyan-400" />
+                                                                        <span>{rec}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Action Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button
+                                    onClick={analyzeSEO}
+                                    disabled={isAnalyzing}
+                                    className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                                >
+                                    <RefreshCw className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`} />
+                                    <span>{isAnalyzing ? 'Analyzing...' : 'Re-analyze SEO'}</span>
+                                </button>
+
+                                <button
+                                    onClick={exportReport}
+                                    className="px-6 py-3 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300 flex items-center space-x-2"
+                                >
+                                    <Download className="w-5 h-5" />
+                                    <span>Export Report</span>
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
 export default SEOOptimizer;

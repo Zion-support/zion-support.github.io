@@ -275,110 +275,55 @@ export const EnhancedNavigation: React.FC = () => {
                 </button>
               </form>
 
-              {/* Search */}
-              <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
-                <Search className="w-5 h-5" />
-              </button>
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
-
-              {/* Contact Info */}
-              <div className="flex items-center space-x-4">
-                {contactInfo.slice(0, 2).map((contact, index) => (
-                  <a
-                    key={index}
-                    href={contact.href}
-                    className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    <contact.icon className="w-4 h-4" />
-                    <span className="hidden xl:inline">{contact.text}</span>
-                  </a>
-                ))}
-              </div>
-
-              {/* CTA Button */}
-              <Link
-                to="/contact"
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              aria-label="Toggle mobile menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
-            >
-              <div className="px-4 py-6 space-y-6">
-                {/* Mobile Navigation Items */}
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.children ? (
-                      <div>
-                        <button
-                          onClick={() => handleDropdownToggle(item.name)}
-                          className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors py-3"
-                          aria-expanded={activeDropdown === item.name}
-                        >
-                          <div className="flex items-center space-x-2">
-                            {item.icon && <item.icon className="w-5 h-5" />}
-                            <span className="font-medium">{item.name}</span>
-                          </div>
-                          <ChevronDown className={`w-5 h-5 transition-transform ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
-                        </button>
-                        
-                        {activeDropdown === item.name && (
-                          <div className="ml-6 mt-2 space-y-2">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.name}
-                                to={child.href}
-                                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors py-2"
-                              >
-                                <span>{child.name}</span>
-                                {child.badge && (
-                                  <span className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-400 rounded-full">
-                                    {child.badge}
-                                  </span>
-                                )}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors py-3"
+              {/* Mobile Navigation Items */}
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.children ? (
+                    <div>
+                      <button
+                        onClick={() => handleDropdownToggle(item.name)}
+                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors py-3"
+                        aria-expanded={activeDropdown === item.name}
                       >
-                        {item.icon && <item.icon className="w-5 h-5" />}
-                        <span className="font-medium">{item.name}</span>
-                      </Link>
-                    )}
-                  </div>
-                ))}
-
-              </div>
+                        <div className="flex items-center space-x-2">
+                          {item.icon && <item.icon className="w-5 h-5" />}
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-5 h-5 transition-transform ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      {activeDropdown === item.name && (
+                        <div className="ml-6 mt-2 space-y-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors py-2"
+                            >
+                              <span>{child.name}</span>
+                              {child.badge && (
+                                <span className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-400 rounded-full">
+                                  {child.badge}
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors py-3"
+                    >
+                      {item.icon && <item.icon className="w-5 h-5" />}
+                      <span className="font-medium">{item.name}</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
 
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-slate-700/50">
@@ -410,3 +355,5 @@ export const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
+
+export default EnhancedNavigation;
