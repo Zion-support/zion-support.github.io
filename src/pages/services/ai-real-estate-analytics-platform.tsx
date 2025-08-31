@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Package, 
+  Home, 
+  TrendingUp, 
   Brain, 
   Shield, 
   Users, 
@@ -24,138 +24,99 @@ import {
   Database,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Building,
+  MapPinIcon,
+  Calculator
 } from 'lucide-react';
 
-const AISupplyChainOptimizationPlatform = () => {
+const AIRealEstateAnalyticsPlatform = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
+      title: "AI-Powered Market Analysis",
+      description: "Advanced machine learning algorithms analyze real estate markets in real-time, providing predictive insights for investment decisions with 92% accuracy."
     },
     {
-      icon: <Truck className="w-6 h-6" />,
-      title: "Route Optimization",
-      description: "Intelligent route planning that reduces delivery times by 30% and cuts transportation costs by 25%."
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Property Valuation",
+      description: "AI models predict property values based on market trends, neighborhood data, and economic indicators, helping investors make informed decisions."
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Real-time risk assessment and mitigation strategies for supply chain disruptions and supplier issues."
+      icon: <Building className="w-6 h-6" />,
+      title: "Portfolio Optimization",
+      description: "Intelligent portfolio management tools that optimize real estate investments based on risk tolerance, market conditions, and investment goals."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Supplier Management",
-      description: "AI-driven supplier performance analysis and automated procurement recommendations."
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Inventory Optimization",
-      description: "Smart inventory management that maintains optimal stock levels while minimizing carrying costs."
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Comprehensive supply chain KPIs and real-time performance monitoring dashboards."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Small Business",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Up to 100 SKUs",
-        "Basic demand forecasting",
-        "Standard reporting",
-        "Email support",
-        "Basic integrations",
-        "Mobile app access"
-      ],
-      popular: false
-    },
-    {
-      name: "Enterprise",
-      price: "$1,199",
-      period: "/month",
-      description: "Ideal for growing companies and mid-market businesses",
-      features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI algorithms",
-        "Custom dashboards",
-        "Priority support",
-        "Full integration suite",
-        "Advanced analytics",
-        "Risk management",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Global Enterprise",
-      price: "$2,999",
-      period: "/month",
-      description: "For large multinational corporations",
-      features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Multi-warehouse management",
-        "Custom integrations",
-        "Training and consultation",
-        "SLA guarantees"
-      ],
-      popular: false
+      icon: <MapPinIcon className="w-6 h-6" />,
+      title: "Geographic Market Intelligence",
+      description: "Comprehensive geographic analysis including neighborhood trends, school ratings, crime statistics, and future development plans."
     }
   ];
 
   const benefits = [
+    "Increase investment returns by 25-40% through AI-driven insights",
+    "Reduce market research time from weeks to hours",
+    "Identify undervalued properties before they hit the market",
+    "Optimize portfolio allocation for maximum returns",
+    "Stay ahead of market trends with predictive analytics",
+    "Comprehensive risk assessment and mitigation strategies"
+  ];
+
+  const pricing = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Cost Reduction",
-      description: "Reduce supply chain costs by 20-35% through AI optimization"
+      plan: "Starter",
+      price: "$199",
+      period: "/month",
+      features: [
+        "Basic market analysis",
+        "Property valuation estimates",
+        "Market trend reports",
+        "Email support"
+      ]
     },
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Faster Delivery",
-      description: "Improve delivery times by 30-40% with route optimization"
+      plan: "Professional",
+      price: "$399",
+      period: "/month",
+      features: [
+        "Advanced AI analytics",
+        "Portfolio optimization",
+        "Real-time market alerts",
+        "Priority support",
+        "Custom reports"
+      ]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Risk Mitigation",
-      description: "Identify and prevent supply chain disruptions before they occur"
-    },
-    {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Improved Efficiency",
-      description: "Streamline operations and reduce manual processes by 50%"
+      plan: "Enterprise",
+      price: "$799",
+      period: "/month",
+      features: [
+        "Full AI platform access",
+        "Custom AI model training",
+        "API access",
+        "Dedicated account manager",
+        "White-label solutions"
+      ]
     }
   ];
 
-  const industries = [
+  const useCases = [
     {
-      icon: <Package className="w-8 h-8" />,
-      title: "E-commerce",
-      description: "Optimize fulfillment and last-mile delivery for online retailers"
+      title: "Real Estate Investors",
+      description: "Identify high-potential properties and optimize investment portfolios with AI-driven insights."
     },
     {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Manufacturing",
-      description: "Streamline production planning and raw material procurement"
+      title: "Property Developers",
+      description: "Analyze market demand and identify optimal locations for new developments."
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Retail",
-      description: "Improve inventory management and store replenishment"
+      title: "Real Estate Agents",
+      description: "Provide clients with data-driven market insights and property recommendations."
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: "Healthcare",
-      description: "Ensure critical medical supplies are always available"
+      title: "Financial Institutions",
+      description: "Assess real estate collateral values and manage portfolio risk effectively."
     }
   ];
 
@@ -170,22 +131,22 @@ const AISupplyChainOptimizationPlatform = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <Truck className="w-12 h-12 text-blue-500 mr-3" />
+              <Home className="w-12 h-12 text-blue-500 mr-3" />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
-                AI Supply Chain
-                <span className="text-blue-500 block">Optimization Platform</span>
+                AI Real Estate Analytics
+                <span className="text-blue-500 block">Platform</span>
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Predict demand, 
-              optimize routes, and manage inventory with unprecedented precision.
+              Transform your real estate investments with AI-powered market analysis, predictive valuations, 
+              and intelligent portfolio optimization. Make data-driven decisions that maximize returns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
@@ -210,15 +171,14 @@ const AISupplyChainOptimizationPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Supply Chain Intelligence
+              AI-Powered Real Estate Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform combines cutting-edge technology with supply chain expertise to deliver 
-              insights that optimize operations and reduce costs.
+              Our advanced AI platform provides comprehensive real estate analytics that give you the competitive edge.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -226,10 +186,12 @@ const AISupplyChainOptimizationPlatform = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors"
+                className="bg-slate-800 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors"
               >
-                <div className="text-blue-500 mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <div className="text-white">{feature.icon}</div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -237,7 +199,7 @@ const AISupplyChainOptimizationPlatform = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -248,34 +210,32 @@ const AISupplyChainOptimizationPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Transform Your Real Estate Business
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform adapts to various industries, providing tailored optimization 
-              strategies for different supply chain challenges.
+              Experience unprecedented growth and profitability with AI-driven insights and automation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="flex items-start space-x-3"
               >
-                <div className="text-blue-500 mb-4 flex justify-center">{industry.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.title}</h3>
-                <p className="text-gray-300">{industry.description}</p>
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -286,33 +246,55 @@ const AISupplyChainOptimizationPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Supply Chain Leaders Choose Us?
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in efficiency, cost reduction, and customer satisfaction.
+              Flexible pricing options designed to scale with your real estate business needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className={`bg-slate-800 p-8 rounded-lg border ${
+                  index === 1 ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-700'
+                }`}
               >
-                <div className="text-blue-500 mb-4 flex justify-center">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
+                  <span className="text-gray-400">{plan.period}</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+                    index === 1
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
+                  Get Started
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -323,64 +305,25 @@ const AISupplyChainOptimizationPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing Plans
+              Perfect For Every Real Estate Professional
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your business size and supply chain complexity. 
-              All plans include our core AI capabilities and optimization tools.
+              Whether you're an investor, developer, agent, or financial institution, our platform adapts to your needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-slate-800 p-8 rounded-lg border ${
-                  plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
-                    : 'border-slate-700'
-                }`}
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700"
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="https://ziontechgroup.com/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
-                >
-                  Get Started
-                </a>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -397,10 +340,10 @@ const AISupplyChainOptimizationPlatform = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Supply Chain?
+              Ready to Revolutionize Your Real Estate Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join leading companies that have already improved efficiency and reduced costs with AI optimization.
+              Join thousands of real estate professionals who have already transformed their business with AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -455,4 +398,4 @@ const AISupplyChainOptimizationPlatform = () => {
   );
 };
 
-export default AISupplyChainOptimizationPlatform;
+export default AIRealEstateAnalyticsPlatform;
