@@ -192,9 +192,7 @@ const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoT
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
 // New Innovative Services 2025
-const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
 const AICustomerIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-customer-intelligence-platform'));
-const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
 
 // Showcase pages
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
