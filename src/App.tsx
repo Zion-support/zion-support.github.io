@@ -44,6 +44,13 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New AI Autonomous Services 2025
+const AIQuantumFinancialAnalytics = createLazyComponent(() => import('./pages/services/AI-Quantum-Financial-Analytics-Platform'));
+const AIAutonomousSupplyChain = createLazyComponent(() => import('./pages/services/AI-Autonomous-Supply-Chain-Optimization-Platform'));
+const AIAutonomousHealthcare = createLazyComponent(() => import('./pages/services/AI-Autonomous-Healthcare-Diagnostics-Platform'));
+const AIAutonomousCybersecurity = createLazyComponent(() => import('./pages/services/AI-Autonomous-Cybersecurity-Threat-Intelligence-Platform'));
+const AIAutonomousManufacturing = createLazyComponent(() => import('./pages/services/AI-Autonomous-Manufacturing-Optimization-Platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -125,6 +132,13 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+
+                    {/* New AI Autonomous Services 2025 */}
+                    <Route path="/services/ai-quantum-financial-analytics-platform" element={<AIQuantumFinancialAnalytics />} />
+                    <Route path="/services/ai-autonomous-supply-chain-optimization-platform" element={<AIAutonomousSupplyChain />} />
+                    <Route path="/services/ai-autonomous-healthcare-diagnostics-platform" element={<AIAutonomousHealthcare />} />
+                    <Route path="/services/ai-autonomous-cybersecurity-threat-intelligence-platform" element={<AIAutonomousCybersecurity />} />
+                    <Route path="/services/ai-autonomous-manufacturing-optimization-platform" element={<AIAutonomousManufacturing />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
