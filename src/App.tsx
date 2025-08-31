@@ -18,9 +18,15 @@ const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Services = createLazyComponent(() => import('./pages/Services'));
 
+// Legal and utility pages
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+
 // Our new innovative services pages
 const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2029'));
 const ComprehensivePricingGuide2029 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2029'));
+const ComprehensiveServices2029 = createLazyComponent(() => import('./pages/ComprehensiveServices2029'));
 
 // Simple loading component
 const LoadingSpinner = () => (
@@ -51,6 +57,8 @@ const ErrorFallback = ({ error }: { error: Error }) => (
 );
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -71,13 +79,98 @@ function App() {
               </div>
               <nav className="hidden md:flex items-center space-x-6">
                 <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
-                <a href="/services" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Services</a>
+                <div className="relative group">
+                  <button className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
+                    Services
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="p-4">
+                      <div className="space-y-3">
+                        <a href="/comprehensive-services-2029" className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                          <div className="font-semibold text-gray-900 dark:text-white">All Services 2029</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Complete portfolio of AI, IT & Micro SAAS</div>
+                        </a>
+                        <a href="/comprehensive-pricing-guide-2029" className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                          <div className="font-semibold text-gray-900 dark:text-white">Pricing Guide</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Transparent pricing with market comparisons</div>
+                        </a>
+                        <a href="/innovative-services-showcase-2029" className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                          <div className="font-semibold text-gray-900 dark:text-white">Innovative Services</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Cutting-edge technology solutions</div>
+                        </a>
+                        <a href="/services" className="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                          <div className="font-semibold text-gray-900 dark:text-white">Legacy Services</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">Traditional IT & development services</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <a href="/about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
                 <a href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
               </nav>
+              
+              {/* Mobile menu button */}
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                {mobileMenuOpen ? (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </button>
             </div>
           </div>
         </header>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div className="md:hidden fixed inset-0 z-50 bg-black bg-opacity-50">
+            <div className="fixed inset-y-0 right-0 w-80 bg-white dark:bg-gray-800 shadow-xl">
+              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Menu</h3>
+                <button 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <nav className="p-4 space-y-4">
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Main</h4>
+                  <a href="/" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Home</a>
+                  <a href="/about" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">About</a>
+                  <a href="/contact" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Contact</a>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Services</h4>
+                  <a href="/comprehensive-services-2029" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">All Services 2029</a>
+                  <a href="/comprehensive-pricing-guide-2029" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Pricing Guide</a>
+                  <a href="/innovative-services-showcase-2029" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Innovative Services</a>
+                  <a href="/services" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Legacy Services</a>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Legal</h4>
+                  <a href="/privacy" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Privacy Policy</a>
+                  <a href="/terms" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Terms of Service</a>
+                  <a href="/sitemap" className="block p-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Sitemap</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        )}
 
         {/* Main Content */}
         <main className="flex-1">
@@ -88,9 +181,15 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             
+            {/* Legal and Utility Routes */}
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            
             {/* Our New Innovative Services Routes */}
             <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
             <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
+            <Route path="/comprehensive-services-2029" element={<ComprehensiveServices2029 />} />
             
             {/* Fallback Route */}
             <Route path="*" element={
@@ -107,43 +206,85 @@ function App() {
           </Routes>
         </main>
 
-        {/* Simple Footer */}
-        <footer className="bg-gray-900 text-white py-12">
+        {/* Enhanced Footer */}
+        <footer className="bg-gray-900 text-white py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
+                <p className="text-gray-400 text-sm mb-4">
                   Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.
                 </p>
+                <div className="flex space-x-4">
+                  <a href="https://ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </a>
+                  <a href="tel:+13024640950" className="text-gray-400 hover:text-white transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </a>
+                </div>
               </div>
               <div>
-                <h4 className="text-md font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="/innovative-services-showcase-2029" className="hover:text-white transition-colors">Innovative Services</a></li>
+                <h4 className="text-lg font-semibold mb-4">Core Services</h4>
+                <ul className="space-y-3 text-sm text-gray-400">
+                  <li><a href="/comprehensive-services-2029" className="hover:text-white transition-colors">All Services 2029</a></li>
                   <li><a href="/comprehensive-pricing-guide-2029" className="hover:text-white transition-colors">Pricing Guide</a></li>
-                  <li><a href="/services" className="hover:text-white transition-colors">All Services</a></li>
+                  <li><a href="/innovative-services-showcase-2029" className="hover:text-white transition-colors">Innovative Services</a></li>
+                  <li><a href="/services" className="hover:text-white transition-colors">Legacy Services</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-md font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-                  <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-                  <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
+                <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+                <ul className="space-y-3 text-sm text-gray-400">
+                  <li><a href="/comprehensive-services-2029#ai-ml" className="hover:text-white transition-colors">AI & Machine Learning</a></li>
+                  <li><a href="/comprehensive-services-2029#cybersecurity" className="hover:text-white transition-colors">Cybersecurity</a></li>
+                  <li><a href="/comprehensive-services-2029#cloud-devops" className="hover:text-white transition-colors">Cloud & DevOps</a></li>
+                  <li><a href="/comprehensive-services-2029#micro-saas" className="hover:text-white transition-colors">Micro SAAS</a></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-md font-semibold mb-4">Contact</h4>
-                <div className="text-sm text-gray-400 space-y-2">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+                <div className="space-y-3 text-sm text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-blue-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-              <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <div className="border-t border-gray-800 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p className="text-sm text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
+                <div className="flex space-x-6 text-sm text-gray-400">
+                  <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                  <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                  <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>
+                </div>
+              </div>
             </div>
           </div>
         </footer>
