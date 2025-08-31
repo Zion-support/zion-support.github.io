@@ -129,38 +129,41 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Globe className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                <Globe className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
             </div>
-            <p className="text-zinc-400 mb-6 max-w-md">
+            <p className="text-zinc-300 mb-8 max-w-md leading-relaxed">
               Transforming businesses through innovative AI, cloud, and technology solutions. 
-              We help organizations of all sizes accelerate their digital transformation journey.
+              We help organizations of all sizes accelerate their digital transformation journey 
+              with cutting-edge technology and expert guidance.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-zinc-400">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
-              <div className="flex items-center space-x-3 text-zinc-400">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:underline">
+                  +1 302 464 0950
+                </a>
               </div>
-              <div className="flex items-center space-x-4 text-zinc-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-zinc-400">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors">
                 <MapPin className="w-4 h-4" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
@@ -208,7 +211,7 @@ export function Footer() {
         </div>
 
         {/* Additional Resources Section */}
-        <div className="border-t border-zinc-800 pt-8 mb-8">
+        <div className="border-t border-zion-purple/30 pt-10 mb-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
@@ -308,7 +311,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-zinc-800 pt-8">
+        <div className="border-t border-zion-purple/30 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-zinc-400 text-sm">
