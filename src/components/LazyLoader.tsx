@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react.ts'
 import { LoadingSpinner   } from './ui/LoadingSpinner'
 =======
@@ -17,6 +18,17 @@ export const LazyLoader: React.FC<LazyLoaderProps> = ({;
 component: Component,;
   fallback = <LoadingSpinner />,
   props = { /* empty */ 
+=======
+import React, { Suspense, lazy } from 'react.ts'
+import { LoadingSpinner  } from './ui/LoadingSpinner'
+
+interface LazyLoaderProps extends React.PropsWithChildren<{}> {
+
+component: React.ComponentType<any>;
+fallback?: React.ReactNode;
+props?: any;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 }) => {
   return (

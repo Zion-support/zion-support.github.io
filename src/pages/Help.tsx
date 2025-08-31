@@ -15,8 +15,12 @@ import { Search,
   MessageCircle, 
   Phone, 
   Mail, 
+<<<<<<< HEAD
   Video, 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  Clock, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   FileText,
   HelpCircle,
   Brain,
@@ -27,17 +31,24 @@ import { Search,
   Globe,
 <<<<<<< HEAD
   Rocket
+<<<<<<< HEAD
 import { SEO  } from '../components/SEO';
 =======
   ArrowRight,
   ExternalLink,
   ChevronRight
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 } from 'lucide-react';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Help(...args[]: any):  {
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
+=======
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const helpCategories = [
     {
@@ -145,6 +156,7 @@ export default function Help(...args[]: any):  {
           description: 'Security settings and configuration options',
           url: '/help/technical/security-config',
           type: 'guide'
+<<<<<<< HEAD
 
 =======
           title: 'Cost Optimization Strategies',
@@ -179,10 +191,13 @@ export default function Help(...args[]: any):  {
           description: 'What to do when security incidents occur',
           href: '/help/security/incident-response',
           readTime: '8 min read'
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         }
       ]
     },
     {
+<<<<<<< HEAD
       id: 'troubleshooting',
       title: 'Troubleshooting',
       description: 'Common issues and their solutions',
@@ -197,10 +212,37 @@ export default function Help(...args[]: any):  {
         },
         {
 <<<<<<< HEAD
+=======
+      id: 'billing-account',
+      title: 'Billing & Account',
+      icon: Users,
+      description: 'Account management and billing information',
+      articles: [
+        {
+          title: 'Billing Overview',
+          description: 'Understanding your billing structure and charges',
+          url: '/help/billing/overview',
+          type: 'guide'
+        },
+        {
+          title: 'Payment Methods',
+          description: 'Adding and managing payment methods',
+          url: '/help/billing/payment-methods',
+          type: 'guide'
+        },
+        {
+          title: 'Invoice Management',
+          description: 'Accessing and managing your invoices',
+          url: '/help/billing/invoices',
+          type: 'guide'
+        },
+        {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           title: 'Account Settings',
           description: 'Managing your account preferences and settings',
           url: '/help/billing/account-settings',
           type: 'guide'
+<<<<<<< HEAD
 
 =======
           title: 'Performance Issues',
@@ -287,10 +329,46 @@ export default function Help(...args[]: any):  {
       action: 'Watch Videos',
       href: '/help/videos',
       available: true
+=======
+        }
+      ]
+    }
+  ];
+
+  const quickLinks = [
+    {
+      title: 'Contact Support',
+      description: 'Get in touch with our support team',
+      icon: MessageCircle,
+      url: '/contact',
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      title: 'Live Chat',
+      description: 'Chat with our support agents in real-time',
+      icon: MessageCircle,
+      url: '/help/live-chat',
+      color: 'from-green-500 to-green-600'
+    },
+    {
+      title: 'Phone Support',
+      description: 'Call us for immediate assistance',
+      icon: Phone,
+      url: 'tel:+13024640950',
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      title: 'Email Support',
+      description: 'Send us an email for detailed inquiries',
+      icon: Mail,
+      url: 'mailto:support@ziontechgroup.com',
+      color: 'from-orange-500 to-orange-600'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
+<<<<<<< HEAD
   const filteredCategories = helpCategories.filter(category => {
     if (selectedCategory !== 'all' && category.id !== selectedCategory) return false;
     if (searchQuery) {
@@ -301,6 +379,22 @@ export default function Help(...args[]: any):  {
     }
     return true;
   });
+=======
+  const supportHours = [
+    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
+    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
+    { day: 'Sunday', hours: 'Emergency Support Only', available: false }
+  ];
+
+  const filteredCategories = helpCategories.filter(category =>
+    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.articles.some(article =>
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   return (
 <<<<<<< HEAD
@@ -373,6 +467,7 @@ export default function Help(...args[]: any):  {
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg"
                 />
               </div>
+<<<<<<< HEAD
 =======
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Find answers to your questions, learn how to use our services, and get the support 
@@ -401,11 +496,14 @@ export default function Help(...args[]: any):  {
                 className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg"
               />
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </div>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Category Filters */}
       <section className="py-8">
         <div className="container mx-auto px-6">
@@ -443,6 +541,9 @@ export default function Help(...args[]: any):  {
       </section>
 
       {/* Popular Articles */}
+=======
+      {/* Quick Support Links */}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
@@ -512,6 +613,7 @@ export default function Help(...args[]: any):  {
                 <p className="text-gray-300 text-sm">{link.description}</p>
               </motion.a>
             ))}
+<<<<<<< HEAD
 =======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
@@ -541,11 +643,16 @@ export default function Help(...args[]: any):  {
               </motion.div>
             )}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </section>
       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {/* Support Hours */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -571,6 +678,7 @@ export default function Help(...args[]: any):  {
                   <div className="flex items-center space-x-3">
                     <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />
                     <span className="text-white font-medium">{schedule.day}</span>
+<<<<<<< HEAD
 =======
       {/* Help Categories */}
       {!searchQuery && (
@@ -791,10 +899,26 @@ export default function Help(...args[]: any):  {
               </div>
             </motion.div>
           </div>
+=======
+                  </div>
+                  <div className="text-right">
+                    <span className={`text-sm ${schedule.available ? 'text-gray-300' : 'text-orange-400'}`}>
+                      {schedule.hours}
+                    </span>
+                    {!schedule.available && (
+                      <span className="block text-xs text-orange-400">24/7 Emergency Support Available</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         </div>
       </section>
 
       {/* Help Categories */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-6">
           {filteredCategories.map((category, categoryIndex) => (
@@ -849,10 +973,14 @@ export default function Help(...args[]: any):  {
 
       {/* Support Options */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+=======
+      <section className="py-16">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
@@ -884,6 +1012,28 @@ export default function Help(...args[]: any):  {
                   onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
                   className="w-full p-6 text-left hover:bg-slate-700/50 transition-colors duration-200"
 
+=======
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Help Categories</h2>
+            <p className="text-gray-300">Browse our organized help content by category</p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {filteredCategories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden"
+              >
+                <button
+                  onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
+                  className="w-full p-6 text-left hover:bg-slate-700/50 transition-colors duration-200"
+                >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -909,15 +1059,26 @@ export default function Help(...args[]: any):  {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="border-t border-slate-700/50"
+<<<<<<< HEAD
 
                     <div className="p-6">
                       <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
                         {category.articles.map((article, articleIndex)  => (
+=======
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {category.articles.map((article, articleIndex) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                           <a
                             key={articleIndex}
                             href={article.url}
                             className="block p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 border border-slate-600/30 hover:border-cyan-400/50"
+<<<<<<< HEAD
 
+=======
+                          >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="text-white font-medium">{article.title}</h4>
                               <span className={`inline-block px-2 py-1 text-xs rounded-full ${
@@ -935,6 +1096,7 @@ export default function Help(...args[]: any):  {
                     </div>
                   </motion.div>
                 )}
+<<<<<<< HEAD
 =======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -964,11 +1126,18 @@ export default function Help(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
+=======
+              </motion.div>
+            )}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {/* Additional Resources */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -977,12 +1146,20 @@ export default function Help(...args[]: any):  {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
+<<<<<<< HEAD
 
+=======
+          >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
             <p className="text-gray-300">Explore more helpful resources and materials</p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             {[
               {
                 icon: BookOpen,
@@ -1004,8 +1181,13 @@ export default function Help(...args[]: any):  {
                 description: 'Software, tools, and resources for your projects',
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
+<<<<<<< HEAD
 
             ].map((resource, index)  => (
+=======
+              }
+            ].map((resource, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.a
                 key={index}
                 href={resource.url}
@@ -1013,7 +1195,11 @@ export default function Help(...args[]: any):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
+<<<<<<< HEAD
 
+=======
+              >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
@@ -1086,8 +1272,12 @@ export default function Help(...args[]: any):  {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}}}}}}}}
 =======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

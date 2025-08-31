@@ -13,8 +13,11 @@ import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Mail, 
   Lock, 
+<<<<<<< HEAD
   Eye, 
   EyeOff, 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   User, 
   Building, 
   Globe, 
@@ -288,6 +291,7 @@ export default function Login(...args: any[]): any {
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
                 </label>
+<<<<<<< HEAD
                 <input
                   type="email"
                   id="email"
@@ -322,10 +326,121 @@ export default function Login(...args: any[]): any {
                   >
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
+=======
+              </div>
+              <Link
+                to="/forgot-password"
+                className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+              >
+                Forgot password?
+              </Link>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              {isLoading ? (
+                <div className="flex items-center">
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                  Signing in...
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </div>
               </div>
+<<<<<<< HEAD
 
               {!isLogin && (
+=======
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-500">
+                  Or continue with
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Login Buttons */}
+          <div className="mt-6 grid grid-cols-2 gap-3">
+            <button className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
+              <Github className="h-5 w-5 mr-2" />
+              GitHub
+            </button>
+            <button className="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
+              <Linkedin className="h-5 w-5 mr-2" />
+              LinkedIn
+            </button>
+          </div>
+
+          {/* Sign Up Link */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600">
+              Don't have an account?{' '}
+              <Link
+                to="/signup"
+                className="font-medium text-blue-600 hover:text-blue-700"
+              >
+                Sign up for free
+              </Link>
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Right Side - Company Info & Features */}
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full max-w-lg mx-auto"
+        >
+          {/* Company Header */}
+          <div className="mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
+              <Zap className="h-10 w-10 text-white" />
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Zion Tech Group</h2>
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Leading the future of technology with cutting-edge AI, quantum computing, and sustainable solutions for enterprises worldwide.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-6 mb-12">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="text-center"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl mb-3">
+                  <stat.icon className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold">{stat.number}</div>
+                <div className="text-sm text-blue-100">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Features */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-4">Our Core Services</h3>
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 + index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                  <feature.icon className="h-4 w-4 text-white" />
+                </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <div>
                   <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
                     Confirm Password
@@ -441,6 +556,7 @@ export default function Login(...args: any[]): any {
               </motion.div>
             )}
 
+<<<<<<< HEAD
             {/* Toggle Form Type */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -524,3 +640,27 @@ export default function Login(...args: any[]): any {
   );
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+          {/* Contact Info */}
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <div className="flex items-center space-x-4 text-sm text-blue-100">
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                +1 (555) 123-4567
+              </div>
+              <div className="flex items-center">
+                <MailIcon className="h-4 w-4 mr-2" />
+                contact@ziontechgroup.com
+              </div>
+            </div>
+            <div className="mt-2 text-sm text-blue-100">
+              <MapPin className="h-4 w-4 inline mr-2" />
+              123 Innovation Drive, Tech Valley, CA 94000
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

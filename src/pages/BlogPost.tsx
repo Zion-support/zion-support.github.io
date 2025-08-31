@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react.ts';
 import { useParams, Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
@@ -23,6 +24,10 @@ import { Calendar,
   BookOpen
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
+=======
+import React from 'react'
+import { SEO } from '@/components/SEO'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
 const BlogPost: React.FC = (): JSX.Element => {
@@ -37,6 +42,7 @@ const BlogPost: React.FC = (): JSX.Element => {
 	)
 
 export default BlogPost
+<<<<<<< HEAD
 }
 =======
 export default function BlogPost(...args: any[]): any {
@@ -488,3 +494,5 @@ export default function BlogPost(...args: any[]): any {
   );
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

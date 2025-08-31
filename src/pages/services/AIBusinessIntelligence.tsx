@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion   } from 'framer-motion.ts';
 import { Brain, 
@@ -7,6 +8,14 @@ import React from 'react.ts';
 <<<<<<< HEAD
 import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Brain, 
+  BarChart3, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   TrendingUp, 
   BarChart3, 
   Users, 
@@ -37,6 +46,7 @@ import { SEO  } from '../../components/SEO';
   Cpu,
   Lock
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
 import { motion  } from 'framer-motion.ts';
@@ -179,6 +189,40 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       ],
       cta: 'Contact Sales',
       popular: false
+=======
+
+export default function AIBusinessIntelligence() {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that automatically identify patterns and insights in your business data."
+    },
+    {
+      icon: BarChart3,
+      title: "Real-Time Dashboards",
+      description: "Live monitoring and visualization of key performance indicators with customizable reporting."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using historical data and AI models."
+    },
+    {
+      icon: Users,
+      title: "User Behavior Analysis",
+      description: "Deep insights into customer interactions and engagement patterns."
+    },
+    {
+      icon: Target,
+      title: "Goal Tracking",
+      description: "Monitor progress towards business objectives with automated alerts and recommendations."
+    },
+    {
+      icon: Zap,
+      title: "Automated Insights",
+      description: "AI-generated recommendations and actionable insights delivered in real-time."
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -188,6 +232,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     "Increase revenue by 15-25% through predictive insights",
     "Reduce operational costs by 20-30% with automated analytics",
     "Improve decision-making speed by 60%",
@@ -210,14 +255,27 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     "Reduce risk by 30% with early warning systems";
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    "Increase revenue by 15-25% through data-driven decision making",
+    "Reduce operational costs by 20-30% with optimized processes",
+    "Improve customer satisfaction by 35% with personalized insights",
+    "Accelerate time-to-market by 40% with predictive analytics",
+    "Enhance team productivity by 25% with automated reporting",
+    "Reduce risk by 30% with early warning systems"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const useCases = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: 'Retail & E-commerce',
       description: 'Optimize inventory, predict demand, and personalize customer experiences',
       metrics: ['25% increase in conversion rates', '30% reduction in inventory costs', '40% improvement in customer retention']
+=======
+      industry: "E-commerce",
+      description: "Customer segmentation, inventory optimization, and sales forecasting"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       title: 'Financial Services',
@@ -225,6 +283,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       metrics: ['90% fraud detection accuracy', '35% reduction in risk exposure', '50% faster decision making']
     },
     {
+<<<<<<< HEAD
       title: 'Healthcare',
       description: 'Patient outcome prediction, resource optimization, and operational efficiency',
       metrics: ['85% patient outcome accuracy', '40% resource optimization', '60% faster diagnosis']
@@ -317,10 +376,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization";
     };
+=======
+      industry: "Finance",
+      description: "Risk assessment, fraud detection, and investment portfolio optimization"
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization"
+    },
+    {
+      industry: "Marketing",
+      description: "Campaign performance analysis, audience targeting, and ROI optimization"
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
       <SEO
         title="AI Business Intelligence Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analytics, predictive modeling, and automated reporting."
@@ -334,6 +407,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
+=======
+      <SEO 
+        title="AI Business Intelligence - Zion Tech Group"
+        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <motion.div
             initial = {
   { opacity: 0,
@@ -356,6 +440,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -368,22 +453,53 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business data into actionable insights with AI-powered analytics.
               Make data-driven decisions faster and more accurately than ever before.
+=======
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
+              <Brain className="w-5 h-5 text-cyan-400 mr-2" />
+              <span className="text-cyan-300 font-medium">AI Business Intelligence</span>
+            </div>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Transform Your Business with
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                {" "}AI-Powered Intelligence
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Unlock the full potential of your data with advanced AI analytics, real-time insights, 
+              and predictive intelligence that drives strategic decision-making and business growth.
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Get Started
+=======
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300"
               >
                 Watch Demo
+=======
+                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                Schedule Demo
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </motion.button>
             </div>
           </motion.div>
@@ -527,6 +643,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Key Features */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -658,6 +775,40 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
+=======
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design 
+              to deliver actionable insights that drive business success.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </motion.div>
             ))}
           </div>
@@ -665,8 +816,13 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
         <div className="max-w-7xl mx-auto">
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <motion.div
             initial = {
   { opacity: 0,
@@ -689,6 +845,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             viewport={{ once: true }}
             className="text-center mb-16"
 <<<<<<< HEAD
@@ -703,6 +860,16 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Join thousands of businesses that have transformed their operations with AI-powered insights
+=======
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Measurable Business Impact
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See real results with our AI Business Intelligence solutions that deliver 
+              quantifiable improvements across all aspects of your business.
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </p>
           </motion.div>
 <<<<<<< HEAD
@@ -846,6 +1013,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Industry Use Cases */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -974,6 +1142,33 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 }}
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Business Intelligence solutions are designed to work across industries, 
+              providing tailored insights for your specific business needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
@@ -984,6 +1179,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => (
@@ -1005,11 +1201,16 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                   ))}
                 </div>
               </div>
+=======
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Benefits */}
       <section className="py-20">
@@ -1219,6 +1420,23 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how AI-powered Business Intelligence can revolutionize your decision-making
               process and drive unprecedented business growth.
+=======
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-12 rounded-2xl border border-cyan-400/20 text-center"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of businesses that have already revolutionized their operations 
+              with our AI Business Intelligence solutions.
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </p>
 <<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-4">
@@ -1266,14 +1484,24 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Request Demo
+=======
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Start Free Trial
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300"
+=======
+                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               >
                 Contact Sales
               </motion.button>

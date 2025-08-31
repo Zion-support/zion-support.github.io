@@ -377,6 +377,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
 
 ];
 
+<<<<<<< HEAD
 export default ADVANCED_MICRO_SAAS_SERVICES_2025;}}
 =======
     competitors: ["Hired", "Pymetrics", "HireVue", "Mya Systems", "Paradox"],
@@ -384,3 +385,6 @@ export default ADVANCED_MICRO_SAAS_SERVICES_2025;}}
   }
 ];
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export default ADVANCED_MICRO_SAAS_SERVICES_2025;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

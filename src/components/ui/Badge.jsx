@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
@@ -47,6 +48,19 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 };
   
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react';
+
+const Badge = ({ children, className = '', variant = 'default' }) => {
+  const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
+  const variantClasses = {
+    default: 'border-transparent bg-primary text-primary-foreground',
+    secondary: 'border-transparent bg-secondary text-secondary-foreground',
+    destructive: 'border-transparent bg-destructive text-destructive-foreground',
+    outline: 'text-foreground'
+  };
+  
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
@@ -54,5 +68,8 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
   );
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export { Badge };

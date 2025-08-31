@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const MicroSAASServices = () => {
@@ -22,6 +23,8 @@ const MicroSAASServices = () => {
               Micro SaaS services page coming soon. We're building focused, scalable solutions.
             </p>
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React, { useState } from 'react';
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
@@ -381,7 +384,10 @@ export default function MicroSaasServices() {
       <TrustedBySection />
     </div>);
 }
+<<<<<<< HEAD
 =======
     </>)};
 export default MicroSAASServices;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

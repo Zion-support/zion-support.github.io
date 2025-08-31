@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
 import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 =======
 // import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
 // import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services";
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+// import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
+// import { enterpriseITInfrastructureServices2026 } from '../data/2025-enterprise-it-infrastructure-services';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

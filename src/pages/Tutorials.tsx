@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 const Tutorials = () => {
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
+
+const Tutorials = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const tutorialCategories = [
     {
       title: "Beginner",

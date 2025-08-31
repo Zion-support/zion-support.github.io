@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -9,6 +10,19 @@ import { Brain,
   Cpu,
   Cloud,
   Rocket,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  GitFork, 
+  Shield, 
+  Atom, 
+  Cpu, 
+  Cloud, 
+  Rocket, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Zap,
   ArrowRight,
   Star,
@@ -728,6 +742,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
             <Link
               to="/services"
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
 
 =======
           transition = {
@@ -882,3 +897,24 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+            >
+              View All Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <a 
+              href="tel:+13024640950"
+              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              Call +1 302 464 0950
+            </a>
+          </div>
+          <div className="mt-6 text-zion-slate-light">
+            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,7 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings const FiveGEnterpriseSolutions = () => {
+=======
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+const FiveGEnterpriseSolutions = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const features = [
         {
             icon: Wifi,
@@ -433,6 +438,7 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
             { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
 <<<<<<< HEAD
+<<<<<<< HEAD
             { icon: Workflow, name: "Management", description: "Network orchestration" }
         ].map((tech, index) => (<motion.div key={index} initial = {
   { opacity: 0,
@@ -478,6 +484,10 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
 
 }} className="text-center">
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+            { icon: GitFork, name: "Management", description: "Network orchestration" }
+        ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
                   <tech.icon className="w-10 h-10 text-teal-400"/>
                 </div>

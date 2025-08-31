@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity export default function Partners() {
 =======
 import { 
@@ -12,6 +13,9 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+=======
+import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity } from 'lucide-react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default function Partners() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const partnershipTypes = [

@@ -32,7 +32,10 @@ import { BarChart3,
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ReportData {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -47,19 +50,27 @@ interface ReportData {
   downloads: number;
 <<<<<<< HEAD
   rating: number;
+<<<<<<< HEAD
 =======
 rating: number;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ReportMetrics {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   topCategories: Array<any>;
   recentActivity: Array<any>;
@@ -70,27 +81,46 @@ interface ReportMetrics {
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+  topCategories: Array<any>;
+  recentActivity: Array<any>;
+}
+
+interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
 <<<<<<< HEAD
   maxReports?: number;
+<<<<<<< HEAD
 =======
   maxReports?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
 <<<<<<< HEAD
   showMetrics = true,
   showFilters = true,
   showCharts = true,
+<<<<<<< HEAD
   maxReports = 15;
 }) => {;
+=======
+  maxReports = 15
+}) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [reports, setReports] = useState<any>([]);
   const [filteredReports, setFilteredReports] = useState<any>([]);
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
+<<<<<<< HEAD
 =======
   showMetrics = true,;
   showFilters = true,;
@@ -103,6 +133,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
@@ -230,7 +262,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     setFilteredReports(sampleReports)}, []);
 
   // Filter and sort reports
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     let filtered = reports;
 
     if (selectedType !== 'all') {
@@ -339,6 +375,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Calculate report metrics
   const reportMetrics = {
+<<<<<<< HEAD
   <<<<<<< HEAD
     totalReports: anyreports.length,
     activeReports: reports.filter(r   => r.status === 'active').length,
@@ -377,6 +414,18 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 }, {} as Record<string, any>);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    totalReports: anyreports.length,
+    activeReports: reports.filter(r  => r.status === 'active').length,
+    totalViews: anyreports.reduce((sum, r)  => sum + r.views, 0),
+    totalDownloads: anyreports.reduce((sum, r)  => sum + r.downloads, 0),
+    averageRating: anyreports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
+    topCategories: any(()  => {
+      const catCounts = reports.reduce((acc, r) => {
+        acc[r.category] = (acc[r.category] || 0) + 1;
+        return acc;
+      }, {} as Record<string, any>);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
       return Object.entries(catCounts)
         .map(([name, count]) => ({
@@ -384,9 +433,16 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           count,
           percentage: any(count / reports.length) * 100
         }))
+<<<<<<< HEAD
         .sort((a, b)   => b.count - a.count)
         .slice(0, 5)})(),
     recentActivity[
+=======
+        .sort((a, b)  => b.count - a.count)
+        .slice(0, 5);
+    })(),
+    recentActivity: [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' },
       { action: 'Report downloaded', timestamp: '5 minutes ago', user: 'Jane Smith' },
       { action: 'New report created', timestamp: '1 hour ago', user: 'Mike Johnson' },
@@ -395,7 +451,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get type icon and color
+<<<<<<< HEAD
   const getTypeDisplay = (type: anystring)   => {
+=======
+  const getTypeDisplay = (type: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const types = {
   financial: { icon: <DollarSign className="w-4 h-4" />,
   color: 'text-green-400 bg-green-400/20' 
@@ -416,9 +476,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Get priority color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
+    switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
@@ -433,9 +498,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Get status color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getStatusColor = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getStatusColor = (status: anystring)  => {
+    switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'archived': return 'text-zinc-400 bg-zinc-400/20';
       case 'draft': return 'text-yellow-400 bg-yellow-400/20';
@@ -449,8 +519,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Handle report actions
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleReportAction = (reportId: anystring, action: 'view' | 'download' | 'share' | 'print')  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleReportAction = (reportId: anystring, action: 'view' | 'download' | 'share' | 'print')  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const report = reports.find(r => r.id === reportId);
     if (report) {
       switch (action) {
@@ -510,8 +584,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Export report data
 <<<<<<< HEAD
+<<<<<<< HEAD
   const exportReport = (report: anyReportData, format: 'pdf' | 'excel' | 'csv')  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const exportReport = (report: anyReportData, format: 'pdf' | 'excel' | 'csv')  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     console.log(`Exporting ${report.title} as ${format}`);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // In a real implementation, this would generate and download the file

@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { MessageCircle,
   Send,
   Bot,
   User,
   Sparkles,
+=======
+import { MessageCircle, 
+  Send, 
+  Bot, 
+  User, 
+  Sparkles, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   X,
   Settings,
   Volume2,
@@ -27,13 +35,20 @@ import { MessageCircle,
   CheckCircle,
   AlertCircle
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ChatMessage {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -48,26 +63,39 @@ metadata?: {;
     estimatedResponseTime?: number;
   
 };
+<<<<<<< HEAD
 =======
     estimatedResponseTime?: number}}
 
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+}
+
+interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
 <<<<<<< HEAD
   autoScroll?: boolean;
+<<<<<<< HEAD
 =======
   autoScroll?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 <<<<<<< HEAD
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
+<<<<<<< HEAD
   autoScroll = true;
 }) => {;
   const [messages, setMessages] = useState<any>([]);
@@ -79,6 +107,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 }) => {;
   const [messages, setMessages] = useState<any>([]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  autoScroll = true
+}) => {
+  const [messages, setMessages] = useState<any>([]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +131,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   useEffect(() => {
     if (isOpen && messages.length = == 0) {
       const welcomeMessage: ChatMessage = {
+<<<<<<< HEAD
   id: 'welcome',
+=======
+        id: any'welcome',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
         timestamp: new Date(),
@@ -139,7 +176,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (autoScroll && messagesEndRef.current) {
 <<<<<<< HEAD
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -151,8 +192,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Simulate AI response
 <<<<<<< HEAD
+<<<<<<< HEAD
   const simulateAIResponse = async (userMessage: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const simulateAIResponse = async (userMessage: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setIsTyping(true);
 
     // Simulate processing time
@@ -198,7 +243,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
     const botMessage: ChatMessage = {
+<<<<<<< HEAD
   id: Date.now().toString(),
+=======
+      id: anyDate.now().toString(),
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       content: randomResponse.content,
       sender: 'bot',
       timestamp: new Date(),
@@ -226,20 +275,32 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setMessages(prev  => [...prev, botMessage]);
     setIsTyping(false);
   };
 
   // Handle message submission
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
+<<<<<<< HEAD
   id: anyDate.now().toString(),
+=======
+      id: anyDate.now().toString(),
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       content: inputValue,
       sender: 'user',
       timestamp: new Date(),
@@ -251,6 +312,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   status: 'sent';
     ;
 
+<<<<<<< HEAD
 
 
 
@@ -259,6 +321,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 };
 
     setMessages(prev   => [...prev, userMessage]);
+=======
+    setMessages(prev  => [...prev, userMessage]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setInputValue('');
 
     // Generate AI response
@@ -271,6 +336,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle file upload
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleFileUpload = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -313,13 +379,37 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     ))};
 =======
   const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {;
+=======
+  const handleFileUpload = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const fileMessage: ChatMessage = {
+        id: anyDate.now().toString(),
+        content: `Uploaded: ${file.name}`,
+        sender: 'user',
+        timestamp: new Date(),
+        type: 'file',
+        status: 'sent'
+      };
+      setMessages(prev  => [...prev, fileMessage]);
+    }
+  };
+
+  // Handle suggestion click
+  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setInputValue(suggestion);
   };
 
   // Rate response
   const rateResponse = (messageId: anystring, rating: 'positive' | 'negative')  => {
+<<<<<<< HEAD
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
+=======
+    setMessages(prev => prev.map(msg => 
+      msg.id === messageId 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
         : msg
     ));

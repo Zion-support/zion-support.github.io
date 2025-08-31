@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
+<<<<<<< HEAD
 import { useRouter } from "next/router";
+=======
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
@@ -11,8 +15,12 @@ import { Link } from 'react-router-dom';
 =======
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 import Link from 'next/link';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -21,7 +29,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
+<<<<<<< HEAD
     const router = useRouter();
+=======
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const id = router.query.id;
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);

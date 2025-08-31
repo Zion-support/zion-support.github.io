@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import { useRouter } from "next/router";
+=======
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { CASE_STUDIES } from "@/data/case-studies";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -9,8 +14,12 @@ import { ArrowLeft export default function CaseStudy() {
 =======
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
+<<<<<<< HEAD
     const router = useRouter();
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const { slug } = router.query;
     const study = CASE_STUDIES.find((s) => s.slug === slug);
     if (!study) {

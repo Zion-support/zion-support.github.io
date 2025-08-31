@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain,
@@ -39,105 +40,171 @@ import {
 <<<<<<< HEAD
   Sparkles
 const AIAutonomousResearchAssistant = () => {
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Search, 
+  BookOpen, 
+  FileText, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Cpu,
+  Database,
+  Lock,
+  BarChart3,
+  Rocket,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Award,
+  Target,
+  Workflow,
+  Lightbulb,
+  Zap,
+  Shield,
+  Eye,
+  Code,
+  GitFork,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
+
+export default function AIAutonomousResearchAssistant() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Research",
-      description: "Advanced AI algorithms that autonomously conduct comprehensive research across multiple sources and databases."
+      icon: Brain,
+      title: "Autonomous Research Discovery",
+      description: "AI that independently discovers, analyzes, and synthesizes research from multiple sources"
     },
     {
-      icon: <Search className="w-6 h-6" />,
-      title: "Multi-Source Analysis",
-      description: "Automatically gather, analyze, and synthesize information from academic papers, industry reports, and real-time data."
+      icon: Search,
+      title: "Intelligent Literature Review",
+      description: "Automated systematic literature reviews with comprehensive coverage and analysis"
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Academic Integration",
-      description: "Seamless integration with academic databases, research repositories, and peer-reviewed sources."
+      icon: FileText,
+      title: "Research Paper Generation",
+      description: "AI-powered research paper writing with proper citations and academic standards"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Trend Analysis",
-      description: "Identify emerging trends, patterns, and insights from vast amounts of research data."
+      icon: TrendingUp,
+      title: "Trend Analysis & Prediction",
+      description: "Identify emerging research trends and predict future research directions"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Updates",
-      description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
+      icon: Database,
+      title: "Multi-Source Data Integration",
+      description: "Seamlessly integrate data from academic databases, journals, and research repositories"
     },
     {
+<<<<<<< HEAD
       icon: <Shield className="w-6 h-6" />,
       title: "Data Security",
       description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
 
+=======
+      icon: Workflow,
+      title: "Research Workflow Automation",
+      description: "Automate repetitive research tasks and streamline the research process"
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for individual researchers and small teams",
-      features: [
-        "Up to 100 research queries/month",
-        "Basic AI analysis",
-        "Standard academic database access",
-        "Email support",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
+      name: "Research Starter",
       price: "$299",
-      period: "/month",
-      description: "Ideal for research institutions and growing organizations",
+      period: "monthly",
+      description: "Perfect for individual researchers and small research teams",
       features: [
-        "Up to 500 research queries/month",
-        "Advanced AI algorithms",
-        "Premium database access",
-        "Priority support",
-        "Advanced analytics",
-        "Custom research templates"
+        "Up to 100 research queries per month",
+        "Basic literature review generation",
+        "Standard citation management",
+        "Email support",
+        "Basic research analytics",
+        "Access to major academic databases"
       ],
-      popular: true
+      bestFor: "Individual researchers, graduate students, small research teams"
     },
     {
-      name: "Enterprise",
+      name: "Research Professional",
       price: "$799",
-      period: "/month",
-      description: "For large organizations with complex research needs",
+      period: "monthly",
+      description: "Advanced features for growing research organizations",
+      features: [
+        "Up to 1,000 research queries per month",
+        "Advanced literature review generation",
+        "Custom research workflows",
+        "Priority support",
+        "Advanced analytics and reporting",
+        "API access",
+        "Custom research templates",
+        "Collaborative research tools"
+      ],
+      bestFor: "Research institutions, universities, corporate R&D teams"
+    },
+    {
+      name: "Research Enterprise",
+      price: "$1,999",
+      period: "monthly",
+      description: "Full-scale research automation platform for large organizations",
       features: [
         "Unlimited research queries",
-        "Custom AI model training",
-        "Full database access",
-        "Dedicated support team",
-        "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
+        "Custom research algorithm development",
+        "Advanced AI model training",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "White-label solutions",
+        "On-premise deployment options",
+        "Research consulting services"
       ],
+<<<<<<< HEAD
       popular: false
 
+=======
+      bestFor: "Large research institutions, government agencies, pharmaceutical companies"
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const useCases = [
     {
       title: "Academic Research",
-      description: "Accelerate literature reviews, identify research gaps, and discover relevant studies across disciplines.",
-      icon: <BookOpen className="w-8 h-8 text-blue-500" />
+      description: "Automated literature reviews, research gap analysis, and academic paper generation",
+      icon: BookOpen
     },
     {
-      title: "Market Intelligence",
-      description: "Monitor industry trends, competitor analysis, and market opportunities with automated research.",
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />
+      title: "Market Research",
+      description: "Competitive analysis, market trend identification, and industry insights",
+      icon: TrendingUp
     },
     {
-      title: "Product Development",
-      description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
+      title: "Scientific Discovery",
+      description: "Cross-disciplinary research connections and hypothesis generation",
+      icon: Lightbulb
+    },
+    {
+      title: "Patent Research",
+      description: "Patent landscape analysis and prior art research automation",
+      icon: Shield
+    },
+    {
+      title: "Clinical Research",
+      description: "Medical literature analysis and clinical trial research automation",
+      icon: Eye
     },
     {
       title: "Policy Research",
+<<<<<<< HEAD
       description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
       icon: <Target className="w-8 h-8 text-purple-500" />
 
@@ -181,6 +248,53 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
     "Natural language output",
     "API integration capabilities",
     "Custom research templates"
+=======
+      description: "Government policy analysis and regulatory research automation",
+      icon: Globe
+    }
+  ];
+
+  const benefits = [
+    "10x faster research completion time",
+    "Comprehensive coverage of research sources",
+    "Automated citation management and formatting",
+    "Real-time research trend analysis",
+    "Collaborative research workflow optimization",
+    "Access to cutting-edge AI research tools"
+  ];
+
+  const researchCapabilities = [
+    {
+      title: "Natural Language Processing",
+      description: "Advanced NLP for understanding complex research documents and generating insights",
+      icon: Brain
+    },
+    {
+      title: "Machine Learning Analysis",
+      description: "ML algorithms for pattern recognition and predictive research analytics",
+      icon: Cpu
+    },
+    {
+      title: "Semantic Search",
+      description: "Intelligent search that understands context and meaning, not just keywords",
+      icon: Search
+    },
+    {
+      title: "Data Visualization",
+      description: "Interactive charts and graphs for research findings presentation",
+      icon: BarChart3
+    },
+    {
+      title: "Citation Network Analysis",
+      description: "Map research influence and identify key papers in any field",
+      icon: GitFork
+    },
+    {
+      title: "Research Quality Assessment",
+      description: "AI-powered evaluation of research methodology and credibility",
+      icon: Award
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const benefits = [
@@ -222,6 +336,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Futuristic Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -285,6 +400,17 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
 
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <SEO 
+        title="AI Autonomous Research Assistant - Zion Tech Group"
+        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
+        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -292,6 +418,7 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
             className="mb-8"
+<<<<<<< HEAD
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
 =======
@@ -326,9 +453,50 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                 Watch Demo
               </motion.button>
 =======
+=======
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              Revolutionary Research AI Technology
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Autonomous Research Assistant
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your research process with our revolutionary AI-powered research assistant. 
+              Automate literature reviews, discover insights, and accelerate your research breakthroughs.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              Start Researching
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="#demo"
+              className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
+            >
+              Request Demo
+            </a>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </motion.div>
 
+<<<<<<< HEAD
           {/* Key Metrics */}
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -360,27 +528,48 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
 <<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Research Capabilities
+=======
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Revolutionary Research AI Features
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI research assistant goes beyond simple search to provide comprehensive, intelligent research solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI research assistant combines cutting-edge artificial intelligence with 
+              comprehensive research capabilities to revolutionize how you discover knowledge.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
 
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
                   {feature.icon}
+=======
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -405,31 +594,49 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Navigation Tabs */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
+=======
+      {/* Research Capabilities Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Research Process
+=======
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Advanced Research Capabilities
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI-powered research can revolutionize your workflow across different domains.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage state-of-the-art AI technologies to enhance every aspect of your research process.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid md: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {researchCapabilities.map((capability, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300"
 
                 <div className="flex items-start space-x-4">
@@ -438,7 +645,16 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     <h3 className="text-2xl font-semibold text-white mb-3">{useCase.title}</h3>
                     <p className="text-gray-300 text-lg">{useCase.description}</p>
                   </div>
+=======
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <capability.icon className="w-6 h-6 text-blue-400" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
               </motion.div>
             ))}
           </div>
@@ -446,29 +662,43 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-4">
               Choose Your Research Plan
+=======
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Transparent Research AI Pricing
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your research needs and budget.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your research needs with our transparent, 
+              enterprise-grade pricing structure.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid md: anygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
@@ -496,10 +726,36 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+=======
+                viewport={{ once: true }}
+                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+                  index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
+                } hover:border-blue-500/50 transition-all`}
+              >
+                {index === 1 && (
+                  <div className="inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4">
+                    <Star className="w-4 h-4 mr-1" />
+                    Most Popular
+                  </div>
+                )}
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-white">{tier.price}</span>
+                  <span className="text-gray-400">/{tier.period}</span>
+                </div>
+                <p className="text-gray-300 mb-6">{tier.description}</p>
+                
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -508,10 +764,102 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
+=======
+                
+                <div className="text-sm text-gray-400 mb-6">
+                  <strong>Best for:</strong> {tier.bestFor}
+                </div>
+                
+                <a
+                  href="/contact"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+                    index === 1
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   }`}
 
                   Get Started
-                </motion.button>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Revolutionary Research Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how our AI research assistant is transforming research across 
+              industries and accelerating breakthrough discoveries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Our AI Research Assistant?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented research efficiency and discovery capabilities 
+              with our cutting-edge AI research automation technology.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-blue-400" />
+                </div>
+                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
 =======
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -894,23 +1242,36 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <div className="max-w-4xl mx-auto text-center">
 <<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12"
 
             <h2 className="text-4xl font-bold text-white mb-6">
+=======
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               Ready to Revolutionize Your Research?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of researchers who are already using AI to accelerate their discoveries and insights.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the AI research revolution and accelerate your discoveries 
+              with our autonomous research assistant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -932,6 +1293,22 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Start Researching with AI
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
+              >
+                <Phone className="mr-2 w-5 h-5" />
+                Call +1 302 464 0950
+              </a>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </div>
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 text-blue-400 mb-4" />
@@ -949,9 +1326,13 @@ export default function AIAutonomousResearchAssistant(...args: any[]): any {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
 export default AIAutonomousResearchAssistant;}}}}
 =======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

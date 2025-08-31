@@ -13,6 +13,7 @@ export default function Webinars(...args: any[]): any {
 		</div>
 	);
 
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars(...args: any[]): any {
@@ -64,13 +65,44 @@ const Webinars: React.FC = (): JSX.Element => {
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 0 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+
+export default function Webinars() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [filterType, setFilterType] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
+  ];
+
+  const filterTypes = [
+    { id: 'all', name: 'All Webinars', count: 0 },
+    { id: 'upcoming', name: 'Upcoming', count: 0 },
+    { id: 'on-demand', name: 'On-Demand', count: 0 },
+    { id: 'live', name: 'Live Now', count: 0 }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const upcomingWebinars = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'AI Autonomous Research Assistant: Revolutionizing Business Intelligence',
       description: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+=======
+      title: 'AI-Powered Business Transformation: Real-World Success Stories',
+      description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       category: 'ai-ml',
       type: 'upcoming',
       date: '2025-02-10T14:00:00Z',
@@ -100,6 +132,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false
+<<<<<<< HEAD
     },
     {
       id: 3,
@@ -229,6 +262,62 @@ const Webinars: React.FC = (): JSX.Element => {
     { label: 'Expert Speakers', value: '15+', icon: Star },;
     { label: 'Topics Covered', value: '20+', icon: BookOpen };
   ];
+=======
+    }
+  ];
+
+  // Update counts
+  React.useEffect(() => {
+    categories.forEach(cat => {
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+
+    filterTypes.forEach(type => {
+      if (type.id === 'all') {
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+      }
+    });
+  }, []);
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const formatTimeUntil = (dateString: string) => {
+    const now = new Date();
+    const webinarDate = new Date(dateString);
+    const diffTime = webinarDate.getTime() - now.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) return 'Past';
+    if (diffDays === 0) return 'Today';
+    if (diffDays < 7) return `${diffDays} days`;
+    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
+    return `${Math.ceil(diffDays / 30)} months`;
+  };
+
+  const getCategoryIcon = (categoryId: string) => {
+    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
+  };
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const contactInfo = {
   email: 'webinars@ziontechgroup.com',
@@ -240,6 +329,7 @@ const Webinars: React.FC = (): JSX.Element => {
 };
 
   return (
+<<<<<<< HEAD
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Webinars - Zion Tech Group"
@@ -413,6 +503,15 @@ const Webinars: React.FC = (): JSX.Element => {
 
 
 }}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
@@ -440,6 +539,7 @@ const Webinars: React.FC = (): JSX.Element => {
                 Subscribe to Webinars
               </motion.button>
               <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+<<<<<<< HEAD
 =======
               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -451,6 +551,10 @@ const Webinars: React.FC = (): JSX.Element => {
               >
                 Read Our Research
               </a>
+=======
+                Contact Us
+              </button>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </div>
           </motion.div>
         </div>

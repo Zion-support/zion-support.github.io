@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
 =======
@@ -7,12 +8,21 @@ interface ButtonProps extends React.PropsWithChildren<{
 }> {
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+interface ButtonProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   children: anyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
+<<<<<<< HEAD
   onClick?: ()   => void;
+=======
+  onClick?: ()  => void;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   type?: 'button' | 'submit' | 'reset';
 <<<<<<< HEAD
   disabled?: boolean}
@@ -20,10 +30,15 @@ export function Button(...args[]: any):  {
 =======
   disabled?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function Button(...args: any[]): any {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {

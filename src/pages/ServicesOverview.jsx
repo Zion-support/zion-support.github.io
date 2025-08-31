@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEO from "@/components/SEO";
 import Link from 'next/link';
+=======
+import { SEO } from "@/components/SEO";
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight export default function ServicesOverview() {

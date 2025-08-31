@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Calendar, Clock, User, Tag, Search, Filter,
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Calendar, Clock, User, Tag, Search, Filter, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ArrowRight, BookOpen, TrendingUp, Star, Eye
 function Blog(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -274,6 +282,7 @@ export default function Blog(...args: any[]): any {
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Insights, trends, and expert analysis on AI, quantum computing, cybersecurity,
               and the latest technology innovations shaping the future of business.
+<<<<<<< HEAD
 =======
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -284,14 +293,22 @@ export default function Blog(...args: any[]): any {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Insights, trends, and expert perspectives on AI, technology, and digital transformation
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </p>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Search and Filters */}
       <section className="py-12">
         <div className="container mx-auto px-6">
+=======
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
@@ -391,7 +408,11 @@ export default function Blog(...args: any[]): any {
                         <span className="text-slate-400 text-sm">•</span>
                         <span className="text-slate-400 text-sm">{post.readTime}</span>
                       </div>
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                         {post.title}
                       </h3>
@@ -651,6 +672,7 @@ export default function Blog(...args: any[]): any {
                     >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       Read More
+<<<<<<< HEAD
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                     </Link>
                   </div>
@@ -664,6 +686,20 @@ export default function Blog(...args: any[]): any {
       {/* Newsletter Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
+=======
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </motion.article>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -702,8 +738,11 @@ export default function Blog(...args: any[]): any {
             <p className="text-sm text-slate-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
+<<<<<<< HEAD
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </motion.div>
         </div>
       </section>

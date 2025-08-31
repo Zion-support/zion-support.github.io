@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import { Clock, Globe, Shield, Zap, MapPin export function ITServiceRequestHero() {
+=======
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
+export function ITServiceRequestHero() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [location, setLocation] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const navigate = useNavigate();

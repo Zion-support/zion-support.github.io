@@ -1,11 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React from 'react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ForumCategoryInfo {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   description: string;
@@ -19,11 +25,17 @@ lastPost?: {;
     date: string;
   
 };
+<<<<<<< HEAD
 =======
     date: string}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ForumCategories(...args[]: any):  {
+=======
+}
+
+export default function ForumCategories(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -127,8 +139,13 @@ export default function ForumCategories(...args[]: any):  {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category)  => (
+<<<<<<< HEAD
             <div
               key={category.id}
+=======
+            <div 
+              key={category.id} 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
 
               <div className="flex items-start justify-between mb-4">

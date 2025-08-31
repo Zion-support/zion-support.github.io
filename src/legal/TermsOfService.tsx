@@ -9,6 +9,7 @@ const TermsOfService = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section>
         <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
         <p className="text-gray-300 leading-relaxed">
@@ -120,12 +121,38 @@ const TermsOfService = () => {
         </a>
 =======
       <div className="space-y-8">
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <section>
           <h2 className="text-2xl font-semibold text-white mb-4">1. Introduction</h2>
           <p className="text-gray-300 leading-relaxed">
             These Terms of Service govern your use of Zion Tech Group's services. By accessing or using our services, you agree to be bound by these terms.
           </p>
         </section>
+<<<<<<< HEAD
+=======
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">3. User Accounts</h2>
+            <p className="text-gray-300 leading-relaxed">
+              When creating an account with us, you must provide accurate and complete information. You are responsible for maintaining the security of your account and password. Zion Tech Group cannot and will not be liable for any loss or damage from your failure to comply with this security obligation.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">4. Acceptable Use</h2>
+            <p className="text-gray-300 leading-relaxed">
+              You agree not to use our services for any unlawful purpose or in any way that could damage, disable, overburden, or impair our servers or networks. You may not attempt to gain unauthorized access to any part of our services.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">5. Intellectual Property</h2>
+            <p className="text-gray-300 leading-relaxed">
+              All content, features, and functionality of our services are owned by Zion Tech Group and are protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written consent.
+            </p>
+          </section>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
         <section>
           <h2 className="text-2xl font-semibold text-white mb-4">2. Description of Services</h2>

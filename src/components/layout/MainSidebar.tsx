@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link, useLocation  } from 'react-router-dom.ts';
 <<<<<<< HEAD
@@ -9,6 +10,18 @@ import { Home,
   BarChart3,
   FileText,
   MessageSquare,
+=======
+import React from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { cn  } from '@/lib/utils';
+import { Home, 
+  Briefcase, 
+  Users, 
+  Settings, 
+  BarChart3, 
+  FileText, 
+  MessageSquare, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   HelpCircle,
   Code,
   Smartphone,
@@ -110,10 +123,16 @@ import {
   Leaf,
   HardDrive,
   RefreshCw
+<<<<<<< HEAD
+=======
+ } from 'lucide-react.ts';
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
   isOpen: anyboolean;
   onClose: ()  => void;
+<<<<<<< HEAD
 =======
   PenTool,
   Atom,
@@ -140,13 +159,18 @@ interface SidebarItem {
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function MainSidebar(...args: any[]): any {
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const location = useLocation();
 
   const toggleSection = (section: anystring)  => {

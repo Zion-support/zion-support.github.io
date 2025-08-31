@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -17,6 +18,14 @@ import {
 =======
 import { Link  } from 'react-router-dom.ts';
 import { DollarSign, 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  DollarSign, 
+  CheckCircle, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Star, 
   CheckCircle, 
   ArrowRight, 
@@ -341,6 +350,7 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Pricing Summary */}
@@ -402,6 +412,17 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
       </section>
 
       {/* Services Pricing Grid */}
+=======
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -411,6 +432,7 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             className="text-center mb-16"
 
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">
               Service Pricing Details
             </h2>
@@ -569,11 +591,75 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
       {/* ROI Calculator */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative group ${
+                  tier.popular ? 'lg:scale-105' : ''
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <Star className="w-4 h-4" />
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className={`p-8 rounded-2xl bg-gradient-to-br ${tier.color} bg-opacity-10 border border-${tier.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <p className="text-gray-300 mb-6">{tier.description}</p>
+                    
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{tier.price}</span>
+                      <span className="text-gray-400 ml-2">/{tier.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to={tier.href}
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      tier.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/25'
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                    }`}
+                  >
+                    {tier.cta}
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Pricing */}
+      <section className="py-20">
+        <div className="container-responsive">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
             <h2 className="text-4xl font-bold text-white mb-6">
               Calculate Your ROI
@@ -618,8 +704,86 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
                       </span>
                     </div>
                   </div>
+=======
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Service-Specific Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Detailed pricing for individual services and solutions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
+                
+                <div className="space-y-4">
+                  {category.services.map((service, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg">
+                      <div>
+                        <h4 className="font-semibold text-white">{service.name}</h4>
+                        <p className="text-sm text-gray-400">{service.description}</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-lg font-bold text-cyan-400">{service.price}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Solutions Pricing */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Custom pricing models for different industries and use cases
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industrySolutions.map((solution, index) => (
+              <motion.div
+                key={solution.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <solution.icon className="w-8 h-8 text-white" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </div>
               </div>
+<<<<<<< HEAD
 
               <div className="text-center">
                 <p className="text-gray-300 mb-4">
@@ -646,6 +810,11 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Why Choose Our Pricing?
+=======
+              
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Need a Custom Quote?
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </h2>
             </div>
             
@@ -707,6 +876,7 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
                   Choose the perfect plan for your {category.name.toLowerCase()} needs. All plans include our core capabilities and expert support.
                 </p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="text-center">
@@ -929,6 +1099,12 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
           </div>
         </motion.section>
       </div>
+=======
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     </div>
 =======
             </div>;

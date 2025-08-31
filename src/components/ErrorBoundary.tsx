@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
 <<<<<<< HEAD
 import { motion  } from 'framer-motion.ts';
@@ -7,19 +8,43 @@ import { AlertTriangle,
   Bug,
   FileText,
   Copy,
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  AlertTriangle, 
+  RefreshCw, 
+  Home, 
+  Bug, 
+  FileText, 
+  Copy, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   X,
   AlertCircle,
   Info,
   Zap,
   CheckCircle
+<<<<<<< HEAD
 interface Props extends React.PropsWithChildren<{}> {
 
   children: anyReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)  => void;
   showDetails?: boolean;
+=======
+} from 'lucide-react';
+
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -72,6 +97,7 @@ export class ErrorBoundary extends Component<Props, State> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
@@ -87,6 +113,14 @@ export class ErrorBoundary extends Component<Props, State> {
 =======
     // // // // // // // console.error('ErrorBoundary caught an error:', error, errorInfo);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+    this.setState({
+      errorInfo
+    });
+
+    // Log error to console
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
     // Call custom error handler if provided
 =======
@@ -94,10 +128,18 @@ export class ErrorBoundary extends Component<Props, State> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
     // Log to external service (you can replace this with your error logging service)
     this.logErrorToService(error, errorInfo);
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
     try {
@@ -128,6 +170,7 @@ export class ErrorBoundary extends Component<Props, State> {
       // });
     } catch (logError) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.error('Failed to log error:', logError);
 
 =======
@@ -150,6 +193,19 @@ export class ErrorBoundary extends Component<Props, State> {
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+=======
+      console.error('Failed to log error:', logError);
+    }
+  };
+
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      showStack: false
+    });
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   };
 
   private handleGoHome = () => {;
@@ -157,6 +213,9 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   private handleCopyError = () => {
     if (this.state.error && this.state.errorInfo) {
       const errorText = `
@@ -190,7 +249,11 @@ User Agent: ${navigator.userAgent}
         document.execCommand('copy');
         document.body.removeChild(textArea);
       });
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   };
 
   private toggleStack = () => {
@@ -210,6 +273,9 @@ User Agent: ${navigator.userAgent}
       // Default error UI
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -229,6 +295,7 @@ User Agent: ${navigator.userAgent}
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 =======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 text-center">
@@ -236,6 +303,8 @@ User Agent: ${navigator.userAgent}
             <div className="mx-auto w-16 h-16 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center mb-4">
               <AlertTriangle className="w-8 h-8 text-red-600 dark:text-red-400" />
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </div>
 
             {/* Error Title */}
@@ -248,6 +317,7 @@ User Agent: ${navigator.userAgent}
               We encountered an unexpected error. Please try again or contact support if the problem persists.
             </p>
 
+<<<<<<< HEAD
             {/* Error Details (Development only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
@@ -257,6 +327,21 @@ User Agent: ${navigator.userAgent}
                 <div className="bg-gray-100 dark:bg-gray-700 rounded p-3 text-xs font-mono text-gray-800 dark:text-gray-200 overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
+=======
+            {/* Error Details */}
+            <div className="p-6">
+              <div className="space-y-4">
+                {/* Error Message */}
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-red-800 mb-1">Error Message</h3>
+                      <p className="text-red-700 text-sm font-mono break-words">
+                        {this.state.error?.message || 'Unknown error occurred'}
+                      </p>
+                    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   </div>
                   {this.state.error.stack && (
                     <div>
@@ -379,6 +464,7 @@ User Agent: ${navigator.userAgent}
                   Hard Refresh
                 </button>
               </div>
+<<<<<<< HEAD
 =======
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -422,6 +508,18 @@ User Agent: ${navigator.userAgent}
             </div>
           </div>
         </div>
+=======
+            </div>
+
+            {/* Footer */}
+            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+              <p className="text-center text-sm text-gray-500">
+                If this problem continues, please contact our support team with the Error ID above.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       );
 
     return this.props.children;
@@ -454,7 +552,11 @@ export function useErrorHandler(...args: any[]): any {
   return { error, handleError, clearError };
 }
 
+<<<<<<< HEAD
 // Higher-order component for error boundaries
+=======
+// Higher-order component for functional components
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function withErrorBoundary<P extends object>(
   Component: anyReact.ComponentType<P>,
   fallback?: ReactNode,
@@ -496,4 +598,7 @@ if (typeof window !== 'undefined') {
     console.error('Unhandled promise rejection:', event.reason);
   });
 }
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

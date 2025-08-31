@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Brain,
   Atom,
   Rocket,
   Shield,
   Dna,
+=======
+import { Brain, 
+  Atom, 
+  Rocket, 
+  Shield, 
+  Dna, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Microscope,
   Cpu,
   Zap,
@@ -22,12 +30,17 @@ import { Brain,
   Mail,
   MapPin
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory   } from '../data/innovativeServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+ } from 'lucide-react.ts';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain,
@@ -64,7 +77,11 @@ const categoryColors: { [key: string]: string } = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
+=======
+export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [expandedService, setExpandedService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -110,10 +127,14 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
     : getServicesByCategory(selectedCategory);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleServiceExpansion = (serviceId: anystring)   => {;
     setExpandedService(expandedService === serviceId ? null : serviceId)};
 =======
   const toggleServiceExpansion = (serviceId: anystring)  => {;
+=======
+  const toggleServiceExpansion = (serviceId: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -229,11 +250,16 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+<<<<<<< HEAD
 <<<<<<< HEAD: any'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
+=======
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               }`}
 
               All Categories
             </button>
+<<<<<<< HEAD
             {serviceCategories2027.map((category)   => {
 =======;
                   : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white';
@@ -243,6 +269,9 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
             </button>;
             {serviceCategories2027.map((category)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+            {serviceCategories2027.map((category)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -273,6 +302,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 
         {/* Services Grid */}
         <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
           initial = {
   { opacity: 0,
@@ -330,6 +360,14 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
         >
           {filteredServices.map((service, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        >
+          {filteredServices.map((service, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={service.id}
               initial = {

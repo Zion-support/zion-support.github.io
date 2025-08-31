@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 ;
+=======
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -23,7 +27,11 @@ export function PrimaryNav() {
     const { user } = useAuth();
     const isMobile = useIsMobile();
     const { t } = useTranslation();
+<<<<<<< HEAD
     const router = useRouter();
+=======
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
@@ -44,6 +52,7 @@ export function PrimaryNav() {
         if (query.trim()) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // // // console.log('PrimaryNav search submit:', query);
 =======
             // // // // // // // console.log('PrimaryNav search submit:', query);
@@ -58,6 +67,10 @@ export function PrimaryNav() {
             setQuery('')}
 =======
             router(`/search/${slugify(query)}`);
+=======
+            console.log('PrimaryNav search submit:', query);
+            navigate(`/search/${slugify(query)}`);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             setQuery('');
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -100,6 +113,7 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
+<<<<<<< HEAD
 
 =======
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
@@ -151,6 +165,8 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 router(`/search/${sugg.slug || slugify(sugg.text)}`);
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -213,6 +229,7 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
+<<<<<<< HEAD
             </Link>
             <LanguageSelector />
             <ModeToggle />
@@ -227,6 +244,11 @@ export function PrimaryNav() {
             {isLoggedIn && <UserMenu />}
           </div>
 
+=======
+              {isLoggedIn && <UserMenu />}
+            </div>
+          
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}

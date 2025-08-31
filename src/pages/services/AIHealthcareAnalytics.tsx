@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database export default function AIHealthcareAnalytics(...args: any[]): any {
 =======
 import React from 'react.ts';
@@ -34,10 +35,14 @@ import { Activity,
   Building
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
+=======
+import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const AIHealthcareAnalytics = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
+<<<<<<< HEAD
     'Real-time patient data analytics and insights',
     'Predictive disease modeling and risk assessment',
     'Automated medical image analysis and diagnosis',
@@ -55,14 +60,82 @@ const AIHealthcareAnalytics = () => {
     'Streamline clinical workflows and efficiency',
     'Enable proactive and preventive healthcare',
     'Support evidence-based medical decisions'
+=======
+    'AI-powered patient outcome prediction',
+    'Real-time health monitoring and alerts',
+    'Predictive analytics for disease prevention',
+    'Automated medical image analysis',
+    'Clinical decision support systems',
+    'Population health management',
+    'Drug interaction and safety monitoring',
+    'Healthcare fraud detection',
+    'Patient engagement optimization',
+    'Regulatory compliance automation'
+  ];
+
+  const benefits = [
+    'Improve patient outcomes by 35%',
+    'Reduce healthcare costs by 25%',
+    'Increase diagnostic accuracy by 40%',
+    'Reduce readmission rates by 30%',
+    'Optimize resource allocation by 45%',
+    'Enhance patient satisfaction by 50%'
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Chief Medical Officer",
+      company: "Metro General Hospital",
+      content: "AI Healthcare Analytics has transformed our diagnostic accuracy. We've improved early detection rates by 30% and reduced misdiagnoses significantly.",
+      rating: 5
+    },
+    {
+      name: "Dr. Michael Chen",
+      role: "Research Director",
+      company: "National Medical Research Institute",
+      content: "The population health analytics have revealed patterns we never would have discovered manually. Our research has accelerated dramatically.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      role: "Healthcare Administrator",
+      company: "Community Health Network",
+      content: "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
+      rating: 5
+    }
+  ];
+
+  const complianceFeatures = [
+    "HIPAA Compliance",
+    "HITECH Act Support",
+    "SOC 2 Type II",
+    "ISO 27001",
+    "GDPR Compliance",
+    "FDA Guidelines",
+    "Clinical Validation",
+    "Data Encryption"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
       industry: 'Hospitals & Health Systems',
       description: 'Comprehensive healthcare analytics for large medical facilities',
       icon: Building,
       applications: ['Patient monitoring', 'Resource optimization', 'Quality improvement', 'Cost management']
+=======
+      name: 'Clinical',
+      price: '$599/mo',
+      details: [
+        'Up to 100 patients',
+        'Basic health analytics',
+        'Standard reporting',
+        'Email support',
+        'HIPAA compliance'
+      ]
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       industry: 'Primary Care Practices',
@@ -172,6 +245,7 @@ const AIHealthcareAnalytics = () => {
 <<<<<<< HEAD
       specialty: 'Neurology',
       solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring']
+<<<<<<< HEAD
 
 =======
       category: 'Financial Analytics',
@@ -180,11 +254,14 @@ const AIHealthcareAnalytics = () => {
     {
       category: 'Population Health',
       features: ['Disease prevalence tracking', 'Preventive care metrics', 'Social determinants analysis', 'Community health insights']
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI Healthcare Analytics Platform - Zion Tech Group"
@@ -260,11 +337,81 @@ const AIHealthcareAnalytics = () => {
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{feature}</h3>
               </motion.div>
-            ))}
+=======
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Heart className="w-4 h-4 mr-2" /> AI-Powered Healthcare Analytics
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            AI Healthcare Analytics Platform
+          </h1>
+          <p className="text-zion-slate-light text-xl">
+            Transform healthcare delivery with AI-powered analytics, predictive insights, and clinical decision support.
+          </p>
         </div>
       </section>
 
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature) => (
+                <li key={feature} className="flex items-start">
+                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
+                  <span className="text-zion-slate-dark">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Healthcare Benefits</h2>
+            <ul className="space-y-3">
+              {benefits.map((benefit) => (
+                <li key={benefit} className="flex items-start">
+                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
+                  <span className="text-zion-slate-dark">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {useCases.map((useCase) => (
+              <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+                <Activity className="w-6 h-6 text-zion-cyan mb-3" />
+                <div className="text-zion-slate-dark font-semibold">{useCase}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Specialty Solutions</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {healthcareSolutions.map((solution) => (
+              <div key={solution.specialty} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.specialty}</h3>
+                <ul className="space-y-2">
+                  {solution.solutions.map((sol) => (
+                    <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
+                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
+                      {sol}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+            ))}
+          </div>
+        </div>
+
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -660,11 +807,24 @@ const AIHealthcareAnalytics = () => {
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
                 </div>
+=======
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {tiers.map((tier) => (
+              <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+                <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>
+                <ul className="text-sm text-zion-slate-dark space-y-1">
+                  {tier.details.map((detail) => (<li key={detail}>{detail}</li>))}
+                </ul>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
             ))}
           </div>
         </div>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -691,6 +851,78 @@ const AIHealthcareAnalytics = () => {
           <div className="mt-8 text-sm text-gray-400">
             <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
             <p>🌐 <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">ziontechgroup.com</a></p>
+=======
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Technical Specifications</h2>
+          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>
+                <div className="flex flex-wrap gap-2">
+                  {technicalSpecs.technology.map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">EHR Integrations</h3>
+                <div className="flex flex-wrap gap-2">
+                  {technicalSpecs.integrations.map((integration) => (
+                    <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
+                      {integration}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>
+                <div className="space-y-1">
+                  {technicalSpecs.security.map((sec) => (
+                    <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
+                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />
+                      {sec}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Uptime</h4>
+                <div className="text-2xl font-bold text-zion-cyan">{technicalSpecs.uptime}</div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</h4>
+                <div className="space-y-1">
+                  {technicalSpecs.compliance.map((comp) => (
+                    <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
+                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />
+                      {comp}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-14 text-center">
+          <div className="text-sm text-zion-slate-light mb-2">Ready to transform healthcare with AI?</div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+            </a>
+          </div>
+          <div className="mt-4">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
+              Learn More <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>;

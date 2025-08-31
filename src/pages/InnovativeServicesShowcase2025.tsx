@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 =======
 import { Link  } from 'react-router-dom.ts';
@@ -824,6 +831,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           ))}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
+<<<<<<< HEAD
 
         {filteredServices.length === 0 && (
           <div className="text-center py-12">
@@ -933,6 +941,9 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
+=======
+      </section>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     </div>
 =======
         

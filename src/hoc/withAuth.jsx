@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD
 ;
 import { useSelector } from 'react-redux';
 function withAuth(Component) {
@@ -10,6 +11,18 @@ function withAuth(Component) {
 <<<<<<< HEAD
                 navigate('/login?next=/community/new');
 
+=======
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+function withAuth(Component) {
+    const Wrapped = (props) => {
+        const router = useNavigate();
+        const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+        useEffect(() => {
+            if (!isLoggedIn) {
+                navigate('/login?next=/community/new');
+            }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
             return null;

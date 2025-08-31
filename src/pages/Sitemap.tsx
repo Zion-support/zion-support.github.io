@@ -1,9 +1,39 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
 import {
   Brain,
   Server,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Home, 
+  Users, 
+  Building, 
+  BookOpen, 
+  MessageCircle, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  ShoppingCart, 
+  BarChart3, 
+  Code, 
+  Globe, 
+  ArrowRight, 
+  Star,
+  FileText,
+  Calendar,
+  HelpCircle,
+  Settings,
+  Target,
+  TrendingUp,
+  Heart,
+  Award,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Rocket,
   Shield,
   Cloud,
@@ -262,6 +292,7 @@ export default function Sitemap(...args: any[]): any {
     },
     {
       title: 'Resources & Support',
+<<<<<<< HEAD
       icon: HelpCircle,
       links: [
         { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -317,6 +348,72 @@ export default function Sitemap(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
 
+=======
+      icon: BookOpen,
+      color: 'from-orange-500 to-red-500',
+      pages: [
+        { name: 'Blog', href: '/blog', description: 'Latest industry trends and insights', featured: true },
+        { name: 'Case Studies', href: '/case-studies', description: 'Real-world success stories', featured: true },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research and analysis', featured: true },
+        { name: 'Webinars', href: '/webinars', description: 'Expert-led learning sessions', featured: true },
+        { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs', featured: true },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions and help', featured: true },
+        { name: 'Community', href: '/community', description: 'Developer community and forums', featured: true },
+        { name: 'Training', href: '/training', description: 'Professional development and training', featured: false },
+        { name: 'API Reference', href: '/api-docs', description: 'API documentation and reference', featured: false },
+        { name: 'Developer Portal', href: '/developers', description: 'Developer resources and tools', featured: false }
+      ]
+    },
+    {
+      title: 'Interactive & Demo',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500',
+      pages: [
+        { name: 'Interactive Demos', href: '/demo', description: 'Try our AI services and solutions', featured: true },
+        { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a personalized demo session', featured: true },
+        { name: 'Request Quote', href: '/request-quote', description: 'Get a custom quote for your needs', featured: true },
+        { name: 'Marketplace', href: '/marketplace', description: 'Browse and purchase our services', featured: true }
+      ]
+    },
+    {
+      title: 'Legal & Compliance',
+      icon: FileText,
+      color: 'from-gray-500 to-slate-500',
+      pages: [
+        { name: 'Privacy Policy', href: '/privacy', description: 'Data privacy and protection policy', featured: true },
+        { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions of service', featured: true },
+        { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage and preferences', featured: true },
+        { name: 'Legal Information', href: '/legal', description: 'Legal notices and compliance', featured: false }
+      ]
+    },
+    {
+      title: 'Specialized Services',
+      icon: Target,
+      color: 'from-pink-500 to-rose-500',
+      pages: [
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales assistance', featured: true },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cloud cost optimization', featured: true },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated compliance monitoring', featured: true },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Intelligent email automation', featured: true },
+        { name: 'Mobile Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Customer feedback collection', featured: true },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Compliance automation platform', featured: true },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'Large language model content creation', featured: true },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations optimization', featured: true },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'Product returns automation', featured: true },
+        { name: 'Email Sequencer', href: '/services/email-sequencer', description: 'Automated email sequences', featured: true },
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', description: 'Audio content transcription', featured: true }
+      ]
+    }
+  ];
+
+  const quickActions = [
+    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Request Quote', href: '/request-quote', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, color: 'from-orange-500 to-red-500' },
+    { name: 'Join Community', href: '/community', icon: Users, color: 'from-indigo-500 to-purple-500' },
+    { name: 'Try Demos', href: '/demo', icon: Zap, color: 'from-yellow-500 to-orange-500' }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   return (
@@ -434,6 +531,7 @@ export default function Sitemap(...args: any[]): any {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Additional Information */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -534,5 +632,44 @@ export default function Sitemap(...args: any[]): any {
         </div>
       </div>
     </>
+=======
+      {/* CTA Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Can't Find What You're Looking For?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our team is here to help you navigate our services and find the perfect solution 
+            for your business needs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Contact Us
+            </Link>
+            <Link
+              to="/schedule-demo"
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Demo
+            </Link>
+            <Link
+              to="/faq"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
+            >
+              <HelpCircle className="w-5 h-5 mr-2" />
+              View FAQ
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   );
 }}</section>}

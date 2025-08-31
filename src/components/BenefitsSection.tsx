@@ -15,6 +15,11 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const benefits: Benefit[] = [;
   {
@@ -76,6 +81,11 @@ features: [;
 
 ];
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function BenefitsSection(...args: any[]): any {
   const [hoveredIndex, setHoveredIndex] = useState<any>(null);
 
@@ -164,10 +174,17 @@ export function BenefitsSection(...args: any[]): any {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: anytrue }}
+<<<<<<< HEAD
 
           {stats.map((stat, index)  => (
             <motion.div
               key={index}
+=======
+        >
+          {stats.map((stat, index)  => (
+            <motion.div 
+              key={index} 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
 
@@ -195,9 +212,14 @@ export function BenefitsSection(...args: any[]): any {
           {/* Benefits */}
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index)  => (
+<<<<<<< HEAD
               <motion.div
                 key={index}
 <<<<<<< HEAD
+=======
+              <motion.div 
+                key={index} 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 variants={itemVariants}
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
@@ -267,10 +289,17 @@ export function BenefitsSection(...args: any[]): any {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: any0.3 }}
+<<<<<<< HEAD
 
                         {benefit.features.map((feature, idx)  => (
                           <motion.div
                             key={idx}
+=======
+                      >
+                        {benefit.features.map((feature, idx)  => (
+                          <motion.div 
+                            key={idx} 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -309,7 +338,11 @@ export function BenefitsSection(...args: any[]): any {
             <h3 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h3>
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
             {stats.map((stat, index)  => (
               <motion.div
@@ -320,7 +353,11 @@ export function BenefitsSection(...args: any[]): any {
                 className="text-center group"
 
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+<<<<<<< HEAD
                   <stat.icon className="w-10 h-10 text-white" />
+=======
+                  {React.createElement(stat.icon, { className: "w-10 h-10 text-white" })}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>

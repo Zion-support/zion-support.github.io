@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
@@ -37,6 +38,210 @@ import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Ta
     'E-commerce logistics optimization',
     'Food and beverage supply chains',
     'Automotive parts management'
+=======
+import React from 'react';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Truck, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  MapPin,
+  Shield,
+  Settings,
+  DollarSign,
+  AlertCircle,
+  Calendar,
+  Package,
+  Route,
+  Warehouse,
+  Factory,
+  Ship,
+  Plane,
+  Store
+} from 'lucide-react';
+
+export default function AISupplyChainOptimization() {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Demand Forecasting",
+      description: "Predict demand patterns with 95% accuracy using machine learning and historical data analysis."
+    },
+    {
+      icon: Route,
+      title: "Route Optimization",
+      description: "Optimize delivery routes in real-time considering traffic, weather, and delivery windows."
+    },
+    {
+      icon: Warehouse,
+      title: "Inventory Optimization",
+      description: "AI-powered inventory management with automated reordering and stock level optimization."
+    },
+    {
+      icon: Target,
+      title: "Supplier Performance Analytics",
+      description: "Monitor supplier performance, quality metrics, and delivery reliability with predictive insights."
+    },
+    {
+      icon: PieChart,
+      title: "Cost Optimization",
+      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement."
+    },
+    {
+      icon: Activity,
+      title: "Real-time Visibility",
+      description: "End-to-end supply chain visibility with real-time tracking and predictive analytics."
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Reduced Costs",
+      description: "Optimize transportation, inventory, and operational costs by up to 30% through AI insights."
+    },
+    {
+      icon: DollarSign,
+      title: "Improved Efficiency",
+      description: "Streamline operations and reduce lead times with intelligent automation and optimization."
+    },
+    {
+      icon: Globe,
+      title: "Global Optimization",
+      description: "Manage complex global supply chains with multi-location optimization and risk mitigation."
+    },
+    {
+      icon: Lock,
+      title: "Risk Management",
+      description: "Identify and mitigate supply chain risks with predictive analytics and contingency planning."
+    },
+    {
+      icon: TrendingUp,
+      title: "Increased Revenue",
+      description: "Improve customer satisfaction and increase sales through better inventory availability and faster delivery."
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      description: "Automate routine supply chain tasks and focus on strategic decision-making."
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$599",
+      period: "/month",
+      description: "Perfect for small businesses with basic supply chain optimization needs",
+      features: [
+        "Up to 5 locations",
+        "Basic demand forecasting",
+        "Email support",
+        "Standard integrations",
+        "Basic reporting",
+        "Route optimization",
+        "Mobile app access"
+      ],
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$1,499",
+      period: "/month",
+      description: "Ideal for growing companies with complex supply chain requirements",
+      features: [
+        "Up to 25 locations",
+        "Advanced AI forecasting",
+        "Priority support",
+        "Custom integrations",
+        "Advanced analytics",
+        "Multi-modal optimization",
+        "API access",
+        "Supplier analytics",
+        "Risk management"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$4,999",
+      period: "/month",
+      description: "For large organizations requiring enterprise-grade supply chain solutions",
+      features: [
+        "Unlimited locations",
+        "Custom AI models",
+        "Dedicated account manager",
+        "White-label solutions",
+        "Advanced security features",
+        "Custom reporting",
+        "On-premise deployment",
+        "SLA guarantees",
+        "24/7 support"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      description: "Optimize fulfillment networks, reduce delivery times, and improve customer satisfaction",
+      icon: Package
+    },
+    {
+      industry: "Manufacturing",
+      description: "Streamline production planning, optimize supplier networks, and reduce lead times",
+      icon: Factory
+    },
+    {
+      industry: "Retail",
+      description: "Optimize store replenishment, reduce stockouts, and improve inventory turnover",
+      icon: Store
+    },
+    {
+      industry: "Logistics",
+      description: "Optimize transportation networks, reduce costs, and improve delivery efficiency",
+      icon: Truck
+    },
+    {
+      industry: "Food & Beverage",
+      description: "Manage perishable supply chains, reduce waste, and ensure food safety",
+      icon: Package
+    },
+    {
+      industry: "Healthcare",
+      description: "Optimize medical supply chains, ensure availability, and reduce costs",
+      icon: Shield
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const tiers = [
@@ -55,6 +260,63 @@ import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Ta
       price: '$4,999/mo',
       details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support']
     },
+<<<<<<< HEAD
+=======
+    {
+      name: "E-commerce",
+      platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
+    },
+    {
+      name: "Analytics",
+      platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"]
+    },
+    {
+      name: "IoT & Sensors",
+      platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"]
+    }
+  ];
+
+  const keyMetrics = [
+    {
+      metric: "30%",
+      label: "Cost Reduction",
+      description: "Average reduction in supply chain costs"
+    },
+    {
+      metric: "50%",
+      label: "Lead Time Reduction",
+      description: "Faster delivery and reduced lead times"
+    },
+    {
+      metric: "95%",
+      label: "Forecast Accuracy",
+      description: "AI-powered demand prediction accuracy"
+    },
+    {
+      metric: "40%",
+      label: "Inventory Optimization",
+      description: "Reduction in excess inventory levels"
+    }
+  ];
+
+  const optimizationAreas = [
+    {
+      category: "Demand Planning",
+      areas: ["Forecasting", "Seasonal Analysis", "Trend Prediction", "Demand Shaping"]
+    },
+    {
+      category: "Inventory Management",
+      areas: ["Stock Optimization", "Reorder Points", "Safety Stock", "ABC Analysis"]
+    },
+    {
+      category: "Transportation",
+      areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"]
+    },
+    {
+      category: "Supplier Management",
+      areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"]
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 =======
 import { SEO  } from '../../components/SEO';
@@ -67,6 +329,7 @@ import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone
 const AISupplyChainOptimization: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
       <SEO 
         title="AI Supply Chain Optimization Platform - Zion Tech Group"
         description="Revolutionary AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics with real-time analytics and predictive insights."
@@ -96,10 +359,81 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Schedule Demo
             </Button>
+=======
+      <SEO
+        title="AI Supply Chain Optimization - Zion Tech Group"
+        description="Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management. Reduce costs and improve efficiency."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
+              <Truck className="w-4 h-4 mr-2" />
+              AI-Powered Optimization
+            </div>
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
+              AI Supply Chain
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                {' '}Optimization
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your supply chain with AI-powered optimization. 
+              Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent supply chain management.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download Brochure
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Key Metrics Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {keyMetrics.map((metric, index) => (
+              <motion.div
+                key={metric.metric}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">
+                  {metric.metric}
+                </div>
+                <div className="text-lg font-semibold text-white mb-2">
+                  {metric.label}
+                </div>
+                <div className="text-sm text-gray-400">
+                  {metric.description}
+                </div>
+              </motion.div>
+            ))}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
@@ -113,6 +447,76 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
                 </li>
               ))}
             </ul>
+=======
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI capabilities designed to revolutionize your supply chain operations and logistics management.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Optimization Areas Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Optimization Areas
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive optimization across all aspects of your supply chain for maximum efficiency and cost savings.
+            </p>
+          </motion.div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
@@ -132,6 +536,7 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
               <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-green-400" />
@@ -163,10 +568,35 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-3">99.9% Uptime</h3>
               <p className="text-gray-300">Enterprise-grade infrastructure ensures continuous supply chain monitoring</p>
             </Card>
+=======
+            {optimizationAreas.map((category, index) => (
+              <motion.div
+                key={category.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
+                  {category.category}
+                </h3>
+                <ul className="space-y-2">
+                  {category.areas.map((area, areaIndex) => (
+                    <li key={areaIndex} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -178,6 +608,44 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+=======
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Business Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI-powered supply chain optimization can transform your operations and drive business growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Predictive Demand Forecasting</h3>
                   <p className="text-gray-300">AI algorithms analyze historical data, market trends, and external factors to predict demand with 95% accuracy</p>
@@ -313,6 +781,7 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-white mb-2">$1,299</div>
@@ -411,10 +880,61 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
                 Contact Sales
               </Button>
             </Card>
+=======
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
+                  plan.popular 
+                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10' 
+                    : 'border-white/10 hover:border-orange-500/50'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}
+                    <span className="text-lg text-gray-400">{plan.period}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
+                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                }`}>
+                  {plan.cta}
+                </button>
+              </motion.div>
+            ))}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Market Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -465,6 +985,57 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
               <Mail className="w-5 h-5 mr-2" />
               <span>kleber@ziontechgroup.com</span>
             </div>
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how organizations across industries leverage our AI supply chain optimization to improve efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {useCase.industry}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
 <<<<<<< HEAD
 
@@ -498,9 +1069,13 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
           </p>
         </div>
       </section>
+<<<<<<< HEAD
     </div>
   )}
 =======
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {/* Integrations Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -661,6 +1236,7 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
               </button>
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
+<<<<<<< HEAD
                 Schedule Demo;
               </button>;
             </div>;
@@ -668,6 +1244,15 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
+=======
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   );
 <<<<<<< HEAD
 }}

@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 =======
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import Link from 'next/link';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useTranslation } from 'react-i18next';
 const defaultContent = {
   products: {

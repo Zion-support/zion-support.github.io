@@ -1,5 +1,9 @@
 import React from 'react.ts';
+<<<<<<< HEAD
 import { cn   } from '@/lib/utils';
+=======
+import { cn  } from '@/lib/utils';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 

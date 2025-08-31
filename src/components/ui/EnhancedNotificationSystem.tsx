@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, createContext, useContext } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell export type NotificationType = 'success' | 'error' | 'warning' | 'info';
@@ -6,13 +7,21 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell export type Noti
 import React, { useState, useEffect, createContext, useContext  } from 'react.ts';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell   } from 'lucide-react.ts';
+=======
+import React, { useState, useEffect, createContext, useContext } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface Notification {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: anystring;
   type: NotificationType;
   title: string;
@@ -20,6 +29,7 @@ export interface Notification {
   duration?: number;
 action?: {;
     label: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     onClick: ()  => void;
   
@@ -40,6 +50,20 @@ interface NotificationContextType {
   addNotification: any(notification: Omit<Notification, 'id'>)   => void;
   removeNotification: any(id: string)   => void;
 clearAll: any()   => void;
+=======
+    onClick: ()  => void;
+  
+};
+}
+
+interface NotificationContextType {
+
+  notifications: anyNotification[];
+  addNotification: (notification: Omit<Notification, 'id'>)  => void;
+  removeNotification: any(id: string)  => void;
+  clearAll: any()  => void;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -57,8 +81,12 @@ export const useNotifications = () => {;
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
+<<<<<<< HEAD
 =======
     throw new Error('useNotifications must be used within a NotificationProvider')
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
   return context};
 
@@ -71,8 +99,12 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   const [notifications, setNotifications] = useState<any>([]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const addNotification = (notification: anyOmit<Notification, 'id'>)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const addNotification = (notification: anyOmit<Notification, 'id'>)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = {
   ...notification,;
@@ -104,6 +136,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const removeNotification = (id: anystring)   => {;
     setNotifications(prev => prev.filter(n => n.id !== id))};
 
@@ -124,6 +157,9 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 const NotificationContainer: React.FC = (): JSX.Element => {;
 =======;
   const removeNotification = (id: anystring)  => {;
+=======
+  const removeNotification = (id: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
@@ -148,8 +184,12 @@ const NotificationContainer: React.FC = (): JSX.Element => {;
   );
 };
 
+<<<<<<< HEAD
 const NotificationContainer: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+const NotificationContainer: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const { notifications, removeNotification, clearAll } = useNotifications();
 
   if (notifications.length === 0) return null;
@@ -231,6 +271,7 @@ interface NotificationItemProps extends React.PropsWithChildren<{}> {
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+<<<<<<< HEAD
   notification: anyNotification;
 <<<<<<< HEAD
   onRemove: (id: string)  => void;
@@ -244,6 +285,19 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+interface NotificationItemProps extends React.PropsWithChildren<{}> {
+
+  notification: anyNotification;
+  onRemove: (id: string)  => void;
+
+}
+
+const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
+  const getIcon = (type: anyNotificationType)  => {
+    switch (type) {
+      case 'success':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'error':
         return <AlertCircle className="w-5 h-5 text-red-400" />;
@@ -259,10 +313,16 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getBorderColor = (type: anyNotificationType)  => {;
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getBorderColor = (type: anyNotificationType)  => {
+    switch (type) {
+      case 'success':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return 'border-green-500/30';
       case 'error':
         return 'border-red-500/30';
@@ -278,10 +338,16 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getBackgroundColor = (type: anyNotificationType)  => {;
     switch (type) {;
       case 'success':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getBackgroundColor = (type: anyNotificationType)  => {
+    switch (type) {
+      case 'success':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return 'bg-green-500/10';
       case 'error':
         return 'bg-red-500/10';
@@ -355,6 +421,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
 // Utility functions for easy notification creation
 export const notify = {
+<<<<<<< HEAD
   success: any(title: string, message: string, options?: Partial<Notification>)   => {
     // This would be used with the context
 <<<<<<< HEAD
@@ -405,6 +472,20 @@ export const notify = {
   },
   info: (title: string, message: string, options?: Partial<Notification>)  => {
     // // // // // // // console.log('Info notification:', { title, message, ...options });
+=======
+  success: any(title: string, message: string, options?: Partial<Notification>)  => {
+    // This would be used with the context
+    console.log('Success notification: any', { title, message, ...options });
+  },
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Error notification: any', { title, message, ...options });
+  },
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Warning notification: any', { title, message, ...options });
+  },
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
+    console.log('Info notification:', { title, message, ...options });
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   }
 <<<<<<< HEAD
 };

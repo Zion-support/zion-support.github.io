@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class SitemapGenerator {
     config;
     constructor(config) {
@@ -6,6 +7,10 @@ export class SitemapGenerator {
             outputPath: './public/sitemap.xml',
             ...config
         };
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 =======
   outputPath: './public/sitemap.xml',
@@ -217,6 +222,7 @@ Crawl-delay: 1`;
               <div>
                 <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()}
               </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
         </div>
@@ -343,6 +349,40 @@ export const generator = new SitemapGenerator(config);
         throw error;
 
 };
+=======
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-medium mb-2">Main Pages:</h4>
+            <div className="space-y-1 text-sm">
+              {sitemapData.pages.map((page, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <span className="text-gray-700">{page.url}</span>
+                  <span className="text-gray-500">Priority: {page.priority}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-medium mb-2">Service Pages:</h4>
+            <div className="space-y-1 text-sm">
+              {sitemapData.services.map((service, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <span className="text-gray-700">{service.url}</span>
+                  <span className="text-gray-500">Priority: {service.priority}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default SitemapGenerator;
 <<<<<<< HEAD
 }}}}}}}}}

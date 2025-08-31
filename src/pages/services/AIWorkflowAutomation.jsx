@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 const AIWorkflowAutomation = () => {
+=======
+import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+const AIWorkflowAutomation = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const features = [
         {
             icon: Brain,
@@ -10,7 +15,11 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
             benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
+<<<<<<< HEAD
             icon: Workflow,
+=======
+            icon: GitFork,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             title: "Intelligent Workflow Design",
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
             benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
@@ -88,7 +97,11 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
         {
             name: "Robotic Process Automation",
             description: "RPA tools for repetitive task automation",
+<<<<<<< HEAD
             icon: Workflow
+=======
+            icon: GitFork
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         },
         {
             name: "Natural Language Processing",

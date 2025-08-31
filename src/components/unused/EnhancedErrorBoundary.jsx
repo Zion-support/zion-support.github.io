@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
+=======
+import React from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { motion } from 'framer-motion';
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
 class EnhancedErrorBoundary extends Component {
@@ -263,6 +267,7 @@ ${errorInfo.componentStack}
               <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">
                 <div className="mb-2">
                   <strong>Error:</strong> {error.toString()}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               </div>
@@ -359,5 +364,27 @@ ${errorInfo.componentStack}
         return this.props.children}
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                </div>
+                {errorInfo && errorInfo.componentStack && (
+                  <div>
+                    <strong>Component Stack:</strong>
+                    <pre className="whitespace-pre-wrap mt-1">{errorInfo.componentStack}</pre>
+                  </div>
+                )}
+              </div>
+            </details>
+          )}
+        </motion.div>
+      </div>
+    );
+
+    return fallback || defaultFallback;
+  }
+
+  return children;
+};
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default EnhancedErrorBoundary;
 }}}}}}}}}}}}}

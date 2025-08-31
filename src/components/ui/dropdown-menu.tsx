@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState } from 'react.ts';
 const DropdownMenu(...args[]):  {
+=======
+import React, { createContext, useContext, useState } from 'react.ts';
+const DropdownMenuContext = createContext(undefined);
+export function DropdownMenu(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
   { isOpen,
@@ -35,9 +41,13 @@ const DropdownMenu({ children }) {
 export function DropdownMenuTrigger(...args: any[]): any {
 =======
 }
+<<<<<<< HEAD
 export function DropdownMenuTrigger(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export function DropdownMenuTrigger(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
@@ -68,9 +78,13 @@ export function DropdownMenuContent(...args[]: any):  {;
 export function DropdownMenuContent(...args: any[]): any {
 =======
 }
+<<<<<<< HEAD
 export function DropdownMenuContent(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export function DropdownMenuContent(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
@@ -108,9 +122,13 @@ export function DropdownMenuItem(...args[]: any):  {
 export function DropdownMenuItem(...args: any[]): any {
 =======
 }
+<<<<<<< HEAD
 export function DropdownMenuItem(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export function DropdownMenuItem(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');

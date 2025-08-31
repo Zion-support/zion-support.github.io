@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift interface NewsletterFormData {
 
+=======
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react.ts';
+
+interface NewsletterFormData {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   email: string;
   firstName: string;
   interests: string[];
   frequency: 'weekly' | 'monthly' | 'quarterly';
+<<<<<<< HEAD
 =======
 import React, { useState  
 } from 'react.ts';
@@ -20,6 +30,9 @@ interface NewsletterFormData {
   firstName: string;
   interests: string[];
 frequency: 'weekly' | 'monthly' | 'quarterly';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -39,6 +52,7 @@ const frequencies = [;
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
   const [formData, setFormData] = useState<any>({;
     email: '',;
@@ -51,6 +65,18 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
 
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({ /* empty */ });
+=======
+export const EnhancedNewsletter: React.FC = (): JSX.Element => {
+  const [formData, setFormData] = useState<any>({
+    email: '',
+    firstName: '',
+    interests: [],
+    frequency: 'monthly'
+  });
+  
+  const [status, setStatus] = useState<any>('idle');
+  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const validateForm = (): boolean => {
     const newErrors: Partial<NewsletterFormData> = { /* empty */ };
@@ -94,8 +120,12 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
     return Object.keys(newErrors).length === 0};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
 
     if (!validateForm()) {
@@ -114,19 +144,26 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
       // Here you would typically send the data to your newsletter service
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       // // // console.log('Newsletter subscription:', formData);
 =======
       // // // // // // // console.log('Newsletter subscription:', formData);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       console.log('Newsletter subscription: any', formData);
       
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       setStatus('success');
 
       // Reset form after successful submission
+<<<<<<< HEAD
       setTimeout(()   => {
+=======
+      setTimeout(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         setFormData({
           email: '',
           firstName: '',
@@ -154,6 +191,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleInterestToggle = (interestId: anystring)  => {;
     setFormData(prev => ({;
       ...prev,;
@@ -161,6 +199,14 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
         ? prev.interests.filter(id  => id !== interestId);
         : [...prev.interests, interestId];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleInterestToggle = (interestId: anystring)  => {
+    setFormData(prev => ({
+      ...prev,
+      interests: anyprev.interests.includes(interestId)
+        ? prev.interests.filter(id  => id !== interestId)
+        : [...prev.interests, interestId]
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }));
 
     // Clear error when user selects an interest
@@ -173,6 +219,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
       setErrors(prev = > ({ ...prev, interests: null }))};
   };
 
+<<<<<<< HEAD
   const handleInputChange = (field: anykeyof NewsletterFormData, value: string | string[])   => {;
 =======;
       setErrors(prev => ({ ...prev, interests: null }));
@@ -182,6 +229,9 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
 
   const handleInputChange = (field: anykeyof NewsletterFormData, value: string | string[])  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleInputChange = (field: anykeyof NewsletterFormData, value: string | string[])  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setFormData(prev => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
@@ -428,6 +478,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
             Areas of Interest * (Select all that apply)
           </label>
           <div className="grid grid-cols-2 md: anygrid-cols-3 gap-3">
+<<<<<<< HEAD
             {interests.map((interest)   => {;
 =======;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
@@ -436,6 +487,9 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
           <div className="grid grid-cols-2 md: anygrid-cols-3 gap-3">;
             {interests.map((interest)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+            {interests.map((interest)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
 
@@ -481,7 +535,11 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {;
             Update Frequency
           </label>
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-3">
+<<<<<<< HEAD
             {frequencies.map((freq)   => (
+=======
+            {frequencies.map((freq)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <label
                 key={freq.value}
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${

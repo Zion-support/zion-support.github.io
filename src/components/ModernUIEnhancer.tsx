@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react.ts';
 import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
 import {
@@ -10,6 +11,20 @@ import {
   Layers,
   Settings,
   X
+=======
+import React, { useEffect, useState, useRef } from 'react.ts';
+import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
+import { Sparkles, 
+  Zap, 
+  Star, 
+  Palette, 
+  Eye, 
+  Layers,
+  Settings,
+  X
+ } from 'lucide-react.ts';
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 interface UISettings {
 
   glassmorphism: boolean;
@@ -19,6 +34,7 @@ interface UISettings {
   modernShadows: boolean;
   colorThemes: boolean;
   depthLayers: boolean;
+<<<<<<< HEAD
 
 export const ModernUIEnhancer: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +46,22 @@ enhancedAnimations: true,;
 modernShadows: true,;
 colorThemes: true,;
 depthLayers: true;
+=======
+
+}
+
+export const ModernUIEnhancer: React.FC = (): JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<any>({
+    glassmorphism: true,
+    particleEffects: true,
+    smoothScrolling: true,
+    enhancedAnimations: true,
+    modernShadows: true,
+    colorThemes: true,
+    depthLayers: true
+  });
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   
 });
 
@@ -485,6 +517,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
 
+<<<<<<< HEAD
     Object.entries(shadows).forEach(([key, value])  => {
       root.style.setProperty(`--shadow-${key}`, value);
     });
@@ -492,6 +525,15 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
   const enhanceTransitions = useCallback(() => {
     if (!enabled) return;
+=======
+  const toggleSetting = (setting: anykeyof UISettings)  => {
+    setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
+  };
+
+  const changeTheme = (theme: anystring)  => {
+    setActiveTheme(theme);
+  };
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
   return (

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 export default function OrderConfirmation() {
     const router = useRouter();
+=======
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+export default function OrderConfirmation() {
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const { orderId } = router.query;
     if (!orderId)
         return null;

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className = '', onClick, type = 'button', disabled = false }) {
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
     const variantClasses = {
@@ -21,6 +25,7 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { cva } from 'class-variance-authority';
@@ -80,3 +85,5 @@ Button.displayName = "Button";
 
 export { Button, buttonVariants };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

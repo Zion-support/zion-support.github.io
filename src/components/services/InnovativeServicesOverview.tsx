@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory   } from '../../data/innovativeServices2025';
 
@@ -7,14 +8,25 @@ interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory  } from '../../data/innovativeServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+import React, { useState, useMemo } from 'react.ts';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory  } from '../../data/innovativeServices2025';
+
+interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   maxServices?: number;
   category?: string;
 <<<<<<< HEAD
   showViewAllButton?: boolean;
+<<<<<<< HEAD
 =======
   showViewAllButton?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6,;
@@ -195,7 +207,11 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<<<<<<< HEAD
           {filteredServices.map((service)   => (
+=======
+          {filteredServices.map((service)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

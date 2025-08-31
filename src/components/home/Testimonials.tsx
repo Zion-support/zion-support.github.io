@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { ChevronLeft, ChevronRight, Star, Quote interface Testimonial {
@@ -13,6 +14,14 @@ interface Testimonial {
 
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react.ts';
+
+interface Testimonial {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: number;
   name: string;
   role: string;
@@ -22,14 +31,22 @@ interface Testimonial {
   avatar: string;
 <<<<<<< HEAD
   industry: string;
+<<<<<<< HEAD
 =======
 industry: string;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Testimonials: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+const Testimonials: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
@@ -93,7 +110,11 @@ const Testimonials: React.FC = (): JSX.Element => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+<<<<<<< HEAD
   const goToTestimonial = (index: anynumber)  => {;
+=======
+  const goToTestimonial = (index: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setCurrentIndex(index);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

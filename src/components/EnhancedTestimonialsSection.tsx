@@ -1,21 +1,34 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Star,
   Quote,
   ChevronLeft,
+=======
+import { Star, 
+  Quote, 
+  ChevronLeft, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ChevronRight,
   Globe,
   Building,
   Users,
   Award
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Testimonial {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   position: string;
@@ -27,8 +40,12 @@ interface Testimonial {
   results: string[];
 <<<<<<< HEAD
   avatar: string;
+<<<<<<< HEAD
 =======
 avatar: string;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -95,7 +112,11 @@ const testimonials: Testimonial[] = [
 
 ];
 
+<<<<<<< HEAD
 export default function EnhancedTestimonialsSection(...args[]: any):  {
+=======
+export default function EnhancedTestimonialsSection(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -122,8 +143,12 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
     setIsAutoPlaying(false)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const goToTestimonial = (index: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const goToTestimonial = (index: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)};
 
@@ -284,7 +309,11 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
 
                   {/* Results */}
                   <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+<<<<<<< HEAD
                     {currentTestimonialData.results.map((result, index)   => (
+=======
+                    {currentTestimonialData.results.map((result, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       <motion.div
                         key={result}
                         initial = {
@@ -421,7 +450,11 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
+<<<<<<< HEAD
               ].map((indicator, index)   => (
+=======
+              ].map((indicator, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <motion.div
                   key={indicator.label}
                   initial = {

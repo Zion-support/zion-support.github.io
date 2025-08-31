@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AnimatePresence, motion  } from 'framer-motion.ts';
 import { Accessibility,
     AlertTriangle,
@@ -41,6 +42,12 @@ import { Eye,
 =======
 import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
 import { Eye, 
+=======
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   EyeOff, 
   Type, 
   Volume2, 
@@ -48,6 +55,7 @@ import { Eye,
   Palette, 
   Monitor, 
   Smartphone,
+<<<<<<< HEAD
   Keyboard,
   MousePointer,
   Settings,
@@ -55,14 +63,30 @@ import { Eye,
   Check,
   AlertTriangle
  } from 'lucide-react.ts';
+=======
+  Tablet,
+  Zap,
+  Shield,
+  Target,
+  Award,
+  BarChart3,
+  Palette,
+  RotateCcw,
+  Save,
+  Loader2
+} from 'lucide-react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface AccessibilitySettings {
 
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
+<<<<<<< HEAD
   colorBlindMode: boolean;
   dyslexiaFriendly: boolean;
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicators: boolean;
@@ -90,6 +114,7 @@ interface AccessibilityAudit {
 
 export default function EnhancedAccessibilityEnhancer(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
   const [activeFeatures, setActiveFeatures] = useState<Set<string>>(new Set());
   const [auditResults, setAuditResults] = useState<any>([]);
   const [isAuditing, setIsAuditing] = useState(false);
@@ -102,6 +127,33 @@ export default function EnhancedAccessibilityEnhancer(...args: any[]): any {;
   const [colorBlindMode, setColorBlindMode] = useState(false);
 
 const accessibilityFeatures: AccessibilityFeature[] = [;
+=======
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicators: false,
+    colorBlindSupport: false,
+    dyslexiaFriendly: false,
+    autoRead: false,
+    voiceControl: false,
+    gestureControl: false,
+    fontSize: 16,
+    lineHeight: 1.5,
+    letterSpacing: 0,
+    colorScheme: 'light',
+    customColors: {
+      background: '#ffffff',
+      text: '#000000',
+      primary: '#3b82f6',
+      secondary: '#64748b'
+    }
+  });
+
+  const [features, setFeatures] = useState<AccessibilityFeature[]>([
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     {
 id: 'high-contrast',;
 name: 'High Contrast Mode',;
@@ -166,6 +218,134 @@ wcagLevel: 'AA';
     const feature = accessibilityFeatures.find(f => f.id === featureId);
     if (!feature) return;
 
+<<<<<<< HEAD
+=======
+  // Apply accessibility settings to the document
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    const body = document.body;
+
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      body.style.setProperty('--zion-bg', '#000000');
+      body.style.setProperty('--zion-text', '#ffffff');
+      body.style.setProperty('--zion-primary', '#ffff00');
+      body.style.setProperty('--zion-secondary', '#00ffff');
+    } else {
+      root.classList.remove('high-contrast');
+      body.style.removeProperty('--zion-bg');
+      body.style.removeProperty('--zion-text');
+      body.style.removeProperty('--zion-primary');
+      body.style.removeProperty('--zion-secondary');
+    }
+
+    // Large text mode
+    if (newSettings.largeText) {
+      root.style.fontSize = '18px';
+      root.style.setProperty('--zion-font-size', '18px');
+      root.style.setProperty('--zion-line-height', '1.6');
+    } else {
+      root.style.fontSize = '16px';
+      root.style.setProperty('--zion-font-size', '16px');
+      root.style.setProperty('--zion-line-height', '1.5');
+    }
+
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--zion-reduced-motion', 'reduce');
+      document.body.classList.add('reduced-motion');
+    } else {
+      root.style.removeProperty('--zion-reduced-motion');
+      document.body.classList.remove('reduced-motion');
+    }
+
+    // Custom colors
+    if (newSettings.colorScheme === 'custom') {
+      root.style.setProperty('--zion-custom-bg', newSettings.customColors.background);
+      root.style.setProperty('--zion-custom-text', newSettings.customColors.text);
+      root.style.setProperty('--zion-custom-primary', newSettings.customColors.primary);
+      root.style.setProperty('--zion-custom-secondary', newSettings.customColors.secondary);
+    }
+
+    // Dyslexia friendly
+    if (newSettings.dyslexiaFriendly) {
+      body.style.setProperty('--zion-font-family', 'OpenDyslexic, Arial, sans-serif');
+      body.style.setProperty('--zion-letter-spacing', '0.12em');
+      body.style.setProperty('--zion-word-spacing', '0.16em');
+    } else {
+      body.style.removeProperty('--zion-font-family');
+      body.style.removeProperty('--zion-letter-spacing');
+      body.style.removeProperty('--zion-word-spacing');
+    }
+
+    // Focus indicators
+    if (newSettings.focusIndicators) {
+      body.classList.add('enhanced-focus');
+    } else {
+      body.classList.remove('enhanced-focus');
+    }
+
+    setSettings(newSettings);
+  }, []);
+
+  // Initialize voice recognition
+  useEffect(() => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onresult = (event: any) => {
+        let finalTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          }
+        }
+        if (finalTranscript) {
+          setTranscript(finalTranscript);
+          handleVoiceCommand(finalTranscript.toLowerCase());
+        }
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
+
+      setVoiceRecognition(recognition);
+    }
+  }, []);
+
+  // Handle voice commands
+  const handleVoiceCommand = useCallback((command: string) => {
+    if (command.includes('open') || command.includes('show')) {
+      if (command.includes('accessibility') || command.includes('settings')) {
+        setIsOpen(true);
+      }
+    } else if (command.includes('close') || command.includes('hide')) {
+      setIsOpen(false);
+    } else if (command.includes('high contrast')) {
+      toggleFeature('high-contrast');
+    } else if (command.includes('large text')) {
+      toggleFeature('large-text');
+    } else if (command.includes('reduced motion')) {
+      toggleFeature('reduced-motion');
+    }
+  }, []);
+
+  // Toggle accessibility features
+  const toggleFeature = useCallback((featureId: string) => {
+    setFeatures(prev => prev.map(f => 
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+    ));
+
+    // Update active features
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setActiveFeatures(prev => {
       const newSet = new Set(prev);
       if (enabled) {
@@ -194,6 +374,7 @@ wcagLevel: 'AA';
         } else {
           setFontSize(16);
 
+<<<<<<< HEAD
         break;
 
       case 'reduced-motion':
@@ -253,6 +434,69 @@ const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
   const [settings, setSettings] = useState<any>(() => {
     const saved = localStorage.getItem('accessibility-settings');
     return saved ? JSON.parse(saved) : {
+=======
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Alt + A to open accessibility panel
+      if (event.altKey && event.key === 'a') {
+        event.preventDefault();
+        setIsOpen(true);
+      }
+      
+      // Escape to close
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+      
+      // Tab navigation enhancement
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+        setTimeout(() => {
+          document.body.classList.remove('keyboard-navigation');
+        }, 1000);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Save settings to localStorage
+  const saveSettings = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate save
+    } catch (error) {
+      console.error('Failed to save settings:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [settings]);
+
+  // Load settings from localStorage
+  const loadSettings = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      const saved = localStorage.getItem('zion-accessibility-settings');
+      if (saved) {
+        const parsedSettings = JSON.parse(saved);
+        setSettings(parsedSettings);
+        applyAccessibilitySettings(parsedSettings);
+      }
+      await new Promise(resolve => setTimeout(resolve, 500)); // Simulate load
+    } catch (error) {
+      console.error('Failed to load settings:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [applyAccessibilitySettings]);
+
+  // Reset to default settings
+  const resetSettings = useCallback(() => {
+    const defaultSettings: AccessibilitySettings = {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       highContrast: false,
       largeText: false,
       reducedMotion: false,
@@ -414,6 +658,7 @@ const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
     if (focusIndicator) {
       document.documentElement.classList.add('focus-visible');
     } else {
+<<<<<<< HEAD
       document.documentElement.classList.remove('focus-visible');
 
   }, [focusIndicator]);
@@ -508,6 +753,12 @@ const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
   const togglePanel = useCallback(() => {
     setIsVisible(prev => !prev);
   }, []);
+=======
+      voiceRecognition.start();
+      setIsListening(true);
+    }
+  }, [voiceRecognition, isListening]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   // Close panel
   const closePanel = useCallback(() => {
@@ -814,6 +1065,7 @@ const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
       </AnimatePresence>
     </>
   );
+<<<<<<< HEAD
 }}}}}}}}}}}}}}}}}}}
 =======
       <button
@@ -958,3 +1210,6 @@ const EnhancedAccessibilityEnhancer: React.FC = (): JSX.Element => {
 
 export default EnhancedAccessibilityEnhancer;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

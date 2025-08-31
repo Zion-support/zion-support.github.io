@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Rocket,
 	Brain,
 	Zap,
@@ -9,11 +10,23 @@ import { Rocket,
 	Heart,
 	DollarSign,
 	Eye,
+=======
+import { Rocket, 
+	Brain, 
+	Zap, 
+	Shield, 
+	Globe, 
+	TrendingUp, 
+	Heart, 
+	DollarSign, 
+	Eye, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 	Bot,
 	ArrowRight,
 	Star,
 	Play,
 	Pause
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
@@ -21,6 +34,11 @@ import { Rocket,
 interface ServiceShowcase {
 
 
+=======
+ } from 'lucide-react.ts';
+interface ServiceShowcase {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 	id: string;
 	title: string;
 	description: string;
@@ -31,8 +49,11 @@ interface ServiceShowcase {
 <<<<<<< HEAD
 	status: 'active' | 'beta' | 'new';
 
+<<<<<<< HEAD
 =======
 status: 'active' | 'beta' | 'new';
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const futuristicServices: ServiceShowcase[] = [
@@ -97,7 +118,11 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 
 ];
+<<<<<<< HEAD
 export default function FuturisticServicesShowcase(...args[]: any):  {
+=======
+export default function FuturisticServicesShowcase(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
@@ -114,9 +139,14 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
+<<<<<<< HEAD
 	const getStatusColor = (status: anystring)  => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+	const getStatusColor = (status: anystring)  => {
+		switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
@@ -128,9 +158,14 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 	const getStatusText = (status: anystring)  => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+	const getStatusText = (status: anystring)  => {
+		switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
 			case 'active': return 'ACTIVE';
@@ -329,7 +364,11 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 						Explore All Services
 					</h3>
 					<div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
 						{futuristicServices.map((service, index)   => (
+=======
+						{futuristicServices.map((service, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 							<motion.div
 								key={service.id}
 								initial = {

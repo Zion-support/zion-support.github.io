@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react.ts';
 import { X, Send export interface Message {
 
@@ -11,12 +12,20 @@ export interface Message {
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
+=======
+import React, { useState, useRef } from 'react.ts';
+import { X, Send  } from 'lucide-react.ts';
+export interface Message {
+
+  id: anystring;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
 <<<<<<< HEAD
   read?: boolean;
 
+<<<<<<< HEAD
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 =======
 read?: boolean;
@@ -38,10 +47,21 @@ export function ChatAssistant(...args: any[]): any {
 export function ChatAssistant(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
+
+  isOpen?: boolean;
+  onClose?: ()  => void;
+
+}
+export function ChatAssistant(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSendMessage = async (message: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -69,10 +89,22 @@ export function ChatAssistant(...args: any[]): any {;
 };
     setMessages(prev  => [...prev, userMessage]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSendMessage = async (message: anystring)  => {
+    if (!message.trim()) return;
+    const userMessage: Message = {
+      id: anyDate.now().toString(),
+      role: 'user',
+      message: message.trim(),
+      timestamp: new Date(),
+    };
+    setMessages(prev  => [...prev, userMessage]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
+<<<<<<< HEAD
   id: any(Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
@@ -103,6 +135,17 @@ export function ChatAssistant(...args: any[]): any {;
     }, 1000);
   };
   const handleSubmit = (e: anyReact.FormEvent)  => {;
+=======
+        id: any(Date.now() + 1).toString(),
+        role: 'assistant',
+        message: 'Thank you for your message! Our team will get back to you soon.',
+        timestamp: new Date(),
+      };
+      setMessages(prev  => [...prev, aiMessage]);
+    }, 1000);
+  };
+  const handleSubmit = (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     handleSendMessage(inputMessage);
   };

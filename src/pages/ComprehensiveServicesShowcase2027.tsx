@@ -29,7 +29,11 @@ import { Brain,
   MapPin,
   Globe as GlobeIcon,
   Atom,
+<<<<<<< HEAD
   Link,
+=======
+  // Blockchain icon removed - not available in lucide-react
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Heart,
   Scale,
   Factory,
@@ -56,12 +60,17 @@ import { Brain,
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from '../data/ultimateInnovativeServices2026';
 import { ALL_REVOLUTIONARY_SERVICES_2026   } from '../data/comprehensiveServices2026';
 =======
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices  } from '../data/comprehensiveServices';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
+import { comprehensiveServices } from '../data/comprehensiveServices';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface Service {
 
@@ -140,6 +149,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
         contactInfo: service.contactInfo;
       })});
 
+<<<<<<< HEAD
     // Add services from ALL_REVOLUTIONARY_SERVICES_2026
     ALL_REVOLUTIONARY_SERVICES_2026.forEach(service = > {;
 =======;
@@ -154,6 +164,10 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {;
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service = > {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+    // Add services from comprehensiveServices
+    comprehensiveServices.forEach(service => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       services.push({
         id: service.id,
         name: service.name,

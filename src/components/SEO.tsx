@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
+=======
+import React, { useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface SEOProps extends React.PropsWithChildren<{}> {
 
@@ -11,6 +16,15 @@ interface SEOProps extends React.PropsWithChildren<{}> {
   canonicalUrl?: string;
   ogType?: 'website' | 'article' | 'product' | 'profile' | 'book';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+<<<<<<< HEAD
+=======
+  ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   noindex?: boolean;
   nofollow?: boolean;
   author?: string;
@@ -145,6 +159,7 @@ export function SEO(...args: any[]): any {
       <meta name="yandex-verification" content="your-yandex-verification-code" />
     </Helmet>
   );
+<<<<<<< HEAD
 }}
 =======
       <title>{fullTitle}</title>
@@ -312,3 +327,6 @@ export function BlogPostSEO(...args: any[]): any {
   );
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

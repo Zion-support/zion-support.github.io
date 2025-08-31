@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react.ts';
 import { Link, useLocation  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Menu,
   X,
   Search,
   User,
   Bell,
+=======
+import { Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ChevronDown,
   Brain,
   Shield,
@@ -218,6 +226,7 @@ import { Menu,
   Psi,
   Omega
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
 =======
   } from 'lucide-react.ts';
@@ -226,6 +235,11 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+ } from 'lucide-react.ts';
+
+export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -249,8 +263,12 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
     setActiveDropdown(null)}, [location.pathname]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSearch = (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSearch = (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     if (searchQuery.trim()) {
 <<<<<<< HEAD
@@ -262,10 +280,14 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleDropdown = (dropdown: anystring)   => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
 =======
   const toggleDropdown = (dropdown: anystring)  => {;
+=======
+  const toggleDropdown = (dropdown: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

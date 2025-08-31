@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Phone,
   Mail,
   MapPin,
@@ -8,6 +9,15 @@ import { Phone,
   Linkedin,
   Twitter,
   Facebook,
+=======
+import { Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Instagram,
   ArrowUp,
   Heart,
@@ -24,6 +34,10 @@ import { Phone,
   MessageCircle,
   Zap as ZapIcon
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
 =======

@@ -1,6 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Brain,
   Cloud,
   Shield,
@@ -8,6 +9,15 @@ import { Brain,
   Code,
   BarChart3,
   Users,
+=======
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Globe, 
+  Code, 
+  BarChart3, 
+  Users, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ShoppingCart,
   MessageSquare,
   FileText,
@@ -20,11 +30,16 @@ import { Brain,
   Mail,
   MapPin
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import the new services
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ultimateInnovativeServices2025   } from '../../data/2025-ultimate-innovative-services-expansion';
 import { enterpriseITInfrastructureServices2025   } from '../../data/2025-enterprise-it-infrastructure-services';
@@ -38,6 +53,14 @@ import { innovativeMicroSaasSolutions2025  } from '../../data/2025-innovative-mi
 interface Service {
 
 
+=======
+import { ultimateInnovativeServices2025  } from '../../data/2025-ultimate-innovative-services-expansion';
+import { enterpriseITInfrastructureServices2025  } from '../../data/2025-enterprise-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025  } from '../../data/2025-innovative-micro-saas-solutions';
+
+interface Service {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   tagline: string;
@@ -67,7 +90,12 @@ contactInfo: {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 website: string;
+=======
+    website: string;
+  
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 };
   realImplementation: boolean;
   implementationDetails: string;
@@ -109,7 +137,11 @@ const categories = [
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
     color: any'from-purple-600 to-pink-700',
+<<<<<<< HEAD
     services: ultimateInnovativeServices2025.filter(s   => s.category.includes('AI'))
+=======
+    services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   },
   {
     id: 'it-infrastructure',
@@ -175,7 +207,11 @@ const patentStatusColors = {
 
 };
 
+<<<<<<< HEAD
 export function UltimateServicesShowcase(...args[]: any):  {
+=======
+export function UltimateServicesShowcase(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
@@ -185,9 +221,14 @@ export function UltimateServicesShowcase(...args[]: any):  {
     ...innovativeMicroSaasSolutions2025;
   ];
 
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'all'
     ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -348,7 +389,11 @@ export function UltimateServicesShowcase(...args[]: any):  {
 
             All Services ({allServices.length})
           </button>
+<<<<<<< HEAD
           {categories.map((category)   => (
+=======
+          {categories.map((category)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}

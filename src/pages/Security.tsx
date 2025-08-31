@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Security: React.FC = (): JSX.Element => (
+=======
+import React from 'react';
+
+const Security: React.FC = () => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Security</h1>
@@ -7,6 +13,7 @@ const Security: React.FC = (): JSX.Element => (
 		</div>
 	</div>
 );
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
@@ -571,3 +578,7 @@ export default function Security(...args: any[]): any {
     </div>
   );
 }
+=======
+
+export default Security;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -8,6 +9,19 @@ import { Brain,
   Heart,
   Globe,
   Shield,
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Rocket, 
+  Zap, 
+  Cpu, 
+  Heart, 
+  Globe, 
+  Shield, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Lock,
   TrendingUp,
   Star,
@@ -609,6 +623,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                     : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'
                 }`}
               >
+<<<<<<< HEAD
                 {tab.label}
                 <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                   {tab.count}
@@ -1191,10 +1206,13 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                 }}
                 className="text-zion-cyan hover:text-zion-blue transition-colors duration-300"
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 Clear all filters
               </button>
             </div>
           )}
+<<<<<<< HEAD
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
@@ -1220,25 +1238,65 @@ export default function RevolutionaryServices2030(...args: any[]): any {
               Don't wait for the future to arrive. Partner with Zion Tech Group and lead the transformation of your industry.
             </p>
 
+=======
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our team of revolutionary technology experts to discuss how our 2030 services can accelerate your success.
+            </p>
+            
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+              <div className="text-center">
+                <Mail className="h-8 w-8 text-zion-purple mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <MapPin className="h-8 w-8 text-zion-orange mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
 
+=======
+              >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <Mail className="mr-2 h-5 w-5" />
                 Get Started Today
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+<<<<<<< HEAD
 
                 <DollarSign className="mr-2 h-5 w-5" />
                 View Pricing
@@ -1390,3 +1448,16 @@ export default function RevolutionaryServices2030(...args: any[]): any {
 
 export default RevolutionaryServices2030;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+              >
+                <DollarSign className="mr-2 h-5 w-5" />
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

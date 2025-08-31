@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { DollarSign,
   TrendingUp,
   Clock,
   Users,
   Star,
+=======
+import { DollarSign, 
+  TrendingUp, 
+  Clock, 
+  Users, 
+  Star, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   CheckCircle,
   ArrowRight,
   ExternalLink,
@@ -21,6 +29,7 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { servicesCatalog  } from '../data/servicesCatalog';
 import { innovativeServices2027  } from '../data/innovativeServices2027';
@@ -39,6 +48,13 @@ import { innovativeServices2027  } from '../data/innovativeServices2027';
 
 export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+ } from 'lucide-react.ts';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { innovativeServices2027  } from '../data/innovativeServices2027';
+
+export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [priceRange, setPriceRange] = useState<any>('All');
@@ -80,6 +96,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
         category: category.name
       }))
     ),
+<<<<<<< HEAD
     ...innovativeServices2027.map(service   => ({
       ...service,;
       source: 'innovative',;
@@ -88,6 +105,16 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
       ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact';
     }));
+=======
+    ...innovativeServices2027.map(service  => ({
+      ...service,
+      source: 'innovative',
+      category: service.category,
+      features: service.features || [],
+      ctaLabel: service.ctaLabel || 'Get Started',
+      href: service.href || '/contact'
+    }))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   // Filter services based on search and category
@@ -137,6 +164,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
   ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriceRange = (price: anystring)   => {
 =======
 
@@ -148,14 +176,21 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 
   const getPriceRange = (price: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriceRange = (price: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High'};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriceColor = (price: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriceColor = (price: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -169,7 +204,11 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: anystring)   => {
+=======
+  const getCategoryIcon = (category: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -300,6 +339,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
 
                 {categories.map(category  => (
@@ -308,6 +348,11 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
               >
                 {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              >
+                {categories.map(category  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
                   </option>
@@ -319,6 +364,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
 
                 {priceRanges.map(range  => (
@@ -327,6 +373,11 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
               >
                 {priceRanges.map(range   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              >
+                {priceRanges.map(range  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
                   </option>
@@ -361,6 +412,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 
         {/* Services Grid */}
         <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
           initial = {
   { opacity: 0,
@@ -418,6 +470,14 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
         >
           {sortedServices.map((service, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        >
+          {sortedServices.map((service, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {

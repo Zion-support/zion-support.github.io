@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -199,6 +200,44 @@ import { HelpCircle,
 export default function Support(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('help');
   const [searchQuery, setSearchQuery] = useState('');
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { 
+  HelpCircle, 
+  MessageCircle, 
+  Mail, 
+  Phone, 
+  Clock, 
+  Users, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Search, 
+  FileText, 
+  Video, 
+  BookOpen, 
+  HelpCircle, 
+  Star, 
+  MapPin, 
+  Globe, 
+  Calendar,
+  Send,
+  Ticket,
+  Headphones,
+  MessageSquare,
+  VideoCall,
+  Mailbox
+} from 'lucide-react';
+
+const Support = () => {
+  const [selectedCategory, setSelectedCategory] = useState('general');
+  const [contactMethod, setContactMethod] = useState('email');
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const supportCategories = [
     {
@@ -228,6 +267,7 @@ export default function Support(...args: any[]): any {
       icon: Zap,
       description: 'Check service status',
       color: 'from-orange-500 to-red-500'
+<<<<<<< HEAD
     }
   ];
 
@@ -306,30 +346,50 @@ export default function Support(...args: any[]): any {
       description: 'Standard business hours support',
       response: 'Response within 4 hours',
       color: 'from-green-500 to-teal-500'
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
   ];
 
   const supportResources = [
     {
+<<<<<<< HEAD
       title: 'Documentation',
       description: 'Comprehensive technical guides and API references',
       icon: FileText,
       href: '/docs',
       color: 'from-blue-500 to-cyan-500'
+=======
+      title: 'Knowledge Base',
+      description: 'Browse our comprehensive documentation and guides',
+      icon: BookOpen,
+      action: 'Browse Docs',
+      color: 'from-indigo-500 to-purple-500'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Video,
+<<<<<<< HEAD
       href: '/tutorials',
       color: 'from-purple-500 to-pink-500'
+=======
+      action: 'Watch Videos',
+      color: 'from-pink-500 to-rose-500'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
+<<<<<<< HEAD
       href: '/community',
       color: 'from-green-500 to-emerald-500'
+=======
+      action: 'Join Forum',
+      color: 'from-teal-500 to-cyan-500'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       title: 'Training Programs',
@@ -722,6 +782,7 @@ export default function Support(...args: any[]): any {
               <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-xl flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-green-400" />
               </div>
+<<<<<<< HEAD
               <div>
                 <h3 className="text-2xl font-bold text-white">Knowledge Base</h3>
                 <p className="text-gray-400">Self-service help articles</p>
@@ -892,6 +953,15 @@ export default function Support(...args: any[]): any {
                 Check the current status of all our services and systems
               </p>
             </div>
+=======
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
               {[

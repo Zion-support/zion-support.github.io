@@ -82,6 +82,7 @@ const ModeToggle = () => {;
             <ResponsiveNavigation />
           </div>
 
+<<<<<<< HEAD
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -210,6 +211,8 @@ const ModeToggle = () => {;
             </div>
           </div>
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           {/* Mobile menu button */}
           <button
 <<<<<<< HEAD

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp export default function HealthcareSolutions() {
+=======
+import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+export default function HealthcareSolutions() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const solutions = [
         {
             icon: Heart,

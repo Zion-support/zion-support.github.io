@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Brain,
   Shield,
   Rocket,
@@ -9,6 +10,16 @@ import { Brain,
   Code,
   Users,
   Globe,
+=======
+import { Brain, 
+  Shield, 
+  Rocket, 
+  Lock, 
+  Cpu, 
+  Code, 
+  Users, 
+  Globe, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Heart,
   TrendingUp,
   Zap,
@@ -27,6 +38,7 @@ import { Brain,
   CheckCircle,
   Clock
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 =======
  } from 'lucide-react';
@@ -34,6 +46,12 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from '@/d
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function ServicesOverview(...args[]: any):  {
+=======
+ } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+
+export function ServicesOverview(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const serviceCategories = [
     {
       id: any'ai-analytics',
@@ -41,7 +59,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
       description: 'Cutting-edge artificial intelligence and advanced analytics solutions',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('AI'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('AI'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'quantum-computing',
@@ -49,7 +71,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Rocket,
       color: 'from-zion-blue to-zion-cyan',
       description: 'Next-generation quantum computing and quantum machine learning',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Quantum'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Quantum'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'blockchain',
@@ -57,7 +83,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Lock,
       color: 'from-zion-purple to-zion-blue',
       description: 'Decentralized solutions and blockchain technology platforms',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Blockchain'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Blockchain'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'iot-edge',
@@ -65,7 +95,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Cpu,
       color: 'from-zion-green to-zion-cyan',
       description: 'Internet of Things and edge computing solutions',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('IoT'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('IoT'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'cybersecurity',
@@ -73,7 +107,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Shield,
       color: 'from-zion-purple to-zion-red',
       description: 'Advanced security and threat protection solutions',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Cybersecurity'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Cybersecurity'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'digital-twin',
@@ -81,7 +119,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Server,
       color: 'from-zion-blue to-zion-purple',
       description: 'Virtual replicas and simulation platforms',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Digital Twin'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Digital Twin'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'sustainability',
@@ -89,7 +131,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Globe,
       color: 'from-zion-green to-zion-blue',
       description: 'Environmental monitoring and sustainability solutions',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Sustainability'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Sustainability'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'hr-talent',
@@ -97,7 +143,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Users,
       color: 'from-zion-pink to-zion-purple',
       description: 'Human resources and talent management platforms',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('HR'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('HR'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'content-creation',
@@ -105,7 +155,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: Code,
       color: 'from-zion-orange to-zion-purple',
       description: 'AI-powered content generation and management',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Content'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Content'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'legal-tech',
@@ -113,7 +167,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: FileText,
       color: 'from-zion-purple to-zion-cyan',
       description: 'Legal technology and compliance solutions',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('Legal'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Legal'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'fintech',
@@ -121,7 +179,11 @@ export function ServicesOverview(...args[]: any):  {
       icon: BarChart3,
       color: 'from-zion-green to-zion-blue',
       description: 'Financial technology and advisory platforms',
+<<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s   => s.category.includes('FinTech'))
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('FinTech'))
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       id: any'healthcare-ai',
@@ -130,6 +192,7 @@ export function ServicesOverview(...args[]: any):  {
       icon: Heart,
       color: 'from-zion-pink to-zion-purple',
       description: 'Healthcare artificial intelligence solutions',
+<<<<<<< HEAD
 <<<<<<< HEAD
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
 
@@ -144,6 +207,10 @@ export function ServicesOverview(...args[]: any):  {
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   return (
@@ -193,7 +260,11 @@ export function ServicesOverview(...args[]: any):  {
 
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+<<<<<<< HEAD
           {serviceCategories.map((category, index)   => (
+=======
+          {serviceCategories.map((category, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={category.id}
               className="group"
@@ -293,7 +364,11 @@ export function ServicesOverview(...args[]: any):  {
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)  => (
               <motion.div

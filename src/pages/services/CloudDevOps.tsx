@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -5,10 +6,45 @@ import { Cloud, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, S
 import { Link  } from 'react-router-dom.ts';
 =======
 import { Cloud,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Cloud, 
+  Code, 
+  CheckCircle, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Cpu,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  BarChart3,
+  TrendingUp,
+  Network,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Server,
+  Database,
+  Smartphone,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   GitBranch,
   Server,
   Zap,
   Shield,
+<<<<<<< HEAD
   Database,
   Globe,
   Cpu,
@@ -16,6 +52,10 @@ import { Cloud,
   BarChart3
  } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  Lock
+} from 'lucide-react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const CloudDevOps = () => {
   const services = [
@@ -26,6 +66,7 @@ const CloudDevOps = () => {
       features: ["Strategy planning", "Data migration", "Performance optimization", "Cost management"]
     },
     {
+<<<<<<< HEAD
       icon: <GitBranch className="w-8 h-8" />,
       title: "DevOps Automation",
       description: "Streamline development and operations with automated CI/CD pipelines and infrastructure as code.",
@@ -36,6 +77,16 @@ const CloudDevOps = () => {
       title: "Container Orchestration",
       description: "Manage and scale containerized applications with Kubernetes and Docker expertise.",
       features: ["Kubernetes management", "Docker optimization", "Auto-scaling", "Load balancing"]
+=======
+      icon: Code,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment pipelines for rapid delivery'
+    },
+    {
+      icon: Docker,
+      title: 'Containerization',
+      description: 'Docker and Kubernetes implementation for scalable application deployment'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       icon: <Zap className="w-8 h-8" />,
@@ -258,12 +309,63 @@ const CloudDevOps = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     "Faster deployment cycles",
     "Improved collaboration",
     "Reduced operational costs",
     "Enhanced security",
     "Better scalability",
     "24/7 monitoring"
+=======
+    'Deploy 10x faster with automated pipelines',
+    'Reduce infrastructure costs by 40%',
+    'Achieve 99.9% uptime with monitoring',
+    'Scale applications automatically',
+    'Improve team productivity by 60%',
+    'Ensure security and compliance'
+  ];
+
+  const services = [
+    {
+      icon: Server,
+      title: 'Infrastructure as Code',
+      description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
+    },
+    {
+      icon: Workflow,
+      title: 'CI/CD Automation',
+      description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
+    },
+    {
+      icon: Kubernetes,
+      title: 'Container Orchestration',
+      description: 'Kubernetes clusters with Helm charts and automated scaling'
+    },
+    {
+      icon: Database,
+      title: 'Database Management',
+      description: 'Automated database provisioning, backups, and scaling'
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: 'E-commerce',
+      description: 'Scalable infrastructure for high-traffic online stores'
+    },
+    {
+      industry: 'SaaS Platforms',
+      description: 'Multi-tenant applications with automated scaling'
+    },
+    {
+      industry: 'Financial Services',
+      description: 'Secure, compliant cloud infrastructure for banking applications'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'HIPAA-compliant cloud solutions for medical applications'
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   return (

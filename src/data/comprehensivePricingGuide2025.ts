@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface PricingTier {
 
   name: string;
@@ -11,6 +12,42 @@ export interface PricingTier {
   roi: string;
   implementationTime: string;
   supportLevel: string;
+=======
+export type PricingTier = {
+  name: string;
+  price: string;
+  billing: 'month' | 'year' | 'project' | 'hour';
+  description: string;
+  features: string[];
+  benefits: string[];
+  bestFor: string[];
+  popular?: boolean;
+};
+
+export type ServicePricing = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  pricingTiers: PricingTier[];
+  marketComparison: {
+    averageMarketPrice: string;
+    ourPrice: string;
+    savings: string;
+    valueProposition: string;
+  };
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+    address: string;
+  };
+};
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 }
 
@@ -891,5 +928,9 @@ export default comprehensivePricingGuide2025;}}}}}}}}}
   }
 ];
 
+<<<<<<< HEAD
 export default COMPREHENSIVE_PRICING_GUIDE_2025;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export default comprehensivePricingGuide2025;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { cn } from '../../lib/utils';
 =======
 <<<<<<< HEAD
@@ -40,5 +44,9 @@ const Textarea = React.forwardRef(({ className, ...props }, ref) => {
 
 Textarea.displayName = 'Textarea';
 
+<<<<<<< HEAD
 export { Textarea };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+export { Textarea };
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

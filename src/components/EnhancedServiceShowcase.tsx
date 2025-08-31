@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Brain,
   Cloud,
   Shield,
@@ -8,6 +9,15 @@ import { Brain,
   Users,
   Globe,
   Code,
+=======
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Code, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Database,
   Rocket,
   TrendingUp,
@@ -18,13 +28,20 @@ import { Brain,
   Award,
   CheckCircle
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -165,8 +182,12 @@ const categories = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -197,12 +218,20 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
 
     return () => observer.disconnect()}, []);
 
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'All Services'
     ? services: anyservices.filter(service  => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: anynumber)   => {
     return Array.from({ length: any5 }, (_, i)   => (
+=======
+  const filteredServices = selectedCategory === 'All Services' 
+    ? services: anyservices.filter(service  => service.category === selectedCategory);
+
+  const renderStars = (rating: anynumber)  => {
+    return Array.from({ length: any5 }, (_, i)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <Star
         key={i}
         className={`w-4 h-4 ${

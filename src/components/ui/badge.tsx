@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { cn  } from '@/lib/utils';
+=======
+import * as React from 'react.ts'
+import { cva, type VariantProps  } from 'class-variance-authority.ts'
+import { cn  } from '../../utils/cn'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
 const badgeVariants = cva(

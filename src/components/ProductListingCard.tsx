@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React, { useState } from 'react.ts';
 import { useNavigate, Link  } from 'react-router-dom.ts';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { ProductListing  } from '@/types/listings';
+<<<<<<< HEAD
 import { DollarSign import { RatingStars  } from '@/components/RatingStars';
 import { FavoriteButton  } from '@/components/FavoriteButton';
 import { useDispatch  } from 'react-redux.ts';
@@ -25,12 +29,28 @@ import { addItem  } from '@/store/cartSlice';
   listing: anyProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string)   => void;
+=======
+import { DollarSign  } from 'lucide-react.ts';
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+// Regular img tag will be used instead of next/image
+
+interface ProductListingCardProps extends React.PropsWithChildren<{}> {
+
+  listing: anyProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string)  => void;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
 <<<<<<< HEAD
   detailBasePath?: string;
+<<<<<<< HEAD
 =======
   detailBasePath?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -38,6 +58,12 @@ import { addItem  } from '@/store/cartSlice';
 <<<<<<< HEAD
 export function ProductListingCard(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
+}
+
+export function ProductListingCard(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -71,7 +97,11 @@ export function ProductListingCard(...args: any[]): any {;
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const handleRequestQuote = (e: anyReact.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();

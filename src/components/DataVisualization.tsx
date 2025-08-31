@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AnimatePresence, motion  } from 'framer-motion.ts';
 import { Activity,
     ArrowDown,
@@ -23,6 +24,15 @@ import { BarChart3,
   TrendingUp,
   Activity,
   Users,
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { BarChart3, 
+  PieChart, 
+  TrendingUp, 
+  Activity, 
+  Users, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   DollarSign,
   Calendar,
   Target,
@@ -33,12 +43,19 @@ import { BarChart3,
   Download,
   Share2,
   RefreshCw
+<<<<<<< HEAD
   } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ChartData {
 
 
+=======
+ } from 'lucide-react.ts';
+
+interface ChartData {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   labels: string[];
 datasets: {;
     label: string;
@@ -49,6 +66,7 @@ datasets: {;
     borderWidth: number;
   
 }[];
+<<<<<<< HEAD
 =======
     borderWidth: number}[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -56,6 +74,12 @@ datasets: {;
 interface MetricCard {
 
 
+=======
+}
+
+interface MetricCard {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   title: string;
   value: string | number;
   change: number;
@@ -63,21 +87,33 @@ interface MetricCard {
   icon: React.ReactNode;
 <<<<<<< HEAD
   color: string;
+<<<<<<< HEAD
 =======
 color: string;
 }
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+
+interface DataVisualizationProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
 <<<<<<< HEAD
   showActions?: boolean;
+<<<<<<< HEAD
 =======
   showActions?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",;
@@ -91,8 +127,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
+<<<<<<< HEAD
     labels['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets[{
+=======
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets: [{
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       label: 'Revenue',
       data[65, 59, 80, 81, 56, 55],
       backgroundColor['rgba(34, 221, 210, 0.2)'],
@@ -156,9 +197,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 <<<<<<< HEAD
     setChartData(prev = > ({
       ...prev,
+<<<<<<< HEAD
       datasets[{
         ...prev.datasets[0],
         data: anyprev.datasets[0].data.map(()   => Math.floor(Math.random() * 100) + 20)
+=======
+      datasets: any[{
+        ...prev.datasets[0],
+        data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       }]
 =======;
     setChartData(prev = > ({;
@@ -184,10 +231,16 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
   // Get change icon and color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getChangeDisplay = (change: anynumber, changeType: string)  => {;
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :;
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getChangeDisplay = (change: anynumber, changeType: string)  => {
+    const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
+                 changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                  <Minus className="w-4 h-4" />;
 
     const color = changeType === 'increase' ? 'text-green-400' :
@@ -317,6 +370,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       {/* Metrics Cards */}
       {showMetrics && (
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<<<<<<< HEAD
           {metrics.map((metric, index)   => {;
 =======;
 ;
@@ -325,6 +379,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
           {metrics.map((metric, index)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+          {metrics.map((metric, index)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div

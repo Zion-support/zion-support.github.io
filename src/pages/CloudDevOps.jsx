@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Cloud,
   Server,
@@ -8,6 +9,16 @@ import {
   Shield,
   CheckCircle,
   ArrowRight,
+=======
+import { 
+  Cloud, 
+  Server, 
+  GitFork, 
+  Zap, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Star,
   Users,
   Award,
@@ -50,8 +61,13 @@ const cloudDevOpsSolutions = [
     id: 2,
     title: "CI/CD Pipeline Development",
     description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
+<<<<<<< HEAD
     icon: GitBranch,
     features[
+=======
+    icon: GitFork,
+    features: [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       "Automated testing",
       "Build automation",
       "Deployment automation",
@@ -157,8 +173,12 @@ const cloudPlatforms = [
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
+<<<<<<< HEAD
     icon: GitBranch,
 <<<<<<< HEAD
+=======
+          icon: GitFork,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
 
 =======
@@ -325,7 +345,11 @@ export default function CloudDevOps() {
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
+<<<<<<< HEAD
                 <GitBranch className="w-4 h-4" />
+=======
+                <GitFork className="w-4 h-4" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">

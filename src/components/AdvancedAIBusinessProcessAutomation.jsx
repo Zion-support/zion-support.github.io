@@ -1,5 +1,10 @@
 import React, { useState, useRef } from 'react';
+<<<<<<< HEAD
 import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader const mockBusinessProcesses = [
+=======
+import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
+const mockBusinessProcesses = [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     {
         id: 'bp-001',
         name: 'Invoice Processing & Approval',

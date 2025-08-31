@@ -25,11 +25,16 @@ import { Check,
   DollarSign,
   Clock
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
 =======
  } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS   } from '@/data/expandedServices';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+} from "lucide-react";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 // Group services by category for better organization
 <<<<<<< HEAD
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;

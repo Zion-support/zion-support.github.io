@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { RecommendedRole   } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription   } from '@/components/ui/card';
 import { Badge   } from '@/components/ui/badge';
@@ -8,6 +9,20 @@ interface RoleCardProps extends React.PropsWithChildren<{}> {
 
   role: anyRecommendedRole;
   onInviteTalent: (talentId: string, roleTitle: string)   => void}
+=======
+import { RecommendedRole  } from '@/types';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { TalentCardPreview  } from './TalentCardPreview';
+import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react.ts'; // Added Briefcase
+
+interface RoleCardProps extends React.PropsWithChildren<{}> {
+
+  role: anyRecommendedRole;
+  onInviteTalent: (talentId: string, roleTitle: string)  => void;
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
   return (
@@ -36,7 +51,11 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
           <>
             <h4 className="text-sm font-medium text-muted-foreground mb-2.5">Suggested Talent ({role.matchedTalent.length}):</h4>
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-3">
+<<<<<<< HEAD
               {role.matchedTalent.map((talent)   => (
+=======
+              {role.matchedTalent.map((talent)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <TalentCardPreview
                   key={talent.id}
                   talent={talent}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Newspaper,
@@ -6,6 +7,17 @@ import { Newspaper,
   ArrowRight,
   Download,
   Mail,
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Newspaper, 
+  Calendar, 
+  User, 
+  ArrowRight, 
+  Download, 
+  Mail, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Phone,
   Globe,
   Award,
@@ -327,6 +339,7 @@ export default function Press(...args[]: any):  {
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
             initial = {
   { opacity: 0,
   y: 20 
@@ -360,6 +373,10 @@ export default function Press(...args[]: any):  {
 
 
 }}
+=======
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 
@@ -459,6 +476,9 @@ export default function Press(...args[]: any):  {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {/* Category Filters */}
       <section className="py-8 bg-zion-slate-dark border-b border-zion-cyan/20">
         <div className="container mx-auto px-4">
@@ -475,6 +495,7 @@ export default function Press(...args[]: any):  {
 
                 {category.name} ({category.count})
               </button>
+<<<<<<< HEAD
 =======
       {/* Press Releases */}
       <section className="py-20 px-4">
@@ -541,6 +562,8 @@ export default function Press(...args[]: any):  {
                 </a>
               </motion.article>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             ))}
           </div>
         </div>
@@ -1009,6 +1032,7 @@ export default function Press(...args[]: any):  {
 
               Contact Media Team
             </motion.button>
+<<<<<<< HEAD
 =======
             >
 <<<<<<< HEAD
@@ -1016,6 +1040,8 @@ export default function Press(...args[]: any):  {
               Download Complete Press Kit
             </a>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </motion.div>
         </div>
       </section>
@@ -1030,8 +1056,12 @@ export default function Press(...args[]: any):  {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}}}}}}}
 =======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

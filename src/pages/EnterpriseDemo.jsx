@@ -43,8 +43,15 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-zion-cyan"/>
                 </div>
+<<<<<<< HEAD
                 <CardTitle className="text-white text-2xl">Interactive Features</CardTitle>
               </CardHeader>
+=======
+                                <CardTitle>
+                  Interactive Demo
+                </CardTitle>
+                </CardHeader>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
                   See real-time demonstrations of AI matching, talent management, and marketplace features
@@ -57,7 +64,13 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-zion-cyan"/>
                 </div>
+<<<<<<< HEAD
                 <CardTitle className="text-white text-2xl">Expert Guidance</CardTitle>
+=======
+                <CardTitle>
+                  Expert Guidance
+                </CardTitle>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">

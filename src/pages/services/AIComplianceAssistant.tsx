@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Link   } from 'react-router-dom.ts';
 import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight   } from 'lucide-react.ts';
@@ -17,6 +18,13 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { Shield, 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { 
+  Shield, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   CheckCircle, 
   AlertTriangle, 
   FileText, 
@@ -36,6 +44,7 @@ import { Shield,
   Filter,
   Download,
   Share2
+<<<<<<< HEAD
  } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -90,6 +99,21 @@ import { Shield,
               </div>
               <h3 className="ml-3 text-xl font-semibold text-white">Features</h3>
 =======
+=======
+} from 'lucide-react';
+
+export default function AIComplianceAssistant() {
+  const frameworks = [
+    'SOC 2',
+    'ISO 27001',
+    'HIPAA',
+    'GDPR',
+    'PCI DSS',
+    'NIST CSF',
+  ];
+
+  const features = [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     {
       icon: Shield,
       title: "Automated Compliance Monitoring",
@@ -690,6 +714,7 @@ import { Shield,
               to reduce risk and maintain regulatory standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -704,6 +729,16 @@ import { Shield,
               >
                 Contact Sales
               </motion.button>
+=======
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
+                Get Started Today
+              </button>
+              <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
+                <Share2 className="w-5 h-5 mr-2 inline" />
+                Schedule Demo
+              </button>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             </div>
           </motion.div>
         </div>

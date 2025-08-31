@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight const AICodeReviewAssistant = () => {
+=======
+import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+const AICodeReviewAssistant = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const features = [
         {
             title: "Automated Security Vulnerability Detection",
@@ -22,8 +27,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
         {
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
+<<<<<<< HEAD
             icon: <GitBranch className="w-6 h-6"/>
 
+=======
+            icon: <GitFork className="w-6 h-6"/>
+        }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     ];
     const benefits = [
         {

@@ -1,7 +1,11 @@
 {
   "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
+<<<<<<< HEAD
   "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+=======
+  "description": "Leading AI solutions, quantum computing, and digital transformation services",
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -9,6 +13,7 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
+<<<<<<< HEAD
   "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
@@ -22,6 +27,39 @@
       "sizes": "32x32",
       "type": "image/png",
       "purpose": "any maskable"
+=======
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
       "src": "/apple-touch-icon.png",
@@ -33,13 +71,61 @@
       "src": "/images/zion-tech-group-logo.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
       "src": "/images/zion-tech-group-logo.png",
       "sizes": "512x512",
       "type": "image/png",
+<<<<<<< HEAD
       "purpose": "any maskable"
+=======
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our AI and technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/images/services-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/images/contact-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI Solutions",
+      "short_name": "AI Solutions",
+      "description": "Explore our AI-powered solutions",
+      "url": "/ai-services",
+      "icons": [
+        {
+          "src": "/images/ai-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
   ],
   "screenshots": [
@@ -122,6 +208,7 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
+<<<<<<< HEAD
   "capture_links": "new-client",
   "file_handlers": [
     {
@@ -133,12 +220,27 @@
       }
     }
   ],
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   "protocol_handlers": [
     {
       "protocol": "web+zion",
       "url": "/protocol-handler?url=%s"
     }
   ],
+<<<<<<< HEAD
+=======
+  "file_handlers": [
+    {
+      "action": "/file-handler",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "text/plain": [".txt"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+      }
+    }
+  ],
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   "share_target": {
     "action": "/share",
     "method": "POST",
@@ -163,10 +265,14 @@
   "features": [
     "Cross Platform",
     "fast",
+<<<<<<< HEAD
     "simple",
     "AI-Powered",
     "Quantum Computing",
     "Business Solutions"
+=======
+    "simple"
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ],
   "developer": {
     "name": "Zion Tech Group",

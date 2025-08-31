@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 =======
 import Link from "next/link";
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

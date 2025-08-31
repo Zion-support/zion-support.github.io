@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ProductListing   } from '@/types/listings';
+=======
+import { ProductListing  } from '@/types/listings';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications

@@ -4,6 +4,7 @@ type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
 
+<<<<<<< HEAD
 
   theme: anyTheme;
 <<<<<<< HEAD
@@ -12,6 +13,12 @@ interface ThemeContextType {
 =======
   setTheme: any(theme: Theme)   => void;
 isDark: boolean;
+=======
+  theme: anyTheme;
+  setTheme: (theme: Theme)  => void;
+  isDark: boolean;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -34,6 +41,7 @@ export const useTheme = () => {;
 <<<<<<< HEAD
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
+<<<<<<< HEAD
   children: React.ReactNode;
 =======
 interface ThemeProviderProps extends React.PropsWithChildren<{
@@ -50,6 +58,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<any>(() => {
     if (typeof window !== 'null') {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode;
+
+}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+  const [theme, setTheme] = useState<any>(() => {
+    if (typeof window !== 'undefined') {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
 <<<<<<< HEAD
@@ -123,11 +142,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     updateTheme();
     
+<<<<<<< HEAD
     if (theme = == 'system') {;
       const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
       mediaQuery.addEventListener('change', updateTheme);
       return ()   => mediaQuery.removeEventListener('change', updateTheme)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
+      mediaQuery.addEventListener('change', updateTheme);
+      return ()  => mediaQuery.removeEventListener('change', updateTheme);
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   }, [theme]);
 
   useEffect(() => {

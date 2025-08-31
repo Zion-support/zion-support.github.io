@@ -1,12 +1,20 @@
 import { useEffect, useRef, useState } from "react";
+<<<<<<< HEAD
 import { useRouter } from "next/router";
+=======
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchResultCard } from "@/components/search/SearchResultCard";
 import { SearchBar } from "@/components/SearchBar";
 const LIMIT = 20;
 export default function SearchResultsPage() {
+<<<<<<< HEAD
     const router = useRouter();
+=======
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({

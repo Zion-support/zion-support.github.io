@@ -265,6 +265,11 @@ export function Footer(...args: any[]): any {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
 <<<<<<< HEAD
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">

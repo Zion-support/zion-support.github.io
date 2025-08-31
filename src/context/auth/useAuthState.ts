@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useState, useEffect  } from 'react.ts';
 
 interface User {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   email: string;
   displayName?: string;
@@ -13,10 +19,17 @@ interface User {
   createdAt?: string;
 <<<<<<< HEAD
   updatedAt?: string;
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface AuthTokens {
+
   accessToken: string | null;
   refreshToken: string | null;
+<<<<<<< HEAD
 =======
 updatedAt?: string;
 }
@@ -30,6 +43,12 @@ refreshToken: string | null;
 }
 
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
+=======
+
+}
+
+export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
@@ -38,7 +57,11 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
     refreshToken: null
   });
 
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
@@ -332,6 +333,8 @@ export const contentOptimizer = new ContentOptimizer();}}}}}}}}}}}}}}}}}}}}}}}
 }
 export const contentOptimizer = new ContentOptimizer();
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -432,5 +435,8 @@ const ContentOptimizer = ({ content, onOptimize }) => {
 };
 
 export default ContentOptimizer;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

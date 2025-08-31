@@ -48,6 +48,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
   } from 'lucide-react.ts';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const EnhancedSidebar: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
@@ -61,6 +62,13 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
 
   const toggleSection = (section: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+export const EnhancedSidebar: React.FC = (): JSX.Element => {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
+  const location = useLocation();
+
+  const toggleSection = (section: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
 <<<<<<< HEAD
@@ -76,7 +84,11 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
     setExpandedSections(newExpanded)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
   const isActive = (path: anystring)   => location.pathname === path;
+=======
+  const isActive = (path: anystring)  => location.pathname === path;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const navigationSections = [
     {
@@ -101,12 +113,23 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
       items[
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
+<<<<<<< HEAD
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
         { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
         { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
         { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
         { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
         { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
+=======
+        { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },
+        { name: "IoT Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },
+        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },
+        { name: "Micro SaaS Products", href: "/services/micro-saas", icon: ShoppingCart },
+        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },
+        { name: "Helpdesk Platform", href: "/services/helpdesk", icon: HelpCircle },
+        { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },
+        { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       ]
     },
     {

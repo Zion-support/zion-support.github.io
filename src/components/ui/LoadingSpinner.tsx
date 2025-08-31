@@ -117,8 +117,13 @@ export function SkeletonLoader(...args: any[]): any {
   );
 }
 
+<<<<<<< HEAD
 // Skeleton loading component
 export function LoadingSkeleton(...args: any[]): any {
+=======
+// Optimized skeleton loader
+export function SkeletonLoader(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: anylines }).map((_, index)  => (
@@ -147,6 +152,9 @@ export function ButtonLoader(...args: any[]): any {
 
 // Page loading overlay
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function PageLoaderOverlay(...args: any[]): any {
   return (
     <motion.div

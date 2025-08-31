@@ -1,10 +1,18 @@
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Brain,
   Cpu,
   Cloud,
   Shield,
   Rocket,
+=======
+import { Brain, 
+  Cpu, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Zap,
   ArrowRight,
   CheckCircle,
@@ -26,6 +34,7 @@ import { Brain,
   ExternalLink,
   Search
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   } from 'lucide-react.ts';
@@ -42,6 +51,14 @@ import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 interface Service {
 
 
+=======
+ } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { EXPANDED_INNOVATIVE_SERVICES_2025  } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
+interface Service {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -63,7 +80,12 @@ interface Service {
 contactInfo: {;
     phone: string;
     email: string;
+<<<<<<< HEAD
 website: string;
+=======
+    website: string;
+  
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 };
   technicalSpecs?: {
     technology: string[];
@@ -84,12 +106,19 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
 const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
 =======
 }
+<<<<<<< HEAD
 const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
@@ -114,8 +143,15 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+<<<<<<< HEAD
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: anystring)   => {
+=======
+      return matchesCategory && matchesInnovationLevel && matchesSearch;
+    });
+  }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
+  const getCategoryIcon = (category: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;
@@ -161,10 +197,16 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getInnovationLevelColor = (level: anystring)  => {;
     switch (level) {;
       case 'Cutting-edge':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getInnovationLevelColor = (level: anystring)  => {
+    switch (level) {
+      case 'Cutting-edge':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -263,6 +305,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
 
                 {categories.map(category  => (
@@ -271,6 +314,11 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
               >
                 {categories.map(category   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -284,6 +332,7 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
 
                 {innovationLevels.map(level  => (
@@ -292,6 +341,11 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
               >
                 {innovationLevels.map(level   => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {innovationLevels.map(level  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>
@@ -305,7 +359,11 @@ const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {filteredServices.map((service, index)   => (
+=======
+            {filteredServices.map((service, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={service.id}
                 initial = {

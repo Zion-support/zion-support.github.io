@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -15,6 +16,15 @@ interface Service {
 
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react.ts';
+
+interface Service {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   category: string;
 icon: React.ComponentType<{ className?: string;
 }>;
@@ -32,8 +42,14 @@ description?: string;
 
 interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
 
+<<<<<<< HEAD
   services: Service[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  services: Service[];
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
@@ -79,7 +95,11 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 lg:gap-12">
+<<<<<<< HEAD
           {services.map((service, index)   => (
+=======
+          {services.map((service, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

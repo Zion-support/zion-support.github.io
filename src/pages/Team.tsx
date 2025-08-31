@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Team: React.FC = (): JSX.Element => (
+=======
+import React from 'react';
+
+const Team: React.FC = () => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
@@ -7,6 +13,7 @@ const Team: React.FC = (): JSX.Element => (
 		</div>
 	</div>
 );
+<<<<<<< HEAD
 =======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
@@ -429,3 +436,7 @@ export default function Team(...args: any[]): any {
     </div>
   );
 }
+=======
+
+export default Team;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

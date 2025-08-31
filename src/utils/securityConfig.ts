@@ -1,49 +1,18 @@
+// Security Configuration and Utilities
 export const securityConfig = {
   // Content Security Policy
   csp: {
     'default-src': ["'self'"],
-    'script-src': [
-      "'self'",
-      "'unsafe-inline'",
-      "'unsafe-eval'", // Required for React development
-      'https://www.googletagmanager.com',
-      'https://www.google-analytics.com',
-      'https://js.stripe.com',
-    ],
-    'style-src': [
-      "'self'",
-      "'unsafe-inline'",
-      'https://fonts.googleapis.com',
-      'https://cdn.jsdelivr.net',
-    ],
-    'font-src': [
-      "'self'",
-      'https://fonts.gstatic.com',
-      'https://cdn.jsdelivr.net',
-    ],
-    'img-src': [
-      "'self'",
-      'data:',
-      'https:',
-      'https://www.google-analytics.com',
-      'https://www.googletagmanager.com',
-    ],
-    'connect-src': [
-      "'self'",
-      'https://api.stripe.com',
-      'https://www.google-analytics.com',
-      'https://www.googletagmanager.com',
-      'wss:',
-      'ws:',
-    ],
-    'frame-src': [
-      "'self'",
-      'https://js.stripe.com',
-      'https://hooks.stripe.com',
-    ],
+    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+    'style-src': ["'self'", "'unsafe-inline'"],
+    'img-src': ["'self'", 'data:', 'https:'],
+    'font-src': ["'self'", 'https:'],
+    'connect-src': ["'self'", 'https:'],
+    'frame-src': ["'none'"],
     'object-src': ["'none'"],
     'base-uri': ["'self'"],
     'form-action': ["'self'"],
+<<<<<<< HEAD
     'frame-ancestors': ["'self'"],
     'upgrade-insecure-requests': [],
   
@@ -61,6 +30,13 @@ export const securityConfig = {
   },
 
   // Rate Limiting
+=======
+    'frame-ancestors': ["'none'"],
+    'upgrade-insecure-requests': true
+  },
+
+  // Rate limiting configuration
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
@@ -69,23 +45,41 @@ export const securityConfig = {
     legacyHeaders: false,
   },
 
-  // JWT Configuration
-  jwt: {
-    secret: process.env.JWT_SECRET || 'your-secret-key',
-    expiresIn: '24h',
-    refreshExpiresIn: '7d',
-    algorithm: 'HS256',
+  // Input validation patterns
+  validation: {
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    phone: /^\+?[\d\s\-\(\)]{10,}$/,
+    name: /^[a-zA-Z\s\-']{2,50}$/,
+    username: /^[a-zA-Z0-9_-]{3,20}$/,
+    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+    url: /^https?:\/\/[^\s/$.?#].[^\s]*$/,
+    alphanumeric: /^[a-zA-Z0-9\s]+$/,
+    numeric: /^\d+$/,
+    decimal: /^\d+(\.\d{1,2})?$/
   },
 
-  // Password Requirements
-  password: {
-    minLength: 12,
-    requireUppercase: true,
-    requireLowercase: true,
-    requireNumbers: true,
-    requireSpecialChars: true,
+  // Security headers
+  headers: {
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  }
+};
+
+// Input sanitization functions
+export const sanitizeInput = {
+  // Remove potentially dangerous HTML tags
+  html: (input: string): string => {
+    return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+                .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi, '')
+                .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, '');
   },
 
+<<<<<<< HEAD
   // Session Configuration
   session: {
     secret: process.env.SESSION_SECRET || 'your-session-secret',
@@ -118,13 +112,88 @@ export const securityMiddleware = (req: any, res: , next: )  => {
   Object.entries(securityConfig.headers).forEach(([key, value]) => {;
     res.setHeader(key, value);
   });
+=======
+  // Sanitize SQL injection attempts
+  sql: (input: string): string => {
+    const dangerousPatterns = [
+      /(\b(union|select|insert|update|delete|drop|create|alter|exec|execute)\b)/gi,
+      /(--|#|\/\*|\*\/)/g,
+      /(\b(and|or)\b\s+\d+\s*[=<>])/gi,
+      /(\b(and|or)\b\s+['"][^'"]*['"]\s*[=<>])/gi
+    ];
+    
+    return dangerousPatterns.reduce((sanitized, pattern) => 
+      sanitized.replace(pattern, ''), input);
+  },
 
-  // Set CSP header
-  res.setHeader('Content-Security-Policy', generateCSPHeader());
+  // Sanitize XSS attempts
+  xss: (input: string): string => {
+    return input.replace(/javascript:/gi, '')
+                .replace(/on\w+\s*=/gi, '')
+                .replace(/<script/gi, '&lt;script')
+                .replace(/<\/script>/gi, '&lt;/script&gt;');
+  },
 
-  next();
+  // General sanitization
+  general: (input: string): string => {
+    return input.trim()
+                .replace(/\s+/g, ' ')
+                .replace(/[<>]/g, '');
+  }
 };
 
+// Validation functions
+export const validateInput = {
+  email: (email: string): boolean => {
+    return securityConfig.validation.email.test(email);
+  },
+
+  phone: (phone: string): boolean => {
+    return securityConfig.validation.phone.test(phone);
+  },
+
+  name: (name: string): boolean => {
+    return securityConfig.validation.name.test(name);
+  },
+
+  username: (username: string): boolean => {
+    return securityConfig.validation.username.test(username);
+  },
+
+  password: (password: string): boolean => {
+    return securityConfig.validation.password.test(password);
+  },
+
+  url: (url: string): boolean => {
+    return securityConfig.validation.url.test(url);
+  },
+
+  alphanumeric: (input: string): boolean => {
+    return securityConfig.validation.alphanumeric.test(input);
+  },
+
+  numeric: (input: string): boolean => {
+    return securityConfig.validation.numeric.test(input);
+  },
+
+  decimal: (input: string): boolean => {
+    return securityConfig.validation.decimal.test(input);
+  }
+};
+
+// CSRF protection utilities
+export const csrfProtection = {
+  generateToken: (): string => {
+    return Math.random().toString(36).substring(2) + Date.now().toString(36);
+  },
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
+
+  validateToken: (token: string, storedToken: string): boolean => {
+    return token === storedToken && token.length > 0;
+  }
+};
+
+<<<<<<< HEAD
 // Input sanitization
 export const sanitizeInput = (input: anystring): string  => {
   return input
@@ -155,3 +224,45 @@ export const generateCSRFToken = (): string => {;
 export const validateCSRFToken = (token: anystring, storedToken: string): boolean  => {;
   return token === storedToken && token.length > 0;
 };
+=======
+// Password strength checker
+export const passwordStrength = {
+  check: (password: string): {
+    score: number;
+    feedback: string[];
+    strength: 'weak' | 'medium' | 'strong' | 'very-strong';
+  } => {
+    const feedback: string[] = [];
+    let score = 0;
+
+    // Length check
+    if (password.length >= 8) score += 1;
+    else feedback.push('Password should be at least 8 characters long');
+
+    // Character variety checks
+    if (/[a-z]/.test(password)) score += 1;
+    else feedback.push('Include lowercase letters');
+
+    if (/[A-Z]/.test(password)) score += 1;
+    else feedback.push('Include uppercase letters');
+
+    if (/\d/.test(password)) score += 1;
+    else feedback.push('Include numbers');
+
+    if (/[@$!%*?&]/.test(password)) score += 1;
+    else feedback.push('Include special characters');
+
+    // Strength classification
+    let strength: 'weak' | 'medium' | 'strong' | 'very-strong';
+    if (score <= 2) strength = 'weak';
+    else if (score <= 3) strength = 'medium';
+    else if (score <= 4) strength = 'strong';
+    else strength = 'very-strong';
+
+    return { score, feedback, strength };
+  }
+};
+
+// Export default security configuration
+export default securityConfig;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

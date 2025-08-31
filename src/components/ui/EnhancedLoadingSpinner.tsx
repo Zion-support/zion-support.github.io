@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Loader2, Zap, Brain, Rocket, Globe  } from 'lucide-react.ts';
+
+interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   message?: string;
   showProgress?: boolean;
@@ -9,10 +17,15 @@ import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProp
   variant?: 'default' | 'ai' | 'tech' | 'global';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+<<<<<<< HEAD
 =======
 import React from 'react.ts';
 import { motion  
 } from 'framer-motion.ts';
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
@@ -252,6 +265,11 @@ interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
   message?: string;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({;
   isOpen,

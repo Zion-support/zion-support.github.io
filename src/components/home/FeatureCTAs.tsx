@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { ArrowRight,
   Users,
   Zap,
@@ -11,6 +12,15 @@ import { ArrowRight,
   Search,
   MessageSquare,
   Smartphone,
+=======
+import { ArrowRight, 
+  Users, 
+  Zap, 
+  Settings, 
+  Search, 
+  MessageSquare, 
+  Smartphone, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Calendar,
   BookOpen,
   Code,
@@ -33,12 +43,18 @@ import { ArrowRight,
   Shield,
   Cloud
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function FeatureCTAs(...args: any[]): any {
 =======
   } from 'lucide-react.ts';
 
 export function FeatureCTAs(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+ } from 'lucide-react.ts';
+
+export function FeatureCTAs(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const features = [
     {
       title: "AI Services & Solutions",
@@ -184,7 +200,11 @@ export function FeatureCTAs(...args[]: any):  {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<<<<<<< HEAD
           {features.map((feature, index)   => (
+=======
+          {features.map((feature, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">

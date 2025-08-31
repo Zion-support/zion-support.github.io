@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { cn  } from '@/lib/utils';
@@ -12,6 +13,14 @@ import { NavLink   } from 'react-router-dom.ts';
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp   } from 'lucide-react.ts';
 export function MainNavigation(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { cn } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
+export function MainNavigation({ className }) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 <<<<<<< HEAD
@@ -23,6 +32,7 @@ export function MainNavigation(...args[]: any):  {
 =======;
     const [isCompanyOpen, setIsCompanyOpen] = useState(false);
     const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+<<<<<<< HEAD
     return (<nav className = {
   cn("hidden md:flex items-center space-x-6",
   className)
@@ -34,6 +44,9 @@ export function MainNavigation(...args[]: any):  {
 
 }>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+    return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
       </NavLink>
@@ -130,21 +143,30 @@ export function MainNavigation(...args[]: any):  {
       </div>
       {/* Comp Dropdown */}
       <div className="relative group">
+<<<<<<< HEAD
         <button
           onMouseEnter={() => setIsCompOpen(true)}
           onMouseLeave={() => setIsCompOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
+=======
+        <button onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <Building2 className="w-4 h-4" />
           <span>Company</span>
           <ChevronDown className="w-3 h-3" />
         </button>
+<<<<<<< HEAD
         {isCompOpen && (
           <div
             onMouseEnter={() => setIsCompOpen(true)}
             onMouseLeave={() => setIsCompOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
+=======
+        {isCompanyOpen && (
+          <div onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
@@ -160,21 +182,29 @@ export function MainNavigation(...args[]: any):  {
       </div>
       {/* Resources Dropdown */}
       <div className="relative group">
+<<<<<<< HEAD
         <button
           onMouseEnter={() => setIsResourcesOpen(true)}
           onMouseLeave={() => setIsResourcesOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
+=======
+        <button onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <FileText className="w-4 h-4" />
           <span>Resources</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         {isResourcesOpen && (
+<<<<<<< HEAD
           <div
             onMouseEnter={() => setIsResourcesOpen(true)}
             onMouseLeave={() => setIsResourcesOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
+=======
+          <div onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>

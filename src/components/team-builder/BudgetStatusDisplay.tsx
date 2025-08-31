@@ -1,23 +1,45 @@
+<<<<<<< HEAD
 import { Progress   } from '@/components/ui/progress';
 import { Alert, AlertDescription, AlertTitle   } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
 import { Badge   } from '@/components/ui/badge'; // Badge not used, but kept for consistency
 import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info   } from 'lucide-react.ts';
 import { Card   } from '@/components/ui/card'; // Added missing import
+=======
+import { Progress  } from '@/components/ui/progress';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
+import { Badge  } from '@/components/ui/badge'; // Badge not used, but kept for consistency
+import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react.ts';
+import { Card  } from '@/components/ui/card'; // Added missing import
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
   projectBriefBudget: string; // e.g., "$10,000 - $15,000", "< $20000", "Approx $30k"
 estimatedCost: { // From TeamRecommendation;
     min: number;
+<<<<<<< HEAD
     max: number}}
 
 // Helper to parse budget string (very basic, needs improvement for production)
 const parseBudget = (budgetString: anystring): { min: number | null; max: number | null }   => {
+=======
+    max: number;
+  
+};
+}
+
+// Helper to parse budget string (very basic, needs improvement for production)
+const parseBudget = (budgetString: anystring): { min: number | null; max: number | null }  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g, ''); // Clean string
 
   let max: number | null = null;
 
+<<<<<<< HEAD
   const kTo1000 = (val: anystring)   => parseFloat(val.replace('k', '')) * 1000;
+=======
+  const kTo1000 = (val: anystring)  => parseFloat(val.replace('k', '')) * 1000;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   if (budgetString.includes('-')) {
     const parts = budgetString.split('-');

@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Wrench,
   Zap,
   Shield,
   CheckCircle,
   ArrowRight,
+=======
+import { 
+  Wrench, 
+  Zap, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Star,
   Users,
   Award,
@@ -66,10 +75,13 @@ import {
   Shield,
   Zap,
   Wrench
+<<<<<<< HEAD
 =======
   Monitor,
   HardDrive,
   Router
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 } from 'lucide-react';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

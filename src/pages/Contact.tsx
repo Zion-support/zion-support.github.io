@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Contact: React.FC = (): JSX.Element => {
 =======
 import React, { useState } from 'react.ts';
@@ -107,6 +108,26 @@ export default function Contact(...args: any[]): any {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
+=======
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-24 text-center text-white">
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Contact Us
+        </h1>
+        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+          We'd love to hear about your project. Reach us via any of the channels below.
+        </p>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
+              <div className="space-y-4 text-left">
+                <div className="flex items-center space-x-3">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <span className="text-2xl">📞</span>
                   <div>
                     <p className="text-white font-medium">Phone</p>
@@ -183,6 +204,7 @@ export default function Contact(...args: any[]): any {
           </div>
 =======
 
+<<<<<<< HEAD
             {/* Response Time */}
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30">
               <h3 className="text-2xl font-bold text-white mb-4">Fast Response Guarantee</h3>
@@ -385,3 +407,6 @@ export default function Contact(...args: any[]): any {
     </div>
   );
 }
+=======
+export default Contact;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -5,6 +5,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -20,10 +21,46 @@ export default defineConfig({
   build: {
     target: 'es2020',
     minify: 'terser',
+=======
+  root: '.',
+  base: '/',
+  build: {
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
+          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `images/[name]-[hash][extname]`;
+          }
+          if (/css/i.test(ext)) {
+            return `css/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        }
+      }
+    },
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
       },
     },
@@ -55,12 +92,36 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   },
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
+<<<<<<< HEAD
       '@radix-ui/react-accordion',
       '@radix-ui/react-alert-dialog',
       '@radix-ui/react-aspect-ratio',
@@ -82,20 +143,54 @@ export default defineConfig({
       '@radix-ui/react-tabs',
       '@radix-ui/react-toast',
       '@radix-ui/react-tooltip',
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       'framer-motion',
       'lucide-react',
       'clsx',
+<<<<<<< HEAD
       'class-variance-authority',
       'tailwind-merge',
+=======
+      'tailwind-merge'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     ],
   },
   server: {
     port: 3000,
     host: true,
     open: true,
+<<<<<<< HEAD
+=======
+    cors: true,
+    hmr: {
+      overlay: false
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   },
   preview: {
     port: 4173,
     host: true,
+<<<<<<< HEAD
   },
+=======
+    open: true
+  },
+  css: {
+    devSourcemap: true,
+    postcss: './postcss.config.js'
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 })

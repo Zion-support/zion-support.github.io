@@ -25,6 +25,7 @@ import { Phone,
   Sun,
   Moon,
   Globe2,
+<<<<<<< HEAD
   Infinity,
   Alpha,
   Beta,
@@ -97,11 +98,90 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  ShieldCheck,
+  Leaf,
+  Scale,
+  Building2,
+  Car,
+  Home,
+  Factory,
+  City,
+  CheckCircle,
+  ArrowUpRight,
+  Play,
+  MailIcon,
+  Calendar,
+  User,
+  Handshake,
+  Briefcase,
+  FileText as FileTextIcon,
+  Users as UsersIcon,
+  Code as CodeIcon,
+  HelpCircle as HelpCircleIcon,
+  DollarSign as DollarSignIcon,
+  Users as UsersIcon2,
+  Calendar as CalendarIcon,
+  Shield as ShieldIcon,
+  BookOpen as BookOpenIcon,
+  Factory as FactoryIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Heart as HeartIcon,
+  TrendingUp as TrendingUpIcon,
+  Building as BuildingIcon,
+  Rocket as RocketIcon,
+  Atom as AtomIcon,
+  Cloud as CloudIcon,
+  Shield as ShieldIcon2,
+  ShoppingCart as ShoppingCartIcon2,
+  Users as UsersIcon3,
+  BookOpen as BookOpenIcon2,
+  FileText as FileTextIcon2,
+  Users as UsersIcon4,
+  Code as CodeIcon2,
+  HelpCircle as HelpCircleIcon2,
+  DollarSign as DollarSignIcon2,
+  Users as UsersIcon5,
+  Calendar as CalendarIcon2,
+  Shield as ShieldIcon3,
+  BookOpen as BookOpenIcon3,
+  Factory as FactoryIcon2,
+  ShoppingCart as ShoppingCartIcon3,
+  Heart as HeartIcon2,
+  TrendingUp as TrendingUpIcon2,
+  Building as BuildingIcon2,
+  Rocket as RocketIcon2,
+  Atom as AtomIcon2,
+  Cloud as CloudIcon2,
+  Shield as ShieldIcon4,
+  ShoppingCart as ShoppingCartIcon4,
+  Users as UsersIcon6,
+  BookOpen as BookOpenIcon4,
+  FileText as FileTextIcon3,
+  Users as UsersIcon7,
+  Code as CodeIcon3,
+  HelpCircle as HelpCircleIcon3,
+  DollarSign as DollarSignIcon3,
+  Users as UsersIcon8,
+  Calendar as CalendarIcon3,
+  Shield as ShieldIcon5,
+  BookOpen as BookOpenIcon5
+} from 'lucide-react';
+
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
+<<<<<<< HEAD
       title: 'Explore',
+=======
+      title: 'AI & Machine Learning Services',
+      featured: true,
+      icon: Brain,
+      color: 'from-purple-500 to-cyan-500',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       links: [
         { name: 'Services', href: '/services' },
         { name: 'AI Services', href: '/ai-services' },
@@ -141,6 +221,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
         { name: 'Terms of Service', href: '/terms', featured: false },
         { name: 'Privacy Policy', href: '/privacy', featured: false }
       ]
+<<<<<<< HEAD
     };
 =======;
         { name: 'Investor Relations', href: '/investors', featured: false },;
@@ -173,6 +254,31 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
+=======
+    }
+  ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
+  ];
+
+  const quickActions = [
+    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
+    { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const stats = [
@@ -208,7 +314,11 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
   ];
 
   // Create missing pages for broken links
+<<<<<<< HEAD
   const createMissingPage = (name: anyanystring, href: string)   => {
+=======
+  const createMissingPage = (name: anystring, href: string)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -223,7 +333,11 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
   };
 
   return (
+<<<<<<< HEAD
           <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+=======
+          <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
@@ -509,6 +623,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
 
           {/* Bottom Bar */}
@@ -561,6 +676,10 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
             </div>
           </div>
         </motion.div>
+=======
+          </motion.div>
+        </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       </div>
     </footer>
 =======

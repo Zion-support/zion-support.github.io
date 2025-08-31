@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 <<<<<<< HEAD
@@ -9,6 +10,15 @@ import { ThemeToggle  } from '../components/ThemeToggle';
 import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar  } from '../components/Sidebar';
 import { EnhancedSearch  } from '../components/EnhancedSearch';
+=======
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar, Database, Network, BarChart3, Wifi, HeartPulse, Leaf, User, Award, Lightbulb, Handshake, BookOpen as BookOpenIcon, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon2, Factory } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
+import { ThemeToggle } from '../components/ThemeToggle';
+import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export function AppHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,13 +69,18 @@ export function AppHeader(...args: any[]): any {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Organized services by category
+=======
+  // Organized Services Categories
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const servicesCategories = [
     {
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-blue-500 to-indigo-500',
       services: [
+<<<<<<< HEAD
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
@@ -74,6 +89,85 @@ export function AppHeader(...args: any[]): any {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
+=======
+        { 
+          name: 'AI Business Intelligence', 
+          href: '/services/ai-business-intelligence', 
+          icon: Brain, 
+          description: 'Machine Learning & Data Science',
+          featured: true
+        },
+        { 
+          name: 'AI Healthcare Analytics', 
+          href: '/services/ai-healthcare-analytics', 
+          icon: Heart, 
+          description: 'Medical AI & Diagnostics',
+          featured: true
+        },
+        { 
+          name: 'AI Legal Document Analysis', 
+          href: '/services/ai-legal-document-analysis', 
+          icon: FileText, 
+          description: 'Legal Tech Platform',
+          featured: true
+        },
+        { 
+          name: 'AI Financial Trading', 
+          href: '/services/ai-financial-trading', 
+          icon: TrendingUp, 
+          description: 'FinTech AI Solutions',
+          featured: true
+        },
+        { 
+          name: 'AI Supply Chain Optimization', 
+          href: '/services/ai-supply-chain-optimization', 
+          icon: Workflow, 
+          description: 'Supply Chain AI',
+          featured: true
+        },
+        { 
+          name: 'AI Content Creation', 
+          href: '/services/ai-content-creation', 
+          icon: PenTool, 
+          description: 'AI-Powered Content Generation',
+          featured: true
+        },
+        { 
+          name: 'AI HR Platform', 
+          href: '/services/ai-hr-platform', 
+          icon: Users, 
+          description: 'Human Resources Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Marketing Automation', 
+          href: '/services/ai-marketing-automation', 
+          icon: Target, 
+          description: 'Intelligent Marketing Solutions',
+          featured: true
+        },
+        { 
+          name: 'AI Quantum Hybrid Platform', 
+          href: '/services/ai-quantum-hybrid-platform', 
+          icon: Atom, 
+          description: 'Quantum-AI Integration',
+          featured: true
+        },
+        { 
+          name: 'AI Autonomous Research Assistant', 
+          href: '/services/ai-autonomous-research-assistant', 
+          icon: Search, 
+          description: 'Research Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Cybersecurity Threat Intelligence', 
+          href: '/services/ai-cybersecurity-threat-intelligence', 
+          icon: Shield, 
+          description: 'AI-Powered Security',
+          featured: true
+        }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       ]
     },
     {
@@ -124,6 +218,7 @@ export function AppHeader(...args: any[]): any {
       icon: ShoppingCart,
       color: 'from-purple-500 to-pink-500',
       services: [
+<<<<<<< HEAD
         { name: 'Micro CRM', href: '/services/micro-crm', description: 'Customer relationship management' },
         { name: 'Helpdesk Platform', href: '/services/helpdesk', description: 'Customer support system' },
         { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance tracking & insights' },
@@ -165,6 +260,170 @@ export function AppHeader(...args: any[]): any {
     { name: 'Price Intelligence', href: '/services/price-intelligence-service', icon: BarChart3, description: 'Competitor tracking + pricing' },
     { name: 'Dev Productivity Copilot', href: '/services/developer-productivity-copilot', icon: GitBranch, description: 'PR review, tests, CI insights' },
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+        { 
+          name: 'Micro SaaS Products', 
+          href: '/services/micro-saas', 
+          icon: ShoppingCart, 
+          description: 'AI automations with transparent pricing',
+          featured: true
+        },
+        { 
+          name: 'Micro CRM', 
+          href: '/services/micro-crm', 
+          icon: Users, 
+          description: 'Customer Relationship Management',
+          featured: true
+        },
+        { 
+          name: 'Helpdesk Platform', 
+          href: '/services/helpdesk', 
+          icon: HelpCircle, 
+          description: 'Customer Support System',
+          featured: true
+        },
+        { 
+          name: 'Website Analytics', 
+          href: '/services/website-analytics', 
+          icon: BarChart3, 
+          description: 'Performance Tracking & Insights',
+          featured: true
+        }
+      ]
+    }
+  ];
+
+  const solutions = [
+    {
+      name: 'Enterprise Solutions',
+      href: '/solutions/enterprise',
+      icon: Building2,
+      description: 'Large-scale business transformations',
+      featured: true
+    },
+    {
+      name: 'Healthcare Solutions',
+      href: '/solutions/healthcare',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
+    },
+    {
+      name: 'Financial Solutions',
+      href: '/solutions/financial',
+      icon: TrendingUp,
+      description: 'Fintech innovation & compliance',
+      featured: true
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions/government',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: false
+    },
+    {
+      name: 'SMB Solutions',
+      href: '/solutions/smb',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: false
+    },
+    {
+      name: 'Startup Solutions',
+      href: '/solutions/startup',
+      icon: Rocket,
+      description: 'Accelerate your startup growth',
+      featured: false
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions/manufacturing',
+      icon: Factory,
+      description: 'Industry 4.0 & Smart Manufacturing',
+      featured: false
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions/retail',
+      icon: ShoppingCart,
+      description: 'E-commerce & Retail Innovation',
+      featured: false
+    }
+  ];
+
+  const resources = [
+    {
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpenIcon,
+      description: 'Latest industry trends and insights',
+      featured: true
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: true
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileTextIcon,
+      description: 'In-depth research and analysis',
+      featured: true
+    },
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: UsersIcon,
+      description: 'Expert-led learning sessions',
+      featured: true
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: CodeIcon,
+      description: 'Technical guides and APIs',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircleIcon,
+      description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSignIcon,
+      description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: UsersIcon2,
+      description: 'Join our community',
+      featured: false
+    },
+    {
+      name: 'Developers',
+      href: '/developers',
+      icon: CodeIcon,
+      description: 'Developer resources',
+      featured: false
+    },
+    {
+      name: 'Training & Certification',
+      href: '/training',
+      icon: Award,
+      description: 'Professional development',
+      featured: false
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   // Quick links for easy access
@@ -309,11 +568,16 @@ export function AppHeader(...args: any[]): any {
 
   return (
     <>
+<<<<<<< HEAD
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+=======
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         scrolled 
           ? 'futuristic-nav' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
       }`}>
+<<<<<<< HEAD
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-400/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -321,6 +585,9 @@ export function AppHeader(...args: any[]): any {
         </div>
 
         <div className="container-responsive relative z-10">
+=======
+        <div className="container-responsive">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
@@ -475,6 +742,7 @@ export function AppHeader(...args: any[]): any {
 <<<<<<< HEAD
                       ))}
                     </div>
+<<<<<<< HEAD
 
                     {/* Quick Links Section */}
                     <div className="mt-6 pt-6 border-t border-cyan-400/20">
@@ -506,6 +774,15 @@ export function AppHeader(...args: any[]): any {
                         </Link>
                       </div>
                     </motion.div>
+=======
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                    >
+                      {item.name}
+                    </Link>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   )}
                 </AnimatePresence>
               </div>
@@ -521,12 +798,70 @@ export function AppHeader(...args: any[]): any {
               ))}
             </nav>
 
+<<<<<<< HEAD
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
               <form onSubmit={handleSearch} className="hidden md:block relative">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+=======
+            {/* Search and Actions */}
+            <div className="hidden lg:flex items-center space-x-4">
+              {/* Search */}
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services..."
+                  className="w-64 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
+                >
+                  {isSearching ? (
+                    <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                  ) : (
+                    <Search className="w-4 h-4" />
+                  )}
+                </button>
+              </form>
+
+              {/* Theme Toggle */}
+              <ThemeToggle />
+
+              {/* CTA Button */}
+              <Link
+                to="/contact"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-700">
+            <div className="container-responsive py-6">
+              <div className="space-y-6">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="relative">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <input
                     type="text"
                     value={searchQuery}
@@ -534,6 +869,7 @@ export function AppHeader(...args: any[]): any {
                     placeholder="Search services..."
                     className="w-64 pl-10 pr-4 py-2 bg-slate-800/70 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
                   />
+<<<<<<< HEAD
                   {isSearching && (
                     <div className="absolute right-3 top-1/2 -translate-y-1/2">
                       <ZionLoadingSpinner size="sm" />
@@ -692,11 +1028,55 @@ export function AppHeader(...args: any[]): any {
                         <link.icon className="w-4 h-4 mr-2" />
                         {link.name}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+                  <button
+                    type="submit"
+                    disabled={isSearching}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
+                  >
+                    {isSearching ? (
+                      <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                    ) : (
+                      <Search className="w-4 h-4" />
+                    )}
+                  </button>
+                </form>
+
+                {/* Mobile Navigation */}
+                <nav className="space-y-4">
+                  {navigation.map((item) => (
+                    <div key={item.name}>
+                      <Link
+                        to={item.href}
+                        className="block text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
+                </nav>
+
+                {/* Mobile Quick Links */}
+                <div className="space-y-4">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    {quickLinks.slice(0, 6).map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <link.icon className="w-4 h-4" />
+                        <span className="text-sm">{link.name}</span>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       </Link>
                     ))}
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Contact Info */}
                 <div className="pt-4 border-t border-slate-700/50 text-center">
                   <p className="text-sm text-slate-400 mb-2">
@@ -715,6 +1095,35 @@ export function AppHeader(...args: any[]): any {
             </motion.div>
           )}
         </AnimatePresence>
+=======
+                {/* Mobile Contact Info */}
+                <div className="space-y-4">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Contact</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2 text-slate-300">
+                      <Phone className="w-4 h-4" />
+                      <span className="text-sm">{contactInfo.phone}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-slate-300">
+                      <Mail className="w-4 h-4" />
+                      <span className="text-sm">{contactInfo.email}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile CTA */}
+                <Link
+                  to="/contact"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       </header>
     </>
   );

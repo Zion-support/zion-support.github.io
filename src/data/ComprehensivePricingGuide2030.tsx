@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { innovativeMicroSaasServices2030   } from '../data/innovativeMicroSaasServices2030';
@@ -6,6 +7,15 @@ import { comprehensiveITServices2030   } from '../data/comprehensiveITServices20
 import { comprehensiveAIServices2030   } from '../data/comprehensiveAIServices2030';
 
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+=======
+import React, { useState } from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { innovativeMicroSaasServices2030  } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030  } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030  } from '../data/comprehensiveAIServices2030';
+
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [activeTab, setActiveTab] = useState<any>('microsaas');
   const [priceRange, setPriceRange] = useState<any>([0, 5000]);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -152,7 +162,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
+<<<<<<< HEAD
   const renderPricingCard = (service)  => {
+=======
+  const renderPricingCard = (service: anyany)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -175,7 +189,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
+<<<<<<< HEAD
                 {service.benefits.slice(0, 4).map((benefit: anystring, index: number)   => (
+=======
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -268,7 +286,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
+<<<<<<< HEAD
                 {service.benefits.slice(0, 4).map((benefit: anystring, index: number)   => (
+=======
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -361,7 +383,11 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
+<<<<<<< HEAD
                 {service.benefits.slice(0, 4).map((benefit: anystring, index: number)   => (
+=======
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}

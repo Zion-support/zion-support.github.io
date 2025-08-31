@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { Card, CardContent, CardHeader, CardTitle   } from './ui/card';
 import { Button   } from './ui/button';
@@ -20,13 +21,19 @@ import { User,
   Eye,
   MousePointer,
 =======
+=======
+import React, { useState, useEffect, useCallback } from 'react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Card, CardContent, CardHeader, CardTitle  } from './ui/card';
 import { Button  } from './ui/button';
 import { Badge  } from './ui/badge';
 import { Progress  } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from './ui/tabs';
 import { User, 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Settings, 
   Palette, 
   Eye, 
@@ -42,13 +49,20 @@ import { User,
   Accessibility,
   Languages
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserPreference {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   value: string | boolean | number;
@@ -57,14 +71,21 @@ interface UserPreference {
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
 <<<<<<< HEAD
   description: string;
+<<<<<<< HEAD
 =======
 description: string;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UserActivity {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   action: string;
   timestamp: Date;
@@ -72,25 +93,37 @@ interface UserActivity {
   success: boolean;
 <<<<<<< HEAD
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
+<<<<<<< HEAD
 =======
 category: 'navigation' | 'interaction' | 'search' | 'purchase';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityFeature {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   enabled: boolean;
   description: string;
 <<<<<<< HEAD
   impact: 'high' | 'medium' | 'low';
+<<<<<<< HEAD
 =======
 impact: 'high' | 'medium' | 'low';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const [preferences, setPreferences] = useState<any>([]);
@@ -102,6 +135,12 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const [userActivities, setUserActivities] = useState<any>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+const InteractiveUserExperience: React.FC = (): JSX.Element => {
+  const [preferences, setPreferences] = useState<any>([]);
+  const [userActivities, setUserActivities] = useState<any>([]);
+  const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [currentTheme, setCurrentTheme] = useState('light');
   const [fontSize, setFontSize] = useState(16);
   const [contrast, setContrast] = useState('normal');
@@ -165,7 +204,11 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setPreferences(initialPreferences)}, []);
 
   // Initialize accessibility features
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const features: AccessibilityFeature[] = [
       {
         id: any'1',
@@ -207,7 +250,11 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setAccessibilityFeatures(features)}, []);
 
   // Simulate user activities
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const activities: UserActivity[] = [
       {
         id: '1',
@@ -246,8 +293,13 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setUserActivities(activities)}, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
     setPreferences(prev => prev.map(pref =>
+=======
+  const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
+    setPreferences(prev => prev.map(pref => 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       pref.id === id ? { ...pref, value } : pref
 =======
 <<<<<<< HEAD
@@ -292,6 +344,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   }, [preferences]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleAccessibilityFeature = useCallback((id: anystring)   => {
     setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
@@ -310,6 +363,16 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const getActivityIcon = (category: anyUserActivity['category'])  => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const toggleAccessibilityFeature = useCallback((id: anystring)  => {
+    setAccessibilityFeatures(prev => prev.map(feature => 
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
+    ));
+  }, []);
+
+  const getActivityIcon = (category: anyUserActivity['category'])  => {
+    switch (category) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
       case 'search': return <Eye className="h-4 w-4" />;
@@ -323,9 +386,14 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {;
     switch (impact) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {
+    switch (impact) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';

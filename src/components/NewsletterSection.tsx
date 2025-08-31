@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap const NewsletterSection: React.FC = (): JSX.Element => {
@@ -11,13 +12,24 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap   } from 'lucide-r
 const NewsletterSection: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react.ts';
+
+const NewsletterSection: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     if (!email) return;
 

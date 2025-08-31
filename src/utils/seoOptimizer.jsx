@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
   '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
@@ -17,6 +18,18 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
   and innovative IT services for the healthcare industry.'
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const SEOOptimizer = ({ content, onOptimize }) => {
+  const [seoScore, setSeoScore] = useState(0);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [recommendations, setRecommendations] = useState([]);
+
+  const analyzeSEO = async () => {
+    setIsAnalyzing(true);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     
 
 };
@@ -359,5 +372,8 @@ export const seoOptimizer = new SEOOptimizer();
 };
 
 export default SEOOptimizer;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

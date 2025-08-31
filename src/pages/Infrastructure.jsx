@@ -43,6 +43,11 @@ import {
   Box,
   Ship,
   Train,
+<<<<<<< HEAD
+=======
+  Plane,
+  Car,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Truck,
   Cloud,
   Settings,
@@ -50,6 +55,27 @@ import {
   Smartphone,
   Tablet,
   Monitor,
+<<<<<<< HEAD
+=======
+  Smartphone,
+  Globe,
+  Shield,
+  Zap,
+  Users,
+  Settings,
+  Palette,
+  Database,
+  Server,
+  Network,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Wifi,
   Bluetooth,
   Battery,
@@ -159,6 +185,10 @@ import {
   Colocation,
   Edge,
   Fog,
+<<<<<<< HEAD
+=======
+  Cloud,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Hybrid,
   Multi,
   Public,
@@ -222,6 +252,10 @@ import {
   Application,
   Data,
   Security,
+<<<<<<< HEAD
+=======
+  Network,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Storage,
   Compute,
   Memory,
@@ -234,6 +268,11 @@ import {
   NearRealTime,
   Offline,
   Online,
+<<<<<<< HEAD
+=======
+  Hybrid,
+  Multi,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Single,
   Distributed,
   Centralized,
@@ -242,6 +281,10 @@ import {
   Hierarchical,
   Flat,
   Mesh,
+<<<<<<< HEAD
+=======
+  Star,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Ring,
   Bus,
   Tree,
@@ -253,9 +296,18 @@ import {
   Array,
   List,
   Stack,
+<<<<<<< HEAD
   Deque,
   PriorityQueue,
   Heap,
+=======
+  Queue,
+  Deque,
+  PriorityQueue,
+  Heap,
+  Tree,
+  Graph,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   HashTable,
   BloomFilter,
   SkipList,
@@ -265,6 +317,9 @@ import {
   AVLTree,
   SplayTree,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Treap,
   SplayTree,
   RedBlackTree,
@@ -549,8 +604,11 @@ import {
   Shield,
   Zap,
   Server
+<<<<<<< HEAD
 =======
   Treap
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 } from 'lucide-react';
 
 <<<<<<< HEAD

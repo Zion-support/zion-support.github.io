@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const Card = ({ children, className = '' }) => {
     return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
       {children}
@@ -30,6 +34,7 @@ const CardFooter = ({ children, className = '' }) => {
     </div>);
 };
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+<<<<<<< HEAD
 =======
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
@@ -69,3 +74,5 @@ const CardFooter = React.forwardRef((_a, ref) => {
 CardFooter.displayName = 'CardFooter';
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

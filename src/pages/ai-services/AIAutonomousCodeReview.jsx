@@ -2,11 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch import { SEO } from '@/components/SEO';
 =======
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitFork } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const features = [
     {
         title: "Automated Code Analysis",
@@ -50,7 +55,11 @@ const useCases = [
     {
         title: "Open Source Projects",
         description: "Maintain high code quality standards in open source contributions.",
+<<<<<<< HEAD
         icon: GitBranch
+=======
+        icon: GitFork
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     },
     {
         title: "Enterprise Applications",

@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Calendar,
   Clock,
   CheckCircle,
   Circle,
   AlertCircle,
+=======
+import { Calendar, 
+  Clock, 
+  CheckCircle, 
+  Circle, 
+  AlertCircle, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Play,
   Pause,
   StopCircle,
@@ -24,13 +32,20 @@ import { Calendar,
   Eye,
   Settings
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   description: string;
@@ -45,14 +60,21 @@ interface Project {
   tags: string[];
 <<<<<<< HEAD
   milestones: Milestone[];
+<<<<<<< HEAD
 =======
 milestones: Milestone[];
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Milestone {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -61,31 +83,49 @@ interface Milestone {
   assignee: string;
 <<<<<<< HEAD
   priority: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
 =======
 priority: 'low' | 'medium' | 'high';
 }
 
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+
+interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   showFilters?: boolean;
   showStats?: boolean;
 <<<<<<< HEAD
   maxProjects?: number;
+<<<<<<< HEAD
 =======
   maxProjects?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
 <<<<<<< HEAD
   showFilters = true,
   showStats = true,
+<<<<<<< HEAD
   maxProjects = 10;
 }) => {;
+=======
+  maxProjects = 10
+}) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [projects, setProjects] = useState<any>([]);
   const [filteredProjects, setFilteredProjects] = useState<any>([]);
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
+<<<<<<< HEAD
 =======
   showFilters = true,;
   showStats = true,;
@@ -96,6 +136,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
@@ -221,7 +263,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(sampleProjects)}, []);
 
   // Filter projects
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -261,6 +307,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Calculate project stats
   const projectStats = {
+<<<<<<< HEAD
   <<<<<<< HEAD
     total: anyprojects.length,
     active: projects.filter(p   => p.status === 'active').length,
@@ -275,6 +322,18 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get status color and icon
   const getStatusDisplay = (status: anystring)   => {
+=======
+    total: anyprojects.length,
+    active: projects.filter(p  => p.status === 'active').length,
+    completed: anyprojects.filter(p  => p.status === 'completed').length,
+    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,
+    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),
+    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
+  };
+
+  // Get status color and icon
+  const getStatusDisplay = (status: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     switch (status) {
       case 'planning':
 =======
@@ -319,9 +378,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get priority color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
+    switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
@@ -336,9 +400,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get milestone status color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getMilestoneStatusColor = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getMilestoneStatusColor = (status: anystring)  => {
+    switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20';
       case 'completed': return 'text-green-400 bg-green-400/20';
@@ -353,7 +422,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Format currency
 <<<<<<< HEAD
+<<<<<<< HEAD
   const formatCurrency = (amount: anynumber)   => {
+=======
+  const formatCurrency = (amount: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -374,8 +447,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
+<<<<<<< HEAD
   const getDaysRemaining = (endDate: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getDaysRemaining = (endDate: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const end = new Date(endDate);
     const today = new Date();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

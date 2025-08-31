@@ -11,10 +11,17 @@ import { toast } from "sonner";
 import { Loader2 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
+<<<<<<< HEAD
 import { useRouter } from "next/router";
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
     const router = useRouter();
+=======
+import { useNavigate } from 'react-router-dom';
+export default function ContentGenerator() {
+    const { user, isLoading } = useAuth();
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [contentType, setContentType] = useState('blog');
     const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
@@ -28,6 +35,7 @@ export default function ContentGenerator() {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
 <<<<<<< HEAD
+<<<<<<< HEAD
             navigate("/login?redirect=/content-generator");
 
 =======
@@ -35,6 +43,9 @@ export default function ContentGenerator() {
             router.push("/login?redirect=/content-generator")}
 =======
             router("/login?redirect=/content-generator");
+=======
+            navigate("/login?redirect=/content-generator");
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

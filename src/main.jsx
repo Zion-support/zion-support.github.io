@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // // // console.log("main.tsx: Start");
 =======
 // // // // // // // console.log("main.tsx: Start");
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -23,6 +26,7 @@ import { AuthProvider } from "./context/auth/AuthProvider";
 import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AnalyticsProvider } from "./context/AnalyticsContext";
 import { ViewModeProvider } from "./context/ViewModeContext";
 =======
@@ -30,6 +34,11 @@ import { AnalyticsProvider } from "./context/AnalyticsContext";
 import { ViewModeProvider } from "./context/ViewModeContext";
 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -39,6 +48,7 @@ const queryClient = new QueryClient({
         },
     },
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 const renderApp() {
     const app = (<React.StrictMode>
@@ -52,6 +62,8 @@ const renderApp() {
                     <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 }}>
                       <ViewModeProvider>
@@ -112,8 +124,12 @@ const renderApp() {
     if (rootElement?.hasChildNodes()) {
 <<<<<<< HEAD
         hydrateRoot(rootElement, app);
+<<<<<<< HEAD
 
     else if (rootElement) {
+=======
+    } else if (rootElement) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         createRoot(rootElement).render(app);
 
 =======
@@ -126,6 +142,7 @@ const renderApp() {
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
+<<<<<<< HEAD
       <div style="padding:20px;text-align:center;font-family:sans-serif;">
         <h1>Application Error</h1>
         <p>${message}</p>
@@ -143,6 +160,21 @@ catch (error) {
     // // // // // // // console.error('Global error caught in main.tsx:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(error.message);
+=======
+            <div style="padding:20px;text-align:center;font-family:sans-serif;">
+                <h1>Application Error</h1>
+                <p>${message}</p>
+            </div>`;
+    }
+}
+
+try {
+    renderApp();
+} catch (error) {
+    console.error('Global error caught in main.jsx:', error);
+    displayFatalError(error.message);
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 window.addEventListener('error', (e) => {
 <<<<<<< HEAD
@@ -152,6 +184,7 @@ window.addEventListener('error', (e) => {
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(e.message);
 });
+<<<<<<< HEAD
 =======
       </div>`}
 }
@@ -192,3 +225,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
     </HelmetProvider>
   </React.StrictMode>);
 }}}}}}}
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

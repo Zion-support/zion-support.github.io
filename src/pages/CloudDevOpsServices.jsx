@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin const CloudDevOpsServices = () => {
+=======
+import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
+const CloudDevOpsServices = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
@@ -144,7 +149,11 @@ import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPi
         switch (category) {
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;
+<<<<<<< HEAD
             case 'DevOps Automation': return <GitBranch className="w-6 h-6"/>;
+=======
+            case 'DevOps Automation': return <GitFork className="w-6 h-6"/>;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             case 'Serverless': return <Zap className="w-6 h-6"/>;
             case 'Infrastructure': return <Server className="w-6 h-6"/>;
             case 'Security': return <Shield className="w-6 h-6"/>;

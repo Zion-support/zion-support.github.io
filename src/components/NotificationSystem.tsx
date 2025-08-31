@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { CheckCircle,
   AlertTriangle,
   Info,
   X,
   Bell,
+=======
+import { CheckCircle, 
+  AlertTriangle, 
+  Info, 
+  X, 
+  Bell, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Settings,
   Volume2,
   VolumeX,
@@ -14,15 +22,22 @@ import { CheckCircle,
   Shield,
   Clock
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
 export interface Notification {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: anystring;
   type: NotificationType;
   title: string;
@@ -32,7 +47,12 @@ export interface Notification {
   read: boolean;
 action?: {;
     label: string;
+<<<<<<< HEAD
 onClick: ()   => void;
+=======
+    onClick: ()  => void;
+  
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 };
   priority: 'low' | 'medium' | 'high';
   category?: string;
@@ -44,6 +64,11 @@ onClick: ()   => void;
 interface NotificationSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
+=======
+interface NotificationSystemProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
@@ -51,6 +76,7 @@ interface NotificationSystemProps extends React.PropsWithChildren<{}> {
   autoDismiss?: boolean;
 <<<<<<< HEAD
   defaultDuration?: number;
+<<<<<<< HEAD
 =======
   defaultDuration?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -58,6 +84,13 @@ interface NotificationSystemProps extends React.PropsWithChildren<{}> {
 interface NotificationSettings {
 
 
+=======
+
+}
+
+interface NotificationSettings {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
@@ -65,8 +98,12 @@ interface NotificationSettings {
   maxNotifications: number;
 <<<<<<< HEAD
   defaultDuration: number;
+<<<<<<< HEAD
 =======
 defaultDuration: number;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -77,6 +114,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   enableSound = true,
   enableVibration = true,
   autoDismiss = true,
+<<<<<<< HEAD
   defaultDuration = 5000;
 }) => {;
   const [notifications, setNotifications] = useState<any>([]);
@@ -90,6 +128,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const [notifications, setNotifications] = useState<any>([]);
   const [settings, setSettings] = useState<any>({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  defaultDuration = 5000
+}) => {
+  const [notifications, setNotifications] = useState<any>([]);
+  const [settings, setSettings] = useState<any>({
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     sound: enableSound,
     vibration: enableVibration,
     autoDismiss: autoDismiss,
@@ -182,6 +226,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.vibration]);
 
   // Add notification
+<<<<<<< HEAD
   const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)   => {
     const newNotification: Notification = {
   ...notification,
@@ -203,6 +248,18 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 =======;
     setNotifications(prev = > {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+    const newNotification: Notification = {
+      ...notification,
+      id: any`notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: new Date(),
+      read: false,
+      duration: notification.duration ?? settings.defaultDuration
+    };
+
+    setNotifications(prev  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       const updated = [newNotification, ...prev];
       return updated.slice(0, settings.maxNotifications)});
 
@@ -211,6 +268,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     triggerVibration()}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
 
   // Dismiss notification
+<<<<<<< HEAD
 <<<<<<< HEAD
   const dismissNotification = useCallback((id: anystring)   => {;
     setNotifications(prev => prev.filter(n => n.id !== id))}, []);
@@ -233,12 +291,19 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const getNotificationIcon = (type: anyNotificationType, priority: string)   => {;
 =======;
   const dismissNotification = useCallback((id: anystring)  => {;
+=======
+  const dismissNotification = useCallback((id: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
   // Mark notification as read
   const markAsRead = useCallback((id: anystring)  => {
+<<<<<<< HEAD
     setNotifications(prev =>
+=======
+    setNotifications(prev => 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
   }, []);
@@ -254,8 +319,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
 
   // Get notification icon
+<<<<<<< HEAD
   const getNotificationIcon = (type: anyNotificationType, priority: string)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getNotificationIcon = (type: anyNotificationType, priority: string)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const iconProps = { className: "w-5 h-5" };
 
     switch (type) {
@@ -280,8 +349,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Get notification styles
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getNotificationStyles = (type: anyNotificationType, priority: string)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getNotificationStyles = (type: anyNotificationType, priority: string)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const baseStyles = "border-l-4 ";
 
     switch (type) {
@@ -326,10 +399,14 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Update settings
 <<<<<<< HEAD
+<<<<<<< HEAD
   const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)   => {;
     setSettings(prev => ({ ...prev, ...newSettings }))}, []);
 =======
   const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)  => {;
+=======
+  const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -671,6 +748,7 @@ export const useNotifications = () => {
 };
 
 // Hook for using notifications in components
+<<<<<<< HEAD
 export const useNotifications = () => {;
   const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {;
     if ((window as ).addNotification) {;
@@ -678,6 +756,12 @@ export const useNotifications = () => {;
 <<<<<<< HEAD
 
 =======
+=======
+export const useNotifications = () => {
+  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification(notification);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -687,10 +771,17 @@ export const useNotifications = () => {;
 
 // Utility functions for common notification types
 export const notificationUtils = {
+<<<<<<< HEAD
   success: any(title: string, message: string, options?: Partial<Notification>)   => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'success',
+=======
+  success: any(title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification({
+        type: any'success',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         title,
         message,
 <<<<<<< HEAD
@@ -720,10 +811,17 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
+<<<<<<< HEAD
   warning: (title: string, message: string, options?: Partial<Notification>)   => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'warning',
+=======
+  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification({
+        type: any'warning',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         title,
         message,
         priority: 'medium',
@@ -736,10 +834,17 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
+<<<<<<< HEAD
   error: any(title: string, message: string, options?: Partial<Notification>)   => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'error',
+=======
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification({
+        type: any'error',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         title,
         message,
         priority: 'high',
@@ -752,10 +857,17 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
+<<<<<<< HEAD
   info: any(title: string, message: string, options?: Partial<Notification>)   => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
         type: 'info',
+=======
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification({
+        type: any'info',
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         title,
         message,
         priority: 'low',
@@ -768,9 +880,15 @@ export const notificationUtils = {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
+<<<<<<< HEAD
   achievement: any(title: string, message: string, options?: Partial<Notification>)   => {
     if ((window as ).addNotification) {
       (window as ).addNotification({
+=======
+  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as any).addNotification) {
+      (window as any).addNotification({
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         type: 'achievement',
         title,
         message,

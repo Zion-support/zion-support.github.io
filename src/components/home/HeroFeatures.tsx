@@ -1,9 +1,16 @@
 import React from 'react.ts';
+<<<<<<< HEAD
 import { motion   } from 'framer-motion.ts';
 
 interface HeroFeature {
 
 
+=======
+import { motion  } from 'framer-motion.ts';
+
+interface HeroFeature {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 icon: React.ComponentType<{ className?: string;
 }>;
   title: string;
@@ -20,8 +27,14 @@ gradient: string;
 
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
 
+<<<<<<< HEAD
   features: HeroFeature[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  features: HeroFeature[];
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   return (
@@ -30,9 +43,15 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: any0.8, delay: 0.6 }}
+<<<<<<< HEAD
 
       {features.map((feature, index)  => (
         <motion.div
+=======
+    >
+      {features.map((feature, index)  => (
+        <motion.div 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           key={feature.title}
           className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
           role="article"

@@ -1,7 +1,12 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server export default function DevOpsCloudServices() {
+=======
+import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
+export default function DevOpsCloudServices() {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const devopsServices = [
         {
             icon: Cloud,

@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield import { SEO } from '@/components/SEO';
 =======
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const CloudDevOps = () => {
   const cloudServices = [
@@ -22,7 +27,11 @@ const CloudDevOps = () => {
       features["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
     {
+<<<<<<< HEAD
       icon: GitBranch,
+=======
+      icon: GitFork,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       title: "CI/CD Pipelines",
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]

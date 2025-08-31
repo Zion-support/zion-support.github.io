@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -5,6 +6,17 @@ import { Users,
   Handshake,
   Globe,
   Award,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Users, 
+  Building, 
+  Globe, 
+  Star, 
+  ArrowRight, 
+  Award, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   TrendingUp,
   Shield,
   Zap,
@@ -940,7 +952,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/co
 const Partners: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
+<<<<<<< HEAD
   const partnershipTypes = [
+=======
+export default function Partners() {
+  const partnerCategories = [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     {
       id: 'technology',
       name: 'Technology Partners',
@@ -978,6 +995,7 @@ const Partners: React.FC = (): JSX.Element => {
       ]
     },
     {
+<<<<<<< HEAD
       id: 'strategic',
       name: 'Strategic Partners',
       description: 'Deep collaboration on joint ventures and initiatives',
@@ -1035,6 +1053,15 @@ const Partners: React.FC = (): JSX.Element => {
       icon: Users,
       title: 'Global Reach',
       description: 'Expand your business globally with our international presence'
+=======
+      title: 'Channel Partners',
+      description: 'Resellers and distributors expanding our reach',
+      icon: Globe,
+      partners: [
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
+      ]
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     }
   ];
 
@@ -1132,9 +1159,14 @@ const Partners: React.FC = (): JSX.Element => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
                 <Handshake className="w-5 h-5 text-zion-purple mr-2" />
                 <span className="text-zion-purple font-medium">Partnership Opportunities</span>
+=======
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Users className="h-10 w-10 text-white" />
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

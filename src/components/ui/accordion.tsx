@@ -1,11 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { ChevronDown interface AccordionProps extends React.PropsWithChildren<{}> {
+=======
+import React, { useState } from 'react.ts';
+import { ChevronDown  } from 'lucide-react.ts';
+
+interface AccordionProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   children: React.ReactNode;
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[];
+<<<<<<< HEAD
 =======
 import React, { useState  
 } from 'react.ts';
@@ -19,12 +27,21 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
   defaultValue?: string | string[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+
+}
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function Accordion(...args: any[]): any {
   const [openItems, setOpenItems] = useState<any>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
 
+<<<<<<< HEAD
   const handleToggle = (value: anystring)   => {
+=======
+  const handleToggle = (value: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -66,7 +83,11 @@ export function Accordion(...args: any[]): any {;
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
+<<<<<<< HEAD
           return React.cloneElement(child, {
+=======
+          return React.cloneElement(child, { 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             isOpen: anyopenItems.includes(child.props.value),
             onToggle: ()  => handleToggle(child.props.value)
           });
@@ -81,12 +102,16 @@ export function Accordion(...args: any[]): any {;
   )}
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   children: anyReact.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onToggle?: ()  => void;
 =======
@@ -98,6 +123,17 @@ export function AccordionItem(...args: any[]): any {;
     <div className={`border-b border-gray-200 ${className}`}>;
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
+=======
+  onToggle?: ()  => void;
+
+}
+
+export function AccordionItem(...args: any[]): any {
+  return (
+    <div className={`border-b border-gray-200 ${className}`}>
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           return React.cloneElement(child, { isOpen, onToggle });
 
         return child;
@@ -110,16 +146,25 @@ export function AccordionItem(...args: any[]): any {;
   )}
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   children: anyReact.ReactNode;
   className?: string;
   isOpen?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onToggle?: ()  => void;
 =======
   onToggle?: ()  => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  onToggle?: ()  => void;
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export function AccordionTrigger(...args: any[]): any {
   return (
@@ -150,13 +195,23 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
+=======
+interface AccordionContentProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   children: React.ReactNode;
   className?: string;
 <<<<<<< HEAD
   isOpen?: boolean;
+<<<<<<< HEAD
 =======
   isOpen?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export function AccordionContent(...args: any[]): any {
   if (!isOpen) return null;

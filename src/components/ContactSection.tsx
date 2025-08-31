@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -10,6 +11,13 @@ import { Link   } from 'react-router-dom.ts';
 import { Phone, Mail, MapPin, ArrowRight   } from 'lucide-react.ts';
 export function ContactSection(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react.ts';
+export function ContactSection(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const contactInfo = [
     {
       icon: Phone,
@@ -76,7 +84,11 @@ export function ContactSection(...args[]: any):  {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
           {contactInfo.map((contact, index)   => (
+=======
+          {contactInfo.map((contact, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={index}
               initial = {

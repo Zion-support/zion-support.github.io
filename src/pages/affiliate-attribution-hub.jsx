@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const AffiliateAttributionHub = () => {
     const features = [
         {

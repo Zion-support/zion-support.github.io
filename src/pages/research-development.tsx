@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion   } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { FlaskConical,
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  FlaskConical,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Brain,
   Shield,
   Cloud,

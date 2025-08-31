@@ -7,6 +7,7 @@ export const PerformanceOptimizer = ({ children }) => {
     // Preload critical resources
     useEffect(() => {
         const preloadCriticalResources = () => {
+<<<<<<< HEAD
             // Preload critical CSS
             const criticalCSS = document.createElement('link');
             criticalCSS.rel = 'preload';
@@ -21,11 +22,19 @@ export const PerformanceOptimizer = ({ children }) => {
             criticalFonts.href = '/fonts/inter-var.woff2';
             criticalFonts.crossOrigin = 'anonymous';
             document.head.appendChild(criticalFonts);
+=======
+            // Note: CSS is already handled by Vite build process
+            // Fonts are loaded via Google Fonts CDN in index.html
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         };
         preloadCriticalResources();
     }, []);
 
+<<<<<<< HEAD
     // Image optimization
+=======
+    // Optimize images on route change
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     useEffect(() => {
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
@@ -148,4 +157,8 @@ if (typeof window !== 'undefined') {
     }
 }
 
+<<<<<<< HEAD
 export default PerformanceOptimizer;
+=======
+export default PerformanceOptimizer;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

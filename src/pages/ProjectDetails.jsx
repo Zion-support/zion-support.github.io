@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+=======
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
@@ -22,8 +27,12 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 =======
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
 function ProjectDetailsContent() {
+<<<<<<< HEAD
     const router = useRouter();
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     // Get projectId from Next.js router query params
     const { projectId } = router.query;
     const { user } = useAuth();
@@ -57,6 +66,7 @@ function ProjectDetailsContent() {
                     variant: "destructive",
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
                 navigate("/dashboard");
 
 =======
@@ -66,6 +76,9 @@ function ProjectDetailsContent() {
         loadProject()}, [projectId]);
 =======
                 router("/dashboard");
+=======
+                navigate("/dashboard");
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setIsLoading(false);
@@ -220,10 +233,14 @@ function ProjectDetailsContent() {
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button onClick={() => router.push("/dashboard")}>
 =======
             <Button onClick={() => router("/dashboard")}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+            <Button onClick={() => navigate("/dashboard")}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               Return to Dashboard
             </Button>
           </CardContent>
@@ -238,11 +255,15 @@ function ProjectDetailsContent() {
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         router.push("/unauthorized");
         return null}
     const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
 =======
         router("/unauthorized");
+=======
+        navigate("/unauthorized");
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return null;
 <<<<<<< HEAD
 
@@ -335,6 +356,7 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
 =======
@@ -345,6 +367,10 @@ function ProjectDetailsContent() {
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+              
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
@@ -532,10 +558,14 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
 =======
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?talentId=${project.talent_id}`)}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -551,10 +581,14 @@ function ProjectDetailsContent() {
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
 =======
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?clientId=${project.client_id}`)}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -597,10 +631,14 @@ function ProjectDetailsContent() {
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
 =======
                   <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+                  <Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)} className="w-full">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}

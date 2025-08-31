@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = (): JSX.Element => {
 =======
@@ -9,13 +10,23 @@ import { Mail, Send, CheckCircle   } from 'lucide-react.ts';
 export const FooterNewsletter: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState } from 'react.ts';
+import { Mail, Send, CheckCircle  } from 'lucide-react.ts';
+
+export const FooterNewsletter: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSubmit = async (e: anyReact.FormEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     if (!email.trim()) return;
 

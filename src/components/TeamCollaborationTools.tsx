@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Users,
   MessageCircle,
   FileText,
   Calendar,
   CheckCircle,
+=======
+import { Users, 
+  MessageCircle, 
+  FileText, 
+  Calendar, 
+  CheckCircle, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Clock,
   AlertCircle,
   Plus,
@@ -64,13 +72,20 @@ import { Users,
   BarChart3,
   PieChart
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   role: string;
@@ -82,14 +97,21 @@ interface TeamMember {
   projects: string[];
 <<<<<<< HEAD
   availability: 'available' | 'busy' | 'unavailable';
+<<<<<<< HEAD
 =======
 availability: 'available' | 'busy' | 'unavailable';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   description: string;
@@ -104,14 +126,21 @@ interface Project {
   client: string;
 <<<<<<< HEAD
   tags: string[];
+<<<<<<< HEAD
 =======
 tags: string[];
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -125,14 +154,21 @@ interface Task {
   tags: string[];
 <<<<<<< HEAD
   comments: Comment[];
+<<<<<<< HEAD
 =======
 comments: Comment[];
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   author: string;
   content: string;
@@ -140,14 +176,21 @@ interface Comment {
   likes: number;
 <<<<<<< HEAD
   replies: Comment[];
+<<<<<<< HEAD
 =======
 replies: Comment[];
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   sender: string;
   content: string;
@@ -155,6 +198,9 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   reactions: { type: string; count: number 
 }[];
   isRead: boolean;
@@ -166,7 +212,10 @@ interface Message {
 
 interface FileItem {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -179,12 +228,19 @@ interface FileItem {
   permissions: 'view' | 'edit' | 'admin';
 <<<<<<< HEAD
   version: string;
+<<<<<<< HEAD
 =======
 version: string;
 }
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+
+interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   showTeamMembers?: boolean;
   showProjects?: boolean;
@@ -192,9 +248,14 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showFileSharing?: boolean;
 <<<<<<< HEAD
   maxItems?: number;
+<<<<<<< HEAD
 =======
   maxItems?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
@@ -202,14 +263,20 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showProjects = true,
   showCommunication = true,
   showFileSharing = true,
+<<<<<<< HEAD
   maxItems = 20;
 }) => {;
+=======
+  maxItems = 20
+}) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [activeTab, setActiveTab] = useState<any>('team');
   const [teamMembers, setTeamMembers] = useState<any>([]);
   const [projects, setProjects] = useState<any>([]);
   const [messages, setMessages] = useState<any>([]);
   const [files, setFiles] = useState<any>([]);
   const [selectedProject, setSelectedProject] = useState<any>(null);
+<<<<<<< HEAD
 =======
   showProjects = true,;
   showCommunication = true,;
@@ -223,6 +290,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const [files, setFiles] = useState<any>([]);
   const [selectedProject, setSelectedProject] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -427,9 +496,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get status color and icon
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getStatusDisplay = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getStatusDisplay = (status: anystring)  => {
+    switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
       case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
@@ -444,9 +518,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get project status color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getProjectStatusColor = (status: anystring)  => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getProjectStatusColor = (status: anystring)  => {
+    switch (status) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'planning': return 'text-blue-400 bg-blue-400/20';
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'review': return 'text-yellow-400 bg-yellow-400/20';
@@ -462,9 +541,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get priority color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
+    switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
@@ -479,9 +563,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Get file type icon
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getFileTypeIcon = (type: anystring)  => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getFileTypeIcon = (type: anystring)  => {
+    switch (type) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'document': return <FileText className="w-5 h-5" />;
       case 'image': return <img className="w-5 h-5" />;
       case 'video': return <Video className="w-5 h-5" />;
@@ -497,27 +586,41 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Format file size
 <<<<<<< HEAD
+<<<<<<< HEAD
   const formatFileSize = (size: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const formatFileSize = (size: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`};
 
   // Handle project selection
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleProjectSelect = (project: anyProject)   => {;
     setSelectedProject(project)};
 
   // Handle message reactions
   const handleProjectSelect = (project: anyProject)  => {;
+=======
+  const handleProjectSelect = (project: anyProject)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setSelectedProject(project);
   };
 
   // Handle message reactions
+<<<<<<< HEAD
   const handleMessageReaction = (messageId: anystring, reactionType: string)  => {;
     setMessages(prev => prev.map(msg => {;
       if (msg.id === messageId) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const handleMessageReaction = (messageId: anystring, reactionType: string)  => {
+    setMessages(prev => prev.map(msg => {
+      if (msg.id === messageId) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
         if (existingReaction) {
 <<<<<<< HEAD
@@ -716,7 +819,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
           {/* Team Members Grid */}
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
             {teamMembers.map((member, index)   => (
+=======
+            {teamMembers.map((member, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={member.id}
                 initial = {

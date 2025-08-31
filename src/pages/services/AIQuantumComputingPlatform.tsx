@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning export default function AIQuantumComputingPlatform(...args: any[]): any {
 =======
 import React from 'react.ts';
@@ -165,6 +166,61 @@ const AIQuantumComputingPlatform = () => {
       description: "Model complex climate systems and predict environmental changes with quantum accuracy",
       benefits["Accurate climate modeling", "Faster predictions", "Better policy decisions"];
     };
+=======
+import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning } from 'lucide-react';
+
+export default function AIQuantumComputingPlatform() {
+  const features = [
+    'AI-powered quantum algorithm optimization',
+    'Hybrid quantum-classical computing solutions',
+    'Quantum machine learning frameworks',
+    'Real-time quantum circuit simulation',
+    'Quantum error correction and optimization',
+    'Multi-qubit system management',
+    'Quantum cryptography and security',
+    'Custom quantum algorithm development',
+    'Quantum cloud infrastructure access',
+    'Advanced quantum analytics and visualization'
+  ];
+
+  const benefits = [
+    'Solve complex problems 1000x faster',
+    'Reduce computational costs by 60-80%',
+    'Enable breakthrough scientific discoveries',
+    'Real-time quantum optimization',
+    'Access to cutting-edge quantum hardware',
+    'Future-proof your computational capabilities'
+  ];
+
+  const pricing = [
+    { 
+      name: 'Starter', 
+      price: '$1,299/mo', 
+      features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
+      popular: false
+    },
+    { 
+      name: 'Professional', 
+      price: '$2,999/mo', 
+      features: ['Up to 50 qubits', 'Advanced quantum AI', 'Real-time optimization', 'Priority support', 'Custom algorithms', 'API access'],
+      popular: true
+    },
+    { 
+      name: 'Enterprise', 
+      price: '$7,999/mo', 
+      features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    'Drug discovery and molecular modeling',
+    'Financial portfolio optimization',
+    'Cryptography and cybersecurity',
+    'Climate modeling and prediction',
+    'Machine learning acceleration',
+    'Supply chain optimization'
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ];
 
   const technologies = [
@@ -236,6 +292,7 @@ const AIQuantumComputingPlatform = () => {
               Learn More
             </a>
           </div>
+<<<<<<< HEAD
 =======
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
@@ -274,11 +331,16 @@ const AIQuantumComputingPlatform = () => {
             </div>
           </motion.div>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         </div>
       </section>
 
       {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Computing Intelligence</h2>
@@ -325,6 +387,7 @@ const AIQuantumComputingPlatform = () => {
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-purple-600" />
+<<<<<<< HEAD
 =======
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -380,12 +443,20 @@ const AIQuantumComputingPlatform = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
+=======
+                </div>
+                <p className="text-gray-700 font-medium">{benefit}</p>
+              </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             ))}
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {/* Use Cases Section */}
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -419,6 +490,7 @@ const AIQuantumComputingPlatform = () => {
                 plan.popular ? 'border-purple-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
+<<<<<<< HEAD
 =======
       {/* Services & Pricing */}
       <section className="py-20 bg-zion-slate-dark/30">
@@ -476,10 +548,15 @@ const AIQuantumComputingPlatform = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
+=======
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
@@ -662,11 +739,67 @@ const AIQuantumComputingPlatform = () => {
                 <p className="text-white font-medium">{tech}</p>
               </motion.div>
             ))}
+=======
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
+                  <p className="text-gray-600">per month</p>
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular 
+                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}>
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
+            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-700 font-semibold">
+              Contact Sales Team
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="py-16 bg-purple-50">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-purple-600 mb-2">1000x</div>
+              <p className="text-gray-700">Faster problem solving</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-purple-600 mb-2">60-80%</div>
+              <p className="text-gray-700">Reduction in computational costs</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="text-3xl font-bold text-purple-600 mb-2">Breakthrough</div>
+              <p className="text-gray-700">Scientific discoveries enabled</p>
+            </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -728,6 +861,38 @@ const AIQuantumComputingPlatform = () => {
           </div>
 <<<<<<< HEAD
 
+=======
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading organizations already using AI Quantum Computing Platform to solve the impossible.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              Start Free Trial
+            </a>
+            <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <Phone className="w-8 h-8 text-purple-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
+            <p className="text-gray-600 mb-4">Speak with our quantum computing experts</p>
+            <a href="tel:+13024640950" className="text-purple-600 hover:text-purple-700 font-semibold">
+              +1 302 464 0950
+            </a>
+          </div>
+          
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-purple-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -737,24 +902,38 @@ const AIQuantumComputingPlatform = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
+<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
 
+=======
+          <a 
+            href="https://ziontechgroup.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+          >
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }}}
 =======
           <p className="text-zion-slate-light mt-4">
@@ -783,3 +962,6 @@ export default AIQuantumComputingPlatform;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+<<<<<<< HEAD
 import { Brain,
   Shield,
   Cloud,
@@ -8,6 +9,15 @@ import { Brain,
   Globe,
   Cpu,
   Database,
+=======
+import { Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Network,
   Lock,
   Code,
@@ -91,6 +101,7 @@ import { Brain,
   Volume2,
   VolumeX
 <<<<<<< HEAD
+<<<<<<< HEAD
 const QuickAccess: React.FC = (): JSX.Element => {
 =======
  } from 'lucide-react.ts';
@@ -102,6 +113,11 @@ const QuickAccess: React.FC = (): JSX.Element => {;
 
 const QuickAccess: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+ } from 'lucide-react.ts';
+
+const QuickAccess: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const quickLinks = [
     {
       title: "AI Services",
@@ -339,6 +355,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
         {/* Quick Links Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<<<<<<< HEAD
           {quickLinks.map((link, index)   => (
             <motion.div
               key={index}
@@ -362,6 +379,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
 <<<<<<< HEAD
 
 =======
+=======
+          {quickLinks.map((link, index)  => (
+            <motion.div
+              key={link.title}
+              variants={hoverVariants}
+              whileHover="hover"
+              onHoverStart={() => setHoveredCategory(link.title)}
+              onHoverEnd={() => setHoveredCategory(null)}
+              onClick={() => setSelectedCategory(selectedCategory === link.title ? null : link.title)}
+              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             >
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -546,7 +574,11 @@ const QuickAccess: React.FC = (): JSX.Element => {
             <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index)  => (
               <motion.div

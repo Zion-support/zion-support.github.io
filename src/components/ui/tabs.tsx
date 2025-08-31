@@ -2,12 +2,18 @@ import React, { createContext, useContext, useState, ReactNode } from 'react.ts'
 
 interface TabsContextType {
 
+<<<<<<< HEAD
 
   activeTab: anystring;
 <<<<<<< HEAD
   setActiveTab: (tab: string)  => void;
 =======
 setActiveTab: any(tab: string)   => void;
+=======
+  activeTab: anystring;
+  setActiveTab: (tab: string)  => void;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -18,6 +24,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
   children: anyReactNode;
   defaultValue?: string;
   value?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onValueChange?: (value: string)  => void;
   className?: string;
@@ -37,6 +44,17 @@ export function Tabs(...args: any[]): any {;
 
   const handleTabChange = (tab: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  onValueChange?: (value: string)  => void;
+  className?: string;
+
+}
+
+export function Tabs(...args: any[]): any {
+  const [activeTab, setActiveTab] = useState(value || defaultValue || '');
+
+  const handleTabChange = (tab: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setActiveTab(tab);
     if (onValueChange) {
 <<<<<<< HEAD
@@ -83,9 +101,15 @@ interface TabsListProps extends React.PropsWithChildren<{}> {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
+=======
+interface TabsListProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   children: ReactNode;
 <<<<<<< HEAD
   className?: string;
+<<<<<<< HEAD
 =======
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -96,6 +120,16 @@ export function TabsList(...args: any[]): any {;
     <div className={`flex border-b border-gray-200 ${className}`}>;
       {children};
     </div>;
+=======
+
+}
+
+export function TabsList(...args: any[]): any {
+  return (
+    <div className={`flex border-b border-gray-200 ${className}`}>
+      {children}
+    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   );
 <<<<<<< HEAD
 =======
@@ -103,10 +137,16 @@ export function TabsList(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
+=======
+interface TabsTriggerProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   children: ReactNode;
   value: string;
 <<<<<<< HEAD
   className?: string;
+<<<<<<< HEAD
 =======
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -114,6 +154,12 @@ export function TabsList(...args: any[]): any {;
 <<<<<<< HEAD
 export function TabsTrigger(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
+}
+
+export function TabsTrigger(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
 
@@ -147,10 +193,16 @@ interface TabsContentProps extends React.PropsWithChildren<{}> {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
+=======
+interface TabsContentProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   children: ReactNode;
   value: string;
 <<<<<<< HEAD
   className?: string;
+<<<<<<< HEAD
 =======
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -158,6 +210,12 @@ interface TabsContentProps extends React.PropsWithChildren<{}> {;
 <<<<<<< HEAD
 export function TabsContent(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
+}
+
+export function TabsContent(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
 

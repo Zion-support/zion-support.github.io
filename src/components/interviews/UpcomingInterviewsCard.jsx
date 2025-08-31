@@ -4,10 +4,14 @@ import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
 import { format, isPast, parseISO } from "date-fns";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Video import { Avatar } from "@/components/ui/avatar";
 =======
 import Link from "next/link";
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

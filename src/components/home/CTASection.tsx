@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -11,6 +12,14 @@ import { ArrowRight, Rocket, MessageCircle, Calendar, Star   } from 'lucide-reac
 
 const CTASection: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react.ts';
+
+const CTASection: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const features = [
     {
       icon: Rocket,
@@ -165,6 +174,7 @@ const CTASection: React.FC = (): JSX.Element => {
         {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+<<<<<<< HEAD
           initial = {
   { opacity: 0,
   y: 30 
@@ -203,6 +213,14 @@ const CTASection: React.FC = (): JSX.Element => {
         >
           {features.map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: anytrue }}
+        >
+          {features.map((feature, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={feature.title}
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"

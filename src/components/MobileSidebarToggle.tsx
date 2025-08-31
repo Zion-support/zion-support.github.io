@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation  } from 'react-router-dom.ts';
@@ -12,13 +13,25 @@ import { Link, useLocation   } from 'react-router-dom.ts';
 <<<<<<< HEAD
 export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+
+export const MobileSidebarToggle: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleSection = (section: anystring)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const toggleSection = (section: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
 <<<<<<< HEAD
@@ -34,7 +47,11 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
     setExpandedSections(newExpanded)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
   const isActive = (path: anystring)   => location.pathname === path;
+=======
+  const isActive = (path: anystring)  => location.pathname === path;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   const navigationSections = [
     {

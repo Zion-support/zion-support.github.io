@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useInView  } from 'framer-motion.ts';
 import { useRef  } from 'react.ts';
@@ -15,11 +16,23 @@ interface Stat {
 
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useInView  } from 'framer-motion.ts';
+import { useRef  } from 'react.ts';
+import { TrendingUp, Award, Users, Clock  } from 'lucide-react.ts';
+
+interface Stat {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   number: string;
   label: string;
   description: string;
   avatar: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 icon: React.ComponentType<{ className?: string;
 }>;
   color: string;
@@ -27,6 +40,7 @@ icon: React.ComponentType<{ className?: string;
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
   stats: Stat[];
+<<<<<<< HEAD
 =======
 icon: React.ComponentType<{ className?: string;
 }>;
@@ -36,15 +50,23 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
   stats: Stat[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [counts, setCounts] = useState<any>({ /* empty */ });
 =======
   const [counts, setCounts] = useState<any>({});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+  const [counts, setCounts] = useState<any>({});
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   useEffect(()  => {
     if (isInView) {
@@ -118,7 +140,11 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </motion.div>
 
         <div ref={ref} className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
           {stats.map((stat, index)   => (
+=======
+          {stats.map((stat, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

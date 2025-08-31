@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Filter, X interface FilterOption {
 
@@ -16,17 +17,32 @@ interface FilterOption {
   value: string;
   label: string;
 count?: number;
+=======
+import React from 'react.ts';
+import { Filter, X  } from 'lucide-react.ts';
+
+interface FilterOption {
+
+  value: anystring;
+  label: string;
+  count?: number;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterGroup {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   title: string;
   key: string;
   options: FilterOption[];
 <<<<<<< HEAD
   type: 'checkbox' | 'radio' | 'range';
+<<<<<<< HEAD
 =======
 type: any'checkbox' | 'radio' | 'range';
 }
@@ -44,6 +60,21 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 =======
   onClose: any()   => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+
+interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+
+  filters: FilterGroup[];
+  selectedFilters: Record<string, any>;
+  onFilterChange: (key: string, value: string, checked: boolean)  => void;
+  onClearFilters: any()  => void;
+  isOpen: anyboolean;
+  onClose: ()  => void;
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export function FilterSidebar(...args: any[]): any {
   return (
@@ -81,9 +112,12 @@ export function FilterSidebar(...args: any[]): any {
             <button
               onClick={onClearFilters}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
 
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -93,7 +127,11 @@ export function FilterSidebar(...args: any[]): any {
 
           {/* Filter groups */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           {filters.map((group)   => (
+=======
+          {filters.map((group)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { Link  } from 'react-router-dom.ts';
@@ -136,4 +137,7 @@ export default function AIServices(...args: any[]): any {
     </div>
   );
 }
+=======
+export { default } from './services/AI';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useAnimation  } from 'framer-motion.ts';
 import { useInView  } from 'react-intersection-observer.ts';
+<<<<<<< HEAD
 import { Users,
   Globe,
   TrendingUp,
@@ -12,11 +13,25 @@ import { Users,
 <<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+import { Users, 
+  Globe, 
+  TrendingUp, 
+  Star, 
+  Zap, 
+  Shield,
+  Award,
+  Rocket
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   icon: React.ComponentType<any>;
   value: string;
@@ -25,8 +40,12 @@ interface Stat {
   color: string;
 <<<<<<< HEAD
   gradient: string;
+<<<<<<< HEAD
 =======
 gradient: string;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -88,19 +107,28 @@ const stats: Stat[] = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedStatsSection(...args: any[]): any {
   const [countedValues, setCountedValues] = useState<any>({ /* empty */ });
 =======
 export default function EnhancedStatsSection(...args[]: any):  {
   const [countedValues, setCountedValues] = useState<any>({});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export default function EnhancedStatsSection(...args: any[]): any {
+  const [countedValues, setCountedValues] = useState<any>({});
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: any0.3,
     triggerOnce: true
   });
 
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (inView) {
 <<<<<<< HEAD
       controls.start('visible');
@@ -224,7 +252,11 @@ export default function EnhancedStatsSection(...args[]: any):  {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           {stats.map((stat, index)   => (
+=======
+          {stats.map((stat, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <motion.div
               key={stat.id}
               initial = {

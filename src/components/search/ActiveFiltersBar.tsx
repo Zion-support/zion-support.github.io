@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { X interface Filter {
 
@@ -33,12 +34,41 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 <<<<<<< HEAD
 export function ActiveFiltersBar(...args: any[]): any {;
   if (filters.length = == 0) {;
+=======
+import React from 'react.ts';
+import { X  } from 'lucide-react.ts';
+
+interface Filter {
+
+  key: anystring;
+  value: string;
+  label: string;
+
+}
+
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+
+  filters: Filter[];
+  onRemoveFilter: (key: string)  => void;
+  onClearAll: any()  => void;
+
+}
+
+export function ActiveFiltersBar(...args: any[]): any {
+  if (filters.length === 0) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     return null;
 
   return (
+<<<<<<< HEAD
     <div className = "flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
       <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
 
+=======
+    <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
+      <span className="text-sm text-zion-slate-light mr-2">Active filters: any</span>
+      
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {filters.map((filter)  => (
         <div
           key={filter.key}

@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Star,
   MessageCircle,
   ThumbsUp,
   ThumbsDown,
   Send,
+=======
+import { Star, 
+  MessageCircle, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Send, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Heart,
   Award,
   TrendingUp,
@@ -16,14 +24,21 @@ import { Star,
   Filter,
   Search
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Feedback {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   customerName: string;
   rating: number;
@@ -36,8 +51,12 @@ interface Feedback {
   tags: string[];
 <<<<<<< HEAD
   verified: boolean;
+<<<<<<< HEAD
 =======
 verified: boolean;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -45,11 +64,15 @@ verified: boolean;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   topCategories: Array<any>;
 =======
@@ -58,18 +81,31 @@ interface FeedbackStats {
 interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+  topCategories: Array<any>;
+}
+
+interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   showStats?: boolean;
   showFilters?: boolean;
 <<<<<<< HEAD
   maxFeedback?: number;
+<<<<<<< HEAD
 =======
   maxFeedback?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 <<<<<<< HEAD
   showStats = true,
   showFilters = true,
+<<<<<<< HEAD
   maxFeedback = 10;
 }) => {;
   const [feedback, setFeedback] = useState<any>([]);
@@ -84,6 +120,13 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
   const [stats, setStats] = useState<any>({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  maxFeedback = 10
+}) => {
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
@@ -101,7 +144,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   });
 
   // Sample feedback data
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const sampleFeedback: Feedback[] = [
       {
         id: any'1',
@@ -174,7 +221,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -185,6 +236,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         acc[f.category] = (acc[f.category] || 0) + 1;
 <<<<<<< HEAD
         return acc;
+<<<<<<< HEAD
       }, { /* empty */ } as Record<string, any>);
 =======
         return acc}, {} as Record<string, any>);
@@ -193,10 +245,17 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
 <<<<<<< HEAD
+=======
+      }, {} as Record<string, any>);
+
+      const topCategories = Object.entries(categoryCounts)
+        .map(([category, count]) => ({
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
           category: anycategory.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
+<<<<<<< HEAD
         .sort((a, b)   => b.count - a.count);
 =======;
           category: anycategory.charAt(0).toUpperCase() + category.slice(1),;
@@ -205,6 +264,9 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         }));
         .sort((a, b)  => b.count - a.count);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+        .sort((a, b)  => b.count - a.count)
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         .slice(0, 4);
 
       setStats({
@@ -269,7 +331,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       comment: newFeedback.comment,
       category: newFeedback.category,
       sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
-      date: new Date().toISOString().split('T')[0],
+      date: anynew Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
 <<<<<<< HEAD
@@ -277,6 +339,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   verified: false;
     ;
 
+<<<<<<< HEAD
 };
 =======
       tags: any[],;
@@ -292,11 +355,18 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setFeedback(prev   => [feedback, ...prev]);
+=======
+    setFeedback(prev  => [feedback, ...prev]);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
+<<<<<<< HEAD
   const handleVote = (feedbackId: anystring, type: 'helpful' | 'unhelpful')   => {
+=======
+  const handleVote = (feedbackId: anystring, type: 'helpful' | 'unhelpful')  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setFeedback(prev => prev.map(f => {
 <<<<<<< HEAD
       if (f.id === feedbackId) {
@@ -323,9 +393,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
+<<<<<<< HEAD
   const getSentimentColor = (sentiment: anystring)  => {;
     switch (sentiment) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getSentimentColor = (sentiment: anystring)  => {
+    switch (sentiment) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
 <<<<<<< HEAD
@@ -337,7 +412,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
+<<<<<<< HEAD
   const getCategoryColor = (category: anystring)   => {
+=======
+  const getCategoryColor = (category: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -504,7 +583,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-4">
+<<<<<<< HEAD
             {stats.topCategories.map((category, index)   => (
+=======
+            {stats.topCategories.map((category, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={category.category}
                 initial = {

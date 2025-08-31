@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Search,
   Filter,
   X,
   ChevronDown,
   Check,
+=======
+import { Search, 
+  Filter, 
+  X, 
+  ChevronDown, 
+  Check, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Star,
   Tag,
   MapPin,
@@ -16,14 +24,22 @@ import { Search,
   Shield,
   Globe
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SearchResult {
 
+<<<<<<< HEAD
 
   id: string;
+=======
+  id: anystring;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   title: string;
   description: string;
   category: string;
@@ -33,19 +49,27 @@ interface SearchResult {
   rating?: number;
 <<<<<<< HEAD
   type: 'service' | 'article' | 'team' | 'technology';
+<<<<<<< HEAD
 =======
 type: 'service' | 'article' | 'team' | 'technology';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterOption {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   label: string;
   value: string;
 <<<<<<< HEAD
   count: number;
+<<<<<<< HEAD
 =======
 count: anynumber;
 }
@@ -55,12 +79,26 @@ interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[])   => void;
+=======
+
+}
+
+interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
+
+  data: SearchResult[];
+  onResultsChange?: (results: SearchResult[])  => void;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   placeholder?: string;
 <<<<<<< HEAD
   showFilters?: boolean;
+<<<<<<< HEAD
 =======
   showFilters?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
@@ -81,14 +119,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, { /* empty */ } as Record<string, any>);
 =======
     }, {} as Record<string, any>);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    }, {} as Record<string, any>);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, { /* empty */ } as Record<string, any>);
 =======
@@ -97,6 +140,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
     return {
       categories: anyObject.entries(categories).map(([key, count])   => ({
+=======
+    }, {} as Record<string, any>);
+
+    return {
+      categories: anyObject.entries(categories).map(([key, count])  => ({
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         id: anykey,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,

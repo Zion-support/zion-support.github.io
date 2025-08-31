@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { Link, useLocation   } from 'react-router-dom.ts';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
@@ -14,6 +15,17 @@ import { Menu,
   Search,
   User,
   Bell,
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MobileSidebarToggle  } from './MobileSidebarToggle';
+import { Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ChevronDown,
   Brain,
   Shield,
@@ -185,6 +197,7 @@ import { Menu,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const FuturisticNavigation: React.FC = (): JSX.Element => {
 =======
 <<<<<<< HEAD
@@ -195,6 +208,10 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+ } from 'lucide-react.ts';
+export const FuturisticNavigation: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -220,13 +237,21 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 =======;
     setActiveDropdown(null);
   }, [location.pathname]);
+<<<<<<< HEAD
   const handleSearch = (e: anyReact.FormEvent)  => {;
+=======
+  const handleSearch = (e: anyReact.FormEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
+<<<<<<< HEAD
   const toggleDropdown = (dropdown: anystring)  => {;
+=======
+  const toggleDropdown = (dropdown: anystring)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };

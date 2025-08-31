@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class ContentQualityAnalyzer {
     static instance;
     analyzedPages = new Map();
@@ -310,6 +311,8 @@ export class ContentQualityAnalyzer {
     }
 }
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -434,7 +437,10 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
   );
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default ContentQualityAnalyzer;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

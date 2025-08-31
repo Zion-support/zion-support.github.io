@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
 <<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion.ts';
@@ -6,6 +7,44 @@ import { Smartphone,
   Monitor,
   Hand,
   Gesture,
+=======
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Smartphone, 
+  Tablet, 
+  Monitor, 
+  RotateCw, 
+  Touch, 
+  Hand, 
+  Wifi, 
+  Battery, 
+  Settings, 
+  X, 
+  CheckCircle, 
+  AlertTriangle, 
+  Info,
+  Zap,
+  Shield,
+  Target,
+  Award,
+  BarChart3,
+  Palette,
+  RotateCcw,
+  Save,
+  Loader2,
+  Smartphone as PhoneIcon,
+  Wifi as WifiIcon,
+  Battery as BatteryIcon,
+  Signal,
+  Volume2,
+  VolumeX,
+  Sun,
+  Moon,
+  Eye,
+  EyeOff,
+  Fingerprint,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ArrowLeft,
   ArrowRight,
   ArrowUp,
@@ -500,6 +539,7 @@ interface MobileMetrics {
 
 interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
 
+<<<<<<< HEAD
   enabled?: boolean;
   showControls?: boolean;
   autoOptimize?: boolean;
@@ -780,15 +820,370 @@ export function MobileExperienceEnhancer(...args: any[]): any {
   useEffect(() => {
     if (metrics) {
       const score = calculateMobileScore();
+=======
+  const [features, setFeatures] = useState<MobileFeature[]>([
+    {
+      id: 'touch-gestures',
+      name: 'Touch Gestures',
+      description: 'Advanced touch gesture recognition and handling',
+      category: 'touch',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'mobile-optimizations',
+      name: 'Mobile Optimizations',
+      description: 'Performance and layout optimizations for mobile devices',
+      category: 'performance',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'pwa-features',
+      name: 'PWA Features',
+      description: 'Progressive Web App capabilities and offline support',
+      category: 'pwa',
+      enabled: true,
+      priority: 'medium',
+      impact: 'medium'
+    },
+    {
+      id: 'adaptive-layout',
+      name: 'Adaptive Layout',
+      description: 'Responsive design that adapts to different screen sizes',
+      category: 'navigation',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'mobile-navigation',
+      name: 'Mobile Navigation',
+      description: 'Touch-optimized navigation and menu systems',
+      category: 'navigation',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'touch-targets',
+      name: 'Touch Targets',
+      description: 'Properly sized touch targets for mobile interaction',
+      category: 'accessibility',
+      enabled: true,
+      priority: 'medium',
+      impact: 'medium'
+    },
+    {
+      id: 'mobile-performance',
+      name: 'Mobile Performance',
+      description: 'Performance monitoring and optimization for mobile',
+      category: 'performance',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'gesture-history',
+      name: 'Gesture History',
+      description: 'Track and analyze user gesture patterns',
+      category: 'touch',
+      enabled: false,
+      priority: 'low',
+      impact: 'low'
+    }
+  ]);
+
+  const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
+  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [mobileScore, setMobileScore] = useState(0);
+  const [activeGestures, setActiveGestures] = useState<string[]>([]);
+
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Detect device information
+  useEffect(() => {
+    const detectDevice = () => {
+      const userAgent = navigator.userAgent;
+      const screen = window.screen;
+      
+      let type: 'mobile' | 'tablet' | 'desktop' = 'desktop';
+      let platform: 'ios' | 'android' | 'web' | 'unknown' = 'unknown';
+      
+      // Detect platform
+      if (/iPad|iPhone|iPod/.test(userAgent)) {
+        platform = 'ios';
+        type = /iPad/.test(userAgent) ? 'tablet' : 'mobile';
+      } else if (/Android/.test(userAgent)) {
+        platform = 'android';
+        type = screen.width >= 768 ? 'tablet' : 'mobile';
+      } else if (/Windows|Mac|Linux/.test(userAgent)) {
+        platform = 'web';
+        type = 'desktop';
+      }
+      
+      // Detect mobile by screen size
+      if (screen.width <= 768) {
+        type = screen.width <= 480 ? 'mobile' : 'tablet';
+      }
+      
+      const deviceInfo: DeviceInfo = {
+        type,
+        platform,
+        screenSize: { width: screen.width, height: screen.height },
+        pixelRatio: window.devicePixelRatio || 1,
+        orientation: screen.width > screen.height ? 'landscape' : 'portrait',
+        touchSupport: 'ontouchstart' in window,
+        pwaSupport: 'serviceWorker' in navigator,
+        networkType: (navigator as any).connection?.effectiveType || 'unknown',
+        batteryLevel: 0
+      };
+      
+      setDeviceInfo(deviceInfo);
+      
+      // Get battery level if available
+      if ('getBattery' in navigator) {
+        (navigator as any).getBattery().then((battery: any) => {
+          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        });
+      }
+    };
+    
+    detectDevice();
+    window.addEventListener('resize', detectDevice);
+    window.addEventListener('orientationchange', detectDevice);
+    
+    return () => {
+      window.removeEventListener('resize', detectDevice);
+      window.removeEventListener('orientationchange', detectDevice);
+    };
+  }, []);
+
+  // Touch gesture handling
+  useEffect(() => {
+    if (!settings.touchGestures) return;
+    
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        touchStartRef.current = {
+          x: touch.clientX,
+          y: touch.clientY,
+          time: Date.now()
+        };
+      }
+    };
+    
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!touchStartRef.current || e.touches.length !== 0) return;
+      
+      const touch = e.changedTouches[0];
+      const start = touchStartRef.current;
+      const deltaX = touch.clientX - start.x;
+      const deltaY = touch.clientY - start.y;
+      const deltaTime = Date.now() - start.time;
+      
+      // Detect gesture type
+      let gestureType: TouchGesture['type'] = 'tap';
+      let direction: TouchGesture['direction'] | undefined;
+      
+      if (deltaTime < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+        gestureType = 'tap';
+      } else if (deltaTime > 500) {
+        gestureType = 'longPress';
+      } else if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+        gestureType = 'swipe';
+        direction = deltaX > 0 ? 'right' : 'left';
+      } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
+        gestureType = 'swipe';
+        direction = deltaY > 0 ? 'down' : 'up';
+      }
+      
+      const gesture: TouchGesture = {
+        type: gestureType,
+        direction,
+        timestamp: Date.now(),
+        coordinates: { x: touch.clientX, y: touch.clientY },
+        intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+      };
+      
+      setTouchGestures(prev => [...prev.slice(-9), gesture]);
+      handleGesture(gesture);
+      
+      touchStartRef.current = null;
+    };
+    
+    const handleGesture = (gesture: TouchGesture) => {
+      // Handle different gesture types
+      switch (gesture.type) {
+        case 'swipe':
+          if (gesture.direction === 'left') {
+            // Navigate forward
+            console.log('Swipe left - navigate forward');
+          } else if (gesture.direction === 'right') {
+            // Navigate back
+            console.log('Swipe right - navigate back');
+          }
+          break;
+        case 'longPress':
+          // Show context menu
+          console.log('Long press - show context menu');
+          break;
+        case 'tap':
+          // Handle tap
+          console.log('Tap detected');
+          break;
+      }
+      
+      // Add to active gestures
+      setActiveGestures(prev => [...prev, `${gesture.type}${gesture.direction ? `-${gesture.direction}` : ''}`]);
+      
+      // Remove after 3 seconds
+      setTimeout(() => {
+        setActiveGestures(prev => prev.filter(g => g !== `${gesture.type}${gesture.direction ? `-${gesture.direction}` : ''}`));
+      }, 3000);
+    };
+    
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [settings.touchGestures]);
+
+  // Apply mobile optimizations
+  const applyMobileOptimizations = useCallback(async () => {
+    setIsOptimizing(true);
+    
+    try {
+      // Apply touch target optimizations
+      if (settings.touchTargets) {
+        document.body.classList.add('mobile-touch-targets');
+        document.documentElement.style.setProperty('--zion-touch-target-size', '44px');
+      }
+      
+      // Apply mobile navigation
+      if (settings.mobileNavigation) {
+        document.body.classList.add('mobile-navigation');
+      }
+      
+      // Apply adaptive layout
+      if (settings.adaptiveLayout) {
+        document.body.classList.add('mobile-adaptive-layout');
+      }
+      
+      // Apply touch feedback
+      if (settings.touchFeedback) {
+        document.body.classList.add('mobile-touch-feedback');
+      }
+      
+      // Simulate optimization delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Calculate mobile score
+      const enabledFeatures = features.filter(f => f.enabled).length;
+      const totalFeatures = features.length;
+      const score = Math.round((enabledFeatures / totalFeatures) * 100);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       setMobileScore(score);
     }
   }, [metrics, calculateMobileScore]);
 
+<<<<<<< HEAD
   if (!enabled || !metrics) return null;
 
   return (
     <>
       {/* Mobile Experience Toggle Button */}
+=======
+  // Toggle mobile features
+  const toggleFeature = useCallback((featureId: string) => {
+    setFeatures(prev => prev.map(f => 
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+    ));
+    
+    // Apply optimizations after feature toggle
+    setTimeout(applyMobileOptimizations, 100);
+  }, [applyMobileOptimizations]);
+
+  // Save mobile settings
+  const saveSettings = useCallback(async () => {
+    setIsOptimizing(true);
+    try {
+      localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } catch (error) {
+      console.error('Failed to save mobile settings:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [settings]);
+
+  // Load mobile settings
+  const loadSettings = useCallback(async () => {
+    setIsOptimizing(true);
+    try {
+      const saved = localStorage.getItem('zion-mobile-settings');
+      if (saved) {
+        const parsedSettings = JSON.parse(saved);
+        setSettings(parsedSettings);
+      }
+      await new Promise(resolve => setTimeout(resolve, 500));
+    } catch (error) {
+      console.error('Failed to load mobile settings:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, []);
+
+  // Reset to default settings
+  const resetSettings = useCallback(() => {
+    const defaultSettings: MobileSettings = {
+      touchGestures: true,
+      orientationLock: false,
+      mobileOptimizations: true,
+      pwaFeatures: true,
+      touchFeedback: true,
+      hapticFeedback: false,
+      adaptiveLayout: true,
+      mobileNavigation: true,
+      touchTargets: true,
+      mobilePerformance: true,
+      gestureHistory: true,
+      mobileAnalytics: true,
+      deviceOrientation: 'auto',
+      touchSensitivity: 'medium',
+      hapticIntensity: 'medium'
+    };
+    
+    setSettings(defaultSettings);
+    setTouchGestures([]);
+    setActiveGestures([]);
+    setMobileScore(0);
+  }, []);
+
+  // Calculate mobile score on mount and when features change
+  useEffect(() => {
+    const enabledFeatures = features.filter(f => f.enabled).length;
+    const totalFeatures = features.length;
+    const score = Math.round((enabledFeatures / totalFeatures) * 100);
+    setMobileScore(score);
+  }, [features]);
+
+  if (!enabled) return null;
+
+  return (
+    <>
+      {/* Floating Mobile Button */}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <motion.button
         className="fixed bottom-4 left-20 z-50 p-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
         onClick={() => setIsVisible(!isVisible)}
@@ -1373,5 +1768,9 @@ export function MobileExperienceEnhancer(...args: any[]): any {
       )}
     </>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { Logo } from './Logo';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
@@ -72,14 +76,31 @@ export function Header({
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
       setIsScrolled(window.scrollY > 10)};
 
+=======
+      setIsScrolled(window.scrollY > 20);
+    };
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
+<<<<<<< HEAD
+=======
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+  };
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)};
 
+<<<<<<< HEAD
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
@@ -196,6 +217,31 @@ export function Header({
                 <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
               </div>
 =======
+=======
+  return (
+    <header 
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
+          : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
+      }`} 
+      style={headerStyle}
+    >
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+      
+      {/* Glowing border effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"/>
+      
+      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
+
+        {/* Desktop Navigation */}
+        <div className="ml-6 flex-1 hidden lg:block">
+          <MainNavigation />
+        </div>
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
           <div className="relative group">
@@ -204,13 +250,18 @@ export function Header({
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
+<<<<<<< HEAD
                 router(`/search?q=${encodeURIComponent(text)}`);
+=======
+                navigate(`/search?q=${encodeURIComponent(text)}`);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 setQuery("");
               }} 
               searchSuggestions={searchSuggestions}
             />
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
               <SearchIcon className="h-4 w-4 text-zion-slate-light"/>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </form>
@@ -218,6 +269,31 @@ export function Header({
 <<<<<<< HEAD
       </header>
 =======
+=======
+            </div>
+          </div>
+        </form>
+
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-3">
+          {/* AI Assistant Button */}
+          <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
+            <Sparkles className="h-4 w-4 group-hover:animate-pulse"/>
+            <span className="text-sm font-medium">AI Assistant</span>
+          </button>
+
+          <LanguageSelector />
+          {!hideLogin && <UserMenu />}
+
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMobileMenu} 
+            className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5"/> : <Menu className="h-5 w-5"/>}
+          </button>
+        </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       </div>
 
       {/* Mobile Search Bar */}
@@ -228,7 +304,11 @@ export function Header({
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
+<<<<<<< HEAD
                 router(`/search?q=${encodeURIComponent(text)}`);
+=======
+                navigate(`/search?q=${encodeURIComponent(text)}`);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 setQuery("");
               }} 
               searchSuggestions={searchSuggestions} 
@@ -240,7 +320,10 @@ export function Header({
           </div>
         </form>
       </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
@@ -259,84 +342,120 @@ export function Header({
             <nav className="flex-1 p-4">
               <ul className="space-y-2">
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Home
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/services"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/services" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Services
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/talent"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/talent" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Talent
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/equipment"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/equipment" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Equipment
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/community"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/community" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Community
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/ai-content-generator"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/ai-content-generator" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     AI Content Generator
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/cybersecurity-suite"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/cybersecurity-suite" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Cybersecurity Suite
                   </Link>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <Link
                     to="/cloud-optimizer"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                  <Link to="/cloud-optimizer" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     Cloud Cost Optimizer
                   </Link>
                 </li>
                 {user && (
                   <li>
+<<<<<<< HEAD
                     <Link
                       to="/dashboard"
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 
+=======
+                    <Link to="/dashboard" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       Dashboard
                     </Link>
                   </li>
@@ -352,6 +471,7 @@ export function Header({
                 </button>
                 {!user && (
                   <div className="flex gap-2">
+<<<<<<< HEAD
                     <Link
                       to="/login"
                       onClick={toggleMobileMenu}
@@ -364,6 +484,12 @@ export function Header({
                       onClick={toggleMobileMenu}
                       className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
 
+=======
+                    <Link to="/login" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors">
+                      Login
+                    </Link>
+                    <Link to="/signup" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors">
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                       Sign Up
                     </Link>
                   </div>
@@ -376,6 +502,7 @@ export function Header({
 
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
   );
@@ -391,3 +518,8 @@ export default Header;
 export default Header;
 export default Header;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    </header>
+  );
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

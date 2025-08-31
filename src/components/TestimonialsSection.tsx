@@ -1,6 +1,7 @@
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
 =======
 import { 
@@ -31,6 +32,10 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe  } from 'lucide-react.ts';
+const testimonials = [
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   {
     id: 1,
     name: "Dr. Sarah Chen",
@@ -106,6 +111,7 @@ const testimonials: Testimonial[] = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
+<<<<<<< HEAD
 
 const stats = [
   { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
@@ -143,6 +149,9 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
 
   const current = testimonials[currentTestimonial];
 
+=======
+export function TestimonialsSection(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
     <section className = "py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -156,7 +165,11 @@ export const TestimonialsSection: React.FC = (): JSX.Element => {
         </div>
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index)  => (
+<<<<<<< HEAD
             <div
+=======
+            <div 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
 

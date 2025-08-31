@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { Link  } from 'react-router-dom.ts';
@@ -76,3 +77,7 @@ export default function MicroSaaS(...args: any[]): any {
   );
 }
 
+=======
+export { default } from './MicroSAAS';
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

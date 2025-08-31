@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
 =======
@@ -10,15 +11,30 @@ interface CheckboxProps extends React.PropsWithChildren<{
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   checked: anyboolean;
   onChange: (checked: boolean)   => void;
+=======
+import React from 'react.ts';
+
+interface CheckboxProps extends React.PropsWithChildren<{}> {
+
+  checked: anyboolean;
+  onChange: (checked: boolean)  => void;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   label?: string;
   disabled?: boolean;
 <<<<<<< HEAD
   className?: string;
+<<<<<<< HEAD
 =======
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function Checkbox(...args[]: any):  {
+=======
+
+}
+
+export function Checkbox(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
     <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
       <input

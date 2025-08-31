@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react.ts';
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 interface AlertProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
 =======
 import React from 'react.ts';
 
@@ -19,6 +25,31 @@ export function Alert(...args: any[]): any {;
     <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
       {children};
     </div>;
+=======
+
+}
+
+export function Alert(...args: any[]): any {
+  return (
+    <div className={`relative w-full rounded-lg border p-4 ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode;
+  className?: string;
+
+}
+
+export function AlertDescription(...args: any[]): any {
+  return (
+    <div className={`text-sm ${className}`}>
+      {children}
+    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   );
 <<<<<<< HEAD
 =======

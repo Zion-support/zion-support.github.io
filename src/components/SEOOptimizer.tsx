@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Search,
   TrendingUp,
   Target,
   Zap,
   CheckCircle,
+=======
+import { Search, 
+  TrendingUp, 
+  Target, 
+  Zap, 
+  CheckCircle, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   AlertTriangle,
   Info,
   Settings,
@@ -18,27 +26,42 @@ import { Search,
   ArrowUpRight,
   RefreshCw
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SEOAnalysis {
 
+<<<<<<< HEAD
 
   score: number;
+=======
+  score: anynumber;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
 <<<<<<< HEAD
   lastUpdated: Date;
+<<<<<<< HEAD
 =======
 lastUpdated: Date;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOIssue {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
@@ -47,14 +70,21 @@ interface SEOIssue {
   fixable: boolean;
 <<<<<<< HEAD
   category: 'content' | 'technical' | 'performance' | 'accessibility';
+<<<<<<< HEAD
 =======
 category: 'content' | 'technical' | 'performance' | 'accessibility';
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOSuggestion {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -62,14 +92,21 @@ interface SEOSuggestion {
   effort: 'low' | 'medium' | 'high';
 <<<<<<< HEAD
   estimatedImpact: number;
+<<<<<<< HEAD
 =======
 estimatedImpact: number;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SEOMetrics {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
@@ -82,6 +119,7 @@ coreWebVitals: {;
     cls: number;
   
 };
+<<<<<<< HEAD
 =======
     cls: anynumber}}
 
@@ -96,12 +134,25 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 =======
   onAnalysisComplete?: (analysis: anySEOAnalysis)   => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+}
+
+interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
+
+  url?: string;
+  autoAnalyze?: boolean;
+  showDetails?: boolean;
+  onAnalysisComplete?: (analysis: SEOAnalysis)  => void;
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
 <<<<<<< HEAD
   autoAnalyze = true,
   showDetails = false,
+<<<<<<< HEAD
   onAnalysisComplete;
 }) => {;
   const [analysis, setAnalysis] = useState<any>(null);
@@ -112,6 +163,11 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {;
   const [analysis, setAnalysis] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  onAnalysisComplete
+}) => {
+  const [analysis, setAnalysis] = useState<any>(null);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -224,25 +280,38 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get score color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getScoreColor = (score: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getScoreColor = (score: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500'};
 
   // Get score background
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getScoreBackground = (score: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getScoreBackground = (score: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100'};
 
   // Get impact color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getImpactColor = (impact: anystring)  => {;
     switch (impact) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getImpactColor = (impact: anystring)  => {
+    switch (impact) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
       case 'low': return 'text-blue-500';
@@ -256,9 +325,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Get priority color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
+    switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
@@ -683,9 +757,14 @@ export const useSEOOptimization[, React.Dispatch<React.SetStateAction<any>>] = (
 };
 
 // Hook for using SEO optimization
+<<<<<<< HEAD
 export const useSEOOptimization = () => {;
   const [analysis, setAnalysis] = useState<any>(null);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+export const useSEOOptimization: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [analysis, setAnalysis] = useState<any>(null);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {;

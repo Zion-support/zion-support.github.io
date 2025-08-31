@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -162,6 +165,7 @@ transition = {};
     </AnimatePresence>
   );
 
+<<<<<<< HEAD
 export default ScrollToTop;
 }}
 =======
@@ -183,6 +187,8 @@ export default ScrollToTop;
     </>;
 ;
 ;
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export default ScrollToTop;
 
 export default ScrollToTop;

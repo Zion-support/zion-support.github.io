@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface PostCardProps extends React.PropsWithChildren<{}> {
 
 post: {;
@@ -10,6 +11,13 @@ interface PostCardProps extends React.PropsWithChildren<{
 
 post: {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React from 'react.ts';
+
+interface PostCardProps extends React.PropsWithChildren<{}> {
+
+post: {;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     id: string;
     title: string;
     content: string;
@@ -18,17 +26,26 @@ post: {
     likes: number;
     replies: number;
     views: number;
+<<<<<<< HEAD
 author: {
+=======
+author: {;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       name: string;
 <<<<<<< HEAD
       avatar: string;
-    };
+    
+};
   };
 =======
       avatar: string}}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
 export default function PostCard(...args[]: any):  {
+=======
+export default function PostCard(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   return (
     <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">

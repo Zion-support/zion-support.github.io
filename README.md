@@ -135,6 +135,7 @@ npm run dev
 npm run build
 ```
 
+<<<<<<< HEAD
 ### Environment Setup
 ```bash
 # Copy environment variables
@@ -202,6 +203,16 @@ src/
 - **Error Tracking** - Real-time error monitoring
 - **User Analytics** - User behavior and engagement metrics
 - **SEO Optimization** - Meta tags, structured data, sitemap
+=======
+### Development Commands
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript type checking
+```
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 ## 🌐 Deployment
 
@@ -260,6 +271,10 @@ This project is proprietary software owned by Zion Tech Group. All rights reserv
 
 ---
 
+<<<<<<< HEAD
 **Zion Tech Group** - Transforming businesses through innovative technology solutions.
 
 *Built with ❤️ and cutting-edge technology*
+=======
+**Zion Tech Group** - Empowering the future through innovative technology solutions.
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

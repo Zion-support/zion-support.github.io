@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { ReactNode   } from 'react.ts';
 import { FuturisticNavigation   } from './FuturisticNavigation';
@@ -8,20 +9,32 @@ import { FuturisticAnimatedBackground   } from './FuturisticAnimatedBackground';
 
 interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
 =======
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import React from 'react.ts';
 import { ReactNode  } from 'react.ts';
 import { FuturisticNavigation  } from './FuturisticNavigation';
 import { FuturisticFooter  } from './FuturisticFooter';
 import { EnhancedSidebar  } from './EnhancedSidebar';
 import { FuturisticAnimatedBackground  } from './FuturisticAnimatedBackground';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
+interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   children: ReactNode;
 <<<<<<< HEAD
   showSidebar?: boolean;
+<<<<<<< HEAD
 =======
   showSidebar?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,

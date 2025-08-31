@@ -1,8 +1,15 @@
 import React, { useState } from 'react.ts';
+<<<<<<< HEAD
 import { Link   } from 'react-router-dom.ts';
 import { motion, AnimatePresence   } from 'framer-motion.ts';
 
 const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
+=======
+import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+
+const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<any>(null);
 
@@ -200,7 +207,11 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
               {/* Service Categories Grid */}
               <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6 mb-8">
+<<<<<<< HEAD
                 {serviceCategories.map((category, categoryIndex)   => (
+=======
+                {serviceCategories.map((category, categoryIndex)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                   <motion.div
                     key={category.name}
                     initial = {
@@ -273,7 +284,11 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                   Quick Access
                 </h4>
                 <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+<<<<<<< HEAD
                   {quickLinks.map((link, index)   => (
+=======
+                  {quickLinks.map((link, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                     <motion.div
                       key={link.title}
                       initial = {

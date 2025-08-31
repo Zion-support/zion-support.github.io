@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Users, Award, Target, Zap, Linkedin, Mail const Leadership = () => {
+=======
+import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+const Leadership = () => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const leadershipTeam = [
         {
             name: "Dr. Sarah Chen",

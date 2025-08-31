@@ -591,6 +591,7 @@ export const getEmergingTechServicesStats = () => {
   };
 };
 
+<<<<<<< HEAD
 export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;}}
 =======
     competitors: ["Neuralink", "Kernel", "CTRL-labs", "Academic research platforms", "Medical device companies"],
@@ -603,3 +604,6 @@ export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;}}
 
 export default EMERGING_TECH_SERVICES_2030;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

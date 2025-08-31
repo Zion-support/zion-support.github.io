@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -6,6 +7,16 @@ import { ArrowRight,
   Star,
   CheckCircle,
   ChevronLeft,
+=======
+import React, { useState, useEffect, memo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
+  Play, 
+  Star, 
+  CheckCircle, 
+  ChevronLeft, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   ChevronRight,
   Zap,
   Shield,
@@ -21,7 +32,10 @@ import { ArrowRight,
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface HeroSlide {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   title: string;
   subtitle: string;
   description: string;
@@ -32,6 +46,7 @@ interface HeroSlide {
   gradient: string;
   icon: React.ComponentType<any>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[];
 =======
@@ -40,6 +55,13 @@ interface HeroSlide {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function EnhancedHeroSection(...args[]: any):  {
+=======
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[];
+}
+
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -94,7 +116,11 @@ export default function EnhancedHeroSection(...args[]: any):  {
 
   ];
 
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (!isAutoPlaying) return;
 
 <<<<<<< HEAD
@@ -117,8 +143,12 @@ export default function EnhancedHeroSection(...args[]: any):  {
     setIsAutoPlaying(false)};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const goToSlide = (index: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const goToSlide = (index: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     setCurrentSlide(index);
     setIsAutoPlaying(false)};
 
@@ -658,8 +688,14 @@ export default function EnhancedHeroSection(...args[]: any):  {
     </section>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}}}
 =======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+});
+
+export default EnhancedHeroSection;
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

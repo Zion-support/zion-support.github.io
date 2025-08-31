@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
+<<<<<<< HEAD
 import { Users,
   Calendar,
   Clock,
   Target,
   TrendingUp,
+=======
+import { Users, 
+  Calendar, 
+  Clock, 
+  Target, 
+  TrendingUp, 
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   AlertCircle,
   CheckCircle,
   XCircle,
@@ -40,14 +48,21 @@ import { Users,
   Lock,
   Unlock
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } from 'lucide-react.ts';
+=======
+ } from 'lucide-react.ts';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Resource {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   name: string;
   type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
@@ -65,8 +80,12 @@ interface Resource {
   manager: string;
 <<<<<<< HEAD
   utilization: number;
+<<<<<<< HEAD
 =======
 utilization: number;
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -74,7 +93,10 @@ utilization: number;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -83,6 +105,7 @@ interface ResourceStats {
   currentUtilization: number;
   averageCost: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   topDepartments: Array<any>;
 =======
   topDepartments: Array<any>}
@@ -90,27 +113,45 @@ interface ResourceStats {
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+=======
+  topDepartments: Array<any>;
+}
+
+interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   showStats?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
 <<<<<<< HEAD
   maxResources?: number;
+<<<<<<< HEAD
 =======
   maxResources?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+
+}
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
 <<<<<<< HEAD
   showStats = true,
   showFilters = true,
   showCharts = true,
+<<<<<<< HEAD
   maxResources = 20;
 }) => {;
+=======
+  maxResources = 20
+}) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [resources, setResources] = useState<any>([]);
   const [filteredResources, setFilteredResources] = useState<any>([]);
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
+<<<<<<< HEAD
 =======
   showStats = true,;
   showFilters = true,;
@@ -123,6 +164,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
@@ -227,7 +270,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
+<<<<<<< HEAD
   useEffect(()   => {
+=======
+  useEffect(()  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -273,6 +320,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Calculate resource stats
   const resourceStats = {
+<<<<<<< HEAD
   <<<<<<< HEAD
     totalResources: anyresources.length,
     availableResources: resources.filter(r   => r.status === 'available').length,
@@ -291,10 +339,15 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 =======
   totalResources: resources.length,
     availableResources: resources.filter(r = > r.status === 'available').length,
+=======
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r  => r.status === 'available').length,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
     maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
     totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
     currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
+<<<<<<< HEAD
     averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,;
     topDepartments: any(()  => {;
       const deptCounts = resources.reduce((acc,;
@@ -315,6 +368,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 }, {} as Record<string, any>);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()  => {
+      const deptCounts = resources.reduce((acc, r) => {
+        acc[r.department] = (acc[r.department] || 0) + 1;
+        return acc;
+      }, {} as Record<string, any>);
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
@@ -322,6 +383,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           count,
           percentage: any(count / resources.length) * 100
         }))
+<<<<<<< HEAD
         .sort((a, b)   => b.count - a.count)
         .slice(0, 5)})()
   };
@@ -332,6 +394,17 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     switch (status) {;
       case 'available':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+        .sort((a, b)  => b.count - a.count)
+        .slice(0, 5);
+    })()
+  };
+
+  // Get status color and icon
+  const getStatusDisplay = (status: anystring)  => {
+    switch (status) {
+      case 'available':
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
       case 'allocated':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Users className="w-4 h-4" /> };
@@ -350,9 +423,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get type icon
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getTypeIcon = (type: anystring)  => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getTypeIcon = (type: anystring)  => {
+    switch (type) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'human': return <Users className="w-5 h-5" />;
       case 'infrastructure': return <Server className="w-5 h-5" />;
       case 'software': return <Database className="w-5 h-5" />;
@@ -368,9 +446,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get priority color
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getPriorityColor = (priority: anystring)  => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getPriorityColor = (priority: anystring)  => {
+    switch (priority) {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
@@ -385,7 +468,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Format currency
 <<<<<<< HEAD
+<<<<<<< HEAD
   const formatCurrency = (amount: anynumber)   => {
+=======
+  const formatCurrency = (amount: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -406,8 +493,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get utilization color
+<<<<<<< HEAD
   const getUtilizationColor = (utilization: anynumber)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+  const getUtilizationColor = (utilization: anynumber)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';
@@ -669,7 +760,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+<<<<<<< HEAD
             {resourceStats.topDepartments.map((dept, index)   => (
+=======
+            {resourceStats.topDepartments.map((dept, index)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={dept.name}
                 initial = {

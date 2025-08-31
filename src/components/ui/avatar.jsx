@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 export function Avatar({ children, className = '' }) {
     return (<div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}>
       {children}
@@ -12,6 +16,7 @@ export function AvatarFallback({ children, className = '' }) {
       {children}
     </div>);
 }
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -35,3 +40,5 @@ const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (<div 
 AvatarFallback.displayName = 'AvatarFallback';
 export { Avatar, AvatarImage, AvatarFallback };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361

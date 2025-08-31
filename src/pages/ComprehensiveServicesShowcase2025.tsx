@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search,
@@ -22,6 +23,29 @@ import React, { useState  } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain,
   Shield,
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  ArrowRight, 
+  ChevronDown, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Lock, 
+  Users, 
+  TrendingUp, 
+  Award, 
+  Clock, 
+  DollarSign, 
+  CheckCircle,
+  Rocket,
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   Cpu,
   Rocket,
   Zap,
@@ -396,9 +420,21 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </select>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
 <<<<<<< HEAD
+=======
+
+            {/* Results Count */}
+            <div className="flex items-center justify-end">
+              <span className="text-zion-slate-light">
+                Showing {filteredServices.length} of {allServices.length} services
+              </span>
+            </div>
+          </div>
+        </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       </section>
 
       {/* Categories */}
@@ -805,6 +841,7 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
         </div>
 
         {/* Success Stories */}
@@ -923,6 +960,10 @@ export default function ComprehensiveServicesShowcase2025(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+=======
+        )}
+      </AnimatePresence>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     </div>
   );
 <<<<<<< HEAD

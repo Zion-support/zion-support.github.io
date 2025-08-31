@@ -201,7 +201,13 @@ import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES  }
   Psi,
   Omega as OmegaIcon
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "@/data/additionalInnovativeServices2025";
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 export function ServicesPage(...args: any[]): any {
   const location = useLocation();
@@ -239,13 +245,12 @@ export function ServicesPage(...args: any[]): any {
   // Filter and sort services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...ADDITIONAL_INNOVATIVE_SERVICES_2025
   ];
 
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const title = service.title || service.name || '';
+    const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
 
@@ -1489,8 +1494,13 @@ export function ServicesPage(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
+=======
+              >
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + ADDITIONAL_INNOVATIVE_SERVICES_2025.length}+</div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div
@@ -1781,8 +1791,13 @@ export function ServicesPage(...args: any[]): any {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
             {SPECIALIZED_SERVICES.map((service, index)  => (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map((service, index) => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 <<<<<<< HEAD
@@ -11,6 +12,12 @@ import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database,
 import { SEO  } from '../components/SEO';
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
+import { SEO } from '../components/SEO';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 interface ServiceStatus {
 

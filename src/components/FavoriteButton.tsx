@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Heart interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
+=======
+import React, { useState } from 'react.ts';
+import { Heart  } from 'lucide-react.ts';
+
+interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string;
+<<<<<<< HEAD
 =======
 import React, { useState  
 } from 'react.ts';
@@ -28,6 +36,15 @@ export function FavoriteButton(...args: any[]): any {;
 
   const handleToggleFavorite = (e: anyReact.MouseEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+
+}
+
+export function FavoriteButton(...args: any[]): any {
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleToggleFavorite = (e: anyReact.MouseEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     e.stopPropagation();
     setIsFavorited(!isFavorited);
 

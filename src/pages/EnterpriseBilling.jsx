@@ -1,12 +1,21 @@
 import React from "react";
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 import { useRouter } from "next/router";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
     const { user } = useAuth();
     const router = useRouter();
+=======
+import { useNavigate } from 'react-router-dom';
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+    const { user } = useAuth();
+    const router = useNavigate();
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     // Check if user has billing permissions
     const hasBillingAccess = user?.role === "enterprise_admin" ||
         (user?.permissions && user.permissions.includes('billing_access'));
@@ -14,6 +23,7 @@ export default function EnterpriseBilling() {
 <<<<<<< HEAD
         if (typeof window !== 'undefined') {
             navigate('/unauthorized');
+<<<<<<< HEAD
 
         return null;
 
@@ -25,6 +35,8 @@ export default function EnterpriseBilling() {
 =======
         if (typeof window !== 'null') {
             router('/unauthorized');
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         }
         return null;
     }

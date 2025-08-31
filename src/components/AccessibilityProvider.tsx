@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon interface AccessibilityContextType {
@@ -28,6 +29,27 @@ interface AccessibilityContextType {
   toggleVoiceNavigation: ()  => void;
 =======
 toggleVoiceNavigation: any()   => void;
+=======
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react.ts';
+
+interface AccessibilityContextType {
+
+  highContrast: anyboolean;
+  toggleHighContrast: ()  => void;
+  reducedMotion: anyboolean;
+  toggleReducedMotion: ()  => void;
+  fontSize: anynumber;
+  increaseFontSize: ()  => void;
+  decreaseFontSize: any()  => void;
+  resetFontSize: any()  => void;
+  showSkipLinks: anyboolean;
+  setShowSkipLinks: (show: boolean)  => void;
+  voiceNavigation: anyboolean;
+  toggleVoiceNavigation: ()  => void;
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -45,8 +67,12 @@ export const useAccessibility = () => {;
 interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
+<<<<<<< HEAD
 =======
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
+=======
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
   return context};
 
@@ -103,10 +129,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Keyboard navigation support
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const handleKeyDown = (event: anyKeyboardEvent)  => {;
       // Skip links (Alt + S);
       if (event.altKey && event.key === 's') {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
+      // Skip links (Alt + S)
+      if (event.altKey && event.key === 's') {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
         event.preventDefault();
         setShowSkipLinks(true);
 <<<<<<< HEAD
@@ -366,7 +398,10 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   isActive = true
 }) => {
   const [focusedElement, setFocusedElement] = useState<any>(null);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
   useEffect(() => {
     if (!isActive) return;
@@ -379,8 +414,12 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const handleKeyDown = (event: anyKeyboardEvent)  => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+=======
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

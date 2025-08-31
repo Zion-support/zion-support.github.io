@@ -20,6 +20,12 @@ import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
 import ComprehensiveServices from "@/pages/ComprehensiveServices";
+<<<<<<< HEAD
+=======
+import AIServices from "@/pages/AIServices";
+import ITServices from "@/pages/ITServices";
+import MicroSaaS from "@/pages/MicroSaaS";
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 const ContentRoutes = () => {
     return (<Routes>
       {/* Content Routes */}
@@ -29,6 +35,15 @@ const ContentRoutes = () => {
       <Route path="/contact" element={<Contact />}/>
       <Route path="/services" element={<Services />}/>
       <Route path="/comprehensive-services" element={<ComprehensiveServices />}/>
+<<<<<<< HEAD
+=======
+      {/* Dedicated Services Pages */}
+      <Route path="/ai-services" element={<AIServices />}/>
+      <Route path="/it-services" element={<ITServices />}/>
+      <Route path="/micro-saas" element={<MicroSaaS />}/>
+      {/* Back-compat for CTA link */}
+      <Route path="/services/micro-saas-solutions" element={<MicroSaaS />}/>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       <Route path="/privacy" element={<Privacy />}/>
       <Route path="/cookies" element={<Cookies />}/>
 

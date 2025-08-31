@@ -18,7 +18,10 @@ import { useNavigate  } from 'react-router-dom.ts';
 
 interface SearchResult {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   id: string;
   title: string;
   description: string;
@@ -35,11 +38,18 @@ relevance: number;
 
 interface SearchFilter {
 
+<<<<<<< HEAD
 
   type: string[];
   category: string[];
 <<<<<<< HEAD
 tags: string[];
+=======
+  type: string[];
+  category: string[];
+  tags: string[];
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
 =======
   tags: string[];
@@ -221,10 +231,19 @@ export function EnhancedSearch(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   // Load recent searches from localStorage
   useEffect(() => {
+<<<<<<< HEAD
     const saved = localStorage.getItem('zion-recent-searches');
     if (saved) {
 <<<<<<< HEAD
       setRecentSearches(JSON.parse(saved));
+=======
+    const handleClickOutside = (event: anyMouseEvent)  => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setSelectedIndex(-1);
+      }
+    };
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 
 =======
 <<<<<<< HEAD
@@ -232,6 +251,37 @@ export function EnhancedSearch(...args: any[]): any {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
+<<<<<<< HEAD
+=======
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+        setSelectedIndex(-1);
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setSelectedIndex(prev => 
+          prev < results.length - 1 ? prev + 1 : prev
+        );
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+      } else if (event.key === 'Enter' && selectedIndex >= 0) {
+        event.preventDefault();
+        if (results[selectedIndex]) {
+          handleResultClick(results[selectedIndex]);
+        }
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, results, selectedIndex]);
+
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   // Search functionality
   useEffect(() => {
     if (debouncedQuery.trim().length < 2) {

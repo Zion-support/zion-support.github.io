@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react.ts';
 import { Loader2 export const LoadingOverlay = ({ visible = false }) => {
+=======
+import React from 'react.ts';
+import { Loader2  } from 'lucide-react.ts';
+export const LoadingOverlay = ({ visible = false }) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     if (!visible)
 =======
 import React from 'react.ts';

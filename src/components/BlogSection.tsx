@@ -1,7 +1,13 @@
 import React from 'react.ts';
+<<<<<<< HEAD
 import { Link   } from 'react-router-dom.ts';
 
 export function BlogSection(...args[]: any):  {
+=======
+import { Link  } from 'react-router-dom.ts';
+
+export function BlogSection(...args: any[]): any {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const blogPosts = [
     {
       id: '1',
@@ -39,7 +45,11 @@ export function BlogSection(...args[]: any):  {
           </Link>
         </div>
         <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+<<<<<<< HEAD
           {blogPosts.map((post)   => (
+=======
+          {blogPosts.map((post)  => (
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">

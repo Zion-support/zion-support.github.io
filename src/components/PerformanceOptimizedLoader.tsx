@@ -19,8 +19,14 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   size = 'md',
   color = 'primary',
   text,
+<<<<<<< HEAD
   fullScreen = false
 }: LoaderProps) {
+=======
+  fullScreen = false,
+  showLogo = false
+}: LoaderProps) => {
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   const sizeClasses = {
   sm: 'w-6 h-6',
     md: 'w-12 h-12',;
@@ -129,7 +135,11 @@ PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader(...args: any[]): any {
   return (
+<<<<<<< HEAD
     <div className = {`space-y-3 ${className}`}>
+=======
+    <div className={`space-y-3 ${className}`}>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
       {Array.from({ length: anylines }).map((_, index)  => (
         <motion.div
           key={index}
@@ -170,11 +180,19 @@ export function CardSkeleton(...args: any[]): any {
 // Grid skeleton loader
 export function GridSkeleton(...args: any[]): any {
   return (
+<<<<<<< HEAD
     <div className = {`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
       {Array.from({ length: columns * rows }).map((_, index)  => (;
         <CardSkeleton key={index} />;
       ))};
     </div>;
+=======
+    <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
+      {Array.from({ length: columns * rows }).map((_, index)  => (
+        <CardSkeleton key={index} />
+      ))}
+    </div>
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
   );
 
 // Page skeleton loader

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
 import { useFavorites } from '@/hooks/useFavorites';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 import { TALENT_PROFILES } from '@/data/talentData';
@@ -8,6 +12,7 @@ import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey } from '@/utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 export default function WishlistPage() {
     const { favorites, loading } = useFavorites();
     const { user } = useAuth();
@@ -34,6 +39,26 @@ export default function WishlistPage() {
         return null; // Or a loading spinner
 
     const { items, dispatch } = useCart();
+=======
+import { safeStorage } from '@/utils/safeStorage';
+
+export default function WishlistPage() {
+    const { favorites, loading } = useFavorites();
+    const { user, loading: isAuthLoading } = useAuth();
+    const { items, dispatch } = useCart();
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        // Redirect if not authenticated and auth loading is complete
+        if (!isAuthLoading && !user) {
+            navigate('/login');
+        }
+    }, [user, isAuthLoading, navigate]);
+    
+    if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
+        return null; // Or a loading spinner
+    }
+>>>>>>> 0db51c83ec2639597974243032be26f90b238361
     const addToCart = (item) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) [];
