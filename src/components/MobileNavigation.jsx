@@ -13,21 +13,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-<<<<<<< HEAD
-                onToggle();
-
-        };
-        if (isOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'hidden';
-
-=======
                 onToggle()}
         };
         if (isOpen) {
             document.addEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'hidden'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
@@ -75,43 +65,23 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Press', href: '/press' },
                 { label: 'Contact', href: '/contact' }
             ]
-
     ];
     const toggleDropdown = (label) => {
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Search query:', searchQuery);
-=======
         // // // // // // // console.log('Search query:', searchQuery);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
-=======
         console.log('Search query:', searchQuery)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const menuVariants = {
   closed: {
             x: '100%',
             opacity: 0,
             transition: {
                 duration: 0.3,
-<<<<<<< HEAD
-                ease: 'easeInOut'
-
-=======
   ease: 'easeInOut'
-            
-
-
-
-
-
-
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             x: 0,
@@ -119,8 +89,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             transition: {
                 duration: 0.3,
                 ease: 'easeInOut'
-
-
     };
     const dropdownVariants = {
   closed: {
@@ -128,20 +96,8 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 0,
             transition: {
                 duration: 0.2,
-<<<<<<< HEAD
-                ease: 'easeInOut'
-
-=======
   ease: 'easeInOut'
-            
-
-
-
-
-
-
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             height: 'auto',
@@ -149,14 +105,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             transition: {
                 duration: 0.2,
                 ease: 'easeInOut'
-
-
     };
     return (<AnimatePresence>
       {isOpen && (<>
           {/* Backdrop */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" onClick={onToggle}/>
-
           {/* Mobile Menu */}
           <motion.div ref={menuRef} variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden">
             {/* Header */}
@@ -171,7 +124,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 <X size={24}/>
               </button>
             </div>
-
             {/* Search Bar */}
             <div className="p-4 border-b border-zion-cyan/20">
               <form onSubmit={handleSearch} className="relative">
@@ -179,7 +131,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 <input type="text" placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:bg-white/20 transition-all"/>
               </form>
             </div>
-
             {/* User Actions */}
             <div className="flex items-center gap-2 p-4 border-b border-zion-cyan/20">
               <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/30 transition-colors">
@@ -190,7 +141,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 <Bell size={20}/>
               </button>
             </div>
-
             {/* Navigation Menu */}
             <div className="flex-1 overflow-y-auto py-4">
               <nav className="space-y-2">
@@ -214,7 +164,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                       </Link>)}
                   </div>))}
               </nav>
-
               {/* Quick Actions */}
               <div className="px-4 mt-6 space-y-2">
                 <Link to="/contact" className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all">
@@ -224,7 +173,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                   Request Quote
                 </Link>
               </div>
-
               {/* Contact Info */}
               <div className="px-4 mt-6 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">
                 <h3 className="text-zion-cyan font-semibold mb-3">Contact Us</h3>
@@ -235,7 +183,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 </div>
               </div>
             </div>
-
             {/* Footer */}
             <div className="p-4 border-t border-zion-cyan/20">
               <div className="flex items-center justify-center gap-4 text-zion-slate-light">

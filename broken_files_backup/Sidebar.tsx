@@ -164,19 +164,11 @@ export function Sidebar() {
 
   ];
 
-<<<<<<< HEAD
-  const toggleItem = (itemName: string) => {
-    setExpandedItems(prev =>
-      prev.includes(itemName)
-        ? prev.filter(name => name !== itemName)
-        : [...prev, itemName]
-=======
   const toggleItem = (itemName: string) => {;
     setExpandedItems(prev => ;
       prev.includes(itemName);
         ? prev.filter(name => name !== itemName);
         : [...prev, itemName];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     );
   };
 
@@ -272,15 +264,6 @@ export function Sidebar() {
               to="/contact"
               className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
               onClick={onClose}
-<<<<<<< HEAD
-
-              Contact Support
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
             >;
               Contact Support;
             </Link>;
@@ -288,7 +271,6 @@ export function Sidebar() {
         </div>;
       </div>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 
 interface SidebarProps {

@@ -36,12 +36,7 @@ export interface Innovative2026AIService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
@@ -304,35 +299,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950
 
 ];
-<<<<<<< HEAD
-export const getPopularAIServices = () => {;
-  return innovative2026AIServices.filter(service => service.popular)};
-export const getAIServicesByCategory = (category: string) => {
-  return innovative2026AIServices.filter(service => ;
-    service.category.toLowerCase().includes(category.toLowerCase());
-  )};
-export const getPopularAIServices = () => {;
-  return innovative2026AIServices.filter(service => service.popular);
-};
-<<<<<<< HEAD
-export const getAIServicesByCategory = (category: string) => {
-  return innovative2026AIServices.filter(service =>
-    service.category.toLowerCase().includes(category.toLowerCase())
-=======
 export const getAIServicesByCategory = (category: string) => {;
   return innovative2026AIServices.filter(service => ;
     service.category.toLowerCase().includes(category.toLowerCase());
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return innovative2026AIServices.filter(service => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-<<<<<<< HEAD
-    return price >= minPrice && price <= maxPrice;
-  });
-};}}
-=======
     return price >= minPrice && price <= maxPrice})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -39,25 +39,11 @@ const categoryColors = {
     'AI & Threat Intelligence': 'from-red-500 to-pink-500',
     'AI & Cloud Management': 'from-blue-500 to-cyan-500',
   'AI & DevOps': 'from-orange-500 to-red-500'
-
-
-
-
-
-
-
 };
 const supportLevelColors = {
   'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
   'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
-
-
-
-
-
-
-
 };
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -70,19 +56,10 @@ export default function ComprehensiveServicesOverview() {
             const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
-<<<<<<< HEAD
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-
-        // Category filter
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-
-=======
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
@@ -99,18 +76,6 @@ export default function ComprehensiveServicesOverview() {
                 case 'high':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-<<<<<<< HEAD
-                        return price > 3000;
-                    });
-                    break;
-
-
-    });
-    const getServicePrice = (service) => {
-        if (typeof service.price === 'number') {
-            return service.price;
-
-=======
                         return price > 3000});
                     break}
         }
@@ -118,11 +83,9 @@ export default function ComprehensiveServicesOverview() {
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
             return service.price}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
-
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -130,7 +93,6 @@ export default function ComprehensiveServicesOverview() {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-blue/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-20">
           {/* Hero Section */}
           <div className="text-center mb-20">
@@ -138,15 +100,12 @@ export default function ComprehensiveServicesOverview() {
               <Sparkles className="h-5 w-5 text-zion-cyan"/>
               <span className="text-zion-cyan font-medium">Complete Portfolio</span>
             </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent leading-tight">
               Comprehensive Services Overview
             </h1>
-
             <p className="text-lg md:text-xl lg:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-10 leading-relaxed">
               Discover our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms designed to transform your business operations and drive innovation.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full px-4 py-2">
                 <CheckCircle className="h-4 w-4 text-zion-purple"/>
@@ -162,7 +121,6 @@ export default function ComprehensiveServicesOverview() {
               </div>
             </div>
           </div>
-
           {/* Search and Filters */}
           <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -171,7 +129,6 @@ export default function ComprehensiveServicesOverview() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"/>
                 <Input placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-zion-slate-light"/>
               </div>
-
               {/* Category Filter */}
               <Select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -182,7 +139,6 @@ export default function ComprehensiveServicesOverview() {
                   {categories.map((category) => (<SelectItem key={category} value={category}>{category}</SelectItem>))}
                 </SelectContent>
               </Select>
-
               {/* Price Range Filter */}
               <Select value={priceRange} onChange={(e) => setPriceRange(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -194,7 +150,6 @@ export default function ComprehensiveServicesOverview() {
                   <SelectItem value="high">Over $3k/month</SelectItem>
                 </SelectContent>
               </Select>
-
               {/* Support Level Filter */}
               <Select value={selectedSupportLevel} onChange={(e) => setSelectedSupportLevel(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -209,7 +164,6 @@ export default function ComprehensiveServicesOverview() {
               </Select>
             </div>
           </div>
-
           {/* Services Count */}
           <div className="text-center mb-12">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6">
@@ -230,7 +184,6 @@ export default function ComprehensiveServicesOverview() {
               </div>
             </div>
           </div>
-
           {/* All Services */}
           <div className="mb-16">
             <div className="flex items-center justify-between mb-8">
@@ -239,7 +192,6 @@ export default function ComprehensiveServicesOverview() {
                 {filteredServices.length} of {ALL_SERVICES.length} services
               </span>
             </div>
-
             {filteredServices.length === 0 ? (<div className="text-center py-12">
                 <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
@@ -248,21 +200,9 @@ export default function ComprehensiveServicesOverview() {
                 {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ delay: index * 0.05 }}>
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <CardHeader>
@@ -281,7 +221,6 @@ export default function ComprehensiveServicesOverview() {
                             </div>
                           </div>
                         </div>
-
                         <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
                           {service.title}
                         </CardTitle>
@@ -289,7 +228,6 @@ export default function ComprehensiveServicesOverview() {
                           {service.description}
                         </CardDescription>
                       </CardHeader>
-
                       <CardContent className="space-y-4">
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           {service.estimatedDelivery && (<div className="flex items-center gap-2 text-zion-slate-light">
@@ -301,7 +239,6 @@ export default function ComprehensiveServicesOverview() {
                               <span>{service.marketPrice}</span>
                             </div>)}
                         </div>
-
                         {service.features && service.features.length > 0 && (<div className="space-y-2">
                             <h4 className="font-semibold text-white text-sm">Key Features:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -313,7 +250,6 @@ export default function ComprehensiveServicesOverview() {
                                 </Badge>)}
                             </div>
                           </div>)}
-
                         {'technologyStack' in service && service.technologyStack && service.technologyStack.length > 0 && (<div className="space-y-2">
                             <h4 className="font-semibold text-white text-sm">Technology Stack:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -326,7 +262,6 @@ export default function ComprehensiveServicesOverview() {
                             </div>
                           </div>)}
                       </CardContent>
-
                       <CardFooter className="pt-0">
                         <div className="w-full space-y-3">
                           <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
@@ -335,7 +270,6 @@ export default function ComprehensiveServicesOverview() {
                               <ExternalLink className="ml-2 h-4 w-4"/>
                             </a>
                           </Button>
-
                           <div className="flex gap-2">
                             {'demoUrl' in service && service.demoUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.demoUrl} target="_blank" rel="noopener noreferrer">
@@ -356,14 +290,12 @@ export default function ComprehensiveServicesOverview() {
                   </motion.div>))}
               </div>)}
           </div>
-
           {/* Contact Section */}
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Contact our team to learn more about these innovative services and how they can drive your business forward.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-3"/>
@@ -381,7 +313,6 @@ export default function ComprehensiveServicesOverview() {
                 <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
                 <a href="mailto:kleber@ziontechgroup.com">
@@ -399,9 +330,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card></Card>}}}}}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

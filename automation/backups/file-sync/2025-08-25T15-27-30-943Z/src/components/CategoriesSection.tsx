@@ -47,15 +47,6 @@ const categories = [
     stats: "100+ Innovations"
   },
   {
-<<<<<<< HEAD
-    title: "AI Hiring Platform",
-    description: "AI-powered recruitment and talent acquisition tools",
-    icon: <ZapIcon className="w-10 h-10" />,
-    link: "/zion-hire-ai",
-    color: "from-zion-purple to-zion-purple-dark",
-    featured: true
-
-=======
     title: "AI Hiring Platform",;
     description: "AI-powered recruitment and talent acquisition tools",;
     icon: <ZapIcon className="w-10 h-10" />,;
@@ -63,7 +54,6 @@ const categories = [
     color: "from-zion-purple to-zion-purple-dark",;
     featured: true;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const specialServices = [
   {
@@ -83,36 +73,6 @@ const specialServices = [
     link: "/cloud-solutions",
     icon: <Globe className="w-5 h-5" />,
     description: "Scalable cloud infrastructure"
-<<<<<<< HEAD
-  },
-  {
-    title: "Security Services",
-    link: "/security-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Cybersecurity & compliance"
-
-];
-interface CategoriesSectionProps {
-  showTitle?: boolean;
-
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-
-=======
   },;
   {;
     title: "Security Services",;
@@ -148,7 +108,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       y: 0,;
       transition: { duration: 0.6, ease: "easeOut" };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   return (
     <section className = "py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -247,12 +206,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
         <motion.div
           className="mb-12"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -284,19 +237,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {specialServices.map((service, index) => (
               <motion.div
                 key={service.title}
-<<<<<<< HEAD
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-
-                <Link
-=======
                 initial = {
   { opacity: 0,
   scale: 0.9 
@@ -329,7 +274,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }}
               >
                 <Link 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   to={service.link}
                   className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
 
@@ -350,14 +294,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
         <motion.div
           className="text-center"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-
-          <Link
-            to="/categories"
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -391,27 +327,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <Link 
             to="/categories" 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
 
             Explore All Categories
-<<<<<<< HEAD
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

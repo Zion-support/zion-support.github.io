@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,13 +12,10 @@ import {
 } from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
-
 export default function RequestsPanel(...args[]):  {
   const { user } = useAuth();
-
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
   const {
     quotes,
     unreadCount,
@@ -32,35 +28,14 @@ export default function RequestsPanel(...args[]):  {
     markAsResponded,
     toggleArchive
   } = useTalentQuotes();
-
-<<<<<<< HEAD
-  const handleViewDetails = (quote: QuoteRequest) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedQuote(quote);
-    setShowDetails(true);
-
-    // If status is new, mark as viewed
-<<<<<<< HEAD
-    if (quote.status = == 'new') {;
-      markAsViewed(quote.id)};
-  };
-
-  // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
-=======
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
-
   };
-
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <ProtectedRoute>
       <div>
-
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
@@ -70,14 +45,12 @@ export default function RequestsPanel(...args[]):  {
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
             />
-
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Requests</TabsTrigger>
                 <TabsTrigger value="archived">Archived</TabsTrigger>
               </TabsList>
-
               <TabsContent value="active">
                 <QuoteRequestsList
                   quotes={activeQuotes}
@@ -88,7 +61,6 @@ export default function RequestsPanel(...args[]):  {
                   onToggleArchive={toggleArchive}
                 />
               </TabsContent>
-
               <TabsContent value="archived">
                 <QuoteRequestsList
                   quotes={archivedQuotes}
@@ -102,7 +74,6 @@ export default function RequestsPanel(...args[]):  {
             </Tabs>
           </div>
         </div>
-
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -111,15 +82,6 @@ export default function RequestsPanel(...args[]):  {
             setShowDetails(false);
             setSelectedQuote(null)}}
         />
-
-<<<<<<< HEAD
-      </div>
-    </ProtectedRoute>
-  );
-}}
-=======
-
       </div>
     </ProtectedRoute>
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

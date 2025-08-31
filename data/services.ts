@@ -14,15 +14,11 @@ export interface Service {
   link: string;
   icon: string;
   isPopular?: boolean;
-<<<<<<< HEAD
-  isNew?: boolean;
-=======
   isNew?: boolean}
 
 // Import enhanced services
 import { enhancedServices2025 } from './enhanced-2025-services';
 import { specializedIndustryServices } from './specialized-industry-services';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const services: Service[] = [
   // AI Services
@@ -439,10 +435,6 @@ export const getPopularServices = () => {
 };
 
 export const getNewServices = () => {
-<<<<<<< HEAD
-  return services.filter(service => service.isNew);
-};}}
-=======
   return allServices.filter(service => service.isNew);
 };
 
@@ -455,4 +447,3 @@ export const getServicesByAudience = (audience: string) => {
     service.targetAudience.includes(audience)
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

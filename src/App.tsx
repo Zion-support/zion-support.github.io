@@ -101,6 +101,14 @@ const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
 
+// Revolutionary Services Showcase 2025
+const RevolutionaryServicesShowcase2025 = createLazyComponent(() => import('./pages/RevolutionaryServicesShowcase2025'));
+
+// Revolutionary Pricing Guide 2025
+const RevolutionaryPricingGuide2025 = createLazyComponent(() => import('./pages/RevolutionaryPricingGuide2025'));
+
+// Comprehensive Services Overview 2025
+const ComprehensiveServicesOverview2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesOverview2025'));
 
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
@@ -269,6 +277,15 @@ function App() {
 
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Revolutionary Services Showcase 2025 */}
+                    <Route path="/revolutionary-services-showcase-2025" element={<ModernLayout><RevolutionaryServicesShowcase2025 /></ModernLayout>} />
+
+                    {/* Revolutionary Pricing Guide 2025 */}
+                    <Route path="/revolutionary-pricing-guide-2025" element={<ModernLayout><RevolutionaryPricingGuide2025 /></ModernLayout>} />
+
+                    {/* Comprehensive Services Overview 2025 */}
+                    <Route path="/revolutionary-services-overview-2025" element={<ModernLayout><ComprehensiveServicesOverview2025 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />

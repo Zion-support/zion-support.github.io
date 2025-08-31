@@ -88,13 +88,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2800,
         completionDate: '2024-06',
         featured: true,
-<<<<<<< HEAD
-        tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
-
-=======
         tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
 export function InteractivePortfolio() {
@@ -115,27 +110,9 @@ export function InteractivePortfolio() {
     const nextImage = () => {
         if (selectedProject) {
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
-
     };
     const prevImage = () => {
         if (selectedProject) {
-<<<<<<< HEAD
-            setCurrentImageIndex((prev) => (prev - 1 + 1) % 1);
-
-    };
-    const handleKeyPress = (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-
-    };
-    useEffect(() => {
-        if (isModalOpen) {
-            document.body.style.overflow = 'hidden';
-
-        else {
-            document.body.style.overflow = 'unset';
-
-=======
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
     };
     const handleKeyPress = (e) => {
@@ -147,7 +124,6 @@ export function InteractivePortfolio() {
             document.body.style.overflow = 'hidden'}
         else {
             document.body.style.overflow = 'unset'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
             document.body.style.overflow = 'unset'}}, [isModalOpen]);
     return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
@@ -161,7 +137,6 @@ export function InteractivePortfolio() {
             Explore our innovative projects that demonstrate cutting-edge technology solutions and creative problem-solving
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map(category => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
@@ -170,7 +145,6 @@ export function InteractivePortfolio() {
               {category}
             </button>))}
         </div>
-
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={containerRef}>
           {filteredProjects.map((project) => (<div key={project.id} className={`group relative cursor-pointer transition-all duration-500 ${hoveredProject === project.id ? 'scale-105' : 'scale-100'}`} onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)} onClick={() => handleProjectClick(project)}>
@@ -188,12 +162,10 @@ export function InteractivePortfolio() {
                       Featured
                     </span>
                   </div>)}
-
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-
                   {/* Quick Actions */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
@@ -207,7 +179,6 @@ export function InteractivePortfolio() {
                       </button>)}
                   </div>
                 </div>
-
                 {/* Project Info */}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -219,15 +190,12 @@ export function InteractivePortfolio() {
                       <span className="text-xs">{project.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
                     {project.title}
                   </h3>
-
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">
                     {project.description}
                   </p>
-
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 3).map((tech, index) => (<span key={index} className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded">
@@ -237,7 +205,6 @@ export function InteractivePortfolio() {
                         +{project.technologies.length - 3}
                       </span>)}
                   </div>
-
                   {/* Project Stats */}
                   <div className="flex items-center justify-between text-xs text-zion-slate-light">
                     <div className="flex items-center gap-1">
@@ -250,13 +217,11 @@ export function InteractivePortfolio() {
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Effect Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"/>
               </div>
             </div>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
@@ -272,7 +237,6 @@ export function InteractivePortfolio() {
           </div>
         </div>
       </div>
-
       {/* Project Modal */}
       {isModalOpen && selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal} onKeyDown={handleKeyPress} tabIndex={0}>
           <div className="bg-white dark:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
@@ -283,14 +247,12 @@ export function InteractivePortfolio() {
                 <X className="w-6 h-6"/>
               </button>
             </div>
-
             {/* Modal Content */}
             <div className="p-6">
               {/* Project Image */}
               <div className="relative mb-6">
                 <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"/>
-
                 {/* Navigation Arrows */}
                 <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
                   <ChevronLeft className="w-5 h-5"/>
@@ -299,7 +261,6 @@ export function InteractivePortfolio() {
                   <ChevronRight className="w-5 h-5"/>
                 </button>
               </div>
-
               {/* Project Details */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
@@ -307,14 +268,12 @@ export function InteractivePortfolio() {
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {selectedProject.description}
                   </p>
-
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">
                         {tech}
                       </span>))}
                   </div>
-
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">
@@ -322,7 +281,6 @@ export function InteractivePortfolio() {
                       </span>))}
                   </div>
                 </div>
-
                 {/* Project Stats */}
                 <div className="space-y-6">
                   <div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">
@@ -347,7 +305,6 @@ export function InteractivePortfolio() {
                       </div>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="space-y-3">
                     {selectedProject.liveUrl && (<a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200">
@@ -364,9 +321,4 @@ export function InteractivePortfolio() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </section>);
-</div></div></div>}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

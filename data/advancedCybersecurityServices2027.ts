@@ -36,12 +36,7 @@ export interface AdvancedCybersecurityService2027 {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2027[] = [
   // AI-Powered Threat Intelligence Platform
@@ -466,16 +461,6 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     },
     roi: "400-800%",
     estimatedDelivery: "16-20 weeks",
-<<<<<<< HEAD
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
-];}}}}}}}
-=======
     contactInfo: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
@@ -484,4 +469,3 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
     };
   };
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
