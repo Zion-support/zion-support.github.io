@@ -61,6 +61,10 @@ const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 
 // Service pages

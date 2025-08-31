@@ -145,12 +145,13 @@
 }
 
 .bg-quantum {
-  background: 
-    conic-gradient(from 0deg at 50% 50%, 
-      rgba(34,221,210,0.1) 0deg, 
-      rgba(56,189,248,0.1) 120deg, 
-      rgba(168,85,247,0.1) 240deg, 
-      rgba(34,221,210,0.1) 360deg);
+  background: conic-gradient(
+    from 0deg at 50% 50%, 
+    rgba(34, 221, 210, 0.1) 0deg, 
+    rgba(56, 189, 248, 0.1) 120deg, 
+    rgba(168, 85, 247, 0.1) 240deg, 
+    rgba(34, 221, 210, 0.1) 360deg
+  );
 }
 
 /* Enhanced Keyframes */
