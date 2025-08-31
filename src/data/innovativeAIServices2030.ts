@@ -328,7 +328,7 @@ export const innovativeAIServices2030: AIService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-    tags["AI Sentiment", "Customer Analytics", "Brand Monitoring", "Social Media", "Customer Service"],
+          tags: ["AI Sentiment", "Customer Analytics", "Brand Monitoring", "Social Media", "Customer Service"],
     image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -348,7 +348,7 @@ export const innovativeAIServices2030: AIService[] = [
       pricingModel: "Monthly subscription with SKU-based pricing",
       marketPrice: "$599-1,199/month"
     },
-    features[
+    features: [
       "Demand forecasting",
       "Inventory optimization",
       "Automated reordering",
@@ -360,36 +360,36 @@ export const innovativeAIServices2030: AIService[] = [
       "Mobile app access",
       "Advanced reporting"
     ],
-    benefits[
+    benefits: [
       "Reduce inventory costs by 30%",
       "Minimize stockouts by 60%",
       "Reduce waste by 40%",
       "Improve cash flow",
       "Enhance customer satisfaction"
     ],
-    useCases[
+    useCases: [
       "Retail inventory management",
       "Manufacturing supply chain",
       "E-commerce operations",
       "Warehouse management",
       "Multi-location businesses"
     ],
-    targetAudience[
+    targetAudience: [
       "Retail businesses",
       "Manufacturing companies",
       "E-commerce platforms",
       "Warehouse operators",
       "Supply chain managers"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Predictive analytics", "Time series analysis",
       "IoT integration", "Real-time processing", "Cloud computing"
     ],
-    integrations[
+    integrations: [
       "ERP systems", "POS systems", "E-commerce platforms", "Accounting software",
       "Shipping providers", "Supplier portals"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Inventory optimization consultation",
       "System integration support",

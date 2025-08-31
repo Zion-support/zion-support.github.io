@@ -416,7 +416,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-    tags["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
+          tags: ["Vulnerability Management", "AI Security", "Risk Assessment", "Patch Management", "Compliance"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,

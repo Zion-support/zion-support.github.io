@@ -216,7 +216,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     reviewCount: 189,
     innovationLevel: "Innovative",
     marketSize: "$18.7B by 2030",
-    competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"],
+          competitors: ["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"],
     technicalCapabilities: [
       "Pipeline optimization", "Deployment automation", "Testing automation",
       "Infrastructure automation", "Performance monitoring", "Error prediction"
