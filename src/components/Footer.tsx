@@ -29,12 +29,12 @@ const Footer = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'AI Solutions', href: '/solutions' },
+        { name: 'IT Services', href: '/solutions' },
+        { name: 'Cloud & DevOps', href: '/solutions' },
+        { name: 'Cybersecurity', href: '/solutions' },
+        { name: 'Micro SAAS', href: '/solutions' },
+        { name: 'Digital Transformation', href: '/solutions' }
       ]
     },
     {
@@ -51,8 +51,8 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
+        { name: 'About Us', href: '/about/team' },
+        { name: 'Our Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
@@ -62,12 +62,12 @@ const Footer = () => {
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'API Reference', href: '/documentation' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/documentation' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research' }
+        { name: 'Research', href: '/documentation' }
       ]
     }
   ];

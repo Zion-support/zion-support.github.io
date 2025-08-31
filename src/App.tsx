@@ -67,6 +67,20 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalT
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
+// Additional pages
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const AboutTeam = createLazyComponent(() => import('./pages/AboutTeam'));
+const AboutStory = createLazyComponent(() => import('./pages/AboutStory'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
@@ -158,6 +172,21 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    
+                            {/* Additional pages */}
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/documentation" element={<Documentation />} />
+        <Route path="/about/team" element={<AboutTeam />} />
+        <Route path="/about/story" element={<AboutStory />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/help" element={<Support />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/contact" element={<Contact />} />
 
                     {/* 404 Page */}
                     <Route
