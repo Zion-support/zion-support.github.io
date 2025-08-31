@@ -22,6 +22,9 @@ const Services = createLazyComponent(() => import('./pages/Services'));
 // Our new innovative services pages
 const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2029'));
 const ComprehensivePricingGuide2029 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2029'));
+const ComprehensiveServicesShowcase2029 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2029'));
+const AIPoweredBusinessAutomation = createLazyComponent(() => import('./pages/AIPoweredBusinessAutomation'));
+const QuantumComputingServices2029 = createLazyComponent(() => import('./pages/QuantumComputingServices2029'));
 
 // Simple loading component
 const LoadingSpinner = () => (
@@ -86,6 +89,9 @@ function App() {
               <nav className="hidden lg:flex items-center space-x-8">
                 <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Home</a>
                 <a href="/services" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Services</a>
+                <a href="/comprehensive-services-showcase-2029" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">All Services</a>
+                <a href="/ai-powered-business-automation" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Automation</a>
+                <a href="/quantum-computing-services-2029" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Quantum</a>
                 <a href="/innovative-services-showcase-2029" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Innovations</a>
                 <a href="/about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">About</a>
                 <a href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Contact</a>
@@ -123,6 +129,27 @@ function App() {
                     className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2"
                   >
                     Services
+                  </a>
+                  <a 
+                    href="/comprehensive-services-showcase-2029" 
+                    onClick={closeMobileMenu}
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2"
+                  >
+                    All Services
+                  </a>
+                  <a 
+                    href="/ai-powered-business-automation" 
+                    onClick={closeMobileMenu}
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2"
+                  >
+                    Automation
+                  </a>
+                  <a 
+                    href="/quantum-computing-services-2029" 
+                    onClick={closeMobileMenu}
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium py-2"
+                  >
+                    Quantum
                   </a>
                   <a 
                     href="/innovative-services-showcase-2029" 
@@ -170,6 +197,9 @@ function App() {
             {/* Our New Innovative Services Routes */}
             <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
             <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
+            <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
+            <Route path="/ai-powered-business-automation" element={<AIPoweredBusinessAutomation />} />
+            <Route path="/quantum-computing-services-2029" element={<QuantumComputingServices2029 />} />
             
             {/* Fallback Route */}
             <Route path="*" element={
@@ -221,9 +251,12 @@ function App() {
               <div>
                 <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
                 <ul className="space-y-3 text-sm text-gray-400">
+                  <li><a href="/comprehensive-services-showcase-2029" className="hover:text-white transition-colors">All Services 2029</a></li>
+                  <li><a href="/ai-powered-business-automation" className="hover:text-white transition-colors">AI Business Automation</a></li>
+                  <li><a href="/quantum-computing-services-2029" className="hover:text-white transition-colors">Quantum Computing 2029</a></li>
                   <li><a href="/innovative-services-showcase-2029" className="hover:text-white transition-colors">Innovative Services 2029</a></li>
                   <li><a href="/comprehensive-pricing-guide-2029" className="hover:text-white transition-colors">Pricing Guide</a></li>
-                  <li><a href="/services" className="hover:text-white transition-colors">All Services</a></li>
+                  <li><a href="/services" className="hover:text-white transition-colors">Core Services</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Quantum Computing</a></li>
                 </ul>
