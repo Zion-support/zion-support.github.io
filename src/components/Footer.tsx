@@ -14,7 +14,22 @@ import {
   Shield,
   Award,
   Users,
-  Clock
+  Clock,
+  ArrowRight,
+  Download,
+  BookOpen,
+  Video,
+  Headphones,
+  Calendar,
+  Star,
+  CheckCircle,
+  Zap,
+  Brain,
+  Cloud,
+  Cpu,
+  Shield as ShieldIcon,
+  Handshake,
+  Code
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -29,77 +44,105 @@ const Footer = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+        { name: 'Digital Transformation', href: '/it-services', icon: Cpu },
+        { name: 'Cloud & DevOps', href: '/services', icon: Cloud },
+        { name: 'Cybersecurity', href: '/services', icon: ShieldIcon },
+        { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Zap },
+        { name: 'Consulting Services', href: '/services', icon: Users }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions' },
-        { name: 'Healthcare Tech', href: '/solutions' },
-        { name: 'Financial Solutions', href: '/solutions' },
-        { name: 'Manufacturing', href: '/solutions' },
-        { name: 'Government', href: '/solutions' },
-        { name: 'Retail Solutions', href: '/solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Shield },
+        { name: 'Healthcare Technology', href: '/industry-solutions', icon: Users },
+        { name: 'Financial Services', href: '/industry-solutions', icon: Award },
+        { name: 'Manufacturing', href: '/industry-solutions', icon: Cpu },
+        { name: 'Government & Defense', href: '/industry-solutions', icon: Shield },
+        { name: 'Retail & E-commerce', href: '/industry-solutions', icon: Globe }
       ]
     },
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' }
+        { name: 'About Us', href: '/about', icon: Users },
+        { name: 'Our Team', href: '/about', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Award },
+        { name: 'Partners', href: '/partners', icon: Handshake },
+        { name: 'News & Updates', href: '/news', icon: Calendar },
+        { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Training', href: '/training' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research' }
+        { name: 'Documentation', href: '/docs', icon: BookOpen },
+        { name: 'API Reference', href: '/api', icon: Code },
+        { name: 'Support Center', href: '/support', icon: Headphones },
+        { name: 'Training Programs', href: '/training', icon: Video },
+        { name: 'Blog & Insights', href: '/blog', icon: BookOpen },
+        { name: 'Research Papers', href: '/research', icon: Download }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:bg-blue-600' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:bg-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:bg-blue-700' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:bg-pink-600' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:bg-gray-700' }
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950',
+      description: 'Call us anytime'
     },
     {
       icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
+      description: 'Send us an email'
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
-      href: '#'
+      text: 'Middletown, DE 19709',
+      href: 'https://maps.google.com/?q=Middletown,DE',
+      description: 'Visit our headquarters'
     },
     {
       icon: Clock,
       text: 'Mon-Fri: 9AM-6PM EST',
-      href: '#'
+      href: '#',
+      description: 'Business hours'
+    }
+  ];
+
+  const quickActions = [
+    {
+      title: 'Download Resources',
+      description: 'Get our latest whitepapers, case studies, and technical guides',
+      icon: Download,
+      href: '/resources',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Schedule Demo',
+      description: 'See our solutions in action with a personalized demonstration',
+      icon: Calendar,
+      href: '/contact',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Join Webinar',
+      description: 'Attend our upcoming webinars on emerging technologies',
+      icon: Video,
+      href: '/webinars',
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
@@ -123,16 +166,17 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-blue-400 mb-4">
+              <h3 className="text-lg font-semibold text-cyan-400 mb-4">
                 {section.title}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
                     >
+                      <link.icon className="w-4 h-4 mr-2 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                       <span className="group-hover:translate-x-1 transition-transform duration-200">
                         {link.name}
                       </span>
@@ -143,6 +187,42 @@ const Footer = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Quick Actions Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h3 className="text-xl font-semibold text-cyan-400 mb-6 text-center">
+            Quick Actions
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {quickActions.map((action, index) => (
+              <Link
+                key={action.title}
+                to={action.href}
+                className="group bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-600 hover:bg-slate-800 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <action.icon className="w-6 h-6 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {action.title}
+                </h4>
+                <p className="text-gray-400 text-sm mb-3">
+                  {action.description}
+                </p>
+                <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Middle Section - Contact & Social */}
         <div className="border-t border-slate-700 pt-12 pb-8">
@@ -155,10 +235,10 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">
                 Get in Touch
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {contactInfo.map((contact, index) => (
                   <motion.a
                     key={contact.text}
@@ -167,10 +247,13 @@ const Footer = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                    className="flex items-start space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                   >
-                    <contact.icon className="w-5 h-5 text-blue-400" />
-                    <span>{contact.text}</span>
+                    <contact.icon className="w-5 h-5 text-cyan-400 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <div>
+                      <span className="font-medium">{contact.text}</span>
+                      <p className="text-sm text-gray-500">{contact.description}</p>
+                    </div>
                   </motion.a>
                 ))}
               </div>
@@ -184,20 +267,26 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">
-                Follow Us
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">
+                Follow Our Journey
               </h3>
+              <p className="text-gray-300 mb-4">
+                Stay updated with our latest innovations, industry insights, and technology trends.
+              </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1 }}
-                    className="w-12 h-12 bg-slate-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
+                    className={`w-12 h-12 bg-slate-700 ${social.color} rounded-lg flex items-center justify-center transition-all duration-200 group`}
+                    title={`Follow us on ${social.name}`}
                   >
                     <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-200" />
                   </motion.a>
@@ -218,7 +307,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="flex items-center space-x-2 text-gray-400"
             >
-              <Shield className="w-5 h-5 text-blue-400" />
+              <Shield className="w-5 h-5 text-cyan-400" />
               <span>Zion Tech Group</span>
               <span>•</span>
               <span>Trusted Technology Partner</span>
@@ -234,13 +323,13 @@ const Footer = () => {
             >
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
               <div className="flex space-x-4">
-                <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-200">
                   Terms of Service
                 </Link>
-                <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
                   Cookie Policy
                 </Link>
               </div>
@@ -258,7 +347,7 @@ const Footer = () => {
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 z-50 group"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 z-50 group"
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-200" />

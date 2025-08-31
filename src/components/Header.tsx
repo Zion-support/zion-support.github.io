@@ -14,13 +14,18 @@ import {
   Brain,
   Cloud,
   Cpu,
-  Zap
+  Zap,
+  Bell,
+  User,
+  Settings
 } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -176,8 +181,27 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Search Button */}
+            <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              title="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
+            {/* Notifications */}
+            <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 relative">
+              <Bell className="w-5 h-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+            </button>
+
+            {/* Theme Toggle */}
+            <ThemeToggle size="sm" />
+
+            {/* CTA Buttons */}
             <Link
               to="/contact"
               className="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
@@ -203,6 +227,37 @@ const Header = () => {
         </div>
       </nav>
 
+      {/* Search Bar */}
+      <AnimatePresence>
+        {showSearch && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
+          >
+            <div className="max-w-7xl mx-auto px-4 py-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search for services, solutions, or resources..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  autoFocus
+                />
+                <button
+                  onClick={() => setShowSearch(false)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -214,6 +269,17 @@ const Header = () => {
             className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
           >
             <div className="px-4 py-6 space-y-4">
+              {/* Mobile Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Mobile Navigation Items */}
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
@@ -267,6 +333,15 @@ const Header = () => {
                 </div>
               ))}
               
+              {/* Mobile Theme Toggle */}
+              <div className="pt-4 border-t border-slate-700/50">
+                <div className="flex items-center justify-between px-3 py-2">
+                  <span className="text-gray-300 text-sm">Theme</span>
+                  <ThemeToggle size="sm" />
+                </div>
+              </div>
+              
+              {/* Mobile CTA Buttons */}
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
                 <Link
                   to="/contact"
