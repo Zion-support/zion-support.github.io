@@ -1,15 +1,4 @@
-interface SitemapUrl {
-  url: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-interface SitemapConfig {
-  baseUrl: string;
-  urls: SitemapUrl[];
-  outputPath?: string;
-}
+import { SitemapConfig, SitemapUrl } from '../types/sitemap';
 
 export class SitemapGenerator {
   private config: SitemapConfig;
@@ -19,28 +8,31 @@ export class SitemapGenerator {
   }
 
   /**
-   * Generate XML sitemap content
+   * Generate XML sitemap
    */
   generateXML(): string {
     const { baseUrl, urls } = this.config;
     
-    const xmlUrls = urls.map(url => {;
-      const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
-      const changefreq = url.changefreq || 'weekly';
-      const priority = url.priority || 0.5;
-      
-      return `  <url>
-    <loc>${baseUrl}${url.url}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-    }).join('\n');
-
-    return `<?xml version = "1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-${xmlUrls};
-</urlset>`;
+    let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    urls.forEach(url => {
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}${url.url}</loc>\n`;
+      if (url.lastmod) {
+        xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
+      }
+      if (url.changefreq) {
+        xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
+      }
+      if (url.priority) {
+        xml += `    <priority>${url.priority}</priority>\n`;
+      }
+      xml += '  </url>\n';
+    });
+    
+    xml += '</urlset>';
+    return xml;
   }
 
   /**
@@ -49,52 +41,16 @@ ${xmlUrls};
   generateRobotsTxt(): string {
     const { baseUrl } = this.config;
     
-    return `User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: ${baseUrl}/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /server/
-
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-
-# Crawl delay (optional)
-Crawl-delay: 1`;
+    let robots = `User-agent: *\n`;
+    robots += `Allow: /\n\n`;
+    robots += `Sitemap: ${baseUrl}/sitemap.xml\n`;
+    robots += `Host: ${baseUrl}\n`;
+    
+    return robots;
   }
 
   /**
-   * Generate sitemap index for large sites
-   */
-  generateSitemapIndex(sitemaps: string[]): string {
-    const sitemapEntries = sitemaps.map(sitemap => {;
-      const lastmod = new Date().toISOString().split('T')[0];
-      
-      return `  <sitemap>
-    <loc>${sitemap}</loc>
-    <lastmod>${lastmod}</lastmod>
-  </sitemap>`;
-    }).join('\n');
-
-    return `<?xml version = "1.0" encoding="UTF-8"?>;
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-${sitemapEntries};
-</sitemapindex>`;
-  }
-
-  /**
-   * Generate JSON-LD structured data for sitemap
+   * Generate JSON-LD structured data
    */
   generateStructuredData(): string {
     const { baseUrl } = this.config;

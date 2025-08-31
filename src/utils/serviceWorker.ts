@@ -28,7 +28,8 @@ export function unregisterServiceWorker() {
       .catch((error) => {
         // // // // // // // console.error(error.message);
       });
-}}}}}}
+  }
+}
 // Service Worker for Zion Tech Group
 // Handles caching, offline functionality, and performance optimization
 const CACHE_NAME = 'zion-tech-group-v1';

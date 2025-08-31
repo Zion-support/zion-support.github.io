@@ -65,30 +65,31 @@ import {
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() =>
-    [...Array(20)].map((_, i) => ({
+    [...Array(15)].map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
+      delay: i * 0.2,
+      duration: 8 + i * 0.5,
+      size: Math.random() * 2 + 1
     })), []
   );
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.08)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
 
       {/* Optimized floating particles */}
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
+          className="absolute bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/30"
           animate={{
-            x: [0, 200, 0],
-            y: [0, -200, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
+            x: [0, 150, 0],
+            y: [0, -150, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [0.8, 1.3, 0.8],
           }}
           transition={{
             duration: particle.duration,
@@ -99,6 +100,8 @@ const FuturisticBackground = React.memo(() => {
           style={{
             left: particle.left,
             top: particle.top,
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
           }}
         />
       ))}
@@ -106,9 +109,10 @@ const FuturisticBackground = React.memo(() => {
   );
 });
 
-// Enhanced Hero Section
-const HeroSection = () => {
+// Enhanced Hero Section with better performance
+const HeroSection = React.memo(() => {
   const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   
   const features = [
     "AI-Powered Business Operations",
@@ -118,6 +122,7 @@ const HeroSection = () => {
   ];
 
   useEffect(() => {
+    setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
@@ -126,19 +131,21 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
       <FuturisticBackground />
       
+      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/30 text-zion-cyan text-sm font-medium mb-8"
           >
@@ -148,9 +155,9 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
             Transform Your Business with
@@ -162,8 +169,8 @@ const HeroSection = () => {
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
             className="text-lg sm:text-xl lg:text-2xl text-zinc-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             Zion Tech Group delivers cutting-edge AI, cloud, and technology solutions 
@@ -173,8 +180,8 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Link
@@ -196,42 +203,9 @@ const HeroSection = () => {
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-          >
-            {[
-              { number: "500+", label: "Enterprise Clients", icon: Building2 },
-              { number: "99.9%", label: "Uptime SLA", icon: ShieldCheck },
-              { number: "24/7", label: "Global Support", icon: Globe2 },
-              { number: "50+", label: "AI Services", icon: Brain }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.1 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-3">
-                  <stat.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-zinc-400">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="mt-12 flex flex-wrap justify-center items-center gap-6 text-zinc-400"
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+            className="flex flex-wrap justify-center items-center gap-6 text-sm text-zion-cyan"
           >
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-zion-cyan" />
@@ -252,14 +226,15 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center cursor-pointer hover:border-zion-cyan-light transition-colors"
+          onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -270,7 +245,7 @@ const HeroSection = () => {
       </motion.div>
     </section>
   );
-};
+});
 
 // Enhanced Services Section
 const ServicesSection = () => {
@@ -371,6 +346,30 @@ const ServicesSection = () => {
       href: "/services/ai-quantum-neural-network-platform",
       color: "from-cyan-500 to-blue-500",
       features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
+    },
+    {
+      icon: Scale,
+      title: "AI Legal Research",
+      description: "Revolutionary AI-powered legal research and case analysis platform",
+      href: "/services/ai-autonomous-legal-research-platform",
+      color: "from-blue-500 to-indigo-500",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      icon: BookOpen,
+      title: "AI Educational Content",
+      description: "AI-powered educational content creation across multiple formats",
+      href: "/services/ai-educational-content-creation-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      icon: Home,
+      title: "AI Real Estate Analytics",
+      description: "AI-powered real estate investment analytics and market intelligence",
+      href: "/services/ai-real-estate-investment-analytics-platform",
+      color: "from-orange-500 to-red-500",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
     }
   ];
 
@@ -578,6 +577,137 @@ const WhyChooseUsSection = () => {
   );
 };
 
+// Latest Innovations Section
+const LatestInnovationsSection = () => {
+  const latestServices = [
+    {
+      title: "AI Autonomous Legal Research Platform",
+      description: "Revolutionary AI-powered legal research and case analysis with 99.7% accuracy",
+      icon: Scale,
+      color: "from-blue-500 to-indigo-500",
+      link: "/services/ai-autonomous-legal-research-platform",
+      features: ["Case Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      title: "AI Educational Content Creation Platform",
+      description: "AI-powered educational content creation across multiple formats with 80% time savings",
+      icon: BookOpen,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-educational-content-creation-platform",
+      features: ["Content Generation", "Multi-Format", "Personalized Learning", "Analytics"]
+    },
+    {
+      title: "AI Real Estate Investment Analytics Platform",
+      description: "AI-powered real estate investment analytics with 40% higher returns",
+      icon: Home,
+      color: "from-orange-500 to-red-500",
+      link: "/services/ai-real-estate-investment-analytics-platform",
+      features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300 text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            Latest Innovations 2026
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Revolutionary New Services
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+              Just Launched
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the future of AI-powered solutions with our latest groundbreaking services 
+            designed to transform industries and drive unprecedented growth.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {latestServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-purple-500/20 rounded-2xl p-8 h-full hover:border-purple-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25">
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-zinc-400">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+
+                {/* Hover effect border */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View All Services CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            View All Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Enhanced CTA Section
 const CTASection = () => {
   return (
@@ -640,6 +770,88 @@ const CTASection = () => {
   );
 };
 
+// Floating Action Button Component
+const FloatingActionButton = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const openContact = () => {
+    window.location.href = '/contact';
+  };
+
+  return (
+    <>
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          scale: isVisible ? 1 : 0 
+        }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <div className="flex flex-col gap-3">
+          {/* Contact Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={openContact}
+            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
+            aria-label="Contact Us"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </motion.button>
+
+          {/* Scroll to Top Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToTop}
+            className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center text-white"
+            aria-label="Scroll to top"
+          >
+            <ArrowUpRight className="w-6 h-6" />
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Floating Action Button for Mobile */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          scale: isVisible ? 1 : 0 
+        }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-6 left-6 z-50 md:hidden"
+      >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={openContact}
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
+          aria-label="Contact Us"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </motion.button>
+      </motion.div>
+    </>
+  );
+});
+
 // Main Home Component
 const Home: React.FC = () => {
   // SEO structured data for the home page
@@ -683,8 +895,10 @@ const Home: React.FC = () => {
       />
       <HeroSection />
       <ServicesSection />
+      <LatestInnovationsSection />
       <WhyChooseUsSection />
       <CTASection />
+      <FloatingActionButton />
     </div>
   );
 }
