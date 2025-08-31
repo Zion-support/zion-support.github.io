@@ -15,7 +15,6 @@ export function AIChatAssistant() {
             type: 'assistant',
             content: "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?",
             timestamp: new Date()
-
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
@@ -34,13 +33,6 @@ export function AIChatAssistant() {
             type: 'user',
             content: inputValue,
   timestamp: new Date()
-        
-
-
-
-
-
-
 };
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');
@@ -53,13 +45,6 @@ export function AIChatAssistant() {
                 type: 'assistant',
                 content: randomResponse,
   timestamp: new Date()
-            
-
-
-
-
-
-
 };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};
@@ -70,14 +55,6 @@ export function AIChatAssistant() {
             setTimeout(() => {
                 const voiceText = "I'm interested in your AI development services";
                 setInputValue(voiceText);
-<<<<<<< HEAD
-                setIsListening(false);
-            }, 2000);
-
-        else {
-            setIsListening(false);
-
-=======
                 setIsListening(false)}, 2000)}
         else {
             setIsListening(false)}
@@ -86,19 +63,6 @@ export function AIChatAssistant() {
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-<<<<<<< HEAD
-            handleSendMessage();
-
-    };
-    const toggleChat = () => {
-        if (isOpen) {
-            setIsMinimized(!isMinimized);
-
-        else {
-            setIsOpen(true);
-            setIsMinimized(false);
-
-=======
             handleSendMessage()}
     };
     const toggleChat = () => {
@@ -113,10 +77,6 @@ export function AIChatAssistant() {
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">
         <MessageCircle className="w-6 h-6"/>
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
@@ -130,10 +90,6 @@ export function AIChatAssistant() {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">
@@ -155,14 +111,12 @@ export function AIChatAssistant() {
           </button>
         </div>
       </div>
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (<div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
             {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
                 <Bot className="w-4 h-4 text-white"/>
               </div>)}
-
             <div className={`max-w-[80%] p-3 rounded-lg ${message.type === 'user'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                 : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'}`}>
@@ -171,12 +125,10 @@ export function AIChatAssistant() {
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </span>
             </div>
-
             {message.type === 'user' && (<div className="w-8 h-8 bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-full flex items-center justify-center flex-shrink-0">
                 <User className="w-4 h-4 text-white"/>
               </div>)}
           </div>))}
-
         {/* Typing Indicator */}
         {isTyping && (<div className="flex gap-3 justify-start">
             <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
@@ -190,10 +142,8 @@ export function AIChatAssistant() {
               </div>
             </div>
           </div>)}
-
         <div ref={messagesEndRef}/>
       </div>
-
       {/* Input Area */}
       <div className="p-4 border-t border-zion-slate-light">
         <div className="flex items-center gap-2">
@@ -203,26 +153,19 @@ export function AIChatAssistant() {
                 <X className="w-4 h-4"/>
               </button>)}
           </div>
-
           <button onClick={handleVoiceInput} className={`p-2 rounded-lg transition-all duration-200 ${isListening
             ? 'bg-red-500 text-white animate-pulse'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-cyan hover:text-white'}`} title={isListening ? 'Listening...' : 'Voice Input'}>
             {isListening ? <MicOff className="w-4 h-4"/> : <Mic className="w-4 h-4"/>}
           </button>
-
           <button onClick={handleSendMessage} disabled={!inputValue.trim()} className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed" title="Send Message">
             <Send className="w-4 h-4"/>
           </button>
         </div>
-
         <div className="flex items-center gap-2 mt-2 text-xs text-zion-slate-light">
           <Sparkles className="w-3 h-3"/>
           <span>Powered by Zion AI • Always learning</span>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>}}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

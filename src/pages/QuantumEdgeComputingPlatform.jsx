@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform = () => {
-=======
 import Link from 'next/link';
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
@@ -37,7 +33,6 @@ const QuantumEdgeComputingPlatform = () => {
             icon: Users,
             title: "Scalable Architecture",
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
-
     ];
     const pricingPlans = [
         {
@@ -82,7 +77,6 @@ const QuantumEdgeComputingPlatform = () => {
                 "On-site implementation support",
                 "SLA guarantees"
             ]
-
     ];
     const useCases = [
         {
@@ -104,7 +98,6 @@ const QuantumEdgeComputingPlatform = () => {
             title: "Research & Development",
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -149,7 +142,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -171,7 +163,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -196,7 +187,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -219,7 +209,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -263,7 +252,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4 text-center">

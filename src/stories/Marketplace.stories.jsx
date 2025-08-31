@@ -8,13 +8,6 @@ const meta = {
         <Story />
       </MemoryRouter>)
     ]
-
-
-
-
-
-
-
 };
 export default meta;
 export const Grid = {
@@ -22,16 +15,6 @@ export const Grid = {
         localStorage.setItem('marketplaceView',
   'grid');
         return <Marketplace />;
-<<<<<<< HEAD
-
-=======
-    
-
-
-
-
-
-
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
@@ -40,16 +23,6 @@ export const List = {
         localStorage.setItem('marketplaceView',
   'list');
         return <Marketplace />;
-<<<<<<< HEAD
-
-=======
-    
-
-
-
-
-
-
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };

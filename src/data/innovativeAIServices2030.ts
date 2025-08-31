@@ -1,8 +1,6 @@
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
-
 export interface AIService {
-
   id: string;
   title: string;
   description: string;
@@ -48,12 +46,8 @@ pricing: {
   image: string;
   createdAt: string;
   featured: boolean;
-<<<<<<< HEAD
-  trending: boolean;
-=======
   trending: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
@@ -65,14 +59,7 @@ const zionContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 export const innovativeAIServices2030: AIService[] = [
   {
     id: "ai-voice-cloning-platform",
@@ -161,10 +148,6 @@ export const innovativeAIServices2030: AIService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["AI Voice", "Voice Cloning", "Text-to-Speech", "Content Creation", "Accessibility"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto = format&fit=crop&w=800&h=500",
-=======
     tags: ["AI Voice", "Voice Cloning", "Text-to-Speech", "Content Creation", "Accessibility"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto = format&fit=crop&w=800&h=500",
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -172,7 +155,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "ai-code-review-assistant",
     title: "Zion AI Code Review Assistant",
@@ -266,7 +248,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "ai-customer-sentiment-analyzer",
     title: "Zion AI Customer Sentiment Analyzer",
@@ -360,7 +341,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "ai-predictive-inventory-management",
     title: "Zion AI Predictive Inventory Management",
@@ -454,7 +434,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "ai-personalized-learning-platform",
     title: "Zion AI Personalized Learning Platform",
@@ -542,15 +521,6 @@ export const innovativeAIServices2030: AIService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
-<<<<<<< HEAD
-
-=======
   }
 =======;
     tags: ["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],;
@@ -562,5 +532,4 @@ export const innovativeAIServices2030: AIService[] = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default innovativeAIServices2030;}}

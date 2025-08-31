@@ -12,12 +12,6 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = {
   min: 0,
   max: 10000 
-
-
-
-
-
-
 }, detailBasePath = '/marketplace/listing' }) {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
@@ -33,7 +27,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
             setPriceRange({ min: 0, max });
             setCurrentPriceFilter([0, max]);
-
     }, [allListings]);
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
         0,
@@ -74,10 +67,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                             title: listing.title,
                             category: listing.category,
                             image: listing.images?.[0]
-
-
                 });
-
         }, 500);
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -88,23 +78,16 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             {description}
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5"/> Filters
               </h3>
-
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category
                 </label>
-<<<<<<< HEAD
-                <Select value={selectedCategory} onValueChange={(value) => {
-<<<<<<< HEAD
-            // // // console.log("Category selected:", value);
-=======
             // // // // // // // console.log("Category selected:", value);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -114,13 +97,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   value);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setSelectedCategory(value);
-        
-
-
-
-
-
-
 }}>
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                     <SelectValue placeholder="Select Category"/>
@@ -133,7 +109,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   </SelectContent>
                 </Select>
               </div>
-
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range
@@ -142,12 +117,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   <Slider aria-label="Price range" defaultValue = {
   [0,
   priceRange.max]
-
-
-
-
-
-
 } min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -155,17 +124,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   </div>
                 </div>
               </div>
-
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-<<<<<<< HEAD
-                // // // console.log("Rating selected:", rating);
-=======
                 // // // // // // // console.log("Rating selected:", rating);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -175,13 +138,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   rating);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 setSelectedRating(rating);
-            
-
-
-
-
-
-
 }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                 : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>
@@ -192,16 +148,9 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     </Button>))}
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-<<<<<<< HEAD
-            // // // console.log("Resetting filters");
-=======
             // // // // // // // console.log("Resetting filters");
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-              
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick = {
   () => {
             console.log("Resetting filters");
@@ -211,29 +160,16 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             setCurrentPriceFilter([0,
   priceRange.max]);
             setSelectedRating(null);
-        
-
-
-
-
-
-
 }}>
                 Reset Filters
               </Button>
             </div>
           </div>
-
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-<<<<<<< HEAD
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-<<<<<<< HEAD
-            // // // console.log("Search query:", e.target.value);
-=======
             // // // // // // // console.log("Search query:", e.target.value);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -243,16 +179,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   e.target.value);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setSearchQuery(e.target.value);
-        
-
-
-
-
-
-
 }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
                 </div>
-
                 <div className="flex items-center gap-2 ml-auto">
                   <Button variant="outline" size="icon" onClick={() => setView("grid")} aria-pressed={view === "grid"} aria-label="Grid view" title="Grid view" className={`${view === "grid"
             ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -269,7 +197,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </div>
               </div>
             </div>
-
             <div className="mb-6">
               <p className="text-zion-slate-light">
                 Showing {paginatedListings.length} of {filteredListings.length} results
@@ -277,7 +204,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-
             {isLoading ? (
               <div className={view === "grid"
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -323,19 +249,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   setCurrentPriceFilter([0,
   priceRange.max]);
                   setSelectedRating(null);
-                
-
-
-
-
-
-
 }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                   Clear all filters
                 </Button>
               </div>
             )}
-
             {totalPages > 1 && (
               <div className="mt-8">
                 <Pagination className="justify-center">
@@ -346,13 +264,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         e.preventDefault();
                         setCurrentPage(Math.max(1,
   currentPage - 1));
-                      
-
-
-
-
-
-
 }}/>
                     </PaginationItem>
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -371,13 +282,6 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         e.preventDefault();
                         setCurrentPage(Math.min(totalPages,
   currentPage + 1));
-                      
-
-
-
-
-
-
 }}/>
                     </PaginationItem>
                   </PaginationContent>

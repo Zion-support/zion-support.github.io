@@ -12,13 +12,6 @@ export default function Ecommerce() {
         "name": "E-commerce Platform",
         "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
   "url": "https://app.ziontechgroup.com/features/e-commerce"
-    
-
-
-
-
-
-
 };
     return (<>
       <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
@@ -57,9 +50,5 @@ export default function Ecommerce() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -351,10 +351,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "IBM Edge"],
         innovationLevel: "Advanced",
         marketTrend: "High Growth",
-<<<<<<< HEAD
-        aiCapabilities: ["Edge AI", "Predictive Maintenance", "Anomaly Detection", "Real-time Optimization"]
-
-=======
         aiCapabilities["Edge AI", "Predictive Maintenance", "Anomaly Detection", "Real-time Optimization"]
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

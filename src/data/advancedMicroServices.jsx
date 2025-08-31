@@ -578,14 +578,6 @@ export const ADVANCED_MICRO_SERVICES = [
         rating: 4.8,
         reviewCount: 178,
         featured: true,
-<<<<<<< HEAD
-        technologyStack: ["UiPath", "Automation Anywhere", "Blue Prism", "Python", "Node.js", "Kubernetes"],
-        apiEndpoints: ["/api/v1/automation", "/api/v1/workflows", "/api/v1/analytics"],
-        integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Office", "Slack", "Teams"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
-        securityFeatures: ["Role-based access control", "Audit logging", "Data encryption", "Secure automation"]
-
-=======
         technologyStack["UiPath", "Automation Anywhere", "Blue Prism", "Python", "Node.js", "Kubernetes"],
         apiEndpoints["/api/v1/automation", "/api/v1/workflows", "/api/v1/analytics"],
         integrations["SAP", "Oracle", "Salesforce", "Microsoft Office", "Slack", "Teams"],

@@ -17,15 +17,8 @@ export function AdminLayout({ children }) {
         </nav>
       </aside>
       <main className="flex-1 p-6 overflow-y-auto">{children}</main>
-<<<<<<< HEAD
-    </div>);
-
-export default AdminLayout;
-}
-=======
     </div>)}
 export default AdminLayout;
-
 export default AdminLayout;
 export default AdminLayout;
 export default AdminLayout;

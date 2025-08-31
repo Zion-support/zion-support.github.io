@@ -1,11 +1,8 @@
 // Cart utility functions for managing shopping cart state and operations
-
 // Local storage keys
 const CART_EXPIRY_KEY = 'zion_cart_expiry';
-
 // Cart expiry time (24 hours)
 const CART_EXPIRY_TIME = 24 * 60 * 60 * 1000;
-
 /**
  * Get cart from localStorage
  * @returns {Array} Cart items array
@@ -14,41 +11,26 @@ export const getCartFromStorage = () => {
   try {
     const cartData = localStorage.getItem(CART_STORAGE_KEY);
     const expiryData = localStorage.getItem(CART_EXPIRY_KEY);
-
     if (!cartData || !expiryData) {
       return [];
-<<<<<<< HEAD
-=======
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     const expiry = parseInt(expiryData);
     const now = Date.now();
-
     // Check if cart has expired
     if (now > expiry) {
       clearCartFromStorage();
       return [];
-<<<<<<< HEAD
-
-    return JSON.parse(cartData);
-  } catch (error) {
-<<<<<<< HEAD
-    // // // console.error('Error reading cart from storage:', error);
-=======
     // // // // // // // console.error('Error reading cart from storage:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
     }
-
     return JSON.parse(cartData);
   } catch (error) {
     // // // // console.error('Error reading cart from storage:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return [];
-
 };
-
 /**
  * Save cart to localStorage
  * @param {Array} cart - Cart items array
@@ -59,11 +41,6 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error saving cart to storage:', error);
-
-=======
     // // // // // // // console.error('Error saving cart to storage:', error);
 =======
     // // // // console.error('Error saving cart to storage:', error);
@@ -71,7 +48,6 @@ export const saveCartToStorage = (cart) => {
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
-
 /**
  * Clear cart from localStorage
  */
@@ -80,11 +56,6 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error clearing cart from storage:', error);
-
-=======
     // // // // // // // console.error('Error clearing cart from storage:', error);
 =======
     // // // // console.error('Error clearing cart from storage:', error);
@@ -92,7 +63,6 @@ export const clearCartFromStorage = () => {
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
-
 /**
  * Add item to cart
  * @param {Array} currentCart - Current cart items
@@ -101,10 +71,6 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Invalid item provided to addToCart');
-=======
     // // // // // // // console.error('Invalid item provided to addToCart');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return currentCart;
@@ -113,9 +79,7 @@ export const addToCart = (currentCart, item) => {
     return currentCart;
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
-
   if (existingItemIndex >= 0) {
     // Item already exists, update quantity
     const updatedCart = [...currentCart];
@@ -131,9 +95,7 @@ export const addToCart = (currentCart, item) => {
       quantity: item.quantity || 1,
       addedAt: new Date().toISOString()
     }];
-
 };
-
 /**
  * Remove item from cart
  * @param {Array} currentCart - Current cart items
@@ -143,7 +105,6 @@ export const addToCart = (currentCart, item) => {
 export const removeFromCart = (currentCart, itemId) => {
   return currentCart.filter(item => item.id !== itemId);
 };
-
 /**
  * Update item quantity in cart
  * @param {Array} currentCart - Current cart items
@@ -154,18 +115,14 @@ export const removeFromCart = (currentCart, itemId) => {
 export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(currentCart, itemId);
-<<<<<<< HEAD
-=======
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return currentCart.map(item =>
     item.id === itemId
       ? { ...item, quantity, updatedAt: new Date().toISOString() }
       : item
   );
 };
-
 /**
  * Calculate cart total
  * @param {Array} cart - Cart items array
@@ -179,22 +136,16 @@ export const calculateCartTotal = (cart) => {
       total: 0,
       itemCount: 0
     };
-<<<<<<< HEAD
-=======
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const subtotal = cart.reduce((sum, item) => {
     const price = parseFloat(item.price) || 0;
     const quantity = parseInt(item.quantity) || 0;
     return sum + (price * quantity);
   }, 0);
-
   // Calculate tax (example: 8.5%)
   const total = subtotal + tax;
-
   const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
-
   return {
     subtotal: Math.round(subtotal * 100) / 100,
     tax: Math.round(tax * 100) / 100,
@@ -202,7 +153,6 @@ export const calculateCartTotal = (cart) => {
     itemCount
   };
 };
-
 /**
  * Check if cart is empty
  * @param {Array} cart - Cart items array
@@ -211,7 +161,6 @@ export const calculateCartTotal = (cart) => {
 export const isCartEmpty = (cart) => {
   return !Array.isArray(cart) || cart.length === 0;
 };
-
 /**
  * Get cart item by ID
  * @param {Array} cart - Cart items array
@@ -221,7 +170,6 @@ export const isCartEmpty = (cart) => {
 export const getCartItemById = (cart, itemId) => {
   return cart.find(item => item.id === itemId) || null;
 };
-
 /**
  * Validate cart item
  * @param {Object} item - Item to validate
@@ -229,18 +177,13 @@ export const getCartItemById = (cart, itemId) => {
  */
 export const validateCartItem = (item) => {
   if (!item) return false;
-
   const requiredFields = ['id', 'name', 'price'];
   const hasRequiredFields = requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field));
-
   if (!hasRequiredFields) return false;
-
   const price = parseFloat(item.price);
   const quantity = parseInt(item.quantity) || 1;
-
   return !isNaN(price) && price >= 0 && quantity > 0;
 };
-
 /**
  * Merge carts (useful for guest to user conversion)
  * @param {Array} cart1 - First cart
@@ -250,16 +193,11 @@ export const validateCartItem = (item) => {
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
-<<<<<<< HEAD
-=======
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const mergedCart = [...cart1];
-
   cart2.forEach(item2 => {
     const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
-
     if (existingItemIndex >= 0) {
       // Merge quantities
       mergedCart[existingItemIndex].quantity += item2.quantity;
@@ -270,12 +208,9 @@ export const mergeCarts = (cart1, cart2) => {
         ...item2,
         addedAt: new Date().toISOString()
       });
-
   });
-
   return mergedCart;
 };
-
 /**
  * Format price for display
  * @param {number} price - Price to format
@@ -285,17 +220,13 @@ export const mergeCarts = (cart1, cart2) => {
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
-<<<<<<< HEAD
-=======
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency
   }).format(price);
 };
-
 /**
  * Get cart summary for display
  * @param {Array} cart - Cart items array
@@ -303,7 +234,6 @@ export const formatPrice = (price, currency = 'USD') => {
  */
 export const getCartSummary = (cart) => {
   const total = calculateCartTotal(cart);
-
   return {
     itemCount: total.itemCount,
     uniqueItems: cart.length,
@@ -313,7 +243,6 @@ export const getCartSummary = (cart) => {
     isEmpty: isCartEmpty(cart)
   };
 };
-
 /**
  * Export cart data (useful for debugging or backup)
  * @param {Array} cart - Cart items array
@@ -323,19 +252,13 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error exporting cart data:', error);
-=======
     // // // // // // // console.error('Error exporting cart data:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
     // // // // console.error('Error exporting cart data:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return '[]';
-
 };
-
 /**
  * Import cart data (useful for restoring from backup)
  * @param {string} cartData - JSON string of cart data
@@ -346,22 +269,15 @@ export const importCartData = (cartData) => {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item));
-
     return [];
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error importing cart data:', error);
-=======
     // // // // // // // console.error('Error importing cart data:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
     // // // // console.error('Error importing cart data:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return [];
-
 };
-
 /**
  * Get cart key for storage (useful for user-specific carts)
  * @param {string} userId - User ID (optional)
@@ -370,10 +286,8 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
-
   return CART_STORAGE_KEY;
 };
-
 /**
  * Merge cart items (alias for mergeCarts for backward compatibility)
  * @param {Array} cart1 - First cart

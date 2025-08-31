@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -81,15 +78,6 @@ export default function CybersecurityServices() {
       icon: Lock,
       features: [
         "Data encryption at rest and in transit",
-<<<<<<< HEAD
-        "Data loss prevention",
-        "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-
-=======
         "Data loss prevention",;
         "Backup and recovery",;
         "Compliance frameworks (GDPR, HIPAA, SOC2)";
@@ -139,14 +127,6 @@ export default function CybersecurityServices() {
       color: "from-orange-500 to-amber-600"
     },
     {
-<<<<<<< HEAD
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
-      icon: Target,
-      color: "from-cyan-500 to-blue-600"
-<<<<<<< HEAD
-
-=======
     };
 =======;
       name: "NIST",;
@@ -162,30 +142,15 @@ export default function CybersecurityServices() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.div className="text-center">
-=======
           <motion.div 
             className="text-center"
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
           >
@@ -204,7 +169,6 @@ export default function CybersecurityServices() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -238,7 +202,6 @@ export default function CybersecurityServices() {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -264,7 +227,6 @@ export default function CybersecurityServices() {
                   <Link
                     to="/contact"
                     className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-
                     Get Quote
                   </Link>
                 </div>
@@ -289,7 +251,6 @@ export default function CybersecurityServices() {
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
@@ -316,7 +277,6 @@ export default function CybersecurityServices() {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-
                 <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>
                   <framework.icon className="h-6 w-6 text-white" />
                 </div>
@@ -341,23 +301,12 @@ export default function CybersecurityServices() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 Schedule Security Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Explore All Services;
               </Link>;

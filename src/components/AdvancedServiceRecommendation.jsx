@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-=======
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
@@ -98,16 +93,11 @@ const AdvancedServiceRecommendation = () => {
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com'
-
     ];
     const calculateMatchScore = (service, profile) => {
         const score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
-<<<<<<< HEAD
-            score += 25;
-
-=======
             score += 25}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Budget compatibility
@@ -194,10 +184,6 @@ const AdvancedServiceRecommendation = () => {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -206,10 +192,6 @@ const AdvancedServiceRecommendation = () => {
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -222,21 +204,9 @@ const AdvancedServiceRecommendation = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} className="text-center mb-8">
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
           AI-Powered Service Recommendation Engine
@@ -246,130 +216,71 @@ const AdvancedServiceRecommendation = () => {
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
-
       {/* Client Profile Form */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
           <Brain className="w-6 h-6 text-zion-cyan"/>
           Tell Us About Your Business
         </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
-
-
-
-
-
-
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
             </select>
           </div>
-
           <div>
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
-            <select value={clientProfile.compSize} onChange = {
-  (e) => setClientProfile(prev => ({ ...prev,
-  compSize: e.target.value 
-
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">
-              <option value="">Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
-=======
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   companySize: e.target.value 
-
-
-
-
-
-
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Company Size</option>
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value 
-
-
-
-
-
-
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value 
-
-
-
-
-
-
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
-
-
-
-
-
-
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>))}
             </select>
           </div>
         </div>
-
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -377,25 +288,8 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
-
-                else {
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
-
-=======
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
-
-
-
-
 }));
                 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -407,7 +301,6 @@ const AdvancedServiceRecommendation = () => {
               </label>))}
           </div>
         </div>
-
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -415,25 +308,8 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
-
-                else {
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
-
-=======
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
-
-
-
-
 }));
                 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -445,7 +321,6 @@ const AdvancedServiceRecommendation = () => {
               </label>))}
           </div>
         </div>
-
         <div className="mt-8 text-center">
           <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>
             {isAnalyzing ? (<>
@@ -458,50 +333,24 @@ const AdvancedServiceRecommendation = () => {
           </Button>
         </div>
       </motion.div>
-
       {/* Recommendations Results */}
       {showResults && (<motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.2 }}>
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
           </h2>
-
           <div className="space-y-6">
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.1 * index }}>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -513,7 +362,6 @@ const AdvancedServiceRecommendation = () => {
                         <p className="text-zion-slate-light mb-3">
                           {rec.service.description}
                         </p>
-
                         <div className="flex flex-wrap gap-2 mb-4">
                           <Badge className={getPriorityColor(rec.priority)}>
                             Priority: {rec.priority}
@@ -526,7 +374,6 @@ const AdvancedServiceRecommendation = () => {
                           </Badge>
                         </div>
                       </div>
-
                       <div className="text-right ml-4">
                         <div className="text-2xl font-bold text-zion-cyan mb-1">
                           {rec.service.price}
@@ -537,7 +384,6 @@ const AdvancedServiceRecommendation = () => {
                       </div>
                     </div>
                   </CardHeader>
-
                   <CardContent>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
@@ -552,7 +398,6 @@ const AdvancedServiceRecommendation = () => {
                             </li>))}
                         </ul>
                       </div>
-
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                           <BarChart3 className="w-4 h-4 text-zion-cyan"/>
@@ -574,17 +419,10 @@ const AdvancedServiceRecommendation = () => {
                             </Badge>
                           </div>
                         </div>
-
                         <div className="mt-4">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
   () => window.open(rec.service.link,
   '_blank')
-
-
-
-
-
-
 }>
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2"/>
@@ -596,26 +434,13 @@ const AdvancedServiceRecommendation = () => {
                 </Card>
               </motion.div>))}
           </div>
-
           {/* CTA Section */}
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
@@ -627,12 +452,6 @@ const AdvancedServiceRecommendation = () => {
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',
   '_blank')
-
-
-
-
-
-
 }>
                   <Users className="w-5 h-5 mr-2"/>
                   Get Expert Consultation
@@ -640,12 +459,6 @@ const AdvancedServiceRecommendation = () => {
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
-
-
-
-
-
-
 }>
                   <Zap className="w-5 h-5 mr-2"/>
                   Call Now
@@ -654,10 +467,6 @@ const AdvancedServiceRecommendation = () => {
             </div>
           </motion.div>
         </motion.div>)}
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card>};
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServiceRecommendation;

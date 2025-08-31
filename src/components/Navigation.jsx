@@ -34,16 +34,9 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },
             ]
-
     ];
     const isActive = (href) => {
         if (href === '/') {
-<<<<<<< HEAD
-            return location.pathname === '/';
-
-        return location.pathname.startsWith(href);
-    };
-=======
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -59,7 +52,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigationItems.map((item) => {
@@ -70,7 +62,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                   <Icon className="w-4 h-4"/>
                   <span>{item.name}</span>
                 </Link>)})}
-
             {/* Services Dropdown */}
             <div className="relative">
               <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors">
@@ -78,7 +69,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}/>
               </button>
-
               {isServicesOpen && (<div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-blue-light rounded-xl shadow-2xl z-50">
                   <div className="p-4">
                     <div className="grid grid-cols-1 gap-4">
@@ -94,14 +84,12 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                   </div>
                 </div>)}
             </div>
-
             {/* Contact Button */}
             <a href="tel:+13024640950" className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
               <Phone className="w-4 h-4"/>
               <span>Contact Us</span>
             </a>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-zion-slate-light hover:text-white focus:outline-none focus:text-white">
@@ -110,7 +98,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isOpen && (<div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
@@ -122,7 +109,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                   <Icon className="w-5 h-5"/>
                   <span>{item.name}</span>
                 </Link>)})}
-
             {/* Mobile Services */}
             <div className="px-3 py-2">
               <h3 className="text-sm font-semibold text-zion-cyan mb-2">Service Categories</h3>
@@ -137,7 +123,6 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                   </div>))}
               </div>
             </div>
-
             {/* Mobile Contact */}
             <div className="px-3 py-2 border-t border-zion-blue-light/30">
               <a href="tel:+13024640950" className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium">

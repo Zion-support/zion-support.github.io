@@ -29,10 +29,6 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-<<<<<<< HEAD
-      </>);
-
-=======
       </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleAddToCart = () => {
@@ -46,15 +42,8 @@ export default function EquipmentDetail() {
             })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
-<<<<<<< HEAD
-            router(`/login?next=/equipment/${equipmentId}`);
-            return}
-=======
             router(`/login?next=/equipment/${equipmentId}`);
             return;
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -67,17 +56,6 @@ export default function EquipmentDetail() {
             });
             const { url } = await response.json();
             if (url) {
-<<<<<<< HEAD
-                window.location.href = url;
-
-
-        catch (err) {
-            toast({ title: 'Payment error', description: 'Could not start checkout.' });
-
-        finally {
-            setIsAdding(false);
-
-=======
                 window.location.href = url}
         }
         catch (err) {
@@ -201,12 +179,6 @@ export default function EquipmentDetail() {
                     <button className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50" onClick = {
   () => setQuantity(prev => Math.max(1,
   prev - 1))
-
-
-
-
-
-
 } disabled={quantity <= 1 || !equipment.inStock}>
                       -
                     </button>
@@ -259,9 +231,5 @@ export default function EquipmentDetail() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}}}}}}}}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

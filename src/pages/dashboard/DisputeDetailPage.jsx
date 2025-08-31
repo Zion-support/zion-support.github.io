@@ -6,19 +6,10 @@ function DisputeDetailPage() {
     return (<ProtectedRoute>
       <>
         <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>
-
         <DisputeDetail />
-
       </>
-<<<<<<< HEAD
-    </ProtectedRoute>);
-
-export default DisputeDetailPage;
-}
-=======
     </ProtectedRoute>)}
 export default DisputeDetailPage;
-
 export default DisputeDetailPage;
 export default DisputeDetailPage;
 export default DisputeDetailPage;

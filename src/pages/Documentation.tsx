@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter export default function Documentation() {
-=======
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -23,12 +20,10 @@ import {
   Shield,
   Rocket
 } from 'lucide-react';
-
 export default function Documentation() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const docCategories = [
     {
       id: 'getting-started',
@@ -79,7 +74,6 @@ export default function Documentation() {
       ]
     }
   ];
-
   const apiDocs = [
     {
       name: 'REST API',
@@ -110,7 +104,6 @@ export default function Documentation() {
       languages: 8
     }
   ];
-
   const popularGuides = [
     {
       title: 'Complete AI Implementation Guide',
@@ -145,11 +138,9 @@ export default function Documentation() {
       rating: 4.7
     }
   ];
-
   const filteredCategories = selectedCategory === 'all' 
     ? docCategories 
     : docCategories.filter(category => category.id === selectedCategory);
-
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
         category.articles.filter(article => 
@@ -157,7 +148,6 @@ export default function Documentation() {
         ).map(article => ({ ...category, article }))
       )
     : [];
-
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
@@ -166,8 +156,6 @@ export default function Documentation() {
         keywords="documentation, API docs, user guides, tutorials, Zion Tech Group"
         canonical="https://ziontechgroup.com/documentation"
       />
-<<<<<<< HEAD
-=======
       lastUpdated: '2025-01-10',
       views: 7890,
       rating: 4.6,
@@ -181,15 +169,6 @@ export default function Documentation() {
       category: 'examples',
       type: 'examples',
       difficulty: 'intermediate',
-<<<<<<< HEAD
-      readTime: '30 min',
-      lastUpdated: '2025-01-08',
-      views: 5670,
-      rating: 4.5,
-      featured: false,
-      tags: ['python', 'sdk', 'examples']
-
-=======
       readTime: '30 min',;
       lastUpdated: '2025-01-08',;
       views: 5670,;
@@ -199,7 +178,6 @@ export default function Documentation() {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const featuredResources = [
     {
       title: 'Zion Tech Group Developer Portal',
@@ -215,15 +193,6 @@ export default function Documentation() {
       link: '/api-playground',
       featured: true
     },
-<<<<<<< HEAD
-    {
-      title: 'Community Forum',
-      description: 'Connect with other developers and get help',
-      type: 'community',
-      link: '/community',
-      featured: false
-
-=======
     {;
       title: 'Community Forum',;
       description: 'Connect with other developers and get help',;
@@ -233,44 +202,34 @@ export default function Documentation() {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {;
       case 'beginner': return 'bg-green-500';
       case 'intermediate': return 'bg-yellow-500';
       case 'advanced': return 'bg-red-500';
       default: return 'bg-gray-500';
-
   };
-
   const getDifficultyText = (difficulty: string) => {;
     switch (difficulty) {;
       case 'beginner': return 'Beginner';
       case 'intermediate': return 'Intermediate';
       case 'advanced': return 'Advanced';
       default: return 'Unknown';
-
   };
-
   const filteredItems = documentationItems.filter(item => {;
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-
     return matchesSearch && matchesCategory;
   });
-
   // Update counts
   categories.forEach(cat = > {;
     if (cat.id === 'all') {;
       cat.count = documentationItems.length;
     } else {
       cat.count = documentationItems.filter(item => item.category === cat.id).length;
-
   });
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -292,12 +251,10 @@ export default function Documentation() {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 =======
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div 
             className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8"
@@ -323,7 +280,6 @@ export default function Documentation() {
           >
             Everything you need to get started with our services
           </motion.p>
-          
           {/* Search Bar */}
           <motion.div 
             className="max-w-2xl mx-auto"
@@ -344,47 +300,6 @@ export default function Documentation() {
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-            {/* Categories and Sort */}
-            <div className="flex flex-col lg:flex-row gap-6 mb-8">
-              {/* Categories */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                      activeCategory === category.id
-                        ? 'bg-zion-cyan text-zion-slate-dark'
-                        : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                    }`}
-
-                    {category.icon}
-                    {category.name}
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Sort Options */}
-              <div className="flex items-center gap-2">
-                <span className="text-zion-slate-light">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-=======
       {/* Search Results */}
       {searchQuery && (
         <section className="py-12 bg-slate-800/50">
@@ -402,7 +317,6 @@ export default function Documentation() {
                 Found {searchResults.length} articles matching your search
               </p>
             </motion.div>
-            
             {searchResults.length > 0 ? (
               <div className="max-w-4xl mx-auto space-y-4">
                 {searchResults.map((result, index) => (
@@ -448,7 +362,6 @@ export default function Documentation() {
           </div>
         </section>
       )}
-
       {/* Documentation Categories */}
       {!searchQuery && (
         <section className="py-20 bg-slate-900">
@@ -467,7 +380,6 @@ export default function Documentation() {
                 Browse our organized documentation by service category
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               {filteredCategories.map((category, index) => (
                 <motion.div
@@ -482,10 +394,8 @@ export default function Documentation() {
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <category.icon className="w-8 h-8 text-white" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
                     <p className="text-slate-300 mb-6 leading-relaxed">{category.description}</p>
-                    
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-cyan-400 mb-3">Available Guides:</h4>
                       <div className="space-y-3">
@@ -506,7 +416,6 @@ export default function Documentation() {
                         ))}
                       </div>
                     </div>
-                    
                     <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
                       View All {category.name} Docs
                     </button>
@@ -518,66 +427,11 @@ export default function Documentation() {
           </div>
         </section>
       )}
-
       {/* API Documentation */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Featured Resources
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredResources.map((resource, index) => (
-              <div
-                key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                {resource.featured && (
-                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
-                    Featured
-                  </div>
-                )}
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
-                <a
-                  href={resource.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-
-                  {resource.type === 'portal' ? 'Visit Portal' : 'Learn More'}
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
           <motion.div 
             className="text-center mb-16"
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 30 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Documentation Items */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Documentation Library
-          </h2>
-
-          {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
-                    item.featured ? 'ring-2 ring-zion-cyan' : ''
-                  }`}
-<<<<<<< HEAD
-
-=======
                 >
 =======
             initial={{ opacity: 0, y: 30 }}
@@ -592,7 +446,6 @@ export default function Documentation() {
               Integrate with our services using our comprehensive APIs
             </p>
           </motion.div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {apiDocs.map((api, index) => (
               <motion.div
@@ -617,22 +470,6 @@ export default function Documentation() {
                       {api.status}
                     </span>
                   </div>
-<<<<<<< HEAD
-
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{item.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
-                    ))}
-=======
-                  
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-slate-400 text-sm">Version: {api.version}</span>
                     <span className="text-slate-400 text-sm">
@@ -640,7 +477,6 @@ export default function Documentation() {
                     </span>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
-                  
                   <div className="flex space-x-3">
                     <button className="flex-1 bg-slate-700 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-slate-600 transition-colors duration-300">
                       View Docs
@@ -655,7 +491,6 @@ export default function Documentation() {
           </div>
         </div>
       </section>
-
       {/* Popular Guides */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -673,7 +508,6 @@ export default function Documentation() {
               Most frequently accessed documentation and tutorials
             </p>
           </motion.div>
-          
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {popularGuides.map((guide, index) => (
@@ -698,7 +532,6 @@ export default function Documentation() {
                         <span className="text-white text-sm font-medium">{guide.rating}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-4 text-slate-400 text-sm">
                         <span className="flex items-center">
@@ -709,7 +542,6 @@ export default function Documentation() {
                       </div>
                       <span className="text-slate-400 text-sm">{guide.views} views</span>
                     </div>
-                    
                     <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
                       Read Guide
                     </button>
@@ -720,7 +552,6 @@ export default function Documentation() {
           </div>
         </div>
       </section>
-
       {/* Additional Resources */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -738,7 +569,6 @@ export default function Documentation() {
               More ways to learn and get support
             </p>
           </motion.div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -775,11 +605,9 @@ export default function Documentation() {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                     <resource.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-4">{resource.title}</h3>
                   <p className="text-slate-300 mb-4">{resource.description}</p>
                   <div className="text-cyan-400 text-sm font-medium mb-6">{resource.count}</div>
-                  
                   <a 
                     href={resource.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
@@ -793,7 +621,6 @@ export default function Documentation() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
         <div className="container mx-auto px-4 text-center">
@@ -838,9 +665,6 @@ export default function Documentation() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )}
-=======
               ))}
             </div>
           ) : (
@@ -854,7 +678,6 @@ export default function Documentation() {
           )}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -868,21 +691,11 @@ export default function Documentation() {
             <a
               href="/support"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-
               Contact Support
             </a>
             <a
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-<<<<<<< HEAD
-
-              Help Center
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
             >;
               Help Center;
             </a>;

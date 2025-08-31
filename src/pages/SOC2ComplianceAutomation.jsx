@@ -576,143 +576,7 @@ import {
   Shield,
   Zap,
   Brain
-<<<<<<< HEAD
-const soc2Solutions = [
-  {
-    id: 1,
-    title: "SOC2 Compliance Monitoring",
-    description: "Automated monitoring and tracking of SOC2 compliance requirements.",
-    icon: Shield,
-    features: [
-      "Real-time monitoring",
-      "Compliance tracking",
-      "Automated alerts",
-      "Audit trails"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "Monitoring",
-    technologies: ["AI Monitoring", "Compliance", "Automation", "Audit Trails"]
-  },
-  {
-    id: 2,
-    title: "Automated Policy Management",
-    description: "AI-powered system for managing and enforcing SOC2 policies.",
-    icon: FileText,
-    features: [
-      "Policy automation",
-      "Compliance checking",
-      "Policy updates",
-      "Enforcement tracking"
-    ],
-    price: "From $120,000",
-    timeline: "18-30 weeks",
-    category: "Policy Management",
-    technologies: ["AI", "Policy Automation", "Compliance", "Enforcement"]
-  },
-  {
-    id: 3,
-    title: "Risk Assessment Automation",
-    description: "Intelligent system for automated risk assessment and management.",
-    icon: AlertTriangle,
-    features: [
-      "Risk identification",
-      "Assessment automation",
-      "Mitigation tracking",
-      "Risk reporting"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Risk Management",
-    technologies: ["AI Risk Assessment", "Automation", "Risk Analysis", "Reporting"]
-  },
-  {
-    id: 4,
-    title: "Audit Preparation System",
-    description: "AI-driven system for preparing and managing SOC2 audits.",
-    icon: CheckCircle,
-    features: [
-      "Audit preparation",
-      "Documentation automation",
-      "Evidence collection",
-      "Compliance reporting"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Audit Preparation",
-    technologies: ["AI", "Audit Automation", "Documentation", "Compliance"]
-  },
-  {
-    id: 5,
-    title: "Security Control Automation",
-    description: "Automated implementation and monitoring of security controls.",
-    icon: Lock,
-    features: [
-      "Control automation",
-      "Security monitoring",
-      "Compliance validation",
-      "Control reporting"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Security Controls",
-    technologies: ["AI Security", "Automation", "Monitoring", "Compliance"]
-  },
-  {
-    id: 6,
-    title: "Compliance Reporting Platform",
-    description: "Comprehensive platform for SOC2 compliance reporting and analytics.",
-    icon: BarChart3,
-    features: [
-      "Automated reporting",
-      "Compliance analytics",
-      "Dashboard views",
-      "Executive summaries"
-    ],
-    price: "From $160,000",
-    timeline: "20-32 weeks",
-    category: "Reporting",
-    technologies: ["AI Reporting", "Analytics", "Dashboards", "Automation"]
-
-];
-
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const soc2Technologies = [
-  {
-    name: "AI Compliance Monitoring",
-    description: "Intelligent monitoring of compliance requirements",
-    icon: Shield,
-    useCase: "Compliance Monitoring",
-    reliability: "Critical"
-  },
-  {
-    name: "Policy Automation",
-    description: "Automated policy management and enforcement",
-    icon: FileText,
-    useCase: "Policy Management",
-    reliability: "Critical"
-  },
-  {
-    name: "Risk Assessment AI",
-    description: "AI-powered risk assessment and management",
-    icon: AlertTriangle,
-    useCase: "Risk Management",
-    reliability: "High"
-  },
-  {
-    name: "Security Automation",
-    description: "Automated security control implementation",
-    icon: Lock,
-    useCase: "Security Controls",
-    reliability: "High"
-
-];
-
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const successStories = [
   {
@@ -741,9 +605,7 @@ const successStories = [
     solution: "Built AI-powered SOC2 audit preparation and security automation system",
     results: "75% faster audit preparation, 90% automated security controls, better compliance, improved security",
     logo: "CSP"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -772,9 +634,7 @@ const processSteps = [
     description: "Test systems and validate compliance requirements",
     icon: Gauge,
     duration: "4-8 weeks"
-
 ];
-
 const soc2Benefits = [
   {
     title: "Automated Compliance",
@@ -798,25 +658,17 @@ const soc2Benefits = [
     title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
-<<<<<<< HEAD
-    examples: ["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
-
-=======
     examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function SOC2ComplianceAutomation() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'Monitoring', 'Policy Management', 'Risk Management', 'Audit Preparation', 'Security Controls', 'Reporting'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? soc2Solutions
     : soc2Solutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -826,78 +678,42 @@ export default function SOC2ComplianceAutomation() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Shield className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               SOC2 Compliance &
               <span className="text-gradient block">Automation</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform SOC2 compliance with intelligent automation systems. From monitoring
               to audit preparation, we help you achieve and maintain SOC2 compliance efficiently.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Shield className="w-4 h-4" />
@@ -915,7 +731,6 @@ export default function SOC2ComplianceAutomation() {
           </motion.div>
         </div>
       </section>
-
       {/* SOC2 Benefits */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -923,32 +738,18 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">SOC2 Compliance Automation Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make SOC2 automation essential
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {soc2Benefits.map((benefit, index) => (
               <motion.div
@@ -956,42 +757,21 @@ export default function SOC2ComplianceAutomation() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -1006,7 +786,6 @@ export default function SOC2ComplianceAutomation() {
           </div>
         </div>
       </section>
-
       {/* SOC2 Technologies */}
       <section className="py-20">
         <div className="container-responsive">
@@ -1014,32 +793,18 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">SOC2 Compliance Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading SOC2 compliance automation technologies
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {soc2Technologies.map((technology, index) => (
               <motion.div
@@ -1047,43 +812,22 @@ export default function SOC2ComplianceAutomation() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -1098,7 +842,6 @@ export default function SOC2ComplianceAutomation() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -1106,32 +849,18 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our SOC2 Compliance Automation Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful SOC2 compliance automation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -1139,35 +868,16 @@ export default function SOC2ComplianceAutomation() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -1176,7 +886,6 @@ export default function SOC2ComplianceAutomation() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -1187,7 +896,6 @@ export default function SOC2ComplianceAutomation() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -1195,32 +903,18 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">SOC2 Compliance Automation Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for intelligent SOC2 compliance automation
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -1232,12 +926,10 @@ export default function SOC2ComplianceAutomation() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -1245,43 +937,22 @@ export default function SOC2ComplianceAutomation() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -1290,23 +961,19 @@ export default function SOC2ComplianceAutomation() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1321,7 +988,6 @@ export default function SOC2ComplianceAutomation() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -1329,32 +995,18 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">SOC2 Compliance Automation Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with SOC2 compliance automation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -1362,35 +1014,16 @@ export default function SOC2ComplianceAutomation() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1400,7 +1033,6 @@ export default function SOC2ComplianceAutomation() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1415,7 +1047,6 @@ export default function SOC2ComplianceAutomation() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1427,7 +1058,6 @@ export default function SOC2ComplianceAutomation() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -1435,43 +1065,27 @@ export default function SOC2ComplianceAutomation() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate SOC2 Compliance?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how SOC2 compliance automation can revolutionize your operations,
               improve security, and ensure regulatory compliance.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start SOC2 Automation Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 SOC2 Automation Consultation
               </a>
             </div>
@@ -1479,9 +1093,5 @@ export default function SOC2ComplianceAutomation() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

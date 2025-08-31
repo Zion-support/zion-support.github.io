@@ -28,13 +28,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (initialMessages && initialMessages.length > 0) {
                 setDisplayGuestMessages(initialMessages);
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
-
             else {
-<<<<<<< HEAD
-                setDisplayGuestMessages(storedGuestMessages);
-
-
-=======
                 setDisplayGuestMessages(storedGuestMessages)}
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -43,10 +37,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     useEffect(() => {
         if (!isGuest) {
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
-<<<<<<< HEAD
-            setLoggedInMessages(initialMessages);
-
-=======
             setLoggedInMessages(initialMessages)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isGuest, initialMessages, recipient.id]);
@@ -57,23 +47,14 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
             setDisplayGuestMessages(newMessages);
             setStoredGuestMessages(newMessages); // Always update localStorage for guests
-
         else {
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-<<<<<<< HEAD
-            setLoggedInMessages(newMessages);
-
-=======
             setLoggedInMessages(newMessages)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
         if (debouncedApiCallParams) {
-<<<<<<< HEAD
-            onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
-
-=======
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [debouncedApiCallParams, onSendMessage]);
@@ -90,23 +71,8 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 role: 'user',
                 message: messageContent,
   timestamp: new Date()
-            
-
-
-
-
-
-
 };
             setCurrentMessages((prev) => [...prev, newMessage]);
-<<<<<<< HEAD
-            setPendingApiCallParams({ message: messageContent, conversationId });
-
-        else { // Guest user
-            setGuestMessage(messageContent);
-            setShowGuestModal(true);
-
-=======
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user
             setGuestMessage(messageContent);
@@ -121,13 +87,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             role: 'user',
             message: guestMessage,
   timestamp: new Date()
-        
-
-
-
-
-
-
 };
         setCurrentMessages((prev) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
         setPendingApiCallParams({ message: guestMessage, conversationId });
@@ -142,10 +101,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         const handleKey = (e) => {
             if (e.key === 'Escape') {
                 e.preventDefault();
-<<<<<<< HEAD
-                handleModalCancel();
-
-=======
                 handleModalCancel()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
@@ -160,10 +115,6 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
                 e.preventDefault();
-<<<<<<< HEAD
-                onClose();
-
-=======
                 onClose()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
@@ -193,12 +144,10 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             <X className="h-5 w-5"/>
           </Button>
         </div>
-
         {/* Context Header (Optional) */}
         {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>)}
-
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
@@ -206,13 +155,11 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
           <div ref={messagesEndRef}/>
         </div>
-
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage}/>
         </div>
       </div>
-
       {showGuestModal && guestMessage && (<div ref={guestModalRef} className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title">
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
             <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4">Confirm Message</h3>
@@ -229,9 +176,5 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-</div>}}}}}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

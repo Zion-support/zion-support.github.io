@@ -9,56 +9,7 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = () => {
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const caseStudies = [
-    {
-      comp: 'TechCorp Solutions',
-      industry: 'Financial Services',
-      challenge: 'Legacy system modernization and digital transformation',
-      solution: 'Implemented AI-powered automation and cloud migration',
-      results[
-        '40% reduction in operational costs',
-        '60% improvement in customer satisfaction',
-        '3x faster transaction processing'
-      ],
-      logo: '🏦',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      comp: 'Global Manufacturing Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Supply chain optimization and predictive maintenance',
-      solution: 'IoT sensors and AI-powered analytics platform',
-      results[
-        '25% reduction in downtime',
-        '30% improvement in supply chain efficiency',
-        '$2M annual cost savings'
-      ],
-      logo: '🏭',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      comp: 'HealthTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Patient data security and compliance management',
-      solution: 'Zero-trust security framework and automated compliance',
-      results[
-        '99.9% security compliance rate',
-        '50% reduction in audit preparation time',
-        'Enhanced patient data protection'
-      ],
-      logo: '🏥',
-<<<<<<< HEAD
-      color: 'from-purple-500 to-pink-500'
-
-=======
       color: 'from-purple-500 to-pink-500';
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -112,36 +63,19 @@ const caseStudies = [
   };
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export function CaseStudiesSection() {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -155,64 +89,24 @@ export function CaseStudiesSection() {
             remarkable results through innovative technology solutions.
           </p>
         </motion.div>
-
         <div className="grid lg: grid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, index)  => (
             <motion.div
-<<<<<<< HEAD
-              key={study.company}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
-
-=======
-<<<<<<< HEAD
-              key={study.comp}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -227,15 +121,12 @@ export function CaseStudiesSection() {
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>
               </div>
-
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
                 <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
-
                 <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                 <p className="text-gray-600 text-sm">{study.solution}</p>
               </div>
-
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>
                 <ul className="space-y-2">
@@ -247,7 +138,6 @@ export function CaseStudiesSection() {
                   ))}
                 </ul>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="flex items-center text-sm text-gray-600">
                   <Star className="h-4 w-4 text-yellow-500 mr-1" />
@@ -255,61 +145,25 @@ export function CaseStudiesSection() {
                   <span className="mx-2">•</span>
                   <span>Verified Results</span>
                 </div>
-<<<<<<< HEAD
-                <Link
-                  to="/case-studies"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200"
-
-                  Read Full Case Study
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </motion.div>
           ))}
         </div>
-
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-
-=======
         <motion.div 
           className="mt-16 text-center"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -325,14 +179,12 @@ export function CaseStudiesSection() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
-
                 Start Your Project
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
-
                 View All Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -342,11 +194,7 @@ export function CaseStudiesSection() {
       </div>;
     </section>;
   )};
-
 export default CaseStudiesSection;
-<<<<<<< HEAD
-}}
-=======
 =======
             <span className="text-2xl">→</span>;
           </div>;
@@ -356,7 +204,6 @@ export default CaseStudiesSection;
   );
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default CaseStudiesSection;
 export default CaseStudiesSection;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

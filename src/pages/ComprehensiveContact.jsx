@@ -17,10 +17,6 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Form submitted:', formData);
-=======
         // // // // // // // console.log('Form submitted:', formData);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
@@ -48,7 +44,6 @@ export default function ComprehensiveContact() {
           </p>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -73,7 +68,6 @@ export default function ComprehensiveContact() {
                       <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your email"/>
                     </div>
                   </div>
-
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="comp" className="text-white">Company</Label>
@@ -84,7 +78,6 @@ export default function ComprehensiveContact() {
                       <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter phone number"/>
                     </div>
                   </div>
-
                   <div>
                     <Label htmlFor="service" className="text-white">Service Interest</Label>
                     <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-3 rounded-md bg-white/10 border border-zion-cyan/30 text-white">
@@ -100,12 +93,10 @@ export default function ComprehensiveContact() {
                       <option value="other">Other</option>
                     </select>
                   </div>
-
                   <div>
                     <Label htmlFor="message" className="text-white">Message *</Label>
                     <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Tell us about your project or requirements..."/>
                   </div>
-
                   <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white py-3">
                     <Send className="mr-2 h-5 w-5"/>
                     Send Message
@@ -114,7 +105,6 @@ export default function ComprehensiveContact() {
               </CardContent>
             </Card>
           </div>
-
           {/* Contact Details */}
           <div className="space-y-8">
             <div>
@@ -128,7 +118,6 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -137,7 +126,6 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">24/7 Response</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -146,7 +134,6 @@ export default function ComprehensiveContact() {
                     <p className="text-zion-cyan-light">Middletown DE 19709</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <Globe className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -158,7 +145,6 @@ export default function ComprehensiveContact() {
                 </div>
               </div>
             </div>
-
             {/* Quick Actions */}
             <div>
               <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
@@ -180,7 +166,6 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
-
       {/* Services Overview */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -190,7 +175,6 @@ export default function ComprehensiveContact() {
               Comprehensive technology solutions designed to drive your business forward in the digital age.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
                 <CardHeader className="text-center">
@@ -215,7 +199,6 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
-
       {/* Why Choose Us */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -224,7 +207,6 @@ export default function ComprehensiveContact() {
             We combine cutting-edge technology with proven expertise to deliver exceptional results.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
@@ -235,7 +217,6 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -245,7 +226,6 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <TrendingUp className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -255,7 +235,6 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -265,7 +244,6 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Building className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -275,7 +253,6 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Star className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -287,7 +264,6 @@ export default function ComprehensiveContact() {
           </Card>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
@@ -309,7 +285,6 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <footer className="bg-zion-blue-dark py-12">
         <div className="container mx-auto px-4">
@@ -357,9 +332,5 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </footer>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

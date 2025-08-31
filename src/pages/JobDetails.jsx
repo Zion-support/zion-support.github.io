@@ -22,46 +22,22 @@ export default function JobDetails() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (error || !job) {
         return (<>
-
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router('/jobs')}>View All Jobs</Button>
         </div>
-<<<<<<< HEAD
-
-      </>);
-
-=======
-        
       </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
-<<<<<<< HEAD
-            router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-            return}
-=======
             router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
-<<<<<<< HEAD
-
-        if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-            toast.error("Only job seekers can apply for jobs");
-            return;
-
-        setIsApplyModalOpen(true);
-    };
-=======
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
@@ -78,21 +54,10 @@ export default function JobDetails() {
         return `$${budget.min} - $${budget.max}`};
     const isOwnJob = user?.id === job.client_id;
     return (<>
-<<<<<<< HEAD
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
-
-=======
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
   job.description.substring(0,
   160)
-
-
-
-
-
-
 }/>
-      
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -100,7 +65,6 @@ export default function JobDetails() {
             ← Back to Jobs
           </Button>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             <Card>
@@ -123,7 +87,6 @@ export default function JobDetails() {
                     {job.description}
                   </div>
                 </div>
-
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
@@ -135,7 +98,6 @@ export default function JobDetails() {
               </CardContent>
             </Card>
           </div>
-
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -146,7 +108,6 @@ export default function JobDetails() {
                     <p className="font-medium">{formatBudget(job.budget)}</p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground"/>
                   <div className="ml-3">
@@ -156,7 +117,6 @@ export default function JobDetails() {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground"/>
                   <div className="ml-3">
@@ -164,11 +124,9 @@ export default function JobDetails() {
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-
                 {!isOwnJob && (<Button className="w-full mt-4" onClick={handleApply} disabled={isOwnJob}>
                     Apply Now
                   </Button>)}
-
                 {isOwnJob && (<div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>)}
@@ -177,7 +135,6 @@ export default function JobDetails() {
           </div>
         </div>
       </main>
-
       {/* Job application modal */}
       {job && (<ApplyToJobModal job = {
   {
@@ -186,24 +143,9 @@ export default function JobDetails() {
                 description: job.description,
                 comp_name: job.comp_name || "Comp",
                 budget: job.budget,
-  <<<<<<< HEAD
-                client_id: job.client_id
-            
-
-}} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>)}
-=======
   client_id: job.client_id
-            
-
-
-
-
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
-<<<<<<< HEAD
-</Card></Card></Card></Card>}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,19 +16,6 @@ export default function CheckoutPage() {
     useEffect(() => {
         if (sku) {
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-<<<<<<< HEAD
-            return;
-
-        const stored = safeStorage.getItem(getCartKey(user?.id));
-        if (stored) {
-            try {
-                setItems(JSON.parse(stored));
-
-            catch {
-                setItems([]);
-
-
-=======
             return}
         const stored = safeStorage.getItem(getCartKey(user?.id));
         if (stored) {
@@ -61,15 +48,6 @@ export default function CheckoutPage() {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
-<<<<<<< HEAD
-                        });
-
-                    catch (e) {
-<<<<<<< HEAD
-                        // // // console.error('Failed to add points', e);
-
-
-=======
                         // // // // // // // console.error('Failed to add points', e);
                     }
 =======
@@ -80,21 +58,9 @@ export default function CheckoutPage() {
                 }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 safeStorage.removeItem(getCartKey(user?.id));
-<<<<<<< HEAD
-                navigate(`/orders/${result.id}`);
-
-
-        catch (err) {
-<<<<<<< HEAD
-            // // // console.error('Payment failed', err);
-
-=======
             // // // // // // // console.error('Payment failed', err);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-<<<<<<< HEAD
-                router(`/orders/${result.id}`)}
 =======
                 router(`/orders/${result.id}`);
             }
@@ -107,7 +73,6 @@ export default function CheckoutPage() {
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
       <CheckoutProgress currentStep={0} className="mb-6"/>
-
       {/* Order Summary */}
       <div className="bg-gray-50 p-4 rounded-md mb-6">
         <h2 className="font-semibold mb-3">Order Summary</h2>
@@ -134,9 +99,5 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

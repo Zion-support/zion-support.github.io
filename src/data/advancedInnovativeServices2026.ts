@@ -1,5 +1,4 @@
 export interface AdvancedInnovativeService2026 {
-
   id: string;
   title: string;
   description: string;
@@ -29,12 +28,8 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  caseStudies?: string[];
-=======
   caseStudies?: string[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
   {
     id: 'quantum-ai-neural-networks-2026',
@@ -623,12 +618,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       uptime: '99.9%',
       security['Research Security', 'Data Integrity', 'Access Control']
     },
-<<<<<<< HEAD
-    competitors: ['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
-    caseStudies: ['Advanced theoretical research', 'International collaboration', 'Educational innovation']
-
-];}}
-=======
     competitors['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
     caseStudies['Advanced theoretical research', 'International collaboration', 'Educational innovation']
   }

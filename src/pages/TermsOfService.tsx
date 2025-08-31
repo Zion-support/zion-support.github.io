@@ -15,24 +15,9 @@ import {
   Lock,
   Eye,
   Database
-<<<<<<< HEAD
-const TermsOfService: React.FC = () => {
-=======
  } from 'lucide-react';
-
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'legal@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
-  
   const sections = [
     {
       id: 'acceptance',
@@ -119,7 +104,6 @@ const TermsOfService = () => {;
       content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
     };
   ];
-
   const keyProvisions = [
     {
       title: 'Service Usage',
@@ -152,7 +136,6 @@ const TermsOfService = () => {;
       icon: AlertTriangle;
     };
   ];
-
   const disputeResolution = [
     {
       step: '1',
@@ -176,43 +159,7 @@ const TermsOfService = () => {;
     };
   ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-zion-cyan/20 rounded-2xl flex items-center justify-center">
-                <FileText className="w-10 h-10 text-zion-cyan" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Terms of <span className="text-zion-cyan">Service</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-              Please read these terms carefully before using our website and services.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-zion-slate-light">
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                Last updated: {lastUpdated}
-              </span>
-              <span className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                {website}
-              </span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
@@ -220,39 +167,18 @@ const TermsOfService = () => {;
         <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
       </Helmet>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mb-12"
-
-=======
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="text-center"
@@ -274,7 +200,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Services Description */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -282,12 +207,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Description of Services
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   {companyName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
@@ -319,7 +242,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* User Accounts */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -327,12 +249,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
                 User Accounts and Responsibilities
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   When you create an account with us, you must provide accurate, complete, and current information. You are responsible for:
@@ -360,7 +280,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Acceptable Use */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -368,12 +287,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Acceptable Use Policy
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   You agree not to use our website or services to:
@@ -409,7 +326,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Intellectual Property */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -417,12 +333,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Intellectual Property Rights
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Our website and services contain content that is owned by {companyName} or its licensors, including but not limited to:
@@ -453,7 +367,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Privacy and Data */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -461,12 +374,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
@@ -479,7 +390,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Limitation of Liability */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -487,12 +397,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   To the maximum extent permitted by law, {companyName} shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
@@ -520,7 +428,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Disclaimers */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -528,12 +435,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied.
@@ -564,7 +469,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Indemnification */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -572,12 +476,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   You agree to indemnify, defend, and hold harmless {companyName} and its officers, directors, employees, agents, and affiliates from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
@@ -602,7 +504,6 @@ const TermsOfService = () => {;
                 </ul>
               </div>
             </motion.div>
-
             {/* Termination */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -610,12 +511,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.
@@ -628,7 +527,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Governing Law */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -636,12 +534,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
@@ -654,7 +550,6 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Changes to Terms */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -662,12 +557,10 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 1.1 }}
               viewport={{ once: true }}
               className="mb-12"
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
               </h2>
-
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
@@ -680,23 +573,19 @@ const TermsOfService = () => {;
                 </p>
               </div>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}
-
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Information
               </h2>
-
               <p className="text-zion-slate-light mb-6">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-zion-slate-light">
@@ -723,20 +612,12 @@ const TermsOfService = () => {;
                   Download PDF
                 </button>
               </div>
-
               <p className="text-zion-slate-light mt-6">
                 We will respond to your inquiry within 30 days of receipt.
               </p>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
         </section>
-
         {/* Table of Contents */}
         <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
@@ -744,38 +625,19 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index) => (
                   <motion.a
@@ -784,32 +646,14 @@ const TermsOfService = () => {;
                     initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
-
-
-
-
-
-
 }}
                     className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
                   >
@@ -824,7 +668,6 @@ const TermsOfService = () => {;
             </motion.div>
           </div>
         </section>
-
         {/* Key Provisions */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -832,38 +675,19 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Key Provisions
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {keyProvisions.map((provision, index) => (
                   <motion.div
@@ -871,32 +695,14 @@ const TermsOfService = () => {;
                     initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
-
-
-
-
-
-
 }}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-purple-200"
                   >
@@ -911,7 +717,6 @@ const TermsOfService = () => {;
             </motion.div>
           </div>
         </section>
-
         {/* Terms Content */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
@@ -919,32 +724,14 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}
             >
               {sections.map((section, index) => (
@@ -955,7 +742,6 @@ const TermsOfService = () => {;
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
                   </div>
-                  
                   <div className="prose prose-slate max-w-none">
                     <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
                   </div>
@@ -964,7 +750,6 @@ const TermsOfService = () => {;
             </motion.div>
           </div>
         </section>
-
         {/* Dispute Resolution */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -972,38 +757,19 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Dispute Resolution Process
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {disputeResolution.map((step, index) => (
                   <motion.div
@@ -1011,32 +777,14 @@ const TermsOfService = () => {;
                     initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
-
-
-
-
-
-
 }}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-indigo-200 text-center"
                   >
@@ -1051,7 +799,6 @@ const TermsOfService = () => {;
             </motion.div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
@@ -1059,32 +806,14 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
-
 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1093,7 +822,6 @@ const TermsOfService = () => {;
               <p className="text-xl text-purple-100 mb-8">
                 Our legal team is here to help clarify any questions about our Terms of Service.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center justify-center gap-3 text-white">
                   <Mail className="w-5 h-5" />
@@ -1104,7 +832,6 @@ const TermsOfService = () => {;
                   <span>+1 (555) 123-4567</span>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
                   Contact Legal Team
@@ -1121,5 +848,4 @@ const TermsOfService = () => {;
   );
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default TermsOfService;}

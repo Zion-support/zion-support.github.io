@@ -5,19 +5,6 @@ export default function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-<<<<<<< HEAD
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        await axios.post('/auth/register', { email, password });
-        router('/marketplace')};
-    return (<form onSubmit={handleSubmit} className="p-4 space-y-2">
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="border px-2 py-1 w-full"/>
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="border px-2 py-1 w-full"/>
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-        Sign Up
-      </button>
-    </form>)}
-=======
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     // Track confirm password locally to prevent it from clearing on blur
@@ -126,7 +113,6 @@ export default function SignUp() {
             return <Navigate to="/onboarding"/>;
         }
         return (<>
-
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -141,7 +127,6 @@ export default function SignUp() {
                 </Link>
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               <Form {...form}>
                 {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">
@@ -150,12 +135,6 @@ export default function SignUp() {
                 <form onSubmit = {
   form.handleSubmit(onSubmit,
   onInvalid)
-
-
-
-
-
-
 } className="space-y-6" noValidate>
                   <FormField control={form.control} name="displayName" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
@@ -167,7 +146,6 @@ export default function SignUp() {
                         </FormControl>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <FormField control={form.control} name="email" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                         <FormControl>
@@ -178,7 +156,6 @@ export default function SignUp() {
                         </FormControl>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Password</FormLabel>
                         <FormControl>
@@ -195,7 +172,6 @@ export default function SignUp() {
                         </FormControl>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <FormField control={form.control} name="confirmPassword" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                         <FormControl>
@@ -218,9 +194,7 @@ export default function SignUp() {
                         </FormControl>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <PasswordStrengthMeter password={passwordValue}/>
-
                   <FormField control={form.control} name="termsAccepted" render={({ field }) => (<FormItem className="flex flex-row items-start space-x-3 space-y-0">
                         <FormControl>
                           <Checkbox checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"/>
@@ -239,7 +213,6 @@ export default function SignUp() {
                           <FormMessage className="text-red-400"/>
                         </div>
                       </FormItem>)}/>
-
                   <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isSubmitting}>
                     {isSubmitting ? (<>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
@@ -248,7 +221,6 @@ export default function SignUp() {
                   </Button>
                 </form>
               </Form>
-
               <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -258,7 +230,6 @@ export default function SignUp() {
                     <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
                   </div>
                 </div>
-
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   <Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick={() => loginWithGoogle()} disabled={isSubmitting}>
                     <span className="sr-only">Sign in with Google</span>
@@ -295,7 +266,6 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-
     </>);
     };
 }

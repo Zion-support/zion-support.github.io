@@ -13,13 +13,6 @@ export default function IntegrationsFeature() {
         "name": "API & Integrations",
         "description": "Connect Zion with Slack, your website and other tools via our API and widgets.",
   "url": "https://app.ziontechgroup.com/features/integrations"
-    
-
-
-
-
-
-
 };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
@@ -61,9 +54,5 @@ export default function IntegrationsFeature() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

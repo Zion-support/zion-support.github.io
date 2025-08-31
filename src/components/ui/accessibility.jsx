@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X import { Button } from './button';
-=======
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
 import { Button } from "./button";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -23,27 +20,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         const root = document.documentElement;
         // High contrast
         if (settings.highContrast) {
-<<<<<<< HEAD
-            root.classList.add('high-contrast');
-
-        else {
-            root.classList.remove('high-contrast');
-
-        // Large text
-        if (settings.largeText) {
-            root.style.fontSize = '18px';
-
-        else {
-            root.style.fontSize = '16px';
-
-        // Reduced motion
-        if (settings.reducedMotion) {
-            root.style.setProperty('--reduced-motion', 'reduce');
-
-        else {
-            root.style.setProperty('--reduced-motion', 'no-preference');
-
-=======
             root.classList.add('high-contrast')}
         else {
             root.classList.remove('high-contrast')}
@@ -70,16 +46,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
-<<<<<<< HEAD
-                setSettings(prev => ({ ...prev, ...parsed }));
-
-=======
                 setSettings(prev => ({ ...prev, ...parsed }))}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch {
                 // Silently handle parsing errors
-
-
     }, []);
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
@@ -88,21 +58,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
-  <<<<<<< HEAD
-            ...settings,
-  [key]: value !== null ? value : !settings[key]
-        
-
-};
-        saveSettings(newSettings)}, [settings, saveSettings]);
-=======
   ...settings,
   [key]: value !== null ? value : !settings[key]
-        
-
-
-
-
 };
         saveSettings(newSettings);
     }, [settings, saveSettings]);
@@ -115,19 +72,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             reducedMotion: false,
             screenReader: false,
             fontSize: 16,
-  <<<<<<< HEAD
-            colorBlindMode: 'normal'
-        
-
-};
-        saveSettings(defaults)}, [saveSettings]);
-=======
   colorBlindMode: 'normal'
-        
-
-
-
-
 };
         saveSettings(defaults);
     }, [saveSettings]);
@@ -145,11 +90,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
-<<<<<<< HEAD
-                document.body.removeChild(announcement);
-            }, 1000);
-
-=======
                 document.body.removeChild(announcement)}, 1000)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [settings.screenReader]);
@@ -160,50 +100,24 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
         <Accessibility className="w-6 h-6"/>
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
-
             {/* Panel */}
             <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
   { opacity: 0, x: 300,
   scale: 0.95 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.95 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.3,
   ease: "easeOut" 
-
-
-
-
-
-
 }}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -212,11 +126,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <X className="w-5 h-5 text-zinc-400"/>
                 </button>
               </div>
-
               {/* Visual Settings */}
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
-
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -227,7 +139,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     {settings.highContrast ? 'On' : 'Off'}
                   </Button>
                 </div>
-
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -238,7 +149,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     {settings.largeText ? 'On' : 'Off'}
                   </Button>
                 </div>
-
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
@@ -254,7 +164,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     </Button>
                   </div>
                 </div>
-
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
@@ -264,12 +173,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <select value={settings.colorBlindMode} onChange = {
   (e) => toggleSetting('colorBlindMode',
   e.target.value)
-
-
-
-
-
-
 } className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -278,11 +181,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </select>
                 </div>
               </div>
-
               {/* Motion Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Settings className="w-5 h-5 text-zion-cyan"/>
@@ -293,11 +194,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </Button>
                 </div>
               </div>
-
               {/* Audio Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio</h3>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"/>) : (<VolumeX className="w-5 h-5 text-zinc-400"/>)}
@@ -308,7 +207,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </Button>
                 </div>
               </div>
-
               {/* Test Announcement */}
               {settings.screenReader && (<div className="mt-4 p-3 bg-zion-blue/20 rounded-lg">
                   <p className="text-zinc-300 text-sm mb-2">Test screen reader announcement:</p>
@@ -316,14 +214,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     Test Announcement
                   </Button>
                 </div>)}
-
               {/* Reset Button */}
               <div className="mt-6 pt-6 border-t border-zion-blue-light/20">
                 <Button onClick={resetSettings} variant="outline" className="w-full border-zinc-500 text-zinc-300 hover:bg-zinc-500/20">
                   Reset to Defaults
                 </Button>
               </div>
-
               {/* Help Text */}
               <div className="mt-4 text-xs text-zinc-400 text-center">
                 <p>These settings are saved locally and will persist across sessions.</p>
@@ -332,7 +228,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Screen Reader Only Class */}
       <style dangerouslySetInnerHTML = {
   {
@@ -347,23 +242,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             clip: rect(0, 0, 0,
   0);
             white-space: nowrap;
-<<<<<<< HEAD
-            border: 0
-
-}
-=======
             border: 0;
-<<<<<<< HEAD
-=======
-          
-
-
-
-
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           .high-contrast {
             --zion-cyan: #00ffff;
             --zion-blue: #0066ff;
@@ -372,78 +254,37 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-blue-light: #3399ff;
             --zion-cyan-light: #33ffff;
             --zion-purple-dark: #6600cc;
-<<<<<<< HEAD
-            --zion-purple-light: #cc33ff;
-
-          [data-color-blind="protanopia"] {
-            filter: url('#protanopia-filter');
-
-          [data-color-blind="deuteranopia"] {
-            filter: url('#deuteranopia-filter');
-
-          [data-color-blind="tritanopia"] {
-            filter: url('#tritanopia-filter');
-
-          :root {
-            --font-size: 16px;
-            --reduced-motion: no-preference;
-
-          * {
-            font-size: var(--font-size);
-=======
             --zion-purple-light: #cc33ff}
-
           [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter')}
-
           [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter')}
-
           [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter')}
-
           :root {
             --font-size: 16px;
             --reduced-motion: no-preference}
-
           * {
             font-size: var(--font-size)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
-<<<<<<< HEAD
-              transition-duration: 0.01ms !important;
-
-=======
               transition-duration: 0.01ms !important}
           }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
-<<<<<<< HEAD
-            transition-duration: 0.01ms !important;
-
-=======
             transition-duration: 0.01ms !important}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         `
         }}/>
-
       {/* SVG Filters for Color Blind Modes */}
       <svg style = {
   { position: 'absolute', width: 0,
   height: 0 
-
-
-
-
-
-
 }}>
         <defs>
           <filter id="protanopia-filter">
@@ -457,9 +298,5 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>
         </defs>
       </svg>
-<<<<<<< HEAD
-    </>);
-</div>}}}}}}}}}}}}}}}}}}}}}}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

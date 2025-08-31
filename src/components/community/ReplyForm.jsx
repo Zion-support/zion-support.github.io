@@ -6,10 +6,6 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
         e.preventDefault();
         if (content.trim()) {
             onSubmit(content);
-<<<<<<< HEAD
-            setContent('');
-
-=======
             setContent('')}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -20,9 +16,5 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
           Post Reply
         </Button>
       </div>
-<<<<<<< HEAD
-    </form>);
-}}
-=======
     </form>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

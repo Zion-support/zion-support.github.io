@@ -1,16 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Atom,
-  Zap,
-  CheckCircle,
-  BarChart3,
-  Sparkles,
-  ArrowRight,
-  Brain,
-  Cpu,
-=======
 import { 
   Atom, 
   Zap, 
@@ -31,12 +20,6 @@ import {
   LineChart,
   Activity,
   Target,
-<<<<<<< HEAD
-  Shield,
-  TrendingUp,
-  Layers
-import { SEO } from '@/components/SEO';
-=======
   Lightbulb,
   Search,
   Filter,
@@ -66,7 +49,6 @@ import { SEO } from '@/components/SEO';
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function QuantumComputingSolutions() {
   const features = [
     {
@@ -90,7 +72,6 @@ export default function QuantumComputingSolutions() {
       description: 'From small quantum circuits to enterprise-scale quantum applications.'
     }
   ];
-
   const capabilities = [
     {
       title: 'Quantum Algorithms',
@@ -114,14 +95,9 @@ export default function QuantumComputingSolutions() {
       title: 'Quantum Security',
       description: 'Quantum-resistant cryptography and secure communications',
       icon: Shield,
-<<<<<<< HEAD
-      useCases: ['Post-quantum cryptography', 'Quantum key distribution', 'Secure multi-party computation', 'Blockchain security']
-
-=======
       benefits: ['Post-quantum crypto', 'Quantum key distribution', 'Secure networks']
     }
   ];
-
   const useCases = [
     {
       industry: 'Financial Services',
@@ -149,7 +125,6 @@ export default function QuantumComputingSolutions() {
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -184,14 +159,6 @@ export default function QuantumComputingSolutions() {
       popular: true
     },
     {
-<<<<<<< HEAD
-      plan: 'Government',
-      price: '$24,999',
-      period: '/month',
-      features: ['Unlimited qubits', 'Custom quantum hardware', '24/7 support', 'On-site quantum experts', 'White-label solutions'],
-      recommended: false
-
-=======
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -210,7 +177,6 @@ export default function QuantumComputingSolutions() {
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -233,12 +199,7 @@ export default function QuantumComputingSolutions() {
       description: 'Stay ahead of the curve with cutting-edge quantum technology.'
     }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-futuristic">
-      <SEO
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -246,18 +207,8 @@ export default function QuantumComputingSolutions() {
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-=======
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 animate-pulse"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
@@ -278,93 +229,6 @@ export default function QuantumComputingSolutions() {
               1000x faster than classical computers. From AI enhancement to cryptography, unlock new possibilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-
-                Explore Quantum Solutions
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
-                Visit Our Site
-              </a>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <motion.div
-            className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
-            transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-          />
-        </div>
-      </section>
-
-      {/* Quantum Applications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary <span className="text-cyan-400">Quantum Applications</span>
-            </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Discover how quantum computing is transforming industries and solving previously impossible problems
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumApplications.map((app, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-                    <app.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{app.name}</h3>
-                    <p className="text-cyan-400 text-sm font-medium">Quantum Application</p>
-                  </div>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">{app.description}</p>
-                <ul className="space-y-2">
-                  {app.useCases.map((useCase, idx) => (
-                    <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {useCase}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-=======
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -385,19 +249,10 @@ export default function QuantumComputingSolutions() {
         </div>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -411,10 +266,6 @@ export default function QuantumComputingSolutions() {
               Cutting-edge quantum technology that revolutionizes computational capabilities.
             </p>
           </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {features.map((feature, index) => (
@@ -422,13 +273,6 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <Atom className="h-6 w-6 text-white" />
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
               >
@@ -443,19 +287,10 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -469,22 +304,6 @@ export default function QuantumComputingSolutions() {
               Comprehensive quantum computing solutions for enterprise applications.
             </p>
           </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
-                    <Zap className="h-6 w-6 text-white" />
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -517,19 +336,10 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -543,11 +353,6 @@ export default function QuantumComputingSolutions() {
               Transform your industry with quantum computing solutions.
             </p>
           </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchAreas.map((area, index) => (
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -555,14 +360,6 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">{area}</h3>
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
               >
@@ -584,19 +381,10 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -610,24 +398,10 @@ export default function QuantumComputingSolutions() {
               Access to quantum computing power at competitive prices. All plans include a 30-day free trial.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-                  plan.recommended
-                    ? 'border-cyan-500/50 bg-slate-800/70'
-                    : 'border-slate-700/50'
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                {plan.recommended && (
-=======
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -645,7 +419,6 @@ export default function QuantumComputingSolutions() {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -654,7 +427,6 @@ export default function QuantumComputingSolutions() {
                   </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -663,19 +435,6 @@ export default function QuantumComputingSolutions() {
                     </li>
                   ))}
                 </ul>
-
-<<<<<<< HEAD
-                <Link
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
-                    plan.recommended
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
-
-                  Get Started
-                </Link>
-=======
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -693,19 +452,10 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -719,12 +469,6 @@ export default function QuantumComputingSolutions() {
               Transform your business with the power of quantum computing.
             </p>
           </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quantumTechnologies.map((tech, index) => (
-              <motion.a
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -732,14 +476,6 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="text-sm text-cyan-400 mb-1">{tech.category}</div>
-                <div className="text-white font-semibold">{tech.name}</div>
-              </motion.a>
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -754,20 +490,12 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to <span className="text-cyan-400">Quantum Leap</span> Forward?
-=======
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -778,21 +506,6 @@ export default function QuantumComputingSolutions() {
               Start your 30-day free trial and experience the future of computing today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-
-                Start Quantum Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
-                Call +1 302 464 0950
-              </a>
-=======
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

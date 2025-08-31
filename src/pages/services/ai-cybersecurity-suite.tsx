@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function AICybersecuritySuite(...args: []):  {
   return (
     <>
@@ -17,7 +11,6 @@ export default function AICybersecuritySuite(...args: []):  {
         <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
         <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +21,18 @@ export default function AICybersecuritySuite(...args: []):  {
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Cybersecurity
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Cybersecurity
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Suite</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds
                 in real-time. Protect your digital assets with intelligent threat detection and automated response.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Protected
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +44,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +56,6 @@ export default function AICybersecuritySuite(...args: []):  {
                 with intelligent detection and automated response capabilities.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -100,10 +87,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   icon: Lock,
                   title: "Data Encryption",
                   description: "End-to-end encryption with AI-powered key management and access control."
-<<<<<<< HEAD
-
-              ].map((feature, index) => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -118,7 +101,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Security Layers Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +112,6 @@ export default function AICybersecuritySuite(...args: []):  {
                 Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -152,10 +133,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   layer: "04",
                   title: "Data Security",
                   description: "Encryption, access control, and data loss prevention."
-<<<<<<< HEAD
-
-              ].map((layer, index) => (
-=======
                 }
               ].map((layer, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -170,7 +147,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Threat Intelligence Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +158,6 @@ export default function AICybersecuritySuite(...args: []):  {
                 Stay ahead of emerging threats with real-time intelligence and predictive analytics.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -201,7 +176,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
@@ -226,7 +200,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,7 +211,6 @@ export default function AICybersecuritySuite(...args: []):  {
                 Meet regulatory requirements with built-in compliance features and audit capabilities.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -276,10 +248,6 @@ export default function AICybersecuritySuite(...args: []):  {
                   description: "Cybersecurity framework alignment and implementation.",
                   icon: Activity,
                   features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
-<<<<<<< HEAD
-
-              ].map((compliance, index) => (
-=======
                 }
               ].map((compliance, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -302,7 +270,6 @@ export default function AICybersecuritySuite(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -316,23 +283,12 @@ export default function AICybersecuritySuite(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200"
-
                 Schedule Security Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

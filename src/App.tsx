@@ -97,6 +97,15 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
+// Revolutionary Services Showcase 2025
+const RevolutionaryServicesShowcase2025 = createLazyComponent(() => import('./pages/RevolutionaryServicesShowcase2025'));
+
+// Revolutionary Pricing Guide 2025
+const RevolutionaryPricingGuide2025 = createLazyComponent(() => import('./pages/RevolutionaryPricingGuide2025'));
+
+// Comprehensive Services Overview 2025
+const ComprehensiveServicesOverview2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesOverview2025'));
+
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
 
@@ -265,6 +274,15 @@ function App() {
 
 {/* Innovative Services Showcase 2026 */}
 <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+
+{/* Revolutionary Services Showcase 2025 */}
+<Route path="/revolutionary-services-showcase-2025" element={<ModernLayout><RevolutionaryServicesShowcase2025 /></ModernLayout>} />
+
+{/* Revolutionary Pricing Guide 2025 */}
+<Route path="/revolutionary-pricing-guide-2025" element={<ModernLayout><RevolutionaryPricingGuide2025 /></ModernLayout>} />
+
+{/* Comprehensive Services Overview 2025 */}
+<Route path="/comprehensive-services-overview-2025" element={<ModernLayout><ComprehensiveServicesOverview2025 /></ModernLayout>} />
 
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />

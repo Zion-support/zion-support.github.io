@@ -3,9 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp import { SEO } from '@/components/SEO';
-=======
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -23,12 +20,6 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "AI Customer Intelligence",
-<<<<<<< HEAD
-                starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
-                enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
-
-=======
                 starter: { price: "$3,999", features["Basic customer analytics", "Churn prediction", "Email support"] },
                 professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
                 enterprise: { price: "$8,999+", features["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
@@ -47,12 +38,6 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "Compliance Management Platform",
-<<<<<<< HEAD
-                starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
-                professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
-                enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
-
-=======
                 starter: { price: "$2,999", features["Basic compliance monitoring", "GDPR support", "Email support"] },
                 professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
                 enterprise: { price: "$6,999+", features["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
@@ -71,12 +56,6 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "DevOps Automation Platform",
-<<<<<<< HEAD
-                starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
-                professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
-                enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
-
-=======
                 starter: { price: "$2,999", features["Basic CI/CD", "Automated testing", "Email support"] },
                 professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
                 enterprise: { price: "$7,999+", features["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
@@ -95,25 +74,17 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "Real-Time Analytics Dashboard",
-<<<<<<< HEAD
-                starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
-
-=======
                 starter: { price: "$1,999", features["Basic dashboard", "Real-time data", "Email support"] },
                 professional: { price: "$3,999", features["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
                 enterprise: { price: "$5,999+", features["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
             }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
-
 ];
 export default function ServicesComparisonPage() {
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
     return (<div className="min-h-screen bg-background">
       <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -124,7 +95,6 @@ export default function ServicesComparisonPage() {
             Compare our comprehensive AI and IT services to find the perfect solution for your business.
             Transparent pricing with flexible plans designed for every organization size.
           </p>
-
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
@@ -142,7 +112,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -152,7 +121,6 @@ export default function ServicesComparisonPage() {
               Flexible pricing designed to grow with your business
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
@@ -177,7 +145,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Service Comparisons */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -187,14 +154,12 @@ export default function ServicesComparisonPage() {
               Compare features, capabilities, and pricing across all our services
             </p>
           </div>
-
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-zion-blue-light">
               {SERVICE_COMPARISONS.map((category) => (<TabsTrigger key={category.category} value={category.category} className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue">
                   {category.category}
                 </TabsTrigger>))}
             </TabsList>
-
             {SERVICE_COMPARISONS.map((category) => (<TabsContent key={category.category} value={category.category} className="mt-8">
                 <div className="space-y-8">
                   {category.services.map((service, serviceIndex) => (<Card key={serviceIndex} className="border-zion-blue-light">
@@ -220,7 +185,6 @@ export default function ServicesComparisonPage() {
                               Choose Starter
                             </Button>
                           </div>
-
                           {/* Professional Plan */}
                           <div className="text-center p-6 border-2 border-zion-cyan rounded-lg bg-zion-blue-light/5">
                             <Badge className="mb-2 bg-zion-cyan text-zion-blue">Most Popular</Badge>
@@ -236,7 +200,6 @@ export default function ServicesComparisonPage() {
                               Choose Professional
                             </Button>
                           </div>
-
                           {/* Enterprise Plan */}
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise</h3>
@@ -259,7 +222,6 @@ export default function ServicesComparisonPage() {
           </Tabs>
         </div>
       </section>
-
       {/* Value Proposition */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -269,7 +231,6 @@ export default function ServicesComparisonPage() {
               Proven expertise and results that speak for themselves
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -278,7 +239,6 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">AI Expertise</h3>
               <p className="text-zion-slate-light">Cutting-edge AI solutions with proven results</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-zion-blue"/>
@@ -286,7 +246,6 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">Bank-level security and compliance standards</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-zion-blue"/>
@@ -294,7 +253,6 @@ export default function ServicesComparisonPage() {
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
               <p className="text-zion-slate-light">Certified professionals with industry experience</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-zion-blue"/>
@@ -305,7 +263,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
@@ -313,7 +270,6 @@ export default function ServicesComparisonPage() {
           <p className="text-zion-slate text-lg mb-8 max-w-2xl mx-auto">
             Our experts are here to help you find the perfect solution for your business needs and budget.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
@@ -324,7 +280,6 @@ export default function ServicesComparisonPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-
           <div className="text-zion-slate">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
@@ -335,9 +290,5 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

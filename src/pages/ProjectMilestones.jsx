@@ -6,19 +6,10 @@ function ProjectMilestones() {
     return (<ProtectedRoute>
       <>
         <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
-
         <ProjectMilestonesContent />
-
       </>
-<<<<<<< HEAD
-    </ProtectedRoute>);
-
-export default ProjectMilestones;
-}
-=======
     </ProtectedRoute>)}
 export default ProjectMilestones;
-
 export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;

@@ -1,8 +1,5 @@
 import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell import { Button } from './button';
-=======
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
 import { Button } from "./button";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -12,12 +9,6 @@ const NotificationContext = createContext(null);
 export function useNotifications() {
     const context = useContext(NotificationContext);
     if (!context) {
-<<<<<<< HEAD
-        throw new Error('useNotifications must be used within a NotificationProvider');
-
-    return context;
-
-=======
         throw new Error('useNotifications must be used within a NotificationProvider')}
     return context}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -32,13 +23,6 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
             timestamp: new Date(),
             dismissible: notification.dismissible ?? true,
   duration: notification.duration ?? 5000
-        
-
-
-
-
-
-
 };
         setNotifications(prev => {
             const updated = [newNotification, ...prev];
@@ -46,11 +30,6 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
-<<<<<<< HEAD
-                removeNotification(newNotification.id);
-            }, newNotification.duration);
-
-=======
                 removeNotification(newNotification.id)}, newNotification.duration)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [maxNotifications, removeNotification]);
@@ -61,21 +40,10 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         addNotification,
         removeNotification,
   clearAll
-    
-
-
-
-
-
-
 };
     return (<NotificationContext.Provider value={value}>
       {children}
       <NotificationContainer position={position}/>
-<<<<<<< HEAD
-    </NotificationContext.Provider>);
-
-=======
     </NotificationContext.Provider>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationContainer({ position }) {
@@ -95,10 +63,6 @@ function NotificationContainer({ position }) {
             case 'bottom-center':
                 return 'bottom-4 left-1/2 transform -translate-x-1/2';
             default:
-<<<<<<< HEAD
-                return 'top-4 right-4';
-
-=======
                 return 'top-4 right-4'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -117,17 +81,12 @@ function NotificationContainer({ position }) {
             Clear all
           </Button>
         </div>)}
-
       {/* Notifications */}
       <div className="space-y-2">
         <AnimatePresence mode="popLayout">
           {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification}/>))}
         </AnimatePresence>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationItem({ notification }) {
@@ -143,10 +102,6 @@ function NotificationItem({ notification }) {
             case 'info':
                 return <Info className="w-5 h-5 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <Info className="w-5 h-5 text-blue-400"/>;
-
-=======
                 return <Info className="w-5 h-5 text-blue-400"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -161,10 +116,6 @@ function NotificationItem({ notification }) {
             case 'info':
                 return 'border-blue-500/30 bg-blue-500/10';
             default:
-<<<<<<< HEAD
-                return 'border-zion-blue-light/30 bg-zion-blue/10';
-
-=======
                 return 'border-zion-blue-light/30 bg-zion-blue/10'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -179,72 +130,36 @@ function NotificationItem({ notification }) {
             case 'info':
                 return 'bg-blue-400';
             default:
-<<<<<<< HEAD
-                return 'bg-zion-cyan';
-
-=======
                 return 'bg-zion-cyan'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<motion.div layout initial = {
   { opacity: 0, x: 300,
   scale: 0.8 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
-
-
-
-
-
-
 }} transition = {
   {
             type: "spring",
             stiffness: 500,
             damping: 30,
   opacity: { duration: 0.2 
-
-
-
-
-
-
 }
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
       {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
   { duration: notification.duration / 1000,
   ease: "linear" 
-
-
-
-
-
-
 }}/>)}
-
       <div className="flex items-start gap-3">
         {/* Icon */}
         <div className="flex-shrink-0 mt-0.5">
           {getIcon(notification.type)}
         </div>
-
         {/* Content */}
         <div className="flex-1 min-w-0">
           <h4 className="text-white font-medium text-sm mb-1">
@@ -253,7 +168,6 @@ function NotificationItem({ notification }) {
           {notification.message && (<p className="text-zinc-300 text-sm leading-relaxed">
               {notification.message}
             </p>)}
-
           {/* Action Button */}
           {notification.action && (<div className="mt-3">
               <Button size="sm" variant="ghost" onClick={notification.action.onClick} className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs">
@@ -261,35 +175,15 @@ function NotificationItem({ notification }) {
               </Button>
             </div>)}
         </div>
-
         {/* Dismiss Button */}
         {notification.dismissible && (<button onClick={() => removeNotification(notification.id)} className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200">
             <X className="w-4 h-4 text-zinc-400 hover:text-white"/>
           </button>)}
       </div>
-
       {/* Timestamp */}
       <div className="mt-2 text-xs text-zinc-400">
         {notification.timestamp.toLocaleTimeString()}
       </div>
-<<<<<<< HEAD
-    </motion.div>);
-
-// Convenience functions for quick notifications
-export function showSuccess(title, message, options) {
-    // This would be called from the context
-    return { type: 'success', title, message, ...options };
-
-export function showError(title, message, options) {
-    return { type: 'error', title, message, ...options };
-
-export function showWarning(title, message, options) {
-    return { type: 'warning', title, message, ...options };
-
-export function showInfo(title, message, options) {
-    return { type: 'info', title, message, ...options };
-}}}}}}}}}}}}}}</motion.div>}
-=======
     </motion.div>)}
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {

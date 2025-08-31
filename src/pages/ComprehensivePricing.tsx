@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027  } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027  } from "../../data/2027-specialized-innovative-services";
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap import { Link } from "react-router-dom";
-=======
 import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -34,14 +18,7 @@ const contactInfo = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
-
 const pricingTiers = [
   {
     name: 'Starter',
@@ -81,15 +58,6 @@ const pricingTiers = [
       'Full AI suite',
       '24/7 dedicated support',
       'Custom development',
-<<<<<<< HEAD
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees'
-    ],
-    popular: false
-
-=======
       'Enterprise analytics',;
       'Dedicated account manager',;
       'Custom training programs',;
@@ -99,21 +67,16 @@ const pricingTiers = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function ComprehensivePricing(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
-
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
-
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -129,33 +92,14 @@ export default function ComprehensivePricing(...args[]):  {
           break;
         case 'over-5000':
           matchesPrice = price >= 5000;
-<<<<<<< HEAD
-          break;
-
-=======
           break}
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     return matchesCategory && matchesPrice;
   });
-
-<<<<<<< HEAD
-  const getPriceRangeLabel = (range: string) => {;
-    switch (range) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'under-1000': return 'Under $1,000';
-      case '1000-3000': return '$1,000 - $3,000';
-      case '3000-5000': return '$3,000 - $5,000';
-      case 'over-5000': return 'Over $5,000';
-<<<<<<< HEAD
-      default: return 'All Prices';
-
-=======
       default: return 'All Prices'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header */}
@@ -168,7 +112,6 @@ export default function ComprehensivePricing(...args[]):  {
             Transparent pricing for our revolutionary micro SAAS solutions.
             Choose the plan that fits your business needs and budget.
           </p>
-
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -191,7 +134,6 @@ export default function ComprehensivePricing(...args[]):  {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -233,19 +175,16 @@ export default function ComprehensivePricing(...args[]):  {
           </div>
         </div>
       </div>
-
       {/* Service Pricing Grid */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Individual Service Pricing</h2>
-
           {/* Filters */}
           <div className="flex flex-col md:flex-row gap-4 mb-12 max-w-4xl mx-auto">
             <select
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-
               <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
@@ -255,7 +194,6 @@ export default function ComprehensivePricing(...args[]):  {
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
-
               <option value="all">All Prices</option>
               <option value="under-1000">Under $1,000</option>
               <option value="1000-3000">$1,000 - $3,000</option>
@@ -263,7 +201,6 @@ export default function ComprehensivePricing(...args[]):  {
               <option value="over-5000">Over $5,000</option>
             </select>
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service)  => (
@@ -285,15 +222,12 @@ export default function ComprehensivePricing(...args[]):  {
                     {service.price}
                     <span className="text-sm text-zion-slate-light font-normal">{service.period}</span>
                   </div>
-
                   <Badge className="mb-3 bg-zion-purple text-white">
                     {service.category}
                   </Badge>
-
                   <p className="text-sm text-zion-slate-dark mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: any</h4>
@@ -304,7 +238,6 @@ export default function ComprehensivePricing(...args[]):  {
                       </div>
                     ))}
                   </div>
-
                   {/* Market Information */}
                   <div className="space-y-2 mb-4 text-sm bg-zion-slate-light/20 p-3 rounded-lg">
                     <div className="flex justify-between">
@@ -320,7 +253,6 @@ export default function ComprehensivePricing(...args[]):  {
                       <span className="font-semibold">{service.roi}</span>
                     </div>
                   </div>
-
                   {/* Service Stats */}
                   <div className="flex items-center justify-between text-sm mb-4">
                     <div className="flex items-center">
@@ -332,7 +264,6 @@ export default function ComprehensivePricing(...args[]):  {
                       {service.customers} customers
                     </Badge>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="space-y-2">
                     <Link to={service.link} className="w-full">
@@ -352,23 +283,14 @@ export default function ComprehensivePricing(...args[]):  {
               </Card>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPriceRange('all')}}
-                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark";
-=======;
                   setSelectedPriceRange('all');
                 }}
-<<<<<<< HEAD
-                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
-
-=======
                 className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
@@ -379,7 +301,6 @@ export default function ComprehensivePricing(...args[]):  {
           )}
         </div>
       </div>
-
       {/* Why Choose Us */}
       <div className="py-20 bg-gradient-to-br from-zion-blue to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -416,7 +337,6 @@ export default function ComprehensivePricing(...args[]):  {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -446,23 +366,12 @@ export default function ComprehensivePricing(...args[]):  {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

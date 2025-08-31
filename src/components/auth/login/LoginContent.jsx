@@ -7,35 +7,23 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-
   const { login } = useAuth();
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
-
     try {
       await login(email, password);
-<<<<<<< HEAD
-      router('/dashboard')} catch (err) {
-      setError('Login failed. Please try again.')} finally {
-      setIsLoading(false)}
-=======
       router('/dashboard');
     } catch (err) {
       setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);
-<<<<<<< HEAD
-
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light p-4">
       <div className="max-w-md w-full space-y-8">
@@ -52,7 +40,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
             Sign in to access your account and continue your journey
           </p>
         </div>
-
         {/* Login Form */}
         <div className="glass-strong rounded-2xl p-8 border border-zion-cyan/20">
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -64,7 +51,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                 </div>
               </div>
             )}
-
             {/* Email Field */}
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light">
@@ -87,7 +73,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                 />
               </div>
             </div>
-
             {/* Password Field */}
             <div className="space-y-2">
               <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light">
@@ -112,7 +97,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
-
                   {showPassword ? (
                     <EyeOff className="h-5 w-5" />
                   ) : (
@@ -121,7 +105,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
                 </button>
               </div>
             </div>
-
             {/* Remember Me & Forgot Password */}
             <div className="flex items-center justify-between">
               <label className="flex items-center">
@@ -134,17 +117,14 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
               <a
                 href="/forgot-password"
                 className="text-zion-cyan hover:text-zion-cyan-light text-sm transition-colors duration-200 hover:underline"
-
                 Forgot password?
               </a>
             </div>
-
             {/* Submit Button */}
             <button
               type="submit"
               disabled={isLoading}
               className="btn-primary w-full group relative overflow-hidden"
-
               <span className="relative z-10 flex items-center justify-center">
                 {isLoading ? (
                   <>
@@ -161,7 +141,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </form>
-
           {/* Divider */}
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
@@ -171,7 +150,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
               <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
             </div>
           </div>
-
           {/* Social Login Buttons */}
           <div className="space-y-3">
             <button className="w-full flex items-center justify-center px-4 py-3 border border-zion-purple/30 rounded-lg text-zion-slate-light hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300 group">
@@ -186,7 +164,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
               </div>
               Continue with Google
             </button>
-
             <button className="w-full flex items-center justify-center px-4 py-3 border border-zion-purple/30 rounded-lg text-zion-slate-light hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300 group">
               <div className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300">
                 {/* GitHub Icon */}
@@ -198,7 +175,6 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
             </button>
           </div>
         </div>
-
         {/* Sign Up Link */}
         <div className="text-center">
           <span className="text-zion-slate-light text-sm">
@@ -207,11 +183,9 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
           <a
             href="/register"
             className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors duration-200 hover:underline"
-
             Sign up for free
           </a>
         </div>
-
         {/* Footer */}
         <div className="text-center text-xs text-zion-slate-light">
           <p>By signing in, you agree to our</p>
@@ -223,9 +197,5 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}}}
-=======
   )}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

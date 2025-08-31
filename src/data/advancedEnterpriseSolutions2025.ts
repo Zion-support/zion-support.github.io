@@ -1,5 +1,4 @@
 export interface EnterpriseSolution {
-
   id: string;
   title: string;
   description: string;
@@ -23,10 +22,6 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-<<<<<<< HEAD
-  support: string;
-
-=======
   support: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
@@ -373,27 +368,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     status: 'active',
     sla: 'Consulting success guarantee',
     support: 'Strategic advisory team'
-
 ];
-<<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
-  if (category === 'All') {;
-    return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
-export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
-=======
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
 };
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-<<<<<<< HEAD
-};}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

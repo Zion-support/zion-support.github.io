@@ -35,9 +35,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
       title: "Advanced Analytics",
       description: "Comprehensive insights and reporting for data-driven decisions",
       color: "from-pink-500 to-pink-600"
-
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,13 +47,11 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
             Experience the full power of Zion's AI marketplace in the palm of your hand with our feature-rich mobile app.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
-
               <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
@@ -64,7 +60,6 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -85,9 +80,5 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

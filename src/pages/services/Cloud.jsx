@@ -18,10 +18,6 @@ const CloudServices = () => {
             title: "Cloud Security & Compliance",
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
             price: "From $6,500/month",
-<<<<<<< HEAD
-            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
-
-=======
             features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -35,7 +31,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -57,7 +52,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Infrastructure?</h2>

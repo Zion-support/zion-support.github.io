@@ -1,11 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-=======
 import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
 import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub";
 import { Button } from "../components/ui/button";
@@ -55,7 +49,6 @@ const ServiceInnovationHub = () => {
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
             trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
             investment: '$80B+'
-
     ];
     const keyInsights = [
         {
@@ -81,7 +74,6 @@ const ServiceInnovationHub = () => {
             description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes',
             impact: 'High',
             timeline: '2025-2035'
-
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -91,26 +83,13 @@ const ServiceInnovationHub = () => {
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Service Innovation Hub
@@ -127,12 +106,6 @@ const ServiceInnovationHub = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',
   '_blank')
-
-
-
-
-
-
 }>
                 Get Innovation Strategy
               </Button>
@@ -140,28 +113,15 @@ const ServiceInnovationHub = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Innovation Areas Overview */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Innovation Areas
@@ -171,35 +131,16 @@ const ServiceInnovationHub = () => {
               that will define the future of business and society.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovationAreas.map((area, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} viewport={{ once: true }}>
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -236,28 +177,15 @@ const ServiceInnovationHub = () => {
           </div>
         </div>
       </section>
-
       {/* Key Insights Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-4xl mx-auto">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Key Innovation Insights
@@ -266,35 +194,16 @@ const ServiceInnovationHub = () => {
               Strategic insights and predictions that will guide your innovation strategy and technology investments
             </p>
           </motion.div>
-
           <div className="space-y-6">
             {keyInsights.map((insight, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} viewport={{ once: true }}>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
@@ -325,28 +234,15 @@ const ServiceInnovationHub = () => {
           </div>
         </div>
       </section>
-
       {/* Innovation Hub Section */}
       <section id="innovation-hub" className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Interactive Innovation Hub
@@ -356,32 +252,18 @@ const ServiceInnovationHub = () => {
               and strategic insights for informed decision making.
             </p>
           </motion.div>
-
           <AdvancedServiceInnovationHub />
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Lead the Innovation Revolution?
@@ -394,12 +276,6 @@ const ServiceInnovationHub = () => {
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',
   '_blank')
-
-
-
-
-
-
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Lead Innovation
@@ -407,12 +283,6 @@ const ServiceInnovationHub = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
-
-
-
-
-
-
 }>
                 <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
@@ -421,10 +291,6 @@ const ServiceInnovationHub = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>};
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServiceInnovationHub;

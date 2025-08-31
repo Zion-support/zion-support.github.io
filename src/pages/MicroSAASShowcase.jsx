@@ -37,7 +37,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* SAAS Stats Banner */}
       <section className="bg-zion-blue-dark py-8">
         <div className="container mx-auto px-4">
@@ -61,7 +60,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* SAAS Solutions Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -74,7 +72,6 @@ export default function MicroSAASShowcase() {
               and priced for accessibility. Start small, scale as you grow.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {microSAASServices.map((service) => (<Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-zion-blue-light">
                 <div className="relative">
@@ -83,14 +80,12 @@ export default function MicroSAASShowcase() {
                     {service.subcategory}
                   </Badge>
                 </div>
-
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-blue">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-
                 <CardContent className="space-y-6">
                   {/* Pricing */}
                   <div className="text-center p-4 bg-zion-cyan-light rounded-lg">
@@ -104,7 +99,6 @@ export default function MicroSAASShowcase() {
                       No setup fees • Cancel time
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div>
                     <h4 className="font-semibold text-zion-blue mb-3 flex items-center gap-2">
@@ -117,7 +111,6 @@ export default function MicroSAASShowcase() {
                         </Badge>))}
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between text-sm text-gray-500 border-t pt-4">
                     <div className="flex items-center gap-1">
@@ -130,7 +123,6 @@ export default function MicroSAASShowcase() {
                       <span>{service.availability || '2-4 weeks'}</span>
                     </div>
                   </div>
-
                   {/* Category */}
                   <div>
                     <h4 className="font-semibold text-zion-blue mb-3 flex items-center gap-2">
@@ -143,7 +135,6 @@ export default function MicroSAASShowcase() {
                       </Badge>
                     </div>
                   </div>
-
                   {/* Contact CTA */}
                   <div className="text-center space-y-4">
                     <div className="text-sm text-gray-600">
@@ -168,7 +159,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* SAAS Benefits */}
       <section className="bg-zion-blue-light py-16">
         <div className="container mx-auto px-4">
@@ -180,7 +170,6 @@ export default function MicroSAASShowcase() {
               Micro SAAS solutions offer the perfect balance of functionality, affordability, and scalability for growing businesses.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -213,7 +202,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* SAAS Features Comparison */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -225,7 +213,6 @@ export default function MicroSAASShowcase() {
               All our SAAS platforms include these essential features to ensure your success.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 border border-zion-blue-light rounded-lg">
               <div className="flex items-center gap-3 mb-4">
@@ -272,7 +259,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* Implementation Timeline */}
       <section className="bg-zion-blue-light py-16">
         <div className="container mx-auto px-4">
@@ -284,7 +270,6 @@ export default function MicroSAASShowcase() {
               Our streamlined onboarding process gets you up and running quickly with minimal setup time.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -317,7 +302,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-zion-blue to-zion-cyan py-16">
         <div className="container mx-auto px-4 text-center">
@@ -344,7 +328,6 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="bg-zion-blue-dark py-12">
         <div className="container mx-auto px-4 text-center text-white">
@@ -370,9 +353,5 @@ export default function MicroSAASShowcase() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

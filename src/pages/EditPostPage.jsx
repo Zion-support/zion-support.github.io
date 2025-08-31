@@ -23,13 +23,6 @@ const mockPost = {
     replyCount: 12,
     isAnswered: true,
   isFeatured: true
-
-
-
-
-
-
-
 };
 export default function EditPostPage() {
     const { postId } = useParams();
@@ -47,10 +40,6 @@ export default function EditPostPage() {
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!post) {
@@ -59,10 +48,6 @@ export default function EditPostPage() {
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Check if the user is the author or an admin
@@ -74,10 +59,6 @@ export default function EditPostPage() {
           <Button asChild>
             <Link to={`/community/post/${postId}`}>Back to Post</Link>
           </Button>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const initialValues = {
@@ -86,13 +67,6 @@ export default function EditPostPage() {
         categoryId: post.categoryId,
         tags: post.tags.join(",
   ")
-    
-
-
-
-
-
-
 };
     const handleSubmit = async (values) => {
         try {
@@ -103,13 +77,6 @@ export default function EditPostPage() {
                 description: "Your post has been updated successfully"
             });
             // Redirect back to the post
-<<<<<<< HEAD
-            navigate(`/community/post/${postId}`);
-
-=======
-<<<<<<< HEAD
-            router(`/community/post/${postId}`)}
-=======
             router(`/community/post/${postId}`);
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -119,10 +86,6 @@ export default function EditPostPage() {
                 title: "Error",
                 description: "There was a problem updating your post",
                 variant: "destructive"
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -140,13 +103,7 @@ export default function EditPostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>
         </div>
-
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
-<<<<<<< HEAD
-      </div>);
-}}}}}}
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

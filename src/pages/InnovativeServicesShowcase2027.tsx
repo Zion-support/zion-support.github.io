@@ -5,11 +5,6 @@ import {
   Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
   Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
   ArrowRight, Search, Filter, Grid, List, ChevronDown
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027() {
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
@@ -31,15 +26,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
     )
     .sort((a, b) => b[sortBy] - a[sortBy]);
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -52,23 +38,8 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -81,12 +52,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   const cardVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
       scale: 1,
@@ -94,18 +59,8 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       transition: {
         duration: 0.3,
         ease: "easeOut"
-
     },
     hover: {
-<<<<<<< HEAD
-      scale: 1.05,
-      y: -10,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-
-
-=======
       scale: 1.05,;
       y: -10,;
       transition: {;
@@ -141,63 +96,26 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         initial = {
   { opacity: 0,
   y: -50 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
         transition={{ duration: 0.8 }}
-
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -205,41 +123,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -249,41 +143,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
           {/* Stats */}
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -307,41 +177,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* Search and Filters */}
       <motion.section
         className="relative z-10 px-6 pb-12"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
-
-
-
-
-
-
 }}
       >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -366,11 +212,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
@@ -386,7 +227,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
                   <option value="aiScore">Sort by AI Score</option>
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
@@ -398,13 +238,11 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -418,7 +256,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
@@ -428,38 +265,16 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index) => (
-=======
               >
                 {filteredServices.map((service, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -467,25 +282,14 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-
                     {viewMode === 'grid' ? (
                       <motion.div
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-<<<<<<< HEAD
-                        onClick={() => window.open(service.website, '_blank')}
-
-=======
                         onClick = {
   () => window.open(service.website,
   '_blank')
-
-
-
-
-
-
 }
                       >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -520,7 +324,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                               <span
                                 key={tagIndex}
                                 className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-
                                 {tag}
                               </span>
                             ))}
@@ -592,7 +395,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-
                                   {tag}
                                 </span>
                               ))}
@@ -600,7 +402,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                             <button
                               onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-
                               View Details
                               <ArrowRight className="w-4 h-4" />
                             </button>
@@ -617,7 +418,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -629,41 +429,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* CTA Section */}
       <motion.section
         className="relative z-10 px-6 pb-20"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
         transition = {
   { duration: 0.8,
   delay: 1.2 
-
-
-
-
-
-
 }}
       >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -679,32 +455,19 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
                 Contact Our Team
               </Link>
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
-
                 Call +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.section>;
     </div>;
   );
-<<<<<<< HEAD
-</div>}}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -78,7 +78,6 @@ import {
   Building,
   Car
 } from 'lucide-react';
-
 export const EnhancedFuturisticFooter: React.FC = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 =======
@@ -100,30 +99,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   Calendar,
   Settings
 } from 'lucide-react';
-
 export const EnhancedFuturisticFooter: React.FC = () => {
 >>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
-<<<<<<< HEAD
-      title: 'Explore',
-      links: [
-        { name: 'Services', href: '/services' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Blog', href: '/blog' }
-=======
       title: 'Services',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
@@ -162,33 +142,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
 >>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391
       ]
-<<<<<<< HEAD
-
-=======
     },
     {
-<<<<<<< HEAD
-      title: 'Company & Contact',
-      featured: false,
-      icon: Users,
-      color: 'from-slate-500 to-gray-500',
-      links: [
-        { name: 'About Zion Tech Group', href: '/about', featured: false },
-        { name: 'Our Team', href: '/about#team', featured: false },
-        { name: 'Careers', href: '/careers', featured: false },
-        { name: 'Contact Us', href: '/contact', featured: true },
-        { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
-        { name: 'Partnerships', href: '/partners', featured: false },
-<<<<<<< HEAD
-        { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Press & Media', href: '/press', featured: false },
-        { name: 'Legal & Privacy', href: '/legal', featured: false },
-        { name: 'Terms of Service', href: '/terms', featured: false },
-        { name: 'Privacy Policy', href: '/privacy', featured: false }
-      ]
-    };
-=======;
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
@@ -196,7 +151,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const quickLinks = [
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
@@ -211,7 +165,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Marketplace', href: '/marketplace' }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-300' },
@@ -220,14 +173,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
   ];
-
   const stats = [
     { value: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { value: '50+', label: 'AI Solutions', icon: Brain },
     { value: '24/7', label: 'Support Available', icon: Clock },
     { value: '99.9%', label: 'Uptime Guarantee', icon: Award }
   ];
-
   return (
     <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}
@@ -243,7 +194,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
         </div>
       </div>
-
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
@@ -252,7 +202,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
   ];
-
   // Create missing pages for broken links
   const createMissingPage = (name: anystring, href: string)  => {
     // For now, we'll create placeholder pages for missing routes
@@ -267,14 +216,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </Link>;
     );
   };
-
   return (
           <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
         </div>
-      
       <div className="relative">
         {/* Main Footer Content */}
         <div className="container-responsive py-16">
@@ -305,7 +252,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Main Footer Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
             {/* Company Info */}
@@ -327,12 +273,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
-                Transform your business with our innovative technology platforms.
-=======
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
                 We help businesses innovate and thrive in the digital age.
@@ -351,47 +291,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-start space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <span>Delaware, United States</span>
-                </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3">Quick Actions</h4>
-                <div className="space-y-2">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.name}
-                      to={action.href}
-                      className="flex items-center text-sm text-slate-300 hover:text-cyan-300 transition-colors group"
-
-                      <action.icon className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                      {action.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
-                <div className="flex space-x-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50 hover:scale-110`}
-                      aria-label={social.name}
-
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-=======
                 <div className="flex items-center space-x-3 text-slate-300">
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
@@ -399,31 +298,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
               </div>
             </div>
-
-<<<<<<< HEAD
-            {/* Footer Sections */}
-            {footerSections.map((section) => (
-              <div key={section.title} className="space-y-4">
-                <h3 className={`text-sm font-semibold ${section.featured ? 'text-cyan-300' : 'text-white'} flex items-center gap-2`}>
-                  {section.featured && <Star className="w-4 h-4" />}
-                  {section.title}
-                </h3>
-                <div className="space-y-2">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className={`text-sm text-slate-300 hover:text-cyan-300 transition-colors flex items-center gap-2 group ${
-                        link.featured ? 'font-medium text-cyan-200' : ''
-                      }`}
-
-                      {link.featured && <Sparkles className="w-3 h-3 text-yellow-400" />}
-                      {link.name}
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    </Link>
-                  ))}
-                </div>
-=======
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -441,12 +315,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
-            
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               and digital transformation services. Transforming businesses with cutting-edge technology.
             </p>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title}>
@@ -471,7 +343,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Additional Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company */}
@@ -490,7 +361,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Support */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
@@ -507,7 +377,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Legal */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
@@ -524,7 +393,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Social & Newsletter */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
@@ -556,7 +424,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-slate-800/50">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -648,14 +515,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     }
   ];
-
   const quickLinks = [
     { name: 'Get Quote', href: '/request-quote', icon: DollarSign },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
     { name: 'Contact Support', href: '/support', icon: MessageCircle },
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
@@ -664,13 +529,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
-
   const contactInfo = {
     phone: '+1 (555) 123-4567',
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
   };
-
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Background Elements */}
@@ -678,7 +541,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
@@ -712,7 +574,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -742,7 +603,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Quick Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -776,7 +636,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Contact & Newsletter */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Contact Info */}
@@ -797,7 +656,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Newsletter */}
             <div className="space-y-6">
               <h4 className="text-xl font-semibold text-white mb-4">Stay Updated</h4>
@@ -817,7 +675,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-slate-800">
           <div className="container mx-auto px-4 py-6">
@@ -836,7 +693,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-slate-800/50">
           <div className="container mx-auto px-4 py-8">
@@ -845,7 +701,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 © {currentYear} Zion Tech Group. All rights reserved.
                 Revolutionizing technology, one innovation at a time.
               </div>
-
               <div className="flex items-center space-x-6 text-sm text-slate-400">
                 <Link to="/privacy" className="hover:text-white transition-colors">
                   Privacy Policy
@@ -866,7 +721,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
     </footer>
 =======
-            
             {/* Additional Contact Methods */}
             <div className="mt-12 pt-8 border-t border-slate-700">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
@@ -902,7 +756,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
-            
             <div className="flex items-center space-x-4">
               <button
                 onClick={scrollToTop}
@@ -918,8 +771,5 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     </footer>;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-<<<<<<< HEAD
-}}}
-=======
 };
 >>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391

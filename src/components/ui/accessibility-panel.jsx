@@ -23,23 +23,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
         // High contrast mode
         if (settings.highContrast) {
             root.style.setProperty('--high-contrast', 'true');
-<<<<<<< HEAD
-            root.classList.add('high-contrast');
-
-        else {
-            root.style.removeProperty('--high-contrast');
-            root.classList.remove('high-contrast');
-
-        // Large text mode
-        if (settings.largeText) {
-            root.style.setProperty('--large-text', 'true');
-            root.classList.add('large-text');
-
-        else {
-            root.style.removeProperty('--large-text');
-            root.classList.remove('large-text');
-
-=======
             root.classList.add('high-contrast')}
         else {
             root.style.removeProperty('--high-contrast');
@@ -59,32 +42,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
         // Reduced motion
         if (settings.reducedMotion) {
             root.style.setProperty('--reduced-motion', 'true');
-<<<<<<< HEAD
-            root.classList.add('reduced-motion');
-
-        else {
-            root.style.removeProperty('--reduced-motion');
-            root.classList.remove('reduced-motion');
-
-        // Focus indicator
-        if (settings.focusIndicator) {
-            root.style.setProperty('--focus-indicator', 'true');
-            root.classList.add('focus-indicator');
-
-        else {
-            root.style.removeProperty('--focus-indicator');
-            root.classList.remove('focus-indicator');
-
-        // Keyboard navigation
-        if (settings.keyboardNavigation) {
-            root.style.setProperty('--keyboard-navigation', 'true');
-            root.classList.add('keyboard-navigation');
-
-        else {
-            root.style.removeProperty('--keyboard-navigation');
-            root.classList.remove('keyboard-navigation');
-
-=======
             root.classList.add('reduced-motion')}
         else {
             root.style.removeProperty('--reduced-motion');
@@ -120,16 +77,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                 document.body.removeChild(announcement)}, 1000)};
         // Announce important changes
         if (settings.highContrast) {
-<<<<<<< HEAD
-            announce('High contrast mode enabled');
-
-        if (settings.largeText) {
-            announce('Large text mode enabled');
-
-        if (settings.reducedMotion) {
-            announce('Reduced motion enabled');
-
-=======
             announce('High contrast mode enabled')}
         if (settings.largeText) {
             announce('Large text mode enabled')}
@@ -142,24 +89,12 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             const newSettings = {
   ...prev,
   [key]: value 
-
-
-
-
-
-
 };
             // Add notification
             const notification = {
   id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g,
   ' $1').toLowerCase()
-
-
-
-
-
-
 } ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
                 timestamp: Date.now()
@@ -176,32 +111,13 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             screenReader: false,
             focusIndicator: true,
   keyboardNavigation: true
-        
-
-
-
-
-
-
 };
         setSettings(defaultSettings);
         const notification = {
   id: Date.now().toString(),
             message: 'Accessibility settings reset to defaults',
             type: 'info',
-  <<<<<<< HEAD
-            timestamp: Date.now()
-        
-
-};
-        setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []);
-=======
   timestamp: Date.now()
-        
-
-
-
-
 };
         setNotifications(prev => [notification, ...prev.slice(0, 2)]);
     }, []);
@@ -232,11 +148,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                     case 'a':
                         e.preventDefault();
                         setIsOpen(!isOpen);
-<<<<<<< HEAD
-                        break;
-
-
-=======
                         break}
             }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -250,45 +161,20 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="w-6 h-6 text-white"/>
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0,
   x: 300 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   x: 300 
-
-
-
-
-
-
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
-
-
-
-
-
-
 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
             {/* Header */}
             <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">
@@ -305,7 +191,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H, L, R, A)
               </p>
             </div>
-
             {/* Settings Content */}
             <div className="p-6 space-y-6">
               {/* Visual Settings */}
@@ -314,43 +199,28 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                   <Eye className="w-5 h-5 text-zion-cyan"/>
                   Visual Settings
                 </h3>
-
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.highContrast} onChange = {
   (e) => updateSetting('highContrast',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     High Contrast
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>
                 </div>
-
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.largeText} onChange = {
   (e) => updateSetting('largeText',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Large Text
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>
                 </div>
-
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>
@@ -366,19 +236,12 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                     </button>
                   </div>
                 </div>
-
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <label className="text-white text-sm">Color Blind Mode</label>
                   <select value={settings.colorBlindMode} onChange = {
   (e) => updateSetting('colorBlindMode',
   e.target.value)
-
-
-
-
-
-
 } className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -387,92 +250,61 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
                   </select>
                 </div>
               </div>
-
               {/* Motion & Audio Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
                   <Volume2 className="w-5 h-5 text-zion-cyan"/>
                   Motion & Audio
                 </h3>
-
                 {/* Reduced Motion */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.reducedMotion} onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Reduced Motion
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>
                 </div>
-
                 {/* Screen Reader */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Screen Reader Support
                   </label>
                 </div>
               </div>
-
               {/* Navigation Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
                   <Settings className="w-5 h-5 text-zion-cyan"/>
                   Navigation
                 </h3>
-
                 {/* Focus Indicator */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.focusIndicator} onChange = {
   (e) => updateSetting('focusIndicator',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Focus Indicator
                   </label>
                 </div>
-
                 {/* Keyboard Navigation */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
-
-
-
-
-
-
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Keyboard Navigation
                   </label>
                 </div>
               </div>
-
               {/* Reset Button */}
               <div className="pt-4 border-t border-zion-cyan/30">
                 <button onClick={resetToDefaults} className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors">
@@ -482,46 +314,21 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Notifications */}
       <div className="fixed top-6 right-6 z-50 space-y-2">
         <AnimatePresence>
           {notifications.map((notification) => (<motion.div key={notification.id} initial = {
   { opacity: 0, x: 300,
   scale: 0.8 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
-
-
-
-
-
-
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
-
-
-
-
-
-
 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success'
                 ? 'bg-green-500/20 border-green-500 text-green-300'
                 : notification.type === 'warning'
@@ -534,64 +341,37 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             </motion.div>))}
         </AnimatePresence>
       </div>
-
       {/* CSS Variables for Accessibility */}
       <style dangerouslySetInnerHTML={{
             __html: `
           :root {
             --font-size: ${settings.fontSize}px;
-<<<<<<< HEAD
-            --color-blind-mode: ${settings.colorBlindMode};
-=======
             --color-blind-mode: ${settings.colorBlindMode}}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           .high-contrast {
             --bg-primary: #000000;
             --bg-secondary: #1a1a1a;
             --text-primary: #ffffff;
             --text-secondary: #e0e0e0;
-<<<<<<< HEAD
-            --border-color: #ffffff;
-=======
             --border-color: #ffffff}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           .large-text {
             --font-size-base: 18px;
             --font-size-lg: 22px;
             --font-size-xl: 26px;
-<<<<<<< HEAD
-            --font-size-2xl: 32px;
-=======
             --font-size-2xl: 32px}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           .reduced-motion * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
-<<<<<<< HEAD
-            transition-duration: 0.01ms !important;
-
-          .focus-indicator *:focus {
-            outline: 3px solid #00d4ff !important;
-            outline-offset: 2px !important;
-
-          .keyboard-navigation *:focus-visible {
-            outline: 3px solid #00d4ff !important;
-            outline-offset: 2px !important;
-=======
             transition-duration: 0.01ms !important}
-
           .focus-indicator *:focus {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important}
-
           .keyboard-navigation *:focus-visible {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
           .sr-only {
             position: absolute;
             width: 1px;
@@ -601,33 +381,12 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
-<<<<<<< HEAD
-            border: 0;
-
-          /* Color blind mode filters */
-          [style*="--color-blind-mode: protanopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia');
-
-          [style*="--color-blind-mode: deuteranopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia');
-
-          [style*="--color-blind-mode: tritanopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia');
-
-        `
-        }}/>
-    </>);
-</div>};
-=======
             border: 0}
-
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia')}
-
           [style*="--color-blind-mode: deuteranopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia')}
-
           [style*="--color-blind-mode: tritanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia')}
         `

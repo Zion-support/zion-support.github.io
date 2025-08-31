@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { MobileSidebarToggle  } from "./MobileSidebarToggle";
-import { Menu, 
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -185,13 +178,6 @@ import {
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
-<<<<<<< HEAD
-export const FuturisticNavigation: React.FC = () => {
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-export const FuturisticNavigation: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 export const FuturisticNavigation: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -201,10 +187,6 @@ export const FuturisticNavigation: React.FC = () => {;
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20)};
-=======
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
@@ -212,20 +194,12 @@ export const FuturisticNavigation: React.FC = () => {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
-<<<<<<< HEAD
-    setActiveDropdown(null)}, [location.pathname]);
-  const handleSearch = (e: React.FormEvent)  => {;
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
-=======;
     setActiveDropdown(null);
   }, [location.pathname]);
   const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-
   };
   const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -291,15 +265,6 @@ export const FuturisticNavigation: React.FC = () => {;
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-<<<<<<< HEAD
-      dropdown: [
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
-      ]
-
-=======
       dropdown[;
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
@@ -324,25 +289,12 @@ export const FuturisticNavigation: React.FC = () => {;
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.5 }}
-
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">
@@ -363,95 +315,45 @@ export const FuturisticNavigation: React.FC = () => {;
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
-
-
-
-
-
-
 }}
               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <Link
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">About</span>
                 </Link>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.15 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.15 
-
-
-
-
-
-
 }}
               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <Link
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">Partners</span>
                 </Link>
@@ -463,32 +365,14 @@ export const FuturisticNavigation: React.FC = () => {;
                     initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.5,
   delay: (index + 2) * 0.1 
-
-
-
-
-
-
 }}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
@@ -496,7 +380,6 @@ export const FuturisticNavigation: React.FC = () => {;
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'
                         : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'
                     }`}
-
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                     <span className="font-medium">{category.name}</span>
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
@@ -510,36 +393,17 @@ export const FuturisticNavigation: React.FC = () => {;
                         initial = {
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                         animate = {
   { opacity: 1, y: 0,
   scale: 1 
-
-
-
-
-
-
 }}
                         exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-
                         <div className="p-4">
                           <div className="mb-4">
                             <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
@@ -549,48 +413,23 @@ export const FuturisticNavigation: React.FC = () => {;
                             {category.services.map((service, subIndex) => (
                               <motion.div
                                 key={service.name}
-<<<<<<< HEAD
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.3, delay: subIndex * 0.05 }}
-
-=======
                                 initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                                 animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                                 transition = {
   { duration: 0.3,
   delay: subIndex * 0.05 
-
-
-
-
-
-
 }}
                               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                 <Link
                                   to={service.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
-
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                     <Brain className="w-4 h-4 text-zion-cyan" /> {/* Using Brain icon for consistency */}
                                   </div>
@@ -631,43 +470,29 @@ export const FuturisticNavigation: React.FC = () => {;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <ShoppingCart className="w-5 h-5" />
                 </motion.button>
               </div>
               {/* Mobile Sidebar Toggle */}
               <MobileSidebarToggle />
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </header>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
       </header>;
     </>;
   );
-<<<<<<< HEAD
-};}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

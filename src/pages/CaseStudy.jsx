@@ -3,10 +3,6 @@ import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { ArrowLeft export default function CaseStudy() {
-    const router = useNavigate();
-=======
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
     const router = useRouter();
@@ -16,10 +12,6 @@ export default function CaseStudy() {
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
@@ -38,9 +30,5 @@ export default function CaseStudy() {
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-</div>}}}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

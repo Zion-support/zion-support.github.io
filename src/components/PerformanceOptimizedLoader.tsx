@@ -1,16 +1,11 @@
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-<<<<<<< HEAD
-
-export const PerformanceOptimizedLoader = memo<LoaderProps>(({
-=======
 }
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -28,36 +23,16 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   ;
   lg: 'w-16 h-16';
   ;
-
-
-
-
-
-
 };
   const textSizes = {
-  <<<<<<< HEAD
-    sm: 'text-xs',
-    md: 'text-sm',
-  lg: 'text-base';
-  ;
-
-};
-=======
   sm: 'text-xs',
     md: 'text-sm',;
   ;
   ;
   lg: 'text-base';
   ;
-
-
-
-
 };
-
   const showLogo = true; // Add this variable
-
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
     <div className = "flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -84,35 +59,13 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         <div className="mt-4 text-center">
           <motion.div
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
-<<<<<<< HEAD
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-
-            {text}
-          </motion.div>
-        </div>
-      </div>
-    </div>
-=======
             animate = {
   { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
-
 }};
           >;
             {text};
@@ -150,7 +103,6 @@ export function SkeletonLoader({
       ))};
     </div>;
   );
-
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -172,7 +124,6 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
       </div>;
     </div>;
   );
-
 // Grid skeleton loader
 export function GridSkeleton({
   columns = 3,
@@ -190,7 +141,6 @@ export function GridSkeleton({
       ))};
     </div>;
   );
-
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (

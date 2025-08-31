@@ -16,14 +16,6 @@ export default function ExpandedServicesPage() {
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-                service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-
-        // Filter by category
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-
-=======
                 service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))}
         // Filter by category
         if (selectedCategory !== 'all') {
@@ -45,10 +37,6 @@ export default function ExpandedServicesPage() {
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-<<<<<<< HEAD
-            default: return '⚡';
-
-=======
             default: return '⚡'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -58,10 +46,6 @@ export default function ExpandedServicesPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -75,7 +59,6 @@ export default function ExpandedServicesPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Discover our complete ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services designed to accelerate your business growth.
           </p>
-
           {/* Search and Filter Bar */}
           <div className="max-w-4xl mx-auto mb-8">
             <div className="flex flex-col md:flex-row gap-4">
@@ -96,7 +79,6 @@ export default function ExpandedServicesPage() {
               </select>
             </div>
           </div>
-
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -118,7 +100,6 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -136,7 +117,6 @@ export default function ExpandedServicesPage() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-
                 <CardContent className="space-y-4">
                   {/* Rating and AI Score */}
                   <div className="flex items-center justify-between">
@@ -152,7 +132,6 @@ export default function ExpandedServicesPage() {
                       <span className="text-sm font-medium text-zion-purple">AI Score: {service.aiScore}</span>
                     </div>
                   </div>
-
                   {/* Price and Market Price */}
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -164,7 +143,6 @@ export default function ExpandedServicesPage() {
                       </span>
                     </div>
                   </div>
-
                   {/* Features Preview */}
                   <div className="space-y-2">
                     <h4 className="font-semibold text-zion-blue-dark text-sm">Key Features:</h4>
@@ -177,7 +155,6 @@ export default function ExpandedServicesPage() {
                         </Badge>)}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="space-y-2">
                     <h4 className="font-semibold text-zion-blue-dark text-sm">Benefits:</h4>
@@ -188,7 +165,6 @@ export default function ExpandedServicesPage() {
                         </li>))}
                     </ul>
                   </div>
-
                   {/* Contact Information */}
                   <div className="pt-4 border-t border-gray-200">
                     <div className="space-y-2">
@@ -208,7 +184,6 @@ export default function ExpandedServicesPage() {
                       </div>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex space-x-2 pt-4">
                     <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
@@ -221,21 +196,18 @@ export default function ExpandedServicesPage() {
                 </CardContent>
               </Card>))}
           </div>
-
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or browse all categories.</p>
             </div>)}
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-zion-blue-dark mb-12">
             Service Categories
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="text-center hover:shadow-lg transition-all duration-300">
                 <CardHeader>
@@ -255,12 +227,10 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -271,7 +241,6 @@ export default function ExpandedServicesPage() {
                 Our services have helped businesses achieve significant improvements in efficiency, cost savings, and growth.
               </p>
             </div>
-
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white"/>
@@ -281,7 +250,6 @@ export default function ExpandedServicesPage() {
                 Certified professionals with years of experience in AI, IT, and digital transformation across various industries.
               </p>
             </div>
-
             <div className="text-center">
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-white"/>
@@ -294,7 +262,6 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
@@ -304,7 +271,6 @@ export default function ExpandedServicesPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
               <Phone className="h-5 w-5 mr-2"/>
@@ -315,18 +281,12 @@ export default function ExpandedServicesPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-
           <div className="mt-8 text-zion-slate-light">
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>Website: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </section>
-
       <TrustedBySection />
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

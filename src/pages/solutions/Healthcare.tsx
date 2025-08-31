@@ -1,5 +1,4 @@
 import React from 'react';
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">
@@ -19,8 +18,5 @@ import React from 'react';
     </div>;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-<<<<<<< HEAD
-}
-=======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

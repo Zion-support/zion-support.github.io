@@ -13,10 +13,6 @@ export default function ExpensiveComponent() {
         return (<div className="text-center p-8">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
         <p className="text-zion-slate-light">Computing expensive data...</p>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="space-y-4">
@@ -36,9 +32,5 @@ export default function ExpensiveComponent() {
             ... and {data.length - 100} more values
           </p>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp const AIServices = () => {
-    const features = [
-=======
 import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
@@ -94,12 +89,6 @@ const AIServices = () => {
             reviewCount: 189
         },
         {
-<<<<<<< HEAD
-            icon: Shield,
-            title: "AI Ethics",
-            description: "Responsible AI development and governance"
-
-=======
             id: "computer-vision",
             title: "Computer Vision & Image AI",
             description: "Visual AI solutions for image recognition, object detection, and video analysis.",
@@ -297,33 +286,8 @@ const AIServices = () => {
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
-
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            AI Services for
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-              {" "}Innovation
-            </span>
-          </motion.h1>
-          <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Harness the power of artificial intelligence to transform your business operations,
-            enhance customer experiences, and drive innovation across all departments.
-          </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
-              Start Your AI Journey
-            </button>
-          </motion.div>
-        </div>
-      </section>
-=======
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     return (
         <div className="min-h-screen bg-background">
             <SEO 
@@ -332,7 +296,6 @@ const AIServices = () => {
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" 
                 canonical="https://ziontechgroup.com/services/ai-services"
             />
-
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -357,7 +320,6 @@ const AIServices = () => {
                     </div>
                 </div>
             </section>
-
             {/* Contact Info Banner */}
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-pink-400/30">
                 <div className="container mx-auto px-4 py-6">
@@ -377,7 +339,6 @@ const AIServices = () => {
                     </div>
                 </div>
             </div>
-
             {/* Services Grid */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
@@ -387,7 +348,6 @@ const AIServices = () => {
                             Comprehensive AI solutions designed to meet your business challenges and drive innovation
                         </p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {aiServices.map((service) => (
                             <div key={service.id} className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-pink-300">
@@ -402,13 +362,10 @@ const AIServices = () => {
                                             </span>
                                         )}
                                     </div>
-                                    
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
                                         {service.title}
                                     </h3>
-                                    
                                     <p className="text-gray-600 mb-4">{service.description}</p>
-                                    
                                     <div className="mb-4">
                                         <p className="text-sm text-gray-500 mb-3">{service.details}</p>
                                         <div className="grid grid-cols-2 gap-2 mb-4">
@@ -419,7 +376,6 @@ const AIServices = () => {
                                                 </div>
                                             ))}
                                         </div>
-                                        
                                         <div className="mb-4">
                                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Pricing:</h4>
                                             <div className="space-y-1">
@@ -431,12 +387,10 @@ const AIServices = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        
                                         <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
                                             <span>Free Trial:</span>
                                             <span className="text-pink-600 font-semibold">{service.freeTrial}</span>
                                         </div>
-                                        
                                         <div className="flex items-center justify-center gap-1 mb-4">
                                             {[...Array(5)].map((_, i) => (
                                                 <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
@@ -444,7 +398,6 @@ const AIServices = () => {
                                             <span className="text-sm text-gray-500 ml-2">({service.reviewCount})</span>
                                         </div>
                                     </div>
-                                    
                                     <div className="text-center mb-4">
                                         <span className="text-3xl font-bold text-pink-600">
                                             {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
@@ -453,7 +406,6 @@ const AIServices = () => {
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
                                         </span>
                                     </div>
-                                    
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                                             <ExternalLink className="h-4 w-4 mr-2"/>
@@ -466,7 +418,6 @@ const AIServices = () => {
                     </div>
                 </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">
                 <div className="container mx-auto px-4 text-center">
@@ -492,6 +443,5 @@ const AIServices = () => {
         </div>
     );
 };
-
 export default AIServices;
 }}

@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone import { SEO } from '@/components/SEO';
-=======
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Link as RouterLink } from 'react-router-dom';
-
 export default function Blockchain(...args[]):  {
   const features = [
     {
@@ -33,15 +29,6 @@ export default function Blockchain(...args[]):  {
     {
       icon: Target,
       title: "Identity Management",
-<<<<<<< HEAD
-      description: "Self-sovereign identity solutions with privacy and security"
-    },
-    {
-      icon: Network,
-      title: "Cross-Chain Interoperability",
-      description: "Seamless communication between different blockchain networks"
-
-=======
       description: "Self-sovereign identity solutions with privacy and security";
     },;
     {;
@@ -51,7 +38,6 @@ export default function Blockchain(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -93,15 +79,6 @@ export default function Blockchain(...args[]):  {
         "Custom blockchain solutions",
         "Private blockchain networks",
         "24/7 support",
-<<<<<<< HEAD
-        "Real-time monitoring",
-        "White-label solutions",
-        "Dedicated blockchain engineer"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
         "Real-time monitoring",;
         "White-label solutions",;
         "Dedicated blockchain engineer";
@@ -111,7 +88,6 @@ export default function Blockchain(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       icon: Shield,
@@ -126,15 +102,6 @@ export default function Blockchain(...args[]):  {
     {
       icon: BarChart3,
       title: "Cost Reduction",
-<<<<<<< HEAD
-      description: "Eliminate intermediaries and reduce transaction costs"
-    },
-    {
-      icon: Users,
-      title: "Trust & Compliance",
-      description: "Build trust through verifiable and auditable processes"
-
-=======
       description: "Eliminate intermediaries and reduce transaction costs";
     },;
     {;
@@ -144,7 +111,6 @@ export default function Blockchain(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [
     {
       icon: Globe,
@@ -157,24 +123,6 @@ export default function Blockchain(...args[]):  {
       title: "Supply Chain",
       description: "Track products from origin to destination with full transparency",
       examples: ["Product tracking", "Quality assurance", "Compliance reporting"]
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: "Healthcare",
-      description: "Secure patient records and pharmaceutical supply chain management",
-      examples: ["Patient data", "Drug tracking", "Clinical trials"]
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO
-        title="Blockchain Services - Zion Tech Group"
-        description="Transform your business with our advanced blockchain solutions. Smart contracts, DeFi, NFTs, and supply chain tracking for the digital age."
-        keywords="blockchain, smart contracts, DeFi, NFTs, supply chain, cryptocurrency, decentralized applications"
-      />
-=======
     },;
     {;
       icon: Shield,;
@@ -183,7 +131,6 @@ export default function Blockchain(...args[]):  {
       examples: ["Patient data", "Drug tracking", "Clinical trials"];
     };
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -201,17 +148,14 @@ export default function Blockchain(...args[]):  {
               <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Trust Through
               <span className="text-gradient"> Technology</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Build trust, transparency, and efficiency with blockchain technology.
               Transform your business with decentralized solutions.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project
@@ -224,7 +168,6 @@ export default function Blockchain(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -232,12 +175,10 @@ export default function Blockchain(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -250,7 +191,6 @@ export default function Blockchain(...args[]):  {
               Unprecedented security, transparency, and efficiency
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
@@ -258,17 +198,14 @@ export default function Blockchain(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -283,97 +220,6 @@ export default function Blockchain(...args[]):  {
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-      {/* Services Section */}
-      <section className="py-20 bg-white/5">
-        <div className="container-responsive">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Blockchain Services
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive blockchain solutions for modern businesses
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
-              <motion.div
-                key={service.title}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-12 text-center relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-black/20"></div>
-            <div className="relative z-10">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Build on the Blockchain?
-              </h2>
-              <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-                Transform your business with decentralized technology and smart contracts.
-=======
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -383,25 +229,12 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
-
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4 mr-2" />
                 Blockchain Innovation
@@ -418,21 +251,18 @@ export default function Blockchain(...args[]):  {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-
                   Request Quote
                 </RouterLink>
               </div>
             </motion.div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="container-responsive">
@@ -441,26 +271,13 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications
               </h2>
@@ -468,7 +285,6 @@ export default function Blockchain(...args[]):  {
                 Discover how blockchain is transforming industries across the globe
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -477,35 +293,16 @@ export default function Blockchain(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
@@ -524,7 +321,6 @@ export default function Blockchain(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
@@ -533,26 +329,13 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?
               </h2>
@@ -560,7 +343,6 @@ export default function Blockchain(...args[]):  {
                 Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -569,35 +351,16 @@ export default function Blockchain(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -608,7 +371,6 @@ export default function Blockchain(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container-responsive">
@@ -617,26 +379,13 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -644,7 +393,6 @@ export default function Blockchain(...args[]):  {
                 Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricing.map((plan, index) => (
                 <motion.div
@@ -657,35 +405,16 @@ export default function Blockchain(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
@@ -693,7 +422,6 @@ export default function Blockchain(...args[]):  {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -702,7 +430,6 @@ export default function Blockchain(...args[]):  {
                     </div>
                     <p className="text-zinc-400">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zinc-300">
@@ -711,7 +438,6 @@ export default function Blockchain(...args[]):  {
                       </li>
                     ))}
                   </ul>
-
                   <RouterLink
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -719,7 +445,6 @@ export default function Blockchain(...args[]):  {
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-
                     {plan.cta}
                   </RouterLink>
                 </motion.div>
@@ -727,7 +452,6 @@ export default function Blockchain(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
@@ -736,26 +460,13 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -763,7 +474,6 @@ export default function Blockchain(...args[]):  {
                 See measurable improvements in your business processes and customer trust
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -772,35 +482,16 @@ export default function Blockchain(...args[]):  {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -813,7 +504,6 @@ export default function Blockchain(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive text-center">
@@ -821,26 +511,13 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?
               </h2>
@@ -851,34 +528,21 @@ export default function Blockchain(...args[]):  {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-
                   Get Custom Quote
                 </RouterLink>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </div>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div>}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -27,13 +27,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     element: element,
                     fixable: false,
   suggestedFix: ''
-                
-
-
-
-
-
-
 };
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
@@ -43,14 +36,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         link.status = 'broken';
                         link.error = 'Target element not found';
                         link.fixable = true;
-<<<<<<< HEAD
-                        link.suggestedFix = 'Add missing element or fix anchor reference';
-
-                    else {
-                        link.status = 'healthy';
-
-
-=======
                         link.suggestedFix = 'Add missing element or fix anchor reference'}
                     else {
                         link.status = 'healthy'}
@@ -60,32 +45,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     // JavaScript links
                     link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
-<<<<<<< HEAD
-                    link.fixable = false;
-
-                else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
-                    // Protocol links
-                    link.status = 'healthy';
-                    link.fixable = false;
-
-                else if (href.startsWith('http')) {
-                    // External links - will be checked
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                else if (href.startsWith('/')) {
-                    // Internal relative links
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                else {
-                    // Other relative links
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                links.push(link);
-
-=======
                     link.fixable = false}
                 else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
                     // Protocol links
@@ -113,17 +72,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             // Internal anchor links
             const targetElement = document.querySelector(link.url);
             if (targetElement) {
-<<<<<<< HEAD
-                return { ...link, status: 'healthy', lastChecked: new Date() };
-
-            else {
-                return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() };
-
-
-        if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
-            return { ...link, status: 'healthy', lastChecked: new Date() };
-
-=======
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
                 return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() }}
@@ -138,10 +86,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             if (isInternal) {
                 // Simulate internal link check
                 await new Promise(resolve => setTimeout(resolve, 100));
-<<<<<<< HEAD
-                return { ...link, status: 'healthy', lastChecked: new Date() };
-
-=======
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             else {
@@ -150,15 +94,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 // Simulate some broken external links
                 const random = Math.random();
                 if (random < 0.1) { // 10% chance of broken external link
-<<<<<<< HEAD
-                    return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() };
-
-                else {
-                    return { ...link, status: 'healthy', lastChecked: new Date() };
-
-
-
-=======
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() }}
                 else {
                     return { ...link, status: 'healthy', lastChecked: new Date() }}
@@ -171,10 +106,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 status: 'broken',
                 error: error instanceof Error ? error.message : 'Unknown error',
                 lastChecked: new Date()
-<<<<<<< HEAD
-            };
-
-=======
             }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
@@ -218,13 +149,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 return newStats});
             // Small delay between batches
             if (i + batchSize < allLinks.length) {
-<<<<<<< HEAD
-                await new Promise(resolve => setTimeout(resolve, 100));
-
-
-        setIsChecking(false);
-    }, [findAllLinks, checkLink]);
-=======
                 await new Promise(resolve => setTimeout(resolve, 100))}
         }
         setIsChecking(false)}, [findAllLinks, checkLink]);
@@ -246,11 +170,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     placeholder.style.cssText = 'padding: 2rem; margin: 1rem 0; background: #f3f4f6; border: 2px dashed #d1d5db; border-radius: 0.5rem; color: #6b7280;';
                     // Insert before the link
                     link.element.parentNode?.insertBefore(placeholder, link.element);
-<<<<<<< HEAD
-                    fixedCount++;
-
-
-=======
                     fixedCount++}
             }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -261,18 +180,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 if (randomPage !== link.url) {
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
-<<<<<<< HEAD
-                    fixedCount++;
-
-
-        });
-        if (fixedCount > 0) {
-            // Re-check links after fixes
-            setTimeout(checkAllLinks, 1000);
-
-        return fixedCount;
-    }, [links, checkAllLinks]);
-=======
                     fixedCount++}
             }
         });
@@ -299,10 +206,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     useEffect(() => {
         if (autoCheck) {
             const timer = setTimeout(checkAllLinks, 2000);
-<<<<<<< HEAD
-            return () => clearTimeout(timer);
-
-=======
             return () => clearTimeout(timer)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoCheck, checkAllLinks]);
@@ -312,10 +215,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
             case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'checking': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -325,10 +224,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;
-<<<<<<< HEAD
-            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>;
-
-=======
             default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -337,36 +232,17 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Broken Link Checker" aria-expanded={isOpen}>
         <LinkIcon className="w-6 h-6"/>
       </motion.button>
-
       {/* Broken Link Fixer Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
   { opacity: 0, scale: 0.8,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
-
-
-
-
-
-
 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
@@ -377,7 +253,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 <XMarkIcon className="w-5 h-5"/>
               </button>
             </div>
-
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
               {['overview', 'broken', 'healthy', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
@@ -386,7 +261,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>
-
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               {/* Overview Tab */}
@@ -401,7 +275,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Total Links
                       </div>
                     </div>
-
                     <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-green-600">
                         {stats.healthy}
@@ -410,7 +283,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Healthy
                       </div>
                     </div>
-
                     <div className="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-red-600">
                         {stats.broken}
@@ -419,7 +291,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Broken
                       </div>
                     </div>
-
                     <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-yellow-600">
                         {stats.checking + stats.unknown}
@@ -429,7 +300,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                       </div>
                     </div>
                   </div>
-
                   {/* Health Score */}
                   {stats.total > 0 && (<div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                       <div className="text-center">
@@ -441,13 +311,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         </div>
                       </div>
                     </div>)}
-
                   {/* Check Button */}
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     {isChecking ? 'Checking...' : 'Check All Links'}
                   </button>
                 </div>)}
-
               {/* Broken Links Tab */}
               {activeTab === 'broken' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'broken').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -459,7 +327,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>
                             <div className="flex items-start gap-2">
                               <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>
-
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
                                   {link.url}
@@ -483,7 +350,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                           </div>))}
                     </div>)}
                 </div>)}
-
               {/* Healthy Links Tab */}
               {activeTab === 'healthy' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'healthy').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -495,7 +361,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">
                             <div className="flex items-start gap-2">
                               <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5"/>
-
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
                                   {link.url}
@@ -513,25 +378,21 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                           </div>))}
                     </div>)}
                 </div>)}
-
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
                   <div className="text-center text-gray-500 dark:text-gray-400">
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500"/>
                     <p>Take action to fix broken links</p>
                   </div>
-
                   {/* Auto-fix Button */}
                   {links.filter(link => link.status === 'broken' && link.fixable).length > 0 && (<button onClick={autoFixBrokenLinks} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Auto-fix Broken Links
                     </button>)}
-
                   {/* Re-check Button */}
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
                     {isChecking ? 'Checking...' : 'Re-check Links'}
                   </button>
-
                   {/* Export Report */}
                   {links.length > 0 && (<button onClick = {
   () => {
@@ -544,13 +405,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 error: link.error,
                                 lastChecked: link.lastChecked.toISOString(),
   fixable: link.fixable
-                            
-
-
-
-
-
-
 }))
                         };
                         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
@@ -566,29 +420,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* CSS for highlighting */}
       <style>{`
         .broken-link-highlight {
           outline: 3px solid #f97316 !important;
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
-<<<<<<< HEAD
-          transition: all 0.3s ease !important;
-
-        .link-target-placeholder {
-          animation: pulse 2s infinite;
-
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.7; }
-
-=======
           transition: all 0.3s ease !important}
-        
         .link-target-placeholder {
           animation: pulse 2s infinite}
-        
         @keyframes pulse {
           0%, 100% { opacity: 1}
           50% { opacity: 0.7}

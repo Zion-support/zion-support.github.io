@@ -17,22 +17,12 @@ export default function ResetPasswordPage() {
         if (!token) {
             setError('Invalid or missing reset token.');
             // Consider redirecting to an error page or login page
-
     }, [token]);
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         if (password !== confirmPassword) {
             setError('Passwords do not match.');
-<<<<<<< HEAD
-            return;
-
-        // Basic password strength check (can be enhanced)
-        if (password.length < 8) {
-            setError('Password must be at least 8 characters long.');
-            return;
-
-=======
             return}
         // Basic password strength check (can be enhanced)
         if (password.length < 8) {
@@ -43,10 +33,6 @@ export default function ResetPasswordPage() {
         try {
             await resetPassword(token, password);
             toast.success('Password has been reset successfully!');
-<<<<<<< HEAD
-            navigate('/login'); // Redirect to login page on success
-
-=======
             router('/login'); // Redirect to login page on success
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -54,13 +40,6 @@ export default function ResetPasswordPage() {
             // Ensure err.message is a string.
             const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
             setError(errorMessage);
-<<<<<<< HEAD
-            toast.error(errorMessage);
-
-        finally {
-            setIsLoading(false);
-
-=======
             toast.error(errorMessage)}
         finally {
             setIsLoading(false)}
@@ -69,10 +48,6 @@ export default function ResetPasswordPage() {
     if (error && !token) { // If token was invalid from the start
         return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">
         <p>{error}</p>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="flex min-h-screen items-center justify-center p-4">
@@ -89,9 +64,5 @@ export default function ResetPasswordPage() {
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

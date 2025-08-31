@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = () => {
-=======
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
-
 const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
@@ -17,7 +11,6 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
         keywords="returns management, RMA, e-commerce, Shopify, automation, logistics"
         canonical="/services/returns-management"
       />
-
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-center gap-3 mb-6 text-cyan-300">
           <Package className="h-5 w-5" />
@@ -28,7 +21,6 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
           Streamline returns with branded portals, label generation, smart approvals, carrier pick-ups, refund workflows,
           exchanges, and analytics to cut costs and lift repeat purchase rate.
         </p>
-
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Capabilities</div>
@@ -50,7 +42,6 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $49–$299/month typical</div>
           </div>
         </div>
-
         <div className="mt-8 grid md:grid-cols-2 gap-6">
           <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
             <h3 className="font-semibold mb-2">Pricing</h3>
@@ -73,12 +64,10 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
             </ul>
           </div>
         </div>
-
         <div className="mt-8 flex items-center gap-3 text-slate-300 text-sm">
           <DollarSign className="w-4 h-4 text-cyan-300" />
           <span>ROI: reduce reverse logistics cost and increase retention via seamless exchanges.</span>
         </div>
-
         <div className="mt-8">
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;
             Book a demo;
@@ -89,7 +78,5 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
 export default ReturnsManagementSaaS;
-
 }

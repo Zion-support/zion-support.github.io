@@ -7,7 +7,6 @@ function ApplicationStatusTrackerContent() {
     const isMobile = useIsMobile();
     return (<>
       <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
-
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
@@ -15,7 +14,6 @@ function ApplicationStatusTrackerContent() {
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
-
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
@@ -29,21 +27,10 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
-
         <ApplicationStatusTrackerContent />
-<<<<<<< HEAD
-
-    </ProtectedRoute>);
-</Card></Card></Card>}}}
-=======
-      
     </ProtectedRoute>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

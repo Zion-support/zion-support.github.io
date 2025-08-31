@@ -477,7 +477,6 @@ export const EXPANDED_SERVICES = [
         location: "Global",
         availability: "12-16 Weeks",
         aiScore: 94
-
 ];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
@@ -496,20 +495,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 // Service subcategories for detailed filtering
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
-  <<<<<<< HEAD
-    'ai-development'['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
-    'cloud-services'['Migration', 'Optimization', 'Security', 'Monitoring', 'Cost Management'],
-    'devops'['Automation', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'Monitoring'],
-    'cybersecurity'['Audit & Testing', 'Architecture', 'Incident Response', 'Compliance', 'Training'],
-    'data-analytics'['Data Warehouse', 'Dashboards', 'Governance', 'Machine Learning', 'Reporting'],
-    'web-development'['PWA', 'E-commerce', 'CMS', 'API Development', 'Performance Optimization'],
-    'mobile-development'['Cross-platform', 'Native iOS', 'Native Android', 'Backend API', 'Testing'],
-    'blockchain'['Smart Contracts', 'DeFi', 'NFT', 'DAO', 'Security'],
-    'iot'['Platform Development', 'Device Integration', 'Data Analytics', 'Security', 'Cloud Integration'],
-    'hardware'['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],
-    'business-automation'['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
-    'business-solutions'['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
-=======
   'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
     'cloud-services': ['Migration', 'Optimization', 'Security', 'Monitoring', 'Cost Management'],
     'devops': ['Automation', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'Monitoring'],
@@ -523,16 +508,8 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'business-automation': ['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
     'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems',
   'Project Management']
-
-
-
-
-
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-
 };
-
 // Alias exports for backward compatibility
 export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES;
 }

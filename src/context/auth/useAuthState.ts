@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
-
 interface User {
-
   id: string;
   email: string;
   displayName?: string;
@@ -10,21 +8,11 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string;
-
-interface AuthTokens {
-  accessToken: string | null;
-  refreshToken: string | null;
-=======
   updatedAt?: string}
-
 interface AuthTokens {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   accessToken: string | null;
   refreshToken: string | null}
-
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +21,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
     accessToken: null,
     refreshToken: null
   });
-
   useEffect(() => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
@@ -47,20 +34,10 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
               setTokens({
                 accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
-<<<<<<< HEAD
-              });
-
-
-
-      } catch (error) {
-<<<<<<< HEAD
-        // // // console.error('Error checking auth state:', error);
-=======
         // // // // // // // console.error('Error checking auth state:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       } finally {
         setIsLoading(false);
-
 =======
               })}
           }
@@ -70,9 +47,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
         setIsLoading(false)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
-
     checkAuthState()}, []);
-
   return {
     user,
     setUser,
@@ -82,9 +57,5 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
     setOnboardingStep,
     tokens,
     setTokens
-<<<<<<< HEAD
-  };
-};}}}}}}
-=======
   }};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

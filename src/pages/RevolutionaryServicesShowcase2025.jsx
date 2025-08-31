@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from "../data/revolutionaryMicroSaasServices2025";
 const RevolutionaryServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [
-        ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: 'revolutionary' })),
-        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: 'emerging' }))
-    ];
+    const allServices = REVOLUTIONARY_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'revolutionary' }));
     const categories = [
         'all',
         'Micro SAAS',
@@ -21,10 +17,12 @@ const RevolutionaryServicesShowcase2025 = () => {
         'Quantum Technology'
     ];
     const filteredServices = allServices.filter(service => {
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch});
+            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
@@ -111,11 +109,11 @@ const RevolutionaryServicesShowcase2025 = () => {
                   </span>
                   <span className="text-sm text-gray-400">{service.subcategory}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.subcategory}</p>
                 <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-green-400">{service.price}</div>
-                  <span className="text-gray-400">{service.period}</span>
+                  <div className="text-2xl font-bold text-green-400">${service.price}</div>
+                  <span className="text-gray-400">/{service.pricingModel}</span>
                 </div>
               </div>
 
@@ -151,12 +149,12 @@ const RevolutionaryServicesShowcase2025 = () => {
               <div className="mb-6 text-sm">
                 <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div>
-                    <p className="font-semibold text-white">Market Size</p>
-                    <p>{service.marketSize}</p>
+                    <p className="font-semibold text-white">Market Price</p>
+                    <p>{service.marketPrice}</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-white">Growth Rate</p>
-                    <p>{service.growthRate}</p>
+                    <p className="font-semibold text-white">Innovation Level</p>
+                    <p>{service.innovationLevel}</p>
                   </div>
                 </div>
               </div>
@@ -169,28 +167,28 @@ const RevolutionaryServicesShowcase2025 = () => {
                     <p className="text-green-400">{service.roi}</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-white">Setup Time</p>
-                    <p>{service.setupTime}</p>
+                    <p className="font-semibold text-white">Delivery Time</p>
+                    <p>{service.estimatedDelivery}</p>
                   </div>
                 </div>
               </div>
 
-              {/* Trial Info */}
+              {/* Support Level */}
               <div className="mb-6 text-center">
                 <div className="bg-blue-500/20 rounded-lg p-3">
-                  <p className="text-white font-semibold">{service.trialDays} Days Free Trial</p>
-                  <p className="text-blue-400 text-sm">No credit card required</p>
+                  <p className="text-white font-semibold">{service.supportLevel} Support</p>
+                  <p className="text-blue-400 text-sm">Professional assistance included</p>
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                <a href={service.websiteUrl} target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                <a href={service.contactInfo.website} target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Learn More & Get Started
                 </a>
-                {service.demoUrl && (<a href={service.demoUrl} target="_blank" rel="noopener noreferrer" className="block w-full border border-white/20 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                    Request Demo
-                  </a>)}
+                <a href={`mailto:${service.contactInfo.email}?subject=Demo Request for ${service.title}`} className="block w-full border border-white/20 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                  Request Demo
+                </a>
               </div>
 
               {/* Contact Info */}

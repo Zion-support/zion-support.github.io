@@ -3,12 +3,6 @@ const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
-<<<<<<< HEAD
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-    return context;
-};
-=======
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -40,25 +34,6 @@ export const AccessibilityProvider = ({ children }) => {
     useEffect(() => {
         const body = document.body;
         if (isHighContrast) {
-<<<<<<< HEAD
-            body.classList.add('high-contrast');
-
-        else {
-            body.classList.remove('high-contrast');
-
-        if (isReducedMotion) {
-            body.classList.add('reduced-motion');
-
-        else {
-            body.classList.remove('reduced-motion');
-
-        if (isLargeText) {
-            body.classList.add('large-text');
-
-        else {
-            body.classList.remove('large-text');
-
-=======
             body.classList.add('high-contrast')}
         else {
             body.classList.remove('high-contrast')}
@@ -83,18 +58,6 @@ export const AccessibilityProvider = ({ children }) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
-<<<<<<< HEAD
-                        lastElement.focus();
-
-
-                else {
-                    if (document.activeElement === lastElement) {
-                        e.preventDefault();
-                        firstElement.focus();
-
-
-
-=======
                         lastElement.focus()}
                 }
                 else {
@@ -126,38 +89,22 @@ export const AccessibilityProvider = ({ children }) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 toggleHighContrast();
-<<<<<<< HEAD
-                announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
                 toggleReducedMotion();
-<<<<<<< HEAD
-                announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
                 e.preventDefault();
                 toggleLargeText();
-<<<<<<< HEAD
-                announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-        return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
-    const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
-=======
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [isHighContrast, isReducedMotion, isLargeText]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -171,8 +118,6 @@ export const AccessibilityProvider = ({ children }) => {
         toggleLargeText,
         focusTrap,
         announceToScreenReader,
-  
-
 };
     return (<AccessibilityContext.Provider value={value}>
       {children}
@@ -183,25 +128,21 @@ export const AccessibilityToolbar = () => {
     return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
       <div className="space-y-3">
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
-
         <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}>
           High Contrast
         </button>
-
         <button onClick={toggleReducedMotion} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isReducedMotion
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}>
           Reduced Motion
         </button>
-
         <button onClick={toggleLargeText} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isLargeText
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>
           Large Text
         </button>
-
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
           <p>Keyboard shortcuts:</p>
           <p>Ctrl/Cmd + K: High Contrast</p>
@@ -214,10 +155,5 @@ export const AccessibilityToolbar = () => {
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
-<<<<<<< HEAD
-    </a>);
-};
-}}}}}}}}}}}}}}}
-=======
     </a>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

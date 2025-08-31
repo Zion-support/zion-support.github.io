@@ -6,10 +6,6 @@ export function AvatarUpload({ value, onChange }) {
         const secure = result?.info?.secure_url;
         if (secure) {
             setUrl(secure);
-<<<<<<< HEAD
-            onChange?.(secure);
-
-=======
             onChange?.(secure)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -20,9 +16,5 @@ export function AvatarUpload({ value, onChange }) {
             process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== '' ? (<CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
           Upload Avatar
         </CldUploadButton>) : (<p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>)}
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

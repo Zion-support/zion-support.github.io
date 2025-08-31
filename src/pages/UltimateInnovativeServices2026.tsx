@@ -55,21 +55,16 @@ import {
   Smartphone,
   Globe2,
   Leaf
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-=======
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
 export default function UltimateInnovativeServices2026(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<any>(null);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },
@@ -84,14 +79,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
     { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
-
   const sortOptions = [;
     { id: 'featured', name: 'Featured' },;
     { id: 'price-low', name: 'Price: Low to High' },;
@@ -99,66 +92,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'roi', name: 'ROI Potential' };
   ];
-
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Zap};
-
-<<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const cat = categories.find(c => c.id === category);
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
-
-  const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
-
-    const matchesPrice = selectedPriceRange === 'all' ||
-                        (selectedPriceRange === 'under-10k' && service.price < 10000) ||
-                        (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
-                        (selectedPriceRange === 'over-20k' && service.price > 20000);
-
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price-low':;
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'innovation':
-        const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      case 'roi':
-        const aROI = parseInt(a.roi.split('-')[0]);
-        const bROI = parseInt(b.roi.split('-')[0]);
-        return bROI - aROI;
-      default:
-<<<<<<< HEAD
-        return 0;
-
-=======
         return 0}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
-
-<<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: string)  => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)};
-=======
   const toggleServiceExpansion = (serviceId: string) => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -166,7 +106,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
         description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
         keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -175,25 +114,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ultimate Innovative Services
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -209,7 +135,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-
                 <Sparkles className="w-5 h-5" />
                 <span>12 Revolutionary Services</span>
               </motion.div>
@@ -217,7 +142,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-
                 <Award className="w-5 h-5" />
                 <span>Industry-Leading Innovation</span>
               </motion.div>
@@ -225,7 +149,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-
                 <Target className="w-5 h-5" />
                 <span>Proven ROI</span>
               </motion.div>
@@ -233,7 +156,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,17 +173,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 />
               </div>
             </div>
-
             {/* Category Filter */}
             <div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-
-                {categories.map(category => (
-=======
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category  => (
@@ -272,17 +188,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 ))}
               </select>
             </div>
-
             {/* Price Filter */}
             <div>
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-
-                {priceRanges.map(range => (
-=======
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {priceRanges.map(range  => (
@@ -294,7 +204,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               </select>
             </div>
           </div>
-
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <span className="text-zion-slate-300">Sort by: any</span>
@@ -307,14 +216,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
                 }`}
-
                 {option.name}
               </button>
             ))}
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,7 +233,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               Discover the future of technology with our cutting-edge micro SAAS solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
               {sortedServices.map((service, index)  => (
@@ -335,45 +241,20 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="group relative"
-
                   <div className="relative bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/50 hover:shadow-2xl hover:shadow-zion-cyan/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -391,7 +272,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                         </div>
                       </div>
                     </div>
-
                     {/* Service Title and Description */}
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {service.title}
@@ -399,7 +279,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                     <p className="text-zion-slate-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Innovation Level Badge */}
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -415,14 +294,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                         ROI: {service.roi}
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-
                           {tag}
                         </span>
                       ))}
@@ -432,12 +309,10 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                         </span>
                       )}
                     </div>
-
                     {/* Expand/Collapse Button */}
                     <button
                       onClick={() => toggleServiceExpansion(service.id)}
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
-
                       {expandedService === service.id ? (
                         <>
                           <EyeOff className="w-4 h-4" />
@@ -450,7 +325,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                         </>
                       )}
                     </button>
-
                     {/* Expanded Service Details */}
                     <AnimatePresence>
                       {expandedService === service.id && (
@@ -458,36 +332,17 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                           initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                           animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }}
                           exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                           transition={{ duration: 0.3 }}
                           className="mt-4 pt-4 border-t border-zion-slate-600/30"
-
                           {/* Features */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -500,7 +355,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                               ))}
                             </ul>
                           </div>
-
                           {/* Benefits */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
@@ -513,7 +367,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                               ))}
                             </ul>
                           </div>
-
                           {/* Market Info */}
                           <div className="grid grid-cols-2 gap-4 text-xs">
                             <div>
@@ -525,13 +378,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                               <div className="text-white font-semibold">{service.estimatedDelivery}</div>
                             </div>
                           </div>
-
                           {/* Contact Button */}
                           <div className="mt-4">
                             <Link
                               to="/contact"
                               className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
-
                               <MessageCircle className="w-4 h-4" />
                               Get Started
                             </Link>
@@ -544,7 +395,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -557,16 +407,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 onClick={() => {;
                   setSearchQuery('');
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPriceRange('all')}}
-                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors";
-=======;
                   setSelectedPriceRange('all');
                 }}
-<<<<<<< HEAD
-                className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
-
-=======
                 className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
@@ -577,7 +419,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           )}
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -585,26 +426,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -616,14 +444,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -631,23 +457,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

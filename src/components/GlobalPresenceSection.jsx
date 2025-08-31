@@ -1,104 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock const globalOffices = [
-=======
 import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
-<<<<<<< HEAD
-const globalOffices = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    {
-        id: 1,
-        city: "San Francisco",
-        country: "United States",
-        region: "North America",
-        flag: "🇺🇸",
-        established: "2018",
-        teamSize: "45+",
-        specialties["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
-        projects: 120,
-        clients: 85,
-        rating: 4.9,
-        timezone: "PST (UTC-8)",
-        address: "123 Innovation Drive, San Francisco, CA 94105"
-    },
-    {
-        id: 2,
-        city: "London",
-        country: "United Kingdom",
-        region: "Europe",
-        flag: "🇬🇧",
-        established: "2019",
-        teamSize: "32+",
-        specialties["FinTech", "Digital Banking", "RegTech"],
-        projects: 95,
-        clients: 67,
-        rating: 4.8,
-        timezone: "GMT (UTC+0)",
-        address: "456 Tech Square, London, EC2A 4BX"
-    },
-    {
-        id: 3,
-        city: "Singapore",
-        country: "Singapore",
-        region: "Asia Pacific",
-        flag: "🇸🇬",
-        established: "2020",
-        teamSize: "28+",
-        specialties["E-commerce", "Digital Transformation", "Smart Cities"],
-        projects: 78,
-        clients: 54,
-        rating: 4.9,
-        timezone: "SGT (UTC+8)",
-        address: "789 Digital Hub, Singapore 018956"
-    },
-    {
-        id: 4,
-        city: "Toronto",
-        country: "Canada",
-        region: "North America",
-        flag: "🇨🇦",
-        established: "2021",
-        teamSize: "25+",
-        specialties["Healthcare Tech", "AI Research", "Enterprise Solutions"],
-        projects: 65,
-        clients: 42,
-        rating: 4.8,
-        timezone: "EST (UTC-5)",
-        address: "321 Innovation Center, Toronto, ON M5V 3A8"
-    },
-    {
-        id: 5,
-        city: "Berlin",
-        country: "Germ",
-        region: "Europe",
-        flag: "🇩🇪",
-        established: "2021",
-        teamSize: "22+",
-        specialties["IoT", "Manufacturing Tech", "Sustainability"],
-        projects: 58,
-        clients: 38,
-        rating: 4.7,
-        timezone: "CET (UTC+1)",
-        address: "654 Tech District, Berlin, 10115"
-    },
-    {
-        id: 6,
-        city: "Sydney",
-        country: "Australia",
-        region: "Asia Pacific",
-        flag: "🇦🇺",
-        established: "2022",
-        teamSize: "18+",
-        specialties["EdTech", "Green Tech", "Digital Marketing"],
-        projects: 42,
-        clients: 29,
-        rating: 4.8,
-        timezone: "AEST (UTC+10)",
-        address: "987 Innovation Bay, Sydney, NSW 2000"
-
-];
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
@@ -162,7 +64,6 @@ const partnerships = [
         established: "2022",
         projects: 12,
         status: "Active"
-
 ];
 const industries = [
     { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },
@@ -183,18 +84,10 @@ export function GlobalPresenceSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -202,8 +95,6 @@ export function GlobalPresenceSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-
-
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -212,27 +103,14 @@ export function GlobalPresenceSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Global <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
@@ -241,36 +119,17 @@ export function GlobalPresenceSection() {
             From Silicon Valley to Singapore, Zion Tech Group operates across six continents,
             serving clients worldwide with localized expertise and global innovation.
           </p>
-
           {/* Global stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {globalStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
@@ -280,68 +139,30 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Global Offices */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Global Offices</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {globalOffices.map((office, index) => (<motion.div key={office.id} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedOffice(selectedOffice === office.id ? null : office.id)}>
                   {/* Header */}
@@ -360,7 +181,6 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Est. {office.established}</div>
                     </div>
                   </div>
-
                   {/* Quick info */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -372,7 +192,6 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Projects</div>
                     </div>
                   </div>
-
                   {/* Specialties */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Specialties:</div>
@@ -382,7 +201,6 @@ export function GlobalPresenceSection() {
                         </span>))}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -390,36 +208,17 @@ export function GlobalPresenceSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedOffice === office.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
                         <div className="space-y-3 mb-4">
                           <div className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
@@ -445,68 +244,30 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Strategic Partnerships */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Partnerships</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {partnerships.map((partnership, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedPartnership(selectedPartnership === index ? null : index)}>
                   {/* Header */}
@@ -520,11 +281,9 @@ export function GlobalPresenceSection() {
                     <div className="text-zion-cyan text-sm mb-1">{partnership.type}</div>
                     <div className="text-zion-slate-light text-xs">Since {partnership.established}</div>
                   </div>
-
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {partnership.description}
                   </p>
-
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -536,36 +295,17 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Status</div>
                     </div>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedPartnership === index && (<motion.div className="mt-4 p-3 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
                         <div className="flex items-center gap-2 text-zion-cyan text-sm">
                           <CheckCircle className="w-4 h-4"/>
@@ -577,71 +317,32 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Industry Presence */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{industry.name}</h4>
-
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{industry.projects}</div>
@@ -659,35 +360,16 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
@@ -710,9 +392,5 @@ export function GlobalPresenceSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

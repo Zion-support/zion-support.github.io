@@ -15,9 +15,5 @@ export function DisputeDashboard() {
         <div className="text-lg font-semibold text-white">Average Resolution Time</div>
         <div className="text-2xl font-bold text-zion-purple">3.2 days</div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

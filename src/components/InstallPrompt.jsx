@@ -15,13 +15,6 @@ export const InstallPrompt = () => {
         const result = await deferred.userChoice;
         if (result.outcome !== 'accepted') {
             // keep for later
-<<<<<<< HEAD
-            setDeferred(deferred);
-
-        else {
-            setDeferred(null);
-
-=======
             setDeferred(deferred)}
         else {
             setDeferred(null)}

@@ -1,16 +1,6 @@
 import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated, viewProfile, clearFilters, handleBook, handleMessage }) {
-<<<<<<< HEAD
-    const handleBookInternal = (talent) => {
-        if (handleBook) {
-            handleBook(talent);
-
-        else {
-<<<<<<< HEAD
-            // // // console.log("Book talent:", talent.id);
-
-=======
             // // // // // // // console.log("Book talent:", talent.id);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
@@ -18,14 +8,11 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
     const handleMessageInternal = (talent) => {
         if (handleMessage) {
             handleMessage(talent);
-
         else {
             onTalentClick(talent.id);
-
     };
     if (isLoading) {
         return <TalentSkeleton />;
-
 =======
     const handleMessageInternal = (talent) => {
         if (handleMessage) {
@@ -42,14 +29,6 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
       {clearFilters && (<button onClick={clearFilters} className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors">
           Clear Filters
         </button>)}
-<<<<<<< HEAD
-    </div>;
-
-    return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {talents.map((talent) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}
-    </div>);
-}}}}}}}
-=======
     </div>}
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (<TalentCard key={talent.id} talent={talent} onMessage={() => handleMessageInternal(talent)} onBook={() => handleBookInternal(talent)} isAuthenticated={isAuthenticated}/>))}

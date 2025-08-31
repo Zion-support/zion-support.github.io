@@ -21,10 +21,6 @@ export default function ProfileDetail() {
             try {
                 if (!profileId) {
                     setError("Profile ID is missing.");
-<<<<<<< HEAD
-                    return;
-
-=======
                     return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data, error } = await supabase
@@ -33,16 +29,6 @@ export default function ProfileDetail() {
                     .eq("id", profileId)
                     .single();
                 if (error) {
-<<<<<<< HEAD
-                    throw new Error(error.message);
-
-                if (!data) {
-                    setError("Profile not found.");
-                    return;
-
-                setProfileData(data);
-
-=======
                     throw new Error(error.message)}
                 if (!data) {
                     setError("Profile not found.");
@@ -55,13 +41,6 @@ export default function ProfileDetail() {
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
-<<<<<<< HEAD
-                });
-
-            finally {
-                setIsLoading(false);
-
-=======
                 })}
             finally {
                 setIsLoading(false)}
@@ -71,20 +50,6 @@ export default function ProfileDetail() {
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-<<<<<<< HEAD
-      </div>);
-
-    if (error) {
-        return (<div className="min-h-screen flex items-center justify-center">
-        <p>Error: {error}</p>
-      </div>);
-
-    if (!profileData) {
-        return (<div className="min-h-screen flex items-center justify-center">
-        <p>Profile not found.</p>
-      </div>);
-
-=======
       </div>)}
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
@@ -97,7 +62,6 @@ export default function ProfileDetail() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content */}
@@ -135,7 +99,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -145,7 +108,6 @@ export default function ProfileDetail() {
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
               </CardContent>
             </Card>
-
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -157,7 +119,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -172,7 +133,6 @@ export default function ProfileDetail() {
                     </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}
               </CardContent>
             </Card>
-
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -188,7 +148,6 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
           </div>
-
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA talentProfile = {
@@ -197,13 +156,6 @@ export default function ProfileDetail() {
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
-        
-
-
-
-
-
-
 }}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
@@ -225,7 +177,6 @@ export default function ProfileDetail() {
                   </div>)}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -247,11 +198,5 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

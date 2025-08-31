@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function Webinars() {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="Webinars - Zion Tech Group" description="Upcoming and past webinars." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
-				<p className="text-zinc-300">Explore our upcoming and recorded sessions.</p>
-			</div>
-		</div>
-	);
-
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars() {
-=======
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -49,13 +29,11 @@ import {
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
 const Webinars: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: BookOpen, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 0 },
@@ -66,7 +44,6 @@ const Webinars: React.FC = () => {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
   ];
-
   const upcomingWebinars = [
     {
       id: 1,
@@ -129,15 +106,6 @@ const Webinars: React.FC = () => {
       duration: '45 min',
       speakers: ['Alex Thompson', 'Dr. James Wilson'],
       maxAttendees: 300,
-<<<<<<< HEAD
-      currentAttendees: 189,
-      featured: false,
-      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],
-      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-
-=======
       summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
       tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-technology-roi/register',
@@ -178,7 +146,6 @@ const Webinars: React.FC = () => {
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pastWebinars = [
     {
       id: 7,
@@ -213,41 +180,7 @@ const Webinars: React.FC = () => {
       isLive: false
     }
   ];
-
   const allWebinars = [...upcomingWebinars, ...pastWebinars];
-
-<<<<<<< HEAD
-  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {;
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    return matchesCategory && matchesSearch});
-
-  const stats = [
-    { label: 'Webinars Delivered', value: '100+', icon: Video },
-    { label: 'Attendees Served', value: '25K+', icon: Users },
-    { label: 'Expert Speakers', value: '15+', icon: Star },;
-    { label: 'Topics Covered', value: '20+', icon: BookOpen };
-  ];
-
-  const contactInfo = {
-  email: 'webinars@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008,
-  Middletown DE 19709';
-  ;
-
-};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Webinars - Zion Tech Group"
-        description="Join our educational webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry experts."
-      />
-      
-=======
       currentAttendees: 189,;
       featured: false,;
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
@@ -256,30 +189,24 @@ const Webinars: React.FC = () => {
       recordingAvailable: false;
     };
   ];
-
   // Update counts
   React.useEffect(() => {
     categories.forEach(cat = > {;
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
-
     filterTypes.forEach(type = > {;
       if (type.id === 'all') {;
         type.count = webinars.length;
       } else {
         type.count = webinars.filter(w => w.type === type.id).length;
-
     });
   }, []);
-
   const filteredWebinars = webinars.filter(webinar => {;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
     const matchesType = filterType === 'all' || webinar.type === filterType;
-
     return matchesSearch && matchesCategory && matchesType;
 =======
   // Update category counts
@@ -291,7 +218,6 @@ const Webinars: React.FC = () => {
     }
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   });
-
   const filteredWebinars = allWebinars.filter(webinar => {
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -299,20 +225,16 @@ const Webinars: React.FC = () => {
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesTimeFilter = showPast ? true : !pastWebinars.includes(webinar);
-    
     return matchesCategory && matchesSearch && matchesTimeFilter;
   });
-
   const getCategoryIcon = (categoryId: string) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen;
   };
-
   const getCategoryName = (categoryId: string) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -322,23 +244,6 @@ const Webinars: React.FC = () => {
       day: 'numeric' 
     });
   };
-
-<<<<<<< HEAD
-  const formatTimeUntil = (dateString: string) => {;
-    const now = new Date();
-    const webinarDate = new Date(dateString);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays < 0) return 'Past';
-    if (diffDays === 0) return 'Today';
-    if (diffDays < 7) return `${diffDays} days`;
-    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
-    return `${Math.ceil(diffDays / 30)} months`;
-  };
-
-  const getCategoryIcon = (categoryId: string) => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
-=======
   const getRegistrationStatus = (webinar: any) => {
     if (webinar.isLive) {
       return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
@@ -351,7 +256,6 @@ const Webinars: React.FC = () => {
     }
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   };
-
   return (
     <>
       <SEO 
@@ -359,7 +263,6 @@ const Webinars: React.FC = () => {
         description="Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry leaders and gain practical insights."
         keywords="webinars, AI webinars, cybersecurity webinars, cloud computing, technology education, Zion Tech Group, online learning"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -374,51 +277,23 @@ const Webinars: React.FC = () => {
                 <Video className="w-5 h-5 text-zion-purple mr-2" />
                 <span className="text-zion-purple font-medium">Expert Webinars</span>
               </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Technology Webinars
               </h1>
-              
               <p className="text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8">
                 Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. 
                 Learn from industry leaders and gain practical insights to transform your business.
               </p>
-
-<<<<<<< HEAD
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -430,18 +305,11 @@ const Webinars: React.FC = () => {
               from industry experts and technology leaders. Get notified about upcoming
               sessions and access to exclusive content.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-
-                Subscribe to Webinars
-              </motion.button>
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-=======
               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Contact Us
@@ -456,7 +324,6 @@ const Webinars: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="py-12 bg-zion-slate">
         <div className="container mx-auto px-4">
@@ -472,7 +339,6 @@ const Webinars: React.FC = () => {
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark border border-zion-slate-light/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 mb-6">
               {categories.map((category) => (
@@ -484,7 +350,6 @@ const Webinars: React.FC = () => {
                       ? 'bg-zion-cyan border-zion-cyan text-white'
                       : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-cyan/50'
                   }`}
-
                   {category.icon}
 =======
               {/* Search Bar */}
@@ -503,7 +368,6 @@ const Webinars: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Categories Filter */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -525,47 +389,6 @@ const Webinars: React.FC = () => {
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
-
-            {/* Type Filters */}
-            <div className="flex flex-wrap gap-3">
-              {filterTypes.map((type) => (
-                <button
-                  key={type.id}
-                  onClick={() => setFilterType(type.id)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-                    filterType === type.id
-                      ? 'bg-zion-purple border-zion-purple text-white'
-                      : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-purple/50'
-                  }`}
-
-                  {type.name} ({type.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Webinars Grid */}
-      <section className="py-16 bg-zion-slate-light">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            {filteredWebinars.length === 0 ? (;
-              <div className="text-center py-20">;
-                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />;
-                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>;
-                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>;
-                <button;
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setActiveCategory('all');
-                    setFilterType('all');
-                  }}
-<<<<<<< HEAD
-                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
-
-=======
                   className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
                 >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -575,7 +398,6 @@ const Webinars: React.FC = () => {
 =======
           </div>
         </section>
-
         {/* Time Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -603,14 +425,12 @@ const Webinars: React.FC = () => {
                   Past Webinars
                 </button>
               </div>
-              
               <div className="text-zion-cyan-light">
                 {filteredWebinars.length} webinars found
               </div>
             </div>
           </div>
         </section>
-
         {/* Webinars Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -629,95 +449,8 @@ const Webinars: React.FC = () => {
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-                {filteredWebinars.map((webinar) => (
-                  <motion.div
-                    key={webinar.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
-
-                    {/* Thumbnail */}
-                    <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Play className="w-16 h-16 text-zion-cyan" />
-                      </div>
-                      {webinar.featured && (
-                        <div className="absolute top-4 right-4 bg-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          Featured
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        {getCategoryIcon(webinar.category)}
-                        <span className="text-sm text-zion-slate-light">
-                          {categories.find(c => c.id === webinar.category)?.name}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                        {webinar.title}
-                      </h3>
-
-                      <p className="text-zion-slate-light mb-4 line-clamp-3">
-                        {webinar.description}
-                      </p>
-
-                      {/* Meta Info */}
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(webinar.date)}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Clock className="w-4 h-4" />
-                          <span>{webinar.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Users className="w-4 h-4" />
-                          <span>{webinar.currentAttendees}/{webinar.maxAttendees} attendees</span>
-                        </div>
-                      </div>
-
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {webinar.tags.slice(0, 3).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 bg-zion-slate text-zion-slate-light text-xs rounded"
-
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Actions */}
-                      <div className="flex gap-3">
-                        {webinar.registrationRequired ? (
-                          <button className="flex-1 bg-zion-cyan text-white py-2 px-4 rounded-lg hover:bg-zion-cyan/90 transition-colors font-semibold">
-                            Register Now
-                          </button>
-                        ) : (
-                          <button className="flex-1 bg-zion-purple text-white py-2 px-4 rounded-lg hover:bg-zion-purple/90 transition-colors font-semibold">
-                            Join Now
-                          </button>
-                        )}
-                        <button className="p-2 border border-zion-slate-light/20 text-zion-slate-light rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-colors">
-                          <ExternalLink className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-=======
                 {filteredWebinars.map((webinar, index) => {
                   const registrationStatus = getRegistrationStatus(webinar);
-                  
                   return (
                     <motion.div
                       key={webinar.id}
@@ -739,15 +472,12 @@ const Webinars: React.FC = () => {
                               {registrationStatus.status}
                             </div>
                           </div>
-                          
                           <CardTitle className="text-xl font-bold text-white group-hover:text-zion-purple transition-colors duration-300 mb-3">
                             {webinar.title}
                           </CardTitle>
-                          
                           <CardDescription className="text-zion-cyan-light leading-relaxed mb-4">
                             {webinar.summary}
                           </CardDescription>
-                          
                           <div className="flex items-center space-x-4 text-sm text-zion-cyan-light mb-4">
                             <div className="flex items-center space-x-1">
                               <Users className="w-4 h-4" />
@@ -759,7 +489,6 @@ const Webinars: React.FC = () => {
                             </div>
                           </div>
                         </CardHeader>
-                        
                         <CardContent>
                           <div className="space-y-3 mb-6 text-sm">
                             <div className="flex items-center justify-between">
@@ -775,7 +504,6 @@ const Webinars: React.FC = () => {
                               <span className="text-white">{webinar.time}</span>
                             </div>
                           </div>
-                          
                           <div className="mb-6">
                             <h4 className="text-white font-semibold mb-3">Tags:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -789,7 +517,6 @@ const Webinars: React.FC = () => {
                               ))}
                             </div>
                           </div>
-                          
                           <div className="flex space-x-2">
                             {webinar.registrationUrl ? (
                               <Button
@@ -812,7 +539,6 @@ const Webinars: React.FC = () => {
                                 </a>
                               </Button>
                             ) : null}
-                            
                             <Button
                               variant="outline"
                               size="sm"
@@ -831,7 +557,6 @@ const Webinars: React.FC = () => {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -848,13 +573,11 @@ const Webinars: React.FC = () => {
                 Have expertise to share? We're always looking for industry leaders and subject matter experts 
                 to share their knowledge with our community.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">
                   <Video className="w-5 h-5 mr-2" />
                   Propose a Webinar
                 </Button>
-                
                 <Button
                   variant="outline"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
@@ -869,10 +592,6 @@ const Webinars: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}}}}}
-=======
 };
-
 export default Webinars;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

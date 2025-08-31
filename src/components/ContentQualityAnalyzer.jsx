@@ -48,7 +48,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             description: 'No headings found',
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
             status: 'open'
-
     ];
     useEffect(() => {
         setContentIssues(sampleIssues);
@@ -84,10 +83,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':
                 return <Info className="w-4 h-4 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <Info className="w-4 h-4 text-gray-400"/>;
-
-=======
                 return <Info className="w-4 h-4 text-gray-400"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -100,10 +95,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':
                 return 'text-blue-400';
             default:
-<<<<<<< HEAD
-                return 'text-gray-400';
-
-=======
                 return 'text-gray-400'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -116,10 +107,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'open':
                 return 'text-red-400';
             default:
-<<<<<<< HEAD
-                return 'text-gray-400';
-
-=======
                 return 'text-gray-400'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -140,10 +127,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'no_images':
                 return 'No Images';
             default:
-<<<<<<< HEAD
-                return type;
-
-=======
                 return type}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -152,36 +135,17 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <FileText className="w-6 h-6"/>
       </motion.button>
-
       {/* Modal */}
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
           <motion.div initial = {
   { scale: 0.9,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { scale: 1,
   opacity: 1 
-
-
-
-
-
-
 }} exit = {
   { scale: 0.9,
   opacity: 0 
-
-
-
-
-
-
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">
@@ -198,7 +162,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 Analyze and improve content quality across all website pages
               </p>
             </div>
-
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Summary Cards */}
@@ -220,7 +183,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     <div className="text-blue-400 text-sm">With Meta Descriptions</div>
                   </div>
                 </div>)}
-
               {/* Actions */}
               <div className="flex items-center justify-between">
                 <div className="flex space-x-2">
@@ -245,19 +207,16 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     Low
                   </button>
                 </div>
-
                 <button onClick={startAnalysis} disabled={isAnalyzing} className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">
                   {isAnalyzing ? (<Zap className="w-4 h-4 animate-spin"/>) : (<Search className="w-4 h-4"/>)}
                   <span>{isAnalyzing ? 'Analyzing...' : 'Analyze Content'}</span>
                 </button>
               </div>
-
               {/* Search */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
                 <input type="text" placeholder="Search issues by page title or description..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"/>
               </div>
-
               {/* Issues Table */}
               <div className="bg-gray-800 rounded-lg overflow-hidden">
                 <div className="overflow-x-auto">
@@ -342,7 +301,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                   </table>
                 </div>
               </div>
-
               {/* Quick Actions */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">
@@ -356,7 +314,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     <li>• Add proper heading structure</li>
                   </ul>
                 </div>
-
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-blue-400 mb-2 flex items-center">
                     <BarChart3 className="w-5 h-5 mr-2"/>
@@ -368,7 +325,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     <li>• Use proper heading hierarchy</li>
                   </ul>
                 </div>
-
                 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-purple-400 mb-2 flex items-center">
                     <TrendingUp className="w-5 h-5 mr-2"/>

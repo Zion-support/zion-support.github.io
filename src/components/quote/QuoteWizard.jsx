@@ -17,10 +17,6 @@ function StepIndicator({ step }) {
       <div className="h-1 bg-zion-blue-light rounded">
         <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function QuoteWizard({ category }) {
@@ -36,10 +32,6 @@ export function QuoteWizard({ category }) {
             toast({
                 title: 'Unable to load services',
                 variant: 'destructive'
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [delayedError, toast]);
@@ -59,10 +51,6 @@ export function QuoteWizard({ category }) {
                 : category === 'talent'
                     ? 'talent'
                     : 'item'} to continue.`);
-<<<<<<< HEAD
-            return;
-
-=======
             return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setSelectionError('');
@@ -87,10 +75,6 @@ export function QuoteWizard({ category }) {
                 break;
             default:
                 payload.item_id = selectedItemId;
-<<<<<<< HEAD
-                payload.category = category;
-
-=======
                 payload.category = category}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         await fetch(endpoint, {
@@ -105,7 +89,6 @@ export function QuoteWizard({ category }) {
         {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
             {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full"/>))}
           </div>)}
-
         {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">
             <Alert variant="destructive">
               <AlertTitle>Error Fetching {category}</AlertTitle>
@@ -117,19 +100,13 @@ export function QuoteWizard({ category }) {
               Retry
             </Button>
           </div>)}
-
         {!loading && !delayedError && data && data.length === 0 && (<div className="text-center text-muted-foreground py-12">
             No {category} found.
           </div>)}
-
         {!loading && !delayedError && data && data.length > 0 && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.map((item) => (<Card data-testid={`item-card-${item.id}`} key={item.id} className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`} onClick={() => setSelectedItemId(item.id)} tabIndex={0} onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
-<<<<<<< HEAD
-                            setSelectedItemId(item.id);
-
-=======
                             setSelectedItemId(item.id)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     }}>
@@ -144,17 +121,12 @@ export function QuoteWizard({ category }) {
                 </Button>
               </Card>))}
           </div>)}
-
         {selectionError && (<p className="text-red-500 text-sm mt-2" data-testid="selection-error">
             {selectionError}
           </p>)}
         <Button onClick={handleContinue} disabled={loading || !!delayedError || !selectedItemId} className="mt-6">
           Continue
         </Button>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (step === 2) {
@@ -171,10 +143,6 @@ export function QuoteWizard({ category }) {
           <Button variant="outline" onClick={() => setStep(1)}>Back</Button>
           <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (step === 3) {
@@ -190,12 +158,6 @@ export function QuoteWizard({ category }) {
                 setMessage('')}}>
           Request Another Quote
         </Button>
-<<<<<<< HEAD
-      </div>);
-
-    return null;
-</div>}}}}}}}}}
-=======
       </div>)}
     return null}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

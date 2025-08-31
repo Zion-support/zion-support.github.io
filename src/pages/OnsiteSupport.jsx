@@ -1,42 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Wrench,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-=======
 import { 
   Wrench, 
   Clock, 
@@ -52,26 +15,10 @@ import {
   Server,
   Network,
   Database,
-<<<<<<< HEAD
-  Eye,
-  Clock,
-  Activity,
-  Lock,
-  Globe,
-  Award,
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Zap,
-  Wrench
-=======
   Monitor,
   HardDrive,
   Router
 } from 'lucide-react';
-
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const onsiteSupportSolutions = [
   {
@@ -168,46 +115,10 @@ const onsiteSupportSolutions = [
     price: "From $400/hour",
     timeline: "2-8 hours",
     category: "Emergency",
-<<<<<<< HEAD
-    technologies: ["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
-
-];
-
-const supportTechnologies = [
-  {
-    name: "Hardware Support",
-    description: "Comprehensive hardware troubleshooting and repair",
-    icon: Cpu,
-    useCase: "Hardware Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Network Support",
-    description: "Network infrastructure and connectivity solutions",
-    icon: Network,
-    useCase: "Network Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Software Support",
-    description: "Software installation and configuration support",
-    icon: Code,
-    useCase: "Software Issues",
-    reliability: "High"
-  },
-  {
-    name: "Security Support",
-    description: "Security system implementation and maintenance",
-    icon: Shield,
-    useCase: "Security Issues",
-    reliability: "Critical"
-
-=======
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const successStories = [
   {
     id: 1,
@@ -235,9 +146,7 @@ const successStories = [
     solution: "Emergency hardware support with immediate replacement and data recovery",
     results: "Zero trading downtime, data integrity maintained, improved disaster recovery",
     logo: "FSF"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -266,9 +175,7 @@ const processSteps = [
     description: "Document resolution and schedule follow-up maintenance",
     icon: FileText,
     duration: "1-2 hours"
-
 ];
-
 const supportBenefits = [
   {
     title: "Rapid Response",
@@ -292,25 +199,17 @@ const supportBenefits = [
     title: "Preventive Maintenance",
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
-<<<<<<< HEAD
-    examples: ["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
-
-=======
     examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function OnsiteSupport() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'Hardware', 'Networking', 'Software', 'Data', 'Security', 'Emergency'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? onsiteSupportSolutions
     : onsiteSupportSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -320,78 +219,42 @@ export default function OnsiteSupport() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Wrench className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Onsite IT Support &
               <span className="text-gradient block">Technical Services</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Professional onsite IT support when you need it most. From emergency repairs to
               preventive maintenance, our certified technicians bring expertise to your location.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Wrench className="w-4 h-4" />
@@ -409,7 +272,6 @@ export default function OnsiteSupport() {
           </motion.div>
         </div>
       </section>
-
       {/* Onsite Support Benefits */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -417,32 +279,18 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make onsite support essential
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {supportBenefits.map((benefit, index) => (
               <motion.div
@@ -450,42 +298,21 @@ export default function OnsiteSupport() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -500,7 +327,6 @@ export default function OnsiteSupport() {
           </div>
         </div>
       </section>
-
       {/* Support Technologies */}
       <section className="py-20">
         <div className="container-responsive">
@@ -508,32 +334,18 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Support Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading IT platforms and technologies
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportTechnologies.map((technology, index) => (
               <motion.div
@@ -541,43 +353,22 @@ export default function OnsiteSupport() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -592,7 +383,6 @@ export default function OnsiteSupport() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -600,32 +390,18 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our Onsite Support Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful onsite support delivery
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -633,35 +409,16 @@ export default function OnsiteSupport() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -670,7 +427,6 @@ export default function OnsiteSupport() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -681,7 +437,6 @@ export default function OnsiteSupport() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -689,32 +444,18 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for onsite IT support and maintenance
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -726,12 +467,10 @@ export default function OnsiteSupport() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -739,43 +478,22 @@ export default function OnsiteSupport() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -784,23 +502,19 @@ export default function OnsiteSupport() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -815,7 +529,6 @@ export default function OnsiteSupport() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -823,32 +536,18 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have benefited from our onsite support services
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -856,35 +555,16 @@ export default function OnsiteSupport() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -894,7 +574,6 @@ export default function OnsiteSupport() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -909,7 +588,6 @@ export default function OnsiteSupport() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -921,7 +599,6 @@ export default function OnsiteSupport() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -929,43 +606,27 @@ export default function OnsiteSupport() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Need Onsite IT Support?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our onsite support services can keep your systems running smoothly,
               minimize downtime, and ensure business continuity.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Schedule Onsite Support
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Emergency Support
               </a>
             </div>
@@ -973,9 +634,5 @@ export default function OnsiteSupport() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

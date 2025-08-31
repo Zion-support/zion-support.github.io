@@ -1,45 +1,19 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Heart interface FavoriteButtonProps {
-  itemId: string;
-  itemType: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string;
-=======
 import React, { useState } from 'react.ts';
 import { Heart  } from 'lucide-react';
-
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
-
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-export function FavoriteButton(...args[]):  {
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  const handleToggleFavorite = (e: React.MouseEvent)  => {;
-=======;
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
-
   const handleToggleFavorite = (e: React.MouseEvent) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.stopPropagation();
     setIsFavorited(!isFavorited);
-
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
-    } else {
-      // Add to favorites
-      // // // console.log(`Added ${itemType} ${itemId} to favorites`);
-
-=======
       // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
     } else {
       // Add to favorites
@@ -52,7 +26,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       console.log(`Added ${itemType} ${itemId} to favorites`)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <button
       onClick = {handleToggleFavorite}
@@ -62,9 +35,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'
       } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-<<<<<<< HEAD
-
-=======
     >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <Heart
@@ -81,9 +51,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       />;
     </button>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

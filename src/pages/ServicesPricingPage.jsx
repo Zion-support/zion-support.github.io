@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-import { SEO } from '@/components/SEO';
-=======
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import SEO from '@/components/SEO';
@@ -16,18 +12,11 @@ export default function ServicesPricingPage() {
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
         const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
-<<<<<<< HEAD
-            acc[category] = categoryServices;
-
-        return acc;
-    }, { /* empty */ });
-=======
             acc[category] = categoryServices}
         return acc}, {});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
-
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -53,7 +42,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -79,7 +67,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -91,7 +78,6 @@ export default function ServicesPricingPage() {
               Flexible pricing tiers designed to scale with your business needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (<Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center pb-6">
@@ -120,7 +106,6 @@ export default function ServicesPricingPage() {
                       <span className="text-white text-sm">Maintenance & updates</span>
                     </li>
                   </ul>
-
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2"/>
                     Get Started
@@ -130,7 +115,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Service-Specific Pricing */}
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
@@ -142,7 +126,6 @@ export default function ServicesPricingPage() {
               Detailed pricing for individual services and solutions
             </p>
           </div>
-
           <div className="space-y-8">
             {Object.entries(servicesByCategory).map(([category, services]) => (<div key={category} className="bg-zion-blue rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">{category}</h3>
@@ -175,7 +158,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Why Choose Zion Tech Group */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -187,7 +169,6 @@ export default function ServicesPricingPage() {
               We deliver exceptional value through expertise, innovation, and proven results
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
@@ -209,7 +190,6 @@ export default function ServicesPricingPage() {
                 icon: <Building className="w-8 h-8"/>,
                 title: "Proven ROI",
                 description: "Measurable business outcomes and return on investment"
-
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
@@ -220,7 +200,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -242,9 +221,5 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

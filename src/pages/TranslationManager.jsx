@@ -34,18 +34,6 @@ export default function TranslationManager() {
                     return Object.keys(obj).reduce((acc, key) => {
                         const pre = prefix.length ? `${prefix}.` : '';
                         if (typeof obj[key] === 'object' && obj[key] !== null) {
-<<<<<<< HEAD
-                            Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-
-                        else {
-                            acc[`${pre}${key}`] = obj[key];
-
-                        return acc;
-                    }, { /* empty */ });
-                };
-                currentTranslations[lang.code] = flattenObject(res);
-
-=======
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))}
                         else {
                             acc[`${pre}${key}`] = obj[key]}
@@ -67,10 +55,6 @@ export default function TranslationManager() {
             Object.values(translations).forEach(langTranslations => {
                 Object.keys(langTranslations).forEach(key => allKeys.add(key))});
             setFilteredKeys(Array.from(allKeys));
-<<<<<<< HEAD
-            return;
-
-=======
             return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const query = searchQuery.toLowerCase().trim();
@@ -80,14 +64,6 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-<<<<<<< HEAD
-                    filtered.push(key);
-
-            });
-        });
-        setFilteredKeys([...new Set(filtered)]);
-    }, [searchQuery, translations]);
-=======
                     filtered.push(key)}
             })});
         setFilteredKeys([...new Set(filtered)])}, [searchQuery, translations]);
@@ -110,12 +86,6 @@ export default function TranslationManager() {
             const updatedTranslations = { ...translations };
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
-<<<<<<< HEAD
-                    updatedTranslations[lang.code] = { /* empty */ };
-
-                updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
-            });
-=======
                     updatedTranslations[lang.code] = {}}
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -133,11 +103,6 @@ export default function TranslationManager() {
             if (translations[lang]?.[key]) {
                 sourceLanguage = lang;
                 sourceText = translations[lang][key];
-<<<<<<< HEAD
-                break;
-
-
-=======
                 break}
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -147,10 +112,6 @@ export default function TranslationManager() {
                 description: t('translation.add_content_first'),
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
@@ -161,10 +122,6 @@ export default function TranslationManager() {
                     description: error,
                     variant: "destructive",
                 });
-<<<<<<< HEAD
-                return;
-
-=======
                 return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Update edited translations with auto-translated content
@@ -175,29 +132,15 @@ export default function TranslationManager() {
             toast({
                 title: t('translation.translation_success'),
                 description: t('translation.content_translated'),
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error(`Error translating key ${key}:`, error);
-=======
             // // // // // // // console.error(`Error translating key ${key}:`, error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-    };
-    const handleCancel = () => {
-        setEditingKey(null);
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -207,11 +150,6 @@ export default function TranslationManager() {
             [key]: {
                 ...editedTranslations[key],
                 [lang]: value
-<<<<<<< HEAD
-
-        });
-    };
-=======
             }
         })};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -221,7 +159,6 @@ export default function TranslationManager() {
             .filter(lang => !translations[lang]?.[key])};
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
-
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
         <Card>
           <CardHeader>
@@ -242,7 +179,6 @@ export default function TranslationManager() {
                   </TabsList>
                 </Tabs>
               </div>
-
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -250,7 +186,6 @@ export default function TranslationManager() {
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
-
                 {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}
                   </div>) : (<div className="divide-y">
@@ -267,21 +202,9 @@ export default function TranslationManager() {
                             editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {
   (e) => handleChange(lang.code, key,
   e.target.value)
-
-
-
-
-
-
 } dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {
   (e) => handleChange(lang.code, key,
   e.target.value)
-
-
-
-
-
-
 } dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
                                 </div>))}
                             </div>
@@ -329,11 +252,5 @@ export default function TranslationManager() {
           </CardContent>
         </Card>
       </main>
-<<<<<<< HEAD
-
-    </>);
-</Card></Card></Card>}}}}}}}}}}}}}}}
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
 export default function AIComplianceCopilot(...args[]):  {
   return (
     <div className = "min-h-screen bg-futuristic text-white">
@@ -16,7 +15,6 @@ export default function AIComplianceCopilot(...args[]):  {
           Automate compliance with real-time control monitoring, policy mapping, gap analysis, and auto-evidence generation.
           Integrates with cloud, code, identity, and ticketing to reduce audit prep from months to days.
         </p>
-
         <div className="grid gap-8 md:grid-cols-3 mt-10">
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-lg font-semibold mb-2">Frameworks</h2>
@@ -34,26 +32,13 @@ export default function AIComplianceCopilot(...args[]):  {
             </p>
           </div>
         </div>
-
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-<<<<<<< HEAD
-          <h3 className="font-semibold mb-2">Contact</h3>
-          <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
           <h3 className="font-semibold mb-2">Contact</h3>;
           <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

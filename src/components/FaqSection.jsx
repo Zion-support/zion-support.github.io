@@ -9,7 +9,6 @@ export function FaqSection() {
             Find answers to common questions about our services and solutions
           </p>
         </div>
-
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-white mb-3">
@@ -20,7 +19,6 @@ export function FaqSection() {
               data analytics, blockchain development, and innovative technology consulting.
             </p>
           </div>
-
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-white mb-3">
               How can I get started with your services?
@@ -30,7 +28,6 @@ export function FaqSection() {
               to understand your needs and provide a customized solution.
             </p>
           </div>
-
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
             <h3 className="text-xl font-semibold text-white mb-3">
               What is your typical project timeline?
@@ -42,9 +39,5 @@ export function FaqSection() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -5,10 +5,6 @@ export function WaitlistSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle waitlist signup
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Waitlist signup:', email);
-=======
         // // // // // // // console.log('Waitlist signup:', email);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
@@ -30,9 +26,5 @@ export function WaitlistSection() {
           </Button>
         </form>
       </div>
-<<<<<<< HEAD
-    </section>);
-}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

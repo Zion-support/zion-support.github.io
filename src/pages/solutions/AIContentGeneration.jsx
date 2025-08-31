@@ -1,33 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music const AIContentGeneration = () => {
-    const contentFeatures = [
-        {
-            icon: FileText,
-            title: "Text Generation",
-            description: "AI-powered content creation for various text formats",
-            features: ["Article writing", "Copywriting", "Technical documentation", "Creative storytelling"]
-        },
-        {
-            icon: Image,
-            title: "Visual Content",
-            description: "Generate images, graphics, and visual elements",
-            features: ["Image generation", "Graphic design", "Illustrations", "Visual branding"]
-        },
-        {
-            icon: Video,
-            title: "Video Production",
-            description: "AI-enhanced video creation and editing",
-            features: ["Video generation", "Content editing", "Animation", "Visual effects"]
-        },
-        {
-            icon: Music,
-            title: "Audio Content",
-            description: "Generate audio content and music compositions",
-            features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
-
-    ];
-=======
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
 const AIContentGeneration = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -67,7 +38,6 @@ const AIContentGeneration = () => {
             description: "Combined text, image, and video content",
             icon: Globe,
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
-
     ];
     const benefits = [
         "Significantly faster content creation",
@@ -107,7 +77,6 @@ const AIContentGeneration = () => {
             phase: "Deployment",
             description: "Full deployment and team training",
             duration: "1-2 weeks"
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -137,7 +106,6 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-
       {/* Content Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,7 +118,6 @@ const AIContentGeneration = () => {
               and formats for comprehensive content creation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -168,7 +135,6 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-
       {/* Content Types */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +147,6 @@ const AIContentGeneration = () => {
               and communication needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -199,7 +164,6 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +201,6 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -248,7 +211,6 @@ const AIContentGeneration = () => {
             A structured approach to implementing AI content generation
             in your organization.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -261,7 +223,6 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

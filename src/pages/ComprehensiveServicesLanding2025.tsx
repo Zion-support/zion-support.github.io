@@ -1,197 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-
-const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const serviceCategories = [
-    {
-      id: 'ai-services',
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions for business transformation',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      services[
-        'AI Business Intelligence Platform',
-        'AI Sales Copilot',
-        'AI Compliance Assistant',
-        'AI Auto Email Responder',
-        'AI Compliance Copilot',
-        'LLM Content Studio'
-      ],
-      href: '/ai-services',
-      featured: true
-    },
-    {
-      id: 'quantum-services',
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum solutions for complex problem solving',
-      icon: Zap,
-      color: 'from-cyan-500 to-blue-500',
-      services[
-        'Quantum AI Hybrid Platform',
-        'Quantum Financial Trading',
-        'Quantum Internet Security',
-        'Quantum Neural Networks',
-        'Quantum Edge Computing',
-        'Quantum Cloud Infrastructure'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: true
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions for the digital age',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      services[
-        'AI-Powered Cybersecurity Platform',
-        'Zero Trust Architecture',
-        'Threat Intelligence',
-        'Incident Response',
-        'Compliance Automation',
-        'Security Analytics'
-      ],
-      href: '/services',
-      featured: true
-    },
-    {
-      id: 'cloud-devops',
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automation solutions',
-      icon: Cloud,
-      color: 'from-blue-500 to-indigo-500',
-      services[
-        'Cloud Infrastructure Management',
-        'DevOps Automation',
-        'Container Orchestration',
-        'Serverless Architecture',
-        'Cloud Migration',
-        'Performance Optimization'
-      ],
-      href: '/services/cloud-devops',
-      featured: false
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure',
-      description: 'Enterprise-grade infrastructure and support services',
-      icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-      services[
-        'Network Infrastructure',
-        'Data Center Management',
-        'Onsite IT Support',
-        'Green IT Solutions',
-        '5G Network Solutions',
-        'IoT Edge Computing'
-      ],
-      href: '/services/it-infrastructure',
-      featured: false
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SaaS Solutions',
-      description: 'Productized software solutions for specific business needs',
-      icon: Rocket,
-      color: 'from-yellow-500 to-orange-500',
-      services[
-        'Customer Feedback Surveys',
-        'FinOps Advisor',
-        'Business Intelligence Tools',
-        'Process Automation',
-        'Analytics Dashboards',
-        'Integration Platforms'
-      ],
-      href: '/micro-saas',
-      featured: true
-    },
-    {
-      id: 'healthcare-tech',
-      title: 'Healthcare Technology',
-      description: 'AI-powered healthcare solutions and diagnostics',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-500',
-      services[
-        'AI Healthcare Diagnostics',
-        'Medical Imaging Analysis',
-        'Patient Care Optimization',
-        'Telemedicine Platforms',
-        'Clinical Decision Support',
-        'Healthcare Analytics'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'smart-cities',
-      title: 'Smart Cities & IoT',
-      description: 'Sustainable urban infrastructure and IoT solutions',
-      icon: Globe,
-      color: 'from-teal-500 to-cyan-500',
-      services[
-        'Sustainable Smart City Platform',
-        'IoT Infrastructure Management',
-        'Energy Grid Optimization',
-        'Traffic Management',
-        'Environmental Monitoring',
-        'Public Safety Systems'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'education-tech',
-      title: 'Education Technology',
-      description: 'AI-powered learning and educational platforms',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500',
-      services[
-        'AI Education Platform',
-        'Personalized Learning',
-        'Intelligent Tutoring',
-        'Student Analytics',
-        'Content Management',
-        'Assessment Tools'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false
-    },
-    {
-      id: 'manufacturing',
-      title: 'Manufacturing & Industry 4.0',
-      description: 'Smart manufacturing and industrial automation',
-      icon: Cpu,
-      color: 'from-slate-500 to-gray-500',
-      services[
-        'AI Manufacturing Platform',
-        'Predictive Maintenance',
-        'Quality Control Automation',
-        'Supply Chain Optimization',
-        'Industrial IoT',
-        'Smart Factory Solutions'
-      ],
-      href: '/revolutionary-services-2030',
-      featured: false;
-    };
-  };
-
-  const filteredCategories = useMemo(() => {;
-    if (!searchQuery.trim()) return serviceCategories;
-    
-    const query = searchQuery.toLowerCase();
-    return serviceCategories.filter(category = >
-      category.title.toLowerCase().includes(query) ||
-      category.description.toLowerCase().includes(query) ||;
-      category.services.some(service => service.toLowerCase().includes(query));
-    )}, [searchQuery]);
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -232,14 +38,10 @@ import {
   MapPin,
   Globe as GlobeIcon,
   ExternalLink
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
-
 const ComprehensiveServicesLanding2025: React.FC = () => {;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
@@ -265,9 +67,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
         return <Leaf className="w-8 h-8" />;
       default:
         return <Sparkles className="w-8 h-8" />;
-
   };
-
   const getCategoryColor = (category: string) => {;
     switch (category) {;
       case 'AI & Automation':;
@@ -292,10 +92,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
         return 'from-green-500 to-teal-500';
       default:
         return 'from-gray-500 to-slate-500';
-
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({;
     category,;
@@ -303,25 +101,18 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
     icon: getCategoryIcon(category),;
     color: getCategoryColor(category);
   }));
-
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
   const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
     const roi = parseInt(service.roi.replace('%', ''));
     return sum + roi;
   }, 0) / totalServices;
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -329,43 +120,27 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full border border-blue-400/30 mb-6">
               <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">Comprehensive Services 2025</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Complete Technology
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400">
                 Solutions Portfolio
               </span>
             </h1>
-
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Explore our comprehensive suite of innovative technology services designed to transform
               your business operations and drive digital innovation across all industries.
             </p>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -381,25 +156,21 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 <div className="text-gray-300">Average ROI</div>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/innovative-services-showcase-2025"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-
                 Explore All Services
               </Link>
               <Link
                 to="/comprehensive-pricing-guide-2027"
                 className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
-
                 View Pricing Guide
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="px-4 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -411,7 +182,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our services by category to find the perfect solution for your business needs
             </p>
           </div>
-
           <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((category, index)  => (
               <motion.div
@@ -419,50 +189,24 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="group"
-
                 <Link
                   to="/innovative-services-showcase-2025"
                   className="block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full"
-
                   <div className="text-center">
                     <div className={`inline-flex p-4 bg-gradient-to-r ${categoryData.color}/20 rounded-2xl border border-${categoryData.color.split('-')[1]}-400/30 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <div className={`text-${categoryData.color.split('-')[1]}-400`}>
                         {categoryData.icon}
                       </div>
-<<<<<<< HEAD
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                      {categoryData.category}
-=======
                     ))}
                     {category.services.length > 3 && (
                       <div className="text-xs text-slate-400">
@@ -470,7 +214,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                       </div>
                     )}
                   </div>
-
                   <Link
                     to={category.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 duration-300"
@@ -484,7 +227,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
         </div>
       </section>
-
       {/* All Categories */}
       <section className="py-16 bg-slate-900/30">
         <div className="container mx-auto px-4">
@@ -494,7 +236,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our comprehensive range of technology services across all categories
             </p>
           </div>
-
           <div className="grid gap-6 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {filteredCategories.map((category, index)  => (
               <motion.div
@@ -502,17 +243,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.05 
-
 }}
                 className="group bg-slate-800/40 backdrop-blur border border-slate-700/30 hover:border-cyan-400/30 transition-all duration-300 rounded-xl p-5 hover:shadow-lg hover:shadow-cyan-400/5"
               >
@@ -520,17 +258,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                   <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
-                  
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold mb-2 group-hover:text-cyan-300 transition-colors">
                       {category.title}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </h3>
-
                     <p className="text-gray-300 mb-6">
                       {categoryData.services.length} innovative services designed to transform your {categoryData.category.toLowerCase()} operations
                     </p>
-
                     <div className="space-y-3 mb-6">
                       {categoryData.services.slice(0, 3).map((service, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-400">
@@ -544,7 +279,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                         </div>
                       )}
                     </div>
-
                     <div className="flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors">
                       <span className="text-sm font-medium">Explore Services</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -556,7 +290,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className="px-4 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -568,7 +301,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Our most popular and innovative solutions that are transforming businesses worldwide
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
@@ -576,35 +308,16 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group"
-
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400/30">
@@ -621,15 +334,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <div className="text-sm text-gray-400">per month</div>
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
-
                 <div className="space-y-2 mb-4">
                   {service.features.slice(0, 2).map((feature, idx) => (
                     <div key={idx} className="flex items-center text-xs text-gray-400">
@@ -638,7 +348,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                   <div className="flex items-center">
                     <Clock className="w-3 h-3 mr-1" />
@@ -649,11 +358,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <span>ROI: {service.roi}</span>
                   </div>
                 </div>
-
                 <Link
                   to="/innovative-services-showcase-2025"
                   className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 text-center block"
-
                   <span className="flex items-center justify-center">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -662,19 +369,16 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               </motion.div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <Link
               to="/innovative-services-showcase-2025"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="px-4 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -687,7 +391,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               solutions that drive real results and measurable ROI
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -709,42 +412,22 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 icon: <Shield className="w-8 h-8" />,
                 title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
-
             ].map((feature, index) => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border border-blue-400/30 mb-6">
                   <div className="text-blue-400">{feature.icon}</div>
                 </div>
@@ -755,7 +438,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="px-4 pb-20">
         <div className="max-w-4xl mx-auto">
@@ -763,26 +445,13 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -790,7 +459,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Our team of technology experts is ready to help you select the perfect solution
               and provide a customized implementation plan for your business needs.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-blue-400">
                 <Phone className="w-5 h-5" />
@@ -805,33 +473,21 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 <span>ziontechgroup.com</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-
                 Call Sales Team
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
-
                 Email Sales
               </a>
             </div>
-
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -840,5 +496,4 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   );
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ComprehensiveServicesLanding2025;}}}}

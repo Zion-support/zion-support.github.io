@@ -11,10 +11,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     url,
                     status: 'external',
                     responseTime: Date.now() - startTime
-<<<<<<< HEAD
-                };
-
-=======
                 }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check if it's a mailto or tel link
@@ -23,10 +19,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     url,
                     status: 'healthy',
                     responseTime: Date.now() - startTime
-<<<<<<< HEAD
-                };
-
-=======
                 }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // For internal links, we'll assume they're healthy since they're part of our app
@@ -35,10 +27,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                     url,
                     status: 'healthy',
                     responseTime: Date.now() - startTime
-<<<<<<< HEAD
-                };
-
-=======
                 }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // For external links, we could implement actual health checking
@@ -47,10 +35,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 url,
                 status: 'external',
                 responseTime: Date.now() - startTime
-<<<<<<< HEAD
-            };
-
-=======
             }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
@@ -59,10 +43,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 status: 'broken',
                 responseTime: Date.now() - startTime,
                 error: error instanceof Error ? error.message : 'Unknown error'
-<<<<<<< HEAD
-            };
-
-=======
             }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -86,10 +66,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
             default:
-<<<<<<< HEAD
-                return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
-
-=======
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -104,10 +80,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return 'Checking...';
             default:
-<<<<<<< HEAD
-                return 'Unknown';
-
-=======
                 return 'Unknown'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -122,10 +94,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             case 'checking':
                 return 'text-yellow-500';
             default:
-<<<<<<< HEAD
-                return 'text-gray-500';
-
-=======
                 return 'text-gray-500'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -149,7 +117,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>)}
         </button>
       </div>
-
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
@@ -165,7 +132,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <div className="text-sm text-blue-300">External</div>
         </div>
       </div>
-
       {/* Link Status List */}
       <div className="space-y-3">
         {links.map((link, index) => {
@@ -191,7 +157,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
               </div>
             </div>)})}
       </div>
-
       {/* Recommendations */}
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
           <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>
@@ -200,17 +165,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
-
       {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
           <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
           <p className="text-sm text-green-300">
             Great job! All links are working properly. Your website is in excellent health.
           </p>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default LinkHealthChecker;

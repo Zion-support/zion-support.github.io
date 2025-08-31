@@ -10,20 +10,12 @@ import { Send export function ChatInput({ onSend, disabled = false }) {
         e.preventDefault();
         if (message.trim() && !disabled) {
             onSend(message);
-<<<<<<< HEAD
-            setMessage('');
-
-=======
             setMessage('')}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-<<<<<<< HEAD
-            handleSubmit(e);
-
-=======
             handleSubmit(e)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -32,9 +24,5 @@ import { Send export function ChatInput({ onSend, disabled = false }) {
       <Button type="submit" className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center" disabled={!message.trim() || disabled}>
         <Send className="h-5 w-5"/>
       </Button>
-<<<<<<< HEAD
-    </form>);
-}}}}
-=======
     </form>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

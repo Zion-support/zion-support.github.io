@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X import { Button } from './button';
-import { Badge } from './badge';
-=======
 import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
 import { Button } from "./button";
 import { Badge } from "./badge";
@@ -48,21 +44,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                         timestamp: Date.now()
                     };
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                    onAlert?.('fps', fps, thresholds.fps);
-
-=======
                     onAlert?.('fps', fps, thresholds.fps)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 frameCount = 0;
-<<<<<<< HEAD
-                lastTime = currentTime}
-            requestAnimationFrame(countFrame)};
-        requestAnimationFrame(countFrame)}, [thresholds.fps, onAlert]);
-    const memoryInfo = performance.memory;
-=======
                 lastTime = currentTime;
-
             requestAnimationFrame(countFrame);
         };
         requestAnimationFrame(countFrame);
@@ -85,11 +70,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('memory', percentage, thresholds.memory);
-
-
-=======
                 onAlert?.('memory', percentage, thresholds.memory)}
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -110,12 +90,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('renderTime', renderTime, thresholds.renderTime);
-
-        });
-    }, [thresholds.renderTime, onAlert]);
-=======
                 onAlert?.('renderTime', renderTime, thresholds.renderTime)}
         })}, [thresholds.renderTime, onAlert]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -138,15 +112,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('networkLatency', latency, thresholds.networkLatency);
-
-
-        catch {
-            // Network error, set high latency
-            setMetrics(prev => ({ ...prev, networkLatency: 999 }));
-
-=======
                 onAlert?.('networkLatency', latency, thresholds.networkLatency)}
         }
         catch {
@@ -173,10 +138,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-            onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
-
-=======
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (diskUsage > thresholds.diskUsage) {
@@ -188,10 +149,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-            onAlert?.('diskUsage', diskUsage, thresholds.diskUsage);
-
-=======
             onAlert?.('diskUsage', diskUsage, thresholds.diskUsage)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
@@ -216,16 +173,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
-<<<<<<< HEAD
-        return () => clearInterval(interval);
-    }, []);
-    const getMetricColor = (metric, value, threshold) => {
-        if (metric === 'FPS') {
-            return value >= threshold ? 'text-green-400' : 'text-red-400';
-
-        return value <= threshold ? 'text-green-400' : 'text-red-400';
-    };
-=======
         return () => clearInterval(interval)}, []);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getMetricIcon = (metric) => {
@@ -236,10 +183,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'Network': return Wifi;
             case 'CPU': return Cpu;
             case 'Disk': return HardDrive;
-<<<<<<< HEAD
-            default: return Activity;
-
-=======
             default: return Activity}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -248,10 +191,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
-<<<<<<< HEAD
-            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-
-=======
             default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -261,21 +200,9 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { scale: 1,
   opacity: 1 
-
-
-
-
-
-
 }}>
         <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">
           <Activity className="w-4 h-4 mr-2"/>
@@ -283,42 +210,14 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               {alerts.length}
             </Badge>)}
         </Button>
-<<<<<<< HEAD
-      </motion.div>)}
-    return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
-  { scale: 0.8,
-  opacity: 0 
-
-}} animate = {
-  { scale: 1,
-  opacity: 1 
-
-}}>
-=======
       </motion.div>);
-<<<<<<< HEAD
-
-    return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-=======
     }
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { scale: 1,
   opacity: 1 
-
-
-
-
-
-
 }}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -334,51 +233,29 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <p className="text-zinc-400 text-xs">Real-time metrics</p>
             </div>
           </div>
-
           <div className="flex items-center gap-2">
             <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
               <Settings className="w-4 h-4"/>
             </Button>
-
             <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
               <Minimize2 className="w-4 h-4"/>
             </Button>
-
             <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
               {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
             </Button>
           </div>
         </div>
-
         {/* Settings Panel */}
         <AnimatePresence>
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
   { height: 0,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { height: 'auto',
   opacity: 1 
-
-
-
-
-
-
 }} exit = {
   { height: 0,
   opacity: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.2 }}>
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>
@@ -390,19 +267,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <input type="number" value={value} onChange = {
   (e) => setThresholds(prev => ({ ...prev,
   [key]: Number(e.target.value) 
-
-
-
-
-
-
 }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"/>
                     </div>))}
                 </div>
               </div>
             </motion.div>)}
         </AnimatePresence>
-
         {/* Metrics Display */}
         <div className="p-4">
           <div className="grid grid-cols-2 gap-4">
@@ -415,17 +285,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('FPS', metrics.fps,
   thresholds.fps)
-
-
-
-
-
-
 }`}>
                 {metrics.fps}
               </div>
             </div>
-
             {/* Memory */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -435,17 +298,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
-
-
-
-
-
-
 }`}>
                 {metrics.memory.percentage}%
               </div>
             </div>
-
             {/* Render Time */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -455,17 +311,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime,
   thresholds.renderTime)
-
-
-
-
-
-
 }`}>
                 {metrics.renderTime}ms
               </div>
             </div>
-
             {/* Network */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -475,37 +324,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
-
-
-
-
-
-
 }`}>
                 {metrics.networkLatency}ms
               </div>
             </div>
           </div>
-
           {/* Detailed Metrics */}
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial = {
   { height: 0,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { height: 'auto',
   opacity: 1 
-
-
-
-
-
-
 }} transition={{ duration: 0.2 }}>
               <div className="space-y-3">
                 {/* CPU Usage */}
@@ -518,18 +348,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     <span className = {
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
   thresholds.cpuUsage)
-
-
-
-
-
-
 }`}>
                       {metrics.cpuUsage}%
                     </span>
                   </div>
                 </div>
-
                 {/* Disk Usage */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Disk Usage</span>
@@ -540,18 +363,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     <span className = {
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
-
-
-
-
-
-
 }`}>
                       {metrics.diskUsage}%
                     </span>
                   </div>
                 </div>
-
                 {/* Memory Details */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Memory Details</span>
@@ -559,7 +375,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     {metrics.memory.used}MB / {metrics.memory.total}MB
                   </span>
                 </div>
-
                 {/* Last Updated */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Last Updated</span>
@@ -569,7 +384,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 </div>
               </div>
             </motion.div>)}
-
           {/* Alerts */}
           {alerts.length > 0 && (<div className="mt-4 pt-4 border-t border-zion-blue-light/30">
               <div className="flex items-center justify-between mb-3">
@@ -578,37 +392,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                   <X className="w-3 h-3"/>
                 </Button>
               </div>
-
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {alerts.map((alert) => {
                 const Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}>
                       <div className="flex items-center gap-2">
                         <Icon className="w-3 h-3"/>
@@ -621,7 +416,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     </motion.div>)})}
               </div>
             </div>)}
-
           {/* Actions */}
           <div className="mt-4 pt-4 border-t border-zion-blue-light/30">
             <div className="flex items-center gap-2">
@@ -633,7 +427,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <RefreshCw className="w-3 h-3 mr-2"/>
                 Refresh
               </Button>
-
               <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
                 <Settings className="w-3 h-3"/>
               </Button>
@@ -641,9 +434,5 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </motion.div>);
-</div></div>}}}}}}}}}}}}}}}}
-=======
     </motion.div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

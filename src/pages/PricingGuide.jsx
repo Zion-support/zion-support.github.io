@@ -3,9 +3,6 @@ import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedS
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock import { SEO } from '@/components/SEO';
-=======
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -23,31 +20,13 @@ export default function PricingGuide() {
             'Data & Analytics': <Database className="w-6 h-6"/>,
             'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
             'Emerging Tech': <Globe className="w-6 h-6"/>,
-  <<<<<<< HEAD
-            'Managed Services': <Lock className="w-6 h-6"/>
-        
-
-};
-        return icons[category] || <Star className="w-6 h-6"/>};
-=======
   'Managed Services': <Lock className="w-6 h-6"/>
-        
-
-
-
-
 };
         return icons[category] || <Star className="w-6 h-6"/>;
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const formatPrice = (price) => {
         if (price >= 1000) {
-<<<<<<< HEAD
-            return `$${(price / 1000).toFixed(0)}K`;
-
-        return `$${price}`;
-    };
-=======
             return `$${(price / 1000).toFixed(0)}K`}
         return `$${price}`};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -55,12 +34,6 @@ export default function PricingGuide() {
         const comparisons = {
   'AI Development': { avg: price * 1.3,
   savings: 23 
-
-
-
-
-
-
 },
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },
@@ -73,7 +46,6 @@ export default function PricingGuide() {
         return comparisons[category] || { avg: price * 1.3, savings: 23 }};
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -96,7 +68,6 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -116,7 +87,6 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-
       {/* Pricing Overview */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -126,7 +96,6 @@ export default function PricingGuide() {
               Competitive pricing with guaranteed ROI and transparent cost structure
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <Card className="bg-white/5 border-zion-blue-light text-center">
               <CardHeader>
@@ -140,7 +109,6 @@ export default function PricingGuide() {
                 <p className="text-zion-slate-light">Below market average across all service categories</p>
               </CardContent>
             </Card>
-
             <Card className="bg-white/5 border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-blue-500/20 text-blue-400 mb-4">
@@ -153,7 +121,6 @@ export default function PricingGuide() {
                 <p className="text-zion-slate-light">Average return on investment within 12 months</p>
               </CardContent>
             </Card>
-
             <Card className="bg-white/5 border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-purple-500/20 text-purple-400 mb-4">
@@ -167,7 +134,6 @@ export default function PricingGuide() {
               </CardContent>
             </Card>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -177,7 +143,6 @@ export default function PricingGuide() {
                 {category.label}
               </Button>))}
           </div>
-
           {/* Services Pricing Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service) => {
@@ -215,7 +180,6 @@ export default function PricingGuide() {
                         <span className="text-sm font-medium">Save {marketComparison.savings}% vs market average</span>
                       </div>
                     </div>
-
                     {/* Service Details */}
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center gap-2 text-zion-slate-light">
@@ -235,14 +199,12 @@ export default function PricingGuide() {
                           <span className="text-sm">AI Score: {service.aiScore}%</span>
                         </div>)}
                     </div>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 4).map((tag) => (<Badge key={tag} variant="secondary" className="bg-zion-blue-light text-zion-cyan">
                           {tag}
                         </Badge>))}
                     </div>
-
                     {/* CTA Buttons */}
                     <div className="flex gap-2">
                       <Button size="sm" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white flex-1">
@@ -256,7 +218,6 @@ export default function PricingGuide() {
                   </CardContent>
                 </Card>)})}
           </div>
-
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found in this category</div>
               <Button onClick={() => setSelectedCategory('all')}>
@@ -265,7 +226,6 @@ export default function PricingGuide() {
             </div>)}
         </div>
       </div>
-
       {/* Value Proposition */}
       <div className="py-16 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -275,7 +235,6 @@ export default function PricingGuide() {
               We deliver exceptional value through expertise, innovation, and proven results
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="bg-zion-blue border-zion-blue-light text-center">
               <CardHeader>
@@ -290,7 +249,6 @@ export default function PricingGuide() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-zion-purple/20 text-zion-cyan mb-4">
@@ -304,7 +262,6 @@ export default function PricingGuide() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-zion-purple/20 text-zion-cyan mb-4">
@@ -318,7 +275,6 @@ export default function PricingGuide() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue border-zion-blue-light text-center">
               <CardHeader>
                 <div className="mx-auto p-3 rounded-full bg-zion-purple/20 text-zion-cyan mb-4">
@@ -335,7 +291,6 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-
       {/* Contact CTA Section */}
       <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto text-center">
@@ -360,9 +315,5 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

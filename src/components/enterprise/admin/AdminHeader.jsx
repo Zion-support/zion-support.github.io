@@ -1,8 +1,5 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Download, Settings import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-=======
 import { Download, Settings } from "lucide-react";
 import { useCompWorkspace } from "@/hooks/useCompWorkspace";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -28,7 +25,6 @@ export function AdminHeader() {
           </Button>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
@@ -43,7 +39,6 @@ export function AdminHeader() {
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>
       </div>
-
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
@@ -58,9 +53,5 @@ export function AdminHeader() {
         </div>
         <Button>Customize Workspace</Button>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

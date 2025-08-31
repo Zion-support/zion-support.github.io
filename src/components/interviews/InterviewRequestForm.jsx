@@ -46,10 +46,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: "Please log in to schedule an interview",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
@@ -74,30 +70,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
-<<<<<<< HEAD
-            onClose();
-
-=======
             onClose()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Failed to schedule interview:", error);
-=======
             // // // // // // // console.error("Failed to schedule interview:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
@@ -120,7 +101,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
-
         <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
@@ -128,7 +108,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               </FormControl>
               <FormMessage />
             </FormItem>)}/>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField control={form.control} name="date" render={({ field }) => (<FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
@@ -138,12 +117,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                       <Button variant="outline" className = {
   cn("w-full pl-3 text-left font-normal",
   !field.value && "text-muted-foreground")
-
-
-
-
-
-
 }>
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
@@ -154,18 +127,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {
   (date) => date < new Date() || date > addDays(new Date(),
   90)
-
-
-
-
-
-
 } initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>)}/>
-
           <FormField control={form.control} name="time" render={({ field }) => (<FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -183,7 +149,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <FormMessage />
               </FormItem>)}/>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField control={form.control} name="duration" render={({ field }) => (<FormItem>
                 <FormLabel>Duration</FormLabel>
@@ -202,7 +167,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 </Select>
                 <FormMessage />
               </FormItem>)}/>
-
           <FormField control={form.control} name="platform" render={({ field }) => (<FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -221,7 +185,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <FormMessage />
               </FormItem>)}/>
         </div>
-
         {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
@@ -229,7 +192,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 </FormControl>
                 <FormMessage />
               </FormItem>)}/>)}
-
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
@@ -237,7 +199,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               </FormControl>
               <FormMessage />
             </FormItem>)}/>
-
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
             Cancel
@@ -247,9 +208,5 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           </Button>
         </div>
       </form>
-<<<<<<< HEAD
-    </Form>);
-}}}}}}}
-=======
     </Form>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

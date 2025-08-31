@@ -16,14 +16,6 @@ export default function CompWorkspace() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
-<<<<<<< HEAD
-      </div>);
-
-    if (error || !company) {
-        return <Navigate to="/"/>;
-
-    // In white-label mode, use the tenant's theme instead of the company's theme
-=======
       </div>)}
     if (error || !comp) {
         return <Navigate to="/"/>}
@@ -37,10 +29,6 @@ export default function CompWorkspace() {
     // Check if user has access to this comp workspace
     const hasAccess = true; // For demo purposes, always grant access
     if (!hasAccess) {
-<<<<<<< HEAD
-        return <Navigate to="/unauthorized"/>;
-
-=======
         return <Navigate to="/unauthorized"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<ProtectedRoute>
@@ -50,9 +38,5 @@ export default function CompWorkspace() {
         <CompDashboard company={comp}/>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </ProtectedRoute>);
-}}}}
-=======
     </ProtectedRoute>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

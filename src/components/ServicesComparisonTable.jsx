@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Check, X, Star, Clock, Phone, Mail import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
-=======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -27,7 +20,6 @@ export function ServicesComparisonTable() {
             Compare our comprehensive service offerings to find the perfect solution for your business needs
           </p>
         </div>
-
         {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {serviceCategories.map((category) => {
@@ -51,7 +43,6 @@ export function ServicesComparisonTable() {
                 </CardContent>
               </Card>)})}
         </div>
-
         {/* Detailed Comparison Table */}
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
           <div className="overflow-x-auto">
@@ -117,7 +108,6 @@ export function ServicesComparisonTable() {
             </Table>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">
           <div className="text-center mb-8">
@@ -128,7 +118,6 @@ export function ServicesComparisonTable() {
               Our expert team is here to help you select the perfect service for your business needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
               <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2"/>
@@ -146,7 +135,6 @@ export function ServicesComparisonTable() {
               <p className="text-blue-600 dark:text-blue-400">{CONTACT_INFO.responseTime}</p>
             </div>
           </div>
-
           <div className="text-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
               <Phone className="w-4 h-4 mr-2"/>
@@ -154,7 +142,6 @@ export function ServicesComparisonTable() {
             </Button>
           </div>
         </div>
-
         {/* Service Highlights */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">
@@ -194,9 +181,5 @@ export function ServicesComparisonTable() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

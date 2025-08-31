@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network export default function ManufacturingSolutions() {
-=======
 import Link from 'next/link';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
 export default function ManufacturingSolutions() {
@@ -42,10 +38,6 @@ export default function ManufacturingSolutions() {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined workflows and automated decision-making processes",
-<<<<<<< HEAD
-            features: ["Workflow automation", "Decision support", "Process optimization"]
-
-=======
             features["Workflow automation", "Decision support", "Process optimization"]
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -80,7 +72,6 @@ export default function ManufacturingSolutions() {
             title: "Production Planning",
             description: "Intelligent production scheduling and resource allocation",
             icon: "📅"
-
     ];
     const benefits = [
         "Reduce downtime by 30-50%",
@@ -117,7 +108,6 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +119,6 @@ export default function ManufacturingSolutions() {
               Our comprehensive suite of manufacturing technology solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg w-fit mb-4">
@@ -147,7 +136,6 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -159,7 +147,6 @@ export default function ManufacturingSolutions() {
               Discover how smart manufacturing is transforming industries worldwide
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -169,7 +156,6 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +167,6 @@ export default function ManufacturingSolutions() {
               See real results with our smart manufacturing solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
@@ -198,7 +183,6 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -219,9 +203,5 @@ export default function ManufacturingSolutions() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

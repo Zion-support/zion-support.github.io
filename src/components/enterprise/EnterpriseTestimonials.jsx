@@ -34,7 +34,6 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (<CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
@@ -63,9 +62,5 @@ export function EnterpriseTestimonials() {
           </div>
         </Carousel>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

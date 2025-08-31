@@ -11,25 +11,11 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
         setCurrentSrc(fallbackSrc)};
     const handleRetry = () => {
         setFailed(false);
-<<<<<<< HEAD
-        setCurrentSrc(src)};
-    return (<div className = {
-  cn('relative inline-block',
-  className)
-
-}>
-=======
         setCurrentSrc(src);
     };
     return (<div className = {
   cn('relative inline-block',
   className)
-
-
-
-
-
-
 }>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -37,24 +23,11 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
       {failed && (<button type="button" onClick={handleRetry} className = {
   cn('absolute bottom-1 right-1 text-xs underline',
   retryClassName)
-
-
-
-
-
-
 }>
           Retry
         </button>)}
-<<<<<<< HEAD
-    </div>);
-
-export default ImageWithRetry;
-}
-=======
     </div>)}
 export default ImageWithRetry;
-
 export default ImageWithRetry;
 export default ImageWithRetry;
 export default ImageWithRetry;

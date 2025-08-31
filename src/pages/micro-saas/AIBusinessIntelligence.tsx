@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target export default function AIBusinessIntelligence() {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
-
 export default function AIBusinessIntelligence(...args[]):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
@@ -23,15 +17,6 @@ export default function AIBusinessIntelligence(...args[]):  {
     {
       icon: Zap,
       title: 'Automated Intelligence',
-<<<<<<< HEAD
-      description: 'Smart automation of business processes'
-    },
-    {
-      icon: Eye,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and identify opportunities'
-
-=======
       description: 'Smart automation of business processes';
     },;
     {;
@@ -41,7 +26,6 @@ export default function AIBusinessIntelligence(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const capabilities = [
     {
       title: 'Business Intelligence Dashboard',
@@ -56,15 +40,6 @@ export default function AIBusinessIntelligence(...args[]):  {
     {
       title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
-<<<<<<< HEAD
-      icon: Database
-    },
-    {
-      title: 'Automated Reporting',
-      description: 'Generate reports automatically with AI insights',
-      icon: Target
-
-=======
       icon: Database;
     },;
     {;
@@ -74,7 +49,6 @@ export default function AIBusinessIntelligence(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -85,41 +59,25 @@ export default function AIBusinessIntelligence(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-
             <div className="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-2 mb-6">
               <Brain className="w-5 h-5 text-violet-400" />
               <span className="text-violet-400 font-medium">AI Business Intelligence</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Intelligence at Your
               <span className="text-gradient"> Fingertips</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Transform your business data into actionable intelligence with our AI-powered
               business intelligence platform. Make smarter decisions faster.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial
@@ -132,7 +90,6 @@ export default function AIBusinessIntelligence(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -140,27 +97,14 @@ export default function AIBusinessIntelligence(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Business Intelligence?
             </h2>
@@ -168,7 +112,6 @@ export default function AIBusinessIntelligence(...args[]):  {
               Powerful insights that drive business growth and efficiency
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
@@ -176,36 +119,17 @@ export default function AIBusinessIntelligence(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -216,7 +140,6 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
@@ -224,27 +147,14 @@ export default function AIBusinessIntelligence(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Platform Capabilities
             </h2>
@@ -252,7 +162,6 @@ export default function AIBusinessIntelligence(...args[]):  {
               Everything you need to transform data into business intelligence
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {capabilities.map((capability, index)  => (
               <motion.div
@@ -260,36 +169,17 @@ export default function AIBusinessIntelligence(...args[]):  {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <capability.icon className="w-8 h-8 text-white" />
@@ -304,7 +194,6 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -312,27 +201,14 @@ export default function AIBusinessIntelligence(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -340,43 +216,23 @@ export default function AIBusinessIntelligence(...args[]):  {
               Choose the plan that fits your business needs
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Starter Plan */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">$29<span className="text-lg text-zion-slate-light">/month</span></div>
               <ul className="space-y-3 mb-8">
@@ -395,42 +251,22 @@ export default function AIBusinessIntelligence(...args[]):  {
               </ul>
               <button className="w-full btn-outline py-3">Get Started</button>
             </motion.div>
-
             {/* Pro Plan */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative"
-
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-black px-4 py-1 rounded-full text-sm font-semibold">
                 Most Popular
               </div>
@@ -458,42 +294,22 @@ export default function AIBusinessIntelligence(...args[]):  {
                 Get Started
               </button>
             </motion.div>
-
             {/* Enterprise Plan */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>
               <ul className="space-y-3 mb-8">
@@ -519,7 +335,6 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -527,27 +342,14 @@ export default function AIBusinessIntelligence(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-3xl p-12 text-center relative overflow-hidden"
-
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -564,26 +366,15 @@ export default function AIBusinessIntelligence(...args[]):  {
                   Schedule Demo
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Missing icon component
 const CheckCircle = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;

@@ -1,9 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown import { useVirtualScroll } from '../hooks/useVirtualScroll';
-import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll";
 import { useAnalytics } from "../hooks/useAnalytics";
@@ -27,11 +23,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {
                 const value = String(item[col.key]).toLowerCase();
-<<<<<<< HEAD
-                return value.includes(searchQuery.toLowerCase());
-            }));
-
-=======
                 return value.includes(searchQuery.toLowerCase())}))}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply filters
@@ -50,18 +41,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         return value.endsWith(filterValue);
                     case 'regex':
                         try {
-<<<<<<< HEAD
-                            return new RegExp(filterValue, 'i').test(value);
-
-                        catch {
-                            return false;
-
-                    default:
-                        return true;
-
-            });
-        });
-=======
                             return new RegExp(filterValue, 'i').test(value)}
                         catch {
                             return false}
@@ -78,13 +57,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)
                     return sortConfig.direction === 'asc' ? 1 : -1;
-<<<<<<< HEAD
-                return 0;
-            });
-
-        return result;
-    }, [data, searchQuery, filters, sortConfig, columns]);
-=======
                 return 0})}
         return result}, [data, searchQuery, filters, sortConfig, columns]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -107,14 +79,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             if (prev?.key === key) {
                 return prev.direction === 'asc'
                     ? { key, direction: 'desc' }
-<<<<<<< HEAD
-                    : null;
-
-            return { key, direction: 'asc' };
-        });
-        trackEvent('table', 'column_sorted', String(key));
-    }, [enableSorting, trackEvent]);
-=======
                     : null}
             return { key, direction: 'asc' }});
         trackEvent('table', 'column_sorted', String(key))}, [enableSorting, trackEvent]);
@@ -124,13 +88,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         setFilters(prev => {
             const newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
-<<<<<<< HEAD
-                newFilters.push({ key, value, operator })}
-            return newFilters});
-        trackEvent('table', 'filter_applied', String(key), null, { operator, value })}, [trackEvent]);
-=======
                 newFilters.push({ key, value, operator });
-
             return newFilters;
         });
         trackEvent('table', 'filter_applied', String(key), null, { operator, value });
@@ -141,13 +99,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
         if (checked) {
-<<<<<<< HEAD
-            newSelection.add(itemKey);
-
-        else {
-            newSelection.delete(itemKey);
-
-=======
             newSelection.add(itemKey)}
         else {
             newSelection.delete(itemKey)}
@@ -159,14 +110,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if (checked) {
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
-<<<<<<< HEAD
-            onSelectionChange?.(paginatedData);
-
-        else {
-            setSelectedItems(new Set());
-            onSelectionChange?.([]);
-
-=======
             onSelectionChange?.(paginatedData)}
         else {
             setSelectedItems(new Set());
@@ -176,17 +119,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Export data
     const handleExport = useCallback(() => {
         if (onExport) {
-<<<<<<< HEAD
-            onExport(processedData);
-
-        else {
-            // Default CSV export
-            const csvContent = generateCSV(processedData, columns);
-            downloadCSV(csvContent, 'table-export.csv');
-
-        trackEvent('table', 'data_exported', 'export_completed', processedData.length);
-    }, [processedData, columns, onExport, trackEvent]);
-=======
             onExport(processedData)}
         else {
             // Default CSV export
@@ -213,10 +145,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Get sort icon
     const getSortIcon = (key) => {
         if (!enableSorting || sortConfig?.key !== key) {
-<<<<<<< HEAD
-            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>;
-
-=======
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return sortConfig.direction === 'asc'
@@ -226,10 +154,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const renderCell = (column, item, index) => {
         const value = item[column.key];
         if (column.render) {
-<<<<<<< HEAD
-            return column.render(value, item, index);
-
-=======
             return column.render(value, item, index)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
@@ -242,13 +166,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             Data Table ({processedData.length} items)
           </h3>
-
           <div className="flex items-center gap-2">
             {enableExport && (<button onClick={handleExport} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
                 <Download className="w-4 h-4"/>
                 Export
               </button>)}
-
             <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters
             ? 'bg-blue-500 text-white'
             : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'}`}>
@@ -257,42 +179,22 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             </button>
           </div>
         </div>
-
         {/* Search Bar */}
         {enableSearch && (<div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/>
             <input type="text" placeholder="Search in all columns..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"/>
           </div>)}
-
         {/* Filters Panel */}
         <AnimatePresence>
           {showFilters && (<motion.div initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -303,12 +205,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <select onChange = {
   (e) => handleFilterChange(column.key, e.target.value,
   'contains')
-
-
-
-
-
-
 } className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="">No filter</option>
                       <option value="contains">Contains</option>
@@ -321,7 +217,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             </motion.div>)}
         </AnimatePresence>
       </div>
-
       {/* Table Container */}
       <div className="overflow-hidden">
         {/* Table Header */}
@@ -330,7 +225,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             {enableSelection && (<div className="w-8 mr-2">
                 <input type="checkbox" checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
               </div>)}
-
             {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
                 <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>
                   <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">
@@ -339,61 +233,33 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   {column.sortable !== false && getSortIcon(column.key)}
                 </button>
               </div>))}
-
             {enableActions && (<div className="w-20 px-2 py-1">
                 <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">Actions</span>
               </div>)}
           </div>
         </div>
-
         {/* Table Body with Virtual Scrolling */}
         <div {...containerProps} className="relative">
           <div {...listProps}>
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {
   () => onRowClick?.(item,
   index)
-
-
-
-
-
-
 }>
                 {enableSelection && (<div className="w-8 mr-2">
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {
   (e) => handleSelectionChange(item,
   e.target.checked)
-
-
-
-
-
-
 } onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                   </div>)}
-
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
                     {renderCell(column, item, index)}
                   </div>))}
-
                 {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">
                     <button className="p-1 text-gray-400 hover:text-blue-500 transition-colors">
                       <Eye className="w-4 h-4"/>
@@ -409,51 +275,29 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           </div>
         </div>
       </div>
-
       {/* Pagination */}
       {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
           <div className="flex items-center justify-between">
             <div className="text-sm text-gray-700 dark:text-gray-300">
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results
             </div>
-
             <div className="flex items-center gap-2">
               <button onClick = {
   () => setCurrentPage(prev => Math.max(1,
   prev - 1))
-
-
-
-
-
-
 } disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous
               </button>
-
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                 const page = i + 1;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page
                         ? 'bg-blue-500 text-white'
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
-<<<<<<< HEAD
-                  </button>);
-            })}
-
-              <button onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-=======
                   </button>)})}
-              
               <button onClick = {
   () => setCurrentPage(prev => Math.min(totalPages,
   prev + 1))
-
-
-
-
-
-
 } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Next
@@ -461,10 +305,5 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}}}}}}}
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

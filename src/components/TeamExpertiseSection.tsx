@@ -11,65 +11,7 @@ import {
   CheckCircle,
   Globe,
   Rocket
-<<<<<<< HEAD
-export const TeamExpertiseSection: React.FC = () => {
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
-export const TeamExpertiseSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const expertise = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Deep expertise in neural networks, natural language processing, and predictive analytics.',
-      certifications['AWS Machine Learning', 'Google Cloud AI', 'Microsoft Azure AI'],
-      experience: '8+ years',
-      projects: '150+'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Expert security professionals with certifications in ethical hacking and compliance.',
-      certifications['CISSP', 'CEH', 'CompTIA Security+', 'ISO 27001'],
-      experience: '10+ years',
-      projects: '200+'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Certified cloud architects specializing in multi-cloud and hybrid solutions.',
-      certifications['AWS Solutions Architect', 'Azure Solutions Architect', 'Google Cloud Architect'],
-      experience: '12+ years',
-      projects: '300+'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'Strategic consultants with proven track records in business transformation.',
-      certifications['PMP', 'ITIL', 'Six Sigma Black Belt', 'Change Management'],
-      experience: '15+ years',
-      projects: '500+'
-    },
-    {
-      icon: Globe,
-      title: 'Web & Mobile Development',
-      description: 'Full-stack developers with expertise in modern frameworks and technologies.',
-      certifications['React', 'Node.js', 'Flutter', 'AWS Developer'],
-      experience: '6+ years',
-      projects: '100+'
-    },
-    {
-      icon: Rocket,
-      title: 'Innovation & R&D',
-      description: 'Research scientists and engineers pushing the boundaries of technology.',
-      certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
-      experience: '20+ years',
-<<<<<<< HEAD
-      projects: '50+'
-
-=======
       projects: '50+';
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -114,7 +56,6 @@ const teamExpertise = [
   };
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",;
@@ -125,37 +66,19 @@ const coreExpertise = [
   "IoT & Edge Computing",;
   "Mobile & Web Development";
 ];
-
 export function TeamExpertiseSection() {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Meet Our Expert Team
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -169,32 +92,17 @@ export function TeamExpertiseSection() {
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
-
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-
-          {stats.map((stat, index) => {
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
-
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
@@ -221,33 +129,15 @@ export function TeamExpertiseSection() {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -256,7 +146,6 @@ export function TeamExpertiseSection() {
               </div>
             )})}
         </motion.div>
-
         {/* Expertise Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {expertise.map((item, index)  => {;
@@ -267,20 +156,16 @@ export function TeamExpertiseSection() {
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-blue-100 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-blue-600" />
@@ -289,11 +174,9 @@ export function TeamExpertiseSection() {
                     {item.title}
                   </h3>
                 </div>
-
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {item.description}
                 </p>
-
                 <div className="space-y-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600">Experience:</span>
@@ -304,7 +187,6 @@ export function TeamExpertiseSection() {
                     <span className="font-semibold text-gray-900">{item.projects}</span>
                   </div>
                 </div>
-
                 <div className="mt-6">
                   <h4 className="font-semibold text-gray-900 mb-3 text-sm">Certifications:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -312,7 +194,6 @@ export function TeamExpertiseSection() {
                       <span
                         key={certIndex}
                         className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
-
                         {cert}
                       </span>
                     ))}
@@ -321,48 +202,20 @@ export function TeamExpertiseSection() {
               </motion.div>
             )})}
         </div>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-
-=======
         <motion.div 
           className="text-center mb-12"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}
         >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -389,11 +242,7 @@ export function TeamExpertiseSection() {
       </div>;
     </section>;
   )};
-
 export default TeamExpertiseSection;
-<<<<<<< HEAD
-}}
-=======
 =======
             <span className="text-2xl">→</span>;
           </div>;
@@ -403,7 +252,6 @@ export default TeamExpertiseSection;
   );
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

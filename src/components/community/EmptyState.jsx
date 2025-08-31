@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { MessageSquare import { Button } from '@/components/ui/button';
-=======
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';

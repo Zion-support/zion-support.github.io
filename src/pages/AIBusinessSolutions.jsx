@@ -1,78 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
-<<<<<<< HEAD
-    const businessSolutions = [
-        {
-            category: 'Marketing & Sales',
-            solutions[
-                {
-                    name: 'AI Marketing Automation',
-                    description: 'Automate marketing campaigns with intelligent targeting and optimization',
-                    features['Customer segmentation', 'Predictive analytics', 'Campaign optimization', 'ROI tracking'],
-                    icon: '📈'
-                },
-                {
-                    name: 'AI Sales Intelligence',
-                    description: 'Enhance sales performance with AI-powered insights and automation',
-                    features['Lead scoring', 'Sales forecasting', 'Pipeline optimization', 'Customer insights'],
-                    icon: '💼'
-
-            ]
-        },
-        {
-            category: 'Operations & Supply Chain',
-            solutions[
-                {
-                    name: 'AI Supply Chain Optimization',
-                    description: 'Optimize supply chain operations with predictive analytics',
-                    features['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Risk management'],
-                    icon: '🚚'
-                },
-                {
-                    name: 'AI Process Automation',
-                    description: 'Streamline business processes with intelligent automation',
-                    features['Workflow automation', 'Document processing', 'Quality control', 'Performance monitoring'],
-                    icon: '⚙️'
-
-            ]
-        },
-        {
-            category: 'Finance & Risk',
-            solutions[
-                {
-                    name: 'AI Financial Analytics',
-                    description: 'Advanced financial analysis and risk assessment',
-                    features['Risk modeling', 'Fraud detection', 'Investment analysis', 'Regulatory compliance'],
-                    icon: '💰'
-                },
-                {
-                    name: 'AI Credit Scoring',
-                    description: 'Intelligent credit assessment and lending decisions',
-                    features['Credit risk analysis', 'Alternative data', 'Real-time scoring', 'Portfolio management'],
-                    icon: '🏦'
-
-            ]
-        },
-        {
-            category: 'Customer Experience',
-            solutions[
-                {
-                    name: 'AI Customer Service',
-                    description: '24/7 intelligent customer support and engagement',
-                    features['Chatbots', 'Voice assistants', 'Sentiment analysis', 'Personalized support'],
-                    icon: '🤖'
-                },
-                {
-                    name: 'AI Personalization',
-                    description: 'Deliver personalized experiences across all touchpoints',
-                    features['Recommendation engines', 'Dynamic pricing', 'Content personalization', 'Behavioral analysis'],
-                    icon: '🎯'
-
-            ]
-
-    ];
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const benefits = [
         {
@@ -98,7 +26,6 @@ export default function AIBusinessSolutions() {
             description: 'Personalized and responsive customer interactions',
             metric: '50%',
             detail: 'Customer satisfaction improvement'
-
     ];
     const industries = [
         {
@@ -123,10 +50,6 @@ export default function AIBusinessSolutions() {
         },
         {
             name: 'Energy',
-<<<<<<< HEAD
-            applications: ['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
-
-=======
             applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -151,7 +74,6 @@ export default function AIBusinessSolutions() {
             </button>
           </div>
         </div>
-
         {/* Business Solutions Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Comprehensive Business Solutions</h2>
@@ -175,7 +97,6 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
-
         {/* Business Benefits */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Measurable Business Impact</h2>
@@ -188,7 +109,6 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
-
         {/* Industry Applications */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Industry-Specific Applications</h2>
@@ -203,7 +123,6 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
-
         {/* Implementation Process */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Implementation Process</h2>
@@ -240,7 +159,6 @@ export default function AIBusinessSolutions() {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">
@@ -260,9 +178,5 @@ export default function AIBusinessSolutions() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -54,11 +54,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy"],
         integrationCapabilities["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["5 content generations per month", "Basic SEO tools", "Standard templates"],
-            limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
-
-=======
             features["5 content generations per month", "Basic SEO tools", "Standard templates"],
             limitations["Limited AI models", "Basic analytics", "No custom branding"]
         }
@@ -119,11 +114,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Financial Regulations", "Data Security"],
         integrationCapabilities["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["10 invoices per month", "Basic reporting", "Email support"],
-            limitations: ["No API access", "Limited integrations", "Basic templates"]
-
-=======
             features["10 invoices per month", "Basic reporting", "Email support"],
             limitations["No API access", "Limited integrations", "Basic templates"]
         }
@@ -184,11 +174,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy", "Security Standards"],
         integrationCapabilities["Slack", "Discord", "Website Chat", "Mobile Apps", "CRM Systems"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["100 conversations per month", "Basic chatbot", "Email support"],
-            limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
-
-=======
             features["100 conversations per month", "Basic chatbot", "Email support"],
             limitations["Limited AI models", "Basic analytics", "No custom branding"]
         }
@@ -249,11 +234,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Security"],
         integrationCapabilities["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["3 projects", "5 team members", "Basic analytics"],
-            limitations: ["Limited AI features", "No advanced reporting", "Basic integrations"]
-
-=======
             features["3 projects", "5 team members", "Basic analytics"],
             limitations["Limited AI features", "No advanced reporting", "Basic integrations"]
         }
@@ -314,11 +294,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],
         integrationCapabilities["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["1,000 emails per month", "Basic AI features", "Standard templates"],
-            limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
-
-=======
             features["1,000 emails per month", "Basic AI features", "Standard templates"],
             limitations["Limited AI models", "Basic analytics", "No custom branding"]
         }
@@ -379,11 +354,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Security", "Industry Standards"],
         integrationCapabilities["POS Systems", "E-commerce Platforms", "ERP Systems", "Supplier APIs", "Shipping Carriers"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["100 SKUs", "Basic forecasting", "Email support"],
-            limitations: ["Limited AI features", "Basic reporting", "No API access"]
-
-=======
             features["100 SKUs", "Basic forecasting", "Email support"],
             limitations["Limited AI features", "Basic reporting", "No API access"]
         }
@@ -444,11 +414,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy", "Platform Policies"],
         integrationCapabilities["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["2 social media accounts", "Basic AI features", "Standard templates"],
-            limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
-
-=======
             features["2 social media accounts", "Basic AI features", "Standard templates"],
             limitations["Limited AI models", "Basic analytics", "No custom branding"]
         }
@@ -509,11 +474,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "Data Privacy"],
         integrationCapabilities["Project Management Tools", "CRM Systems", "Accounting Software", "Calendar Apps"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["Basic time tracking", "1 project", "Email support"],
-            limitations: ["No AI features", "Basic reporting", "Limited integrations"]
-
-=======
             features["Basic time tracking", "1 project", "Email support"],
             limitations["No AI features", "Basic reporting", "Limited integrations"]
         }
@@ -574,11 +534,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "CAN-SPAM", "Data Privacy"],
         integrationCapabilities["CRM Systems", "Email Platforms", "Social Media", "Website Forms", "Analytics Tools"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["100 leads per month", "Basic AI features", "Email support"],
-            limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
-
-=======
             features["100 leads per month", "Basic AI features", "Email support"],
             limitations["Limited AI models", "Basic analytics", "No custom branding"]
         }
@@ -639,12 +594,6 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         complianceStandards["GDPR", "SOC2", "Data Security", "Industry Standards"],
         integrationCapabilities["Microsoft Office", "Google Workspace", "CRM Systems", "ERP Systems", "Cloud Storage"],
         freeTier: {
-<<<<<<< HEAD
-            features: ["5GB storage", "Basic AI features", "Email support"],
-            limitations: ["Limited AI models", "Basic workflow", "No advanced security"]
-
-
-=======
             features["5GB storage", "Basic AI features", "Email support"],
             limitations["Limited AI models", "Basic workflow", "No advanced security"]
         }

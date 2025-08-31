@@ -40,16 +40,9 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
                 { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },
                 { key: 'sitemap', href: '/sitemap', icon: <Calendar className="w-4 h-4"/>, label: 'Sitemap' },
             ]
-
     ];
     const isActive = (href) => {
         if (href === '/') {
-<<<<<<< HEAD
-            return location.pathname === '/';
-
-        return location.pathname.startsWith(href);
-    };
-=======
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -64,7 +57,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
           Tech & AI Marketplace
         </p>
       </div>
-
       <nav className="space-y-6">
         {sidebarSections.map((section) => (<div key={section.title}>
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
@@ -77,12 +69,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
   isActive(item.href)
                     ? "bg-zion-purple/20 text-zion-cyan"
                     : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
-
-
-
-
-
-
 }>
                     {item.icon}
                     <span>{item.label}</span>
@@ -91,7 +77,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
             </ul>
           </div>))}
       </nav>
-
       <div className="mt-8 pt-6 border-t border-zion-blue-light">
         <div className="text-zion-slate-light text-xs">
           <p className="mb-2">Need help?</p>
@@ -100,9 +85,5 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </aside>);
-}}}}
-=======
     </aside>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

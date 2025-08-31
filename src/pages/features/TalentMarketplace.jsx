@@ -12,13 +12,6 @@ export default function TalentMarketplace() {
         "name": "Talent Marketplace",
         "description": "Hire vetted AI and tech professionals from around the world on Zion.",
   "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-    
-
-
-
-
-
-
 };
     return (<>
       <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="https://app.ziontechgroup.com/features/talent-marketplace"/>
@@ -57,9 +50,5 @@ export default function TalentMarketplace() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

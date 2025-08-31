@@ -29,24 +29,6 @@ export const AuthProvider = ({ children }) => {
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
-
-        // Handle other errors from the API call
-        if (res.status === 400) { // Bad request (e.g. missing fields)
-            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
-            return { error: data?.error || 'Missing email or password' };
-
-        if (res.status === 401) { // Unauthorized (invalid credentials)
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
-            return { error: 'Incorrect email or password' };
-
-        // Catch-all for other non-200 statuses from loginUser
-        if (res.status !== 200) {
-            toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
-            return { error: data?.error || 'Login failed' };
-
-=======
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }}
         // Handle other errors from the API call
         if (res.status === 400) { // Bad request (e.g. missing fields)
@@ -68,18 +50,11 @@ export const AuthProvider = ({ children }) => {
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login
-<<<<<<< HEAD
-            // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
-=======
             // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
-<<<<<<< HEAD
-            return { error: clientLoginResult.error?.message || "Client-side login failed." };
-
-=======
             return { error: clientLoginResult.error?.message || "Client-side login failed." }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const params = new URLSearchParams(location.search);
@@ -92,18 +67,6 @@ export const AuthProvider = ({ children }) => {
         try {
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
-<<<<<<< HEAD
-                return { error: data?.message || 'Registration failed' };
-
-            safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
-            setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
-            setUser(data.user);
-            return { error: null };
-
-        catch (err) {
-            return { error: err?.message || 'Registration failed' };
-
-=======
                 return { error: data?.message || 'Registration failed' }}
             safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
@@ -123,16 +86,6 @@ export const AuthProvider = ({ children }) => {
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-<<<<<<< HEAD
-                navigate(next, { replace: true });
-
-
-        return result;
-    };
-=======
-<<<<<<< HEAD
-                router(next, { replace: true })}
-=======
                 router(next, { replace: true });
             }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -162,22 +115,8 @@ export const AuthProvider = ({ children }) => {
                                 const { id, title, price } = location.state.pendingActionArgs;
                                 dispatch(addItem({ id, title, price }));
                                 // Clear pending action from state first
-<<<<<<< HEAD
-                                navigate(location.pathname, { state: { /* empty */ }, replace: true });
-                                // Navigate to checkout
-                                navigate('/checkout', { replace: true });
-
-                            else if (next) {
-                                navigate(decodeURIComponent(next), { replace: true });
-
-=======
                                 router(location.pathname, { state: {}, replace: true });
                                 // Navigate to checkout
-<<<<<<< HEAD
-                                router('/checkout', { replace: true })}
-                            else if (next) {
-                                router(decodeURIComponent(next), { replace: true })}
-=======
                                 router('/checkout', { replace: true });
                             }
                             else if (next) {
@@ -186,27 +125,14 @@ export const AuthProvider = ({ children }) => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                             // --- END MODIFICATION ---
-
-
                     else if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        // // // console.error("Error fetching user profile:", error);
-=======
                         // // // // // // // console.error("Error fetching user profile:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                         setUser(null);
-
-
                 catch (error) {
-<<<<<<< HEAD
-                    // // // console.error("Error fetching user profile:", error);
-=======
                     // // // // // // // console.error("Error fetching user profile:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     setUser(null);
-
-
 =======
                         console.error("Error fetching user profile:", error);
                         setUser(null)}
@@ -220,13 +146,6 @@ export const AuthProvider = ({ children }) => {
                 setUser(false);
                 // Show logout toast when user logs out
                 if (event === 'SIGNED_OUT') {
-<<<<<<< HEAD
-                    handleSignedOut();
-
-
-            setIsLoading(false);
-        });
-=======
                     handleSignedOut()}
             }
             setIsLoading(false)});
@@ -250,20 +169,8 @@ export const AuthProvider = ({ children }) => {
         setUser,
         onboardingStep,
   tokens
-    
-
-
-
-
-
-
 };
     return (<AuthContext.Provider value={authContextValue}>
       {children}
-<<<<<<< HEAD
-    </AuthContext.Provider>);
-};
-}}}}}}}}}}}}}}}}}}}}
-=======
     </AuthContext.Provider>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

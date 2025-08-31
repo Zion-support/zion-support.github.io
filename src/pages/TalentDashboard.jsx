@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox import { ProtectedRoute } from "@/components/ProtectedRoute";
-=======
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
@@ -32,7 +27,6 @@ function TalentDashboardContent() {
         onboardingStatus.matchReceived;
     return (<>
       <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
-
       <main className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
@@ -53,10 +47,8 @@ function TalentDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">
@@ -90,7 +82,6 @@ function TalentDashboardContent() {
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
-
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
@@ -101,18 +92,15 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (<div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>)}
-
             {/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-
             <Card className="mt-8">
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
@@ -139,7 +127,6 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
-
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -150,11 +137,9 @@ function TalentDashboardContent() {
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-
               <TabsContent value="applications" className="mt-0">
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -165,7 +150,6 @@ function TalentDashboardContent() {
                   </Button>
                 </div>
               </TabsContent>
-
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
@@ -182,17 +166,6 @@ function TalentDashboardContent() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function TalentDashboard() {
-    return (<ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
-      
     </>)}
 export default function TalentDashboard() {
     return (<ProtectedRoute>

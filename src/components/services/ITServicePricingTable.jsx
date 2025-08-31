@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
-
   const plans = [
     {
       name: 'Basic Support',
@@ -68,9 +67,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       ],
       popular: false,
       icon: Star
-
   ];
-
   const additionalServices = [
     {
       name: 'Hardware Installation',
@@ -91,9 +88,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       name: 'Training Sessions',
       price: 200,
       description: 'Staff IT training (per session)'
-
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +100,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the IT support plan that fits your business needs. All plans include our core services with flexible options for growth.
           </p>
-
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8">
             <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>
@@ -114,7 +108,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             <button
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
@@ -127,7 +120,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             </span>
           </div>
         </div>
-
         {/* Pricing Plans */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {plans.map((plan, index) => (
@@ -138,7 +130,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                   ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -146,7 +137,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                   </span>
                 </div>
               )}
-
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -157,7 +147,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                     <p className="text-gray-600 text-sm">{plan.description}</p>
                   </div>
                 </div>
-
                 <div className="mb-8">
                   <div className="flex items-baseline">
                     <span className="text-5xl font-bold text-gray-900">${plan.price}</span>
@@ -166,7 +155,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                     </span>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">What's Included:</h4>
                   {plan.features.map((feature, featureIndex) => (
@@ -176,7 +164,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                     </div>
                   ))}
                 </div>
-
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">Not Included:</h4>
                   {plan.notIncluded.map((feature, featureIndex) => (
@@ -186,21 +173,18 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                     </div>
                   ))}
                 </div>
-
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-
                   Get Started
                 </button>
               </div>
             </div>
           ))}
         </div>
-
         {/* Additional Services */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
@@ -219,7 +203,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             ))}
           </div>
         </div>
-
         {/* FAQ Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold text-gray-900 mb-8">
@@ -252,7 +235,6 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             </div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="text-center mt-20">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 max-w-3xl mx-auto">
@@ -266,13 +248,11 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                 Get Custom Quote
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 Schedule Demo
               </a>
             </div>
@@ -280,9 +260,5 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

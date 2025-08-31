@@ -3,10 +3,6 @@ import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban import { ProtectedRoute } from "@/components/ProtectedRoute";
-=======
 import SEO from "@/components/SEO";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -27,10 +23,6 @@ function ClientDashboardContent() {
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);
-<<<<<<< HEAD
-            setSelectedJobTitle(jobs[0].title);
-
-=======
             setSelectedJobTitle(jobs[0].title)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [jobs, selectedJobId]);
@@ -39,7 +31,6 @@ function ClientDashboardContent() {
         setSelectedJobTitle(jobTitle)};
     return (<>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
-
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
@@ -59,12 +50,10 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>
@@ -75,7 +64,6 @@ function ClientDashboardContent() {
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
-
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect}/>
               </TabsContent>
@@ -93,22 +81,18 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
-
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
               <ActiveProjectsCard />
-
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
-
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
                   AI Talent Suggestions
                 </h2>
-
                 {selectedJobId ? (<SuggestedTalents jobId={selectedJobId}/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center">
                     <p className="text-muted-foreground">
                       Select a job to see AI-matched talent suggestions
@@ -119,17 +103,6 @@ function ClientDashboardContent() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function ClientDashboard() {
-    return (<ProtectedRoute>
-      <ClientDashboardContent />
-    </ProtectedRoute>);
-}}}}
-=======
-      
     </>)}
 export default function ClientDashboard() {
     return (<ProtectedRoute>

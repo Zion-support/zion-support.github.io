@@ -43,21 +43,11 @@ import { ArrowRight,
   SortAsc,
   SortDesc,
   X
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-import { REVOLUTIONARY_SERVICES_2030  } from "../data/revolutionaryServices2030";
-=======
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -67,24 +57,15 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const [itemsPerPage] = useState(12);
   const [selectedService, setSelectedService] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
-
   // Filter and sort services
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
-
-    return matchesCategory && matchesSearch;
-  });
-=======
-    
     return matchesCategory && matchesSearch});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const sortedServices = [...filteredServices].sort((a, b) => {;
     let comparison = 0;
     switch (sortBy) {
@@ -109,43 +90,20 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         comparison = timeA - timeB;
         break;
       default:
-<<<<<<< HEAD
-        comparison = 0;
-
-    return sortOrder === 'asc' ? comparison : -comparison;
-  });
-=======
         comparison = 0};
     return sortOrder === 'asc' ? comparison : -comparison});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
-
-<<<<<<< HEAD
-  const handlePageChange = (page: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-
-<<<<<<< HEAD
-  const handleServiceSelect = (service)  => {;
-    setSelectedService(service)};
-
-  const closeModal = () => {;
-    setSelectedService(null)};
-=======
   const handleServiceSelect = (service: any) => {;
     setSelectedService(service);
   };
-
   const closeModal = () => {;
     setSelectedService(null);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
@@ -179,7 +137,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
-
   const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
@@ -213,40 +170,9 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': 'from-violet-500 to-purple-500';
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
-
-<<<<<<< HEAD
-  const getROIColor = (roi: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-    if (roiNumber >= 800) return 'text-green-400';
-    if (roiNumber >= 500) return 'text-blue-400';
-    if (roiNumber >= 300) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getSetupTimeColor = (setupTime: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-    if (weeks <= 8) return 'text-green-400';
-    if (weeks <= 16) return 'text-yellow-400';
-    return 'text-red-400'};
-
-  // Calculate statistics
-  const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0);
-  const averageROI = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => {;
-    const roi = service.roi;
-    if (typeof roi = == 'string') {;
-      const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-      return sum + roiNumber;
-
-    return sum;
-  }, 0) / REVOLUTIONARY_SERVICES_2030.length;
-=======
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return (
     <>
       <SEO
@@ -256,7 +182,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         image="https://ziontechgroup.com/images/revolutionary-services-showcase-2030.jpg"
         url="https://ziontechgroup.com/revolutionary-services-showcase-2030"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -266,26 +191,13 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-center"
-
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Revolutionary Services
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -313,7 +225,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
             </motion.div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -333,7 +244,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
             </div>
           </div>
         </section>
-
         {/* Services Showcase Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +267,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
-
                     <option value="aiScore">Sort by AI Score</option>
                     <option value="price">Sort by Price</option>
                     <option value="rating">Sort by Rating</option>
@@ -368,7 +277,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <button
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
-
                     {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
                   </button>
                 </div>
@@ -380,7 +288,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-
                     Grid
                   </button>
                   <button
@@ -390,12 +297,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-
                     List
                   </button>
                 </div>
               </div>
-
               {/* Category Filters */}
               <div className="flex flex-wrap gap-4 mb-8">
                 {categories.map((category) => (
@@ -407,12 +312,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-
                     {category === 'all' ? 'All Categories' : category}
                   </button>
                 ))}
               </div>
-
               {/* Results Summary */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
                 <div className="flex flex-wrap items-center justify-between gap-4 text-white">
@@ -431,7 +334,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 </div>
               </div>
             </div>
-
             {/* Services Grid */}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service, index)  => (
@@ -440,36 +342,17 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.05 
-
-
-
-
-
-
 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer group"
                   onClick={() => handleServiceSelect(service)}
-
                   <div className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                     <div className="flex items-center justify-between">
                       {getCategoryIcon(service.category)}
@@ -479,7 +362,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       </div>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {service.title}
@@ -487,7 +369,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <p className="text-gray-400 mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">AI Score:</span>
@@ -514,18 +395,15 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
-
                           {tag}
                         </span>
                       ))}
                     </div>
-
                     <div className="flex items-center justify-between">
                       <span className="text-purple-400 text-sm font-semibold">
                         {service.category}
@@ -536,7 +414,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 </motion.div>
               ))}
             </div>
-
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="mt-16 flex justify-center">
@@ -545,14 +422,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
-
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-<<<<<<< HEAD
-
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-=======
-                  
                   {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <button
@@ -563,16 +434,13 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                           : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                       }`}
-
                       {page}
                     </button>
                   ))}
-
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
-
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -580,7 +448,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
             )}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -588,26 +455,13 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Revolutionize Your Business?
               </h2>
@@ -616,33 +470,19 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 on implementing these revolutionary services in your organization.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <motion.div
                 initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
-
                 <h3 className="text-2xl font-bold text-white mb-6">Request Revolutionary Service Demo</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -681,37 +521,22 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-
                     Get Revolutionary Demo
                   </button>
                 </form>
               </motion.div>
-
               {/* Contact Information */}
               <motion.div
                 initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
-
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                   <div className="space-y-4">
@@ -738,7 +563,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     </div>
                   </div>
                 </div>
-
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
                   <div className="space-y-4">
@@ -769,7 +593,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
           </div>
         </section>
       </div>
-
       {/* Service Detail Modal */}
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -777,35 +600,16 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
             initial = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
             className="bg-slate-900 border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>
@@ -814,14 +618,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 <button
                   onClick={closeModal}
                   className="text-white/60 hover:text-white transition-colors"
-
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.title}</h2>
               <p className="text-gray-300 text-lg mb-6">{selectedService.description}</p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>
@@ -856,7 +657,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
                   <div className="space-y-3">
@@ -867,14 +667,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       </div>
                     ))}
                   </div>
-
                   <h3 className="text-xl font-semibold text-white mb-4 mt-6">ROI & Benefits</h3>
                   <div className="bg-white/5 rounded-lg p-4">
                     <p className="text-green-400 font-semibold">{selectedService.roi}</p>
                   </div>
                 </div>
               </div>
-
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Integrations</h3>
                 <div className="flex flex-wrap gap-2">
@@ -882,13 +680,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <span
                       key={index}
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
-
                       {integration}
                     </span>
                   ))}
                 </div>
               </div>
-
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Competitors</h3>
                 <div className="flex flex-wrap gap-2">
@@ -896,44 +692,29 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <span
                       key={index}
                       className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"
-
                       {competitor}
                   </span>
                   ))}
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`}
                   className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-
                   Get Revolutionary Demo
                 </a>
                 <a
                   href={`tel:${selectedService.contactInfo.phone}`}
                   className="flex-1 border-2 border-white/30 text-white py-4 px-6 rounded-lg font-semibold text-center hover:bg-white/10 transition-all duration-300"
-
                   Call Now
                 </a>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       )};
     </>;
   );
-<<<<<<< HEAD
-</div>}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

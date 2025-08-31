@@ -4,7 +4,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {
     return (<>
-
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="mb-12 text-center">
@@ -15,21 +14,17 @@ export default function Payments() {
               Track your payment history, manage transactions in escrow, and view your financial activities.
             </p>
           </div>
-
           <Tabs defaultValue="history" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
               <TabsTrigger value="history">Transaction History</TabsTrigger>
               <TabsTrigger value="settings">Payment Settings</TabsTrigger>
             </TabsList>
-
             <TabsContent value="history">
               <TransactionHistory />
             </TabsContent>
-
             <TabsContent value="settings">
               <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
                 <h2 className="text-2xl font-bold text-white mb-6">Payment Settings</h2>
-
                 <div className="space-y-8">
                   <div className="border-b border-zion-blue-light pb-6">
                     <h3 className="text-lg font-medium text-white mb-3">Default Payment Method</h3>
@@ -39,17 +34,10 @@ export default function Payments() {
                     <Button onClick = {
   () => window.open('https://stripe.com',
   '_blank')
-
-
-
-
-
-
 } className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
                       Manage Payment Methods
                     </Button>
                   </div>
-
                   <div className="border-b border-zion-blue-light pb-6">
                     <h3 className="text-lg font-medium text-white mb-3">Escrow Settings</h3>
                     <p className="text-zion-slate-light mb-4">
@@ -62,7 +50,6 @@ export default function Payments() {
                       </Label>
                     </div>
                   </div>
-
                   <div>
                     <h3 className="text-lg font-medium text-white mb-3">Payment Notifications</h3>
                     <p className="text-zion-slate-light mb-4">
@@ -89,12 +76,6 @@ export default function Payments() {
           </Tabs>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import UI components for Payment Settings tab

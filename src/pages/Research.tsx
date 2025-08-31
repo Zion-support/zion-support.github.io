@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research() {
-=======
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
-
 export default function Research() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
   const [activeType, setActiveType] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
@@ -21,7 +16,6 @@ export default function Research() {
     { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
   ];
-
   const statuses = [
     { id: 'all', name: 'All Statuses', count: 0 },
     { id: 'active', name: 'Active', count: 0 },
@@ -29,7 +23,6 @@ export default function Research() {
     { id: 'planning', name: 'Planning', count: 0 },
     { id: 'published', name: 'Published', count: 0 }
   ];
-
   const types = [
     { id: 'all', name: 'All Types', count: 0 },
     { id: 'research', name: 'Research Papers', count: 0 },
@@ -37,7 +30,6 @@ export default function Research() {
     { id: 'prototypes', name: 'Prototypes', count: 0 },
     { id: 'collaborations', name: 'Collaborations', count: 0 }
   ];
-
   const researchProjects = [
     {
       id: 1,
@@ -62,7 +54,6 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
-
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -99,7 +90,6 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
-
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -129,7 +119,6 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
-
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
@@ -181,7 +170,6 @@ export default function Research() {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
-
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -211,15 +199,6 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-<<<<<<< HEAD
-
-      ],
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
-      featured: true,
-      progress: 55,
-      impact: 'high'
-
-=======
         };
       ],;
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
@@ -229,112 +208,46 @@ export default function Research() {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length});
-
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length});
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length});
-=======
   categories.forEach(cat = > {;
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
-
   statuses.forEach(status = > {;
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
-
   types.forEach(type = > {;
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const filteredProjects = researchProjects.filter(project => {;
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
-
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
-
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string)  => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
-
-  const getCategoryIcon = (categoryId: string) => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
-  };
-
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'active': return 'text-green-400';
-      case 'completed': return 'text-blue-400';
-      case 'planning': return 'text-yellow-400';
-      case 'published': return 'text-purple-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
       default: return 'text-zion-slate-light'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
-<<<<<<< HEAD
-  const getImpactColor = (impact: string) => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'very-high': return 'text-red-400';
-      case 'high': return 'text-orange-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-green-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
       default: return 'text-zion-slate-light'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
-<<<<<<< HEAD
-  const formatDate = (dateString: string)  => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',;
-      month: 'short';
-    })};
-
-  const formatFunding = (amount: number)  => {
-    if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
-      return `$${(amount / 1000).toFixed(0)}K`};
-    return `$${amount.toLocaleString()}`};
-=======
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
       month: 'short';
     });
   };
-
   const formatFunding = (amount: number) => {;
     if (amount >= 1000000) {;
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
-
     return `$${amount.toLocaleString()}`;
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -353,7 +266,6 @@ export default function Research() {
           </p>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className="py-12">
         <div className="container mx-auto px-4">
@@ -369,7 +281,6 @@ export default function Research() {
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {/* Categories */}
@@ -385,14 +296,12 @@ export default function Research() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-
                       {category.icon}
                       {category.name}
                     </button>
                   ))}
                 </div>
               </div>
-
               {/* Status */}
               <div className="space-y-3">
                 <label className="text-white font-medium">Status</label>
@@ -406,13 +315,11 @@ export default function Research() {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-
                       {status.name} ({status.count})
                     </button>
                   ))}
                 </div>
               </div>
-
               {/* Types */}
               <div className="space-y-3">
                 <label className="text-white font-medium">Type</label>
@@ -426,7 +333,6 @@ export default function Research() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover: bg-zion-slate-light hover:text-white'
                       }`}
-
                       {type.name} ({type.count})
                     </button>
                   ))}
@@ -436,7 +342,6 @@ export default function Research() {
           </div>
         </div>
       </div>
-
       {/* Featured Research */}
       {researchProjects.filter(p  => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
@@ -449,7 +354,6 @@ export default function Research() {
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -477,7 +381,6 @@ export default function Research() {
                       </div>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {getCategoryIcon(project.category)}
@@ -488,10 +391,8 @@ export default function Research() {
                         {statuses.find(s => s.id === project.status)?.name}
                       </span>
                     </div>
-
                     <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                     <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
-
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
@@ -502,7 +403,6 @@ export default function Research() {
                         {project.publications.length} publications
                       </div>
                     </div>
-
                     <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                       Learn More
                     </button>
@@ -513,21 +413,18 @@ export default function Research() {
           </div>
         </div>
       )}
-
       {/* All Research Projects */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             All Research Projects
           </h2>
-
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredProjects.map((project)  => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
@@ -549,21 +446,17 @@ export default function Research() {
                       </div>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
                   <p className="text-zion-slate-light mb-4">{project.description}</p>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
                         {tag}
                       </span>
                     ))}
                   </div>
-
                   <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
@@ -582,7 +475,6 @@ export default function Research() {
                       <span>{project.publications.length} publications</span>
                     </div>
                   </div>
-
                   <div className="mb-4">
                     <div className="flex items-center justify-between text-sm text-zion-slate-light mb-2">
                       <span>Progress</span>
@@ -595,7 +487,6 @@ export default function Research() {
                       ></div>
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1 mb-1">
@@ -607,7 +498,6 @@ export default function Research() {
                         {project.institution}
                       </div>
                     </div>
-
                     <div className="flex gap-2">
                       <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
                         <FileText className="w-4 h-4" />
@@ -634,7 +524,6 @@ export default function Research() {
           )}
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -650,23 +539,12 @@ export default function Research() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Research Team
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </button>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

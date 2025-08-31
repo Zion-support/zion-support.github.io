@@ -12,7 +12,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
         {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
         {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
       </TabsList>
-
       <TabsContent value="images" className="pt-4">
         <div className="aspect-video w-full relative">
           <img loading="lazy" src={images[selected]} alt={`Product image ${selected + 1}`} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
@@ -23,7 +22,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
               </div>))}
           </div>)}
       </TabsContent>
-
       {videoUrl && (<TabsContent value="video" className="pt-4">
           <AspectRatio ratio={16 / 9}>
             <Suspense fallback={<img loading="lazy" src={poster} alt="Video preview" className="w-full h-full object-cover"/>}>
@@ -31,26 +29,15 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
             </Suspense>
           </AspectRatio>
         </TabsContent>)}
-
       {modelUrl && (<TabsContent value="model" className="pt-4">
           <AspectRatio ratio={16 / 9}>
             <Suspense fallback={<img loading="lazy" src={poster} alt="3D model preview" className="w-full h-full object-cover"/>}>
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style = {
   { width: '100%',
   height: '100%' 
-
-
-
-
-
-
 }}/>
             </Suspense>
           </AspectRatio>
         </TabsContent>)}
-<<<<<<< HEAD
-    </Tabs>);
-}
-=======
     </Tabs>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

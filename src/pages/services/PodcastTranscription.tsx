@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
 function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -40,13 +39,7 @@ function PodcastTranscription() {
       </section>;
     </div>;
   );
-
 export default PodcastTranscription;
-
-<<<<<<< HEAD
-}
-=======
-
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;

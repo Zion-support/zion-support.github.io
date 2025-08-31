@@ -14,89 +14,36 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
             return <MessageCircle className = {
   cn(className,
   "text-blue-500")
-
-
-
-
-
-
 }/>;
         case 'quote_request':
             return <Briefcase className = {
   cn(className,
   "text-purple-500")
-
-
-
-
-
-
 }/>;
         case 'booking_confirmation':
             return <CheckCircle className = {
   cn(className,
   "text-green-500")
-
-
-
-
-
-
 }/>;
         case 'hire_request':
             return <UserCheck className = {
   cn(className,
   "text-zion-purple")
-
-
-
-
-
-
 }/>;
         case 'onboarding':
             return <Settings className = {
   cn(className,
   "text-zion-cyan")
-
-
-
-
-
-
 }/>;
         case 'system':
             return <AlertCircle className = {
   cn(className,
   "text-yellow-500")
-
-
-
-
-
-
 }/>;
         default:
-<<<<<<< HEAD
-            return <Bell className={cn(className, "text-gray-500")}/>;
-
-=======
-<<<<<<< HEAD
             return <Bell className = {
   cn(className,
   "text-gray-500")
-
-}/>}
-=======
-            return <Bell className = {
-  cn(className,
-  "text-gray-500")
-
-
-
-
-
-
 }/>;
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -117,10 +64,6 @@ const getNotificationTypeBadge = (type) => {
         case 'system':
             return <Badge className="bg-yellow-500">System</Badge>;
         default:
-<<<<<<< HEAD
-            return <Badge variant="outline">Notification</Badge>;
-
-=======
             return <Badge variant="outline">Notification</Badge>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
@@ -128,18 +71,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
         if (!notification.read) {
-<<<<<<< HEAD
-            onMarkAsRead(notification.id);
-
-        if (notification.action_url) {
-            navigate(notification.action_url);
-
-=======
             onMarkAsRead(notification.id)}
         if (notification.action_url) {
-<<<<<<< HEAD
-            router(notification.action_url)}
-=======
             router(notification.action_url);
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -148,12 +81,6 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     return (<div className = {
   cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
   notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")
-
-
-
-
-
-
 }>
       <div className="flex items-start gap-4">
         <div className="mt-1">
@@ -171,7 +98,6 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
                 {!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)}
               </div>
             </div>
-
             <div className="flex items-center gap-2">
               {!notification.read && (<Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => onMarkAsRead(notification.id)}>
                   <Check className="h-4 w-4 text-green-400"/>
@@ -183,9 +109,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
               </Button>
             </div>
           </div>
-
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
-
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4"/>
@@ -197,7 +121,6 @@ export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
-
       <main className="container mx-auto px-4 py-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -207,13 +130,11 @@ export default function NotificationsPage() {
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
-
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>
               <Check className="mr-2 h-4 w-4"/>
               Mark all as read
             </Button>)}
         </div>
-
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value)}>
             <TabsList className="grid w-full max-w-md grid-cols-5">
@@ -241,11 +162,5 @@ export default function NotificationsPage() {
           </Tabs>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

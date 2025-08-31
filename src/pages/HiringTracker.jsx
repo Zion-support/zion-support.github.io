@@ -10,7 +10,6 @@ import { Briefcase function HiringTrackerContent() {
     const [activeTab, setActiveTab] = useState("kanban");
     return (<>
       <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
-
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -23,33 +22,19 @@ import { Briefcase function HiringTrackerContent() {
             </p>
           </div>
         </div>
-
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId}/>
           </TabsContent>
-
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId}/>
           </TabsContent>
         </Tabs>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function HiringTracker() {
-    return (<ProtectedRoute>
-      <HiringTrackerContent />
-    </ProtectedRoute>);
-}}}
-=======
-      
     </>)}
 export default function HiringTracker() {
     return (<ProtectedRoute>

@@ -1,5 +1,4 @@
 export interface IoTEdgeService {
-
   id: string;
   title: string;
   description: string;
@@ -23,10 +22,6 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
-<<<<<<< HEAD
-  deployment: string;
-
-=======
   deployment: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
@@ -373,27 +368,14 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     status: 'active',
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
-
 ];
-<<<<<<< HEAD
-export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
-  if (category === 'All') {;
-    return IOT_EDGE_COMPUTING_SERVICES_2025};
-  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
-export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
-  return IOT_EDGE_COMPUTING_SERVICES_2025};
-=======
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[] => {;
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025;
-
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
 };
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
   return IOT_EDGE_COMPUTING_SERVICES_2025;
 };
-<<<<<<< HEAD
-}}}
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

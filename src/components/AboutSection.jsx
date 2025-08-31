@@ -36,7 +36,6 @@ export function AboutSection() {
             title: "Trust & Security",
             description: "Your data and systems are protected with enterprise-grade security and compliance standards.",
             icon: <Shield className="w-8 h-8"/>
-
     ];
     const technologies = [
         "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics",
@@ -51,48 +50,40 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Zion Tech Group</span>
             </h2>
-
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Founded in 2015, Zion Tech Group has emerged as a leading force in the technology
               industry, pioneering innovative solutions that transform how businesses operate in
               the digital age.
             </p>
-
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Our mission is to democratize cutting-edge technology, making advanced AI,
               quantum computing, and autonomous systems accessible to organizations of all sizes.
               We believe that innovation should drive progress, not complexity.
             </p>
-
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to Fortune 500
               companies, helping them navigate the complexities of digital transformation
               and emerge stronger, more efficient, and future-ready.
             </p>
-
             <Link
               to="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
-
               Learn Our Story
               <ArrowRight className="w-5 h-5"/>
             </Link>
           </div>
-
           {/* Right Column - Achievements */}
           <div className="grid grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-
                 <div className="text-zion-cyan mb-2">{achievement.icon}</div>
                 <div className="text-3xl font-bold text-white mb-1">{achievement.number}</div>
                 <div className="text-sm text-zion-slate-light">{achievement.label}</div>
               </div>))}
           </div>
         </div>
-
         {/* Values Section */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12 font-futuristic">
@@ -103,14 +94,12 @@ export function AboutSection() {
               <div
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-
                 <div className="text-zion-cyan mb-4 flex justify-center">{value.icon}</div>
                 <h4 className="text-xl font-semibold text-white mb-3">{value.title}</h4>
                 <p className="text-zion-slate-light leading-relaxed">{value.description}</p>
               </div>))}
           </div>
         </div>
-
         {/* Technologies Section */}
         <div>
           <h3 className="text-3xl font-bold text-white text-center mb-12 font-futuristic">
@@ -121,7 +110,6 @@ export function AboutSection() {
               <div
                 key={index}
                 className="flex items-center gap-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                 <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                 <span className="text-zion-slate-light text-sm">{tech}</span>
               </div>
@@ -129,9 +117,5 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -9,25 +9,12 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Integration with major real estate platforms',;
     'Custom AI models for local market insights';
   ];
-
   const tiers = [
     {
       name: 'Individual Agent',
       price: '$199/mo',
       details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Small Agency',
-      price: '$599/mo',
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,499/mo',
-      details: ['Unlimited properties', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Small Agency', 
       price: '$599/mo', 
@@ -40,7 +27,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     },;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Residential property valuation and sales',;
     'Commercial real estate investment analysis',;
@@ -49,7 +35,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Investment portfolio management',;
     'Development project feasibility studies';
   ];
-
   const benefits = [;
     'Improve property valuation accuracy by 25-40%',;
     'Reduce time-to-sale by 30-50%',;
@@ -58,7 +43,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Enhance client satisfaction and retention',;
     'Scale operations without additional staff';
   ];
-
   const industries = [;
     'Residential Real Estate',;
     'Commercial Real Estate',;
@@ -67,7 +51,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Development & Construction',;
     'Property Technology';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 py-20 text-center">
@@ -79,7 +62,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           <p className="text-orange-100 text-xl">Transform your real estate business with AI-powered insights that enhance property valuation, optimize pricing, and accelerate sales.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +101,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['25-40% accuracy improvement', '30-50% faster sales', '20-35% revenue increase'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +109,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-amber-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your real estate business?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

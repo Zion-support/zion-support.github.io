@@ -9,15 +9,10 @@ export default function PostJob() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
-
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
         <Card className="border shadow-md">
           <CardHeader>
@@ -31,12 +26,7 @@ export default function PostJob() {
           </CardContent>
         </Card>
       </main>
-
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card>}}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

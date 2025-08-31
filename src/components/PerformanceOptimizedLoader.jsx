@@ -4,25 +4,11 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
   sm: 'w-6 h-6',
         md: 'w-12 h-12',
   lg: 'w-16 h-16'
-    
-
-
-
-
-
-
 };
     const colorClasses = {
   primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
   white: 'text-white'
-    
-
-
-
-
-
-
 };
     const spinnerVariants = {
   animate: {
@@ -30,29 +16,12 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
             transition: {
                 duration: 1,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "linear"
-
-
-=======
   ease: "linear"
-            
-
-
-
-
-
-
 }
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const pulseVariants = {
-  <<<<<<< HEAD
-        animate: {
-            scale[1, 1.2, 1],
-            opacity[0.5, 1, 0.5],
-=======
   animate: {
             scale: [1, 1.2, 1],
             opacity: [0.5, 1, 0.5],
@@ -60,19 +29,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
             transition: {
                 duration: 2,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-
-
-=======
   ease: "easeInOut"
-            
-
-
-
-
-
-
 }
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -83,7 +40,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="31.416" strokeDashoffset="31.416" className="animate-dash"/>
         </svg>
       </motion.div>
-
       {text && (<motion.p variants={pulseVariants} animate="animate" className="text-zion-slate-light text-center font-medium">
           {text}
         </motion.p>)}
@@ -91,12 +47,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
     if (fullScreen) {
         return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50">
         <LoaderContent />
-<<<<<<< HEAD
-      </motion.div>);
-
-    return <LoaderContent />;
-
-=======
       </motion.div>)}
     return <LoaderContent />}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -106,10 +56,6 @@ export function SkeletonLoader({ className = "", lines = 3, height = "h-4" }) {
       {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }} className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`} style={{
                 width: `${Math.random() * 40 + 60}%`
             }}/>))}
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Card skeleton loader
@@ -118,34 +64,24 @@ export function CardSkeleton({ className = "" }) {
       <div className="space-y-4">
         {/* Image skeleton */}
         <div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse"/>
-
         {/* Content skeleton */}
         <div className="space-y-3">
           <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4"/>
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full"/>
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"/>
         </div>
-
         {/* Button skeleton */}
         <div className="flex gap-3 pt-4">
           <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1"/>
           <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24"/>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Grid skeleton loader
 export function GridSkeleton({ columns = 3, rows = 2, className = "" }) {
     return (<div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index) => (<CardSkeleton key={index}/>))}
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Page skeleton loader
@@ -156,18 +92,12 @@ export function PageSkeleton({ className = "" }) {
         <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"/>
         <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"/>
       </div>
-
       {/* Content skeleton */}
       <GridSkeleton columns={3} rows={2}/>
-
       {/* Footer skeleton */}
       <div className="space-y-3">
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2"/>
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"/>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></div></div></div></div></div></div></div></div></div></Card>}}}}}}}}}</motion.div>}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

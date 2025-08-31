@@ -98,9 +98,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
         { name: 'Reporting', value: 'Daily', icon: FileText }
       ]
-
   ];
-
   const additionalServices = [
     {
       name: 'Hardware Installation',
@@ -137,9 +135,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Custom Quote',
       description: 'Complete cloud infrastructure migration services',
       icon: Globe
-
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,7 +149,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             with additional features and support levels.
           </p>
         </div>
-
         {/* Service Packages */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {servicePackages.map((pkg, index) => (
@@ -164,7 +159,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                   ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -172,7 +166,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                   </span>
                 </div>
               )}
-
               <div className="p-8">
                 {/* Package Header */}
                 <div className="text-center mb-8">
@@ -180,7 +173,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                   <p className="text-gray-600 mb-4">{pkg.description}</p>
                   <div className="text-3xl font-bold text-blue-600">{pkg.price}</div>
                 </div>
-
                 {/* Package Features */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {pkg.features.map((feature, featureIndex) => (
@@ -193,7 +185,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                     </div>
                   ))}
                 </div>
-
                 {/* What's Included */}
                 <div className="mb-8">
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
@@ -209,7 +200,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                     ))}
                   </ul>
                 </div>
-
                 {/* What's Not Included */}
                 <div className="mb-8">
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
@@ -225,7 +215,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                     ))}
                   </ul>
                 </div>
-
                 {/* CTA Button */}
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -233,14 +222,12 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-
                   Get Started
                 </button>
               </div>
             </div>
           ))}
         </div>
-
         {/* Additional Services */}
         <div className="bg-white rounded-3xl shadow-2xl p-8 mb-20">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
@@ -266,7 +253,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             ))}
           </div>
         </div>
-
         {/* Service Guarantees */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
           <h3 className="text-3xl font-bold text-center mb-8">
@@ -302,7 +288,6 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl mx-auto">
@@ -316,13 +301,11 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               <a
                 href="#contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
                 Get Custom Quote
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
-
                 Schedule Consultation
               </a>
             </div>
@@ -330,9 +313,5 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

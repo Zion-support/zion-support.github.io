@@ -1,24 +1,16 @@
 import React from 'react.ts';
 import { useParams, Link  } from 'react-router-dom.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-
 export default function GenericPage(...args[]):  {
   const { '*': slug } = useParams();
   const slugParts = slug ? slug.split('/').filter(Boolean) [];
   const path = '/' + slugParts.join('/');
   const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
   const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
-
   return (
     <main style = {
   {padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:900,
   margin:'0 auto'
-
-
-
-
-
-
 }}>
       <Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -30,12 +22,6 @@ export default function GenericPage(...args[]):  {
         <span style = {
   {margin:'0 8px',
   color:'#9ca3af'
-
-
-
-
-
-
 }}>/</span>
         <span>{title}</span>
       </nav>
@@ -44,25 +30,11 @@ export default function GenericPage(...args[]):  {
       <section style = {
   {marginTop:16, padding:'12px 16px', background:'#f9fafb', border:'1px solid #e5e7eb',
   borderRadius:8
-
-
-
-
-
-
 }}>
         <h2 style={{marginBottom:8}}>How we can help</h2>
         <ul style={{paddingLeft:18}}>
           <li>Micro SaaS solutions tailored to your workflow</li>
           <li>Applied AI: assistants, RAG, and automation</li>
-<<<<<<< HEAD
-          <li>Cloud, DevOps, data, and cybersecurity services</li>
-        </ul>
-        <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
-      </section>
-    </main>
-  )};
-=======;
           <li>Cloud, DevOps, data, and cybersecurity services</li>;
         </ul>;
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>;

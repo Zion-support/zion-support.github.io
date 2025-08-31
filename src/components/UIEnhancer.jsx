@@ -10,16 +10,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const detectDevice = () => {
             const width = window.innerWidth;
             if (width < 768) {
-<<<<<<< HEAD
-                setDeviceType('mobile');
-
-            else if (width < 1024) {
-                setDeviceType('tablet');
-
-            else {
-                setDeviceType('desktop');
-
-=======
                 setDeviceType('mobile')}
             else if (width < 1024) {
                 setDeviceType('tablet')}
@@ -32,10 +22,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         // Load saved theme
         const savedTheme = localStorage.getItem('ui-theme');
         if (savedTheme) {
-<<<<<<< HEAD
-            setTheme(savedTheme);
-
-=======
             setTheme(savedTheme)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply theme
@@ -44,17 +30,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const handleScroll = () => {
             setShowScrollToTop(window.scrollY > 300)};
         if (enableScrollEffects) {
-<<<<<<< HEAD
-            window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('resize', detectDevice);
-            if (enableScrollEffects) {
-                window.removeEventListener('scroll', handleScroll);
-
-        };
-    }, [enableScrollEffects]);
-=======
             window.addEventListener('scroll', handleScroll)}
         return () => {
             window.removeEventListener('resize', detectDevice);
@@ -67,16 +42,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         if (newTheme === 'auto') {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
-<<<<<<< HEAD
-            root.classList.toggle('light', !prefersDark);
-
-        else {
-            root.classList.remove('light', 'dark');
-            root.classList.add(newTheme);
-
-        localStorage.setItem('ui-theme', newTheme);
-    };
-=======
             root.classList.toggle('light', !prefersDark)}
         else {
             root.classList.remove('light', 'dark');
@@ -104,7 +69,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
               </svg>)}
           </motion.button>
-
           {/* Particle Mode Toggle */}
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleParticleMode} className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hover:shadow-xl ${isParticleMode
                 ? 'bg-purple-500 text-white border-purple-600'
@@ -113,67 +77,34 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </motion.button>
-
           {/* Device Indicator */}
           <motion.div initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>
             {deviceType === 'mobile' ? '📱' : deviceType === 'tablet' ? '📱' : '💻'}
           </motion.div>
         </div>)}
-
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollToTop && enableScrollEffects && (<motion.button initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} onClick={scrollToTop} className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110" title="Scroll to top">
             <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
             </svg>
           </motion.button>)}
       </AnimatePresence>
-
       {/* Particle Background */}
       {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 overflow-hidden">
@@ -182,51 +113,21 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
   scale: 0
-                
-
-
-
-
-
-
 }} animate = {
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-<<<<<<< HEAD
-                    scale[0, 1,
-  0]
-                
-
-}} transition = {
-  {
-=======
                     scale: [0, 1,
   0]
-                
-
-
-
-
-
-
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
   ease: "linear"
-                
-
-
-
-
-
-
 }}/>))}
           </div>
         </div>)}
-
       {/* Theme Auto Mode Button */}
       <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleThemeChange('auto')} className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${theme === 'auto'
             ? 'bg-blue-600 text-white shadow-lg'
@@ -238,26 +139,13 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           <span>Auto</span>
         </span>
       </motion.button>
-
       {/* UI Enhancement Panel */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} className="fixed top-4 right-20 z-40 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dark:border-slate-700/50">
         <div className="flex items-center space-x-3 text-sm text-white">
           <div className="flex items-center space-x-2">

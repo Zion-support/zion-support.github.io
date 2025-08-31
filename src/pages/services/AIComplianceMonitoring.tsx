@@ -9,25 +9,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Real-time compliance analytics and insights',;
     'Custom AI models for compliance applications';
   ];
-
   const tiers = [
     {
       name: 'Developer',
       price: '$499/mo',
       details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,999/mo',
-      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,299/mo', 
@@ -40,7 +27,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     },;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Compliance monitoring optimization',;
     'Regulatory compliance tracking',;
@@ -49,7 +35,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Compliance automation and orchestration',;
     'Compliance scaling and management';
   ];
-
   const benefits = [;
     'Improve compliance monitoring performance by 50-80%',;
     'Reduce compliance reporting time by 40-70%',;
@@ -58,7 +43,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Optimize resource utilization',;
     'Scale compliance operations efficiently';
   ];
-
   const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
@@ -67,7 +51,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Media & Entertainment',;
     'Technology & SaaS';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center">
@@ -79,7 +62,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <p className="text-emerald-100 text-xl">Transform your compliance monitoring operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +101,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['50-80% performance improvement', '40-70% reporting time reduction', '35-65% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +109,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-emerald-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Compliance Monitoring Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your compliance monitoring operations with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

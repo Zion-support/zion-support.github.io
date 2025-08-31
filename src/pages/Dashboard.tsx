@@ -4,8 +4,6 @@ import {
   BarChart3,
   Users,
   TrendingUp,
-<<<<<<< HEAD
-=======
   DollarSign,
   Activity,
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -21,50 +19,14 @@ import {
   MessageSquare,
   Star,
   ArrowRight
-<<<<<<< HEAD
-export default function Dashboard() {
-=======
  } from 'lucide-react';
-
 export default function Dashboard(...args[]):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const stats = [
-<<<<<<< HEAD
-    {
-      title: "Total Revenue",
-      value: "$124,563",
-      change: "+12.5%",
-      changeType: "positive",
-      icon: <DollarSign className="h-6 w-6 text-green-500" />
-    },
-    {
-      title: "Active Users",
-      value: "2,847",
-      change: "+8.2%",
-      changeType: "positive",
-      icon: <Users className="h-6 w-6 text-blue-500" />
-    },
-    {
-      title: "Projects",
-      value: "156",
-      change: "+23.1%",
-      changeType: "positive",
-      icon: <FileText className="h-6 w-6 text-purple-500" />
-    },
-    {
-      title: "Conversion Rate",
-      value: "3.24%",
-      change: "-1.2%",
-      changeType: "negative",
-<<<<<<< HEAD
-      icon: <TrendingUp className="h-6 w-6 text-orange-500" />
-
-=======
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const recentProjects = [
     {
       id: 1,
@@ -96,15 +58,10 @@ export default function Dashboard(...args[]):  {
       status: "In Progress",
       progress: 60,
       dueDate: "2024-02-28",
-<<<<<<< HEAD
-      priority: "Medium"
-
-=======
       priority: "Medium";
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const notifications = [
     {
       id: 1,
@@ -125,15 +82,10 @@ export default function Dashboard(...args[]):  {
       title: "System update",
       message: "Scheduled maintenance completed successfully",
       time: "1 day ago",
-<<<<<<< HEAD
-      read: true
-
-=======
       read: true;
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const quickActions = [
     {
       title: "Create Project",
@@ -158,9 +110,6 @@ export default function Dashboard(...args[]):  {
       description: "Submit support request",
       icon: <MessageSquare className="h-8 w-8 text-zion-purple" />,
       color: "bg-zion-purple/10 border-zion-purple/20"
-<<<<<<< HEAD
-
-=======
     }
 =======;
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;
@@ -171,7 +120,6 @@ export default function Dashboard(...args[]):  {
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const recentServices = [;
     { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
     { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
@@ -179,14 +127,12 @@ export default function Dashboard(...args[]):  {
     { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' };
   ];
-
   const upcomingEvents = [;
     { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
     { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
     { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
   ];
-
   const quickActions = [;
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
@@ -196,7 +142,6 @@ export default function Dashboard(...args[]):  {
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-
   const getStatusColor = (status: string)  => {
     switch (status) {;
       case "Completed":;
@@ -206,14 +151,9 @@ export default function Dashboard(...args[]):  {
       case "Planning":
         return "bg-yellow-100 text-yellow-800";
       default:
-<<<<<<< HEAD
-        return "bg-gray-100 text-gray-800";
-
-=======
         return "bg-gray-100 text-gray-800"}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const getPriorityColor = (priority: string)  => {
     switch (priority) {;
       case "High":;
@@ -223,18 +163,10 @@ export default function Dashboard(...args[]):  {
       case "Low":
         return "bg-green-100 text-green-800";
       default:
-<<<<<<< HEAD
-        return "bg-gray-100 text-gray-800";
-
-=======
         return "bg-gray-100 text-gray-800"}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-zion-blue text-white">
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Header */}
@@ -255,57 +187,32 @@ export default function Dashboard(...args[]):  {
           </div>
         </div>
       </div>
-
       <div className="p-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index)  => (
             <motion.div
-<<<<<<< HEAD
-              key={stat.title}
-              className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-
-=======
               initial = {
   { opacity: 0,
   y: 20 
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
 }}
 =======
               key={stat.name}
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
@@ -327,32 +234,22 @@ export default function Dashboard(...args[]):  {
             </motion.div>
           ))}
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Recent Projects */}
           <div className="lg:col-span-2">
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
-<<<<<<< HEAD
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-
-=======
               initial = {
   { opacity: 0,
   x: -20 
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
 }}
               transition = {
   { duration: 0.5,
   delay: 0.4 
-
 }}
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -362,34 +259,17 @@ export default function Dashboard(...args[]):  {
                   View All
                 </button>
               </div>
-
               <div className="space-y-4">
-<<<<<<< HEAD
-                {recentProjects.map((project) => (
-                  <div key={project.id} className="flex items-center justify-between p-4 bg-zion-blue-light/10 rounded-lg border border-zion-purple/20">
-=======
                 {recentServices.map((service, index) => (
                   <motion.div
                     key={service.name}
                     initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center p-4 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
@@ -408,12 +288,10 @@ export default function Dashboard(...args[]):  {
                           {project.priority}
                         </span>
                       </div>
-
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <span>Due: {project.dueDate}</span>
                         <span>Progress: {project.progress}%</span>
                       </div>
-
                       <div className="w-full bg-zion-purple/20 rounded-full h-2 mt-2">
                         <div
                           className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
@@ -421,7 +299,6 @@ export default function Dashboard(...args[]):  {
                         ></div>
                       </div>
                     </div>
-
                     <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
                       <ArrowRight className="h-4 w-4" />
                     </button>
@@ -430,67 +307,38 @@ export default function Dashboard(...args[]):  {
               </div>
             </motion.div>
           </div>
-
           {/* Right Sidebar */}
           <div className="space-y-6">
             {/* Quick Actions */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
-<<<<<<< HEAD
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-
-=======
               initial = {
   { opacity: 0,
   x: 20 
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
 }}
               transition = {
   { duration: 0.5,
   delay: 0.6 
-
 }}
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
-<<<<<<< HEAD
-                  <button
-                    key={action.title}
-                    className={`p-4 rounded-lg border ${action.color} hover:scale-105 transition-all duration-300 text-left`}
-<<<<<<< HEAD
-
-=======
 =======
                   <motion.button
                     key={action.name}
                     initial = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                     transition={{ delay: index * 0.1 }}
                     className={`p-3 rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover:shadow-lg transition-shadow flex flex-col items-center`}
@@ -504,71 +352,35 @@ export default function Dashboard(...args[]):  {
                 ))}
               </div>
             </motion.div>
-
             {/* Notifications */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
-<<<<<<< HEAD
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-
-=======
               initial = {
   { opacity: 0,
   x: 20 
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
 }}
               transition = {
   { duration: 0.5,
   delay: 0.8 
-
 }}
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-xl font-semibold text-white mb-4">Notifications</h2>
               <div className="space-y-3">
-<<<<<<< HEAD
-                {notifications.map((notification) => (
-                  <div key={notification.id} className={`p-3 rounded-lg ${
-                    notification.read ? 'bg-zion-blue-light/5' : 'bg-zion-purple/10'
-                  }`}>
-                    <div className="flex items-start gap-3">
-                      <div className={`w-2 h-2 rounded-full mt-2 ${
-                        notification.read ? 'bg-zion-slate-light' : 'bg-zion-cyan'
-                      }`}></div>
-                      <div className="flex-1">
-                        <h4 className="font-medium text-white text-sm mb-1">{notification.title}</h4>
-                        <p className="text-zion-slate-light text-xs mb-2">{notification.message}</p>
-                        <span className="text-zion-slate-light text-xs">{notification.time}</span>
-=======
                 {upcomingEvents.map((event, index) => (
                   <motion.div
                     key={event.title}
                     initial = {
   { opacity: 0,
   y: 10 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
@@ -597,30 +409,20 @@ export default function Dashboard(...args[]):  {
                 View All Notifications
               </button>
             </motion.div>
-
             {/* System Status */}
             <motion.div
               className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6"
-<<<<<<< HEAD
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-
-=======
               initial = {
   { opacity: 0,
   x: 20 
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
 }}
               transition = {
   { duration: 0.5,
   delay: 1 
-
 }}
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -645,14 +447,6 @@ export default function Dashboard(...args[]):  {
                   <span className="text-white text-sm">99.9%</span>
                 </div>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )}
-=======
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <span className="text-sm text-gray-600">Cloud Services</span>
@@ -663,7 +457,6 @@ export default function Dashboard(...args[]):  {
               </div>
             </div>
           </div>
-          
           {/* Placeholder for chart */}
           <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
             <div className="text-center">
@@ -676,9 +469,6 @@ export default function Dashboard(...args[]):  {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -265,10 +265,7 @@ import {
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
-
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const blockchainSolutions = [
   {
@@ -362,14 +359,6 @@ const blockchainSolutions = [
       "Data migration",
       "Legacy support"
     ],
-<<<<<<< HEAD
-    price: "From $200,000",
-    timeline: "18-30 weeks",
-    category: "Integration",
-<<<<<<< HEAD
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
-
-=======
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]
   };
 =======;
@@ -381,7 +370,6 @@ const blockchainSolutions = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const blockchainTechnologies = [
   {
     name: "Blockchain Platforms",
@@ -404,15 +392,6 @@ const blockchainTechnologies = [
     useCase: "Network Security",
     reliability: "High"
   },
-<<<<<<< HEAD
-  {
-    name: "Cryptography",
-    description: "Advanced cryptographic security solutions",
-    icon: Lock,
-    useCase: "Security & Privacy",
-    reliability: "High"
-
-=======
   {;
     name: "Cryptography",;
     description: "Advanced cryptographic security solutions",;
@@ -422,7 +401,6 @@ const blockchainTechnologies = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const successStories = [
   {
     id: 1,
@@ -444,15 +422,6 @@ const successStories = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    company: "Healthcare Identity Solutions",
-    industry: "Healthcare",
-    challenge: "Needed secure patient identity management system",
-    solution: "Built blockchain-based identity management platform",
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",
-    logo: "HIS"
-
-=======
     comp: "Healthcare Identity Solutions",;
     industry: "Healthcare",;
     challenge: "Needed secure patient identity management system",;
@@ -462,7 +431,6 @@ const successStories = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -485,15 +453,6 @@ const processSteps = [
     icon: Wrench,
     duration: "16-48 weeks"
   },
-<<<<<<< HEAD
-  {
-    step: 4,
-    title: "Testing & Deployment",
-    description: "Test blockchain systems and deploy to production",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-=======
   {;
     step: 4,;
     title: "Testing & Deployment",;
@@ -503,7 +462,6 @@ const processSteps = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const blockchainBenefits = [
   {
     title: "Transparency & Trust",
@@ -524,14 +482,6 @@ const blockchainBenefits = [
     examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
   {
-<<<<<<< HEAD
-    title: "Cost Reduction",
-    description: "Blockchain eliminates intermediaries and reduces operational costs",
-    icon: TrendingUp,
-<<<<<<< HEAD
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-
-=======
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
   };
 =======;
@@ -543,18 +493,14 @@ const blockchainBenefits = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions
     : blockchainSolutions.filter(solution => solution.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -564,78 +510,42 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Building className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Blockchain
               <span className="text-gradient block">Enterprise Solutions</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your enterprise with cutting-edge blockchain solutions. From supply chain
               transparency to financial services, we help you leverage the power of blockchain technology.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Building className="w-4 h-4" />
@@ -653,7 +563,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Blockchain Benefits */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -661,32 +570,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make blockchain essential for enterprises
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {blockchainBenefits.map((benefit, index)  => (
               <motion.div
@@ -694,42 +589,21 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
                   {benefit.examples.map((example, exampleIndex)  => (
@@ -744,7 +618,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Blockchain Technologies */}
       <section className="py-20">
         <div className="container-responsive">
@@ -752,32 +625,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading blockchain enterprise technologies
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {blockchainTechnologies.map((technology, index)  => (
               <motion.div
@@ -785,43 +644,22 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -836,7 +674,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -844,32 +681,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our Blockchain Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful blockchain enterprise implementation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)  => (
               <motion.div
@@ -877,35 +700,16 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -914,7 +718,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -925,7 +728,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -933,32 +735,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for blockchain enterprise transformation
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -970,12 +758,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)  => (
               <motion.div
@@ -983,43 +769,22 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -1028,23 +793,19 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1059,7 +820,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -1067,32 +827,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with blockchain enterprise solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)  => (
               <motion.div
@@ -1100,35 +846,16 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1138,7 +865,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1153,7 +879,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1165,7 +890,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -1173,62 +897,35 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform with Blockchain?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how blockchain enterprise solutions can revolutionize your operations,
               improve transparency, and create competitive advantages.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start Blockchain Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Blockchain Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

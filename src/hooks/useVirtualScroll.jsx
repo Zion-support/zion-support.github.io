@@ -40,10 +40,6 @@ export const useVirtualScroll = (items, options) => {
         const scrollTop = target.scrollTop;
         // Cancel previous RAF
         if (rafRef.current) {
-<<<<<<< HEAD
-            cancelAnimationFrame(rafRef.current);
-
-=======
             cancelAnimationFrame(rafRef.current)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Use RAF for smooth scrolling
@@ -55,10 +51,6 @@ export const useVirtualScroll = (items, options) => {
             }));
             // Clear scrolling state after delay
             if (scrollTimeoutRef.current) {
-<<<<<<< HEAD
-                clearTimeout(scrollTimeoutRef.current);
-
-=======
                 clearTimeout(scrollTimeoutRef.current)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             scrollTimeoutRef.current = setTimeout(() => {
@@ -76,10 +68,6 @@ export const useVirtualScroll = (items, options) => {
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
             default:
-<<<<<<< HEAD
-                scrollTop = index * itemHeight;
-
-=======
                 scrollTop = index * itemHeight}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
@@ -87,15 +75,6 @@ export const useVirtualScroll = (items, options) => {
             containerRef.current.scrollTo({
                 top: scrollTop,
                 behavior: 'smooth'
-<<<<<<< HEAD
-            });
-
-        else {
-            containerRef.current.scrollTop = scrollTop;
-
-        setState(prev => ({ ...prev, scrollTop }));
-    }, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling]);
-=======
             })}
         else {
             containerRef.current.scrollTop = scrollTop}
@@ -130,10 +109,6 @@ export const useVirtualScroll = (items, options) => {
                 const event = new CustomEvent('virtualScrollEnd', {
                     detail: { scrollTop, scrollHeight, clientHeight }
                 });
-<<<<<<< HEAD
-                window.dispatchEvent(event);
-
-=======
                 window.dispatchEvent(event)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
@@ -145,15 +120,6 @@ export const useVirtualScroll = (items, options) => {
     useEffect(() => {
         return () => {
             if (rafRef.current) {
-<<<<<<< HEAD
-                cancelAnimationFrame(rafRef.current);
-
-            if (scrollTimeoutRef.current) {
-                clearTimeout(scrollTimeoutRef.current);
-
-        };
-    }, []);
-=======
                 cancelAnimationFrame(rafRef.current)}
             if (scrollTimeoutRef.current) {
                 clearTimeout(scrollTimeoutRef.current)}
@@ -167,13 +133,6 @@ export const useVirtualScroll = (items, options) => {
             overflow: 'auto',
             position: 'relative',
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
-        
-
-
-
-
-
-
 },
         onScroll: handleScroll
     };
@@ -182,17 +141,7 @@ export const useVirtualScroll = (items, options) => {
   style: {
             height: state.totalHeight,
             position: 'relative',
-<<<<<<< HEAD
-            transform: `translateY(${virtualScrollParams.offsetY}px)`
-
-=======
   transform: `translateY(${virtualScrollParams.offsetY
-
-
-
-
-
-
 }px)`
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -217,11 +166,6 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
     useEffect(() => {
         if (!searchQuery.trim()) {
             setFilteredItems(items);
-<<<<<<< HEAD
-            setSearchResults({ indices: [], highlights: new Map() });
-            return;
-
-=======
             setSearchResults({ indices[], highlights: new Map() });
             return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -240,12 +184,6 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     let pos = value.indexOf(query);
                     while (pos !== -1) {
                         highlightPositions.push(pos);
-<<<<<<< HEAD
-                        pos = value.indexOf(query, pos + 1);
-
-                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`));
-
-=======
                         pos = value.indexOf(query, pos + 1)}
                     itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -253,10 +191,6 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
             if (isMatch) {
                 results.push(item);
                 indices.push(index);
-<<<<<<< HEAD
-                highlights.set(index, itemHighlights);
-
-=======
                 highlights.set(index, itemHighlights)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
@@ -288,12 +222,6 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const getCumulativeHeight = useCallback((index) => {
         let cumulative = 0;
         for (let i = 0; i < index; i++) {
-<<<<<<< HEAD
-            cumulative += itemHeights.get(i) || 0;
-
-        return cumulative;
-    }, [itemHeights]);
-=======
             cumulative += itemHeights.get(i) || 0}
         return cumulative}, [itemHeights]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -303,14 +231,6 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         for (let i = 0; i < items.length; i++) {
             const height = itemHeights.get(i) || 0;
             if (cumulative + height > scrollTop) {
-<<<<<<< HEAD
-                return i;
-
-            cumulative += height;
-
-        return items.length - 1;
-    }, [items.length, itemHeights]);
-=======
                 return i}
             cumulative += height}
         return items.length - 1}, [items.length, itemHeights]);
@@ -343,10 +263,5 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         getCumulativeHeight,
         findIndexFromScrollTop,
         state
-<<<<<<< HEAD
-    };
-};
-}}}}}}}}}}}}}}}}
-=======
     }};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

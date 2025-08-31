@@ -56,7 +56,6 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
             description: "Take Zion with you on the go with our mobile app for iOS and Android",
             icon: <Smartphone className="h-6 w-6 text-zion-purple"/>,
             link: "/mobile-launch"
-
     ];
     return (<div className="min-h-screen bg-zion-blue text-white">
       <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"/>
@@ -102,9 +101,5 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-<<<<<<< HEAD
-    </div>);
-}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

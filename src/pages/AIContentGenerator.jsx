@@ -2,15 +2,10 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail import { Link } from "react-router-dom";
-=======
 import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function AIContentGenerator() {
     const features = [
         {
@@ -32,9 +27,7 @@ export default function AIContentGenerator() {
             title: "SEO Optimization",
             description: "AI-powered SEO suggestions to improve content visibility and ranking",
             icon: <Target className="h-6 w-6 text-zion-cyan"/>
-
     ];
-
     const contentTypes = [
         {
             title: "Blog Posts",
@@ -65,9 +58,7 @@ export default function AIContentGenerator() {
             title: "Video Scripts",
             description: "Scripts for video content and presentations",
             icon: <Video className="h-8 w-8 text-zion-blue"/>
-
     ];
-
     const pricingPlans = [
         {
             name: "Starter",
@@ -116,9 +107,7 @@ export default function AIContentGenerator() {
                 "API access"
             ],
             popular: false
-
     ];
-
     const benefits = [
         "AI-powered content generation for any industry",
         "SEO-optimized content with keyword research",
@@ -133,14 +122,12 @@ export default function AIContentGenerator() {
         "API access for enterprise integration",
         "24/7 customer support"
     ];
-
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             <SEO
                 title="AI Content Generator - Zion Tech Group"
                 description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more."
             />
-
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
@@ -168,7 +155,6 @@ export default function AIContentGenerator() {
                     </div>
                 </div>
             </section>
-
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
@@ -181,7 +167,6 @@ export default function AIContentGenerator() {
                             high-quality content that drives results.
                         </p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature, index) => (
                             <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
@@ -197,7 +182,6 @@ export default function AIContentGenerator() {
                     </div>
                 </div>
             </section>
-
             {/* Content Types Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
@@ -209,7 +193,6 @@ export default function AIContentGenerator() {
                             From blog posts to social media content, our AI generator handles all your content needs.
                         </p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {contentTypes.map((type, index) => (
                             <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
@@ -225,7 +208,6 @@ export default function AIContentGenerator() {
                     </div>
                 </div>
             </section>
-
             {/* Pricing Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
@@ -237,7 +219,6 @@ export default function AIContentGenerator() {
                             Flexible pricing plans designed to grow with your content needs.
                         </p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {pricingPlans.map((plan, index) => (
                             <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${
@@ -276,7 +257,6 @@ export default function AIContentGenerator() {
                     </div>
                 </div>
             </section>
-
             {/* Benefits Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
@@ -288,7 +268,6 @@ export default function AIContentGenerator() {
                             Experience the power of AI-driven content creation with these key benefits.
                         </p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {benefits.map((benefit, index) => (
                             <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
@@ -299,7 +278,6 @@ export default function AIContentGenerator() {
                     </div>
                 </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">

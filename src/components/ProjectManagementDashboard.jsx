@@ -51,7 +51,6 @@ import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChar
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
-
 ];
 const statusColors = {
   'planning': 'bg-zion-blue text-white',
@@ -59,26 +58,12 @@ const statusColors = {
     'review': 'bg-zion-gold text-white',
     'completed': 'bg-zion-emerald text-white',
   'on-hold': 'bg-zion-slate text-white'
-
-
-
-
-
-
-
 };
 const priorityColors = {
   'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
   'critical': 'bg-red-500 text-white'
-
-
-
-
-
-
-
 };
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false);
@@ -100,10 +85,6 @@ export function ProjectManagementDashboard() {
             case 'review': return <Eye className="w-4 h-4"/>;
             case 'completed': return <CheckCircle className="w-4 h-4"/>;
             case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Clock className="w-4 h-4"/>;
-
-=======
             default: return <Clock className="w-4 h-4"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -129,10 +110,6 @@ export function ProjectManagementDashboard() {
     if (!isVisible) {
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">
         <BarChart3 className="w-5 h-5"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="fixed inset-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
@@ -148,7 +125,6 @@ export function ProjectManagementDashboard() {
           </button>
         </div>
       </div>
-
       <div className="p-6 overflow-y-auto h-full">
         {/* Controls */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
@@ -157,7 +133,6 @@ export function ProjectManagementDashboard() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
               <input type="text" placeholder="Search projects..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent"/>
             </div>
-
             <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Status</option>
               <option value="planning">Planning</option>
@@ -166,7 +141,6 @@ export function ProjectManagementDashboard() {
               <option value="completed">Completed</option>
               <option value="on-hold">On Hold</option>
             </select>
-
             <select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Priority</option>
               <option value="low">Low</option>
@@ -175,7 +149,6 @@ export function ProjectManagementDashboard() {
               <option value="critical">Critical</option>
             </select>
           </div>
-
           <div className="flex items-center gap-2">
             <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
               <BarChart3 className="w-4 h-4"/>
@@ -188,7 +161,6 @@ export function ProjectManagementDashboard() {
             </button>
           </div>
         </div>
-
         {/* Projects Grid */}
         {viewMode === 'grid' && (<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (<div key={project.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer" onClick={() => setSelectedProject(project)}>
@@ -207,7 +179,6 @@ export function ProjectManagementDashboard() {
                     </span>
                   </div>
                 </div>
-
                 {/* Progress Bar */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -218,7 +189,6 @@ export function ProjectManagementDashboard() {
                     <div className={`h-2 rounded-full transition-all duration-500 ${getProgressColor(project.progress)}`} style={{ width: `${project.progress}%` }}></div>
                   </div>
                 </div>
-
                 {/* Project Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
@@ -230,7 +200,6 @@ export function ProjectManagementDashboard() {
                     <div className="text-xs text-zion-slate-light">Total Tasks</div>
                   </div>
                 </div>
-
                 {/* Budget Info */}
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-zion-slate-light">Budget</span>
@@ -238,7 +207,6 @@ export function ProjectManagementDashboard() {
                     ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
                   </span>
                 </div>
-
                 {/* Timeline */}
                 <div className="mt-4 pt-4 border-t border-zion-slate-light">
                   <div className="flex items-center gap-2 text-xs text-zion-slate-light">
@@ -246,7 +214,6 @@ export function ProjectManagementDashboard() {
                     <span>{new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}</span>
                   </div>
                 </div>
-
                 {/* Health Indicator */}
                 <div className="mt-3 flex items-center gap-2">
                   <div className={`w-2 h-2 rounded-full ${calculateProjectHealth(project) === 'healthy' ? 'bg-zion-emerald' :
@@ -257,7 +224,6 @@ export function ProjectManagementDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {/* List View */}
         {viewMode === 'list' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden">
             <div className="overflow-x-auto">
@@ -328,7 +294,6 @@ export function ProjectManagementDashboard() {
               </table>
             </div>
           </div>)}
-
         {/* Gantt View */}
         {viewMode === 'gantt' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
             <h3 className="text-lg font-semibold text-zion-slate mb-4">Project Timeline</h3>
@@ -355,7 +320,6 @@ export function ProjectManagementDashboard() {
             </div>
           </div>)}
       </div>
-
       {/* Project Detail Modal */}
       {selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white dark:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -365,13 +329,11 @@ export function ProjectManagementDashboard() {
                 <X className="w-6 h-6"/>
               </button>
             </div>
-
             <div className="p-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Project Details</h3>
                   <p className="text-zion-slate-light mb-4">{selectedProject.description}</p>
-
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light">Status:</span>
@@ -391,7 +353,6 @@ export function ProjectManagementDashboard() {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tasks</h3>
                   <div className="space-y-3">
@@ -415,9 +376,5 @@ export function ProjectManagementDashboard() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

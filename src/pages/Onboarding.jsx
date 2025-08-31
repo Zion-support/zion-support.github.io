@@ -22,10 +22,6 @@ export default function Onboarding() {
             case "client":
                 return "employer";
             default:
-<<<<<<< HEAD
-                return "buyer";
-
-=======
                 return "buyer"}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -33,22 +29,11 @@ export default function Onboarding() {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
-<<<<<<< HEAD
-            router('/service-onboarding');
-            return}
-        else if (type === "talent") {
-            router('/talent-onboarding');
-            return}
-=======
             router('/service-onboarding');
             return;
-
         else if (type === "talent") {
             router('/talent-onboarding');
             return;
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -61,15 +46,8 @@ export default function Onboarding() {
                 description: "Your session may have expired. Please log in again.",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            router('/login');
-            return}
-=======
             router('/login');
             return;
-<<<<<<< HEAD
-
-=======
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -98,31 +76,17 @@ export default function Onboarding() {
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
-<<<<<<< HEAD
-            navigate(dashboardRoute);
-
-=======
-<<<<<<< HEAD
-            router(dashboardRoute)}
-=======
             router(dashboardRoute);
         }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Error updating profile:', error);
-=======
             // // // // // // // console.error('Error updating profile:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
                 variant: 'destructive',
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -131,20 +95,12 @@ export default function Onboarding() {
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
     if (!user) {
-<<<<<<< HEAD
-        router('/login');
-        return null}
-=======
         router('/login');
         return null;
-<<<<<<< HEAD
-
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
-
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -155,7 +111,6 @@ export default function Onboarding() {
               Complete your profile to get started
             </p>
           </div>
-
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
               {steps.map((step, index) => (<Step key={index} status={currentStep > index
@@ -165,10 +120,8 @@ export default function Onboarding() {
                     : "incomplete"} label={step.label} description={step.description}/>))}
             </Steps>
           </div>
-
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
             {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}
-
             {currentStep === 1 && (<div className="mt-6">
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
                   Back to Role Selection
@@ -177,11 +130,5 @@ export default function Onboarding() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}}
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

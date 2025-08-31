@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -11,7 +9,6 @@ import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link } f
 export default function EnterpriseDemo() {
     return (<>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>
-
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -21,7 +18,6 @@ export default function EnterpriseDemo() {
               Experience how Zion's AI-powered platform can transform your talent acquisition and marketplace operations
             </p>
           </div>
-
           {/* Demo Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20">
@@ -37,7 +33,6 @@ export default function EnterpriseDemo() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -51,7 +46,6 @@ export default function EnterpriseDemo() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -66,7 +60,6 @@ export default function EnterpriseDemo() {
               </CardContent>
             </Card>
           </div>
-
           {/* Demo Options */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Live Demo */}
@@ -98,7 +91,6 @@ export default function EnterpriseDemo() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Self-Guided Demo */}
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader>
@@ -129,7 +121,6 @@ export default function EnterpriseDemo() {
               </CardContent>
             </Card>
           </div>
-
           {/* What You'll See */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">What You'll See in the Demo</h2>
@@ -140,21 +131,18 @@ export default function EnterpriseDemo() {
                   See how our AI algorithms match the perfect talent to your requirements
                 </p>
               </div>
-
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Marketplace Features</h3>
                 <p className="text-zion-slate-light">
                   Explore our comprehensive marketplace for services, equipment, and solutions
                 </p>
               </div>
-
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Dashboard</h3>
                 <p className="text-zion-slate-light">
                   Experience our powerful analytics and management tools
                 </p>
               </div>
-
               <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Integration Capabilities</h3>
                 <p className="text-zion-slate-light">
@@ -163,7 +151,6 @@ export default function EnterpriseDemo() {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to See Zion in Action?</h2>
@@ -186,9 +173,5 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -18,17 +18,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         // Particle system
         const particles = [];
         // Color schemes
-<<<<<<< HEAD
-        const colorSchemes = {
-  blue['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-            purple['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-            green['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-            multi['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000',
-  '#8000ff']
-        
-
-};
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const colors = colorSchemes[colorScheme];
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
@@ -44,10 +33,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 color: colors[Math.floor(Math.random() * colors.length)],
                 life: Math.random() * 100,
                 maxLife: 100
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Grid lines
@@ -65,10 +50,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.beginPath();
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canvas.height);
-<<<<<<< HEAD
-                ctx.stroke();
-
-=======
                 ctx.stroke()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Horizontal lines
@@ -76,10 +57,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.beginPath();
                 ctx.moveTo(0, y);
                 ctx.lineTo(canvas.width, y);
-<<<<<<< HEAD
-                ctx.stroke();
-
-=======
                 ctx.stroke()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Update and draw particles
@@ -89,13 +66,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 particle.y += particle.vy;
                 // Bounce off edges
                 if (particle.x <= 0 || particle.x >= canvas.width) {
-<<<<<<< HEAD
-                    particle.vx *= -1;
-
-                if (particle.y <= 0 || particle.y >= canvas.height) {
-                    particle.vy *= -1;
-
-=======
                     particle.vx *= -1}
                 if (particle.y <= 0 || particle.y >= canvas.height) {
                     particle.vy *= -1}
@@ -105,10 +75,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 if (particle.life <= 0) {
                     particle.life = particle.maxLife;
                     particle.x = Math.random() * canvas.width;
-<<<<<<< HEAD
-                    particle.y = Math.random() * canvas.height;
-
-=======
                     particle.y = Math.random() * canvas.height}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Draw particle
@@ -129,11 +95,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particles.length; i++) {
-<<<<<<< HEAD
-                for (const j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-=======
                 for (let j = i + 1; j < particles.length; j++) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     const distance = Math.sqrt(dx * dx + dy * dy);
@@ -143,12 +104,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-<<<<<<< HEAD
-                        ctx.stroke();
-
-
-
-=======
                         ctx.stroke()}
                 }
             }
@@ -173,10 +128,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
                 ctx.beginPath();
                 ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
-<<<<<<< HEAD
-                ctx.fill();
-
-=======
                 ctx.fill()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Draw scanning line effect
@@ -190,15 +141,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         animate();
         return () => {
             if (animationRef.current) {
-<<<<<<< HEAD
-                cancelAnimationFrame(animationRef.current);
-
-            window.removeEventListener('resize', resizeCanvas);
-        };
-    }, [intensity, colorScheme]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>);
-};
-=======
                 cancelAnimationFrame(animationRef.current)}
             window.removeEventListener('resize', resizeCanvas)}}, [intensity, colorScheme]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};

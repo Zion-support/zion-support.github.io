@@ -124,11 +124,6 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
             "Renewable Energy Integration",
             "Carbon Footprint Reduction"
         ],
-<<<<<<< HEAD
-        technologies: ["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
-        partners: ["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
-
-=======
         technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
         partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
     }
@@ -174,7 +169,6 @@ const researchLabs = [
         equipment: "Security Testing Environment, Privacy Tools",
         projects: 9,
         researchers: 5
-
 ];
 export function InnovationResearchSection() {
     const [selectedResearch, setSelectedResearch] = useState(null);
@@ -186,18 +180,10 @@ export function InnovationResearchSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -205,8 +191,6 @@ export function InnovationResearchSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-
-
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -215,27 +199,14 @@ export function InnovationResearchSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Innovation & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Research</span>
@@ -244,36 +215,17 @@ export function InnovationResearchSection() {
             At Zion Tech Group, we push the boundaries of technology through cutting-edge research,
             innovative solutions, and collaborative partnerships with leading institutions worldwide.
           </p>
-
           {/* Innovation stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {innovationStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
@@ -283,68 +235,30 @@ export function InnovationResearchSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Research Areas */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Areas</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (<motion.div key={area.id} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
                   {/* Header */}
@@ -354,7 +268,6 @@ export function InnovationResearchSection() {
                         {area.icon}
                       </div>
                     </div>
-
                     <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {area.title}
                     </h4>
@@ -362,7 +275,6 @@ export function InnovationResearchSection() {
                       {area.description}
                     </p>
                   </div>
-
                   {/* Quick stats */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -374,7 +286,6 @@ export function InnovationResearchSection() {
                       <div className="text-zion-slate-light text-xs">Researchers</div>
                     </div>
                   </div>
-
                   {/* Highlights preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Focus Areas:</div>
@@ -388,7 +299,6 @@ export function InnovationResearchSection() {
                         </div>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -396,36 +306,17 @@ export function InnovationResearchSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
                         <div className="grid grid-cols-2 gap-4 mb-4">
                           <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -437,7 +328,6 @@ export function InnovationResearchSection() {
                             <div className="text-zion-slate-light text-xs">Patents</div>
                           </div>
                         </div>
-
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Technologies:</h5>
                           <div className="flex flex-wrap gap-1">
@@ -446,14 +336,12 @@ export function InnovationResearchSection() {
                               </span>))}
                           </div>
                         </div>
-
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Partners:</h5>
                           <div className="text-zion-slate-light/80 text-xs">
                             {area.partners.join(", ")}
                           </div>
                         </div>
-
                         <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
                           <div className="text-zion-cyan font-bold text-sm">{area.funding}</div>
                           <div className="text-zion-slate-light text-xs">Research Funding</div>
@@ -464,77 +352,37 @@ export function InnovationResearchSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Research Labs */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Labs</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {researchLabs.map((lab, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
                   <TestTube className="w-6 h-6 text-white"/>
                 </div>
-
                 <h4 className="text-lg font-bold text-white mb-2">{lab.name}</h4>
                 <div className="text-zion-cyan text-sm mb-2">{lab.location}</div>
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{lab.focus}</p>
-
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
                     <div className="text-zion-cyan font-bold text-sm">{lab.projects}</div>
@@ -545,42 +393,22 @@ export function InnovationResearchSection() {
                     <div className="text-zion-slate-light text-xs">Researchers</div>
                   </div>
                 </div>
-
                 <div className="text-zion-slate-light/80 text-xs">
                   <strong>Equipment:</strong> {lab.equipment}
                 </div>
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
@@ -603,9 +431,5 @@ export function InnovationResearchSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

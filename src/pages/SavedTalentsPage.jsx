@@ -15,14 +15,9 @@ export default function SavedTalentsPage() {
             setIsLoading(true);
             try {
                 if (!user) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    // // // console.warn("User not authenticated.");
-=======
                     // // // // // // // console.warn("User not authenticated.");
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     return;
-
 =======
                     console.warn("User not authenticated.");
                     return}
@@ -48,16 +43,6 @@ export default function SavedTalentsPage() {
           `)
                     .eq("user_id", user.id);
                 if (error) {
-<<<<<<< HEAD
-                    throw error;
-
-                if (data) {
-                    // Extract talent profiles and convert to TalentProfile type
-                    const talentProfiles = data.map(item => item.talent_profile);
-                    setSavedTalents(talentProfiles);
-
-
-=======
                     throw error}
                 if (data) {
                     // Extract talent profiles and convert to TalentProfile type
@@ -66,22 +51,12 @@ export default function SavedTalentsPage() {
             }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (error) {
-<<<<<<< HEAD
-                // // // console.error("Error fetching saved talents:", error);
-=======
                 // // // // // // // console.error("Error fetching saved talents:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast({
                     title: "Error",
                     description: "Failed to load saved talents. Please try again later.",
                     variant: "destructive",
-<<<<<<< HEAD
-                });
-
-            finally {
-                setIsLoading(false);
-
-=======
                 })}
             finally {
                 setIsLoading(false)}
@@ -89,16 +64,10 @@ export default function SavedTalentsPage() {
         };
         fetchSavedTalents()}, [user]);
     const handleViewProfile = (talentId) => {
-<<<<<<< HEAD
-        router(`/talent/${talentId}`)};
-=======
         router(`/talent/${talentId}`);
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const handleRequestHire = (talent) => {
-<<<<<<< HEAD
-        // // // console.log("Request to hire:", talent);
-=======
         // // // // // // // console.log("Request to hire:", talent);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         toast({
@@ -108,14 +77,9 @@ export default function SavedTalentsPage() {
     const handleToggleSave = async (talentId, isCurrentlySaved) => {
         try {
             if (!user) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                // // // console.warn("User not authenticated.");
-=======
                 // // // // // // // console.warn("User not authenticated.");
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 return;
-
 =======
                 console.warn("User not authenticated.");
                 return}
@@ -128,20 +92,12 @@ export default function SavedTalentsPage() {
                     .eq('user_id', user.id)
                     .eq('talent_id', talentId);
                 if (error) {
-<<<<<<< HEAD
-                    throw error;
-
-=======
                     throw error}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 setSavedTalents(prevTalents => prevTalents.filter(talent => talent.id !== talentId));
                 toast({
                     title: "Talent Removed",
                     description: "Talent removed from saved list.",
-<<<<<<< HEAD
-                });
-
-=======
                 })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             else {
@@ -150,10 +106,6 @@ export default function SavedTalentsPage() {
                     .from('saved_talents')
                     .insert([{ user_id: user.id, talent_id: talentId }]);
                 if (error) {
-<<<<<<< HEAD
-                    throw error;
-
-=======
                     throw error}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Fetch the updated talent profile and add it to the list
@@ -163,9 +115,6 @@ export default function SavedTalentsPage() {
                     .eq('id', talentId)
                     .single();
                 if (talentError) {
-<<<<<<< HEAD
-                    // // // console.error("Error fetching talent profile:", talentError);
-=======
                     // // // // // // // console.error("Error fetching talent profile:", talentError);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     toast({
@@ -173,10 +122,6 @@ export default function SavedTalentsPage() {
                         description: "Failed to update saved talents. Please try again later.",
                         variant: "destructive",
                     });
-<<<<<<< HEAD
-                    return;
-
-=======
                     return}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 if (talentData) {
@@ -184,51 +129,30 @@ export default function SavedTalentsPage() {
                     toast({
                         title: "Talent Saved",
                         description: "Talent saved to your list.",
-<<<<<<< HEAD
-                    });
-
-
-
-=======
                     })}
             }
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error toggling saved talent:", error);
-=======
             // // // // // // // console.error("Error toggling saved talent:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to update saved talents. Please try again later.",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-=======
             })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
-
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-
         {isLoading ? (<div className="text-center py-8">Loading saved talents...</div>) : savedTalents.length === 0 ? (<div className="text-center py-8">No talents saved yet.</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (<TalentCard key={talent.id} talent={talent} onViewProfile={handleViewProfile} onRequestHire={handleRequestHire} isSaved={true} onToggleSave={handleToggleSave} isAuthenticated={!!user}/>))}
           </div>)}
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}}}}}}}}}}
-=======
-      
     </>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

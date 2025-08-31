@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-interface ButtonProps {
-=======
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{}> {
-
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
@@ -12,14 +8,7 @@ interface ButtonProps extends React.PropsWithChildren<{}> {
   className?: string;
   onClick?: ()  => void;
   type?: 'button' | 'submit' | 'reset';
-<<<<<<< HEAD
-  disabled?: boolean}
-export function Button(...args[]):  {
-=======
   disabled?: boolean;
-<<<<<<< HEAD
-
-=======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Button({
@@ -43,12 +32,6 @@ export function Button({
   ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
   ;
-
-
-
-
-
-
 };
   const sizeClasses = {
   sm: 'px-3 py-1.5 text-sm',
@@ -60,42 +43,21 @@ export function Button({
   ;
   icon: 'w-10 h-10 p-0';
   ;
-
-
-
-
-
-
 };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-<<<<<<< HEAD
-    return <span className={classes}>{children}</span>;
-
-=======
     return <span className = {classes}>{children}</span>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <button
       type = {type}
       className={classes}
-<<<<<<< HEAD
-      onClick={onClick}
-      disabled={disabled}
-
-      {children}
-    </button>
-  )};
-=======;
       onClick={onClick};
       disabled={disabled};
     >;
       {children};
     </button>;
   );
-<<<<<<< HEAD
-
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -110,12 +72,6 @@ export const buttonVariants = {
   ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
 ;
-
-
-
-
-
-
 };
 export type { ButtonProps };
 }}}

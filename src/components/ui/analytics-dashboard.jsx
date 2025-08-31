@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target import { Button } from './button';
-=======
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
 import { Button } from "./button";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -54,21 +51,9 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.6 }}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -76,7 +61,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
           <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3>
           <p className="text-zinc-300 text-sm">Real-time business metrics and insights</p>
         </div>
-
         <div className="flex items-center gap-2">
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
             {showTargets ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
@@ -89,7 +73,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
           </Button>
         </div>
       </div>
-
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {/* Total Users */}
@@ -114,17 +97,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.totalUsers,
   15000)
-
-
-
-
-
-
 }%` }}/>
               </div>
             </div>)}
         </motion.div>
-
         {/* Active Users */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
@@ -147,17 +123,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.activeUsers,
   12000)
-
-
-
-
-
-
 }%` }}/>
               </div>
             </div>)}
         </motion.div>
-
         {/* Revenue */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
@@ -180,17 +149,10 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.revenue,
   500000)
-
-
-
-
-
-
 }%` }}/>
               </div>
             </div>)}
         </motion.div>
-
         {/* Growth Rate */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
@@ -213,47 +175,22 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.growth,
   25)
-
-
-
-
-
-
 }%` }}/>
               </div>
             </div>)}
         </motion.div>
       </div>
-
       {/* Selected Metric Details */}
       <AnimatePresence>
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>
             <p className="text-zinc-300 text-sm">
@@ -261,9 +198,5 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </p>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </motion.div>);
-</div></div></div></div>}}
-=======
     </motion.div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

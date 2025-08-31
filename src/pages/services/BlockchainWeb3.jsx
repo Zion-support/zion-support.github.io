@@ -35,10 +35,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             icon: Lock,
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
-<<<<<<< HEAD
-            features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
-
-=======
             features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
         }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -73,7 +69,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             name: "Avalanche",
             description: "Fast consensus protocol",
             icon: "AVAX"
-
     ];
     const useCases = [
         {
@@ -105,7 +100,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             title: "Real Estate",
             description: "Property tokenization and fractional ownership",
             icon: Target
-
     ];
     const benefits = [
         "Transparent and immutable record-keeping",
@@ -143,7 +137,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* Blockchain Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -156,7 +149,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               and Web3 application creation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -174,7 +166,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* Web3 Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +178,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               the best solutions for your specific needs.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
@@ -199,7 +189,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -212,7 +201,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               and create new opportunities for innovation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -224,7 +212,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -262,7 +249,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* Development Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -273,7 +259,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             A systematic approach to building secure, scalable, and user-friendly
             blockchain applications.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -306,7 +291,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">

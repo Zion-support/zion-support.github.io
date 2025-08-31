@@ -5,26 +5,18 @@ import {
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function ComprehensivePricing2027(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState<any>('price');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
-
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
-
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-
   const filteredServices = allServices
     .filter(service =>
       (selectedCategory === 'All' || service.category === service.category) &&
@@ -37,17 +29,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating});
-
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -57,27 +39,11 @@ export default function ComprehensivePricing2027(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -87,16 +53,9 @@ export default function ComprehensivePricing2027(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const cardVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
       scale: 1,
@@ -104,18 +63,8 @@ export default function ComprehensivePricing2027(...args[]):  {
       transition: {
         duration: 0.3,
         ease: "easeOut"
-
     },
     hover: {
-<<<<<<< HEAD
-      scale: 1.02,
-      y: -5,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-
-
-=======
       scale: 1.02,;
       y: -5,;
       transition: {;
@@ -125,105 +74,17 @@ export default function ComprehensivePricing2027(...args[]):  {
     };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
-<<<<<<< HEAD
-  const getPriceColor = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'text-green-400';
-    if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getPriceTier = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'Starter';
-    if (price < 2500) return 'Professional';
-    return 'Enterprise'};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Header Section */}
-      <motion.section
-        className="relative z-10 pt-20 pb-16 px-6"
-        initial = {
-  { opacity: 0,
-  y: -50 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-        transition={{ duration: 0.8 }}
-
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -231,86 +92,37 @@ export default function ComprehensivePricing2027(...args[]):  {
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Transparent pricing for our cutting-edge technology services.
             Choose the perfect solution for your business needs and budget.
           </motion.p>
-
           {/* Pricing Stats */}
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
-
 }}
           >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -331,45 +143,20 @@ export default function ComprehensivePricing2027(...args[]):  {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Search and Filters */}
       <motion.section
         className="relative z-10 px-6 pb-12"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
-
-
-
-
-
-
 }}
       >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -389,17 +176,11 @@ export default function ComprehensivePricing2027(...args[]):  {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className="relative">
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
@@ -409,33 +190,28 @@ export default function ComprehensivePricing2027(...args[]):  {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
               </div>
-
               {/* Sort By */}
               <div className="relative">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
                   <option value="rating">Sort by Rating</option>
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
               </div>
-
               {/* View Mode Toggle */}
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -443,14 +219,12 @@ export default function ComprehensivePricing2027(...args[]):  {
           </div>
         </div>
       </motion.section>
-
       {/* Services Grid */}
       <motion.section
         className="relative z-10 px-6 pb-20"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
@@ -460,38 +234,16 @@ export default function ComprehensivePricing2027(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index) => (
-=======
               >
                 {filteredServices.map((service, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -499,14 +251,12 @@ export default function ComprehensivePricing2027(...args[]):  {
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-
                     {viewMode === 'grid' ? (
                       <motion.div
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
                         onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-
                         {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
@@ -525,24 +275,20 @@ export default function ComprehensivePricing2027(...args[]):  {
                             </div>
                           </div>
                         </div>
-
                         {/* Service Description */}
                         <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                           {service.description}
                         </p>
-
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {service.tags.slice(0, 3).map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-
                               {tag}
                             </span>
                           ))}
                         </div>
-
                         {/* Stats */}
                         <div className="flex items-center justify-between pt-4 border-t border-zion-purple/20">
                           <div className="flex items-center gap-4">
@@ -559,7 +305,6 @@ export default function ComprehensivePricing2027(...args[]):  {
                             <div className="text-xs text-zion-slate-light">{service.availability}</div>
                           </div>
                         </div>
-
                         {/* Expand/Collapse Button */}
                         <button className="w-full mt-4 p-2 text-zion-cyan hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-colors flex items-center justify-center gap-2">
                           {expandedService === service.id ? (
@@ -574,7 +319,6 @@ export default function ComprehensivePricing2027(...args[]):  {
                             </>
                           )}
                         </button>
-
                         {/* Expanded Content */}
                         <AnimatePresence>
                           {expandedService === service.id && (
@@ -582,35 +326,16 @@ export default function ComprehensivePricing2027(...args[]):  {
                               initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                               animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }}
                               exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                               className="mt-4 pt-4 border-t border-zion-purple/20"
-
                               {/* Features */}
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -623,7 +348,6 @@ export default function ComprehensivePricing2027(...args[]):  {
                                   ))}
                                 </ul>
                               </div>
-
                               {/* Benefits */}
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
@@ -636,12 +360,10 @@ export default function ComprehensivePricing2027(...args[]):  {
                                   ))}
                                 </ul>
                               </div>
-
                               {/* CTA Button */}
                               <button
                                 onClick={() => window.open(service.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
                                 Get Started
                               </button>
                             </motion.div>
@@ -661,7 +383,6 @@ export default function ComprehensivePricing2027(...args[]):  {
                             {service.category}
                           </div>
                         </div>
-
                         {/* Service Content */}
                         <div className="flex-1 space-y-3">
                           <div className="flex items-start justify-between">
@@ -673,9 +394,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <div className="text-xs text-zion-slate-light">per {service.pricingModel}</div>
                             </div>
                           </div>
-
                           <p className="text-gray-300 text-sm">{service.description}</p>
-
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
@@ -690,23 +409,19 @@ export default function ComprehensivePricing2027(...args[]):  {
                               {getPriceTier(service.price)}
                             </div>
                           </div>
-
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
                               {service.tags.slice(0, 4).map((tag, tagIndex) => (
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-
                                   {tag}
                                 </span>
                               ))}
                             </div>
-
                             <button
                               onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-
                               Get Started
                             </button>
                           </div>
@@ -722,7 +437,6 @@ export default function ComprehensivePricing2027(...args[]):  {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -731,45 +445,20 @@ export default function ComprehensivePricing2027(...args[]):  {
           </AnimatePresence>
         </div>
       </motion.section>
-
       {/* CTA Section */}
       <motion.section
         className="relative z-10 px-6 pb-20"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
         animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
         transition = {
   { duration: 0.8,
   delay: 1.2 
-
-
-
-
-
-
 }}
       >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -785,32 +474,19 @@ export default function ComprehensivePricing2027(...args[]):  {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
                 Contact Our Team
               </Link>
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
-
                 Call +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.section>;
     </div>;
   );
-<<<<<<< HEAD
-</div>}}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

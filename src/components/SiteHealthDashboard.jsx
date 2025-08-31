@@ -39,7 +39,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 85,
                             status: 'good',
                             description: 'Overall Google Core Web Vitals performance',
-
                     ]
                 },
                 {
@@ -78,7 +77,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 85,
                             status: 'good',
                             description: 'Structured data implementation',
-
                     ]
                 },
                 {
@@ -110,7 +108,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 89,
                             status: 'good',
                             description: 'Screen reader compatibility',
-
                     ]
                 },
                 {
@@ -142,7 +139,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 95,
                             status: 'excellent',
                             description: 'CSP header implementation',
-
                     ]
                 },
                 {
@@ -175,7 +171,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 89,
                             status: 'good',
                             description: 'Recently updated content percentage',
-
                     ]
                 },
                 {
@@ -206,9 +201,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             value: 77,
                             status: 'good',
                             description: '404 pages and error handling',
-
                     ]
-
             ];
             setHealthData(healthCategories);
             // Calculate overall score
@@ -222,10 +215,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
-<<<<<<< HEAD
-            default: return 'text-gray-500 bg-gray-50 border-gray-200';
-
-=======
             default: return 'text-gray-500 bg-gray-50 border-gray-200'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -235,10 +224,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Clock className="w-4 h-4"/>;
-
-=======
             default: return <Clock className="w-4 h-4"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -257,10 +242,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           <h2 className="text-2xl font-bold mb-2">Analyzing Site Health</h2>
           <p className="text-gray-600">Performing comprehensive health check...</p>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="max-w-7xl mx-auto p-6 space-y-8">
@@ -273,7 +254,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           Comprehensive monitoring of website performance, SEO, accessibility, and user experience
         </p>
       </div>
-
       {/* Overall Score */}
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Overall Health Score</h2>
@@ -290,7 +270,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                     'Critical - Immediate action required for optimal performance.'}
         </p>
       </div>
-
       {/* Health Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {healthData.map((category, index) => {
@@ -309,7 +288,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                   </div>
                 </div>
               </div>
-
               <div className="p-6 space-y-4">
                 {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -327,14 +305,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
               </div>
             </div>)})}
       </div>
-
       {/* Action Items */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6 flex items-center space-x-2">
           <TrendingUp className="w-6 h-6 text-blue-600"/>
           <span>Priority Action Items</span>
         </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
@@ -352,7 +328,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
               </li>
             </ul>
           </div>
-
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">
               <AlertTriangle className="w-5 h-5"/>
@@ -375,7 +350,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           </div>
         </div>
       </div>
-
       {/* Performance Trends */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>
@@ -397,9 +371,5 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

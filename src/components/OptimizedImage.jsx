@@ -10,15 +10,6 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
     useEffect(() => {
         if (priority) {
             setIsInView(true);
-<<<<<<< HEAD
-            return;
-
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsInView(true);
-                observer.disconnect();
-
-=======
             return}
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
@@ -30,17 +21,6 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
             threshold: 0.1
         });
         if (imageRef.current) {
-<<<<<<< HEAD
-            observer.observe(imageRef.current);
-
-        return () => observer.disconnect();
-    }, [priority]);
-    // Load image when in view
-    useEffect(() => {
-        if (isInView && !priority) {
-            setCurrentSrc(src);
-
-=======
             observer.observe(imageRef.current)}
         return () => observer.disconnect()}, [priority]);
     // Load image when in view
@@ -66,7 +46,6 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
               <p className="text-xs text-gray-500">Loading...</p>
             </div>
           </motion.div>)}
-
         {/* Error State */}
         {hasError && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
             <div className="text-center text-red-600 dark:text-red-400">
@@ -75,46 +54,17 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Main Image */}
       <motion.img ref={imageRef} src={currentSrc} alt={alt} sizes={sizes} className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onLoad={handleLoad} onError={handleError} loading={priority ? 'eager' : 'lazy'} decoding="async"/>
-
       {/* Progressive Loading Effect */}
-<<<<<<< HEAD
       {isLoaded && !hasError && (<motion.div initial = {
   { opacity: 0,
   scale: 1.1 
-
 }} animate = {
   { opacity: 1,
   scale: 1 
-
-}} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
-    </div>)};
-=======
-      {isLoaded && !hasError && (<motion.div initial = {
-  { opacity: 0,
-  scale: 1.1 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>);
 };
-<<<<<<< HEAD
-}}}</motion.div>}
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

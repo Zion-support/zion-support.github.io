@@ -1,125 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug const mockSecurityEvents = [
-    {
-        id: '1',
-        type: 'threat',
-        severity: 'critical',
-        title: 'Suspicious Login Attempts Detected',
-        description: 'Multiple failed login attempts from suspicious IP addresses detected across multiple user accounts.',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        source: '192.168.1.100',
-        status: 'investigating',
-        assignedTo: 'Security Team',
-        priority: 'immediate'
-    },
-    {
-        id: '2',
-        type: 'vulnerability',
-        severity: 'high',
-        title: 'Critical Security Patch Required',
-        description: 'High-severity vulnerability detected in production database server. Immediate patching required.',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        source: 'Database Server',
-        status: 'open',
-        assignedTo: 'DevOps Team',
-        priority: 'high'
-    },
-    {
-        id: '3',
-        type: 'compliance',
-        severity: 'medium',
-        title: 'SOC 2 Audit Due',
-        description: 'Annual SOC 2 Type II audit is due in 30 days. Several controls need attention.',
-        timestamp: '2024-01-15T08:00:00.000Z',
-        source: 'Compliance Team',
-        status: 'open',
-        assignedTo: 'Compliance Officer',
-        priority: 'high'
-
-];
-const mockComplianceRequirements = [
-    {
-        id: '1',
-        framework: 'SOC2',
-        requirement: 'Access Control Management',
-        status: 'compliant',
-        lastAudit: '2024-01-01T00:00:00.000Z',
-        nextAudit: '2024-12-31T00:00:00.000Z',
-        riskLevel: 'low',
-        description: 'Ensure proper access controls are in place for all systems and applications.',
-        controls: ['Multi-factor authentication', 'Role-based access control', 'Regular access reviews']
-    },
-    {
-        id: '2',
-        framework: 'ISO27001',
-        requirement: 'Information Security Policy',
-        status: 'in_progress',
-        lastAudit: '2023-12-01T00:00:00.000Z',
-        nextAudit: '2024-06-01T00:00:00.000Z',
-        riskLevel: 'medium',
-        description: 'Develop and maintain comprehensive information security policies.',
-        controls: ['Policy documentation', 'Employee training', 'Regular policy reviews']
-    },
-    {
-        id: '3',
-        framework: 'GDPR',
-        requirement: 'Data Protection Impact Assessment',
-        status: 'non_compliant',
-        lastAudit: '2023-11-01T00:00:00.000Z',
-        nextAudit: '2024-02-01T00:00:00.000Z',
-        riskLevel: 'high',
-        description: 'Conduct DPIA for all new data processing activities.',
-        controls: ['Risk assessment', 'Mitigation planning', 'Documentation']
-
-];
-=======
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const mockSecurityMetrics = [
-    {
-        id: '1',
-        name: 'Security Score',
-        value: 87,
-        target: 90,
-        unit: '%',
-        trend: 'up',
-        change: 2.5,
-        category: 'Overall'
-    },
-    {
-        id: '2',
-        name: 'Threat Detection Rate',
-        value: 94.2,
-        target: 95,
-        unit: '%',
-        trend: 'up',
-        change: 1.8,
-        category: 'Detection'
-    },
-    {
-        id: '3',
-        name: 'Mean Time to Response',
-        value: 15,
-        target: 10,
-        unit: 'minutes',
-        trend: 'down',
-        change: -2.3,
-        category: 'Response'
-    },
-    {
-        id: '4',
-        name: 'Vulnerability Remediation',
-        value: 78.5,
-        target: 85,
-        unit: '%',
-        trend: 'up',
-        change: 3.2,
-        category: 'Remediation'
-
-];
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockThreatIntelligence = [
     {
@@ -141,7 +21,6 @@ const mockThreatIntelligence = [
         mitigationSteps['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
-
 ];
 export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false);
@@ -170,10 +49,6 @@ export function AdvancedSecurityDashboard() {
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-<<<<<<< HEAD
-            return () => clearInterval(interval);
-
-=======
             return () => clearInterval(interval)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoRefresh]);
@@ -188,10 +63,6 @@ export function AdvancedSecurityDashboard() {
             case 'low':
                 return 'bg-blue-500 text-white';
             default:
-<<<<<<< HEAD
-                return 'bg-gray-500 text-white';
-
-=======
                 return 'bg-gray-500 text-white'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -204,10 +75,6 @@ export function AdvancedSecurityDashboard() {
             case 'in_progress':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
-<<<<<<< HEAD
-                return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
-
-=======
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -218,10 +85,6 @@ export function AdvancedSecurityDashboard() {
             case 'medium':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
-<<<<<<< HEAD
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
-
-=======
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -232,10 +95,6 @@ export function AdvancedSecurityDashboard() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
-<<<<<<< HEAD
-                return <Activity className="w-4 h-4 text-gray-500"/>;
-
-=======
                 return <Activity className="w-4 h-4 text-gray-500"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -250,20 +109,12 @@ export function AdvancedSecurityDashboard() {
             case 'access':
                 return <Users className="w-5 h-5 text-purple-500"/>;
             default:
-<<<<<<< HEAD
-                return <Server className="w-5 h-5 text-gray-500"/>;
-
-=======
                 return <Server className="w-5 h-5 text-gray-500"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
         <Shield className="w-6 h-6"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
@@ -275,10 +126,6 @@ export function AdvancedSecurityDashboard() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
@@ -306,7 +153,6 @@ export function AdvancedSecurityDashboard() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -338,7 +184,6 @@ export function AdvancedSecurityDashboard() {
           </div>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
@@ -356,7 +201,6 @@ export function AdvancedSecurityDashboard() {
               {tab.label}
             </button>)})}
       </div>
-
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -381,7 +225,6 @@ export function AdvancedSecurityDashboard() {
                   </div>
                 </div>))}
             </div>
-
             {/* Quick Security Status */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
@@ -402,7 +245,6 @@ export function AdvancedSecurityDashboard() {
                     </div>))}
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-zion-blue"/>
@@ -425,7 +267,6 @@ export function AdvancedSecurityDashboard() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'events' && (<div className="space-y-4">
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -453,7 +294,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'compliance' && (<div className="space-y-4">
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -488,7 +328,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'threats' && (<div className="space-y-4">
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -530,7 +369,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>
@@ -539,9 +377,5 @@ export function AdvancedSecurityDashboard() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -104,7 +104,6 @@ import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const
         rating: 5,
         videoUrl: '/videos/manufacturing-case-study.mp4',
         imageUrl: '/images/manufacturing-iot.jpg'
-
 ];
 const industries = [
     { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },
@@ -124,18 +123,10 @@ export function CaseStudiesSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -143,8 +134,6 @@ export function CaseStudiesSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-
-
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -153,27 +142,14 @@ export function CaseStudiesSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Success <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stories</span>
@@ -182,36 +158,17 @@ export function CaseStudiesSection() {
             Discover how we've helped organizations across industries achieve remarkable results.
             Our proven track record speaks for itself.
           </p>
-
           {/* Industry stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {industry.icon}
@@ -221,18 +178,11 @@ export function CaseStudiesSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Case Studies Grid */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
   stiffness: 300 
-
-
-
-
-
-
 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
               <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
                 {/* Header */}
@@ -242,17 +192,14 @@ export function CaseStudiesSection() {
                       {caseStudy.icon}
                     </div>
                   </div>
-
                   <div className="text-right">
                     <div className="text-zion-cyan text-sm font-medium">{caseStudy.industry}</div>
                     <div className="text-zion-slate-light text-xs">{caseStudy.comp}</div>
                   </div>
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {caseStudy.title}
                 </h3>
-
                 {/* Challenge & Solution */}
                 <div className="space-y-4 mb-6">
                   <div>
@@ -264,7 +211,6 @@ export function CaseStudiesSection() {
                     <p className="text-zion-slate-light text-sm leading-relaxed">{caseStudy.solution}</p>
                   </div>
                 </div>
-
                 {/* Quick stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -276,7 +222,6 @@ export function CaseStudiesSection() {
                     <div className="text-zion-slate-light text-xs">Team Size</div>
                   </div>
                 </div>
-
                 {/* Technologies */}
                 <div className="mb-6">
                   <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies Used:</h4>
@@ -289,7 +234,6 @@ export function CaseStudiesSection() {
                       </span>)}
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className="flex items-center justify-between">
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -297,57 +241,26 @@ export function CaseStudiesSection() {
                   </span>
                   <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                 </div>
-
                 {/* Expanded results */}
                 <AnimatePresence>
                   {selectedCase === caseStudy.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
                       <h4 className="text-zion-cyan font-semibold text-sm mb-4">Key Results:</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         {caseStudy.results.map((result, idx) => (<motion.div key={idx} className="p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/20" initial = {
   { opacity: 0,
   x: -10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ delay: idx * 0.1 }}>
                             <div className="flex items-center justify-between mb-1">
                               <span className="text-zion-slate-light text-xs">{result.metric}</span>
@@ -356,7 +269,6 @@ export function CaseStudiesSection() {
                             <div className="text-zion-slate-light/80 text-xs">{result.improvement}</div>
                           </motion.div>))}
                       </div>
-
                       {/* Testimonial */}
                       <div className="p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/20">
                         <p className="text-zion-slate-light text-sm italic mb-2">"{caseStudy.testimonial}"</p>
@@ -375,35 +287,16 @@ export function CaseStudiesSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
@@ -425,9 +318,5 @@ export function CaseStudiesSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}
-=======
     </section>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

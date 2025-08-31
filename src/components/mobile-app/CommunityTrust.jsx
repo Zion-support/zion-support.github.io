@@ -6,7 +6,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     { icon: TrendingUp, value: '99.9%', label: 'Uptime', color: 'text-green-400' },
     { icon: Shield, value: 'SOC 2', label: 'Certified', color: 'text-purple-400' }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Chen',
@@ -31,16 +30,13 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       content: 'The real-time synchronization and mobile-first approach make Zion the perfect solution for our distributed team.',
       rating: 5,
       avatar: '👩‍🔧'
-
   ];
-
   const certifications = [
     { name: 'SOC 2 Type II', icon: '🔒', description: 'Security & compliance certified' },
     { name: 'ISO 27001', icon: '🛡️', description: 'Information security management' },
     { name: 'GDPR Compliant', icon: '🇪🇺', description: 'Data protection regulation' },
     { name: 'HIPAA Ready', icon: '🏥', description: 'Healthcare data standards' }
   ];
-
   const features = [
     {
       icon: Shield,
@@ -56,9 +52,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       icon: Award,
       title: 'Industry Recognition',
       description: 'Award-winning solution trusted by Fortune 500 companies'
-
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +65,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             Join thousands of IT teams who rely on Zion mobile for secure, reliable, and efficient asset management.
           </p>
         </div>
-
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
@@ -86,7 +79,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </div>
           ))}
         </div>
-
         {/* Testimonials */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -103,13 +95,11 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
                     <div className="text-xs text-gray-500">{testimonial.comp}</div>
                   </div>
                 </div>
-
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-
                 <p className="text-gray-300 text-sm leading-relaxed">
                   "{testimonial.content}"
                 </p>
@@ -117,7 +107,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             ))}
           </div>
         </div>
-
         {/* Certifications */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -133,7 +122,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             ))}
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -151,7 +139,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             ))}
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
           <div className="text-center mb-8">
@@ -162,7 +149,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
               Experience the same level of trust and reliability that has made Zion the preferred choice for IT asset management.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🌍</div>
@@ -186,7 +172,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 max-w-3xl mx-auto">
@@ -200,13 +185,11 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
               <a
                 href="#download"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                 Download Now
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 Request Demo
               </a>
             </div>
@@ -214,9 +197,5 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

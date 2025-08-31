@@ -3,9 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
-import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube import SEOHead from '../components/SEOHead';
-=======
 import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide-react';
 import SEOHead from "../components/SEOHead";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -25,13 +22,6 @@ const InnovativeServicesShowcase = () => {
         description: "Discover cutting-edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",
         keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
   url: "https://ziontechgroup.com/innovative-services"
-    
-
-
-
-
-
-
 };
     // Combine all services
     const allServices = [
@@ -53,19 +43,7 @@ const InnovativeServicesShowcase = () => {
             'Cybersecurity': <Shield className="h-5 w-5"/>,
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
-  <<<<<<< HEAD
-            'Digital Twin': <Cpu className="h-5 w-5"/>
-        
-
-};
-        return categoryIcons[category] || <Zap className="h-5 w-5"/>};
-=======
   'Digital Twin': <Cpu className="h-5 w-5"/>
-        
-
-
-
-
 };
         return categoryIcons[category] || <Zap className="h-5 w-5"/>;
     };
@@ -81,16 +59,11 @@ const InnovativeServicesShowcase = () => {
             case 'starter': return 'bg-green-100 text-green-800 border-green-200';
             case 'professional': return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'enterprise': return 'bg-purple-100 text-purple-800 border-purple-200';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800 border-gray-200';
-
-=======
             default: return 'bg-gray-100 text-gray-800 border-gray-200'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig}/>
-
       {/* Header Section */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -118,7 +91,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 bg-zion-slate-light">
         <div className="container mx-auto px-4">
@@ -128,19 +100,16 @@ const InnovativeServicesShowcase = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>
                 <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10"/>
               </div>
-
               <select value={selectedCategory} onChange={(e) => {
             setSelectedCategory(e.target.value);
             setSelectedSubcategory('all')}} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Categories</option>
                 {INNOVATIVE_SERVICE_CATEGORIES_2025.map((category) => (<option key={category} value={category}>{category}</option>))}
               </select>
-
               <select value={selectedSubcategory} onChange={(e) => setSelectedSubcategory(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Subcategories</option>
                 {getSubcategoriesForCategory(selectedCategory).map((subcategory) => (<option key={subcategory} value={subcategory}>{subcategory}</option>))}
               </select>
-
               <select value={priceRange} onChange={(e) => setPriceRange(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Prices</option>
                 <option value="low">Under $10K</option>
@@ -151,7 +120,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {sortedServices.length === 0 ? (<div className="text-center py-12">
@@ -180,15 +148,12 @@ const InnovativeServicesShowcase = () => {
                       </div>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
-
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
-
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span className="flex items-center">
                       <Clock className="w-4 h-4 mr-1"/>
@@ -200,7 +165,6 @@ const InnovativeServicesShowcase = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Service Features */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Key Features</h4>
@@ -214,7 +178,6 @@ const InnovativeServicesShowcase = () => {
                       </div>)}
                   </div>
                 </div>
-
                 {/* Service Benefits */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Benefits</h4>
@@ -225,7 +188,6 @@ const InnovativeServicesShowcase = () => {
                       </div>))}
                   </div>
                 </div>
-
                 {/* Service Footer */}
                 <div className="p-6 bg-gray-50">
                   <div className="flex items-center justify-between mb-4">
@@ -238,7 +200,6 @@ const InnovativeServicesShowcase = () => {
                         </span>))}
                     </div>
                   </div>
-
                   <div className="flex space-x-3">
                     <Link to={'link' in service ? service.link : '#'} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors flex items-center justify-center">
                       Learn More
@@ -255,7 +216,6 @@ const InnovativeServicesShowcase = () => {
               </div>))}
           </div>)}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -282,7 +242,6 @@ const InnovativeServicesShowcase = () => {
               364 E Main St STE 1008, Middletown DE 19709
             </p>
           </div>
-
           {filteredServices.length === 0 ? (<div className="text-center py-20">
               <h3 className="text-2xl font-semibold text-zion-slate mb-4">No services found</h3>
               <p className="text-zion-slate-light mb-6">Try adjusting your search criteria or browse all categories.</p>
@@ -310,16 +269,13 @@ const InnovativeServicesShowcase = () => {
                           Featured
                         </Badge>)}
                     </div>
-
                     <CardTitle className="text-xl text-zion-blue-dark group-hover:text-zion-purple transition-colors">
                       {service.title}
                     </CardTitle>
-
                     <CardDescription className="text-zion-slate line-clamp-3">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-
                   <CardContent className="space-y-4">
                     {/* Key Features */}
                     <div>
@@ -337,7 +293,6 @@ const InnovativeServicesShowcase = () => {
                           </li>)}
                       </ul>
                     </div>
-
                     {/* Benefits */}
                     <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2 flex items-center gap-2">
@@ -351,7 +306,6 @@ const InnovativeServicesShowcase = () => {
                           </li>))}
                       </ul>
                     </div>
-
                     {/* Pricing & Details */}
                     <div className="pt-4 border-t border-zion-slate-light">
                       <div className="flex items-center justify-between mb-3">
@@ -362,7 +316,6 @@ const InnovativeServicesShowcase = () => {
                           {service.pricingModel}
                         </Badge>
                       </div>
-
                       <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                         <span className="flex items-center gap-1">
                           <Clock className="h-4 w-4"/>
@@ -373,7 +326,6 @@ const InnovativeServicesShowcase = () => {
                           {service.supportLevel}
                         </span>
                       </div>
-
                       {/* Rating */}
                       {service.rating && (<div className="flex items-center gap-2 mb-4">
                           <div className="flex items-center gap-1">
@@ -383,19 +335,16 @@ const InnovativeServicesShowcase = () => {
                             {service.rating} ({service.reviewCount} reviews)
                           </span>
                         </div>)}
-
                       {/* Market Price */}
                       <div className="mb-4 p-3 bg-zion-slate-light rounded-lg">
                         <div className="text-sm text-zion-slate-light mb-1">Market Price Range</div>
                         <div className="font-semibold text-zion-blue-dark">{service.marketPrice}</div>
                       </div>
-
                       {/* ROI */}
                       <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                         <div className="text-sm text-green-700 mb-1">Expected ROI</div>
                         <div className="font-semibold text-green-800">{service.roi}</div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <Button asChild className="flex-1 bg-zion-blue hover:bg-zion-blue-dark">
@@ -408,7 +357,6 @@ const InnovativeServicesShowcase = () => {
                           <Link to="/request-quote">Quote</Link>
                         </Button>
                       </div>
-
                       {/* Contact Info */}
                       <div className="mt-4 pt-4 border-t border-zion-slate-light">
                         <div className="text-sm text-zion-slate-light mb-2">Ready to transform your business?</div>
@@ -427,7 +375,6 @@ const InnovativeServicesShowcase = () => {
             </div>)}
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -438,7 +385,6 @@ const InnovativeServicesShowcase = () => {
             Join the technology revolution with Zion Tech Group. Our innovative solutions are designed to
             drive growth, efficiency, and competitive advantage in the digital age.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light">
               <Link to="/contact">Schedule a Consultation</Link>
@@ -447,7 +393,6 @@ const InnovativeServicesShowcase = () => {
               <Link to="/request-quote">Get Custom Quote</Link>
             </Button>
           </div>
-
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -473,10 +418,5 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</div></div></Card></Card></Card></Card>};
-}}
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

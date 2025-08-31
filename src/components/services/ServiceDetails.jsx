@@ -4,21 +4,6 @@ export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
         const dataCenters = {
-  <<<<<<< HEAD
-            "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
-            "United Kingdom"["London", "Manchester", "Birmingham"],
-            "Germ"["Frankfurt", "Berlin", "Munich"],
-            "Japan"["Tokyo", "Osaka"],
-            "Australia"["Sydney", "Melbourne", "Perth"],
-            "Singapore"["Singapore Central"],
-            "Canada"["Toronto", "Montreal", "Vancouver"],
-  // Default for other countries
-            "default"["Major metropolitan areas"]
-        
-
-};
-        return dataCenters[country] || dataCenters["default"]};
-=======
   "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
             "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -28,11 +13,6 @@ export function ServiceDetails({ country }) {
             "Canada": ["Toronto", "Montreal", "Vancouver"],
   // Default for other countries
             "default": ["Major metropolitan areas"]
-        
-
-
-
-
 };
         return dataCenters[country] || dataCenters["default"];
     };
@@ -49,31 +29,6 @@ export function ServiceDetails({ country }) {
             "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
   // Default placeholder
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-<<<<<<< HEAD
-        
-
-};
-        return regions[country] || regions["default"]};
-    // Get region-specific instructions
-    const getRegionalInstructions = (country) => {
-        // In a real implementation, this would be much more detailed and specific
-        const timeZones = {
-  "United States": "EST/CST/PST depending on location",
-            "United Kingdom": "GMT/BST",
-            "Germ": "CET/CEST",
-            "Japan": "JST",
-            "Australia": "AEST/ACDT/AWST depending on location",
-            "Singapore": "SGT",
-  "default": "Local timezone"
-        
-
-};
-=======
-        
-
-
-
-
 };
         return regions[country] || regions["default"];
     };
@@ -101,7 +56,6 @@ export function ServiceDetails({ country }) {
         <div className="overflow-hidden rounded-lg mb-4">
           <img loading="lazy" src={getRegionalImage(country)} alt={`Datacenter in ${country}`} className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"/>
         </div>
-
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
@@ -114,7 +68,6 @@ export function ServiceDetails({ country }) {
                 </div>))}
             </div>
           </div>
-
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <Clock className="mr-2 h-4 w-4 text-zion-purple"/>
@@ -124,7 +77,6 @@ export function ServiceDetails({ country }) {
               {getRegionalInstructions(country)}
             </p>
           </div>
-
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
@@ -142,9 +94,5 @@ export function ServiceDetails({ country }) {
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card></Card>}}
-=======
     </Card>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

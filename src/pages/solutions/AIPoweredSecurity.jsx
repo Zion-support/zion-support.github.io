@@ -1,33 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud const AIPoweredSecurity = () => {
-    const securityFeatures = [
-        {
-            icon: Brain,
-            title: "AI Threat Detection",
-            description: "Intelligent threat identification and response using machine learning",
-            features: ["Behavioral analysis", "Pattern recognition", "Anomaly detection", "Predictive security"]
-        },
-        {
-            icon: Shield,
-            title: "Advanced Protection",
-            description: "Multi-layered security with AI-enhanced defense mechanisms",
-            features: ["Real-time monitoring", "Automated response", "Threat intelligence", "Zero-day protection"]
-        },
-        {
-            icon: Eye,
-            title: "Continuous Monitoring",
-            description: "24/7 surveillance and analysis of security events",
-            features: ["Real-time alerts", "Comprehensive logging", "Performance metrics", "Incident tracking"]
-        },
-        {
-            icon: Lock,
-            title: "Access Control",
-            description: "Intelligent authentication and authorization systems",
-            features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
-
-    ];
-=======
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
 const AIPoweredSecurity = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -67,7 +38,6 @@ const AIPoweredSecurity = () => {
             description: "Automated incident detection and response",
             icon: AlertTriangle,
             capabilities: ["Threat hunting", "Automated response", "Forensic analysis", "Recovery planning"]
-
     ];
     const benefits = [
         "Proactive threat detection and prevention",
@@ -107,7 +77,6 @@ const AIPoweredSecurity = () => {
             phase: "Monitoring & Optimization",
             description: "Continuous monitoring and system optimization",
             duration: "Ongoing"
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -137,7 +106,6 @@ const AIPoweredSecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Security Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,7 +118,6 @@ const AIPoweredSecurity = () => {
               protection against evolving cyber threats.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -168,7 +135,6 @@ const AIPoweredSecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Security Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +147,6 @@ const AIPoweredSecurity = () => {
               of your organization's security needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securitySolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -199,7 +164,6 @@ const AIPoweredSecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +201,6 @@ const AIPoweredSecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -248,7 +211,6 @@ const AIPoweredSecurity = () => {
             A structured approach to deploying AI-powered security across
             your organization with minimal disruption.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -261,7 +223,6 @@ const AIPoweredSecurity = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

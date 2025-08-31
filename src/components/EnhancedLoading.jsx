@@ -4,35 +4,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
   sm: 'w-4 h-4',
         md: 'w-8 h-8',
         lg: 'w-12 h-12',
-  <<<<<<< HEAD
-        xl: 'w-16 h-16'
-    
-
-};
-    const renderBars = () => (<div className="flex space-x-1">
-      {[0, 1, 2, 3].map((i) => (<motion.div key={i} className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-400 rounded-full`} animate = {
-  {
-                scaleY[1, 1.5, 1],
-                opacity[0.5, 1,
-  0.5]
-            
-
-}} transition = {
-  {
-                duration: 1.2,
-                repeat: Infinity,
-  delay: i * 0.1
-            
-
-}}/>))}
-    </div>);
-=======
   xl: 'w-16 h-16'
-    
-
-
-
-
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const renderVariant = () => {
@@ -44,10 +16,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             case 'bars':
                 return renderBars();
             default:
-<<<<<<< HEAD
-                return renderSpinner();
-
-=======
                 return renderSpinner()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };

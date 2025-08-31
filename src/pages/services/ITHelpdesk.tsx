@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail export default function ITHelpdesk() {
-  const features = [
-    'Ticketing with SLA and automation rules',
-    'Self-service knowledge base and chat widget',
-    'Asset inventory and remote assistance',
-    'Email-to-ticket and status notifications',
-    'Multi-tenant client portals',
-    'Reports: MTTR, CSAT, backlog trends'
-=======
 import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from 'lucide-react';
-
 export default function ITHelpdesk() {
   const features = [;
     'Ticketing with SLA and automation rules',;
@@ -20,13 +9,11 @@ export default function ITHelpdesk() {
     'Reports: MTTR, CSAT, backlog trends';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricing = [;
     { name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },;
     { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },;
     { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },;
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
@@ -38,7 +25,6 @@ export default function ITHelpdesk() {
           <p className="text-white/90 text-xl">Ticketing, SLAs, and client portals built for managed service providers.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
         <div>
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Capabilities</h2>
@@ -69,7 +55,6 @@ export default function ITHelpdesk() {
           </div>
         </div>
       </section>
-
       <section className="pb-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
           {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => (

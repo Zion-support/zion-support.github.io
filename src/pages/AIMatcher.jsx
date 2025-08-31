@@ -63,7 +63,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 'Medium-term (6-12 months)',
                 'Long-term (1+ years)'
             ]
-
     ];
     const aiSolutions = [
         {
@@ -119,25 +118,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
             features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],
             href: '/services/ai-customer-service-automation',
             icon: Users
-
     ];
-<<<<<<< HEAD
-    const handleAnswer = (questionId, answer) => {
-        setAnswers(prev => ({ ...prev, [questionId]: answer }));
-    };
-    const handleNext = () => {
-        if (currentStep < questions.length) {
-            setCurrentStep(currentStep + 1);
-
-        else {
-            generateRecommendations();
-
-    };
-    const handlePrevious = () => {
-        if (currentStep > 1) {
-            setCurrentStep(currentStep - 1);
-
-=======
     const handlePrevious = () => {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1)}
@@ -151,24 +132,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         let filteredSolutions = aiSolutions;
         // Filter based on industry
         if (industry === 'Healthcare & Life Sciences') {
-<<<<<<< HEAD
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights');
-
-        else if (industry === 'Financial Services') {
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights');
-
-        // Filter based on company size
-        if (companySize === 'Startup (1-50 employees)') {
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'));
-
-        // Filter based on goals
-        if (goals === 'Automate repetitive tasks') {
-            filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation');
-
-        else if (goals === 'Improve customer experience') {
-            filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience');
-
-=======
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights')}
         else if (industry === 'Financial Services') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights')}
@@ -185,11 +148,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         setCurrentStep(questions.length + 1)};
     const resetQuiz = () => {
         setCurrentStep(1);
-<<<<<<< HEAD
-        setAnswers({ /* empty */ });
-        setRecommendations([]);
-    };
-=======
         setAnswers({});
         setRecommendations([])};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -198,26 +156,13 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
               <Brain className="w-10 h-10 text-white"/>
@@ -234,36 +179,17 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
           </motion.div>
         </div>
       </div>
-
       {/* Quiz Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {currentStep <= questions.length ? (<motion.div key={currentStep} initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
             {/* Progress Bar */}
             <div className="mb-8">
@@ -275,23 +201,15 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
               </div>
             </div>
-
             {/* Question */}
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-white mb-6">
                 {questions[currentStep - 1].question}
               </h2>
-
               <div className="space-y-3">
                 {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {
   () => handleAnswer(questions[currentStep - 1].id,
   option)
-
-
-
-
-
-
 } className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${answers[questions[currentStep - 1].id] === option
                     ? 'border-blue-500 bg-blue-500/20 text-blue-300'
                     : 'border-slate-600 hover:border-slate-500 text-gray-300 hover:text-white hover:bg-slate-700/50'}`}>
@@ -299,7 +217,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                   </button>))}
               </div>
             </div>
-
             {/* Navigation */}
             <div className="flex justify-between">
               <button onClick={handlePrevious} disabled={currentStep === 1} className={`px-6 py-2 rounded-lg border transition-all duration-200 ${currentStep === 1
@@ -307,7 +224,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 : 'border-slate-500 text-slate-300 hover:border-slate-400 hover:text-white'}`}>
                 Previous
               </button>
-
               <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]
                 ? 'bg-slate-600 text-slate-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>
@@ -319,21 +235,9 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="space-y-8">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-4">
@@ -344,35 +248,16 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 Based on your answers, here are the AI solutions that best match your business needs and goals.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recommendations.map((solution, index) => (<motion.div key={solution.name} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
@@ -383,9 +268,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                       <p className="text-sm text-blue-400">{solution.category}</p>
                     </div>
                   </div>
-
                   <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
-
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-gray-300 mb-2">Best For:</h4>
                     <ul className="space-y-1">
@@ -395,14 +278,12 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                         </li>))}
                     </ul>
                   </div>
-
                   <Link to={solution.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"/>
                   </Link>
                 </motion.div>))}
             </div>
-
             <div className="text-center mt-12">
               <button onClick={resetQuiz} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 mr-4">
                 Take Quiz Again
@@ -413,28 +294,15 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
             </div>
           </motion.div>)}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Need More Personalized Guidance?
@@ -454,10 +322,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AIMatcher;

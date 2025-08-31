@@ -2,37 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server import { Link } from "react-router-dom";
-export default function CybersecurityServices() {
-    const services = [
-        {
-            title: "Penetration Testing",
-            description: "Comprehensive security assessments to identify vulnerabilities in your systems",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,500"
-        },
-        {
-            title: "Security Audits",
-            description: "Thorough review of your security policies, procedures, and infrastructure",
-            icon: <Eye className="h-6 w-6 text-zion-purple"/>,
-            price: "From $1,800"
-        },
-        {
-            title: "Incident Response",
-            description: "24/7 emergency response team for security breaches and cyber attacks",
-            icon: <AlertTriangle className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Security Training",
-            description: "Employee cybersecurity awareness and best practices training",
-            icon: <Users className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $500"
-
-    ];
-=======
 import SEO from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -68,7 +37,6 @@ export default function CybersecurityServices() {
             title: "Compliance",
             description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
             icon: <Shield className="h-8 w-8 text-zion-blue"/>
-
     ];
     const pricingPlans = [
         {
@@ -114,7 +82,6 @@ export default function CybersecurityServices() {
                 "Executive reporting"
             ],
             popular: false
-
     ];
     const testimonials = [
         {
@@ -134,11 +101,9 @@ export default function CybersecurityServices() {
             role: "CEO, E-commerce Pro",
             content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -168,7 +133,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -180,7 +144,6 @@ export default function CybersecurityServices() {
               Our expert cybersecurity team provides a full range of security services to protect your business assets and data.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
@@ -201,7 +164,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Security Solutions Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -213,7 +175,6 @@ export default function CybersecurityServices() {
               From network security to compliance, we provide comprehensive protection across all aspects of your infrastructure.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securitySolutions.map((solution, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
                 <CardHeader>
@@ -231,7 +192,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -243,7 +203,6 @@ export default function CybersecurityServices() {
               Choose the security plan that fits your business needs. All plans include our core cybersecurity features.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
@@ -276,7 +235,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -288,7 +246,6 @@ export default function CybersecurityServices() {
               See what our clients say about our cybersecurity expertise and commitment to protecting their businesses.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
@@ -305,7 +262,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">
@@ -330,9 +286,5 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

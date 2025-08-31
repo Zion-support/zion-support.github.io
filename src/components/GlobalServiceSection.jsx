@@ -35,15 +35,10 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       icon: CheckCircle,
       title: "Quality Assurance",
       description: "Rigorous testing and validation of all services",
-<<<<<<< HEAD
-      features: ["Performance testing", "Security audits", "Compliance verification"]
-
-=======
       features["Performance testing", "Security audits", "Compliance verification"]
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,13 +50,11 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
             Our global network ensures consistent, high-quality IT services wherever your business operates.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {globalServices.map((service, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
                   <service.icon className="h-8 w-8 text-blue-400" />
@@ -80,7 +73,6 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -96,9 +88,5 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

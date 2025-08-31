@@ -1,5 +1,4 @@
 export interface MarketplaceItem {
-
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -19,12 +18,8 @@ seller: {
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
-<<<<<<< HEAD
-  warranty: string;
-=======
   warranty: string}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const marketplaceItems: MarketplaceItem[] = [
   {
     id: 'ai-server-cluster',
@@ -36,10 +31,6 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 127,
     views: 2847,
     likes: 156,
-<<<<<<< HEAD
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags['AI', 'High Performance', 'Scalable', 'GPU'],
-=======
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -162,15 +153,6 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'DataGenius Consulting',
       rating: 4.7,
-<<<<<<< HEAD
-      verified: true
-    },
-    location: 'Remote',
-    availability: 'available',
-    deliveryTime: 'Immediate',
-    warranty: 'N/A'
-
-=======
       verified: true;
     },;
     location: 'Remote',;
@@ -180,7 +162,6 @@ export const marketplaceItems: MarketplaceItem[] = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const marketplaceCategories = [
   {
     id: 'products',
@@ -201,14 +182,6 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item  => item.category === 'equipment').length
   },
   {
-<<<<<<< HEAD
-    id: 'services',
-    name: 'Services',
-    description: 'Professional services and consulting',
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item => item.category === 'services').length
-
-=======
     count: marketplaceItems.filter(item  => item.category === 'services').length
   };
 =======;
@@ -220,7 +193,6 @@ export const marketplaceCategories = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const marketplaceFilters = [
   {
     title: 'Category',
@@ -257,16 +229,6 @@ export const marketplaceFilters = [
     title: 'Availability',
     key: 'availability',
     type: 'checkbox' as const,
-<<<<<<< HEAD
-    options[
-      { value: 'available', label: 'Available' },
-      { value: 'limited', label: 'Limited' },
-      { value: 'out-of-stock', label: 'Out of Stock' }
-    ]
-<<<<<<< HEAD
-
-];}}}}
-=======
   }
 =======;
     options: [;

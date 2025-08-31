@@ -51,7 +51,6 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             icon: User,
             matches: (path) => path.startsWith("/dashboard"),
             authRequired: true
-
     ];
     // Filter items based on auth status
     const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));
@@ -62,12 +61,6 @@ export function MobileBottomNav({ unreadCount = 0 }) {
   item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white")
-
-
-
-
-
-
 }>
             <div className="relative">
               <item.icon className="h-5 w-5 mb-1"/>
@@ -78,9 +71,5 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             <span className="text-xs font-medium">{item.name}</span>
           </Link>))}
       </div>
-<<<<<<< HEAD
-    </nav>);
-}}}
-=======
     </nav>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

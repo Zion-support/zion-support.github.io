@@ -1,13 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
-import enhancedAIServices2025 from '../data/enhancedAIServices2025';
-import enhancedITServices2025 from '../data/enhancedITServices2025';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
@@ -49,10 +40,6 @@ const ComprehensivePricing = () => {
             case 'consulting': return <Users className="h-5 w-5"/>;
             case 'managed services': return <Settings className="h-5 w-5"/>;
             case 'web development': return <Globe className="h-5 w-5"/>;
-<<<<<<< HEAD
-            default: return <Star className="h-5 w-5"/>;
-
-=======
             default: return <Star className="h-5 w-5"/>}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -85,39 +72,6 @@ const ComprehensivePricing = () => {
             case 'consulting': return 'from-purple-500 to-indigo-500';
             case 'managed services': return 'from-teal-500 to-cyan-500';
             case 'web development': return 'from-blue-500 to-green-500';
-<<<<<<< HEAD
-            default: return 'from-gray-500 to-slate-500';
-
-    };
-    const formatPrice = (price, pricingModel) => {
-        if (pricingModel === 'per API call') {
-            return `$${price.toFixed(3)} per call`;
-
-        else if (pricingModel === 'per word') {
-            return `$${price.toFixed(2)} per word`;
-
-        else if (pricingModel === 'per recommendation') {
-            return `$${price.toFixed(3)} per recommendation`;
-
-        else if (pricingModel === 'per employee/month') {
-            return `$${price}/employee/month`;
-
-        else if (pricingModel === 'monthly') {
-            return `$${price}/month`;
-
-        else if (pricingModel === 'usage-based') {
-            return `$${price} per unit`;
-
-        else if (pricingModel === 'tiered') {
-            return `$${price}/month starting`;
-
-        else if (pricingModel === 'enterprise') {
-            return `$${price}/month`;
-
-        else {
-            return `$${price}`;
-
-=======
             default: return 'from-gray-500 to-slate-500'}
     };
     const formatPrice = (price, pricingModel) => {
@@ -209,12 +163,6 @@ const ComprehensivePricing = () => {
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300" onClick = {
   () => window.open(service.contactInfo.website,
   '_blank')
-
-
-
-
-
-
 }>
                   Get Started
                 </Button>
@@ -314,12 +262,6 @@ const ComprehensivePricing = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
-
-
-
-
-
-
 }>
               Visit Our Website
               <ExternalLink className="ml-2 h-4 w-4"/>
@@ -331,10 +273,6 @@ const ComprehensivePricing = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
-=======
     </div>)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ComprehensivePricing;

@@ -9,25 +9,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Real-time auditing performance tracking',;
     'Custom AI models for auditing applications';
   ];
-
   const tiers = [
     {
       name: 'Developer',
       price: '$599/mo',
       details: ['Up to 5 audits/month', 'Basic AI features', 'Standard auditing', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,999/mo',
-      details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,499/mo', 
@@ -40,7 +27,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     },;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Security auditing optimization',;
     'Auditing strategy management and execution',;
@@ -49,7 +35,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Auditing automation and orchestration',;
     'Auditing scaling and management';
   ];
-
   const benefits = [;
     'Improve security auditing performance by 50-80%',;
     'Reduce auditing completion time by 40-70%',;
@@ -58,7 +43,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Optimize resource utilization',;
     'Scale security auditing operations efficiently';
   ];
-
   const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
@@ -67,7 +51,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Media & Entertainment',;
     'Technology & SaaS';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-500 py-20 text-center">
@@ -79,7 +62,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <p className="text-orange-100 text-xl">Transform your security auditing with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +101,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +109,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-orange-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Security Auditing Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your security auditing with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -10,7 +10,6 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
     return (<div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
-
       <div className="space-y-3 mt-6">
         <Card className={`cursor-pointer transition-all ${selectedRole === 'talent'
             ? "border-primary bg-primary/5"
@@ -28,7 +27,6 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
             </div>
           </CardContent>
         </Card>
-
         <Card className={`cursor-pointer transition-all ${selectedRole === 'client'
             ? "border-primary bg-primary/5"
             : "border-border hover:border-primary/40"}`} onClick={() => handleSelect('client')}>
@@ -46,9 +44,5 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card>}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

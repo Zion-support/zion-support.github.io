@@ -607,10 +607,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         customBranding: true,
         dataRetention: "10 years",
         uptime: "99.99%",
-<<<<<<< HEAD
-        securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-
-=======
         securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,4 @@
 import { ProductListing  } from '@/types/listings';
-
 // Enhanced real micro SAAS services and solutions
 export const ENHANCED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -17,9 +16,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       avatarUrl: "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png",
       email: "kleber@ziontechgroup.com"
     },
-<<<<<<< HEAD
-    images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=800&h=500"],
-=======
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=800&h=500"],
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2024-01-15T10:00:00.000Z",
@@ -72,7 +68,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "Immediate",
     aiScore: 91
   },
-
   // Cloud & Infrastructure Services
   {
     id: "multi-cloud-orchestration",
@@ -117,7 +112,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 92
   },
-
   // Cybersecurity Services
   {
     id: "ai-threat-detection",
@@ -162,7 +156,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 93
   },
-
   // Data & Analytics Services
   {
     id: "real-time-data-pipeline",
@@ -206,7 +199,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 92
   },
-
   // Business Intelligence & Reporting
   {
     id: "ai-business-intelligence",
@@ -230,7 +222,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "1-2 Weeks",
     aiScore: 94
   },
-
   // Development & DevOps Services
   {
     id: "ai-code-review",
@@ -274,7 +265,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 91
   },
-
   // Digital Transformation Services
   {
     id: "digital-transformation-consulting",
@@ -298,7 +288,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 95
   },
-
   // Industry-Specific Solutions
   {
     id: "healthcare-ai-platform",
@@ -342,7 +331,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 93
   },
-
   // Emerging Technology Services
   {
     id: "blockchain-enterprise",
@@ -387,7 +375,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 94
   },
-
   // Advanced AI & Machine Learning Services
   {
     id: "ai-video-generation",
@@ -496,7 +483,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 95
   },
-
   // Advanced Cloud & Infrastructure Services
   {
     id: "kubernetes-orchestration",
@@ -605,7 +591,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 95
   },
-
   // Advanced Cybersecurity Services
   {
     id: "penetration-testing",
@@ -713,7 +698,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 94
   },
-
   // Advanced Data & Analytics Services
   {
     id: "data-warehouse-design",
@@ -821,7 +805,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 94
   },
-
   // Business Intelligence & Development Services
   {
     id: "bi-platform-development",
@@ -930,7 +913,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 92
   },
-
   // Digital Transformation & Industry Solutions
   {
     id: "digital-transformation-consulting",
@@ -1042,7 +1024,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 97
   },
-
   // Innovative & Emerging Technology Services
   {
     id: "ai-voice-assistant",
@@ -1143,16 +1124,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com"
     },
-<<<<<<< HEAD
-    images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-09-05T11:20:00.000Z",
-    rating: 4.7,
-    reviewCount: 78,
-    location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 91
-
-=======
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-09-05T11:20:00.000Z",;
     rating: 4.7,;
@@ -1163,7 +1134,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 // Append additional diversified, real micro SaaS, IT, and AI services
 export const MORE_ENHANCED_SERVICES: ProductListing[] = [
   {
@@ -1175,9 +1145,6 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     currency: "$",
     tags["RAG", "Knowledge Base", "Support Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
-<<<<<<< HEAD
-    images["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto = format&fit=crop&w=800&h=500"],
-=======
     images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto = format&fit=crop&w=800&h=500"],
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2025-02-01T10:00:00.000Z",
@@ -1240,15 +1207,6 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     currency: "$",
     tags["PDF", "Rendering", "API"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
-<<<<<<< HEAD
-    images["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-01T08:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 28,
-    link: "https://ziontechgroup.com/services/pdf-render-api"
-<<<<<<< HEAD
-
-=======
   }
 =======;
     images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],;
@@ -1260,12 +1218,10 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [
   ...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
 ];
-
 // Service categories for filtering
 export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'AI & Machine Learning', value: 'ai-ml' },
@@ -1283,33 +1239,23 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'Emerging Technology', value: 'emerging-tech' },;
   { label: 'AI Automation', value: 'ai-automation' };
 ];
-
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
   description: "Essential services for small businesses and startups" 
-
 ;
 ;
 ;
-
-
 },;
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
 };
-
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-<<<<<<< HEAD
-  website: "https://ziontechgroup.com",
-  domain: "ziontechgroup.com"
-};}}
-=======
   website: "https://ziontechgroup.com",;
   ;
   ;
@@ -1317,11 +1263,5 @@ export const CONTACT_INFO = {
   ;
   domain: "ziontechgroup.com";
 ;
-
-
-
-
-
-
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

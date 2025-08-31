@@ -14,7 +14,6 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-
       {/* Quick Access Skeleton */}
       <section className="py-12 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -32,7 +31,6 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-
       {/* Feature CTA Skeleton */}
       <section className="py-16 bg-zion-slate">
         <div className="container mx-auto px-4">
@@ -51,7 +49,6 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-
       {/* Categories Section Skeleton */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -68,7 +65,6 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section Skeleton */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -86,7 +82,6 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-
       {/* Newsletter Section Skeleton */}
       <section className="py-16 bg-zion-slate">
         <div className="container mx-auto px-4 text-center">
@@ -98,9 +93,5 @@ export function HomePageSkeleton() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -114,7 +114,6 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
-
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
@@ -160,7 +159,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -171,7 +169,6 @@ export default function AIServicesPage() {
               {category.name}
             </Button>))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -212,7 +209,6 @@ export default function AIServicesPage() {
               </div>
             </Card>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -233,9 +229,5 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

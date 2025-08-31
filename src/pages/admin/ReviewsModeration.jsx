@@ -16,16 +16,9 @@ function ReviewsModerationContent() {
             // For now, let's simulate a delay and return empty data
             await new Promise(resolve => setTimeout(resolve, 1000));
             setReviews([]);
-<<<<<<< HEAD
-            setIsLoading(false);
-
-=======
             setIsLoading(false)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error fetching reviews:", error);
-=======
             // // // // // // // console.error("Error fetching reviews:", error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
@@ -33,10 +26,6 @@ function ReviewsModerationContent() {
                 description: "Failed to load reviews. Please try again later.",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            setIsLoading(false);
-
-=======
             setIsLoading(false)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
@@ -46,7 +35,6 @@ function ReviewsModerationContent() {
         fetchReviews()};
     return (<>
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
-
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -54,7 +42,6 @@ function ReviewsModerationContent() {
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -71,11 +58,9 @@ function ReviewsModerationContent() {
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable reviews={reviews} isLoading={isLoading} onRefresh={handleRefresh}/>
               </TabsContent>
-
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2"/>
@@ -89,17 +74,6 @@ function ReviewsModerationContent() {
           </CardContent>
         </Card>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function ReviewsModeration() {
-    return (<ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>);
-</Card></Card></Card></Card>}}}}}
-=======
-      
     </>)}
 export default function ReviewsModeration() {
     return (<ProtectedRoute>

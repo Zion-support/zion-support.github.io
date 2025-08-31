@@ -1,97 +1,5 @@
 import React, { useState, useRef } from 'react';
-<<<<<<< HEAD
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus const mockParticipants = [
-    {
-        id: '1',
-        name: 'Sarah Johnson',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100',
-        isHost: true,
-        isMuted: false,
-        isVideoOff: false,
-        isScreenSharing: false,
-        hasRaisedHand: false,
-        status: 'online',
-        joinTime: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '2',
-        name: 'Michael Chen',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
-        isHost: false,
-        isMuted: true,
-        isVideoOff: false,
-        isScreenSharing: false,
-        hasRaisedHand: true,
-        status: 'online',
-        joinTime: '2024-01-15T10:02:00.000Z'
-    },
-    {
-        id: '3',
-        name: 'Emily Rodriguez',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100',
-        isHost: false,
-        isMuted: false,
-        isVideoOff: true,
-        isScreenSharing: false,
-        hasRaisedHand: false,
-        status: 'away',
-        joinTime: '2024-01-15T10:05:00.000Z'
-
-];
-const mockChatMessages = [
-    {
-        id: '1',
-        senderId: '1',
-        senderName: 'Sarah Johnson',
-        message: 'Welcome everyone to our quarterly review meeting!',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        type: 'text',
-        reactions: []
-    },
-    {
-        id: '2',
-        senderId: '2',
-        senderName: 'Michael Chen',
-        message: 'Thanks Sarah! I have some questions about the Q4 metrics.',
-        timestamp: '2024-01-15T10:01:00.000Z',
-        type: 'text',
-        reactions: [{ emoji: '👍', count: 2 }]
-    },
-    {
-        id: '3',
-        senderId: '1',
-        senderName: 'Sarah Johnson',
-        message: 'Perfect! I\'ll share the presentation now.',
-        timestamp: '2024-01-15T10:02:00.000Z',
-        type: 'text',
-        reactions: []
-
-];
-=======
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const mockDocuments = [
-    {
-        id: '1',
-        name: 'Q4_2024_Review.pptx',
-        type: 'presentation',
-        size: '2.4 MB',
-        lastModified: '2024-01-15T09:30:00.000Z',
-        sharedBy: 'Sarah Johnson',
-        permissions: 'edit'
-    },
-    {
-        id: '2',
-        name: 'Financial_Report_Q4.xlsx',
-        type: 'spreadsheet',
-        size: '1.8 MB',
-        lastModified: '2024-01-15T08:45:00.000Z',
-        sharedBy: 'Michael Chen',
-        permissions: 'view'
-
-];
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockMeetings = [
     {
@@ -103,7 +11,6 @@ const mockMeetings = [
         status: 'active',
         recording: true,
         password: 'Q4Review2024'
-
 ];
 export function AdvancedCollaborationPlatform() {
     const [isOpen, setIsOpen] = useState(false);
@@ -143,33 +50,14 @@ export function AdvancedCollaborationPlatform() {
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
                 type: 'text',
-  <<<<<<< HEAD
-                reactions[]
-            
-
-};
-=======
   reactions: []
-            
-
-
-
-
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             setChatMessages(prev => [...prev, newMessage]);
-<<<<<<< HEAD
-            setChatMessage('');
-
-=======
             setChatMessage('')}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const raiseHand = () => {
-<<<<<<< HEAD
-        setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
-    const filteredParticipants = participants.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
-=======
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p));
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -177,10 +65,6 @@ export function AdvancedCollaborationPlatform() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">
         <Users className="w-6 h-6"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
@@ -192,10 +76,6 @@ export function AdvancedCollaborationPlatform() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
@@ -220,7 +100,6 @@ export function AdvancedCollaborationPlatform() {
           </button>
         </div>
       </div>
-
       {/* Meeting Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -257,7 +136,6 @@ export function AdvancedCollaborationPlatform() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="flex h-[calc(100%-140px)]">
         {/* Main Meeting Area */}
@@ -274,7 +152,6 @@ export function AdvancedCollaborationPlatform() {
                   <p className="text-sm text-zion-slate-light">Screen sharing active</p>
                 </div>
               </div>
-
               {/* Participant Videos */}
               <div className="grid grid-cols-2 gap-3">
                 {participants.slice(0, 4).map(participant => (<div key={participant.id} className="bg-zion-slate-light/30 rounded-lg p-3">
@@ -292,7 +169,6 @@ export function AdvancedCollaborationPlatform() {
                   </div>))}
               </div>
             </div>
-
             {/* Right Sidebar */}
             <div className="space-y-4">
               {/* Tabs */}
@@ -311,7 +187,6 @@ export function AdvancedCollaborationPlatform() {
                       {tab.label}
                     </button>)})}
               </div>
-
               {/* Tab Content */}
               <div className="h-80 overflow-y-auto">
                 {activeTab === 'meeting' && (<div className="space-y-4">
@@ -332,7 +207,6 @@ export function AdvancedCollaborationPlatform() {
                         </div>
                       </div>
                     </div>
-
                     <div className="bg-zion-slate-light/30 p-4 rounded-xl">
                       <h4 className="font-semibold text-zion-slate mb-2">Quick Actions</h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -351,7 +225,6 @@ export function AdvancedCollaborationPlatform() {
                       </div>
                     </div>
                   </div>)}
-
                 {activeTab === 'chat' && (<div className="space-y-4">
                     <div className="space-y-3">
                       {chatMessages.map(message => (<div key={message.id} className="bg-zion-slate-light/30 p-3 rounded-lg">
@@ -369,7 +242,6 @@ export function AdvancedCollaborationPlatform() {
                             </div>)}
                         </div>))}
                     </div>
-
                     <div className="flex gap-2">
                       <input type="text" value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && sendChatMessage()} placeholder="Type a message..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>
                       <button onClick={sendChatMessage} className="px-4 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald/90 transition-colors">
@@ -377,7 +249,6 @@ export function AdvancedCollaborationPlatform() {
                       </button>
                     </div>
                   </div>)}
-
                 {activeTab === 'documents' && (<div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search documents..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>
@@ -385,7 +256,6 @@ export function AdvancedCollaborationPlatform() {
                         <Plus className="w-4 h-4"/>
                       </button>
                     </div>
-
                     <div className="space-y-2">
                       {filteredDocuments.map(document => (<div key={document.id} className="bg-zion-slate-light/30 p-3 rounded-lg hover:bg-zion-slate-light/50 transition-colors">
                           <div className="flex items-center gap-3">
@@ -405,7 +275,6 @@ export function AdvancedCollaborationPlatform() {
                         </div>))}
                     </div>
                   </div>)}
-
                 {activeTab === 'participants' && (<div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search participants..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>
@@ -413,7 +282,6 @@ export function AdvancedCollaborationPlatform() {
                         <UserPlus className="w-4 h-4"/>
                       </button>
                     </div>
-
                     <div className="space-y-2">
                       {filteredParticipants.map(participant => (<div key={participant.id} className="bg-zion-slate-light/30 p-3 rounded-lg">
                           <div className="flex items-center gap-3">
@@ -438,9 +306,5 @@ export function AdvancedCollaborationPlatform() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>}}}}}}}}}
-=======
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
