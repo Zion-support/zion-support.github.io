@@ -76,14 +76,13 @@ const Status = createLazyComponent(() => import('./pages/Status'));
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
 // Comprehensive Services Showcase 2025
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Comprehensive Pricing Guide 2025
-const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
-const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 
 // 2026 Innovative Services
@@ -111,6 +110,12 @@ const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIContentOptimizer = createLazyComponent(() => import('./pages/services/ai-content-optimizer-pro'));
 const AICybersecuritySuite = createLazyComponent(() => import('./pages/services/ai-cybersecurity-suite'));
+
+// New AI Services
+const AIBusinessIntelligencePlatform = createLazyComponent(() => import('./pages/services/AI-Business-Intelligence-Platform'));
+const AICybersecurityThreatIntelligencePlatform = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence-Platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization-Platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
 const AIFinancialTrading = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/ai-hr-platform'));
@@ -339,7 +344,7 @@ function App() {
                   } />
 
                   {/* Comprehensive Services Routes */}
-                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                   <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
@@ -390,6 +395,12 @@ function App() {
                   <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                   <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                   <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+                  <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligencePlatform />} />
+                  <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                  <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
                   
                   {/* New Innovative Services Routes */}
                   <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />

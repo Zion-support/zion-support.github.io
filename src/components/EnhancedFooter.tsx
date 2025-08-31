@@ -69,6 +69,10 @@ export default function EnhancedFooter() {
     {
       title: 'Services',
       links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-platform' },
+        { name: 'AI Cybersecurity Intelligence', href: '/services/ai-cybersecurity-threat-intelligence-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
         { name: 'AI Solutions', href: '/ai-services' },
         { name: 'Quantum Computing', href: '/services/ai-quantum-computing-platform' },
         { name: 'Space Technology', href: '/services/ai-space-technology-platform' },

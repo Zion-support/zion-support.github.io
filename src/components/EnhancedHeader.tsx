@@ -91,10 +91,12 @@ export default function EnhancedHeader() {
         {
           title: 'AI & Machine Learning',
           items: [
-            { name: 'AI Content Intelligence', href: '/services/ai-content-intelligence-platform', icon: Brain },
-            { name: 'AI Customer Success Predictor', href: '/services/ai-customer-success-predictor', icon: Target },
-            { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic-assistant', icon: Heart },
-            { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection-engine', icon: Shield }
+            { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-platform', icon: Brain },
+            { name: 'AI Cybersecurity Intelligence', href: '/services/ai-cybersecurity-threat-intelligence-platform', icon: Shield },
+            { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform', icon: Truck },
+            { name: 'AI Content Intelligence', href: '/services/ai-content-intelligence-platform', icon: Target },
+            { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart },
+            { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection-engine', icon: Lock }
           ]
         },
         {

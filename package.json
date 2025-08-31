@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -138,7 +137,6 @@
     "next-themes": "^0.2.1",
     "node-cron": "^4.2.1",
     "notistack": "^3.0.0",
-    "postcss-preset-env": "^10.3.1",
     "react": "^18.3.1",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.3.1",
