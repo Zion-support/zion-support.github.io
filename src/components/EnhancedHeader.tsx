@@ -46,8 +46,11 @@ import {
   Users as UsersIcon,
   Zap as ZapIcon,
   Home,
-  PenTool,
-  Handshake,
+  User,
+  Settings,
+  LogOut,
+  Sun,
+  Moon,
   TrendingUp
 } from 'lucide-react';
 
@@ -106,7 +109,7 @@ export default function EnhancedHeader() {
         {
           title: 'Micro SAAS',
           items: [
-            { name: 'AI Content Creation Studio', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool },
+            { name: 'AI Content Creation Studio', href: '/services/AI-Content-Creation-Studio-Pro', icon: Code },
             { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: TrendingUp },
             { name: 'Adaptive Learning Platform', href: '/services/adaptive-learning-platform', icon: BookOpen },
             { name: 'Sustainable Energy Optimizer', href: '/services/sustainable-energy-optimizer', icon: Leaf }
@@ -166,7 +169,7 @@ export default function EnhancedHeader() {
         {
           title: 'Content',
           items: [
-            { name: 'Blog', href: '/blog', icon: PenTool },
+            { name: 'Blog', href: '/blog', icon: Code },
             { name: 'Case Studies', href: '/case-studies', icon: Star },
             { name: 'White Papers', href: '/white-papers', icon: FileText },
             { name: 'Research', href: '/research', icon: Lightbulb }
@@ -192,8 +195,8 @@ export default function EnhancedHeader() {
           title: 'Connect',
           items: [
             { name: 'Contact', href: '/contact', icon: MessageCircle },
-            { name: 'Partners', href: '/partners', icon: Handshake },
-            { name: 'Support', href: '/support', icon: HelpCircle },
+            { name: 'Partners', href: '/partners', icon: Users },
+            { name: 'Support', href: '/support', icon: MessageCircle },
             { name: 'Community', href: '/community', icon: Users }
           ]
         }
@@ -204,16 +207,16 @@ export default function EnhancedHeader() {
   const companyInfo = {
     name: 'Zion Tech Group',
     tagline: 'Innovating Tomorrow, Today',
-    phone: '+1 (555) 123-4567',
-    email: 'info@ziontechgroup.com',
-    address: '123 Innovation Drive, Tech City, TC 12345'
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Instagram', href: '#', icon: 'instagram' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: 'instagram' }
   ];
 
   return (
@@ -374,7 +377,7 @@ export default function EnhancedHeader() {
                         <span className="flex items-center space-x-2">
                           <item.icon className="w-4 h-4" />
                           <span>{item.name}</span>
-                        </button>
+                        </span>
                         <ChevronRight className="w-4 h-4" />
                       </button>
                       <div className="ml-4 mt-2 space-y-2">
