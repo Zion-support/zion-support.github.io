@@ -1,0 +1,432 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Home, Zap, Shield, Clock, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Sun, Battery, Leaf } from 'lucide-react';
+
+const AISmartHomeEnergyManagementPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      title: "Intelligent Energy Optimization",
+      description: "AI-powered energy consumption optimization with real-time monitoring and control"
+    },
+    {
+      icon: <Home className="w-8 h-8 text-cyan-400" />,
+      title: "Smart Home Integration",
+      description: "Seamless integration with IoT devices, smart thermostats, and home automation systems"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      title: "Predictive Analytics",
+      description: "Advanced AI algorithms for energy demand forecasting and consumption prediction"
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-cyan-400" />,
+      title: "Real-time Monitoring",
+      description: "Live energy consumption tracking with instant alerts and automated responses"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
+      title: "Cost Optimization",
+      description: "Intelligent pricing optimization and demand response management"
+    },
+    {
+      icon: <Leaf className="w-8 h-8 text-cyan-400" />,
+      title: "Sustainability Insights",
+      description: "Environmental impact tracking and carbon footprint reduction recommendations"
+    }
+  ];
+
+  const benefits = [
+    "Reduce energy costs by 30%",
+    "Optimize energy consumption by 40%",
+    "Improve home efficiency by 50%",
+    "Save up to $500 annually on energy bills",
+    "Reduce carbon footprint by 25%"
+  ];
+
+  const energySources = [
+    "Solar Power Integration",
+    "Battery Storage Management",
+    "Grid Energy Optimization",
+    "Peak Demand Management",
+    "Renewable Energy Prioritization",
+    "Smart Appliance Control"
+  ];
+
+  const useCases = [
+    {
+      icon: <Home className="w-8 h-8 text-cyan-400" />,
+      industry: "Residential Homes",
+      description: "Smart home energy management, cost optimization, and sustainability for homeowners"
+    },
+    {
+      icon: <Building2 className="w-8 h-8 text-cyan-400" />,
+      industry: "Commercial Buildings",
+      description: "Office energy optimization, demand response, and cost management for businesses"
+    },
+    {
+      icon: <Leaf className="w-8 h-8 text-cyan-400" />,
+      industry: "Green Communities",
+      description: "Community-wide energy optimization, renewable integration, and sustainability programs"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      features: [
+        "Up to 5 smart devices",
+        "Basic energy monitoring",
+        "Standard optimization",
+        "Email support",
+        "Basic reporting"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$499",
+      period: "/month",
+      features: [
+        "Up to 20 smart devices",
+        "Advanced AI optimization",
+        "Predictive analytics",
+        "Priority support",
+        "Advanced reporting & API access",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$1,299",
+      period: "/month",
+      features: [
+        "Unlimited smart devices",
+        "Custom AI model training",
+        "Dedicated energy expert",
+        "White-label solutions",
+        "Advanced security features",
+        "24/7 phone support"
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Smart Home Energy Management Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered smart home energy management platform that optimizes consumption, reduces costs, and enhances sustainability. Transform your home energy efficiency with cutting-edge AI technology." />
+        <meta name="keywords" content="AI smart home, energy management, home automation, energy optimization, smart grid, sustainability platform" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-smart-home-energy-management-platform" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <Home className="w-16 h-16 text-cyan-400" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Smart Home Energy Management Platform
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Revolutionize your home energy efficiency with AI-powered optimization, intelligent monitoring, and automated sustainability management.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-semibold flex items-center justify-center gap-2">
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors font-semibold">
+                  Schedule Demo
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced AI-Powered Energy Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our platform combines cutting-edge AI technology with deep energy expertise to deliver unprecedented efficiency and savings.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors"
+                >
+                  <div className="mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Transform Your Home Energy Efficiency
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Experience unprecedented savings and sustainability in home energy management.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Energy Sources Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Comprehensive Energy Management
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our AI platform optimizes all energy sources and consumption patterns for maximum efficiency.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {energySources.map((source, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors text-center"
+                >
+                  <Zap className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white">{source}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Industry Applications
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our platform is designed to meet the unique energy challenges of various environments.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors text-center"
+                >
+                  <div className="flex justify-center mb-4">{useCase.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Choose Your Plan
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Flexible pricing options designed to scale with your energy management needs.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                    plan.popular ? 'border-cyan-500 ring-2 ring-cyan-500/20' : 'border-slate-700'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-cyan-500 text-white hover:bg-cyan-600'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}>
+                    Get Started
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Energy Efficiency?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of homeowners who have already revolutionized their energy management with AI-powered optimization.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-semibold">
+                  Start Free Trial
+                </button>
+                <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors font-semibold">
+                  Contact Sales
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+                Get in Touch
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex flex-col items-center gap-3">
+                  <Phone className="w-8 h-8 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Phone</p>
+                    <p className="text-gray-300">+1 302 464 0950</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <Mail className="w-8 h-8 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Email</p>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center gap-3">
+                  <MapPin className="w-8 h-8 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Address</p>
+                    <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AISmartHomeEnergyManagementPlatform;
