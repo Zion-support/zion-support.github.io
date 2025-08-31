@@ -1,70 +1,93 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
-=======
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight, Shield, Cloud, Zap, Globe, Cpu, Lock } from 'lucide-react';
 
 const categories = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  {
-    title: "Comprehensive Services",
-    description: "Micro SAAS, IT services, and AI solutions",
-    icon: <Briefcase className="w-10 h-10" />,
-    link: "/comprehensive-services",
-    color: "from-purple-500 to-indigo-600",
-  },
   {
     title: "AI Solutions",
     description: "Cutting-edge AI and machine learning services",
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
   },
   {
-    title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
-    link: "/talent",
-    color: "from-cyan-500 to-blue-600",
+    title: "Cloud & DevOps",
+    description: "Scalable cloud infrastructure and automated deployment",
+    icon: <Cloud className="w-10 h-10" />,
+    link: "/it-services",
+    color: "from-blue-500 to-indigo-600",
+    features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
   },
   {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment",
-    color: "from-amber-500 to-orange-600",
+    title: "Cybersecurity",
+    description: "Advanced security protocols and threat protection",
+    icon: <Shield className="w-10 h-10" />,
+    link: "/services/ai-compliance-copilot",
+    color: "from-red-500 to-orange-600",
+    features: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
   },
+  {
+    title: "Digital Transformation",
+    description: "Strategic technology consulting and implementation",
+    icon: <Zap className="w-10 h-10" />,
+    link: "/services",
+    color: "from-yellow-500 to-orange-500",
+    features: ["Process Automation", "Digital Strategy", "Change Management", "Technology Roadmap"]
+  },
+  {
+    title: "IoT & Edge Computing",
+    description: "Smart device networks and edge computing solutions",
+    icon: <Cpu className="w-10 h-10" />,
+    link: "/services/edge-computing-platform",
+    color: "from-green-500 to-emerald-500",
+    features: ["IoT Platforms", "Edge Analytics", "Device Management", "Smart Cities"]
+  },
+  {
+    title: "Quantum Computing",
+    description: "Next-generation quantum solutions for complex problems",
+    icon: <Globe className="w-10 h-10" />,
+    link: "/services/ai-quantum-hybrid-platform",
+    color: "from-purple-500 to-pink-500",
+    features: ["Quantum Algorithms", "Quantum Security", "Quantum Simulation", "Quantum ML"]
+  }
 ];
 
 const specialServices = [
   {
     title: "Enhanced AI & IT Services",
-    link: "/enhanced-services"
+    link: "/enhanced-services",
+    description: "Advanced AI-powered business solutions"
   },
   {
     title: "IT Onsite Services",
-    link: "/it-onsite-services"
+    link: "/it-onsite-services",
+    description: "Professional on-site technical support"
   },
   {
     title: "AI Development",
-    link: "/ai-development"
+    link: "/ai-development",
+    description: "Custom AI solution development"
   },
   {
     title: "Cloud Migration",
-    link: "/cloud-migration"
+    link: "/cloud-migration",
+    description: "Seamless cloud infrastructure transition"
   },
   {
     title: "Cybersecurity",
-    link: "/cybersecurity"
-
+    link: "/cybersecurity",
+    description: "Comprehensive security solutions"
+  }
 ];
 
 interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
   showTitle?: boolean;
+  className?: string;
+}
 
-export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
+export function CategoriesSection({ showTitle = true, className = "" }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,8 +95,8 @@ export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-
-
+      }
+    }
   };
 
   const itemVariants = {
@@ -87,8 +110,8 @@ export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-
-
+      }
+    }
   };
 
   const cardVariants = {
@@ -102,78 +125,76 @@ export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
       transition: {
         duration: 0.4,
         ease: "easeOut"
-
-
+      }
+    }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className={`py-20 ${className}`}>
+      <div className="container mx-auto px-4">
         {showTitle && (
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Explore Categories
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive Service Portfolio
             </h2>
-            <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation.
-              Everything you need to accelerate your digital transformation in one place.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI-powered solutions to quantum computing, we offer the full spectrum of 
+              cutting-edge technology services to drive your business forward.
             </p>
           </motion.div>
         )}
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 300 }}
-
-              <Link to={category.link} className="group block h-full">
+              className="group"
+            >
+              <Link
+                to={category.link}
+                className="block h-full p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
                 <motion.div
-                  className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark"
                   variants={cardVariants}
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-
-                  {/* Icon with enhanced background */}
-                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
+                  className="h-full flex flex-col"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    {category.icon}
                   </div>
-
-                  {/* Title and description */}
-                  <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                     {category.title}
                   </h3>
-                  <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
                     {category.description}
                   </p>
-
-                  {/* Learn more link */}
-                  <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  
+                  <div className="space-y-2 mb-6">
+                    {category.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center text-cyan-400 font-medium group-hover:text-cyan-300 transition-colors duration-200 mt-auto">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </motion.div>
               </Link>
@@ -183,47 +204,51 @@ export function CategoriesSection({ showTitle }: CategoriesSectionProps) {
 
         {/* Special Services Section */}
         <motion.div
-          className="mt-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-
-          <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {specialServices.map((service) => (
-              <Link
+          className="mt-20"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Specialized Services
+            </h3>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Additional specialized services tailored to meet your specific business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {specialServices.map((service, index) => (
+              <motion.div
                 key={service.title}
-                to={service.link}
-                className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-400/30 hover:border-blue-400/50 rounded-2xl text-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
-
-                {service.title}
-              </Link>
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link
+                  to={service.link}
+                  className="block p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:bg-white/10"
+                >
+                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h4>
+                  <p className="text-sm text-gray-400 mb-4">
+                    {service.description}
+                  </p>
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Explore Service
+                    <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          className="mt-16 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-<<<<<<< HEAD
-
-=======
-        >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <Link
-            to="/services"
-            className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
-
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </motion.div>
       </div>
     </section>
   );
-}}}}}}}}}}
+}
