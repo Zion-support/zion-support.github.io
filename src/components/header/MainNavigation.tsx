@@ -108,6 +108,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <BarChart3 className="w-3 h-3 mr-2" />
                         AI Data Analytics
@@ -150,6 +156,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Neural Networks
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Workflow className="w-3 h-3 mr-2" />
                         Supply Chain AI
@@ -159,19 +171,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Network className="w-3 h-3 mr-2" />
                         Blockchain Solutions
-                      </Link>
-                    </li>
-                    {/* Additional services from remote branch */}
-                    <li>
-                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <TrendingUp className="w-3 h-3 mr-2" />
-                        AI Sales Copilot
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Shield className="w-3 h-3 mr-2" />
-                        AI Compliance Assistant
                       </Link>
                     </li>
                   </ul>
@@ -212,27 +211,20 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         Blockchain Solutions
                       </Link>
                     </li>
-                    {/* Additional services from remote branch */}
-                    <li>
-                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <DollarSign className="w-3 h-3 mr-2" />
-                        Cloud FinOps Optimizer
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/it-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Server className="w-3 h-3 mr-2" />
-                        IT Infrastructure
-                      </Link>
-                    </li>
                   </ul>
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
-                <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
-                </Link>
+                <div className="grid grid-cols-2 gap-4">
+                  <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Innovation Showcase 2026
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -288,17 +280,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Support
                       </Link>
                     </li>
-                    {/* Additional solutions from remote branch */}
                     <li>
-                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Users2 className="w-3 h-3 mr-2" />
-                        Find Experts
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/interview-assessment-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Brain className="w-3 h-3 mr-2" />
-                        AI Hiring
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cloud className="w-3 h-3 mr-2" />
+                        Cloud FinOps
                       </Link>
                     </li>
                   </ul>
