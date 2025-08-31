@@ -1,634 +1,693 @@
 #!/usr/bin/env node
 
-/**
- * Intelligent Dependency Manager - PM2 Automation
- * Automatically analyzes dependencies, detects vulnerabilities, suggests updates, and manages conflicts
- */
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
 
-class IntelligentDependencyManager {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-dependency-manager.log');
-    this.dependencyAnalysis = path.join(this.projectRoot, 'logs', 'dependency-analysis.json');
-    this.vulnerabilityReport = path.join(this.projectRoot, 'logs', 'vulnerability-report.json');
-    this.updateRecommendations = path.join(this.projectRoot, 'logs', 'update-recommendations.json');
-    this.ensureLogsDirectory();
+console.log('📦 Starting intelligent dependency manager automation...');
+
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
+
+async function runIntelligentDependencyManagement() {
+  try {
+    console.log(`📦 Running intelligent dependency management at ${new Date().toISOString()}`);
     
-    this.dependencyHistory = [];
-    this.vulnerabilityHistory = [];
-    this.updateHistory = [];
-    this.conflictHistory = [];
-    
-    this.riskLevels = {
-      LOW: { score: 1, color: '🟢', action: 'MONITOR' },
-      MEDIUM: { score: 2, color: '🟡', action: 'UPDATE_SOON' },
-      HIGH: { score: 3, color: '🟠', action: 'UPDATE_URGENT' },
-      CRITICAL: { score: 4, color: '🔴', action: 'UPDATE_IMMEDIATE' }
+    const dependencyAnalysis = {
+      timestamp: new Date().toISOString(),
+      outdated: [],
+      vulnerabilities: [],
+      unused: [],
+      peerDependencies: [],
+      recommendations: [],
+      actions: [],
+      priority: 'medium'
     };
-  }
 
-  ensureLogsDirectory() {
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+    // 1. Analyze current dependencies
+    console.log('🔍 Analyzing current dependencies...');
+    dependencyAnalysis.outdated = await checkOutdatedDependencies();
+    
+    // 2. Security vulnerability scan
+    console.log('🔒 Scanning for security vulnerabilities...');
+    dependencyAnalysis.vulnerabilities = await scanVulnerabilities();
+    
+    // 3. Detect unused dependencies
+    console.log('🧹 Detecting unused dependencies...');
+    dependencyAnalysis.unused = await detectUnusedDependencies();
+    
+    // 4. Check peer dependency conflicts
+    console.log('🔗 Checking peer dependency conflicts...');
+    dependencyAnalysis.peerDependencies = await checkPeerDependencies();
+    
+    // 5. Generate intelligent recommendations
+    console.log('💡 Generating dependency recommendations...');
+    dependencyAnalysis.recommendations = generateDependencyRecommendations(dependencyAnalysis);
+    
+    // 6. Plan actions
+    console.log('📋 Planning dependency actions...');
+    dependencyAnalysis.actions = planDependencyActions(dependencyAnalysis);
+    
+    // 7. Prioritize actions
+    dependencyAnalysis.priority = prioritizeDependencyActions(dependencyAnalysis);
+    
+    // 8. Generate comprehensive report
+    console.log('📊 Generating dependency analysis report...');
+    const reportPath = path.join(process.cwd(), 'intelligent-dependency-analysis.json');
+    fs.writeFileSync(reportPath, JSON.stringify(dependencyAnalysis, null, 2));
+    
+    // 9. Create action plan
+    await createDependencyActionPlan(dependencyAnalysis);
+    
+    // 10. Execute safe updates if configured
+    if (process.env.AUTO_UPDATE_SAFE === 'true') {
+      await executeSafeUpdates(dependencyAnalysis);
     }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
-  }
-
-  async analyzeDependencies() {
-    this.log('Starting comprehensive dependency analysis...');
+    console.log(`✅ Intelligent dependency management completed. Report saved to ${reportPath}`);
+    console.log(`🎯 Priority: ${dependencyAnalysis.priority.toUpperCase()}`);
+    console.log(`📋 Actions: ${dependencyAnalysis.actions.length}`);
     
-    try {
-      const analysis = {
-        timestamp: new Date().toISOString(),
-        packageJson: await this.analyzePackageJson(),
-        lockFiles: await this.analyzeLockFiles(),
-        nodeModules: await this.analyzeNodeModules(),
-        vulnerabilities: await this.scanVulnerabilities(),
-        conflicts: await this.detectConflicts(),
-        outdated: await this.checkOutdated(),
-        recommendations: []
-      };
-      
-      // Generate intelligent recommendations
-      analysis.recommendations = this.generateRecommendations(analysis);
-      
-      // Save analysis
-      await this.saveDependencyAnalysis(analysis);
-      
-      this.log(`Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts`);
-      
-      return analysis;
-      
-    } catch (error) {
-      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
-      return null;
-    }
+  } catch (error) {
+    console.error('❌ Intelligent dependency management failed:', error.message);
   }
+}
 
-  async analyzePackageJson() {
-    this.log('Analyzing package.json...');
+async function checkOutdatedDependencies() {
+  const outdated = [];
+  
+  try {
+    // Check for outdated packages
+    const output = execSync('npm outdated --json', { stdio: 'pipe' }).toString();
+    const outdatedData = JSON.parse(output);
     
-    try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      const packageContent = fs.readFileSync(packagePath, 'utf8');
-      const packageData = JSON.parse(packageContent);
+    Object.keys(outdatedData).forEach(packageName => {
+      const pkg = outdatedData[packageName];
+      const current = pkg.current;
+      const latest = pkg.latest;
+      const wanted = pkg.wanted;
       
-      const analysis = {
-        dependencies: {
-          count: Object.keys(packageData.dependencies || {}).length,
-          packages: packageData.dependencies || {},
-          totalSize: 0
-        },
-        devDependencies: {
-          count: Object.keys(packageData.devDependencies || {}).length,
-          packages: packageData.devDependencies || {},
-          totalSize: 0
-        },
-        scripts: Object.keys(packageData.scripts || {}),
-        engines: packageData.engines || {},
-        hasWorkspaces: !!packageData.workspaces,
-        hasPrivate: !!packageData.private
-      };
+      // Calculate update priority
+      let priority = 'low';
+      let risk = 'low';
       
-      // Calculate estimated sizes
-      analysis.dependencies.totalSize = this.estimateDependencySize(analysis.dependencies.packages);
-      analysis.devDependencies.totalSize = this.estimateDependencySize(analysis.devDependencies.packages);
-      
-      return analysis;
-      
-    } catch (error) {
-      this.log(`Package.json analysis failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async analyzeLockFiles() {
-    this.log('Analyzing lock files...');
-    
-    try {
-      const lockFiles = [];
-      const lockFileTypes = ['package-lock.json', 'yarn.lock', 'pnpm-lock.yaml'];
-      
-      for (const lockFile of lockFileTypes) {
-        const lockPath = path.join(this.projectRoot, lockFile);
-        if (fs.existsSync(lockPath)) {
-          const stats = fs.statSync(lockPath);
-          lockFiles.push({
-            name: lockFile,
-            size: stats.size,
-            sizeKB: Math.round(stats.size / 1024),
-            lastModified: stats.mtime,
-            exists: true
-          });
-        } else {
-          lockFiles.push({
-            name: lockFile,
-            exists: false
-          });
-        }
+      if (isMajorVersionUpdate(current, latest)) {
+        priority = 'high';
+        risk = 'high';
+      } else if (isMinorVersionUpdate(current, latest)) {
+        priority = 'medium';
+        risk = 'medium';
       }
       
-      return lockFiles;
-      
-    } catch (error) {
-      this.log(`Lock file analysis failed: ${error.message}`, 'ERROR');
-      return [];
-    }
-  }
-
-  async analyzeNodeModules() {
-    this.log('Analyzing node_modules...');
-    
-    try {
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
-      
-      if (!fs.existsSync(nodeModulesPath)) {
-        return { exists: false, size: 0, packageCount: 0 };
+      // Check if it's a breaking change
+      if (isBreakingChange(current, latest)) {
+        risk = 'high';
       }
       
-      const stats = fs.statSync(nodeModulesPath);
-      const packageCount = this.countPackagesInNodeModules(nodeModulesPath);
-      
-      return {
-        exists: true,
-        size: stats.size,
-        sizeMB: Math.round(stats.size / (1024 * 1024)),
-        packageCount,
-        lastModified: stats.mtime
-      };
-      
-    } catch (error) {
-      this.log(`Node modules analysis failed: ${error.message}`, 'ERROR');
-      return { exists: false, size: 0, packageCount: 0 };
-    }
-  }
-
-  async scanVulnerabilities() {
-    this.log('Scanning for vulnerabilities...');
-    
-    try {
-      // Run npm audit
-      const auditOutput = execSync('npm audit --json', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
+      outdated.push({
+        name: packageName,
+        current: current,
+        wanted: wanted,
+        latest: latest,
+        priority: priority,
+        risk: risk,
+        type: getDependencyType(packageName),
+        lastUpdated: pkg.published || 'unknown',
+        description: getPackageDescription(packageName)
       });
-      
-      const auditData = JSON.parse(auditOutput);
-      const vulnerabilities = [];
-      
-      if (auditData.vulnerabilities) {
-        for (const [packageName, vulnData] of Object.entries(auditData.vulnerabilities)) {
-          for (const vuln of vulnData.via) {
-            if (vuln.type === 'npm') {
-              vulnerabilities.push({
-                package: packageName,
-                severity: vuln.severity.toUpperCase(),
-                title: vuln.title,
-                description: vuln.description,
-                cwe: vuln.cwe,
-                cve: vuln.cve,
-                cvss: vuln.cvss,
-                recommendation: vuln.recommendation,
-                riskScore: this.calculateRiskScore(vuln.severity),
-                action: this.getActionForSeverity(vuln.severity)
-              });
-            }
-          }
-        }
-      }
-      
-      // Sort by risk score (highest first)
-      vulnerabilities.sort((a, b) => b.riskScore - a.riskScore);
-      
-      return vulnerabilities;
-      
-    } catch (error) {
-      this.log(`Vulnerability scan failed: ${error.message}`, 'ERROR');
-      return [];
-    }
-  }
-
-  async detectConflicts() {
-    this.log('Detecting dependency conflicts...');
+    });
     
-    try {
-      const conflicts = [];
-      
-      // Check for peer dependency conflicts
-      const peerCheckOutput = execSync('npm ls --depth=0', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      const lines = peerCheckOutput.split('\n');
-      for (const line of lines) {
-        if (line.includes('UNMET PEER DEPENDENCY') || line.includes('npm ERR!')) {
-          conflicts.push({
-            type: 'PEER_DEPENDENCY',
-            message: line.trim(),
-            severity: 'MEDIUM',
-            action: 'RESOLVE_MANUALLY'
+  } catch (error) {
+    // npm outdated returns non-zero exit code when there are outdated packages
+    if (error.status === 1) {
+      // Parse the output even with non-zero exit code
+      try {
+        const output = error.stdout?.toString() || error.message;
+        if (output.includes('{')) {
+          const jsonStart = output.indexOf('{');
+          const jsonEnd = output.lastIndexOf('}') + 1;
+          const jsonOutput = output.substring(jsonStart, jsonEnd);
+          const outdatedData = JSON.parse(jsonOutput);
+          
+          Object.keys(outdatedData).forEach(packageName => {
+            const pkg = outdatedData[packageName];
+            outdated.push({
+              name: packageName,
+              current: pkg.current,
+              wanted: pkg.wanted,
+              latest: pkg.latest,
+              priority: isMajorVersionUpdate(pkg.current, pkg.latest) ? 'high' : 'medium',
+              risk: isMajorVersionUpdate(pkg.current, pkg.latest) ? 'high' : 'medium',
+              type: getDependencyType(packageName),
+              lastUpdated: pkg.published || 'unknown',
+              description: getPackageDescription(packageName)
+            });
           });
         }
+      } catch (parseError) {
+        console.log('⚠️  Could not parse outdated dependencies output');
       }
-      
-      // Check for version conflicts
-      const versionConflicts = this.detectVersionConflicts();
-      conflicts.push(...versionConflicts);
-      
-      return conflicts;
-      
-    } catch (error) {
-      this.log(`Conflict detection failed: ${error.message}`, 'ERROR');
-      return [];
+    } else {
+      console.log('✅ All dependencies are up to date');
     }
   }
+  
+  return outdated;
+}
 
-  async checkOutdated() {
-    this.log('Checking for outdated packages...');
+async function scanVulnerabilities() {
+  const vulnerabilities = [];
+  
+  try {
+    // Run npm audit
+    const output = execSync('npm audit --json', { stdio: 'pipe' }).toString();
+    const auditData = JSON.parse(output);
     
-    try {
-      const outdatedOutput = execSync('npm outdated --json', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      const outdatedData = JSON.parse(outdatedOutput);
-      const outdated = [];
-      
-      for (const [packageName, packageData] of Object.entries(outdatedData)) {
-        const current = packageData.current;
-        const latest = packageData.latest;
-        const major = packageData.latest;
+    if (auditData.vulnerabilities) {
+      Object.keys(auditData.vulnerabilities).forEach(packageName => {
+        const vuln = auditData.vulnerabilities[packageName];
         
-        const updateType = this.determineUpdateType(current, latest, major);
-        const priority = this.calculateUpdatePriority(updateType, current, latest);
-        
-        outdated.push({
-          package: packageName,
-          current,
-          latest,
-          major,
-          updateType,
-          priority,
-          action: this.getActionForUpdateType(updateType)
-        });
-      }
-      
-      // Sort by priority (highest first)
-      outdated.sort((a, b) => b.priority - a.priority);
-      
-      return outdated;
-      
-    } catch (error) {
-      this.log(`Outdated check failed: ${error.message}`, 'ERROR');
-      return [];
-    }
-  }
-
-  detectVersionConflicts() {
-    const conflicts = [];
-    
-    try {
-      // Check package-lock.json for version conflicts
-      const lockPath = path.join(this.projectRoot, 'package-lock.json');
-      if (fs.existsSync(lockPath)) {
-        const lockContent = fs.readFileSync(lockPath, 'utf8');
-        const lockData = JSON.parse(lockContent);
-        
-        // Check for multiple versions of the same package
-        const packageVersions = {};
-        
-        if (lockData.dependencies) {
-          for (const [packageName, packageData] of Object.entries(lockData.dependencies)) {
-            if (!packageVersions[packageName]) {
-              packageVersions[packageName] = [];
-            }
-            packageVersions[packageName].push(packageData.version);
-          }
-        }
-        
-        for (const [packageName, versions] of Object.entries(packageVersions)) {
-          if (versions.length > 1 && new Set(versions).size > 1) {
-            conflicts.push({
-              type: 'VERSION_CONFLICT',
+        vuln.via.forEach(via => {
+          if (via.type === 'audit') {
+            vulnerabilities.push({
               package: packageName,
-              versions: [...new Set(versions)],
-              severity: 'HIGH',
-              action: 'RESOLVE_VERSIONS'
+              severity: via.severity,
+              title: via.title,
+              description: via.description,
+              cwe: via.cwe || [],
+              cvss: via.cvss || {},
+              recommendation: via.recommendation || 'Update to latest version',
+              dependencyOf: vuln.dependencyOf || [],
+              path: vuln.path || []
+            });
+          }
+        });
+      });
+    }
+    
+  } catch (error) {
+    // npm audit returns non-zero exit code when vulnerabilities are found
+    if (error.status === 1) {
+      try {
+        const output = error.stdout?.toString() || error.message;
+        if (output.includes('{')) {
+          const jsonStart = output.indexOf('{');
+          const jsonEnd = output.lastIndexOf('}') + 1;
+          const jsonOutput = output.substring(jsonStart, jsonEnd);
+          const auditData = JSON.parse(jsonOutput);
+          
+          if (auditData.vulnerabilities) {
+            Object.keys(auditData.vulnerabilities).forEach(packageName => {
+              const vuln = auditData.vulnerabilities[packageName];
+              vuln.via.forEach(via => {
+                if (via.type === 'audit') {
+                  vulnerabilities.push({
+                    package: packageName,
+                    severity: via.severity,
+                    title: via.title,
+                    description: via.description,
+                    cwe: via.cwe || [],
+                    cvss: via.cvss || {},
+                    recommendation: via.recommendation || 'Update to latest version',
+                    dependencyOf: vuln.dependencyOf || [],
+                    path: vuln.path || []
+                  });
+                }
+              });
             });
           }
         }
+      } catch (parseError) {
+        console.log('⚠️  Could not parse audit output');
       }
-    } catch (error) {
-      this.log(`Version conflict detection failed: ${error.message}`, 'WARN');
+    } else {
+      console.log('✅ No security vulnerabilities found');
     }
-    
-    return conflicts;
   }
+  
+  return vulnerabilities;
+}
 
-  determineUpdateType(current, latest, major) {
-    const currentParts = current.split('.').map(Number);
-    const latestParts = latest.split('.').map(Number);
-    const majorParts = major.split('.').map(Number);
-    
-    if (majorParts[0] > currentParts[0]) return 'MAJOR';
-    if (latestParts[1] > currentParts[1]) return 'MINOR';
-    if (latestParts[2] > currentParts[2]) return 'PATCH';
-    return 'NONE';
-  }
-
-  calculateUpdatePriority(updateType, current, latest) {
-    const basePriority = {
-      'MAJOR': 100,
-      'MINOR': 50,
-      'PATCH': 25,
-      'NONE': 0
-    };
-    
-    let priority = basePriority[updateType];
-    
-    // Add priority based on how old the current version is
-    const currentDate = new Date();
-    const daysSinceUpdate = Math.floor((currentDate - new Date()) / (1000 * 60 * 60 * 24));
-    priority += Math.abs(daysSinceUpdate) * 0.1;
-    
-    return Math.round(priority);
-  }
-
-  calculateRiskScore(severity) {
-    const scores = {
-      'low': 1,
-      'moderate': 2,
-      'high': 3,
-      'critical': 4
-    };
-    
-    return scores[severity.toLowerCase()] || 0;
-  }
-
-  getActionForSeverity(severity) {
-    const actions = {
-      'low': 'MONITOR',
-      'moderate': 'UPDATE_SOON',
-      'high': 'UPDATE_URGENT',
-      'critical': 'UPDATE_IMMEDIATE'
-    };
-    
-    return actions[severity.toLowerCase()] || 'MONITOR';
-  }
-
-  getActionForUpdateType(updateType) {
-    const actions = {
-      'MAJOR': 'REVIEW_AND_UPDATE',
-      'MINOR': 'UPDATE_SAFE',
-      'PATCH': 'UPDATE_AUTO',
-      'NONE': 'NO_ACTION'
-    };
-    
-    return actions[updateType] || 'NO_ACTION';
-  }
-
-  estimateDependencySize(packages) {
-    // Rough estimation based on package count
-    const packageCount = Object.keys(packages).length;
-    return packageCount * 1024 * 1024; // 1MB per package estimate
-  }
-
-  countPackagesInNodeModules(nodeModulesPath) {
-    let count = 0;
-    
+async function detectUnusedDependencies() {
+  const unused = [];
+  
+  try {
+    // Run depcheck if available
     try {
-      const items = fs.readdirSync(nodeModulesPath);
-      for (const item of items) {
-        const itemPath = path.join(nodeModulesPath, item);
-        const stats = fs.statSync(itemPath);
-        
-        if (stats.isDirectory()) {
-          // Check if it's a package (has package.json)
-          const packageJsonPath = path.join(itemPath, 'package.json');
-          if (fs.existsSync(packageJsonPath)) {
-            count++;
-          }
-        }
+      const output = execSync('npx depcheck --json', { stdio: 'pipe' }).toString();
+      const depcheckData = JSON.parse(output);
+      
+      if (depcheckData.dependencies && depcheckData.dependencies.length > 0) {
+        depcheckData.dependencies.forEach(dep => {
+          unused.push({
+            name: dep,
+            type: 'unused',
+            reason: 'Not imported or used in code',
+            impact: 'low'
+          });
+        });
       }
-    } catch (error) {
-      this.log(`Error counting packages: ${error.message}`, 'WARN');
+      
+      if (depcheckData.devDependencies && depcheckData.devDependencies.length > 0) {
+        depcheckData.devDependencies.forEach(dep => {
+          unused.push({
+            name: dep,
+            type: 'unused-dev',
+            reason: 'Not used in build or test processes',
+            impact: 'low'
+          });
+        });
+      }
+      
+    } catch (depcheckError) {
+      // Fallback to manual analysis
+      console.log('ℹ️  depcheck not available, using manual analysis');
+      unused.push(...await manualUnusedDependencyAnalysis());
     }
     
-    return count;
+  } catch (error) {
+    console.log('⚠️  Unused dependency detection failed:', error.message);
   }
+  
+  return unused;
+}
 
-  generateRecommendations(analysis) {
-    const recommendations = [];
+async function manualUnusedDependencyAnalysis() {
+  const unused = [];
+  
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const srcPath = path.join(process.cwd(), 'src');
     
-    // Vulnerability-based recommendations
-    if (analysis.vulnerabilities.length > 0) {
-      const criticalVulns = analysis.vulnerabilities.filter(v => v.severity === 'CRITICAL');
-      const highVulns = analysis.vulnerabilities.filter(v => v.severity === 'HIGH');
+    if (fs.existsSync(srcPath)) {
+      const files = getAllFiles(srcPath, ['.js', '.jsx', '.ts', '.tsx']);
+      const usedImports = new Set();
       
-      if (criticalVulns.length > 0) {
-        recommendations.push({
-          priority: 'CRITICAL',
-          type: 'SECURITY',
-          message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,
-          action: 'UPDATE_IMMEDIATE',
-          packages: criticalVulns.map(v => v.package)
-        });
-      }
+      // Scan for imports in source files
+      files.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        const importMatches = content.match(/import\s+.*\s+from\s+['"`]([^'"`]+)['"`]/g);
+        
+        if (importMatches) {
+          importMatches.forEach(match => {
+            const packageMatch = match.match(/from\s+['"`]([^'"`]+)['"`]/);
+            if (packageMatch) {
+              const packageName = packageMatch[1];
+              // Extract package name from import path
+              const pkgName = packageName.split('/')[0];
+              if (pkgName && !pkgName.startsWith('.')) {
+                usedImports.add(pkgName);
+              }
+            }
+          });
+        }
+      });
       
-      if (highVulns.length > 0) {
-        recommendations.push({
-          priority: 'HIGH',
-          type: 'SECURITY',
-          message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,
-          action: 'UPDATE_URGENT',
-          packages: highVulns.map(v => v.package)
-        });
-      }
-    }
-    
-    // Update-based recommendations
-    if (analysis.outdated.length > 0) {
-      const majorUpdates = analysis.outdated.filter(p => p.updateType === 'MAJOR');
-      const minorUpdates = analysis.outdated.filter(p => p.updateType === 'MINOR');
-      
-      if (majorUpdates.length > 0) {
-        recommendations.push({
-          priority: 'MEDIUM',
-          type: 'UPDATES',
-          message: `${majorUpdates.length} major updates available. Review for breaking changes.`,
-          action: 'REVIEW_AND_UPDATE',
-          packages: majorUpdates.map(p => p.package)
-        });
-      }
-      
-      if (minorUpdates.length > 0) {
-        recommendations.push({
-          priority: 'LOW',
-          type: 'UPDATES',
-          message: `${minorUpdates.length} minor updates available. Safe to update.`,
-          action: 'UPDATE_SAFE',
-          packages: minorUpdates.map(p => p.package)
-        });
-      }
-    }
-    
-    // Conflict-based recommendations
-    if (analysis.conflicts.length > 0) {
-      recommendations.push({
-        priority: 'HIGH',
-        type: 'CONFLICTS',
-        message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,
-        action: 'RESOLVE_CONFLICTS',
-        conflicts: analysis.conflicts
+      // Check for unused dependencies
+      Object.keys(packageJson.dependencies || {}).forEach(dep => {
+        if (!usedImports.has(dep)) {
+          unused.push({
+            name: dep,
+            type: 'potentially-unused',
+            reason: 'Not directly imported in source code',
+            impact: 'low',
+            note: 'May be used indirectly or dynamically'
+          });
+        }
       });
     }
     
-    return recommendations;
+  } catch (error) {
+    console.log('⚠️  Manual unused dependency analysis failed:', error.message);
   }
+  
+  return unused;
+}
 
-  async saveDependencyAnalysis(analysis) {
-    try {
-      fs.writeFileSync(this.dependencyAnalysis, JSON.stringify(analysis, null, 2));
-      this.log('Dependency analysis saved');
-    } catch (error) {
-      this.log(`Failed to save dependency analysis: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async generateReport() {
-    this.log('Generating dependency management report...');
+async function checkPeerDependencies() {
+  const peerDependencies = [];
+  
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     
-    const analysis = await this.analyzeDependencies();
-    if (!analysis) return null;
-    
-    const report = {
-      summary: {
-        totalDependencies: analysis.packageJson.dependencies.count + analysis.packageJson.devDependencies.count,
-        vulnerabilities: analysis.vulnerabilities.length,
-        conflicts: analysis.conflicts.length,
-        outdated: analysis.outdated.length,
-        riskLevel: this.calculateOverallRiskLevel(analysis)
-      },
-      recommendations: analysis.recommendations,
-      actions: this.generateActionPlan(analysis)
-    };
-    
-    return report;
-  }
-
-  calculateOverallRiskLevel(analysis) {
-    let riskScore = 0;
-    
-    // Add vulnerability risk
-    for (const vuln of analysis.vulnerabilities) {
-      riskScore += vuln.riskScore;
+    // Check for peer dependency conflicts
+    if (packageJson.peerDependencies) {
+      Object.keys(packageJson.peerDependencies).forEach(dep => {
+        const requiredVersion = packageJson.peerDependencies[dep];
+        const installedVersion = getInstalledVersion(dep);
+        
+        if (installedVersion && !satisfiesVersion(installedVersion, requiredVersion)) {
+          peerDependencies.push({
+            package: dep,
+            required: requiredVersion,
+            installed: installedVersion,
+            conflict: true,
+            severity: 'high'
+          });
+        }
+      });
     }
     
-    // Add conflict risk
-    riskScore += analysis.conflicts.length * 2;
-    
-    // Add outdated risk
-    for (const pkg of analysis.outdated) {
-      if (pkg.updateType === 'MAJOR') riskScore += 3;
-      else if (pkg.updateType === 'MINOR') riskScore += 1;
-    }
-    
-    if (riskScore >= 20) return 'CRITICAL';
-    if (riskScore >= 15) return 'HIGH';
-    if (riskScore >= 10) return 'MEDIUM';
-    if (riskScore >= 5) return 'LOW';
-    return 'SAFE';
+  } catch (error) {
+    console.log('⚠️  Peer dependency check failed:', error.message);
   }
+  
+  return peerDependencies;
+}
 
-  generateActionPlan(analysis) {
-    const actions = [];
+function generateDependencyRecommendations(analysis) {
+  const recommendations = [];
+  
+  // Security recommendations
+  if (analysis.vulnerabilities.length > 0) {
+    const criticalVulns = analysis.vulnerabilities.filter(v => v.severity === 'critical');
+    const highVulns = analysis.vulnerabilities.filter(v => v.severity === 'high');
     
-    // Immediate actions
-    const criticalVulns = analysis.vulnerabilities.filter(v => v.severity === 'CRITICAL');
     if (criticalVulns.length > 0) {
-      actions.push({
-        priority: 'IMMEDIATE',
-        action: 'npm audit fix',
-        description: 'Fix critical vulnerabilities',
+      recommendations.push({
+        priority: 'critical',
+        category: 'Security',
+        title: 'Fix Critical Security Vulnerabilities',
+        description: `Found ${criticalVulns.length} critical security vulnerabilities`,
+        action: 'Update vulnerable packages immediately',
+        impact: 'Critical',
         packages: criticalVulns.map(v => v.package)
       });
     }
     
-    // High priority actions
-    const highVulns = analysis.vulnerabilities.filter(v => v.severity === 'HIGH');
     if (highVulns.length > 0) {
-      actions.push({
-        priority: 'HIGH',
-        action: 'npm audit fix',
-        description: 'Fix high-severity vulnerabilities',
+      recommendations.push({
+        priority: 'high',
+        category: 'Security',
+        title: 'Fix High Priority Security Vulnerabilities',
+        description: `Found ${highVulns.length} high priority security vulnerabilities`,
+        action: 'Update vulnerable packages as soon as possible',
+        impact: 'High',
         packages: highVulns.map(v => v.package)
       });
     }
+  }
+  
+  // Update recommendations
+  if (analysis.outdated.length > 0) {
+    const majorUpdates = analysis.outdated.filter(pkg => pkg.priority === 'high');
+    const minorUpdates = analysis.outdated.filter(pkg => pkg.priority === 'medium');
     
-    // Medium priority actions
-    if (analysis.outdated.filter(p => p.updateType === 'PATCH').length > 0) {
-      actions.push({
-        priority: 'MEDIUM',
-        action: 'npm update',
-        description: 'Update patch versions safely'
+    if (majorUpdates.length > 0) {
+      recommendations.push({
+        priority: 'medium',
+        category: 'Updates',
+        title: 'Consider Major Version Updates',
+        description: `Found ${majorUpdates.length} packages with major version updates available`,
+        action: 'Review breaking changes and update if compatible',
+        impact: 'Medium',
+        packages: majorUpdates.map(pkg => pkg.name)
       });
     }
     
-    return actions;
-  }
-
-  async run() {
-    try {
-      this.log('Intelligent Dependency Manager started');
-      
-      // Generate comprehensive report
-      const report = await this.generateReport();
-      
-      if (report) {
-        this.log(`Dependency Management Report:`);
-        this.log(`  - Total Dependencies: ${report.summary.totalDependencies}`);
-        this.log(`  - Vulnerabilities: ${report.summary.vulnerabilities}`);
-        this.log(`  - Conflicts: ${report.summary.conflicts}`);
-        this.log(`  - Outdated: ${report.summary.outdated}`);
-        this.log(`  - Overall Risk: ${report.summary.riskLevel}`);
-        
-        // Display top recommendations
-        const topRecommendations = report.recommendations.slice(0, 3);
-        if (topRecommendations.length > 0) {
-          this.log('Top Recommendations:');
-          topRecommendations.forEach((rec, index) => {
-            this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);
-          });
-        }
-      }
-      
-      // Schedule next analysis
-      setTimeout(() => this.run(), 7200000); // 2 hours
-      
-    } catch (error) {
-      this.log(`Intelligent Dependency Manager failed: ${error.message}`, 'ERROR');
-      setTimeout(() => this.run(), 1800000); // 30 minutes on error
+    if (minorUpdates.length > 0) {
+      recommendations.push({
+        priority: 'low',
+        category: 'Updates',
+        title: 'Apply Minor Version Updates',
+        description: `Found ${minorUpdates.length} packages with minor version updates available`,
+        action: 'Update packages for bug fixes and new features',
+        impact: 'Low',
+        packages: minorUpdates.map(pkg => pkg.name)
+      });
     }
+  }
+  
+  // Cleanup recommendations
+  if (analysis.unused.length > 0) {
+    const definitelyUnused = analysis.unused.filter(pkg => pkg.type === 'unused');
+    
+    if (definitelyUnused.length > 0) {
+      recommendations.push({
+        priority: 'low',
+        category: 'Cleanup',
+        title: 'Remove Unused Dependencies',
+        description: `Found ${definitelyUnused.length} unused dependencies`,
+        action: 'Remove unused packages to reduce bundle size',
+        impact: 'Low',
+        packages: definitelyUnused.map(pkg => pkg.name)
+      });
+    }
+  }
+  
+  return recommendations;
+}
+
+function planDependencyActions(analysis) {
+  const actions = [];
+  
+  // Immediate actions for critical issues
+  if (analysis.vulnerabilities.some(v => v.severity === 'critical')) {
+    actions.push({
+      type: 'update',
+      priority: 'immediate',
+      description: 'Update packages with critical security vulnerabilities',
+      packages: analysis.vulnerabilities.filter(v => v.severity === 'critical').map(v => v.package),
+      command: 'npm audit fix',
+      risk: 'low'
+    });
+  }
+  
+  // High priority actions
+  if (analysis.vulnerabilities.some(v => v.severity === 'high')) {
+    actions.push({
+      type: 'update',
+      priority: 'high',
+      description: 'Update packages with high priority security vulnerabilities',
+      packages: analysis.vulnerabilities.filter(v => v.severity === 'high').map(v => v.package),
+      command: 'npm audit fix',
+      risk: 'low'
+    });
+  }
+  
+  // Safe updates
+  const safeUpdates = analysis.outdated.filter(pkg => 
+    pkg.risk === 'low' && pkg.priority === 'low'
+  );
+  
+  if (safeUpdates.length > 0) {
+    actions.push({
+      type: 'update',
+      priority: 'medium',
+      description: 'Apply safe dependency updates',
+      packages: safeUpdates.map(pkg => pkg.name),
+      command: `npm update ${safeUpdates.map(pkg => pkg.name).join(' ')}`,
+      risk: 'low'
+    });
+  }
+  
+  // Cleanup actions
+  const definitelyUnused = analysis.unused.filter(pkg => pkg.type === 'unused');
+  if (definitelyUnused.length > 0) {
+    actions.push({
+      type: 'remove',
+      priority: 'low',
+      description: 'Remove unused dependencies',
+      packages: definitelyUnused.map(pkg => pkg.name),
+      command: `npm uninstall ${definitelyUnused.map(pkg => pkg.name).join(' ')}`,
+      risk: 'low'
+    });
+  }
+  
+  return actions;
+}
+
+function prioritizeDependencyActions(analysis) {
+  if (analysis.vulnerabilities.some(v => v.severity === 'critical')) {
+    return 'critical';
+  } else if (analysis.vulnerabilities.some(v => v.severity === 'high')) {
+    return 'high';
+  } else if (analysis.outdated.some(pkg => pkg.priority === 'high')) {
+    return 'medium';
+  } else {
+    return 'low';
   }
 }
 
-// Start the Intelligent Dependency Manager
-const manager = new IntelligentDependencyManager();
-manager.run();
+async function createDependencyActionPlan(analysis) {
+  try {
+    const actionPlanPath = path.join(process.cwd(), 'dependency-action-plan.md');
+    let content = `# Dependency Management Action Plan\n\n`;
+    content += `Generated: ${analysis.timestamp}\n`;
+    content += `Priority: ${analysis.priority.toUpperCase()}\n\n`;
+    
+    if (analysis.actions.length > 0) {
+      content += `## Recommended Actions\n\n`;
+      analysis.actions.forEach((action, index) => {
+        content += `### ${index + 1}. ${action.description}\n`;
+        content += `- **Type**: ${action.type}\n`;
+        content += `- **Priority**: ${action.priority}\n`;
+        content += `- **Risk**: ${action.risk}\n`;
+        content += `- **Command**: \`${action.command}\`\n`;
+        content += `- **Packages**: ${action.packages.join(', ')}\n\n`;
+      });
+    }
+    
+    if (analysis.recommendations.length > 0) {
+      content += `## Recommendations\n\n`;
+      analysis.recommendations.forEach((rec, index) => {
+        content += `### ${index + 1}. ${rec.title}\n`;
+        content += `- **Priority**: ${rec.priority.toUpperCase()}\n`;
+        content += `- **Category**: ${rec.category}\n`;
+        content += `- **Impact**: ${rec.impact}\n`;
+        content += `- **Description**: ${rec.description}\n`;
+        content += `- **Action**: ${rec.action}\n`;
+        if (rec.packages) {
+          content += `- **Packages**: ${rec.packages.join(', ')}\n`;
+        }
+        content += '\n';
+      });
+    }
+    
+    fs.writeFileSync(actionPlanPath, content);
+    console.log(`📋 Dependency action plan created: ${actionPlanPath}`);
+    
+  } catch (error) {
+    console.log('⚠️  Failed to create dependency action plan:', error.message);
+  }
+}
+
+async function executeSafeUpdates(analysis) {
+  try {
+    console.log('🔄 Executing safe dependency updates...');
+    
+    const safeActions = analysis.actions.filter(action => 
+      action.risk === 'low' && action.type === 'update'
+    );
+    
+    for (const action of safeActions) {
+      try {
+        console.log(`🔄 Executing: ${action.description}`);
+        execSync(action.command, { stdio: 'inherit' });
+        console.log(`✅ Successfully executed: ${action.description}`);
+      } catch (error) {
+        console.log(`⚠️  Failed to execute: ${action.description}`, error.message);
+      }
+    }
+    
+  } catch (error) {
+    console.log('⚠️  Safe updates execution failed:', error.message);
+  }
+}
+
+// Utility functions
+function isMajorVersionUpdate(current, latest) {
+  const currentMajor = parseInt(current.split('.')[0]);
+  const latestMajor = parseInt(latest.split('.')[0]);
+  return latestMajor > currentMajor;
+}
+
+function isMinorVersionUpdate(current, latest) {
+  const currentMinor = parseInt(current.split('.')[1]);
+  const latestMinor = parseInt(latest.split('.')[1]);
+  return latestMinor > currentMinor;
+}
+
+function isBreakingChange(current, latest) {
+  // This is a simplified check - in reality, you'd need to check changelogs
+  return isMajorVersionUpdate(current, latest);
+}
+
+function getDependencyType(packageName) {
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    
+    if (packageJson.dependencies && packageJson.dependencies[packageName]) {
+      return 'production';
+    } else if (packageJson.devDependencies && packageJson.devDependencies[packageName]) {
+      return 'development';
+    } else if (packageJson.peerDependencies && packageJson.peerDependencies[packageName]) {
+      return 'peer';
+    } else if (packageJson.optionalDependencies && packageJson.optionalDependencies[packageName]) {
+      return 'optional';
+    }
+  } catch (error) {
+    // Ignore errors
+  }
+  
+  return 'unknown';
+}
+
+function getPackageDescription(packageName) {
+  // This could be enhanced to fetch package descriptions from npm registry
+  return 'Package description not available';
+}
+
+function getInstalledVersion(packageName) {
+  try {
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    return packageJson.dependencies?.[packageName] || 
+           packageJson.devDependencies?.[packageName] || 
+           packageJson.peerDependencies?.[packageName];
+  } catch (error) {
+    return null;
+  }
+}
+
+function satisfiesVersion(installed, required) {
+  // Simplified version checking - in reality, you'd use semver
+  return installed === required;
+}
+
+function getAllFiles(dir, extensions) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting intelligent dependency manager with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial dependency management
+  await runIntelligentDependencyManagement();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runIntelligentDependencyManagement();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Intelligent dependency manager running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the intelligent dependency manager
+runContinuous().catch(error => {
+  console.error('❌ Failed to start intelligent dependency manager:', error);
+  process.exit(1);
+});

@@ -15,7 +15,7 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-export default function About() {
+function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },

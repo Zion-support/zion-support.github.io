@@ -1,7 +1,10 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import { PageSEO } from '../components/SEOOptimizer';
+import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
+import { PerformanceDashboard } from '../components/PerformanceDashboard';
+import { EnhancedAnalytics } from '../components/EnhancedAnalytics';
 import {
   Users,
   TrendingUp,
@@ -61,6 +64,7 @@ import {
   Target2,
   Building2
 } from 'lucide-react';
+import { SEO } from "@/components/SEO";
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -109,6 +113,9 @@ const FuturisticBackground = React.memo(() => {
   );
 });
 
+// Enhanced Hero Section
+const HeroSection = () => {
+=======
 // Enhanced Hero Section with better performance
 const HeroSection = React.memo(() => {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -134,6 +141,7 @@ const HeroSection = React.memo(() => {
       {/* Background */}
       <FuturisticBackground />
       
+=======
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -300,10 +308,30 @@ const ServicesSection = () => {
       link: "/services/ai-cybersecurity-threat-intelligence"
     },
     {
-      icon: Chip,
-      title: "Edge Computing",
-      description: "Ultra-low latency IoT and edge solutions",
-      href: "/services/edge-computing-platform",
+      title: "AI Cybersecurity Intelligence Platform",
+      description: "Advanced AI-powered cybersecurity platform with 99.9% threat detection accuracy and zero false positives.",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "/services/ai-cybersecurity-intelligence-platform"
+    },
+    {
+      title: "AI Customer Churn Predictor",
+      description: "Predict and prevent customer churn with AI-powered analytics and automated retention strategies.",
+      icon: TrendingDown,
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-powered-customer-churn-predictor"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "/services/cybersecurity"
+    },
+    {
+      title: "Cloud Services",
+      description: "Scalable cloud infrastructure and management solutions",
+      icon: Cloud,
       color: "from-green-500 to-emerald-500",
       features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
     },
@@ -370,6 +398,30 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    },
+    {
+      icon: DollarSign,
+      title: "AI Financial Advisor",
+      description: "Autonomous AI-powered financial advice and portfolio optimization",
+      href: "/services/ai-autonomous-financial-advisor",
+      color: "from-green-500 to-cyan-500",
+      features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"]
+    },
+    {
+      icon: Heart,
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered medical diagnostics and health analytics",
+      href: "/services/ai-autonomous-healthcare-diagnostics",
+      color: "from-red-500 to-blue-500",
+      features: ["Medical Imaging", "Disease Detection", "Predictive Analytics", "Clinical Support"]
+    },
+    {
+      icon: Shield,
+      title: "AI Cybersecurity Operations",
+      description: "Autonomous AI-powered cybersecurity and threat response",
+      href: "/services/ai-autonomous-cybersecurity-operations",
+      color: "from-orange-500 to-red-500",
+      features: ["Threat Detection", "Autonomous Response", "Zero Trust", "24/7 Monitoring"]
     }
   ];
 
@@ -577,6 +629,7 @@ const WhyChooseUsSection = () => {
   );
 };
 
+=======
 // Latest Innovations Section
 const LatestInnovationsSection = () => {
   const latestServices = [
@@ -793,112 +846,42 @@ const FloatingActionButton = React.memo(() => {
 
   return (
     <>
-      {/* Floating Action Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <div className="flex flex-col gap-3">
-          {/* Contact Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={openContact}
-            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Contact Us"
-          >
-            <MessageCircle className="w-6 h-6" />
-          </motion.button>
-
-          {/* Scroll to Top Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={scrollToTop}
-            className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Scroll to top"
-          >
-            <ArrowUpRight className="w-6 h-6" />
-          </motion.button>
-        </div>
-      </motion.div>
-
-      {/* Floating Action Button for Mobile */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 left-6 z-50 md:hidden"
-      >
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={openContact}
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-          aria-label="Contact Us"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </motion.button>
-      </motion.div>
+      <PageSEO pageType="home" />
+      <div className="min-h-screen bg-zion-blue-dark">
+        <HeroSection />
+        <FeaturesSection />
+        <ServicesSection />
+        <StatsSection />
+        <TestimonialsSection />
+        <CTASection />
+        
+        {/* Enhanced Performance & Analytics Components */}
+        <PerformanceDashboard enabled={true} showRealTime={true} />
+        <EnhancedAnalytics enabled={true} showRealTime={true} />
+      </div>
     </>
   );
 });
 
 // Main Home Component
-const Home: React.FC = () => {
-  // SEO structured data for the home page
-  const homePageStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Zion Tech Group - AI-Powered Technology Solutions",
-    "description": "Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions.",
-    "url": "https://ziontechgroup.com",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud computing, and digital transformation services.",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
-      }
-    }
-  };
-
+export default function Home() {
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="AI-Powered Technology Solutions & Digital Transformation"
-        description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
-        keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
-        canonical="https://ziontechgroup.com"
-        structuredData={homePageStructuredData}
-      />
-      <HeroSection />
-      <ServicesSection />
-      <LatestInnovationsSection />
-      <WhyChooseUsSection />
-      <CTASection />
-      <FloatingActionButton />
-    </div>
+    <EnhancedSEO data={SEOConfigs.home}>
+      <div className="min-h-screen bg-zion-blue-dark">
+        <SEO
+          title="AI-Powered Technology Solutions & Digital Transformation"
+          description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
+          keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
+          canonical="https://ziontechgroup.com"
+          structuredData={homePageStructuredData}
+        />
+        <HeroSection />
+        <ServicesSection />
+        <LatestInnovationsSection />
+        <WhyChooseUsSection />
+        <CTASection />
+        <FloatingActionButton />
+      </div>
+    </EnhancedSEO>
   );
 }

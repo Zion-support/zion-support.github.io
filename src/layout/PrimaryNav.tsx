@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
+import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { Menu, X, ShoppingCart } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { useAuth } from '@/context/auth/AuthContext';
+import { useIsMobile } from '@/hooks/useIsMobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { generateSearchSuggestions, slugify } from '@/utils/searchUtils';
 import type { RootState } from '@/store';
       // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
@@ -79,7 +75,9 @@ const ModeToggle = () => {;
                       suggestion_id: sugg.id || sugg.slug
                     })}
                 }}
-                searchSuggestions = {suggestions}
+                suggestions={suggestions}
+                placeholder={t('search.placeholder')}
+                className="w-full"
               />
             </form>
             {/* Compact actions group */}
@@ -131,8 +129,22 @@ const ModeToggle = () => {;
                     {t('auth.signup')}
                   </Link>
                 </>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => router.push('/login')}
+                    className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {t('auth.login')}
+                  </button>
+                  <button
+                    onClick={() => router.push('/signup')}
+                    className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  >
+                    {t('auth.signup')}
+                  </button>
+                </div>
               )}
-              {isLoggedIn && <UserMenu />}
             </div>
           </div>
           {/* Mobile menu button */}

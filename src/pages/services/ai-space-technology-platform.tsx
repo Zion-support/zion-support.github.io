@@ -24,7 +24,7 @@ import {
   MapPin as MapPinIcon,
   Network,
   Orbit,
-  Telescope,
+  Eye,
   Planet,
   Comet,
   Meteor,
@@ -40,7 +40,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       description: "AI-powered management of satellite networks with autonomous orbital optimization and collision avoidance."
     },
     {
-      icon: Telescope,
+      icon: Eye,
       title: "Space Observation & Analytics",
       description: "Advanced AI algorithms for processing astronomical data and space imagery with unprecedented accuracy."
     },
@@ -139,7 +139,7 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       description: "Autonomous satellite constellation management and mission control."
     },
     {
-      icon: Telescope,
+      icon: Eye,
       title: "Astronomy Research",
       description: "AI-powered analysis of astronomical data and space phenomena."
     },

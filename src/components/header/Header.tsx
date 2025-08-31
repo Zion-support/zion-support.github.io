@@ -3,15 +3,11 @@ import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
 import { Logo } from './Logo';
-import { Menu, X, Search, User, ShoppingBag, Bell } from 'lucide-react';
+import { Menu, X, Search, User, ShoppingBag, Bell, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -22,11 +18,26 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-12 items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
-              <div className="text-zion-slate-light">
-                📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center">
+                  <Mail className="w-3 h-3 mr-1" />
+                  kleber@ziontechgroup.com
+                </a>
               </div>
-              <div className="text-zion-slate-light hidden sm:block">
-                📞 <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors hidden sm:block">
+                <a href="tel:+13024640950" className="flex items-center">
+                  <Phone className="w-3 h-3 mr-1" />
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors hidden md:block">
+                <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  Middletown, DE
+                </a>
+              </div>
+              <div className="text-zion-slate-light hidden lg:block">
+                📍 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -38,6 +49,9 @@ export function Header() {
               </Link>
               <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Pricing
+              </Link>
+              <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Contact
               </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-zion-slate-light text-xs">Follow us:</span>
@@ -71,6 +85,15 @@ export function Header() {
             {/* Desktop Navigation */}
             <MainNavigation className="hidden lg:flex" />
 
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
@@ -113,26 +136,11 @@ export function Header() {
 
               {/* Get Started CTA */}
               <Link
-                to="/contact"
+                to="/get-started"
                 className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-sm font-medium rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
                 Get Started
               </Link>
-
-              {/* Mobile Menu Button */}
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark lg:hidden transition-all duration-300"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle mobile menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMobileMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
             </div>
           </div>
         </div>

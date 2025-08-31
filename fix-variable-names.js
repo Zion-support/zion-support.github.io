@@ -9,19 +9,8 @@ function toCamelCase(str) {
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
-  <<<<<<< HEAD
         '0': 'Zero'
-      
-
-};
-      return numberWords[match] || match})
-  '0': 'Zero'
-      
-
-
-
-
-};
+      };
       return numberWords[match] || match;
     })
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())

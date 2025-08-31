@@ -1,24 +1,30 @@
-      // // // // // // // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
-      navigator.serviceWorker
-        .register(swUrl)
-        .then((registration) => {
-          // // // // // // // console.log('SW registered: ', registration);
-          // Handle updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-                  // // // // // // // console.log('New content is available; please refresh.');
-                }
-              });
-          });
-        })
-        .catch((registrationError) => {
-          // // // // // // // console.error('SW registration failed: ', registrationError);
+// Service Worker Registration and Management
+export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
+  if ('serviceWorker' in navigator) {
+    console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+    navigator.serviceWorker
+      .register(swUrl)
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available
+                console.log('New content is available; please refresh.');
+              }
+            });
+          }
         });
-    });
+      })
+      .catch((registrationError) => {
+        console.error('SW registration failed: ', registrationError);
+      });
+  }
+}
+
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
@@ -26,10 +32,11 @@ export function unregisterServiceWorker() {
         registration.unregister();
       })
       .catch((error) => {
-        // // // // // // // console.error(error.message);
+        console.error(error.message);
       });
   }
 }
+
 // Service Worker for Zion Tech Group
 // Handles caching, offline functionality, and performance optimization
 const CACHE_NAME = 'zion-tech-group-v1';
@@ -40,6 +47,7 @@ const STATIC_ASSETS = [
   '/favicon.ico',
   '/og-image.jpg'
 ];
+
 const DYNAMIC_ROUTES = [
   '/about',
   '/services',
@@ -48,10 +56,12 @@ const DYNAMIC_ROUTES = [
   '/blog',
   '/case-studies'
 ];
+
 const API_ENDPOINTS = [
   '/api/',
   '/graphql'
 ];
+
 // Install event - cache static assets
 self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
@@ -60,15 +70,9 @@ self.addEventListener('install', (event: ExtendableEvent) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
   );
 });
+
 // Activate event - clean up old caches
 self.addEventListener('activate', (event: ExtendableEvent) => {
   event.waitUntil(
@@ -81,24 +85,25 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
     })
   );
 });
+
 // Fetch event - handle different caching strategies
 self.addEventListener('fetch', (event: FetchEvent) => {
   const { request } = event;
   const url = new URL(request.url);
+  
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
+  
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
+  
   // Handle different types of requests
   if (isStaticAsset(request)) {
     event.respondWith(cacheFirst(request, CACHE_NAME));
@@ -111,23 +116,64 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
-// Cache First Strategy
+
+// Helper functions
+function isStaticAsset(request: Request): boolean {
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
+}
+
+function isImage(request: Request): boolean {
+  return request.destination === 'image';
+}
+
+function isFont(request: Request): boolean {
+  return request.destination === 'font';
+}
+
+function isAPIRequest(request: Request): boolean {
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
+}
+
+function isDynamicRoute(request: Request): boolean {
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route));
+}
+
+// Cache strategies
 async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
+  
   if (cachedResponse) {
-    // Update cache in background
-    fetch(request).then(response => {
-      if (response.ok) {
-        cache.put(request, response);
-      }
-    }).catch(() => {
-      // Silently fail background update
-    });
     return cachedResponse;
   }
-  // Fetch from network if no cache
+  
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
@@ -135,10 +181,14 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
     }
     return networkResponse;
   } catch (error) {
-    return new Response('Offline', { status: 503 });
+    // Return a fallback response if both cache and network fail
+    return new Response('Offline content not available', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
   }
 }
-// Network First Strategy
+
 async function networkFirst(request: Request, cacheName: string): Promise<Response> {
   try {
     const networkResponse = await fetch(request);
@@ -148,13 +198,18 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
     }
     return networkResponse;
   } catch (error) {
-    // Fall back to cache
     const cache = await caches.open(cacheName);
     const cachedResponse = await cache.match(request);
+    
     if (cachedResponse) {
       return cachedResponse;
     }
-    return new Response('Offline', { status: 503 });
+    
+    // Return a fallback response if both network and cache fail
+    return new Response('Content not available offline', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
   }
 }
 // Helper functions to determine request type
@@ -201,26 +256,14 @@ async function doBackgroundSync() {
 self.addEventListener('push', (event: PushEvent) => {
   console.log('Push notification received:', event);
   const options = {
-    body: event.data?.text() || 'New notification from Zion Tech Group',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View',
-        icon: '/icon-192x192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
+    }
   };
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)

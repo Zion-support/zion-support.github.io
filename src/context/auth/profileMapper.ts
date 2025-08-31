@@ -1,9 +1,10 @@
 interface SupabaseUser {
   id: string;
   email?: string;
-user_metadata?: {
+  user_metadata?: {
     full_name?: string;
-    avatar_url?: string};
+    avatar_url?: string;
+  };
   created_at?: string;
   updated_at?: string}
 interface Profile {
