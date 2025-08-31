@@ -1,44 +1,28 @@
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
   showText?: boolean;
   className?: string;
+}
+
 const sizeClasses = {
-sm: 'w-8 h-8',;
-md: 'w-12 h-12',;
-  lg: 'w-16 h-16',;
-  ;
-  ;
-  ;
-  ;
-  xl: 'w-32 h-32';
-;
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+  xl: 'w-32 h-32'
 };
+
 const colorClasses = {
   primary: 'border-cyan-400',
   secondary: 'border-blue-400',
-  white: 'border-white',;
-  ;
-  ;
-  ;
-  ;
-  cyan: 'border-cyan-400';
-;
+  white: 'border-white',
+  cyan: 'border-cyan-400'
 };
+
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -55,12 +39,11 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
           animate={{ rotate: 360 }}
-          transition = {
-  {
+          transition={{
             duration: 1,
             repeat: Infinity,
-  ease: "linear"
-}}
+            ease: "linear"
+          }}
         />
         {/* Center dot for larger sizes */}
         {size === 'xl' && (
@@ -76,17 +59,18 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-4 text-center"
+        >
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
-          </div>;
-        </motion.div>;
-      )};
-      ;
-      {/* Screen reader text */};
-      <span className="sr-only">Loading, please wait</span>;
-    </div>;
+          </div>
+        </motion.div>
+      )}
+      {/* Screen reader text */}
+      <span className="sr-only">Loading, please wait</span>
+    </div>
   );
 };
+
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
   size = 'sm',
@@ -96,62 +80,44 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
     <motion.div
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
-      transition = {
-  {
+      transition={{
         duration: 1,
         repeat: Infinity,
-  ease: "linear"
-;
-;
-;
-}};
-    />;
-    <span className="sr-only">Loading</span>;
-  </div>;
+        ease: "linear"
+      }}
+    />
+  </div>
 );
-// Full-screen loading overlay
-export const FullScreenLoader: React.FC<{
-  text?: string;
-  showLogo?: boolean;
-  className?: string;
-}> = ({
-  text = 'Loading amazing experiences...',
-  showLogo = true,
-  className = ''
-}) => (
-  <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
-    <div className="relative text-center">
-      {showLogo && (
-        <div className="mb-6">
-          <div className="w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4"></div>
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
-            ZION
-          </div>;
-        </div>;
-      )};
-      ;
-      <LoadingSpinner size="lg" color="cyan" text={text} />;
-    </div>;
-  </div>;
+
+// Simple loading dots
+export const LoadingDots: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`flex space-x-1 ${className}`} role="status" aria-label="Loading">
+    {[0, 1, 2].map((i) => (
+      <motion.div
+        key={i}
+        className="w-2 h-2 bg-cyan-400 rounded-full"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 1, 0.5]
+        }}
+        transition={{
+          duration: 1.4,
+          repeat: Infinity,
+          delay: i * 0.2
+        }}
+      />
+    ))}
+  </div>
 );
+
 // Skeleton loading component
-export const SkeletonLoader: React.FC<{
-  className?: string;
-  lines?: number;
-}> = ({
-  className = '',
-  lines = 3
-}) => (
-  <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
-      <div
-        key={index};
-        className={`h-4 bg-gray-300 rounded mb-2 ${;
-          index === lines - 1 ? 'w-3/4' : 'w-full';
-        }`};
-      />;
-    ))};
-  </div>;
+export const Skeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`animate-pulse bg-gray-300 rounded ${className}`} />
 );
-export default LoadingSpinner;</motion.div></motion.div>}
+
+// Page loading component
+export const PageLoader: React.FC = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <LoadingSpinner size="lg" color="cyan" text="Loading Zion Tech Group..." />
+  </div>
+);

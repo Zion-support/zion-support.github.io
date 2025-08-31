@@ -1,9 +1,8 @@
-import React from 'react.ts';
-import SEO from '../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { Code,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search,
   Filter,
   ArrowRight,
@@ -20,22 +19,20 @@ import { Code,
   Clock,
   User,
   Star,
-  Terminal,
   Key,
-  Database,
-  Lock
-             } from 'lucide-react.ts';
+  Lock,
+  Brain,
+  Cloud,
+  Rocket,
+  BookOpen,
+  Users
+} from 'lucide-react';
 
-const API: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function API() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
   const endpoints = [
-    {
-      method: 'GET',
-      path: '/api/v1/services',
-      description: 'Retrieve all available services',
-      auth: 'Required'
-    },
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'auth',
       name: 'Authentication',
@@ -67,6 +64,38 @@ const API: React.FC = (): JSX.Element => {
       path: '/api/v1/analytics',
       description: 'Get analytics and metrics data',
       category: 'analytics'
+    },
+    {
+      id: 'services',
+      name: 'Get Services',
+      method: 'GET',
+      path: '/api/v1/services',
+      description: 'Retrieve all available services',
+      category: 'services'
+    },
+    {
+      id: 'ai-models',
+      name: 'AI Models',
+      method: 'POST',
+      path: '/api/v1/ai/models',
+      description: 'Train and deploy AI models',
+      category: 'ai'
+    },
+    {
+      id: 'cloud-deploy',
+      name: 'Cloud Deployment',
+      method: 'POST',
+      path: '/api/v1/cloud/deploy',
+      description: 'Deploy applications to cloud infrastructure',
+      category: 'cloud'
+    },
+    {
+      id: 'security-scan',
+      name: 'Security Scan',
+      method: 'POST',
+      path: '/api/v1/security/scan',
+      description: 'Perform security vulnerability scan',
+      category: 'security'
     }
   ];
 
@@ -99,7 +128,7 @@ const API: React.FC = (): JSX.Element => {
   "success": true,
   "data": {
     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-    "refresh_token": "refresh_token_here",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "expires_in": 3600,
     "user": {
       "id": "user_123",
@@ -114,8 +143,8 @@ const API: React.FC = (): JSX.Element => {
     "users": [
       {
         "id": "user_123",
+        "email": "user@example.com",
         "name": "John Doe",
-        "email": "john@example.com",
         "role": "admin"
       }
     ],
@@ -129,12 +158,14 @@ const API: React.FC = (): JSX.Element => {
     projects: `{
   "success": true,
   "data": {
-    "id": "proj_456",
-    "name": "My Project",
-    "description": "Project description",
-    "type": "web_application",
-    "created_at": "2024-01-15T10:30:00Z",
-    "status": "active"
+    "project": {
+      "id": "proj_456",
+      "name": "My Project",
+      "description": "Project description",
+      "type": "web_application",
+      "status": "created",
+      "created_at": "2024-01-15T10:30:00Z"
+    }
   }
 }`,
     analytics: `{
@@ -142,8 +173,9 @@ const API: React.FC = (): JSX.Element => {
   "data": {
     "metrics": {
       "total_users": 1250,
-      "active_projects": 89,
-      "api_calls": 45678
+      "active_users": 890,
+      "total_projects": 456,
+      "success_rate": 98.5
     },
     "period": {
       "start_date": "2024-01-01",
@@ -153,509 +185,292 @@ const API: React.FC = (): JSX.Element => {
 }`
   };
 
-export default function API(...args: any[]): any {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const categories = [
+    { id: 'all', name: 'All APIs', count: endpoints.length },
+    { id: 'auth', name: 'Authentication', count: endpoints.filter(e => e.category === 'auth').length },
+    { id: 'users', name: 'User Management', count: endpoints.filter(e => e.category === 'users').length },
+    { id: 'projects', name: 'Projects', count: endpoints.filter(e => e.category === 'projects').length },
+    { id: 'analytics', name: 'Analytics', count: endpoints.filter(e => e.category === 'analytics').length },
+    { id: 'ai', name: 'AI Services', count: endpoints.filter(e => e.category === 'ai').length },
+    { id: 'cloud', name: 'Cloud Services', count: endpoints.filter(e => e.category === 'cloud').length },
+    { id: 'security', name: 'Security', count: endpoints.filter(e => e.category === 'security').length }
+  ];
+
+  const filteredEndpoints = endpoints.filter(endpoint => {
+    const matchesCategory = selectedCategory === 'all' || endpoint.category === selectedCategory;
+    const matchesSearch = endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const getMethodColor = (method: string) => {
+    switch (method) {
+      case 'GET':
+        return 'bg-green-500';
+      case 'POST':
+        return 'bg-blue-500';
+      case 'PUT':
+        return 'bg-yellow-500';
+      case 'DELETE':
+        return 'bg-red-500';
+      default:
+        return 'bg-gray-500';
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'auth':
+        return Key;
+      case 'users':
+        return User;
+      case 'projects':
+        return Target;
+      case 'analytics':
+        return TrendingUp;
+      case 'ai':
+        return Brain;
+      case 'cloud':
+        return Cloud;
+      case 'security':
+        return Shield;
+      default:
+        return Code;
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <SEO 
+        title="API Reference - Zion Tech Group"
+        description="Complete API documentation for Zion Tech Group services. RESTful APIs, authentication, endpoints, and code examples."
+        keywords={['API', 'documentation', 'REST API', 'GraphQL', 'endpoints', 'authentication', 'Zion Tech Group']}
+      />
+
       {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="pt-24 pb-16 px-4 sm:px-6 lg:px-8"
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8"
-          >
-            <Code className="w-10 h-10 text-white" />
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8"
-          >
-            <Code className="w-10 h-10 text-white" />
-          </motion.div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Developer
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400">
-              API Reference
-            </span>
+      <div className="container mx-auto px-4 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-white mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            API Reference
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Integrate Zion Tech Group's cutting-edge services into your applications
-            with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            Complete API documentation for all Zion Tech Group services. 
+            Integrate our AI, cloud, and security solutions into your applications.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
-              Get API Key
-            </button>
-            <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
-              View Documentation
-            </button>
+        </motion.div>
+
+        {/* Search and Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
+            {/* Search Bar */}
+            <div className="relative w-full max-w-md">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search APIs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white border-cyan-500'
+                      : 'bg-white/10 text-gray-300 border-white/20 hover:bg-white/20 hover:border-cyan-400/50'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      {/* API Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              API Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools for developers to build amazing applications
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {apiCategories.map((category, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+        {/* API Endpoints */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">API Endpoints</h2>
+          <div className="space-y-6">
+            {filteredEndpoints.map((endpoint, index) => (
               <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
+                key={endpoint.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Tab Navigation */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="px-4 sm:px-6 lg:px-8 mb-8"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center border-b border-white/10">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center px-6 py-3 text-sm font-medium transition-colors duration-300 ${
-                  activeTab === tab.id
-                    ? 'text-cyan-400 border-b-2 border-cyan-400'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                <tab.icon className="w-4 h-4 mr-2" />
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              API Endpoints
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our RESTful API endpoints
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {quickStartExamples.map((example, index)               => (
-              <motion.div
-                key={endpoint.path}
-                initial = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
-
-                <div className="flex items-center justify-between">
+                <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
-                      endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
-                      endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
-                    }`}>
-                      {endpoint.method}
-                    </span>
-                    <code className="text-blue-300 font-mono text-lg">{endpoint.path}</code>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <getCategoryIcon category={endpoint.category} className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{endpoint.name}</h3>
+                      <p className="text-gray-400 text-sm">{endpoint.description}</p>
+                    </div>
+                  </div>
+                  <span className={`px-3 py-1 rounded-lg text-white text-sm font-medium ${getMethodColor(endpoint.method)}`}>
+                    {endpoint.method}
+                  </span>
+                </div>
+
+                <div className="bg-slate-800/50 rounded-lg p-4 mb-4">
+                  <code className="text-cyan-400 font-mono text-sm break-all">
+                    {endpoint.path}
+                  </code>
+                </div>
+
+                <div className="grid lg:grid-cols-2 gap-6">
+                  {/* Request Example */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Request Example</h4>
+                    <div className="bg-slate-800/50 rounded-lg p-4">
+                      <pre className="text-gray-300 text-xs overflow-x-auto">
+                        <code>{codeExamples[endpoint.id as keyof typeof codeExamples] || 'Example not available'}</code>
+                      </pre>
+                    </div>
+                  </div>
+
+                  {/* Response Example */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Response Example</h4>
+                    <div className="bg-slate-800/50 rounded-lg p-4">
+                      <pre className="text-gray-300 text-xs overflow-x-auto">
+                        <code>{responseExamples[endpoint.id as keyof typeof responseExamples] || 'Example not available'}</code>
+                      </pre>
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-300 mt-3">{endpoint.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* SDKs Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              SDKs & Libraries
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Official SDKs for popular programming languages
-            </p>
-          </motion.div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {sdks.map((sdk, index)              => (
-              <motion.div
-                key={sdk.name}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-
-                <div className="text-4xl mb-4">{sdk.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
-                <div className="flex space-x-2">
-                  <button className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">
-                    <Download className="w-4 h-4 inline mr-1" />
-                    Download
-                  </button>
-                  <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">
-                    <BookOpen className="w-4 h-4 inline mr-1" />
-                    Docs
-                  </button>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Endpoints Tab */}
-          {activeTab === 'endpoints' && (
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Available Endpoints</h3>
-                  <div className="space-y-3">
-                    {apiEndpoints.map((endpoint) => (
-                      <button
-                        key={endpoint.id}
-                        onClick={() => setSelectedEndpoint(endpoint.id)}
-                        className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
-                          selectedEndpoint === endpoint.id
-                            ? 'bg-cyan-500/20 border border-cyan-500/50'
-                            : 'bg-white/5 hover:bg-white/10 border border-white/10'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <span className={`px-2 py-1 rounded text-xs font-mono ${
-                            endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
-                            endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
-                            'bg-yellow-500/20 text-yellow-400'
-                          }`}>
-                            {endpoint.method}
-                          </span>
-                          <span className="text-sm text-gray-400">{endpoint.category}</span>
-                        </div>
-                        <div className="font-mono text-sm text-white mb-1">{endpoint.path}</div>
-                        <div className="text-gray-400 text-sm">{endpoint.description}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Code Example</h3>
-                  <div className="bg-gray-900 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-gray-400">cURL Request</span>
-                      <button
-                        onClick={() => copyToClipboard(codeExamples[selectedEndpoint as keyof typeof codeExamples], selectedEndpoint)}
-                        className="flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                      >
-                        {copiedEndpoint === selectedEndpoint ? (
-                          <>
-                            <Check className="w-4 h-4 mr-1" />
-                            Copied!
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-4 h-4 mr-1" />
-                            Copy
-                          </>
-                        )}
-                      </button>
-                    </div>
-                    <pre className="text-sm text-gray-300 overflow-x-auto">
-                      <code>{codeExamples[selectedEndpoint as keyof typeof codeExamples]}</code>
-                    </pre>
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-white mt-6 mb-3">Response Example</h4>
-                  <div className="bg-gray-900 rounded-lg p-4">
-                    <pre className="text-sm text-gray-300 overflow-x-auto">
-                      <code>{responseExamples[selectedEndpoint as keyof typeof responseExamples]}</code>
-                    </pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Playground Tab */}
-          {activeTab === 'playground' && (
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">API Playground</h2>
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-                  <div className="text-center mb-8">
-                    <Terminal className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Interactive API Testing</h3>
-                    <p className="text-gray-300">
-                      Test our APIs directly in your browser. No setup required.
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-medium text-white mb-2">Endpoint</label>
-                      <select className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                        <option value="/api/v1/auth/login">POST /api/v1/auth/login</option>
-                        <option value="/api/v1/users">GET /api/v1/users</option>
-                        <option value="/api/v1/projects">POST /api/v1/projects</option>
-                        <option value="/api/v1/analytics">GET /api/v1/analytics</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-white mb-2">Request Body (JSON)</label>
-                      <textarea
-                        rows={6}
-                        className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white font-mono text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder='{
-  "email": "user@example.com",
-  "password": "your_password"
-}'
-                      />
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                        Send Request
-                      </button>
-                      <button className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
-                        Clear
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* SDKs Tab */}
-          {activeTab === 'sdks' && (
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { name: 'JavaScript/Node.js', icon: '⚡', description: 'Official Node.js SDK with TypeScript support', download: 'npm install @ziontechgroup/sdk' },
-                  { name: 'Python', icon: '🐍', description: 'Python SDK for data science and automation', download: 'pip install ziontechgroup-sdk' },
-                  { name: 'React', icon: '⚛️', description: 'React hooks and components for frontend integration', download: 'npm install @ziontechgroup/react' },
-                  { name: 'PHP', icon: '🐘', description: 'PHP SDK for web applications', download: 'composer require ziontechgroup/sdk' },
-                  { name: 'Go', icon: '🐹', description: 'Go SDK for high-performance applications', download: 'go get github.com/ziontechgroup/go-sdk' },
-                  { name: 'Java', icon: '☕', description: 'Java SDK for enterprise applications', download: 'Maven dependency available' }
-                ].map((sdk, index) => (
-                  <motion.div
-                    key={sdk.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                    className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                  >
-                    <div className="text-4xl mb-4">{sdk.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{sdk.description}</p>
-                    <div className="bg-gray-800 rounded-lg p-3 text-xs text-gray-300 font-mono">
-                      {sdk.download}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </motion.div>
-
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="px-4 sm:px-6 lg:px-8 pb-16"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-6">
-              Join thousands of developers building amazing applications with our APIs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+          {filteredEndpoints.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-16"
+            >
+              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No APIs found</h3>
+              <p className="text-gray-300 mb-4">
+                Try adjusting your search or filters to find relevant APIs.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('all');
+                }}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                Get API Key
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-              <a
-                href="https://github.com/ziontechgroup"
-                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-              >
-                <Github className="w-4 h-4 mr-2" />
-                View on GitHub
-              </a>
+                Clear all filters
+              </button>
+            </motion.div>
+          )}
+        </motion.div>
+
+        {/* Quick Start Guide */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Quick Start Guide</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Key className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">1. Get API Key</h3>
+                <p className="text-gray-300 text-sm">Sign up and generate your API key from the dashboard</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">2. Make First Request</h3>
+                <p className="text-gray-300 text-sm">Use the authentication endpoint to get your access token</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">3. Start Building</h3>
+                <p className="text-gray-300 text-sm">Integrate our APIs into your applications</p>
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+
+        {/* Additional Resources */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Additional Resources</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a
+              href="/documentation"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <BookOpen className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
+              <p className="text-gray-300 text-sm">Comprehensive guides and tutorials</p>
+            </a>
+
+            <a
+              href="/help"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Terminal className="w-12 h-12 text-purple-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
+              <p className="text-gray-300 text-sm">Client libraries for popular languages</p>
+            </a>
+
+            <a
+              href="/contact"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Users className="w-12 h-12 text-green-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Support</h3>
+              <p className="text-gray-300 text-sm">Get help from our technical team</p>
+            </a>
+
+            <a
+              href="/blog"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg font-semibold text-white mb-2">Examples</h3>
+              <p className="text-gray-300 text-sm">Real-world integration examples</p>
+            </a>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
-};
-export default API;
+}

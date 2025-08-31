@@ -1,307 +1,199 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Calendar,
-  Clock,
-  CheckCircle,
-  Circle,
-  AlertCircle,
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
+import React, { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Calendar, 
+  Target, 
+  FileText, 
+  Plus, 
+  Search, 
+  Filter, 
+  Circle, 
+  Play, 
+  Pause, 
+  CheckCircle, 
+  StopCircle, 
+  Clock, 
+  DollarSign, 
+  Users, 
   TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
+  ChevronDown,
+  ChevronUp,
   Edit,
   Trash2,
   Eye,
-  Settings
-               } from 'lucide-react.ts';
+  Download,
+  RefreshCw
+} from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
   status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled';
   priority: 'low' | 'medium' | 'high' | 'critical';
+  progress: number;
+  budget: number;
   startDate: string;
   endDate: string;
-  progress: number;
-  team: string[];
   client: string;
-  budget: number;
+  team: string[];
   tags: string[];
-milestones: Milestone[];
-
-
-
-
-
-
-
-
-
-
-
-
-
+  milestones: Milestone[];
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Milestone {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
-  title: string;
+  name: string;
   description: string;
   dueDate: string;
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
-  assignee: string;
-priority: 'low' | 'medium' | 'high';
-
-
-
-
-
-
-
-
-
-
-
-
-
+  progress: number;
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
-  showFilters?: boolean;
-  showStats?: boolean;
-  maxProjects?: number}
-export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-  showFilters = true,;
-  showStats = true,;
-  maxProjects = 10;
-}) => {;
-  const [projects, setProjects] = useState<any>([]);
-  const [filteredProjects, setFilteredProjects] = useState<any>([]);
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-  const [selectedPriority, setSelectedPriority] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export default function ProjectManagementTimeline() {
+  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [selectedStatus, setSelectedStatus] = useState('all');
+  const [selectedPriority, setSelectedPriority] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('timeline');
-  const [showProjectForm, setShowProjectForm] = useState(false);
-  const [editingProject, setEditingProject] = useState<any>(null);
+  const [maxProjects, setMaxProjects] = useState(10);
+  const [expandedProjects, setExpandedProjects] = useState<Set<string>>(new Set());
+
   // Sample project data
-  useEffect(() => {
-    const sampleProjects: Project[] = [
-      {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
-        name: 'AI-Powered Customer Analytics Platform',
-        description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
-        status: 'active',
-        priority: 'high',
-        startDate: '2024-01-01',
-        endDate: '2024-06-30',
-        progress: 65,
-        team['Sarah Johnson', 'Michael Chen', 'Emily Rodriguez'],
-        client: 'TechCorp Inc.',
-        budget: 250000,
-        tags['AI', 'Machine Learning', 'Analytics', 'Platform'],
-        milestones[
-          {
-            id: 'm1',
-            title: 'Requirements Analysis',
-            description: 'Complete stakeholder interviews and document requirements',
-            dueDate: '2024-01-15',
-            status: 'completed',
-            assignee: 'Sarah Johnson',
-            priority: 'high'
-          },
-          {
-            id: 'm2',
-            title: 'System Architecture Design',
-            description: 'Design system architecture and database schema',
-            dueDate: '2024-02-15',
-            status: 'completed',
-            assignee: 'Michael Chen',
-            priority: 'high'
-          },
-          {
-            id: 'm3',
-            title: 'Core Development',
-            description: 'Develop core platform features and API endpoints',
-            dueDate: '2024-04-15',
-            status: 'in-progress',
-            assignee: 'Emily Rodriguez',
-            priority: 'high'
-          },
-          {
-            id: 'm4',
-            title: 'Testing & QA',
-            description: 'Comprehensive testing and quality assurance',
-            dueDate: '2024-05-15',
-            status: 'pending',
-            assignee: 'Sarah Johnson',
-            priority: 'medium'
-        ]
-      },
-      {
-        id: '2',
-        name: 'Cloud Migration & Infrastructure Modernization',
-        description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance.',
-        status: 'active',
-        priority: 'critical',
-        startDate: '2024-02-01',
-        endDate: '2024-08-31',
-        progress: 35,
-        team['David Kim', 'Lisa Thompson', 'Alex Wong'],
-        client: 'Global Enterprises Ltd.',
-        budget: 500000,
-        tags['Cloud', 'Migration', 'Infrastructure', 'DevOps'],
-        milestones[
-          {
-            id: 'm5',
-            title: 'Infrastructure Assessment',
-            description: 'Assess current infrastructure and plan migration strategy',
-            dueDate: '2024-02-28',
-            status: 'completed',
-            assignee: 'David Kim',
-            priority: 'critical'
-          },
-          {
-            id: 'm6',
-            title: 'Cloud Setup',
-            description: 'Set up cloud infrastructure and security configurations',
-            dueDate: '2024-04-15',
-            status: 'in-progress',
-            assignee: 'Lisa Thompson',
-            priority: 'critical'
-        ]
-      },
-      {
-        id: '3',
-        name: 'Cybersecurity Enhancement Program',
-        description: 'Implement comprehensive cybersecurity measures including threat detection, incident response, and security awareness training.',
-        status: 'planning',
-        priority: 'high',
-        startDate: '2024-03-01',
-        endDate: '2024-09-30',
-        progress: 15,
-        team['James Wilson', 'Maria Garcia'],
-        client: 'SecureBank Corp.',
-        budget: 300000,
-        tags['Cybersecurity', 'Threat Detection', 'Training', 'Compliance'],
-        milestones[
-          {
-            id: 'm7',
-            title: 'Security Assessment',
-            description: 'Conduct comprehensive security audit and vulnerability assessment',
-            dueDate: '2024-03-31',
-            status: 'in-progress',
-            assignee: 'James Wilson',
-            priority: 'high'
-        ]
-    ];
-    setProjects(sampleProjects);
-    setFilteredProjects(sampleProjects)}, []);
-  // Filter projects
-  useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    let filtered = projects;
-    if (selectedStatus !== 'all') {
-      filtered = filtered.filter(p => p.status === selectedStatus)}
-    if (selectedPriority !== 'all') {
-      filtered = filtered.filter(p => p.priority === selectedPriority)}
-    if (searchQuery) {
-      filtered = filtered.filter(p =>
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )};
-      filtered = filtered.filter(p => ;
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
+  const projects: Project[] = [
+    {
+      id: '1',
+      name: 'AI-Powered Analytics Platform',
+      description: 'Develop a comprehensive analytics platform using machine learning algorithms',
+      status: 'active',
+      priority: 'high',
+      progress: 65,
+      budget: 150000,
+      startDate: '2024-01-15',
+      endDate: '2024-06-30',
+      client: 'TechCorp Inc.',
+      team: ['John Doe', 'Jane Smith', 'Mike Johnson'],
+      tags: ['AI', 'Analytics', 'Machine Learning'],
+      milestones: [
+        {
+          id: 'm1',
+          name: 'Data Pipeline Setup',
+          description: 'Establish data collection and processing pipeline',
+          dueDate: '2024-02-15',
+          status: 'completed',
+          progress: 100
+        },
+        {
+          id: 'm2',
+          name: 'ML Model Development',
+          description: 'Build and train machine learning models',
+          dueDate: '2024-04-15',
+          status: 'in-progress',
+          progress: 75
+        },
+        {
+          id: 'm3',
+          name: 'UI/UX Implementation',
+          description: 'Create user interface and user experience',
+          dueDate: '2024-05-15',
+          status: 'pending',
+          progress: 0
+        }
+      ]
+    },
+    {
+      id: '2',
+      name: 'Cloud Migration Project',
+      description: 'Migrate legacy systems to cloud infrastructure',
+      status: 'planning',
+      priority: 'medium',
+      progress: 25,
+      budget: 80000,
+      startDate: '2024-03-01',
+      endDate: '2024-08-31',
+      client: 'Global Enterprises',
+      team: ['Sarah Wilson', 'David Brown'],
+      tags: ['Cloud', 'Migration', 'DevOps'],
+      milestones: [
+        {
+          id: 'm4',
+          name: 'Infrastructure Assessment',
+          description: 'Evaluate current infrastructure and plan migration',
+          dueDate: '2024-03-31',
+          status: 'completed',
+          progress: 100
+        },
+        {
+          id: 'm5',
+          name: 'Pilot Migration',
+          description: 'Execute pilot migration for one system',
+          dueDate: '2024-05-31',
+          status: 'pending',
+          progress: 0
+        }
+      ]
+    },
+    {
+      id: '3',
+      name: 'Cybersecurity Enhancement',
+      description: 'Implement advanced security measures and threat detection',
+      status: 'active',
+      priority: 'critical',
+      progress: 40,
+      budget: 120000,
+      startDate: '2024-02-01',
+      endDate: '2024-07-31',
+      client: 'SecureBank Ltd.',
+      team: ['Alex Chen', 'Lisa Park', 'Tom Davis'],
+      tags: ['Security', 'Cybersecurity', 'Threat Detection'],
+      milestones: [
+        {
+          id: 'm6',
+          name: 'Security Audit',
+          description: 'Conduct comprehensive security assessment',
+          dueDate: '2024-03-15',
+          status: 'completed',
+          progress: 100
+        },
+        {
+          id: 'm7',
+          name: 'Implementation',
+          description: 'Deploy security enhancements',
+          dueDate: '2024-06-30',
+          status: 'in-progress',
+          progress: 40
+        }
+      ]
     }
-    setFilteredProjects(filtered.slice(0, maxProjects))}, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
+  ];
+
+  // Filter projects based on search and filters
+  const filteredProjects = useMemo(() => {
+    let filtered = projects.filter(p => {
+      const statusMatch = selectedStatus === 'all' || p.status === selectedStatus;
+      const priorityMatch = selectedPriority === 'all' || p.priority === selectedPriority;
+      const searchMatch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      return statusMatch && priorityMatch && searchMatch;
+    });
+    return filtered.slice(0, maxProjects);
+  }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
+
   // Calculate project stats
   const projectStats = {
-  <<<<<<< HEAD
-    total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
-    active: projects.filter(p                => p.status === 'active').length,
-    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p                => p.status === 'completed').length,
-    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p                => p.status === 'on-hold').length,
-    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)                => sum + p.budget, 0),
-    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)                => sum + p.progress,
-  0) / projects.length || 0;
-  ;
-
-};
+    total: projects.length,
+    active: projects.filter(p => p.status === 'active').length,
+    completed: projects.filter(p => p.status === 'completed').length,
+    onHold: projects.filter(p => p.status === 'on-hold').length,
+    totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
+    averageProgress: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
+  };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'planning':
-=======
-  total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
-    active: projects.filter(p               => p.status === 'active').length,
-    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'completed').length,
-    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'on-hold').length,;
-    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.budget, 0),;
-    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.progress,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  ;
-  ;
-  0) / projects.length || 0;
-  ;
-};
-  // Get status color and icon
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (status) {;
-      case 'planning':;
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
       case 'active':
         return { color: 'text-green-400 bg-green-400/20', icon: <Play className="w-4 h-4" /> };
@@ -312,36 +204,72 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'cancelled':
         return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> };
       default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
+        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
+    }
   };
+
   // Get priority color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      default: return 'text-zinc-400 bg-zinc-400/20'}
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'low':
+        return 'text-green-400 bg-green-400/20';
+      case 'medium':
+        return 'text-yellow-400 bg-yellow-400/20';
+      case 'high':
+        return 'text-orange-400 bg-orange-400/20';
+      case 'critical':
+        return 'text-red-400 bg-red-400/20';
+      default:
+        return 'text-zinc-400 bg-zinc-400/20';
+    }
   };
+
   // Get milestone status color
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      default: return 'text-zinc-400 bg-zinc-400/20'}
+  const getMilestoneStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'text-green-400 bg-green-400/20';
+      case 'in-progress':
+        return 'text-blue-400 bg-blue-400/20';
+      case 'overdue':
+        return 'text-red-400 bg-red-400/20';
+      default:
+        return 'text-zinc-400 bg-zinc-400/20';
+    }
   };
+
   // Format currency
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    return new Intl.NumberFormat('en-US', {;
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0;
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
     }).format(amount);
   };
+
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const getDaysRemaining = (endDate: string) => {
     const end = new Date(endDate);
     const today = new Date();
+    const diffTime = end.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays};
+    return diffDays;
+  };
+
+  // Toggle project expansion
+  const toggleProjectExpansion = (projectId: string) => {
+    const newExpanded = new Set(expandedProjects);
+    if (newExpanded.has(projectId)) {
+      newExpanded.delete(projectId);
+    } else {
+      newExpanded.add(projectId);
+    }
+    setExpandedProjects(newExpanded);
+  };
+
   return (
-    <div className = "w-full max-w-7xl mx-auto p-6">
+    <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
@@ -358,297 +286,268 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as )}
+                onClick={() => setViewMode(mode.id as 'timeline' | 'grid' | 'list')}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
-                    ? 'bg-zion-cyan text-white'
+                    ? 'bg-cyan-500 text-white'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
+              >
                 {mode.icon}
                 {mode.label}
               </button>
             ))}
           </div>
+
           {/* Add Project Button */}
-          <button
-            onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
+          <button className="flex items-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-all duration-300">
             <Plus className="w-4 h-4" />
             Add Project
           </button>
         </div>
       </div>
-      {/* Stats Section */}
-      {showStats && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
-            <div className="text-zinc-400 text-sm">Total Projects</div>
-          </motion.div>
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: 0.1 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
-            <div className="text-zinc-400 text-sm">Active</div>
-          </motion.div>
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: 0.2 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
-            <div className="text-zinc-400 text-sm">Completed</div>
-          </motion.div>
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: 0.3 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
-            <div className="text-zinc-400 text-sm">On Hold</div>
-          </motion.div>
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: 0.4 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
-            <div className="text-zinc-400 text-sm">Total Budget</div>
-          </motion.div>
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: 0.5 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
-            <div className="text-zinc-400 text-sm">Avg Progress</div>
-          </motion.div>
+
+      {/* Stats Overview */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-white">{projectStats.total}</div>
+          <div className="text-zinc-400 text-sm">Total Projects</div>
         </div>
-      )}
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-green-400">{projectStats.active}</div>
+          <div className="text-zinc-400 text-sm">Active</div>
+        </div>
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-purple-400">{projectStats.completed}</div>
+          <div className="text-zinc-400 text-sm">Completed</div>
+        </div>
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-yellow-400">{projectStats.onHold}</div>
+          <div className="text-zinc-400 text-sm">On Hold</div>
+        </div>
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-blue-400">{formatCurrency(projectStats.totalBudget)}</div>
+          <div className="text-zinc-400 text-sm">Total Budget</div>
+        </div>
+        <div className="bg-zinc-900/30 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-cyan-400">{Math.round(projectStats.averageProgress)}%</div>
+          <div className="text-zinc-400 text-sm">Avg Progress</div>
+        </div>
+      </div>
+
       {/* Filters and Search */}
-      {showFilters && (
-        <div className="flex flex-wrap items-center gap-4 mb-6">
-          {/* Status Filter */}
-          <select
-            value={selectedStatus}
-            onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            <option value="all">All Statuses</option>
-            <option value="planning">Planning</option>
-            <option value="active">Active</option>
-            <option value="on-hold">On Hold</option>
-            <option value="completed">Completed</option>
-            <option value="cancelled">Cancelled</option>
-          </select>
-          {/* Priority Filter */}
-          <select
-            value={selectedPriority}
-            onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            <option value="all">All Priorities</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-            <option value="critical">Critical</option>
-          </select>
-          {/* Search */}
-          <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search projects..."
-              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
-          </div>
+      <div className="flex flex-col lg:flex-row gap-4 mb-8">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+          <input
+            type="text"
+            placeholder="Search projects..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+          />
         </div>
-      )}
-      {/* Projects Display */}
-      <div className="space-y-6">
-        {filteredProjects.map((project, index) => (
+
+        <select
+          value={selectedStatus}
+          onChange={(e) => setSelectedStatus(e.target.value)}
+          className="px-4 py-2 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+        >
+          <option value="all">All Statuses</option>
+          <option value="planning">Planning</option>
+          <option value="active">Active</option>
+          <option value="on-hold">On Hold</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+
+        <select
+          value={selectedPriority}
+          onChange={(e) => setSelectedPriority(e.target.value)}
+          className="px-4 py-2 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+        >
+          <option value="all">All Priorities</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
+
+        <button className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-colors duration-200">
+          <Filter className="w-4 h-4 inline mr-2" />
+          More Filters
+        </button>
+      </div>
+
+      {/* Projects List */}
+      <div className="space-y-4">
+        {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-zinc-900/30 rounded-lg border border-zinc-700/50 overflow-hidden"
+          >
             {/* Project Header */}
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).color}`}>
-                    <div className="flex items-center gap-1">
+            <div className="p-6">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl font-semibold text-white">{project.name}</h3>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusDisplay(project.status).color}`}>
                       {getStatusDisplay(project.status).icon}
-                      {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
+                      <span className="ml-1">{project.status}</span>
+                    </span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
+                      {project.priority}
+                    </span>
+                  </div>
+                  
+                  <p className="text-zinc-400 mb-4">{project.description}</p>
+                  
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {getDaysRemaining(project.endDate)} days remaining
                     </div>
-                  </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>
-                    {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
-                  </span>
+                    <div className="flex items-center gap-1">
+                      <DollarSign className="w-4 h-4" />
+                      {formatCurrency(project.budget)}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {project.team.length} team members
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <TrendingUp className="w-4 h-4" />
+                      {project.progress}% complete
+                    </div>
+                  </div>
+
+                  {/* Progress Bar */}
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between text-sm mb-2">
+                      <span className="text-zinc-400">Progress</span>
+                      <span className="text-white font-medium">{project.progress}%</span>
+                    </div>
+                    <div className="w-full bg-zinc-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${project.progress}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs rounded-md">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-zinc-300 mb-3">{project.description}</p>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {getDaysRemaining(project.endDate)} days remaining
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    {project.team.length} team members
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Target className="w-4 h-4" />
-                    {project.client}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <TrendingUp className="w-4 h-4" />
-                    {formatCurrency(project.budget)}
-                  </div>
+
+                <div className="flex items-center gap-2 ml-4">
+                  <button
+                    onClick={() => toggleProjectExpansion(project.id)}
+                    className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+                  >
+                    {expandedProjects.has(project.id) ? (
+                      <ChevronUp className="w-5 h-5" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5" />
+                    )}
+                  </button>
+                  <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200">
+                    <Edit className="w-4 h-4" />
+                  </button>
+                  <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200">
+                    <Trash2 className="w-4 h-4" />
+                  </button>
                 </div>
-              </div>
-              <div className="flex items-center gap-2 ml-4">
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                  <Eye className="w-4 h-4" />
-                </button>
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                  <Edit className="w-4 h-4" />
-                </button>
-                <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">
-                  <Trash2 className="w-4 h-4" />
-                </button>
               </div>
             </div>
-            {/* Progress Bar */}
-            <div className="mb-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-zinc-300">Progress</span>
-                <span className="text-sm text-zinc-400">{project.progress}%</span>
-              </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
+
+            {/* Expanded Milestones Section */}
+            <AnimatePresence>
+              {expandedProjects.has(project.id) && (
                 <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${project.progress}%` }}
-                  transition = {
-  { duration: 1,
-  delay: index * 0.1 
-}}
-                  className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
-                />
-              </div>
-            </div>
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                  {tag}
-                </span>
-              ))}
-            </div>
-            {/* Milestones */}
-            <div className="border-t border-zinc-700/50 pt-4">
-              <h4 className="text-sm font-medium text-white mb-3">Milestones</h4>
-              <div className="space-y-2">
-                {project.milestones.map((milestone) => (
-                  <div
-                    key={milestone.id}
-                    className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg"
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h5 className="text-sm font-medium text-white">{milestone.title}</h5>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.status)}`}>
-                          {milestone.status.charAt(0).toUpperCase() + milestone.status.slice(1)}
-                        </span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(milestone.priority)}`}>
-                          {milestone.priority.charAt(0).toUpperCase() + milestone.priority.slice(1)}
-                        </span>
-                      </div>
-                      <p className="text-xs text-zinc-400">{milestone.description}</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-xs text-zinc-400 mb-1">{milestone.assignee}</div>
-                      <div className="text-xs text-zinc-500">{new Date(milestone.dueDate).toLocaleDateString()}</div>
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="border-t border-zinc-700/50 bg-zinc-800/20"
+                >
+                  <div className="p-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Milestones</h4>
+                    <div className="space-y-3">
+                      {project.milestones.map((milestone) => (
+                        <div key={milestone.id} className="flex items-center justify-between p-3 bg-zinc-800/50 rounded-lg">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <h5 className="font-medium text-white">{milestone.name}</h5>
+                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getMilestoneStatusColor(milestone.status)}`}>
+                                {milestone.status}
+                              </span>
+                            </div>
+                            <p className="text-zinc-400 text-sm">{milestone.description}</p>
+                            <div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">
+                              <span>Due: {new Date(milestone.dueDate).toLocaleDateString()}</span>
+                              <span>Progress: {milestone.progress}%</span>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <button className="p-1 text-zinc-400 hover:text-white hover:bg-zinc-700/50 rounded transition-colors">
+                              <Eye className="w-4 h-4" />
+                            </button>
+                            <button className="p-1 text-zinc-400 hover:text-white hover:bg-zinc-700/50 rounded transition-colors">
+                              <Edit className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
       </div>
-      {/* No Results */}
+
+      {/* Load More Button */}
+      {filteredProjects.length < projects.length && (
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setMaxProjects(prev => prev + 5)}
+            className="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            Load More Projects
+          </button>
+        </div>
+      )}
+
+      {/* Empty State */}
       {filteredProjects.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-12"
-          <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No projects found</h3>
+        <div className="text-center py-16">
+          <Target className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-white mb-2">No projects found</h3>
           <p className="text-zinc-400 mb-4">
-            Try adjusting your filters or create a new project to get started!
+            Try adjusting your search or filters to find relevant projects.
           </p>
           <button
-            onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+            onClick={() => {
+              setSearchQuery('');
+              setSelectedStatus('all');
+              setSelectedPriority('all');
+            }}
+            className="text-cyan-400 hover:text-cyan-300 transition-colors"
           >
-            Create Project;
-          </button>;
-        </motion.div>;
-      )};
-    </div>;
+            Clear all filters
+          </button>
+        </div>
+      )}
+    </div>
   );
-};
+}

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Menu,
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu,
   X,
   ChevronDown,
   Brain,
@@ -17,10 +18,7 @@ import { Menu,
   FileText,
   Phone,
   Mail,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MapPin,
-  ChevronDown,
-  Globe,
   Search,
   Bell,
   User,
@@ -35,15 +33,16 @@ import { Menu,
   Briefcase,
   Newspaper,
   DollarSign
-              } from 'lucide-react.ts';
+} from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export function Header(...args: any[]): any {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -55,7 +54,7 @@ export function Header(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (dropdownName: string) => {
+  const toggleDropdown = (dropdownName) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
@@ -99,7 +98,9 @@ export function Header(...args: any[]): any {
       ]
     },
     {
-      title: 'Company',
+      name: 'Company',
+      href: '/about',
+      dropdown: true,
       items: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
@@ -110,7 +111,9 @@ export function Header(...args: any[]): any {
       ]
     },
     {
-      title: 'Resources',
+      name: 'Resources',
+      href: '/resources',
+      dropdown: true,
       items: [
         { name: 'Blog', href: '/blog' },
         { name: 'Documentation', href: '/docs' },
@@ -123,32 +126,107 @@ export function Header(...args: any[]): any {
     }
   ];
 
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
+  const isActive = (href) => location.pathname === href;
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {
+  const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for: anyanyanyanyanyanyanyanyanyanyanyanyanyany', searchQuery);
+      console.log('Searching for:', searchQuery);
       setIsSearchOpen(false);
       setSearchQuery('');
     }
   };
 
   // Close mobile menu when route changes
-  useEffect(()               => {
+  useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  // Simple Theme Toggle Component
+  const ThemeToggle = ({ size = "md" }) => {
+    const [isDark, setIsDark] = useState(true);
+    const sizeClasses = {
+      sm: "w-8 h-8",
+      md: "w-10 h-10",
+      lg: "w-12 h-12"
+    };
+    
+    return (
+      <button
+        onClick={() => setIsDark(!isDark)}
+        className={`${sizeClasses[size]} p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200`}
+        title="Toggle theme"
+      >
+        {isDark ? <Eye className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+      </button>
+    );
+  };
+
+  // Main Navigation Component
+  const MainNavigation = () => (
+    <nav className="flex items-center space-x-8">
+      {navigation.map((item) => (
+        <div key={item.name} className="relative">
+          {item.dropdown ? (
+            <div>
+              <button
+                onClick={() => toggleDropdown(item.name)}
+                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <span>{item.name}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  activeDropdown === item.name ? 'rotate-180' : ''
+                }`} />
+              </button>
+              
+              <AnimatePresence>
+                {activeDropdown === item.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50"
+                  >
+                    <div className="p-2">
+                      {item.items?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ) : (
+            <Link
+              to={item.href}
+              className={`text-gray-300 hover:text-white transition-colors duration-200 ${
+                isActive(item.href) ? 'text-cyan-400' : ''
+              }`}
+            >
+              {item.name}
+            </Link>
+          )}
+        </div>
+      ))}
+    </nav>
+  );
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg' 
           : 'bg-transparent'
-      } ${className || ''}`}
+      }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -158,10 +236,10 @@ export function Header(...args: any[]): any {
               <Zap className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
-              <p className="text-xs text-cyan-400 font-rajdhani tracking-wider">
+              <p className="text-xs text-cyan-400 tracking-wider">
                 Innovation Group
               </p>
             </div>

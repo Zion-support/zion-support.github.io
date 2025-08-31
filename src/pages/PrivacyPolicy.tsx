@@ -1,23 +1,27 @@
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  Users,
-  Mail,
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Share
-              } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Eye, 
+  Database, 
+  Users, 
+  Globe, 
+  Lock, 
+  CheckCircle, 
+  ExternalLink, 
+  AlertTriangle, 
+  Mail, 
+  Shield, 
+  Clock, 
+  FileText,
+  Download,
+  Share2
+} from 'lucide-react';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const PrivacyPolicy = () => {;
+export default function PrivacyPolicy() {
   const lastUpdated = '2025-01-15';
+  const [activeSection, setActiveSection] = useState('overview');
+
   const sections = [
     {
       id: 'overview',
@@ -84,14 +88,15 @@ const PrivacyPolicy = () => {;
       title: 'Changes to This Policy',
       icon: AlertTriangle,
       content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
-    },;
-    {;
-      id: 'contact',;
-      title: 'Contact Us',;
-      icon: Mail,;
-      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`;
-    };
+    },
+    {
+      id: 'contact',
+      title: 'Contact Us',
+      icon: Mail,
+      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
+    }
   ];
+
   const dataCategories = [
     {
       category: 'Personal Information',
@@ -110,1016 +115,233 @@ const PrivacyPolicy = () => {;
       examples: ['IP address, device information', 'Browser type and version', 'Operating system'],
       purpose: 'Security, fraud prevention, service optimization',
       retention: '1 year from collection'
-    },;
-    {;
-      category: 'Communication Data',;
-      examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],;
-      purpose: 'Customer support, service improvement',;
-      retention: '3 years from last interaction';
-    };
+    },
+    {
+      category: 'Marketing Data',
+      examples: ['Communication preferences', 'Marketing campaign interactions', 'Feedback and surveys'],
+      purpose: 'Marketing communications, product development',
+      retention: '3 years from last interaction'
+    }
   ];
-  const securityMeasures = [
-    {
-      measure: 'Encryption',
-      description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',
-      icon: Lock
-    },
-    {
-      measure: 'Access Controls',
-      description: 'Strict access controls and authentication mechanisms to prevent unauthorized access',
-      icon: Shield
-    },
-    {
-      measure: 'Regular Audits',
-      description: 'Regular security audits and penetration testing to identify and address vulnerabilities',
-      icon: CheckCircle
-    },
-    {
-      measure: 'Data Backup',
-      description: 'Regular data backups with disaster recovery procedures in place',
-      icon: Database
-    },
-    {
-      measure: 'Employee Training',
-      description: 'Regular security training for all employees to ensure data protection awareness',
-      icon: Users;
-    },;
-    {;
-      measure: 'Incident Response',;
-      description: 'Comprehensive incident response plan for handling security breaches',;
-      icon: AlertTriangle;
-    };
-  ];
+
+  const handleDownload = () => {
+    const content = `Zion Tech Group Privacy Policy\nLast Updated: ${lastUpdated}\n\n${sections.map(section => `${section.title}\n${section.content}`).join('\n\n')}`;
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'privacy-policy.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Zion Tech Group Privacy Policy',
+          text: 'Read our comprehensive privacy policy',
+          url: window.location.href
+        });
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copied to clipboard!');
+    }
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
-        <meta name = "description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, Zion Tech Group, privacy practices" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Introduction
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  {compName} ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website {website} or use our services.
-                </p>
-                <p>
-                  By using our website and services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website or services.
-                </p>
-                <p>
-                  We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
-                </p>
-              </div>
-            </motion.div>
-            {/* Information We Collect */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Database className="w-8 h-8 text-zion-cyan" />
-                Information We Collect
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Personal Information</h3>
-                  <p className="text-zion-slate-light mb-3">
-                    We may collect personal information that you voluntarily provide to us, including:
-                  </p>
-                  <ul className="space-y-2 text-zion-slate-light ml-6">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Name and contact information (email address, phone number, mailing address)
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Company name and job title
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Information you provide when contacting us or requesting services
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Resume or professional background information for job applications
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Automatically Collected Information</h3>
-                  <p className="text-zion-slate-light mb-3">
-                    When you visit our website, we automatically collect certain information, including:
-                  </p>
-                  <ul className="space-y-2 text-zion-slate-light ml-6">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      IP address and browser type
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Operating system and device information
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Pages visited and time spent on our website
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Referring website and search terms
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Cookies and Tracking Technologies</h3>
-                  <p className="text-zion-slate-light mb-3">
-                    We use cookies and similar tracking technologies to enhance your experience on our website:
-                  </p>
-                  <ul className="space-y-2 text-zion-slate-light ml-6">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Essential cookies for website functionality
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Analytics cookies to understand website usage
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      Marketing cookies for personalized content
-                    </li>
-                  </ul>
-                </div>
-                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  <Download className="w-4 h-4" />
-                  Download PDF
-                </button>
-              </div>
-            </motion.div>
-            {/* How We Use Your Information */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                How We Use Your Information
-              </h2>
-              <p className="text-zion-slate-light mb-4">
-                We use the information we collect for various purposes, including:
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Providing and maintaining our website and services
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Responding to your inquiries and providing customer support
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Processing job applications and recruitment activities
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Sending newsletters, marketing materials, and updates (with your consent)
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Improving our website, services, and user experience
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Analyzing website usage and trends
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Complying with legal obligations and protecting our rights
-                </li>
-              </ul>
-            </motion.div>
-            {/* Information Sharing and Disclosure */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Share className="w-8 h-8 text-zion-cyan" />
-                Information Sharing and Disclosure
-              </h2>
-              <p className="text-zion-slate-light mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and providing services
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights and safety
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Consent:</strong> We may share information with your explicit consent
-                </li>
-              </ul>
-            </motion.div>
-            {/* Data Security */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Data Security
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-                </p>
-                <p>
-                  Our security measures include:
-                </p>
-                <ul className="space-y-2 text-zion-slate-light ml-6">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Encryption of data in transit and at rest
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Regular security assessments and updates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Access controls and authentication measures
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Employee training on data protection
-                  </li>
-                </ul>
-                <p>
-                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
-                </p>
-              </div>
-            </motion.div>
-            {/* Your Rights and Choices */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Users className="w-8 h-8 text-zion-cyan" />
-                Your Rights and Choices
-              </h2>
-              <p className="text-zion-slate-light mb-4">
-                You have certain rights regarding your personal information:
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Access:</strong> Request access to your personal information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Correction:</strong> Request correction of inaccurate information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Deletion:</strong> Request deletion of your personal information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Portability:</strong> Request a copy of your data in a portable format
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Opt-out:</strong> Unsubscribe from marketing communications
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
-                </li>
-              </ul>
-              <p className="text-zion-slate-light mt-4">
-                To exercise these rights, please contact us using the information provided below.
-              </p>
-            </motion.div>
-            {/* International Data Transfers */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                International Data Transfers
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
-                </p>
-                <p>
-                  For transfers to countries outside the European Economic Area (EEA), we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
-                </p>
-              </div>
-            </motion.div>
-            {/* Children's Privacy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <AlertTriangle className="w-8 h-8 text-zion-cyan" />
-                Children's Privacy
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
-                </p>
-                <p>
-                  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
-                </p>
-              </div>
-            </motion.div>
-            {/* Changes to This Policy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to This Policy
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
-                </p>
-                <p>
-                  We will notify you of any material changes by:
-                </p>
-                <ul className="space-y-2 text-zion-slate-light ml-6">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Posting the updated policy on our website
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Updating the "Last Updated" date
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Sending email notifications for significant changes
-                  </li>
-                </ul>
-                <p>
-                  Your continued use of our website after any changes indicates your acceptance of the updated policy.
-                </p>
-              </div>
-            </motion.div>
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Us
-              </h2>
-              <p className="text-zion-slate-light mb-6">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Mail className="w-5 h-5 text-zion-cyan" />
-                    <span>{email}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Phone className="w-5 h-5 text-zion-cyan" />
-                    <span>{phone}</span>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 text-zion-slate-light">
-                    <MapPin className="w-5 h-5 text-zion-cyan mt-0.5" />
-                    <span>{address}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Globe className="w-5 h-5 text-zion-cyan" />
-                    <span>{website}</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-zion-slate-light mt-6">
-                We will respond to your inquiry within 30 days of receipt.
-              </p>
-            </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <SEO 
+        title="Privacy Policy - Zion Tech Group"
+        description="Learn how Zion Tech Group protects your privacy and handles your personal information. Read our comprehensive privacy policy."
+        keywords={['privacy policy', 'data protection', 'personal information', 'Zion Tech Group', 'privacy']}
+      />
+
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-white mb-16"
+        >
+          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
+            <Shield className="w-10 h-10 text-white" />
           </div>
-        </section>
-            {/* How We Use Your Information */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.2 
-}}
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Privacy Policy
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            Your privacy is important to us. Learn how we protect and handle your personal information.
+          </p>
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={handleDownload}
+              className="flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-200"
             >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                How We Use Your Information
-              </h2>
-              
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.a
+              <Download className="w-5 h-5" />
+              Download PDF
+            </button>
+            <button
+              onClick={handleShare}
+              className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+            >
+              <Share2 className="w-5 h-5" />
+              Share
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Last Updated */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-gray-300">
+            <Clock className="w-4 h-4" />
+            <span>Last Updated: {lastUpdated}</span>
+          </div>
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Sidebar Navigation */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="lg:col-span-1"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 sticky top-24">
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Navigation</h3>
+              <nav className="space-y-2">
+                {sections.map((section) => (
+                  <button
                     key={section.id}
-                    href={`#${section.id}`}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
+                    onClick={() => setActiveSection(section.id)}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                      activeSection === section.id
+                        ? 'bg-cyan-500 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
                   >
-                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-4 h-4 text-blue-600" />
+                    <div className="flex items-center gap-2">
+                      <section.icon className="w-4 h-4" />
+                      {section.title}
                     </div>
-                    <span className="font-medium text-slate-900">{section.title}</span>
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
+                  </button>
                 ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Policy Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6,
-  delay: 0.4 
-}}
-            >
-              {sections.map((section, index)              => (
-                <div key={section.id} id={section.id} className="mb-16">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              </nav>
+            </div>
+          </motion.div>
+
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="lg:col-span-3"
+          >
+            <div className="space-y-8">
+              {sections.map((section, index) => (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
+                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                   </div>
-                  <div className="prose prose-slate max-w-none">
-                    <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
-                  </div>
-                </div>
+                  <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
+                </motion.div>
               ))}
-            </motion.div>
-          </div>
-        </section>
-        {/* Data Categories Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.6 
-}}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Data Categories and Retention
-              </h2>
-              
-              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-                {dataCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.div
-                    key={category.category}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-                  >
-                    <h3 className="text-xl font-semibold text-slate-900 mb-4">{category.category}</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Examples:</h4>
-                        <ul className="list-disc list-inside text-slate-600 space-y-1">
-                          {category.examples.map((example, idx) => (
-                            <li key={idx}>{example}</li>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Data Categories Table */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Data Categories & Retention</h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-white/20">
+                    <th className="px-6 py-4 text-left text-white font-semibold">Category</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Examples</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Purpose</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold">Retention</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dataCategories.map((category, index) => (
+                    <tr key={category.category} className="border-t border-white/10">
+                      <td className="px-6 py-4 text-white font-medium">{category.category}</td>
+                      <td className="px-6 py-4 text-gray-300">
+                        <ul className="list-disc list-inside space-y-1">
+                          {category.examples.map((example, i) => (
+                            <li key={i} className="text-sm">{example}</li>
                           ))}
                         </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Purpose:</h4>
-                        <p className="text-slate-600">{category.purpose}</p>
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-slate-700 mb-2">Retention Period:</h4>
-                        <p className="text-slate-600">{category.retention}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                      </td>
+                      <td className="px-6 py-4 text-gray-300">{category.purpose}</td>
+                      <td className="px-6 py-4 text-gray-300">{category.retention}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </section>
-        {/* Security Measures Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.8 
-}}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Data Security Measures
-              </h2>
-              
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.div
-                    key={measure.measure}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-green-200"
-                  >
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <measure.icon className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3 text-center">{measure.measure}</h3>
-                    <p className="text-slate-600 text-center">{measure.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        </motion.div>
+
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 1.0 
-}}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Questions About Privacy?
-              </h2>
-              <p className="text-xl text-green-100 mb-8">
-                Our privacy team is here to help. Contact us with any questions about your data or our privacy practices.
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Providing and maintaining our website and services
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Responding to your inquiries and providing customer support
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Processing job applications and recruitment activities
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Sending newsletters, marketing materials, and updates (with your consent)
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Improving our website, services, and user experience
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Analyzing website usage and trends
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  Complying with legal obligations and protecting our rights
-                </li>
-              </ul>
-            </motion.div>
-            {/* Information Sharing and Disclosure */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.3 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Share className="w-8 h-8 text-zion-cyan" />
-                Information Sharing and Disclosure
-              </h2>
-              <p className="text-zion-slate-light mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and providing services
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights and safety
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Consent:</strong> We may share information with your explicit consent
-                </li>
-              </ul>
-            </motion.div>
-            {/* Data Security */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.4 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Data Security
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-                </p>
-                <p>
-                  Our security measures include:
-                </p>
-                <ul className="space-y-2 text-zion-slate-light ml-6">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Encryption of data in transit and at rest
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Regular security assessments and updates
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Access controls and authentication measures
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Employee training on data protection
-                  </li>
-                </ul>
-                <p>
-                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
-                </p>
-              </div>
-            </motion.div>
-            {/* Your Rights and Choices */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.5 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Users className="w-8 h-8 text-zion-cyan" />
-                Your Rights and Choices
-              </h2>
-              <p className="text-zion-slate-light mb-4">
-                You have certain rights regarding your personal information:
-              </p>
-              <ul className="space-y-3 text-zion-slate-light ml-6">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Access:</strong> Request access to your personal information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Correction:</strong> Request correction of inaccurate information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Deletion:</strong> Request deletion of your personal information
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Portability:</strong> Request a copy of your data in a portable format
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Opt-out:</strong> Unsubscribe from marketing communications
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <strong>Cookies:</strong> Manage cookie preferences through your browser settings
-                </li>
-              </ul>
-              <p className="text-zion-slate-light mt-4">
-                To exercise these rights, please contact us using the information provided below.
-              </p>
-            </motion.div>
-            {/* International Data Transfers */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.6 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                International Data Transfers
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
-                </p>
-                <p>
-                  For transfers to countries outside the European Economic Area (EEA), we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
-                </p>
-              </div>
-            </motion.div>
-            {/* Children's Privacy */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.7 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <AlertTriangle className="w-8 h-8 text-zion-cyan" />
-                Children's Privacy
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
-                </p>
-                <p>
-                  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
-                </p>
-              </div>
-            </motion.div>
-            {/* Changes to This Policy */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.8 
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to This Policy
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
-                </p>
-                <p>
-                  We will notify you of  material changes by:
-                </p>
-                <ul className="space-y-2 text-zion-slate-light ml-6">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Posting the updated policy on our website
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Updating the "Last Updated" date
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Sending email notifications for significant changes
-                  </li>
-                </ul>
-                <p>
-                  Your continued use of our website after  changes indicates your acceptance of the updated policy.
-                </p>
-              </div>
-            </motion.div>
-            {/* Contact Information */}
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.9 
-}}
-              viewport={{ once: true }}
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Mail className="w-8 h-8 text-zion-cyan" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-2xl font-bold text-white mb-4">Questions About Privacy?</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about our privacy practices or this policy, 
+              please don't hesitate to contact us.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-200"
+              >
+                <Mail className="w-5 h-5" />
                 Contact Us
-              </h2>
-              <p className="text-zion-slate-light mb-6">
-                If you have  questions about this Privacy Policy or our data practices, please contact us:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Mail className="w-5 h-5 text-zion-cyan" />
-                    <span>{email}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Phone className="w-5 h-5 text-zion-cyan" />
-                    <span>{phone}</span>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 text-zion-slate-light">
-                    <MapPin className="w-5 h-5 text-zion-cyan mt-0.5" />
-                    <span>{address}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Globe className="w-5 h-5 text-zion-cyan" />
-                    <span>{website}</span>
-                  </div>
-                </div>
-              </div>
-              <div className = "mt-8">
-                <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors">
-                  Contact Privacy Team
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+              </a>
+              <a
+                href="mailto:privacy@ziontechgroup.com"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+              >
+                <Mail className="w-5 h-5" />
+                privacy@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
-};
-export default PrivacyPolicy;}
+}

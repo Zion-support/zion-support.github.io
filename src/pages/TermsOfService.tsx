@@ -1,19 +1,6 @@
-              } from 'lucide-react.ts';
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const TermsOfService = () => {;
-  const lastUpdated = '2025-01-15';
-  const sections = [
-    {
-      id: 'acceptance',
-      title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`
-    },
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { 
   Shield, 
   Users, 
@@ -24,15 +11,23 @@ import {
   Globe, 
   CheckCircle, 
   AlertTriangle, 
-  Mail 
+  Mail,
+  FileText,
+  Download,
+  Share2
 } from 'lucide-react';
 
 export default function TermsOfService() {
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  
-  const termsSections = [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+  const lastUpdated = '2025-01-15';
+  const [activeSection, setActiveSection] = useState('acceptance');
+
+  const sections = [
+    {
+      id: 'acceptance',
+      title: 'Acceptance of Terms',
+      icon: CheckCircle,
+      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`
+    },
     {
       id: 'services',
       title: 'Description of Services',
@@ -101,408 +96,184 @@ export default function TermsOfService() {
     }
   ];
 
-  const keyProvisions = [
-    {
-      title: 'Service Usage',
-      description: 'Services are provided "as is" without warranties of any kind',
-      icon: CheckCircle
-    },
-    {
-      title: 'Data Security',
-      description: 'We implement industry-standard security measures to protect your data',
-      icon: Shield
-    },
-    {
-      title: 'Payment Terms',
-      description: 'Fees are billed according to your service agreement and are non-refundable',
-      icon: CheckCircle
-    },
-    {
-      title: 'Intellectual Property',
-      description: 'All content and services remain the property of Zion Tech Group',
-      icon: Lock
-    },
-    {
-      title: 'Liability Limits',
-      description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
-      icon: AlertTriangle
-    },
-    {
-      title: 'Termination Rights',
-      description: 'Either party may terminate services with appropriate notice as specified in service agreements',
-      icon: AlertTriangle
-    }
-  ];
+  const handleDownload = () => {
+    const content = `Zion Tech Group Terms of Service\nLast Updated: ${lastUpdated}\n\n${sections.map(section => `${section.title}\n${section.content}`).join('\n\n')}`;
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'terms-of-service.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
-  const disputeResolution = [
-    {
-      step: '1',
-      title: 'Direct Communication',
-      description: 'Attempt to resolve disputes through direct communication with our support team'
-    },
-    {
-      step: '2',
-      title: 'Escalation',
-      description: 'If direct communication fails, escalate to management for resolution'
-    },
-    {
-      step: '3',
-      title: 'Mediation',
-      description: 'For complex disputes, engage in mediation with a neutral third party'
-    },
-    {
-      step: '4',
-      title: 'Arbitration',
-      description: 'As a last resort, resolve disputes through binding arbitration'
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Zion Tech Group Terms of Service',
+          text: 'Read our terms of service',
+          url: window.location.href
+        });
+      } catch (error) {
+        console.log('Error sharing:', error);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copied to clipboard!');
     }
-  ];
+  };
 
   return (
-    <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
-        <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
-        <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Agreement to Terms
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>
-                  These Terms of Service ("Terms") govern your use of the {compName} website located at {website} and related services provided by {compName} ("we," "our," or "us").
-                </p>
-                <p>
-                  By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our website or use our services.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <SEO 
+        title="Terms of Service - Zion Tech Group"
+        description="Read Zion Tech Group's terms of service. Learn about our service agreements, user responsibilities, and legal terms."
+        keywords={['terms of service', 'service agreement', 'legal terms', 'Zion Tech Group', 'terms']}
+      />
 
-        {/* Terms Content */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="space-y-16">
-              {termsSections.map((section, index) => (
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-white mb-16"
+        >
+          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
+            <FileText className="w-10 h-10 text-white" />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Terms of Service
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            Please read these terms carefully before using our services.
+          </p>
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={handleDownload}
+              className="flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-200"
+            >
+              <Download className="w-5 h-5" />
+              Download PDF
+            </button>
+            <button
+              onClick={handleShare}
+              className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+            >
+              <Share2 className="w-5 h-5" />
+              Share
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Last Updated */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-gray-300">
+            <Calendar className="w-4 h-4" />
+            <span>Last Updated: {lastUpdated}</span>
+          </div>
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Sidebar Navigation */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="lg:col-span-1"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 sticky top-24">
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Navigation</h3>
+              <nav className="space-y-2">
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => setActiveSection(section.id)}
+                    className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                      activeSection === section.id
+                        ? 'bg-cyan-500 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <section.icon className="w-4 h-4" />
+                      {section.title}
+                    </div>
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </motion.div>
+
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="lg:col-span-3"
+          >
+            <div className="space-y-8">
+              {sections.map((section, index) => (
                 <motion.div
                   key={section.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="mb-12"
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
                 >
-                  <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                    <section.icon className="w-8 h-8 text-zion-cyan" />
-                    {section.title}
-                  </h2>
-                  <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                    <p>{section.content}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Key Provisions */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Key Provisions</h2>
-              <p className="text-xl text-gray-300">Important terms and conditions you should know</p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {keyProvisions.map((provision, index) => (
-                <motion.div
-                  key={provision.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-                >
-                  <provision.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{provision.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{provision.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Dispute Resolution */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Dispute Resolution Process</h2>
-              <p className="text-xl text-gray-300">Our approach to resolving conflicts and disputes</p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {disputeResolution.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 justify-center">
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Information
-              </h2>
-              <div className="space-y-4 text-zion-slate-light leading-relaxed max-w-2xl mx-auto">
-                <p>
-                  For questions about these Terms of Service or any other legal matters, please contact us:
-                </p>
-                <div className="space-y-2">
-                  <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p><strong>Phone:</strong> +1 302 464 0950</p>
-                  <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
-                </div>
-              
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.a
-                    key={section.id}
-                    href={`#${section.id}`}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
-                  >
-                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-4 h-4 text-purple-600" />
-                    </div>
-                    <span className="font-medium text-slate-900">{section.title}</span>
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
-                ))}
-=======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-              </div>
-            </motion.div>
-          </div>
-        </section>
-              
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                {keyProvisions.map((provision, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.div
-                    key={provision.title}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-purple-200"
-                  >
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <provision.icon className="w-8 h-8 text-purple-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3 text-center">{provision.title}</h3>
-                    <p className="text-slate-600 text-center text-sm">{provision.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Terms Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6,
-  delay: 0.6 
-}}
-            >
-              {sections.map((section, index)              => (
-                <div key={section.id} id={section.id} className="mb-16">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
+                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                   </div>
-                  <div className="prose prose-slate max-w-none">
-                    <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
-                  </div>
-                </div>
+                  <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
+                </motion.div>
               ))}
-            </motion.div>
-          </div>
-        </section>
-        {/* Dispute Resolution */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.8 
-}}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Dispute Resolution Process
-              </h2>
-              
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-                {disputeResolution.map((step, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  <motion.div
-                    key={step.step}
-                    initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                    animate = {
-  { opacity: 1,
-  y: 0 
-}}
-                    transition = {
-  { duration: 0.6,
-  delay: 0.1 * index 
-}}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-indigo-200 text-center"
-                  >
-                    <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-indigo-600">{step.step}</span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3">{step.title}</h3>
-                    <p className="text-slate-600 text-sm">{step.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 1.0 
-}}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Questions About These Terms?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Our legal team is here to help clarify any questions about our Terms of Service.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-center justify-center gap-3 text-white">
-                  <Mail className="w-5 h-5" />
-                  <span>legal@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center justify-center gap-3 text-white">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
-                  Contact Legal Team
-                </button>
-                <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors">
-                  Request Clarification
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-=======
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-2xl font-bold text-white mb-4">Questions About Terms?</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about our terms of service, 
+              please don't hesitate to contact us.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-200"
+              >
+                <Mail className="w-5 h-5" />
+                Contact Us
+              </a>
+              <a
+                href="mailto:legal@ziontechgroup.com"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
+              >
+                <Mail className="w-5 h-5" />
+                legal@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+    </div>
   );
 }

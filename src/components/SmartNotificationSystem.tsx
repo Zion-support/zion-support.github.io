@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Bell,
   X,
@@ -23,58 +22,25 @@ import {
   Zap,
   TrendingUp,
   Award
+} from 'lucide-react';
+
 interface Notification {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
-  type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  id: string;
   title: string;
   message: string;
-  type: 'success' | 'error' | 'warning' | 'info' | 'system';
+  type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'user' | 'system' | 'security' | 'performance' | 'update';
   timestamp: Date;
   read: boolean;
-action?: {;
+  action?: {
     label: string;
-    onClick: ()               => void;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
-  priority: 'low' | 'medium' | 'high';
-  category: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+    onClick: () => void;
+  };
   expiresAt?: Date;
 }
 
 interface Props extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
   maxNotifications?: number;
   autoDismiss?: boolean;
@@ -83,12 +49,18 @@ interface Props extends React.PropsWithChildren<{}> {
   onNotificationAction?: (notification: Notification, action: string) => void;
 }
 
-export function SmartNotificationSystem(...args: any[]): any {;
-  const [notifications, setNotifications] = useState<any>([]);
+export function SmartNotificationSystem({
+  enabled = true,
+  maxNotifications = 10,
+  autoDismiss = true,
+  autoDismissDelay = 5000,
+  soundEnabled = true,
+  onNotificationAction
+}: Props) {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showSettings, setShowSettings] = useState(false);
   const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -98,161 +70,51 @@ export function SmartNotificationSystem(...args: any[]): any {;
     autoDismiss: autoDismiss,
     autoDismissDelay,
     showPreview: true,
-    grouping: true,
-    priority: true
+    categories: ['user', 'system', 'security', 'performance', 'update']
   });
 
-  // Generate sample notifications
-  const generateSampleNotifications = useCallback(() => {
-const sampleNotifications: Notification[] = [;
-      {
-id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',;
-type: 'success',;
-title: 'Welcome to Zion Tech Group!',;
-message: 'Your account has been successfully created. Explore our AI-powered solutions.',;
-timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago;
-read: false,;
-priority: 'high',;
-category: 'onboarding',;
-action: {;
-label: 'Get Started',;
-onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Get Started clicked');
-        
-}
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      },
-      {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'2',
-        type: 'achievement',
-        title: 'Performance Milestone Reached!',
-        message: 'Your website performance score has improved to 95%. Great job!',
-        timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-        read: false,
-        priority: 'medium',
-        category: 'performance',
-        action: {
-          label: 'View Details',
-          onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('View Details clicked')
-        }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      },
-      {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'3',
-        type: 'info',
-        title: 'New Feature Available',
-        message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        read: true,
-        priority: 'low',
-        category: 'features'
-      },
-      {
-        id: '4',
-        type: 'warning',
-        title: 'Security Update Required',
-        message: 'Please update your password to maintain account security.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
-        read: false,
-          onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Update Now clicked')
-        }
-      }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-        priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'high',;
-        category: 'security',;
-        action: {;
-          label: 'Update Now',;
-          onClick: ()               => console.log('Update Now clicked');
-        };
-      };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    ];
-
-    setNotifications(sampleNotifications);
-    setUnreadCount(sampleNotifications.filter(n => !n.read).length);
-  }, []);
-
-  // Initialize with sample notifications
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  useEffect(() => {
-    if (settings.sound) {
-      audioRef.current = new Audio('/notification-sound.mp3');
-      audioRef.current.volume = 0.3;
-    }
-  }, [settings.sound]);
-
   // Add notification
-  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     const newNotification: Notification = {
       ...notification,
-      id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
-      read: false,
-      archived: false
+      read: false
     };
 
-  // Auto-expire notifications
-  useEffect(() => {
-    const interval = setInterval(() => {;
-      setNotifications(prev => {;
-        const now = new Date();
-        const filtered = prev.filter(notification => {;
-          if (notification.expiresAt && notification.expiresAt < now) {;
-            return false;
-
-          return true;
-        });
-
-        if (filtered.length !== prev.length) {
-          setUnreadCount(filtered.filter(n => !n.read).length);
-
-        return filtered;
-      });
-    }, 60000); // Check every minute
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Mark notification as read
-  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    setNotifications(prev => {;
-      const updated = prev.map(n => ;
-        n.id === id ? { ...n, read: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue } : n;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-      );
-      setUnreadCount(updated.filter(n               => !n.read).length);
+    setNotifications(prev => {
+      const updated = [newNotification, ...prev].slice(0, maxNotifications);
       return updated;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     });
 
-    // Play sound if enabled
-    if (settings.sound && audioRef.current) {
-      audioRef.current.play().catch(() => {
-        // Ignore audio play errors
-      });
-    }
+    setUnreadCount(prev => prev + 1);
 
-    // Auto-dismiss if enabled
-    if (settings.autoDismiss && notification.priority !== 'critical') {
+    // Auto-dismiss
+    if (autoDismiss && notification.priority !== 'critical') {
       setTimeout(() => {
         dismissNotification(newNotification.id);
-      }, settings.autoDismissDelay);
+      }, autoDismissDelay);
     }
 
-    // Show desktop notification if enabled
+    // Play sound
+    if (soundEnabled && !isMuted) {
+      playNotificationSound(notification.type);
+    }
+
+    // Desktop notification
     if (settings.desktop && 'Notification' in window && Notification.permission === 'granted') {
       new Notification(notification.title, {
         body: notification.message,
         icon: '/favicon.ico',
-        tag: notification.id,
-        requireInteraction: notification.priority === 'critical'
+        tag: notification.id
       });
     }
-  }, [maxNotifications, settings, autoDismissDelay]);
+  }, [maxNotifications, autoDismiss, autoDismissDelay, soundEnabled, isMuted, settings.desktop]);
 
   // Dismiss notification
   const dismissNotification = useCallback((id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
+    setUnreadCount(prev => Math.max(0, prev - 1));
   }, []);
 
   // Mark as read
@@ -260,426 +122,238 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.l
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
-  }, []);
-
-  // Archive notification
-  const archiveNotification = useCallback((id: string) => {
-    setNotifications(prev => 
-      prev.map(n => n.id === id ? { ...n, archived: true } : n)
-    );
+    setUnreadCount(prev => Math.max(0, prev - 1));
   }, []);
 
   // Mark all as read
-  const markAllAsRead = useCallback(() => {;
-    setNotifications(prev => {;
-      const updated = prev.map(n => ({ ...n, read: true }));
-      setUnreadCount(0);
-      return updated;
-    });
-  }, []);
-
-  // Remove notification
-  const removeNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    setNotifications(prev => {;
-      const filtered = prev.filter(n => n.id !== id);
-      setUnreadCount(filtered.filter(n => !n.read).length);
-      return filtered;
-    });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const markAllAsRead = useCallback(() => {
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+    setUnreadCount(0);
   }, []);
 
   // Clear all notifications
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);
+    setUnreadCount(0);
   }, []);
 
-  // Filter notifications
+  // Play notification sound
+  const playNotificationSound = useCallback((type: string) => {
+    // Simple sound implementation - you can replace with actual audio files
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    const frequencies = {
+      success: 800,
+      error: 400,
+      warning: 600,
+      info: 1000,
+      achievement: 1200
+    };
+
+    oscillator.frequency.setValueAtTime(frequencies[type] || 800, audioContext.currentTime);
+    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.1);
+  }, []);
+
+  // Filtered notifications
   const filteredNotifications = notifications.filter(notification => {
     if (filter === 'unread' && notification.read) return false;
     if (filter === 'important' && notification.priority !== 'high' && notification.priority !== 'critical') return false;
-    if (searchTerm && !notification.title.toLowerCase().includes(searchTerm.toLowerCase()) && 
-        !notification.message.toLowerCase().includes(searchTerm.toLowerCase())) return false;
-    return !notification.archived;
+    if (searchTerm && !notification.title.toLowerCase().includes(searchTerm.toLowerCase()) && !notification.message.toLowerCase().includes(searchTerm.toLowerCase())) return false;
+    return true;
   });
-
-  // Get notification icon
-  const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification['type'])               => {;
-    switch (type) {;
-      case 'success':;
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />;
-      case 'achievement':
-        return <Award className="w-5 h-5 text-purple-500" />;
-      default:
-        return <Info className="w-5 h-5 text-gray-500" />;
-
-  };
-
-  // Get priority color
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification['priority'])               => {;
-    switch (priority) {;
-      case 'high':;
-        return 'border-l-red-500';
-      case 'medium':
-        return 'border-l-yellow-500';
-      case 'low':
-        return 'border-l-blue-500';
-      default:
-        return 'border-l-gray-500';
-
-  };
-
-  // Format timestamp
-  const formatTimestamp = (timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate)               => {;
-    const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const minutes = Math.floor(diff / (1000 * 60));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    if (minutes < 1) return 'Just now';
-    if (minutes < 60) return `${minutes}m ago`;
-    if (hours < 24) return `${hours}h ago`;
-    return `${days}d ago`;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  };
-
-  // Request notification permission
-  const requestNotificationPermission = useCallback(async () => {
-    if ('Notification' in window && Notification.permission === 'default') {
-      const permission = await Notification.requestPermission();
-      if (permission === 'granted') {
-        setSettings(prev => ({ ...prev, desktop: true }));
-      }
-    }
-  }, []);
-
-  // Handle notification action
-  const handleNotificationAction = useCallback((notification: Notification, action: NotificationAction) => {
-    action.action();
-    markAsRead(notification.id);
-    
-    if (onNotificationAction) {
-      onNotificationAction(notification, action.label);
-    }
-  }, [markAsRead, onNotificationAction]);
-
-  // Group notifications by category
-  const groupedNotifications = settings.grouping 
-    ? filteredNotifications.reduce((groups, notification) => {
-        const category = notification.category;
-        if (!groups[category]) groups[category] = [];
-        groups[category].push(notification);
-        return groups;
-      }, {} as Record<string, Notification[]>)
-    : { 'All': filteredNotifications };
 
   if (!enabled) return null;
 
   return (
-    <>
+    <div className="fixed top-4 right-4 z-50">
       {/* Notification Bell */}
       <motion.button
-        onClick={() => setIsOpen(true)}
-        className="relative p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+        onClick={() => setIsVisible(!isVisible)}
+        className="relative w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Open notifications"
       >
-        <Bell className="w-6 h-6" />
-        {notificationCount > 0 && (
+        <Bell className="w-6 h-6 text-slate-600 dark:text-slate-400" />
+        {unreadCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-medium"
+            className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
           >
-            {notificationCount > 99 ? '99+' : notificationCount}
+            {unreadCount > 99 ? '99+' : unreadCount}
           </motion.div>
         )}
       </motion.button>
 
-      {/* Notification Panel */}
+      {/* Notifications Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isVisible && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-16 right-0 w-96 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-hidden"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: -20 }}
-              className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex items-center space-x-3">
-                  <Bell className="w-6 h-6 text-blue-600" />
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                      Notifications
-                    </h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {notificationCount} unread
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setShowSettings(!showSettings)}
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                  >
-                    <Settings className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Notifications</h3>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setIsMuted(!isMuted)}
+                  className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                </button>
+                <button
+                  onClick={() => setShowSettings(!showSettings)}
+                  className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  <Settings className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setIsVisible(false)}
+                  className="p-2 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
+            </div>
 
-              {/* Settings Panel */}
-              <AnimatePresence>
-                {showSettings && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="border-b border-gray-200 dark:border-gray-700 overflow-hidden"
-                  >
-                    <div className="p-4 space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <label className="flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            checked={settings.sound}
-                            onChange={(e) => setSettings(prev => ({ ...prev, sound: e.target.checked }))}
-                            className="w-4 h-4 text-blue-600"
-                          />
-                          <span className="text-sm">Sound</span>
-                        </label>
-                        <label className="flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            checked={settings.desktop}
-                            onChange={(e) => setSettings(prev => ({ ...prev, desktop: e.target.checked }))}
-                            className="w-4 h-4 text-blue-600"
-                          />
-                          <span className="text-sm">Desktop</span>
-                        </label>
-                        <label className="flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            checked={settings.autoDismiss}
-                            onChange={(e) => setSettings(prev => ({ ...prev, autoDismiss: e.target.checked }))}
-                            className="w-4 h-4 text-blue-600"
-                          />
-                          <span className="text-sm">Auto-dismiss</span>
-                        </label>
-                        <label className="flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            checked={settings.grouping}
-                            onChange={(e) => setSettings(prev => ({ ...prev, grouping: e.target.checked }))}
-                            className="w-4 h-4 text-blue-600"
-                          />
-                          <span className="text-sm">Group by category</span>
-                        </label>
-                      </div>
-                      {settings.desktop && Notification.permission === 'default' && (
-                        <button
-                          onClick={requestNotificationPermission}
-                          className="px-3 py-1 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                        >
-                          Enable Desktop Notifications
-                        </button>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {/* Controls */}
-              <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex space-x-1">
-                    {(['all', 'unread', 'important'] as const).map((filterType) => (
-                      <button
-                        key={filterType}
-                        onClick={() => setFilter(filterType)}
-                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
-                          filter === filterType
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                        }`}
-                      >
-                        {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
-                      </button>
-                    ))}
-                  </div>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={markAllAsRead}
-                      className="px-3 py-1 text-sm bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                    >
-                      Mark All Read
-                    </button>
-                    <button
-                      onClick={clearAllNotifications}
-                      className="px-3 py-1 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-                    >
-                      Clear All
-                    </button>
-                  </div>
-                </div>
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search notifications..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
+            {/* Search and Filters */}
+            <div className="p-4 border-b border-slate-200 dark:border-slate-700">
+              <div className="relative mb-3">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search notifications..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
               </div>
+              <div className="flex space-x-2">
+                {(['all', 'unread', 'important'] as const).map((filterType) => (
+                  <button
+                    key={filterType}
+                    onClick={() => setFilter(filterType)}
+                    className={`px-3 py-1 text-sm rounded-lg transition-colors ${
+                      filter === filterType
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+                    }`}
+                  >
+                    {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-              {/* Notifications List */}
-              <div className="overflow-y-auto max-h-[60vh]">
-                {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (
-                  <div key={category} className="border-b border-gray-200 dark:border-gray-700 last:border-b-0">
-                    {settings.grouping && (
-                      <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800">
-                        <div className="flex items-center space-x-2">
-                          {getCategoryIcon(category as Notification['category'])({ className: 'w-4 h-4' })}
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
-                            {category}
-                          </span>
-                          <span className="text-xs text-gray-500 dark:text-gray-400">
-                            ({categoryNotifications.length})
-                          </span>
+            {/* Notifications List */}
+            <div className="max-h-64 overflow-y-auto">
+              {filteredNotifications.length === 0 ? (
+                <div className="p-8 text-center text-slate-500 dark:text-slate-400">
+                  <Bell className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                  <p>No notifications</p>
+                </div>
+              ) : (
+                <div className="divide-y divide-slate-200 dark:divide-slate-700">
+                  {filteredNotifications.map((notification) => (
+                    <motion.div
+                      key={notification.id}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      className={`p-4 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors ${
+                        !notification.read ? 'bg-cyan-50 dark:bg-cyan-900/20' : ''
+                      }`}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0">
+                          {notification.type === 'success' && <CheckCircle className="w-5 h-5 text-green-500" />}
+                          {notification.type === 'error' && <XCircle className="w-5 h-5 text-red-500" />}
+                          {notification.type === 'warning' && <AlertTriangle className="w-5 h-5 text-yellow-500" />}
+                          {notification.type === 'info' && <Info className="w-5 h-5 text-blue-500" />}
+                          {notification.type === 'achievement' && <Award className="w-5 h-5 text-purple-500" />}
                         </div>
-                      </div>
-                    )}
-                    <div className="divide-y divide-gray-200 dark:divide-gray-700">
-                      {categoryNotifications.map((notification) => (
-                        <motion.div
-                          key={notification.id}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          className={`p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${
-                            !notification.read ? 'bg-blue-50 dark:bg-blue-900/10' : ''
-                          }`}
-                        >
-                          <div className="flex items-start space-x-3">
-                            <div className={`p-2 rounded-lg ${getPriorityColor(notification.priority)}`}>
-                              {getNotificationIcon(notification.type)({ className: 'w-5 h-5' })}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-start justify-between">
-                                <div className="flex-1">
-                                  <h4 className={`text-sm font-medium ${
-                                    !notification.read ? 'text-gray-900 dark:text-white' : 'text-gray-700 dark:text-gray-300'
-                                  }`}>
-                                    {notification.title}
-                                  </h4>
-                                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                                    {notification.message}
-                                  </p>
-                                  <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500 dark:text-gray-400">
-                                    <span className="flex items-center space-x-1">
-                                      <Clock className="w-3 h-3" />
-                                      <span>{notification.timestamp.toLocaleTimeString()}</span>
-                                    </span>
-                                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(notification.priority)}`}>
-                                      {notification.priority}
-                                    </span>
-                                  </div>
-                                </div>
-                                <div className="flex items-center space-x-1 ml-2">
-                                  {!notification.read && (
-                                    <button
-                                      onClick={() => markAsRead(notification.id)}
-                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
-                                      title="Mark as read"
-                                    >
-                                      <Eye className="w-4 h-4" />
-                                    </button>
-                                  )}
-                                  <button
-                                    onClick={() => archiveNotification(notification.id)}
-                                    className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
-                                    title="Archive"
-                                  >
-                                    <Archive className="w-4 h-4" />
-                                  </button>
-                                  <button
-                                    onClick={() => dismissNotification(notification.id)}
-                                    className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
-                                    title="Dismiss"
-                                  >
-                                    <X className="w-4 h-4" />
-                                  </button>
-                                </div>
-                              </div>
-                              
-                              {/* Actions */}
-                              {notification.actions && notification.actions.length > 0 && (
-                                <div className="flex space-x-2 mt-3">
-                                  {notification.actions.map((action, index) => (
-                                    <button
-                                      key={index}
-                                      onClick={() => handleNotificationAction(notification, action)}
-                                      className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-                                        action.variant === 'primary'
-                                          ? 'bg-blue-600 text-white hover:bg-blue-700'
-                                          : action.variant === 'danger'
-                                          ? 'bg-red-600 text-white hover:bg-red-700'
-                                          : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-                                      }`}
-                                    >
-                                      {action.icon && <action.icon className="w-3 h-3 inline mr-1" />}
-                                      {action.label}
-                                    </button>
-                                  ))}
-                                </div>
-                              )}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between">
+                            <p className="text-sm font-medium text-slate-900 dark:text-white">
+                              {notification.title}
+                            </p>
+                            <div className="flex items-center space-x-2">
+                              {notification.priority === 'critical' && <Star className="w-4 h-4 text-red-500" />}
+                              <button
+                                onClick={() => dismissNotification(notification.id)}
+                                className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                              >
+                                <X className="w-4 h-4" />
+                              </button>
                             </div>
                           </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                
-                {filteredNotifications.length === 0 && (
-                  <div className="p-8 text-center text-gray-500 dark:text-gray-400">
-                    <Bell className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                    <p>No notifications to display</p>
-                    <p className="text-sm">You're all caught up!</p>
-                  </div>
-                )}
+                          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                            {notification.message}
+                          </p>
+                          <div className="flex items-center justify-between mt-2">
+                            <span className="text-xs text-slate-500 dark:text-slate-500">
+                              {new Date(notification.timestamp).toLocaleTimeString()}
+                            </span>
+                            {!notification.read && (
+                              <button
+                                onClick={() => markAsRead(notification.id)}
+                                className="text-xs text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 transition-colors"
+                              >
+                                Mark as read
+                              </button>
+                            )}
+                          </div>
+                          {notification.action && (
+                            <button
+                              onClick={notification.action.onClick}
+                              className="mt-2 text-xs bg-cyan-500 text-white px-3 py-1 rounded-full hover:bg-cyan-600 transition-colors"
+                            >
+                              {notification.action.label}
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Footer Actions */}
+            {notifications.length > 0 && (
+              <div className="p-4 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/50">
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={markAllAsRead}
+                    className="text-sm text-cyan-600 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 transition-colors"
+                  >
+                    Mark all as read
+                  </button>
+                  <button
+                    onClick={clearAllNotifications}
+                    className="text-sm text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 transition-colors"
+                  >
+                    Clear all
+                  </button>
+                </div>
               </div>
-            </motion.div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
-
-// Export the addNotification function for external use
-export const addNotification = (notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
-  // This will be implemented by the component instance
-  console.warn('addNotification called before component initialization');
-};

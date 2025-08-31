@@ -69,7 +69,7 @@ const additionalStats = [
 ];
 
 export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
