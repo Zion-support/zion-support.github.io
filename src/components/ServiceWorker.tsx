@@ -19,6 +19,24 @@ export function ServiceWorker() {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Register service worker

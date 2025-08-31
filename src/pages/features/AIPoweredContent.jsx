@@ -20,12 +20,30 @@ export default function AIPoweredContent() {
     useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
         markAiExplored();
     }, [markAiExplored]);
     return (<>
       <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script type="application/ld+json" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">

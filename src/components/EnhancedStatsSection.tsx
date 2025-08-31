@@ -79,6 +79,24 @@ export default function EnhancedStatsSection() {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
     if (inView) {
       controls.start('visible');
     }
@@ -106,6 +124,24 @@ export default function EnhancedStatsSection() {
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 }, []);
     if (inView) {

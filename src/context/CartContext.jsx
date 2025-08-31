@@ -40,6 +40,24 @@ export function CartProvider({ children }) {
     useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
         let items = [];
         const stored = safeStorage.getItem(cartKey);
         if (stored) {
@@ -67,6 +85,24 @@ export function CartProvider({ children }) {
         dispatch({ type: 'SET_ITEMS', payload: items });
     }, [cartKey]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 }, []);
         safeStorage.setItem(cartKey, JSON.stringify(state.items));

@@ -33,12 +33,120 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         scrollToBottom();
     }, [messages]);
     // Focus input when opened
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {
@@ -51,6 +159,60 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {

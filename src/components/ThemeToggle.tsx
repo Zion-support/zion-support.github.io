@@ -16,6 +16,60 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
     setMounted(true);
@@ -26,6 +80,60 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {

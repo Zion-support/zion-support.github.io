@@ -22,6 +22,60 @@ export const AccessibilityProvider = ({ children }) => {
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
@@ -39,6 +93,60 @@ export const AccessibilityProvider = ({ children }) => {
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         const settings = {
@@ -51,6 +159,60 @@ export const AccessibilityProvider = ({ children }) => {
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     // Apply accessibility settings to document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {
@@ -102,6 +264,60 @@ export const AccessibilityPanel = () => {
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
     // Keyboard shortcuts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {
@@ -234,6 +450,60 @@ export const SkipToContent = () => (<a href="#main-content" className="sr-only f
 // Focus Trap Hook
 export const useFocusTrap = (isActive) => {
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {

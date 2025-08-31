@@ -26,6 +26,24 @@ export function useAuth() {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');

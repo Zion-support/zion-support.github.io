@@ -17,6 +17,60 @@ export const AccessibilityProvider = ({ children }) => {
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         // Check for reduced motion preference
@@ -42,6 +96,60 @@ export const AccessibilityProvider = ({ children }) => {
     }, []);
     // Apply accessibility classes to body
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {
@@ -114,6 +222,60 @@ export const AccessibilityProvider = ({ children }) => {
     };
     // Keyboard shortcuts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {

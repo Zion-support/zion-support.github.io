@@ -122,6 +122,60 @@ export default function CategoryDetail() {
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         setIsLoading(true);
@@ -160,6 +214,60 @@ export default function CategoryDetail() {
         setIsLoading(false);
     }, [slug]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {

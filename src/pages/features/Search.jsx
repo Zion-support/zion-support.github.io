@@ -16,7 +16,7 @@ export default function SearchFeature() {
     return (<>
       <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script type="application/ld+json" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">

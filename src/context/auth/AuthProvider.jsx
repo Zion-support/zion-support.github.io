@@ -98,6 +98,24 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
         // Clean up any potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {

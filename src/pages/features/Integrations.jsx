@@ -18,12 +18,30 @@ export default function IntegrationsFeature() {
     useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
         markSlackConnected();
     }, [markSlackConnected]);
     return (<>
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script type="application/ld+json" // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">

@@ -18,6 +18,60 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
   return () => {
     // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
   };
 }, []);, []);
         if (!enabled)
@@ -53,6 +107,60 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     }, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+}, []);
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+}, []);;
+}, []);, []);
+  // TODO: Add dependencies if needed
+}, []);
   // TODO: Add dependencies if needed
 
   return () => {
@@ -252,7 +360,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       </AnimatePresence>
 
       {/* Screen Reader Only Class */}
-      <style // TODO: Sanitize content before using dangerouslySetInnerHTML={{
+      <style // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using // TODO: Sanitize content before using dangerouslySetInnerHTML={{
             __html: `
           .sr-only {
             position: absolute;
