@@ -53,7 +53,8 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette
+  Palette,
+  Truck
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -311,6 +312,62 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
+          {/* Featured New Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <h3 className="text-2xl font-bold text-white text-center mb-8">
+              Featured New Services
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-6">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-3">
+                  <FileText className="w-5 h-5 text-blue-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">AI Contract Analysis Platform</h4>
+                <p className="text-gray-300 text-sm mb-3">AI-powered contract analysis with risk assessment and compliance monitoring</p>
+                <Link
+                  to="/services/ai-intelligent-contract-analysis-platform"
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                >
+                  Learn More →
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-6">
+                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mb-3">
+                  <Truck className="w-5 h-5 text-green-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">AI Supply Chain Optimization</h4>
+                <p className="text-gray-300 text-sm mb-3">Revolutionize supply chain management with AI-powered optimization</p>
+                <Link
+                  to="/services/ai-supply-chain-optimization-platform"
+                  className="text-green-400 hover:text-green-300 text-sm font-medium"
+                >
+                  Learn More →
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-3">
+                  <Server className="w-5 h-5 text-purple-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">IT Infrastructure Management</h4>
+                <p className="text-gray-300 text-sm mb-3">Comprehensive IT infrastructure monitoring and management platform</p>
+                <Link
+                  to="/services/it-infrastructure-management-platform"
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium"
+                >
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

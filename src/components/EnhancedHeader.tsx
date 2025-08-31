@@ -111,6 +111,9 @@ export default function EnhancedHeader() {
           items: [
             { name: 'AI Content Creation Studio', href: '/services/AI-Content-Creation-Studio-Pro', icon: Code },
             { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: TrendingUp },
+            { name: 'AI Contract Analysis Platform', href: '/services/ai-intelligent-contract-analysis-platform', icon: FileText },
+            { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform', icon: Truck },
+            { name: 'IT Infrastructure Management', href: '/services/it-infrastructure-management-platform', icon: Server },
             { name: 'Adaptive Learning Platform', href: '/services/adaptive-learning-platform', icon: BookOpen },
             { name: 'Sustainable Energy Optimizer', href: '/services/sustainable-energy-optimizer', icon: Leaf }
           ]

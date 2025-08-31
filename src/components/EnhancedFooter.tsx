@@ -85,6 +85,9 @@ export default function EnhancedFooter() {
       title: 'Micro SAAS',
       services: [
         { name: 'AI Content Creation Studio', href: '/services/AI-Content-Creation-Studio-Pro' },
+        { name: 'AI Contract Analysis Platform', href: '/services/ai-intelligent-contract-analysis-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform' },
+        { name: 'IT Infrastructure Management', href: '/services/it-infrastructure-management-platform' },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform' },
         { name: 'Adaptive Learning Platform', href: '/services/adaptive-learning-platform' },
         { name: 'Sustainable Energy Optimizer', href: '/services/sustainable-energy-optimizer' }

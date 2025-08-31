@@ -126,6 +126,11 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// New Innovative Micro SAAS Services
+const AIIntelligentContractAnalysisPlatform = createLazyComponent(() => import('./pages/services/AI-Intelligent-Contract-Analysis-Platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization-Platform'));
+const ITInfrastructureManagementPlatform = createLazyComponent(() => import('./pages/services/IT-Infrastructure-Management-Platform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -322,7 +327,7 @@ function App() {
                   } />
 
                   {/* Comprehensive Services Routes */}
-                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                   <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
@@ -397,6 +402,11 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* New Innovative Micro SAAS Service Routes */}
+                  <Route path="/services/ai-intelligent-contract-analysis-platform" element={<AIIntelligentContractAnalysisPlatform />} />
+                  <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                  <Route path="/services/it-infrastructure-management-platform" element={<ITInfrastructureManagementPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
