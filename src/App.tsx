@@ -22,6 +22,11 @@ import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
+// New Enhanced Components
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
 import { AppFooter } from './components/layout/AppFooter';
@@ -423,6 +428,11 @@ function App() {
 
             {/* User Experience Optimizer */}
             <UserExperienceOptimizer enabled={true} />
+
+            {/* New Enhanced Components */}
+            <PerformanceMonitor showPanel={true} autoRefresh={true} />
+            <AccessibilityEnhancer showPanel={true} />
+            <AnalyticsDashboard showPanel={true} autoRefresh={true} />
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
