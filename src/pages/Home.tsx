@@ -51,36 +51,36 @@ export default function Home() {
 
   const featuredServices = [
     {
+      name: 'AI Financial Fraud Detection',
+      description: 'Real-time AI-powered fraud detection for financial institutions with zero false positives',
+      icon: Shield,
+      href: '/services/ai-financial-fraud-detection',
+      color: 'from-red-600 to-orange-600',
+      features: ['Real-time monitoring', 'AI risk assessment', 'Compliance automation']
+    },
+    {
+      name: 'AI Supply Chain Risk Management',
+      description: 'Comprehensive AI-powered supply chain risk detection and prevention platform',
+      icon: Globe,
+      href: '/services/ai-supply-chain-risk-management',
+      color: 'from-blue-600 to-cyan-600',
+      features: ['Risk monitoring', 'Predictive analytics', 'Global mapping']
+    },
+    {
+      name: 'AI Customer Experience Analytics',
+      description: 'Transform customer insights into actionable intelligence with AI-powered analytics',
+      icon: Brain,
+      href: '/services/ai-customer-experience-analytics',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Sentiment analysis', 'Behavioral patterns', 'Predictive insights']
+    },
+    {
       name: 'AI Enterprise Orchestrator',
       description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
-      icon: Brain,
+      icon: Cpu,
       href: '/services/ai-enterprise-orchestrator',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
-    },
-    {
-      name: 'AI Cybersecurity Suite',
-      description: 'AI-powered threat detection and response for comprehensive security',
-      icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
-      color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
-    },
-    {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
-      icon: Atom,
-      href: '/services/quantum-ai-platform',
-      color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
-    },
-    {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,
-      href: '/services/ai-healthcare-analytics',
       color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
     }
   ];
 

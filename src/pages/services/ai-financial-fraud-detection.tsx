@@ -8,72 +8,123 @@ import {
   Brain, 
   Zap, 
   CheckCircle, 
-  Globe,
+  DollarSign, 
+  BarChart3,
+  Lock,
   Eye,
   Clock,
   Users,
+  Globe,
   Database,
   Cpu,
   Network,
+  Smartphone,
+  Monitor,
   Server,
+  ShieldCheck,
+  Globe2,
+  Leaf,
+  Satellite,
+  Atom,
+  Code,
+  FileText,
+  GraduationCap,
+  Building,
+  Briefcase,
+  Lightbulb,
+  Sparkles,
   ArrowRight,
+  Star,
+  Heart,
+  Cloud,
+  Target,
+  Handshake,
+  Rocket,
+  Target as TargetIcon,
+  BarChart,
+  Activity,
+  MessageCircle,
+  Search,
+  Settings,
+  Palette,
+  ChevronRight,
   Play,
+  Pause,
+  Stop,
+  RefreshCw,
+  Download,
+  Upload,
+  Trash2,
+  Edit,
+  Copy,
+  Share2,
+  MoreHorizontal,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Calendar,
+  Clock as ClockIcon,
+  MapPin,
+  Phone,
+  Mail,
   ExternalLink
 } from 'lucide-react';
 
-export default function AISupplyChainRiskManagement() {
+export default function AIFinancialFraudDetection() {
   const features = [
     {
-      title: "Real-time Risk Monitoring",
-      description: "24/7 monitoring of supply chain risks across global networks",
+      title: "Real-time Transaction Monitoring",
+      description: "AI-powered analysis of every transaction in real-time with millisecond response",
       icon: Eye,
-      benefits: ["Instant alerts", "Risk scoring", "Predictive analytics"]
+      benefits: ["Instant fraud detection", "Zero false positives", "24/7 monitoring"]
     },
     {
-      title: "AI-Powered Risk Assessment",
-      description: "Machine learning models that predict and prevent supply chain disruptions",
+      title: "Advanced Machine Learning Models",
+      description: "Self-learning algorithms that adapt to new fraud patterns automatically",
       icon: Brain,
       benefits: ["Pattern recognition", "Behavioral analysis", "Continuous learning"]
     },
     {
-      title: "Global Supply Chain Mapping",
-      description: "Complete visibility into your entire supply chain network",
-      icon: Globe,
-      benefits: ["Supplier mapping", "Risk hotspots", "Compliance tracking"]
+      title: "Multi-layered Security",
+      description: "Combines AI, ML, and traditional security measures for comprehensive protection",
+      icon: Shield,
+      benefits: ["Defense in depth", "Risk scoring", "Threat intelligence"]
     },
     {
-      title: "Automated Compliance",
-      description: "Ensure regulatory compliance across all supply chain operations",
+      title: "Compliance Automation",
+      description: "Automated regulatory compliance reporting for financial institutions",
       icon: CheckCircle,
-      benefits: ["GDPR compliance", "ISO standards", "Industry regulations"]
+      benefits: ["GDPR compliance", "PCI DSS support", "SOX automation"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$299",
       period: "/month",
-      description: "For small businesses",
+      description: "Perfect for small financial institutions",
       features: [
-        "Up to 50 suppliers",
-        "Basic risk monitoring",
+        "Up to 10,000 transactions/month",
+        "Basic fraud detection",
         "Email alerts",
-        "Standard support"
+        "Standard support",
+        "Basic reporting"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$899",
+      price: "$799",
       period: "/month",
-      description: "For growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 500 suppliers",
+        "Up to 100,000 transactions/month",
         "Advanced AI models",
         "Real-time alerts",
         "Priority support",
+        "Advanced analytics",
         "API access"
       ],
       cta: "Start Free Trial",
@@ -81,18 +132,46 @@ export default function AISupplyChainRiskManagement() {
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations",
+      description: "For large financial institutions",
       features: [
-        "Unlimited suppliers",
+        "Unlimited transactions",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
-        "Custom integrations"
+        "Custom integrations",
+        "On-premise deployment"
       ],
       cta: "Contact Sales",
       popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Credit Card Fraud",
+      description: "Detect unauthorized credit card transactions in real-time",
+      icon: CreditCard,
+      examples: ["Stolen card detection", "Unusual spending patterns", "Geographic anomalies"]
+    },
+    {
+      title: "Bank Transfer Fraud",
+      description: "Prevent fraudulent bank transfers and wire fraud",
+      icon: Banknote,
+      examples: ["Account takeover", "Social engineering", "Money laundering"]
+    },
+    {
+      title: "Investment Fraud",
+      description: "Protect against investment scams and market manipulation",
+      icon: TrendingUp,
+      examples: ["Pump and dump schemes", "Insider trading", "Market manipulation"]
+    },
+    {
+      title: "Insurance Fraud",
+      description: "Detect fraudulent insurance claims and applications",
+      icon: Shield,
+      examples: ["False claims", "Exaggerated damages", "Identity theft"]
     }
   ];
 
@@ -109,14 +188,14 @@ export default function AISupplyChainRiskManagement() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain Security
+              AI-Powered Financial Security
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain Risk Management
+              AI Financial Fraud Detection
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Protect your supply chain with intelligent AI that predicts, detects, and prevents 
-              risks before they impact your business operations.
+              Protect your financial institution with cutting-edge AI that detects fraud in real-time, 
+              preventing millions in losses while maintaining zero false positives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -145,11 +224,11 @@ export default function AISupplyChainRiskManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Risk Management Features
+              Advanced Fraud Detection Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI platform provides comprehensive supply chain risk management 
-              with real-time monitoring and predictive analytics.
+              Our AI platform combines multiple technologies to provide the most comprehensive 
+              financial fraud protection available in the market.
             </p>
           </motion.div>
 
@@ -194,7 +273,8 @@ export default function AISupplyChainRiskManagement() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that fits your organization's size and risk management requirements.
+              Choose the plan that fits your organization's size and security requirements. 
+              All plans include our core AI fraud detection capabilities.
             </p>
           </motion.div>
 
@@ -247,6 +327,56 @@ export default function AISupplyChainRiskManagement() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Fraud Protection
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our AI platform covers all types of financial fraud, from traditional scams 
+              to sophisticated cyber attacks and emerging threats.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-zion-slate-light mb-4">{useCase.description}</p>
+                    <div className="space-y-2">
+                      {useCase.examples.map((example, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-zion-slate-light">
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3" />
+                          {example}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -256,11 +386,11 @@ export default function AISupplyChainRiskManagement() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Supply Chain?
+              Ready to Protect Your Financial Institution?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join leading companies that trust our AI to protect their supply chains. 
-              Start your free trial today.
+              Join hundreds of financial institutions that trust our AI to protect their assets 
+              and customers from fraud. Start your free trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -285,5 +415,22 @@ export default function AISupplyChainRiskManagement() {
         </div>
       </section>
     </div>
+  );
+}
+
+// Icon components for use cases
+function CreditCard({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+    </svg>
+  );
+}
+
+function Banknote({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+    </svg>
   );
 }

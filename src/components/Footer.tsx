@@ -82,6 +82,7 @@ export function Footer() {
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
+              Based in Middletown, DE with global reach.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
@@ -99,6 +100,23 @@ export function Footer() {
               <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 pt-4 border-t border-zion-purple/20">
+              <div className="flex items-center space-x-3 text-sm text-zion-slate-light">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-zion-slate-light">
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start space-x-3 text-sm text-zion-slate-light">
+                <MapPin className="w-4 h-4 text-zion-cyan mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
               <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Github className="w-5 h-5" />
               </a>
