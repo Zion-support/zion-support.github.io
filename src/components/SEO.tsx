@@ -1,537 +1,506 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Eye, 
-  BarChart3, 
-  Globe, 
+import { motion } from 'framer-motion';
+import {
+  Search,
+  TrendingUp,
+  BarChart3,
+  Globe,
   Smartphone,
   Monitor,
   Zap,
+  Eye,
+  Target,
   CheckCircle,
   AlertTriangle,
   Info,
-  Settings
+  Settings,
+  RefreshCw,
+  ExternalLink,
+  Code,
+  Image,
+  FileText,
+  Link as LinkIcon
 } from 'lucide-react';
 
-interface SEOMetaData {
+interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  canonicalUrl?: string;
-  robots?: string;
-  language?: string;
-  author?: string;
-  viewport?: string;
-  charset?: string;
+  canonical: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  structuredData: any;
+  metaTags: Record<string, string>;
 }
 
 interface SEOProps {
-  meta: SEOMetaData;
-  showPanel?: boolean;
-  autoOptimize?: boolean;
+  data: SEOData;
+  pageType?: 'home' | 'service' | 'about' | 'contact' | 'blog' | 'product';
   enableAnalytics?: boolean;
-}
-
-interface SEOAnalysis {
-  score: number;
-  issues: string[];
-  suggestions: string[];
-  improvements: string[];
+  enableStructuredData?: boolean;
+  enablePerformanceTracking?: boolean;
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  meta,
-  showPanel = false,
-  autoOptimize = true,
-  enableAnalytics = true
+  data,
+  pageType = 'home',
+  enableAnalytics = true,
+  enableStructuredData = true,
+  enablePerformanceTracking = true
 }) => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis>({
-    score: 0,
-    issues: [],
-    suggestions: [],
-    improvements: []
-  });
+  const [seoScore, setSeoScore] = useState<number>(0);
+  const [seoIssues, setSeoIssues] = useState<string[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [showAnalysis, setShowAnalysis] = useState(showPanel);
-  const [pageSpeed, setPageSpeed] = useState<number>(0);
-  const [coreWebVitals, setCoreWebVitals] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  });
+  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
 
-  // Default meta values
-  const defaultMeta = useMemo(() => ({
-    charset: 'utf-8',
-    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-    robots: 'index, follow',
-    language: 'en',
-    author: 'Zion Tech Group',
-    twitterCard: 'summary_large_image',
-    ...meta
-  }), [meta]);
-
-  // SEO Analysis function
-  const analyzeSEO = useCallback(async () => {
+  // Enhanced SEO analysis
+  const analyzeSEO = useCallback(() => {
+    if (!enableAnalytics) return;
+    
     setIsAnalyzing(true);
-    const newIssues: string[] = [];
-    const newSuggestions: string[] = [];
-    const newImprovements: string[] = [];
+    const issues: string[] = [];
     let score = 100;
 
-    try {
-      // Check title length
-      if (meta.title.length < 30) {
-        newIssues.push('Title is too short (should be 30-60 characters)');
-        score -= 15;
-      } else if (meta.title.length > 60) {
-        newIssues.push('Title is too long (should be 30-60 characters)');
-        score -= 10;
-      } else {
-        newImprovements.push('Title length is optimal');
-      }
-
-      // Check description length
-      if (meta.description.length < 120) {
-        newIssues.push('Description is too short (should be 120-160 characters)');
-        score -= 15;
-      } else if (meta.description.length > 160) {
-        newIssues.push('Description is too long (should be 120-160 characters)');
-        score -= 10;
-      } else {
-        newImprovements.push('Description length is optimal');
-      }
-
-      // Check keywords
-      if (meta.keywords.length === 0) {
-        newIssues.push('No keywords specified');
-        score -= 10;
-      } else if (meta.keywords.length > 10) {
-        newSuggestions.push('Consider reducing keywords to 5-10 most important ones');
-      } else {
-        newImprovements.push('Keywords are well optimized');
-      }
-
-      // Check for missing Open Graph tags
-      if (!meta.ogTitle) {
-        newSuggestions.push('Add Open Graph title for better social sharing');
-        score -= 5;
-      }
-      if (!meta.ogDescription) {
-        newSuggestions.push('Add Open Graph description for better social sharing');
-        score -= 5;
-      }
-      if (!meta.ogImage) {
-        newSuggestions.push('Add Open Graph image for better social sharing');
-        score -= 5;
-      }
-
-      // Check for missing Twitter Card tags
-      if (!meta.twitterTitle) {
-        newSuggestions.push('Add Twitter Card title for better Twitter sharing');
-        score -= 3;
-      }
-      if (!meta.twitterDescription) {
-        newSuggestions.push('Add Twitter Card description for better Twitter sharing');
-        score -= 3;
-      }
-
-      // Check for canonical URL
-      if (!meta.canonicalUrl) {
-        newSuggestions.push('Add canonical URL to prevent duplicate content issues');
-        score -= 5;
-      }
-
-      // Check heading structure
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      const h1Count = document.querySelectorAll('h1').length;
-      
-      if (h1Count === 0) {
-        newIssues.push('No H1 heading found');
-        score -= 10;
-      } else if (h1Count > 1) {
-        newIssues.push('Multiple H1 headings found (should have only one)');
-        score -= 10;
-      } else {
-        newImprovements.push('H1 heading structure is correct');
-      }
-
-      // Check for images without alt text
-      const images = document.querySelectorAll('img');
-      const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
-      if (imagesWithoutAlt.length > 0) {
-        newIssues.push(`${imagesWithoutAlt.length} images missing alt text`);
-        score -= Math.min(15, imagesWithoutAlt.length * 2);
-      } else {
-        newImprovements.push('All images have alt text');
-      }
-
-      // Check for internal links
-      const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="http://localhost"], a[href^="https://ziontechgroup.com"]');
-      if (internalLinks.length < 3) {
-        newSuggestions.push('Add more internal links for better site structure');
-        score -= 5;
-      } else {
-        newImprovements.push('Good internal linking structure');
-      }
-
-      // Check for external links
-      const externalLinks = document.querySelectorAll('a[href^="http"]:not([href^="http://localhost"]):not([href^="https://ziontechgroup.com"])');
-      if (externalLinks.length > 0) {
-        newSuggestions.push('Consider adding rel="nofollow" to external links');
-      }
-
-      // Check for meta viewport
-      if (!meta.viewport) {
-        newIssues.push('Missing viewport meta tag for mobile optimization');
-        score -= 10;
-      } else {
-        newImprovements.push('Viewport meta tag is present');
-      }
-
-      // Check for structured data
-      const structuredData = document.querySelectorAll('script[type="application/ld+json"]');
-      if (structuredData.length === 0) {
-        newSuggestions.push('Add structured data (JSON-LD) for better search results');
-        score -= 5;
-      } else {
-        newImprovements.push('Structured data is present');
-      }
-
-      // Check for sitemap
-      const sitemapLink = document.querySelector('link[rel="sitemap"]');
-      if (!sitemapLink) {
-        newSuggestions.push('Add sitemap link for better search engine crawling');
-        score -= 3;
-      }
-
-      // Check for robots.txt
-      fetch('/robots.txt')
-        .then(response => {
-          if (!response.ok) {
-            newSuggestions.push('Create robots.txt file for search engine guidance');
-            score -= 3;
-          } else {
-            newImprovements.push('Robots.txt file is present');
-          }
-        })
-        .catch(() => {
-          newSuggestions.push('Create robots.txt file for search engine guidance');
-          score -= 3;
-        });
-
-    } catch (error) {
-      console.warn('SEO analysis failed:', error);
+    // Check title length
+    if (data.title.length < 30 || data.title.length > 60) {
+      issues.push('Title length should be between 30-60 characters');
+      score -= 10;
     }
 
-    setAnalysis({
-      score: Math.max(0, score),
-      issues: newIssues,
-      suggestions: newSuggestions,
-      improvements: newImprovements
-    });
-    setIsAnalyzing(false);
-  }, [meta]);
+    // Check description length
+    if (data.description.length < 120 || data.description.length > 160) {
+      issues.push('Description length should be between 120-160 characters');
+      score -= 10;
+    }
 
-  // Measure Core Web Vitals
-  const measureCoreWebVitals = useCallback(() => {
-    if ('PerformanceObserver' in window) {
-      try {
-        // First Contentful Paint
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const fcp = entries[entries.length - 1];
-          if (fcp) {
-            setCoreWebVitals(prev => ({ ...prev, fcp: fcp.startTime }));
-          }
-        }).observe({ entryTypes: ['paint'] });
+    // Check keywords
+    if (data.keywords.length < 3) {
+      issues.push('Add more relevant keywords (minimum 3)');
+      score -= 5;
+    }
 
-        // Largest Contentful Paint
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const lcp = entries[entries.length - 1];
-          if (lcp) {
-            setCoreWebVitals(prev => ({ ...prev, lcp: lcp.startTime }));
-          }
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
+    // Check for missing meta tags
+    if (!data.ogImage) {
+      issues.push('Missing Open Graph image');
+      score -= 5;
+    }
 
-        // First Input Delay
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const fid = entries[entries.length - 1];
-          if (fid) {
-            setCoreWebVitals(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-          }
-        }).observe({ entryTypes: ['first-input'] });
+    if (!data.canonical) {
+      issues.push('Missing canonical URL');
+      score -= 5;
+    }
 
-        // Cumulative Layout Shift
-        new PerformanceObserver((entryList) => {
-          let cls = 0;
-          entryList.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              cls += entry.value;
-            }
-          });
-          setCoreWebVitals(prev => ({ ...prev, cls }));
-        }).observe({ entryTypes: ['layout-shift'] });
+    // Check for duplicate content
+    const currentUrl = window.location.href;
+    if (currentUrl !== data.canonical) {
+      issues.push('URL mismatch with canonical');
+      score -= 5;
+    }
 
-        // Time to First Byte
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigationEntry) {
-          setCoreWebVitals(prev => ({ 
-            ...prev, 
-            ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-          }));
+    // Check for proper heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const h1Count = document.querySelectorAll('h1').length;
+    
+    if (h1Count === 0) {
+      issues.push('Missing H1 heading');
+      score -= 10;
+    } else if (h1Count > 1) {
+      issues.push('Multiple H1 headings found');
+      score -= 5;
+    }
+
+    // Check for images without alt text
+    const images = document.querySelectorAll('img');
+    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+    if (imagesWithoutAlt.length > 0) {
+      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
+      score -= Math.min(10, imagesWithoutAlt.length * 2);
+    }
+
+    // Check for internal links
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="' + window.location.origin + '"]');
+    if (internalLinks.length < 5) {
+      issues.push('Add more internal links for better site structure');
+      score -= 5;
+    }
+
+    // Check for external links
+    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href^="' + window.location.origin + '"])');
+    if (externalLinks.length > 0) {
+      externalLinks.forEach(link => {
+        if (!link.hasAttribute('rel') || !link.getAttribute('rel')?.includes('nofollow')) {
+          issues.push('External links should have rel="nofollow"');
+          score -= 2;
         }
-      } catch (error) {
-        console.warn('Core Web Vitals measurement failed:', error);
+      });
+    }
+
+    // Check for schema markup
+    if (enableStructuredData && !data.structuredData) {
+      issues.push('Missing structured data markup');
+      score -= 10;
+    }
+
+    // Check for mobile optimization
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+      issues.push('Missing viewport meta tag');
+      score -= 5;
+    }
+
+    // Check for language declaration
+    const htmlLang = document.documentElement.getAttribute('lang');
+    if (!htmlLang) {
+      issues.push('Missing HTML lang attribute');
+      score -= 5;
+    }
+
+    setSeoScore(Math.max(0, score));
+    setSeoIssues(issues);
+    setIsAnalyzing(false);
+  }, [data, enableAnalytics, enableStructuredData]);
+
+  // Performance tracking
+  const trackPerformance = useCallback(() => {
+    if (!enablePerformanceTracking) return;
+
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      const metrics = {
+        ttfb: navigation.responseStart - navigation.requestStart,
+        fcp: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        lcp: paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0,
+        domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        windowLoad: navigation.loadEventEnd - navigation.loadEventStart
+      };
+
+      setPerformanceMetrics(metrics);
+
+      // Send to analytics if available
+      if (window.gtag) {
+        window.gtag('event', 'performance_metrics', {
+          event_category: 'performance',
+          event_label: pageType,
+          value: Math.round(metrics.lcp),
+          custom_parameters: {
+            ttfb: Math.round(metrics.ttfb),
+            fcp: Math.round(metrics.fcp),
+            dom_load: Math.round(metrics.domLoad),
+            window_load: Math.round(metrics.windowLoad)
+          }
+        });
       }
     }
-  }, []);
+  }, [enablePerformanceTracking, pageType]);
 
-  // Calculate page speed score
-  const calculatePageSpeed = useCallback(() => {
-    let score = 100;
-    
-    if (coreWebVitals.fcp > 1800) score -= 20;
-    if (coreWebVitals.lcp > 2500) score -= 25;
-    if (coreWebVitals.fid > 100) score -= 15;
-    if (coreWebVitals.cls > 0.1) score -= 20;
-    if (coreWebVitals.ttfb > 600) score -= 20;
-    
-    setPageSpeed(Math.max(0, score));
-  }, [coreWebVitals]);
-
-  // Auto-optimize SEO
+  // Auto-analyze on mount
   useEffect(() => {
-    if (autoOptimize) {
-      analyzeSEO();
-    }
-  }, [autoOptimize, analyzeSEO]);
+    analyzeSEO();
+    trackPerformance();
+  }, [analyzeSEO, trackPerformance]);
 
-  // Measure performance on mount
-  useEffect(() => {
-    measureCoreWebVitals();
-    
-    const timer = setTimeout(() => {
-      measureCoreWebVitals();
-    }, 2000);
+  // Generate structured data based on page type
+  const generateStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
 
-    return () => clearTimeout(timer);
-  }, [measureCoreWebVitals]);
-
-  // Calculate page speed when core web vitals change
-  useEffect(() => {
-    if (coreWebVitals.fcp > 0) {
-      calculatePageSpeed();
-    }
-  }, [coreWebVitals, calculatePageSpeed]);
-
-  // Generate structured data
-  const generateStructuredData = useMemo(() => {
-    const structuredData = {
+    const baseData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.png",
-      "description": meta.description,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ],
+      "description": "Leading technology solutions provider specializing in AI, quantum computing, and digital transformation",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1-302-464-0950",
         "contactType": "customer service",
-        "areaServed": "US"
-      }
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ]
     };
 
-    return JSON.stringify(structuredData);
-  }, [meta.description]);
+    switch (pageType) {
+      case 'service':
+        return {
+          ...baseData,
+          "@type": "Service",
+          "name": data.title,
+          "description": data.description,
+          "provider": baseData,
+          "areaServed": "Worldwide",
+          "serviceType": "Technology Solutions"
+        };
+      
+      case 'about':
+        return {
+          ...baseData,
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "Organization",
+            ...baseData
+          }
+        };
+      
+      case 'contact':
+        return {
+          ...baseData,
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "ContactPage",
+            "name": "Contact Zion Tech Group",
+            "description": "Get in touch with our team for technology solutions"
+          }
+        };
+      
+      default:
+        return baseData;
+    }
+  }, [pageType, data, enableStructuredData]);
+
+  // Generate meta tags
+  const generateMetaTags = useCallback(() => {
+    const tags: Record<string, string> = {
+      'viewport': 'width=device-width, initial-scale=1.0',
+      'robots': 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+      'author': 'Zion Tech Group',
+      'theme-color': '#0ea5e9',
+      'msapplication-TileColor': '#0ea5e9',
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'default',
+      'format-detection': 'telephone=no',
+      ...data.metaTags
+    };
+
+    return tags;
+  }, [data.metaTags]);
+
+  const structuredData = generateStructuredData();
+  const metaTags = generateMetaTags();
 
   return (
     <>
       <Helmet>
         {/* Basic Meta Tags */}
-        <title>{defaultMeta.title}</title>
-        <meta name="description" content={defaultMeta.description} />
-        <meta name="keywords" content={defaultMeta.keywords.join(', ')} />
-        <meta name="author" content={defaultMeta.author} />
-        <meta name="robots" content={defaultMeta.robots} />
-        <meta name="language" content={defaultMeta.language} />
-        <meta charSet={defaultMeta.charset} />
-        <meta name="viewport" content={defaultMeta.viewport} />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={defaultMeta.ogTitle || defaultMeta.title} />
-        <meta property="og:description" content={defaultMeta.ogDescription || defaultMeta.description} />
-        <meta property="og:image" content={defaultMeta.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
-        <meta property="og:url" content={defaultMeta.ogUrl || window.location.href} />
-        <meta property="og:type" content="website" />
+        <title>{data.title}</title>
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords.join(', ')} />
+        <link rel="canonical" href={data.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={data.title} />
+        <meta property="og:description" content={data.description} />
+        <meta property="og:url" content={data.canonical} />
+        <meta property="og:type" content={data.ogType} />
+        {data.ogImage && <meta property="og:image" content={data.ogImage} />}
         <meta property="og:site_name" content="Zion Tech Group" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={defaultMeta.twitterCard} />
-        <meta name="twitter:title" content={defaultMeta.twitterTitle || defaultMeta.title} />
-        <meta name="twitter:description" content={defaultMeta.twitterDescription || defaultMeta.description} />
-        <meta name="twitter:image" content={defaultMeta.twitterImage || 'https://ziontechgroup.com/twitter-image.jpg'} />
-
-        {/* Canonical URL */}
-        {defaultMeta.canonicalUrl && (
-          <link rel="canonical" href={defaultMeta.canonicalUrl} />
-        )}
-
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={data.twitterCard} />
+        <meta name="twitter:title" content={data.title} />
+        <meta name="twitter:description" content={data.description} />
+        {data.ogImage && <meta name="twitter:image" content={data.ogImage} />}
+        <meta name="twitter:site" content="@ziontechgroup" />
+        
+        {/* Additional Meta Tags */}
+        {Object.entries(metaTags).map(([name, content]) => (
+          <meta key={name} name={name} content={content} />
+        ))}
+        
         {/* Structured Data */}
-        <script type="application/ld+json">
-          {generateStructuredData}
-        </script>
-
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
+        
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
-
+        
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
-        {/* Sitemap */}
-        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        
+        {/* Favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Helmet>
 
-      {/* SEO Analysis Panel */}
-      {showAnalysis && (
+      {/* SEO Analysis Panel (Development Only) */}
+      {process.env.NODE_ENV === 'development' && enableAnalytics && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed top-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4 text-white text-sm z-50 max-w-xs"
+          className="fixed top-4 right-4 z-50 w-80 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden"
         >
-          <h3 className="font-semibold mb-2 text-green-400">SEO Analysis</h3>
-          
-          {/* SEO Score */}
-          <div className="mb-3">
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-xs">SEO Score:</span>
-              <span className={`text-lg font-bold ${
-                analysis.score >= 90 ? 'text-green-400' :
-                analysis.score >= 70 ? 'text-yellow-400' : 'text-red-400'
-              }`}>
-                {analysis.score}
-              </span>
-            </div>
-            <div className="w-full bg-slate-700 rounded-full h-2">
-              <div 
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  analysis.score >= 90 ? 'bg-green-500' :
-                  analysis.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${analysis.score}%` }}
-              />
+          {/* Panel Header */}
+          <div className="bg-gradient-to-r from-green-500/20 to-blue-600/20 p-4 border-b border-slate-700/50">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Search className="w-5 h-5 text-green-400" />
+                <span>SEO Analysis</span>
+              </h3>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={analyzeSEO}
+                  disabled={isAnalyzing}
+                  className="p-2 bg-slate-800/50 text-green-400 rounded-lg hover:bg-slate-700/50 transition-colors disabled:opacity-50"
+                  title="Refresh analysis"
+                >
+                  <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Page Speed */}
-          <div className="mb-3">
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-xs">Page Speed:</span>
-              <span className={`text-sm font-bold ${
-                pageSpeed >= 90 ? 'text-green-400' :
-                pageSpeed >= 70 ? 'text-yellow-400' : 'text-red-400'
-              }`}>
-                {pageSpeed}
-              </span>
+          {/* Panel Content */}
+          <div className="p-4 space-y-4 max-h-[60vh] overflow-y-auto">
+            {/* SEO Score */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
+                SEO Score
+              </h4>
+              <div className="flex items-center space-x-3">
+                <div className="relative">
+                  <svg className="w-16 h-16 transform -rotate-90">
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="28"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="transparent"
+                      className="text-slate-700"
+                    />
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="28"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="transparent"
+                      strokeDasharray={`${(seoScore / 100) * 175.93} 175.93`}
+                      className={`text-green-400 transition-all duration-1000 ${
+                        seoScore >= 80 ? 'text-green-400' : seoScore >= 60 ? 'text-yellow-400' : 'text-red-400'
+                      }`}
+                    />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-lg font-bold text-white">{seoScore}</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-sm text-gray-400">Current Score</div>
+                  <div className={`text-lg font-semibold ${
+                    seoScore >= 80 ? 'text-green-400' : seoScore >= 60 ? 'text-yellow-400' : 'text-red-400'
+                  }`}>
+                    {seoScore >= 80 ? 'Excellent' : seoScore >= 60 ? 'Good' : 'Needs Improvement'}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Issues Found */}
+            {seoIssues.length > 0 && (
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
+                  Issues Found ({seoIssues.length})
+                </h4>
+                <div className="space-y-2">
+                  {seoIssues.slice(0, 5).map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-2 text-sm">
+                      <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{issue}</span>
+                    </div>
+                  ))}
+                  {seoIssues.length > 5 && (
+                    <div className="text-xs text-gray-500 text-center">
+                      +{seoIssues.length - 5} more issues
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Performance Metrics */}
+            {performanceMetrics && (
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
+                  Performance
+                </h4>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-slate-800/50 p-2 rounded">
+                    <div className="text-xs text-gray-400">FCP</div>
+                    <div className="text-sm font-semibold text-white">
+                      {performanceMetrics.fcp.toFixed(0)}ms
+                    </div>
+                  </div>
+                  <div className="bg-slate-800/50 p-2 rounded">
+                    <div className="text-xs text-gray-400">LCP</div>
+                    <div className="text-sm font-semibold text-white">
+                      {performanceMetrics.lcp.toFixed(0)}ms
+                    </div>
+                  </div>
+                  <div className="bg-slate-800/50 p-2 rounded">
+                    <div className="text-xs text-gray-400">TTFB</div>
+                    <div className="text-sm font-semibold text-white">
+                      {performanceMetrics.ttfb.toFixed(0)}ms
+                    </div>
+                  </div>
+                  <div className="bg-slate-800/50 p-2 rounded">
+                    <div className="text-xs text-gray-400">DOM Load</div>
+                    <div className="text-sm font-semibold text-white">
+                      {performanceMetrics.domLoad.toFixed(0)}ms
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Quick Actions */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
+                Quick Actions
+              </h4>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => window.open('https://search.google.com/test/rich-results', '_blank')}
+                  className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
+                >
+                  <Code className="w-4 h-4" />
+                  <span className="text-xs">Test Rich Results</span>
+                </button>
+                <button
+                  onClick={() => window.open('https://pagespeed.web.dev/', '_blank')}
+                  className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
+                >
+                  <Zap className="w-4 h-4" />
+                  <span className="text-xs">PageSpeed</span>
+                </button>
+              </div>
             </div>
           </div>
-
-          {/* Issues */}
-          {analysis.issues.length > 0 && (
-            <div className="mb-3 p-2 bg-red-900/20 border border-red-500/30 rounded text-xs">
-              <h4 className="text-red-400 font-medium mb-1">Issues:</h4>
-              <div className="space-y-1">
-                {analysis.issues.slice(0, 3).map((issue, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-1.5 flex-shrink-0" />
-                    <span className="text-red-300">{issue}</span>
-                  </div>
-                ))}
-                {analysis.issues.length > 3 && (
-                  <span className="text-red-400 text-xs">+{analysis.issues.length - 3} more</span>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Suggestions */}
-          {analysis.suggestions.length > 0 && (
-            <div className="mb-3 p-2 bg-blue-900/20 border border-blue-500/30 rounded text-xs">
-              <h4 className="text-blue-400 font-medium mb-1">Suggestions:</h4>
-              <div className="space-y-1">
-                {analysis.suggestions.slice(0, 2).map((suggestion, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 flex-shrink-0" />
-                    <span className="text-blue-300">{suggestion}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          <button
-            onClick={() => setShowAnalysis(false)}
-            className="w-full px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-xs font-medium transition-colors"
-          >
-            Dismiss
-          </button>
         </motion.div>
-      )}
-
-      {/* SEO Toggle Button */}
-      <motion.button
-        onClick={() => setShowAnalysis(!showAnalysis)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        title="SEO Analysis"
-        aria-label="Toggle SEO analysis panel"
-      >
-        <Search className="w-7 h-7 text-white mx-auto" />
-        {analysis.score < 80 && (
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-            <span className="text-xs text-white font-bold">
-              {Math.round(analysis.score)}
-            </span>
-          </div>
-        )}
-      </motion.button>
-
-      {/* Google Analytics */}
-      {enableAnalytics && (
-        <>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
-            `}
-          </script>
-        </>
       )}
     </>
   );
@@ -541,24 +510,14 @@ export const SEO: React.FC<SEOProps> = ({
 export function HomePageSEO() {
   return (
     <SEO
-      meta={{
+      data={{
         title: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
         description: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
         keywords: ["AI business solutions", "quantum computing", "autonomous operations", "digital transformation", "IT services", "cybersecurity", "machine learning", "neural networks"],
-        ogTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
-        ogDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
-        ogImage: "https://ziontechgroup.com/og-image.jpg",
-        ogUrl: "https://ziontechgroup.com",
-        twitterTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
-        twitterDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
-        twitterImage: "https://ziontechgroup.com/og-image.jpg",
-        canonicalUrl: "https://ziontechgroup.com",
-        robots: "index, follow",
-        language: "en",
-        author: "Zion Tech Group",
-        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        charset: "utf-8",
+        canonical: "https://ziontechgroup.com",
+        ogImage: "/images/zion-tech-group-og.jpg",
         ogType: "website",
+        twitterCard: "summary_large_image",
         structuredData: {
           "@context": "https://schema.org",
           "@type": "WebPage",
@@ -570,8 +529,17 @@ export function HomePageSEO() {
             "name": "Zion Tech Group",
             "description": "AI-powered business solutions and quantum computing services"
           }
+        },
+        metaTags: {
+          "og:title": "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          "og:description": "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          "og:image": "/images/zion-tech-group-og.jpg",
+          "twitter:title": "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          "twitter:description": "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          "twitter:image": "/images/zion-tech-group-og.jpg"
         }
       }}
+      pageType="home"
     />
   );
 }
@@ -579,24 +547,14 @@ export function HomePageSEO() {
 export function ServicesPageSEO() {
   return (
     <SEO
-      meta={{
+      data={{
         title: "AI Services, Quantum Computing & IT Solutions | Zion Tech Group",
         description: "Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure.",
         keywords: ["AI services", "quantum computing services", "IT infrastructure", "cybersecurity services", "cloud computing", "business automation", "machine learning services"],
-        ogTitle: "AI Services, Quantum Computing & IT Solutions | Zion Tech Group",
-        ogDescription: "Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure.",
-        ogImage: "https://ziontechgroup.com/og-image.jpg",
-        ogUrl: "https://ziontechgroup.com",
-        twitterTitle: "AI Services, Quantum Computing & IT Solutions | Zion Tech Group",
-        twitterDescription: "Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure.",
-        twitterImage: "https://ziontechgroup.com/og-image.jpg",
-        canonicalUrl: "https://ziontechgroup.com/services",
-        robots: "index, follow",
-        language: "en",
-        author: "Zion Tech Group",
-        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        charset: "utf-8",
+        canonical: "https://ziontechgroup.com/services",
+        ogImage: "/images/zion-tech-group-og.jpg",
         ogType: "website",
+        twitterCard: "summary_large_image",
         structuredData: {
           "@context": "https://schema.org",
           "@type": "Service",
@@ -607,8 +565,17 @@ export function ServicesPageSEO() {
           },
           "serviceType": "AI Solutions, Quantum Computing, IT Services",
           "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
+        },
+        metaTags: {
+          "og:title": "AI Services, Quantum Computing & IT Solutions | Zion Tech Group",
+          "og:description": "Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure.",
+          "og:image": "/images/zion-tech-group-og.jpg",
+          "twitter:title": "AI Services, Quantum Computing & IT Solutions | Zion Tech Group",
+          "twitter:description": "Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure.",
+          "twitter:image": "/images/zion-tech-group-og.jpg"
         }
       }}
+      pageType="service"
     />
   );
 }
@@ -616,24 +583,14 @@ export function ServicesPageSEO() {
 export function ContactPageSEO() {
   return (
     <SEO
-      meta={{
+      data={{
         title: "Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions",
         description: "Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation.",
         keywords: ["contact Zion Tech Group", "AI consulting", "quantum computing consulting", "IT consulting", "digital transformation consulting"],
-        ogTitle: "Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions",
-        ogDescription: "Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation.",
-        ogImage: "https://ziontechgroup.com/og-image.jpg",
-        ogUrl: "https://ziontechgroup.com/contact",
-        twitterTitle: "Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions",
-        twitterDescription: "Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation.",
-        twitterImage: "https://ziontechgroup.com/og-image.jpg",
-        canonicalUrl: "https://ziontechgroup.com/contact",
-        robots: "index, follow",
-        language: "en",
-        author: "Zion Tech Group",
-        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        charset: "utf-8",
+        canonical: "https://ziontechgroup.com/contact",
+        ogImage: "/images/zion-tech-group-og.jpg",
         ogType: "website",
+        twitterCard: "summary_large_image",
         structuredData: {
           "@context": "https://schema.org",
           "@type": "ContactPage",
@@ -649,8 +606,17 @@ export function ContactPageSEO() {
               "email": "info@ziontechgroup.com"
             }
           }
+        },
+        metaTags: {
+          "og:title": "Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions",
+          "og:description": "Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation.",
+          "og:image": "/images/zion-tech-group-og.jpg",
+          "twitter:title": "Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions",
+          "twitter:description": "Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation.",
+          "twitter:image": "/images/zion-tech-group-og.jpg"
         }
       }}
+      pageType="contact"
     />
   );
 }
@@ -672,24 +638,14 @@ export function BlogPostSEO({
 }) {
   return (
     <SEO
-      meta={{
+      data={{
         title: title,
         description: description,
-        keywords: ["blog", "Zion Tech Group", "technology", "IT", "AI", "quantum computing"],
-        ogTitle: title,
-        ogDescription: description,
+        keywords: ["blog", "article", "Zion Tech Group", "technology", "AI", "quantum computing"],
+        canonical: `https://ziontechgroup.com/blog/${slug}`,
         ogImage: image,
-        ogUrl: `https://ziontechgroup.com/blog/${slug}`,
-        twitterTitle: title,
-        twitterDescription: description,
-        twitterImage: image,
-        canonicalUrl: `https://ziontechgroup.com/blog/${slug}`,
-        robots: "index, follow",
-        language: "en",
-        author: author,
-        viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        charset: "utf-8",
         ogType: "article",
+        twitterCard: "summary_large_image",
         structuredData: {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
@@ -714,8 +670,17 @@ export function BlogPostSEO({
             "@type": "WebPage",
             "@id": `https://ziontechgroup.com/blog/${slug}`
           }
+        },
+        metaTags: {
+          "og:title": title,
+          "og:description": description,
+          "og:image": image,
+          "twitter:title": title,
+          "twitter:description": description,
+          "twitter:image": image
         }
       }}
+      pageType="blog"
     />
   );
 }
