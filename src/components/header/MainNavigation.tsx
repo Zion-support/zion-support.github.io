@@ -58,9 +58,11 @@ import {
   GraduationCap,
   Handshake,
   ShoppingCart,
+  Truck,
   Heart,
   Scale,
-  Home
+  Home,
+  BookOpen
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -129,6 +131,36 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                           <TrendingUp className="w-3 h-3 mr-2" />
                           AI Business Intelligence
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-enterprise-resource-planning" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Database className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Enterprise Resource Planning</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Manufacturing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Quantum Neural Network</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-space-technology-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Satellite className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Space Technology</span>
                         </Link>
                       </li>
                     </ul>
