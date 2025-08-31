@@ -9,7 +9,10 @@ import { Footer } from './components/layout/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
@@ -22,6 +25,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import FloatingActionButton from './components/FloatingActionButton';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -420,8 +424,14 @@ function App() {
             {/* User Experience Optimizer */}
             <UserExperienceOptimizer enabled={true} />
 
+            {/* Enhanced Performance Monitor */}
+            <EnhancedPerformanceMonitor />
+
+            {/* Enhanced Accessibility */}
+            <EnhancedAccessibility />
+
             {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />
+            <FloatingActionButton />
           </div>
         </Router>
       </ErrorBoundary>

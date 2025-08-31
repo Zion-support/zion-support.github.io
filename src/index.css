@@ -98,10 +98,10 @@
   
   /* Accessibility */
   --sr-only: 0 0 0 0;
+  --high-contrast: 1;
+  --reduced-motion: 1;
+  --large-text: 1;
 }
---high-contrast: 1;
---reduced-motion: 1;
---large-text: 1;
 
 /* Accessibility Classes */
 .sr-only {
