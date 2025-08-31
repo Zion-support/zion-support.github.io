@@ -222,6 +222,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI HR Platform</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-content-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <PenTool className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Content Generator</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
 

@@ -227,6 +227,7 @@ const AIAutonomousBusiness = createLazyComponent(() => import('./pages/solutions
 const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/BlockchainWeb3'));
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
+const CloudMigration = createLazyComponent(() => import('./pages/solutions/CloudMigration'));
 
 // New Innovative Services 2025
 const AICustomerIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-customer-intelligence-platform'));
@@ -486,6 +487,7 @@ function App() {
                     <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
                     <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
                     <Route path="/solutions/space-tech" element={<SpaceTech />} />
+                    <Route path="/solutions/cloud-migration" element={<CloudMigration />} />
 
                     {/* New Innovative Services 2025 */}
                     <Route path="/services/ai-enterprise-workflow-automation" element={<AIEnterpriseWorkflowAutomation />} />
