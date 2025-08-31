@@ -31,25 +31,6 @@ export default {
         'gap-properties': true,
         'double-position-gradients': true
       }
-    },
-    'cssnano': {
-      preset: ['default', {
-        discardComments: {
-          removeAll: true,
-        },
-        normalizeWhitespace: false,
-        colormin: true,
-        minifyFontValues: true,
-        minifyGradients: true,
-        minifySelectors: true,
-        mergeLonghand: true,
-        mergeRules: true,
-        reduceIdents: false,
-        reduceInitial: true,
-        reduceTransforms: true,
-        uniqueSelectors: true,
-        zindex: false
-      }]
     }
   }
 }
