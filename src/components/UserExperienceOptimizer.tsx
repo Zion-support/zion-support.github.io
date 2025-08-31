@@ -1,438 +1,385 @@
-import React, { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  MousePointer, 
-  Zap, 
-  TrendingUp, 
-  Eye, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
   Clock, 
-  Target,
+  Star, 
+  Users, 
+  Award,
   CheckCircle,
-  AlertCircle,
-  Loader2
+  ArrowRight,
+  X,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
-interface UXMetrics {
-  scrollDepth: number;
-  timeOnPage: number;
-  interactions: number;
-  loadTime: number;
-  errors: number;
-}
-
-interface UserExperienceOptimizerProps {
-  enabled?: boolean;
-  enableSmoothScrolling?: boolean;
-  enableLoadingStates?: boolean;
-  enableInteractionTracking?: boolean;
-  enablePerformanceMonitoring?: boolean;
-}
-
-export const UserExperienceOptimizer: React.FC<UserExperienceOptimizerProps> = ({
-  enabled = true,
-  enableSmoothScrolling = true,
-  enableLoadingStates = true,
-  enableInteractionTracking = true,
-  enablePerformanceMonitoring = true,
-}) => {
-  const [metrics, setMetrics] = useState<UXMetrics>({
-    scrollDepth: 0,
-    timeOnPage: 0,
-    interactions: 0,
-    loadTime: 0,
-    errors: 0,
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [showMetrics, setShowMetrics] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  
-  const startTime = useRef(Date.now());
-  const interactionCount = useRef(0);
-  const errorCount = useRef(0);
-  const scrollTimeout = useRef<NodeJS.Timeout>();
-
-  // Smooth scrolling enhancement
-  const setupSmoothScrolling = useCallback(() => {
-    if (!enableSmoothScrolling) return;
-
-    // Add smooth scrolling to all internal links
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    internalLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-          });
-        }
-      });
-    });
-
-    // Enhanced scroll behavior for the page
-    document.documentElement.style.scrollBehavior = 'smooth';
-  }, [enableSmoothScrolling]);
-
-  // Loading states management
-  const setupLoadingStates = useCallback(() => {
-    if (!enableLoadingStates) return;
-
-    // Show loading state for navigation
-    const handleBeforeUnload = () => {
-      setIsLoading(true);
-    };
-
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    window.addEventListener('load', handleLoad);
-
-    // Add loading states to forms
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', () => {
-        setIsLoading(true);
-      });
-    });
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.removeEventListener('load', handleLoad);
-    };
-  }, [enableLoadingStates]);
-
-  // Interaction tracking
-  const setupInteractionTracking = useCallback(() => {
-    if (!enableInteractionTracking) return;
-
-    const trackInteraction = () => {
-      interactionCount.current++;
-      setMetrics(prev => ({ ...prev, interactions: interactionCount.current }));
-    };
-
-    // Track clicks
-    document.addEventListener('click', trackInteraction);
-    
-    // Track form interactions
-    document.addEventListener('input', trackInteraction);
-    document.addEventListener('change', trackInteraction);
-    
-    // Track scroll depth
-    const trackScrollDepth = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      
-      setScrollProgress(Math.min(scrollPercent, 100));
-      setMetrics(prev => ({ ...prev, scrollDepth: Math.round(scrollPercent) }));
-    };
-
-    // Throttled scroll tracking
-    const throttledScrollTrack = () => {
-      if (scrollTimeout.current) return;
-      
-      scrollTimeout.current = setTimeout(() => {
-        trackScrollDepth();
-        scrollTimeout.current = undefined;
-      }, 100);
-    };
-
-    window.addEventListener('scroll', throttledScrollTrack);
-
-    return () => {
-      document.removeEventListener('click', trackInteraction);
-      document.removeEventListener('input', trackInteraction);
-      document.removeEventListener('change', trackInteraction);
-      window.removeEventListener('scroll', throttledScrollTrack);
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-    };
-  }, [enableInteractionTracking]);
-
-  // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {
-    if (!enablePerformanceMonitoring) return;
-
-    // Monitor page load time
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime: Math.round(loadTime) }));
-
-    // Monitor errors
-    const handleError = (event: ErrorEvent) => {
-      errorCount.current++;
-      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
-      console.warn('UX Error detected:', event.error);
-    };
-
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      errorCount.current++;
-      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
-      console.warn('UX Unhandled rejection:', event.reason);
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, [enablePerformanceMonitoring]);
-
-  // Time tracking
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
-      setMetrics(prev => ({ ...prev, timeOnPage: timeSpent }));
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Setup all UX optimizations
-  useEffect(() => {
-    if (!enabled) return;
-
-    const cleanupSmooth = setupSmoothScrolling();
-    const cleanupLoading = setupLoadingStates();
-    const cleanupInteraction = setupInteractionTracking();
-    const cleanupPerformance = setupPerformanceMonitoring();
-
-    return () => {
-      cleanupSmooth?.();
-      cleanupLoading?.();
-      cleanupInteraction?.();
-      cleanupPerformance?.();
-    };
-  }, [
-    enabled,
-    setupSmoothScrolling,
-    setupLoadingStates,
-    setupInteractionTracking,
-    setupPerformanceMonitoring
+// Interactive Chat Widget
+export const InteractiveChatWidget: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      type: 'bot',
+      content: 'Hello! How can I help you today?',
+      timestamp: new Date()
+    }
   ]);
+  const [inputValue, setInputValue] = useState('');
 
-  // Enhanced hover effects
-  useEffect(() => {
-    if (!enabled) return;
+  const quickReplies = [
+    'Tell me about your services',
+    'Get a quote',
+    'Schedule a consultation',
+    'Technical support'
+  ];
 
-    // Add enhanced hover effects to interactive elements
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+  const handleQuickReply = (reply: string) => {
+    setMessages(prev => [...prev, {
+      id: prev.length + 1,
+      type: 'user',
+      content: reply,
+      timestamp: new Date()
+    }]);
     
-    interactiveElements.forEach(element => {
-      element.addEventListener('mouseenter', () => {
-        element.classList.add('enhanced-hover');
-      });
-      
-      element.addEventListener('mouseleave', () => {
-        element.classList.remove('enhanced-hover');
-      });
-    });
+    // Simulate bot response
+    setTimeout(() => {
+      setMessages(prev => [...prev, {
+        id: prev.length + 1,
+        type: 'bot',
+        content: `Thanks for asking about "${reply}". Let me connect you with our team.`,
+        timestamp: new Date()
+      }]);
+    }, 1000);
+  };
 
-    // Add CSS for enhanced hover effects
-    const style = document.createElement('style');
-    style.textContent = `
-      .enhanced-hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      }
-      
-      .ux-loading {
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .ux-loading::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-        animation: loading-shimmer 1.5s infinite;
-      }
-      
-      @keyframes loading-shimmer {
-        0% { left: -100%; }
-        100% { left: 100%; }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, [enabled]);
-
-  if (!enabled) return null;
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return;
+    
+    setMessages(prev => [...prev, {
+      id: prev.length + 1,
+      type: 'user',
+      content: inputValue,
+      timestamp: new Date()
+    }]);
+    setInputValue('');
+  };
 
   return (
     <>
-      {/* UX Metrics Toggle Button */}
+      {/* Chat Toggle Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 z-50 bg-zion-cyan text-white p-4 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-colors"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setShowMetrics(!showMetrics)}
-        className="fixed bottom-4 right-20 z-50 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        aria-label="UX Metrics"
-        aria-expanded={showMetrics}
+        aria-label="Open chat"
       >
-        <TrendingUp className="w-6 h-6" />
+        <MessageCircle className="w-6 h-6" />
       </motion.button>
 
-      {/* UX Metrics Panel */}
+      {/* Chat Widget */}
       <AnimatePresence>
-        {showMetrics && (
+        {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className="fixed bottom-20 right-4 z-40 bg-slate-900/95 backdrop-blur-lg border border-green-500/30 rounded-2xl p-6 w-80 max-h-96 overflow-y-auto"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            className="fixed bottom-24 right-6 z-50 w-96 bg-white rounded-lg shadow-2xl border border-gray-200"
           >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400" />
-                UX Metrics
-              </h3>
-              <button
-                onClick={() => setShowMetrics(false)}
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Close UX metrics panel"
-              >
-                ×
-              </button>
+            {/* Header */}
+            <div className="bg-gradient-to-r from-zion-slate-dark to-zion-purple text-white p-4 rounded-t-lg">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-semibold">Zion Tech Group Support</h3>
+                  <p className="text-sm text-zion-cyan">We're here to help!</p>
+                </div>
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setIsMinimized(!isMinimized)}
+                    className="p-1 hover:bg-white/20 rounded"
+                    aria-label={isMinimized ? 'Expand chat' : 'Minimize chat'}
+                  >
+                    {isMinimized ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                  </button>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="p-1 hover:bg-white/20 rounded"
+                    aria-label="Close chat"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              {/* Scroll Progress */}
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-gray-300">Scroll Progress</span>
-                  <span className="text-green-400 font-semibold">{Math.round(scrollProgress)}%</span>
+            {/* Chat Content */}
+            {!isMinimized && (
+              <div className="h-96 flex flex-col">
+                {/* Messages */}
+                <div className="flex-1 p-4 overflow-y-auto space-y-3">
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                    >
+                      <div
+                        className={`max-w-xs p-3 rounded-lg ${
+                          message.type === 'user'
+                            ? 'bg-zion-cyan text-white'
+                            : 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        <p className="text-sm">{message.content}</p>
+                        <p className="text-xs opacity-70 mt-1">
+                          {message.timestamp.toLocaleTimeString()}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="w-full bg-slate-700 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${scrollProgress}%` }}
-                  />
-                </div>
-              </div>
 
-              {/* Time on Page */}
-              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm">Time on Page</span>
-                </div>
-                <span className="text-green-400 font-semibold">
-                  {Math.floor(metrics.timeOnPage / 60)}:{(metrics.timeOnPage % 60).toString().padStart(2, '0')}
-                </span>
-              </div>
-
-              {/* Interactions */}
-              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <MousePointer className="w-4 h-4" />
-                  <span className="text-sm">Interactions</span>
-                </div>
-                <span className="text-blue-400 font-semibold">{metrics.interactions}</span>
-              </div>
-
-              {/* Load Time */}
-              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Zap className="w-4 h-4" />
-                  <span className="text-sm">Load Time</span>
-                </div>
-                <span className="text-purple-400 font-semibold">{metrics.loadTime}ms</span>
-              </div>
-
-              {/* Errors */}
-              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <AlertCircle className="w-4 h-4" />
-                  <span className="text-sm">Errors</span>
-                </div>
-                <span className={`font-semibold ${metrics.errors > 0 ? 'text-red-400' : 'text-green-400'}`}>
-                  {metrics.errors}
-                </span>
-              </div>
-
-              {/* Performance Indicators */}
-              <div className="pt-4 border-t border-slate-700">
-                <h4 className="text-sm font-medium text-white mb-2">Performance</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-gray-400">Scroll Depth</span>
-                    <span className={`font-semibold ${
-                      metrics.scrollDepth > 80 ? 'text-green-400' : 
-                      metrics.scrollDepth > 50 ? 'text-yellow-400' : 'text-red-400'
-                    }`}>
-                      {metrics.scrollDepth > 80 ? 'Excellent' : 
-                       metrics.scrollDepth > 50 ? 'Good' : 'Needs Improvement'}
-                    </span>
+                {/* Quick Replies */}
+                {messages.length === 1 && (
+                  <div className="px-4 pb-2">
+                    <div className="flex flex-wrap gap-2">
+                      {quickReplies.map((reply) => (
+                        <button
+                          key={reply}
+                          onClick={() => handleQuickReply(reply)}
+                          className="px-3 py-1 text-xs bg-zion-cyan/10 text-zion-cyan rounded-full hover:bg-zion-cyan/20 transition-colors"
+                        >
+                          {reply}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-gray-400">Engagement</span>
-                    <span className={`font-semibold ${
-                      metrics.interactions > 10 ? 'text-green-400' : 
-                      metrics.interactions > 5 ? 'text-yellow-400' : 'text-red-400'
-                    }`}>
-                      {metrics.interactions > 10 ? 'High' : 
-                       metrics.interactions > 5 ? 'Medium' : 'Low'}
-                    </span>
+                )}
+
+                {/* Input */}
+                <div className="p-4 border-t border-gray-200">
+                  <div className="flex space-x-2">
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      placeholder="Type your message..."
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    />
+                    <button
+                      onClick={handleSendMessage}
+                      className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                      aria-label="Send message"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Global Loading Indicator */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-center justify-center"
-          >
-            <div className="bg-slate-900/95 border border-slate-700/50 rounded-2xl p-8 text-center">
-              <Loader2 className="w-12 h-12 text-green-400 animate-spin mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Loading...</h3>
-              <p className="text-gray-400">Please wait while we process your request</p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Scroll to Top Button */}
-      {scrollProgress > 20 && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-20 right-4 z-40 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          aria-label="Scroll to top"
-        >
-          <Target className="w-6 h-6" />
-        </motion.button>
-      )}
     </>
+  );
+};
+
+// Enhanced Call-to-Action Component
+interface EnhancedCTAProps {
+  title: string;
+  description: string;
+  primaryAction: {
+    text: string;
+    href: string;
+    variant?: 'primary' | 'secondary' | 'outline';
+  };
+  secondaryAction?: {
+    text: string;
+    href: string;
+  };
+  features?: string[];
+  className?: string;
+}
+
+export const EnhancedCTA: React.FC<EnhancedCTAProps> = ({
+  title,
+  description,
+  primaryAction,
+  secondaryAction,
+  features,
+  className = ''
+}) => {
+  const getButtonClasses = (variant: string = 'primary') => {
+    const baseClasses = 'inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2';
+    
+    switch (variant) {
+      case 'primary':
+        return `${baseClasses} bg-zion-cyan text-white hover:bg-zion-cyan/90 focus:ring-zion-cyan/50`;
+      case 'secondary':
+        return `${baseClasses} bg-zion-purple text-white hover:bg-zion-purple/90 focus:ring-zion-purple/50`;
+      case 'outline':
+        return `${baseClasses} border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white focus:ring-zion-cyan/50`;
+      default:
+        return baseClasses;
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className={`bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 text-center ${className}`}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
+      <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">{description}</p>
+      
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href={primaryAction.href} className={getButtonClasses(primaryAction.variant)}>
+          {primaryAction.text}
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </a>
+        
+        {secondaryAction && (
+          <a href={secondaryAction.href} className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+            {secondaryAction.text}
+          </a>
+        )}
+      </div>
+
+      {features && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="flex items-center space-x-3 text-zion-cyan"
+            >
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+              <span className="text-white">{feature}</span>
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
+// Trust Signals Component
+export const TrustSignals: React.FC = () => {
+  const signals = [
+    { icon: Users, text: '500+ Clients Worldwide', color: 'text-blue-400' },
+    { icon: Award, text: 'ISO 27001 Certified', color: 'text-yellow-400' },
+    { icon: Star, text: '4.9/5 Customer Rating', color: 'text-green-400' },
+    { icon: Clock, text: '24/7 Support Available', color: 'text-purple-400' }
+  ];
+
+  return (
+    <div className="py-12 bg-slate-800/50">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {signals.map((signal, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className={`${signal.color} mb-3 flex justify-center`}>
+                <signal.icon className="w-12 h-12" />
+              </div>
+              <p className="text-white font-medium">{signal.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Accessibility Enhancement Component
+export const AccessibilityEnhancer: React.FC = () => {
+  const [fontSize, setFontSize] = useState(16);
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (highContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+  }, [highContrast]);
+
+  useEffect(() => {
+    if (reducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+  }, [reducedMotion]);
+
+  return (
+    <div className="fixed top-20 right-4 z-40 bg-white rounded-lg shadow-lg border border-gray-200 p-4">
+      <h3 className="font-semibold text-gray-900 mb-3">Accessibility</h3>
+      
+      <div className="space-y-3">
+        <div>
+          <label className="block text-sm text-gray-600 mb-1">Font Size</label>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setFontSize(Math.max(12, fontSize - 2))}
+              className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <span className="text-sm w-8 text-center">{fontSize}px</span>
+            <button
+              onClick={() => setFontSize(Math.min(24, fontSize + 2))}
+              className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            id="highContrast"
+            checked={highContrast}
+            onChange={(e) => setHighContrast(e.target.checked)}
+            className="rounded"
+          />
+          <label htmlFor="highContrast" className="text-sm text-gray-600">
+            High Contrast
+          </label>
+        </div>
+
+        <div className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            id="reducedMotion"
+            checked={reducedMotion}
+            onChange={(e) => setReducedMotion(e.target.checked)}
+            className="rounded"
+          />
+          <label htmlFor="reducedMotion" className="text-sm text-gray-600">
+            Reduced Motion
+          </label>
+        </div>
+      </div>
+    </div>
   );
 };

@@ -15,7 +15,7 @@ import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
 import { AIContentOptimizer } from './components/AIContentOptimizer';
 import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
-import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
+import { InteractiveChatWidget, EnhancedCTA, TrustSignals, AccessibilityEnhancer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
