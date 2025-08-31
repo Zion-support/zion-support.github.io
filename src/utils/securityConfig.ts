@@ -46,15 +46,13 @@ export const securityConfig = {
     'form-action': ["'self'"],
     'frame-ancestors': ["'self'"],
     'upgrade-insecure-requests': [],
-  
-
-},
+  },
 
   // Security Headers
   headers: {
-    'X-Content-Type-Options': 'nosniff',;
-    'X-Frame-Options': 'DENY',;
-    'X-XSS-Protection': '1; mode = block',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
@@ -64,7 +62,7 @@ export const securityConfig = {
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-    message: 'Too m requests from this IP, please try again later.',
+    message: 'Too many requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false,
   },
