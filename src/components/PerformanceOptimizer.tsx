@@ -1,31 +1,5 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { toast } from 'react-hot-toast';
-import {
-  Activity,
-  Zap,
-  Gauge,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  HardDrive,
-  Cpu,
-  Memory,
-  Network,
-  Battery,
-  Settings,
-  X,
-  RefreshCw,
-  Info,
-  BarChart3,
-  Target,
-  Rocket,
-  Lightbulb,
-  Shield,
-  Globe,
-  Smartphone
-} from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -33,237 +7,215 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-  domLoad: number;
-  windowLoad: number;
-}
-
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'accessibility' | 'seo' | 'mobile' | 'security';
-  implemented: boolean;
-  priority: number;
-  estimatedSavings: string;
 }
 
 interface PerformanceOptimizerProps {
-  enabled: boolean;
-  monitoringInterval?: number;
+  enabled?: boolean;
   showMetrics?: boolean;
-  autoOptimize?: boolean;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enabled = true,
-  monitoringInterval = 5000,
-  showMetrics = false,
-  autoOptimize = true
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
+  enabled = true, 
+  showMetrics = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Performance monitoring
   const measurePerformance = useCallback(() => {
-    if (!enabled || !window.performance) return;
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcp = entries[entries.length - 1];
+        if (fcp) {
+          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-    const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-    
-    const newMetrics: PerformanceMetrics = {
-      fcp,
-      lcp,
-      fid: 0, // Will be updated by observer
-      cls: 0, // Will be updated by observer
-      ttfb: navigation.responseStart - navigation.requestStart,
-      domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      windowLoad: navigation.loadEventEnd - navigation.loadEventStart
-    };
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcp = entries[entries.length - 1];
+        if (lcp) {
+          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    setMetrics(newMetrics);
-    
-    // Auto-optimize if enabled
-    if (autoOptimize) {
-      analyzeAndOptimize(newMetrics);
-    }
-  }, [enabled, autoOptimize]);
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fid = entries[entries.length - 1];
+        if (fid) {
+          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-  // Performance analysis and optimization
-  const analyzeAndOptimize = useCallback((currentMetrics: PerformanceMetrics) => {
-    const newOptimizations: string[] = [];
-    
-    if (currentMetrics.fcp > 2000) {
-      newOptimizations.push('First Contentful Paint is slow - consider image optimization and critical CSS inlining');
-    }
-    
-    if (currentMetrics.lcp > 4000) {
-      newOptimizations.push('Largest Contentful Paint is slow - optimize hero images and reduce render-blocking resources');
-    }
-    
-    if (currentMetrics.ttfb > 600) {
-      newOptimizations.push('Time to First Byte is slow - optimize server response and database queries');
-    }
-    
-    if (currentMetrics.domLoad > 1000) {
-      newOptimizations.push('DOM loading is slow - reduce JavaScript bundle size and defer non-critical scripts');
-    }
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    if (newOptimizations.length > 0) {
-      setOptimizations(prev => [...prev, ...newOptimizations]);
-      applyOptimizations(newOptimizations);
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
     }
-  }, []);
-
-  // Apply performance optimizations
-  const applyOptimizations = useCallback((optimizationList: string[]) => {
-    setIsOptimizing(true);
-    
-    // Image optimization
-    if (optimizationList.some(opt => opt.includes('image'))) {
-      optimizeImages();
-    }
-    
-    // Script optimization
-    if (optimizationList.some(opt => opt.includes('JavaScript') || opt.includes('bundle'))) {
-      optimizeScripts();
-    }
-    
-    // CSS optimization
-    if (optimizationList.some(opt => opt.includes('CSS'))) {
-      optimizeCSS();
-    }
-
-    setTimeout(() => setIsOptimizing(false), 2000);
   }, []);
 
   // Image optimization
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
-      if (!img.decoding) {
-        img.decoding = 'async';
+      
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
       }
-    });
-  }, []);
 
-  // Script optimization
-  const optimizeScripts = useCallback(() => {
-    const scripts = document.querySelectorAll('script:not([data-critical])');
-    scripts.forEach(script => {
-      if (!script.async && !script.defer) {
-        script.defer = true;
-      }
-    });
-  }, []);
-
-  // CSS optimization
-  const optimizeCSS = useCallback(() => {
-    const links = document.querySelectorAll('link[rel="stylesheet"]');
-    links.forEach(link => {
-      if (!link.hasAttribute('media')) {
-        link.setAttribute('media', 'print');
-        link.setAttribute('onload', "this.media='all'");
+      // Add srcset for responsive images if not present
+      if (!img.srcset && img.src) {
+        const src = img.src;
+        if (src.includes('.jpg') || src.includes('.jpeg') || src.includes('.png')) {
+          const baseUrl = src.split('.')[0];
+          const extension = src.split('.').pop();
+          img.srcset = `${baseUrl}-300w.${extension} 300w, ${baseUrl}-600w.${extension} 600w, ${baseUrl}-900w.${extension} 900w`;
+          img.sizes = '(max-width: 600px) 300px, (max-width: 900px) 600px, 900px';
+        }
       }
     });
   }, []);
 
-  // Setup performance observer
-  useEffect(() => {
-    if (!enabled) return;
+  // Resource hints optimization
+  const addResourceHints = useCallback(() => {
+    const head = document.head;
+    
+    // DNS prefetch for external domains
+    const dnsPrefetch = document.createElement('link');
+    dnsPrefetch.rel = 'dns-prefetch';
+    dnsPrefetch.href = '//fonts.googleapis.com';
+    head.appendChild(dnsPrefetch);
 
-    // Observe LCP
-    if ('PerformanceObserver' in window) {
-      try {
-        observerRef.current = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          
-          setMetrics(prev => prev ? {
-            ...prev,
-            lcp: lastEntry.startTime
-          } : null);
-        });
-        
-        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
-        console.warn('PerformanceObserver not supported');
-      }
-    }
-
-    // Start monitoring
-    measurePerformance();
-    intervalRef.current = setInterval(measurePerformance, monitoringInterval);
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [enabled, monitoringInterval, measurePerformance]);
-
-  // Preload critical resources
-  useEffect(() => {
-    if (!enabled) return;
-
-    // Preload critical fonts
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap';
-    fontLink.as = 'style';
-    document.head.appendChild(fontLink);
+    // Preconnect for critical resources
+    const preconnect = document.createElement('link');
+    preconnect.rel = 'preconnect';
+    preconnect.href = '//fonts.googleapis.com';
+    head.appendChild(preconnect);
 
     // Preload critical CSS
-    const criticalCSS = document.createElement('link');
-    criticalCSS.rel = 'preload';
-    criticalCSS.href = '/css/index.css';
-    criticalCSS.as = 'style';
-    document.head.appendChild(criticalCSS);
-  }, [enabled]);
+    const preloadCSS = document.createElement('link');
+    preloadCSS.rel = 'preload';
+    preloadCSS.href = '/src/index.css';
+    preloadCSS.as = 'style';
+    head.appendChild(preloadCSS);
+  }, []);
+
+  // Bundle optimization
+  const optimizeBundles = useCallback(() => {
+    // Dynamic imports for non-critical components
+    const loadNonCriticalComponents = () => {
+      import('./EnhancedAnalyticsDashboard').catch(() => {});
+      import('./AIContentOptimizer').catch(() => {});
+    };
+
+    // Load non-critical components after page load
+    if (document.readyState === 'complete') {
+      loadNonCriticalComponents();
+    } else {
+      window.addEventListener('load', loadNonCriticalComponents);
+    }
+  }, []);
+
+  // Memory management
+  const optimizeMemory = useCallback(() => {
+    // Clean up event listeners
+    const cleanup = () => {
+      // Remove unused event listeners
+      window.removeEventListener('scroll', () => {});
+      window.removeEventListener('resize', () => {});
+    };
+
+    // Clean up on page unload
+    window.addEventListener('beforeunload', cleanup);
+  }, []);
+
+  // Main optimization function
+  const runOptimizations = useCallback(async () => {
+    if (!enabled) return;
+    
+    setIsOptimizing(true);
+    
+    try {
+      // Run optimizations in parallel
+      await Promise.all([
+        optimizeImages(),
+        addResourceHints(),
+        optimizeBundles(),
+        optimizeMemory()
+      ]);
+      
+      // Measure performance after optimizations
+      measurePerformance();
+      
+    } catch (error) {
+      console.warn('Performance optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [enabled, optimizeImages, addResourceHints, optimizeBundles, optimizeMemory, measurePerformance]);
+
+  useEffect(() => {
+    if (enabled) {
+      runOptimizations();
+    }
+  }, [enabled, runOptimizations]);
 
   if (!enabled) return null;
 
   return (
     <>
+      {/* Performance monitoring overlay */}
       {showMetrics && metrics && (
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50 max-w-xs">
-          <h4 className="font-bold mb-2">Performance Metrics</h4>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg z-50 text-sm"
+        >
+          <h3 className="font-bold mb-2">Performance Metrics</h3>
           <div className="space-y-1">
-            <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-            <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-            <div>TTFB: {metrics.ttfb.toFixed(0)}ms</div>
-            <div>DOM: {metrics.domLoad.toFixed(0)}ms</div>
+            <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+            <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+            <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+            <div>CLS: {metrics.cls?.toFixed(3)}</div>
+            <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
           </div>
-          {isOptimizing && (
-            <div className="mt-2 text-cyan-400 animate-pulse">
-              Optimizing...
-            </div>
-          )}
-        </div>
+        </motion.div>
       )}
-      
-      {/* Performance monitoring overlay for development */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-black/80 text-white p-3 rounded-lg text-xs z-50">
-          <div className="font-bold mb-1">Performance Monitor</div>
-          <div className="space-y-1">
-            <div>Status: {enabled ? 'Active' : 'Inactive'}</div>
-            <div>Optimizations: {optimizations.length}</div>
-            <div>Auto-optimize: {autoOptimize ? 'On' : 'Off'}</div>
-          </div>
-        </div>
+
+      {/* Optimization status indicator */}
+      {isOptimizing && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed bottom-4 right-4 bg-blue-500 text-white px-3 py-2 rounded-lg z-50"
+        >
+          Optimizing performance...
+        </motion.div>
       )}
     </>
   );

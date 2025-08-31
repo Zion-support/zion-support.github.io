@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { MobileResponsivenessEnhancer } from './components/MobileResponsivenessEnhancer';
 import { SEO } from './components/SEO';
 import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -187,13 +188,21 @@ function App() {
             <Footer />
 
             {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
+            <PerformanceOptimizer enabled={true} showMetrics={false} />
 
             {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+            <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
+
+            {/* Mobile Responsiveness Enhancer */}
+            <MobileResponsivenessEnhancer 
+              enabled={true} 
+              showMobileIndicator={false}
+              enableTouchGestures={true}
+              enableMobileOptimizations={true}
+            />
 
             {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={true} />
+            <AdvancedAnalytics enabled={true} showMetrics={false} />
 
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />
