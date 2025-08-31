@@ -129,9 +129,6 @@ const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
 // Additional pages
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const Partners = createLazyComponent(() => import('./pages/Partners'));
-const News = createLazyComponent(() => import('./pages/News'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 
 // Error fallback component
