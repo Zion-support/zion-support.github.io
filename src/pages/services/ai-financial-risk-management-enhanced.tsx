@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Truck,
+  Shield,
   TrendingUp,
   CheckCircle,
   Star,
@@ -11,7 +11,6 @@ import {
   Target,
   BarChart3,
   Zap,
-  Shield,
   Clock,
   DollarSign,
   Phone,
@@ -38,121 +37,139 @@ import {
   Briefcase,
   Globe,
   Building,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Bike,
-  Motorcycle,
-  Bus,
-  Truck as TruckIcon,
-  Ship as ShipIcon,
-  Plane as PlaneIcon,
-  Train as TrainIcon,
-  Car as CarIcon,
-  Bike as BikeIcon,
-  Motorcycle as MotorcycleIcon,
-  Bus as BusIcon,
-  Package as PackageIcon,
-  Route as RouteIcon,
-  Warehouse as WarehouseIcon,
-  Factory as FactoryIcon
+  Coins,
+  CreditCard,
+  PiggyBank,
+  TrendingDown,
+  ArrowUpDown,
+  RefreshCw,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  FileCheck,
+  Scale,
+  Gavel,
+  BookOpen as BookOpenIcon,
+  Clipboard,
+  Calculator,
+  Receipt,
+  PieChart,
+  LineChart,
+  BarChart,
+  Activity as ActivityIcon,
+  TrendingUp as TrendingUpIcon,
+  TrendingDown as TrendingDownIcon,
+  DollarSign as DollarSignIcon,
+  Coins as CoinsIcon,
+  CreditCard as CreditCardIcon,
+  PiggyBank as PiggyBankIcon,
+  ArrowUpDown as ArrowUpDownIcon,
+  RefreshCw as RefreshCwIcon,
+  AlertCircle as AlertCircleIcon,
+  Info as InfoIcon,
+  HelpCircle as HelpCircleIcon,
+  FileCheck as FileCheckIcon,
+  Scale as ScaleIcon,
+  Gavel as GavelIcon,
+  BookOpen as BookOpenIcon2,
+  Clipboard as ClipboardIcon,
+  Calculator as CalculatorIcon,
+  Receipt as ReceiptIcon,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  BarChart as BarChartIcon
 } from 'lucide-react';
 
-const AISupplyChainOptimizationEnhanced: React.FC = () => {
+const AIFinancialRiskManagementEnhanced: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Demand Forecasting",
-      description: "Predict demand patterns with 95% accuracy using machine learning algorithms"
-    },
-    {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "Optimize delivery routes reducing costs by up to 30% and improving delivery times"
-    },
-    {
-      icon: Warehouse,
-      title: "Smart Inventory Management",
-      description: "Automated inventory tracking with real-time alerts and predictive restocking"
-    },
-    {
-      icon: Truck,
-      title: "Fleet Management & Tracking",
-      description: "Real-time GPS tracking, fuel optimization, and maintenance scheduling"
-    },
-    {
-      icon: BarChart3,
-      title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into supply chain performance and optimization opportunities"
+      title: "AI-Powered Risk Assessment",
+      description: "Advanced machine learning algorithms for real-time risk identification and scoring"
     },
     {
       icon: Shield,
-      title: "Risk Management & Compliance",
-      description: "Identify and mitigate supply chain risks with AI-powered threat detection"
+      title: "Comprehensive Risk Monitoring",
+      description: "24/7 monitoring of market risks, credit risks, and operational risks with instant alerts"
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Risk Analytics",
+      description: "Forecast potential risks using historical data and market trends with 90%+ accuracy"
+    },
+    {
+      icon: Workflow,
+      title: "Automated Risk Mitigation",
+      description: "Intelligent workflows for automatic risk response and mitigation strategies"
+    },
+    {
+      icon: Eye,
+      title: "Real-time Risk Dashboard",
+      description: "Comprehensive visualization of risk metrics, trends, and exposure levels"
+    },
+    {
+      icon: AlertCircle,
+      title: "Early Warning System",
+      description: "Proactive alerts for emerging risks before they impact your business"
     }
   ];
 
   const benefits = [
-    "Reduce supply chain costs by 25-40%",
-    "Improve delivery accuracy by 95%",
-    "Reduce inventory carrying costs by 30%",
-    "Increase supplier performance by 45%",
-    "Reduce lead times by 35%",
-    "Improve customer satisfaction by 60%"
+    "Reduce financial losses by 40-60%",
+    "Improve risk assessment accuracy by 85%",
+    "Reduce compliance violations by 75%",
+    "Increase risk-adjusted returns by 30%",
+    "Reduce manual risk monitoring by 70%",
+    "Improve regulatory compliance by 90%"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$499",
+      price: "$399",
       period: "/month",
-      description: "Perfect for small businesses starting their supply chain optimization journey",
+      description: "Perfect for small businesses starting their risk management journey",
       features: [
-        "Up to 100 SKUs",
-        "Basic demand forecasting",
-        "Route optimization",
-        "Inventory tracking",
-        "Email support",
-        "Standard reporting"
+        "Up to $10M portfolio value",
+        "Basic risk assessment",
+        "Standard monitoring",
+        "Email alerts",
+        "Core risk dashboard",
+        "Basic reporting"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chain operations",
+      description: "Ideal for growing businesses with complex financial operations",
       features: [
-        "Up to 1,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-modal optimization",
-        "Real-time tracking",
-        "Priority support",
+        "Up to $100M portfolio value",
+        "Advanced AI risk models",
+        "Real-time monitoring",
+        "Priority alerts",
+        "Advanced analytics",
         "Custom integrations",
-        "Advanced analytics"
+        "Compliance tracking"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with global supply chain operations",
+      description: "For large organizations with complex risk management needs",
       features: [
-        "Unlimited SKUs",
+        "Unlimited portfolio value",
         "Custom AI models",
-        "Global optimization",
         "White-label solution",
-        "Dedicated account manager",
+        "Dedicated risk manager",
         "Advanced security",
-        "Custom development"
+        "Custom development",
+        "Regulatory compliance"
       ],
       cta: "Contact Sales",
       popular: false
@@ -161,47 +178,47 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
 
   const useCases = [
     {
-      title: "E-commerce & Retail",
-      description: "Optimize inventory, reduce shipping costs, and improve delivery times",
-      icon: ShoppingCart
+      title: "Investment Management",
+      description: "Portfolio risk assessment, market risk monitoring, and compliance tracking",
+      icon: PieChart
     },
     {
-      title: "Manufacturing",
-      description: "Streamline production planning, reduce lead times, and optimize supplier networks",
-      icon: Factory
+      title: "Banking & Finance",
+      description: "Credit risk assessment, operational risk monitoring, and regulatory compliance",
+      icon: Coins
     },
     {
-      title: "Logistics & Transportation",
-      description: "Optimize routes, reduce fuel costs, and improve fleet utilization",
-      icon: Truck
-    },
-    {
-      title: "Healthcare & Pharmaceuticals",
-      description: "Ensure critical supplies availability and optimize distribution networks",
+      title: "Insurance",
+      description: "Underwriting risk assessment, claims risk analysis, and fraud detection",
       icon: Shield
+    },
+    {
+      title: "Corporate Finance",
+      description: "Financial risk management, treasury operations, and compliance monitoring",
+      icon: Building
     }
   ];
 
-  const industries = [
+  const riskTypes = [
     {
-      title: "Automotive",
-      icon: Car,
-      description: "Just-in-time manufacturing and global parts distribution"
+      title: "Market Risk",
+      icon: TrendingUp,
+      description: "Monitor market volatility, interest rate changes, and currency fluctuations"
     },
     {
-      title: "Food & Beverage",
-      icon: Package,
-      description: "Cold chain optimization and perishable goods management"
+      title: "Credit Risk",
+      icon: CreditCard,
+      description: "Assess borrower creditworthiness and portfolio credit exposure"
     },
     {
-      title: "Electronics",
+      title: "Operational Risk",
       icon: Cog,
-      description: "Component sourcing and global supply chain coordination"
+      description: "Identify operational inefficiencies and process-related risks"
     },
     {
-      title: "Fashion & Apparel",
-      icon: Palette,
-      description: "Seasonal demand planning and fast fashion logistics"
+      title: "Compliance Risk",
+      icon: Gavel,
+      description: "Ensure regulatory compliance and avoid legal penalties"
     }
   ];
 
@@ -217,15 +234,15 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+              AI-Powered Financial Risk Management
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="text-zion-cyan"> Optimization</span>
+              AI Financial Risk
+              <span className="text-zion-cyan"> Management</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with AI-powered optimization, predictive analytics, 
-              and intelligent automation that reduces costs, improves efficiency, and enhances customer satisfaction.
+              Protect your business with AI-powered financial risk management that provides real-time monitoring, 
+              predictive analytics, and automated mitigation strategies to safeguard your assets and ensure compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -257,10 +274,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Supply Chain Features
+              Advanced Risk Management Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to optimize your supply chain operations
+              Everything you need to identify, assess, and mitigate financial risks
             </p>
           </motion.div>
 
@@ -285,8 +302,47 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Risk Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Risk Coverage
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Monitor and manage all types of financial risks in one platform
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {riskTypes.map((riskType, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <riskType.icon className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{riskType.title}</h3>
+                <p className="text-zion-slate-light">{riskType.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -299,7 +355,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
               Proven Results
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See the measurable impact of AI-powered supply chain optimization
+              See the measurable impact of AI-powered financial risk management
             </p>
           </motion.div>
 
@@ -323,45 +379,6 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
         </div>
       </section>
 
-      {/* Industry Solutions */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored optimization strategies for your industry
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.title}</h3>
-                <p className="text-zion-slate-light">{industry.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
@@ -376,7 +393,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain needs
+              Choose the plan that fits your risk management needs
             </p>
           </motion.div>
 
@@ -447,10 +464,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Business Type
+              Perfect for Every Financial Institution
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI supply chain optimization works across all business sizes and types
+              Our AI risk management works across all financial services and business types
             </p>
           </motion.div>
 
@@ -485,10 +502,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Protect Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of companies using AI to transform their supply chain operations
+              Join thousands of companies using AI to manage financial risks and ensure compliance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -533,4 +550,4 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimizationEnhanced;
+export default AIFinancialRiskManagementEnhanced;
