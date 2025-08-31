@@ -1,11 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Calendar, Search, Brain, Shield, Cloud, TrendingUp, Zap, Globe, BookOpen, MapPin, Clock, Users, ArrowRight } from 'lucide-react';
 
-export default function Events() {
-<<<<<<< HEAD
+const Events = () => {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
+
+  const events = [
+    {
+      id: 1,
+      title: "AI & Machine Learning Summit 2025",
+      description: "Join industry leaders for insights into the latest AI developments and their business applications.",
+      type: "Conference",
+      category: "AI & ML",
+      status: "upcoming",
+      date: "2025-03-15",
+      time: "09:00 AM",
+      location: "San Francisco, CA",
+      speakers: ["Dr. Sarah Chen", "Marcus Rodriguez", "Dr. Elena Petrova"],
+      attendees: 250,
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Workshop Series",
+      description: "Hands-on workshops covering the latest cybersecurity threats and defense strategies.",
+      type: "Workshop",
+      category: "Cybersecurity",
+      status: "upcoming",
+      date: "2025-02-28",
+      time: "02:00 PM",
+      location: "Virtual",
+      speakers: ["Alex Thompson", "Dr. Michael Chang"],
+      attendees: 75,
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 3,
+      title: "Quantum Computing Innovation Forum",
+      description: "Explore the future of quantum computing and its potential impact on various industries.",
+      type: "Forum",
+      category: "AI & ML",
+      status: "upcoming",
+      date: "2025-04-10",
+      time: "10:00 AM",
+      location: "Boston, MA",
+      speakers: ["Dr. Sarah Chen", "James Wilson"],
+      attendees: 120,
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 4,
+      title: "Cloud & DevOps Best Practices",
+      description: "Learn from experts about modern cloud architecture and DevOps methodologies.",
+      type: "Webinar",
+      category: "Cloud & DevOps",
+      status: "past",
+      date: "2025-01-20",
+      time: "01:00 PM",
+      location: "Virtual",
+      speakers: ["Marcus Rodriguez", "Alex Thompson"],
+      attendees: 200,
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 5,
+      title: "Data Analytics & Business Intelligence",
+      description: "Discover how data analytics can drive business decisions and create competitive advantages.",
+      type: "Conference",
+      category: "Data Analytics",
+      status: "past",
+      date: "2025-01-10",
+      time: "09:00 AM",
+      location: "New York, NY",
+      speakers: ["Dr. Elena Petrova", "James Wilson"],
+      attendees: 180,
+      image: "/api/placeholder/400/250"
+    }
+  ];
 
   const filteredEvents = events.filter(event => {
     const matchesType = selectedType === 'All' || event.type === selectedType;
@@ -52,24 +126,23 @@ export default function Events() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
+            <div className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-400 px-6 py-3 rounded-full border border-cyan-500/30 mb-6">
               <Calendar className="w-5 h-5" />
               <span className="font-medium">Events & Webinars</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our Events
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Discover the latest technology trends, learn from industry experts, and network with
               professionals at our comprehensive events, workshops, and webinars.
             </p>
@@ -78,20 +151,20 @@ export default function Events() {
       </section>
 
       {/* Filters Section */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-800/50 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {/* Search */}
               <div className="md:col-span-2">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
                     placeholder="Search events..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 </div>
               </div>
@@ -101,11 +174,13 @@ export default function Events() {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-3 py-3 bg-gray-700/50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
-                  {eventTypes.map(type => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
+                  <option value="All">All Types</option>
+                  <option value="Conference">Conference</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Webinar">Webinar</option>
+                  <option value="Forum">Forum</option>
                 </select>
               </div>
 
@@ -114,11 +189,15 @@ export default function Events() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-3 py-3 bg-gray-700/50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
+                  <option value="All">All Categories</option>
+                  <option value="AI & ML">AI & ML</option>
+                  <option value="Cybersecurity">Cybersecurity</option>
+                  <option value="Cloud & DevOps">Cloud & DevOps</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                  <option value="IoT & Edge">IoT & Edge</option>
+                  <option value="Digital Transformation">Digital Transformation</option>
                 </select>
               </div>
 
@@ -127,13 +206,11 @@ export default function Events() {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-3 py-3 bg-gray-700/50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
-                  {statuses.map(status => (
-                    <option key={status} value={status}>
-                      {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
-                    </option>
-                  ))}
+                  <option value="All">All Status</option>
+                  <option value="upcoming">Upcoming</option>
+                  <option value="past">Past</option>
                 </select>
               </div>
             </div>
@@ -143,20 +220,18 @@ export default function Events() {
 
       {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
+              className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
-              <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
-            </motion.div>
+              Upcoming Events
+            </motion.h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {upcomingEvents.map((event, index) => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -165,90 +240,65 @@ export default function Events() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                    className="bg-gray-800/50 rounded-xl overflow-hidden hover:bg-gray-800/70 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
                   >
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                          <CategoryIcon className="w-6 h-6 text-white" />
+                    {/* Event Image */}
+                    <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <CategoryIcon className="w-16 h-16 text-cyan-400" />
+                    </div>
+
+                    {/* Event Content */}
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        {getStatusBadge(event.status)}
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                          {event.type}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{event.description}</p>
+
+                      {/* Event Details */}
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Calendar className="w-4 h-4" />
+                          <span>{formatDate(event.date)}</span>
                         </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>
-                          <div className="flex items-center gap-2">
-                            {getStatusBadge(event.status)}
-                            <span className="text-sm text-zion-slate-light">{event.type}</span>
-                          </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Clock className="w-4 h-4" />
+                          <span>{event.time}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <MapPin className="w-4 h-4" />
+                          <span>{event.location}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Users className="w-4 h-4" />
+                          <span>{event.attendees} attendees</span>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-zion-cyan">{event.price}</div>
-                        <div className="text-sm text-zion-slate-light">Registration</div>
-                      </div>
-                    </div>
 
-                    {/* Event Details */}
-                    <div className="mb-4 space-y-3">
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(event.date)}</span>
+                      {/* Speakers */}
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-400 mb-2">Speakers:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {event.speakers.map((speaker, speakerIndex) => (
+                            <span
+                              key={speakerIndex}
+                              className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                            >
+                              {speaker}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Clock className="w-4 h-4" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <MapPin className="w-4 h-4" />
-                        <span>{event.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Users className="w-4 h-4" />
-                        <span>{event.attendees} attendees</span>
-                      </div>
-                    </div>
 
-                    {/* Description */}
-                    <p className="text-zion-slate-light mb-4">{event.description}</p>
-
-                    {/* Highlights */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-white mb-2">Highlights</h4>
-                      <div className="grid grid-cols-1 gap-1">
-                        {event.highlights.slice(0, 3).map((highlight, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                            <CheckCircle className="w-3 h-3 text-green-400" />
-                            <span>{highlight}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Speakers */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-white mb-2">Featured Speakers</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {event.speakers.map((speaker, idx) => (
-                          <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
-                            {speaker}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href={`/events/${event.id}`}
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                      <div className="text-right">
-                        <div className="text-sm text-zion-slate-light">Contact us for details</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                      </div>
+                      {/* Register Button */}
+                      <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
+                        Register Now
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
                     </div>
                   </motion.div>
                 );
@@ -260,20 +310,18 @@ export default function Events() {
 
       {/* Past Events */}
       {pastEvents.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
+              className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
-              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
-            </motion.div>
+              Past Events
+            </motion.h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {pastEvents.map((event, index) => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -282,53 +330,65 @@ export default function Events() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
+                    className="bg-gray-800/50 rounded-xl overflow-hidden opacity-75"
                   >
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>
-                          <div className="flex items-center gap-2">
-                            {getStatusBadge(event.status)}
-                            <span className="text-sm text-zion-slate-light">{event.type}</span>
-                          </div>
-                        </div>
-                      </div>
+                    {/* Event Image */}
+                    <div className="h-48 bg-gradient-to-br from-gray-500/20 to-gray-600/20 flex items-center justify-center">
+                      <CategoryIcon className="w-16 h-16 text-gray-400" />
                     </div>
 
-                    {/* Event Details */}
-                    <div className="mb-4 space-y-3">
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(event.date)}</span>
+                    {/* Event Content */}
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        {getStatusBadge(event.status)}
+                        <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full">
+                          {event.type}
+                        </span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <MapPin className="w-4 h-4" />
-                        <span>{event.location}</span>
-                      </div>
-                    </div>
 
-                    {/* Description */}
-                    <p className="text-zion-slate-light mb-4">{event.description}</p>
+                      <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{event.description}</p>
 
-                    {/* CTA */}
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href={`/events/${event.id}`}
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
-                        View Event Details
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                      <div className="text-right">
-                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                      {/* Event Details */}
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Calendar className="w-4 h-4" />
+                          <span>{formatDate(event.date)}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Clock className="w-4 h-4" />
+                          <span>{event.time}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <MapPin className="w-4 h-4" />
+                          <span>{event.location}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <Users className="w-4 h-4" />
+                          <span>{event.attendees} attendees</span>
+                        </div>
                       </div>
+
+                      {/* Speakers */}
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-400 mb-2">Speakers:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {event.speakers.map((speaker, speakerIndex) => (
+                            <span
+                              key={speakerIndex}
+                              className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                            >
+                              {speaker}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* View Recording Button */}
+                      <button className="w-full bg-gray-600 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-2">
+                        View Recording
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
                     </div>
                   </motion.div>
                 );
@@ -339,48 +399,44 @@ export default function Events() {
       )}
 
       {/* CTA Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Want to Host an Event?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group to host technology events, workshops, or webinars.
-              Let's create valuable learning experiences together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
-                Partner With Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
-                View Our Services
-              </Link>
-            </div>
+            Stay Updated with Our Events
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-gray-300 mb-8"
+          >
+            Get notified about upcoming events, workshops, and webinars
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <button className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors">
+              Subscribe
+            </button>
           </motion.div>
         </div>
       </section>
-=======
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold mb-4">Events</h1>
-        <p className="text-slate-300">Join our upcoming webinars, conferences, and community events.</p>
-      </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     </div>
   );
-}
+};
+
+export default Events;

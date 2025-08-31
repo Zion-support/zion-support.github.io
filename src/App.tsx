@@ -37,12 +37,39 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Docs = createLazyComponent(() => import('./pages/Documentation'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+
+// Solution pages
+const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
+const QuantumEdgeComputing = createLazyComponent(() => import('./pages/solutions/QuantumEdgeComputing'));
+const AIAutonomousBusiness = createLazyComponent(() => import('./pages/solutions/AIAutonomousBusiness'));
+const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/BlockchainWeb3'));
+const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
+const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -112,12 +139,39 @@ function App() {
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/docs" element={<Docs />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/research-development" element={<ResearchDevelopment />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+
+                    {/* Solution Routes */}
+                    <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                    <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                    <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                    <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                    <Route path="/solutions/retail" element={<RetailSolutions />} />
+                    <Route path="/solutions/quantum-edge-computing" element={<QuantumEdgeComputing />} />
+                    <Route path="/solutions/ai-autonomous-business" element={<AIAutonomousBusiness />} />
+                    <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
+                    <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
+                    <Route path="/solutions/space-tech" element={<SpaceTech />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
