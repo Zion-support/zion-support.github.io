@@ -255,9 +255,12 @@ export default function ComprehensivePricingGuide2025() {
 
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div
+              <motion.div
                 key={service.id}
                 className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 {/* Service Header */}
                 <div className="mb-6">
@@ -277,10 +280,7 @@ export default function ComprehensivePricingGuide2025() {
                     <Clock className="w-4 h-4" />
                     <span>Delivery: {service.estimatedDelivery}</span>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
+                </div>
 
                 {/* Pricing */}
                 <div className="mb-6">
@@ -396,7 +396,7 @@ export default function ComprehensivePricingGuide2025() {
                     Call Now
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -460,6 +460,4 @@ export default function ComprehensivePricingGuide2025() {
       </div>
     </div>
   );
-}
-
-export default ComprehensivePricingGuide2025;
+  }
