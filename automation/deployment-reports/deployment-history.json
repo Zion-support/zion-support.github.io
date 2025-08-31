@@ -1359,6 +1359,18 @@
       "priority": "high",
       "description": "Low deployment success rate",
       "action": "Implement pre-deployment quality gates and automated testing"
+    },
+    {
+      "type": "dependency_optimization",
+      "priority": "medium",
+      "description": "Consider optimizing large dependencies: moment",
+      "action": "Use tree-shaking or replace with lighter alternatives"
+    },
+    {
+      "type": "quality_gates",
+      "priority": "high",
+      "description": "Low deployment success rate",
+      "action": "Implement pre-deployment quality gates and automated testing"
     }
   ]
 }

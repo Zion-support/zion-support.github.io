@@ -1,20 +1,24 @@
 export class SitemapGenerator {
     config;
+    
     constructor(config) {
         this.config = {
-  outputPath: './public/sitemap.xml',
-  ...config
-        
-
-};
+            outputPath: './public/sitemap.xml',
+            ...config
+        };
     }
+    
     /**
      * Generate XML sitemap content
      */
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlElement = `<url>
+        const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        const urlsetClose = '</urlset>';
+        
+        const urlElements = urls.map(url => {
+            const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
@@ -22,21 +26,28 @@ export class SitemapGenerator {
       </url>`;
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
+        
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
     }
+    
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
+        const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        const sitemapindexClose = '</sitemapindex>';
+        
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </sitemap>`;
         }).join('');
+        
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
     }
+    
     /**
      * Generate robots.txt content
      */
@@ -66,23 +77,23 @@ Allow: /careers/
 # Crawl delay (optional)
 Crawl-delay: 1`;
     }
+    
     /**
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON() {
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
-  baseUrl,
+            baseUrl,
             urls: urls.map(url => ({
                 ...url,
-  fullUrl: `${baseUrl
-
-}${url.url}`,
+                fullUrl: `${baseUrl}${url.url}`,
                 lastmod: url.lastmod || new Date().toISOString()
             }))
         };
         return JSON.stringify(jsonSitemap, null, 2);
     }
+    
     /**
      * Generate HTML sitemap for users
      */
@@ -98,82 +109,135 @@ Crawl-delay: 1`;
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; }
-        h1 { color: #00e5ff; border-bottom: 2px solid #00e5ff; padding-bottom: 10px; }
+        h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
         .sitemap-section { margin: 30px 0; }
-        .sitemap-section h2 { color: #333; margin-bottom: 15px; }
+        .sitemap-section h2 { color: #555; margin-bottom: 15px; }
         .sitemap-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .sitemap-link { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; }
-        .sitemap-link:hover { background-color: #f5f5f5; border-color: #00e5ff; }
-        .priority-high { border-left: 4px solid #00e5ff; }
-        .priority-medium { border-left: 4px solid #ff9800; }
-        .priority-low { border-left: 4px solid #4caf50; }
+        .sitemap-link { padding: 15px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; transition: all 0.3s ease; }
+        .sitemap-link:hover { background-color: #f8f9fa; border-color: #007bff; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,123,255,0.1); }
+        .sitemap-link h3 { margin: 0 0 10px 0; color: #007bff; }
+        .sitemap-link p { margin: 0; color: #666; font-size: 14px; }
+        .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #666; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Zion Tech Group - Sitemap</h1>
-        <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>
+        <h1>Zion Tech Group - Website Sitemap</h1>
         
         <div class="sitemap-section">
             <h2>Main Pages</h2>
             <div class="sitemap-links">
-                ${urls
-            .filter(url => url.priority && url.priority >= 0.8)
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">
-                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
+                <a href="/" class="sitemap-link">
+                    <h3>Home</h3>
+                    <p>Welcome to Zion Tech Group - Revolutionary Technology Solutions</p>
+                </a>
+                <a href="/about" class="sitemap-link">
+                    <h3>About Us</h3>
+                    <p>Learn about our mission, vision, and innovative approach to technology</p>
+                </a>
+                <a href="/contact" class="sitemap-link">
+                    <h3>Contact</h3>
+                    <p>Get in touch with our team for technology consulting and solutions</p>
+                </a>
             </div>
         </div>
         
         <div class="sitemap-section">
             <h2>Services</h2>
             <div class="sitemap-links">
-                ${urls
-            .filter(url => url.url.startsWith('/services/'))
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
+                <a href="/services" class="sitemap-link">
+                    <h3>All Services</h3>
+                    <p>Comprehensive overview of our technology services and solutions</p>
+                </a>
+                <a href="/services/ai-autonomous-systems" class="sitemap-link">
+                    <h3>AI Autonomous Systems</h3>
+                    <p>Intelligent automation and AI-powered business solutions</p>
+                </a>
+                <a href="/services/quantum-technology" class="sitemap-link">
+                    <h3>Quantum Technology</h3>
+                    <p>Next-generation quantum computing and quantum solutions</p>
+                </a>
+                <a href="/services/cybersecurity" class="sitemap-link">
+                    <h3>Cybersecurity</h3>
+                    <p>Advanced security solutions and threat protection</p>
+                </a>
+                <a href="/services/it-infrastructure" class="sitemap-link">
+                    <h3>IT Infrastructure</h3>
+                    <p>Robust and scalable technology infrastructure solutions</p>
+                </a>
+                <a href="/services/micro-saas-solutions" class="sitemap-link">
+                    <h3>Micro SaaS Solutions</h3>
+                    <p>Innovative software-as-a-service platforms for modern businesses</p>
+                </a>
             </div>
         </div>
         
         <div class="sitemap-section">
             <h2>Solutions</h2>
             <div class="sitemap-links">
-                ${urls
-            .filter(url => url.url.startsWith('/solutions/'))
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
+                <a href="/solutions/enterprise" class="sitemap-link">
+                    <h3>Enterprise Solutions</h3>
+                    <p>Large-scale technology solutions for enterprise organizations</p>
+                </a>
+                <a href="/solutions/healthcare" class="sitemap-link">
+                    <h3>Healthcare Technology</h3>
+                    <p>Secure and compliant IT solutions for the healthcare industry</p>
+                </a>
             </div>
         </div>
         
         <div class="sitemap-section">
-            <h2>Other Pages</h2>
+            <h2>Resources</h2>
             <div class="sitemap-links">
-                ${urls
-            .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8)
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">
-                        ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
+                <a href="/blog" class="sitemap-link">
+                    <h3>Blog</h3>
+                    <p>Technology insights, industry trends, and expert analysis</p>
+                </a>
+                <a href="/careers" class="sitemap-link">
+                    <h3>Careers</h3>
+                    <p>Join our team of technology experts and innovators</p>
+                </a>
+                <a href="/pricing" class="sitemap-link">
+                    <h3>Pricing</h3>
+                    <p>Transparent pricing for our technology services and solutions</p>
+                </a>
             </div>
         </div>
         
-        <div class="sitemap-section">
-            <p><strong>Total Pages:</strong> ${urls.length}</p>
-            <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>
+        <div class="footer">
+            <p>&copy; ${new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+            <p>For technical support or questions about this sitemap, please contact our team.</p>
         </div>
     </div>
 </body>
 </html>`;
+        
         return html;
+    }
+    
+    /**
+     * Generate all sitemap formats
+     */
+    generateAll() {
+        return {
+            xml: this.generateXML(),
+            json: this.generateJSON(),
+            html: this.generateHTML(),
+            robots: this.generateRobotsTxt()
+        };
+    }
+    
+    /**
+     * Save sitemap to file
+     */
+    async saveToFile(content, filePath) {
+        try {
+            const fs = await import('fs/promises');
+            await fs.writeFile(filePath, content, 'utf8');
+            console.log(`Sitemap saved to: ${filePath}`);
+        } catch (error) {
+            console.error('Error saving sitemap:', error);
+        }
     }
 }
 // Default sitemap configuration for Zion Tech Group
