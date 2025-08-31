@@ -2,131 +2,211 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
-    
-    <!-- Theme and PWA -->
-    <meta name="theme-color" content="#06b6d4" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="msapplication-TileColor" content="#06b6d4" />
-    <meta name="color-scheme" content="dark light" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Zion Tech Group - Leading AI & Technology Solutions Provider</title>
-    <meta name="description" content="Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Transform your business with our innovative technology services." />
-    <meta name="keywords" content="AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group, machine learning, quantum computing, blockchain" />
-    <meta name="author" content="Zion Tech Group" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no,address=no,email=no" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group - Leading AI & Technology Solutions Provider" />
-    <meta property="og:description" content="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions from Zion Tech Group." />
-    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Zion Tech Group" />
-    <meta property="og:locale" content="en_US" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group - Leading AI & Technology Solutions Provider" />
-    <meta property="twitter:description" content="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions." />
-    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-    <meta property="twitter:site" content="@ziontechgroup" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://ziontechgroup.com/" />
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    
-    <!-- Fonts with preload -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    </noscript>
-    
-    <!-- Favicon and Icons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#06b6d4" />
+    <link rel="icon" type="image/svg+xml" href="/images/zion-tech-group-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
     
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#06b6d4" />
+    <meta name="msapplication-TileColor" content="#06b6d4" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/images/zion-tech-group-logo-192x192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/zion-tech-group-logo-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/zion-tech-group-logo-192x192.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/zion-tech-group-logo-152x152.png" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/index.css" as="style" />
+    <link rel="preload" href="/js/index.js" as="script" />
+    
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//ziontechgroup.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    
+    <!-- Critical CSS -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #111827;
+        color: #ffffff;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      .loading-spinner::after {
+        content: '';
+        width: 32px;
+        height: 32px;
+        border: 4px solid #06b6d4;
+        border-top: 4px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Skip link for accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #06b6d4;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+      }
+      
+      .skip-link:focus {
+        top: 6px;
+      }
+      
+      /* Focus indicators for keyboard navigation */
+      .keyboard-navigation *:focus {
+        outline: 2px solid #06b6d4 !important;
+        outline-offset: 2px !important;
+      }
+    </style>
+    
+    <title>Zion Tech Group - Future Technology Solutions</title>
+    <meta name="description" content="Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation. We specialize in cutting-edge AI, IT infrastructure, and micro SAAS solutions." />
+    <meta name="keywords" content="AI, artificial intelligence, technology solutions, IT infrastructure, micro SAAS, cybersecurity, cloud computing, digital transformation, Zion Tech Group" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zion Tech Group - Future Technology Solutions" />
+    <meta property="og:description" content="Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation." />
+    <meta property="og:image" content="https://ziontechgroup.com/images/zion-tech-group-og.jpg" />
+    <meta property="og:url" content="https://ziontechgroup.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zion Tech Group - Future Technology Solutions" />
+    <meta name="twitter:description" content="Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation." />
+    <meta name="twitter:image" content="https://ziontechgroup.com/images/zion-tech-group-og.jpg" />
+    <meta name="twitter:site" content="@ziontechgroup" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com" />
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup",
-        "https://www.facebook.com/ziontechgroup"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com",
+        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+        "description": "Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "364 E Main St STE 1008",
+          "addressLocality": "Middletown",
+          "addressRegion": "DE",
+          "postalCode": "19709",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-302-464-0950",
+          "contactType": "customer service",
+          "email": "kleber@ziontechgroup.com"
+        },
+        "sameAs": [
+          "https://github.com/ziontechgroup"
+        ],
+        "foundingDate": "2020",
+        "areaServed": "Worldwide",
+        "serviceType": [
+          "AI & Machine Learning",
+          "Cloud & DevOps",
+          "Cybersecurity",
+          "Digital Transformation",
+          "IT Infrastructure",
+          "Micro SAAS Solutions"
+        ]
+      }
     </script>
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Critical CSS Inline -->
-    <style>
-      /* Critical above-the-fold styles */
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      .loading { display: flex; justify-content: center; align-items: center; height: 100vh; }
-      .spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #06b6d4; border-radius: 50%; animation: spin 1s linear infinite; }
-      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
+    <div id="root">
+      <div class="loading-spinner">
+        <span class="sr-only">Loading Zion Tech Group...</span>
+      </div>
+    </div>
     
     <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
-            .then(registration => console.log('SW registered'))
-            .catch(error => console.log('SW registration failed'));
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
         });
       }
+      
+      // Performance monitoring
+      if ('PerformanceObserver' in window) {
+        try {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'navigation') {
+                const navigation = entry;
+                console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
+                console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+              }
+            }
+          });
+          observer.observe({ entryTypes: ['navigation'] });
+        } catch (error) {
+          console.warn('Performance monitoring failed:', error);
+        }
+      }
     </script>
-  </head>
-  <body>
-    <div id="root">
-      <div class="loading">
-        <div class="spinner"></div>
-      </div>
-    </div>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
