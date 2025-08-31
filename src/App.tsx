@@ -54,6 +54,17 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalT
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
+// Additional pages we created
+const QuantumComputing = createLazyComponent(() => import('./pages/QuantumComputing.tsx'));
+const BlockchainSolutions = createLazyComponent(() => import('./pages/BlockchainSolutions'));
+const IoTSolutions = createLazyComponent(() => import('./pages/IoTSolutions'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
@@ -135,6 +146,17 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+
+                    {/* Additional pages we created */}
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/blockchain-solutions" element={<BlockchainSolutions />} />
+                    <Route path="/iot-solutions" element={<IoTSolutions />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/training" element={<Training />} />
 
                     {/* 404 Page */}
                     <Route

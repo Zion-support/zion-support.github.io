@@ -1,654 +1,624 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function Training() {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Training</h1>
-				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>
-			</div>
-		</div>
-	);
-
-import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training() {
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
-  BookOpen, 
-  Users, 
-  Clock, 
-  Star, 
-  Search, 
-  Filter, 
-  Play, 
-  Download, 
-  ExternalLink, 
-  ArrowRight, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Zap, 
-  Globe, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  CheckCircle, 
-  Calendar, 
-  MapPin, 
-  DollarSign, 
-  FileText, 
-  Lightbulb, 
-  Microscope, 
-  Rocket, 
-  Code, 
-  Network, 
-  Cpu, 
-  Lock, 
-  BarChart3, 
-  Palette, 
-  Smartphone, 
-  Eye
+  Search,
+  Calendar,
+  Clock,
+  User,
+  Users,
+  Play,
+  ArrowRight,
+  Filter,
+  BookOpen,
+  Star,
+  Tag,
+  ExternalLink,
+  ChevronDown,
+  ChevronRight,
+  Eye,
+  Download,
+  Share2,
+  Bookmark,
+  MessageCircle,
+  Award,
+  CheckCircle,
+  Target,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Database
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Training: React.FC = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeLevel, setActiveLevel] = useState('all');
-  const [activeFormat, setActiveFormat] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedLevel, setSelectedLevel] = useState('All');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: GraduationCap, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 3 },
-    { id: 'leadership', name: 'Leadership & Management', icon: Users, count: 4 }
-  ];
-
-  const levels = [
-    { id: 'all', name: 'All Levels', count: 0 },
-    { id: 'beginner', name: 'Beginner', count: 0 },
-    { id: 'intermediate', name: 'Intermediate', count: 0 },
-    { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 }
-  ];
-
-  const formats = [
-    { id: 'all', name: 'All Formats', count: 0 },
-    { id: 'online', name: 'Online', count: 0 },
-    { id: 'in-person', name: 'In-Person', count: 0 },
-    { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self-paced', name: 'Self-Paced', count: 0 }
-  ];
+  const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Emerging Technologies', 'Industry Solutions'];
+  const levels = ['All', 'Beginner', 'Intermediate', 'Advanced', 'Expert'];
 
   const trainingPrograms = [
     {
       id: 1,
-      title: 'AI Fundamentals & Machine Learning',
-      description: 'Master the basics of artificial intelligence and machine learning algorithms',
-      category: 'ai-ml',
-      level: 'beginner',
-      format: 'online',
-      duration: '8 weeks',
+      title: 'AI Fundamentals for Business Leaders',
+      description: 'Comprehensive introduction to artificial intelligence concepts, applications, and strategic implementation for business executives and decision-makers.',
+      category: 'AI & Machine Learning',
+      level: 'Beginner',
       instructor: 'Dr. Sarah Chen',
+      duration: '8 weeks',
+      totalHours: 40,
+      maxStudents: 25,
+      currentStudents: 18,
       rating: 4.8,
-      students: 1247,
-      price: '$299',
-      image: '/images/training/ai-fundamentals.jpg',
-      tags: ['Python', 'TensorFlow', 'Neural Networks', 'Data Science'],
-      features: [
-        'Hands-on projects with real datasets',
-        'Live Q&A sessions with experts',
-        'Certificate upon completion',
-        'Lifetime access to materials'
+      featured: true,
+      price: '$2,499',
+      tags: ['AI', 'Business Strategy', 'Leadership', 'Digital Transformation'],
+      overview: 'This program provides business leaders with a solid foundation in AI concepts...',
+      curriculum: [
+        'Introduction to AI and Machine Learning',
+        'AI in Business Strategy and Operations',
+        'Ethical Considerations and Risk Management',
+        'Implementation Planning and ROI Analysis',
+        'Case Studies and Best Practices'
+      ],
+      outcomes: [
+        'Understand AI fundamentals and business applications',
+        'Develop AI strategy and implementation roadmap',
+        'Evaluate AI solutions and vendors',
+        'Lead AI transformation initiatives'
       ]
     },
     {
       id: 2,
-      title: 'Advanced Cloud Architecture',
-      description: 'Design and implement scalable cloud solutions for enterprise applications',
-      category: 'cloud',
-      level: 'advanced',
-      format: 'hybrid',
-      duration: '12 weeks',
+      title: 'Advanced Cybersecurity Architecture',
+      description: 'Deep dive into enterprise cybersecurity architecture, threat modeling, and advanced security implementation strategies.',
+      category: 'Cybersecurity',
+      level: 'Advanced',
       instructor: 'Michael Rodriguez',
+      duration: '12 weeks',
+      totalHours: 60,
+      maxStudents: 20,
+      currentStudents: 15,
       rating: 4.9,
-      students: 892,
-      price: '$499',
-      image: '/images/training/cloud-architecture.jpg',
-      tags: ['AWS', 'Azure', 'Kubernetes', 'Microservices'],
-      features: [
-        'Real-world case studies',
-        'Architecture design workshops',
-        'Industry best practices',
-        'Networking opportunities'
+      featured: true,
+      price: '$3,999',
+      tags: ['Cybersecurity', 'Architecture', 'Threat Modeling', 'Enterprise Security'],
+      overview: 'Advanced cybersecurity program for experienced security professionals...',
+      curriculum: [
+        'Advanced Threat Modeling and Risk Assessment',
+        'Zero Trust Architecture Implementation',
+        'Cloud Security and DevSecOps',
+        'Incident Response and Forensics',
+        'Security Automation and Orchestration'
+      ],
+      outcomes: [
+        'Design enterprise security architectures',
+        'Implement advanced security controls',
+        'Lead security transformation initiatives',
+        'Develop incident response strategies'
       ]
     },
     {
       id: 3,
-      title: 'Cybersecurity Masterclass',
-      description: 'Comprehensive security training covering threat detection and prevention',
-      category: 'security',
-      level: 'intermediate',
-      format: 'in-person',
-<<<<<<< HEAD
-      duration: '4 weeks',
-      hours: 32,
-      price: 3999,
-      location: 'Boston, MA',
-      startDate: '2025-06-01',
-      instructor: 'Jennifer Park',
-      rating: 4.8,
-      students: 45,
-      featured: false,
-      certification: 'Digital Transformation Leader',
-      tags: ['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
-      modules: [
-        'Digital Strategy Development',
-        'Change Management and Culture',
-        'Technology Selection and Implementation',
-        'Stakeholder Management',
-        'Success Measurement'
-      ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
-
-=======
-      duration: '6 weeks',
-      instructor: 'Lisa Thompson',
+      title: 'Cloud-Native Development Mastery',
+      description: 'Master cloud-native development practices, microservices architecture, and modern DevOps methodologies.',
+      category: 'Cloud Computing',
+      level: 'Intermediate',
+      instructor: 'Dr. Emily Watson',
+      duration: '10 weeks',
+      totalHours: 50,
+      maxStudents: 30,
+      currentStudents: 22,
       rating: 4.7,
-      students: 1563,
-      price: '$399',
-      image: '/images/training/cybersecurity.jpg',
-      tags: ['Penetration Testing', 'Incident Response', 'Compliance', 'Risk Management'],
-      features: [
-        'Hands-on lab exercises',
-        'Security tool training',
-        'Industry certifications',
-        'Career guidance'
+      featured: false,
+      price: '$2,999',
+      tags: ['Cloud Computing', 'Microservices', 'DevOps', 'Containerization'],
+      overview: 'Comprehensive cloud-native development program...',
+      curriculum: [
+        'Cloud-Native Architecture Principles',
+        'Microservices Design and Implementation',
+        'Container Orchestration with Kubernetes',
+        'CI/CD Pipeline Development',
+        'Monitoring and Observability'
+      ],
+      outcomes: [
+        'Build scalable cloud-native applications',
+        'Implement microservices architecture',
+        'Deploy and manage containerized applications',
+        'Establish DevOps practices and pipelines'
+      ]
+    },
+    {
+      id: 4,
+      title: 'Data Science and Analytics Bootcamp',
+      description: 'Intensive bootcamp covering data science fundamentals, statistical analysis, and machine learning applications.',
+      category: 'AI & Machine Learning',
+      level: 'Intermediate',
+      instructor: 'Dr. James Thompson',
+      duration: '6 weeks',
+      totalHours: 35,
+      maxStudents: 35,
+      currentStudents: 28,
+      rating: 4.6,
+      featured: false,
+      price: '$1,999',
+      tags: ['Data Science', 'Machine Learning', 'Analytics', 'Statistics'],
+      overview: 'Data science bootcamp for professionals...',
+      curriculum: [
+        'Data Science Fundamentals and Statistics',
+        'Data Wrangling and Preprocessing',
+        'Machine Learning Algorithms',
+        'Data Visualization and Storytelling',
+        'Real-world Project Implementation'
+      ],
+      outcomes: [
+        'Apply data science methodologies',
+        'Build and evaluate ML models',
+        'Create compelling data visualizations',
+        'Solve real-world business problems'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Blockchain Development Fundamentals',
+      description: 'Learn blockchain technology fundamentals, smart contract development, and decentralized application building.',
+      category: 'Emerging Technologies',
+      level: 'Beginner',
+      instructor: 'Lisa Chang',
+      duration: '8 weeks',
+      totalHours: 45,
+      maxStudents: 25,
+      currentStudents: 20,
+      rating: 4.5,
+      featured: false,
+      price: '$2,299',
+      tags: ['Blockchain', 'Smart Contracts', 'DApps', 'Web3'],
+      overview: 'Blockchain development fundamentals program...',
+      curriculum: [
+        'Blockchain Technology Fundamentals',
+        'Smart Contract Development',
+        'Decentralized Application Architecture',
+        'Blockchain Security and Best Practices',
+        'Industry Applications and Use Cases'
+      ],
+      outcomes: [
+        'Understand blockchain technology principles',
+        'Develop smart contracts',
+        'Build decentralized applications',
+        'Apply blockchain in business contexts'
+      ]
+    },
+    {
+      id: 6,
+      title: 'Digital Transformation Leadership',
+      description: 'Executive program focused on leading digital transformation initiatives and organizational change management.',
+      category: 'Digital Transformation',
+      level: 'Expert',
+      instructor: 'Robert Kim',
+      duration: '16 weeks',
+      totalHours: 80,
+      maxStudents: 15,
+      currentStudents: 12,
+      rating: 4.9,
+      featured: true,
+      price: '$5,999',
+      tags: ['Digital Transformation', 'Leadership', 'Change Management', 'Strategy'],
+      overview: 'Executive digital transformation leadership program...',
+      curriculum: [
+        'Digital Transformation Strategy Development',
+        'Organizational Change Management',
+        'Technology Portfolio Management',
+        'Innovation and Disruption Strategies',
+        'Digital Culture and Talent Development'
+      ],
+      outcomes: [
+        'Lead digital transformation initiatives',
+        'Manage organizational change effectively',
+        'Develop digital innovation strategies',
+        'Build digital-first organizational culture'
+      ]
+    },
+    {
+      id: 7,
+      title: 'IoT and Edge Computing Solutions',
+      description: 'Comprehensive training on Internet of Things technologies, edge computing, and connected device solutions.',
+      category: 'Emerging Technologies',
+      level: 'Intermediate',
+      instructor: 'Dr. Alex Johnson',
+      duration: '10 weeks',
+      totalHours: 55,
+      maxStudents: 28,
+      currentStudents: 19,
+      rating: 4.7,
+      featured: false,
+      price: '$2,799',
+      tags: ['IoT', 'Edge Computing', 'Connected Devices', 'Data Processing'],
+      overview: 'IoT and edge computing solutions program...',
+      curriculum: [
+        'IoT Architecture and Protocols',
+        'Edge Computing and Fog Computing',
+        'Sensor Networks and Data Collection',
+        'Real-time Data Processing',
+        'IoT Security and Privacy'
+      ],
+      outcomes: [
+        'Design IoT solutions and architectures',
+        'Implement edge computing strategies',
+        'Build connected device ecosystems',
+        'Ensure IoT security and compliance'
+      ]
+    },
+    {
+      id: 8,
+      title: 'Sustainable Technology Implementation',
+      description: 'Learn how to implement green technology solutions and sustainable IT practices in enterprise environments.',
+      category: 'Industry Solutions',
+      level: 'Intermediate',
+      instructor: 'Maria Garcia',
+      duration: '8 weeks',
+      totalHours: 40,
+      maxStudents: 30,
+      currentStudents: 24,
+      rating: 4.6,
+      featured: false,
+      price: '$2,199',
+      tags: ['Sustainability', 'Green IT', 'Energy Efficiency', 'ESG'],
+      overview: 'Sustainable technology implementation program...',
+      curriculum: [
+        'Sustainable Technology Principles',
+        'Green IT Implementation Strategies',
+        'Energy Efficiency and Carbon Reduction',
+        'ESG Reporting and Compliance',
+        'Sustainable Technology ROI Analysis'
+      ],
+      outcomes: [
+        'Implement sustainable technology solutions',
+        'Reduce environmental impact',
+        'Develop ESG strategies',
+        'Measure sustainability ROI'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const filteredPrograms = trainingPrograms.filter(program => {
     const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
-    const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
-
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
+    
+    const matchesCategory = selectedCategory === 'All' || program.category === selectedCategory;
+    const matchesLevel = selectedLevel === 'All' || program.level === selectedLevel;
+    
+    return matchesSearch && matchesCategory && matchesLevel;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
-  };
+  const featuredPrograms = trainingPrograms.filter(program => program.featured);
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'beginner': return 'text-green-400';
-      case 'intermediate': return 'text-yellow-400';
-      case 'advanced': return 'text-orange-400';
-      case 'expert': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-
+      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Advanced': return 'bg-orange-500/20 text-orange-400';
+      case 'Expert': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+    }
   };
 
-  const getFormatIcon = (format: string) => {
-    switch (format) {
-      case 'online': return <Globe className="w-4 h-4" />;
-      case 'in-person': return <MapPin className="w-4 h-4" />;
-      case 'hybrid': return <Users className="w-4 h-4" />;
-      case 'self-paced': return <Clock className="w-4 h-5" />;
-      default: return <BookOpen className="w-4 h-4" />;
-
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
-    <>
-      <SEO 
-        title="Training & Development - Zion Tech Group"
-        description="Comprehensive training programs in AI, cloud computing, cybersecurity, and emerging technologies. Advance your career with expert-led courses."
-        keywords="training, AI courses, cloud computing, cybersecurity, machine learning, professional development"
-        canonicalUrl="https://ziontechgroup.com/training"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <motion.div
-          className="relative py-20 overflow-hidden"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, currentColor 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }} />
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6">
-                <GraduationCap className="w-10 h-10 text-white" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Training & Development
-              </h1>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-                Master cutting-edge technologies with our comprehensive training programs. 
-                From AI fundamentals to advanced cloud architecture, advance your skills with expert-led courses.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Search and Filters */}
-        <div className="container mx-auto px-4 pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-blue-light/20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search training programs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-blue-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+            <div className="flex items-center justify-center mb-6">
+              <GraduationCap className="w-16 h-16 text-cyan-400 mr-4" />
+              <h1 className="text-5xl md:text-6xl font-bold text-white">
+                Training Programs
+              </h1>
             </div>
-
-            {/* Filter Tabs */}
-            <div className="space-y-4">
-              {/* Categories */}
-              <div>
-                <h3 className="text-sm font-medium text-zion-slate-light mb-3">Categories</h3>
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        activeCategory === category.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
-                      }`}
-<<<<<<< HEAD
-
-                      {category.icon}
-                      {category.name}
-=======
-                    >
-                      <div className="flex items-center gap-2">
-                        <category.icon className="w-4 h-4" />
-                        {category.name}
-                        <span className="text-xs opacity-75">({category.count})</span>
-                      </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-<<<<<<< HEAD
-              {/* Levels */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Level</label>
-                <div className="flex flex-wrap gap-2">
-                  {levels.map((level) => (
-                    <button
-                      key={level.id}
-                      onClick={() => setActiveLevel(level.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeLevel === level.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {level.name} ({level.count})
-                    </button>
-                  ))}
-=======
-              {/* Levels and Formats */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Skill Level</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {levels.map((level) => (
-                      <button
-                        key={level.id}
-                        onClick={() => setActiveLevel(level.id)}
-                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
-                          activeLevel === level.id
-                            ? 'bg-purple-600 text-white'
-                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
-                        }`}
-                      >
-                        {level.name}
-                      </button>
-                    ))}
-                  </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                </div>
-
-<<<<<<< HEAD
-              {/* Formats */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Format</label>
-                <div className="flex flex-wrap gap-2">
-                  {formats.map((format) => (
-                    <button
-                      key={format.id}
-                      onClick={() => setActiveFormat(format.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeFormat === format.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {format.name} ({format.count})
-                    </button>
-                  ))}
-=======
-                <div>
-                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Format</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {formats.map((format) => (
-                      <button
-                        key={format.id}
-                        onClick={() => setActiveFormat(format.id)}
-                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
-                          activeFormat === format.id
-                            ? 'bg-green-600 text-white'
-                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
-                        }`}
-                      >
-                        {format.name}
-                      </button>
-                    ))}
-                  </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                </div>
-              </div>
-            </div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Professional development programs designed to advance your career in technology
+            </p>
           </motion.div>
         </div>
+      </section>
 
-<<<<<<< HEAD
-      {/* Featured Programs */}
-      {trainingPrograms.filter(p => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Training Programs
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {trainingPrograms.filter(p => p.featured).map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+      {/* Search and Filters */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* Search */}
+            <div className="lg:col-span-2">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
+                <input
+                  type="text"
+                  placeholder="Search training programs..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
+                />
+              </div>
+            </div>
 
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 text-white">
-=======
-        {/* Training Programs Grid */}
-        <div className="container mx-auto px-4 pb-20">
+            {/* Category Filter */}
+            <div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-cyan-400 transition-colors"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Level Filter */}
+            <div>
+              <select
+                value={selectedLevel}
+                onChange={(e) => setSelectedLevel(e.target.value)}
+                className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-cyan-400 transition-colors"
+              >
+                {levels.map(level => (
+                  <option key={level} value={level}>{level}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Training Programs */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
           >
-            {filteredPrograms.map((program, index) => (
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Programs</h2>
+            <p className="text-gray-300">Our most popular and highly-rated training programs</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredPrograms.map((program, index) => (
               <motion.div
                 key={program.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-2"
               >
-                <Card className="h-full bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/20 hover:border-zion-blue-light/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                          <GraduationCap className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="text-xs font-medium text-zion-slate-light uppercase tracking-wide">
-                          {program.category.replace('-', ' ')}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium text-white">{program.rating}</span>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center justify-between text-white">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{formatDate(program.startDate)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span className="text-sm">{program.duration}</span>
-                        </div>
-                      </div>
-                    </div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    <span className="text-yellow-400 text-sm font-medium">Featured</span>
                   </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getLevelColor(program.level)}`}>
+                    {program.level}
+                  </span>
+                </div>
 
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      <span className={`text-sm font-medium ${getLevelColor(program.level)}`}>
-                        {levels.find(l => l.id === program.level)?.name}
-                      </span>
-                    </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{program.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{program.description}</p>
 
-                    <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {program.tags.slice(0, 3).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-=======
-                    <CardTitle className="text-xl text-white mb-2 line-clamp-2">
-                      {program.title}
-                    </CardTitle>
-                    <CardDescription className="text-zion-slate-light line-clamp-3">
-                      {program.description}
-                    </CardDescription>
-                  </CardHeader>
-                  
-                  <CardContent className="space-y-4">
-                    {/* Program Details */}
-                    <div className="grid grid-cols-2 gap-3 text-sm">
-                      <div className="flex items-center gap-2 text-zion-slate-light">
-                        <Clock className="w-4 h-4" />
-                        <span>{program.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zion-slate-light">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                        <Users className="w-4 h-4" />
-                        <span>{program.students} students</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zion-slate-light">
-                        <Users className="w-4 h-4" />
-                        <span>{program.instructor}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zion-slate-light">
-                        <DollarSign className="w-4 h-4" />
-                        <span>{program.price}</span>
-                      </div>
-                    </div>
-<<<<<<< HEAD
-
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Learn More
-                    </button>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      {program.instructor}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {program.duration} ({program.totalHours}h)
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {program.currentStudents}/{program.maxStudents}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1 text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="text-sm font-medium">{program.rating}</span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
-      {/* All Training Programs */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Training Programs
-          </h2>
-
-          {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPrograms.map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      {program.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
-=======
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {program.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 bg-zion-blue-dark/30 text-zion-cyan text-xs rounded-md border border-zion-cyan/20"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {program.tags.length > 3 && (
-                        <span className="px-2 py-1 bg-zion-slate-dark/50 text-zion-slate-light text-xs rounded-md">
-                          +{program.tags.length - 3} more
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Features */}
-                    <div className="space-y-2">
-                      {program.features.slice(0, 2).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-<<<<<<< HEAD
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {program.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-=======
-                    {/* Action Buttons */}
-                    <div className="flex gap-2 pt-2">
-                      <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                        <Play className="w-4 h-4 mr-2" />
-                        Enroll Now
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Download className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-cyan-400">{program.price}</div>
+                  <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold transition-colors flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    Enroll Now
+                  </button>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          </div>
+        </div>
+      </section>
 
-          {/* No Results */}
-          {filteredPrograms.length === 0 && (
+      {/* All Training Programs */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">All Training Programs</h2>
+            <p className="text-gray-300">
+              {filteredPrograms.length} programs found
+              {searchQuery && ` for "${searchQuery}"`}
+            </p>
+          </motion.div>
+
+          {filteredPrograms.length > 0 ? (
+            <div className="space-y-6">
+              {filteredPrograms.map((program, index) => (
+                <motion.div
+                  key={program.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div className="lg:col-span-2">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          {program.featured && (
+                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full font-medium">
+                              Featured
+                            </span>
+                          )}
+                          <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                            {program.category}
+                          </span>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getLevelColor(program.level)}`}>
+                            {program.level}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-1 text-yellow-400">
+                          <Star className="w-4 h-4 fill-current" />
+                          <span className="text-sm font-medium">{program.rating}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-3">{program.title}</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">{program.description}</p>
+
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {program.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-4 text-sm text-gray-400">
+                        <span className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          {program.instructor}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {program.duration} ({program.totalHours}h)
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {program.currentStudents}/{program.maxStudents} enrolled
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col justify-between">
+                      <div className="text-right mb-4">
+                        <div className="text-3xl font-bold text-cyan-400 mb-1">
+                          {program.price}
+                        </div>
+                        <div className="text-gray-400 text-sm">Program Fee</div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <button className="w-full px-4 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                          <BookOpen className="w-4 h-4" />
+                          Enroll Now
+                        </button>
+                        <button className="w-full px-4 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                          <Eye className="w-4 h-4" />
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
             <motion.div
-              className="text-center py-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center py-16"
             >
-              <div className="w-16 h-16 bg-zion-slate-dark/50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-zion-slate-light" />
-              </div>
+              <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No training programs found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search criteria or filters to find what you're looking for.
+              <p className="text-gray-300 mb-6">
+                Try adjusting your search terms or filters
               </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('All');
+                  setSelectedLevel('All');
+                }}
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold transition-colors"
+              >
+                Clear Filters
+              </button>
             </motion.div>
           )}
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Advance Your Career?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join our training programs and gain the skills needed for the future of technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 };
 
 export default Training;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
