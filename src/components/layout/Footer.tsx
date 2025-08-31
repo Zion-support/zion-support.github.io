@@ -104,10 +104,6 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
-        { name: "AI Autonomous Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
-        { name: "AI Cybersecurity Threat Intelligence", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
-        { name: "AI Healthcare Diagnostics Platform", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
-
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -122,13 +118,7 @@ export function Footer() {
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
         { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Building2 },
         { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
-        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },
-        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
-        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
-        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-        { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor", icon: TrendingDown },
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-intelligence-platform", icon: Shield }
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ]
     },
     {
@@ -139,18 +129,53 @@ export function Footer() {
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
         { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
         { name: "Blockchain Enterprise", href: "/services/blockchain-enterprise-solutions", icon: Network },
-        { name: "Quantum Computing", href: "/services/quantum-computing", icon: Atom },
-        { name: "IoT & Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },
-        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },
-        { name: "Performance Monitoring", href: "/services/performance-monitoring", icon: Activity },
-        { name: "Disaster Recovery", href: "/services/disaster-recovery", icon: Shield },
-        { name: "Network Security", href: "/services/network-security", icon: Lock },
-        { name: "API Management", href: "/services/api-management", icon: Code },
-        { name: "Microservices Architecture", href: "/services/microservices-architecture", icon: Layers }
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Atom },
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign },
+        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
+        { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
       ]
     },
     {
       title: "Industry Solutions",
+      icon: Target,
+      links: [
+        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
+        { name: "Financial Services", href: "/solutions/financial", icon: DollarSign },
+        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
+        { name: "Government Solutions", href: "/solutions/government", icon: Building2 },
+        { name: "Retail Solutions", href: "/solutions/retail", icon: Briefcase },
+        { name: "Enterprise Solutions", href: "/enterprise", icon: Building2 },
+        { name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
+        { name: "Industry Overview", href: "/industry-solutions", icon: Target }
+      ]
+    },
+    {
+      title: "Emerging Technologies",
+      icon: Sparkles,
+      links: [
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
+        { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions", icon: Atom },
+        { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
+        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
+        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
+        { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
+        { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
+      ]
+    },
+    {
+      title: "Legal & Education",
+      icon: BookOpen,
+      links: [
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: Scale },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText }
+      ]
+    },
+    {
+      title: "Company & About",
       icon: Building2,
       links: [
         { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
@@ -176,42 +201,10 @@ export function Footer() {
         { name: "White Papers", href: "/white-papers", icon: FileText },
         { name: "Research & Development", href: "/research", icon: Lightbulb },
         { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-        { name: "Blog & Insights", href: "/blog", icon: PenTool },
-        { name: "Documentation", href: "/docs", icon: BookOpen },
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Community", href: "/community", icon: Users },
-        { name: "ROI Calculator", href: "/tools/roi-calculator", icon: Calculator },
-        { name: "Security Assessment", href: "/tools/security-assessment", icon: Shield },
-        { name: "Performance Monitor", href: "/tools/performance-monitor", icon: Activity }
-      ]
-    },
-    {
-      title: "Innovation Hub",
-      icon: Rocket,
-      links: [
-        { name: "Innovation Services Hub", href: "/innovative-services-hub", icon: Rocket },
-        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
-        { name: "Innovation Showcase 2032", href: "/innovative-services-showcase-2032", icon: Sparkles },
-        { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025", icon: Layers },
-        { name: "Comprehensive Services 2026", href: "/comprehensive-services-showcase-2026", icon: Rocket },
-        { name: "Pricing Guide 2032", href: "/comprehensive-pricing-guide-2032", icon: DollarSign },
-        { name: "All Services", href: "/services", icon: Layers },
-        { name: "All Solutions", href: "/solutions", icon: Target },
-        { name: "Pricing", href: "/pricing", icon: DollarSign }
-      ]
-    },
-    {
-      title: "Support & Legal",
-      icon: Shield,
-      links: [
-        { name: "Support Center", href: "/support", icon: Headphones },
-        { name: "Privacy Policy", href: "/privacy", icon: Lock },
-        { name: "Terms of Service", href: "/terms", icon: FileText },
-        { name: "Cookie Policy", href: "/cookies", icon: Lock },
-        { name: "Accessibility", href: "/accessibility", icon: Users },
-        { name: "Security", href: "/security", icon: Shield },
-        { name: "Compliance", href: "/compliance", icon: CheckCircle },
-        { name: "Sitemap", href: "/sitemap", icon: Layers }
+        { name: "Training & Certification", href: "/training", icon: GraduationCap },
+        { name: "Webinars", href: "/webinars", icon: Monitor },
+        { name: "Help & Support", href: "/help", icon: Headphones },
+        { name: "Research & Development", href: "/research-development", icon: Lightbulb }
       ]
     }
   ];
@@ -263,11 +256,16 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-zion-slate-darker border-t border-zion-purple/20">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
+    <footer className="bg-gradient-to-br from-zion-slate-darker via-zion-blue-dark to-zion-slate-darker border-t border-zion-purple/30 relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+          {/* Company Info - Spans 2 columns on large screens */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -278,10 +276,10 @@ export function Footer() {
                 <p className="text-sm text-zion-slate-light">Innovation • Technology • Growth</p>
               </div>
             </div>
-            <p className="text-zion-slate-light mb-6 leading-relaxed">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
-              and digital transformation services. We help businesses leverage cutting-edge technology 
-              to drive innovation and growth.
+            
+            <p className="text-zinc-300 mb-8 max-w-md leading-relaxed">
+              Transforming businesses through innovative AI, cloud, and technology solutions. 
+              We help organizations of all sizes accelerate their digital transformation journey.
             </p>
             
             {/* Contact Information */}
@@ -421,12 +419,6 @@ export function Footer() {
                 </div>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
-              <div className="flex items-center space-x-3 text-zinc-400">
-                <div className="p-2 bg-zion-purple/20 rounded-lg">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
-              </div>
             </div>
 
           {/* Footer Links Grid */}
@@ -556,10 +548,53 @@ export function Footer() {
           </div>
         </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-zion-purple/20 bg-zion-slate-darkest">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Quick Links Section */}
+        <div className="border-t border-zion-purple/20 pt-8 mb-8">
+          <div className="flex items-center space-x-2 mb-6">
+            <Zap className="w-5 h-5 text-zion-cyan" />
+            <h4 className="text-white font-semibold">Quick Access</h4>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="flex items-center space-x-2 p-3 bg-zion-purple/10 rounded-lg border border-zion-purple/20 hover:bg-zion-purple/20 hover:border-zion-cyan/30 transition-all duration-300 group"
+              >
+                <link.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform" />
+                <span className="text-zinc-300 group-hover:text-white transition-colors text-sm font-medium">
+                  {link.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-2xl p-6 mb-8 border border-zion-purple/30">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <h4 className="text-white font-semibold text-lg mb-2">Stay Updated</h4>
+              <p className="text-zinc-300 text-sm">
+                Get the latest updates on AI innovations, technology trends, and exclusive insights.
+              </p>
+            </div>
+            <div className="flex w-full md:w-auto space-x-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 md:w-64 px-4 py-2 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 font-medium">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-zion-purple/20 pt-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
             {/* Copyright */}
             <div className="text-zion-slate-light text-sm">
               <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingDown, 
-  Users, 
-  DollarSign, 
+  Shield, 
+  TrendingUp, 
   Target, 
   Zap, 
-  Shield, 
   Cloud, 
   Brain, 
   CheckCircle,
@@ -23,7 +21,6 @@ import {
   Download,
   Share2,
   Filter,
-  Search,
   AlertTriangle,
   Lightbulb,
   BarChart,
@@ -35,90 +32,93 @@ import {
   Download as DownloadIcon,
   Share2 as Share2Icon,
   Filter as FilterIcon,
-  Search as SearchIcon,
   AlertTriangle as AlertTriangleIcon,
   Lightbulb as LightbulbIcon,
-  UserMinus,
-  UserCheck,
-  Bell,
-  Target as TargetIcon,
   BarChart3,
-  TrendingUp,
+  TrendingDown,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  DollarSign,
+  Users,
+  Lock,
+  AlertCircle,
+  Calculator,
+  TrendingUp,
+  Target as TargetIcon,
+  Zap as ZapIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIPoweredCustomerChurnPredictor() {
+export default function AIPoweredFinancialRiskManagementPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Churn Prediction",
-      description: "Advanced machine learning algorithms that analyze customer behavior patterns to predict churn risk with 95%+ accuracy",
-      benefits: ["Early warning system", "Behavioral pattern analysis", "Predictive scoring"]
+      title: "AI-Powered Risk Assessment",
+      description: "Advanced machine learning algorithms that analyze market data, financial statements, and economic indicators to predict risk with 95%+ accuracy",
+      benefits: ["Real-time risk scoring", "Predictive analytics", "Multi-factor analysis"]
     },
     {
-      icon: TrendingDown,
-      title: "Real-time Risk Monitoring",
-      description: "Continuous monitoring of customer engagement metrics and automatic risk assessment updates",
-      benefits: ["Live risk scoring", "Automated alerts", "Real-time dashboards"]
-    },
-    {
-      icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent segmentation based on churn risk, value, and behavior patterns for targeted retention strategies",
-      benefits: ["Risk-based segmentation", "Value prioritization", "Behavioral clustering"]
+      icon: Shield,
+      title: "Comprehensive Risk Monitoring",
+      description: "24/7 monitoring of portfolio risk, market volatility, and regulatory compliance with instant alerts and notifications",
+      benefits: ["Continuous monitoring", "Instant alerts", "Regulatory compliance"]
     },
     {
       icon: Target,
-      title: "Personalized Retention Campaigns",
-      description: "AI-generated retention strategies and automated campaign recommendations for high-risk customers",
-      benefits: ["Custom retention plans", "Automated campaigns", "ROI optimization"]
+      title: "Portfolio Risk Optimization",
+      description: "AI-driven portfolio rebalancing recommendations that minimize risk while maximizing returns based on your risk tolerance",
+      benefits: ["Risk-adjusted returns", "Portfolio optimization", "Dynamic rebalancing"]
     },
     {
       icon: Zap,
-      title: "Automated Intervention System",
-      description: "Smart triggers and automated actions to prevent churn before it happens",
-      benefits: ["Proactive interventions", "Smart triggers", "Automated workflows"]
+      title: "Automated Risk Mitigation",
+      description: "Smart triggers and automated actions to reduce exposure when risk thresholds are exceeded",
+      benefits: ["Auto-hedging", "Stop-loss management", "Risk reduction"]
+    },
+    {
+      icon: AlertTriangle,
+      title: "Early Warning System",
+      description: "Proactive identification of potential risks before they materialize, giving you time to take preventive action",
+      benefits: ["Risk prevention", "Early detection", "Proactive management"]
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive reporting on churn patterns, retention success rates, and ROI of retention efforts",
-      benefits: ["Churn analytics", "Retention metrics", "ROI tracking"]
+      title: "Advanced Analytics & Reporting",
+      description: "Comprehensive insights into risk metrics, performance attribution, and regulatory reporting requirements",
+      benefits: ["Risk metrics", "Performance analysis", "Regulatory reporting"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Professional",
+      price: "$599",
       period: "/month",
-      description: "Perfect for small businesses starting with churn prevention",
+      description: "Perfect for professional investors and small investment firms",
       features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
-        "Email alerts",
-        "Standard reporting",
+        "Up to $10M portfolio value",
+        "Basic risk assessment",
+        "Portfolio monitoring",
+        "Daily risk reports",
         "Email support",
-        "Basic retention suggestions"
+        "Basic analytics"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$499",
+      name: "Institutional",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for growing companies with advanced churn prevention needs",
+      description: "Ideal for institutional investors and growing investment firms",
       features: [
-        "Up to 10,000 customers",
-        "Advanced ML algorithms",
+        "Up to $100M portfolio value",
+        "Advanced AI algorithms",
         "Real-time monitoring",
-        "Automated campaigns",
+        "Automated risk mitigation",
         "Priority support",
-        "Custom retention strategies",
+        "Custom reporting",
         "API access",
         "Advanced analytics"
       ],
@@ -127,12 +127,12 @@ export default function AIPoweredCustomerChurnPredictor() {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$2,999",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade churn prevention",
+      description: "For large financial institutions requiring enterprise-grade risk management",
       features: [
-        "Unlimited customers",
-        "Custom ML models",
+        "Unlimited portfolio value",
+        "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
         "Advanced integrations",
@@ -147,47 +147,80 @@ export default function AIPoweredCustomerChurnPredictor() {
 
   const useCases = [
     {
-      industry: "SaaS & Subscription",
-      description: "Predict subscription cancellations and implement targeted retention strategies",
-      metrics: ["Churn rate reduction", "LTV improvement", "Retention cost savings"]
+      industry: "Investment Management",
+      description: "Optimize portfolio risk, monitor market exposure, and implement dynamic risk management strategies",
+      metrics: ["Risk-adjusted returns", "Portfolio volatility", "Drawdown reduction"]
     },
     {
-      industry: "E-commerce",
-      description: "Identify customers at risk of leaving and personalize retention efforts",
-      metrics: ["Customer retention", "Repeat purchase rate", "Lifetime value"]
+      industry: "Hedge Funds",
+      description: "Advanced risk modeling, position sizing, and automated risk controls for complex trading strategies",
+      metrics: ["VaR optimization", "Position limits", "Risk-adjusted performance"]
     },
     {
-      industry: "Financial Services",
-      description: "Monitor account activity and predict account closures for proactive retention",
-      metrics: ["Account retention", "Product adoption", "Revenue protection"]
+      industry: "Private Equity",
+      description: "Due diligence risk assessment, portfolio company monitoring, and exit strategy optimization",
+      metrics: ["Investment risk scoring", "Portfolio monitoring", "Exit timing optimization"]
     },
     {
-      industry: "Telecommunications",
-      description: "Predict service cancellations and implement targeted retention campaigns",
-      metrics: ["Service retention", "Plan upgrades", "Churn prevention ROI"]
+      industry: "Corporate Treasury",
+      description: "Manage currency risk, interest rate exposure, and liquidity risk for corporate financial operations",
+      metrics: ["FX risk management", "Interest rate hedging", "Liquidity optimization"]
     }
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Reduce Churn by 30-50%",
-      description: "Proactive identification and intervention significantly reduces customer churn rates"
+      title: "Improve Risk-Adjusted Returns by 20-40%",
+      description: "AI-optimized risk management significantly improves portfolio performance while reducing volatility"
+    },
+    {
+      icon: Shield,
+      title: "Reduce Portfolio Drawdowns",
+      description: "Proactive risk management helps minimize losses during market downturns and volatility spikes"
     },
     {
       icon: DollarSign,
-      title: "Increase Customer LTV",
-      description: "Better retention strategies lead to higher customer lifetime value and revenue"
-    },
-    {
-      icon: Users,
-      title: "Improve Customer Experience",
-      description: "Personalized retention efforts enhance customer satisfaction and loyalty"
+      title: "Lower Capital Requirements",
+      description: "Better risk management allows for more efficient capital allocation and reduced regulatory capital needs"
     },
     {
       icon: Target,
-      title: "Optimize Marketing ROI",
-      description: "Targeted retention campaigns reduce marketing waste and improve efficiency"
+      title: "Enhanced Compliance & Reporting",
+      description: "Automated regulatory reporting and compliance monitoring reduce operational risk and audit costs"
+    }
+  ];
+
+  const riskMetrics = [
+    {
+      icon: Calculator,
+      title: "Value at Risk (VaR)",
+      description: "Advanced VaR calculations with multiple confidence levels and time horizons"
+    },
+    {
+      icon: TrendingUp,
+      title: "Expected Shortfall",
+      description: "Tail risk analysis and extreme loss probability assessment"
+    },
+    {
+      icon: Target,
+      title: "Sharpe Ratio Optimization",
+      description: "Risk-adjusted return optimization and performance attribution analysis"
+    },
+    {
+      icon: AlertCircle,
+      title: "Stress Testing",
+      description: "Scenario analysis and stress testing for various market conditions"
+    },
+    {
+      icon: Lock,
+      title: "Regulatory Compliance",
+      description: "Basel III, Solvency II, and other regulatory framework compliance"
+    },
+    {
+      icon: Users,
+      title: "Risk Governance",
+      description: "Risk appetite framework and governance structure implementation"
     }
   ];
 
@@ -202,36 +235,36 @@ export default function AIPoweredCustomerChurnPredictor() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4 mr-2" />
-              AI-Powered Churn Prevention
+            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Financial Risk Management
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Stop Customer Churn Before It
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400"> Happens</span>
+              Master Financial Risk with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> AI Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Our AI-powered customer churn predictor uses advanced machine learning to identify at-risk customers 
-              and automatically trigger retention strategies, helping you reduce churn by up to 50%.
+              Our AI-powered financial risk management platform uses advanced machine learning to predict, 
+              monitor, and mitigate financial risks in real-time, protecting your investments and optimizing returns.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
               >
                 <span className="flex items-center gap-2">
-                  Get Started Today
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5" />
                 </span>
               </Link>
               
-              <button className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300">
+              <button className="inline-flex items-center px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300">
                 <span className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Download Brochure
+                  Download Risk Guide
                 </span>
               </button>
             </div>
@@ -250,10 +283,10 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Churn Prevention
+              Advanced Risk Management Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our comprehensive churn prediction platform combines cutting-edge AI with proven retention strategies
+              Our comprehensive platform combines cutting-edge AI with proven risk management strategies
             </p>
           </motion.div>
 
@@ -265,9 +298,9 @@ export default function AIPoweredCustomerChurnPredictor() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-red-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -286,7 +319,7 @@ export default function AIPoweredCustomerChurnPredictor() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Risk Metrics Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -297,10 +330,49 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Customer Retention
+              Comprehensive Risk Metrics
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See measurable improvements in customer retention and business growth
+              Advanced risk measurement and analysis tools for institutional-grade risk management
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {riskMetrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-green-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <metric.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{metric.title}</h3>
+                <p className="text-gray-400 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Risk Management
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              See measurable improvements in risk-adjusted returns and portfolio performance
             </p>
           </motion.div>
 
@@ -314,7 +386,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -328,7 +400,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -338,10 +410,10 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Institutional-Grade Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs and start preventing churn today
+              Choose the plan that fits your portfolio size and risk management needs
             </p>
           </motion.div>
 
@@ -355,13 +427,13 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/25' 
+                    ? 'border-green-500 shadow-lg shadow-green-500/25' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -387,7 +459,7 @@ export default function AIPoweredCustomerChurnPredictor() {
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   {plan.cta}
@@ -399,7 +471,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -412,7 +484,7 @@ export default function AIPoweredCustomerChurnPredictor() {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our churn prediction platform works across various industries and business models
+              Our risk management platform serves various financial institutions and investment strategies
             </p>
           </motion.div>
 
@@ -451,18 +523,18 @@ export default function AIPoweredCustomerChurnPredictor() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-to-r from-red-500/10 to-pink-600/10 border border-red-500/20 rounded-3xl p-12">
+            <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/20 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Stop Customer Churn?
+                Ready to Master Financial Risk?
               </h2>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses that have reduced churn and increased customer lifetime value 
-                with our AI-powered prediction platform.
+                Join leading financial institutions that have improved their risk-adjusted returns 
+                and portfolio performance with our AI-powered risk management platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <span className="flex items-center gap-2">
                     Start Free Trial
@@ -471,7 +543,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300"
                 >
                   <span className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
@@ -499,24 +571,24 @@ export default function AIPoweredCustomerChurnPredictor() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
             <div className="mt-8">
               <p className="text-gray-400">
-                Visit our website: <a href="https://ziontechgroup.com" className="text-red-400 hover:text-red-300 underline">https://ziontechgroup.com</a>
+                Visit our website: <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300 underline">https://ziontechgroup.com</a>
               </p>
             </div>
           </motion.div>

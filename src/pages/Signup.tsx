@@ -2,272 +2,193 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Building2, 
-  Users, 
-  Globe, 
-  Phone, 
+  User, 
+  Lock, 
   Mail, 
-  MessageSquare, 
-  Calendar,
-  CheckCircle,
-  Star,
+  Phone, 
+  Building2, 
+  CheckCircle, 
+  ArrowRight, 
+  Eye, 
+  EyeOff,
+  Shield,
+  Sparkles,
   Zap,
   Brain,
-  Server,
-  Shield,
   Cloud,
-  Database,
-  Workflow,
   Target,
   Rocket,
-  TrendingUp,
-  BarChart3,
-  Atom,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Lightbulb,
-  Star as StarIcon,
-  HelpCircle,
-  BarChart as BarChartIcon,
-  ShoppingCart,
+  Palette,
+  Users,
+  Award,
   Clock,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  User
+  DollarSign,
+  Globe,
+  Star
 } from 'lucide-react';
 
 export default function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('free');
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
+    company: '',
+    industry: '',
     password: '',
     confirmPassword: '',
-    companyName: '',
-    companySize: '',
-    industry: '',
-    role: '',
-    phone: '',
     agreeToTerms: false,
-    subscribeToNewsletter: false
+    agreeToMarketing: false
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
-  const [errors, setErrors] = useState<{[key: string]: string}>({});
-
-  const companySizes = [
-    { value: 'startup', label: 'Startup (1-50 employees)' },
-    { value: 'small', label: 'Small Business (51-200 employees)' },
-    { value: 'medium', label: 'Medium Business (201-1000 employees)' },
-    { value: 'large', label: 'Large Enterprise (1000+ employees)' }
+  const plans = [
+    {
+      id: 'free',
+      name: 'Free Trial',
+      price: '$0',
+      period: '/month',
+      description: 'Perfect for exploring our services',
+      features: [
+        'Access to basic features',
+        '5 AI content generations',
+        'Basic templates',
+        'Community support',
+        'Limited storage (1GB)'
+      ],
+      popular: false,
+      cta: 'Start Free Trial'
+    },
+    {
+      id: 'starter',
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for small businesses',
+      features: [
+        'All Free features',
+        '25 AI content generations',
+        'Premium templates',
+        'Email support',
+        '5GB storage',
+        'Basic analytics'
+      ],
+      popular: true,
+      cta: 'Get Started'
+    },
+    {
+      id: 'professional',
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'For growing businesses',
+      features: [
+        'All Starter features',
+        '100 AI content generations',
+        'Custom templates',
+        'Priority support',
+        '25GB storage',
+        'Advanced analytics',
+        'Team collaboration'
+      ],
+      popular: false,
+      cta: 'Start Professional'
+    }
   ];
 
-  const industries = [
-    { value: 'technology', label: 'Technology' },
-    { value: 'healthcare', label: 'Healthcare' },
-    { value: 'finance', label: 'Financial Services' },
-    { value: 'manufacturing', label: 'Manufacturing' },
-    { value: 'retail', label: 'Retail & E-commerce' },
-    { value: 'education', label: 'Education' },
-    { value: 'government', label: 'Government' },
-    { value: 'nonprofit', label: 'Non-profit' },
-    { value: 'other', label: 'Other' }
-  ];
-
-  const roles = [
-    { value: 'executive', label: 'C-Level Executive' },
-    { value: 'director', label: 'Director/VP' },
-    { value: 'manager', label: 'Manager' },
-    { value: 'developer', label: 'Developer/Engineer' },
-    { value: 'consultant', label: 'Consultant' },
-    { value: 'student', label: 'Student' },
-    { value: 'other', label: 'Other' }
+  const serviceHighlights = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence for business transformation'
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and enterprise infrastructure'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enterprise Security',
+      description: 'Advanced cybersecurity and compliance solutions'
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: 'Industry Solutions',
+      description: 'Tailored solutions for specific industry needs'
+    }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
-    const checked = (e.target as HTMLInputElement).checked;
-    
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => ({
         ...prev,
-        [name]: ''
+        [name]: checked
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
       }));
     }
   };
 
-  const validateStep = (step: number) => {
-    const newErrors: {[key: string]: string} = {};
-
-    if (step === 1) {
-      if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-      if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-      if (!formData.email.trim()) newErrors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
-      if (!formData.password) newErrors.password = 'Password is required';
-      else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters';
-      if (!formData.confirmPassword) newErrors.confirmPassword = 'Please confirm your password';
-      else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = 'Passwords do not match';
-    }
-
-    if (step === 2) {
-      if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
-      if (!formData.companySize) newErrors.companySize = 'Please select company size';
-      if (!formData.industry) newErrors.industry = 'Please select industry';
-      if (!formData.role) newErrors.role = 'Please select your role';
-    }
-
-    if (step === 3) {
-      if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const nextStep = () => {
-    if (validateStep(currentStep)) {
-      setCurrentStep(prev => Math.min(prev + 1, 3));
-    }
-  };
-
-  const prevStep = () => {
-    setCurrentStep(prev => Math.max(prev - 1, 1));
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateStep(currentStep)) {
-      // Handle form submission
-      console.log('Form submitted:', formData);
-    }
-  };
-
-  const getStepStatus = (step: number) => {
-    if (step < currentStep) return 'completed';
-    if (step === currentStep) return 'current';
-    return 'upcoming';
+    // Handle form submission
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2" />
               Join Zion Tech Group
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Create Your Account
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
-              Create your account to access our cutting-edge AI, cloud, and technology solutions. 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already using our AI-powered services and technology solutions. 
               Start your digital transformation journey today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Free Account</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Instant Access</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Premium Support</span>
-              </div>
-            </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Progress Steps */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="flex items-center justify-between mb-8">
-            {[
-              { step: 1, title: 'Account Details', icon: User },
-              { step: 2, title: 'Company Info', icon: Building2 },
-              { step: 3, title: 'Terms & Finish', icon: CheckCircle }
-            ].map(({ step, title, icon: Icon }) => (
-              <div key={step} className="flex flex-col items-center">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all duration-300 ${
-                  getStepStatus(step) === 'completed' 
-                    ? 'bg-zion-cyan text-white' 
-                    : getStepStatus(step) === 'current'
-                    ? 'bg-zion-cyan/20 text-zion-cyan border-2 border-zion-cyan'
-                    : 'bg-zinc-700 text-zinc-400'
-                }`}>
-                  {getStepStatus(step) === 'completed' ? (
-                    <CheckCircle className="w-6 h-6" />
-                  ) : (
-                    <Icon className="w-6 h-6" />
-                  )}
-                </div>
-                <span className={`text-sm font-medium ${
-                  getStepStatus(step) === 'completed' 
-                    ? 'text-zion-cyan' 
-                    : getStepStatus(step) === 'current'
-                    ? 'text-white'
-                    : 'text-zinc-400'
-                }`}>
-                  {title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+      </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8"
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Step 1: Account Details */}
-              {currentStep === 1 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-2xl font-bold text-white mb-6">Account Details</h2>
-                  
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+            {/* Signup Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1"
+            >
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-gray-700 rounded-2xl p-8">
+                <h2 className="text-3xl font-bold text-white mb-8">Get Started Today</h2>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name Fields */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         First Name *
                       </label>
                       <input
@@ -275,18 +196,13 @@ export default function Signup() {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                          errors.firstName ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                        placeholder="Enter first name"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                        placeholder="Enter your first name"
                       />
-                      {errors.firstName && (
-                        <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>
-                      )}
                     </div>
-                    
                     <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         Last Name *
                       </label>
                       <input
@@ -294,212 +210,31 @@ export default function Signup() {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                          errors.lastName ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                        placeholder="Enter last name"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                        placeholder="Enter your last name"
                       />
-                      {errors.lastName && (
-                        <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
-                      )}
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                        errors.email ? 'border-red-500' : 'border-zinc-600'
-                      }`}
-                      placeholder="Enter email address"
-                    />
-                    {errors.email && (
-                      <p className="text-red-400 text-sm mt-1">{errors.email}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Password *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type={showPassword ? 'text' : 'password'}
-                        name="password"
-                        value={formData.password}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
-                          errors.password ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                        placeholder="Create a password"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
-                      >
-                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                      </button>
-                    </div>
-                    {errors.password && (
-                      <p className="text-red-400 text-sm mt-1">{errors.password}</p>
-                    )}
-                    <p className="text-zinc-400 text-sm mt-1">Must be at least 8 characters long</p>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Confirm Password *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type={showConfirmPassword ? 'text' : 'password'}
-                        name="confirmPassword"
-                        value={formData.confirmPassword}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
-                          errors.confirmPassword ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                        placeholder="Confirm your password"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
-                      >
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                      </button>
-                    </div>
-                    {errors.confirmPassword && (
-                      <p className="text-red-400 text-sm mt-1">{errors.confirmPassword}</p>
-                    )}
-                  </div>
-
-                  <div className="pt-4">
-                    <button
-                      type="button"
-                      onClick={nextStep}
-                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      Continue
-                      <ArrowRight className="w-5 h-5 ml-2 inline" />
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Step 2: Company Information */}
-              {currentStep === 2 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-2xl font-bold text-white mb-6">Company Information</h2>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="companyName"
-                      value={formData.companyName}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                        errors.companyName ? 'border-red-500' : 'border-zinc-600'
-                      }`}
-                      placeholder="Enter company name"
-                    />
-                    {errors.companyName && (
-                      <p className="text-red-400 text-sm mt-1">{errors.companyName}</p>
-                    )}
-                  </div>
-
+                  {/* Contact Fields */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
-                        Company Size *
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
                       </label>
-                      <select
-                        name="companySize"
-                        value={formData.companySize}
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                          errors.companySize ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                      >
-                        <option value="">Select company size</option>
-                        {companySizes.map(size => (
-                          <option key={size.value} value={size.value}>
-                            {size.label}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.companySize && (
-                        <p className="text-red-400 text-sm mt-1">{errors.companySize}</p>
-                      )}
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                        placeholder="Enter your email"
+                      />
                     </div>
-                    
                     <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
-                        Industry *
-                      </label>
-                      <select
-                        name="industry"
-                        value={formData.industry}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                          errors.industry ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                      >
-                        <option value="">Select industry</option>
-                        {industries.map(industry => (
-                          <option key={industry.value} value={industry.value}>
-                            {industry.label}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.industry && (
-                        <p className="text-red-400 text-sm mt-1">{errors.industry}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
-                        Your Role *
-                      </label>
-                      <select
-                        name="role"
-                        value={formData.role}
-                        onChange={handleInputChange}
-                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
-                          errors.role ? 'border-red-500' : 'border-zinc-600'
-                        }`}
-                      >
-                        <option value="">Select your role</option>
-                        {roles.map(role => (
-                          <option key={role.value} value={role.value}>
-                            {role.label}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.role && (
-                        <p className="text-red-400 text-sm mt-1">{errors.role}</p>
-                      )}
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number
                       </label>
                       <input
@@ -507,42 +242,101 @@ export default function Signup() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                        placeholder="Enter phone number"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                        placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
 
-                  <div className="pt-4 flex space-x-4">
-                    <button
-                      type="button"
-                      onClick={prevStep}
-                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
-                    >
-                      Back
-                    </button>
-                    <button
-                      type="button"
-                      onClick={nextStep}
-                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      Continue
-                      <ArrowRight className="w-5 h-5 ml-2 inline" />
-                    </button>
+                  {/* Company Fields */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                        placeholder="Enter your company name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Industry
+                      </label>
+                      <select
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors"
+                      >
+                        <option value="">Select Industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail</option>
+                        <option value="education">Education</option>
+                        <option value="government">Government</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
                   </div>
-                </motion.div>
-              )}
 
-              {/* Step 3: Terms & Finish */}
-              {currentStep === 3 && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-2xl font-bold text-white mb-6">Terms & Finish</h2>
-                  
+                  {/* Password Fields */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Password *
+                      </label>
+                      <div className="relative">
+                        <input
+                          type={showPassword ? 'text' : 'password'}
+                          name="password"
+                          value={formData.password}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors pr-12"
+                          placeholder="Create a password"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
+                        >
+                          {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Confirm Password *
+                      </label>
+                      <div className="relative">
+                        <input
+                          type={showConfirmPassword ? 'text' : 'password'}
+                          name="confirmPassword"
+                          value={formData.confirmPassword}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-colors pr-12"
+                          placeholder="Confirm your password"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
+                        >
+                          {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Checkboxes */}
                   <div className="space-y-4">
                     <label className="flex items-start space-x-3 cursor-pointer">
                       <input
@@ -550,80 +344,169 @@ export default function Signup() {
                         name="agreeToTerms"
                         checked={formData.agreeToTerms}
                         onChange={handleInputChange}
-                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                        required
+                        className="w-4 h-4 text-cyan-500 bg-slate-700 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2 mt-1"
                       />
-                      <div>
-                        <span className="text-zinc-300">
-                          I agree to the{' '}
-                          <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light underline">
-                            Terms of Service
-                          </Link>
-                          {' '}and{' '}
-                          <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light underline">
-                            Privacy Policy
-                          </Link>
-                          *
-                        </span>
-                        {errors.agreeToTerms && (
-                          <p className="text-red-400 text-sm mt-1">{errors.agreeToTerms}</p>
-                        )}
-                      </div>
+                      <span className="text-sm text-gray-300">
+                        I agree to the{' '}
+                        <Link to="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                          Terms of Service
+                        </Link>{' '}
+                        and{' '}
+                        <Link to="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                          Privacy Policy
+                        </Link>
+                      </span>
                     </label>
-
+                    
                     <label className="flex items-start space-x-3 cursor-pointer">
                       <input
                         type="checkbox"
-                        name="subscribeToNewsletter"
-                        checked={formData.subscribeToNewsletter}
+                        name="agreeToMarketing"
+                        checked={formData.agreeToMarketing}
                         onChange={handleInputChange}
-                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                        className="w-4 h-4 text-cyan-500 bg-slate-700 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2 mt-1"
                       />
-                      <span className="text-zinc-300">
-                        Subscribe to our newsletter for updates on new features, industry insights, and exclusive offers
+                      <span className="text-sm text-gray-300">
+                        I agree to receive marketing communications about new features and services
                       </span>
                     </label>
                   </div>
 
-                  <div className="pt-4 flex space-x-4">
-                    <button
-                      type="button"
-                      onClick={prevStep}
-                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
-                    >
-                      Back
-                    </button>
-                    <button
-                      type="submit"
-                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                    >
-                      Create Account
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-            </form>
-          </motion.div>
-        </div>
-      </div>
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    Create Account
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
 
-      {/* Login Link */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                  {/* Login Link */}
+                  <div className="text-center">
+                    <p className="text-gray-400">
+                      Already have an account?{' '}
+                      <Link to="/login" className="text-cyan-400 hover:text-cyan-300 underline font-medium">
+                        Sign in here
+                      </Link>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </motion.div>
+
+            {/* Plan Selection & Features */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="order-1 lg:order-2"
+            >
+              {/* Plan Selection */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-white mb-6">Choose Your Plan</h3>
+                <div className="space-y-4">
+                  {plans.map((plan) => (
+                    <div
+                      key={plan.id}
+                      onClick={() => setSelectedPlan(plan.id)}
+                      className={`cursor-pointer border rounded-xl p-4 transition-all duration-300 ${
+                        selectedPlan === plan.id
+                          ? 'border-cyan-500 bg-cyan-500/10'
+                          : 'border-gray-600 hover:border-gray-500'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white">{plan.name}</h4>
+                          <p className="text-gray-400 text-sm">{plan.description}</p>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">{plan.price}</div>
+                          <div className="text-gray-400 text-sm">{plan.period}</div>
+                        </div>
+                      </div>
+                      
+                      <ul className="space-y-2 mb-4">
+                        {plan.features.map((feature, index) => (
+                          <li key={index} className="flex items-center text-sm">
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                            <span className="text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <button
+                        className={`w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 ${
+                          selectedPlan === plan.id
+                            ? 'bg-cyan-500 text-white hover:bg-cyan-600'
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                        }`}
+                      >
+                        {plan.cta}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Service Highlights */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4">
+                  {serviceHighlights.map((highlight, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div className="text-cyan-400">
+                          {highlight.icon}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-1">{highlight.title}</h4>
+                        <p className="text-gray-400 text-sm">{highlight.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
-            <p className="text-zinc-300 mb-4">
-              Already have an account?{' '}
-              <Link to="/login" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
-                Sign in here
-              </Link>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8">
+              Join thousands of businesses already leveraging our AI-powered solutions for growth and innovation
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Our Team
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

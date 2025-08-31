@@ -65,6 +65,174 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const footerSections = [
+    {
+      title: "AI & Machine Learning",
+      icon: Brain,
+      services: [
+        { name: "AI Customer Success Automation", href: "/services/ai-powered-customer-success-automation" },
+        { name: "AI Churn Predictor", href: "/services/ai-powered-churn-predictor" },
+        { name: "AI Interview Assessment", href: "/services/ai-interview-assessment-platform" },
+        { name: "AI Returns Management", href: "/services/ai-returns-management-saas" },
+        { name: "AI SEO Platform", href: "/services/ai-powered-seo-platform" },
+        { name: "AI Workflow Automation", href: "/services/ai-workflow-automation-platform" },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-suite" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics" },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Content Optimizer Pro", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation-platform" },
+        { name: "AI IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
+        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "Micro SAAS Solutions", href: "/micro-saas" }
+      ]
+    },
+    {
+      title: "AI Cybersecurity & Infrastructure",
+      icon: Shield,
+      services: [
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform" }
+      ]
+    },
+    {
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      services: [
+        { name: "Cloud DevOps", href: "/services/cloud-devops" },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
+        { name: "FinOps Advisor", href: "/services/finops-advisor" },
+        { name: "Cloud Migration", href: "/services/cloud-migration-services" },
+        { name: "Edge Computing", href: "/services/iot-edge-computing" },
+        { name: "Edge Computing Solutions", href: "/services/edge-computing-solutions" }
+      ]
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: "Quantum Computing & Emerging Tech",
+      icon: Atom,
+      services: [
+        { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" },
+        { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
+      ]
+    }
+  ];
+
+  const solutions = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Education Solutions", href: "/solutions/education" },
+    { name: "Startup Solutions", href: "/solutions/startup" }
+  ];
+
+  const resources = [
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Documentation", href: "/documentation" },
+    { name: "API Reference", href: "/api" },
+    { name: "Help Center", href: "/help" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Services Overview", href: "/services-overview" },
+    { name: "Marketplace", href: "/marketplace" }
+  ];
+
+  const company = [
+    { name: "About Us", href: "/about" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Careers", href: "/careers" },
+    { name: "Partners", href: "/partners" },
+    { name: "News", href: "/news" },
+    { name: "Contact", href: "/contact" },
+    { name: "Request Quote", href: "/request-quote" },
+    { name: "Schedule Demo", href: "/schedule-demo" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "GDPR Compliance", href: "/gdpr" },
+    { name: "Accessibility", href: "/accessibility" },
+    { name: "Security", href: "/security" }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: '#'
+    },
+    {
+      icon: Clock,
+      text: 'Mon-Fri: 9AM-6PM EST',
+      href: '#'
+    }
+  ];
+
+>>>>>>> origin/comprehensive-improvements-merge
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}

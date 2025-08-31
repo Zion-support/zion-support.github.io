@@ -35,7 +35,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { MobileResponsivenessEnhancer } from './components/MobileResponsivenessEnhancer';
 import { SEO } from './components/SEO';
-import FloatingActionButton from './components/FloatingActionButton';
+import FloatingActionButton from './components/ui/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
@@ -125,6 +125,12 @@ const AIAutonomousCybersecurityPlatform = createLazyComponent(() => import('./pa
 const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-manufacturing-platform'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+
+// New Innovative Micro SAAS Services 2026 - Additional
+const AIPoweredCustomerChurnPredictor = createLazyComponent(() => import('./pages/services/ai-powered-customer-churn-predictor'));
+const AIPoweredSEOOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-powered-seo-optimization-platform'));
+const AIPoweredFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-powered-financial-risk-management-platform'));
+const AIPoweredSupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-powered-supply-chain-optimization-platform'));
 const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 
 // New Innovative Services 2026 - Additional
@@ -157,7 +163,15 @@ const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/
 const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
 
+// Import new service data
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from './data/innovativeMicroSaasServices2026';
+import { INNOVATIVE_IT_SERVICES_2026 } from './data/innovativeITServices2026';
+import { INNOVATIVE_AI_SERVICES_2026 } from './data/innovativeAIServices2026';
+
 // New Innovative Services 2026 - Additional
+const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
+const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
+const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-manufacturing-platform'));
 const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
 const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
 const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-smart-home-energy-management-platform'));
@@ -168,12 +182,14 @@ const AIRealEstateInvestmentAnalyticsPlatform = createLazyComponent(() => import
 
 // New Innovative Services 2025 - Additional
 const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
-const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
 const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence'));
 const AIHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
 
 // New AI Services 2026
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
+
+// Innovative Services Showcase 2026
+const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
 // Innovative Services Showcase 2027
 const InnovativeServicesShowcase2027 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2027'));
@@ -189,6 +205,9 @@ const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages
 
 // Comprehensive Pricing Guide 2029
 const ComprehensivePricingGuide2029 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2029'));
+
+// Comprehensive Pricing Guide 2026
+const ComprehensivePricingGuide2026 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2026'));
 
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
@@ -206,6 +225,7 @@ const AIContentCreationStudio = createLazyComponent(() => import('./pages/servic
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
 // Additional service pages
+>>>>>>> origin/comprehensive-improvements-merge
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
 const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
@@ -367,6 +387,24 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
 
+                    {/* Innovative Services Showcase 2026 */}
+                    <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2026 */}
+                    <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
+
+                    {/* Innovative Services Showcase 2027 */}
+                    <Route path="/innovative-services-showcase-2027" element={<ModernLayout><InnovativeServicesShowcase2027 /></ModernLayout>} />
+
+                    {/* Innovative Services Showcase 2032 */}
+                    <Route path="/innovative-services-showcase-2032" element={<ModernLayout><InnovativeServicesShowcase2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2032 */}
+                    <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2033 */}
+                    <Route path="/comprehensive-pricing-guide-2033" element={<ModernLayout><ComprehensivePricingGuide2033 /></ModernLayout>} />
+                    
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
                     <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
@@ -388,8 +426,54 @@ function App() {
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
                     <Route path="/services/ai-devops-automation-platform" element={<ModernLayout><AIDevOpsAutomationPlatform /></ModernLayout>} />
                     <Route path="/services/ai-ecommerce-optimization-platform" element={<ModernLayout><AIEcommerceOptimizationPlatform /></ModernLayout>} />
-                    {/* Innovative Services Showcase 2026 */}
-                    <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+
+                    {/* New Innovative Services 2025 - Combined from both versions */}
+                    <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
+                    <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
+                    <Route path="/services/it-infrastructure-management" element={<ITInfrastructureManagement />} />
+                    <Route path="/services/micro-saas-solutions-comprehensive" element={<MicroSaaSSolutionsComprehensive />} />
+
+                    {/* New Innovative AI Services 2025 - Enhanced */}
+                    <Route path="/services/ai-quantum-neural-network-platform" element={<ModernLayout><AIQuantumNeuralNetworkPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-business-operations-platform" element={<ModernLayout><AIAutonomousBusinessOperationsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
+
+                    {/* Additional Innovative Services 2025 */}
+                    <Route path="/services/ai-enterprise-intelligence-platform" element={<ModernLayout><AIEnterpriseIntelligencePlatform /></ModernLayout>} />
+                    <Route path="/services/quantum-ai-cybersecurity-platform" element={<ModernLayout><QuantumAICybersecurityPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-hr-management-platform" element={<ModernLayout><AIHRManagementPlatform /></ModernLayout>} />
+
+                    {/* Additional service routes from remote branch */}
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
+                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* New Innovative Services 2025 - Content Creation & Analytics */}
+                    <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                    <Route path="/pricing-guide" element={<PricingGuide />} />
+                    
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Additional */}
+                    <Route path="/services/ai-carbon-footprint-management-platform" element={<ModernLayout><AICarbonFootprintManagementPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-mental-health-support-platform" element={<ModernLayout><AIMentalHealthSupportPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-smart-home-energy-management-platform" element={<ModernLayout><AISmartHomeEnergyManagementPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Legal & Education */}
+
 
                     {/* Comprehensive Pricing Guide 2026 */}
                     <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
@@ -402,6 +486,12 @@ function App() {
 
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2033 */}
+                    <Route path="/comprehensive-pricing-guide-2033" element={<ModernLayout><ComprehensivePricingGuide2033 /></ModernLayout>} />
+                    
+                    {/* Comprehensive Pricing Guide 2026 */}
+                    <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
@@ -471,9 +561,16 @@ function App() {
                     <Route path="/services/ai-autonomous-healthcare-diagnostics" element={<ModernLayout><AIAutonomousHealthcareDiagnostics /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-cybersecurity-operations" element={<ModernLayout><AIAutonomousCybersecurityOperations /></ModernLayout>} />
 
+                    <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
+                    <Route path="/services/ai-quantum-computing-solutions" element={<ModernLayout><AIQuantumComputingSolutions /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
+
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<ModernLayout><AIPoweredCustomerChurnPredictor /></ModernLayout>} />
                     <Route path="/services/ai-cybersecurity-intelligence-platform" element={<ModernLayout><AICybersecurityIntelligencePlatform /></ModernLayout>} />
+                    <Route path="/services/ai-powered-seo-optimization-platform" element={<AIPoweredSEOOptimizationPlatform />} />
+                    <Route path="/services/ai-powered-financial-risk-management-platform" element={<AIPoweredFinancialRiskManagementPlatform />} />
+                    <Route path="/services/ai-powered-supply-chain-optimization-platform" element={<AIPoweredSupplyChainOptimizationPlatform />} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
@@ -583,6 +680,13 @@ function App() {
               showMobileIndicator={false}
               enableTouchGestures={true}
               enableMobileOptimizations={true}
+            />
+
+            {/* SEO Component */}
+            <SEO 
+              title="Zion Tech Group - Innovative AI & IT Solutions"
+              description="Leading provider of AI-powered business solutions, IT services, and innovative technology consulting. Transform your business with cutting-edge AI and digital solutions."
+              keywords="AI solutions, IT services, business automation, digital transformation, cybersecurity, cloud computing, quantum computing"
             />
 
             {/* Advanced Analytics */}
