@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu,
   X,
   Search,
@@ -49,14 +49,10 @@ import { Menu,
   Satellite,
   FileText,
   Sparkles as SparklesIcon
-<<<<<<< HEAD
-import { enhancedServicesCatalog2025               } from '../data/enhancedServicesCatalog2025';
-=======
 } from 'lucide-react';
-import { enhancedServicesCatalog2025               } from '../data/enhancedServicesCatalog2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
-export function EnhancedHeader(...args: any[]): any {
+export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -65,7 +61,7 @@ export function EnhancedHeader(...args: any[]): any {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
 
@@ -73,7 +69,7 @@ export function EnhancedHeader(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
