@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -22,7 +22,7 @@ const registerServiceWorker = async () => {
       }
       
       // Handle updates
-      registration.addEventListener('updatefound', ()              => {
+      registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
@@ -46,7 +46,7 @@ const registerServiceWorker = async () => {
 };
 
 // Performance monitoring
-const reportWebVitals = (metric: anyany)  => {
+const reportWebVitals = (metric: any) => {
   if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metric);
   }
@@ -54,7 +54,7 @@ const reportWebVitals = (metric: anyany)  => {
 };
 
 // Error boundary for the root
-class RootErrorBoundary extends React.Component<
+class RootErrorBoundary extends Component<
   { children: React.ReactNode },
   { hasError: boolean; error?: Error }
 > {
@@ -103,7 +103,7 @@ const renderApp = () => {
   const root = ReactDOM.createRoot(document.getElementById('root')!);
   
   root.render(
-    <React.StrictMode>
+    <StrictMode>
       <RootErrorBoundary>
         <HelmetProvider>
           <Router>
@@ -111,7 +111,7 @@ const renderApp = () => {
           </Router>
         </HelmetProvider>
       </RootErrorBoundary>
-    </React.StrictMode>,
+    </StrictMode>,
   );
 };
 
