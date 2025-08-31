@@ -46,47 +46,66 @@ const ModernSidebar: React.FC = () => {
 
   const navigation = {
     main: [
-      { name: 'Home', href: '/', icon: Home },
-      { name: 'About', href: '/about', icon: Users },
-      { name: 'Contact', href: '/contact', icon: Phone },
-      { name: 'Blog', href: '/blog', icon: FileText },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'Events', href: '/events', icon: Calendar },
+      { name: 'Home', href: '/', icon: Home, badge: null },
+      { name: 'About Us', href: '/about', icon: Users, badge: null },
+      { name: 'Contact', href: '/contact', icon: Phone, badge: null },
+      { name: 'Pricing', href: '/pricing', icon: BarChart3, badge: null },
+      { name: 'Get Quote', href: '/request-quote', icon: MessageCircle, badge: 'Popular' },
     ],
     services: [
-      { name: 'AI Services', href: '/ai-services', icon: Brain },
-      { name: 'IT Services', href: '/it-services', icon: Cpu },
-      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-      { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
-      { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Smartphone },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
+      { name: 'All Services', href: '/services', icon: Zap, badge: null },
+      { name: 'AI & ML Services', href: '/ai-services', icon: Brain, badge: 'Hot' },
+      { name: 'IT Infrastructure', href: '/it-services', icon: Cpu, badge: null },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, badge: null },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, badge: null },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Rocket, badge: 'New' },
+      { name: 'Blockchain & Web3', href: '/services/blockchain-enterprise-solutions', icon: Lock, badge: null },
+      { name: 'Edge Computing', href: '/services/edge-computing-solutions', icon: Smartphone, badge: null },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, badge: null },
+    ],
+    ai: [
+      { name: 'Enterprise Automation', href: '/services/ai-enterprise-automation-platform', icon: Brain, badge: null },
+      { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, badge: null },
+      { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', icon: Globe, badge: null },
+      { name: 'Customer Support AI', href: '/services/ai-customer-support-automation', icon: MessageCircle, badge: null },
+      { name: 'Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, badge: 'Popular' },
+      { name: 'Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, badge: null },
     ],
     solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Database },
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Globe },
-      { name: 'AI-Powered Analytics', href: '/solutions/ai-analytics', icon: Brain },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'Security Compliance', href: '/solutions/security-compliance', icon: Shield },
-      { name: 'Performance Optimization', href: '/solutions/performance', icon: Zap },
+      { name: 'Healthcare & Biotech', href: '/solutions/healthcare', icon: Users, badge: null },
+      { name: 'Financial Services', href: '/solutions/financial', icon: BarChart3, badge: null },
+      { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Settings, badge: null },
+      { name: 'Government & Public', href: '/solutions/government', icon: Shield, badge: null },
+      { name: 'Retail & E-commerce', href: '/solutions/retail', icon: Database, badge: null },
+      { name: 'Enterprise Solutions', href: '/enterprise', icon: Globe, badge: null },
+    ],
+    innovation: [
+      { name: '2026 Innovation Showcase', href: '/innovative-services-showcase-2026', icon: Rocket, badge: 'New' },
+      { name: '2025 Services Showcase', href: '/comprehensive-services-showcase-2025', icon: Zap, badge: null },
+      { name: 'AI Services 2025', href: '/innovative-ai-services-showcase-2025', icon: Brain, badge: null },
+      { name: 'Emerging Technologies', href: '/emerging-tech', icon: Cpu, badge: 'Trending' },
+      { name: 'Digital Transformation', href: '/digital-transformation', icon: Globe, badge: null },
     ],
     resources: [
-      { name: 'Case Studies', href: '/case-studies', icon: FileText },
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'API Reference', href: '/api', icon: Cpu },
-      { name: 'Support Center', href: '/help', icon: MessageCircle },
-      { name: 'Community Forum', href: '/forum', icon: Users },
+      { name: 'Documentation', href: '/docs', icon: FileText, badge: null },
+      { name: 'Case Studies', href: '/case-studies', icon: FileText, badge: null },
+      { name: 'White Papers', href: '/white-papers', icon: FileText, badge: null },
+      { name: 'Webinars', href: '/webinars', icon: Calendar, badge: null },
+      { name: 'Training', href: '/training', icon: Users, badge: null },
+      { name: 'Research & Development', href: '/research-development', icon: Cpu, badge: null },
+      { name: 'Support Center', href: '/help', icon: MessageCircle, badge: null },
     ],
-    comp: [
-      { name: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { name: 'Terms of Service', href: '/terms', icon: FileText },
-      { name: 'Cookie Policy', href: '/cookies', icon: Lock },
-      { name: 'Accessibility', href: '/accessibility', icon: Users },
-      { name: 'Security', href: '/security', icon: Shield },
-      { name: 'Compliance', href: '/compliance', icon: Shield },
+    company: [
+      { name: 'Leadership Team', href: '/leadership', icon: Users, badge: null },
+      { name: 'News & Updates', href: '/news', icon: FileText, badge: null },
+      { name: 'Events & Webinars', href: '/events', icon: Calendar, badge: null },
+      { name: 'Partners', href: '/partners', icon: Users, badge: null },
+      { name: 'Careers', href: '/careers', icon: Users, badge: 'Hiring' },
+      { name: 'Blog', href: '/blog', icon: FileText, badge: null },
+    ],
+    marketplace: [
+      { name: 'Marketplace Home', href: '/marketplace', icon: Database, badge: null },
+      { name: 'Sign Up', href: '/signup', icon: Users, badge: 'Free' },
     ]
   };
 
@@ -103,13 +122,32 @@ const ModernSidebar: React.FC = () => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
+  const renderBadge = (badge: string | null) => {
+    if (!badge) return null;
+    
+    const badgeColors = {
+      'New': 'bg-green-500/20 text-green-400 border-green-500/30',
+      'Hot': 'bg-red-500/20 text-red-400 border-red-500/30',
+      'Popular': 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
+      'Trending': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+      'Free': 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+      'Hiring': 'bg-orange-500/20 text-orange-400 border-orange-500/30'
+    };
+    
+    return (
+      <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${badgeColors[badge] || badgeColors['New']}`}>
+        {badge}
+      </span>
+    );
+  };
+
   const renderNavSection = (title: string, items: any[], sectionKey: string) => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors py-2 font-medium"
       >
-        <span>{title}</span>
+        <span className="text-sm font-semibold uppercase tracking-wider">{title}</span>
         {expandedSections.includes(sectionKey) ? (
           <ChevronDown className="w-4 h-4" />
         ) : (
@@ -126,19 +164,22 @@ const ModernSidebar: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="ml-4 mt-2 space-y-1">
+            <div className="ml-2 mt-2 space-y-1">
               {items.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                  className={`flex items-center justify-between group px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     location.pathname === item.href
-                      ? 'bg-cyan-500/20 text-cyan-400'
-                      : 'text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50'
+                      ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border border-cyan-500/30'
+                      : 'text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 hover:border hover:border-cyan-500/20'
                   }`}
                 >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
+                  <div className="flex items-center space-x-3 flex-1">
+                    <item.icon className="w-4 h-4" />
+                    <span className="truncate">{item.name}</span>
+                  </div>
+                  {renderBadge(item.badge)}
                 </Link>
               ))}
             </div>
@@ -206,14 +247,17 @@ const ModernSidebar: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                    className={`flex items-center justify-between group px-3 py-2 rounded-lg transition-all duration-200 ${
                       location.pathname === item.href
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50'
+                        ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border border-cyan-500/30'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 hover:border hover:border-cyan-500/20'
                     }`}
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
+                    <div className="flex items-center space-x-3 flex-1">
+                      <item.icon className="w-4 h-4" />
+                      <span className="truncate">{item.name}</span>
+                    </div>
+                    {renderBadge(item.badge)}
                   </Link>
                 ))}
               </div>
@@ -222,14 +266,23 @@ const ModernSidebar: React.FC = () => {
             {/* Services Section */}
             {renderNavSection('Services', navigation.services, 'services')}
 
-            {/* Solutions Section */}
-            {renderNavSection('Solutions', navigation.solutions, 'solutions')}
+            {/* AI Solutions Section */}
+            {renderNavSection('AI Solutions', navigation.ai, 'ai')}
+
+            {/* Industry Solutions Section */}
+            {renderNavSection('Industry Solutions', navigation.solutions, 'solutions')}
+
+            {/* Innovation Hub Section */}
+            {renderNavSection('Innovation Hub', navigation.innovation, 'innovation')}
 
             {/* Resources Section */}
             {renderNavSection('Resources', navigation.resources, 'resources')}
 
             {/* Company Section */}
-            {renderNavSection('Company', navigation.comp, 'comp')}
+            {renderNavSection('Company', navigation.company, 'company')}
+
+            {/* Marketplace Section */}
+            {renderNavSection('Marketplace', navigation.marketplace, 'marketplace')}
           </nav>
 
           {/* Contact Information */}
