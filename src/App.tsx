@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Layout Components
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -89,12 +93,15 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Header */}
+            <Header />
+            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
             
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 pt-16 lg:pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -198,6 +205,9 @@ function App() {
             {/* User Experience Optimizer */}
             <UserExperienceOptimizer enabled={true} />
 
+            {/* Footer */}
+            <Footer />
+            
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
           </div>
