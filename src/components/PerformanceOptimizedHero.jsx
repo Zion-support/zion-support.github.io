@@ -35,12 +35,7 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
-<<<<<<< HEAD
-      </section>);
-
-=======
       </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<section className="relative py-20 px-4 overflow-hidden" role="banner" aria-label="Zion Tech Group Hero Section">
       {/* Optimized Background Elements */}
       <div className="absolute inset-0 futuristic-bg">
@@ -48,10 +43,8 @@ const PerformanceOptimizedHero = memo(() => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000" aria-hidden="true"></div>
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000" aria-hidden="true"></div>
       </div>
-
       {/* Optimized Grid Pattern */}
       <div className="absolute inset-0 cyber-grid-bg opacity-30" aria-hidden="true"></div>
-
       {/* Optimized Matrix Rain Effect - Only render when loaded */}
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
           {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style={{
@@ -62,7 +55,6 @@ const PerformanceOptimizedHero = memo(() => {
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
         </div>)}
-
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -72,12 +64,10 @@ const PerformanceOptimizedHero = memo(() => {
             <br />
             <span className="text-white">With AI & Tech</span>
           </h1>
-
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services
             designed to propel your business into the future.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/services" className="quantum-button text-lg px-8 py-4 inline-block" aria-label="Explore our services">
               Explore Services
@@ -86,12 +76,10 @@ const PerformanceOptimizedHero = memo(() => {
               Get Free Consultation
             </Link>
           </div>
-
           {/* Optimized Stats Component */}
           <HeroStats stats={stats}/>
         </div>
       </div>
-
       {/* Optimized Floating Elements */}
       {isLoaded && (<>
           <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>

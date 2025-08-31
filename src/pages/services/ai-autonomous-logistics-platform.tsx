@@ -1,435 +1,389 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import SEOOptimizer from '../../components/SEOOptimizer';
 import { 
   Truck, 
   Route, 
   Package, 
   Globe, 
   Zap, 
+  Brain, 
   Shield, 
-  BarChart3, 
-  Clock, 
-  DollarSign, 
-  CheckCircle,
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight,
   MapPin,
-  TrendingUp,
+  Clock,
+  DollarSign,
   Users,
+  BarChart3,
+  Workflow,
+  Cpu,
   Database,
-  Cloud,
-  Lock,
+  Network,
+  Satellite,
   Activity,
   Target,
   Rocket,
+  Lightbulb,
   Star,
-  ArrowRight,
+  Award,
+  Handshake,
   Phone,
   Mail,
   MapPin as MapPinIcon
 } from 'lucide-react';
 
-const AIAutonomousLogisticsPlatform: React.FC = () => {
+const AIAutonomousLogisticsPlatform = () => {
   const features = [
     {
-      icon: Truck,
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Route Optimization",
+      description: "Advanced algorithms that continuously learn and optimize delivery routes in real-time, reducing fuel costs and delivery times by up to 40%."
+    },
+    {
+      icon: <Route className="w-6 h-6" />,
       title: "Autonomous Fleet Management",
-      description: "AI-powered fleet optimization with real-time route planning and autonomous decision-making capabilities."
+      description: "Intelligent fleet coordination that automatically assigns vehicles, predicts maintenance needs, and optimizes capacity utilization."
     },
     {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "Dynamic route planning that adapts to traffic, weather, and delivery constraints in real-time."
+      icon: <Package className="w-6 h-6" />,
+      title: "Smart Inventory Management",
+      description: "Predictive analytics for demand forecasting, automated reordering, and real-time inventory tracking across all locations."
     },
     {
-      icon: Package,
-      title: "Smart Package Tracking",
-      description: "End-to-end visibility with predictive delivery times and automated status updates."
-    },
-    {
-      icon: Globe,
+      icon: <Globe className="w-6 h-6" />,
       title: "Global Supply Chain Visibility",
-      description: "Real-time tracking across multiple countries, carriers, and transportation modes."
+      description: "End-to-end visibility across your entire supply chain with real-time tracking, predictive analytics, and automated alerts."
     },
     {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "AI-driven demand forecasting and capacity planning with 95% accuracy."
+      icon: <Shield className="w-6 h-6" />,
+      title: "Risk Management & Compliance",
+      description: "AI-powered risk assessment, compliance monitoring, and automated reporting for regulatory requirements."
     },
     {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with SOC 2 Type II compliance and blockchain verification."
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Comprehensive dashboards and reports showing KPIs, cost analysis, and optimization opportunities."
     }
   ];
 
-  const pricingPlans = [
+  const benefits = [
+    "Reduce logistics costs by 25-40%",
+    "Improve delivery speed by 30-50%",
+    "Increase fleet utilization by 35%",
+    "Reduce carbon footprint by 20-30%",
+    "Eliminate manual planning errors",
+    "24/7 autonomous operations",
+    "Real-time decision making",
+    "Scalable to any fleet size"
+  ];
+
+  const pricing = [
     {
       name: "Starter",
-      price: "$599",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for small logistics companies",
+      description: "Perfect for small to medium logistics operations",
       features: [
-        "Up to 100 shipments/month",
+        "Up to 50 vehicles",
         "Basic route optimization",
-        "Real-time tracking",
+        "Standard reporting",
         "Email support",
         "Mobile app access"
-      ],
-      popular: false
+      ]
     },
     {
       name: "Professional",
-      price: "$1,299",
+      price: "$5,999",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing logistics companies",
       features: [
-        "Up to 1,000 shipments/month",
+        "Up to 200 vehicles",
         "Advanced AI optimization",
-        "Predictive analytics",
-        "API access",
+        "Real-time analytics",
         "Priority support",
+        "API access",
         "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,999",
+      price: "$12,999",
       period: "/month",
-      description: "For large-scale operations",
+      description: "For large-scale logistics operations",
       features: [
-        "Unlimited shipments",
-        "Full AI autonomy",
+        "Unlimited vehicles",
+        "Full AI suite",
         "Custom AI models",
-        "White-label options",
         "Dedicated support",
-        "On-premise deployment"
-      ],
-      popular: false
+        "White-label options",
+        "Advanced security"
+      ]
     }
   ];
 
-  const benefits = [
-    {
-      metric: "40%",
-      description: "Reduction in delivery costs"
-    },
-    {
-      metric: "60%",
-      description: "Improvement in delivery times"
-    },
-    {
-      metric: "95%",
-      description: "Route optimization accuracy"
-    },
-    {
-      metric: "80%",
-      description: "Reduction in fuel consumption"
-    }
-  ];
+  const seoData = {
+    title: "AI Autonomous Logistics Platform | Zion Tech Group",
+    description: "Revolutionary AI-powered logistics platform that autonomously optimizes routes, manages fleets, and streamlines supply chains. Reduce costs by 40% and improve efficiency.",
+    keywords: "AI logistics, autonomous logistics, route optimization, fleet management, supply chain AI, logistics automation",
+    url: "https://ziontechgroup.com/services/ai-autonomous-logistics-platform"
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>AI Autonomous Logistics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your logistics operations with AI-powered autonomous fleet management, intelligent route optimization, and global supply chain visibility. Reduce costs by 40% and improve delivery times by 60%." />
-        <meta name="keywords" content="AI logistics, autonomous logistics, fleet management, route optimization, supply chain visibility, logistics automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-logistics-platform" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Truck className="w-4 h-4" />
-              <span>AI-Powered Logistics</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Autonomous
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics Platform</span>
-            </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your logistics operations with the world's most advanced AI-powered autonomous fleet management system. 
-              Achieve unprecedented efficiency with 95% route optimization accuracy and 40% cost reduction.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Proven Results That Drive Business Growth
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Autonomous Logistics Platform delivers measurable improvements across all key performance indicators.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl lg:text-5xl font-bold text-zion-cyan mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-zion-slate-light">
-                  {benefit.description}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Features for Modern Logistics
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience the future of logistics with AI-powered automation and intelligent decision-making.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-cyan/30 transition-all duration-300">
-                  <feature.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business Size
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose the plan that fits your logistics needs and scale as you grow.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-zion-slate-dark p-8 rounded-2xl border-2 ${
-                  plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-purple/20'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
+    <>
+      <SEOOptimizer {...seoData} />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
+                <Truck className="w-4 h-4 mr-2" />
+                AI-Powered Logistics Platform
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Autonomous
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-purple to-zion-cyan">Platform</span>
+              </h1>
+              
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Revolutionize your logistics operations with AI that thinks, learns, and optimizes autonomously. 
+                Reduce costs by 40%, improve delivery speed by 50%, and eliminate manual planning forever.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
-                      : 'bg-zion-purple/20 text-zion-purple border border-zion-purple hover:bg-zion-purple hover:text-white'
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 (302) 464-0950
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-zion-cyan/30 rounded-full blur-lg animate-pulse delay-500"></div>
+        </section>
+
+        {/* Key Benefits */}
+        <section className="py-20 bg-zion-slate-dark/50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Transform Your Logistics Operations
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Our AI platform delivers measurable results that directly impact your bottom line
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-purple/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <CheckCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                  <p className="text-white font-medium">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Advanced AI Features
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Cutting-edge artificial intelligence that continuously learns and improves your logistics operations
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
+                >
+                  <div className="text-zion-cyan mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-zion-slate-light">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-20 bg-zion-slate-dark/50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Flexible Pricing Plans
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Choose the plan that fits your logistics operation size and requirements
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative bg-zion-slate-dark/50 border rounded-xl p-8 ${
+                    plan.popular 
+                      ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
+                      : 'border-zion-purple/20'
                   }`}
                 >
-                  Get Started
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-12 text-center border border-zion-cyan/30"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Logistics Operations?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already using AI to optimize their logistics and reduce costs. 
-              Start your free trial today and see the difference AI can make.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Contact Sales
-              </motion.button>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
+                      <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-dark hover:to-zion-purple-dark'
+                        : 'bg-zion-slate-dark border border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10'
+                    }`}
+                  >
+                    Get Started
+                  </motion.button>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Ready to revolutionize your logistics operations? Our team is here to help you get started.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-2xl p-12 text-center"
             >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-zion-cyan" />
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Logistics?
+              </h2>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Join hundreds of companies already using our AI platform to revolutionize their logistics operations. 
+                Get started with a free consultation today.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Schedule Demo
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 (302) 464-0950
+                </motion.button>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-zion-cyan font-medium">+1 302 464 0950</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-zion-cyan" />
+              
+              <div className="mt-8 text-zion-slate-light">
+                <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p>📧 kleber@ziontechgroup.com</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-zion-cyan font-medium">kleber@ziontechgroup.com</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPinIcon className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-zion-cyan font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </motion.div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

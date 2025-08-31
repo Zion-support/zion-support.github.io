@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
-  Phone, Mail, MapPin, ChevronRight, ChevronDown,
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
-  Award, Clock, Heart, Lightbulb, Users, FileText,
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-=======
 import React, { useState, useEffect } from 'react.ts';
 import Link from 'next/link.ts';
 import { useRouter  } from 'next/router.ts';
@@ -21,7 +9,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   HelpCircle, BookOpen, Target, TrendingUp, Star
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SidebarItem {
 
   name: string;
@@ -34,11 +21,7 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-<<<<<<< HEAD
-  category?: string;
-=======
   category?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const sidebarSections = [
   {
@@ -250,20 +233,6 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-<<<<<<< HEAD
-          { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-
-    ]
-
-];
-
-interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
-=======
           { name: 'Training Programs', href: '/training' },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
@@ -274,7 +243,6 @@ interface EnhancedSidebar2025Props {
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   isOpen: boolean;
   onClose: ()  => void}
@@ -283,23 +251,9 @@ export default function EnhancedSidebar2025(...args[]):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-<<<<<<< HEAD
-  const toggleSection = (sectionTitle: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionTitle)) {
-<<<<<<< HEAD
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-
-    setExpandedSections(newExpanded);
-  };
-=======
       newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -310,25 +264,6 @@ export default function EnhancedSidebar2025(...args[]):  {
     );
   );
 
-<<<<<<< HEAD
-  const toggleItem = (itemName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemName)) {
-<<<<<<< HEAD
-      newExpanded.delete(itemName);
-    } else {
-      newExpanded.add(itemName);
-
-    setExpandedItems(newExpanded);
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-=======
       newExpanded.delete(itemName)} else {
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
@@ -340,7 +275,6 @@ export default function EnhancedSidebar2025(...args[]):  {
 ;
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (href: string)  => router.pathname === href;
 
@@ -599,23 +533,10 @@ export default function EnhancedSidebar2025(...args[]):  {
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}</section></motion.div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,432 +1,512 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Leaf, TrendingDown, Shield, Clock, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Building2, Home, Droplets } from 'lucide-react';
+import { 
+  Leaf, 
+  TrendingDown, 
+  BarChart3, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Calculator,
+  Database,
+  Cloud,
+  Smartphone,
+  Target,
+  Award,
+  Clock,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
-const AICarbonFootprintManagementPlatform: React.FC = () => {
+export default function AICarbonFootprintManagementPlatform() {
   const features = [
     {
-      icon: <TrendingDown className="w-8 h-8 text-cyan-400" />,
-      title: "Autonomous Carbon Tracking",
-      description: "AI-powered monitoring and tracking of carbon emissions across all business operations"
+      title: "AI-Powered Carbon Tracking",
+      description: "Automatically track and analyze carbon emissions across all business operations with 95% accuracy",
+      icon: BarChart3,
+      benefits: ["Real-time monitoring", "Automated data collection", "Predictive analytics"]
     },
     {
-      icon: <Leaf className="w-8 h-8 text-cyan-400" />,
-      title: "Sustainability Intelligence",
-      description: "Advanced analytics and insights for sustainable business decision-making"
+      title: "Sustainability Reporting",
+      description: "Generate comprehensive ESG reports compliant with international standards",
+      icon: Database,
+      benefits: ["GRI compliance", "TCFD reporting", "Custom dashboards"]
     },
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
-      title: "ESG Reporting Automation",
-      description: "Automated environmental, social, and governance reporting with AI accuracy"
+      title: "Carbon Reduction Recommendations",
+      description: "AI-driven insights to reduce carbon footprint by up to 40%",
+      icon: TrendingDown,
+      benefits: ["Actionable insights", "ROI calculations", "Implementation roadmap"]
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
-      title: "Carbon Reduction Planning",
-      description: "Intelligent planning and optimization for carbon reduction strategies"
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-cyan-400" />,
-      title: "Real-time Monitoring",
-      description: "Live carbon footprint monitoring with instant alerts and notifications"
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
-      title: "Compliance Management",
-      description: "Automated compliance monitoring for environmental regulations and standards"
-    }
-  ];
-
-  const benefits = [
-    "Reduce carbon emissions by 40%",
-    "Achieve carbon neutrality 3x faster",
-    "Save up to $200,000 annually in energy costs",
-    "Improve ESG ratings by 2-3 levels",
-    "Ensure 99.9% compliance accuracy"
-  ];
-
-  const sustainabilityMetrics = [
-    "Carbon Footprint (CO2e)",
-    "Energy Consumption (kWh)",
-    "Water Usage (gallons)",
-    "Waste Generation (tons)",
-    "Renewable Energy %",
-    "Carbon Intensity (CO2e/$)"
-  ];
-
-  const useCases = [
-    {
-      icon: <Building2 className="w-8 h-8 text-cyan-400" />,
-      industry: "Corporate Sustainability",
-      description: "Enterprise-wide carbon management, ESG reporting, and sustainability strategy optimization"
-    },
-    {
-      icon: <Home className="w-8 h-8 text-cyan-400" />,
-      industry: "Manufacturing & Industry",
-      description: "Industrial carbon tracking, energy optimization, and supply chain sustainability"
-    },
-    {
-      icon: <Droplets className="w-8 h-8 text-cyan-400" />,
-      industry: "Financial Services",
-      description: "ESG investment analysis, carbon risk assessment, and sustainable finance reporting"
+      title: "Supply Chain Monitoring",
+      description: "Track carbon impact across your entire supply chain network",
+      icon: Globe,
+      benefits: ["Vendor assessment", "Scope 3 emissions", "Risk mitigation"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$299",
       period: "/month",
+      description: "Perfect for small businesses starting their sustainability journey",
       features: [
-        "Up to 10 locations",
+        "Up to 100 emission sources",
         "Basic carbon tracking",
-        "Standard ESG reporting",
-        "Email support",
-        "Basic analytics"
+        "Monthly reports",
+        "Email support"
       ],
-      popular: false
+      popular: false,
+      color: "from-green-400 to-emerald-500"
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$799",
       period: "/month",
+      description: "Ideal for growing companies with complex operations",
       features: [
-        "Up to 50 locations",
-        "Advanced AI analytics",
+        "Unlimited emission sources",
+        "Advanced analytics",
         "Real-time monitoring",
+        "Custom reporting",
         "Priority support",
-        "Advanced reporting & API access",
-        "Custom integrations"
+        "API access"
       ],
-      popular: true
+      popular: true,
+      color: "from-blue-400 to-cyan-500"
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,999",
       period: "/month",
+      description: "For large organizations requiring enterprise-grade solutions",
       features: [
-        "Unlimited locations",
-        "Custom AI model training",
-        "Dedicated sustainability expert",
-        "White-label solutions",
-        "Advanced security features",
-        "24/7 phone support"
+        "Everything in Professional",
+        "Multi-site management",
+        "Advanced AI insights",
+        "Custom integrations",
+        "Dedicated account manager",
+        "On-site training",
+        "White-label options"
       ],
-      popular: false
+      popular: false,
+      color: "from-purple-400 to-pink-500"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Regulatory Compliance",
+      description: "Stay ahead of evolving environmental regulations and avoid penalties",
+      icon: Shield,
+      metric: "100%"
+    },
+    {
+      title: "Cost Savings",
+      description: "Reduce operational costs through energy efficiency and waste reduction",
+      icon: DollarSign,
+      metric: "25-40%"
+    },
+    {
+      title: "Brand Enhancement",
+      description: "Improve brand reputation and customer loyalty through sustainability leadership",
+      icon: Award,
+      metric: "85%"
+    },
+    {
+      title: "Investor Appeal",
+      description: "Attract ESG-focused investors and improve access to green financing",
+      icon: Users,
+      metric: "3x"
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "Manufacturing",
+      description: "Track emissions from production processes, energy consumption, and waste management",
+      savings: "30-45% reduction in carbon footprint"
+    },
+    {
+      industry: "Logistics & Transportation",
+      description: "Monitor fleet emissions, optimize routes, and implement green delivery options",
+      savings: "25-35% reduction in fuel consumption"
+    },
+    {
+      industry: "Retail & E-commerce",
+      description: "Measure store operations, packaging impact, and supply chain emissions",
+      savings: "20-30% reduction in operational emissions"
+    },
+    {
+      industry: "Technology & Data Centers",
+      description: "Track energy consumption, cooling systems, and renewable energy integration",
+      savings: "40-50% reduction in energy costs"
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
         <title>AI Carbon Footprint Management Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered carbon footprint management platform that automates sustainability tracking, ESG reporting, and carbon reduction planning. Transform your environmental impact with cutting-edge AI technology." />
-        <meta name="keywords" content="AI carbon management, sustainability platform, ESG reporting, carbon tracking, environmental compliance, carbon reduction" />
+        <meta name="description" content="Revolutionary AI-powered carbon footprint management platform. Track, analyze, and reduce your carbon emissions with 95% accuracy. Start your sustainability journey today." />
+        <meta name="keywords" content="carbon footprint, sustainability, ESG, carbon tracking, emissions management, AI sustainability, green business" />
         <link rel="canonical" href="https://ziontechgroup.com/services/ai-carbon-footprint-management-platform" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <Leaf className="w-16 h-16 text-cyan-400" />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full">
+                <Leaf className="h-8 w-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Carbon Footprint Management Platform
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your sustainability efforts with AI-powered carbon tracking, intelligent ESG reporting, and automated compliance monitoring.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-semibold flex items-center justify-center gap-2">
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors font-semibold">
-                  Schedule Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced AI-Powered Sustainability Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our platform combines cutting-edge AI technology with deep environmental expertise to deliver unprecedented sustainability insights.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors"
-                >
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
             </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transform Your Environmental Impact
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience unprecedented efficiency and accuracy in sustainability management and carbon reduction.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="flex items-start gap-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </motion.div>
-              ))}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Carbon Footprint
+              <span className="block bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                Management Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business sustainability with our revolutionary AI platform. 
+              Track, analyze, and reduce carbon emissions with 95% accuracy while 
+              achieving regulatory compliance and cost savings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Sustainability Metrics Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Sustainability Metrics
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Track and analyze all key environmental indicators with AI-powered precision and insights.
-              </p>
-            </motion.div>
+      {/* Key Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Carbon Management Platform?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join thousands of businesses already reducing their environmental impact 
+              while improving their bottom line.
+            </p>
+          </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sustainabilityMetrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors text-center"
-                >
-                  <Leaf className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white">{metric}</h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industry Applications
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our platform is designed to meet the unique sustainability challenges of various industries.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-colors text-center"
-                >
-                  <div className="flex justify-center mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Flexible pricing options designed to scale with your sustainability goals.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-500 ring-2 ring-cyan-500/20' : 'border-slate-700'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400">{plan.period}</span>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-slate-800 rounded-lg border border-slate-700 hover:border-green-400 transition-all duration-300"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full">
+                    <benefit.icon className="h-6 w-6 text-white" />
                   </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 mb-3">{benefit.description}</p>
+                <div className="text-2xl font-bold text-green-400">{benefit.metric}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+      {/* Features */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features for Sustainable Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform provides everything you need to manage your carbon footprint 
+              effectively and efficiently.
+            </p>
+          </motion.div>
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-cyan-500 text-white hover:bg-cyan-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}>
-                    Get Started
-                  </button>
-                </motion.div>
-              ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700 rounded-lg border border-slate-600"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="p-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg mr-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing for Every Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your sustainability goals and budget. 
+              All plans include our core AI-powered carbon tracking capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative p-8 rounded-lg border-2 ${
+                  plan.popular 
+                    ? 'border-green-400 bg-slate-800 scale-105' 
+                    : 'border-slate-600 bg-slate-700'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-green-400 to-emerald-500 text-white hover:from-green-500 hover:to-emerald-600'
+                    : 'bg-slate-600 text-white hover:bg-slate-500'
+                }`}>
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform is designed to meet the unique sustainability challenges 
+              of different industries.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700 rounded-lg border border-slate-600"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <div className="flex items-center text-green-400 font-semibold">
+                  <TrendingDown className="h-5 w-5 mr-2" />
+                  {useCase.savings}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Start Your Sustainability Journey?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already reducing their environmental impact 
+              while improving their bottom line. Start your free trial today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
+      {/* Contact Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Sustainability?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations who have already revolutionized their environmental impact with AI-powered sustainability management.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors font-semibold">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors font-semibold">
-                  Contact Sales
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Get in Touch
               </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="flex flex-col items-center gap-3">
-                  <Phone className="w-8 h-8 text-cyan-400" />
-                  <div>
-                    <p className="text-white font-semibold">Phone</p>
-                    <p className="text-gray-300">+1 302 464 0950</p>
-                  </div>
+              <p className="text-gray-300 mb-8">
+                Ready to transform your business sustainability? Our team of experts 
+                is here to help you get started with carbon footprint management.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center text-gray-300">
+                  <Phone className="h-5 w-5 mr-3 text-green-400" />
+                  <span>+1 302 464 0950</span>
                 </div>
-                <div className="flex flex-col items-center gap-3">
-                  <Mail className="w-8 h-8 text-cyan-400" />
-                  <div>
-                    <p className="text-white font-semibold">Email</p>
-                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                  </div>
+                <div className="flex items-center text-gray-300">
+                  <Mail className="h-5 w-5 mr-3 text-green-400" />
+                  <span>kleber@ziontechgroup.com</span>
                 </div>
-                <div className="flex flex-col items-center gap-3">
-                  <MapPin className="w-8 h-8 text-cyan-400" />
-                  <div>
-                    <p className="text-white font-semibold">Address</p>
-                    <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                  </div>
+                <div className="flex items-center text-gray-300">
+                  <MapPin className="h-5 w-5 mr-3 text-green-400" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
 
-export default AICarbonFootprintManagementPlatform;
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-slate-700 p-8 rounded-lg border border-slate-600"
+            >
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Request a Demo
+              </h3>
+              <form className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Company Name"
+                  className="w-full p-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full p-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full p-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
+                />
+                <textarea
+                  placeholder="Tell us about your sustainability goals"
+                  rows={4}
+                  className="w-full p-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300"
+                >
+                  Request Demo
+                </button>
+              </form>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

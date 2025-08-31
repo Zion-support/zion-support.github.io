@@ -1,0 +1,81 @@
+{
+  "links": [
+    {
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "state": "OK",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/favicon.svg",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/logo192.png",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/manifest.json",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/js/main-3lYBb4BX.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/js/react-vendor-ClxMxoJB.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/js/router-vendor-BYHOfCvf.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/js/ui-vendor-BZl2CecO.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/js/utils-vendor-CrFdsnXa.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://ziontechgroup.com/css/main-C3rjQXSa.css",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    }
+  ],
+  "passed": true
+}

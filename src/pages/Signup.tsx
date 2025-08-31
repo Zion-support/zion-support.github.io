@@ -1,607 +1,629 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  User, 
+  Building2, 
+  Users, 
+  Globe, 
+  Phone, 
   Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
-  Shield, 
+  MessageSquare, 
+  Calendar,
   CheckCircle,
-  AlertCircle,
-  ArrowRight,
+  Star,
   Zap,
   Brain,
+  Server,
+  Shield,
   Cloud,
+  Database,
+  Workflow,
+  Target,
   Rocket,
-  Building,
-  Phone,
-  Globe,
-  Users,
-  Star,
   TrendingUp,
-  Award
+  BarChart3,
+  Atom,
+  Network,
+  Lock,
+  Cpu,
+  Wifi,
+  Satellite,
+  Handshake,
+  FileText,
+  Video,
+  GraduationCap,
+  Lightbulb,
+  Star as StarIcon,
+  HelpCircle,
+  BarChart as BarChartIcon,
+  ShoppingCart,
+  Clock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  User
 } from 'lucide-react';
 
-interface SignupForm {
-  firstName: string;
-  lastName: string;
-  email: string;
-  company: string;
-  phone: string;
-  industry: string;
-  companySize: string;
-  password: string;
-  confirmPassword: string;
-  agreeToTerms: boolean;
-  agreeToMarketing: boolean;
-}
-
-const Signup: React.FC = () => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState<SignupForm>({
+export default function Signup() {
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    company: '',
-    phone: '',
-    industry: '',
-    companySize: '',
     password: '',
     confirmPassword: '',
+    companyName: '',
+    companySize: '',
+    industry: '',
+    role: '',
+    phone: '',
     agreeToTerms: false,
-    agreeToMarketing: false
+    subscribeToNewsletter: false
   });
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
-    'Other'
-  ];
+  const [currentStep, setCurrentStep] = useState(1);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
   const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
-    '501-1000 employees',
-    '1000+ employees'
+    { value: 'startup', label: 'Startup (1-50 employees)' },
+    { value: 'small', label: 'Small Business (51-200 employees)' },
+    { value: 'medium', label: 'Medium Business (201-1000 employees)' },
+    { value: 'large', label: 'Large Enterprise (1000+ employees)' }
   ];
 
-  const handleInputChange = (field: keyof SignupForm, value: string | boolean) => {
+  const industries = [
+    { value: 'technology', label: 'Technology' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'finance', label: 'Financial Services' },
+    { value: 'manufacturing', label: 'Manufacturing' },
+    { value: 'retail', label: 'Retail & E-commerce' },
+    { value: 'education', label: 'Education' },
+    { value: 'government', label: 'Government' },
+    { value: 'nonprofit', label: 'Non-profit' },
+    { value: 'other', label: 'Other' }
+  ];
+
+  const roles = [
+    { value: 'executive', label: 'C-Level Executive' },
+    { value: 'director', label: 'Director/VP' },
+    { value: 'manager', label: 'Manager' },
+    { value: 'developer', label: 'Developer/Engineer' },
+    { value: 'consultant', label: 'Consultant' },
+    { value: 'student', label: 'Student' },
+    { value: 'other', label: 'Other' }
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
     setFormData(prev => ({
       ...prev,
-      [field]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
-    setError('');
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const validateForm = () => {
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.company || !formData.password || !formData.confirmPassword) {
-      setError('Please fill in all required fields');
-      return false;
+  const validateStep = (step: number) => {
+    const newErrors: {[key: string]: string} = {};
+
+    if (step === 1) {
+      if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+      if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+      if (!formData.email.trim()) newErrors.email = 'Email is required';
+      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+      if (!formData.password) newErrors.password = 'Password is required';
+      else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters';
+      if (!formData.confirmPassword) newErrors.confirmPassword = 'Please confirm your password';
+      else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = 'Passwords do not match';
     }
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setError('Please enter a valid email address');
-      return false;
+
+    if (step === 2) {
+      if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+      if (!formData.companySize) newErrors.companySize = 'Please select company size';
+      if (!formData.industry) newErrors.industry = 'Please select industry';
+      if (!formData.role) newErrors.role = 'Please select your role';
     }
-    if (formData.password.length < 8) {
-      setError('Password must be at least 8 characters long');
-      return false;
+
+    if (step === 3) {
+      if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
     }
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      return false;
-    }
-    if (!formData.agreeToTerms) {
-      setError('Please agree to the terms and conditions');
-      return false;
-    }
-    return true;
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const nextStep = () => {
+    if (validateStep(currentStep)) {
+      setCurrentStep(prev => Math.min(prev + 1, 3));
+    }
+  };
+
+  const prevStep = () => {
+    setCurrentStep(prev => Math.max(prev - 1, 1));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsLoading(true);
-    setError('');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Mock successful signup
-      setSuccess('Account created successfully! Welcome to Zion Tech Group.');
-      setTimeout(() => {
-        navigate('/dashboard');
-      }, 2000);
-    } catch (err) {
-      setError('Failed to create account. Please try again.');
-    } finally {
-      setIsLoading(false);
+    if (validateStep(currentStep)) {
+      // Handle form submission
+      console.log('Form submitted:', formData);
     }
   };
 
-  const getPasswordStrength = (password: string) => {
-    if (password.length === 0) return { score: 0, label: '', color: '' };
-    if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
-    if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
-    if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };
-    return { score: 4, label: 'Strong', color: 'text-green-400' };
+  const getStepStatus = (step: number) => {
+    if (step < currentStep) return 'completed';
+    if (step === currentStep) return 'current';
+    return 'upcoming';
   };
-
-  const passwordStrength = getPasswordStrength(formData.password);
-
-  const benefits = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: 'AI-Powered Solutions',
-      description: 'Access cutting-edge AI and machine learning technologies'
-    },
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance standards'
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business with modern technology'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' },
-    { number: '50+', label: 'Services' }
-  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
-      {/* Left Side - Form */}
-      <div className="flex-1 flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-2xl">
-          {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8"
+            className="text-center"
           >
-            <Link to="/" className="inline-block mb-6">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mx-auto">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-            </Link>
-            <h1 className="text-4xl font-bold text-white mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Join Zion Tech Group
             </h1>
-            <p className="text-xl text-slate-300">
-              Transform your business with cutting-edge technology solutions
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
+              Create your account to access our cutting-edge AI, cloud, and technology solutions. 
+              Start your digital transformation journey today.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <span>Free Account</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <span>Instant Access</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <span>Premium Support</span>
+              </div>
+            </div>
           </motion.div>
-
-          {/* Error/Success Messages */}
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
-            >
-              <AlertCircle className="w-5 h-5" />
-              {error}
-            </motion.div>
-          )}
-
-          {success && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
-            >
-              <CheckCircle className="w-5 h-5" />
-              {success}
-            </motion.div>
-          )}
-
-          {/* Signup Form */}
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            onSubmit={handleSubmit}
-            className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  First Name <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.firstName}
-                    onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your first name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Last Name <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.lastName}
-                    onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your last name"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Email Address <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Phone Number
-                </label>
-                <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Company Name <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your company name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Industry
-                </label>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <select
-                    value={formData.industry}
-                    onChange={(e) => handleInputChange('industry', e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    <option value="">Select your industry</option>
-                    {industries.map((industry) => (
-                      <option key={industry} value={industry}>{industry}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <label className="block text-white font-medium mb-2">
-                Company Size
-              </label>
-              <div className="relative">
-                <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <select
-                  value={formData.companySize}
-                  onChange={(e) => handleInputChange('companySize', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select company size</option>
-                  {companySizes.map((size) => (
-                    <option key={size} value={size}>{size}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Password <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type={showPassword ? 'text' : 'password'}
-                    value={formData.password}
-                    onChange={(e) => handleInputChange('password', e.target.value)}
-                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Create a password"
-                    required
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                  </button>
-                </div>
-                {formData.password && (
-                  <div className="mt-2">
-                    <div className="flex gap-1 mb-1">
-                      {[1, 2, 3, 4].map((level) => (
-                        <div
-                          key={level}
-                          className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-                            level <= passwordStrength.score
-                              ? passwordStrength.color.replace('text-', 'bg-')
-                              : 'bg-slate-600/30'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <p className={`text-xs ${passwordStrength.color}`}>
-                      {passwordStrength.label}
-                    </p>
-                  </div>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">
-                  Confirm Password <span className="text-red-400">*</span>
-                </label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type={showConfirmPassword ? 'text' : 'password'}
-                    value={formData.confirmPassword}
-                    onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
-                    className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Confirm your password"
-                    required
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={formData.agreeToTerms}
-                  onChange={(e) => handleInputChange('agreeToTerms', e.target.checked)}
-                  className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
-                  required
-                />
-                <span className="text-slate-300 text-sm">
-                  I agree to the{' '}
-                  <Link to="/terms" className="text-cyan-400 hover:text-cyan-300">
-                    Terms of Service
-                  </Link>{' '}
-                  and{' '}
-                  <Link to="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                    Privacy Policy
-                  </Link>{' '}
-                  <span className="text-red-400">*</span>
-                </span>
-              </label>
-
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={formData.agreeToMarketing}
-                  onChange={(e) => handleInputChange('agreeToMarketing', e.target.checked)}
-                  className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
-                />
-                <span className="text-slate-300 text-sm">
-                  I agree to receive marketing communications about Zion Tech Group services and updates
-                </span>
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 text-lg"
-            >
-              {isLoading ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                  Creating Account...
-                </>
-              ) : (
-                <>
-                  Create Account
-                  <ArrowRight className="w-5 h-5" />
-                </>
-              )}
-            </button>
-
-            <div className="text-center mt-6">
-              <p className="text-slate-400">
-                Already have an account?{' '}
-                <Link to="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200">
-                  Sign in here
-                </Link>
-              </p>
-            </div>
-          </motion.form>
         </div>
       </div>
 
-      {/* Right Side - Benefits */}
-      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10"></div>
-        
-        <div className="relative z-10 flex items-center justify-center p-12">
-          <div className="text-center max-w-lg">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-8"
-            >
-              <div className="flex justify-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                  <Brain className="w-8 h-8 text-white" />
+      {/* Progress Steps */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="flex items-center justify-between mb-8">
+            {[
+              { step: 1, title: 'Account Details', icon: User },
+              { step: 2, title: 'Company Info', icon: Building2 },
+              { step: 3, title: 'Terms & Finish', icon: CheckCircle }
+            ].map(({ step, title, icon: Icon }) => (
+              <div key={step} className="flex flex-col items-center">
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all duration-300 ${
+                  getStepStatus(step) === 'completed' 
+                    ? 'bg-zion-cyan text-white' 
+                    : getStepStatus(step) === 'current'
+                    ? 'bg-zion-cyan/20 text-zion-cyan border-2 border-zion-cyan'
+                    : 'bg-zinc-700 text-zinc-400'
+                }`}>
+                  {getStepStatus(step) === 'completed' ? (
+                    <CheckCircle className="w-6 h-6" />
+                  ) : (
+                    <Icon className="w-6 h-6" />
+                  )}
                 </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                  <Cloud className="w-8 h-8 text-white" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
+                <span className={`text-sm font-medium ${
+                  getStepStatus(step) === 'completed' 
+                    ? 'text-zion-cyan' 
+                    : getStepStatus(step) === 'current'
+                    ? 'text-white'
+                    : 'text-zinc-400'
+                }`}>
+                  {title}
+                </span>
               </div>
-            </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-4xl font-bold text-white mb-6"
-            >
-              Why Choose Zion Tech Group?
-            </motion.h2>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="space-y-6 mb-8"
-            >
-              {benefits.map((benefit, index) => (
+      {/* Main Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8"
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Step 1: Account Details */}
+              {currentStep === 1 && (
                 <motion.div
-                  key={benefit.title}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-                  className="flex items-center gap-4 text-left"
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    {benefit.icon}
+                  <h2 className="text-2xl font-bold text-white mb-6">Account Details</h2>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.firstName ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Enter first name"
+                      />
+                      {errors.firstName && (
+                        <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.lastName ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Enter last name"
+                      />
+                      {errors.lastName && (
+                        <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
+                      )}
+                    </div>
                   </div>
+
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-slate-300 text-sm">
-                      {benefit.description}
-                    </p>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                        errors.email ? 'border-red-500' : 'border-zinc-600'
+                      }`}
+                      placeholder="Enter email address"
+                    />
+                    {errors.email && (
+                      <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Password *
+                    </label>
+                    <div className="relative">
+                      <input
+                        type={showPassword ? 'text' : 'password'}
+                        name="password"
+                        value={formData.password}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
+                          errors.password ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Create a password"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+                      >
+                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      </button>
+                    </div>
+                    {errors.password && (
+                      <p className="text-red-400 text-sm mt-1">{errors.password}</p>
+                    )}
+                    <p className="text-zinc-400 text-sm mt-1">Must be at least 8 characters long</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Confirm Password *
+                    </label>
+                    <div className="relative">
+                      <input
+                        type={showConfirmPassword ? 'text' : 'password'}
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
+                          errors.confirmPassword ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Confirm your password"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+                      >
+                        {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      </button>
+                    </div>
+                    {errors.confirmPassword && (
+                      <p className="text-red-400 text-sm mt-1">{errors.confirmPassword}</p>
+                    )}
+                  </div>
+
+                  <div className="pt-4">
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Continue
+                      <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    </button>
                   </div>
                 </motion.div>
-              ))}
-            </motion.div>
+              )}
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="grid grid-cols-2 gap-6"
-            >
-              {stats.map((stat, index) => (
+              {/* Step 2: Company Information */}
+              {currentStep === 2 && (
                 <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-                  className="text-center"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
                 >
-                  <div className="text-3xl font-bold text-cyan-400 mb-1">
-                    {stat.number}
+                  <h2 className="text-2xl font-bold text-white mb-6">Company Information</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                        errors.companyName ? 'border-red-500' : 'border-zinc-600'
+                      }`}
+                      placeholder="Enter company name"
+                    />
+                    {errors.companyName && (
+                      <p className="text-red-400 text-sm mt-1">{errors.companyName}</p>
+                    )}
                   </div>
-                  <div className="text-slate-300 text-sm">
-                    {stat.label}
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Company Size *
+                      </label>
+                      <select
+                        name="companySize"
+                        value={formData.companySize}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.companySize ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select company size</option>
+                        {companySizes.map(size => (
+                          <option key={size.value} value={size.value}>
+                            {size.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.companySize && (
+                        <p className="text-red-400 text-sm mt-1">{errors.companySize}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Industry *
+                      </label>
+                      <select
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.industry ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select industry</option>
+                        {industries.map(industry => (
+                          <option key={industry.value} value={industry.value}>
+                            {industry.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.industry && (
+                        <p className="text-red-400 text-sm mt-1">{errors.industry}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Your Role *
+                      </label>
+                      <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.role ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select your role</option>
+                        {roles.map(role => (
+                          <option key={role.value} value={role.value}>
+                            {role.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.role && (
+                        <p className="text-red-400 text-sm mt-1">{errors.role}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                        placeholder="Enter phone number"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-4 flex space-x-4">
+                    <button
+                      type="button"
+                      onClick={prevStep}
+                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                    >
+                      Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Continue
+                      <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    </button>
                   </div>
                 </motion.div>
-              ))}
-            </motion.div>
+              )}
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="mt-8 p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <Award className="w-6 h-6 text-yellow-400" />
-                <h3 className="text-lg font-semibold text-white">
-                  Trusted by Industry Leaders
-                </h3>
-              </div>
-              <p className="text-slate-300 text-sm">
-                Join thousands of businesses that trust Zion Tech Group to drive their digital transformation and innovation initiatives.
-              </p>
-            </motion.div>
-          </div>
+              {/* Step 3: Terms & Finish */}
+              {currentStep === 3 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
+                >
+                  <h2 className="text-2xl font-bold text-white mb-6">Terms & Finish</h2>
+                  
+                  <div className="space-y-4">
+                    <label className="flex items-start space-x-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="agreeToTerms"
+                        checked={formData.agreeToTerms}
+                        onChange={handleInputChange}
+                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                      />
+                      <div>
+                        <span className="text-zinc-300">
+                          I agree to the{' '}
+                          <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light underline">
+                            Terms of Service
+                          </Link>
+                          {' '}and{' '}
+                          <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light underline">
+                            Privacy Policy
+                          </Link>
+                          *
+                        </span>
+                        {errors.agreeToTerms && (
+                          <p className="text-red-400 text-sm mt-1">{errors.agreeToTerms}</p>
+                        )}
+                      </div>
+                    </label>
+
+                    <label className="flex items-start space-x-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="subscribeToNewsletter"
+                        checked={formData.subscribeToNewsletter}
+                        onChange={handleInputChange}
+                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                      />
+                      <span className="text-zinc-300">
+                        Subscribe to our newsletter for updates on new features, industry insights, and exclusive offers
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="pt-4 flex space-x-4">
+                    <button
+                      type="button"
+                      onClick={prevStep}
+                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                    >
+                      Back
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Create Account
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </form>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Login Link */}
+      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-zinc-300 mb-4">
+              Already have an account?{' '}
+              <Link to="/login" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
+                Sign in here
+              </Link>
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Signup;
+}

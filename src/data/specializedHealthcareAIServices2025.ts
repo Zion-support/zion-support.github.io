@@ -1,8 +1,6 @@
 // Specialized Healthcare AI Services 2025 - Zion Tech Group
 // Advanced AI-powered healthcare technology solutions
-
 export interface HealthcareAIService {
-
   id: number;
   name: string;
   category: string;
@@ -27,13 +25,7 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
@@ -45,14 +37,7 @@ const zionContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   {
     id: 1,
@@ -310,13 +295,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Stress reduction",
       "Crisis intervention"
     ],
-<<<<<<< HEAD
-    technologies: ["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
-
-=======
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default specializedHealthcareAIServices2025;}}

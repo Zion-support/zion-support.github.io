@@ -1,5 +1,4 @@
 export interface AdvancedAIService {
-
   id: string;
   title: string;
   description: string;
@@ -27,21 +26,9 @@ contactInfo: {
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-<<<<<<< HEAD
-    security: string[];
-  };
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  rating: number;
-  reviews: number;
-  customers: number;
-=======
     security: string[]};
   competitors?: string[];
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Cybersecurity & Threat Detection
   {
@@ -107,7 +94,6 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     marketSize: "$45.2 billion by 2025"
   },
-
   // AI-Powered Financial Trading & Analysis
   {
     id: "ai-financial-trading-platform",
@@ -172,7 +158,6 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     competitors["Alpaca", "QuantConnect", "MetaTrader", "TradingView"],
     marketSize: "$18.7 billion by 2025"
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics-suite",
@@ -238,7 +223,6 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     competitors["Butterfly Network", "Zebra Medical", "Aidoc", "Lunit"],
     marketSize: "$67.4 billion by 2025"
   },
-
   // AI-Powered Predictive Healthcare
   {
     id: "ai-supply-chain-optimizer",
@@ -301,19 +285,9 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       uptime: "99.9%",
       security["SOC 2", "ISO 27001", "Data encryption", "Access controls"]
     },
-<<<<<<< HEAD
-    competitors: ["Tesla", "Waymo", "Cruise", "Aurora"],
-    marketSize: "$556.7 billion by 2025",
-    growthRate: "350% annual growth",
-    rating: 4.9,
-    reviews: 345,
-    customers: 567
-
-=======
     competitors["SAP", "Oracle", "Manhattan Associates", "Blue Yonder"],
     marketSize: "$31.2 billion by 2025"
   },
-
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-document-analyzer",
@@ -378,7 +352,5 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     competitors["DoNotPay", "LegalZoom", "Rocket Lawyer", "LawVu"],
     marketSize: "$25.8 billion by 2025"
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default ADVANCED_AI_SERVICES_2025;}}
