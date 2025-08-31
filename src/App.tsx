@@ -50,6 +50,7 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // New pages we created
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
@@ -136,6 +137,9 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/services-showcase" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/pricing-guide" element={<ComprehensivePricingGuide2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
