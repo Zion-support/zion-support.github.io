@@ -216,15 +216,33 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
-            {/* Header */}
-            <Header />
-            
-            {/* Skip Link for Accessibility */}
-            <a href="#main-content" className="skip-link">
-              Skip to main content
-            </a>
-            
-            <main id="main-content" className="flex-1 pt-20">
+            {/* Enhanced Components */}
+            <PerformanceOptimizer enableLazyLoading={true} enableImageOptimization={true} enablePerformanceMonitoring={true}>
+              <EnhancedAccessibilityEnhancer 
+                enableHighContrast={true}
+                enableLargeText={true}
+                enableReducedMotion={true}
+                enableScreenReader={true}
+                enableKeyboardNavigation={true}
+                enableFocusIndicators={true}
+              >
+                <AdvancedAnalytics 
+                  enableTracking={true}
+                  enableRealTime={true}
+                  enableHeatmaps={true}
+                  enableABTesting={true}
+                  enableConversionTracking={true}
+                  enableUserSegmentation={true}
+                >
+                  {/* Header */}
+                  <Header />
+                  
+                  {/* Skip Link for Accessibility */}
+                  <a href="#main-content" className="skip-link">
+                    Skip to main content
+                  </a>
+                  
+                  <main id="main-content" className="flex-1 pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -447,33 +465,9 @@ function App() {
 
             {/* Footer - Using AppFooter for enhanced features */}
             <AppFooter />
-
-            {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
-
-            {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
-
-            {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={true} />
-
-            {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />
-
-            {/* Advanced Analytics Dashboard */}
-            <AdvancedAnalyticsDashboard enabled={true} />
-
-            {/* AI Content Optimizer */}
-            <AIContentOptimizer enabled={true} />
-
-            {/* Security Monitoring System */}
-            <SecurityMonitoringSystem enabled={true} />
-
-            {/* User Experience Optimizer */}
-            <UserExperienceOptimizer enabled={true} />
-
-            {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />
+                </AdvancedAnalytics>
+              </EnhancedAccessibilityEnhancer>
+            </PerformanceOptimizer>
           </div>
         </Router>
       </ErrorBoundary>
