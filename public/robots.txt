@@ -1,44 +1,156 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap
-
 # Allow all major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 2
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 1
 
-# Allow crawling of all content
+# Block specific paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /tailwind.config.js
+Disallow: /eslint.config.js
+Disallow: /jest.config.js
+Disallow: /vitest.config.ts
+Disallow: /ecosystem.config.js
+Disallow: /pm2/
+Disallow: /scripts/
+Disallow: /automation/
+Disallow: /reports/
+Disallow: /error-reports/
+Disallow: /test-reports/
+Disallow: /ci-cd-reports/
+Disallow: /broken_files_backup/
+Disallow: /temp_working/
+Disallow: /hooks/
+Disallow: /stories/
+Disallow: /__tests__/
+Disallow: /components.disabled/
+Disallow: /types/
+Disallow: /utils/
+Disallow: /lib/
+Disallow: /config/
+Disallow: /context/
+Disallow: /mobile/
+Disallow: /server/
+Disallow: /services/
+Disallow: /contracts/
+Disallow: /data/
+Disallow: /docs/
+Disallow: /link-reports/
+Disallow: /link-checker-report.json
+Disallow: /link-report.json
+Disallow: /link-report-full.json
+Disallow: /link-report-sitemap.json
+Disallow: /link-check.json
+Disallow: /linkinator.json
+Disallow: /quality-report.json
+Disallow: /performance-report.json
+Disallow: /master-error-fixer-report.json
+Disallow: /comprehensive-error-fixer-report.json
+Disallow: /console-error-fixer-report.json
+Disallow: /continuous-improvement-report.json
+Disallow: /daily-build-test-report.json
+Disallow: /typescript-error-fixer-report.json
+Disallow: /fix-broken-links-summary.md
+Disallow: /resolve_all_merge_conflicts.sh
+Disallow: /resolve_merge_conflicts.sh
+Disallow: /start-automation.sh
+Disallow: /start-enhanced-pm2-automation.sh
+Disallow: /start-error-fixing-automation.sh
+Disallow: /start-error-prevention-automation.sh
+Disallow: /merge-all-prs.sh
+Disallow: /merge-priority-prs.sh
+Disallow: /monitor-error-prevention.sh
+Disallow: /fix-all-issues.sh
+Disallow: /fix_utils_files.js
+Disallow: /fix_variable_names.js
+Disallow: /fix_all_anyanyany_errors.js
+Disallow: /fix_all_function_names.js
+Disallow: /fix_all_nextjs_imports.js
+Disallow: /fix_corrupted_files.js
+Disallow: /fix_empty_pages.js
+Disallow: /fix_jsx_extensions.sh
+Disallow: /fix_remaining_syntax_errors.js
+Disallow: /fix_tags.js
+Disallow: /fix_typescript_syntax_errors.js
+Disallow: /cleanup-merge-conflicts.sh
+Disallow: /cleanup-project.sh
+Disallow: /complete_merge.sh
+Disallow: /manage-error-prevention.sh
+
+# Allow important content
 Allow: /services/
 Allow: /solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
-Allow: /docs/
+Allow: /news/
+Allow: /events/
+Allow: /careers/
+Allow: /partners/
+Allow: /case-studies/
 Allow: /white-papers/
 Allow: /webinars/
 Allow: /training/
-Allow: /case-studies/
-Allow: /news/
-Allow: /events/
-Allow: /partners/
-Allow: /careers/
+Allow: /research-development/
+Allow: /pricing/
+Allow: /help/
+Allow: /docs/
+Allow: /marketplace/
+Allow: /request-quote/
+Allow: /signup/
+Allow: /enterprise/
+Allow: /industry-solutions/
+Allow: /digital-transformation/
+Allow: /cloud-solutions/
+Allow: /emerging-tech/
+Allow: /ai-services/
+Allow: /ai-solutions/
+Allow: /it-services/
+Allow: /micro-saas/
 Allow: /leadership/
+Allow: /privacy/
+Allow: /terms/
+Allow: /cookies/
+Allow: /accessibility/
+Allow: /security/
+Allow: /compliance/
 
 # Allow crawling of assets
 Allow: /css/
@@ -46,15 +158,11 @@ Allow: /js/
 Allow: /images/
 Allow: /assets/
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /node_modules/
-
-# Crawl delay for respectful crawling
+# Crawl-delay for all bots (be respectful)
 Crawl-delay: 1
 
 # Host
 Host: https://ziontechgroup.com
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap
