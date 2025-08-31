@@ -2,27 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SEOOptimizer from '../../components/SEOOptimizer';
 import { 
-  Truck, 
-  Route, 
-  Package, 
-  Globe, 
-  Zap, 
+  PenTool, 
   Brain, 
-  Shield, 
+  Zap, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
-  MapPin,
-  Clock,
-  DollarSign,
   Users,
   BarChart3,
   Workflow,
-  Cpu,
-  Database,
-  Network,
-  Satellite,
-  Activity,
   Target,
   Rocket,
   Lightbulb,
@@ -31,104 +19,160 @@ import {
   Handshake,
   Phone,
   Mail,
-  MapPin as MapPinIcon
+  MapPin,
+  FileText,
+  Image,
+  Video,
+  Globe,
+  Search,
+  Palette,
+  Sparkles,
+  Eye,
+  Share2,
+  Calendar,
+  DollarSign,
+  Clock,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Activity,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop
 } from 'lucide-react';
 
-const AIAutonomousLogisticsPlatform = () => {
+const AIContentMarketingStudio = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Route Optimization",
-      description: "Advanced algorithms that continuously learn and optimize delivery routes in real-time, reducing fuel costs and delivery times by up to 40%."
+      title: "AI Content Generation",
+      description: "Advanced AI that creates high-quality, engaging content across all formats - blogs, social media, emails, and more."
     },
     {
-      icon: <Route className="w-6 h-6" />,
-      title: "Autonomous Fleet Management",
-      description: "Intelligent fleet coordination that automatically assigns vehicles, predicts maintenance needs, and optimizes capacity utilization."
-    },
-    {
-      icon: <Package className="w-6 h-6" />,
-      title: "Smart Inventory Management",
-      description: "Predictive analytics for demand forecasting, automated reordering, and real-time inventory tracking across all locations."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Supply Chain Visibility",
-      description: "End-to-end visibility across your entire supply chain with real-time tracking, predictive analytics, and automated alerts."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management & Compliance",
-      description: "AI-powered risk assessment, compliance monitoring, and automated reporting for regulatory requirements."
+      icon: <Target className="w-6 h-6" />,
+      title: "Audience Intelligence",
+      description: "Deep insights into your target audience with AI-powered persona analysis and content optimization recommendations."
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Performance Analytics",
-      description: "Comprehensive dashboards and reports showing KPIs, cost analysis, and optimization opportunities."
+      description: "Comprehensive analytics dashboard showing content performance, engagement metrics, and ROI tracking."
+    },
+    {
+      icon: <Workflow className="w-6 h-6" />,
+      title: "Automated Workflows",
+      description: "Streamlined content creation workflows with automated scheduling, publishing, and performance monitoring."
+    },
+    {
+      icon: <Search className="w-6 h-6" />,
+      title: "SEO Optimization",
+      description: "AI-powered SEO tools that optimize content for search engines and improve organic visibility."
+    },
+    {
+      icon: <Palette className="w-6 h-6" />,
+      title: "Brand Consistency",
+      description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines."
     }
   ];
 
   const benefits = [
-    "Reduce logistics costs by 25-40%",
-    "Improve delivery speed by 30-50%",
-    "Increase fleet utilization by 35%",
-    "Reduce carbon footprint by 20-30%",
-    "Eliminate manual planning errors",
-    "24/7 autonomous operations",
-    "Real-time decision making",
-    "Scalable to any fleet size"
+    "Increase content production by 10x",
+    "Improve engagement rates by 40-60%",
+    "Reduce content creation costs by 70%",
+    "Boost SEO rankings by 50%",
+    "24/7 automated content generation",
+    "Multi-platform content distribution",
+    "Real-time performance optimization",
+    "Scalable to any content volume"
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999",
+      name: "Creator",
+      price: "$1,999",
       period: "/month",
-      description: "Perfect for small to medium logistics operations",
+      description: "Perfect for small businesses and content creators",
       features: [
-        "Up to 50 vehicles",
-        "Basic route optimization",
-        "Standard reporting",
-        "Email support",
-        "Mobile app access"
+        "Up to 100 AI-generated articles/month",
+        "Basic SEO optimization",
+        "Social media content",
+        "Email marketing templates",
+        "Standard analytics",
+        "Email support"
       ]
     },
     {
       name: "Professional",
-      price: "$5,999",
+      price: "$4,999",
       period: "/month",
-      description: "Ideal for growing logistics companies",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "Up to 200 vehicles",
-        "Advanced AI optimization",
-        "Real-time analytics",
+        "Up to 500 AI-generated articles/month",
+        "Advanced SEO tools",
+        "Multi-platform content",
+        "Custom brand voice",
         "Priority support",
         "API access",
-        "Custom integrations"
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,999",
+      price: "$9,999",
       period: "/month",
-      description: "For large-scale logistics operations",
+      description: "For large organizations and agencies",
       features: [
-        "Unlimited vehicles",
-        "Full AI suite",
+        "Unlimited content generation",
         "Custom AI models",
+        "White-label solutions",
         "Dedicated support",
-        "White-label options",
-        "Advanced security"
+        "Advanced security",
+        "Custom integrations"
       ]
     }
   ];
 
+  const contentTypes = [
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: "Blog Posts & Articles",
+      description: "SEO-optimized long-form content that ranks and converts"
+    },
+    {
+      icon: <Image className="w-8 h-8" />,
+      title: "Social Media Content",
+      description: "Engaging posts for all major social platforms"
+    },
+    {
+      icon: <Video className="w-8 h-8" />,
+      title: "Video Scripts & Content",
+      description: "Compelling video content that captures attention"
+    },
+    {
+      icon: <Mail className="w-8 h-8" />,
+      title: "Email Marketing",
+      description: "High-converting email sequences and campaigns"
+    },
+    {
+      icon: <Search className="w-8 h-8" />,
+      title: "SEO Content",
+      description: "Search-optimized content that drives organic traffic"
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Multi-language Content",
+      description: "Global content in multiple languages and cultures"
+    }
+  ];
+
   const seoData = {
-    title: "AI Autonomous Logistics Platform | Zion Tech Group",
-    description: "Revolutionary AI-powered logistics platform that autonomously optimizes routes, manages fleets, and streamlines supply chains. Reduce costs by 40% and improve efficiency.",
-    keywords: "AI logistics, autonomous logistics, route optimization, fleet management, supply chain AI, logistics automation",
-    url: "https://ziontechgroup.com/services/ai-autonomous-logistics-platform"
+    title: "AI Content Marketing Studio | Zion Tech Group",
+    description: "Revolutionary AI-powered content marketing platform that generates, optimizes, and distributes high-quality content automatically. Increase production 10x and engagement by 60%.",
+    keywords: "AI content marketing, content generation, marketing automation, SEO content, social media content, AI writing",
+    url: "https://ziontechgroup.com/services/ai-content-marketing-studio"
   };
 
   return (
@@ -146,20 +190,20 @@ const AIAutonomousLogisticsPlatform = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
-                <Truck className="w-4 h-4 mr-2" />
-                AI-Powered Logistics Platform
+                <PenTool className="w-4 h-4 mr-2" />
+                AI-Powered Content Marketing
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Autonomous
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics</span>
+                AI Content
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Marketing</span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-purple to-zion-cyan">Platform</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-purple to-zion-cyan">Studio</span>
               </h1>
               
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Revolutionize your logistics operations with AI that thinks, learns, and optimizes autonomously. 
-                Reduce costs by 40%, improve delivery speed by 50%, and eliminate manual planning forever.
+                Transform your content marketing with AI that writes, optimizes, and distributes high-quality content automatically. 
+                Increase production 10x, boost engagement by 60%, and dominate your market with intelligent content.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -200,10 +244,10 @@ const AIAutonomousLogisticsPlatform = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Transform Your Logistics Operations
+                Revolutionize Your Content Marketing
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our AI platform delivers measurable results that directly impact your bottom line
+                Our AI platform delivers measurable results that transform your content marketing strategy
               </p>
             </motion.div>
             
@@ -224,8 +268,49 @@ const AIAutonomousLogisticsPlatform = () => {
           </div>
         </section>
 
-        {/* Features */}
+        {/* Content Types */}
         <section className="py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                All Content Types Covered
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                From blog posts to social media, our AI creates engaging content for every platform and audience
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {contentTypes.map((content, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/50 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
+                >
+                  <div className="text-zion-cyan mb-4 group-hover:scale-110 transition-transform duration-300 mx-auto">
+                    {content.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {content.title}
+                  </h3>
+                  <p className="text-zion-slate-light">
+                    {content.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-20 bg-zion-slate-dark/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -237,7 +322,7 @@ const AIAutonomousLogisticsPlatform = () => {
                 Advanced AI Features
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Cutting-edge artificial intelligence that continuously learns and improves your logistics operations
+                Cutting-edge artificial intelligence that continuously learns and improves your content marketing
               </p>
             </motion.div>
             
@@ -266,7 +351,7 @@ const AIAutonomousLogisticsPlatform = () => {
         </section>
 
         {/* Pricing */}
-        <section className="py-20 bg-zion-slate-dark/50">
+        <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -278,7 +363,7 @@ const AIAutonomousLogisticsPlatform = () => {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Choose the plan that fits your logistics operation size and requirements
+                Choose the plan that fits your content marketing needs and scale as you grow
               </p>
             </motion.div>
             
@@ -339,7 +424,7 @@ const AIAutonomousLogisticsPlatform = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
+        <section className="py-20 bg-zion-slate-dark/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -348,10 +433,10 @@ const AIAutonomousLogisticsPlatform = () => {
               className="bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-2xl p-12 text-center"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Logistics?
+                Ready to Transform Your Content Marketing?
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies already using our AI platform to revolutionize their logistics operations. 
+                Join hundreds of companies already using our AI platform to revolutionize their content marketing. 
                 Get started with a free consultation today.
               </p>
               
@@ -387,4 +472,4 @@ const AIAutonomousLogisticsPlatform = () => {
   );
 };
 
-export default AIAutonomousLogisticsPlatform;
+export default AIContentMarketingStudio;

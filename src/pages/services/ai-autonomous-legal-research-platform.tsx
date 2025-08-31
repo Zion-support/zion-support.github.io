@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { 
   Search, 
   BookOpen, 
+  Scale, 
+  FileText, 
   Brain, 
   Zap, 
   Shield, 
@@ -11,8 +13,10 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
+  Globe,
   Database,
   Eye,
+  Settings,
   Download,
   Share2,
   Filter,
@@ -26,8 +30,10 @@ import {
   TrendingUp,
   Lock,
   Cloud,
+  Cpu,
   Network,
   Server,
+  Database as DatabaseIcon,
   Code,
   Bot,
   Workflow,
@@ -49,35 +55,7 @@ import {
   ShieldCheck,
   Sparkles,
   Atom,
-  Microscope,
-  TestTube,
-  Flask,
-  Beaker,
-  Search as SearchIcon,
-  BookOpen as BookOpenIcon,
-  Brain as BrainIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Clock as ClockIcon,
-  Users as UsersIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowRight as ArrowRightIcon,
-  Star as StarIcon,
-  Database as DatabaseIcon,
-  Eye as EyeIcon,
-  Download as DownloadIcon,
-  Share2 as Share2Icon,
-  Filter as FilterIcon,
-  AlertTriangle as AlertTriangleIcon,
-  Lightbulb as LightbulbIcon,
-  BarChart as BarChartIcon,
-  PieChart as PieChartIcon,
-  LineChart as LineChartIcon,
-  Activity as ActivityIcon,
-  Target as TargetIcon,
-  TrendingUp as TrendingUpIcon,
-  Lock as LockIcon,
-  Cloud as CloudIcon,
+  Cpu as CpuIcon,
   Network as NetworkIcon,
   Server as ServerIcon,
   Code as CodeIcon,
@@ -104,93 +82,93 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIAutonomousResearchAssistant() {
+export default function AIAutonomousLegalResearchPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Research",
-      description: "Advanced natural language processing that understands research context and requirements",
-      benefits: ["Context-aware analysis", "Semantic understanding", "Intelligent synthesis", "Pattern recognition"]
+      title: "AI-Powered Legal Research",
+      description: "Advanced natural language processing that understands legal terminology and context",
+      benefits: ["Semantic search", "Context-aware results", "Legal precedent analysis"]
     },
     {
       icon: Search,
-      title: "Comprehensive Literature Review",
-      description: "Automated discovery and analysis of relevant research papers and publications",
-      benefits: ["Multi-source search", "Citation analysis", "Trend identification", "Gap analysis"]
+      title: "Intelligent Case Law Search",
+      description: "Find relevant cases, statutes, and regulations with unprecedented accuracy",
+      benefits: ["Multi-jurisdiction search", "Citation tracking", "Related case discovery"]
     },
     {
       icon: BookOpen,
-      title: "Intelligent Data Analysis",
-      description: "AI-driven analysis of research data with statistical insights and visualization",
-      benefits: ["Statistical analysis", "Data visualization", "Trend detection", "Correlation analysis"]
+      title: "Comprehensive Legal Database",
+      description: "Access to millions of legal documents, cases, and regulatory materials",
+      benefits: ["Real-time updates", "Historical archives", "Multi-source integration"]
+    },
+    {
+      icon: Scale,
+      title: "Legal Analysis & Insights",
+      description: "AI-generated summaries, key points, and legal reasoning analysis",
+      benefits: ["Automated summaries", "Risk assessment", "Strategy recommendations"]
     },
     {
       icon: Zap,
-      title: "Automated Report Generation",
-      description: "Intelligent synthesis of research findings into comprehensive reports",
-      benefits: ["Auto-summarization", "Citation management", "Format optimization", "Multi-language support"]
+      title: "Automated Citation Management",
+      description: "Intelligent citation formatting and verification for legal documents",
+      benefits: ["Auto-formatting", "Citation checking", "Bibliography generation"]
     },
     {
       icon: Shield,
-      title: "Research Validation",
-      description: "AI-powered verification of research methodology and data integrity",
-      benefits: ["Methodology review", "Data validation", "Bias detection", "Quality assessment"]
-    },
-    {
-      icon: Workflow,
-      title: "Collaborative Research",
-      description: "Team-based research coordination with AI-powered insights sharing",
-      benefits: ["Team collaboration", "Knowledge sharing", "Progress tracking", "Version control"]
+      title: "Compliance Monitoring",
+      description: "Track regulatory changes and ensure legal compliance across jurisdictions",
+      benefits: ["Regulatory alerts", "Compliance dashboards", "Risk monitoring"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Student",
-      price: "$99",
+      name: "Legal Professional",
+      price: "$199",
       period: "/month",
-      description: "Perfect for students and individual researchers",
+      description: "Perfect for individual lawyers and small law firms",
       features: [
-        "Up to 3 research projects",
-        "Basic AI assistance",
-        "Literature review tools",
+        "Up to 3 users",
+        "Basic legal research tools",
+        "Standard case law database",
         "Email support",
-        "Basic analytics",
-        "Mobile app access"
+        "Basic AI insights",
+        "Citation management"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Academic",
-      price: "$299",
+      name: "Law Firm",
+      price: "$499",
       period: "/month",
-      description: "Ideal for academic researchers and institutions",
+      description: "Ideal for growing law firms and legal departments",
       features: [
-        "Up to 10 research projects",
-        "Advanced AI algorithms",
-        "Comprehensive databases",
+        "Up to 10 users",
+        "Advanced research algorithms",
+        "Full legal database access",
         "Priority support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
+        "Advanced AI insights",
+        "Compliance monitoring",
+        "Team collaboration tools"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$899",
+      price: "$1,299",
       period: "/month",
-      description: "For research organizations and corporations",
+      description: "For large law firms and corporate legal departments",
       features: [
-        "Unlimited research projects",
+        "Unlimited users",
         "Custom AI models",
-        "White-label solution",
+        "API access",
         "Dedicated support",
-        "Advanced reporting",
-        "Multi-tenant setup",
-        "Custom development"
+        "Custom integrations",
+        "Advanced analytics",
+        "White-label options"
       ],
       cta: "Contact Sales",
       popular: false
@@ -200,54 +178,54 @@ export default function AIAutonomousResearchAssistant() {
   const benefits = [
     {
       icon: Clock,
-      title: "80% Time Savings",
-      description: "Reduce research time from weeks to days with AI-powered automation"
+      title: "90% Time Savings",
+      description: "Reduce legal research time from hours to minutes with AI-powered search and analysis"
     },
     {
       icon: CheckCircle,
       title: "95% Accuracy Rate",
-      description: "Advanced AI algorithms ensure highly accurate research insights and analysis"
+      description: "Advanced AI algorithms ensure highly accurate legal research results and citations"
     },
     {
       icon: DollarSign,
-      title: "60% Cost Reduction",
-      description: "Lower research costs and increase productivity with automated processes"
+      title: "40% Cost Reduction",
+      description: "Lower research costs and increase billable hours with automated legal research"
     },
     {
       icon: Users,
-      title: "Enhanced Collaboration",
-      description: "Enable multiple researchers to collaborate seamlessly on projects"
+      title: "Team Collaboration",
+      description: "Enable multiple team members to collaborate on research projects seamlessly"
     }
   ];
 
   const useCases = [
     {
-      title: "Academic Research",
-      description: "Streamline literature reviews and data analysis for academic publications",
-      icon: BookOpen
-    },
-    {
-      title: "Market Research",
-      description: "Conduct comprehensive market analysis and competitive intelligence",
+      title: "Case Law Research",
+      description: "Find relevant precedents and case law for ongoing litigation",
       icon: Search
     },
     {
-      title: "Scientific Discovery",
-      description: "Accelerate scientific research with AI-powered insights and validation",
-      icon: Microscope
+      title: "Regulatory Compliance",
+      description: "Stay updated on changing regulations and compliance requirements",
+      icon: Shield
     },
     {
-      title: "Policy Research",
-      description: "Analyze policy implications and conduct impact assessments",
-      icon: Shield
+      title: "Contract Analysis",
+      description: "Analyze contracts for legal risks and compliance issues",
+      icon: FileText
+    },
+    {
+      title: "Legal Strategy",
+      description: "Develop winning legal strategies with comprehensive research insights",
+      icon: Target
     }
   ];
 
   const stats = [
-    { number: '1M+', label: 'Research Papers', icon: Database },
+    { number: '10M+', label: 'Legal Documents', icon: Database },
     { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
-    { number: '80%', label: 'Time Savings', icon: Clock },
-    { number: '50+', label: 'Research Fields', icon: Brain }
+    { number: '90%', label: 'Time Savings', icon: Clock },
+    { number: '50+', label: 'Jurisdictions', icon: Globe }
   ];
 
   return (
@@ -261,11 +239,11 @@ export default function AIAutonomousResearchAssistant() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Research Assistant
+              AI Autonomous Legal Research Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your research with AI-powered intelligence. Discover insights, analyze data, 
-              and generate reports with unprecedented speed and accuracy.
+              Revolutionize legal research with AI-powered intelligence. Access millions of legal documents, 
+              get instant insights, and build stronger cases with unprecedented speed and accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -320,11 +298,11 @@ export default function AIAutonomousResearchAssistant() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Research
+              Powerful Features for Legal Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge technology with deep research expertise to deliver 
-              unprecedented research capabilities and insights.
+              Our AI platform combines cutting-edge technology with deep legal expertise to deliver 
+              unprecedented research capabilities.
             </p>
           </motion.div>
 
@@ -368,11 +346,11 @@ export default function AIAutonomousResearchAssistant() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Research Assistant?
+              Why Choose Our Legal Research Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your research process with AI-powered intelligence that saves time, improves accuracy, 
-              and enhances collaboration.
+              Transform your legal practice with AI-powered research that saves time, reduces costs, 
+              and improves outcomes.
             </p>
           </motion.div>
 
@@ -410,10 +388,10 @@ export default function AIAutonomousResearchAssistant() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Research Need
+              Perfect for Every Legal Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From academic research to market analysis, our platform adapts to your specific research requirements.
+              From solo practitioners to large law firms, our platform adapts to your specific legal research requirements.
             </p>
           </motion.div>
 
@@ -450,7 +428,7 @@ export default function AIAutonomousResearchAssistant() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your research needs and budget. All plans include a 14-day free trial.
+              Choose the plan that fits your practice size and research needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 
@@ -520,10 +498,10 @@ export default function AIAutonomousResearchAssistant() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Research?
+              Ready to Transform Your Legal Research?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of researchers who have already revolutionized their work with AI-powered intelligence.
+              Join thousands of legal professionals who have already revolutionized their practice with AI-powered research.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
