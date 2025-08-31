@@ -32,16 +32,13 @@ import {
 } from 'lucide-react';
 
 export function MobileMenu({ onClose }) {
-  const [expandedSections, setExpandedSections] = useState({});
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
   
-  const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
-
+  const toggleServices = () => setIsServicesOpen(!isServicesOpen);
+  const toggleSolutions = () => setIsSolutionsOpen(!isSolutionsOpen);
+  
   const isActive = (path) => location.pathname === path || location.pathname.startsWith(path);
   
   const navigationSections = [
@@ -54,30 +51,43 @@ export function MobileMenu({ onClose }) {
           label: 'AI & Automation',
           icon: Brain,
           items: [
-            { href: '/services/ai-business-intelligence-dashboard', label: 'AI BI Dashboard' },
-            { href: '/services/ai-customer-support-automation', label: 'AI Support Automation' },
-            { href: '/services/ai-project-management-platform', label: 'AI Project Management' },
-            { href: '/services/ai-marketing-automation-platform', label: 'AI Marketing Automation' },
-            { href: '/services/ai-enterprise-automation-platform', label: 'AI Enterprise Automation' },
+            { label: 'AI Enterprise Automation', href: '/services/ai-enterprise-automation-platform' },
+            { label: 'AI Enterprise Intelligence', href: '/services/ai-enterprise-intelligence-platform' },
+            { label: 'AI Data Analytics', href: '/services/ai-data-analytics-platform' },
+            { label: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+            { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
+            { label: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
+            { label: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
+            { label: 'AI Healthcare', href: '/services/ai-healthcare-platform' },
+            { label: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning' },
+            { label: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+            { label: 'AI Supply Chain Intelligence', href: '/services/ai-supply-chain-intelligence' },
           ]
         },
         {
           label: 'IT & Infrastructure',
           icon: Server,
           items: [
-            { href: '/services/it-infrastructure-management', label: 'Infrastructure Management' },
-            { href: '/services/cloud-devops', label: 'Cloud & DevOps' },
-            { href: '/services/cybersecurity', label: 'Cybersecurity' },
-            { href: '/services/blockchain-enterprise-solutions', label: 'Blockchain Solutions' },
+            { label: 'Infrastructure Management', href: '/services/it-infrastructure-management' },
+            { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+            { label: 'Cybersecurity', href: '/services/cybersecurity' },
+            { label: 'Digital Transformation', href: '/services/digital-transformation' },
+            { label: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+            { label: 'Edge Computing', href: '/services/edge-computing-solutions' },
+            { label: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
           ]
         },
         {
           label: 'Micro SaaS',
-          icon: Rocket,
+          icon: Store,
           items: [
-            { href: '/services/micro-saas-solutions-comprehensive', label: 'Comprehensive Solutions' },
-            { href: '/services/ai-customer-success-automation', label: 'Customer Success AI' },
-            { href: '/services/ai-financial-risk-management-enhanced', label: 'Financial Risk Management' },
+            { label: 'AI Support Automation', href: '/services/ai-customer-support-automation' },
+            { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+            { label: 'AI Project Management', href: '/services/ai-project-management-platform' },
+            { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation-platform' },
+            { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
+            { label: 'AI HR Platform', href: '/services/ai-hr-platform' },
+            { label: 'AI Financial Risk Management', href: '/services/ai-financial-trading-risk-management' },
           ]
         }
       ]
@@ -87,10 +97,11 @@ export function MobileMenu({ onClose }) {
       label: 'Solutions',
       icon: Target,
       items: [
-        { href: '/solutions/healthcare', label: 'Healthcare' },
-        { href: '/solutions/financial', label: 'Financial Services' },
-        { href: '/solutions/manufacturing', label: 'Manufacturing' },
-        { href: '/solutions/government', label: 'Government' },
+        { label: 'Healthcare', href: '/solutions/healthcare' },
+        { label: 'Financial', href: '/solutions/financial' },
+        { label: 'Manufacturing', href: '/solutions/manufacturing' },
+        { label: 'Government', href: '/solutions/government' },
+        { label: 'Retail', href: '/solutions/retail' },
       ]
     },
     {
@@ -98,30 +109,19 @@ export function MobileMenu({ onClose }) {
       label: 'Company',
       icon: Building2,
       items: [
-        { href: '/about', label: 'About Us' },
-        { href: '/careers', label: 'Careers' },
-        { href: '/partners', label: 'Partners' },
-        { href: '/news', label: 'News' },
-      ]
-    },
-    {
-      id: 'resources',
-      label: 'Resources',
-      icon: FileText,
-      items: [
-        { href: '/blog', label: 'Blog & Insights' },
-        { href: '/webinars', label: 'Webinars' },
-        { href: '/white-papers', label: 'White Papers' },
-        { href: '/case-studies', label: 'Case Studies' },
-        { href: '/research-development', label: 'Research' },
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Partners', href: '/partners' },
       ]
     }
   ];
 
   const directLinks = [
+    { href: '/get-started', label: 'Get Started' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/help', label: 'Support' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/support', label: 'Support' },
   ];
 
   const contactInfo = [
@@ -129,7 +129,7 @@ export function MobileMenu({ onClose }) {
     { icon: Mail, label: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, label: '364 E Main St STE 1008 Middletown DE 19709' },
   ];
-  
+
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
       <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-gradient-to-b from-zion-blue-dark via-zion-slate-dark to-zion-blue-dark border-l border-zion-purple/30 shadow-2xl">
@@ -156,67 +156,87 @@ export function MobileMenu({ onClose }) {
             {navigationSections.map((section) => (
               <div key={section.id} className="space-y-3">
                 <button
-                  onClick={() => toggleSection(section.id)}
+                  onClick={() => {
+                    if (section.id === 'services') toggleServices();
+                    if (section.id === 'solutions') toggleSolutions();
+                  }}
                   className="flex items-center justify-between w-full p-3 text-left text-white hover:bg-zion-purple/10 rounded-lg transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
                     <section.icon className="w-5 h-5 text-zion-cyan" />
                     <span className="font-semibold">{section.label}</span>
                   </div>
-                  {expandedSections[section.id] ? (
+                  {(section.id === 'services' && isServicesOpen) || (section.id === 'solutions' && isSolutionsOpen) ? (
                     <ChevronDown className="w-4 h-4 text-zion-purple transition-transform duration-300" />
                   ) : (
                     <ChevronRight className="w-4 h-4 text-zion-purple transition-transform duration-300" />
                   )}
                 </button>
                 
-                {expandedSections[section.id] && (
+                {section.id === 'services' && isServicesOpen && (
                   <div className="ml-6 space-y-2">
-                    {section.items.map((item, index) => {
-                      if (item.items) {
-                        // Subsection with nested items
-                        return (
-                          <div key={index} className="space-y-2">
-                            <div className="flex items-center space-x-2 text-zion-cyan font-medium text-sm">
-                              <item.icon className="w-4 h-4" />
-                              <span>{item.label}</span>
-                            </div>
-                            <div className="ml-4 space-y-1">
-                              {item.items.map((subItem, subIndex) => (
-                                <Link
-                                  key={subIndex}
-                                  to={subItem.href}
-                                  onClick={onClose}
-                                  className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                                    isActive(subItem.href)
-                                      ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                                      : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                                  }`}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        );
-                      } else {
-                        // Direct link
-                        return (
-                          <Link
-                            key={index}
-                            to={item.href}
-                            onClick={onClose}
-                            className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                              isActive(item.href)
-                                ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                                : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                            }`}
-                          >
-                            {item.label}
-                          </Link>
-                        );
-                      }
-                    })}
+                    {section.items.map((item, index) => (
+                      <div key={index} className="space-y-2">
+                        <div className="flex items-center space-x-2 text-zion-cyan font-medium text-sm">
+                          <item.icon className="w-4 h-4" />
+                          <span>{item.label}</span>
+                        </div>
+                        <div className="ml-4 space-y-1">
+                          {item.items.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subItem.href}
+                              onClick={onClose}
+                              className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
+                                isActive(subItem.href)
+                                  ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
+                                  : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                              }`}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {section.id === 'solutions' && isSolutionsOpen && (
+                  <div className="ml-6 space-y-1">
+                    {section.items.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        onClick={onClose}
+                        className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
+                          isActive(item.href)
+                            ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
+                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
+                {section.id === 'company' && (
+                  <div className="ml-6 space-y-1">
+                    {section.items.map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        onClick={onClose}
+                        className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
+                          isActive(item.href)
+                            ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
+                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>

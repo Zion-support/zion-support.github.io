@@ -70,6 +70,9 @@ export function Footer() {
         { name: "AI Enterprise Workflow Automation", href: "/services/ai-enterprise-workflow-automation" },
         { name: "AI Quantum Computing Solutions", href: "/services/ai-quantum-computing-solutions" },
         { name: "AI Cybersecurity Threat Intelligence", href: "/services/ai-cybersecurity-threat-intelligence" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
+        { name: "AI Customer Success Platform", href: "/services/ai-customer-success-platform" },
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" },
         { name: "AI Autonomous Logistics Platform", href: "/services/ai-autonomous-logistics-platform" },
         { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }
       ]
@@ -118,7 +121,12 @@ export function Footer() {
         { name: "AI Project Management", href: "/services/ai-project-management-platform" },
         { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform" },
         { name: "AI Predictive Maintenance", href: "/services/ai-predictive-maintenance" },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform" }
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
+        { name: "AI Customer Success Platform", href: "/services/ai-customer-success-platform" },
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" },
+        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
+        { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025" }
       ]
     },
     {
@@ -161,7 +169,7 @@ export function Footer() {
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">

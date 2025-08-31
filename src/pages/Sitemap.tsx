@@ -43,7 +43,10 @@ export default function Sitemap() {
       { name: 'AI Content Creation Studio', path: '/services/ai-content-creation-studio' },
       { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics-platform' },
       { name: 'AI Autonomous Business Operations', path: '/services/ai-autonomous-business-operations-platform' },
-      { name: 'AI Content Intelligence Platform', path: '/services/ai-content-intelligence-platform' }
+      { name: 'AI Content Intelligence Platform', path: '/services/ai-content-intelligence-platform' },
+      { name: 'AI Enterprise Resource Planning', path: '/services/ai-enterprise-resource-planning' },
+      { name: 'AI Customer Success Platform', path: '/services/ai-customer-success-platform' },
+      { name: 'AI Supply Chain Intelligence', path: '/services/ai-supply-chain-intelligence' }
     ],
     itServices: [
       { name: 'Infrastructure Management', path: '/services/it-infrastructure-management' },
@@ -88,7 +91,12 @@ export default function Sitemap() {
       { name: 'Webinars', path: '/webinars' },
       { name: 'Training', path: '/training' },
       { name: 'Research & Development', path: '/research-development' },
-      { name: 'Case Studies', path: '/case-studies' }
+      { name: 'Case Studies', path: '/case-studies' },
+      { name: 'Innovative Services Showcase 2026', path: '/innovative-services-showcase-2026' },
+      { name: 'Comprehensive Services Showcase 2025', path: '/comprehensive-services-showcase-2025' },
+      { name: 'Innovative AI Services Showcase 2025', path: '/innovative-ai-services-showcase-2025' },
+      { name: 'Advanced Services Showcase 2025', path: '/advanced-services-showcase-2025' },
+      { name: 'Comprehensive Pricing Guide 2025', path: '/comprehensive-pricing-guide-2025' }
     ],
     legal: [
       { name: 'Privacy Policy', path: '/privacy' },
