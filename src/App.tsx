@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Layout Components
+import { Header } from './components/Header';
+import Footer from './components/Footer';
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -17,6 +21,8 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
+import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -59,6 +65,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative AI Services 2025
+const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Neural-Network-Platform'));
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
+
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
 const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
@@ -73,32 +84,27 @@ const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
+
+// New pages we created
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
+const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
+const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-    <div className="text-center max-w-md">
-      <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-        <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-        </svg>
-      </div>
-      <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
-      <p className="text-gray-400 mb-6">We're sorry, but something unexpected happened. Please try again.</p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Try again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Go home
-        </button>
-      </div>
+    <div className="text-center">
+      <h1 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+      >
+        Try again
+      </button>
     </div>
   </div>
 );
@@ -109,12 +115,15 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Header */}
+            <Header />
+            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
             
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -161,6 +170,11 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
 
+                    {/* New Innovative AI Services 2025 */}
+                    <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />
+                    <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
                     <Route path="/solutions/financial" element={<FinancialSolutions />} />
@@ -175,6 +189,14 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-ai-services-showcase-2025" element={<InnovativeAIServicesShowcase2025 />} />
+
+                    {/* New pages we created */}
+                    <Route path="/enterprise" element={<Enterprise />} />
+                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
+                    <Route path="/emerging-tech" element={<EmergingTech />} />
 
                     {/* 404 Page */}
                     <Route
@@ -213,6 +235,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Footer */}
+            <Footer />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
