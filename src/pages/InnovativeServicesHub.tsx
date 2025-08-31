@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,6 +20,45 @@ import {
   Globe2, Cpu2, Database2, Network2, Server2, Smartphone2,
   TrendingUp, ExternalLink, Lightbulb, Monitor, ShieldCheck
 } from 'lucide-react';
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Rocket,
+  Brain,
+  Zap,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  TrendingUp,
+  Users,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Lightbulb,
+  Code,
+  Cloud,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Key,
+  BarChart3,
+  Globe2,
+  ShieldCheck
+<<<<<<< HEAD
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
+=======
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function InnovativeServicesHub() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -486,6 +526,7 @@ export default function InnovativeServicesHub() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Filters and Search */}
       <section className="py-8 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -501,6 +542,106 @@ export default function InnovativeServicesHub() {
                       ? 'bg-purple-600 text-white'
                       : 'bg-slate-700 text-purple-200 hover:bg-slate-600'
                   }`}
+=======
+      {/* Service Categories */}
+      <motion.div
+        className="container mx-auto px-4 py-16"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Explore Our Service Categories
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            From revolutionary AI to sustainable green technology, discover the perfect solution for your business
+<<<<<<< HEAD
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {serviceCategories.map((category)               => {;
+=======;
+          </p>;
+        </div>;
+;
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+          {serviceCategories.map((category)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+            const IconComponent = category.icon;
+            return (
+              <motion.div
+                key = {category.id}
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
+                variants={itemVariants}
+<<<<<<< HEAD
+                whileHover={{ y: -5, scale: 1.02 }}
+
+=======
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+
+
+
+
+}}
+              >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div className="flex items-start gap-4 mb-6">
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
+                      {category.title}
+                    </h3>
+                    <p className="text-slate-300 leading-relaxed">
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <div className="text-sm text-slate-400 mb-3">Key Features:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.features.map((feature, index) => (
+                      <span key={index} className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                    <div className="text-lg font-bold text-blue-400">{category.stats.services}</div>
+                    <div className="text-xs text-slate-400">Services</div>
+                  </div>
+                  <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                    <div className="text-lg font-bold text-green-400">{category.stats.avgROI}</div>
+                    <div className="text-xs text-slate-400">Avg ROI</div>
+                  </div>
+                  <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                    <div className="text-lg font-bold text-purple-400">{category.stats.innovation}</div>
+                    <div className="text-xs text-slate-400">Level</div>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <a
+                  href={category.route}
+                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
@@ -538,10 +679,31 @@ export default function InnovativeServicesHub() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
+=======
+      {/* Featured Services */}
+      <motion.div
+        className="container mx-auto px-4 py-16"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Featured Revolutionary Services
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Our most innovative and high-impact solutions that are transforming industries worldwide
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {featuredServices.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
               initial={{ opacity: 0, y: 20 }}

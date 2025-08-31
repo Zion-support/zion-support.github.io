@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Plus, 
+=======
+<<<<<<< HEAD
+import React, { useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Plus,
+  MessageCircle,
+  Phone,
+  Mail,
+  ArrowUp,
+  Settings,
+  HelpCircle,
+=======
+import React, { useState, useCallback, useEffect               } from 'react.ts';
+import { Plus, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageCircle, 
   Phone, 
   Mail, 
@@ -14,6 +30,7 @@ import {
   Heart,
   Share2,
   Download,
+<<<<<<< HEAD
   Bookmark,
   Calendar,
   MapPin
@@ -22,12 +39,56 @@ import {
 interface FloatingAction {
   id: string;
   icon: React.ComponentType<any>;
+=======
+<<<<<<< HEAD
+  Search
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
+  enabled?: boolean;
+=======
+  Printer
+ 
+} from 'lucide-react.ts';
+
+interface FloatingAction {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  icon: React.ComponentType<{ size?: number; className?: string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}>;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
-  action: () => void;
+  action: ()               => void;
   color: string;
   priority?: 'high' | 'medium' | 'low';
 }
 
+<<<<<<< HEAD
 interface FloatingActionButtonProps {
   enabled: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
@@ -35,6 +96,17 @@ interface FloatingActionButtonProps {
   showLabels?: boolean;
   actions?: FloatingAction[];
   onAction?: (actionId: string) => void;
+=======
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
+  actions?: FloatingAction[];
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  theme?: 'light' | 'dark' | 'auto';
+  showScrollToTop?: boolean;
+  showContactActions?: boolean;
+  showUtilityActions?: boolean;
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
@@ -46,6 +118,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   onAction
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+<<<<<<< HEAD
   const [isHovered, setIsHovered] = useState(false);
 
   // Default actions if none provided
@@ -98,11 +171,318 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       color: 'from-pink-500 to-rose-500',
       priority: 'low'
     }
+=======
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<any>('light');
+
+<<<<<<< HEAD
+  // Hide button when scrolling down, show when scrolling up
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const isScrollingDown = scrollTop > (window as ).lastScrollTop;
+
+    if (isScrollingDown && scrollTop > 100) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+
+    (window as ).lastScrollTop = scrollTop;
+  }, []);
+=======
+  // Detect theme
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+      
+      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)               => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
+    }
+  }, [theme]);
+
+  // Show scroll to top button when scrolled down
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300);
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+<<<<<<< HEAD
+  // Quick actions
+  const quickActions = [
+    {
+      icon: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMessageCircle,
+      label: 'Chat Support',
+      action: ()               => {
+        // Trigger chat support
+        const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
+        if (chatButton) chatButton.click();
+      },
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-blue-500 to-blue-600',
+      delay: 0.1
+    },
+    {
+      icon: Phone,
+      label: 'Call Us',
+      action: ()               => {
+        window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1-555-0123';
+      },
+      color: 'from-green-500 to-green-600',
+      delay: 0.2
+    },
+    {
+      icon: Mail,
+      label: 'Email',
+      action: ()               => {
+        window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanycontact@ziontechgroup.com';
+      },
+      color: 'from-purple-500 to-purple-600',
+      delay: 0.3
+    },
+    {
+      icon: Search,
+      label: 'Search',
+      action: ()               => {
+        const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.click();
+
+      },
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-orange-500 to-orange-600',
+      delay: 0.4
+    },
+    {
+      icon: Bookmark,
+      label: 'Bookmark',
+      action: ()               => {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Zion Tech Group',
+            url: window.location.href
+          });
+        } else {
+          // Fallback for browsers that don't support Web Share API
+          const url = window.location.href;
+          const title = document.title;
+          const bookmarkUrl = `https://del.icio.us/post?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+          window.open(bookmarkUrl, '_blank');
+
+      },
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-red-500 to-red-600',
+      delay: 0.5
+    },
+    {
+      icon: Download,
+      label: 'Download App',
+      action: ()               => {
+        // Trigger app download or PWA install
+        const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
+        if (installButton) {
+          installButton.click();
+        } else {
+          // Show app store links
+          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+          const isAndroid = /Android/.test(navigator.userAgent);
+
+          if (isIOS) {
+            window.open('https://apps.apple.com/app/zion-tech-group/id123456789', '_blank');
+          } else if (isAndroid) {
+            window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
+          } else {
+            // Show PWA install prompt
+            const deferredPrompt = (window as ).deferredPrompt;
+            if (deferredPrompt) {
+              deferredPrompt.prompt();
+
+
+
+      },
+      color: 'from-indigo-500 to-indigo-600',
+      delay: 0.6
+
+=======
+  // Default actions
+  const defaultActions: FloatingAction[] = [
+    // Contact actions
+    ...(showContactActions ? [
+      {
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'contact',
+        icon: MessageCircle,
+        label: 'Contact Us',
+        action: ()               => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyanyanyany'smooth' });
+          }
+        },
+        color: 'bg-blue-500 hover:bg-blue-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'phone',
+        icon: Phone,
+        label: 'Call Now',
+        action: ()               => {
+          window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1234567890';
+        },
+        color: 'bg-green-500 hover:bg-green-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'email',
+        icon: Mail,
+        label: 'Send Email',
+        action: ()               => {
+          window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanyinfo@ziontechgroup.com';
+        },
+        color: 'bg-purple-500 hover:bg-purple-600',
+        priority: 'medium' as const
+      },
+      {
+        id: 'location',
+        icon: MapPin,
+        label: 'Get Directions',
+        action: ()               => {
+          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-red-500 hover:bg-red-600',
+        priority: 'medium' as const
+      }
+    ] : []),
+    
+    // Utility actions
+    ...(showUtilityActions ? [
+      {
+        id: 'bookmark',
+        icon: Bookmark,
+        label: 'Bookmark Page',
+        action: ()               => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              // Show success message
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-yellow-500 hover:bg-yellow-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'share',
+        icon: Share2,
+        label: 'Share Page',
+        action: ()               => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-indigo-500 hover:bg-indigo-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'download',
+        icon: Download,
+        label: 'Download Brochure',
+        action: ()               => {
+          // Create a temporary link to trigger download
+          const link = document.createElement('a');
+          link.href = '/brochure.pdf'; // Adjust path as needed
+          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-teal-500 hover:bg-teal-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'print',
+        icon: Printer,
+        label: 'Print Page',
+        action: ()               => {
+          window.print();
+        },
+        color: 'bg-gray-500 hover:bg-gray-600',
+        priority: 'low' as const
+      }
+    ] : []),
+    
+    // Custom actions
+    ...actions
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const finalActions = actions.length > 0 ? actions : defaultActions;
 
+<<<<<<< HEAD
   // Position classes
+=======
+  // Toggle expansion
+  const toggleExpansion = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  // Scroll to top
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Show notification
+  const showNotification = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
+      transform translate-x-full transition-transform duration-300 ease-in-out
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
+  }, []);
+
+  // Get position classes
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':

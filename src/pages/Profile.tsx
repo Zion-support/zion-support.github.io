@@ -1,5 +1,23 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { User,
+  Mail,
+  Phone,
+  Building,
+  Globe,
+  MapPin,
+  Camera,
+  Save,
+  Edit,
+=======
+import React, { useState              } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { User, 
   Mail, 
   Phone, 
@@ -33,8 +51,31 @@ import { User,
   Brain,
   Cloud,
   Rocket
+<<<<<<< HEAD
  } from 'lucide-react';
 interface UserProfile {
+=======
+<<<<<<< HEAD
+=======
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+interface UserProfile {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   firstName: string;
   lastName: string;
   email: string;
@@ -45,22 +86,124 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
+<<<<<<< HEAD
   avatar: string}
 interface NotificationSettings {
+=======
+<<<<<<< HEAD
+  avatar: string;
+=======
+avatar: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface NotificationSettings {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   emailNotifications: boolean;
   pushNotifications: boolean;
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
+<<<<<<< HEAD
   weeklyReports: boolean}
 interface SecuritySettings {
+=======
+<<<<<<< HEAD
+  weeklyReports: boolean;
+=======
+weeklyReports: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface SecuritySettings {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
+<<<<<<< HEAD
 loginHistory: Array<any>}
 const Profile: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
+=======
+<<<<<<< HEAD
+loginHistory: Array<any>;
+=======
+loginHistory: Array<any>;
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+const Profile: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('profile');
+=======
+const Profile: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('profile');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -152,13 +295,33 @@ const Profile: React.FC = () => {;
       setError('Failed to change password. Please try again.')} finally {
       setIsLoading(false)}
   };
+<<<<<<< HEAD
   const handleNotificationToggle = (key: keyof NotificationSettings) => {;
+=======
+
+<<<<<<< HEAD
+  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)               => {
+    setNotifications(prev => ({
+      ...prev,;
+      [key]: !prev[key];
+    }))};
+
+  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+=======;
+  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => ({;
       ...prev,;
       [key]: !prev[key];
     }));
   };
+<<<<<<< HEAD
   const getPasswordStrength = (password: string) => {;
+=======
+
+  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -216,8 +379,8 @@ const Profile: React.FC = () => {;
           </button>
         </div>
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
-          {stats.map((stat, index)  => (
+        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+          {stats.map((stat, index)               => (
             <motion.div
               key={stat.label}
               initial = {
@@ -322,7 +485,19 @@ const Profile: React.FC = () => {;
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
+<<<<<<< HEAD
                 value={profile.company}
+=======
+<<<<<<< HEAD
+                value={profile.comp}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  comp: e.target.value 
+
+}))}
+=======
+                value={profile.comp}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   company: e.target.value 
@@ -358,9 +533,21 @@ const Profile: React.FC = () => {;
   industry: e.target.value 
 }))}
                 disabled={!isEditing}
+<<<<<<< HEAD
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)  => (
+=======
+<<<<<<< HEAD
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+
+                {industries.map((industry)              => (
+=======
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {industries.map((industry)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
@@ -436,8 +623,8 @@ const Profile: React.FC = () => {;
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+          {achievements.map((achievement, index)               => (
             <motion.div
               key={achievement.title}
               initial = {

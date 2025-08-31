@@ -1,14 +1,14 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { ArrowRight, CheckCircle, ExternalLink } from 'lucide-react';
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+import { ArrowRight, CheckCircle, ExternalLink              } from 'lucide-react.ts';
 
-const anchor = (url: string, label?: string) => (
+const anchor = (url: anyanyanyanyanyanyanyanyanyanyanyanyanystring, label?: string)              => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
     {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
   </a>
 );
 
-const ServicesAdvertising: React.FC = () => {
+const ServicesAdvertising: React.FC = (): JSX.Element => {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -104,8 +104,8 @@ const ServicesAdvertising: React.FC = () => {
       </section>
 
       <section className="pb-12">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-          {benefits.map((b) => (
+        <div className="container mx-auto px-4 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 max-w-6xl">
+          {benefits.map((b)              => (
             <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
@@ -119,8 +119,8 @@ const ServicesAdvertising: React.FC = () => {
       <section className="pb-16">
         <div className="container mx-auto px-4 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {spotlight.map((h) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {spotlight.map((h)              => (
               <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">{h.title}</h3>
                 <div className="text-sm text-slate-400 mb-2">{h.price}</div>

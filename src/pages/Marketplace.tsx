@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Store, 
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+=======
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+import { Store, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   Filter, 
   Grid, 
@@ -18,16 +29,36 @@ import {
   Award,
   Users,
   ArrowRight
+<<<<<<< HEAD
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const Marketplace: React.FC = () => {
+=======
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+
+<<<<<<< HEAD
+export default function Marketplace(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+=======
+const Marketplace: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
+<<<<<<< HEAD
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
+=======
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedItem, setExpandedItem] = useState<any>(null);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [
     { id: 'all', name: 'All Solutions', count: 45, icon: Globe },
     { id: 'ai', name: 'AI & Machine Learning', count: 18, icon: Brain },
@@ -292,6 +323,124 @@ const Marketplace: React.FC = () => {
       pricing: '$99/month',
       rating: 4.8,
       reviews: 234,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      downloads: 1234,
+      status: 'trending',
+      tags: ['Code Generation', 'AI', 'Development', 'Productivity'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/code-generator',
+      documentation: 'https://docs.ziontechgroup.com/code-generator'
+    },
+    {
+      id: 'api-gateway',
+      name: 'API Gateway Platform',
+      category: 'development',
+      type: 'software',
+      icon: Network,
+      description: 'Enterprise API gateway with advanced management features',
+      features: [
+        'Rate limiting',
+        'Authentication',
+        'Monitoring & analytics',
+        'Version management',
+        'Documentation',
+        'Developer portal'
+      ],
+      pricing: '$299/month',
+      rating: 4.7,
+      reviews: 156,
+      downloads: 567,
+      status: 'featured',
+      tags: ['API Gateway', 'Microservices', 'API Management', 'Developer Tools'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/api-gateway',
+      documentation: 'https://docs.ziontechgroup.com/api-gateway'
+    },
+    // Hardware & Equipment
+    {
+      id: 'edge-computing',
+      name: 'Edge Computing Device',
+      category: 'hardware',
+      type: 'hardware',
+      icon: Cpu,
+      description: 'High-performance edge computing device for IoT applications',
+      features: [
+        'Intel i7 processor',
+        '16GB RAM',
+        '512GB SSD',
+        'Dual network ports',
+        'Industrial grade',
+        '5-year warranty'
+      ],
+      pricing: '$1,299',
+      rating: 4.9,
+      reviews: 78,
+      downloads: 234,
+      status: 'featured',
+      tags: ['Edge Computing', 'IoT', 'Hardware', 'Industrial'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/edge-computing',
+      documentation: 'https://docs.ziontechgroup.com/edge-computing'
+    },
+    {
+      id: 'network-switch',
+      name: 'Enterprise Network Switch',
+      category: 'hardware',
+      type: 'hardware',
+      icon: Network,
+      description: 'High-speed network switch for enterprise environments',
+      features: [
+        '48-port Gigabit',
+        'PoE+ support',
+        'VLAN management',
+        'QoS features',
+        'SNMP monitoring',
+        'Lifetime warranty'
+      ],
+      pricing: '$899',
+      rating: 4.8,
+      reviews: 123,
+      downloads: 456,
+      status: 'popular',
+      tags: ['Networking', 'Switch', 'Enterprise', 'PoE'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/network-switch',
+      documentation: 'https://docs.ziontechgroup.com/network-switch'
+    }
+  ];
+
+  const featuredItems = marketplaceItems.filter(item => item.status === 'featured');
+  const popularItems = marketplaceItems.filter(item => item.status === 'popular');
+  const trendingItems = marketplaceItems.filter(item => item.status === 'trending');
+
+  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedItem(expandedItem === itemId ? null : itemId);
+  };
+
+  const filteredItems = marketplaceItems.filter(item => {
+    if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
+    if (selectedType !== 'all' && item.type !== selectedType) return false;
+    if (searchQuery) {
+      return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    }
+    return true;
+  });
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (category) {
+      case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
+      case 'cloud': return 'bg-blue-500/20 text-blue-400';
+      case 'security': return 'bg-red-500/20 text-red-400';
+      case 'data': return 'bg-green-500/20 text-green-400';
+      case 'development': return 'bg-orange-500/20 text-orange-400';
+      case 'hardware': return 'bg-gray-500/20 text-gray-400';
+      default: return 'bg-slate-500/20 text-slate-400';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       users: 156,
       features: ["Cost optimization", "Resource management", "Budget tracking", "Automated scaling"],
       image: "☁️",
@@ -322,7 +471,12 @@ const Marketplace: React.FC = () => {
         return b.reviews - a.reviews; // popularity
     }
   };
+<<<<<<< HEAD
   const getTypeColor = (type: string) => {
+=======
+
+  const getTypeColor = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -330,7 +484,12 @@ const Marketplace: React.FC = () => {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
+<<<<<<< HEAD
   const getStatusColor = (status: string) => {
+=======
+
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
       case 'popular': return 'bg-blue-500/20 text-blue-400';
@@ -338,7 +497,12 @@ const Marketplace: React.FC = () => {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
+<<<<<<< HEAD
   const renderStars = (rating: number) => {
+=======
+
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -354,6 +518,7 @@ const Marketplace: React.FC = () => {
     }
     return stars;
   };
+<<<<<<< HEAD
   const getCategoryIcon = (categoryId: string) => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : Globe;
@@ -363,6 +528,20 @@ const Marketplace: React.FC = () => {
     return category ? category.name : 'General';
   };
   const getBadgeColor = (badge: string) => {
+=======
+
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : Globe;
+  };
+
+  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'General';
+  };
+
+  const getBadgeColor = (badge: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (badge) {
       case 'Most Popular':
         return 'bg-gradient-to-r from-yellow-500 to-orange-500';
@@ -424,6 +603,64 @@ const Marketplace: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+              {/* Category Filter */}
+              <div className="lg:w-48">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                >
+                  {categories.map((category)              => (
+                    <option key={category.id} value={category.id}>
+                      {category.name} ({category.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Type Filter */}
+              <div className="lg:w-48">
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                >
+                  {types.map((type)              => (
+                    <option key={type.id} value={type.id}>
+                      {type.name} ({type.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    viewMode === 'grid' 
+                      ? 'bg-green-400/20 text-green-400' 
+                      : 'bg-slate-800/50 text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all duration-200 ${
+                    viewMode === 'list' 
+                      ? 'bg-green-400/20 text-green-400' 
+                      : 'bg-slate-800/50 text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Categories Filter */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -470,6 +707,141 @@ const Marketplace: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+      {/* Featured Items */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
+            <p className="text-xl text-gray-300">Handpicked solutions for enterprise success</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredItems.map((item, index)              => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                        {categories.find(c => c.id === item.category)?.name}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                        {types.find(t => t.id === item.type)?.name}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
+                        {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+                      </span>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">
+                        <item.icon className="w-6 h-6 text-green-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
+                        {item.name}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+                    
+                    <div className="flex items-center gap-4 mb-4 text-sm">
+                      <div className="flex items-center gap-1">
+                        {renderStars(item.rating)}
+                        <span className="text-gray-400 ml-1">({item.reviews})</span>
+                      </div>
+                      <div className="text-gray-400">•</div>
+                      <div className="text-gray-400">{item.downloads} downloads</div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-green-400">{item.pricing}</div>
+                      <div className="flex items-center gap-2">
+                        <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                          <Heart className="w-5 h-5" />
+                        </button>
+                        <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                          <Eye className="w-5 h-5" />
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <button
+                      onClick={() => toggleItemExpansion(item.id)}
+                      className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                    >
+                      {expandedItem === item.id ? 'Show Less' : 'Learn More'}
+                    </button>
+                    
+                    {expandedItem === item.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4 pt-4 border-t border-slate-600/50"
+                      >
+                        <div className="mb-4">
+                          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                          <ul className="space-y-1">
+                            {item.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <a
+                            href={item.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 px-3 py-2 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-500/30 transition-all duration-200 text-center"
+                          >
+                            <Play className="w-4 h-4 inline mr-1" />
+                            Demo
+                          </a>
+                          <a
+                            href={item.documentation}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 px-3 py-2 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-lg hover:bg-purple-500/30 transition-all duration-200 text-center"
+                          >
+                            <BookOpen className="w-4 h-4 inline mr-1" />
+                            Docs
+                          </a>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                </div>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -486,8 +858,8 @@ const Marketplace: React.FC = () => {
                 </p>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {sortedSolutions.map((solution, index) => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                {sortedSolutions.map((solution, index)              => (
                   <motion.div
                     key={solution.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -582,6 +954,216 @@ const Marketplace: React.FC = () => {
               </div>
             )}
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>
+      </section>
+
+      {/* All Marketplace Items */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">All Marketplace Items</h2>
+            <p className="text-xl text-gray-300">
+              Browse our complete collection of technology solutions
+            </p>
+          </motion.div>
+
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredItems.map((item, index)              => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.05 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                          {categories.find(c => c.id === item.category)?.name}
+                        </span>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                          {types.find(t => t.id === item.type)?.name}
+                        </span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg">
+                          <item.icon className="w-5 h-5 text-green-400" />
+                        </div>
+                        <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors duration-200">
+                          {item.name}
+                        </h3>
+                      </div>
+                      
+                      <p className="text-gray-300 text-xs mb-3 leading-relaxed line-clamp-2">
+                        {item.description}
+                      </p>
+                      
+                      <div className="flex items-center gap-2 mb-3 text-xs">
+                        <div className="flex items-center gap-1">
+                          {renderStars(item.rating)}
+                          <span className="text-gray-400">({item.reviews})</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-lg font-bold text-green-400">{item.pricing}</div>
+                        <div className="flex items-center gap-1">
+                          <button className="p-1 text-gray-400 hover:text-white transition-colors duration-200">
+                            <Heart className="w-4 h-4" />
+                          </button>
+                          <button className="p-1 text-gray-400 hover:text-white transition-colors duration-200">
+                            <Eye className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {item.tags.slice(0, 2).map((tag, tagIndex) => (
+                          <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <button className="w-full px-3 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 text-sm">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {filteredItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.05 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 p-6">
+                    <div className="flex items-center gap-6">
+                      <div className="flex-shrink-0">
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">
+                          <item.icon className="w-8 h-8 text-green-400" />
+                        </div>
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                            {categories.find(c => c.id === item.category)?.name}
+                          </span>
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                            {types.find(t => t.id === item.type)?.name}
+                          </span>
+                          {item.status !== 'regular' && (
+                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
+                              {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+                            </span>
+                          )}
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200 mb-2">
+                          {item.name}
+                        </h3>
+                        
+                        <p className="text-gray-300 text-sm mb-3 leading-relaxed">
+                          {item.description}
+                        </p>
+                        
+                        <div className="flex items-center gap-4 text-sm mb-3">
+                          <div className="flex items-center gap-1">
+                            {renderStars(item.rating)}
+                            <span className="text-gray-400 ml-1">({item.reviews})</span>
+                          </div>
+                          <div className="text-gray-400">•</div>
+                          <div className="text-gray-400">{item.downloads} downloads</div>
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          {item.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="flex-shrink-0 text-right">
+                        <div className="text-2xl font-bold text-green-400 mb-3">{item.pricing}</div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                            <Heart className="w-5 h-5" />
+                          </button>
+                          <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                            <Eye className="w-5 h-5" />
+                          </button>
+                          <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
+                            <ShoppingCart className="w-5 h-5" />
+                          </button>
+                        </div>
+                        <button className="px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our team can create custom solutions tailored to your specific needs. 
+              Let's discuss your requirements and build something amazing together.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Request Custom Solution
+              </button>
+              <a
+                href="mailto:marketplace@ziontechgroup.com"
+                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
+              >
+                Contact Sales Team
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

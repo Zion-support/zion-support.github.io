@@ -1,6 +1,26 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useEffect } from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SEOData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   title: string;
   description: string;
   keywords: string[];
@@ -8,10 +28,33 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
+<<<<<<< HEAD
 interface EnhancedSEOManagerProps {
   seoData: SEOData;
   children: React.ReactNode;
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
+=======
+
+interface EnhancedSEOManagerProps extends React.PropsWithChildren<{
+
+
+
+
+
+
+
+
+
+
+
+
+}> {
+  seoData: SEOData;
+  children: React.ReactNode;
+
+const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children;
+}) => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {;
@@ -32,7 +75,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         document.head.appendChild(metaKeywords);
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {;
+      const updateOGTag = (property: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, content: string)               => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -47,7 +90,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:description', seoData.description);
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {;
+      const updateTwitterTag = (name: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, content: string)               => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');

@@ -1,6 +1,51 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Users, 
+  MessageSquare, 
+  Github, 
+  ExternalLink, 
+  Terminal, 
+  Webhook, 
+  Key, 
+  Mail,
+  ArrowRight,
+  Check,
+  Star,
+  Download,
+  Play,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  BarChart3,
+  Target,
+  Award,
+  Lightbulb
+              } from 'lucide-react.ts';
+=======
+import React from 'react.ts';
+import SEO from '../components/SEO';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock const DeveloperPortal: React.FC = (): JSX.Element => {
+  const tools = [
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import {
   Code,
   BookOpen,
@@ -32,7 +77,12 @@ import {
   Target,
   Award,
   Lightbulb
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+             } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const apiFeatures = [
@@ -178,8 +228,14 @@ const data = await response.json();
               Powerful tools to accelerate your development workflow
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {quickStartSteps.map((step, index)  => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tool.title}
                 initial = {
@@ -243,8 +299,14 @@ const data = await response.json();
               Comprehensive guides and tutorials for all skill levels
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {apiFeatures.map((feature, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -283,8 +345,14 @@ const data = await response.json();
               Get started quickly with these ready-to-use code examples in your preferred language.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {codeExamples.map((example, index) => (
+=======
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -322,8 +390,14 @@ const data = await response.json();
               Comprehensive documentation, tools, and community resources to help you succeed.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {resources.map((resource, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={resource.title}
                 initial = {
@@ -355,6 +429,41 @@ const data = await response.json();
                     <p className="text-gray-300">{resource.description}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+      {/* Community Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Developer Community
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Connect with fellow developers and get support
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {community.map((platform, index)              => (
+              <motion.div
+                key={platform.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+
+                <div className="text-4xl mb-4">{platform.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{platform.name}</h3>
+                <p className="text-gray-300 mb-4">{platform.description}</p>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
                 <div className="flex items-center justify-between">

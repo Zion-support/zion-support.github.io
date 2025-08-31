@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import Head from 'next/head.ts';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
+=======
+import React from 'react.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
 
@@ -16,8 +27,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https: any//ziontechgroup.com'
-})  => {
+  canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
+})               => {
   return (
     <>
       <Helmet>

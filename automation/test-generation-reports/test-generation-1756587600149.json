@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-08-30T21:00:00.149Z",
+  "summary": {
+    "totalFilesAnalyzed": 0,
+    "untestedFiles": 0,
+    "generatedTests": 0,
+    "testCoverage": 0
+  },
+  "metrics": {
+    "generatedTests": [],
+    "testCoverage": 0,
+    "untestedFiles": [],
+    "testSuggestions": [],
+    "testPatterns": {}
+  },
+  "suggestions": []
+}

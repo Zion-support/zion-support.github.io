@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -93,6 +94,46 @@ const microSAASSolutions = [
     color: 'from-emerald-600 to-green-600'
   }
 ];
+=======
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare              } from 'lucide-react.ts';
+
+export default function MicroSaaS(...args: any[]): any {
+  const products = [
+    {
+      name: 'AI Email Responder',
+      price: '$39/mo',
+      features: ['Auto-categorize and draft replies', 'Gmail/Outlook add-on', 'Team approval workflows'],
+      link: '/contact'
+    },
+    {
+      name: 'SEO Content Optimizer',
+      price: '$49/mo',
+      features: ['Topic clustering and briefs', 'Internal link suggestions', 'On-page optimization scores'],
+      link: '/contact'
+    },
+    {
+      name: 'Internal Linking (WordPress)',
+      price: '$29/mo',
+      features: ['Auto link graph builder', 'Context-aware suggestions', 'Bulk fix orphan pages'],
+      link: '/contact'
+    },
+    {
+      name: 'Review Booster (eCommerce)',
+      price: '$59/mo',
+      features: ['Post-purchase review flows', 'Photo/video prompts', 'Fraud/spam detection'],
+      link: '/contact'
+    },
+    {
+      name: 'Smart Surveys',
+      price: '$25/mo',
+      features: ['Mobile-first', 'Branching logic', 'AI summaries'],
+      link: '/contact'
+    },
+  ];
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const benefits = [
   {
@@ -129,6 +170,7 @@ export default function MicroSAAS() {
           <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-2000"></div>
         </div>
 
+<<<<<<< HEAD
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -281,6 +323,20 @@ export default function MicroSAAS() {
                   </Link>
                 </div>
               </motion.div>
+=======
+          <div className="mt-12 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {products.map((p)              => (
+              <div key={p.name} className="card-futuristic">
+                <h3 className="text-white font-semibold">{p.name}</h3>
+                <div className="mt-1 text-slate-400">{p.price}</div>
+                <ul className="mt-4 space-y-2 text-slate-300">
+                  {p.features.map((f) => (
+                    <li key={f}>• {f}</li>
+                  ))}
+                </ul>
+                <Link to={p.link} className="mt-6 inline-flex btn-futuristic">Start</Link>
+              </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             ))}
           </div>
 

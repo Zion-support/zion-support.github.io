@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,15 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
+=======
+
+import React from 'react.ts';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle               } from '@/components/ui/card';
+import { Button               } from '@/components/ui/button';
+import { Badge               } from '@/components/ui/badge';
+import { Link               } from 'react-router-dom.ts';
+import { ArrowRight,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Users,
   Zap,
   Settings,
@@ -32,8 +42,18 @@ import {
   PenTool,
   Shield,
   Cloud
+<<<<<<< HEAD
  } from 'lucide-react';
 export function FeatureCTAs(...args[]):  {
+=======
+<<<<<<< HEAD
+export function FeatureCTAs(...args: any[]): any {
+=======
+               } from 'lucide-react.ts';
+
+export function FeatureCTAs(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "AI Services & Solutions",
@@ -166,8 +186,14 @@ export function FeatureCTAs(...args[]):  {
             From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
           </p>
         </div>
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index)  => (
+=======
+
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {features.map((feature, index)                => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">

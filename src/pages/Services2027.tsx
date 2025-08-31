@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Search, 
   ArrowRight, 
   DollarSign, 
   ExternalLink, 
@@ -55,8 +54,8 @@ import {
   ShieldCheck,
   Server,
   Chip
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
 // Mock data for 2027 services
 const SERVICES_2027 = [
@@ -158,21 +157,21 @@ const SERVICES_2027 = [
   }
 ];
 
-const Services2027: React.FC = () => {
+const Services2027: React.FC = (): JSX.Element => {
   const [query, setQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
   
   const categories = [
-    { id: 'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },
-    { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s => s.category === 'AI & Automation').length },
-    { id: 'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s => s.category === 'Quantum AI').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s => s.category === 'Digital Twin').length },
-    { id: 'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s => s.category === 'Sustainability').length },
-    { id: 'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s => s.category === 'Metaverse').length },
-    { id: 'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s => s.category === 'IoT').length }
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },
+    { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s              => s.category === 'AI & Automation').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s              => s.category === 'Quantum AI').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s              => s.category === 'Cybersecurity').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s              => s.category === 'Edge Computing').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s              => s.category === 'Digital Twin').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s              => s.category === 'Sustainability').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s              => s.category === 'Metaverse').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s              => s.category === 'IoT').length }
   ];
 
   const filteredAndSorted = useMemo(() => {
@@ -286,9 +285,9 @@ const Services2027: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400/50"
+                  className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-400/50"
                 >
-                  {categories.map((category) => (
+                  {categories.map((category)              => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -331,8 +330,8 @@ const Services2027: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -399,8 +398,8 @@ const Services2027: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredAndSorted.map((service, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredAndSorted.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

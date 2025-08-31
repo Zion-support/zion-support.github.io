@@ -1,7 +1,21 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain const QuantumComputingAsAService: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { SEO               } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain               } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -197,8 +211,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Our quantum computing platform delivers unprecedented performance for complex problems
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -235,8 +261,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Everything you need to harness the power of quantum computing for your business
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -273,8 +311,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)              => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -342,8 +392,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               See how different industries are leveraging quantum computing for breakthrough results
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-8">
             {useCases.map((useCase, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)              => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -385,8 +447,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Connect with your existing development tools and cloud platforms
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
+=======
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

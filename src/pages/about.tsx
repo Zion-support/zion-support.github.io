@@ -1,8 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Users, 
+=======
+<<<<<<< HEAD
+const About: React.FC = (): JSX.Element => {
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { SEO               } from '@/components/SEO';
+import { Users, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Target, 
   Award, 
   Globe, 
@@ -12,10 +23,27 @@ import {
   Shield,
   Heart,
   Star,
+<<<<<<< HEAD
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function About() {
+=======
+  TrendingUp,
+  Lightbulb,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Database
+              } from 'lucide-react.ts';
+
+export default function About(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+function About() {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },
@@ -159,11 +187,21 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
+=======
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)              => (
+              <motion.div 
+                key={index}
+                className="text-center group"
+                initial={{ opacity: 0, y: 30 }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -190,8 +228,14 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-300">The principles that guide everything we do</p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -219,8 +263,14 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}

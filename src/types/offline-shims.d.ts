@@ -2,17 +2,17 @@
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: P) => any;
-  export type ReactNode = any;
+  export type FC<P = any> = (props: anyanyanyanyanyanyanyanyanyanyanyanyanyP)              => ;
+  export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {};
   export interface RefObject<T> { current: T };
-  export type RefCallback<T> = (value: T) => void;
+  export type RefCallback<T> = (value: anyanyanyanyanyanyanyanyanyanyanyanyanyT)              => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
-  const react: any;
+  const react: ;
   export default react;
 }
 
@@ -21,62 +21,114 @@ declare module 'react/jsx-runtime' {
 }
 
 declare namespace JSX {
-  interface Element {}
+  interface Element {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
   interface IntrinsicElements {
-    [elemName: string]: any;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    [elemName: string]: ;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}
 }
 
 declare module 'react-dom' {
-  export function reactDom: any;
+  export function reactDom: ;
   export default reactDom;
 }
 
 declare module 'react-router-dom' {
-  export function useNavigate(): any;
-  export const Link: any;
-  export const Routes: any;
-  export const Navigate: any;
-  const rr: any;
+  export function useNavigate(): ;
+  export const Link: ;
+  export const Routes: ;
+  export const Navigate: ;
+  const rr: ;
   export default rr;
 }
 
 declare module 'react-hook-form' {
-  export function useForm<T = any>(...args: any[]): any;
-  const rhf: any;
+  export function useForm<T = any>(...args: any[]): ;
+  const rhf: ;
   export default rhf;
 }
 
 declare module '@hookform/resolvers/zod' {
-  export function zodResolver(...args: any[]): any;
+  export function zodResolver(...args: any[]): ;
 }
 
 declare module '@tanstack/react-query' {
-  export function useMutation<T = any>(...args: any[]): any;
-  const rq: any;
+  export function useMutation<T = any>(...args: any[]): ;
+  const rq: ;
   export default rq;
 }
 
 declare module 'jspdf' {
   export class jsPDF {
     constructor(...args: any[]);
-    [key: string]: any;
+    [key: string]: ;
   }
 }
 
 declare module 'path' {
-  const path: any;
+  const path: ;
   export default path;
 }
 
 declare module 'jspdf-autotable' {
-  const autotable: any;
+  const autotable: ;
   export default autotable;
 }
 
 declare module 'zod' {
-  export type infer<T> = any;
-  const z: any;
+  export type infer<T> = ;
+  const z: ;
   export { z };
   export default z;
 }

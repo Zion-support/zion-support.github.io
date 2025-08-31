@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -77,6 +78,71 @@ import {
 } from 'lucide-react';
 
 export default function Training() {
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function Training(...args: any[]): any {
+	return (
+		<div className="min-h-screen bg-slate-900 text-white py-16">
+			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
+			<div className="container mx-auto px-4 max-w-4xl">
+				<h1 className="text-4xl font-bold mb-4">Training</h1>
+				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>
+			</div>
+		</div>
+	);
+
+import React, { useState } from 'react.ts';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training(...args: any[]): any {
+=======
+import React, { useState              } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { GraduationCap, 
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  Search, 
+  Filter, 
+  Play, 
+  Download, 
+  ExternalLink, 
+  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Zap, 
+  Globe, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  CheckCircle, 
+  Calendar, 
+  MapPin, 
+  DollarSign, 
+  FileText, 
+  Lightbulb, 
+  Microscope, 
+  Rocket, 
+  Code, 
+  Network, 
+  Cpu, 
+  Lock, 
+  BarChart3, 
+  Palette, 
+  Smartphone, 
+  Eye
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+
+const Training: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedLevel, setSelectedLevel] = useState('all');
@@ -391,6 +457,7 @@ export default function Training() {
     return matchesSearch && matchesCategory && matchesLevel;
   });
 
+<<<<<<< HEAD
   const getLevelColor = (level: string) => {
     switch (level.toLowerCase()) {
       case 'beginner':
@@ -414,6 +481,39 @@ export default function Training() {
     // Simulate preview
     console.log(`Previewing: ${title}`);
     // In a real app, this would show course preview
+=======
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
+  };
+
+  const getLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (level) {
+      case 'beginner': return 'text-green-400';
+      case 'intermediate': return 'text-yellow-400';
+      case 'advanced': return 'text-orange-400';
+      case 'expert': return 'text-red-400';
+      default: return 'text-zion-slate-light';
+
+  };
+
+  const getFormatIcon = (format: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (format) {
+      case 'online': return <Globe className="w-4 h-4" />;
+      case 'in-person': return <MapPin className="w-4 h-4" />;
+      case 'hybrid': return <Users className="w-4 h-4" />;
+      case 'self-paced': return <Clock className="w-4 h-5" />;
+      default: return <BookOpen className="w-4 h-4" />;
+
+  };
+
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -440,6 +540,7 @@ export default function Training() {
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 <span>Expert Instructors</span>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 <span>Hands-on Projects</span>
@@ -447,12 +548,95 @@ export default function Training() {
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 <span>Certifications</span>
+=======
+
+<<<<<<< HEAD
+              {/* Levels */}
+              <div className="space-y-3">
+                <label className="text-white font-medium">Level</label>
+                <div className="flex flex-wrap gap-2">
+                  {levels.map((level) => (
+                    <button
+                      key={level.id}
+                      onClick={() => setActiveLevel(level.id)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        activeLevel === level.id
+                          ? 'bg-zion-purple text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
+
+                      {level.name} ({level.count})
+                    </button>
+                  ))}
+=======
+              {/* Levels and Formats */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Skill Level</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {levels.map((level) => (
+                      <button
+                        key={level.id}
+                        onClick={() => setActiveLevel(level.id)}
+                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          activeLevel === level.id
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
+                        }`}
+                      >
+                        {level.name}
+                      </button>
+                    ))}
+                  </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                </div>
+
+<<<<<<< HEAD
+              {/* Formats */}
+              <div className="space-y-3">
+                <label className="text-white font-medium">Format</label>
+                <div className="flex flex-wrap gap-2">
+                  {formats.map((format) => (
+                    <button
+                      key={format.id}
+                      onClick={() => setActiveFormat(format.id)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        activeFormat === format.id
+                          ? 'bg-zion-cyan text-zion-slate-dark'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
+
+                      {format.name} ({format.count})
+                    </button>
+                  ))}
+=======
+                <div>
+                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Format</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {formats.map((format) => (
+                      <button
+                        key={format.id}
+                        onClick={() => setActiveFormat(format.id)}
+                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          activeFormat === format.id
+                            ? 'bg-green-600 text-white'
+                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-dark hover:text-white'
+                        }`}
+                      >
+                        {format.name}
+                      </button>
+                    ))}
+                  </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Search and Filter Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
@@ -480,6 +664,46 @@ export default function Training() {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+=======
+<<<<<<< HEAD
+      {/* Featured Programs */}
+      {trainingPrograms.filter(p              => p.featured).length > 0 && (
+        <div className="py-12 bg-zion-slate-dark">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              Featured Training Programs
+            </h2>
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {trainingPrograms.filter(p              => p.featured).map((program) => (
+                <div
+                  key={program.id}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+
+                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                        Featured
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <div className="flex items-center gap-1 text-white">
+=======
+        {/* Training Programs Grid */}
+        <div className="container mx-auto px-4 pb-20">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6, delay: 0.6 }}
+          >
+            {filteredPrograms.map((program, index)              => (
+              <motion.div
+                key={program.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
@@ -648,6 +872,7 @@ export default function Training() {
           <p className="text-zinc-300">Browse our complete course catalog</p>
         </motion.div>
 
+<<<<<<< HEAD
         {filteredCourses.length > 0 ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -656,6 +881,24 @@ export default function Training() {
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {filteredCourses.map((course, index) => (
+=======
+          {filteredPrograms.length > 0 ? (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPrograms.map((program)              => (
+                <div
+                  key={program.id}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      {getCategoryIcon(program.category)}
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {categories.find(c => c.id === program.category)?.name}
+                      </span>
+                      {program.featured && (
+                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          Featured
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   GraduationCap, 
   BookOpen, 
@@ -1434,4 +1677,3 @@ const Training: React.FC = () => {
 };
 
 export default Training;
->>>>>>> main

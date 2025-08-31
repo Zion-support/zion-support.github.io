@@ -45,10 +45,7 @@ const navigation: NavigationItem[] = [
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security protocols' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Scalable cloud infrastructure' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' },
-      { name: 'AI Workflow Automation', href: '/services/ai-enterprise-workflow-automation', description: 'Intelligent business process automation' },
-      { name: 'Customer Intelligence', href: '/services/ai-customer-intelligence-platform', description: 'AI-powered customer insights' },
-      { name: 'AI Trading Platform', href: '/services/ai-financial-trading-platform', description: 'Intelligent financial trading' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' }
     ]
   },
   {

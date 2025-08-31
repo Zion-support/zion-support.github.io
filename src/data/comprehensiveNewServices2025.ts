@@ -1,12 +1,53 @@
+<<<<<<< HEAD
 export interface ComprehensiveService {
+=======
+export interface ComprehensiveNewService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
   category: string;
   subcategory: string;
   price: number;
   currency: string;
   pricingModel: string;
+=======
+  category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech';
+pricing: {;
+    monthly: string;
+    yearly: string;
+    enterprise: string;
+    setup: string;
+    marketPrice: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   features: string[];
   benefits: string[];
   useCases: string[];
