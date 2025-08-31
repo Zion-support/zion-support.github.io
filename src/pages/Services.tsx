@@ -48,7 +48,8 @@ import {
   Palette,
   TrendingUp,
   Scale,
-  Gauge
+  Gauge,
+  PenTool
 } from 'lucide-react';
 
 export default function Services() {
@@ -106,42 +107,69 @@ export default function Services() {
       count: 12,
       color: "from-purple-400 to-pink-500",
       services: ["Quantum Algorithms", "Quantum Security", "Quantum Simulation", "Quantum ML"]
+    },
+    {
+      name: "AI Marketing & Content",
+      description: "AI-powered content creation, marketing automation, and customer experience optimization",
+      icon: PenTool,
+      href: "/services/ai-content-marketing-studio",
+      count: 15,
+      color: "from-pink-400 to-rose-500",
+      services: ["Content Generation", "Marketing Automation", "Customer Analytics", "SEO Optimization"]
+    },
+    {
+      name: "DevOps & Automation",
+      description: "Intelligent DevOps automation with AI-powered optimization and security",
+      icon: Code,
+      href: "/services/ai-devops-automation-platform",
+      count: 18,
+      color: "from-green-400 to-emerald-500",
+      services: ["CI/CD Automation", "Infrastructure Management", "Security Scanning", "Performance Optimization"]
+    },
+    {
+      name: "E-commerce Optimization",
+      description: "AI-powered e-commerce optimization for maximum conversions and revenue",
+      icon: ShoppingCart,
+      href: "/services/ai-ecommerce-optimization-platform",
+      count: 20,
+      color: "from-orange-400 to-red-500",
+      services: ["Product Recommendations", "Dynamic Pricing", "Inventory Management", "Customer Analytics"]
     }
   ];
 
   const featuredServices = [
+    {
+      title: "AI Content Marketing Studio",
+      description: "Transform content marketing with AI-powered creation, distribution, and optimization",
+      price: "From $499/month",
+      features: ["AI Content Generation", "Multi-Format Creation", "Performance Analytics"],
+      href: "/services/ai-content-marketing-studio",
+      color: "from-pink-400 to-purple-500",
+      popular: true
+    },
+    {
+      title: "AI Customer Experience Analytics Platform",
+      description: "Understand every touchpoint with AI-powered analytics and predictive insights",
+      price: "From $799/month",
+      features: ["Sentiment Analysis", "Journey Mapping", "Predictive Analytics"],
+      href: "/services/ai-customer-experience-analytics-platform",
+      color: "from-blue-400 to-cyan-500"
+    },
+    {
+      title: "AI DevOps Automation Platform",
+      description: "Accelerate deployments by 60% with intelligent automation and optimization",
+      price: "From $899/month",
+      features: ["AI Code Review", "Intelligent CI/CD", "Predictive Infrastructure"],
+      href: "/services/ai-devops-automation-platform",
+      color: "from-green-400 to-emerald-500"
+    },
     {
       title: "AI Legal Document Analysis",
       description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
       price: "From $299/month",
       features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
       href: "/services/ai-legal-document-analysis",
-      color: "from-blue-400 to-purple-500",
-      popular: true
-    },
-    {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
-      color: "from-green-400 to-blue-500"
-    },
-    {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
-      price: "From $399/month",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
-      href: "/services/ai-supply-chain-optimization-enhanced",
-      color: "from-blue-400 to-indigo-500"
-    },
-    {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500"
+      color: "from-blue-400 to-purple-500"
     }
   ];
 
