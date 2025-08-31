@@ -34,6 +34,19 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
+const ITConsulting = React.lazy(() => import('./pages/ITConsulting'));
+const SpaceTech = React.lazy(() => import('./pages/SpaceTech'));
+
+// Solution pages
+const Enterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const Healthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
+const Financial = React.lazy(() => import('./pages/solutions/Financial'));
+const Government = React.lazy(() => import('./pages/solutions/Government'));
+const SMB = React.lazy(() => import('./pages/solutions/SMB'));
+const Startup = React.lazy(() => import('./pages/solutions/Startup'));
+const Manufacturing = React.lazy(() => import('./pages/solutions/Manufacturing'));
+const Retail = React.lazy(() => import('./pages/solutions/Retail'));
 
 // Enhanced components
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
@@ -199,8 +212,14 @@ function App() {
                 
                 {/* New sitemap routes */}
                 <Route path="/ai-solutions" element={<AiSolutions />} />
-                <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
-                <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                <Route path="/solutions/enterprise" element={<Enterprise />} />
+                <Route path="/solutions/healthcare" element={<Healthcare />} />
+                <Route path="/solutions/financial" element={<Financial />} />
+                <Route path="/solutions/government" element={<Government />} />
+                <Route path="/solutions/smb" element={<SMB />} />
+                <Route path="/solutions/startup" element={<Startup />} />
+                <Route path="/solutions/manufacturing" element={<Manufacturing />} />
+                <Route path="/solutions/retail" element={<Retail />} />
                 
                 {/* Service routes */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
