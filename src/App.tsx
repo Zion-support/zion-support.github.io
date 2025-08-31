@@ -92,6 +92,12 @@ const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sal
 const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
 const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
 
+// New Innovative Micro SAAS Services 2026
+const AILegalDocumentAnalysis = createLazyComponent(() => import('./pages/services/ai-legal-document-analysis'));
+const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+const AIEcommerceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-ecommerce-optimization-platform'));
+
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
@@ -308,6 +314,12 @@ function App() {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-analysis" element={<ModernLayout><AILegalDocumentAnalysis /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-platform" element={<ModernLayout><AIRealEstateInvestmentPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-ecommerce-optimization-platform" element={<ModernLayout><AIEcommerceOptimizationPlatform /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
