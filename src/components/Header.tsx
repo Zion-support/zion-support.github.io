@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MainNavigation } from './header/MainNavigation';
 import { 
@@ -11,9 +11,10 @@ import {
   MapPin,
   ChevronDown,
   Globe,
-  Sun,
-  Moon
+  Search,
+  Bell
 } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
   className?: string;
@@ -22,9 +23,9 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [isThemeOpen, setIsThemeOpen] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [showSearch, setShowSearch] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,36 +36,15 @@ export function Header({ className }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
-    if (savedTheme) {
-      setCurrentTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setCurrentTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  const toggleDropdown = (dropdownName: string) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
-  const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'pt', name: 'Português', flag: '🇵🇹' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },
-    { code: 'ko', name: '한국어', flag: '🇰🇷' }
-  ];
-
-  const mobileMenuItems = [
+  const navigation = [
     {
-      title: 'Services',
+      name: 'Services',
+      href: '/services',
+      dropdown: true,
       items: [
         { name: 'AI & Machine Learning', href: '/services#ai-ml' },
         { name: 'Quantum Computing', href: '/services#quantum' },
@@ -77,7 +57,9 @@ export function Header({ className }: HeaderProps) {
       ]
     },
     {
-      title: 'Solutions',
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: true,
       items: [
         { name: 'Healthcare', href: '/solutions/healthcare' },
         { name: 'Financial Services', href: '/solutions/financial' },
@@ -87,30 +69,9 @@ export function Header({ className }: HeaderProps) {
         { name: 'Education', href: '/solutions/education' }
       ]
     },
-    {
-      title: 'Company',
-      items: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about/team' },
-        { name: 'Our Story', href: '/about/story' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News', href: '/news' },
-        { name: 'Contact', href: '/contact' }
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' },
-        { name: 'Research & Development', href: '/research-development' }
-      ]
-    }
+    { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -141,72 +102,41 @@ export function Header({ className }: HeaderProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <MainNavigation />
-            
-            {/* Language Selector */}
-            <div className="relative">
-              <button
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
-              >
-                <Globe className="w-4 h-4" />
-                <span className="text-sm">EN</span>
-                <ChevronDown className="w-3 h-3" />
-              </button>
-              
-              <AnimatePresence>
-                {isLanguageOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full right-0 mt-2 w-48 bg-slate-800 border border-slate-600 rounded-lg shadow-xl"
-                  >
-                    <div className="p-2">
-                      {languages.map((language) => (
-                        <button
-                          key={language.code}
-                          className="w-full flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
-                        >
-                          <span className="text-lg">{language.flag}</span>
-                          <span>{language.name}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+          </div>
 
-            {/* Theme Toggle */}
+          {/* Right Side Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search Button */}
             <button
-              onClick={toggleTheme}
-              className="p-2 text-gray-300 hover:text-white transition-colors"
+              onClick={() => setShowSearch(!showSearch)}
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              title="Search"
             >
-              {currentTheme === 'dark' ? (
-                <Sun className="w-5 h-5" />
-              ) : (
-                <Moon className="w-5 h-5" />
-              )}
+              <Search className="w-5 h-5" />
             </button>
 
-            {/* Contact Info */}
-            <div className="flex items-center space-x-4 text-sm text-gray-300">
-              <a 
-                href="tel:+13024640950" 
-                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">+1 (302) 464-0950</span>
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="hidden xl:inline">kleber@ziontechgroup.com</span>
-              </a>
-            </div>
+            {/* Notifications */}
+            <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 relative">
+              <Bell className="w-5 h-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+            </button>
+
+            {/* Theme Toggle */}
+            <ThemeToggle size="sm" />
+
+            {/* CTA Buttons */}
+            <Link
+              to="/contact"
+              className="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              Get Quote
+            </Link>
+            <Link
+              to="/contact"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
+              Start Project
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -223,7 +153,38 @@ export function Header({ className }: HeaderProps) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Search Bar */}
+      <AnimatePresence>
+        {showSearch && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
+          >
+            <div className="max-w-7xl mx-auto px-4 py-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search for services, solutions, or resources..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  autoFocus
+                />
+                <button
+                  onClick={() => setShowSearch(false)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -233,62 +194,91 @@ export function Header({ className }: HeaderProps) {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
           >
-            <div className="container mx-auto px-6 py-6">
-              {/* Mobile Navigation */}
-              <nav className="space-y-6">
-                {mobileMenuItems.map((section) => (
-                  <div key={section.title}>
-                    <h3 className="text-lg font-semibold text-white mb-3">{section.title}</h3>
-                    <ul className="space-y-2">
-                      {section.items.map((item) => (
-                        <li key={item.name}>
-                          <Link
-                            to={item.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-md transition-colors"
+            <div className="px-4 py-6 space-y-4">
+              {/* Mobile Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Mobile Navigation Items */}
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-4 mt-2 space-y-2"
                           >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </nav>
-
-              {/* Mobile Contact Info */}
-              <div className="mt-8 pt-6 border-t border-slate-700/50">
-                <div className="space-y-4">
-                  <a 
-                    href="tel:+13024640950" 
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>+1 (302) 464-0950</span>
-                  </a>
-                  <a 
-                    href="mailto:kleber@ziontechgroup.com" 
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </a>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-5 h-5" />
-                    <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                  </div>
+                            {item.items?.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </div>
-
-                {/* Mobile CTA */}
-                <div className="mt-6 pt-6 border-t border-slate-700/50">
-                  <Link
-                    to="/contact"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                  >
-                    Get Started Today
-                  </Link>
+              ))}
+              
+              {/* Mobile Theme Toggle */}
+              <div className="pt-4 border-t border-slate-700/50">
+                <div className="flex items-center justify-between px-3 py-2">
+                  <span className="text-gray-300 text-sm">Theme</span>
+                  <ThemeToggle size="sm" />
                 </div>
+              </div>
+              
+              {/* Mobile CTA Buttons */}
+              <div className="pt-4 border-t border-slate-700/50 space-y-3">
+                <Link
+                  to="/contact"
+                  className="block w-full px-4 py-2 text-center border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get Quote
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block w-full px-4 py-2 text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Start Project
+                </Link>
               </div>
             </div>
           </motion.div>

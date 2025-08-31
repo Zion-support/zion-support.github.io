@@ -1,49 +1,36 @@
 "use client";
 import * as React from "react";
-const initialState = {
+
+const ThemeContext = React.createContext({
   theme: "dark",
-    setTheme: () => null,
+  setTheme: () => null,
+});
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = React.useState("dark");
   
+  React.useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+  }, [theme]);
 
+  const value = {
+    theme,
+    setTheme,
+  };
+
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
-export const ThemeProvider({ children }) {
-    const [theme] = useState("dark");
-    useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove("light", "dark");
-        root.classList.add("dark")}, []);
-    const value = {
-<<<<<<< HEAD
-        theme,
-        setTheme: () => { /* empty */ },
-    };
-    return (<ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>);
 
-=======
-  theme,
-  setTheme: () => { 
-
-
-
-
-
-
-},
-    };
-    return (<ThemeContext.Provider value={value}>
-      {children}
-    </ThemeContext.Provider>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const useTheme = () => {
-    const context = useContext(ThemeProviderContext);
-    if (context === null)
-        throw new Error("useTheme must be used within a ThemeProvider");
-<<<<<<< HEAD
-    return context;
+  const context = React.useContext(ThemeContext);
+  if (context === null) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
 };
-}
-=======
-    return context};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
