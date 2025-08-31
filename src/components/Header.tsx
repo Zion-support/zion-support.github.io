@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,35 +8,10 @@ import {
   Zap, 
   Phone, 
   Mail, 
-=======
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Menu,
-  X,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cpu,
-  Heart,
-  Rocket,
-  Sparkles,
-  BarChart3,
-  Network,
-  Globe,
-  Users,
-  FileText,
-  Phone,
-  Mail,
-<<<<<<< HEAD
-  MapPin
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MapPin,
   ChevronDown,
   Globe,
   Search,
-<<<<<<< HEAD
   Bell
 } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
@@ -51,29 +25,6 @@ export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
-=======
-  Bell,
-  User,
-  Settings,
-  Zap,
-  Atom,
-  Eye,
-  Activity,
-  Building,
-  Target,
-  TrendingUp,
-  Briefcase,
-  Newspaper,
-  DollarSign
-              } from 'lucide-react.ts';
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export function Header(...args: any[]): any {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
 
   useEffect(() => {
@@ -95,24 +46,20 @@ export function Header(...args: any[]): any {
       href: '/services',
       dropdown: true,
       items: [
-        { name: 'AI & Machine Learning', href: '/services#ai-ml', category: 'Core AI' },
-        { name: 'Quantum Computing', href: '/services#quantum', category: 'Emerging Tech' },
-        { name: 'AI Cybersecurity', href: '/services#cybersecurity', category: 'Security' },
-        { name: 'AI Healthcare', href: '/services#healthcare', category: 'Healthcare' },
-        { name: 'AI Financial Trading', href: '/services#financial', category: 'Finance' },
-        { name: 'AI Supply Chain', href: '/services#supply-chain', category: 'Logistics' },
-        { name: 'AI Marketing & SEO', href: '/services#marketing', category: 'Marketing' },
-        { name: 'AI Project Management', href: '/services#project-management', category: 'Management' },
-        { name: 'AI DevOps & Infrastructure', href: '/services#devops', category: 'Infrastructure' },
-        { name: 'AI IoT & Edge Computing', href: '/services#iot-edge', category: 'IoT' },
-        { name: 'Space Technology', href: '/services#space-tech', category: 'Space Tech' },
-        { name: 'Micro SAAS Solutions', href: '/services#micro-saas', category: 'SAAS' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', category: 'Security' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', category: 'Cloud' },
-        { name: 'Data & Analytics', href: '/services/ai-business-intelligence', category: 'Analytics' },
-        { name: 'Digital Transformation', href: '/digital-transformation', category: 'Transformation' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', category: 'Infrastructure' },
-        { name: 'Emerging Technologies', href: '/emerging-tech', category: 'Emerging Tech' }
+        { name: 'AI Business Intelligence', href: '/services/ai-autonomous-business-intelligence-platform' },
+        { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced' },
+        { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation' },
+        { name: 'AI Marketing & SEO', href: '/services/ai-powered-seo' },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform' },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation-platform' },
+        { name: 'AI IoT & Edge Computing', href: '/services/quantum-edge-computing-solutions' },
+        { name: 'Quantum Computing Solutions', href: '/services/ai-quantum-computing-solutions' },
+        { name: 'Space Technology Platform', href: '/services/ai-space-technology-platform' },
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions-comprehensive' },
+        { name: 'All Services', href: '/services' }
       ]
     },
     {
@@ -153,27 +100,6 @@ export function Header(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-=======
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
-
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Implement search functionality
-      console.log('Searching for: anyanyanyanyanyanyanyanyanyanyanyanyanyany', searchQuery);
-      setIsSearchOpen(false);
-      setSearchQuery('');
-    }
-  };
-
-  // Close mobile menu when route changes
-  useEffect(()               => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

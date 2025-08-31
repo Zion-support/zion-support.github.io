@@ -84,6 +84,11 @@ const AIFinancialTrading = createLazyComponent(() => import('./pages/services/ai
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/ai-hr-platform'));
 const AIIoTEdgeComputing = createLazyComponent(() => import('./pages/services/ai-iot-edge-computing-platform'));
+
+// New AI Services 2029
+const AIAutonomousBusinessIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-intelligence-platform'));
+const AICybersecurityOperationsCenter = createLazyComponent(() => import('./pages/services/ai-cybersecurity-operations-center'));
+const ComprehensiveServicesShowcase2029 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2029'));
 const AIMarketingAutomation = createLazyComponent(() => import('./pages/services/ai-marketing-automation'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/services/ai-predictive-maintenance'));
@@ -384,6 +389,12 @@ function App() {
                   {/* 2029 Cutting-Edge Services */}
                   <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                   <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+
+                  {/* New AI Services 2029 */}
+                  <Route path="/services/ai-autonomous-business-intelligence-platform" element={<AIAutonomousBusinessIntelligencePlatform />} />
+                  <Route path="/services/ai-cybersecurity-operations-center" element={<AICybersecurityOperationsCenter />} />
+                  <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalytics />} />
+                  <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
 
                   {/* 404 Page */}
                   <Route
