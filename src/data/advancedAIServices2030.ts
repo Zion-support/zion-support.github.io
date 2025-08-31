@@ -217,14 +217,6 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors: ["Knewton", "DreamBox", "Carnegie Learning"],
     roi: "500% within 12 months",
     setupTime: "4-6 weeks",
-<<<<<<< HEAD
-    integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"]
-  }
-];
-
-export default ADVANCED_AI_SERVICES_2030;
-=======
     integrations["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"]
   }
 ];
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

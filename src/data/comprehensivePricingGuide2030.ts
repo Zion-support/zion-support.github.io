@@ -8,13 +8,7 @@ export interface PricingTier {
   features: string[];
   bestFor: string;
   setupTime: string;
-<<<<<<< HEAD
-  support: string;
-}
-
-=======
   support: string}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export interface ServicePricing {
   serviceId: string;
   serviceName: string;
@@ -27,13 +21,7 @@ export interface ServicePricing {
   setupTime: string;
   paymentOptions: string[];
   volumeDiscounts: string[];
-<<<<<<< HEAD
-  enterpriseFeatures: string[];
-}
-
-=======
   enterpriseFeatures: string[]}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
   {
@@ -85,10 +73,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large research institutions",
         setupTime: "8-10 weeks",
         support: "Dedicated account manager"
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     ],
     marketPrice: "$7,000-15,000",
     competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
@@ -146,10 +130,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large companies",
         setupTime: "10-12 weeks",
         support: "Dedicated support"
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     ],
     marketPrice: "$10,000-25,000",
     competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
@@ -207,10 +187,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large enterprises",
         setupTime: "8-10 weeks",
         support: "Dedicated support"
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     ],
     marketPrice: "$10,000-25,000",
     competitors: ["Okta", "Palo Alto Networks", "Cisco"],
@@ -269,10 +245,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large medical centers",
         setupTime: "12-16 weeks",
         support: "Dedicated support"
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     ],
     marketPrice: "$20,000-50,000",
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
@@ -331,44 +303,24 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large financial institutions",
         setupTime: "10-12 weeks",
         support: "Dedicated support"
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     ],
     marketPrice: "$15,000-40,000",
     competitors: ["Bloomberg Risk", "Reuters Risk", "S&P Global"],
     roi: "900% within 18 months",
     setupTime: "8-10 weeks",
-<<<<<<< HEAD
-    paymentOptions: ["One-time payment", "Annual subscription", "Per-portfolio pricing"],
-    volumeDiscounts: ["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
-=======
     paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],
     volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   }
 ];
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(
-<<<<<<< HEAD
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) /
-=======
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-<<<<<<< HEAD
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  },
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
-    if (!acc[service.category]) {
-=======
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
 ;
@@ -377,27 +329,17 @@ export const PRICING_ANALYSIS_2030 = {
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
     if (!acc[service.category]) {;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       acc[service.category] = [];
     }
     acc[service.category].push(service.basePrice);
     return acc;
   }, {} as Record<string, number[]>),
-<<<<<<< HEAD
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
-    serviceName: service.serviceName,
-    roi: service.roi,
-    setupTime: service.setupTime,
-    price: service.basePrice
-  }))
-=======
   roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({;
     serviceName: service.serviceName,;
     roi: service.roi,;
     setupTime: service.setupTime,;
     price: service.basePrice;
   }));
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 // Payment and Discount Information
 export const PAYMENT_OPTIONS_2030 = {
@@ -414,11 +356,6 @@ export const PAYMENT_OPTIONS_2030 = {
     "White-label solutions",
     "Dedicated support",
     "On-premise deployment",
-<<<<<<< HEAD
-    "Custom integrations",
-    "SLA guarantees"
-  ]
-=======
     "Custom integrations",;
   ;
   ;
@@ -426,7 +363,6 @@ export const PAYMENT_OPTIONS_2030 = {
   "SLA guarantees";
   ];
 ;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 // Contact Information for Pricing Inquiries
 export const PRICING_CONTACT_2030 = {
@@ -434,10 +370,6 @@ export const PRICING_CONTACT_2030 = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-<<<<<<< HEAD
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "Within 24 hours for pricing inquiries"
-=======
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
   ;
   ;
@@ -445,5 +377,4 @@ export const PRICING_CONTACT_2030 = {
   ;
   responseTime: "Within 24 hours for pricing inquiries";
 ;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };

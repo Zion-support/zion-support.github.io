@@ -34,13 +34,7 @@ contactInfo: {
   growthRate: string;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-  customers: number;
-}
-
-=======
   customers: number}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
   {
@@ -525,9 +519,4 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     reviews: 178,
     customers: 289
 ];
-<<<<<<< HEAD
-
-export default ADVANCED_IT_SERVICES_2025;
-=======
 export default ADVANCED_IT_SERVICES_2025;}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

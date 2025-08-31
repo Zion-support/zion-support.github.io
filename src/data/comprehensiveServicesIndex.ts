@@ -63,9 +63,6 @@ export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-  address: '364 E Main St STE 1008, Middletown DE 19709'
-=======
   address: '364 E Main St STE 1008,;
   ;
   ;
@@ -73,17 +70,12 @@ export const CONTACT_INFO = {
   ;
   Middletown DE 19709';
 ;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 // Service Statistics
 export const SERVICE_STATS = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
   categories: SERVICE_CATEGORIES.length,
   innovationLevels: INNOVATION_LEVELS.length,
-<<<<<<< HEAD
-  supportLevels: SUPPORT_LEVELS.length,
-  pricingModels: PRICING_MODELS.length
-=======
   supportLevels: SUPPORT_LEVELS.length,;
   ;
   ;
@@ -91,21 +83,12 @@ export const SERVICE_STATS = {
   ;
   pricingModels: PRICING_MODELS.length;
 ;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 // Helper Functions
-<<<<<<< HEAD
-export const getServicesByCategory = (category: string) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-};
-
-export const getServicesByInnovationLevel = (level: string) => {
-=======
 export const getServicesByCategory = (category: string) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
 export const getServicesByInnovationLevel = (level: string) => {;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
@@ -113,25 +96,6 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-<<<<<<< HEAD
-
-export const getServicesByTags = (tags: string[]) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    tags.some(tag => service.tags.includes(tag))
-  );
-};
-
-export const searchServices = (query: string) => {
-  const searchTerm = query.toLowerCase();
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-    service.category.toLowerCase().includes(searchTerm)
-  );
-};
-
-=======
 export const getServicesByTags = (tags: string[]) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
@@ -145,5 +109,4 @@ export const searchTerm = query.toLowerCase();
     service.category.toLowerCase().includes(searchTerm);
   );
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export default ALL_COMPREHENSIVE_SERVICES;

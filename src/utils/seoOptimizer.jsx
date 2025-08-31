@@ -15,15 +15,9 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
-<<<<<<< HEAD
-        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-    };
-
-=======
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
   and innovative IT services for the healthcare industry.'
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static KEYWORD_MAPPINGS = {
         '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
@@ -40,15 +34,9 @@ export class SEOOptimizer {
         '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
-<<<<<<< HEAD
-        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-    };
-
-=======
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
   'medical technology']
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateSEOData(path) {
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -62,20 +50,10 @@ export class SEOOptimizer {
             canonicalUrl,
             structuredData
         };
-<<<<<<< HEAD
-    }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateTitle(path) {
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
-<<<<<<< HEAD
-        }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         const pathSegments = path.split('/').filter(Boolean);
         if (pathSegments.length === 0) {
             return baseTitle;
@@ -86,25 +64,6 @@ export class SEOOptimizer {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
         return `${formattedSegment} - ${baseTitle}`;
-<<<<<<< HEAD
-    }
-
-    static generateDescription(path) {
-        return this.DEFAULT_META_DESCRIPTIONS[path] ||
-            'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
-    }
-
-    static generateKeywords(path) {
-        return this.KEYWORD_MAPPINGS[path] ||
-            ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
-    }
-
-    static generateCanonicalUrl(path) {
-        const baseUrl = 'https://ziontechgroup.com';
-        return `${baseUrl}${path}`;
-    }
-
-=======
     static generateDescription(path) {
         return this.DEFAULT_META_DESCRIPTIONS[path] ||
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
@@ -114,7 +73,6 @@ export class SEOOptimizer {
     static generateCanonicalUrl(path) {
         const baseUrl = 'https://ziontechgroup.com';
         return `${baseUrl}${path}`;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateStructuredData(path) {
         const baseData = {
             "@context": "https://schema.org",
@@ -126,13 +84,8 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-            }
-=======
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 }
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         };
 
         // Add specific structured data based on page type
@@ -157,14 +110,7 @@ export class SEOOptimizer {
                     "telephone": "+1-302-464-0950",
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                }
             };
-        }
-
-=======
-            };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         if (path.startsWith('/services/')) {
             return {
                 ...baseData,
@@ -173,18 +119,8 @@ export class SEOOptimizer {
                 "provider": {
                     "@type": "Organization",
                     "name": "Zion Tech Group"
-<<<<<<< HEAD
-                }
-            };
-        }
-
-        return baseData;
-    }
-
-=======
             };
         return baseData;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static analyzeContentQuality(content, page) {
         const issues = [];
         
@@ -196,11 +132,6 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             });
-<<<<<<< HEAD
-        }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for missing meta description
         if (!content.includes('name="description"')) {
             issues.push({
@@ -209,11 +140,6 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
-<<<<<<< HEAD
-        }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
@@ -223,11 +149,6 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
             });
-<<<<<<< HEAD
-        }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
@@ -236,11 +157,6 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
-<<<<<<< HEAD
-        }
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
@@ -250,15 +166,7 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'
             });
-<<<<<<< HEAD
-        }
-
         return issues;
-    }
-
-=======
-        return issues;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     static generateMetaTags(seoData) {
         return `
     <title>${seoData.title}</title>
@@ -281,40 +189,6 @@ export class SEOOptimizer {
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
-<<<<<<< HEAD
-    }
-
-    static generateSitemap(pages) {
-        const sitemap = {
-            baseUrl: 'https://ziontechgroup.com',
-            pages: pages.map(page => ({
-                url: page.url,
-                lastmod: page.lastmod || new Date().toISOString(),
-                changefreq: page.changefreq || 'weekly',
-                priority: page.priority || 0.5
-            }))
-        };
-        return sitemap;
-    }
-
-    static optimizeForKeywords(content, keywords) {
-        const suggestions = [];
-        
-        keywords.forEach(keyword => {
-            const keywordCount = (content.match(new RegExp(keyword, 'gi')) || []).length;
-            if (keywordCount === 0) {
-                suggestions.push(`Consider adding the keyword "${keyword}" to your content`);
-            } else if (keywordCount < 2) {
-                suggestions.push(`Consider using the keyword "${keyword}" more frequently`);
-            }
-        });
-        
-        return suggestions;
-    }
-}
-
-export const seoOptimizer = new SEOOptimizer();
-=======
 export const seoOptimizer = new SEOOptimizer();
     // Simulate SEO analysis
     setTimeout(() => {
@@ -427,5 +301,4 @@ export const seoOptimizer = new SEOOptimizer();
     </div>
   );
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export default SEOOptimizer;

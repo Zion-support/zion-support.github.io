@@ -100,11 +100,5 @@ function App() {
         <ChatAssistant />
       </div>
     </Router>
-<<<<<<< HEAD
-  );
-}
-
-=======
   )}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export default App;

@@ -105,11 +105,7 @@ export const checkAuthStatus = createAsyncThunk(
           token: token
         };
       } else {
-<<<<<<< HEAD
-        throw new Error('No auth data found');
-=======
         throw new Error('No valid session found');
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       }
     } catch (error) {
       return rejectWithValue(error.message);
@@ -138,11 +134,7 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-<<<<<<< HEAD
-    }
-=======
     },
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   },
   extraReducers: (builder) => {
     // Login

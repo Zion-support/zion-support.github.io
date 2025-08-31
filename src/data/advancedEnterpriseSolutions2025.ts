@@ -22,13 +22,7 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-<<<<<<< HEAD
-  support: string;
-}
-
-=======
   support: string}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
     id: 'enterprise-cloud-migration',
@@ -374,16 +368,9 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: 'Consulting success guarantee',
     support: 'Strategic advisory team'
 ];
-<<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {
-  if (category === 'All') {
-    return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-  }
-=======
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
 };
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {

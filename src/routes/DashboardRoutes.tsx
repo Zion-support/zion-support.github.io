@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { Route } from 'react-router-dom';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import Dashboard from '@/pages/Dashboard';
-import ClientDashboard from '@/pages/ClientDashboard';
-import TalentDashboard from '@/pages/TalentDashboard';
-import CreatorDashboard from '@/pages/CreatorDashboard';
-import Analytics from '@/pages/Analytics';
-import ProjectMilestones from '@/pages/ProjectMilestones';
-import ProjectDetails from '@/pages/ProjectDetails';
-import ProjectRoom from '@/pages/ProjectRoom';
-import Orders from '@/pages/Orders';
-import OrderDetail from '@/pages/OrderDetail';
-import Profile from '@/pages/Profile';
-import AccountSettings from '@/pages/AccountSettings';
-import SavedTalents from '@/pages/SavedTalentsPage';
-import HiringTracker from '@/pages/HiringTracker';
-import PortfolioBuilder from '@/pages/PortfolioBuilder';
-import ContractBuilder from '@/pages/ContractBuilder';
-import DisputeManagement from '@/pages/DisputeManagement';
-import DisputesPage from '@/pages/dashboard/DisputesPage';
-import DisputeDetailPage from '@/pages/dashboard/DisputeDetailPage';
-import RequestsPanel from '@/pages/dashboard/RequestsPanel';
-
-export const DashboardRoutes = () => {
-=======
 import { Route, Routes  } from 'react-router-dom.ts';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Dashboard from "@/pages/Dashboard";
@@ -51,7 +23,6 @@ import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
 const DashboardRoutes = () => {
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return (
     <>
       {/* Dashboard Routes */}
@@ -77,10 +48,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-        }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       />
       <Route
         path="/creator-dashboard"
@@ -112,10 +79,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-<<<<<<< HEAD
-        }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       />
       <Route
         path="/project/:id/room"
@@ -123,10 +86,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-<<<<<<< HEAD
-        }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       />
       <Route
         path="/messages"
@@ -190,9 +149,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-<<<<<<< HEAD
-        }
-=======
       />
       <Route
         path="/projects"
@@ -200,7 +156,6 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       />
       <Route
         path="/portfolio-builder"
@@ -209,8 +164,6 @@ const DashboardRoutes = () => {
             <PortfolioBuilder />
           </ProtectedRoute>
         }
-<<<<<<< HEAD
-=======
       />
       <Route
         path="/referrals"
@@ -255,7 +208,6 @@ const DashboardRoutes = () => {
             <DeveloperPortal />
           </ProtectedRoute>
         }
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       />
       <Route
         path="/contract-builder"
@@ -299,10 +251,6 @@ const DashboardRoutes = () => {
       />
     </>
   );
-<<<<<<< HEAD
-};
-=======
 };
 export default DashboardRoutes;
 }}}}}}}}}}}}}}}}}}}}}}}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

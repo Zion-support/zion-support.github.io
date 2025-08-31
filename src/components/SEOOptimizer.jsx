@@ -34,17 +34,10 @@ const SEOOptimizer = () => {
                     url: '/ai-solutions',
                     title: 'AI Solutions - Artificial Intelligence Services',
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
-<<<<<<< HEAD
-                    headings: ['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],
-                    images: ['/images/ai-solutions.jpg'],
-                    links: ['/services', '/about', '/contact'],
-                    keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
-=======
                     headings['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],
                     images['/images/ai-solutions.jpg'],
                     links['/services', '/about', '/contact'],
                     keywords['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                 }
             ];
 
@@ -92,15 +85,6 @@ const SEOOptimizer = () => {
                 topIssues,
                 pageAnalyses,
                 summary
-<<<<<<< HEAD
-            });
-
-        } catch (error) {
-            console.error('Error analyzing SEO:', error);
-        } finally {
-            setIsAnalyzing(false);
-        }
-=======
             // // // // // // // console.error('Error analyzing SEO:', error);
         }
         finally {
@@ -110,7 +94,6 @@ const SEOOptimizer = () => {
             console.error('Error analyzing SEO:', error)}
         finally {
             setIsAnalyzing(false)}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }, []);
 
     useEffect(() => {
@@ -125,117 +108,6 @@ const SEOOptimizer = () => {
         // Title optimization (0-20 points)
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
-<<<<<<< HEAD
-            score += 20;
-        } else if (page.title.length > 0) {
-            score += 10;
-        }
-
-        // Meta description (0-15 points)
-        maxScore += 15;
-        if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {
-            score += 15;
-        } else if (page.metaDescription.length > 0) {
-            score += 8;
-        }
-
-        // Headings (0-15 points)
-        maxScore += 15;
-        if (page.headings.length >= 3) {
-            score += 15;
-        } else if (page.headings.length >= 1) {
-            score += 10;
-        }
-
-        // Images (0-10 points)
-        maxScore += 10;
-        if (page.images.length >= 2) {
-            score += 10;
-        } else if (page.images.length >= 1) {
-            score += 5;
-        }
-
-        // Internal links (0-15 points)
-        maxScore += 15;
-        if (page.links.length >= 3) {
-            score += 15;
-        } else if (page.links.length >= 1) {
-            score += 10;
-        }
-
-        // Keywords (0-10 points)
-        maxScore += 10;
-        if (page.keywords.length >= 3) {
-            score += 10;
-        } else if (page.keywords.length >= 1) {
-            score += 5;
-        }
-
-        // URL structure (0-15 points)
-        maxScore += 15;
-        if (page.url === '/' || page.url.includes('-')) {
-            score += 15;
-        } else if (page.url.length > 0) {
-            score += 8;
-        }
-
-        return Math.round((score / maxScore) * 100);
-    };
-
-    const identifySEOIssues = (page) => {
-        const issues = [];
-        if (!page.title || page.title.length < 30) {
-            issues.push('Title is too short (should be 30-60 characters)');
-        } else if (page.title.length > 60) {
-            issues.push('Title is too long (should be 30-60 characters)');
-        }
-        if (!page.metaDescription || page.metaDescription.length < 120) {
-            issues.push('Meta description is too short (should be 120-160 characters)');
-        } else if (page.metaDescription.length > 160) {
-            issues.push('Meta description is too long (should be 120-160 characters)');
-        }
-        if (page.headings.length < 2) {
-            issues.push('Insufficient heading structure (should have at least 2 headings)');
-        }
-        if (page.images.length === 0) {
-            issues.push('No images found (consider adding relevant images with alt text)');
-        }
-        if (page.links.length < 2) {
-            issues.push('Insufficient internal linking (should have at least 2 internal links)');
-        }
-        if (page.keywords.length < 2) {
-            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)');
-        }
-        if (page.url !== '/' && !page.url.includes('-')) {
-            issues.push('URL could be more SEO-friendly (consider using hyphens)');
-        }
-        return issues;
-    };
-
-    const generateSEORecommendations = (issues) => {
-        const recommendations = [];
-        if (issues.some(issue => issue.includes('Title'))) {
-            recommendations.push('Optimize page titles with relevant keywords and compelling copy');
-        }
-        if (issues.some(issue => issue.includes('Meta description'))) {
-            recommendations.push('Write compelling meta descriptions that accurately describe the page content');
-        }
-        if (issues.some(issue => issue.includes('heading structure'))) {
-            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO');
-        }
-        if (issues.some(issue => issue.includes('No images'))) {
-            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO');
-        }
-        if (issues.some(issue => issue.includes('internal linking'))) {
-            recommendations.push('Add internal links to related pages to improve navigation and SEO');
-        }
-        if (issues.some(issue => issue.includes('keyword targeting'))) {
-            recommendations.push('Research and include relevant keywords naturally throughout the content');
-        }
-        if (issues.some(issue => issue.includes('URL'))) {
-            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms');
-        }
-=======
             score += 20}
         else if (page.title.length > 0) {
             score += 10}
@@ -313,7 +185,6 @@ const SEOOptimizer = () => {
             recommendations.push('Research and include relevant keywords naturally throughout the content')}
         if (issues.some(issue => issue.includes('URL'))) {
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
         recommendations.push('Ensure content is unique, valuable, and addresses user intent');
         recommendations.push('Implement structured data markup for better search engine understanding');
         recommendations.push('Optimize page loading speed for better user experience and SEO');
@@ -327,22 +198,6 @@ const SEOOptimizer = () => {
         const poorPages = pageAnalyses.filter(page => page.score < 40).length;
         let summary = `Analyzed ${totalPages} pages for SEO. `;
         if (excellentPages > 0) {
-<<<<<<< HEAD
-            summary += `${excellentPages} pages have excellent SEO. `;
-        }
-        if (goodPages > 0) {
-            summary += `${goodPages} pages have good SEO. `;
-        }
-        if (poorPages > 0) {
-            summary += `${poorPages} pages need significant SEO improvement. `;
-        }
-        if (topIssues.length > 0) {
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`;
-        }
-        return summary;
-    };
-
-=======
             summary += `${excellentPages} pages have excellent SEO. `}
         if (goodPages > 0) {
             summary += `${goodPages} pages have good SEO. `}
@@ -351,7 +206,6 @@ const SEOOptimizer = () => {
         if (topIssues.length > 0) {
             summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`}
         return summary};
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     const exportSEOReport = () => {
         if (!report)
             return;

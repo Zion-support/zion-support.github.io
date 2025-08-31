@@ -95,23 +95,13 @@ export const getVarietyScore = (password) => {
  */
 export const getPatternPenalty = (password) => {
   if (!password) return 0;
-<<<<<<< HEAD
-
   let penalty = 0;
-
-=======
-  let penalty = 0;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Check for repeated characters
   for (let i = 0; i < password.length - 2; i++) {
     if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
       penalty += 2;
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Check for sequential characters
   for (let i = 0; i < password.length - 2; i++) {
     const char1 = password.charCodeAt(i);
@@ -121,19 +111,11 @@ export const getPatternPenalty = (password) => {
       penalty += 1;
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Check for common keyboard patterns
   const keyboardPatterns = ['qwerty', 'asdfgh', 'zxcvbn', '123456', 'abcdef'];
   keyboardPatterns.forEach(pattern => {
     if (password.toLowerCase().includes(pattern)) {
       penalty += 3;
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   });
   return penalty;
 };
@@ -153,10 +135,6 @@ export const calculatePasswordScore = (password) => {
   if (password.length > 12) {
     score += 10;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Penalty for patterns
   score -= getPatternPenalty(password);
   // Ensure score is between 0 and 100
@@ -182,11 +160,6 @@ export const getPasswordStrength = (password) => {
  */
 export const getPasswordStrengthDetails = (password) => {
   const score = calculatePasswordScore(password);
-<<<<<<< HEAD
-  const strength = getPasswordStrength(password);
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return {
     strength,
     score,
@@ -228,10 +201,6 @@ export const getPasswordFeedback = (password, strength) => {
   if (password.length < 12 && strength === PASSWORD_STRENGTH.MEDIUM) {
     feedback.push('Consider using 12+ characters for better security');
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Remove duplicate feedback
   return [...new Set(feedback)];
 };
@@ -270,19 +239,11 @@ export const validatePassword = (password, requirements = {}) => {
   if (requireSpecial && !hasSpecialChars(password)) {
     errors.push('Password must contain at least one special character');
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   // Warnings for weak passwords
   const strength = getPasswordStrength(password);
   if (strength === PASSWORD_STRENGTH.VERY_WEAK || strength === PASSWORD_STRENGTH.WEAK) {
     warnings.push('Consider using a stronger password for better security');
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return {
     isValid: errors.length === 0,
     errors,
@@ -426,14 +387,3 @@ export function getPasswordStrengthIndicator(password) {
     width: `${percentage}%`
   };
 }
-<<<<<<< HEAD
-
-export const getStrengthLabel = (score) => {
-  if (score >= 4) return 'Very Strong';
-  if (score >= 3) return 'Strong';
-  if (score >= 2) return 'Medium';
-  if (score >= 1) return 'Weak';
-  return 'Very Weak';
-};
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

@@ -15,31 +15,18 @@ export const getCartFromStorage = () => {
     if (!cartData || !expiryData) {
       return [];
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     const expiry = parseInt(expiryData);
     const now = Date.now();
     // Check if cart has expired
     if (now > expiry) {
       clearCartFromStorage();
       return [];
-<<<<<<< HEAD
-=======
     // // // // // // // console.error('Error reading cart from storage:', error);
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     }
     return JSON.parse(cartData);
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error reading cart from storage:', error);
-    return [];
-  }
-=======
     // // // // console.error('Error reading cart from storage:', error);
     return [];
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 /**
  * Save cart to localStorage
@@ -51,12 +38,8 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error saving cart to storage:', error);
-=======
     // // // // // // // console.error('Error saving cart to storage:', error);
     // // // // console.error('Error saving cart to storage:', error);
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   }
 };
 /**
@@ -67,12 +50,8 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error clearing cart from storage:', error);
-=======
     // // // // // // // console.error('Error clearing cart from storage:', error);
     // // // // console.error('Error clearing cart from storage:', error);
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   }
 };
 /**
@@ -83,18 +62,11 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
-<<<<<<< HEAD
-    console.error('Invalid item provided to addToCart');
-    return currentCart;
-  }
-
-=======
     // // // // // // // console.error('Invalid item provided to addToCart');
     return currentCart;
     // // // // console.error('Invalid item provided to addToCart');
     return currentCart;
   }
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
   if (existingItemIndex >= 0) {
     // Item already exists, update quantity
@@ -111,10 +83,6 @@ export const addToCart = (currentCart, item) => {
       quantity: item.quantity || 1,
       addedAt: new Date().toISOString()
     }];
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 /**
  * Remove item from cart
@@ -136,10 +104,6 @@ export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(currentCart, itemId);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return currentCart.map(item =>
     item.id === itemId
       ? { ...item, quantity, updatedAt: new Date().toISOString() }
@@ -160,10 +124,6 @@ export const calculateCartTotal = (cart) => {
       itemCount: 0
     };
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   const subtotal = cart.reduce((sum, item) => {
     const price = parseFloat(item.price) || 0;
     const quantity = parseInt(item.quantity) || 0;
@@ -205,12 +165,7 @@ export const getCartItemById = (cart, itemId) => {
 export const validateCartItem = (item) => {
   if (!item) return false;
   const requiredFields = ['id', 'name', 'price'];
-<<<<<<< HEAD
-  const hasRequiredFields = requiredFields.every(field => item.hasOwnProperty(field));
-
-=======
   const hasRequiredFields = requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field));
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   if (!hasRequiredFields) return false;
   const price = parseFloat(item.price);
   const quantity = parseInt(item.quantity) || 1;
@@ -226,10 +181,6 @@ export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   const mergedCart = [...cart1];
   cart2.forEach(item2 => {
     const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
@@ -243,10 +194,6 @@ export const mergeCarts = (cart1, cart2) => {
         ...item2,
         addedAt: new Date().toISOString()
       });
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   });
   return mergedCart;
 };
@@ -260,10 +207,6 @@ export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency
@@ -294,15 +237,9 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error exporting cart data:', error);
-    return '[]';
-  }
-=======
     // // // // // // // console.error('Error exporting cart data:', error);
     // // // // console.error('Error exporting cart data:', error);
     return '[]';
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 /**
  * Import cart data (useful for restoring from backup)
@@ -314,20 +251,11 @@ export const importCartData = (cartData) => {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item));
-<<<<<<< HEAD
-    }
-    return [];
-  } catch (error) {
-    console.error('Error importing cart data:', error);
-    return [];
-  }
-=======
     return [];
   } catch (error) {
     // // // // // // // console.error('Error importing cart data:', error);
     // // // // console.error('Error importing cart data:', error);
     return [];
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 /**
  * Get cart key for storage (useful for user-specific carts)
@@ -337,10 +265,6 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   return CART_STORAGE_KEY;
 };
 /**

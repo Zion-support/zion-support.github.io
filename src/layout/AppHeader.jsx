@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Menu, X, ChevronDown } from 'lucide-react';
-=======
 import { 
   Menu, 
   X, 
@@ -21,7 +18,6 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 
 export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,19 +27,6 @@ export function AppHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
-    {
-      name: 'Services',
-      path: '/services',
-=======
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -66,7 +49,6 @@ export function AppHeader() {
     { 
       name: 'Services', 
       path: '/services', 
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
       icon: null,
       dropdown: [
         { name: 'AI Solutions', path: '/ai-solutions' },
@@ -76,13 +58,6 @@ export function AppHeader() {
         { name: 'Micro SaaS', path: '/micro-saas' },
       ]
     },
-<<<<<<< HEAD
-    { name: 'Solutions', path: '/solutions', icon: null },
-    { name: 'Pricing', path: '/pricing', icon: null },
-    { name: 'Resources', path: '/resources', icon: null },
-    { name: 'Request Quote', path: '/request-quote', icon: null },
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
@@ -152,23 +127,14 @@ export function AppHeader() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-=======
                           onMouseEnter={() => setActiveDropdown(item.name)}
                           onMouseLeave={() => setActiveDropdown(null)}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                         >
                           <div className="grid grid-cols-1 gap-2">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
-<<<<<<< HEAD
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 text-zinc-300 hover:text-white transition-all duration-300"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                {dropdownItem.name}
-=======
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
                               >
                                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
@@ -179,7 +145,6 @@ export function AppHeader() {
                                     {dropdownItem.name}
                                   </div>
                                 </div>
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                               </Link>
                             ))}
                           </div>
@@ -201,13 +166,6 @@ export function AppHeader() {
             ))}
           </nav>
 
-<<<<<<< HEAD
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-zinc-300 hover:text-white transition-colors duration-300 p-2"
-=======
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Dark mode toggle */}
@@ -230,7 +188,6 @@ export function AppHeader() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -270,10 +227,6 @@ export function AppHeader() {
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="block p-3 rounded-lg hover:bg-zinc-800/50 text-zinc-300 hover:text-white transition-colors duration-300"
-<<<<<<< HEAD
-                                onClick={() => setMobileMenuOpen(false)}
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -289,10 +242,6 @@ export function AppHeader() {
                             ? 'text-zion-cyan bg-zion-cyan/10'
                             : 'text-zinc-300 hover:text-white hover:bg-zinc-800/50'
                         }`}
-<<<<<<< HEAD
-                        onClick={() => setMobileMenuOpen(false)}
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                       >
                         {item.name}
                       </Link>

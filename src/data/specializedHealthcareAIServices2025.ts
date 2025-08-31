@@ -25,22 +25,11 @@ export interface HealthcareAIService {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-}
-
-=======
     address: string}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
   website: "https://ziontechgroup.com",;
   ;
   ;
@@ -48,7 +37,6 @@ const zionContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   {
@@ -307,15 +295,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Stress reduction",
       "Crisis intervention"
     ],
-<<<<<<< HEAD
-    technologies: ["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
-  }
-];
-
-export default specializedHealthcareAIServices2025;
-=======
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
   }
 ];
 export default specializedHealthcareAIServices2025;}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

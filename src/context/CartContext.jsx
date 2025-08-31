@@ -1,40 +1,11 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-<<<<<<< HEAD
-import { useAuth } from './auth/AuthContext';
-import { safeStorage } from '../utils/safeStorage';
-import { getCartKey, mergeCartItems } from '../utils/cartUtils';
-=======
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 
 const initialState = { items: [] };
 
 function cartReducer(state, action) {
-<<<<<<< HEAD
-    switch (action.type) {
-        case 'SET_ITEMS':
-            return { items: action.payload };
-        case 'ADD_ITEM':
-            const existing = state.items.find(i => i.id === action.payload.id);
-            let items;
-            if (existing) {
-                items = state.items.map(i => i.id === action.payload.id
-                    ? { ...i, quantity: i.quantity + action.payload.quantity }
-                    : i);
-            } else {
-                items = [...state.items, action.payload];
-            }
-            return { items };
-        case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !== action.payload) };
-        case 'CLEAR_CART':
-            return { items: [] };
-        default:
-            return state;
-    }
-=======
   switch (action.type) {
     case 'ADD_ITEM': {
       const existing = state.items.find(i => i.id === action.payload.id);
@@ -71,72 +42,11 @@ function cartReducer(state, action) {
     default:
       return state;
   }
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 }
 
 const CartContext = createContext(null);
 
 export function useCart() {
-<<<<<<< HEAD
-    const ctx = useContext(CartContext);
-    if (!ctx) {
-        throw new Error('useCart must be used within a CartProvider');
-    }
-    return ctx;
-}
-
-export function CartProvider({ children }) {
-    const { user } = useAuth();
-    const [state, dispatch] = useReducer(cartReducer, initialState);
-    const cartKey = getCartKey(user?.id);
-
-    useEffect(() => {
-        let items = [];
-        const stored = safeStorage.getItem(cartKey);
-        if (stored) {
-            try {
-                items = JSON.parse(stored);
-            } catch {
-                items = [];
-            }
-        }
-
-        // Merge guest cart when user logs in
-        if (user?.id) {
-            const guestStored = safeStorage.getItem(getCartKey());
-            if (guestStored) {
-                try {
-                    const guestItems = JSON.parse(guestStored);
-                    items = mergeCartItems(items, guestItems);
-                } catch {
-                    /* ignore */
-                }
-                safeStorage.removeItem(getCartKey());
-            }
-        }
-
-        dispatch({ type: 'SET_ITEMS', payload: items });
-    }, [cartKey]);
-
-    useEffect(() => {
-        safeStorage.setItem(cartKey, JSON.stringify(state.items));
-    }, [state.items, cartKey]);
-
-    const value = {
-        items: state.items,
-        dispatch,
-        addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }),
-        removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }),
-        clearCart: () => dispatch({ type: 'CLEAR_CART' }),
-        setItems: (items) => dispatch({ type: 'SET_ITEMS', payload: items })
-    };
-
-    return (
-        <CartContext.Provider value={value}>
-            {children}
-        </CartContext.Provider>
-    );
-=======
   const ctx = useContext(CartContext);
   if (!ctx) {
     throw new Error('useCart must be used within a CartProvider');
@@ -231,5 +141,4 @@ export function CartProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 }

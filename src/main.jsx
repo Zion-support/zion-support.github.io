@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // // // // // // // console.log("main.tsx: Start");
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -23,10 +20,6 @@ import { NotificationProvider } from "./context/notifications/NotificationContex
 // Import analytics provider
 import { AnalyticsProvider } from "./context/AnalyticsContext";
 import { ViewModeProvider } from "./context/ViewModeContext";
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -36,12 +29,7 @@ const queryClient = new QueryClient({
         },
     },
 });
-<<<<<<< HEAD
-
-const renderApp = () => {
-=======
 const renderApp() {
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     const app = (
         <React.StrictMode>
             <HelmetProvider>
@@ -51,17 +39,10 @@ const renderApp() {
                             <AuthProvider>
                                 <NotificationProvider>
                                     <AnalyticsProvider>
-<<<<<<< HEAD
-                                        <LanguageProvider authState={{
-                                            isAuthenticated: false,
-                                            user: null
-                                        }}>
-=======
                                         <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
 }}>
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
                                             <ViewModeProvider>
                                                 <AppLayout>
                                                     <App />
@@ -78,27 +59,6 @@ const renderApp() {
             </HelmetProvider>
         </React.StrictMode>
     );
-<<<<<<< HEAD
-
-    const container = document.getElementById('root');
-    if (!container) {
-        throw new Error('Root element not found');
-    }
-
-    // Check if we're hydrating or creating a new root
-    if (container.hasChildNodes()) {
-        // Hydrate existing content
-        hydrateRoot(container, app);
-    } else {
-        // Create new root
-        const root = createRoot(container);
-        root.render(app);
-    }
-};
-
-// Initialize the app
-renderApp();
-=======
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app)}
     else if (rootElement) {
@@ -153,4 +113,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
     </HelmetProvider>
   </React.StrictMode>);
 }}}}}}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

@@ -217,10 +217,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     competitors: ["DJI", "Skydio", "Autel Robotics"],
     roi: "800% within 20 months",
     setupTime: "8-12 weeks",
-<<<<<<< HEAD
-    integrations: ["Drone Hardware", "Navigation Systems", "Communication Networks", "Ground Control Stations", "Analytics Platforms"]
-=======
     integrations["Drone Hardware", "Navigation Systems", "Communication Networks", "Ground Control Stations", "Analytics Platforms"]
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
   }
 ];

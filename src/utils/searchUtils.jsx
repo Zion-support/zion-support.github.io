@@ -23,10 +23,6 @@ export const matchesSearchTerm = (text, searchTerm) => {
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
-<<<<<<< HEAD
-    const term = searchTerm.toLowerCase();
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
     
@@ -45,32 +41,16 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     // Tag matches
     if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
         score += 20;
-<<<<<<< HEAD
-    }
-    // Category match
-    if (result.category?.toLowerCase().includes(term)) {
-        score += 15;
-    }
-    // Boost score based on rating
-    if (result.rating) {
-        score += result.rating * 2;
-    }
-=======
     // Category match
     if (result.category?.toLowerCase().includes(term)) {
         score += 15;
     // Boost score based on rating
     if (result.rating) {
         score += result.rating * 2;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     // Recent content gets slight boost
     if (result.date) {
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     return score;
 };
 
@@ -101,10 +81,6 @@ export const sortResults = (results, sortBy, searchTerm) => {
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
             });
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 };
 
 /**
@@ -116,19 +92,9 @@ export const filterResults = (results, filters) => {
     // Filter by type
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
-<<<<<<< HEAD
-    }
-    
     // Filter by category
     if (filters.category) {
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
-    }
-    
-=======
-    // Filter by category
-    if (filters.category) {
-        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
     // Filter by price range
     if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
         filteredResults = filteredResults.filter(result => {
@@ -137,18 +103,6 @@ export const filterResults = (results, filters) => {
             if (filters.maxPrice !== undefined && price > filters.maxPrice) return false;
             return true;
         });
-<<<<<<< HEAD
-    }
-    
-    // Filter by rating
-    if (filters.minRating !== undefined) {
-        filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
-    }
-    
-    return filteredResults;
-};
-
-=======
     // Filter by minimum rating
     if (filters.minRating > 0) {
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
@@ -202,28 +156,9 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     });
     return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 /**
  * Perform fuzzy search on text
  */
-<<<<<<< HEAD
-export const fuzzySearch = (text, searchTerm) => {
-    if (!text || !searchTerm) return false;
-    
-    const textLower = text.toLowerCase();
-    const termLower = searchTerm.toLowerCase();
-    
-    let termIndex = 0;
-    for (let i = 0; i < textLower.length && termIndex < termLower.length; i++) {
-        if (textLower[i] === termLower[termIndex]) {
-            termIndex++;
-        }
-    }
-    
-    return termIndex === termLower.length;
-};
-
-=======
 export const calculateSearchMetrics = (results, searchTime) => {
     const totalResults = results.length;
     // Calculate top categories
@@ -254,7 +189,6 @@ export const calculateSearchMetrics = (results, searchTime) => {
         averageRating
     };
 };
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 /**
  * Get search suggestions based on input
  */
@@ -278,8 +212,6 @@ export default {
     fuzzySearch,
     getSearchSuggestions
 };
-<<<<<<< HEAD
-=======
 export default for;
 export default for;
 export default for;
@@ -287,4 +219,3 @@ export default for;
 export default for;
 export default for;
 export default for;
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04

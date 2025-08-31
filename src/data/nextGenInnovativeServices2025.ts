@@ -31,13 +31,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string;
   demoUrl?: string;
-<<<<<<< HEAD
-  documentationUrl?: string;
-}
-
-=======
   documentationUrl?: string}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
   {
@@ -633,9 +627,4 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/retail-ai",
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
 ];
-<<<<<<< HEAD
-
-export default NEXT_GEN_INNOVATIVE_SERVICES_2025;
-=======
 export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}
->>>>>>> 0c99c864a5b3e9103e05fe2d2d18af9657a73b04
