@@ -7,6 +7,29 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Header } from './components/header/Header';
 import { Footer } from './components/layout/Footer';
 
+// Enhanced Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
+const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
+const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
+const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025').then(module => ({ default: module.ComprehensivePricingGuide2025 })));
+const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026').then(module => ({ default: module.UltimateServicesShowcase2026 })));
+const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025').then(module => ({ default: module.ComprehensiveServicesLanding2025 })));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
@@ -143,6 +166,8 @@ const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('
 // Additional services
 const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-cybersecurity-platform'));
 const AIHRManagementPlatform = createLazyComponent(() => import('./pages/services/ai-hr-management-platform'));
+const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
+const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
 // New Innovative Micro SAAS Services 2026
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
@@ -295,6 +320,12 @@ function App() {
                     <Route path="/services/ai-sales-copilot" element={<ModernLayout><AISalesCopilot /></ModernLayout>} />
                     <Route path="/services/ai-compliance-assistant" element={<ModernLayout><AIComplianceAssistant /></ModernLayout>} />
                     <Route path="/services/cloud-finops-optimizer" element={<ModernLayout><CloudFinOpsOptimizer /></ModernLayout>} />
+
+                    {/* Comprehensive Services Routes */}
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                    <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+                    <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
@@ -465,8 +496,16 @@ function App() {
               </Suspense>
             </main>
 
+<<<<<<< HEAD
             {/* Footer - Using AppFooter for enhanced features */}
             <AppFooter />
+=======
+            {/* Footer */}
+            <EnhancedFooter />
+
+            {/* Floating Action Button */}
+            <FloatingActionButton enabled={true} />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-ae2e
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer />
