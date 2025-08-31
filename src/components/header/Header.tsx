@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
 import { Logo } from './Logo';
-import { Menu, X, Search, User, ShoppingBag, Bell } from 'lucide-react';
+import { Menu, X, Search, User, ShoppingBag, Bell, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,11 +18,23 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-12 items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
-              <div className="text-zion-slate-light">
-                📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center">
+                  <Mail className="w-3 h-3 mr-1" />
+                  kleber@ziontechgroup.com
+                </a>
               </div>
-              <div className="text-zion-slate-light hidden sm:block">
-                📞 <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors hidden sm:block">
+                <a href="tel:+13024640950" className="flex items-center">
+                  <Phone className="w-3 h-3 mr-1" />
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="text-zion-slate-light hover:text-zion-cyan transition-colors hidden md:block">
+                <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  Middletown, DE
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">

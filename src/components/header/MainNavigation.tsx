@@ -149,6 +149,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Business Intelligence</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/quantum-enhanced-ai-decision-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Quantum-Enhanced AI Decision Intelligence</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/autonomous-ai-business-operations" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Autonomous AI Business Operations</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -187,6 +199,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>Digital Transformation</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/quantum-enhanced-cybersecurity-operations" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Quantum-Enhanced Cybersecurity Operations</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-cloud-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cloud className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI-Powered Cloud Infrastructure</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/blockchain-supply-chain-security" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Lock className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Blockchain Supply Chain Security</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -217,6 +247,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Compliance Assistant</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-customer-churn-prevention" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Users className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Customer Churn Prevention</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/intelligent-content-marketing-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <MessageCircle className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Intelligent Content Marketing Automation</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/smart-financial-operations-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Smart Financial Operations Automation</span>
                         </Link>
                       </li>
                     </ul>
