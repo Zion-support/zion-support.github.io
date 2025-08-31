@@ -1,160 +1,170 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { 
+  MessageCircle, 
+  Bot, 
+  Users, 
+  Clock, 
+  Zap, 
+  Brain, 
+  CheckCircle, 
+  ArrowRight,
+  BarChart3,
+  Headphones,
+  Globe,
+  Star,
+  Award,
+  Target,
+  Phone
+} from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
   const features = [
     {
+      icon: Bot,
+      title: "Intelligent Chatbots",
+      description: "AI-powered chatbots that understand context and provide accurate responses 24/7"
+    },
+    {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent conversational AI that understands context and provides accurate responses"
+      title: "Natural Language Processing",
+      description: "Advanced NLP for understanding customer intent and sentiment analysis"
     },
     {
       icon: MessageCircle,
       title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone"
+      description: "Seamless support across chat, email, social media, and phone channels"
     },
     {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support without human intervention"
-    },
-    {
-      icon: Target,
-      title: "Personalized Responses",
-      description: "AI learns customer preferences and provides tailored solutions"
+      icon: Zap,
+      title: "Instant Response System",
+      description: "Real-time automated responses with intelligent routing to human agents"
     },
     {
       icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Live insights into customer satisfaction and support performance"
+      title: "Performance Analytics",
+      description: "Comprehensive insights into support metrics and customer satisfaction"
     },
     {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and SOC2 compliance"
+      icon: Users,
+      title: "Human-AI Collaboration",
+      description: "Smooth handoff between AI and human agents for complex issues"
     }
   ];
 
   const benefits = [
-    "Reduce support costs by 60-80%",
-    "Improve response time by 90%",
-    "Increase customer satisfaction by 40-60%",
-    "Handle 10x more support requests",
-    "Reduce agent workload by 70%",
-    "Provide 24/7 multilingual support"
+    "Reduce response time by 90%",
+    "Handle 80% of inquiries automatically",
+    "Increase customer satisfaction by 40%",
+    "Cut support costs by 50-70%",
+    "Provide 24/7 customer support",
+    "Scale support operations instantly"
   ];
 
-  const solutions = [
+  const supportChannels = [
+    "Live Chat",
+    "Email Support",
+    "Social Media",
+    "Phone Support",
+    "Mobile Apps",
+    "Voice Assistants"
+  ];
+
+  const pricing = [
     {
-      title: "AI Chatbot Platform",
-      description: "Intelligent conversational AI for website and app support",
-      features: ["Natural language processing", "Multi-language support", "Integration APIs"],
-      price: "From $2,000/month"
+      name: "Starter",
+      price: "$1,500",
+      period: "/month",
+      description: "For small businesses",
+      features: [
+        "Up to 1,000 conversations/month",
+        "Basic chatbot",
+        "Email support",
+        "Standard integrations",
+        "Email support"
+      ]
     },
     {
-      title: "Email Support Automation",
-      description: "AI-powered email categorization and response generation",
-      features: ["Smart categorization", "Auto-response generation", "Sentiment analysis"],
-      price: "From $1,500/month"
+      name: "Professional",
+      price: "$3,200",
+      period: "/month",
+      description: "For growing companies",
+      features: [
+        "Up to 10,000 conversations/month",
+        "Advanced AI chatbot",
+        "Multi-channel support",
+        "Custom integrations",
+        "Priority support"
+      ],
+      popular: true
     },
     {
-      title: "Voice Support AI",
-      description: "Intelligent voice recognition and response system",
-      features: ["Speech-to-text", "Voice synthesis", "Call routing"],
-      price: "From $3,000/month"
-    },
-    {
-      title: "Full Support Suite",
-      description: "Complete AI-powered customer support solution",
-      features: ["All channels", "Advanced analytics", "Custom integrations"],
-      price: "From $5,000/month"
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large organizations",
+      features: [
+        "Unlimited conversations",
+        "Custom AI models",
+        "White-label options",
+        "Dedicated support",
+        "SLA guarantees"
+      ]
     }
   ];
 
-  const useCases = [
-    "E-commerce Customer Support",
-    "SaaS Product Support",
-    "Financial Services",
-    "Healthcare Support",
-    "Travel & Hospitality",
-    "Education & Training"
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Customer Support Automation Services - Zion Tech Group"
-        description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
-              <MessageCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">AI Customer Support</span>
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              AI-Powered Customer Support
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-                AI Customer Support
-              </span>
-              <br />
-              <span className="text-white">Automation</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer Support Automation
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with AI-powered automation that works 24/7. 
-              Reduce costs, improve response times, and deliver exceptional customer experiences 
-              across all channels.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your customer support with intelligent automation, 24/7 availability, and AI-powered insights that deliver exceptional customer experiences.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
-              </motion.button>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Technology for Better Support
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Intelligent Support Automation
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support platform combines natural language processing, 
-              machine learning, and automation to deliver exceptional customer experiences.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Leverage AI technology to provide instant, accurate, and personalized customer support.
             </p>
           </motion.div>
 
@@ -165,10 +175,11 @@ export default function AICustomerSupportAutomation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-emerald-500/40 transition-all duration-300">
-                  <feature.icon className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -178,83 +189,144 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
+      {/* Support Channels Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Omnichannel Support Coverage
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support automation delivers measurable improvements 
-              in efficiency, cost reduction, and customer satisfaction.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Provide consistent support experiences across all customer touchpoints.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {supportChannels.map((channel, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 hover:border-purple-500/50 transition-all duration-300"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-white font-medium">{benefit}</span>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-purple-400" />
+                  <span className="text-white font-medium text-lg">{channel}</span>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Flexible Solutions for Every Business
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Your Customer Support
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered customer support solutions designed to 
-              meet your specific business needs and scale with your growth.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join organizations that have revolutionized their customer support with AI automation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Flexible Pricing for Every Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the support automation solution that fits your customer service needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-300"
+                viewport={{ once: true }}
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
+                    : 'border-slate-700/50'
+                }`}
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                
-                <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </div>
-                  ))}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
-                <div className="text-3xl font-bold text-green-400 mb-6">{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-                  Get Started
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                    : 'border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                }`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </button>
               </motion.div>
             ))}
@@ -262,75 +334,28 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Trusted Across Industries
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support automation is successfully deployed across 
-              diverse industries, helping organizations deliver exceptional customer experiences.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Headphones className="w-6 h-6 text-green-400" />
-                </div>
-                <span className="text-white font-medium text-sm">{useCase}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Automate Your Support?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in customer support and deliver exceptional experiences 
-              while reducing costs and improving efficiency.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the AI revolution in customer support and deliver exceptional experiences 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
-              >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
-              </motion.button>
+              <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
