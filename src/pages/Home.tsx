@@ -1,6 +1,8 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer';
+import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
 import {
   Users,
   TrendingUp,
@@ -621,11 +623,16 @@ const CTASection = () => {
 // Main Home Component
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <CTASection />
-    </div>
+    <>
+      <SEOOptimizer {...defaultSEO} />
+      <PerformanceOptimizer>
+        <div className="min-h-screen bg-zion-blue-dark">
+          <HeroSection />
+          <ServicesSection />
+          <WhyChooseUsSection />
+          <CTASection />
+        </div>
+      </PerformanceOptimizer>
+    </>
   );
 }
