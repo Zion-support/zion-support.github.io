@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Menu, 
   X, 
-  User, 
   MessageSquare, 
   Home, 
   Store, 
   Users, 
-  Settings,
   Brain,
-  Shield,
-  Cloud,
-  Chip,
-  TrendingUp,
-  Zap,
   Database,
   Truck,
   ChevronDown,
