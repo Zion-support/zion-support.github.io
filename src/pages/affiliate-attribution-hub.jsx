@@ -21,7 +21,6 @@ const AffiliateAttributionHub = () => {
             title: "Commission Management",
             description: "Automated commission calculation and payment processing",
             icon: "💰"
-
     ];
     const attributionModels = [
         {
@@ -43,7 +42,6 @@ const AffiliateAttributionHub = () => {
             name: "Time-Decay Attribution",
             description: "More recent touchpoints receive higher credit",
             useCase: "Long sales cycles"
-
     ];
     const platformFeatures = [
         {
@@ -60,13 +58,8 @@ const AffiliateAttributionHub = () => {
         },
         {
             category: "Integration & APIs",
-<<<<<<< HEAD
-            features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
-
-=======
             features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         {
@@ -84,7 +77,6 @@ const AffiliateAttributionHub = () => {
         {
             title: "Data Insights",
             description: "Deep understanding of customer journey and attribution patterns"
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -102,7 +94,6 @@ const AffiliateAttributionHub = () => {
               affiliate marketing ROI.
             </p>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Powerful Attribution Features</h2>
@@ -114,7 +105,6 @@ const AffiliateAttributionHub = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Attribution Models */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Flexible Attribution Models</h2>
@@ -129,7 +119,6 @@ const AffiliateAttributionHub = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Platform Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Platform Features</h2>
@@ -145,7 +134,6 @@ const AffiliateAttributionHub = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Attribution Hub?</h2>
@@ -156,7 +144,6 @@ const AffiliateAttributionHub = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Dashboard Preview */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -169,7 +156,6 @@ const AffiliateAttributionHub = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Performance Metrics</h3>
                   <p className="text-gray-300 text-sm">Track clicks, conversions, and revenue in real-time</p>
                 </div>
-
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🎯</span>
@@ -177,7 +163,6 @@ const AffiliateAttributionHub = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Attribution Insights</h3>
                   <p className="text-gray-300 text-sm">Understand customer journey and touchpoint impact</p>
                 </div>
-
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🔒</span>
@@ -188,7 +173,6 @@ const AffiliateAttributionHub = () => {
               </div>
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
@@ -200,7 +184,6 @@ const AffiliateAttributionHub = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">E-commerce Businesses</h3>
                 <p className="text-gray-300 text-sm">Track affiliate performance and optimize marketing spend</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📱</span>
@@ -208,7 +191,6 @@ const AffiliateAttributionHub = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">SaaS Companies</h3>
                 <p className="text-gray-300 text-sm">Monitor customer acquisition and attribution across channels</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🎯</span>
@@ -218,7 +200,6 @@ const AffiliateAttributionHub = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">

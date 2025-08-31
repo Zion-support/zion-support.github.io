@@ -2,21 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-<<<<<<< HEAD
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2e73ea" />
-    <title>Zion Tech Group</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="description" content="Zion Tech Group - AI, Cloud, and Cybersecurity solutions." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-  </html>
-
-=======
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0f172a" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -30,7 +15,6 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,37 +37,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no,address=no,email=no" />
     <meta name="color-scheme" content="dark light" />
-    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
     <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="og:image" content="/og-image.svg" />
-    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ziontechgroup.com/" />
     <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="twitter:image" content="/og-image.svg" />
-    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ziontechgroup.com/" />
-    
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
-    
     <title>Zion Tech Group - Technology Solutions</title>
     <script type="application/ld+json">
       {
@@ -125,7 +102,6 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
     <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
@@ -133,7 +109,6 @@
           navigator.serviceWorker.register('/sw.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
-              
               // Check for updates
               registration.addEventListener('updatefound', () => {
                 const newWorker = registration.installing;

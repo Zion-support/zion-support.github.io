@@ -35,28 +35,6 @@ export default function Marketplace() {
         if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
-<<<<<<< HEAD
-            return false;
-
-        // Product type filter
-        if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-            return false;
-
-        // Location filter
-        if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
-            return false;
-
-        // Availability filter
-        if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
-            return false;
-
-        // Rating filter
-        if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
-            return false;
-
-        return true;
-    });
-=======
             return false}
         // Product type filter
         if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -71,13 +49,8 @@ export default function Marketplace() {
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
             return false}
         return true});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleFilterChange = (filterType, value) => {
-<<<<<<< HEAD
-        // // // console.log(`Filter changed: ${filterType} = ${value}`);
-=======
         // // // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         switch (filterType) {
             case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
@@ -86,14 +59,8 @@ export default function Marketplace() {
                 setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;
             case 'availability':
-<<<<<<< HEAD
-                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
-                break;
-
-=======
                 setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const clearAllFilters = () => {
         setSearchQuery("");
@@ -106,11 +73,7 @@ export default function Marketplace() {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
-<<<<<<< HEAD
-        // // // console.log(`Quote requested for ${listing.title}`);
-=======
         // // // // // // // console.log(`Quote requested for ${listing.title}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // Navigate to the quote request page with the listing information
             router("/request-quote", {
                 state: {
@@ -120,16 +83,9 @@ export default function Marketplace() {
                         title: listing.title,
                         category: listing.category,
                         image: listing.images?.[0]
-<<<<<<< HEAD
-
-
-            });
-
-=======
                     }
                 }
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
@@ -165,13 +121,6 @@ export default function Marketplace() {
             selectedLocations,
             selectedAvailability,
   selectedRating
-        
-
-
-
-
-
-
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
           {/* Main content */}
@@ -201,9 +150,4 @@ export default function Marketplace() {
               </div>)}
           </div>
         </div>
-<<<<<<< HEAD
-      </main>);
-}}}}}}}}}}}
-=======
       </main>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

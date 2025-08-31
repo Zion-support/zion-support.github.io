@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
-=======
 import React from 'react.ts';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
-
 const CloudServices = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",
@@ -24,14 +18,6 @@ const CloudServices = () => {
     },
     {
       title: "Cloud Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
-      price: "From $6,500/month",
-      features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
-      icon: Shield
-<<<<<<< HEAD
-
-=======
     };
 =======;
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
@@ -39,10 +25,7 @@ const CloudServices = () => {
       features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],;
       icon: Shield;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const cloudPlatforms = [
     {
       name: "Amazon Web Services",
@@ -57,14 +40,6 @@ const CloudServices = () => {
       features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
-<<<<<<< HEAD
-      name: "Google Cloud Platform",
-      description: "AI-first cloud platform with advanced analytics",
-      icon: Globe,
-<<<<<<< HEAD
-      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
-
-=======
       features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     };
 =======;
@@ -73,10 +48,7 @@ const CloudServices = () => {
       icon: Globe,;
       features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Scalable infrastructure that grows with your business",;
     "Reduced capital expenditure and operational costs",;
@@ -85,7 +57,6 @@ const CloudServices = () => {
     "Global availability and disaster recovery",;
     "Automated scaling and resource management";
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -115,7 +86,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -128,7 +98,6 @@ const CloudServices = () => {
               and accelerate your business growth.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -151,7 +120,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -164,7 +132,6 @@ const CloudServices = () => {
               solutions for your specific needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -185,7 +152,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -225,7 +191,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -241,14 +206,6 @@ const CloudServices = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -256,6 +213,4 @@ const CloudServices = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default CloudServices;}}}

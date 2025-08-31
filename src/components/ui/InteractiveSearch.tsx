@@ -1,32 +1,19 @@
 import React, { useState } from 'react';
-
 interface InteractiveSearchProps {
   placeholder?: string;
   onSearch: (query: string) => void;
   className?: string;
-
-<<<<<<< HEAD
-const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
-  placeholder = "Search...",
-  onSearch,
-  className = ""
-}) => {
-=======
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", ;
   onSearch, ;
   className = "" ;
 }) => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [query, setQuery] = useState('');
-
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
-
   };
-
   return (
     <form onSubmit = {handleSubmit} className={`w-full ${className}`}>
       <div className="relative">
@@ -43,15 +30,6 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
           </svg>
         </div>
         <button
-<<<<<<< HEAD
-          type="submit"
-          className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors"
-
-          Search
-        </button>
-      </div>
-    </form>
-=======
           type="submit";
           className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors";
         >;
@@ -59,8 +37,6 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
         </button>;
       </div>;
     </form>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
-
 export default InteractiveSearch;}}

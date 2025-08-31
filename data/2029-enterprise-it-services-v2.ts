@@ -36,13 +36,7 @@ export interface EnterpriseITService2029V2 {
     mobile: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',
@@ -106,7 +100,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'quantum-cloud-infrastructure',
@@ -170,7 +163,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'ai-powered-enterprise-security',
@@ -234,7 +226,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'autonomous-it-operations-center',
@@ -298,6 +289,4 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
-
 ];}}}}}}

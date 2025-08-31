@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle  } from "./ui/card";
-import { Button  } from "./ui/button";
-import { Badge  } from "./ui/badge";
-import { Progress  } from "./ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from "./ui/tabs";
-import { User, 
-=======
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Progress } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import {
-  User,
-  Settings,
-  Palette,
-  Eye,
-  MousePointer,
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -28,12 +6,10 @@ import { Progress } from "./ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { 
   User, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Settings, 
   Palette, 
   Eye, 
   MousePointer, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Smartphone,
   Monitor,
   Zap,
@@ -43,66 +19,36 @@ import {
   TrendingUp,
   Accessibility,
   Languages
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserPreference {
-
   id: string;
   name: string;
   value: string | boolean | number;
   type: 'boolean' | 'string' | 'number' | 'select';
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
-<<<<<<< HEAD
-  description: string;
-=======
   description: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface UserActivity {
-
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
   success: boolean;
-<<<<<<< HEAD
-  category: 'navigation' | 'interaction' | 'search' | 'purchase';
-=======
   category: 'navigation' | 'interaction' | 'search' | 'purchase'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface AccessibilityFeature {
-
   id: string;
   name: string;
   enabled: boolean;
   description: string;
-<<<<<<< HEAD
-  impact: 'high' | 'medium' | 'low';
-=======
   impact: 'high' | 'medium' | 'low'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-const InteractiveUserExperience: React.FC = (): JSX.Element => {;
-  const [preferences, setPreferences] = useState<any>([]);
-  const [userActivities, setUserActivities] = useState<any>([]);
-  const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
-=======
 const InteractiveUserExperience: React.FC = () => {;
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
   const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<AccessibilityFeature[]>([]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [currentTheme, setCurrentTheme] = useState('light');
   const [fontSize, setFontSize] = useState(16);
   const [contrast, setContrast] = useState('normal');
   const [language, setLanguage] = useState('en');
-
   // Initialize user preferences
   useEffect(() => {
     const initialPreferences: UserPreference[] = [
@@ -155,11 +101,8 @@ const InteractiveUserExperience: React.FC = () => {;
         type: 'boolean',
         category: 'performance',
         description: 'Automatically save your work'
-
     ];
-
     setPreferences(initialPreferences)}, []);
-
   // Initialize accessibility features
   useEffect(()  => {
     const features: AccessibilityFeature[] = [
@@ -197,11 +140,8 @@ const InteractiveUserExperience: React.FC = () => {;
         enabled: false,
         description: 'Voice-activated navigation and controls',
         impact: 'low'
-
     ];
-
     setAccessibilityFeatures(features)}, []);
-
   // Simulate user activities
   useEffect(()  => {
     const activities: UserActivity[] = [
@@ -236,123 +176,37 @@ const InteractiveUserExperience: React.FC = () => {;
         duration: 8,
         success: true,
         category: 'interaction'
-
     ];
-
     setUserActivities(activities)}, []);
-
-<<<<<<< HEAD
-  const updatePreference = useCallback((id: string, value: string | boolean | number) => {
-    setPreferences(prev => prev.map(pref =>
-      pref.id === id ? { ...pref, value } : pref
-=======
-<<<<<<< HEAD
-  const updatePreference = useCallback((id: string, value: string | boolean | number) => {;
-    setPreferences(prev => prev.map(pref => ;
-      pref.id === id ? { ...pref, value } : pref;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    ));
-
-    // Apply preference changes
-    const preference = preferences.find(p => p.id === id);
-    if (preference) {
-      switch (preference.name) {
-        case 'Theme':
-          setCurrentTheme(value as string);
-          document.documentElement.setAttribute('data-theme', value as string);
-          break;
-        case 'Font Size':
-          setFontSize(value as number);
-          document.documentElement.style.fontSize = `${value}px`;
-          break;
-        case 'High Contrast':
-          setContrast(value as boolean ? 'high' : 'normal');
-          document.documentElement.setAttribute('data-contrast', value as boolean ? 'high' : 'normal');
-          break;
-        case 'Language':
-          setLanguage(value as string);
-          // Here you would typically change the app language
-<<<<<<< HEAD
-          break;
-
-
-  }, [preferences]);
-
-  const toggleAccessibilityFeature = useCallback((id: string) => {
-    setAccessibilityFeatures(prev => prev.map(feature =>
-      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
-=======
           break}
     }
   }, [preferences]);
-
-<<<<<<< HEAD
-  const toggleAccessibilityFeature = useCallback((id: string)  => {
-    setAccessibilityFeatures(prev => prev.map(feature => ;
-      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
-    ))}, []);
-
-  const getActivityIcon = (category: UserActivity['category'])  => {
-    switch (category) {;
-=======;
   const toggleAccessibilityFeature = useCallback((id: string) => {;
     setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ));
   }, []);
-
   const getActivityIcon = (category: UserActivity['category']) => {;
     switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
       case 'search': return <Eye className="h-4 w-4" />;
       case 'purchase': return <Heart className="h-4 w-4" />;
-<<<<<<< HEAD
-      default: return <User className="h-4 w-4" />;
-
-=======
       default: return <User className = "h-4 w-4" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
-<<<<<<< HEAD
-  const getImpactColor = (impact: AccessibilityFeature['impact']) => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'high': return 'bg-red-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'low': return 'bg-blue-500';
-<<<<<<< HEAD
-      default: return 'bg-gray-500';
-
-=======
       default: return 'bg-gray-500'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const getSuccessRate = () => {;
     const total = userActivities.length;
     const successful = userActivities.filter(activity => activity.success).length;
     return total > 0 ? (successful / total) * 100 : 0};
-
   const getAverageDuration = () => {;
     const activitiesWithDuration = userActivities.filter(activity => activity.duration);
     if (activitiesWithDuration.length === 0) return 0;
-<<<<<<< HEAD
-
-    const totalDuration = activitiesWithDuration.reduce((sum, activity) =>
-      sum + (activity.duration || 0), 0
-=======
-    
     const totalDuration = activitiesWithDuration.reduce((sum, activity) => ;
       sum + (activity.duration || 0), 0;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     );
     return totalDuration / activitiesWithDuration.length};
-
   return (
     <div className = "space-y-6">
       <Tabs defaultValue="preferences" className="w-full">
@@ -374,7 +228,6 @@ const InteractiveUserExperience: React.FC = () => {;
             Feedback
           </TabsTrigger>
         </TabsList>
-
         {/* Preferences Tab */}
         <TabsContent value="preferences" className="space-y-6">
           <Card>
@@ -403,15 +256,8 @@ const InteractiveUserExperience: React.FC = () => {;
                             onClick = {
   () => updatePreference(preference.id,
   !preference.value)
-
-
-
-
-
-
 }
                             size="sm"
-
                             {preference.value ? 'Enabled' : 'Disabled'}
                           </Button>
                         )}
@@ -421,15 +267,8 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   e.target.value)
-
-
-
-
-
-
 }
                             className="border rounded px-3 py-2 text-sm"
-
                             {preference.options.map((option) => (
                               <option key={option} value={option}>
                                 {option.charAt(0).toUpperCase() + option.slice(1)}
@@ -446,12 +285,6 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   parseInt(e.target.value))
-
-
-
-
-
-
 }
                             className="w-24"
                           />
@@ -464,7 +297,6 @@ const InteractiveUserExperience: React.FC = () => {;
             </CardContent>
           </Card>
         </TabsContent>
-
         {/* Accessibility Tab */}
         <TabsContent value="accessibility" className="space-y-6">
           <Card>
@@ -495,7 +327,6 @@ const InteractiveUserExperience: React.FC = () => {;
                         onClick={() => toggleAccessibilityFeature(feature.id)}
                         size="sm"
                         className="ml-4"
-
                         {feature.enabled ? 'Enabled' : 'Disabled'}
                       </Button>
                     </div>
@@ -504,7 +335,6 @@ const InteractiveUserExperience: React.FC = () => {;
               </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -538,7 +368,6 @@ const InteractiveUserExperience: React.FC = () => {;
             </CardContent>
           </Card>
         </TabsContent>
-
         {/* Analytics Tab */}
         <TabsContent value="analytics" className="space-y-6">
           <Card>
@@ -569,7 +398,6 @@ const InteractiveUserExperience: React.FC = () => {;
                   <div className="text-sm text-gray-600">Avg Duration</div>
                 </div>
               </div>
-
               <div className="space-y-4">
                 <h4 className="font-semibold">Recent Activities</h4>
                 {userActivities.map((activity) => (
@@ -601,7 +429,6 @@ const InteractiveUserExperience: React.FC = () => {;
             </CardContent>
           </Card>
         </TabsContent>
-
         {/* Feedback Tab */}
         <TabsContent value="feedback" className="space-y-6">
           <Card>
@@ -627,7 +454,6 @@ const InteractiveUserExperience: React.FC = () => {;
                   <div className="text-2xl font-bold">4.2/5.0</div>
                   <div className="text-sm text-gray-600">Based on 127 reviews</div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="border rounded-lg p-4">
                     <h4 className="font-semibold mb-2">What users love:</h4>
@@ -648,7 +474,6 @@ const InteractiveUserExperience: React.FC = () => {;
                     </ul>
                   </div>
                 </div>
-
                 <div className="text-center">
                   <Button className="flex items-center gap-2 mx-auto">
                     <MessageCircle className="h-4 w-4" />
@@ -656,14 +481,6 @@ const InteractiveUserExperience: React.FC = () => {;
                   </Button>
                 </div>
               </div>
-<<<<<<< HEAD
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>;
-    </div>;
-  )};
-=======
             </CardContent>;
           </Card>;
         </TabsContent>;
@@ -671,19 +488,10 @@ const InteractiveUserExperience: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 // Add missing Tablet icon component
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (
-<<<<<<< HEAD
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-  </svg>
-=======
   <svg className = {className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />;
   </svg>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 );
-
 export default InteractiveUserExperience;}}}}}}}}}}}

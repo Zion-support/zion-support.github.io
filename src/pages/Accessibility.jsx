@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart export default function Accessibility() {
-=======
 import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
-
 export default function Accessibility() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityFeatures = [
     {
       icon: <Eye className="w-8 h-8" />,
@@ -57,9 +52,7 @@ export default function Accessibility() {
         'Help and support resources',
         'Minimal distractions'
       ]
-
   ];
-
   const complianceStandards = [
     {
       name: 'WCAG 2.1 AA',
@@ -84,35 +77,7 @@ export default function Accessibility() {
       description: 'European accessibility requirements for ICT products and services',
       status: 'Compliant',
       icon: <CheckCircle className="w-6 h-6 text-green-500" />
-
   ];
-
-<<<<<<< HEAD
-  const assistiveTechnologies = [
-    {
-      name: 'Screen Readers',
-      description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Voice Control',
-      description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Switch Devices',
-      description: 'Single switch, multiple switch, and scanning software support',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Magnification',
-      description: 'ZoomText, Windows Magnifier, and other magnification software',
-      compatibility: 'Full'
-
-  ];
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityTools = [
     {
       title: 'Accessibility Checker',
@@ -137,9 +102,7 @@ export default function Accessibility() {
       description: 'Complete list of keyboard navigation shortcuts',
       link: '/keyboard-shortcuts',
       icon: <Hand className="w-6 h-6" />
-
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -158,7 +121,6 @@ export default function Accessibility() {
           </p>
         </div>
       </div>
-
       {/* Commitment Statement */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -178,7 +140,6 @@ export default function Accessibility() {
           </div>
         </div>
       </div>
-
       {/* Accessibility Features */}
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -190,7 +151,6 @@ export default function Accessibility() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
                 <div className="text-zion-cyan mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
@@ -205,7 +165,6 @@ export default function Accessibility() {
           </div>
         </div>
       </div>
-
       {/* Compliance Standards */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -217,7 +176,6 @@ export default function Accessibility() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 text-center"
-
                 <div className="flex justify-center mb-4">{standard.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{standard.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{standard.description}</p>
@@ -229,7 +187,6 @@ export default function Accessibility() {
           </div>
         </div>
       </div>
-
       {/* Assistive Technology Support */}
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -241,7 +198,6 @@ export default function Accessibility() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6"
-
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-3">{tech.description}</p>
                 <div className="flex items-center gap-2">
@@ -255,7 +211,6 @@ export default function Accessibility() {
           </div>
         </div>
       </div>
-
       {/* Accessibility Tools */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -267,14 +222,12 @@ export default function Accessibility() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
                 <div className="text-zion-cyan mb-4">{tool.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{tool.description}</p>
                 <a
                   href={tool.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm"
-
                   Access Tool
                   <span>→</span>
                 </a>
@@ -283,7 +236,6 @@ export default function Accessibility() {
           </div>
         </div>
       </div>
-
       {/* Feedback and Support */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -293,7 +245,6 @@ export default function Accessibility() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             We value your feedback on accessibility. If you encounter any accessibility barriers or have suggestions for improvement, please let us know.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
@@ -302,11 +253,9 @@ export default function Accessibility() {
               <a
                 href="mailto:accessibility@ziontechgroup.com"
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-
                 accessibility@ziontechgroup.com
               </a>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
@@ -314,11 +263,9 @@ export default function Accessibility() {
               <a
                 href="tel:+13024640950"
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-
                 +1 (302) 464-0950
               </a>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Users className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Accessibility Team</h3>
@@ -326,12 +273,10 @@ export default function Accessibility() {
               <a
                 href="/contact"
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-
                 Contact Team
               </a>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold text-white mb-4">Accessibility Statement</h3>
             <p className="text-zion-slate-light mb-6">
@@ -341,14 +286,12 @@ export default function Accessibility() {
               <a
                 href="/accessibility-statement.pdf"
                 className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
-
                 <Download className="w-4 h-4" />
                 Accessibility Statement
               </a>
               <a
                 href="/vpat.pdf"
                 className="border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors inline-flex items-center gap-2"
-
                 <Download className="w-4 h-4" />
                 VPAT Document
               </a>

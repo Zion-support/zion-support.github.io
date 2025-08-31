@@ -20,12 +20,7 @@ export function AdvancedSearch() {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
-<<<<<<< HEAD
-                setShowSuggestions(false);
-
-=======
                 setShowSuggestions(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
@@ -37,19 +32,10 @@ export function AdvancedSearch() {
                 .sort((a, b) => b.relevance - a.relevance)
                 .slice(0, 8);
             setSuggestions(filtered);
-<<<<<<< HEAD
-            setShowSuggestions(true);
-
-        else {
-            setSuggestions([]);
-            setShowSuggestions(false);
-
-=======
             setShowSuggestions(true)}
         else {
             setSuggestions([]);
             setShowSuggestions(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [query]);
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
@@ -68,12 +54,7 @@ export function AdvancedSearch() {
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;
-<<<<<<< HEAD
-            default: return <Search className="w-4 h-4 text-zion-slate"/>;
-
-=======
             default: return <Search className="w-4 h-4 text-zion-slate"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSuggestionColor = (type) => {
         switch (type) {
@@ -81,12 +62,7 @@ export function AdvancedSearch() {
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
             case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
-<<<<<<< HEAD
-            default: return 'bg-zion-slate/10 border-zion-slate/20';
-
-=======
             default: return 'bg-zion-slate/10 border-zion-slate/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}
@@ -94,16 +70,13 @@ export function AdvancedSearch() {
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <Search className="h-5 w-5 text-zion-slate-light"/>
         </div>
-
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} onFocus={() => setShowSuggestions(true)} placeholder="Search for services, technologies, or solutions..." className="block w-full pl-10 pr-12 py-3 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-200 text-zion-slate placeholder-zion-slate-light"/>
-
         <div className="absolute inset-y-0 right-0 flex items-center pr-3">
           <button onClick={() => setIsExpanded(!isExpanded)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Advanced Filters">
             <Filter className="h-5 w-5"/>
           </button>
         </div>
       </div>
-
       {/* Advanced Filters */}
       {isExpanded && (<div className="mt-4 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg">
           <div className="flex items-center justify-between mb-3">
@@ -112,7 +85,6 @@ export function AdvancedSearch() {
                 Clear All
               </button>)}
           </div>
-
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)
                     ? 'bg-zion-cyan text-white border-zion-cyan'
@@ -121,7 +93,6 @@ export function AdvancedSearch() {
               </button>))}
           </div>
         </div>)}
-
       {/* Search Suggestions */}
       {showSuggestions && suggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">
           {suggestions.map(suggestion => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left hover:bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light last:border-b-0">
@@ -147,7 +118,6 @@ export function AdvancedSearch() {
                 </div>
               </div>
             </button>))}
-
           <div className="p-3 bg-zion-slate-light/5 border-t border-zion-slate-light">
             <div className="flex items-center gap-2 text-xs text-zion-slate-light">
               <Sparkles className="w-3 h-3"/>
@@ -155,7 +125,6 @@ export function AdvancedSearch() {
             </div>
           </div>
         </div>)}
-
       {/* No Results */}
       {showSuggestions && query.trim() && suggestions.length === 0 && (<div className="absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 text-center">
           <div className="text-zion-slate-light mb-2">No results found for "{query}"</div>
@@ -163,9 +132,4 @@ export function AdvancedSearch() {
             Try different keywords or browse our categories
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

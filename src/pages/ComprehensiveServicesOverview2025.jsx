@@ -33,23 +33,10 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': '⚖️',
             'Marketing & AI': '📢',
             'Energy & Sustainability': '⚡',
-  <<<<<<< HEAD
-            'Logistics & Transportation': '🚚'
-        
-
-};
-        return icons[category] || '🚀'};
-=======
   'Logistics & Transportation': '🚚'
-        
-
-
-
-
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getCategoryColor = (category) => {
         const colors = {
   'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
@@ -63,23 +50,10 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': 'from-gray-500 to-slate-500',
             'Marketing & AI': 'from-pink-500 to-rose-500',
             'Energy & Sustainability': 'from-green-500 to-teal-500',
-  <<<<<<< HEAD
-            'Logistics & Transportation': 'from-orange-500 to-red-500'
-        
-
-};
-        return colors[category] || 'from-gray-500 to-slate-500'};
-=======
   'Logistics & Transportation': 'from-orange-500 to-red-500'
-        
-
-
-
-
 };
         return colors[category] || 'from-gray-500 to-slate-500';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

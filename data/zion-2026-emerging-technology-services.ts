@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../src/types/service-variants";
-
 export interface Zion2026EmergingTechnologyService {
   id: string;
   name: string;
@@ -37,12 +36,7 @@ export interface Zion2026EmergingTechnologyService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -53,14 +47,7 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
-
 export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyService[] = [
   // Quantum-Enhanced Blockchain and Web3 Platform
   {
@@ -109,7 +96,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 580
   },
-
   // AI-Powered Autonomous Metaverse Development Platform
   {
     id: 'ai-autonomous-metaverse-development-platform-2026',
@@ -157,7 +143,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 480
   },
-
   // Quantum-Enhanced Internet of Things (IoT) Platform
   {
     id: 'quantum-enhanced-iot-platform-2026',
@@ -205,7 +190,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.8,
     reviews: 1050
   },
-
   // AI-Powered Autonomous Space Technology Platform
   {
     id: 'ai-autonomous-space-technology-platform-2026',
@@ -253,7 +237,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 320
   },
-
   // Quantum-Enhanced Neural Network and Brain-Computer Interface Platform
   {
     id: 'quantum-enhanced-neural-network-bci-platform-2026',
@@ -301,7 +284,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 220
   },
-
   // AI-Powered Autonomous Biotechnology and Synthetic Biology Platform
   {
     id: 'ai-autonomous-biotechnology-synthetic-biology-platform-2026',
@@ -349,7 +331,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 390
   },
-
   // Quantum-Enhanced Climate and Environmental Technology Platform
   {
     id: 'quantum-enhanced-climate-environmental-technology-platform-2026',
@@ -397,7 +378,6 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.9,
     reviews: 600
   },
-
   // AI-Powered Autonomous Robotics and Automation Platform
   {
     id: 'ai-autonomous-robotics-automation-platform-2026',
@@ -444,7 +424,5 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     customers: 1350,
     rating: 4.8,
     reviews: 680
-
 ];
-
 export default zion2026EmergingTechnologyServices;}}

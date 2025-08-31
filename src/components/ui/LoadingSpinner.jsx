@@ -7,60 +7,33 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
   xl: 'w-12 h-12'
-    
-
 };
     const colorClasses = {
   primary: 'border-zion-purple',
         secondary: 'border-zion-cyan',
         white: 'border-white',
   custom: ''
-    
-
 };
     const borderColor = customColor || colorClasses[color];
     return (<div className = {
   cn('flex flex-col items-center justify-center',
   className)
-
 }>
       <motion.div className = {
   cn('border-2 border-t-transparent rounded-full animate-spin', sizeClasses[size],
   borderColor)
-
 } animate={{ rotate: 360 }} transition = {
   {
             duration: 1,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: "linear"
-        }} role="status" aria-label="Loading"/>
-
-      {showText && (<motion.p className="mt-3 text-sm text-zion-slate-light text-center" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          {text}
-        </motion.p>)}
-    </div>);
-
-// Skeleton loading component for content
-export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
-    return (<div className={cn('space-y-3', className)}>
-      {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }}/>))}
-    </div>);
-
-=======
   ease: "linear"
-        
-
 }} role="status" aria-label="Loading"/>
-      
       {showText && (<motion.p className="mt-3 text-sm text-zion-slate-light text-center" initial = {
   { opacity: 0,
   y: 10 
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
 }} transition={{ delay: 0.2 }}>
           {text}
         </motion.p>)}
@@ -70,43 +43,28 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
     return (<div className = {
   cn('space-y-3',
   className)
-
 }>
       {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} className = {
   cn('bg-zion-slate-light/20 rounded animate-pulse',
   height)
-
 } initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }}/>))}
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Page loading component
 export function PageLoader({ text = 'Loading page...', className }) {
     return (<div className = {
   cn('min-h-screen flex items-center justify-center',
   className)
-
 }>
       <div className="text-center">
         <LoadingSpinner size="xl" color="primary" showText text={text}/>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Button loading state
 export function ButtonLoader({ size = 'sm', className }) {
     return (<div className = {
   cn('inline-flex items-center',
   className)
-
 }>
       <LoadingSpinner size={size} color="white"/>
       <span className="ml-2">Loading...</span>
-<<<<<<< HEAD
-    </div>);
-}}}</motion.div></motion.div>}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

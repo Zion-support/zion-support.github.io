@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionaryAIInnovationService2029 {
   id: string;
   name: string;
@@ -38,13 +37,9 @@ export interface RevolutionaryAIInnovationService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
   // AI-Powered Autonomous Code Review
   {
@@ -99,7 +94,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 34,
     isPopular: true
   },
-
   // AI-Powered Content Creation Suite
   {
     id: 'ai-content-creation-suite',
@@ -153,7 +147,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 45,
     isPopular: true
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management',
@@ -207,7 +200,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 28,
     isNew: true
   },
-
   // AI-Powered SEO Optimization
   {
     id: 'ai-powered-seo',
@@ -260,7 +252,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.6,
     reviews: 38
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
@@ -313,7 +304,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.7,
     reviews: 32
   },
-
   // AI-Powered Customer Support
   {
     id: 'ai-customer-support-automation',
@@ -367,7 +357,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 26,
     isPopular: true
   },
-
   // AI-Powered Financial Analytics
   {
     id: 'ai-financial-analytics',
@@ -421,7 +410,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 19,
     isNew: true
   },
-
   // AI-Powered Legal Document Automation
   {
     id: 'ai-legal-document-automation',
@@ -468,24 +456,12 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Production-ready platform with real AI marketing optimization models, comprehensive campaign management, and advanced analytics.',
-    launchDate: '2024-03-01',
-    customers: 520,
-    rating: 4.8,
-    reviews: 380
-
-];
-
-export default revolutionaryAIInnovationServices2029;}}
-=======
     implementationDetails: 'AI models, document processing, compliance engine',
     launchDate: '2025-01-28',
     customers: 22,
     rating: 4.7,
     reviews: 15
   },
-
   // AI-Powered Interview Assessment
   {
     id: 'ai-interview-assessment',
@@ -539,23 +515,18 @@ export default revolutionaryAIInnovationServices2029;}}
     reviews: 23
   }
 ];
-
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(service => service.category === category);
 };
-
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(service => service.isPopular);
 };
-
 export const getNewAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
 };
-
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

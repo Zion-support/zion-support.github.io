@@ -43,7 +43,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             lastChecked: new Date(),
             parentPage: 'Contact',
             linkText: 'Email'
-
     ];
     useEffect(() => {
         setLinkStatuses(sampleLinks);
@@ -76,12 +75,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
-
-=======
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -92,12 +86,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return 'text-blue-400';
             default:
-<<<<<<< HEAD
-                return 'text-yellow-400';
-
-=======
                 return 'text-yellow-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
@@ -108,36 +97,17 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <Link className="w-6 h-6"/>
       </motion.button>
-
       {/* Modal */}
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
           <motion.div initial = {
   { scale: 0.9,
   opacity: 0 
-
-
-
-
-
-
 }} animate = {
   { scale: 1,
   opacity: 1 
-
-
-
-
-
-
 }} exit = {
   { scale: 0.9,
   opacity: 0 
-
-
-
-
-
-
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">
@@ -154,7 +124,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 Monitor and maintain the health of all website links
               </p>
             </div>
-
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Summary Cards */}
@@ -176,7 +145,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                     <div className="text-blue-400 text-sm">External</div>
                   </div>
                 </div>)}
-
               {/* Actions */}
               <div className="flex items-center justify-between">
                 <div className="flex space-x-2">
@@ -201,13 +169,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                     Healthy
                   </button>
                 </div>
-
                 <button onClick={startMonitoring} disabled={isMonitoring} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">
                   {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin"/>) : (<Zap className="w-4 h-4"/>)}
                   <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>
                 </button>
               </div>
-
               {/* Links Table */}
               <div className="bg-gray-800 rounded-lg overflow-hidden">
                 <div className="overflow-x-auto">
@@ -266,7 +232,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                   </table>
                 </div>
               </div>
-
               {/* Recommendations */}
               <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">

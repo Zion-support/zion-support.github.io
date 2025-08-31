@@ -1,27 +1,13 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import Head from 'next/head.ts';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from "./ModernFooter";
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
-
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-  canonical?: string;
-=======
   canonical?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 const ModernLayout: React.FC<ModernLayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -39,7 +25,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
-
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
@@ -47,24 +32,20 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:site_name" content="Zion Tech Group" />
-
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={canonical} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -84,13 +65,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressRegion": "DE",
                 "postalCode": "19709",
   "addressCountry": "US"
-              
-
-
-
-
-
-
 },
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -107,23 +81,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
           }}
         />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-black text-white flex flex-col">
-=======
-      
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <ModernHeader />
         <main className="flex-1 pt-20">
-<<<<<<< HEAD
-          {children}
-        </main>
-        <ModernFooter />
-      </div>;
-    </>;
-  )};
-=======
           {children};
         </main>;
         <ModernFooter />;
@@ -131,6 +91,4 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ModernLayout;}

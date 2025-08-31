@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD:src/pages/ZeroTrustNetworkArchitecture.jsx
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Zap, Globe const ZeroTrustNetworkArchitecture = () => {
-=======
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
 const AIAutonomousLegalResearchAssistant = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/AIAutonomousLegalResearchAssistant.js.jsx
     const features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",
@@ -33,17 +29,10 @@ const AIAutonomousLegalResearchAssistant = () => {
             description: "Lower legal research costs while improving quality and speed"
         },
         {
-<<<<<<< HEAD:src/pages/ZeroTrustNetworkArchitecture.jsx
-            icon: Zap,
-            title: "Compliance Ready",
-            description: "Meet regulatory requirements with comprehensive security controls"
-
-=======
             icon: Shield,
             title: "Compliance & Updates",
             description: "Stay current with latest legal changes and regulatory updates"
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/AIAutonomousLegalResearchAssistant.js.jsx
     ];
     const pricingPlans = [
         {
@@ -90,7 +79,6 @@ const AIAutonomousLegalResearchAssistant = () => {
                 "On-site training & support",
                 "SLA guarantees"
             ]
-
     ];
     const useCases = [
         {
@@ -109,48 +97,6 @@ const AIAutonomousLegalResearchAssistant = () => {
             icon: Shield
         },
         {
-<<<<<<< HEAD:src/pages/ZeroTrustNetworkArchitecture.jsx
-            title: "Data Protection",
-            description: "Safeguard sensitive data with granular access controls",
-            icon: Lock
-
-    ];
-    const industries = [
-        "Healthcare",
-        "Financial Services",
-        "Government",
-        "Manufacturing",
-        "Retail",
-        "Education",
-        "Technology",
-        "Energy & Utilities"
-    ];
-    const securityLayers = [
-        {
-            title: "Identity Layer",
-            description: "Multi-factor authentication and identity verification",
-            icon: Users,
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            title: "Device Layer",
-            description: "Device health checks and compliance validation",
-            icon: Shield,
-            color: "from-green-500 to-emerald-500"
-        },
-        {
-            title: "Network Layer",
-            description: "Micro-segmentation and encrypted communications",
-            icon: Network,
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            title: "Application Layer",
-            description: "Application-level security and access controls",
-            icon: Lock,
-            color: "from-orange-500 to-red-500"
-
-=======
             title: "Legal Opinions",
             description: "Generate well-researched legal opinions with AI assistance",
             icon: BarChart3
@@ -165,7 +111,6 @@ const AIAutonomousLegalResearchAssistant = () => {
         "Tax Law",
         "Employment Law",
         "Environmental Law"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/AIAutonomousLegalResearchAssistant.js.jsx
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -182,13 +127,8 @@ const AIAutonomousLegalResearchAssistant = () => {
             AI Autonomous Legal Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD:src/pages/ZeroTrustNetworkArchitecture.jsx
-            Comprehensive cybersecurity solution implementing zero-trust principles across your entire
-            network infrastructure for maximum security and protection against modern cyber threats.
-=======
             Advanced AI-powered legal research tool that autonomously analyzes case law, statutes, 
             and legal precedents to provide comprehensive legal insights and accelerate your research.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/AIAutonomousLegalResearchAssistant.js.jsx
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link to="/contact" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
@@ -215,7 +155,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -237,7 +176,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -262,7 +200,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -285,7 +222,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -307,7 +243,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -351,7 +286,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -371,12 +305,5 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD:src/pages/ZeroTrustNetworkArchitecture.jsx
-    </div>);
-};
-export default ZeroTrustNetworkArchitecture;
-}}}}}
-=======
     </div>)};
 export default AIAutonomousLegalResearchAssistant;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/AIAutonomousLegalResearchAssistant.js.jsx

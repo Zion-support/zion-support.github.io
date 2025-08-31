@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database import { SEO } from '../components/SEO';
-=======
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const transformationServices = [
     {
         title: "Strategy & Planning",
@@ -49,7 +45,6 @@ const transformationServices = [
         icon: Shield,
         features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
         color: "from-yellow-500 to-orange-500"
-
 ];
 const transformationPhases = [
     {
@@ -75,11 +70,9 @@ const transformationPhases = [
         title: "Full Implementation",
         description: "Execute transformation plan with phased rollout and continuous optimization",
         duration: "6-18 months"
-
 ];
 =======
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const testimonials = [
     {
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
@@ -98,7 +91,6 @@ const testimonials = [
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
         rating: 5
-
 ];
 const stats = [
     { label: "Transformations Completed", value: "75+", icon: Rocket },
@@ -115,21 +107,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Digital
@@ -164,30 +144,12 @@ export default function DigitalTransformation() {
             return (<motion.div key={stat.label} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -204,21 +166,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Our Transformation Services
@@ -233,30 +183,12 @@ export default function DigitalTransformation() {
             return (<motion.div key={service.title} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8"/>
@@ -288,21 +220,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Our Transformation Process
@@ -315,30 +235,12 @@ export default function DigitalTransformation() {
             {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
                   {phase.phase}
@@ -356,21 +258,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Transformation Benefits
@@ -400,36 +290,17 @@ export default function DigitalTransformation() {
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
-
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-cyan">
@@ -450,21 +321,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Success Stories
@@ -477,30 +336,12 @@ export default function DigitalTransformation() {
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current"/>))}
@@ -522,21 +363,9 @@ export default function DigitalTransformation() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
@@ -557,9 +386,4 @@ export default function DigitalTransformation() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

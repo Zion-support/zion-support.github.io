@@ -576,118 +576,11 @@ import {
   Shield,
   Zap,
   Brain
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const infrastructureSolutions = [
-  {
-    id: 1,
-    title: "Network Infrastructure",
-    description: "Comprehensive network design, implementation, and management solutions.",
-    icon: Network,
-    features[
-      "Network design",
-      "Implementation",
-      "Management",
-      "Optimization"
-    ],
-    price: "From $100,000",
-    timeline: "16-28 weeks",
-    category: "Networking",
-    technologies["Network Design", "Implementation", "Management", "Optimization"]
-  },
-  {
-    id: 2,
-    title: "Server Infrastructure",
-    description: "Robust server infrastructure design and deployment solutions.",
-    icon: Server,
-    features[
-      "Server design",
-      "Deployment",
-      "Management",
-      "Maintenance"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "Servers",
-    technologies["Server Design", "Deployment", "Management", "Maintenance"]
-  },
-  {
-    id: 3,
-    title: "Storage Infrastructure",
-    description: "Scalable storage solutions for enterprise data management.",
-    icon: Database,
-    features[
-      "Storage design",
-      "Data management",
-      "Backup solutions",
-      "Recovery systems"
-    ],
-    price: "From $120,000",
-    timeline: "18-30 weeks",
-    category: "Storage",
-    technologies["Storage Design", "Data Management", "Backup", "Recovery"]
-  },
-  {
-    id: 4,
-    title: "Cloud Infrastructure",
-    description: "Hybrid and multi-cloud infrastructure solutions.",
-    icon: Cloud,
-    features[
-      "Cloud design",
-      "Migration",
-      "Management",
-      "Optimization"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Cloud",
-    technologies["Cloud Design", "Migration", "Management", "Optimization"]
-  },
-  {
-    id: 5,
-    title: "Security Infrastructure",
-    description: "Comprehensive security infrastructure and compliance solutions.",
-    icon: Shield,
-    features[
-      "Security design",
-      "Implementation",
-      "Monitoring",
-      "Compliance"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Security",
-    technologies["Security Design", "Implementation", "Monitoring", "Compliance"]
-  },
-  {
-    id: 6,
-    title: "Data Center Infrastructure",
-    description: "Modern data center design and implementation solutions.",
-    icon: Building,
-    features[
-      "Data center design",
-      "Implementation",
-      "Management",
-      "Optimization"
-    ],
-    price: "From $300,000",
-    timeline: "32-44 weeks",
-    category: "Data Center",
-<<<<<<< HEAD
-    technologies: ["Data Center Design", "Implementation", "Management", "Optimization"]
-
-=======
     technologies["Data Center Design", "Implementation", "Management", "Optimization"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const infrastructureTechnologies = [
   {
     name: "Network Technologies",
@@ -716,9 +609,7 @@ const infrastructureTechnologies = [
     icon: Cloud,
     useCase: "Cloud Infrastructure",
     reliability: "High"
-
 ];
-
 const successStories = [
   {
     id: 1,
@@ -746,9 +637,7 @@ const successStories = [
     solution: "Built robust IT infrastructure with high availability and security",
     results: "99.9% uptime, 70% performance improvement, better patient care, improved efficiency",
     logo: "HTL"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -777,9 +666,7 @@ const processSteps = [
     description: "Test systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-
 ];
-
 const infrastructureBenefits = [
   {
     title: "Improved Performance",
@@ -803,25 +690,16 @@ const infrastructureBenefits = [
     title: "Scalability",
     description: "Flexible infrastructure supports business growth",
     icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
-
-=======
     examples["Easy scaling", "Growth support", "Flexible resources", "Future-proof design"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function ITInfrastructure() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'Networking', 'Servers', 'Storage', 'Cloud', 'Security', 'Data Center'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? infrastructureSolutions
     : infrastructureSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -831,78 +709,42 @@ export default function ITInfrastructure() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Server className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure &
               <span className="text-gradient block">Solutions</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your IT infrastructure with modern, scalable solutions. From networking
               to data centers, we help you build the foundation for digital success.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Network className="w-4 h-4" />
@@ -920,7 +762,6 @@ export default function ITInfrastructure() {
           </motion.div>
         </div>
       </section>
-
       {/* Infrastructure Benefits */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -928,32 +769,18 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">IT Infrastructure Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make modern IT infrastructure essential
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {infrastructureBenefits.map((benefit, index) => (
               <motion.div
@@ -961,42 +788,21 @@ export default function ITInfrastructure() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -1011,7 +817,6 @@ export default function ITInfrastructure() {
           </div>
         </div>
       </section>
-
       {/* Infrastructure Technologies */}
       <section className="py-20">
         <div className="container-responsive">
@@ -1019,32 +824,18 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">IT Infrastructure Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading IT infrastructure technologies
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {infrastructureTechnologies.map((technology, index) => (
               <motion.div
@@ -1052,43 +843,22 @@ export default function ITInfrastructure() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -1103,7 +873,6 @@ export default function ITInfrastructure() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -1111,32 +880,18 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our IT Infrastructure Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful IT infrastructure implementation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -1144,35 +899,16 @@ export default function ITInfrastructure() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -1181,7 +917,6 @@ export default function ITInfrastructure() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -1192,7 +927,6 @@ export default function ITInfrastructure() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -1200,32 +934,18 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">IT Infrastructure Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for modern IT infrastructure
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -1237,12 +957,10 @@ export default function ITInfrastructure() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -1250,43 +968,22 @@ export default function ITInfrastructure() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -1295,23 +992,19 @@ export default function ITInfrastructure() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1326,7 +1019,6 @@ export default function ITInfrastructure() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -1334,32 +1026,18 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">IT Infrastructure Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with modern IT infrastructure
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -1367,35 +1045,16 @@ export default function ITInfrastructure() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1405,7 +1064,6 @@ export default function ITInfrastructure() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1420,7 +1078,6 @@ export default function ITInfrastructure() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1432,7 +1089,6 @@ export default function ITInfrastructure() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -1440,43 +1096,27 @@ export default function ITInfrastructure() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Infrastructure?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how modern IT infrastructure can revolutionize your operations,
               improve performance, and create competitive advantages.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start Infrastructure Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Infrastructure Consultation
               </a>
             </div>
@@ -1484,9 +1124,4 @@ export default function ITInfrastructure() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

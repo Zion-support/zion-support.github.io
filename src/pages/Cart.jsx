@@ -1,62 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
 export default function CartPage() {
     const navigate = useNavigate();
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [cartLoading, setCartLoading] = useState(true);
     const [showEmpty, setShowEmpty] = useState(false);
-
     useEffect(() => {
         // Simulate loading cart data
         const timer = setTimeout(() => {
             setCartLoading(false);
-<<<<<<< HEAD
-
-        else {
-            const stored = safeStorage.getItem('zion_cart');
-            if (stored) {
-                try {
-                    dispatch(setItemsAction(JSON.parse(stored)));
-
-                catch {
-                    dispatch(setItemsAction([]));
-
-
-            else {
-                dispatch(setItemsAction([]));
-
-
-        ;
-        load();
-    }, [user, dispatch]);
-    const updateQuantity = async (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
-        if (user) {
-            try {
-                await fetch('/api/cart', {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
-                });
-
-            catch (err) {
-<<<<<<< HEAD
-                // // // console.error('Failed to update cart', err);
-
-
-=======
                 // // // // // // // console.error('Failed to update cart', err);
             }
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {
         if (!cartLoading && items.length === 0) {
             setShowEmpty(true);
-
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
@@ -74,10 +35,8 @@ export default function CartPage() {
                 amount: subtotal,
             });
             setDiscount(res.data.discount || 0);
-
         catch (e) {
             setDiscount(0);
-
     };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
@@ -86,7 +45,6 @@ export default function CartPage() {
         <Skeleton className="h-8 w-1/3"/>
         <Skeleton className="h-32 w-full"/>
       </div>);
-
     if (showEmpty) {
         return (<div className="container py-10 text-center">
         <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
@@ -95,7 +53,6 @@ export default function CartPage() {
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>);
-
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
@@ -132,10 +89,8 @@ export default function CartPage() {
 =======
             setShowEmpty(true);
         }, 1000);
-        
         return () => clearTimeout(timer);
     }, []);
-
     if (cartLoading) {
         return (
             <div className="container py-10 space-y-4">
@@ -144,7 +99,6 @@ export default function CartPage() {
             </div>
         );
     }
-
     if (showEmpty) {
         return (
             <div className="container py-10 text-center">
@@ -161,7 +115,6 @@ export default function CartPage() {
             </div>
         );
     }
-
     return (
         <div className="container max-w-2xl py-10">
             <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
@@ -177,4 +130,3 @@ export default function CartPage() {
         </div>
     );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

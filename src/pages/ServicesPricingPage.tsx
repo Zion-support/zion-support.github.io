@@ -1,52 +1,10 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Check,
-  X,
-  Star,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Users,
-  Building,
-  Smartphone,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Truck,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  DollarSign,
-  Clock
-<<<<<<< HEAD
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
-=======
  } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Group services by category for better organization
-<<<<<<< HEAD
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (!acc[service.category]) {;
-    acc[service.category] = [];
-<<<<<<< HEAD
-
-  acc[service.category].push(service);
-  return acc;
-}, { /* empty */ } as { [key: string]: typeof EXPANDED_SERVICES });
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   acc[service.category].push(service);
   return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
@@ -109,11 +67,9 @@ import {
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
 const ServicesPricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('starter');
   const [billingCycle, setBillingCycle] = useState('monthly');
-
   const pricingPlans = [
     {
       id: 'starter',
@@ -168,7 +124,6 @@ const ServicesPricingPage: React.FC = () => {
       icon: Shield
     }
   ];
-
   const serviceCategories = [
     {
       name: 'AI Solutions',
@@ -223,7 +178,6 @@ const ServicesPricingPage: React.FC = () => {
       ]
     }
   ];
-
   const addOns = [
     {
       name: '24/7 Support',
@@ -250,7 +204,6 @@ const ServicesPricingPage: React.FC = () => {
       icon: Shield
     }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Chen',
@@ -274,19 +227,15 @@ const ServicesPricingPage: React.FC = () => {
       company: 'Quantum Labs'
     }
   ];
-
   const calculatePrice = (plan: any) => {
     return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
   };
-
   const calculateSavings = (plan: any) => {
     if (billingCycle === 'annual') {
       return Math.round((plan.price.monthly * 12 - plan.price.annual) / (plan.price.monthly * 12) * 100);
     }
     return 0;
   };
-
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   return (
     <>
       <SEO 
@@ -294,7 +243,6 @@ const ServicesPricingPage: React.FC = () => {
         description="Explore our comprehensive AI, cloud, and cybersecurity services with transparent pricing. Find the perfect plan for your business needs."
         keywords="AI services pricing, cloud solutions cost, cybersecurity pricing, technology consulting rates, Zion Tech Group pricing"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -309,16 +257,13 @@ const ServicesPricingPage: React.FC = () => {
                 <Award className="w-5 h-5 text-zion-purple mr-2" />
                 <span className="text-zion-purple font-medium">Transparent Pricing</span>
               </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Services & Pricing
               </h1>
-              
               <p className="text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8">
                 Choose the perfect plan for your business. Our transparent pricing ensures you know exactly 
                 what you're getting and how much it costs.
               </p>
-
               {/* Billing Toggle */}
               <div className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-cyan-light'}`}>
@@ -346,7 +291,6 @@ const ServicesPricingPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Plans */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -365,7 +309,6 @@ const ServicesPricingPage: React.FC = () => {
                 All plans include our core features with different levels of support and customization.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <motion.div
@@ -387,7 +330,6 @@ const ServicesPricingPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   <Card className={`h-full transition-all duration-300 hover:scale-105 ${
                     plan.popular 
                       ? 'bg-zion-purple/10 border-zion-purple/50' 
@@ -401,27 +343,11 @@ const ServicesPricingPage: React.FC = () => {
                       }`}>
                         <plan.icon className="w-8 h-8" />
                       </div>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                  <Button
-                    className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
-
-=======
                     onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
   '_blank')
-
-
-
-
-
-
 }
                   >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     Get Custom Quote
                   </Button>
                 </CardContent>
@@ -464,16 +390,12 @@ const ServicesPricingPage: React.FC = () => {
                       <CardDescription className="text-zion-cyan-light line-clamp-3">
                         {service.description}
 =======
-                      
                       <CardTitle className="text-2xl font-bold text-white">
                         {plan.name}
                       </CardTitle>
-                      
                       <CardDescription className="text-zion-cyan-light">
                         {plan.description}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                       </CardDescription>
-                      
                       <div className="mt-6">
                         <div className="text-4xl font-bold text-white">
                           ${calculatePrice(plan)}
@@ -488,73 +410,7 @@ const ServicesPricingPage: React.FC = () => {
                         )}
                       </div>
                     </CardHeader>
-                    
                     <CardContent>
-<<<<<<< HEAD
-                      <div className="space-y-4">
-                        {/* Pricing and Details */}
-                        <div className="space-y-2">
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Price:</span>
-                            <span className="font-semibold text-zion-cyan text-lg">
-                              ${service.price?.toLocaleString()}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Availability:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Clock className="h-3 w-3" />
-                              {service.availability}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Location:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Globe className="h-3 w-3" />
-                              {service.location}
-                            </span>
-                          </div>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {service.tags.slice(0, 3).map((tag, index) => (
-                            <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        {/* Rating and AI Score */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                            <span className="text-sm">{service.rating}</span>
-                            <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
-                          </div>
-                          {service.aiScore && (
-                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                              AI Score: {service.aiScore}
-                            </Badge>
-                          )}
-                        </div>
-                        {/* Action Buttons */}
-                        <div className="flex gap-2">
-                          <Button
-                            className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                            onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
-
-                            <Mail className="h-4 w-4 mr-2" />
-                            Get Quote
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-<<<<<<< HEAD
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </div>
-=======
                             onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
@@ -567,7 +423,6 @@ const ServicesPricingPage: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                      
                       <Button 
                         className={`w-full ${
                           plan.popular 
@@ -586,8 +441,6 @@ const ServicesPricingPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-
         {/* Service Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -606,7 +459,6 @@ const ServicesPricingPage: React.FC = () => {
                 Each category can be customized to meet your specific requirements.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
@@ -622,20 +474,16 @@ const ServicesPricingPage: React.FC = () => {
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-blue rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
-                      
                       <CardTitle className="text-xl font-bold text-white">
                         {category.name}
                       </CardTitle>
-                      
                       <CardDescription className="text-zion-cyan-light">
                         {category.description}
                       </CardDescription>
-                      
                       <div className="text-2xl font-bold text-zion-cyan">
                         Starting at ${category.startingPrice}/mo
                       </div>
                     </CardHeader>
-                    
                     <CardContent>
                       <ul className="space-y-2 mb-6">
                         {category.features.map((feature, featureIndex) => (
@@ -645,7 +493,6 @@ const ServicesPricingPage: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                      
                       <Button 
                         variant="outline" 
                         className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white"
@@ -660,7 +507,6 @@ const ServicesPricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Add-ons */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -679,7 +525,6 @@ const ServicesPricingPage: React.FC = () => {
                 Mix and match to create the perfect solution for your business.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {addOns.map((addon, index) => (
                 <motion.div
@@ -694,20 +539,16 @@ const ServicesPricingPage: React.FC = () => {
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl mb-4">
                         <addon.icon className="w-8 h-8 text-white" />
                       </div>
-                      
                       <CardTitle className="text-xl font-bold text-white">
                         {addon.name}
                       </CardTitle>
-                      
                       <CardDescription className="text-zion-cyan-light">
                         {addon.description}
                       </CardDescription>
-                      
                       <div className="text-2xl font-bold text-zion-cyan">
                         ${addon.price[billingCycle as keyof typeof addon.price]}/{billingCycle === 'monthly' ? 'mo' : 'year'}
                       </div>
                     </CardHeader>
-                    
                     <CardContent>
                       <Button 
                         variant="outline" 
@@ -723,7 +564,6 @@ const ServicesPricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -742,7 +582,6 @@ const ServicesPricingPage: React.FC = () => {
                 about our services and pricing.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -759,16 +598,13 @@ const ServicesPricingPage: React.FC = () => {
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      
                       <p className="text-zion-cyan-light mb-4 italic">
                         "{testimonial.content}"
                       </p>
-                      
                       <div className="border-t border-white/20 pt-4">
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-zion-cyan-light">{testimonial.role}</div>
                         <div className="text-xs text-zion-cyan-light">{testimonial.company}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
                     </CardContent>
                   </Card>
@@ -777,7 +613,6 @@ const ServicesPricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -795,7 +630,6 @@ const ServicesPricingPage: React.FC = () => {
                 Get answers to common questions about our services and pricing structure.
               </p>
             </motion.div>
-
             <div className="space-y-6">
               <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
                 <CardHeader>
@@ -843,62 +677,7 @@ const ServicesPricingPage: React.FC = () => {
               </Card>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        {/* Pricing FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What's included in the pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support.
-                  Custom integrations and additional features can be added based on your requirements.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
-                  Contact us for a personalized quote tailored to your business needs.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments,
-                  and monthly/annual subscription options for ongoing services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
-                  within the first 30 days, we'll work to make it right or provide a refund.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-=======
         </section>
-
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
         {/* Contact CTA Section */}
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white mx-4 sm:mx-6 lg:mx-8 mb-20">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
@@ -910,7 +689,6 @@ const ServicesPricingPage: React.FC = () => {
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
-
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
@@ -919,7 +697,6 @@ const ServicesPricingPage: React.FC = () => {
               variant="outline"
               className="border-white text-white hover:bg-white/10"
               onClick={() => window.open('tel:+13024640950', '_blank')}
-
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </Button>
@@ -928,10 +705,5 @@ const ServicesPricingPage: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-</div></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
 };
-
 export default ServicesPricingPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

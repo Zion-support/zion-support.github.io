@@ -36,12 +36,7 @@ export interface EnterpriseITSolutions2026 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture
   {
@@ -302,5 +297,4 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     customers: 180,
     rating: 4.9,
     reviews: 112
-
 ];}}

@@ -70,118 +70,11 @@ import {
   Users,
   Settings,
   Palette
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const customerExperienceSolutions = [
-  {
-    id: 1,
-    title: "User Experience Design",
-    description: "Comprehensive UX design services for web, mobile, and desktop applications.",
-    icon: Palette,
-    features[
-      "User research & personas",
-      "Information architecture",
-      "Wireframing & prototyping",
-      "Usability testing"
-    ],
-    price: "From $30,000",
-    timeline: "8-16 weeks",
-    category: "UX Design",
-    technologies["Figma", "Adobe XD", "Sketch", "InVision"]
-  },
-  {
-    id: 2,
-    title: "Customer Journey Mapping",
-    description: "Visual representation of customer interactions and touchpoints across all channels.",
-    icon: MapPin,
-    features[
-      "Journey mapping",
-      "Touchpoint analysis",
-      "Pain point identification",
-      "Optimization strategies"
-    ],
-    price: "From $25,000",
-    timeline: "6-12 weeks",
-    category: "Journey Mapping",
-    technologies["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
-  },
-  {
-    id: 3,
-    title: "Customer Feedback Systems",
-    description: "Comprehensive feedback collection and analysis systems for continuous improvement.",
-    icon: MessageCircle,
-    features[
-      "Feedback collection",
-      "Sentiment analysis",
-      "Real-time monitoring",
-      "Actionable insights"
-    ],
-    price: "From $20,000",
-    timeline: "4-10 weeks",
-    category: "Feedback Systems",
-    technologies["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
-  },
-  {
-    id: 4,
-    title: "Personalization Engines",
-    description: "AI-powered personalization systems for tailored customer experiences.",
-    icon: Brain,
-    features[
-      "User behavior analysis",
-      "Content personalization",
-      "Recommendation engines",
-      "A/B testing"
-    ],
-    price: "From $40,000",
-    timeline: "12-20 weeks",
-    category: "Personalization",
-    technologies["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
-  },
-  {
-    id: 5,
-    title: "Customer Support Platforms",
-    description: "Integrated customer support and helpdesk solutions for seamless service delivery.",
-    icon: Headphones,
-    features[
-      "Multi-channel support",
-      "Ticket management",
-      "Knowledge base",
-      "Live chat integration"
-    ],
-    price: "From $35,000",
-    timeline: "10-18 weeks",
-    category: "Support Platforms",
-    technologies["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
-  },
-  {
-    id: 6,
-    title: "Customer Analytics & Insights",
-    description: "Advanced analytics and reporting systems for customer behavior and satisfaction metrics.",
-    icon: BarChart3,
-    features[
-      "Customer analytics",
-      "Satisfaction metrics",
-      "Behavior tracking",
-      "Predictive insights"
-    ],
-    price: "From $30,000",
-    timeline: "8-16 weeks",
-    category: "Analytics",
-<<<<<<< HEAD
-    technologies: ["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
-
-=======
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const customerExperienceTechnologies = [
   {
     name: "User Research Tools",
@@ -210,9 +103,7 @@ const customerExperienceTechnologies = [
     icon: Brain,
     useCase: "Custom Experiences",
     reliability: "High"
-
 ];
-
 const successStories = [
   {
     id: 1,
@@ -240,9 +131,7 @@ const successStories = [
     solution: "Redesigned patient portal with intuitive UX and streamlined appointment scheduling",
     results: "50% increase in portal usage, 45% reduction in appointment booking time, improved patient satisfaction",
     logo: "HP"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -271,9 +160,7 @@ const processSteps = [
     description: "Test experiences and continuously optimize based on feedback",
     icon: Gauge,
     duration: "Ongoing"
-
 ];
-
 const customerExperienceBenefits = [
   {
     title: "Improved Customer Satisfaction",
@@ -297,25 +184,16 @@ const customerExperienceBenefits = [
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
-<<<<<<< HEAD
-    examples: ["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
-
-=======
     examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function CustomerExperience() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'UX Design', 'Journey Mapping', 'Feedback Systems', 'Personalization', 'Support Platforms', 'Analytics'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? customerExperienceSolutions
     : customerExperienceSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -325,78 +203,42 @@ export default function CustomerExperience() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Heart className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Customer
               <span className="text-gradient block">Experience</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your customer interactions with data-driven insights and personalized experiences.
               From UX design to customer journey optimization, we help you create memorable customer experiences.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Heart className="w-4 h-4" />
@@ -414,7 +256,6 @@ export default function CustomerExperience() {
           </motion.div>
         </div>
       </section>
-
       {/* Customer Experience Benefits */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -422,32 +263,18 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Customer Experience Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make customer experience essential
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {customerExperienceBenefits.map((benefit, index) => (
               <motion.div
@@ -455,42 +282,21 @@ export default function CustomerExperience() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -505,7 +311,6 @@ export default function CustomerExperience() {
           </div>
         </div>
       </section>
-
       {/* Customer Experience Technologies */}
       <section className="py-20">
         <div className="container-responsive">
@@ -513,32 +318,18 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Customer Experience Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading customer experience platforms and technologies
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {customerExperienceTechnologies.map((technology, index) => (
               <motion.div
@@ -546,43 +337,22 @@ export default function CustomerExperience() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -597,7 +367,6 @@ export default function CustomerExperience() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -605,32 +374,18 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our Customer Experience Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful customer experience transformation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -638,35 +393,16 @@ export default function CustomerExperience() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -675,7 +411,6 @@ export default function CustomerExperience() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -686,7 +421,6 @@ export default function CustomerExperience() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -694,32 +428,18 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Customer Experience Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for customer-centric transformation
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -731,12 +451,10 @@ export default function CustomerExperience() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -744,43 +462,22 @@ export default function CustomerExperience() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -789,23 +486,19 @@ export default function CustomerExperience() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -820,7 +513,6 @@ export default function CustomerExperience() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -828,32 +520,18 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Customer Experience Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their customer experience and business outcomes
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -861,35 +539,16 @@ export default function CustomerExperience() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -899,7 +558,6 @@ export default function CustomerExperience() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -914,7 +572,6 @@ export default function CustomerExperience() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -926,7 +583,6 @@ export default function CustomerExperience() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -934,43 +590,27 @@ export default function CustomerExperience() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready for Customer Experience Transformation?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how customer experience optimization can transform your business,
               improve customer satisfaction, and drive sustainable growth.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start CX Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 CX Consultation
               </a>
             </div>
@@ -978,9 +618,4 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

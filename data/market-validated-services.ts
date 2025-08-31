@@ -18,13 +18,7 @@ export interface MarketValidatedService {
 		mobile: string;
 		email: string;
 		address: string;
-<<<<<<< HEAD
-		website?: string;
-	};
-
-=======
 		website?: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const contactInfo = {
   mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
@@ -35,12 +29,6 @@ const contactInfo = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants

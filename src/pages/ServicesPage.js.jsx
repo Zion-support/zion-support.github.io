@@ -484,12 +484,6 @@ const SERVICE_LISTINGS = [
         reviewCount: 85,
     },
 ];
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-function getRandomItem(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 function generateRandomService(idNum) {
     const templates = [
         {
@@ -566,12 +560,7 @@ function generateRandomService(idNum) {
         aiScore: Math.floor(90 + Math.random() * 10),
         rating: parseFloat((4 + Math.random()).toFixed(1)),
         reviewCount: Math.floor(50 + Math.random() * 150),
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
@@ -595,7 +584,6 @@ export default function ServicesPage() {
         return () => clearInterval(interval)}, []);
     return (<div className="min-h-screen bg-background">
       <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
-      
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
@@ -614,7 +602,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -622,14 +609,12 @@ export default function ServicesPage() {
             Find expert technology service providers for your business needs, from AI development to infrastructure management.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
               <div className="mb-4">
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
               </div>
-              
               <div className="flex items-center justify-between mb-4">
                 <div className="text-2xl font-bold text-zion-purple">
                   ${service.price?.toLocaleString()}
@@ -640,13 +625,11 @@ export default function ServicesPage() {
                   <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                 </div>
               </div>
-
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
                     {tag}
                   </span>))}
               </div>
-
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -655,9 +638,4 @@ export default function ServicesPage() {
             </div>))}
         </div>
       </div>
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx

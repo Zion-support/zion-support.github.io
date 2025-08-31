@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe export default function Infrastructure() {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react';
-
 export default function Infrastructure(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Server,
@@ -23,15 +16,6 @@ export default function Infrastructure(...args[]):  {
     {
       icon: Shield,
       title: 'Security First',
-<<<<<<< HEAD
-      description: 'Protect your infrastructure with enterprise-grade security'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast systems and applications'
-
-=======
       description: 'Protect your infrastructure with enterprise-grade security';
     },;
     {;
@@ -39,9 +23,7 @@ export default function Infrastructure(...args[]):  {
       title: 'High Performance',;
       description: 'Lightning-fast systems and applications';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const services = [
     {
       title: 'Server Management',
@@ -56,15 +38,6 @@ export default function Infrastructure(...args[]):  {
     {
       title: 'Cloud Migration',
       description: 'Seamless transition to cloud infrastructure',
-<<<<<<< HEAD
-      icon: Cloud
-    },
-    {
-      title: 'Disaster Recovery',
-      description: 'Business continuity and backup solutions',
-      icon: Shield
-
-=======
       icon: Cloud;
     },;
     {;
@@ -72,9 +45,7 @@ export default function Infrastructure(...args[]):  {
       description: 'Business continuity and backup solutions',;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -85,41 +56,25 @@ export default function Infrastructure(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-
             <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
               <Server className="w-5 h-5 text-orange-400" />
               <span className="text-orange-400 font-medium">IT Infrastructure</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Build Your Digital
               <span className="text-gradient"> Foundation</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Create a robust, scalable, and secure IT infrastructure that powers
               your business growth and digital transformation.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Get Infrastructure Assessment
@@ -132,7 +87,6 @@ export default function Infrastructure(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -140,27 +94,14 @@ export default function Infrastructure(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Infrastructure Solutions?
             </h2>
@@ -168,7 +109,6 @@ export default function Infrastructure(...args[]):  {
               Enterprise-grade infrastructure that scales with your business
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
@@ -176,36 +116,17 @@ export default function Infrastructure(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -216,7 +137,6 @@ export default function Infrastructure(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
@@ -224,27 +144,14 @@ export default function Infrastructure(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Infrastructure Services
             </h2>
@@ -252,7 +159,6 @@ export default function Infrastructure(...args[]):  {
               Comprehensive IT infrastructure solutions for modern businesses
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div
@@ -260,36 +166,17 @@ export default function Infrastructure(...args[]):  {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
@@ -304,7 +191,6 @@ export default function Infrastructure(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -312,27 +198,14 @@ export default function Infrastructure(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-orange-600 to-orange-700 rounded-3xl p-12 text-center relative overflow-hidden"
-
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -349,23 +222,10 @@ export default function Infrastructure(...args[]):  {
                   Contact Infrastructure Team
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

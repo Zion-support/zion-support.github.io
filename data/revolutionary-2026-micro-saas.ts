@@ -36,12 +36,7 @@ export interface Revolutionary2026MicroSaasService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: 'ai-business-intelligence-pro',
@@ -501,5 +496,4 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     customers: 1500,
     rating: 4.5,
     reviews: 750
-
 ];}}

@@ -38,11 +38,7 @@ import { FlaskConical,
   Atom,
   Satellite,
   Telescope
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const researchAreas = [
   {
     id: 'ai-ml',
@@ -145,15 +141,6 @@ const researchAreas = [
       'Container Orchestration',
       'Serverless Computing',
       'Multi-cloud Strategies',
-<<<<<<< HEAD
-      'Cloud Security',
-      'DevOps Automation'
-    ],
-    publications: 20,
-    patents: 10,
-    projects: 16
-
-=======
       'Cloud Security',;
       'DevOps Automation';
     ],;
@@ -161,9 +148,7 @@ const researchAreas = [
     patents: 10,;
     projects: 16;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const researchProjects = [
   {
     id: 1,
@@ -266,15 +251,6 @@ const researchProjects = [
     funding: '$350,000',
     outcomes[
       'AI ethics framework',
-<<<<<<< HEAD
-      'Responsible AI guidelines',
-      '4 research publications',
-      'Industry standards contribution'
-    ],
-    icon: Brain,
-    color: 'from-purple-500 to-indigo-600'
-
-=======
       'Responsible AI guidelines',;
       '4 research publications',;
       'Industry standards contribution';
@@ -282,9 +258,7 @@ const researchProjects = [
     icon: Brain,;
     color: 'from-purple-500 to-indigo-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const publications = [
   {
     id: 1,
@@ -329,15 +303,6 @@ const publications = [
   {
     id: 5,
     title: 'Security-First Cloud Architecture Patterns',
-<<<<<<< HEAD
-    authors: ['Dr. Lisa Garcia', 'Dr. David Kim'],
-    journal: 'Cloud Computing Security',
-    year: 2026,
-    citations: 38,
-    area: 'Cloud-Native',
-    abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
-
-=======
     authors['Dr. Lisa Garcia', 'Dr. David Kim'],;
     journal: 'Cloud Computing Security',;
     year: 2026,;
@@ -345,9 +310,7 @@ const publications = [
     area: 'Cloud-Native',;
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const patents = [
   {
     id: 1,
@@ -392,15 +355,6 @@ const patents = [
   {
     id: 5,
     title: 'Cloud Security Architecture Pattern',
-<<<<<<< HEAD
-    inventors: ['Dr. Lisa Garcia'],
-    filingDate: '2026-02-15',
-    status: 'Pending',
-    patentNumber: 'US 2026/0098765',
-    area: 'Cloud-Native',
-    description: 'A security architecture pattern for cloud-native applications.'
-
-=======
     inventors['Dr. Lisa Garcia'],;
     filingDate: '2026-02-15',;
     status: 'Pending',;
@@ -408,57 +362,19 @@ const patents = [
     area: 'Cloud-Native',;
     description: 'A security architecture pattern for cloud-native applications.';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function ResearchDevelopment(...args[]):  {
   const [selectedArea, setSelectedArea] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-
   const areas = ['All', ...researchAreas.map(area => area.name)];
   const statuses = ['All', 'Active', 'Completed', 'Planning'];
-
   const filteredProjects = researchProjects.filter(project => {;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-    return matchesArea && matchesStatus && matchesSearch;
-  });
-=======
-    
     return matchesArea && matchesStatus && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-  const getAreaIcon = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.icon : FlaskConical};
-
-<<<<<<< HEAD
-  const getAreaColor = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.color : 'from-gray-500 to-slate-600'};
-
-<<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
-    if (status === 'Active') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
-    } else if (status = == 'Completed') {;
-      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
-    } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
@@ -468,26 +384,13 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <FlaskConical className="w-5 h-5" />
               <span className="font-medium">Research & Development</span>
@@ -502,7 +405,6 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Search & Filters */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -521,40 +423,26 @@ export default function ResearchDevelopment(...args[]):  {
                   />
                 </div>
               </div>
-
               {/* Research Area Filter */}
               <div>
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {areas.map(area => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={area} value={area}>{area}</option>
                   ))}
                 </select>
               </div>
-
               {/* Status Filter */}
               <div>
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {statuses.map(status => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>{status}</option>
                   ))}
                 </select>
@@ -563,7 +451,6 @@ export default function ResearchDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Research Areas */}
       <section id="research-areas" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -571,41 +458,20 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -613,42 +479,22 @@ export default function ResearchDevelopment(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>
                   <p className="text-zion-slate-light mb-4">{area.description}</p>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>
                     <div className="space-y-1">
@@ -660,7 +506,6 @@ export default function ResearchDevelopment(...args[]):  {
                       ))}
                     </div>
                   </div>
-
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-2xl font-bold text-zion-cyan">{area.publications}</div>
@@ -671,14 +516,6 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>
-<<<<<<< HEAD
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
-                      <div className="text-xs text-zion-slate-light">Projects</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
@@ -686,11 +523,9 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* Active Research Projects */}
       <section id = "active-projects" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -698,41 +533,20 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map((project, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -741,36 +555,17 @@ export default function ResearchDevelopment(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -786,10 +581,8 @@ export default function ResearchDevelopment(...args[]):  {
                       </div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-zion-slate-light mb-4">{project.description}</p>
-
                   {/* Project Details */}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="text-sm text-zion-slate-light">
@@ -805,7 +598,6 @@ export default function ResearchDevelopment(...args[]):  {
                       </span>
                     </div>
                   </div>
-
                   {/* Team */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Team</h4>
@@ -817,7 +609,6 @@ export default function ResearchDevelopment(...args[]):  {
                       ))}
                     </div>
                   </div>
-
                   {/* Outcomes */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Expected Outcomes</h4>
@@ -830,25 +621,15 @@ export default function ResearchDevelopment(...args[]):  {
                       ))}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <Link
                       href={`/research-development/projects/${project.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
-                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
@@ -856,11 +637,9 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* Publications */}
       <section id = "publications" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -868,31 +647,17 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Research Publications</h2>
             <p className="text-zion-slate-light text-lg">Our latest research contributions to the scientific community</p>
           </motion.div>
-
           <div className="space-y-6">
             {publications.map((pub, index) => (
               <motion.div
@@ -900,36 +665,17 @@ export default function ResearchDevelopment(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
@@ -962,7 +708,6 @@ export default function ResearchDevelopment(...args[]):  {
                     <Link
                       href={`/research-development/publications/${pub.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
                       Read Paper
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -973,7 +718,6 @@ export default function ResearchDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Patents */}
       <section id="patents" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -981,31 +725,17 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Patents & Intellectual Property</h2>
             <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {patents.map((patent, index)  => (
               <motion.div
@@ -1013,36 +743,17 @@ export default function ResearchDevelopment(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{patent.title}</h3>
@@ -1060,7 +771,6 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>
                   </div>
                 </div>
-
                 <div className="space-y-3 mb-4">
                   <div className="text-sm text-zion-slate-light">
                     <span className="font-medium text-white">Inventors:</span> {patent.inventors.join(', ')}
@@ -1072,14 +782,11 @@ export default function ResearchDevelopment(...args[]):  {
                     <span className="font-medium text-white">Patent Number:</span> {patent.patentNumber}
                   </div>
                 </div>
-
                 <p className="text-zion-slate-light mb-4">{patent.description}</p>
-
                 <div className="flex items-center justify-between">
                   <Link
                     href={`/research-development/patents/${patent.id}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -1093,7 +800,6 @@ export default function ResearchDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1101,27 +807,14 @@ export default function ResearchDevelopment(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-
             <h2 className="text-3xl font-bold text-white mb-4">
               Collaborate with Our Research Team
             </h2>
@@ -1133,33 +826,18 @@ export default function ResearchDevelopment(...args[]):  {
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-
                 Start Collaboration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-
                 View Research Impact
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

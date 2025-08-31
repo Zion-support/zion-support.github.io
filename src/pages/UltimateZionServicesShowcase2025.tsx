@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../components/SEO";
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025  } from "../data/ultimateZionServices2025";
-=======
 import React from 'react';
 import { SEO } from "../components/SEO";
 import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
   return (
     <>
@@ -17,7 +10,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
         keywords="micro SAAS, IT services, AI solutions, quantum computing, cybersecurity, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/ultimate-zion-services-2025"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -33,7 +25,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <a
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
@@ -42,7 +33,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -52,7 +42,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </div>
             </div>
           </div>
-
           {/* Floating Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -60,7 +49,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +78,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Micro SAAS Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -102,7 +89,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 Transform your business with cutting-edge micro SAAS solutions that deliver unprecedented ROI and competitive advantages
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {ultimateMicroSaasServices2025.map((service)  => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
@@ -115,16 +101,13 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       <span className="text-sm text-gray-400">/month</span>
                     </span>
                   </div>
-
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">Market Price: {service.marketPrice}</p>
                     <p className="text-sm text-gray-400 mb-2">ROI: {service.roi}</p>
                     <p className="text-sm text-gray-400">Setup: {service.setupTime}</p>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                     <ul className="space-y-1">
@@ -138,7 +121,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span key={index} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
@@ -146,18 +128,15 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       </span>
                     ))}
                   </div>
-
                   <div className="space-y-3">
                     <a
                       href={`tel:+13024640950`}
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center block"
-
                       Get Started
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                       className="w-full bg-gray-700 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 text-center block"
-
                       Learn More
                     </a>
                   </div>
@@ -166,7 +145,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* IT Infrastructure Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-7xl mx-auto">
@@ -178,13 +156,11 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 Build robust, scalable, and secure IT infrastructure with our expert consulting and implementation services
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {ultimateITInfrastructureServices2025.map((service)  => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-
                   <div className="mb-4">
                     <p className="text-white font-semibold">
                       Hourly Rate: <span className="text-blue-400">${service.hourlyRate}/hour</span>
@@ -194,7 +170,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                     </p>
                     <p className="text-sm text-gray-400">Market Price: {service.marketPrice}</p>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -208,24 +183,20 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <p className="text-sm text-gray-400 mb-1">Response Time: {service.responseTime}</p>
                     <p className="text-sm text-gray-400 mb-1">SLA: {service.sla}</p>
                     <p className="text-sm text-gray-400">Delivery: {service.deliveryTime}</p>
                   </div>
-
                   <div className="space-y-3">
                     <a
                       href={`tel:+13024640950`}
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center block"
-
                       Get Quote
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                       className="w-full bg-gray-700 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 text-center block"
-
                       Schedule Consultation
                     </a>
                   </div>
@@ -234,7 +205,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* AI Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -246,7 +216,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 Harness the power of artificial intelligence with our cutting-edge AI platforms and solutions
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {ultimateAIServices2025.map((service)  => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:scale-105">
@@ -259,16 +228,13 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       <span className="text-sm text-gray-400">/month</span>
                     </span>
                   </div>
-
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">AI Score: <span className="text-green-400">{service.aiScore}/100</span></p>
                     <p className="text-sm text-gray-400 mb-2">Accuracy: {service.accuracy}</p>
                     <p className="text-sm text-gray-400">Market Price: {service.marketPrice}</p>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">AI Models:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -279,7 +245,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       ))}
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Use Cases:</h4>
                     <ul className="space-y-1">
@@ -293,18 +258,15 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="space-y-3">
                     <a
                       href={`tel:+13024640950`}
                       className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center block"
-
                       Start AI Journey
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                       className="w-full bg-gray-700 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 text-center block"
-
                       AI Consultation
                     </a>
                   </div>
@@ -313,7 +275,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Why Choose Zion Tech Group */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-7xl mx-auto">
@@ -325,7 +286,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 We deliver cutting-edge technology solutions with unmatched expertise and proven results
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -336,7 +296,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <h3 className="text-xl font-bold text-white mb-2">Proven Results</h3>
                 <p className="text-gray-300">300%+ ROI within 12 months for our clients</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -346,7 +305,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <h3 className="text-xl font-bold text-white mb-2">Expert Team</h3>
                 <p className="text-gray-300">Certified professionals with decades of experience</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -356,7 +314,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <h3 className="text-xl font-bold text-white mb-2">Cutting-Edge Tech</h3>
                 <p className="text-gray-300">Latest AI, quantum computing, and emerging technologies</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -369,7 +326,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -379,7 +335,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies already leveraging Zion Tech Group's revolutionary services
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
@@ -389,14 +344,12 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <a
                   href="tel:+13024640950"
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   Call Now
                 </a>
               </div>
-
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-white mb-4">Learn More</h3>
                 <p className="text-purple-100 mb-6">
@@ -405,7 +358,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <a
                   href="mailto:kleber@ziontechgroup.com?subject=Request Service Catalog"
                   className="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -416,7 +368,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
         {/* Footer Contact */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-7xl mx-auto text-center">
@@ -438,24 +389,14 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                 <p className="text-gray-300">Middletown DE 19709</p>
               </div>
             </div>
-
             <div className="mt-12">
               <a
                 href="https://ziontechgroup.com"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
-
                 Visit our website: ziontechgroup.com
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </section>;
@@ -463,6 +404,4 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default UltimateZionServicesShowcase2025;

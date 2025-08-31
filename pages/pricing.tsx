@@ -52,15 +52,6 @@ export default function PricingPage(...args[]):  {
         'Unlimited Users',
         'Advanced Compliance',
         'Dedicated Account Manager',
-<<<<<<< HEAD
-        'SLA Guarantees',
-        'On-Premise Options'
-      ],
-      cta: 'Contact Sales',
-      ctaLink: '/contact',
-      popular: false
-
-=======
         'SLA Guarantees',;
         'On-Premise Options';
       ],;
@@ -68,7 +59,6 @@ export default function PricingPage(...args[]):  {
       ctaLink: '/contact',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const addOnServices = [
     {
@@ -90,14 +80,6 @@ export default function PricingPage(...args[]):  {
       features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
-<<<<<<< HEAD
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
-<<<<<<< HEAD
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
-
-=======
       features['Architecture Design', 'Data Migration', 'Performance Optimization']
     };
 =======;
@@ -106,8 +88,6 @@ export default function PricingPage(...args[]):  {
       price: 'From $10,000',;
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const faqs = [
     {
@@ -129,14 +109,6 @@ export default function PricingPage(...args[]):  {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
-<<<<<<< HEAD
-    },
-    {
-      question: 'Can I cancel my subscription?',
-<<<<<<< HEAD
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-
-=======
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     };
 =======;
@@ -145,8 +117,6 @@ export default function PricingPage(...args[]):  {
       question: 'Can I cancel my subscription?',;
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
     <>
@@ -180,23 +150,15 @@ export default function PricingPage(...args[]):  {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div
-                  key={index}
-=======
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {pricingTiers.map((tier, index)  => (
                 <div 
                   key={index} 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
                     tier.popular
                       ? 'border-blue-400 border-2 scale-105'
                       : 'border-white border-opacity-10'
                   }`}
-
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -204,7 +166,6 @@ export default function PricingPage(...args[]):  {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                     <p className="text-gray-300 mb-6">{tier.description}</p>
@@ -230,7 +191,6 @@ export default function PricingPage(...args[]):  {
                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                     }`}
-
                     {tier.cta}
                   </Link>
                 </div>
@@ -247,15 +207,8 @@ export default function PricingPage(...args[]):  {
                 Enhance your solution with our specialized add-on services
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index) => (
-=======
-            
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {addOnServices.map((service, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -273,7 +226,6 @@ export default function PricingPage(...args[]):  {
                   <Link
                     href="/contact"
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-
                     Learn More →
                   </Link>
                 </div>
@@ -290,7 +242,6 @@ export default function PricingPage(...args[]):  {
                 Get answers to common questions about our pricing and services
               </p>
             </div>
-
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
@@ -314,32 +265,17 @@ export default function PricingPage(...args[]):  {
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-
                 Contact Sales
               </Link>
               <Link
                 href="/services"
                 className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-
                 View Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </main>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -4,17 +4,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const addedITServices2025: AdvancedITService[] = [
   {
     id: 'managed-mlops-platform',
@@ -713,5 +703,4 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 3,
     rating: 4.8,
     reviews: 2
-
 ]}}

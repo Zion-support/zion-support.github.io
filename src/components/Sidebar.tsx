@@ -2,49 +2,10 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  ChevronRight,
-  Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Server,
-  BarChart3,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  Settings,
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  Globe,
-  Cpu,
-  Lock,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Infinity,
-  ArrowRight,
-  DollarSign,
-  Workflow,
-  Briefcase,
-  Newspaper,
-=======
   Home,
   Zap,
   Target,
   Users,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   FileText,
   Phone,
   ChevronRight,
@@ -56,20 +17,6 @@ import {
   Activity,
   Globe,
   Building,
-<<<<<<< HEAD
-  Truck,
-  Mail,
-  Video,
-  Satellite,
-  TestTube,
-  Code,
-  Target
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-=======
   Eye,
   Cpu,
   Cloud,
@@ -81,26 +28,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   Menu,
   X
 } from 'lucide-react';
-
 export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const location = useLocation();
-
-<<<<<<< HEAD
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
-
-  const navigationSections = [
-=======
   const navigation = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
       name: 'Home',
       href: '/',
@@ -148,16 +80,6 @@ export function Sidebar() {
         { name: 'Partners', href: '/partners', icon: Network },
         { name: 'Press', href: '/press', icon: FileText }
       ]
-<<<<<<< HEAD
-
-  ];
-
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
-
-    return location.pathname.startsWith(href);
-=======
     },
     {
       name: 'Resources',
@@ -182,14 +104,10 @@ export function Sidebar() {
       description: 'Get in touch with us'
     }
   ];
-
   const isActive = (href: string) => location.pathname === href;
-
   const toggleSection = (sectionName: string) => {
     setActiveSection(activeSection === sectionName ? null : sectionName);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <motion.aside
       className={`fixed left-0 top-16 h-full bg-gray-900/95 backdrop-blur-md border-r border-gray-700 transition-all duration-300 z-40 ${
@@ -211,57 +129,6 @@ export function Sidebar() {
           <ChevronRight className="w-4 h-4 rotate-180" />
         )}
       </button>
-
-<<<<<<< HEAD
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
-
-            {/* Header */}
-            <div className="p-6 border-b border-cyan-400/20">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Zion Tech
-                  </span>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
-
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Navigation Content */}
-            <div className="p-4 space-y-6">
-              {navigationSections.map((section) => (
-                <div key={section.title} className="space-y-3">
-                  {/* Section Header */}
-                  <button
-                    onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full text-left group"
-
-                    <div className="flex items-center space-x-2">
-                      <section.icon className="w-5 h-5 text-cyan-400" />
-                      <span className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                        {section.title}
-                      </span>
-                    </div>
-                    <ChevronRight
-                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                        expandedSections.includes(section.title) ? 'rotate-90' : ''
-                      }`}
-                    />
-=======
       {/* Navigation */}
       <nav className="h-full overflow-y-auto py-6 px-4">
         <div className="space-y-2">
@@ -288,9 +155,7 @@ export function Sidebar() {
                         className={`w-4 h-4 transition-transform ${activeSection === item.name ? 'rotate-90' : ''}`} 
                       />
                     )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </button>
-                  
                   <AnimatePresence>
                     {activeSection === item.name && !isCollapsed && (
                       <motion.div
@@ -298,15 +163,9 @@ export function Sidebar() {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-                        className="ml-6 space-y-1"
-
-                        {section.items.map((item) => (
-=======
                         className="ml-6 mt-2 space-y-1"
                       >
                         {item.subItems.map((subItem) => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <Link
                             key={subItem.name}
                             to={subItem.href}
@@ -315,21 +174,10 @@ export function Sidebar() {
                                 ? 'bg-cyan-500/10 text-cyan-400'
                                 : 'text-gray-400 hover:text-white hover:bg-gray-800/30'
                             }`}
-<<<<<<< HEAD
-
-                            <item.icon className={`w-4 h-4 ${
-                              isActive(item.href) ? 'text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'
-                            }`} />
-                            <span className="text-sm font-medium">{item.name}</span>
-                            {isActive(item.href) && (
-                              <div className="ml-auto w-2 h-2 bg-cyan-400 rounded-full"></div>
-                            )}
-=======
                             title={subItem.name}
                           >
                             <subItem.icon className="w-4 h-4 flex-shrink-0" />
                             <span className="truncate">{subItem.name}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           </Link>
                         ))}
                       </motion.div>
@@ -353,7 +201,6 @@ export function Sidebar() {
             </div>
           ))}
         </div>
-
         {/* Quick Actions */}
         {!isCollapsed && (
           <div className="mt-8 pt-6 border-t border-gray-700">
@@ -381,9 +228,4 @@ export function Sidebar() {
       </nav>
     </motion.aside>
   );
-<<<<<<< HEAD
-};
-}}}</section></motion.div>}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

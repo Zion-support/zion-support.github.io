@@ -36,12 +36,7 @@ export interface SpaceTechInnovation2026 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform
   {
@@ -302,5 +297,4 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     customers: 150,
     rating: 4.8,
     reviews: 85
-
 ];}}

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon export default function EmailSequencer() {
-	const features = [
-		'Multi-step sequences with A/B testing',
-		'AI subject line and body suggestions',
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',
-		'Smart send windows and reply-detection',
-		'Per-recipient throttling and warmup controls',
-		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips'
-=======
 import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from 'lucide-react';
-
 export default function EmailSequencer() {
 	const features = [;
 		'Multi-step sequences with A/B testing',;
@@ -18,22 +7,18 @@ export default function EmailSequencer() {
 		'Smart send windows and reply-detection',;
 		'Per-recipient throttling and warmup controls',;
 		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	];
-
 	const plans = [;
 		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends', '1 domain', 'Basic templates'] },;
 		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends', '3 domains', 'A/B testing, webhooks'] },;
 		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends', 'SAML/SSO', 'Priority support'] };
 	];
-
 	const references = [;
 		{ label: 'HubSpot Email Marketing Pricing', href: 'https://www.hubspot.com/pricing/marketing/email' },;
 		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },;
 		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },;
 		{ label: 'Salesloft Pricing', href: 'https://salesloft.com/pricing/' };
 	];
-
 	return (
 		<div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
 			<section className="max-w-7xl mx-auto px-6 py-20">
@@ -46,7 +31,6 @@ export default function EmailSequencer() {
 						Automate multi-step outreach with AI-assisted copy, throttling, and deep CRM/webhook integrations.
 					</p>
 				</div>
-
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
 					{features.map((f) => (
 						<div key={f} className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg">
@@ -55,7 +39,6 @@ export default function EmailSequencer() {
 						</div>
 					))}
 				</div>
-
 				<div className="mb-16">
 					<h2 className="text-2xl font-semibold text-white mb-6">Plans</h2>
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -77,7 +60,6 @@ export default function EmailSequencer() {
 						))}
 					</div>
 				</div>
-
 				<div>
 					<h2 className="text-2xl font-semibold text-white mb-4">Market reference links</h2>
 					<p className="text-zion-slate-light mb-4 text-sm">Compare typical pricing and features across leading platforms:</p>

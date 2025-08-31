@@ -17,8 +17,6 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
   and innovative IT services for the healthcare industry.'
-    
-
 };
     static KEYWORD_MAPPINGS = {
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
@@ -38,8 +36,6 @@ export class SEOOptimizer {
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
   'medical technology']
-    
-
 };
     static generateSEOData(path) {
         const title = this.generateTitle(path);
@@ -54,12 +50,10 @@ export class SEOOptimizer {
             canonicalUrl,
             structuredData
         };
-
     static generateTitle(path) {
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
-
         const pathSegments = path.split('/').filter(Boolean);
         if (pathSegments.length === 0)
             return baseTitle;
@@ -69,19 +63,15 @@ export class SEOOptimizer {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
         return `${formattedSegment} - ${baseTitle}`;
-
     static generateDescription(path) {
         return this.DEFAULT_META_DESCRIPTIONS[path] ||
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
-
     static generateKeywords(path) {
         return this.KEYWORD_MAPPINGS[path] ||
             ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
-
     static generateCanonicalUrl(path) {
         const baseUrl = 'https://ziontechgroup.com';
         return `${baseUrl}${path}`;
-
     static generateStructuredData(path) {
         const baseData = {
   "@context": "https://schema.org",
@@ -93,15 +83,8 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-
-=======
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-            
-
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         // Add specific structured data based on page type
         if (path === '/') {
@@ -125,9 +108,7 @@ export class SEOOptimizer {
                     "telephone": "+1-302-464-0950",
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
-
             };
-
         if (path.startsWith('/services/')) {
             return {
                 ...baseData,
@@ -136,11 +117,8 @@ export class SEOOptimizer {
                 "provider": {
                     "@type": "Organization",
                     "name": "Zion Tech Group"
-
             };
-
         return baseData;
-
     static analyzeContentQuality(content, page) {
         const issues = [];
         // Check for missing or short title
@@ -151,7 +129,6 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
             });
-
         // Check for missing meta description
         if (!content.includes('name="description"')) {
             issues.push({
@@ -160,7 +137,6 @@ export class SEOOptimizer {
                 severity: 'high',
                 suggestedFix: 'Add a meta description tag with compelling content'
             });
-
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
@@ -170,7 +146,6 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
             });
-
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
@@ -179,7 +154,6 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             });
-
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
@@ -189,46 +163,35 @@ export class SEOOptimizer {
                 severity: 'medium',
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'
             });
-
         return issues;
-
     static generateMetaTags(seoData) {
         return `
     <title>${seoData.title}</title>
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords.join(', ')}" />
     <link rel="canonical" href="${seoData.canonicalUrl}" />
-
     <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}" />
     <meta property="og:description" content="${seoData.description}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${seoData.canonicalUrl}" />
     <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoData.title}" />
     <meta name="twitter:description" content="${seoData.description}" />
     <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-
     <!-- Structured Data -->
     <script type="application/ld+json">
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
-
-
 export const seoOptimizer = new SEOOptimizer();
-<<<<<<< HEAD
-}}}}}}}}}}}}}}}}}}}}
-=======
 =======
     // Simulate SEO analysis
     setTimeout(() => {
       let score = 0;
       const newRecommendations = [];
-      
       // Check title length
       const titleMatch = content.match(/<title>(.*?)</title>/i);
       if (titleMatch) {
@@ -242,7 +205,6 @@ export const seoOptimizer = new SEOOptimizer();
       } else {
         newRecommendations.push('Add a title tag');
       }
-      
       // Check meta description
       const metaMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
       if (metaMatch) {
@@ -256,7 +218,6 @@ export const seoOptimizer = new SEOOptimizer();
       } else {
         newRecommendations.push('Add a meta description');
       }
-      
       // Check headings
       const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
       if (h1Count > 0 && h2Count > 0) {
@@ -267,7 +228,6 @@ export const seoOptimizer = new SEOOptimizer();
       } else {
         newRecommendations.push('Add heading structure to your content');
       }
-      
       // Check images with alt text
       const imagesWithAlt = images.filter(img => img.includes('alt='));
       if (images.length > 0) {
@@ -278,7 +238,6 @@ export const seoOptimizer = new SEOOptimizer();
           newRecommendations.push('Add alt text to all images');
         }
       }
-      
       // Check internal links
       const internalLinks = content.match(/href="/[^"]*"/g) || [];
       if (internalLinks.length >= 2) {
@@ -289,17 +248,14 @@ export const seoOptimizer = new SEOOptimizer();
       } else {
         newRecommendations.push('Add internal links to related pages');
       }
-      
       setSeoScore(score);
       setRecommendations(newRecommendations);
       setIsAnalyzing(false);
-      
       if (onOptimize) {
         onOptimize({ score, recommendations: newRecommendations });
       }
     }, 2000);
   };
-
   return (
     <div className="space-y-4">
       <button
@@ -309,28 +265,15 @@ export const seoOptimizer = new SEOOptimizer();
       >
         {isAnalyzing ? 'Analyzing SEO...' : 'Analyze SEO'}
       </button>
-      
       {seoScore > 0 && (
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           className="space-y-4"
         >
@@ -338,7 +281,6 @@ export const seoOptimizer = new SEOOptimizer();
             <div className="text-4xl font-bold text-purple-600 mb-2">{seoScore}/100</div>
             <div className="text-lg text-gray-600">SEO Score</div>
           </div>
-          
           {recommendations.length > 0 && (
             <div>
               <h3 className="text-lg font-semibold mb-2">Recommendations:</h3>
@@ -357,7 +299,4 @@ export const seoOptimizer = new SEOOptimizer();
     </div>
   );
 };
-
 export default SEOOptimizer;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

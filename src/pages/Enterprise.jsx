@@ -33,7 +33,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
             icon: <Phone className="h-8 w-8 text-zion-cyan"/>,
             title: "Dedicated Support",
             description: "Priority support with dedicated account managers and 24/7 technical assistance."
-
     ];
     const plans = [
         {
@@ -74,11 +73,9 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
                 "Custom security",
                 "On-premise options"
             ]
-
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -99,7 +96,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -111,7 +107,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
               Everything you need to manage large-scale tech operations efficiently and securely
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-blue border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
@@ -127,7 +122,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
           </div>
         </div>
       </section>
-
       {/* Plans Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -139,7 +133,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
               Choose the plan that fits your organization's needs and scale
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (<Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${plan.name === "Professional" ? "ring-2 ring-zion-purple" : ""}`}>
                 <CardHeader className="text-center">
@@ -169,7 +162,6 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -192,9 +184,4 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

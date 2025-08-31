@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { specializedIndustrySolutions2026  } from '@/data/2026-specialized-industry-solutions';
-=======
 import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 // Interface for the existing service structure
 export interface Service {
-
   id: string;
   title: string;
   description: string;
@@ -40,14 +34,9 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string;
   compliance?: string[];
-
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
-<<<<<<< HEAD
   return specializedIndustrySolutions2026.map(service = > ({
-=======
-  return specializedIndustrySolutions2026.map(service = > ({
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     id: service.id,
     title: service.name,
     description: service.description,

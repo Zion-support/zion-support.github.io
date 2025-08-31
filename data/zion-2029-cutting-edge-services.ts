@@ -31,18 +31,7 @@ export interface ZionCuttingEdgeService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-  pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // AI-Powered Quantum Computing Solutions
   {
@@ -91,20 +80,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     launchDate: '2024-01-15',
     customers: 45,
     rating: 4.9,
-<<<<<<< HEAD
-    reviews: 23,
-    pricing: {
-      starter: 2999,
-      professional: 7999,
-      enterprise: 19999,
-      currency: 'USD',
-      period: 'month'
-
-=======
     reviews: 89
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
-
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: 'ai-cyber-threat-intelligence',
@@ -141,154 +118,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.',
-    launchDate: '2024-03-01',
-    customers: 89,
-    rating: 4.8,
-    reviews: 156,
-    pricing: {
-      starter: 1499,
-      professional: 3999,
-      enterprise: 9999,
-      currency: 'USD',
-      period: 'month'
-
-  },
-
-  // 3. Blockchain-Based Decentralized Identity Management
-  {
-    id: 'blockchain-decentralized-identity',
-    name: 'Blockchain-Based Decentralized Identity Management',
-    tagline: 'Secure, privacy-first digital identity on the blockchain',
-    price: '$299',
-    period: '/month',
-    description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while ensuring security, privacy, and compliance with global regulations.',
-    features: [
-      'Self-sovereign identity management',
-      'Zero-knowledge proof verification',
-      'Multi-chain blockchain support',
-      'Regulatory compliance automation',
-      'Biometric authentication integration',
-      'Decentralized credential verification',
-      'Privacy-preserving data sharing',
-      'Cross-border identity portability',
-      'Enterprise SSO integration',
-      'Mobile wallet applications'
-    ],
-    benefits: [
-      'Eliminate identity fraud by 99.9%',
-      'Reduce compliance costs by 70%',
-      'Improve user privacy and control',
-      'Enable seamless cross-border operations'
-    ],
-    popular: true,
-    icon: '🔐',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-200',
-    link: 'https://ziontechgroup.com/services/blockchain-decentralized-identity',
-    marketPosition: 'Leading decentralized identity platform. Competes with Microsoft Entra, Okta, and Auth0.',
-    targetAudience: ['Financial institutions', 'Healthcare providers', 'Government agencies', 'E-commerce platforms', 'Travel companies'],
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'Blockchain & Security',
-    aiTechnology: ['AI-powered fraud detection', 'Behavioral biometrics', 'Risk assessment algorithms', 'Compliance automation'],
-    realService: true,
-    technology: ['Ethereum, Polygon, Solana, IPFS, Zero-Knowledge Proofs, Web3.js'],
-    integrations: ['Active Directory', 'SAML/OIDC', 'Biometric devices', 'Government databases', 'Financial institutions'],
-    useCases: ['KYC/AML compliance', 'Healthcare identity', 'Government services', 'Financial services', 'Travel and hospitality'],
-    roi: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.',
-    competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
-    marketSize: '$28.6B identity management market',
-    growthRate: '18.2% annual growth',
-    variant: 'blockchain-identity',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.',
-    launchDate: '2024-02-01',
-    customers: 234,
-    rating: 4.9,
-    reviews: 189,
-    pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
-      currency: 'USD',
-      period: 'month'
-
-  },
-
-  // 4. AI-Powered Climate Change Prediction & Mitigation Platform
-  {
-    id: 'ai-climate-change-prediction',
-    name: 'AI-Powered Climate Change Prediction & Mitigation Platform',
-    tagline: 'Predict and mitigate climate impacts with AI precision',
-    price: '$1,999',
-    period: '/month',
-    description: 'Advanced climate modeling platform that uses AI and machine learning to predict climate change impacts and provide actionable mitigation strategies for businesses and governments.',
-    features: [
-      'AI-powered climate modeling',
-      'Real-time environmental monitoring',
-      'Predictive risk assessment',
-      'Carbon footprint tracking',
-      'Sustainability optimization',
-      'Regulatory compliance automation',
-      'Climate impact visualization',
-      'Mitigation strategy recommendations',
-      'Integration with IoT sensors',
-      'Mobile applications for field workers'
-    ],
-    benefits: [
-      'Reduce climate-related risks by 80%',
-      'Optimize sustainability investments',
-      'Ensure regulatory compliance',
-      'Improve corporate ESG ratings'
-    ],
-    popular: true,
-    icon: '🌍',
-    color: 'from-teal-600 to-green-700',
-    textColor: 'text-teal-200',
-    link: 'https://ziontechgroup.com/services/ai-climate-change-prediction',
-    marketPosition: 'Leading AI-powered climate prediction platform. Competes with ClimateAI, Jupiter Intelligence, and One Concern.',
-    targetAudience: ['Insurance companies', 'Real estate developers', 'Agriculture businesses', 'Government agencies', 'Energy companies'],
-    trialDays: 21,
-    setupTime: '1 month',
-    category: 'AI & Sustainability',
-    aiTechnology: ['Deep Learning', 'Computer Vision', 'Time Series Analysis', 'Natural Language Processing'],
-    realService: true,
-    technology: ['Python, TensorFlow, PyTorch, PostgreSQL, Redis, Kubernetes'],
-    integrations: ['Weather APIs', 'Satellite data', 'IoT sensors', 'Government databases', 'ESG platforms'],
-    useCases: ['Climate risk assessment', 'Insurance underwriting', 'Real estate planning', 'Agricultural planning', 'Energy optimization'],
-    roi: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.',
-    competitors: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],
-    marketSize: '$15.2B climate tech market',
-    growthRate: '24.5% annual growth',
-    variant: 'climate-ai-sustainability',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.',
-    launchDate: '2024-01-01',
-    customers: 156,
-    rating: 4.8,
-    reviews: 234,
-    pricing: {
-      starter: 1999,
-      professional: 4999,
-      enterprise: 12999,
-      currency: 'USD',
-      period: 'month'
-
-=======
     technology: ['TensorFlow', 'PyTorch', 'Elasticsearch', 'Kafka', 'Python', 'React'],
     integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Cloud security tools'],
     useCases: ['Enterprise security', 'Financial institutions', 'Healthcare', 'Government agencies'],
@@ -300,9 +129,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     customers: 234,
     rating: 4.8,
     reviews: 156
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
-
   // Autonomous Business Process Automation
   {
     id: 'autonomous-business-automation',
@@ -339,20 +166,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.',
-    launchDate: '2024-03-15',
-    customers: 67,
-    rating: 4.9,
-    reviews: 45,
-    pricing: {
-      starter: 3999,
-      professional: 9999,
-      enterprise: 24999,
-      currency: 'USD',
-      period: 'month'
-
-=======
     technology: ['OpenAI GPT-4', 'Anthropic Claude', 'LangChain', 'Python', 'Node.js', 'React'],
     integrations: ['Salesforce', 'HubSpot', 'Zapier', 'Microsoft 365', 'Google Workspace'],
     useCases: ['Sales automation', 'HR processes', 'Finance operations', 'Customer service'],
@@ -364,9 +177,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     customers: 167,
     rating: 4.7,
     reviews: 203
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: 'ai-financial-trading-platform',
@@ -391,146 +202,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       '24/7 automated trading',
       'Data-driven investment decisions'
     ],
-<<<<<<< HEAD
-    popular: true,
-    icon: '📦',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-200',
-    link: 'https://ziontechgroup.com/services/autonomous-supply-chain-optimization',
-    marketPosition: 'Leading autonomous supply chain platform. Competes with SAP Ariba, Oracle SCM, and Manhattan Associates.',
-    targetAudience: ['Manufacturing companies', 'Retail chains', 'E-commerce platforms', 'Logistics providers', 'Distribution companies'],
-    trialDays: 30,
-    setupTime: '2 months',
-    category: 'AI & Supply Chain',
-    aiTechnology: ['Machine Learning', 'Predictive Analytics', 'Optimization Algorithms', 'Natural Language Processing'],
-    realService: true,
-    technology: ['Python, TensorFlow', 'PyTorch', 'PostgreSQL', 'Redis', 'Kubernetes'],
-    integrations: ['ERP systems', 'WMS platforms', 'TMS solutions', 'Supplier portals', 'Financial systems'],
-    useCases: ['Inventory optimization', 'Demand forecasting', 'Supplier management', 'Logistics optimization', 'Risk management'],
-    roi: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.',
-    competitors: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
-    marketSize: '$19.2B supply chain management market',
-    growthRate: '11.8% annual growth',
-    variant: 'supply-chain-ai',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.',
-    launchDate: '2024-02-15',
-    customers: 189,
-    rating: 4.8,
-    reviews: 267,
-    pricing: {
-      starter: 2499,
-      professional: 5999,
-      enterprise: 14999,
-      currency: 'USD',
-      period: 'month'
-
-  },
-
-  // 7. AI-Powered Healthcare Diagnostics & Treatment Platform
-  {
-    id: 'ai-healthcare-diagnostics-treatment',
-    name: 'AI-Powered Healthcare Diagnostics & Treatment Platform',
-    tagline: 'Revolutionary AI diagnostics and personalized treatment',
-    price: '$1,799',
-    period: '/month',
-    description: 'Comprehensive healthcare AI platform that provides accurate diagnostics, personalized treatment recommendations, and predictive health analytics for healthcare providers and patients.',
-    features: [
-      'AI-powered medical image analysis',
-      'Personalized treatment recommendations',
-      'Predictive health analytics',
-      'Drug interaction checking',
-      'Clinical decision support',
-      'Patient outcome prediction',
-      'Medical literature analysis',
-      'Telemedicine integration',
-      'Mobile health applications',
-      'HIPAA-compliant data security'
-    ],
-    benefits: [
-      'Improve diagnostic accuracy by 40%',
-      'Reduce treatment costs by 30%',
-      'Improve patient outcomes by 50%',
-      'Enable personalized medicine'
-    ],
-    popular: true,
-    icon: '🏥',
-    color: 'from-red-600 to-pink-700',
-    textColor: 'text-red-200',
-    link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-treatment',
-    marketPosition: 'Leading AI healthcare platform. Competes with IBM Watson Health, Google Health AI, and Microsoft Healthcare.',
-    targetAudience: ['Hospitals', 'Clinics', 'Medical imaging centers', 'Pharmaceutical companies', 'Health insurance providers'],
-    trialDays: 21,
-    setupTime: '1 month',
-    category: 'AI & Healthcare',
-    aiTechnology: ['Computer Vision', 'Natural Language Processing', 'Machine Learning', 'Predictive Analytics'],
-    realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR'],
-    integrations: ['PACS systems', 'EMR platforms', 'Lab systems', 'Telemedicine platforms', 'Wearable devices'],
-    useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Drug discovery', 'Population health'],
-    roi: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.',
-    competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],
-    marketSize: '$45.2B AI healthcare market',
-    growthRate: '23.7% annual growth',
-    variant: 'healthcare-ai',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.',
-    launchDate: '2024-01-01',
-    customers: 234,
-    rating: 4.9,
-    reviews: 456,
-    pricing: {
-      starter: 1799,
-      professional: 4499,
-      enterprise: 11999,
-      currency: 'USD',
-      period: 'month'
-
-  },
-
-  // 8. Autonomous Financial Trading & Portfolio Management
-  {
-    id: 'autonomous-financial-trading',
-    name: 'Autonomous Financial Trading & Portfolio Management',
-    tagline: 'AI-powered autonomous trading and portfolio optimization',
-    price: '$3,999',
-    period: '/month',
-    description: 'Advanced autonomous trading platform that uses AI and machine learning to automatically manage portfolios, execute trades, and optimize investment strategies in real-time.',
-    features: [
-      'AI-powered market analysis',
-      'Autonomous portfolio rebalancing',
-      'Real-time risk management',
-      'Predictive market modeling',
-      'Multi-asset class trading',
-      'Regulatory compliance automation',
-      'Performance analytics and reporting',
-      'Custom trading strategies',
-      'Mobile trading applications',
-      'API for institutional clients'
-    ],
-    benefits: [
-      'Improve portfolio returns by 25%',
-      'Reduce trading costs by 40%',
-      'Eliminate emotional trading decisions',
-      'Enable 24/7 market monitoring'
-    ],
-    popular: true,
-=======
     marketPrice: '$2,499/month (Enterprise), $1,499/month (Professional), $799/month (Starter)',
     category: 'Fintech',
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     icon: '📈',
     isPopular: true,
     link: 'https://ziontechgroup.com/services/ai-financial-trading-platform',
@@ -553,7 +226,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.6,
     reviews: 134
   },
-
   // IoT Edge Computing Platform
   {
     id: 'iot-edge-computing-platform',
@@ -600,20 +272,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     launchDate: '2024-02-28',
     customers: 156,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 156,
-    pricing: {
-      starter: 3999,
-      professional: 9999,
-      enterprise: 24999,
-      currency: 'USD',
-      period: 'month'
-
-=======
     reviews: 98
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics',
@@ -650,77 +310,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.',
-    launchDate: '2024-01-15',
-    customers: 345,
-    rating: 4.9,
-    reviews: 567,
-    pricing: {
-      starter: 2199,
-      professional: 5499,
-      enterprise: 13999,
-      currency: 'USD',
-      period: 'month'
-
-  },
-
-  // 10. Autonomous Smart City Infrastructure Management
-  {
-    id: 'autonomous-smart-city-infrastructure',
-    name: 'Autonomous Smart City Infrastructure Management',
-    tagline: 'AI-powered smart city optimization and management',
-    price: '$4,999',
-    period: '/month',
-    description: 'Comprehensive smart city platform that uses AI and IoT to autonomously manage urban infrastructure, optimize resource usage, and improve citizen quality of life.',
-    features: [
-      'AI-powered traffic optimization',
-      'Smart energy management',
-      'Waste management optimization',
-      'Public safety monitoring',
-      'Environmental monitoring',
-      'Citizen engagement platform',
-      'Infrastructure maintenance prediction',
-      'Emergency response optimization',
-      'Data analytics dashboard',
-      'Mobile applications for citizens'
-    ],
-    benefits: [
-      'Reduce energy costs by 30%',
-      'Improve traffic flow by 40%',
-      'Reduce emergency response time by 50%',
-      'Improve citizen satisfaction'
-    ],
-    popular: true,
-    icon: '🏙️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-200',
-    link: 'https://ziontechgroup.com/services/autonomous-smart-city-infrastructure',
-    marketPosition: 'Leading smart city platform. Competes with Cisco Smart Cities, Siemens City Performance, and IBM Smarter Cities.',
-    targetAudience: ['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Technology providers'],
-    trialDays: 30,
-    setupTime: '3 months',
-    category: 'AI & Smart Cities',
-    aiTechnology: ['Machine Learning', 'Computer Vision', 'IoT Analytics', 'Predictive Analytics'],
-    realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5G networks'],
-    integrations: ['Traffic systems', 'Energy grids', 'Water systems', 'Public safety systems', 'Citizen portals'],
-    useCases: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Citizen services'],
-    roi: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.',
-    competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],
-    marketSize: '$225.1B smart city market',
-    growthRate: '14.8% annual growth',
-    variant: 'smart-city-ai',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.',
-    launchDate: '2024-03-01',
-=======
     technology: ['TensorFlow', 'PyTorch', 'OpenCV', 'Python', 'React', 'Node.js'],
     integrations: ['Epic', 'Cerner', 'Allscripts', 'DICOM systems', 'HL7'],
     useCases: ['Radiology', 'Pathology', 'Cardiology', 'Oncology', 'General practice'],
@@ -729,12 +318,10 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     marketSize: '$45.2B AI in healthcare market',
     growthRate: '44.9% annual growth',
     launchDate: '2023-12-10',
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     customers: 78,
     rating: 4.9,
     reviews: 67
   },
-
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain',
@@ -783,7 +370,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.7,
     reviews: 89
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
@@ -830,20 +416,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     launchDate: '2023-10-15',
     customers: 456,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 123,
-    pricing: {
-      starter: 4999,
-      professional: 12999,
-      enterprise: 29999,
-      currency: 'USD',
-      period: 'month'
-
-
-=======
     reviews: 234
   },
-
   // Cloud-Native Development Platform
   {
     id: 'cloud-native-development',
@@ -892,7 +466,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.7,
     reviews: 167
   },
-
   // AI-Powered Customer Service Platform
   {
     id: 'ai-customer-service',
@@ -941,7 +514,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 345
   },
-
   // Data Analytics and Business Intelligence
   {
     id: 'ai-data-analytics-bi',
@@ -990,32 +562,13 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 234
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const getServicesByCategory = (category: ZionCuttingEdgeService2029['category']) => {
   return zionCuttingEdgeServices2029.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isPopular);
 };
-
-<<<<<<< HEAD
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return zionCuttingEdgeServices2029.filter(service => {
-    const starterPrice = service.pricing.starter;
-    return starterPrice >= minPrice && starterPrice <= maxPrice;
-  });
-};
-
-export const getServicesByTechnology = (technology: string) => {
-  return zionCuttingEdgeServices2029.filter(service =>
-    service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};}}}}}}}}}}}}
-=======
 export const getNewServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isNew);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

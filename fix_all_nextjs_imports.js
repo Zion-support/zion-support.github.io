@@ -1,15 +1,8 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-<<<<<<< HEAD
-// // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
-=======
 // // // // // // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-
 // Define the replacements
 const replacements = [
   // Link component
@@ -41,24 +34,19 @@ const replacements = [
   {
     pattern: /import\s+type\s+\{\s*AppProps\s*\}\s+from\s+['"]next\/app['"];?/g,
     replacement: '// import type { AppProps } from \'next/app\'; // TODO: Remove or replace with appropriate type'
-
 ];
-
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     let newContent = content;
-
     // Apply all replacements
     replacements.forEach(({ pattern, replacement }) => {
       if (pattern.test(newContent)) {
         newContent = newContent.replace(pattern, replacement);
         modified = true;
-
     });
-
     // Additional replacements for useRouter usage
     if (newContent.includes('useRouter')) {
       newContent = newContent.replace(/useRouter\(\)/g, 'useNavigate()');
@@ -67,13 +55,11 @@ function processFile(filePath) {
       newContent = newContent.replace(/router\.back\(\)/g, 'router(-1)');
       newContent = newContent.replace(/router\.forward\(\)/g, 'router(1)');
       modified = true;
-
     // Replace Head usage with Helmet
     if (newContent.includes('<Helmet>')) {
       newContent = newContent.replace(/<Helmet>/g, '<Helmet>');
       newContent = newContent.replace(/<\/Head>/g, '</Helmet>');
       modified = true;
-
     // Replace Image usage with img
     if (newContent.includes('<Image')) {
       newContent = newContent.replace(/<Image\s+/g, '<img ');
@@ -83,92 +69,40 @@ function processFile(filePath) {
       newContent = newContent.replace(/\s+fill\s*=\s*\{[^}]*\}/g, '');
       newContent = newContent.replace(/\s+sizes\s*=\s*\{[^}]*\}/g, '');
       modified = true;
-
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD
-      // // // console.log(`✅ Fixed: ${filePath}`);
-=======
       // // // // // // // console.log(`✅ Fixed: ${filePath}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return true;
-
   } catch (error) {
-<<<<<<< HEAD
-    // // // console.error(`❌ Error processing ${filePath}:`, error.message);
-
-=======
     // // // // // // // console.error(`❌ Error processing ${filePath}:`, error.message);
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   return false;
-
 // Function to find all TypeScript/JavaScript files
-<<<<<<< HEAD
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
-
-=======
 function files = [];
-  
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-
       if (stat.isDirectory()) {
         // Skip certain directories
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'temp_backup', 'broken_files_backup'].includes(item)) {
           traverse(fullPath);
-
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-
-
-
   traverse(dir);
   return files;
-
 // Main execution
 try {
   const projectRoot = process.cwd();
-<<<<<<< HEAD
-  // // // console.log(`📁 Scanning project root: ${projectRoot}\n`);
-
-  const files = findFiles(projectRoot);
-  // // // console.log(`📋 Found ${files.length} files to process\n`);
-=======
   // // // // // // // console.log(`📁 Scanning project root: ${projectRoot}\n`);
-
   const files = findFiles(projectRoot);
   // // // // // // // console.log(`📋 Found ${files.length} files to process\n`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-
   const fixedCount = 0;
-
   for (const file of files) {
     if (processFile(file)) {
       fixedCount++;
-
-<<<<<<< HEAD
-
-  // // // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
-
-  if (fixedCount > 0) {
-    // // // console.log('\n📝 Next steps:');
-    // // // console.log('1. Review the changes');
-    // // // console.log('2. Test the build: npm run build');
-    // // // console.log('3. Fix any remaining issues manually');
-    // // // console.log('4. Commit and push changes');
-
-} catch (error) {
-  // // // console.error('❌ Script failed:', error.message);
-=======
   // // // // // // // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
-
   if (fixedCount > 0) {
     // // // // // // // console.log('\n📝 Next steps:');
     // // // // // // // console.log('1. Review the changes');
@@ -176,9 +110,7 @@ try {
     // // // // // // // console.log('3. Fix any remaining issues manually');
     // // // // // // // console.log('4. Commit and push changes');
   }
-
 } catch (error) {
   // // // // // // // console.error('❌ Script failed:', error.message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 }}}}}}}}}}}}}}))))

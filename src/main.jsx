@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// // // console.log("main.tsx: Start");
-=======
 // // // // // // // console.log("main.tsx: Start");
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -22,14 +18,8 @@ import { AppLayout } from '@/layout/AppLayout';
 import { AuthProvider } from "./context/auth/AuthProvider";
 import { NotificationProvider } from "./context/notifications/NotificationContext";
 // Import analytics provider
-<<<<<<< HEAD
 import { AnalyticsProvider } from "./context/AnalyticsContext";
 import { ViewModeProvider } from "./context/ViewModeContext";
-=======
-import { AnalyticsProvider } from "./context/AnalyticsContext";
-import { ViewModeProvider } from "./context/ViewModeContext";
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -39,38 +29,6 @@ const queryClient = new QueryClient({
         },
     },
 });
-<<<<<<< HEAD
-const renderApp() {
-    const app = (<React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState = {
-  { isAuthenticated: false,
-  user: null 
-
-}}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>);
-=======
-
 const renderApp() {
     const app = (
         <React.StrictMode>
@@ -84,12 +42,6 @@ const renderApp() {
                                         <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
-
-
-
-
-
-
 }}>
                                             <ViewModeProvider>
                                                 <AppLayout>
@@ -107,49 +59,21 @@ const renderApp() {
             </HelmetProvider>
         </React.StrictMode>
     );
-    
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (rootElement?.hasChildNodes()) {
-<<<<<<< HEAD
-        hydrateRoot(rootElement, app);
-
-    else if (rootElement) {
-        createRoot(rootElement).render(app);
-
-=======
         hydrateRoot(rootElement, app)}
     else if (rootElement) {
         createRoot(rootElement).render(app)}
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
       <div style="padding:20px;text-align:center;font-family:sans-serif;">
         <h1>Application Error</h1>
         <p>${message}</p>
-<<<<<<< HEAD
-      </div>`;
-
-
-try {
-    renderApp();
-
-catch (error) {
-<<<<<<< HEAD
-    // // // console.error('Global error caught in main.tsx:', error);
-=======
     // // // // // // // console.error('Global error caught in main.tsx:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(error.message);
-
 window.addEventListener('error', (e) => {
-<<<<<<< HEAD
-    // // // console.error('Unhandled error:', e.error || e.message);
-=======
     // // // // // // // console.error('Unhandled error:', e.error || e.message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     displayFatalError(e.message);
 });
 =======
@@ -163,7 +87,6 @@ catch (error) {
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
     <HelmetProvider>
@@ -176,7 +99,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
                   <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
-
 }}>
                     <AppLayout>
                       <App />

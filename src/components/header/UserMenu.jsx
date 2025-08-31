@@ -1,11 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart import { useAuth } from '../../hooks/useAuth';
-=======
 import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
 import { useAuth } from "../../hooks/useAuth";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const UserMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
@@ -13,33 +9,18 @@ export const UserMenu = () => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-<<<<<<< HEAD
-                setIsOpen(false);
-
-=======
                 setIsOpen(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleLogout = async () => {
         try {
             await logout();
-<<<<<<< HEAD
-            setIsOpen(false);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Logout failed:', error);
-
-=======
             // // // // // // // console.error('Logout failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     if (!user) {
         return null;
-
 =======
             setIsOpen(false)}
         catch (error) {
@@ -47,7 +28,6 @@ export const UserMenu = () => {
     };
     if (!user) {
         return null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="relative" ref={menuRef}>
       <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -56,7 +36,6 @@ export const UserMenu = () => {
         <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
-
       {isOpen && (<div className="absolute top-full right-0 mt-2 w-56 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
             {/* User Info */}
@@ -64,30 +43,25 @@ export const UserMenu = () => {
               <div className="text-sm font-medium text-white">{user.name || 'User'}</div>
               <div className="text-xs text-gray-400">{user.email}</div>
             </div>
-
             {/* Menu Items */}
             <div className="py-1">
               <Link to="/profile" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <User className="w-4 h-4"/>
                 Profile
               </Link>
-
               <Link to="/notifications" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Bell className="w-4 h-4"/>
                 Notifications
               </Link>
-
               <Link to="/orders" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <ShoppingCart className="w-4 h-4"/>
                 Orders
               </Link>
-
               <Link to="/settings" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Settings className="w-4 h-4"/>
                 Settings
               </Link>
             </div>
-
             {/* Logout */}
             <div className="border-t border-gray-800 pt-1">
               <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors">
@@ -97,10 +71,4 @@ export const UserMenu = () => {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

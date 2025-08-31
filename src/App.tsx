@@ -44,8 +44,16 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative Services 2025
+const AIAutonomousBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-business-intelligence-platform'));
+const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence-platform'));
+const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// Pricing page
+const Pricing = createLazyComponent(() => import('./pages/Pricing').then(module => ({ default: module.Pricing })));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -119,8 +127,16 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
 
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-autonomous-business-intelligence-platform" element={<AIAutonomousBusinessIntelligence />} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalytics />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+
+                    {/* Pricing Route */}
+                    <Route path="/pricing" element={<Pricing />} />
 
                     {/* 404 Page */}
                     <Route

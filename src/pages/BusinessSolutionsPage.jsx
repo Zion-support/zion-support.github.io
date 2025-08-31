@@ -150,7 +150,6 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         category: "Sustainability",
         badge: "New",
         link: "/request-quote?service=sustainability-consulting"
-
 ];
 const categories = [
     { name: "All", value: "all", icon: <Building className="h-4 w-4"/> },
@@ -200,7 +199,6 @@ export default function BusinessSolutionsPage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -211,7 +209,6 @@ export default function BusinessSolutionsPage() {
               {category.name}
             </Button>))}
         </div>
-
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredSolutions.map((solution, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-blue/20 hover:border-zion-blue/50 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -252,7 +249,6 @@ export default function BusinessSolutionsPage() {
               </div>
             </Card>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -273,9 +269,4 @@ export default function BusinessSolutionsPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -21,19 +21,6 @@ export const useAICodeGeneration = () => {
             let generatedCode = '';
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
-<<<<<<< HEAD
-                generatedCode = generateReactTypeScriptCode(prompt, options);
-
-            else if (options.language === 'javascript' && options.framework === 'express') {
-                generatedCode = generateExpressCode(prompt, options);
-
-            else if (options.language === 'python') {
-                generatedCode = generatePythonCode(prompt, options);
-
-            else {
-                generatedCode = generateGenericCode(prompt, options);
-
-=======
                 generatedCode = generateReactTypeScriptCode(prompt, options)}
             else if (options.language === 'javascript' && options.framework === 'express') {
                 generatedCode = generateExpressCode(prompt, options)}
@@ -41,7 +28,6 @@ export const useAICodeGeneration = () => {
                 generatedCode = generatePythonCode(prompt, options)}
             else {
                 generatedCode = generateGenericCode(prompt, options)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setGeneratedCode(generatedCode);
             // Add to history
             const historyItem = {
@@ -60,22 +46,12 @@ export const useAICodeGeneration = () => {
                 style: options.style,
                 target: options.target,
                 quality: options.quality
-<<<<<<< HEAD
-            });
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
-=======
             // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-
         finally {
             setIsGenerating(false);
-
 =======
             })}
         catch (error) {
@@ -85,7 +61,6 @@ export const useAICodeGeneration = () => {
             })}
         finally {
             setIsGenerating(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Analyze existing code
     const analyzeCode = useCallback(async (code, language) => {
@@ -103,13 +78,6 @@ export const useAICodeGeneration = () => {
                 metrics: getCodeMetrics(code),
                 issues: analyzeCodeIssues(code,
   language)
-            
-
-
-
-
-
-
 };
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
@@ -118,22 +86,12 @@ export const useAICodeGeneration = () => {
                 maintainability: analysis.maintainability,
                 security: analysis.security,
                 performance: analysis.performance
-<<<<<<< HEAD
-            });
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
-=======
             // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-
         finally {
             setIsAnalyzing(false);
-
 =======
             })}
         catch (error) {
@@ -143,7 +101,6 @@ export const useAICodeGeneration = () => {
             })}
         finally {
             setIsAnalyzing(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Apply a code suggestion
     const applySuggestion = useCallback((suggestion) => {
@@ -171,23 +128,11 @@ export const useAICodeGeneration = () => {
                     break;
                 case 'accessibility':
                     optimizedCode = optimizeForAccessibility(code);
-<<<<<<< HEAD
-                    break;
-
-            trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
-            return optimizedCode;
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
-=======
             // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to optimize code:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code;
-
 =======
                     break}
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
@@ -198,7 +143,6 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Generate tests for code
     const generateTests = useCallback(async (code, language) => {
@@ -207,29 +151,11 @@ export const useAICodeGeneration = () => {
             await new Promise(resolve => setTimeout(resolve, 2000));
             let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
-<<<<<<< HEAD
-                testCode = generateJestTests(code);
-
-            else if (language === 'python') {
-                testCode = generatePytestTests(code);
-
-            else {
-                testCode = generateGenericTests(code, language);
-
-            trackEvent('ai_code_generation', 'tests_generated', language, testCode.length);
-            return testCode;
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
-=======
             // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate tests:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests';
-
 =======
                 testCode = generateJestTests(code)}
             else if (language === 'python') {
@@ -244,7 +170,6 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Generate documentation for code
     const generateDocs = useCallback(async (code, language) => {
@@ -253,29 +178,11 @@ export const useAICodeGeneration = () => {
             await new Promise(resolve => setTimeout(resolve, 1500));
             let docs = '';
             if (language === 'typescript' || language === 'javascript') {
-<<<<<<< HEAD
-                docs = generateJSDoc(code);
-
-            else if (language === 'python') {
-                docs = generatePythonDoc(code);
-
-            else {
-                docs = generateGenericDocs(code, language);
-
-            trackEvent('ai_code_generation', 'docs_generated', language, docs.length);
-            return docs;
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
-=======
             // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation';
-
 =======
                 docs = generateJSDoc(code)}
             else if (language === 'python') {
@@ -290,7 +197,6 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Clear generation history
     const clearHistory = useCallback(() => {
@@ -306,18 +212,6 @@ export const useAICodeGeneration = () => {
                 suggestions,
                 timestamp: new Date().toISOString()
             }, null, 2);
-<<<<<<< HEAD
-            filename = 'generated-code.json';
-
-        else if (format === 'md') {
-            exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
-            filename = 'generated-code.md';
-
-        else {
-            exportContent = generatedCode;
-            filename = 'generated-code.txt';
-
-=======
             filename = 'generated-code.json'}
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
@@ -325,7 +219,6 @@ export const useAICodeGeneration = () => {
         else {
             exportContent = generatedCode;
             filename = 'generated-code.txt'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const blob = new Blob([exportContent], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -352,59 +245,43 @@ export const useAICodeGeneration = () => {
     const generateReactTypeScriptCode = (prompt, options) => {
         return `import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
-
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
-
   useEffect(() => {
     // TODO: Implement initialization logic
   }, []);
-
   const handleAction = useCallback(() => {
     // TODO: Implement action handler
   }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="generated-component"
-
       {/* TODO: Implement component based on prompt: ${prompt} */}
       <h1>Generated Component</h1>
       <p>This component was generated based on your prompt.</p>
     </motion.div>
   )};
-
 export default GeneratedComponent;`};
     const generateExpressCode = (prompt, _options) => {
         return `import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 // Middleware
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
-
 // Routes
 app.get('/', (req, res) => {
   res.json({ message: 'Generated API based on prompt: ${prompt}' })});
-
 // TODO: Implement additional routes based on prompt
-
 app.listen(PORT, () => {
-<<<<<<< HEAD
-  // // // // // // // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
-=======
   // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -412,29 +289,23 @@ app.listen(PORT, () => {
 """
 Generated Python code based on prompt: ${prompt}
 """
-
 import asyncio
 from typing import Optional, List, Dict, Any
 from dataclasses import dataclass
-
 @dataclass
 class GeneratedClass:
     """Generated class based on prompt."""
-
     def __init__(self):
         # TODO: Implement initialization
         pass
-
     async def process_data(self, data: Any) -> Any:
         """Process data based on prompt requirements."""
         # TODO: Implement data processing logic
         return data
-
 async def main():
     """Main function."""
     instance = GeneratedClass()
     # TODO: Implement main logic based on prompt
-
 if __name__ == "__main__":
     asyncio.run(main())`;
     };
@@ -443,35 +314,20 @@ if __name__ == "__main__":
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
-
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-// // // // // // // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
-=======
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`;
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 =======
 // // // // // // // // // // // // // // // // // // // // // console.log("Generated code placeholder");
 // // // // // // // // // // // // // // // // // // // // // console.log("Prompt:", "${prompt}");
 // // // // // // // // // // // // // // // // // // // // // console.log("Language:", "${options.language}");`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Helper functions for code analysis
-<<<<<<< HEAD
-    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
-        return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)))};
-=======
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const calculateMaintainability = (code) => {
         const lines = code.split('\n').length;
         const functions = (code.match(/function|=>/g) || []).length;
@@ -507,14 +363,8 @@ if __name__ == "__main__":
                 category: 'Performance',
                 tags['timers', 'animation', 'cleanup'],
                 explanation: 'Timers can cause memory leaks and performance issues if not properly managed.',
-<<<<<<< HEAD
-                alternatives: ['requestAnimationFrame', 'useEffect cleanup', 'AbortController']
-            });
-
-=======
                 alternatives['requestAnimationFrame', 'useEffect cleanup', 'AbortController']
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Security suggestions
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
@@ -528,14 +378,8 @@ if __name__ == "__main__":
                 category: 'Security',
                 tags['xss', 'security', 'user-input'],
                 explanation: 'innerHTML can execute malicious scripts if user input is not properly sanitized.',
-<<<<<<< HEAD
-                alternatives: ['textContent', 'createElement', 'DOMPurify']
-            });
-
-=======
                 alternatives['textContent', 'createElement', 'DOMPurify']
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Best practice suggestions
         if (code.includes('console.log')) {
             suggestions.push({
@@ -549,17 +393,9 @@ if __name__ == "__main__":
                 category: 'Best Practices',
                 tags['logging', 'production', 'cleanup'],
                 explanation: 'Console logs should not be in production code as they can impact performance and expose sensitive information.',
-<<<<<<< HEAD
-                alternatives: ['winston', 'pino', 'debug package']
-            });
-
-        return suggestions;
-    };
-=======
                 alternatives['winston', 'pino', 'debug package']
             })}
         return suggestions};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const analyzeCodeIssues = (code, _language) => {
         const issues = [];
         if (code.includes('TODO')) {
@@ -567,19 +403,6 @@ if __name__ == "__main__":
                 severity: 'info',
                 message: 'Code contains TODO comments that need implementation',
                 line: code.split('\n').findIndex(line => line.includes('TODO')) + 1
-<<<<<<< HEAD
-            });
-
-        if (code.includes('any')) {
-            issues.push({
-                severity: 'warning',
-                message: 'Usage of "any" type reduces type safety',
-                line: code.split('\n').findIndex(line => line.includes('any')) + 1
-            });
-
-        return issues;
-    };
-=======
             })}
         if (code.includes('')) {
             issues.push({
@@ -588,7 +411,6 @@ if __name__ == "__main__":
                 line: code.split('\n').findIndex(line => line.includes('')) + 1
             })}
         return issues};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Helper functions for code optimization
     const optimizeForAccessibility = (code) => {
         return code
@@ -599,12 +421,10 @@ if __name__ == "__main__":
     const generateJestTests = (_code) => {
         return `import { render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from "./GeneratedComponent";
-
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
-
   it('handles user interactions', () => {
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
@@ -614,23 +434,19 @@ describe('GeneratedComponent', () => {
     const generatePytestTests = (_code) => {
         return `import pytest
 from generated_module import GeneratedClass
-
 class TestGeneratedClass:
     def test_initialization(self):
         instance = GeneratedClass()
         assert instance is not None
-
     def test_process_data(self):
         instance = GeneratedClass()
         result = instance.process_data("test")
         assert result == "test"
-
     # TODO: Add more specific test cases based on class functionality`;
     };
     const generateGenericTests = (_code, language) => {
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
-
 describe('Generated Code Tests', () => {
   it('should work as expected', () => {
     // TODO: Add test implementation
@@ -653,14 +469,11 @@ export const GeneratedComponent = () => {
     const generatePythonDoc = (_code) => {
         return `"""
 Generated Module
-
 This module was generated based on user requirements.
 """
-
 def generated_function():
     """
     Generated function with docstring.
-
     Returns:
         str: Description of return value
     """
@@ -678,15 +491,8 @@ def generated_function():
     useEffect(() => {
         return () => {
             if (generationTimeoutRef.current) {
-<<<<<<< HEAD
-                clearTimeout(generationTimeoutRef.current);
-
-        };
-    }, []);
-=======
                 clearTimeout(generationTimeoutRef.current)}
         }}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return {
         // State
         isGenerating,
@@ -706,20 +512,10 @@ def generated_function():
         clearHistory,
         exportCode,
         getCodeMetrics
-<<<<<<< HEAD
-    }};
-=======
     };
-<<<<<<< HEAD
-</div></div>};
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}})))
-=======
 };
-
 export default with;
 export default with;
 export default with;
 export default with;
 export default with;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

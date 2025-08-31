@@ -21,7 +21,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/quantum-edge-computing-platform",
                     features["Low Latency", "High Security", "Scalable Infrastructure"],
                     status: "Emerging Technology"
-
             ]
         },
         {
@@ -42,7 +41,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/space-tech",
                     features["Earth Observation", "Climate Monitoring", "Resource Management"],
                     status: "Production Ready"
-
             ]
         },
         {
@@ -63,7 +61,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/services/edge-computing",
                     features["Low Latency", "High Bandwidth", "Distributed Processing"],
                     status: "Production Ready"
-
             ]
         },
         {
@@ -84,7 +81,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/ai-autonomous-research-assistant",
                     features["Research Automation", "Data Analysis", "Insight Generation"],
                     status: "Research & Development"
-
             ]
         },
         {
@@ -105,7 +101,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/services/ai-workflow-automation",
                     features["Process Optimization", "Error Reduction", "Efficiency Gains"],
                     status: "Production Ready"
-
             ]
         },
         {
@@ -126,9 +121,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     href: "/services/blockchain-defi-solutions",
                     features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
                     status: "Active Development"
-
             ]
-
     ];
     const researchAreas = [
         {
@@ -154,7 +147,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             description: "Creating truly autonomous AI systems with minimal human intervention",
             progress: 80,
             timeline: "2025-2026"
-
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -162,26 +154,16 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5
-
-
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -194,37 +176,19 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             case "Emerging Technology":
                 return "text-purple-400 bg-purple-400/20";
             default:
-<<<<<<< HEAD
-                return "text-gray-400 bg-gray-400/20";
-
-=======
                 return "text-gray-400 bg-gray-400/20"}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
@@ -246,7 +210,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </motion.div>
         </div>
       </div>
-
       {/* Technologies Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
@@ -259,7 +222,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                 <p className="text-gray-400 max-w-2xl mx-auto mb-6">{category.description}</p>
                 <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {category.technologies.map((tech, techIndex) => (<motion.div key={tech.name} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-purple-500/50 transition-all duration-300 group">
                     <div className="flex items-start justify-between mb-4">
@@ -270,11 +232,9 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                         {tech.status}
                       </span>
                     </div>
-
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {tech.description}
                     </p>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-medium text-gray-300 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -284,7 +244,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                           </li>))}
                       </ul>
                     </div>
-
                     <Link to={tech.href} className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Learn More
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -296,28 +255,15 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             </motion.div>))}
         </motion.div>
       </div>
-
       {/* Research & Development Section */}
       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Research & Development
@@ -327,43 +273,22 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
               working on next-generation technologies that will shape the future.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (<motion.div key={area.title} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-white">{area.title}</h3>
                   <span className="text-sm text-purple-400">{area.timeline}</span>
                 </div>
-
                 <p className="text-gray-400 text-sm mb-4">{area.description}</p>
-
                 <div className="mb-2">
                   <div className="flex justify-between text-sm text-gray-400 mb-1">
                     <span>Progress</span>
@@ -377,27 +302,14 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Explore the Future?
@@ -416,11 +328,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EmergingTech;
 }}}}}}}}}}}}}}

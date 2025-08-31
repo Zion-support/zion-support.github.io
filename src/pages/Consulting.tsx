@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
-=======
 import React from 'react.ts';
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
-
 const Consulting = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const consultingServices = [
     {
       icon: Lightbulb,
@@ -39,14 +33,6 @@ const Consulting = () => {
       features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
     },
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: "Digital Innovation",
-      description: "Emerging technology consulting and innovation acceleration",
-<<<<<<< HEAD
-      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-
-=======
       features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
     };
 =======;
@@ -55,10 +41,7 @@ const Consulting = () => {
       description: "Emerging technology consulting and innovation acceleration",;
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const industries = [
     {
       title: "Financial Services",
@@ -83,15 +66,6 @@ const Consulting = () => {
     {
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
-<<<<<<< HEAD
-      icon: Globe
-    },
-    {
-      title: "Government",
-      description: "Public sector digital transformation consulting",
-      icon: Briefcase
-
-=======
       icon: Globe;
     },;
     {;
@@ -99,9 +73,7 @@ const Consulting = () => {
       description: "Public sector digital transformation consulting",;
       icon: Briefcase;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Expert guidance from industry professionals",;
     "Proven methodologies and best practices",;
@@ -110,7 +82,6 @@ const Consulting = () => {
     "Measurable results and ROI",;
     "Access to cutting-edge technology insights";
   ];
-
   const process = [
     {
       phase: "Discovery",
@@ -125,15 +96,6 @@ const Consulting = () => {
     {
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
-<<<<<<< HEAD
-      duration: "3-6 weeks"
-    },
-    {
-      phase: "Implementation",
-      description: "Executing the strategy with ongoing support and guidance",
-      duration: "Ongoing"
-
-=======
       duration: "3-6 weeks";
     },;
     {;
@@ -141,9 +103,7 @@ const Consulting = () => {
       description: "Executing the strategy with ongoing support and guidance",;
       duration: "Ongoing";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -173,7 +133,6 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-
       {/* Consulting Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -186,7 +145,6 @@ const Consulting = () => {
               technology challenges and opportunities.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {consultingServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
@@ -208,7 +166,6 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-
       {/* Industries */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -221,7 +178,6 @@ const Consulting = () => {
               to deliver relevant and effective solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
@@ -235,7 +191,6 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -275,7 +230,6 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-
       {/* Consulting Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -286,7 +240,6 @@ const Consulting = () => {
             A systematic approach to delivering consulting services that ensures
             success and maximizes value for our clients.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
               <div key={index} className="text-center">
@@ -301,7 +254,6 @@ const Consulting = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -318,14 +270,6 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -333,6 +277,4 @@ const Consulting = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default Consulting;}}}}

@@ -18,12 +18,7 @@ export function EnhancedNewsletterForm() {
         const trimmed = email.trim();
         if (!EMAIL_REGEX.test(trimmed)) {
             toast.error("Invalid email");
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             const res = await fetch("/api/newsletter", {
@@ -35,36 +30,13 @@ export function EnhancedNewsletterForm() {
             if (res.ok) {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
-<<<<<<< HEAD
-                    toast.success(data.message || "You're already subscribed!");
-
-                else {
-                    toast.success(data.message || "Thanks for subscribing!");
-
-                setIsSubmitted(true);
-                setEmail("");
-
-            else {
-                // Handle error responses
-<<<<<<< HEAD
-                // // // console.error('Newsletter subscription failed:', data);
-=======
                 // // // // // // // console.error('Newsletter subscription failed:', data);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast.error(data.error || "Subscription failed. Please try again.");
-
-
         catch (err) {
-<<<<<<< HEAD
-            // // // console.error('Newsletter subscription error:', err);
-=======
             // // // // // // // console.error('Newsletter subscription error:', err);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Unable to subscribe right now. Please try again later.");
-
         finally {
             setIsSubmitting(false);
-
 =======
                     toast.success(data.message || "You're already subscribed!")}
                 else {
@@ -81,7 +53,6 @@ export function EnhancedNewsletterForm() {
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -93,7 +64,6 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
@@ -103,7 +73,6 @@ export function EnhancedNewsletterForm() {
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>)}
-
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (<div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
@@ -112,9 +81,4 @@ export function EnhancedNewsletterForm() {
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

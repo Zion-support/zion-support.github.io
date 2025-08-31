@@ -1,108 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import {
-  Users,
-  TrendingUp,
-  Award,
-  Globe,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Play,
-  ChevronLeft,
-  ChevronRight,
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Zap as ZapIcon,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Zap as ZapIcon2
-// Optimized futuristic animated background component
-const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() =>
-    [...Array(20)].map((_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
-    })), []
-  );
-
-  return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      {/* Animated grid with neon effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-
-      {/* Optimized floating particles */}
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
-          animate={{
-            x: [0, 200, 0],
-            y: [0, -200, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,
-            ease: "easeInOut"
-          }}
-          style={{
-            left: particle.left,
-            top: particle.top,
-          }}
-        />
-      ))}
-    </div>
-  );
-});
-
-FuturisticBackground.displayName = 'FuturisticBackground';
-=======
 import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, TrendingUp } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -128,7 +26,6 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 const serviceCategories = [
@@ -181,12 +78,9 @@ const serviceCategories = [
     color: "from-pink-500 to-rose-600"
   }
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const heroSlides = useMemo(() => [
     {
       title: "AI-Powered Solutions",
@@ -211,26 +105,20 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
-
   ], []);
-
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, [heroSlides.length]);
-
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, [heroSlides.length]);
-
   useEffect(() => {
     // Simulate loading time for better UX
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-
     return () => clearTimeout(timer);
   }, []);
-
   const stats = [
     {
       value: "500+",
@@ -261,7 +149,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-purple-400 to-pink-500"
     }
   ];
-
   const aiServices = [
     {
       title: "AI Business Intelligence",
@@ -288,7 +175,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-green-400 to-emerald-500"
     }
   ];
-
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
@@ -345,7 +231,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["Quantum Algorithms", "Quantum Security", "Quantum Simulation", "Quantum ML"]
     }
   ];
-
   const emergingTech = [
     {
       title: "Metaverse Commerce",
@@ -380,7 +265,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Transportation"
     }
   ];
-
   const microSaasServices = [
     {
       title: "AI Customer Success",
@@ -415,7 +299,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Healthcare"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -425,7 +308,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -447,12 +329,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-12"
-
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
           </div>
-
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             Zion Tech Group
           </h1>
@@ -460,108 +340,26 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             Leading the future of technology with cutting-edge AI solutions, quantum computing,
             and innovative micro SAAS services that transform businesses worldwide.
           </p>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to="/services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Explore our services"
-
               <span>Explore Services</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            
             <button
               onClick={onGetStarted}
-<<<<<<< HEAD
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
-              aria-label="Get started with Zion Tech"
-
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-=======
               className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-zion-slate-dark font-bold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Get started with Zion Tech Group"
             >
               Get Started
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </button>
           </div>
         </motion.div>
-
         {/* Hero Slides */}
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-6xl mx-auto"
-
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
-
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
-                      {React.createElement(heroSlides[currentSlide].icon, { className: "w-8 h-8 text-cyan-400" })}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                      {heroSlides[currentSlide].title}
-                    </h3>
-                    <p className="text-gray-300 mb-6">
-                      {heroSlides[currentSlide].description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-3">
-                      {heroSlides[currentSlide].features.map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm text-cyan-400">
-                          <CheckCircle className="w-4 h-4 mr-2" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Previous slide"
-
-              <ChevronLeft className="w-6 h-6 text-cyan-400" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Next slide"
-
-              <ChevronRight className="w-6 h-6 text-cyan-400" />
-            </button>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-cyan-400 scale-125'
-                      : 'bg-cyan-400/30 hover:bg-cyan-400/50'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-=======
           key={currentSlide}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -575,27 +373,22 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                   {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-cyan-400" })}
                 </div>
               </div>
-            
             <h2 className="text-3xl font-bold text-white mb-4">
               {heroSlides[currentSlide].title}
             </h2>
-            
             <p className="text-gray-300 mb-6 text-lg">
               {heroSlides[currentSlide].description}
             </p>
-            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {heroSlides[currentSlide].features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2 text-sm">
                   <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
                 </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
           </div>
         </motion.div>
-
         {/* Slide Navigation */}
         <div className="flex justify-center mt-8 space-x-2">
           {heroSlides.map((_, index) => (
@@ -615,7 +408,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     </section>
   );
 });
-
 // Stats section component
 const StatsSection = React.memo(() => {
   const stats = [
@@ -624,7 +416,6 @@ const StatsSection = React.memo(() => {
     { label: "Security Certifications", value: "25+", icon: Shield, color: "from-red-500 to-orange-500" },
     { label: "Countries Served", value: "45+", icon: Globe, color: "from-purple-500 to-pink-500" }
   ];
-
   return (
     <section className="py-20 bg-zion-slate-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -643,7 +434,6 @@ const StatsSection = React.memo(() => {
             transform their digital infrastructure and achieve remarkable results.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -652,15 +442,9 @@ const StatsSection = React.memo(() => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className="text-center"
-
-              <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-=======
               className="text-center group"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
@@ -672,7 +456,6 @@ const StatsSection = React.memo(() => {
     </section>
   );
 });
-
 // Services preview section
 const ServicesPreview = React.memo(() => {
   return (
@@ -683,34 +466,6 @@ const ServicesPreview = React.memo(() => {
         keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
         canonical="https://ziontechgroup.com/"
       />
-
-<<<<<<< HEAD
-// Featured services section
-const FeaturedServices = React.memo(() => {
-  const featuredServices = useMemo(() => [
-    {
-      title: "AI-Powered Analytics",
-      description: "Advanced business intelligence with machine learning insights",
-      icon: Brain,
-      path: "/ai-services",
-      features: ["Real-time Data Processing", "Predictive Analytics", "Custom Dashboards", "API Integration"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions for modern businesses",
-      icon: Cloud,
-      path: "/it-services",
-      features: ["Multi-cloud Strategy", "DevOps Automation", "Security & Compliance", "24/7 Monitoring"]
-    },
-    {
-      title: "Micro SAAS Solutions",
-      description: "Custom software solutions for specific business needs",
-      icon: Zap,
-      path: "/micro-saas",
-      features: ["Custom Development", "Scalable Architecture", "API-First Design", "Cloud Deployment"]
-
-  ], []);
-=======
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 bg-futuristic-enhanced">
         <div className="absolute inset-0 bg-cyber-grid animate-cyber-grid opacity-5"></div>
@@ -732,8 +487,6 @@ const FeaturedServices = React.memo(() => {
       </div>
     );
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return (
     <>
       <SEO 
@@ -741,11 +494,9 @@ const FeaturedServices = React.memo(() => {
         description="Transform your business with Zion Tech Group's cutting-edge AI, quantum computing, IoT, and digital transformation solutions. Expert consulting and innovative technology services."
         keywords="AI solutions, quantum computing, IoT, digital transformation, technology consulting, cybersecurity, cloud services"
       />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <HeroSection />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -755,7 +506,6 @@ const FeaturedServices = React.memo(() => {
               Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
             variants={containerVariants}
@@ -779,15 +529,12 @@ const FeaturedServices = React.memo(() => {
                       <div className="text-sm text-slate-400">Services</div>
                     </div>
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                     {category.name}
                   </h3>
-                  
                   <p className="text-slate-300 mb-6 leading-relaxed">
                     {category.description}
                   </p>
-                  
                   <div className="space-y-2 mb-6">
                     {category.services.map((service, idx) => (
                       <div key={idx} className="flex items-center text-sm text-slate-400">
@@ -796,7 +543,6 @@ const FeaturedServices = React.memo(() => {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to={category.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1"
@@ -810,7 +556,6 @@ const FeaturedServices = React.memo(() => {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Innovative Micro SAAS Services Showcase */}
       <motion.section 
         className="py-24 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm relative"
@@ -821,7 +566,6 @@ const FeaturedServices = React.memo(() => {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 via-blue-600/10 to-purple-600/10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -831,7 +575,6 @@ const FeaturedServices = React.memo(() => {
               Discover our cutting-edge micro SAAS services that deliver enterprise-grade functionality with startup simplicity
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -858,7 +601,6 @@ const FeaturedServices = React.memo(() => {
                 </div>
               </Link>
             </motion.div>
-
             {/* AI Content Optimizer */}
             <motion.div variants={itemVariants} className="group">
               <Link to="/services/ai-content-optimizer" className="block h-full">
@@ -878,7 +620,6 @@ const FeaturedServices = React.memo(() => {
                 </div>
               </Link>
             </motion.div>
-
             {/* AI Customer Support */}
             <motion.div variants={itemVariants} className="group">
               <Link to="/services/ai-customer-support" className="block h-full">
@@ -898,7 +639,6 @@ const FeaturedServices = React.memo(() => {
                 </div>
               </Link>
             </motion.div>
-
             {/* AI Data Analytics */}
             <motion.div variants={itemVariants} className="group">
               <Link to="/services/ai-data-analytics" className="block h-full">
@@ -919,7 +659,6 @@ const FeaturedServices = React.memo(() => {
               </Link>
             </motion.div>
           </motion.div>
-
           <motion.div className="text-center mt-12" variants={itemVariants}>
             <Link 
               to="/micro-saas" 
@@ -940,22 +679,15 @@ const FeaturedServices = React.memo(() => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Featured Services
-=======
         >
           <h2 className="text-4xl font-bold text-white mb-4">
             Comprehensive Technology Solutions
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From AI-powered insights to quantum computing breakthroughs, 
             we deliver cutting-edge solutions that drive innovation and growth.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceCategories.map((service, index) => (
             <motion.div
@@ -964,41 +696,6 @@ const FeaturedServices = React.memo(() => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"
-
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-300 mb-6">
-                {service.description}
-              </p>
-
-              <div className="mb-6">
-                <div className="text-sm text-gray-400 mb-3">Key Features:</div>
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <Link
-                to={service.path}
-                className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
-
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-=======
               className="group"
             >
               <Link
@@ -1008,15 +705,12 @@ const FeaturedServices = React.memo(() => {
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 text-3xl`}>
                   {service.icon}
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {service.name}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-medium">
                     {service.count} Solutions
@@ -1027,7 +721,6 @@ const FeaturedServices = React.memo(() => {
             </motion.div>
           ))}
         </div>
-
       {/* Interactive Service Showcase - Lazy Loaded */}
       <Suspense fallback={
         <div className="py-20 bg-background">
@@ -1041,7 +734,6 @@ const FeaturedServices = React.memo(() => {
           </div>
         </div>
       </Suspense>
-
       {/* Additional Sections */}
       <CategoriesSection />
       <BenefitsSection />
@@ -1060,12 +752,10 @@ const FeaturedServices = React.memo(() => {
       <AIServicesShowcase />
       <InteractiveTestimonials />
       <ServicesShowcase />
-      
       <FloatingCTA />
     </div>
   );
 };
-
 export default Home;
           className="text-center mb-16"
         >
@@ -1077,7 +767,6 @@ export default Home;
             have to say about working with Zion Tech Group.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -1095,17 +784,14 @@ export default Home;
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
               </div>
-              
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              
               <p className="text-gray-300 leading-relaxed">
                 "{testimonial.content}"
               </p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </motion.div>
           ))}
         </div>
@@ -1113,7 +799,6 @@ export default Home;
     </section>
   );
 });
-
 // CTA section
 const CTASection = React.memo(() => {
   return (
@@ -1132,7 +817,6 @@ const CTASection = React.memo(() => {
             Join hundreds of companies already leveraging our cutting-edge technology 
             solutions to stay ahead of the competition.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -1140,7 +824,6 @@ const CTASection = React.memo(() => {
             >
               Get Free Consultation
             </Link>
-            
             <Link
               to="/about"
               className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-zion-slate-dark font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
@@ -1153,22 +836,14 @@ const CTASection = React.memo(() => {
     </section>
   );
 });
-
 // Main Home component
 const Home: React.FC = () => {
   const handleGetStarted = () => {
     // Handle get started action
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.log('Get Started clicked');
-=======
     // // // // // // // console.log('Get Started clicked');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
     console.log('Get started clicked');
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <>
       <SEO 
@@ -1176,69 +851,7 @@ const Home: React.FC = () => {
         description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing expertise, and innovative micro SAAS services. Leading the future of technology."
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, cybersecurity, cloud computing, Zion Tech Group"
       />
-      
       <FuturisticBackground />
-<<<<<<< HEAD
-
-      <HeroSection onGetStarted={handleGetStarted} />
-      <StatsSection />
-      <FeaturedServices />
-
-      {/* Contact Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8 }}
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get in touch with our experts to discuss how our innovative services can drive your success
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="h-6 w-6 text-cyan-400" />
-                <span className="text-white">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="h-6 w-6 text-cyan-400" />
-                <span className="text-white">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="h-6 w-6 text-cyan-400" />
-                <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg"
-
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
-
-                View Pricing
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-
-export default Home;
-}}}</motion.div>}
-=======
-      
       <main className="relative z-10">
         <HeroSection onGetStarted={handleGetStarted} />
         <StatsSection />
@@ -1249,7 +862,4 @@ export default Home;
     </>
   );
 };
-
 export default Home;
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

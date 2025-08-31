@@ -16,15 +16,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       icon: Target,
       title: 'Performance Analytics',
-<<<<<<< HEAD
-      description: 'Data-driven insights for better decisions'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Automation',
-      description: 'Automated HR compliance and reporting'
-
-=======
       description: 'Data-driven insights for better decisions';
     },;
     {;
@@ -32,9 +23,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       title: 'Compliance Automation',;
       description: 'Automated HR compliance and reporting';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const modules = [
     {
       title: 'Recruitment & Onboarding',
@@ -49,15 +38,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     {
       title: 'Learning & Development',
       description: 'Personalized training and skill development',
-<<<<<<< HEAD
-      icon: '🎓'
-    },
-    {
-      title: 'Employee Engagement',
-      description: 'Monitor and improve workplace satisfaction',
-      icon: '❤️'
-
-=======
       icon: '🎓';
     },;
     {;
@@ -65,9 +45,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       description: 'Monitor and improve workplace satisfaction',;
       icon: '❤️';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     'Reduce time-to-hire by 50% with AI screening',;
     'Improve candidate quality and retention rates',;
@@ -76,19 +54,12 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     'Enhanced employee experience and engagement',;
     'Compliance automation and risk reduction';
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -96,43 +67,27 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full border border-blue-400/30 mb-6">
               <Users className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">AI HR Platform</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI HR
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400">
                 Platform
               </span>
             </h1>
-
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics.
               Streamline processes and create exceptional employee experiences.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Get Started
@@ -144,7 +99,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -152,26 +106,13 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               AI HR Platform Features
             </h2>
@@ -179,7 +120,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               Comprehensive HR solutions powered by artificial intelligence
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -187,35 +127,16 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -226,7 +147,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </div>
         </div>
       </section>
-
       {/* Modules Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -234,26 +154,13 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Platform Modules
             </h2>
@@ -261,7 +168,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               Comprehensive HR solutions for every aspect of people management
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {modules.map((module, index) => (
               <motion.div
@@ -269,35 +175,16 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
-
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{module.icon}</div>
                   <div>
@@ -310,7 +197,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -318,26 +204,13 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI HR Platform?
             </h2>
@@ -345,32 +218,18 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               Transform your HR operations with intelligent automation
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -381,31 +240,17 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 ))}
               </ul>
             </motion.div>
-
             <motion.div
               initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-400/30 rounded-xl p-8"
-
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
                 Ready to transform your HR operations? Our AI HR experts can help you implement
@@ -418,7 +263,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -426,25 +270,12 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your HR?
             </h2>
@@ -465,5 +296,4 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     </div>;
   );
 };
-
 export default AIHRPlatform;}}}

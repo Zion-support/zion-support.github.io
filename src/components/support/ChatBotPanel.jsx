@@ -32,22 +32,12 @@ export function ChatBotPanel() {
     // Auto-scroll to bottom when messages change
     useEffect(() => {
         if (scrollAreaRef.current) {
-<<<<<<< HEAD
-            scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-
-=======
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
         if (inputRef.current) {
-<<<<<<< HEAD
-            inputRef.current.focus();
-
-=======
             inputRef.current.focus()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     const handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
@@ -76,29 +66,14 @@ export function ChatBotPanel() {
                 setFailedAttempts((prev) => prev + 1);
                 // After 3 failed attempts, suggest escalation
                 if (failedAttempts >= 2) {
-<<<<<<< HEAD
-                    suggestEscalation();
-
-
-            else {
-                // Reset failed attempts if successful
-                setFailedAttempts(0);
-
-
-=======
                     suggestEscalation()}
             }
             else {
                 // Reset failed attempts if successful
                 setFailedAttempts(0)}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error in AI chat:", error);
-=======
             // // // // // // // console.error("Error in AI chat:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -106,19 +81,10 @@ export function ChatBotPanel() {
             });
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
-<<<<<<< HEAD
-                suggestEscalation();
-
-
-        finally {
-            setIsLoading(false);
-
-=======
                 suggestEscalation()}
         }
         finally {
             setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const sendToAIAssistant = async (message) => {
         try {
@@ -135,37 +101,18 @@ export function ChatBotPanel() {
                 return {
                     success: false,
                     message: "I'm having trouble connecting to my knowledge base right now."
-<<<<<<< HEAD
-                };
-
-=======
                 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const data = await response.json();
             return {
                 success: true,
                 message: data.message
-<<<<<<< HEAD
-            };
-
-=======
             }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error in AI chat:", error);
-=======
             // // // // // // // console.error("Error in AI chat:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
-<<<<<<< HEAD
-            };
-
-=======
             }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const suggestEscalation = () => {
         const escalationMessage = {
@@ -181,27 +128,14 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-<<<<<<< HEAD
-            // // console.log("Support escalation triggered", {
-=======
             // // // // // // // console.log("Support escalation triggered", {
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
                     timestamp: m.timestamp
                 }))
-<<<<<<< HEAD
-            });
-
-        catch (error) {
-<<<<<<< HEAD
-            // // console.error("Failed to log support escalation:", error);
-
-=======
             // // // // // // // console.error("Failed to log support escalation:", error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     const handleQuickReply = (text) => {
         handleSendMessage(text);
@@ -209,7 +143,6 @@ export function ChatBotPanel() {
             })}
         catch (error) {
             console.error("Failed to log support escalation:", error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleEscalateToLiveAgent = () => {
         setMessages((prev) => [
@@ -225,7 +158,6 @@ export function ChatBotPanel() {
                 content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
                 sender: "bot",
                 timestamp: new Date()
-
         ]);
         // In a real implementation, this would trigger a live chat request
         toast({
@@ -246,35 +178,21 @@ export function ChatBotPanel() {
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
                 sender: "bot",
                 timestamp: new Date()
-<<<<<<< HEAD
-
-        ]);
-    };
-=======
             }
         ])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
-
           {isLoading && (<div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
             </div>)}
         </div>
       </ScrollArea>
-
       {messages.length === 1 && (<div className="px-4 py-3">
           <p className = {
   cn("text-sm mb-2",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
-
-
-
-
-
-
 }>
             Suggested questions:
           </p>
@@ -282,17 +200,10 @@ export function ChatBotPanel() {
             {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
         </div>)}
-
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
           <p className = {
   cn("text-sm mb-2 font-medium",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
-
-
-
-
-
-
 }>
             Need more help?
           </p>
@@ -305,55 +216,23 @@ export function ChatBotPanel() {
             </Button>
           </div>
         </div>)}
-<<<<<<< HEAD
-
-      <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
-=======
-      
       <div className = {
   cn("p-4 border-t",
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
-
-
-
-
-
-
 }>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <form onSubmit={(e) => {
             e.preventDefault();
-<<<<<<< HEAD
-            handleSendMessage()}} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
-  cn("flex-1",
-  theme === "dark"
-=======
             handleSendMessage();
-        
-
 }} className="flex items-center gap-2">
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
   cn("flex-1",
   theme === "dark"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
-
-
-
-
-
-
 }/>
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
             <Send className="h-4 w-4"/>
           </Button>
         </form>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

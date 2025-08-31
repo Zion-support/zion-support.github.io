@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Calculator,
-  Check,
-  X,
-  Star,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Cpu,
-=======
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Calculator, 
@@ -23,7 +9,6 @@ import { Calculator,
   Cloud, 
   Shield, 
   Cpu, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ShoppingCart,
   MessageCircle,
   Users,
@@ -40,36 +25,21 @@ import { Calculator,
   Globe,
   Atom,
   Satellite
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-=======
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function PricingGuide(...args[]):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
-
   const currencyRates = {
   USD: { symbol: '$',
   rate: 1 ;
 ;
 ;
 ;
-
-
-
 },;
     EUR: { symbol: '€', rate: 0.85 },;
     GBP: { symbol: '£', rate: 0.73 };
   };
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -131,14 +101,6 @@ export default function PricingGuide(...args[]):  {
         "Monthly Strategy Sessions",
         "Custom Integration",
         "SLA Guarantees"
-<<<<<<< HEAD
-      ],
-      notIncluded[],
-      cta: "Contact Sales",
-      popular: false
-<<<<<<< HEAD
-
-=======
     };
 =======;
       ],;
@@ -146,10 +108,7 @@ export default function PricingGuide(...args[]):  {
       cta: "Contact Sales",;
       popular: false;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const servicePricing = [
     {
       category: "AI & Machine Learning",
@@ -182,15 +141,6 @@ export default function PricingGuide(...args[]):  {
     {
       category: "IT Infrastructure",
       icon: Cpu,
-<<<<<<< HEAD
-      services: [
-        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
-        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },
-        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
-        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
-      ]
-
-=======
       services[;
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;
@@ -198,31 +148,12 @@ export default function PricingGuide(...args[]):  {
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
-<<<<<<< HEAD
-  const calculatePrice = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
-    const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
-    const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
-    return `${symbol}${Math.round(adjustedPrice * rate)}`};
-
-  const savings = selectedPeriod === 'yearly' ? 10 : 0;
-
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +168,6 @@ export default function PricingGuide(...args[]):  {
               Transparent, competitive pricing for cutting-edge technology solutions.
               Choose the plan that fits your business needs and scale as you grow.
             </p>
-
             {/* Currency and Billing Toggle */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <div className="flex items-center space-x-4">
@@ -246,13 +176,11 @@ export default function PricingGuide(...args[]):  {
                   value={selectedCurrency}
                   onChange={(e) => setSelectedCurrency(e.target.value)}
                   className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400"
-
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
                   <option value="GBP">GBP (£)</option>
                 </select>
               </div>
-
               <div className="flex items-center space-x-4">
                 <span className="text-slate-300">Billing:</span>
                 <div className="flex bg-slate-700 rounded-lg p-1">
@@ -263,7 +191,6 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-
                     Monthly
                   </button>
                   <button
@@ -273,7 +200,6 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-
                     Yearly
                     {savings > 0 && (
                       <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">
@@ -286,7 +212,6 @@ export default function PricingGuide(...args[]):  {
             </div>
           </div>
         </div>
-
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
@@ -294,7 +219,6 @@ export default function PricingGuide(...args[]):  {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -302,15 +226,8 @@ export default function PricingGuide(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-=======
-          
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
@@ -323,14 +240,12 @@ export default function PricingGuide(...args[]):  {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4">
                     <plan.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-slate-400 mb-6">{plan.description}</p>
-
                   <div className="mb-6">
                     <div className="text-4xl font-bold text-white">
                       {calculatePrice(plan.price[selectedPeriod as keyof typeof plan.price])}
@@ -339,7 +254,6 @@ export default function PricingGuide(...args[]):  {
                       </span>
                     </div>
                   </div>
-
                   <Link
                     to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -347,11 +261,9 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
                     }`}
-
                     {plan.cta}
                   </Link>
                 </div>
-
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)  => (
@@ -360,7 +272,6 @@ export default function PricingGuide(...args[]):  {
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
-
                   {plan.notIncluded.length > 0 && (
                     <>
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
@@ -378,7 +289,6 @@ export default function PricingGuide(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Service-Specific Pricing */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -386,15 +296,8 @@ export default function PricingGuide(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {servicePricing.map((category, index) => (
-=======
-          
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {servicePricing.map((category, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
@@ -402,7 +305,6 @@ export default function PricingGuide(...args[]):  {
                   </div>
                   <h3 className="text-2xl font-bold text-white ml-4">{category.category}</h3>
                 </div>
-
                 <div className="space-y-4">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">
@@ -419,7 +321,6 @@ export default function PricingGuide(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -434,34 +335,19 @@ export default function PricingGuide(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Custom Quote
               </Link>
               <Link
                 to="/services-overview"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div>}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

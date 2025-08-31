@@ -22,12 +22,7 @@ function suggestChain(region, stake) {
         return 'bnb';
     if (region === 'europe')
         return 'polygon';
-<<<<<<< HEAD
-    return 'optimism';
-
-=======
     return 'optimism'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function TokenIntegrations() {
     const { address, isConnected } = useWallet();
     const [fromChain, setFromChain] = useState('ethereum');
@@ -56,7 +51,6 @@ export default function TokenIntegrations() {
           <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>
           <ConnectWalletButton />
           {isConnected && (<p className="text-white">Connected wallet: {address}</p>)}
-
           <Card>
             <CardHeader>
               <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>
@@ -95,7 +89,6 @@ export default function TokenIntegrations() {
               {status && <p className="text-white">{status}</p>}
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>DePIN Rewards</CardTitle>
@@ -105,7 +98,6 @@ export default function TokenIntegrations() {
               <p>Earn ZION$ for proof-of-compute, completed IoT jobs, and data streaming.</p>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>Operator AI</CardTitle>
@@ -120,9 +112,4 @@ export default function TokenIntegrations() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -33,33 +33,16 @@ function LoginForm() {
             setIsSubmitting(true);
             const { error } = await login(data.email, data.password);
             if (error) {
-<<<<<<< HEAD
-                form.setError("root", { message: error });
-
-            else {
-                navigate("/");
-
-
-        finally {
-            setIsSubmitting(false);
-
-=======
                 form.setError("root", { message: error })}
             else {
-<<<<<<< HEAD
-                router("/")}
-=======
                 router("/");
             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
-
         {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">
             {form.formState.errors.root.message}
           </p>)}
@@ -74,7 +57,6 @@ function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
-
         <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
@@ -92,7 +74,6 @@ function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
-
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -100,22 +81,12 @@ function LoginForm() {
             </Link>
           </div>
         </div>
-
         <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
-<<<<<<< HEAD
-    </Form>);
-
-export default LoginForm;
-}}}}}}
-=======
     </Form>)}
-
-export default LoginForm;
-
 export default LoginForm;
 export default LoginForm;
 export default LoginForm;
@@ -123,4 +94,4 @@ export default LoginForm;
 export default LoginForm;
 export default LoginForm;
 export default LoginForm;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default LoginForm;
