@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import {
   Users,
   TrendingUp,
@@ -390,6 +391,24 @@ const ServicesPreviewSection = React.memo(() => {
       color: "from-green-500 to-emerald-500",
       features: ["IoT Platforms", "Real-time Analytics", "5G Integration", "Edge AI"],
       badge: "New"
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"],
+      badge: "Popular"
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"],
+      badge: "Trending"
     }
   ];
 
@@ -412,7 +431,7 @@ const ServicesPreviewSection = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -618,7 +637,7 @@ const CTASection = React.memo(() => {
               transformation with Zion Tech Group. Let's discuss how we can help you.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
               <Link
                 to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -634,6 +653,18 @@ const CTASection = React.memo(() => {
                 className="px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
               >
                 Explore Services
+              </Link>
+            </div>
+            
+            <div className="flex justify-center">
+              <Link
+                to="/innovative-services-showcase-2026"
+                className="group px-8 py-4 border-2 border-purple-400/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 hover:scale-105"
+              >
+                <span className="flex items-center gap-2">
+                  <Rocket className="w-4 h-4" />
+                  View Innovation Showcase 2026
+                </span>
               </Link>
             </div>
             
@@ -727,6 +758,31 @@ const FinalCTASection = React.memo(() => {
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
+      {/* SEO Component */}
+      <SEO
+        meta={{
+          title: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          description: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          keywords: ["AI business solutions", "quantum computing", "autonomous operations", "digital transformation", "IT services", "cybersecurity", "machine learning", "neural networks"],
+          ogTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          ogDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          ogImage: "https://ziontechgroup.com/og-image.jpg",
+          ogUrl: "https://ziontechgroup.com",
+          twitterTitle: "AI-Powered Business Solutions & Quantum Computing | Zion Tech Group",
+          twitterDescription: "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity.",
+          twitterImage: "https://ziontechgroup.com/og-image.jpg",
+          canonicalUrl: "https://ziontechgroup.com",
+          robots: "index, follow",
+          language: "en",
+          author: "Zion Tech Group",
+          viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+          charset: "utf-8"
+        }}
+        showPanel={false}
+        autoOptimize={true}
+        enableAnalytics={true}
+      />
+
       <HeroSection />
       <StatisticsSection />
       <ServicesPreviewSection />
