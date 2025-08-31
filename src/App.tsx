@@ -99,6 +99,12 @@ const AISupplyChainOptimization = createLazyComponent(() => import('./pages/serv
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
 
+// New AI Services 2026
+const AIBusinessIntelligencePlatform = createLazyComponent(() => import('./pages/services/AIBusinessIntelligencePlatform'));
+const AICustomerExperiencePlatform = createLazyComponent(() => import('./pages/services/AICustomerExperiencePlatform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
+const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/AIFinancialRiskManagementPlatform'));
+
 // New AI Services
 const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AI-Data-Governance-Platform'));
 const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
@@ -362,6 +368,12 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* New AI Services 2026 */}
+                  <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+                  <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+                  <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                  <Route path="/services/ai-financial-risk-management-platform" element={<AIFinancialRiskManagementPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
