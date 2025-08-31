@@ -1,33 +1,25 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight export default function HelpCenter() {
+import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
+
+export default function HelpCenter() {
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
     const toggleCategory = (category) => {
         setExpandedCategories(prev => prev.includes(category)
             ? prev.filter(c => c !== category)
-            [...prev, category])};
+            : [...prev, category]);
+    };
+    
     const helpCategories = {
   'getting-started': {
             title: 'Getting Started',
             icon: BookOpen,
-<<<<<<< HEAD
-            articles[
-                { title: 'How to create your first account',
-  href: '/help/create-account' 
-
-},
-=======
             articles: [
                 { title: 'How to create your first account',
-  href: '/help/create-account' 
-
-
-
-
-},
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                  href: '/help/create-account' 
+                },
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
@@ -36,7 +28,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'marketplace': {
             title: 'Marketplace',
             icon: BookOpen,
-            articles[
+            articles: [
                 { title: 'How to list products and services', href: '/help/list-products' },
                 { title: 'Managing your listings', href: '/help/manage-listings' },
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
@@ -46,7 +38,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'talent': {
             title: 'Talent & Hiring',
             icon: BookOpen,
-            articles[
+            articles: [
                 { title: 'Creating a talent profile', href: '/help/talent-profile' },
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },
@@ -56,7 +48,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'technical': {
             title: 'Technical Support',
             icon: BookOpen,
-            articles[
+            articles: [
                 { title: 'Common technical issues', href: '/help/technical-issues' },
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
@@ -66,7 +58,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'billing': {
             title: 'Billing & Payments',
             icon: BookOpen,
-            articles[
+            articles: [
                 { title: 'Understanding your invoice', href: '/help/invoice-guide' },
                 { title: 'Payment methods and security', href: '/help/payment-methods' },
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
@@ -76,13 +68,13 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         'account': {
             title: 'Account & Security',
             icon: BookOpen,
-            articles[
+            articles: [
                 { title: 'Account security best practices', href: '/help/account-security' },
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
             ]
-
+        }
     };
     const popularArticles = [
         'How to create your first account',
@@ -217,9 +209,6 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>);
-}}}
-=======
-    </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </>
+  );
+  }

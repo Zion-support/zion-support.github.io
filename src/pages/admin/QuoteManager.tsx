@@ -22,7 +22,6 @@ export default function QuoteManager(...args[]: any):  {
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
-
   const {
     quotes,
     isLoading,
@@ -39,7 +38,6 @@ export default function QuoteManager(...args[]: any):  {
     toggleArchive,
     deleteQuote
   } = useAdminQuotes();
-
   // Count quotes by status
   const statusCounts = {
   <<<<<<< HEAD
@@ -62,39 +60,22 @@ export default function QuoteManager(...args[]: any):  {
   ;
   closed: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'closed').length;
   ;
-
-
-
-
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true)};
-
   const handleResetFilters = () => {;
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-<<<<<<< HEAD
-    setDateRange({ from: null, to: null })};
-=======
     setDateRange({ from: null, to: null });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   if (!isAdmin) {
-<<<<<<< HEAD
-    return <Navigate to="/unauthorized" replace />;
-=======
     return <Navigate to = "/unauthorized" replace />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return (
     <ProtectedRoute adminOnly>
       <div>
-
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -104,10 +85,8 @@ export default function QuoteManager(...args[]: any):  {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
-
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -120,14 +99,12 @@ export default function QuoteManager(...args[]: any):  {
               setDateRange={setDateRange}
               onReset={handleResetFilters}
             />
-
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
-
               <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -141,7 +118,6 @@ export default function QuoteManager(...args[]: any):  {
                   />
                 </Card>
               </TabsContent>
-
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
@@ -158,7 +134,6 @@ export default function QuoteManager(...args[]: any):  {
             </Tabs>
           </div>
         </div>
-
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -167,15 +142,6 @@ export default function QuoteManager(...args[]: any):  {
             setShowDetails(false);
             setSelectedQuote(null)}}
         />
-
-<<<<<<< HEAD
-      </div>
-    </ProtectedRoute>
-  );
-}}
-=======
-
       </div>
     </ProtectedRoute>
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

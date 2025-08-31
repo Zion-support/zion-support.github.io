@@ -1,61 +1,8 @@
-import React from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database export default function Solutions(...args: any[]): any {
-  const solutions = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Advanced AI systems, autonomous agents, and intelligent automation platforms that transform business operations.',
-      features: ['Multi-agent AI systems', 'RAG-powered workflows', 'Predictive analytics', 'Natural language processing'],
-      href: '/services#ai',
-      color: 'from-blue-600 to-purple-600'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & Infrastructure',
-      description: 'Scalable cloud platforms, serverless architectures, and modern infrastructure solutions.',
-      features: ['Cloud migration', 'Kubernetes orchestration', 'Serverless computing', 'Data pipelines'],
-      href: '/services#cloud',
-      color: 'from-cyan-500 to-blue-600'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions including zero-trust architecture and threat detection.',
-      features: ['Zero-trust security', 'Threat intelligence', 'Compliance frameworks', 'Incident response'],
-      href: '/services#cybersecurity',
-      color: 'from-emerald-500 to-teal-600'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize legacy systems and processes.',
-      features: ['Legacy modernization', 'Process automation', 'Digital workflows', 'Change management'],
-      href: '/services#transformation',
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      icon: Users,
-      title: 'Enterprise Solutions',
-      description: 'Tailored enterprise-grade solutions for large organizations with complex requirements.',
-      features: ['Custom development', 'Integration services', 'Enterprise architecture', 'Scalability planning'],
-      href: '/services#enterprise',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Performance tuning, monitoring, and optimization for applications and infrastructure.',
-      features: ['Performance monitoring', 'Load testing', 'Optimization strategies', 'Capacity planning'],
-      href: '/services#performance',
-      color: 'from-yellow-500 to-orange-600'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react';
 
-  ]
-=======
-import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award              } from 'lucide-react.ts';
-
-export default function Solutions(...args: any[]): any {
+export default function Solutions() {
 	const industrySolutions = [
 		{
 			icon: Building,
@@ -82,7 +29,6 @@ export default function Solutions(...args: any[]): any {
 			color: 'from-purple-600 to-pink-700'
 		}
 	];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 	const technologySolutions = [
 		{
@@ -135,83 +81,6 @@ export default function Solutions(...args: any[]): any {
 		}
 	];
 
-<<<<<<< HEAD
-      {/* Solutions Grid */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <h2 className="text-base font-semibold leading-7 text-blue-600">Our Solutions</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Comprehensive technology solutions
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              From AI-powered automation to enterprise-grade security, we provide the tools and expertise to transform your operations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {solutions.map((solution, index)              => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${solution.color} text-white mb-6`}>
-                  <solution.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>
-
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={solution.href}
-                  className={`inline-flex items-center justify-center w-full px-6 py-3 rounded-lg bg-gradient-to-r ${solution.color} text-white font-semibold hover:shadow-lg transition-all duration-200`}
-
-                  Learn More
-                  <Zap className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-              Ready to transform your business?
-            </h2>
-            <p className="text-lg leading-8 text-gray-600 mb-8">
-              Let's discuss how our solutions can help you achieve your goals and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-
-                Get Started
-                <TrendingUp className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 font-semibold hover:border-gray-400 transition-all duration-200"
-
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}}}
-=======
 	const useCaseSolutions = [
 		{
 			title: 'Digital Transformation',
@@ -295,8 +164,8 @@ export default function Solutions(...args: any[]): any {
 						<h2 className="text-2xl font-bold text-gray-900 mb-4">Proven Results</h2>
 						<p className="text-gray-600">Our solutions consistently deliver measurable business value</p>
 					</div>
-					<div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-						{successMetrics.map((metric)              => (
+					<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+						{successMetrics.map((metric) => (
 							<div key={metric.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
 									<metric.icon className="h-8 w-8 text-blue-600" />
@@ -318,8 +187,8 @@ export default function Solutions(...args: any[]): any {
 							Tailored solutions designed for your industry's unique challenges and requirements.
 						</p>
 					</div>
-					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{industrySolutions.map((solution)              => (
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{industrySolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -355,8 +224,8 @@ export default function Solutions(...args: any[]): any {
 							Cutting-edge technology solutions that power modern businesses.
 						</p>
 					</div>
-					<div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{technologySolutions.map((solution)              => (
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{technologySolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-200">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -392,8 +261,8 @@ export default function Solutions(...args: any[]): any {
 							Solutions for the most common business challenges and opportunities.
 						</p>
 					</div>
-					<div className="grid gap-6 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-						{useCaseSolutions.map((solution)              => (
+					<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{useCaseSolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 group">
 								<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
 									<solution.icon className="w-6 h-6 text-blue-600" />
@@ -440,4 +309,3 @@ export default function Solutions(...args: any[]): any {
 		</>
 	);
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

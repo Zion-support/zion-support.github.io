@@ -9,25 +9,12 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Integration with major ATS and HR platforms',;
     'Custom AI models for industry-specific hiring';
   ];
-
   const tiers = [
     {
       name: 'Starter',
       price: '$199/mo',
       details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/mo',
-      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$499/mo', 
@@ -38,9 +25,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$1,299/mo', ;
       details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'High-volume recruitment and hiring',;
     'Technical talent acquisition',;
@@ -49,7 +34,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Diversity and inclusion hiring',;
     'Remote workforce recruitment';
   ];
-
   const benefits = [;
     'Reduce time-to-hire by 40-60%',;
     'Improve candidate quality by 30-50%',;
@@ -58,7 +42,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Enhance candidate experience',;
     'Scale recruitment without additional staff';
   ];
-
   const industries = [;
     'Technology & Software',;
     'Healthcare & Life Sciences',;
@@ -67,7 +50,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Retail & E-commerce',;
     'Professional Services';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           <p className="text-purple-100 text-xl">Revolutionize your hiring process with AI-powered recruitment that finds the best talent faster, reduces bias, and improves hiring outcomes.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -128,7 +109,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-violet-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your recruitment process?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

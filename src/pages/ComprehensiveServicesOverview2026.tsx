@@ -80,18 +80,13 @@ import { Brain,
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '@/data/ultimateInnovativeServices2026';
 
 export default function ComprehensiveServicesOverview2026(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
-
   const serviceCategories = [
     {
       id: anyanyanyanyanyanyanyanyanyanyanyanyany'quantum-ai',
@@ -209,30 +204,17 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-<<<<<<< HEAD
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s               => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '300-800%',
-<<<<<<< HEAD
-      innovationLevel: 'Advanced'
-
-=======
       innovationLevel: 'Advanced';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyserviceCategories.filter(cat              => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -240,7 +222,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -249,25 +230,12 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Comprehensive Services
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -278,27 +246,23 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
               Discover our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories.
               From Quantum AI to Sustainable Technology, we're shaping the future of innovation.
             </p>
-
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-
                 <div className="text-4xl font-bold text-white mb-2">{totalServices}</div>
                 <div className="text-white/80">Revolutionary Services</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-
                 <div className="text-4xl font-bold text-white mb-2">{totalMarketSize}</div>
                 <div className="text-white/80">Total Market Size</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-
                 <div className="text-4xl font-bold text-white mb-2">{avgROI}</div>
                 <div className="text-white/80">Average ROI</div>
               </motion.div>
@@ -306,7 +270,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,7 +277,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
             <h2 className="text-3xl font-bold text-white mb-4">Explore by Category</h2>
             <p className="text-zion-slate-300">Filter our services by technology category</p>
           </div>
-
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setSelectedCategory('all')}
@@ -323,7 +285,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                   ? 'bg-zion-cyan text-white'
                   : 'bg-white/10 text-zion-slate-300 hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
               }`}
-
               All Categories
             </button>
             {serviceCategories.map(category               => (
@@ -335,14 +296,12 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
                 }`}
-
                 {category.name}
               </button>
             ))}
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -354,7 +313,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
               Each category represents a breakthrough in technology innovation
             </p>
           </div>
-
           <div className="space-y-8">
             <AnimatePresence>
               {filteredCategories.map((category, index) => (
@@ -363,45 +321,20 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   exit = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6"
-
                   {/* Category Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -419,7 +352,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                       <div className="text-sm text-zion-slate-400 mt-1">Avg ROI: {category.avgROI}</div>
                     </div>
                   </div>
-
                   {/* Innovation Level Badge */}
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
@@ -435,7 +367,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                       {category.services.length} service{category.services.length !== 1 ? 's' : ''}
                     </div>
                   </div>
-
                   {/* Services Preview */}
                   <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex)               => (
@@ -460,12 +391,10 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                       </div>
                     )}
                   </div>
-
                   {/* Expand/Collapse Button */}
                   <button
                     onClick={() => toggleCategoryExpansion(category.id)}
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
-
                     {expandedCategory === category.id ? (
                       <>
                         <EyeOff className="w-4 h-4" />
@@ -478,7 +407,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                       </>
                     )}
                   </button>
-
                   {/* Expanded Services Details */}
                   <AnimatePresence>
                     {expandedCategory === category.id && (
@@ -486,44 +414,20 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                         initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }}
                         exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
-<<<<<<< HEAD
-
-                        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)              => (
-=======
                       >
                         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">
                                 <h4 className="text-lg font-semibold text-white">{service.title}</h4>
@@ -536,9 +440,7 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                                   </div>
                                 </div>
                               </div>
-
                               <p className="text-zion-slate-300 text-sm mb-4">{service.description}</p>
-
                               <div className="flex items-center gap-2 mb-4">
                                 <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
                                   service.innovationLevel === 'Revolutionary'
@@ -553,22 +455,18 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
                                   ROI: {service.roi}
                                 </div>
                               </div>
-
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
                                   <span
                                     key={tagIndex}
                                     className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-
                                     {tag}
                                   </span>
                                 ))}
                               </div>
-
                               <Link
                                 to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
-
                                 <MessageCircle className="w-4 h-4" />
                                 Get Started
                               </Link>
@@ -584,7 +482,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -592,26 +489,13 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore the Future?
             </h2>
@@ -623,14 +507,12 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -638,23 +520,10 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

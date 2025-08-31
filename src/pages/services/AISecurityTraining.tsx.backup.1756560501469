@@ -16,18 +16,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$199/mo',
       details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$599/mo',
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,499/mo',
-      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$599/mo', 
@@ -38,7 +26,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,499/mo', ;
       details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

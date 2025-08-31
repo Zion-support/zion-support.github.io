@@ -6,11 +6,7 @@ const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 const crypto = require('crypto');
 ;
-<<<<<<< HEAD;
-// // // // // console.log('🔒 File Integrity Monitor Starting...\n');
-=======;
 // // // // // // // // console.log('🔒 File Integrity Monitor Starting...\n');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
 class FileIntegrityMonitor {;
   constructor() {;
@@ -38,23 +34,14 @@ class FileIntegrityMonitor {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
-<<<<<<< HEAD;
-    // // // // // console.log(logEntry.trim());
-=======;
     // // // // // // // // console.log(logEntry.trim());
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
-<<<<<<< HEAD;
-      // // // console.error('Failed to write to log file:', error.message);
-;
-=======;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
     this.log('Starting file integrity monitoring...');
@@ -834,6 +821,21 @@ export default {;
   async stop() {;
     this.log('Stopping file integrity monitor...');
     this.monitoring = false;
+    this.log('File integrity monitoring stopped');
+  }
+}
+
+// Export the class
+module.exports = FileIntegrityMonitor;
+
+// If running directly, start the monitor
+if (require.main === module) {
+  const monitor = new FileIntegrityMonitor();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    monitor.log('Shutting down File Integrity Monitor...');
+    monitor.stop();
     process.exit(0);
 ;
 ;

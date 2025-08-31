@@ -1,42 +1,41 @@
-class SEOOptimizer {
+export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
-        '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.',
-        '/services': 'Comprehensive technology services including AI solutions, cybersecurity, cloud infrastructure, and digital transformation.',
-        '/ai-solutions': 'Advanced AI solutions and autonomous systems. Machine learning, deep learning, and intelligent automation for modern businesses.',
-        '/about': 'Learn about Zion Tech Group - a leading technology company specializing in AI, cybersecurity, and innovative IT solutions.',
-        '/contact': 'Get in touch with Zion Tech Group for technology consulting, AI development, and digital transformation services.',
-        '/pricing': 'Transparent pricing for our technology services. Affordable AI solutions, cybersecurity, and IT infrastructure services.',
-        '/careers': 'Join our team of technology experts. Exciting career opportunities in AI, cybersecurity, and innovative technology.',
-        '/blog': 'Insights and analysis on the latest technology trends, AI developments, and digital transformation strategies.',
-        '/news': 'Latest news and updates from Zion Tech Group. Company announcements, partnerships, and technology achievements.',
-        '/services/ai-autonomous-systems': 'AI autonomous systems and intelligent automation solutions. Transform your business with cutting-edge AI technology.',
-        '/services/quantum-technology': 'Quantum computing and quantum technology solutions. Next-generation computing power for complex problem solving.',
+  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
+        '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
+        '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
+        '/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',
+        '/contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.',
+        '/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.',
+        '/careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.',
+        '/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.',
+        '/news': 'Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.',
+        '/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.',
+        '/services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.',
         '/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.',
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-    };
-
+};
     static KEYWORD_MAPPINGS = {
-        '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
+  '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
-        '/about': ['Zion Tech Group', 'technology company', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'company history'],
+        '/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],
         '/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],
         '/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],
         '/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],
         '/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],
-        '/news': ['company news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
+        '/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
         '/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],
         '/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],
         '/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],
         '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
-        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-    };
-
+        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
+  'medical technology']
+};
     static generateSEOData(path) {
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -57,11 +56,13 @@ class SEOOptimizer {
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
-
+        
         const pathSegments = path.split('/').filter(Boolean);
+        
         if (pathSegments.length === 0) {
-            return baseTitle;
+            return this.siteName;
         }
+        
         const lastSegment = pathSegments[pathSegments.length - 1];
         const formattedSegment = lastSegment
             .split('-')
@@ -96,6 +97,17 @@ class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+}
+        };
+
+        // Add specific structured data based on page type
+        if (path === '/') {
+            return {
+                ...baseData,
+                "@type": "Organization",
+                "name": "Zion Tech Group",
+                "url": "https://ziontechgroup.com",
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
@@ -112,49 +124,100 @@ class SEOOptimizer {
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
                 }
-            }
-        };
-
-        if (path === '/') {
-            return {
-                ...baseData,
-                "@type": "Organization"
             };
         }
-
+        if (path.startsWith('/services/')) {
+            return {
+                ...baseData,
+                "@type": "Service",
+                "serviceType": path.split('/').pop()?.replace(/-/g, ' '),
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Zion Tech Group"
+                }
+            };
+        }
         return baseData;
     }
 
+    static analyzeContentQuality(content, page) {
+        const issues = [];
+        
+        // Check for missing or short title
+        if (!content.includes('<title>') || content.includes('<title></title>')) {
+            issues.push({
+                page,
+                issue: 'missing-title',
+                severity: 'high',
+                suggestedFix: 'Add a descriptive title tag with relevant keywords'
+            });
+        }
+        // Check for missing meta description
+        if (!content.includes('name="description"')) {
+            issues.push({
+                page,
+                issue: 'missing-description',
+                severity: 'high',
+                suggestedFix: 'Add a meta description tag with compelling content'
+            });
+        }
+        // Check for short meta description
+        const descMatch = content.match(/name="description" content="([^"]+)"/);
+        if (descMatch && descMatch[1].length < 120) {
+            issues.push({
+                page,
+                issue: 'short-description',
+                severity: 'medium',
+                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
+            });
+        }
+        // Check for missing headings
+        if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
+            issues.push({
+                page,
+                issue: 'no-headings',
+                severity: 'medium',
+                suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
+            });
+        }
+        // Check for minimal content
+        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
+        
+        if (wordCount < 300) {
+            issues.push({
+                page,
+                issue: 'minimal-content',
+                severity: 'medium',
+                suggestedFix: 'Add more content to improve SEO and user engagement'
+            });
+        }
+        return issues;
+    }
+
     static generateMetaTags(seoData) {
-        const tags = [];
-        
-        if (seoData.title) {
-            tags.push(`<title>${seoData.title}</title>`);
-            tags.push(`<meta property="og:title" content="${seoData.title}" />`);
-            tags.push(`<meta name="twitter:title" content="${seoData.title}" />`);
-        }
-        
-        if (seoData.description) {
-            tags.push(`<meta name="description" content="${seoData.description}" />`);
-            tags.push(`<meta property="og:description" content="${seoData.description}" />`);
-            tags.push(`<meta name="twitter:description" content="${seoData.description}" />`);
-        }
-        
-        if (seoData.keywords && Array.isArray(seoData.keywords)) {
-            tags.push(`<meta name="keywords" content="${seoData.keywords.join(', ')}" />`);
-        }
-        
-        if (seoData.canonicalUrl) {
-            tags.push(`<link rel="canonical" href="${seoData.canonicalUrl}" />`);
-            tags.push(`<meta property="og:url" content="${seoData.canonicalUrl}" />`);
-        }
-        
-        if (seoData.structuredData) {
-            tags.push(`<script type="application/ld+json">${JSON.stringify(seoData.structuredData)}</script>`);
-        }
-        
-        return tags.join('\n    ');
+        return `
+    <title>${seoData.title}</title>
+    <meta name="description" content="${seoData.description}" />
+    <meta name="keywords" content="${seoData.keywords.join(', ')}" />
+    <link rel="canonical" href="${seoData.canonicalUrl}" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="${seoData.title}" />
+    <meta property="og:description" content="${seoData.description}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${seoData.canonicalUrl}" />
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${seoData.title}" />
+    <meta name="twitter:description" content="${seoData.description}" />
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      ${JSON.stringify(seoData.structuredData, null, 2)}
+    </script>
+    `;
     }
 }
 
-module.exports = SEOOptimizer;
+export const seoOptimizer = new SEOOptimizer();

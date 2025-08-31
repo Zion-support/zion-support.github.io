@@ -1,6 +1,5 @@
 // Innovative Cloud & DevOps Services 2030 - Zion Tech Group
 // Next-generation infrastructure and development solutions
-
 export interface CloudDevOpsService {
 
 
@@ -73,12 +72,7 @@ marketPrice: string;
   image: string;
   createdAt: string;
   featured: boolean;
-<<<<<<< HEAD
-  trending: boolean;
-=======
   trending: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
@@ -90,14 +84,7 @@ const zionContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   {
     id: "multi-cloud-orchestration-platform",
@@ -185,18 +172,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Multi-Cloud", "Cloud Orchestration", "DevOps", "Cost Optimization", "Compliance"],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = format&fit=crop&w=800&h=500",
-=======
     tags: ["Multi-Cloud", "Cloud Orchestration", "DevOps", "Cost Optimization", "Compliance"],
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = format&fit=crop&w=800&h=500",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
   },
-
   {
     id: "ai-powered-devops-automation",
     title: "Zion AI-Powered DevOps Automation",
@@ -289,7 +270,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "edge-computing-orchestrator",
     title: "Zion Edge Computing Orchestrator",
@@ -382,7 +362,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "serverless-architecture-platform",
     title: "Zion Serverless Architecture Platform",
@@ -475,7 +454,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "gitops-workflow-automation",
     title: "Zion GitOps Workflow Automation",
@@ -562,25 +540,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
-<<<<<<< HEAD
-
-=======
   }
-=======;
     tags: ["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],;
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
     trending: true;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default innovativeCloudDevOpsServices2030;}}

@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react.ts';
-<<<<<<< HEAD
-import { RefreshCw, X, CheckCircle export function PWAUpdater(...args: any[]): any {
-=======
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info               } from 'lucide-react.ts';
 
@@ -12,48 +9,20 @@ interface PWAUpdaterProps extends React.PropsWithChildren<{}> {
   showUpdatePrompt?: boolean;
 
 }
-
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   autoCheck = true,
   checkInterval = 300000, // 5 minutes
   showUpdatePrompt = true
 }) => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [updateComplete, setUpdateComplete] = useState(false);
   const [registration, setRegistration] = useState<any>(null);
   const [showPrompt, setShowPrompt] = useState(false);
-
   useEffect(() => {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
-<<<<<<< HEAD
-      // Listen for service worker updates
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        setUpdateAvailable(true);
-      });
-
-      // Check for updates
-      checkForUpdates();
-
-  }, []);
-
-  const checkForUpdates = async () => {
-    try {
-      const registration = await navigator.serviceWorker.getRegistration();
-      if (registration) {
-        registration.addEventListener('updatefound', () => {
-          setUpdateAvailable(true);
-        });
-
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.log('Service worker not available');
-
-=======
       // // // // // // // console.log('Service worker not available');
-=======
       // Register service worker
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
@@ -64,12 +33,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           if (autoCheck) {
             checkForUpdates(reg);
           }
-          
           // Listen for updates
           reg.addEventListener('updatefound', ()               => {
             console.log('Service Worker update found');
             const newWorker = reg.installing;
-            
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -81,14 +48,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
               });
             }
           });
-          
           // Listen for controller change (update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
             console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
-            
             // Hide prompt after a delay
             setTimeout(() => {
               setShowPrompt(false);
@@ -107,7 +72,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       const interval = setInterval(() => {
         checkForUpdates(registration);
       }, checkInterval);
-      
       return () => clearInterval(interval);
     }
   }, [autoCheck, checkInterval, registration]);
@@ -118,44 +82,29 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       console.log('Service Worker update check completed');
     } catch (error) {
       console.error('Service Worker update check failed:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   };
-
   const applyUpdate = async () => {
     if (!registration) return;
-    
     setUpdating(true);
     setShowPrompt(false);
-    
     try {
       // Send message to service worker to skip waiting
       if (registration.waiting) {
         registration.waiting.postMessage({ type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'SKIP_WAITING' });
       }
-      
       // Reload the page to apply the update
       setTimeout(()               => {
         window.location.reload();
       }, 1000);
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.error('Update failed:', error);
-=======
       // // // // // // // console.error('Update failed:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       setIsUpdating(false);
-
-=======
       console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true);
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const dismissUpdate = () => {
     setShowPrompt(false);
     // Auto-show again after 1 hour
@@ -165,65 +114,11 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       }
     }, 3600000);
   };
-
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
     return null;
   }
-
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl shadow-cyan-400/10 backdrop-blur-xl">
-      <div className="p-4 max-w-sm">
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0">
-            <RefreshCw className="w-5 h-5 text-cyan-400" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3 className="text-sm font-semibold text-white mb-1">
-              Update Available
-            </h3>
-            <p className="text-xs text-gray-300 mb-3">
-              A new version of Zion Tech Group is available. Refresh to get the latest features.
-            </p>
-            <div className="flex gap-2">
-              <button
-                onClick={handleUpdate}
-                disabled={isUpdating}
-                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-medium rounded-md hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 disabled:opacity-50"
-
-                {isUpdating ? (
-                  <>
-                    <RefreshCw className="w-3 h-3 animate-spin" />
-                    Updating...
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle className="w-3 h-3" />
-                    Update Now
-                  </>
-                )}
-              </button>
-              <button
-                onClick={dismissUpdate}
-                className="px-3 py-2 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200"
-
-                Later
-              </button>
-            </div>
-          </div>
-          <button
-            onClick={dismissUpdate}
-            className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}}}}}}
-=======
     <>
       {/* Update Prompt */}
       <AnimatePresence>
@@ -271,7 +166,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Update Progress */}
       <AnimatePresence>
         {updating && (
@@ -311,7 +205,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Update Complete */}
       <AnimatePresence>
         {updateComplete && (
@@ -338,7 +231,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Floating Update Indicator */}
       {updateAvailable && !showPrompt && !updating && (
         <motion.div
@@ -359,6 +251,4 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     </>
   );
 };
-
 export default PWAUpdater;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -5,7 +5,6 @@ import {
   Brain,
   Cloud,
   Shield,
-<<<<<<< HEAD
   Zap,
   Users,
   Globe,
@@ -98,87 +97,7 @@ export function ServicesShowcase(...args: any[]): any {
       href: "/services/mobile-survey",
       category: "Analytics",
       color: "from-teal-500 to-green-600"
-    },
-    {
-      icon: Shield,
-      title: "Compliance Copilot",
-      description: "SOC2/ISO evidence automation",
-      href: "/services/ai-compliance-copilot",
-      category: "Compliance",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      icon: BookOpen,
-      title: "LLM Content Studio",
-      description: "On-brand AI content",
-      href: "/services/llm-content-studio",
-      category: "Content",
-      color: "from-violet-500 to-purple-600"
-    },
-    {
-      icon: DollarSign,
-      title: "FinOps Advisor",
-      description: "Cloud cost optimization",
-      href: "/services/finops-advisor",
-      category: "Finance",
-      color: "from-emerald-500 to-green-600"
-    },
-    {
-      icon: ShoppingCart,
-      title: "Returns Management",
-      description: "E-commerce RMA automation",
-      href: "/services/returns-management",
-      category: "E-commerce",
-      color: "from-rose-500 to-pink-600"
-    },
-    {
-      icon: MessageCircle,
-      title: "Email Sequencer",
-      description: "Automated follow-ups",
-      href: "/services/email-sequencer",
-      category: "Marketing",
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      icon: BookOpen,
-      title: "Podcast Transcription",
-      description: "Transcripts & show notes",
-      href: "/services/podcast-transcription",
-      category: "Media",
-      color: "from-purple-500 to-violet-600"
-    },
-    {
-      icon: Users,
-      title: "Micro CRM",
-      description: "Local business CRM",
-      href: "/services/micro-crm",
-      category: "CRM",
-      color: "from-cyan-500 to-teal-600"
-    },
-    {
-      icon: Gauge,
-      title: "Website Analytics",
-      description: "Privacy-first SMB analytics",
-      href: "/services/website-analytics",
-      category: "Analytics",
-      color: "from-blue-500 to-cyan-600"
-    },
-    {
-      icon: HelpCircle,
-      title: "IT Helpdesk",
-      description: "Tickets, SLAs, portals",
-      href: "/services/it-helpdesk",
-      category: "Support",
-      color: "from-orange-500 to-yellow-600"
-    },
-    {
-      icon: ShoppingCart,
-      title: "Affiliate Tracking",
-      description: "Partner revenue platform",
-      href: "/services/affiliate-tracking",
-      category: "Marketing",
-      color: "from-green-500 to-emerald-600"
-
+    }
   ];
 
   const containerVariants = {
@@ -248,7 +167,6 @@ export function ServicesShowcase(...args: any[]): any {
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -261,17 +179,6 @@ export function ServicesShowcase(...args: any[]): any {
       y: 0,
       transition: {
         duration: 0.5
-
-
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
       }
     }
   };
@@ -303,12 +210,7 @@ export function ServicesShowcase(...args: any[]): any {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-          className="text-center mb-16"
-
-=======
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive
             <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"> Services</span>
@@ -326,7 +228,7 @@ export function ServicesShowcase(...args: any[]): any {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
+              <div className="text-4xl font-bold text-zion-cyan mb-2">{services.length}+</div>
               <div className="text-zion-slate-light">Total Services</div>
             </motion.div>
             <motion.div
@@ -366,33 +268,19 @@ export function ServicesShowcase(...args: any[]): any {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-<<<<<<< HEAD
-
-          {services.map((service, index)               => (
-=======
         >
-          {filteredServices.map((service, index) => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               className="group relative"
-<<<<<<< HEAD
-
-              <Link to={service.href}>
-                <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
-                  {/* Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-
-=======
             >
               <Link to={service.href || `/services/${service.id}`}>
                 <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(service.category)} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                   
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   {/* Icon */}
                   <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${getCategoryColor(service.category)} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -427,31 +315,6 @@ export function ServicesShowcase(...args: any[]): any {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mt-16"
-
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can drive innovation, efficiency, and growth for your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-
-                View All Services
-              </Link>
-=======
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
@@ -463,15 +326,10 @@ export function ServicesShowcase(...args: any[]): any {
                 Get Started Today
                 <ArrowRight className="w-5 h-5" />
               </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </motion.div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-</div></div>}}}}}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
-=======
 import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity               } from 'lucide-react.ts';
 
 const QuantumTechnology = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const quantumServices = [
     {
       title: "Quantum Neural Networks",
@@ -22,15 +17,6 @@ const QuantumTechnology = () => {
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
     },
-<<<<<<< HEAD
-    {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
-      price: "From $42,000/month",
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
-      icon: Shield
-
-=======
     {;
       title: "Quantum Cryptography",;
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;
@@ -38,9 +24,7 @@ const QuantumTechnology = () => {
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const quantumTechnologies = [
     {
       name: "Quantum Computing",
@@ -53,15 +37,6 @@ const QuantumTechnology = () => {
       description: "AI algorithms leveraging quantum properties",
       icon: BarChart3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Quantum Communications",
-      description: "Secure communication using quantum principles",
-      icon: Globe,
-      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
-
-=======
     },;
     {;
       name: "Quantum Communications",;
@@ -69,9 +44,7 @@ const QuantumTechnology = () => {
       icon: Globe,;
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Exponential speedup for complex computational problems",;
     "Unbreakable encryption and enhanced security",;
@@ -80,7 +53,6 @@ const QuantumTechnology = () => {
     "Competitive advantage in technology innovation",;
     "Future-proof solutions for emerging challenges";
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -110,7 +82,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* What is Quantum Computing Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -151,7 +122,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +157,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -221,7 +190,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -261,7 +229,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -285,5 +252,4 @@ const QuantumTechnology = () => {
     </div>;
   );
 };
-
 export default QuantumTechnology;}}}

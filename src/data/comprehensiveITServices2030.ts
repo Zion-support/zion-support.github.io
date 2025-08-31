@@ -1,6 +1,5 @@
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
-
 export interface ServiceContact {
 
 
@@ -20,9 +19,6 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -38,7 +34,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
 
@@ -79,9 +74,6 @@ export interface ITService {
   technologies: string[];
   useCases: string[];
   roi: string;
-<<<<<<< HEAD
-  setupTime: string;
-=======
 setupTime: string;
 
 
@@ -97,7 +89,6 @@ setupTime: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -110,14 +101,7 @@ const zionContact: ServiceContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 // Comprehensive IT Services 2030
 export const comprehensiveITServices2030: ITService[] = [
   {
@@ -689,7 +673,5 @@ export const comprehensiveITServices2030: ITService[] = [
     ],
     roi: "500% within 24 months",
     setupTime: "4-16 weeks"
-
 ];
-
 export default comprehensiveITServices2030;}}}

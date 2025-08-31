@@ -28,10 +28,6 @@ export interface InnovativeService2027 {
   rating: number;
   reviews: number;
   launchDate: string;
-<<<<<<< HEAD
-  status: 'active' | 'beta' | 'coming-soon';
-
-=======
 status: 'active' | 'beta' | 'coming-soon';
 
 
@@ -46,7 +42,6 @@ status: 'active' | 'beta' | 'coming-soon';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovativeServices2027: InnovativeService2027[] = [
   {
     id: 'quantum-ai-platform',
@@ -128,7 +123,6 @@ export const innovativeServices2027: InnovativeService2027[] = [
     reviews: 234,
     launchDate: '2027-01-20',
     status: 'active'
-
 ];
 export const serviceCategories2027 = [
   'All',
@@ -145,20 +139,8 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-<<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]               => {
-  if (category === 'All') {;
-    return innovativeServices2027};
-  return innovativeServices2027.filter(service => service.category === category)};
-=======
 export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]              => {;
   if (category === 'All') {;
     return innovativeServices2027;
-
   return innovativeServices2027.filter(service => service.category === category);
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

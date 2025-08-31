@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { AnimatePresence, motion               } from 'framer-motion.ts';
-import { Activity,
-    ArrowDown,
-    ArrowUp,
-    BarChart3,
-    DollarSign,
-    Download,
-    Eye,
-    Minus,
-    PieChart,
-    RefreshCw,
-    Share2,
-    Target,
-    TrendingUp,
-    Users
-import React, { useState               } from 'react.ts';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { BarChart3,
@@ -34,7 +16,6 @@ import { BarChart3,
   Share2,
   RefreshCw
                } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ChartData {
 
@@ -58,27 +39,7 @@ datasets: {;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-<<<<<<< HEAD
-    borderWidth: number;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-}[];
-=======
     borderWidth: number}[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 interface MetricCard {
 
 
@@ -100,9 +61,6 @@ interface MetricCard {
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-<<<<<<< HEAD
-  color: string;
-=======
 color: string;
 
 
@@ -120,17 +78,10 @@ color: string;
 }
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
-<<<<<<< HEAD
-  showActions?: boolean;
-=======
   showActions?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",;
   showMetrics = true,;
@@ -140,7 +91,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
   const [activeChart, setActiveChart] = useState<any>('bar');
-
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
     labels['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
@@ -152,7 +102,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       borderWidth: 2
     }]
   });
-
   const [metrics, setMetrics] = useState<any>([
     {
       title: 'Total Revenue',
@@ -179,15 +128,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       color: 'text-yellow-400'
     },
     {
-<<<<<<< HEAD
-      title: 'Avg Session',
-      value: '2m 47s',
-      change: 0.0,
-      changeType: 'neutral',
-      icon: <Activity className="w-5 h-5" />,
-      color: 'text-purple-400'
-
-=======
       title: 'Avg Session',;
       value: '2m 47s',;
       change: 0.0,;
@@ -195,33 +135,20 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       icon: <Activity className="w-5 h-5" />,;
       color: 'text-purple-400';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ]);
-
   // Simulate data refresh
   const refreshData = async () => {;
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     // Update chart data with new random values
-<<<<<<< HEAD
-    setChartData(prev = > ({
-      ...prev,
-      datasets[{
-        ...prev.datasets[0],
-        data: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprev.datasets[0].data.map(()                => Math.floor(Math.random() * 100) + 20)
-      }]
-=======;
     setChartData(prev = > ({;
       ...prev,;
       datasets: anyanyanyanyanyanyanyanyanyanyanyanyanyany[{;
         ...prev.datasets[0],;
         data: prev.datasets[0].data.map(()               => Math.floor(Math.random() * 100) + 20);
       }];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }));
-
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
       ...metric,
@@ -231,37 +158,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       changeType: Math.random() > 0.6 ? 'increase' :
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-
     setIsLoading(false)};
-
   // Get change icon and color
-<<<<<<< HEAD
-  const getChangeDisplay = (change: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, changeType: string)               => {;
-    const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :;
-                 changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                 <Minus className="w-4 h-4" />;
-
-    const color = changeType === 'increase' ? 'text-green-400' :
-                  changeType === 'decrease' ? 'text-red-400' :
-                  'text-zinc-400';
-
-    return { icon, color };
-  };
-
-  // Generate pie chart data
-  const pieChartData = {
-  <<<<<<< HEAD
-    labels['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
-    datasets[{
-      data[35, 25, 20, 15, 5],
-      backgroundColor[
-=======
   labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
     datasets: [{
       data: [35, 25, 20, 15, 5],
       backgroundColor: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         'rgba(34, 221, 210, 0.8)',
         'rgba(140, 21, 233, 0.8)',
         'rgba(239, 68, 68, 0.8)',
@@ -280,23 +182,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   borderWidth: 2;
     ;
 ;
-
-
-
-
-
 }];
   };
-
   // Generate line chart data
   const lineChartData = {
-  <<<<<<< HEAD
-    labels['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets[{
-=======
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [{
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       label: 'Weekly Performance',
       data[65, 59, 80, 81, 56, 55, 70],
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
@@ -308,14 +199,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   tension: 0.4;
     ;
 ;
-
-
-
-
-
 }];
   };
-
   return (
     <div className = "w-full max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -324,7 +209,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           <h1 className="text-3xl font-bold text-white mb-2">{title}</h1>
           <p className="text-zinc-400">Comprehensive analytics and insights for your business</p>
         </div>
-
         {showActions && (
           <div className="flex items-center gap-3 mt-4 sm:mt-0">
             {/* Time Range Selector */}
@@ -332,30 +216,25 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value)}
               className="px-3 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-
               <option value="1d">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
               <option value="30d">Last 30 Days</option>
               <option value="90d">Last 90 Days</option>
               <option value="1y">Last Year</option>
             </select>
-
             {/* Refresh Button */}
             <button
               onClick={refreshData}
               disabled={isLoading}
               className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
               Refresh
             </button>
-
             {/* Export Button */}
             <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg hover:bg-zinc-700 transition-colors flex items-center gap-2">
               <Download className="w-4 h-4" />
               Export
             </button>
-
             {/* Share Button */}
             <button className="px-4 py-2 bg-zinc-800 text-white rounded-lg hover:bg-zinc-700 transition-colors flex items-center gap-2">
               <Share2 className="w-4 h-4" />
@@ -364,19 +243,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           </div>
         )}
       </div>
-<<<<<<< HEAD
-
-      {/* Metrics Cards */}
-      {showMetrics && (
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index)                => {;
-=======;
 ;
       {/* Metrics Cards */};
       {showMetrics && (;
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
           {metrics.map((metric, index)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div
@@ -384,26 +255,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-
                 <div className="flex items-center justify-between mb-4">
                   <div className={`p-3 rounded-lg bg-zinc-800/50 ${metric.color}`}>
                     {metric.icon}
@@ -412,14 +270,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     {icon}
                     <span>{Math.abs(metric.change).toFixed(1)}%</span>
                   </div>
-<<<<<<< HEAD
-                </div>
-
-                <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
-                <p className="text-zinc-400 text-sm">{metric.title}</p>
-              </motion.div>
-            )})};
-=======;
                 </div>;
                 ;
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>;
@@ -427,10 +277,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               </motion.div>;
             );
           })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       )}
-
       {/* Charts Section */}
       {showCharts && (
         <div className = "space-y-8">
@@ -449,13 +297,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
-
                 {chartType.icon}
                 {chartType.label}
               </button>
             ))}
           </div>
-
           {/* Chart Display */}
           <div className="bg-zinc-900/30 border border-zinc-700/50 rounded-xl p-6">
             <div className="flex items-center justify-between mb-6">
@@ -470,7 +316,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               </div>
             </div>
-
             {/* Chart Container */}
             <div className="h-80 flex items-center justify-center">
               <AnimatePresence mode="wait">
@@ -479,36 +324,17 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                   initial = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                   animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                   exit = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                   transition={{ duration: 0.3 }}
                   className="w-full h-full flex items-center justify-center"
-
                   {activeChart === 'bar' && (
                     <div className="w-full h-full flex items-end justify-center gap-4">
                       {chartData.labels.map((label, index) => (
@@ -521,12 +347,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                               transition = {
   { delay: index * 0.1,
   duration: 0.8 
-
-
-
-
-
-
 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
                               style={{ maxHeight: '200px' }}
@@ -549,25 +369,13 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           const startAngle = pieChartData.datasets[0].data;
                             .slice(0, index);
                             .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0);
-
                           const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180);
                           const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
                           const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
                           const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
-
                           const largeArcFlag = angle > 180 ? 1 : 0;
-
                           return (
                             <path
-<<<<<<< HEAD
-                              key = {index}
-                              d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-                              fill={pieChartData.datasets[0].backgroundColor[index]}
-                              stroke={pieChartData.datasets[0].borderColor[index]}
-                              strokeWidth="2"
-                            />
-                          )})}
-=======;
                               key = {index};
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`};
                               fill={pieChartData.datasets[0].backgroundColor[index]};
@@ -576,9 +384,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             />;
                           );
                         })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </svg>
-
                       {/* Legend */}
                       <div className = "absolute -right-32 top-0 space-y-2">
                         {pieChartData.labels.map((label, index) => (
@@ -596,7 +402,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                       </div>
                     </div>
                   )}
-
                   {activeChart === 'line' && (
                     <div className="w-full h-full flex items-center justify-center">
                       <svg className="w-full h-full" viewBox="0 0 600 300">
@@ -623,7 +428,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             strokeWidth="1"
                           />
                         ))}
-
                         {/* Line chart */}
                         <polyline
                           fill="none"
@@ -633,7 +437,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             `${index * 85.7 + 42.85},${300 - (value / 100) * 300}`
                           ).join(' ')}
                         />
-
                         {/* Data points */}
                         {lineChartData.datasets[0].data.map((value, index) => (
                           <circle
@@ -644,7 +447,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             fill="rgba(34, 221, 210, 1)"
                           />
                         ))}
-
                         {/* Labels */}
                         {lineChartData.labels.map((label, index) => (
                           <text
@@ -654,7 +456,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             textAnchor="middle"
                             fill="rgba(255,255,255,0.6)"
                             fontSize="12"
-
                             {label}
                           </text>
                         ))}
@@ -667,7 +468,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           </div>
         </div>
       )}
-
       {/* Insights Section */}
       <div className="mt-8 p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
         <h3 className="text-xl font-semibold text-white mb-4">Key Insights</h3>
@@ -694,23 +494,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <h4 className="font-medium text-white mb-2">Market Trends</h4>
             <p className="text-zinc-400 text-sm">
               Cloud solutions show strong growth potential with increasing enterprise adoption.
-<<<<<<< HEAD
-            </p>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </p>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-};</div></motion.div>}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

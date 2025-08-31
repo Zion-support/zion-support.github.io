@@ -31,17 +31,10 @@ export default function Layout(...args[]: any):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-<<<<<<< HEAD
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
-=======
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
   const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
@@ -74,7 +67,6 @@ export default function Layout(...args[]: any):  {
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-
                 📞 Call Us
               </a>
             </div>
@@ -96,7 +88,6 @@ export default function Layout(...args[]: any):  {
                       <button
                         onClick={() => toggleSidebarDropdown(item.label)}
                         className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-
                         <span className="flex items-center space-x-2">
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
@@ -112,7 +103,6 @@ export default function Layout(...args[]: any):  {
                               key={child.label}
                               href={child.href}
                               className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
-
                               {child.label}
                             </a>
                           ))}
@@ -123,7 +113,6 @@ export default function Layout(...args[]: any):  {
                     <a
                       href={item.href}
                       className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
                     </a>
@@ -134,23 +123,10 @@ export default function Layout(...args[]: any):  {
           </div>
         </aside>
         {/* Main Content Area */}
-<<<<<<< HEAD
-        <main className="flex-1 md:ml-64">
-          {children}
-        </main>
-      </div>
-    </div>
-  )};
-=======;
         <main className="flex-1 md:ml-64">;
           {children};
         </main>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

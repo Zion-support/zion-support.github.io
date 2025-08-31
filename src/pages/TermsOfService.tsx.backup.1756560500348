@@ -14,21 +14,8 @@ import { FileText,
   Lock,
   Eye,
   Database
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {
-=======
             } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'legal@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   
@@ -174,65 +161,20 @@ const TermsOfService = () => {;
       description: 'As a last resort, resolve disputes through binding arbitration';
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-zion-cyan/20 rounded-2xl flex items-center justify-center">
-                <FileText className="w-10 h-10 text-zion-cyan" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Terms of <span className="text-zion-cyan">Service</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-              Please read these terms carefully before using our website and services.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-zion-slate-light">
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                Last updated: {lastUpdated}
-              </span>
-              <span className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                {website}
-              </span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
         <meta name = "description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
         <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
       </Helmet>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mb-12"
-
-=======
               initial = {
   { opacity: 0,
   y: 20 
@@ -256,7 +198,6 @@ const TermsOfService = () => {;
               transition={{ duration: 0.6 }}
               className="text-center"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Agreement to Terms
@@ -728,12 +669,6 @@ const TermsOfService = () => {;
               </p>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
         </section>
 
         {/* Table of Contents */}
@@ -1119,6 +1054,5 @@ const TermsOfService = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TermsOfService;}

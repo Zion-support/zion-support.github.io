@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import Head from 'next/head.ts';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from "./ModernFooter";
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
@@ -16,11 +9,7 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-  canonical?: string;
-=======
   canonical?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
   children,
@@ -107,23 +96,10 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
           }}
         />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-black text-white flex flex-col">
-=======
       
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <ModernHeader />
         <main className="flex-1 pt-20">
-<<<<<<< HEAD
-          {children}
-        </main>
-        <ModernFooter />
-      </div>;
-    </>;
-  )};
-=======
           {children};
         </main>;
         <ModernFooter />;
@@ -131,6 +107,5 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ModernLayout;}

@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock const EnterpriseSolutions = () => {
-=======
-import Link from 'next/link';
 import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
+
 const EnterpriseSolutions = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const solutions = [
         {
             title: 'AI-Powered Business Intelligence',
@@ -59,7 +55,7 @@ const EnterpriseSolutions = () => {
             ],
             icon: Zap,
             href: '/services/ai-autonomous-systems'
-
+        }
     ];
     const industries = [
         {
@@ -85,7 +81,7 @@ const EnterpriseSolutions = () => {
             description: 'Omnichannel retail solutions for modern commerce.',
             icon: Globe,
             solutions: ['Customer personalization', 'Inventory management', 'Demand forecasting', 'E-commerce optimization']
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -202,7 +198,7 @@ const EnterpriseSolutions = () => {
                 title: '24/7 Support',
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
-
+            }
         ].map((benefit, index) => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
@@ -238,7 +234,8 @@ const EnterpriseSolutions = () => {
           </div>
         </div>
       </div>
-    </div>);
+    </div>
+  );
 };
+
 export default EnterpriseSolutions;
-}}}}

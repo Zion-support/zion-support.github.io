@@ -2,13 +2,15 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock export default function MicroSAASPage() {
+import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
+
+export default function MicroSAASPage() {
     const microSAASServices = [
         {
             id: "email-automation",
             title: "Email Marketing Automation",
             description: "Powerful email automation platform with advanced segmentation, A/B testing, and analytics for growing businesses.",
-            features[
+            features: [
                 "Drag & drop email builder",
                 "Advanced segmentation",
                 "A/B testing tools",
@@ -31,7 +33,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "project-management",
             title: "Project Management Suite",
             description: "Comprehensive project management tool with task tracking, team collaboration, and project analytics.",
-            features[
+            features: [
                 "Task & milestone tracking",
                 "Team collaboration tools",
                 "Gantt charts",
@@ -54,7 +56,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "crm-system",
             title: "Customer Relationship Management",
             description: "Lightweight CRM system designed for small to medium businesses with contact management and sales tracking.",
-            features[
+            features: [
                 "Contact management",
                 "Sales pipeline tracking",
                 "Email integration",
@@ -77,7 +79,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "analytics-platform",
             title: "Business Analytics Platform",
             description: "Simple yet powerful analytics platform for tracking business metrics, user behavior, and performance insights.",
-            features[
+            features: [
                 "Real-time dashboards",
                 "Custom metrics tracking",
                 "Data visualization",
@@ -100,7 +102,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "payment-processor",
             title: "Payment Processing Solution",
             description: "Secure payment processing platform with support for multiple payment methods and subscription billing.",
-            features[
+            features: [
                 "Multiple payment methods",
                 "Subscription billing",
                 "Fraud protection",
@@ -123,7 +125,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "form-builder",
             title: "Advanced Form Builder",
             description: "Professional form creation tool with conditional logic, file uploads, and advanced validation rules.",
-            features[
+            features: [
                 "Drag & drop builder",
                 "Conditional logic",
                 "File uploads",
@@ -146,7 +148,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "chat-widget",
             title: "Live Chat Widget",
             description: "Professional live chat solution for websites with visitor tracking, chat history, and team collaboration.",
-            features[
+            features: [
                 "Real-time chat",
                 "Visitor tracking",
                 "Chat history",
@@ -169,7 +171,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "seo-toolkit",
             title: "SEO Optimization Toolkit",
             description: "Comprehensive SEO tool for keyword research, site audits, and performance monitoring.",
-            features[
+            features: [
                 "Keyword research",
                 "Site audit tools",
                 "Ranking tracking",
@@ -192,7 +194,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "design-tool",
             title: "Graphic Design Platform",
             description: "Online design tool with templates, stock photos, and collaboration features for marketing teams.",
-            features[
+            features: [
                 "Template library",
                 "Stock photo access",
                 "Collaboration tools",
@@ -215,7 +217,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "inventory-management",
             title: "Inventory Management System",
             description: "Simple inventory tracking solution for small businesses with barcode scanning and low stock alerts.",
-            features[
+            features: [
                 "Barcode scanning",
                 "Low stock alerts",
                 "Purchase orders",
@@ -238,7 +240,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "appointment-scheduler",
             title: "Appointment Scheduling System",
             description: "Online booking platform for service businesses with calendar integration and automated reminders.",
-            features[
+            features: [
                 "Online booking",
                 "Calendar integration",
                 "Automated reminders",
@@ -261,7 +263,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             id: "survey-platform",
             title: "Survey & Feedback Platform",
             description: "Professional survey creation tool with advanced question types, logic branching, and analytics.",
-            features[
+            features: [
                 "Advanced question types",
                 "Logic branching",
                 "Response analytics",
@@ -279,7 +281,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             users: "Unlimited",
             rating: 4.7,
             reviews: 112
-
+        }
     ];
     const categories = [
         "All Services",
@@ -324,7 +326,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -333,7 +334,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             Micro SAAS solutions offer the perfect balance of functionality, affordability, and scalability for growing businesses.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -344,7 +344,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
               Start small and scale up as your business grows with transparent, predictable pricing.
             </p>
           </div>
-
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="h-8 w-8 text-zion-cyan"/>
@@ -354,7 +353,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
               Get up and running in days, not months, with intuitive interfaces and comprehensive onboarding.
             </p>
           </div>
-
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-zion-purple"/>
@@ -366,7 +364,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -377,7 +374,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             </Button>))}
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -405,7 +401,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                   {service.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -416,7 +411,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                       </li>))}
                   </ul>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-zion-cyan mb-2">Pricing:</h4>
@@ -441,7 +435,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                   </div>
                 </div>
               </CardContent>
-
               <div className="p-6 pt-0 space-y-3">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   <Zap className="h-4 w-4 mr-2"/>
@@ -455,7 +448,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             </Card>))}
         </div>
       </div>
-
       {/* Comparison Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -464,7 +456,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             Understand the differences and choose the right solution for your business needs.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 rounded-lg bg-zion-slate/30 border border-zion-purple/20">
             <h3 className="text-xl font-semibold text-zion-cyan mb-4">Micro SAAS Solutions</h3>
@@ -491,7 +482,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
               </li>
             </ul>
           </div>
-
           <div className="p-6 rounded-lg bg-zion-slate/30 border border-zion-purple/20">
             <h3 className="text-xl font-semibold text-zion-purple mb-4">Enterprise Solutions</h3>
             <ul className="space-y-2 text-zion-slate-light">
@@ -519,7 +509,6 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </div>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -545,9 +534,4 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

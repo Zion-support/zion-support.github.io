@@ -17,7 +17,6 @@ export default function AIAutoEmailResponder(...args[]: any):  {
           classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
-
         <div className="grid gap-8 md:grid-cols-2 mt-10">;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>;
@@ -57,24 +56,10 @@ export default function AIAutoEmailResponder(...args[]: any):  {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Get a Quote</h3>
-<<<<<<< HEAD
-            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

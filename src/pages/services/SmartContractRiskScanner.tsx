@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { SEO               } from '../../components/SEO';
-import { Shield, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-import { Shield,
-  Search,
-  AlertTriangle,
-  CheckCircle,
-=======
 import { SEO              } from '../../components/SEO';
 import { Shield, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Search, 
   AlertTriangle, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Lock,
   Database,
@@ -44,13 +29,9 @@ import { Shield,
   Settings,
   Users,
   TrendingUp
-<<<<<<< HEAD
-export default function SmartContractRiskScanner(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function SmartContractRiskScanner(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Search,
@@ -69,15 +50,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       title: 'Risk Assessment Engine',
       description: 'Advanced risk scoring and prioritization for identified vulnerabilities',
       benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
-<<<<<<< HEAD
-    },
-    {
-      icon: Code,
-      title: 'Smart Contract Analysis',
-      description: 'Deep code analysis and optimization recommendations for smart contracts',
-      benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis']
-
-=======
     },;
     {;
       icon: Code,;
@@ -85,9 +57,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       description: 'Deep code analysis and optimization recommendations for smart contracts',;
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const scanningCapabilities = [
     {
       title: 'Reentrancy Attacks',
@@ -106,15 +76,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       description: 'Detect improper access control and permission vulnerabilities',
       icon: Lock,
       features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Logic Vulnerabilities',
-      description: 'Identify logical flaws and business logic vulnerabilities',
-      icon: Lightbulb,
-      features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing']
-
-=======
     },;
     {;
       title: 'Logic Vulnerabilities',;
@@ -122,9 +83,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       icon: Lightbulb,;
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -171,15 +130,6 @@ export default function SmartContractRiskScanner(...args: []):  {
         'White-label solutions',
         'Dedicated infrastructure',
         '24/7 dedicated support',
-<<<<<<< HEAD
-        'Custom integrations',
-        'On-premise deployment',
-        'Compliance certifications'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'Custom integrations',;
         'On-premise deployment',;
         'Compliance certifications';
@@ -187,9 +137,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       cta: 'Contact Sales',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const marketInfo = {
   marketSize: '$2.8 billion',
     growthRate: '23.4% CAGR',
@@ -201,14 +149,7 @@ export default function SmartContractRiskScanner(...args: []):  {
   ;
   roi: '300-500% within 6 months';
   ;
-
-
-
-
-
-
 };
-
   const supportedNetworks = [
     'Ethereum',
     'Binance Smart Chain',;
@@ -219,7 +160,6 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Optimism',;
     'Base';
   ];
-
   const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
@@ -228,19 +168,12 @@ export default function SmartContractRiskScanner(...args: []):  {
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Smart Contract Risk Scanner - Zion Tech Group"
         description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20"></div>
@@ -249,31 +182,17 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-
             <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4" />
               <span>Blockchain Security Solution</span>
             </div>
-
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
                 Smart Contract
@@ -281,34 +200,28 @@ export default function SmartContractRiskScanner(...args: []):  {
               <br />
               <span className="text-white">Risk Scanner</span>
             </h1>
-
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Protect your DeFi projects with AI-powered smart contract security scanning.
               Detect vulnerabilities, assess risks, and secure your blockchain applications.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center space-x-2"
-
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-red-400 hover:text-red-400 transition-all duration-300"
-
                 Schedule Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Market Information */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -319,26 +232,13 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.6 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center"
-
                 <div className="text-2xl font-bold text-red-400 mb-2">{value}</div>
                 <div className="text-sm text-gray-400 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -348,7 +248,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -356,26 +255,13 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Advanced Security Features
             </h2>
@@ -392,35 +278,16 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300"
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -443,7 +310,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Scanning Capabilities Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-7xl">
@@ -451,26 +317,13 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Vulnerability Detection
             </h2>
@@ -487,35 +340,16 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300"
-
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-white" />
@@ -538,7 +372,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Supported Networks Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -546,26 +379,13 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Multi-Chain Support
             </h2>
@@ -582,35 +402,16 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300"
-
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-6 h-6 text-white" />
                 </div>
@@ -620,7 +421,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Security Standards Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-7xl">
@@ -628,26 +428,13 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry Security Standards
             </h2>
@@ -664,35 +451,16 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300"
-
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-white" />
                 </div>
@@ -702,7 +470,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -710,26 +477,13 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transparent Security Pricing
             </h2>
@@ -746,39 +500,20 @@ export default function SmartContractRiskScanner(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
                   plan.popular
                     ? 'border-red-400 shadow-lg shadow-red-400/20'
                     : 'border-slate-700'
                 }`}
-
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -786,7 +521,6 @@ export default function SmartContractRiskScanner(...args: []):  {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-4">
@@ -795,7 +529,6 @@ export default function SmartContractRiskScanner(...args: []):  {
                   </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
@@ -804,7 +537,6 @@ export default function SmartContractRiskScanner(...args: []):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -813,7 +545,6 @@ export default function SmartContractRiskScanner(...args: []):  {
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -821,7 +552,6 @@ export default function SmartContractRiskScanner(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">
         <div className="container mx-auto max-w-7xl text-center">
@@ -829,25 +559,12 @@ export default function SmartContractRiskScanner(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Smart Contracts?
             </h2>
@@ -855,30 +572,17 @@ export default function SmartContractRiskScanner(...args: []):  {
               Join leading DeFi projects that are already using our smart contract
               risk scanner to protect their applications and users.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300"
-
                 Start Free Trial
               </motion.button>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-<<<<<<< HEAD
-
-                Contact Security Team
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Contact Security Team;
               </motion.button>;
@@ -887,6 +591,5 @@ export default function SmartContractRiskScanner(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}

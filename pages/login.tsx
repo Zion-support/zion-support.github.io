@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion               } from 'framer-motion.ts'
-import { useState               } from 'react.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
 import { Mail,
   Lock,
   Eye,
@@ -11,13 +11,9 @@ import { Mail,
   Cloud,
   Zap,
   ArrowRight
-<<<<<<< HEAD
-export default function Login(...args: any[]): any {
-=======
-              } from 'lucide-react.ts'
+ } from 'lucide-react'
 
-export default function Login(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Login(...args[]):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -25,63 +21,16 @@ export default function Login(...args[]: any):  {
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-<<<<<<< HEAD
-  const [errors, setErrors] = useState<Record<string, any>>({ /* empty */ })
-
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)              => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
-
-
-  const validateForm = () => {
-    const newErrors: Record<string, any> = { /* empty */ }
-
-    if (!formData.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-
-    if (!formData.password) newErrors.password = 'Password is required'
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-=======
   const [errors, setErrors] = useState<Record<string, any>>({})
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault()
-
-    if (!validateForm()) return
-
-    setIsSubmitting(true)
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-
-      // Success - redirect or show success message
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('Login successful:', formData)
-
-    } catch (error) {
-      // // // console.error('Login error:', error)
-=======
       // // // // // // // console.log('Login successful:', formData)
 
     } catch (error) {
       // // // // // // // console.error('Login error:', error)
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
       // // // // console.log('Login successful:', formData)
       
     } catch (error) {
       // // // // console.error('Login error:', error)
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     } finally {
       setIsSubmitting(false)
 
@@ -525,15 +474,6 @@ export default function Login(...args[]: any):  {
                   Manage cloud infrastructure, monitor costs, and optimize resource allocation
                 </p>
               </motion.div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}}}}}}}
-=======
             </div>;
           </div>;
         </section>;
@@ -541,4 +481,3 @@ export default function Login(...args[]: any):  {
     </>;
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

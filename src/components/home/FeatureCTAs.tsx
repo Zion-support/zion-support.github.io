@@ -32,13 +32,9 @@ import { ArrowRight,
   PenTool,
   Shield,
   Cloud
-<<<<<<< HEAD
-export function FeatureCTAs(...args: any[]): any {
-=======
                } from 'lucide-react.ts';
 
 export function FeatureCTAs(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       title: "AI Services & Solutions",
@@ -152,15 +148,6 @@ export function FeatureCTAs(...args[]: any):  {
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
     {
-<<<<<<< HEAD
-      title: "Micro SAAS Hub",
-      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: "/micro-saas",
-      badge: "New",
-      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-
-=======
       title: "Micro SAAS Hub",;
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",;
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
@@ -168,9 +155,7 @@ export function FeatureCTAs(...args[]: any):  {
       badge: "New",;
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <section className = "py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,13 +185,11 @@ export function FeatureCTAs(...args[]: any):  {
                   {feature.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="pb-4">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {feature.details}
                 </p>
               </CardContent>
-
               <CardFooter>
                 <Link to={feature.link} className="w-full">
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
@@ -218,7 +201,6 @@ export function FeatureCTAs(...args[]: any):  {
             </Card>
           ))}
         </div>
-
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -239,23 +221,10 @@ export function FeatureCTAs(...args[]: any):  {
                   View All Services
                 </Button>
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card>}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,53 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle                } from '@/components/ui/card';
-import { Badge                } from '@/components/ui/badge';
-import { Button                } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027                } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027                } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film                } from 'lucide-react.ts';
-import { Link                } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle               } from '@/components/ui/card';
 import { Badge               } from '@/components/ui/badge';
 import { Button               } from '@/components/ui/button';
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film import { Link               } from 'react-router-dom.ts';
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Autonomous Systems': Brain,
-  'Quantum Computing & AI': Cpu,
-  'Blockchain & Web3': Database,
-  'Cybersecurity & Privacy': Shield,
-  'Healthcare & Biotech': Heart,
-  'Financial Technology': DollarSign,
-  'IoT & Automation': Cloud,
-  'Cloud & Infrastructure': Cloud,
-  'Data Analytics & BI': BarChart3,
-  'Digital Marketing & Automation': Users,
-  'E-commerce & Retail': ShoppingCart,
-  'Education & Learning Technology': GraduationCap,
-  'Space Technology & Earth Observation': Rocket,
-  'AR/VR & Immersive Technology': Users,
-  'Robotics & Automation': Factory,
-  'Green Technology & Sustainability': Leaf,
-  'Supply Chain & Logistics': Truck,
-  'Human Resources & Talent Management': Users,
-  'Legal Technology & Compliance': Gavel,
-  'Real Estate & Property Technology': Home,
-  'Sports Technology & Analytics': Trophy,
-  'Entertainment & Media Technology': Film
-};
-=======
 import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
@@ -73,7 +31,6 @@ const categoryColors: { [key: string]: string } = {
   'Sports Technology & Analytics': 'from-green-600 to-blue-700',
   'Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
-
 const features = [
   "AI-Powered Automation",
   "Real-time Analytics",
@@ -88,7 +45,6 @@ const features = [
   "SOC 2 Type II Compliant",;
   "30-Day Money Back Guarantee";
 ];
-
 const benefits = [
   {
     icon: <Zap className="h-6 w-6"/>,
@@ -103,15 +59,6 @@ const benefits = [
   {
     icon: <TrendingUp className="h-6 w-6"/>,
     title: "Proven ROI",
-<<<<<<< HEAD
-    description: "Average 300% ROI within 6 months of implementation"
-  },
-  {
-    icon: <CheckCircle className="h-6 w-6"/>,
-    title: "Quality Guaranteed",
-    description: "30-day money-back guarantee with free migration support"
-
-=======
     description: "Average 300% ROI within 6 months of implementation";
   },;
   {;
@@ -119,9 +66,7 @@ const benefits = [
     title: "Quality Guaranteed",;
     description: "30-day money-back guarantee with free migration support";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -132,24 +77,15 @@ const contactInfo = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 
 export function ComprehensiveServicesShowcase2027(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
-
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
-
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -158,9 +94,7 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch});
-
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
-
   return (
     <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
@@ -188,7 +122,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             </Link>
           </div>
         </div>
-
         {/* Contact Information Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-16 border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -209,7 +142,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             </div>
           </div>
         </div>
-
         {/* Search and Filter */}
         <div className="mb-16">
           <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -224,7 +156,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-
               <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
@@ -232,7 +163,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             </select>
           </div>
         </div>
-
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
@@ -288,7 +218,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             ))}
           </div>
         </div>
-
         {/* All Services Grid */}
         <div>
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
@@ -322,7 +251,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
                   <p className="text-sm text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-white text-sm">Key Features: anyanyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
@@ -333,7 +261,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
                       </div>
                     ))}
                   </div>
-
                   {/* Market Information */}
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex justify-between">
@@ -349,7 +276,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
                       <span className="text-white">{service.roi}</span>
                     </div>
                   </div>
-
                   {/* Service Stats */}
                   <div className="flex items-center justify-between text-sm mb-4">
                     <div className="flex items-center">
@@ -361,7 +287,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
                       {service.customers} customers
                     </Badge>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="space-y-2">
                     <Link to={service.link} className="w-full">
@@ -382,7 +307,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             ))}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
@@ -398,7 +322,6 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="mt-20 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -427,28 +350,13 @@ export function ComprehensiveServicesShowcase2027(...args[]: any):  {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card></Card></Card></Card>}
-
-export default ComprehensiveServicesShowcase2027;}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
@@ -457,4 +365,3 @@ export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

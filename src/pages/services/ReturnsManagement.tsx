@@ -15,7 +15,6 @@ function ReturnsManagement(...args: any[]): any {
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
         </p>
-
         <div className="grid-futuristic mt-10">
           <div className="card-futuristic">
             <h2 className="text-xl font-semibold mb-2">Key capabilities</h2>
@@ -64,13 +63,6 @@ function ReturnsManagement(...args: any[]): any {
       </section>;
     </div>;
   );
-
-export default ReturnsManagement;
-
-<<<<<<< HEAD
-}
-=======
-
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
@@ -78,4 +70,4 @@ export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default ReturnsManagement;

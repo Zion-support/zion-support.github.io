@@ -34,11 +34,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/client-dashboard"
@@ -46,11 +42,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/talent-dashboard"
@@ -66,11 +58,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/analytics"
@@ -78,11 +66,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/project/:id/milestones"
@@ -90,11 +74,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/project/:id"
@@ -118,11 +98,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Messages Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/inbox"
@@ -130,11 +106,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Inbox Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/payments"
@@ -142,11 +114,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/interviews"
@@ -154,11 +122,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/notifications"
@@ -166,11 +130,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/applications/track"
@@ -178,11 +138,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/hiring-tracker"
@@ -206,11 +162,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/referrals"
@@ -218,11 +170,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Referrals Page</div>
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/developers"
@@ -262,11 +210,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
       <Route
         path="/contract-builder"
@@ -274,11 +218,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       />
     </Routes>
   );

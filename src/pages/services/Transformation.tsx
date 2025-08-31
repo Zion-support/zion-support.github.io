@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
-=======
 import React from 'react.ts';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight               } from 'lucide-react.ts';
 
 const DigitalTransformation = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const transformationServices = [
     {
       title: "Process Automation",
@@ -22,15 +17,6 @@ const DigitalTransformation = () => {
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-<<<<<<< HEAD
-    {
-      title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
-      icon: Users
-
-=======
     {;
       title: "Change Management",;
       description: "Guide your team through digital adoption and transformation.",;
@@ -38,9 +24,7 @@ const DigitalTransformation = () => {
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
       icon: Users;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const transformationAreas = [
     {
       name: "Customer Experience",
@@ -53,15 +37,6 @@ const DigitalTransformation = () => {
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-
-=======
     },;
     {;
       name: "Technology",;
@@ -69,9 +44,7 @@ const DigitalTransformation = () => {
       icon: BarChart3,;
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Increased operational efficiency and productivity",;
     "Enhanced customer experience and satisfaction",;
@@ -80,7 +53,6 @@ const DigitalTransformation = () => {
     "Faster time to market for new products",;
     "Better competitive positioning in the market";
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -110,7 +82,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Transformation Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +117,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Transformation Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -180,7 +150,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +189,6 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -244,5 +212,4 @@ const DigitalTransformation = () => {
     </div>;
   );
 };
-
 export default DigitalTransformation;}}}

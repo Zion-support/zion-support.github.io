@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { cn               } from '../../utils/cn';
-=======
 import React from 'react.ts';
 import { cn               } from '../../utils/cn';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SwitchProps extends React.PropsWithChildren<{}> {
 
@@ -37,16 +33,9 @@ export function Switch(...args: any[]): any {;
         disabled && 'opacity-50 cursor-not-allowed',
   className
       )
-
-
-
-
-
-
 }
       id={id}
       {...props}
-
       <span
         className = {
   cn(
@@ -56,9 +45,6 @@ export function Switch(...args: any[]): any {;
 ;
 ;
 ;
-
-
-
 };
       />;
     </button>;

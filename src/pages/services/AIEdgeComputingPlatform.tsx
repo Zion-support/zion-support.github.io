@@ -3,22 +3,22 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
     'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',;
-    'Automatic load balancing and failover',;
-    'Edge security and threat detection',;
-    'IoT device integration and management',;
-    'Custom edge computing workflows',;
-    'Edge analytics and reporting tools',;
-    'Scalable edge infrastructure management';
+    'Edge-to-cloud synchronization and analytics',
+    'Automatic load balancing and failover',
+    'Edge security and threat detection',
+    'IoT device integration and management',
+    'Custom edge computing workflows',
+    'Edge analytics and reporting tools',
+    'Scalable edge infrastructure management'
   ];
 
-  const benefits = [;
-    'Reduce latency by 80-90%',;
-    'Cut bandwidth costs by 60-70%',;
-    'Improve data privacy and security',;
-    'Real-time edge processing',;
-    'Enhanced offline capabilities',;
-    'Scalable edge infrastructure';
+  const benefits = [
+    'Reduce latency by 80-90%',
+    'Cut bandwidth costs by 60-70%',
+    'Improve data privacy and security',
+    'Real-time edge processing',
+    'Enhanced offline capabilities',
+    'Scalable edge infrastructure'
   ];
 
   const pricing = [
@@ -33,41 +33,31 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
       price: '$1,199/mo',
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
-<<<<<<< HEAD
     },
     {
       name: 'Enterprise',
       price: '$3,499/mo',
       features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-
-=======
-    },;
-    { ;
-      name: 'Enterprise', ;
-      price: '$3,499/mo', ;
-      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
-      popular: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
-  const useCases = [;
-    'Smart city infrastructure',;
-    'Industrial IoT monitoring',;
-    'Autonomous vehicle systems',;
-    'Healthcare edge computing',;
-    'Retail edge analytics',;
-    'Energy grid optimization';
+  const useCases = [
+    'Smart city infrastructure',
+    'Industrial IoT monitoring',
+    'Autonomous vehicle systems',
+    'Healthcare edge computing',
+    'Retail edge analytics',
+    'Energy grid optimization'
   ];
 
-  const industries = [;
-    'Smart Cities & Infrastructure',;
-    'Manufacturing & Industry 4.0',;
-    'Transportation & Logistics',;
-    'Healthcare & Medical Devices',;
-    'Retail & E-commerce',;
-    'Energy & Utilities';
+  const industries = [
+    'Smart Cities & Infrastructure',
+    'Manufacturing & Industry 4.0',
+    'Transportation & Logistics',
+    'Healthcare & Medical Devices',
+    'Retail & E-commerce',
+    'Energy & Utilities'
   ];
 
   return (
@@ -291,30 +281,16 @@ import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
-
+          >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
-=======
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold";
-          >;
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
-          </a>;
-        </div>;
-      </section>;
-    </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}}}
+}

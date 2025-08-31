@@ -1,6 +1,6 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
-export default function PricingPage(...args[]: any):  {
+export default function PricingPage(...args[]):  {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -52,15 +52,6 @@ export default function PricingPage(...args[]: any):  {
         'Unlimited Users',
         'Advanced Compliance',
         'Dedicated Account Manager',
-<<<<<<< HEAD
-        'SLA Guarantees',
-        'On-Premise Options'
-      ],
-      cta: 'Contact Sales',
-      ctaLink: '/contact',
-      popular: false
-
-=======
         'SLA Guarantees',;
         'On-Premise Options';
       ],;
@@ -68,7 +59,6 @@ export default function PricingPage(...args[]: any):  {
       ctaLink: '/contact',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const addOnServices = [
     {
@@ -90,24 +80,13 @@ export default function PricingPage(...args[]: any):  {
       features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
-<<<<<<< HEAD
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
-<<<<<<< HEAD
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
-
-=======
       features['Architecture Design', 'Data Migration', 'Performance Optimization']
     };
-=======;
       name: 'Cloud Migration',;
       description: 'Complete cloud infrastructure migration',;
       price: 'From $10,000',;
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const faqs = [
     {
@@ -129,24 +108,13 @@ export default function PricingPage(...args[]: any):  {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
-<<<<<<< HEAD
-    },
-    {
-      question: 'Can I cancel my subscription?',
-<<<<<<< HEAD
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-
-=======
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     };
-=======;
     },;
     {;
       question: 'Can I cancel my subscription?',;
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
     <>
@@ -180,17 +148,10 @@ export default function PricingPage(...args[]: any):  {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)              => (
-                <div
-                  key={index}
-=======
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)               => (
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)  => (
                 <div 
                   key={index} 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
                     tier.popular
                       ? 'border-blue-400 border-2 scale-105'
@@ -247,15 +208,9 @@ export default function PricingPage(...args[]: any):  {
                 Enhance your solution with our specialized add-on services
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index)              => (
-=======
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)  => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -323,23 +278,10 @@ export default function PricingPage(...args[]: any):  {
 
                 View Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </main>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

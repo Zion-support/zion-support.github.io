@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function AISupplyChainOptimization(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
-        <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
+        <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-optimization" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -43,7 +37,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
+                >
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -100,19 +94,14 @@ export default function AISupplyChainOptimization(...args: []):  {
                   icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-slate-400">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -120,7 +109,7 @@ export default function AISupplyChainOptimization(...args: []):  {
         </section>
 
         {/* Optimization Areas Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,20 +157,15 @@ export default function AISupplyChainOptimization(...args: []):  {
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-<<<<<<< HEAD
-
-              ].map((area, index)              => (
-=======
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                  <p className="text-slate-300 mb-4">{area.description}</p>
-                  <ul className="space-y-1">
+                  <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
+                  <p className="text-slate-400 mb-4">{area.description}</p>
+                  <ul className="space-y-2">
                     {area.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -244,20 +228,15 @@ export default function AISupplyChainOptimization(...args: []):  {
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-<<<<<<< HEAD
-
-              ].map((capability, index)              => (
-=======
                 }
               ].map((capability, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
-                  <p className="text-slate-300 mb-4">{capability.description}</p>
-                  <ul className="space-y-1">
+                  <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                  <p className="text-slate-400 mb-4">{capability.description}</p>
+                  <ul className="space-y-2">
                     {capability.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -272,7 +251,7 @@ export default function AISupplyChainOptimization(...args: []):  {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -286,14 +265,7 @@ export default function AISupplyChainOptimization(...args: []):  {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
-                  {[
-                    "15-25% reduction in supply chain costs",
-                    "30-40% improvement in delivery performance",
-                    "20-30% reduction in inventory carrying costs",
-                    "Improved supplier performance and relationships",
-                    "Enhanced risk management and resilience",
-                    "Better customer satisfaction and service levels"
-                  ].map((benefit, index) => (
+                  {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -302,7 +274,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
@@ -356,13 +328,8 @@ export default function AISupplyChainOptimization(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -388,15 +355,14 @@ export default function AISupplyChainOptimization(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-
+              >
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
+              >
                 Explore All Services
               </Link>
             </div>
@@ -404,15 +370,5 @@ export default function AISupplyChainOptimization(...args: []):  {
         </section>
       </div>
     </>
-=======
-              >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
-}}}}}}
+}

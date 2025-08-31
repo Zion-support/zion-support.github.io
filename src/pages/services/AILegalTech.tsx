@@ -9,25 +9,12 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
     'Integration with major legal management platforms',;
     'Custom AI models for specialized legal domains';
   ];
-
   const tiers = [
     {
       name: 'Solo Practice',
       price: '$299/mo',
       details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Small Firm',
-      price: '$799/mo',
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Small Firm', 
       price: '$799/mo', 
@@ -38,9 +25,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
       price: '$1,999/mo', ;
       details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Contract review and risk assessment',;
     'Legal document automation',;
@@ -49,7 +34,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
     'Due diligence and discovery',;
     'Regulatory compliance management';
   ];
-
   const benefits = [;
     'Reduce document review time by 70-85%',;
     'Improve accuracy and consistency by 90%',;
@@ -58,7 +42,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
     'Enhance compliance and risk management',;
     'Scale legal operations without additional staff';
   ];
-
   const industries = [;
     'Corporate Law',;
     'Real Estate Law',;
@@ -67,7 +50,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
     'Technology & IP',;
     'Government & Public Sector';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-600 via-gray-600 to-zinc-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
           <p className="text-gray-100 text-xl">Revolutionize your legal practice with AI-powered tools that automate document review, enhance accuracy, and accelerate legal workflows.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -128,7 +109,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-slate-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your legal practice?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

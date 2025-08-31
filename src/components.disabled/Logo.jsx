@@ -7,9 +7,4 @@ export function Logo({ className = '' }) {
       <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
         Zion Tech Group
       </span>
-<<<<<<< HEAD
-    </motion.div>);
-}
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

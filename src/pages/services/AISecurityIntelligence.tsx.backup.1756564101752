@@ -16,18 +16,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$599/mo',
       details: ['Up to 100 threat feeds', 'Basic AI features', 'Standard intelligence', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,999/mo',
-      details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,499/mo', 
@@ -38,7 +26,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$3,999/mo', ;
       details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

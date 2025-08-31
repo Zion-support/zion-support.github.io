@@ -53,16 +53,12 @@ website: string;
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]};
+    security: string[];
+  };
   competitors?: string[];
   marketSize?: string;
   demoUrl?: string;
-<<<<<<< HEAD
-  documentationUrl?: string;
-=======
   documentationUrl?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
   {
@@ -74,7 +70,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 15999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Quantum-classical hybrid computing",
       "AI workload optimization",
       "Quantum error correction",
@@ -86,28 +82,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "API-first architecture",
       "Enterprise security protocols"
     ],
-    benefits[
+    benefits: [
       "1000x faster AI training",
       "Quantum advantage in optimization",
       "Reduced computational costs",
       "Future-proof technology stack",
       "Competitive edge in research"
     ],
-    useCases[
+    useCases: [
       "Drug discovery simulations",
       "Financial portfolio optimization",
       "Climate modeling",
       "Cryptography research",
       "Machine learning acceleration"
     ],
-    targetAudience[
+    targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
       "Financial services",
       "Government agencies",
       "Tech companies"
     ],
-    tags["Quantum Computing", "AI", "High Performance", "Research", "Innovation"],
+    tags: ["Quantum Computing", "AI", "High Performance", "Research", "Innovation"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$15,999 - $49,999/month",
@@ -119,18 +115,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Qiskit", "Cirq", "PennyLane", "Python", "CUDA"],
-      integrations["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum", "D-Wave"],
+      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "CUDA"],
+      integrations: ["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum", "D-Wave"],
       apiEndpoints: 500,
       uptime: "99.95%",
-      security["Quantum-resistant encryption", "Zero-trust architecture", "SOC 2 Type II", "ISO 27001"]
+      security: ["Quantum-resistant encryption", "Zero-trust architecture", "SOC 2 Type II", "ISO 27001"]
     },
-    competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],
     marketSize: "$1.7 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/quantum-ai-orchestrator",
     documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-orchestrator"
   },
-
   // Autonomous AI Agents
   {
     id: "autonomous-ai-agent-framework",
@@ -141,7 +136,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 4999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Multi-agent orchestration",
       "Autonomous decision making",
       "Natural language processing",
@@ -153,28 +148,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "Scalable architecture",
       "API integration"
     ],
-    benefits[
+    benefits: [
       "24/7 autonomous operation",
       "Reduced human intervention",
       "Improved decision accuracy",
       "Scalable AI deployment",
       "Cost optimization"
     ],
-    useCases[
+    useCases: [
       "Customer service automation",
       "Process optimization",
       "Data analysis",
       "Predictive maintenance",
       "Supply chain management"
     ],
-    targetAudience[
+    targetAudience: [
       "Enterprise companies",
       "E-commerce platforms",
       "Service providers",
       "Manufacturing companies",
       "Financial institutions"
     ],
-    tags["AI", "Automation", "Autonomous", "Machine Learning", "Business Process"],
+    tags: ["AI", "Automation", "Autonomous", "Machine Learning", "Business Process"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $19,999/month",
@@ -186,18 +181,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
-      integrations["Salesforce", "HubSpot", "Zapier", "Slack", "Microsoft Teams", "Slack"],
+      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "Zapier", "Slack", "Microsoft Teams", "Slack"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["End-to-end encryption", "Role-based access", "Audit logging", "GDPR compliance"]
+      security: ["End-to-end encryption", "Role-based access", "Audit logging", "GDPR compliance"]
     },
-    competitors["OpenAI", "Anthropic", "Microsoft", "Google"],
+    competitors: ["OpenAI", "Anthropic", "Microsoft", "Google"],
     marketSize: "$15.7 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/autonomous-ai-agents",
     documentationUrl: "https://ziontechgroup.com/docs/autonomous-ai-agents"
   },
-
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing-platform",
@@ -208,7 +202,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 7999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Edge AI processing",
       "Real-time inference",
       "IoT device management",
@@ -220,28 +214,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "Scalable deployment",
       "API gateway"
     ],
-    benefits[
+    benefits: [
       "Sub-10ms response times",
       "Reduced bandwidth usage",
       "Enhanced privacy",
       "Offline capabilities",
       "Cost optimization"
     ],
-    useCases[
+    useCases: [
       "Smart cities",
       "Industrial IoT",
       "Autonomous vehicles",
       "Healthcare monitoring",
       "Retail analytics"
     ],
-    targetAudience[
+    targetAudience: [
       "IoT companies",
       "Manufacturing",
       "Smart city providers",
       "Healthcare providers",
       "Retail chains"
     ],
-    tags["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
+    tags: ["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$7,999 - $24,999/month",
@@ -253,18 +247,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["TensorFlow Lite", "ONNX Runtime", "Docker", "Kubernetes", "MQTT", "WebRTC"],
-      integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
+      technology: ["TensorFlow Lite", "ONNX Runtime", "Docker", "Kubernetes", "MQTT", "WebRTC"],
+      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
       apiEndpoints: 300,
       uptime: "99.95%",
-      security["Zero-trust security", "Device authentication", "Data encryption", "Secure boot"]
+      security: ["Zero-trust security", "Device authentication", "Data encryption", "Secure boot"]
     },
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/edge-ai-platform",
     documentationUrl: "https://ziontechgroup.com/docs/edge-ai-platform"
   },
-
   // Blockchain AI Integration Platform
   {
     id: "blockchain-ai-integration-platform",
@@ -275,7 +268,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 12999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered smart contracts",
       "Decentralized AI training",
       "Blockchain data analytics",
@@ -287,28 +280,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "NFT marketplace",
       "API ecosystem"
     ],
-    benefits[
+    benefits: [
       "Enhanced security",
       "Transparent AI decisions",
       "Decentralized governance",
       "Reduced costs",
       "Innovation acceleration"
     ],
-    useCases[
+    useCases: [
       "DeFi platforms",
       "Supply chain tracking",
       "Digital identity",
       "Content creation",
       "Gaming platforms"
     ],
-    targetAudience[
+    targetAudience: [
       "DeFi platforms",
       "Blockchain companies",
       "Financial institutions",
       "Gaming companies",
       "Content creators"
     ],
-    tags["Blockchain", "AI", "DeFi", "Smart Contracts", "Web3"],
+    tags: ["Blockchain", "AI", "DeFi", "Smart Contracts", "Web3"],
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
     marketPrice: "$12,999 - $39,999/month",
@@ -320,18 +313,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Ethereum", "Solana", "Polygon", "TensorFlow", "PyTorch", "Web3.js"],
-      integrations["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
+      technology: ["Ethereum", "Solana", "Polygon", "TensorFlow", "PyTorch", "Web3.js"],
+      integrations: ["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
       apiEndpoints: 400,
       uptime: "99.9%",
-      security["Multi-signature wallets", "Smart contract audits", "Zero-knowledge proofs", "Hardware security modules"]
+      security: ["Multi-signature wallets", "Smart contract audits", "Zero-knowledge proofs", "Hardware security modules"]
     },
-    competitors["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],
+    competitors: ["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],
     marketSize: "$8.9 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-platform",
     documentationUrl: "https://ziontechgroup.com/docs/blockchain-ai-platform"
   },
-
   // Cybersecurity AI Platform
   {
     id: "cybersecurity-ai-platform",
@@ -342,7 +334,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 9999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI threat detection",
       "Behavioral analytics",
       "Automated response",
@@ -354,28 +346,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "Risk assessment",
       "Security dashboard"
     ],
-    benefits[
+    benefits: [
       "99.9% threat detection rate",
       "Reduced response time",
       "Automated security",
       "Compliance automation",
       "Cost reduction"
     ],
-    useCases[
+    useCases: [
       "Enterprise security",
       "Cloud security",
       "Network security",
       "Application security",
       "Data protection"
     ],
-    targetAudience[
+    targetAudience: [
       "Large enterprises",
       "Financial institutions",
       "Healthcare providers",
       "Government agencies",
       "Educational institutions"
     ],
-    tags["Cybersecurity", "AI", "Threat Detection", "Automation", "Compliance"],
+    tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Compliance"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$9,999 - $29,999/month",
@@ -387,18 +379,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
-      integrations["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
+      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
+      integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
       apiEndpoints: 250,
       uptime: "99.99%",
-      security["Zero-trust architecture", "Encryption at rest", "Multi-factor authentication", "SOC 2 compliance"]
+      security: ["Zero-trust architecture", "Encryption at rest", "Multi-factor authentication", "SOC 2 compliance"]
     },
-    competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     marketSize: "$45.8 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/cybersecurity-ai",
     documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-ai"
   },
-
   // Healthcare AI Platform
   {
     id: "healthcare-ai-platform",
@@ -409,7 +400,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 14999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Medical image analysis",
       "Diagnostic assistance",
       "Patient monitoring",
@@ -421,28 +412,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "FDA approval support",
       "Research tools"
     ],
-    benefits[
+    benefits: [
       "Improved diagnostic accuracy",
       "Reduced medical errors",
       "Faster diagnosis",
       "Cost optimization",
       "Better patient outcomes"
     ],
-    useCases[
+    useCases: [
       "Radiology",
       "Pathology",
       "Cardiology",
       "Oncology",
       "General practice"
     ],
-    targetAudience[
+    targetAudience: [
       "Hospitals",
       "Clinics",
       "Research institutions",
       "Pharmaceutical companies",
       "Medical device companies"
     ],
-    tags["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Telemedicine"],
+    tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Telemedicine"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$14,999 - $49,999/month",
@@ -454,18 +445,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "Python", "React"],
-      integrations["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms", "Lab systems"],
+      technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "Python", "React"],
+      integrations: ["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms", "Lab systems"],
       apiEndpoints: 300,
       uptime: "99.99%",
-      security["HIPAA compliance", "SOC 2", "End-to-end encryption", "Audit logging", "Access controls"]
+      security: ["HIPAA compliance", "SOC 2", "End-to-end encryption", "Audit logging", "Access controls"]
     },
-    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
     marketSize: "$67.4 billion by 2028",
     demoUrl: "https://ziontechgroup.com/demo/healthcare-ai",
     documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai"
   },
-
   // Financial AI Trading Platform
   {
     id: "financial-ai-trading-platform",
@@ -476,7 +466,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 19999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Algorithmic trading",
       "Risk management",
       "Market prediction",
@@ -488,28 +478,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "API trading",
       "Multi-asset support"
     ],
-    benefits[
+    benefits: [
       "Improved trading performance",
       "Risk reduction",
       "24/7 operation",
       "Compliance automation",
       "Cost optimization"
     ],
-    useCases[
+    useCases: [
       "Equity trading",
       "Forex trading",
       "Cryptocurrency trading",
       "Options trading",
       "Portfolio management"
     ],
-    targetAudience[
+    targetAudience: [
       "Investment banks",
       "Hedge funds",
       "Asset managers",
       "Trading firms",
       "Financial advisors"
     ],
-    tags["Financial Services", "AI", "Trading", "Risk Management", "Algorithmic Trading"],
+    tags: ["Financial Services", "AI", "Trading", "Risk Management", "Algorithmic Trading"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$19,999 - $59,999/month",
@@ -521,18 +511,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Kafka"],
-      integrations["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
+      technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Kafka"],
+      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
       apiEndpoints: 500,
       uptime: "99.99%",
-      security["SOC 2", "PCI DSS", "Encryption", "Multi-factor authentication", "Audit logging"]
+      security: ["SOC 2", "PCI DSS", "Encryption", "Multi-factor authentication", "Audit logging"]
     },
-    competitors["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],
+    competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],
     marketSize: "$23.4 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/financial-ai-trading",
     documentationUrl: "https://ziontechgroup.com/docs/financial-ai-trading"
   },
-
   // Manufacturing AI Platform
   {
     id: "manufacturing-ai-platform",
@@ -543,7 +532,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 11999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Predictive maintenance",
       "Quality control",
       "Supply chain optimization",
@@ -555,28 +544,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "Real-time monitoring",
       "Reporting dashboard"
     ],
-    benefits[
+    benefits: [
       "Reduced downtime",
       "Improved quality",
       "Cost optimization",
       "Energy efficiency",
       "Increased productivity"
     ],
-    useCases[
+    useCases: [
       "Automotive manufacturing",
       "Electronics production",
       "Pharmaceutical manufacturing",
       "Food processing",
       "Textile manufacturing"
     ],
-    targetAudience[
+    targetAudience: [
       "Manufacturing companies",
       "Industrial companies",
       "Automotive manufacturers",
       "Electronics companies",
       "Food processors"
     ],
-    tags["Manufacturing", "AI", "IoT", "Predictive Maintenance", "Quality Control"],
+    tags: ["Manufacturing", "AI", "IoT", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$11,999 - $34,999/month",
@@ -588,18 +577,17 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "TensorFlow", "PyTorch", "OPC UA", "MQTT", "PLC integration"],
-      integrations["SAP", "Oracle", "Siemens", "Rockwell", "ABB", "Schneider Electric"],
+      technology: ["Python", "TensorFlow", "PyTorch", "OPC UA", "MQTT", "PLC integration"],
+      integrations: ["SAP", "Oracle", "Siemens", "Rockwell", "ABB", "Schneider Electric"],
       apiEndpoints: 400,
       uptime: "99.95%",
-      security["Industrial security", "Network segmentation", "Access controls", "Audit logging"]
+      security: ["Industrial security", "Network segmentation", "Access controls", "Audit logging"]
     },
-    competitors["Siemens", "GE Digital", "Rockwell Automation", "ABB Ability"],
+    competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB Ability"],
     marketSize: "$16.7 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/manufacturing-ai",
     documentationUrl: "https://ziontechgroup.com/docs/manufacturing-ai"
   },
-
   // Retail AI Platform
   {
     id: "retail-ai-platform",
@@ -610,7 +598,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     price: 8999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Personalized recommendations",
       "Inventory optimization",
       "Customer analytics",
@@ -622,28 +610,28 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       "Performance tracking",
       "Analytics dashboard"
     ],
-    benefits[
+    benefits: [
       "Increased sales",
       "Improved customer experience",
       "Reduced inventory costs",
       "Better marketing ROI",
       "Operational efficiency"
     ],
-    useCases[
+    useCases: [
       "E-commerce platforms",
       "Physical retail stores",
       "Omnichannel retail",
       "Fashion retail",
       "Grocery retail"
     ],
-    targetAudience[
+    targetAudience: [
       "Retail chains",
       "E-commerce companies",
       "Fashion brands",
       "Grocery stores",
       "Department stores"
     ],
-    tags["Retail", "AI", "E-commerce", "Personalization", "Analytics"],
+    tags: ["Retail", "AI", "E-commerce", "Personalization", "Analytics"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$8,999 - $24,999/month",
@@ -655,17 +643,15 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics"],
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+      integrations: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security["PCI DSS", "GDPR", "Data encryption", "Access controls", "Audit logging"]
+      security: ["PCI DSS", "GDPR", "Data encryption", "Access controls", "Audit logging"]
     },
-    competitors["Salesforce Commerce Cloud", "Adobe Commerce", "Shopify Plus", "Oracle Commerce"],
+    competitors: ["Salesforce Commerce Cloud", "Adobe Commerce", "Shopify Plus", "Oracle Commerce"],
     marketSize: "$19.9 billion by 2027",
     demoUrl: "https://ziontechgroup.com/demo/retail-ai",
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
-
 ];
-
 export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}

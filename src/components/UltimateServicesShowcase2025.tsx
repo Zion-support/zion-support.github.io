@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO               } from '@/components/SEO';
-import { Link               } from 'react-router-dom.ts';
-import { Brain,
-  Zap,
-  Shield,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Lock,
-  Cloud,
-  Briefcase,
-  Scale,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025               } from '@/data/ultimateRealServices2025';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle               } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceContact {
 
@@ -65,14 +38,16 @@ website: string;
 
 }
 
-const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
+}
+
+const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<any>('grid');
 
-  const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
+  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
     { id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀' },
@@ -101,7 +76,8 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch});
+    return matchesCategory && matchesSearch;
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -114,46 +90,10 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-        return 0}
+        return 0;
+    }
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w-6 h-6" />;
-=======
-<<<<<<< HEAD
-  const handleServiceClick = (service)  => {;
-    setSelectedService(service)};
-
-  const closeModal = () => {;
-    setSelectedService(null)};
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      };
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  };
-
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
     };
 =======;
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
@@ -161,129 +101,20 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w-6 h-6" />;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
-const UltimateServicesShowcase2025 = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO
-        title="Ultimate Innovative Services 2025 | Zion Tech Group"
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
-        keywords="AI services, quantum computing, autonomous business, micro SAAS, technology solutions"
-        ogImage="/og-image.jpg"
-        canonicalUrl="https://ziontechgroup.com"
-      />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Ultimate Services Showcase 2025
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. 
-            Transform your business with cutting-edge technology solutions designed for the future.
-          </p>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Phone</h3>
-                <p className="text-lg">+1 302 464 0950</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Email</h3>
-                <p className="text-lg">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Address</h3>
-                <p className="text-lg">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-            <div className="mt-4">
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Visit Our Website
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Overview */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI & Machine Learning</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced artificial intelligence solutions for business automation and insights
-            </p>
-            <ul className="text-gray-400 space-y-2">
-              <li>• Predictive Analytics</li>
-              <li>• Natural Language Processing</li>
-              <li>• Computer Vision</li>
-              <li>• Automated Decision Making</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cloud & DevOps</h3>
-            <p className="text-gray-300 mb-4">
-              Scalable cloud infrastructure and modern development practices
-            </p>
-            <ul className="text-gray-400 space-y-2">
-              <li>• Cloud Migration</li>
-              <li>• Container Orchestration</li>
-              <li>• CI/CD Pipelines</li>
-              <li>• Infrastructure as Code</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-600/30">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cybersecurity</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive security solutions to protect your digital assets
-            </p>
-            <ul className="text-gray-400 space-y-2">
-              <li>• Threat Detection</li>
-              <li>• Identity Management</li>
-              <li>• Compliance</li>
-              <li>• Incident Response</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-12">
-          <a 
-            href="/contact" 
-            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-          >
-            Get Started Today
-          </a>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-zion-cyan/10 via-transparent to-transparent" />
       </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-            Ultimate Services Showcase 2025
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="bg-cyan-400/20 border border-cyan-400/30 rounded-full px-6 py-3">
-              <span className="text-cyan-400 font-semibold">🚀 {filteredServices.length} Services</span>
-=======
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -299,9 +130,9 @@ const UltimateServicesShowcase2025 = () => {
               Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
             </p>
           </motion.div>
-
+          
           {/* Key Statistics */}
-          <motion.div
+          <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}
             initial="hidden"
@@ -326,57 +157,11 @@ const UltimateServicesShowcase2025 = () => {
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div
+          <motion.div 
             className="max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
-              Ultimate Services Showcase 2025
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive portfolio of 40+ cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
-                <span className="text-zion-cyan font-semibold">🚀 {allServices.length} Services</span>
-              </div>
-              <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3">
-                <span className="text-zion-purple font-semibold">⚡ AI-Powered</span>
-              </div>
-              <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-6 py-3">
-                <span className="text-zion-pink font-semibold">💎 Enterprise Grade</span>
-              </div>
-              <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
-                <span className="text-zion-cyan font-semibold">💰 ROI: 200-1000%</span>
-              </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            </div>
-            <div className="bg-purple-400/20 border border-purple-400/30 rounded-full px-6 py-3">
-              <span className="text-purple-400 font-semibold">⚡ AI-Powered</span>
-            </div>
-            <div className="bg-pink-400/20 border border-pink-400/30 rounded-full px-6 py-3">
-              <span className="text-pink-400 font-semibold">💎 Enterprise Grade</span>
-            </div>
-            <div className="bg-cyan-400/20 border border-cyan-400/30 rounded-full px-6 py-3">
-              <span className="text-cyan-400 font-semibold">💰 ROI: 200-1000%</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative mb-6">
               <input
@@ -389,24 +174,8 @@ const UltimateServicesShowcase2025 = () => {
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />
             </div>
 
-<<<<<<< HEAD
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-cyan-400 text-slate-900 shadow-lg'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600/50'
-                  }`}
-
-                  {getCategoryIcon(category)}
-                  <span className="ml-2 capitalize">{category === 'all' ? 'All Services' : category}</span>
-=======
             {/* Sort and View Controls */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <div className="flex items-center gap-2">
                 <label className="text-sm text-gray-300">Sort by:</label>
                 <select
@@ -420,7 +189,7 @@ const UltimateServicesShowcase2025 = () => {
                   <option value="name">Name</option>
                 </select>
               </div>
-
+              
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -429,7 +198,6 @@ const UltimateServicesShowcase2025 = () => {
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                   </svg>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -441,9 +209,10 @@ const UltimateServicesShowcase2025 = () => {
                 </button>
               </div>
             </div>
+          </motion.div>
 
           {/* Category Filter */}
-          <motion.div
+          <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -472,8 +241,8 @@ const UltimateServicesShowcase2025 = () => {
       {/* Services Grid/List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            className={viewMode === 'grid'
+          <motion.div 
+            className={viewMode === 'grid' 
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
             }
@@ -485,7 +254,7 @@ const UltimateServicesShowcase2025 = () => {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={viewMode === 'grid'
+                className={viewMode === 'grid' 
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
@@ -504,7 +273,7 @@ const UltimateServicesShowcase2025 = () => {
 
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">{service.name}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">{service.description}</p>
-
+                
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full border border-zion-purple/30">
                     {service.category}
@@ -555,7 +324,7 @@ const UltimateServicesShowcase2025 = () => {
       {/* Why Choose Zion Tech Group */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -569,8 +338,8 @@ const UltimateServicesShowcase2025 = () => {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
             </p>
           </motion.div>
-
-          <motion.div
+          
+          <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -582,13 +351,13 @@ const UltimateServicesShowcase2025 = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
               <p className="text-gray-300">We stay ahead of the curve with the latest technologies and methodologies, ensuring your business always has a competitive edge.</p>
             </motion.div>
-
+            
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Results Driven</h3>
               <p className="text-gray-300">Our solutions are designed to deliver measurable business outcomes, from increased efficiency to improved customer satisfaction.</p>
             </motion.div>
-
+            
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Partnership Approach</h3>
@@ -642,7 +411,7 @@ const UltimateServicesShowcase2025 = () => {
                     ))}
                   </ul>
                 </div>
-
+                
                 <div>
                   <h3 className="text-lg font-semibold text-zion-purple mb-3">Benefits</h3>
                   <ul className="space-y-2">
@@ -792,25 +561,10 @@ const UltimateServicesShowcase2025 = () => {
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
 
               View Pricing
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default UltimateServicesShowcase2025;
-=======
             </Link>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

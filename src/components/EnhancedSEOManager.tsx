@@ -48,25 +48,20 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     const updateMetaTags = () => {;
       // Update title;
       document.title = seoData.title;
-
       // Update meta description
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name', 'description');
         document.head.appendChild(metaDesc);
-
       metaDesc.setAttribute('content', seoData.description);
-
       // Update keywords
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
-
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
-      
       // Update Open Graph tags
       const updateOGTag = (property: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, content: string)               => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
@@ -77,13 +72,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         }
         ogTag.setAttribute('content', content);
       };
-      
       if (seoData.ogImage) updateOGTag('og:image', seoData.ogImage);
       if (seoData.ogType) updateOGTag('og:type', seoData.ogType);
       updateOGTag('og:title', seoData.title);
       updateOGTag('og:description', seoData.description);
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
-      
       // Update Twitter Card tags
       const updateTwitterTag = (name: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, content: string)               => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
@@ -94,12 +87,10 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         }
         twitterTag.setAttribute('content', content);
       };
-      
       updateTwitterTag('twitter:card', 'summary_large_image');
       updateTwitterTag('twitter:title', seoData.title);
       updateTwitterTag('twitter:description', seoData.description);
       if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
-      
       // Add canonical URL
       if (seoData.canonicalUrl) {
         let canonical = document.querySelector('link[rel="canonical"]');
@@ -110,7 +101,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         }
         canonical.setAttribute('href', seoData.canonicalUrl);
       }
-      
       // Add structured data
       if (seoData.structuredData) {
         let script = document.querySelector('script[type="application/ld+json"]');
@@ -122,9 +112,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         script.textContent = JSON.stringify(seoData.structuredData);
       }
     };
-    
     updateMetaTags();
-    
     // Cleanup function
     return () => {
       // Remove dynamically added meta tags on unmount
@@ -132,63 +120,14 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       dynamicTags.forEach(tag => tag.remove());
     };
   }, [seoData]);
-  
   return (
     <>
       <Helmet>
         <title>{seoData.title}</title>
-<<<<<<< HEAD
-        <meta name="description" content={seoData.description} />
-        <meta name="keywords" content={seoData.keywords.join(', ')} />
-
-        {/* Open Graph */}
-        <meta property="og:title" content={seoData.title} />
-        <meta property="og:description" content={seoData.description} />
-        <meta property="og:type" content={seoData.ogType || 'website'} />
-        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />}
-
-        {/* Canonical URL */}
-        {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}
-
-        {/* Structured Data */}
-        {seoData.structuredData && (
-          <script type="application/ld+json">
-            {JSON.stringify(seoData.structuredData)}
-          </script>
-        )}
-
-        {/* Performance Optimizations */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-        {/* Security */}
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-      </Helmet>
-
-      {children}
-    </>
-  );
-};
-
-export default EnhancedSEOManager;}}}}
-=======
         <meta name = "description" content={seoData.description} />
         <meta name="keywords" content = {
   seoData.keywords.join(',
   ')
-
-
-
-
-
-
 } />
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
@@ -199,12 +138,10 @@ export default EnhancedSEOManager;}}}}
         <meta httpEquiv="X-Frame-Options" content="DENY" />;
         <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        
         {/* Performance optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//ziontechgroup.com" />
-        
         {/* Favicon and app icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -220,8 +157,6 @@ export default EnhancedSEOManager;}}}}
     </>;
   );
 };
-
 export default EnhancedSEOManager;
 export default function
     return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

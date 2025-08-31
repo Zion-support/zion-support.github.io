@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
-import { Cpu,
-  Zap,
-  Globe,
-  Server,
-  Network,
-  Cloud,
-  Shield,
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '@/components/SEO';
@@ -20,7 +8,6 @@ import { Cpu,
   Network, 
   Cloud, 
   Shield, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Clock,
   CheckCircle,
   TrendingUp,
@@ -74,13 +61,9 @@ import { Cpu,
   Droplets,
   Umbrella,
   MapPin
-<<<<<<< HEAD
-const EdgeComputingPlatform: React.FC = (): JSX.Element => {
-=======
              } from 'lucide-react.ts';
 
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Cpu,
@@ -111,15 +94,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       title: "5G & IoT Integration",
       description: "Seamless connectivity with 5G networks and IoT device ecosystems",
       color: "from-indigo-500 to-purple-500"
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols and encryption for edge computing environments",
-      color: "from-yellow-500 to-orange-500"
-
-=======
     },;
     {;
       icon: Shield,;
@@ -127,7 +101,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       description: "Advanced security protocols and encryption for edge computing environments",;
       color: "from-yellow-500 to-orange-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -177,15 +150,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
-<<<<<<< HEAD
-        "Custom development",
-        "SLA guarantees",
-        "On-premise option"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
         "Custom development",;
         "SLA guarantees",;
         "On-premise option";
@@ -193,7 +157,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       cta: "Contact Sales",;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -214,15 +177,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       title: "99.9% Uptime",
       description: "Distributed architecture ensures high availability and reliability",
       metric: "99.9%"
-<<<<<<< HEAD
-    },
-    {
-      icon: Users,
-      title: "Global Scale",
-      description: "Deploy edge nodes worldwide for optimal user experience",
-      metric: "200+"
-
-=======
     },;
     {;
       icon: Users,;
@@ -230,7 +184,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       description: "Deploy edge nodes worldwide for optimal user experience",;
       metric: "200+";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -255,15 +208,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       icon: Factory,
       color: "from-purple-500 to-pink-500"
     },
-<<<<<<< HEAD
-    {
-      industry: "Healthcare",
-      title: "Remote Monitoring",
-      description: "Real-time patient monitoring and emergency response systems",
-      icon: Heart,
-      color: "from-orange-500 to-red-500"
-
-=======
     {;
       industry: "Healthcare",;
       title: "Remote Monitoring",;
@@ -271,7 +215,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       icon: Heart,;
       color: "from-orange-500 to-red-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const edgeLocations = [
@@ -292,20 +235,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
       icon: Satellite,
       color: "from-purple-500 to-pink-500"
-<<<<<<< HEAD
-    },
-    {
-      region: "Latin America",
-      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
-      icon: MapPin,
-      color: "from-orange-500 to-red-500"
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     },;
     {;
       region: "Latin America",;
@@ -318,7 +247,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Edge Computing Platform - Zion Tech Group"
         description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
       />
@@ -390,15 +318,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Everything you need to deploy and manage edge computing infrastructure
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -457,15 +379,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               See how edge computing revolutionizes performance and user experience
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -523,15 +439,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Edge computing solutions for every industry and use case
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -595,15 +505,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Deploy edge nodes worldwide for optimal performance and reliability
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index)             => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {edgeLocations.map((location, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -668,15 +572,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Choose the plan that fits your edge computing needs
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)             => (
-=======
           
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {

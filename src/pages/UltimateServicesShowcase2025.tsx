@@ -26,9 +26,7 @@ import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE
 export default function UltimateServicesShowcase2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
-
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -38,29 +36,17 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
-<<<<<<< HEAD
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-=======
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <Rocket className="w-6 h-6" />;
   };
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
       />
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -82,14 +68,12 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
@@ -97,7 +81,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -132,7 +115,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Search and Filter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -152,7 +134,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                 </div>
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="lg:w-64">
               <select
@@ -170,7 +151,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -199,7 +179,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Service Guarantees */}
       <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -222,7 +201,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -247,7 +225,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                 <Link
                   to="/contact"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
                   Get Started
                 </Link>
               </div>
@@ -255,7 +232,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
@@ -263,7 +239,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"
-
               {/* Service Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-3">
@@ -283,12 +258,10 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                   </span>
                 )}
               </div>
-
               {/* Description */}
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Tags */}
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
@@ -296,13 +269,11 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                     <span
                       key={index}
                       className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
-
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-
               {/* Pricing and ROI */}
               <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className="flex items-center justify-between mb-2">
@@ -319,7 +290,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                   <strong>Setup Time:</strong> {service.setupTime}
                 </p>
               </div>
-
               {/* Integrations */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Integrations</h4>
@@ -328,13 +298,11 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                     <span
                       key={index}
                       className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
-
                       {integration}
                     </span>
                   ))}
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <h4 className="text-white font-semibold mb-3">Contact Information</h4>
@@ -353,13 +321,11 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                   </div>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to={`/services/${service.id}`}
                   className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
-
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -368,11 +334,9 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-
               {/* Contact Information */}
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="text-center">
@@ -381,14 +345,12 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                     <a
                       href="tel:+13024640950"
                       className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
-
                       <Phone className="w-3 h-3 mr-1" />
                       Call Now
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors"
-
                       <Mail className="w-3 h-3 mr-1" />
                       Email Us
                     </a>
@@ -398,7 +360,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
             </div>
           ))}
         </div>
-
         {/* No Results Message */}
         {filteredServices.length === 0 && (;
           <div className="text-center py-16">;
@@ -410,19 +371,13 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
-<<<<<<< HEAD
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-
-=======
               className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear Filters
             </button>
           </div>
         )}
       </div>
-
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -438,14 +393,12 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Your Transformation
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-
                 <Phone className="w-5 h-5 mr-2" />
                 Speak with an Expert
               </a>
@@ -453,7 +406,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-
       {/* Comprehensive Footer */}
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -471,7 +423,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                 </a>
               </div>
             </div>
-
             {/* Quick Links */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
@@ -482,7 +433,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
                 <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
-
             {/* Contact Information */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
@@ -502,7 +452,6 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}
           <div className="border-t border-gray-700 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
@@ -519,18 +468,9 @@ export default function UltimateServicesShowcase2025(...args: any[]): any {
       </div>;
     </div>;
   );
-
 // Search icon component
-<<<<<<< HEAD
-const Search = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-  </svg>
-);}}
-=======
 const Search = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
   </svg>;
 );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

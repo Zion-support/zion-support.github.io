@@ -1,139 +1,87 @@
-import { createSlice, PayloadAction               } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface User {
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   email: string;
   name: string;
   avatar?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
+  role?: string;
+  permissions?: string[];
 }
 
 interface AuthState {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   isLoggedIn: boolean;
-  user:  | null;
+  user: User | null;
   token: string | null;
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const initialState: AuthState = {
+  isLoggedIn: false,
   user: null,
+  token: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-
-
+  error: null,
 };
 
-<<<<<<< HEAD
 const authSlice = createSlice({
-  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',
+  name: 'auth',
   initialState,
-  reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)               => {;
-      state.isLoggedIn = action.payload;
+  reducers: {
+    loginStart: (state) => {
+      state.isLoading = true;
+      state.error = null;
     },
-    setUser: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)               => {
-=======
-const authSlice = createSlice({;
-  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',;
-  initialState,;
-  reducers: {;
-    setUser: (state, action: PayloadAction<User>)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      state.user = action.payload;
+    loginSuccess: (state, action: PayloadAction<{ user: User; token: string }>) => {
+      state.isLoading = false;
+      state.isLoggedIn = true;
       state.isAuthenticated = true;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
       state.error = null;
     },
-    setToken: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)               => {
-      state.token = action.payload;
-    },
-    logout: anyanyanyanyanyanyanyanyanyanyanyanyany(state)               => {
+    loginFailure: (state, action: PayloadAction<string>) => {
+      state.isLoading = false;
       state.isLoggedIn = false;
-      state.user = null;
       state.isAuthenticated = false;
-      state.error = null;
-    },
-    setLoading: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)              => {
-      state.isLoading = action.payload;
-    },
-    setError: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)              => {
+      state.user = null;
+      state.token = null;
       state.error = action.payload;
     },
-    clearError: anyanyanyanyanyanyanyanyanyanyanyanyany(state)              => {
+    logout: (state) => {
+      state.isLoggedIn = false;
+      state.isAuthenticated = false;
+      state.user = null;
+      state.token = null;
       state.error = null;
+    },
+    setUser: (state, action: PayloadAction<User>) => {
+      state.user = action.payload;
+    },
+    setToken: (state, action: PayloadAction<string>) => {
+      state.token = action.payload;
+    },
+    clearError: (state) => {
+      state.error = null;
+    },
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      state.isLoading = action.payload;
     },
   },
 });
 
-<<<<<<< HEAD
-export const { setLoggedIn, setUser, setToken, logout } = authSlice.actions;
-export default authSlice.reducer;}
-=======
-export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
+export const {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  logout,
+  setUser,
+  setToken,
+  clearError,
+  setLoading,
+} = authSlice.actions;
+
 export default authSlice.reducer;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

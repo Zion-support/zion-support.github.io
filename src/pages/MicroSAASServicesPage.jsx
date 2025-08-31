@@ -65,7 +65,6 @@ export default function MicroSaasServicesPage() {
       {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
         </div>)}
-
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/>
@@ -83,7 +82,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -111,7 +109,6 @@ import {Star,
             ArrowRight,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
-
 export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -123,18 +120,15 @@ export default function MicroSaasServicesPage() { /* empty */ }
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
     return `${currency}${price}`;
   };
-
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -146,7 +140,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </CardDescription>
           </div>
         </div>
-
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
             {service.category}
@@ -156,7 +149,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </Badge>
         </div>
       </CardHeader>
-
       <CardContent className="relative z-10 space-y-4">
         {/* Pricing */}
         <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
@@ -174,7 +166,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </Badge>
           </div>
         </div>
-
         {/* Features */}
         <div>
           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -193,7 +184,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             {service.description}
           </p>
         </div>
-
         {/* AI Score */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -205,7 +195,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             {service.subcategory}
           </Badge>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div>
@@ -217,7 +206,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             <p className="text-sm text-zion-cyan font-medium">{service.marketPrice}</p>
           </div>
         </div>
-
         {/* Features Preview */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Key Features:</p>
@@ -230,7 +218,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </Badge>)}
           </div>
         </div>
-
         {/* Benefits */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Benefits:</p>
@@ -241,7 +228,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </div>))}
           </div>
         </div>
-
         {/* Target Audience */}
         <div>
           <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
@@ -251,7 +237,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </Badge>))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <div className="flex space-x-3 pt-4">
           <Button asChild className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -270,7 +255,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/micro-saas-services"/>
@@ -300,7 +284,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/50 border-b border-zion-blue-light/20 py-4">
         <div className="container mx-auto px-4">
@@ -365,7 +348,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         {filteredServices.length === 0 ? (<div className="text-center py-20">
@@ -392,7 +374,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </div>
           </>)}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
         <div className="container mx-auto px-4 text-center">

@@ -5,11 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 ;
-<<<<<<< HEAD;
-// // // // // console.log('📦 Dependency Monitor Starting...\n');
-=======;
 // // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
 class DependencyMonitor {;
   constructor() {;
@@ -35,23 +31,14 @@ class DependencyMonitor {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
-<<<<<<< HEAD;
-    // // // // // console.log(logEntry.trim());
-=======;
     // // // // // // // // console.log(logEntry.trim());
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
-<<<<<<< HEAD;
-      // // // console.error('Failed to write to log file:', error.message);
-;
-=======;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
   async startMonitoring() {;
     this.log('Starting dependency monitoring...');
@@ -324,12 +311,7 @@ class DependencyMonitor {;
 ;
     try {;
       // Create a report of what will be updated;
-<<<<<<< HEAD;
-      const reportPath = path.join(this.projectRoot, 'logs', 'dependency-update-report.txt');
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
-=======;
-      const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`;
       ).join('\n')}\n\nUpdating packages...`;
 ;
@@ -466,12 +448,7 @@ class DependencyMonitor {;
         this.log(`Found ${majorUpdates.length} packages with major updates available`);
 ;
         // Create a report for major updates;
-<<<<<<< HEAD;
-        const reportPath = path.join(this.projectRoot, 'logs', 'major-updates-report.txt');
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
-=======;
-        const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 ;
@@ -536,15 +513,8 @@ class DependencyMonitor {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
-<<<<<<< HEAD;
-;
-        for (const file of files) {;
-          if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {;
-            const filePath = path.join(logsDir, file);
-=======;
 ;
         for (const filePath = path.join(logsDir, file);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             const stats = fs.statSync(filePath);
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
@@ -569,6 +539,21 @@ class DependencyMonitor {;
   async stop() {;
     this.log('Stopping dependency monitor...');
     this.monitoring = false;
+    this.log('Dependency monitoring stopped');
+  }
+}
+
+// Export the class
+module.exports = DependencyMonitor;
+
+// If running directly, start the monitor
+if (require.main === module) {
+  const monitor = new DependencyMonitor();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    monitor.log('Shutting down Dependency Monitor...');
+    monitor.stop();
     process.exit(0);
 ;
 ;

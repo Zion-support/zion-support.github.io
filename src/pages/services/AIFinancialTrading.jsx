@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor export default function AIFinancialTrading() {
+import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
+
+export default function AIFinancialTrading() {
     const features = [
         {
             icon: Brain,
@@ -31,7 +33,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             icon: Users,
             title: "Social Trading",
             description: "Copy successful traders and share strategies with the community"
-
+        }
     ];
     const pricingPlans = [
         {
@@ -39,7 +41,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$99",
             period: "/month",
             description: "Perfect for individual traders and beginners",
-            features[
+            features: [
                 "Basic AI trading signals",
                 "Up to 10 trades/day",
                 "Standard market data",
@@ -55,7 +57,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$299",
             period: "/month",
             description: "Ideal for active traders and small funds",
-            features[
+            features: [
                 "Advanced AI algorithms",
                 "Up to 100 trades/day",
                 "Real-time market data",
@@ -73,7 +75,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             price: "$1,999",
             period: "/month",
             description: "For hedge funds and large institutions",
-            features[
+            features: [
                 "Custom AI models",
                 "Unlimited trades",
                 "Institutional data feeds",
@@ -85,7 +87,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             ],
             cta: "Contact Sales",
             popular: false
-
+        }
     ];
     const benefits = [
         {
@@ -117,7 +119,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             icon: BarChart3,
             title: "Data-Driven Insights",
             description: "Comprehensive analytics and reporting for informed decision making"
-
+        }
     ];
     const tradingInstruments = [
         {
@@ -149,7 +151,7 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
             icon: Monitor,
             title: "Bonds & Fixed Income",
             description: "Fixed income securities with yield optimization and risk management"
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
       {/* Hero Section */}
@@ -312,9 +314,6 @@ import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, Pie
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}
-=======
-    </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </div>
+  );
+}

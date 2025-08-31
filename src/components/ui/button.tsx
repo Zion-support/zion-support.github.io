@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-interface ButtonProps extends React.PropsWithChildren<{}> {
-
-=======
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{
 }> {
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
@@ -14,16 +9,8 @@ interface ButtonProps extends React.PropsWithChildren<{
   className?: string;
   onClick?: ()                => void;
   type?: 'button' | 'submit' | 'reset';
-<<<<<<< HEAD
-  disabled?: boolean}
-export function Button(...args[]: any):  {
-=======
   disabled?: boolean;
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Button(...args: any[]): any {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
@@ -36,12 +23,6 @@ export function Button(...args: any[]): any {
   ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
   ;
-
-
-
-
-
-
 };
   const sizeClasses = {
   sm: 'px-3 py-1.5 text-sm',
@@ -53,45 +34,21 @@ export function Button(...args: any[]): any {
   ;
   icon: 'w-10 h-10 p-0';
   ;
-
-
-
-
-
-
 };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-<<<<<<< HEAD
-    return <span className={classes}>{children}</span>;
-
-=======
     return <span className = {classes}>{children}</span>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <button
       type = {type}
       className={classes}
-<<<<<<< HEAD
-      onClick={onClick}
-      disabled={disabled}
-
-      {children}
-    </button>
-  )};
-=======;
       onClick={onClick};
       disabled={disabled};
     >;
       {children};
     </button>;
   );
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -103,12 +60,6 @@ export const buttonVariants = {
   ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
 ;
-
-
-
-
-
-
 };
 export type { ButtonProps };
 }}}

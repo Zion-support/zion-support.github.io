@@ -1,43 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock const AIBusinessIntelligence = () => {
+import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
+
+const AIBusinessIntelligence = () => {
     const features = [
         {
             icon: Brain,
             title: "AI-Powered Analytics",
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
-            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
+            benefits: ["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
         },
         {
             icon: BarChart3,
             title: "Real-time Dashboards",
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics",
-            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
+            benefits: ["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
         },
         {
             icon: TrendingUp,
             title: "Predictive Analytics",
             description: "Forecast future trends and outcomes using historical data and advanced statistical models",
-            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
+            benefits: ["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
         },
         {
             icon: Target,
             title: "Performance Tracking",
             description: "Monitor and measure business performance against goals and benchmarks in real-time",
-<<<<<<< HEAD
             benefits: ["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
-
-=======
-            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
-        }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        },
     ];
     const solutions = [
         {
             category: "Sales & Marketing",
             icon: Users,
-            solutions[
+            solutions: [
                 "Customer behavior analysis",
                 "Lead scoring and qualification",
                 "Campaign performance optimization",
@@ -48,7 +45,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Operations & Supply Chain",
             icon: Activity,
-            solutions[
+            solutions: [
                 "Inventory optimization",
                 "Supply chain risk assessment",
                 "Operational efficiency analysis",
@@ -59,7 +56,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Financial Analytics",
             icon: TrendingUp,
-            solutions[
+            solutions: [
                 "Revenue forecasting",
                 "Cost analysis and optimization",
                 "Profitability analysis",
@@ -70,14 +67,14 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         {
             category: "Human Resources",
             icon: Users,
-            solutions[
+            solutions: [
                 "Employee performance analytics",
                 "Talent acquisition insights",
                 "Workforce planning",
                 "Employee retention prediction",
                 "Training effectiveness analysis"
             ]
-
+        }
     ];
     const technologies = [
         {
@@ -109,7 +106,7 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
             name: "24/7 Monitoring",
             description: "Continuous monitoring and alerting",
             icon: Clock
-
+        }
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -117,26 +114,21 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
+            }
+        }
     };
     const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
+        hidden: { 
+            y: 20,
+            opacity: 0 
+        },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5
-
-
+            }
+        }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -144,25 +136,12 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
               <TrendingUp className="w-10 h-10 text-white"/>
             </div>
@@ -404,11 +383,8 @@ import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, G
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
-    </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </div>
+  );
+};
+
 export default AIBusinessIntelligence;
-}}}}}}}}

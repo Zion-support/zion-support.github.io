@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
-=======
 // import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
 // import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
 // import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const UltimateServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -42,24 +36,12 @@ const UltimateServicesShowcase2025 = () => {
             case 'category':
                 return a.category.localeCompare(b.category);
             default:
-<<<<<<< HEAD
-                return 0;
-
-    });
-    const formatPrice = (price) => {
-        if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
-
-        return `$${price}`;
-    };
-=======
                 return 0}
     });
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`}
         return `$${price}`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getSupportLevelColor = (level) => {
         switch (level) {
             case 'enterprise':
@@ -67,12 +49,7 @@ const UltimateServicesShowcase2025 = () => {
             case 'premium':
                 return 'bg-blue-600';
             default:
-<<<<<<< HEAD
-                return 'bg-green-600';
-
-=======
                 return 'bg-green-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}
@@ -86,7 +63,6 @@ const UltimateServicesShowcase2025 = () => {
             Transform your business with cutting-edge technology solutions designed for the future.
           </p>
         </div>
-
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">
           <div className="text-center">
@@ -112,7 +88,6 @@ const UltimateServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Filters and Search */}
         <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-gray-600/30">
           <div className="grid md:grid-cols-4 gap-4">
@@ -147,7 +122,6 @@ const UltimateServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (<div key={service.id} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105">
@@ -170,7 +144,6 @@ const UltimateServicesShowcase2025 = () => {
                     </span>))}
                 </div>
               </div>
-
               {/* Key Features */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-blue-300 mb-2">Key Features</h4>
@@ -181,7 +154,6 @@ const UltimateServicesShowcase2025 = () => {
                     </li>))}
                 </ul>
               </div>
-
               {/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-green-300 mb-2">Key Benefits</h4>
@@ -192,7 +164,6 @@ const UltimateServicesShowcase2025 = () => {
                     </li>))}
                 </ul>
               </div>
-
               {/* ROI */}
               {service.roi && (<div className="mb-4">
                   <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>
@@ -201,7 +172,6 @@ const UltimateServicesShowcase2025 = () => {
                     {service.roi}
                   </div>
                 </div>)}
-
               {/* Technology */}
               {service.technology && (<div className="mb-4">
                   <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>
@@ -211,14 +181,12 @@ const UltimateServicesShowcase2025 = () => {
                       </span>))}
                   </div>
                 </div>)}
-
               {/* Market Price Comparison */}
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
                 <h4 className="text-sm font-semibold text-orange-300 mb-1">Market Price</h4>
                 <p className="text-xs text-gray-300">{service.marketPrice}</p>
                 <p className="text-xs text-cyan-400 mt-1">Our Price: {formatPrice(service.price)}/{service.pricingModel}</p>
               </div>
-
               {/* Contact and Action */}
               <div className="border-t border-gray-600/30 pt-4">
                 <div className="text-center mb-3">
@@ -235,7 +203,6 @@ const UltimateServicesShowcase2025 = () => {
               </div>
             </div>))}
         </div>
-
         {/* Summary Statistics */}
         <div className="mt-16 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-8 border border-blue-500/30">
           <div className="text-center">
@@ -266,7 +233,6 @@ const UltimateServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-8 border border-cyan-500/30">
@@ -286,6 +252,8 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>)};
+    </div>
+  );
+}
+
 export default UltimateServicesShowcase2025;
-}}}

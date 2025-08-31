@@ -1,7 +1,7 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 
-export default function ProductsIndex(...args[]: any):  {
+export default function ProductsIndex(...args[]):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
@@ -43,7 +43,7 @@ export default function ProductsIndex(...args[]: any):  {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
-          <div className="grid grid-cols-1 gap-5 sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             {[
               { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },
               { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },
@@ -51,7 +51,7 @@ export default function ProductsIndex(...args[]: any):  {
               { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
               { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
               { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
-            ].map((p)               => (
+            ].map((p)  => (
               <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{p.title}</h3>
@@ -68,23 +68,10 @@ export default function ProductsIndex(...args[]: any):  {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Open Automation Hub</a></Link>
               <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Browse Services</a></Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </main>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div></div></div></div></div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

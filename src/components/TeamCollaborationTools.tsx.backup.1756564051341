@@ -63,11 +63,8 @@ import { Users,
   Target,
   BarChart3,
   PieChart
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
 
 
@@ -92,9 +89,6 @@ interface TeamMember {
   lastSeen: string;
   skills: string[];
   projects: string[];
-<<<<<<< HEAD
-  availability: 'available' | 'busy' | 'unavailable';
-=======
 availability: 'available' | 'busy' | 'unavailable';
 
 
@@ -109,7 +103,6 @@ availability: 'available' | 'busy' | 'unavailable';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
 
@@ -138,9 +131,6 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-<<<<<<< HEAD
-  tags: string[];
-=======
 tags: string[];
 
 
@@ -155,7 +145,6 @@ tags: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
 
@@ -183,9 +172,6 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-<<<<<<< HEAD
-  comments: Comment[];
-=======
 comments: Comment[];
 
 
@@ -200,7 +186,6 @@ comments: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
 
@@ -222,9 +207,6 @@ interface Comment {
   content: string;
   timestamp: string;
   likes: number;
-<<<<<<< HEAD
-  replies: Comment[];
-=======
 replies: Comment[];
 
 
@@ -239,7 +221,6 @@ replies: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
 
@@ -262,27 +243,9 @@ interface Message {
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
-<<<<<<< HEAD
-  reactions: { type: string; count: number 
-
-
-
-
-
-
-
-
-
-
-
-
-}[];
-  isRead: boolean;
-=======
   reactions: { type: string; count: number 
 }[];
   isRead: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FileItem {
 
@@ -309,9 +272,6 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-<<<<<<< HEAD
-  version: string;
-=======
 version: string;
 
 
@@ -328,33 +288,15 @@ version: string;
 }
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   showTeamMembers?: boolean;
   showProjects?: boolean;
   showCommunication?: boolean;
   showFileSharing?: boolean;
-<<<<<<< HEAD
-  maxItems?: number;
-=======
   maxItems?: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
-<<<<<<< HEAD
-  showProjects = true,
-  showCommunication = true,
-  showFileSharing = true,
-  maxItems = 20;
-}) => {;
-  const [activeTab, setActiveTab] = useState<any>('team');
-  const [teamMembers, setTeamMembers] = useState<any>([]);
-  const [projects, setProjects] = useState<any>([]);
-  const [messages, setMessages] = useState<any>([]);
-  const [files, setFiles] = useState<any>([]);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-=======
   showProjects = true,;
   showCommunication = true,;
   showFileSharing = true,;
@@ -366,7 +308,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const [messages, setMessages] = useState<any>([]);
   const [files, setFiles] = useState<any>([]);
   const [selectedProject, setSelectedProject] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -375,153 +316,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Sample data
   useEffect(() => {
-<<<<<<< HEAD
-    const sampleTeamMembers: TeamMember[] = [
-      {
-        id: '1',
-        name: 'Sarah Johnson',
-        role: 'Senior AI Engineer',
-        department: 'Engineering',
-        avatar: 'SJ',
-        status: 'online',
-        lastSeen: '2 minutes ago',
-        skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'],
-        projects: ['AI Platform Development', 'ML Model Optimization'],
-        availability: 'available'
-      },
-      {
-        id: '2',
-        name: 'Michael Chen',
-        role: 'Cloud Architect',
-        department: 'IT Operations',
-        avatar: 'MC',
-        status: 'busy',
-        lastSeen: '15 minutes ago',
-        skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'],
-        projects: ['Cloud Migration', 'Infrastructure Modernization'],
-        availability: 'busy'
-      },
-      {
-        id: '3',
-        name: 'David Kim',
-        role: 'Cybersecurity Specialist',
-        department: 'Security',
-        avatar: 'DK',
-        status: 'online',
-        lastSeen: '1 minute ago',
-        skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'],
-        projects: ['Security Audit', 'Threat Intelligence'],
-        availability: 'available'
-      },
-      {
-        id: '4',
-        name: 'Lisa Thompson',
-        role: 'Project Manager',
-        department: 'Management',
-        avatar: 'LT',
-        status: 'away',
-        lastSeen: '1 hour ago',
-        skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'],
-        projects: ['Digital Transformation', 'Process Optimization'],
-        availability: 'unavailable'
-      },
-      {
-        id: '5',
-        name: 'Alex Wong',
-        role: 'DevOps Engineer',
-        department: 'Engineering',
-        avatar: 'AW',
-        status: 'online',
-        lastSeen: '5 minutes ago',
-        skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'],
-        projects: ['CI/CD Pipeline', 'Infrastructure as Code'],
-        availability: 'available'
-
-    ];
-
-    const sampleProjects: Project[] = [
-      {
-        id: '1',
-        name: 'AI Platform Development',
-        description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',
-        status: 'active',
-        priority: 'high',
-        progress: 65,
-        startDate: '2024-01-01',
-        endDate: '2024-06-30',
-        teamMembers: ['Sarah Johnson', 'Alex Wong'],
-        tasks: [],
-        budget: 500000,
-        client: 'TechCorp Inc.',
-        tags: ['AI', 'Machine Learning', 'Platform']
-      },
-      {
-        id: '2',
-        name: 'Cloud Migration',
-        description: 'Migrating legacy systems to cloud infrastructure with zero downtime',
-        status: 'active',
-        priority: 'critical',
-        progress: 45,
-        startDate: '2024-02-01',
-        endDate: '2024-08-31',
-        teamMembers: ['Michael Chen', 'Alex Wong'],
-        tasks: [],
-        budget: 750000,
-        client: 'Global Enterprises',
-        tags: ['Cloud', 'Migration', 'Infrastructure']
-      },
-      {
-        id: '3',
-        name: 'Security Audit',
-        description: 'Comprehensive security assessment and vulnerability remediation',
-        status: 'review',
-        priority: 'high',
-        progress: 90,
-        startDate: '2024-01-15',
-        endDate: '2024-03-15',
-        teamMembers: ['David Kim'],
-        tasks: [],
-        budget: 150000,
-        client: 'SecureBank',
-        tags: ['Security', 'Audit', 'Compliance']
-
-    ];
-
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    const sampleMessages: Message[] = [
-      {
-        id: '1',
-        sender: 'Sarah Johnson',
-        content: 'Great progress on the AI model training! The accuracy has improved significantly.',
-        timestamp: '2 minutes ago',
-        type: 'text',
-        reactions[{ type: 'thumbsUp', count: 3 }],
-        isRead: true
-      },
-      {
-        id: '2',
-        sender: 'Michael Chen',
-        content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',
-        timestamp: '15 minutes ago',
-        type: 'text',
-        reactions[{ type: 'check', count: 2 }],
-        isRead: false
-      },
-      {
-        id: '3',
-        sender: 'David Kim',
-        content: 'Security vulnerabilities identified and patched. Report ready for review.',
-        timestamp: '1 hour ago',
-        type: 'text',
-        reactions[{ type: 'star', count: 1 }],
-        isRead: true
-
-    ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const sampleFiles: FileItem[] = [
       {
         id: '1',
@@ -570,115 +364,26 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setFiles(sampleFiles)}, []);
 
   // Get status color and icon
-<<<<<<< HEAD
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
-      case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
-      case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
-      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-<<<<<<< HEAD
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-
-=======
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get project status color
-<<<<<<< HEAD
-  const getProjectStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'planning': return 'text-blue-400 bg-blue-400/20';
-      case 'active': return 'text-green-400 bg-green-400/20';
-      case 'review': return 'text-yellow-400 bg-yellow-400/20';
-      case 'completed': return 'text-purple-400 bg-purple-400/20';
-      case 'on-hold': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
       default: return 'text-zinc-400 bg-zinc-400/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get priority color
-<<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
       default: return 'text-zinc-400 bg-zinc-400/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get file type icon
-<<<<<<< HEAD
-  const getFileTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'document': return <FileText className="w-5 h-5" />;
-      case 'image': return <img className="w-5 h-5" />;
-      case 'video': return <Video className="w-5 h-5" />;
-      case 'audio': return <File className="w-5 h-5" />;
-      case 'archive': return <Folder className="w-5 h-5" />;
-<<<<<<< HEAD
-      default: return <File className="w-5 h-5" />;
-
-=======
       default: return <File className = "w-5 h-5" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Format file size
-<<<<<<< HEAD
-  const formatFileSize = (size: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
-    if (size < 1024) return `${size.toFixed(1)} MB`;
-    return `${(size / 1024).toFixed(1)} GB`};
-
-  // Handle project selection
-<<<<<<< HEAD
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyanyanyProject)               => {;
-    setSelectedProject(project)};
-
-  // Handle message reactions
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyanyanyProject)              => {;
-    setSelectedProject(project);
-  };
-
-  // Handle message reactions
-  const handleMessageReaction = (messageId: anyanyanyanyanyanyanyanyanyanyanyanyanystring, reactionType: string)              => {;
-    setMessages(prev => prev.map(msg => {;
-      if (msg.id === messageId) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        const existingReaction = msg.reactions.find(r => r.type === reactionType);
-        if (existingReaction) {
-<<<<<<< HEAD
-          existingReaction.count += 1;
-        } else {
-          msg.reactions.push({ type: reactionType, count: 1 });
-
-
-      return msg;
-    }));
-  };
-=======
           existingReaction.count += 1} else {
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
       return msg}))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <div className = "w-full max-w-7xl mx-auto p-6">
@@ -1705,23 +1410,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
               <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 Choose Files
               </button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      )};
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       )};
     </div>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}}}}}</motion.div>}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

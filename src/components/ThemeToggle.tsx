@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
-=======
 import React, { useState, useEffect               } from 'react.ts';
 import { Sun, Moon, Monitor                } from 'lucide-react.ts';
 
-type Theme = 'dark' | 'light' | 'system';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+type Theme = 'light' | 'dark' | 'system' | 'cyberpunk' | 'minimal' | 'retro';
 
-<<<<<<< HEAD
-export function ThemeToggle(...args[]: any):  {
-  const [theme, setTheme] = useState<any>('system');
-=======
 interface ThemeToggleProps extends React.PropsWithChildren<{}> {
 
   className?: string;
@@ -20,80 +11,119 @@ interface ThemeToggleProps extends React.PropsWithChildren<{}> {
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
   const [theme, setTheme] = useState<any>('system');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme)}
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const root = window.document.documentElement;
-    
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.toggle('dark', systemTheme === 'dark');
-    } else {
-      root.classList.toggle('dark', theme === 'dark');
-    }
-    
-    localStorage.setItem('theme', theme);
-  }, [theme, mounted]);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        const root = window.document.documentElement;
-        root.classList.toggle('dark', mediaQuery.matches);
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme]);
-
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
-    );
-  }
-
-  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
-    { value: 'light', label: 'Light', icon: Sun },
-    { value: 'dark', label: 'Dark', icon: Moon },
-    { value: 'system', label: 'System', icon: Monitor }
+  const themes: { value: Theme; label: string; icon: React.ComponentType<any>; description: string }[] = [
+    { value: 'light', label: 'Light', icon: Sun, description: 'Clean and bright interface' },
+    { value: 'dark', label: 'Dark', icon: Moon, description: 'Easy on the eyes' },
+    { value: 'system', label: 'System', icon: Monitor, description: 'Follows your OS preference' },
+    { value: 'cyberpunk', label: 'Cyberpunk', icon: Palette, description: 'Neon and futuristic' },
+    { value: 'minimal', label: 'Minimal', icon: Settings, description: 'Simple and clean' },
+    { value: 'retro', label: 'Retro', icon: Palette, description: 'Classic computing style' }
   ];
 
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-12 h-12'
+  };
+
+  const iconSizes = {
+    sm: 'w-4 h-4',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6'
+  };
+
+  useEffect(() => {
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('zion-theme') as Theme;
+    if (savedTheme && themes.some(t => t.value === savedTheme)) {
+      setCurrentTheme(savedTheme);
+      applyTheme(savedTheme);
+    } else {
+      // Check system preference
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const defaultTheme: Theme = systemPrefersDark ? 'dark' : 'light';
+      setCurrentTheme(defaultTheme);
+      applyTheme(defaultTheme);
+    }
+  }, []);
+
+  const applyTheme = (theme: Theme) => {
+    const root = document.documentElement;
+    
+    // Remove all theme classes
+    root.classList.remove('theme-light', 'theme-dark', 'theme-cyberpunk', 'theme-minimal', 'theme-retro');
+    
+    // Add new theme class
+    if (theme !== 'system') {
+      root.classList.add(`theme-${theme}`);
+    }
+    
+    // Set data attribute for CSS custom properties
+    root.setAttribute('data-theme', theme);
+    
+    // Apply system theme if needed
+    if (theme === 'system') {
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.classList.add(`theme-${systemPrefersDark ? 'dark' : 'light'}`);
+      root.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+    }
+    
+    // Save to localStorage
+    localStorage.setItem('zion-theme', theme);
+    
+    // Update meta theme-color
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      const colors = {
+        light: '#ffffff',
+        dark: '#0f172a',
+        cyberpunk: '#0a0a0a',
+        minimal: '#f8fafc',
+        retro: '#2d3748'
+      };
+      metaThemeColor.setAttribute('content', colors[theme] || colors.dark);
+    }
+  };
+
+  const handleThemeChange = (theme: Theme) => {
+    setCurrentTheme(theme);
+    applyTheme(theme);
+    setIsOpen(false);
+    setIsAdvancedOpen(false);
+  };
+
+  const getCurrentThemeIcon = () => {
+    const theme = themes.find(t => t.value === currentTheme);
+    return theme ? theme.icon : Moon;
+  };
+
+  const getCurrentThemeLabel = () => {
+    const theme = themes.find(t => t.value === currentTheme);
+    return theme ? theme.label : 'Dark';
+  };
+
   return (
-    <div className="relative">
+    <div className={`relative ${className}`}>
+      {/* Main Theme Toggle Button */}
       <motion.button
+        onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="relative w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-        onClick={() => {
-          const currentIndex = themes.findIndex(t => t.value === theme);
-          const nextIndex = (currentIndex + 1) % themes.length;
-          setTheme(themes[nextIndex].value);
-        }}
-        aria-label={`Current theme: ${theme}. Click to cycle through themes.`}
-        title={`Current theme: ${theme}. Click to cycle through themes.`}
+        className={`${sizeClasses[size]} bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg flex items-center justify-center text-white transition-all duration-200 shadow-lg hover:shadow-xl`}
+        aria-label={`Current theme: ${getCurrentThemeLabel()}. Click to change theme.`}
+        title={`Current theme: ${getCurrentThemeLabel()}`}
       >
         <AnimatePresence mode="wait">
           <motion.div
-            key={theme}
-            initial={{ opacity: 0, rotate: -90 }}
-            animate={{ opacity: 1, rotate: 0 }}
-            exit={{ opacity: 0, rotate: 90 }}
+            key={currentTheme}
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: 90, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex items-center justify-center"
           >
-            {themes.find(t => t.value === theme)?.icon({ className: 'w-5 h-5' })}
+            <getCurrentThemeIcon className={iconSizes[size]} />
           </motion.div>
         </AnimatePresence>
       </motion.button>
@@ -129,16 +159,10 @@ export function ThemeToggleDropdown(...args: any[]): any {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.toggle('dark', systemTheme === 'dark');
     } else {
-<<<<<<< HEAD
-      root.classList.add(theme);
-
-    localStorage.setItem('zion-theme', theme);
-=======
       root.classList.toggle('dark', theme === 'dark');
     }
     
     localStorage.setItem('theme', theme);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [theme, mounted]);
 
   if (!mounted) {
@@ -156,27 +180,6 @@ export function ThemeToggleDropdown(...args: any[]): any {
   return (
     <div className="relative">
       <button
-<<<<<<< HEAD
-        onClick={() => toggleTheme('light')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to light theme"
-
-        <Sun className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('dark')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to dark theme"
-
-        <Moon className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('system')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to system theme"
-
-        <Monitor className="h-5 w-5" />
-=======
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         aria-label="Select theme"
@@ -185,13 +188,13 @@ export function ThemeToggleDropdown(...args: any[]): any {
       >
         {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}
         <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
 
+      {/* Quick Theme Switcher */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
@@ -219,8 +222,4 @@ export function ThemeToggleDropdown(...args: any[]): any {
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
-}}}}
-=======
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

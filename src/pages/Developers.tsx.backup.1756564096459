@@ -37,12 +37,8 @@ import { Code,
   Download,
   Play,
   ExternalLink
-<<<<<<< HEAD
-import { SEO             } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Developers(...args: any[]): any {
   const apis = [
@@ -71,15 +67,6 @@ export default function Developers(...args: any[]): any {
       status: 'Beta'
     },
     {
-<<<<<<< HEAD
-      name: 'AI Security API',
-      description: 'Integrate AI-powered security and compliance features',
-      category: 'Security',
-      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],
-      documentation: '/docs/api/security',
-      status: 'Production'
-
-=======
       name: 'AI Security API',;
       description: 'Integrate AI-powered security and compliance features',;
       category: 'Security',;
@@ -87,7 +74,6 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/api/security',;
       status: 'Production';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const sdks = [
@@ -116,15 +102,6 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/sdk/java'
     },
     {
-<<<<<<< HEAD
-      name: 'Go',
-      description: 'Go SDK for high-performance applications',
-      version: 'v1.2.0',
-      downloads: '8K+',
-      repository: 'https://github.com/ziontechgroup/go-sdk',
-      documentation: '/docs/sdk/go'
-
-=======
       name: 'Go',;
       description: 'Go SDK for high-performance applications',;
       version: 'v1.2.0',;
@@ -132,7 +109,6 @@ export default function Developers(...args: any[]): any {
       repository: 'https://github.com/ziontechgroup/go-sdk',;
       documentation: '/docs/sdk/go';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const tools = [
@@ -157,15 +133,6 @@ export default function Developers(...args: any[]): any {
       href: '/docs',
       category: 'Reference'
     },
-<<<<<<< HEAD
-    {
-      name: 'Code Examples',
-      description: 'Ready-to-use code samples and tutorials',
-      icon: Terminal,
-      href: '/examples',
-      category: 'Learning'
-
-=======
     {;
       name: 'Code Examples',;
       description: 'Ready-to-use code samples and tutorials',;
@@ -173,7 +140,6 @@ export default function Developers(...args: any[]): any {
       href: '/examples',;
       category: 'Learning';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quickStartSteps = [
@@ -198,20 +164,6 @@ export default function Developers(...args: any[]): any {
       action: 'Get Started',
       href: '/docs/quickstart'
     },
-<<<<<<< HEAD
-    {
-      step: 4,
-      title: 'Make First Call',
-      description: 'Test your integration with our sample endpoints',
-      action: 'Try API',
-      href: '/api-playground'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     {;
       step: 4,;
       title: 'Make First Call',;
@@ -224,7 +176,6 @@ export default function Developers(...args: any[]): any {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
       />

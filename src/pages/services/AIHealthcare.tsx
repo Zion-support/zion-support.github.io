@@ -9,25 +9,12 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Integration with major EHR and healthcare systems',;
     'Custom AI models for specialized medical domains';
   ];
-
   const tiers = [
     {
       name: 'Small Practice',
       price: '$399/mo',
       details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Practice',
-      price: '$999/mo',
-      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Health System',
-      price: '$2,999/mo',
-      details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Practice', 
       price: '$999/mo', 
@@ -38,9 +25,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$2,999/mo', ;
       details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Medical imaging and radiology analysis',;
     'Patient diagnosis and treatment planning',;
@@ -49,7 +34,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Population health management',;
     'Medical research and data analysis';
   ];
-
   const benefits = [;
     'Improve diagnostic accuracy by 20-35%',;
     'Reduce medical errors by 30-50%',;
@@ -58,7 +42,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Enhance patient outcomes and satisfaction',;
     'Scale healthcare operations efficiently';
   ];
-
   const industries = [;
     'Hospitals & Health Systems',;
     'Medical Practices & Clinics',;
@@ -67,7 +50,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Research Institutions',;
     'Health Insurance Providers';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           <p className="text-pink-100 text-xl">Transform healthcare delivery with AI-powered tools that enhance diagnosis, optimize treatment, and improve patient outcomes.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -128,7 +109,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-red-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Healthcare Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform healthcare with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

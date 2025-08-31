@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -16,7 +6,6 @@ import { Brain,
   Target, 
   Users, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -44,13 +33,9 @@ import { Brain,
   Lock,
   Eye,
   AlertTriangle
-<<<<<<< HEAD
-export default function AIFinancialTradingPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIFinancialTradingPlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered market analysis and prediction",
     "Real-time algorithmic trading execution",
@@ -65,7 +50,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
     "High-frequency trading capabilities",;
     "Secure and encrypted trading infrastructure";
   ];
-
   const benefits = [;
     "Increase trading returns by 25-40%",;
     "Reduce trading risks by 30-50%",;
@@ -73,7 +57,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
     "Eliminate emotional trading decisions",;
     "Access to institutional-grade tools";
   ];
-
   const useCases = [
     "Individual retail traders",
     "Professional day traders",;
@@ -84,7 +67,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
     "Options and derivatives traders",;
     "Quantitative trading firms";
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -129,20 +111,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
         "High-frequency trading",
         "White-label solutions",
         "Dedicated infrastructure",
-<<<<<<< HEAD
-        "Custom integrations",
-        "Dedicated account manager",
-        "24/7 phone support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         "Custom integrations",;
         "Dedicated account manager",;
         "24/7 phone support";
@@ -151,15 +119,12 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
       popular: false;
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -167,25 +132,12 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Trading
@@ -205,21 +157,18 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Watch Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -227,26 +176,13 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Trading Intelligence
             </h2>
@@ -262,35 +198,16 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
-
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -300,7 +217,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -308,26 +224,13 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Trading Results
             </h2>
@@ -343,35 +246,16 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
@@ -381,7 +265,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -389,26 +272,13 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect for Every Trader
             </h2>
@@ -424,35 +294,16 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -462,7 +313,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -470,26 +320,13 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Competitive Pricing for Every Trader
             </h2>
@@ -505,39 +342,20 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
                     ? 'border-green-500 ring-2 ring-green-500/20'
                     : 'border-gray-700'
                 }`}
-
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -545,7 +363,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -554,7 +371,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -563,7 +379,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -572,7 +387,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                       ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
-
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -580,7 +394,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -588,25 +401,12 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
             </h2>
@@ -618,14 +418,12 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Schedule Demo
               </motion.button>
             </div>
@@ -635,7 +433,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -645,23 +442,10 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

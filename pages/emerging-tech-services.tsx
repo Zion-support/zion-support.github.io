@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState               } from 'react.ts';
-import { EMERGING_TECH_SERVICES_2027               } from '../data/emergingTechServices2027';
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
+import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
 
 const EmergingTechServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-=======
-import type { NextPage } from 'next.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { useState              } from 'react.ts';
-import { EMERGING_TECH_SERVICES_2027              } from '../data/emergingTechServices2027';
-
-const EmergingTechServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
@@ -41,42 +31,13 @@ const EmergingTechServices: NextPage = () => {;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
-<<<<<<< HEAD
-        return 0;
-
-=======
         return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-<<<<<<< HEAD
-  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (level) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'from-red-500 to-pink-600';
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
-      case 'Advanced': return 'from-blue-500 to-cyan-600';
-<<<<<<< HEAD
-      default: return 'from-gray-500 to-gray-600';
-
-=======
       default: return 'from-gray-500 to-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getBadgeColor = (badge: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (badge) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
-<<<<<<< HEAD
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-
-=======
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -144,15 +105,9 @@ const EmergingTechServices: NextPage = () => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-
-                {categories.map((category)              => (
-=======
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -199,8 +154,8 @@ const EmergingTechServices: NextPage = () => {;
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)               => (
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)  => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -307,14 +262,6 @@ const EmergingTechServices: NextPage = () => {;
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
 
               📞 Call +1 (302) 464-0950
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -322,6 +269,5 @@ const EmergingTechServices: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EmergingTechServices;}}}

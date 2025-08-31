@@ -12,11 +12,8 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const pricingData2028 = {
   aiServices[
     {
@@ -29,24 +26,10 @@ const pricingData2028 = {
       roi: '800%',
       setupTime: '4-6 weeks',
       trialDays: 30,
-<<<<<<< HEAD
-      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
-      targetAudience: 'AI research institutions, Government agencies,
-  Ethics committees'
-    
-
-},
-=======
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
   Ethics committees'
-    
-
-
-
-
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -72,7 +55,6 @@ const pricingData2028 = {
       trialDays: 21,
       features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
-
   ],
   microSAAS[
     {
@@ -113,7 +95,6 @@ const pricingData2028 = {
       trialDays: 21,
       features['Multi-language support', 'Bug detection', 'Code optimization'],
       targetAudience: 'Software developers, Development teams, Tech companies'
-
   ],
   itServices[
     {
@@ -151,21 +132,10 @@ const pricingData2028 = {
       growthRate: '300%',
       roi: '600%',
       setupTime: '4-5 weeks',
-<<<<<<< HEAD
-      trialDays: 21,
-      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
-      targetAudience: 'Development teams, DevOps engineers, Technology companies'
-<<<<<<< HEAD
-
-  ]
-=======
     };
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
-
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
-=======;
       trialDays: 21,;
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
       targetAudience: 'Development teams, DevOps engineers, Technology companies';
@@ -174,17 +144,14 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
 };
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;
     { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;
     { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
   ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
@@ -192,14 +159,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-<<<<<<< HEAD
-  const getAllServices = () => {
-    return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Services' })),
-      ...pricingData2028.microSAAS.map(service               => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SAAS' })),;
-      ...pricingData2028.itServices.map(service               => ({ ...service, type: 'IT Services' }));
-    ]};
-=======
   const getAllServices = () => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Services' })),;
@@ -207,32 +166,21 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
       ...pricingData2028.itServices.map(service              => ({ ...service, type: 'IT Services' }));
     ];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const filteredServices = getAllServices().filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
       service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
-
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500;
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
     else if (priceRange === 'high') matchesPrice = price > 10000;
-
     return matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const calculateROI = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    return parseInt(roi.replace('%', ''))};
-=======
   const calculateROI = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return parseInt(roi.replace('%', ''));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -244,7 +192,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-
             Comprehensive Pricing Guide 2028
           </motion.h1>
           <motion.p
@@ -252,7 +199,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
           </motion.p>
           <motion.div
@@ -260,7 +206,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               💰 Transparent Pricing
             </div>
@@ -273,7 +218,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
       {/* Market Overview */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
@@ -282,7 +226,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
-
             Market Overview & Growth Potential
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -291,7 +234,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-center"
-
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-10 h-10 text-white" />
               </div>
@@ -304,7 +246,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
-
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-10 h-10 text-white" />
               </div>
@@ -317,7 +258,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-center"
-
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="w-10 h-10 text-white" />
               </div>
@@ -328,7 +268,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Filters */}
       <section className="py-12 bg-zion-slate-dark/30">
         <div className="container mx-auto px-6">
@@ -346,13 +285,11 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>
               ))}
             </div>
-
             {/* Price Range Filter */}
             <div className="flex flex-wrap gap-3">
               {priceRanges.map((range) => (
@@ -366,7 +303,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-
                   {range.name}
                 </motion.button>
               ))}
@@ -374,7 +310,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -385,40 +320,20 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-
                 {/* Service Type Badge */}
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                   {service.type}
                 </div>
-
                 {/* Service Header */}
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -428,7 +343,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                     {service.category}
                   </p>
                 </div>
-
                 {/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2 mb-2">
@@ -440,7 +354,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                     <span>Trial: {service.trialDays} days</span>
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
@@ -456,7 +369,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                     <div className="text-xs text-zion-slate-light">ROI</div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Key Features</h4>
@@ -469,13 +381,11 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
                     ))}
                   </div>
                 </div>
-
                 {/* Target Audience */}
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Target Audience</h4>
                   <p className="text-sm text-zion-slate-light">{service.targetAudience}</p>
                 </div>
-
                 {/* CTA */}
                 <div className="text-center">
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
@@ -488,7 +398,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* ROI Calculator */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
@@ -497,7 +406,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
-
             ROI Calculator
           </motion.h2>
           <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">
@@ -556,7 +464,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -565,7 +472,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-
             Ready to Maximize Your ROI?
           </motion.h2>
           <motion.p
@@ -573,7 +479,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
           <motion.div
@@ -581,28 +486,17 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </motion.div>;
         </div>;
@@ -610,10 +504,4 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-<<<<<<< HEAD
-export default ComprehensivePricingGuide2028;}}}}
-=======
 export default ComprehensivePricingGuide2028;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

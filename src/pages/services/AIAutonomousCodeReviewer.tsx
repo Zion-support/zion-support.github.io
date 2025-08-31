@@ -1,22 +1,9 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link              } from 'react-router-dom.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Code,
-  Shield,
-  Zap,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  Star,
-=======
 import { motion              } from 'framer-motion.ts';
 import { Code, 
   CheckCircle, 
   Shield, 
   Zap, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Play,
   Settings,
@@ -52,22 +39,10 @@ import { Code,
   GitBranch,
   Github,
   Gitlab,
-<<<<<<< HEAD
-  Slack,
-  MessageSquare,
-  BarChart3,
-  Settings,
-  Lock,
-  Globe,
-  Smartphone,
-  Database
-const AIAutonomousCodeReviewer: React.FC = (): JSX.Element => {
-=======
   Bitbucket
              } from 'lucide-react.ts';
 
 const AIAutonomousCodeReviewer = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Code,
@@ -85,13 +60,6 @@ const AIAutonomousCodeReviewer = () => {
       description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase'
     },
     {
-<<<<<<< HEAD
-      icon: TrendingUp,
-      title: "Quality Metrics",
-      description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
-      benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
-
-=======
       icon: GitBranch,
       title: 'Git Integration',
       description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems'
@@ -106,9 +74,7 @@ const AIAutonomousCodeReviewer = () => {
       title: 'Team Collaboration',
       description: 'Built-in code review workflows, comments, and approval systems for development teams'
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     'Reduce code review time by 70%',
     'Catch 90% of bugs before production',
@@ -117,7 +83,6 @@ const AIAutonomousCodeReviewer = () => {
     'Reduce technical debt',
     'Ensure consistent coding standards'
   ];
-
   const services = [
     {
       icon: Server,
@@ -130,24 +95,6 @@ const AIAutonomousCodeReviewer = () => {
       description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines'
     },
     {
-<<<<<<< HEAD
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations and enterprises",
-      features: [
-        "Unlimited developers",
-        "Custom AI models",
-        "Advanced security features",
-        "API access",
-        "Dedicated support",
-        "Custom integrations",
-        "SLA guarantee"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
       icon: Box,
       title: 'Container Security Scanning',
       description: 'Docker and container security analysis, vulnerability scanning, and compliance checking'
@@ -157,9 +104,7 @@ const AIAutonomousCodeReviewer = () => {
       title: 'Database Code Review',
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [
     {
       industry: 'Software Development',
@@ -174,17 +119,10 @@ const AIAutonomousCodeReviewer = () => {
       description: 'Proactive security scanning and vulnerability detection in application code'
     },
     {
-<<<<<<< HEAD
-      title: "Performance Optimization",
-      description: "Identify and fix performance bottlenecks through intelligent code analysis.",
-      icon: Zap
-
-=======
       industry: 'Code Quality Management',
       description: 'Maintaining high coding standards and reducing technical debt in large codebases'
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -238,9 +176,7 @@ const AIAutonomousCodeReviewer = () => {
       cta: 'Contact Sales',
       popular: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -256,29 +192,14 @@ const AIAutonomousCodeReviewer = () => {
               <Code className="w-4 h-4 mr-2" />
               AI-Powered Code Review
             </div>
-<<<<<<< HEAD
-
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               AI Autonomous
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your development workflow with AI-powered automated code review.
-              Detect security vulnerabilities, optimize performance, and maintain code quality
-              across multiple programming languages with 70% faster review times.
-=======
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your code review process with AI-powered analysis that catches bugs, 
               improves security, and maintains code quality automatically.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -293,82 +214,6 @@ const AIAutonomousCodeReviewer = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Key Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI Code Review?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Leverage artificial intelligence to revolutionize your code review process
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index)              => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Supported Languages */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Multi-Language Support
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive code analysis across the most popular programming languages
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-6">
-              {supportedLanguages.map((language, index)              => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-blue-400/40 transition-all duration-300">
-                  <Code className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <span className="text-white font-medium">{language}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Integrations */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Seamless Integrations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Works with your existing development tools and workflows
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {integrations.map((integration, index)              => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <integration.icon className="w-6 h-6 text-white" />
-=======
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -406,7 +251,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -441,7 +285,6 @@ const AIAutonomousCodeReviewer = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
                     <p className="text-gray-300">{service.description}</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 </div>
               </motion.div>
@@ -449,7 +292,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -466,7 +308,6 @@ const AIAutonomousCodeReviewer = () => {
               Experience measurable improvements in code quality, security, and development efficiency.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -500,89 +341,6 @@ const AIAutonomousCodeReviewer = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Ideal solutions for various development scenarios
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {useCases.map((useCase, index)              => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your team size and needs
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)              => (
-                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular
-                    ? 'border-blue-400 bg-gradient-to-br from-blue-600/20 to-cyan-600/20'
-                    : 'border-white/20 hover:border-blue-400/40'
-                }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    to={plan.cta === "Contact Sales" ? "/contact" : "/contact"}
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                    }`}
-
-                    {plan.cta}
-                  </Link>
-=======
       {/* Pricing Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -621,7 +379,6 @@ const AIAutonomousCodeReviewer = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -629,9 +386,7 @@ const AIAutonomousCodeReviewer = () => {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -640,7 +395,6 @@ const AIAutonomousCodeReviewer = () => {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
@@ -653,7 +407,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -691,7 +444,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* Market Information Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -708,7 +460,6 @@ const AIAutonomousCodeReviewer = () => {
               Understand the market landscape and potential return on investment for AI-powered code review solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -720,7 +471,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">$2.8B</h3>
               <p className="text-gray-300">Global Market Size 2024</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -731,7 +481,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">24.3%</h3>
               <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -742,7 +491,6 @@ const AIAutonomousCodeReviewer = () => {
               <h3 className="text-2xl font-bold text-white mb-2">300%</h3>
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -756,7 +504,6 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -781,7 +528,6 @@ const AIAutonomousCodeReviewer = () => {
                 Contact Sales
               </button>
             </div>
-            
             <div className="mt-8 text-center">
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
@@ -805,5 +551,4 @@ const AIAutonomousCodeReviewer = () => {
     </div>
   );
 };
-
 export default AIAutonomousCodeReviewer;}}}}

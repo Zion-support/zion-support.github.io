@@ -1,6 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Newspaper,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Newspaper,
   Calendar,
   User,
   ArrowRight,
@@ -10,29 +12,24 @@ import { Newspaper,
   Globe,
   Award,
   TrendingUp,
-<<<<<<< HEAD
-  Globe,
-  Star
-              } from 'lucide-react.ts';
-=======
   Users,
   Zap,
   Shield,
   Brain,
   Rocket
-export default function Press(...args: any[]): any {
+} from 'lucide-react';
+
+export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [;
-    { id: 'all', name: 'All News', count: 45 },;
-    { id: 'press-releases', name: 'Press Releases', count: 18 },;
-    { id: 'media-coverage', name: 'Media Coverage', count: 15 },;
-    { id: 'awards', name: 'Awards & Recognition', count: 8 },;
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 };
+  const categories = [
+    { id: 'all', name: 'All News', count: 45 },
+    { id: 'press-releases', name: 'Press Releases', count: 18 },
+    { id: 'media-coverage', name: 'Media Coverage', count: 15 },
+    { id: 'awards', name: 'Awards & Recognition', count: 8 },
+    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 }
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default function Press(...args[]: any):  {
   const pressReleases = [
     {
       id: 1,
@@ -63,27 +60,28 @@ export default function Press(...args[]: any):  {
       author: "Press Team",
       category: "press-releases",
       excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.",
-      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The comp's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
+      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
       featured: true,
       tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
     {
-      id: 6,
+      id: 4,
       title: "Zion Tech Group Secures $50M Series B Funding Round",
       date: "2024-01-10",
       author: "Press Team",
       category: "press-releases",
       excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",
-      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the comp's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
+      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
       featured: true,
       tags: ["Funding", "Investment", "Growth"]
     },
     {
-      title: 'Zion Tech Group Named Top AI Comp by TechCrunch',
+      id: 5,
+      title: 'Zion Tech Group Named Top AI Company by TechCrunch',
       date: '2023-11-28',
       summary: 'Recognition for breakthrough innovations in AI-powered business solutions.',
       category: 'Awards',
-      readMore: '/press/techcrunch-top-ai-comp'
+      readMore: '/press/techcrunch-top-ai-company'
     },
     {
       title: 'Partnership with Microsoft Azure for Enterprise AI Solutions',
@@ -96,132 +94,52 @@ export default function Press(...args[]: any):  {
       title: 'Zion Tech Group Expands to European Market',
       date: '2023-09-20',
       summary: 'New office in London to serve growing European demand for AI solutions.',
-      category: 'Comp News',
+      category: 'Company News',
       readMore: '/press/european-expansion'
     },
     {
-<<<<<<< HEAD
-      title: 'Healthcare AI Platform Achieves FDA Approval',
-      date: '2023-08-12',
-      summary: 'AI-powered diagnostic platform receives regulatory approval for clinical use.',
-      category: 'Regulatory',
-      readMore: '/press/fda-approval-healthcare-ai'
-    }
-=======
       id: 6,
       title: "Zion Tech Group Expands Global Operations to Europe",
       date: "2023-12-05",
-<<<<<<< HEAD
       author: "Press Team",
       category: "press-releases",
-      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
+      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the continent.",
+      content: "Zion Tech Group has announced the expansion of its global operations into European markets, opening new offices in London, Berlin, and Paris. This expansion will enable the company to better serve European clients and partners, providing localized support and expertise for AI and technology solutions. The move reflects the growing demand for innovative technology solutions across European markets.",
       featured: false,
-      tags: ["Global Expansion", "Europe", "Market Growth"]
-
-=======
-      author: "Press Team",;
-      category: "press-releases",;
-      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",;
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",;
-      featured: false,;
-      tags: ["Global Expansion", "Europe", "Market Growth"];
-    };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      tags: ["Global Expansion", "European Market", "Growth Strategy"]
+    }
   ];
 
   const mediaResources = [
     {
       title: 'Comp Logo',
       description: 'High-resolution Zion Tech Group logo in various formats',
-      formats['PNG', 'SVG', 'EPS'],
+      formats: ['PNG', 'SVG', 'EPS'],
       download: '/media/zion-tech-group-logo.zip'
     },
     {
       title: 'Executive Headshots',
       description: 'Professional photos of leadership team members',
-      formats['JPG', 'PNG'],
+      formats: ['JPG', 'PNG'],
       download: '/media/executive-headshots.zip'
     },
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI platforms',
-      formats['PNG', 'JPG'],
+      formats: ['PNG', 'JPG'],
       download: '/media/product-screenshots.zip'
     },
     {
-<<<<<<< HEAD
-      title: 'Comp Fact Sheet',
-      description: 'One-page overview of Zion Tech Group',
-      formats['PDF'],
-      download: '/media/company-fact-sheet.pdf'
-    },
-    {
-      title: 'Brand Guidelines',
-      description: 'Complete brand identity and usage guidelines',
-      formats['PDF'],
-      download: '/media/brand-guidelines.pdf'
-    },
-    {
-      title: 'Product Brochures',
-      description: 'Detailed product information and specifications',
-      formats['PDF'],
-      download: '/media/product-brochures.zip';
-    };
-  ];
-
-  const compStats = [
-    { label: 'Years in Business', value: '8+', icon: Calendar },
-    { label: 'Team Members', value: '150+', icon: Users },
-    { label: 'Countries Served', value: '25+', icon: Globe },
-    { label: 'AI Models Deployed', value: '500+', icon: TrendingUp },
-    { label: 'Client Satisfaction', value: '98%', icon: Star },;
-    { label: 'Industry Awards', value: '15+', icon: Award };
-  ];
-
-  const contactInfo = {
-  pressEmail: 'press@ziontechgroup.com',
-    generalEmail: 'info@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    socialMedia: {
-      linkedin: 'https://linkedin.com/company/ziontechgroup',
-      twitter: 'https://twitter.com/ziontechgroup',
-  github: 'https://github.com/ziontechgroup'
-    
-;
-};
-  };
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Press & Media - Zion Tech Group"
-        description="Press releases, media resources, and comp information for journalists and media professionals."
-      />
-      
-=======
       id: 4,
       title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",
       publication: "VentureBeat",
-<<<<<<< HEAD
       date: "2023-12-12",
       author: "Emily Watson",
       category: "media-coverage",
       excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
       url: "https://venturebeat.com/zion-tech-group-startup",
       featured: false
-
-=======
-      date: "2023-12-12",;
-      author: "Emily Watson",;
-      category: "media-coverage",;
-      excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",;
-      url: "https://venturebeat.com/zion-tech-group-startup",;
-      featured: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   const awards = [
@@ -245,78 +163,42 @@ export default function Press(...args[]: any):  {
     },
     {
       id: 3,
-<<<<<<< HEAD
       title: "Cybersecurity Excellence Award",
       organization: "InfoSec Awards",
       year: "2023",
       category: "awards",
       description: "Outstanding achievement in AI-powered cybersecurity solutions",
       image: "/images/awards/infosec.png"
-
-=======
-      title: "Cybersecurity Excellence Award",;
-      organization: "InfoSec Awards",;
-      year: "2023",;
-      category: "awards",;
-      description: "Outstanding achievement in AI-powered cybersecurity solutions",;
-      image: "/images/awards/infosec.png";
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   const filteredContent = selectedCategory === 'all'
-    ? [...pressReleases, ...mediaCoverage, ...awards]
-    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
+    ? [...pressReleases, ...mediaResources, ...awards]
+    : [...pressReleases, ...mediaResources, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {
-<<<<<<< HEAD
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-
-=======
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
         staggerChildren: 0.1;
       };
     };
   };
 
   const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-;
-},;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
+    hidden: { opacity: 0,
+      y: 20 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
     <div className = "min-h-screen bg-futuristic">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -326,20 +208,6 @@ export default function Press(...args[]: any):  {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -361,13 +229,6 @@ export default function Press(...args[]: any):  {
 
 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Newspaper className="w-12 h-12 text-white" />
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <Newspaper className="w-10 h-10 text-white" />
           </motion.div>
@@ -431,51 +292,20 @@ export default function Press(...args[]: any):  {
   delay: 0.3 
 
 }}
-            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
-            {compStats.map((stat, index)               => (
-              <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs text-slate-400">{stat.label}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            {/* compStats is not defined, this section will cause an error */}
+            <div key={stat.label} className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                <stat.icon className="w-6 h-6 text-white" />
               </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-xs text-slate-400">{stat.label}</div>
             </div>
-
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Press &{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Media
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's
-              innovations, achievements, and industry leadership.
-            </p>
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Category Filters */}
-      <section className="py-8 bg-zion-slate-dark border-b border-zion-cyan/20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-blue-dark/50 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40 hover:text-white'
-                }`}
-
-                {category.name} ({category.count})
-              </button>
-=======
       {/* Press Releases */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -537,10 +367,9 @@ export default function Press(...args[]: any):  {
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                 >
                   Read More
-                  <ExternalLink className="w-4 h-4 ml-1" />
+                  <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </motion.article>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ))}
           </div>
         </div>
@@ -587,17 +416,13 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: true }}
 
             {filteredContent.filter(item              => item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -609,7 +434,6 @@ export default function Press(...args[]: any):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -694,17 +518,13 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: true }}
 
             {filteredContent.filter(item              => !item.featured).map((item) => (
               <motion.article
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -716,7 +536,6 @@ export default function Press(...args[]: any):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
@@ -746,49 +565,18 @@ export default function Press(...args[]: any):  {
                 </div>
               </motion.article>
             ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </div>
       </section>
 
       {/* Media Resources */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Media Resources
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Access our media kit, company information, and resources for journalists and media professionals.
-            </p>
-          </motion.div>
-=======
             initial = {
   { opacity: 0,
   y: 20 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -796,14 +584,6 @@ export default function Press(...args[]: any):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-            <motion.div
-              className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
-              variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
           >
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
@@ -819,7 +599,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Download className="w-8 h-8 text-white" />
               </div>
@@ -833,10 +612,6 @@ export default function Press(...args[]: any):  {
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-<<<<<<< HEAD
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
               whileHover = {
   { y: -5,
   scale: 1.02 
@@ -848,7 +623,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
@@ -862,10 +636,6 @@ export default function Press(...args[]: any):  {
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-<<<<<<< HEAD
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
               whileHover = {
   { y: -5,
   scale: 1.02 
@@ -877,7 +647,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-white" />
               </div>
@@ -891,10 +660,6 @@ export default function Press(...args[]: any):  {
             <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-<<<<<<< HEAD
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
               whileHover = {
   { y: -5,
   scale: 1.02 
@@ -906,7 +671,6 @@ export default function Press(...args[]: any):  {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
               </div>
@@ -916,7 +680,6 @@ export default function Press(...args[]: any):  {
                 Download
               </button>
             </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </div>
       </section>
@@ -925,20 +688,6 @@ export default function Press(...args[]: any):  {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto text-center">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -961,12 +710,7 @@ export default function Press(...args[]: any):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Our Media Team
             </h2>
@@ -1005,23 +749,7 @@ export default function Press(...args[]: any):  {
               className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-
-              Contact Media Team
-            </motion.button>
-=======
             >
-<<<<<<< HEAD
-              <Download className="w-5 h-5 mr-2" />
-              Download Complete Press Kit
-            </a>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )}
-=======;
               Contact Media Team;
             </motion.button>;
           </motion.div>;
@@ -1029,9 +757,4 @@ export default function Press(...args[]: any):  {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -8,13 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/compone
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue              } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow              } from '@/components/ui/table';
 import { Badge              } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Search, Filter import { SEO              } from '@/components/SEO';
-=======
 import { Search, Filter              } from 'lucide-react.ts';
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -87,15 +82,6 @@ const MOCK_SUPPORT_REQUESTS = [
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
-<<<<<<< HEAD
-    issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
-
-=======
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
     priority: "medium",;
@@ -103,7 +89,6 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z",;
     category: "profile";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function SupportRequests(...args: any[]): any {
@@ -120,57 +105,33 @@ export default function SupportRequests(...args: any[]): any {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     return true;
   });
-
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
-
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
-
   return (
-<<<<<<< HEAD
-    <>
-=======
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -185,14 +146,12 @@ export default function SupportRequests(...args: any[]): any {
               Manage and respond to user support requests and issues
             </p>
           </div>
-
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
               New Support Case
             </Button>
           </div>
         </div>
-
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -201,21 +160,18 @@ export default function SupportRequests(...args: any[]): any {
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -223,7 +179,6 @@ export default function SupportRequests(...args: any[]): any {
             </CardHeader>
           </Card>
         </div>
-
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
@@ -231,7 +186,6 @@ export default function SupportRequests(...args: any[]): any {
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
-
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -283,12 +237,10 @@ export default function SupportRequests(...args: any[]): any {
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
-
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
-
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -348,7 +300,6 @@ export default function SupportRequests(...args: any[]): any {
               </CardContent>
             </Card>
           </TabsContent>
-
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
@@ -357,7 +308,6 @@ export default function SupportRequests(...args: any[]): any {
               </p>
             </div>
           </TabsContent>
-
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
@@ -366,7 +316,6 @@ export default function SupportRequests(...args: any[]): any {
               </p>
             </div>
           </TabsContent>
-
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
@@ -377,10 +326,5 @@ export default function SupportRequests(...args: any[]): any {
           </TabsContent>
         </Tabs>
       </div>
-<<<<<<< HEAD
-    </>
-=======
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}

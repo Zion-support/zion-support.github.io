@@ -1,6 +1,5 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
-
 export interface ServiceContact {
 
 
@@ -20,9 +19,6 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -38,7 +34,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -83,9 +78,6 @@ export interface AIService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string;
-=======
 trialPeriod: string;
 
 
@@ -101,7 +93,6 @@ trialPeriod: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -114,14 +105,7 @@ const zionContact: ServiceContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 // Comprehensive AI Services 2030
 export const comprehensiveAIServices2030: AIService[] = [
   {
@@ -710,7 +694,5 @@ export const comprehensiveAIServices2030: AIService[] = [
     integrations["ERP systems", "CRM platforms", "Document management", "Workflow tools"],
     freeTier: true,
     trialPeriod: "30 days"
-
 ];
-
 export default comprehensiveAIServices2030;}}}

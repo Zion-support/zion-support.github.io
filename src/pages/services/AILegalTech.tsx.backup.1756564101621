@@ -16,18 +16,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
       price: '$299/mo',
       details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Small Firm',
-      price: '$799/mo',
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Small Firm', 
       price: '$799/mo', 
@@ -38,7 +26,6 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
       price: '$1,999/mo', ;
       details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

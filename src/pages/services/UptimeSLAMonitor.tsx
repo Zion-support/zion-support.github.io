@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target import { SEO              } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';
 import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target               } from 'lucide-react.ts';
 import { SEO               } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function UptimeSLAMonitor(...args: []):  {
   const features = [
@@ -36,15 +29,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Globe,
       title: "Global Monitoring",
-<<<<<<< HEAD
-      description: "Monitor from multiple locations worldwide to ensure consistent user experience."
-    },
-    {
-      icon: Shield,
-      title: "Security Monitoring",
-      description: "SSL certificate monitoring, security headers, and vulnerability scanning included."
-
-=======
       description: "Monitor from multiple locations worldwide to ensure consistent user experience.";
     },;
     {;
@@ -52,9 +36,7 @@ export default function UptimeSLAMonitor(...args: []):  {
       title: "Security Monitoring",;
       description: "SSL certificate monitoring, security headers, and vulnerability scanning included.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const monitoringTypes = [
     {
       icon: Monitor,
@@ -79,15 +61,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Cloud,
       title: "Cloud Services",
-<<<<<<< HEAD
-      description: "AWS, Azure, GCP service monitoring and cost tracking"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Monitoring",
-      description: "API endpoints, push notifications, and mobile performance"
-
-=======
       description: "AWS, Azure, GCP service monitoring and cost tracking";
     },;
     {;
@@ -95,9 +68,7 @@ export default function UptimeSLAMonitor(...args: []):  {
       title: "Mobile App Monitoring",;
       description: "API endpoints, push notifications, and mobile performance";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -139,15 +110,6 @@ export default function UptimeSLAMonitor(...args: []):  {
         "Unlimited monitors",
         "10-second check intervals",
         "Priority support",
-<<<<<<< HEAD
-        "Advanced SLA reporting",
-        "All global locations",
-        "White-label options",
-        "Custom integrations"
-      ],
-      popular: false
-
-=======
         "Advanced SLA reporting",;
         "All global locations",;
         "White-label options",;
@@ -155,9 +117,7 @@ export default function UptimeSLAMonitor(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       title: "Prevent Downtime",
@@ -172,15 +132,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       title: "Improve Performance",
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
-<<<<<<< HEAD
-      icon: TrendingUp
-    },
-    {
-      title: "Reduce MTTR",
-      description: "Faster incident response with detailed error information and automated escalation.",
-      icon: Zap
-
-=======
       icon: TrendingUp;
     },;
     {;
@@ -188,22 +139,14 @@ export default function UptimeSLAMonitor(...args: []):  {
       description: "Faster incident response with detailed error information and automated escalation.",;
       icon: Zap;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Uptime SLA Monitor - Zion Tech Group"
-=======
       <SEO 
         title = "Uptime SLA Monitor - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -214,25 +157,12 @@ export default function UptimeSLAMonitor(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition={{ duration: 0.6 }}
-
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
                     Uptime SLA Monitor
@@ -246,13 +176,11 @@ export default function UptimeSLAMonitor(...args: []):  {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
                     Start Monitoring
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-
                     Schedule Demo
                   </Link>
                 </div>
@@ -260,7 +188,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -272,49 +199,24 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Everything you need to ensure your services are always available and performing optimally
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -325,7 +227,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Monitoring Types Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
@@ -337,49 +238,24 @@ export default function UptimeSLAMonitor(...args: []):  {
                 From simple website checks to complex infrastructure monitoring
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {monitoringTypes.map((type, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <type.icon className="w-6 h-6 text-white" />
                   </div>
@@ -390,7 +266,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -402,49 +277,24 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Professional monitoring that helps you maintain high availability and meet your SLA commitments
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="flex items-start space-x-4"
-
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -457,7 +307,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
@@ -469,53 +318,28 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Choose the monitoring plan that fits your needs and scale as you grow
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)              => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular
                       ? 'border-green-500 ring-2 ring-green-500/20'
                       : 'border-slate-700'
                   }`}
-
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -523,7 +347,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -532,7 +355,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -541,7 +363,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -549,7 +370,6 @@ export default function UptimeSLAMonitor(...args: []):  {
                         ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-
                     Get Started
                   </Link>
                 </motion.div>
@@ -557,7 +377,6 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
@@ -565,25 +384,12 @@ export default function UptimeSLAMonitor(...args: []):  {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Monitor Your Infrastructure?
               </h2>
@@ -594,13 +400,11 @@ export default function UptimeSLAMonitor(...args: []):  {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-
                   Contact Sales
                 </Link>;
               </div>;

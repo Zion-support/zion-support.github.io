@@ -59,7 +59,6 @@ contactInfo: {;
   marketSize?: string;
   regulatoryCompliance?: string[];
 }
-
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
   // AI-Powered Medical Imaging Analysis
   {
@@ -126,7 +125,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     marketSize: "$45.8 billion by 2028",
     regulatoryCompliance: ["FDA", "CE Mark", "HIPAA", "GDPR", "SOC 2"]
   },
-
   // AI-Powered Drug Discovery Platform
   {
     id: "ai-drug-discovery-platform-2028",
@@ -192,7 +190,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     marketSize: "$67.3 billion by 2028",
     regulatoryCompliance: ["FDA", "EMA", "GMP", "GLP", "SOC 2"]
   },
-
   // AI-Powered Patient Monitoring System
   {
     id: "ai-patient-monitoring-2028",
@@ -258,7 +255,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     marketSize: "$89.2 billion by 2028",
     regulatoryCompliance: ["FDA", "CE Mark", "HIPAA", "SOC 2", "ISO 13485"]
   },
-
   // AI-Powered Clinical Decision Support
   {
     id: "ai-clinical-decision-support-2028",
@@ -324,7 +320,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     marketSize: "$56.7 billion by 2028",
     regulatoryCompliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001"]
   },
-
   // AI-Powered Population Health Management
   {
     id: "ai-population-health-management-2028",
@@ -386,20 +381,9 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
       uptime: "99.9%",
       security: ["HIPAA", "SOC 2", "Data encryption", "Privacy controls"]
     },
-<<<<<<< HEAD
-    marketPrice: "$16,000-45,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "900% within 20 months",
-    setupTime: "10-12 weeks",
-    integrations: ["EHR Systems", "Data Warehouses", "Business Intelligence Tools", "Reporting Systems", "Operational Systems"]
-
-];}
-=======
     competitors: ["Optum", "Cerner", "Epic Systems", "Allscripts"],
     marketSize: "$78.9 billion by 2028",
     regulatoryCompliance: ["HIPAA", "SOC 2", "GDPR", "ISO 27001"]
   }
 ];
-
 export default SPECIALIZED_HEALTHCARE_AI_SERVICES_2028;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

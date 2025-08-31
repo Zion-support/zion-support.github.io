@@ -9,25 +9,12 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Integration with major entertainment platforms',;
     'Custom AI models for entertainment-specific insights';
   ];
-
   const tiers = [
     {
       name: 'Small Creator',
       price: '$199/mo',
       details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Creator',
-      price: '$599/mo',
-      details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Creator',
-      price: '$1,499/mo',
-      details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Creator', 
       price: '$599/mo', 
@@ -38,9 +25,7 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
       price: '$1,499/mo', ;
       details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Video content optimization and recommendation',;
     'Music and audio content personalization',;
@@ -49,7 +34,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Streaming platform content curation',;
     'Content monetization and advertising';
   ];
-
   const benefits = [;
     'Increase audience engagement by 30-50%',;
     'Improve content discovery by 40-60%',;
@@ -58,7 +42,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Enhance user experience and satisfaction',;
     'Scale entertainment operations efficiently';
   ];
-
   const industries = [;
     'Video Streaming & YouTube',;
     'Music & Audio Platforms',;
@@ -67,7 +50,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Podcasting & Audio Content',;
     'Live Streaming & Events';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           <p className="text-rose-100 text-xl">Transform your entertainment business with AI-powered tools that enhance content creation, optimize audience engagement, and maximize reach.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -128,7 +109,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-pink-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Entertainment Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your entertainment with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

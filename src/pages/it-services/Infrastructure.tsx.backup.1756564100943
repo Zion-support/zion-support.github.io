@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe export default function Infrastructure(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe              } from 'lucide-react.ts';
 
 export default function Infrastructure(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Server,
@@ -23,15 +17,6 @@ export default function Infrastructure(...args[]: any):  {
     {
       icon: Shield,
       title: 'Security First',
-<<<<<<< HEAD
-      description: 'Protect your infrastructure with enterprise-grade security'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast systems and applications'
-
-=======
       description: 'Protect your infrastructure with enterprise-grade security';
     },;
     {;
@@ -39,7 +24,6 @@ export default function Infrastructure(...args[]: any):  {
       title: 'High Performance',;
       description: 'Lightning-fast systems and applications';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -56,15 +40,6 @@ export default function Infrastructure(...args[]: any):  {
     {
       title: 'Cloud Migration',
       description: 'Seamless transition to cloud infrastructure',
-<<<<<<< HEAD
-      icon: Cloud
-    },
-    {
-      title: 'Disaster Recovery',
-      description: 'Business continuity and backup solutions',
-      icon: Shield
-
-=======
       icon: Cloud;
     },;
     {;
@@ -72,7 +47,6 @@ export default function Infrastructure(...args[]: any):  {
       description: 'Business continuity and backup solutions',;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -349,23 +323,10 @@ export default function Infrastructure(...args[]: any):  {
                   Contact Infrastructure Team
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

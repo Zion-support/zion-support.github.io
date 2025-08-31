@@ -23,19 +23,10 @@ import { Brain,
   Lock,
   Cloud,
   Rocket
-<<<<<<< HEAD
-const AllServices2027: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
 const AllServices2027: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
-=======
-const AllServices2027: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
@@ -45,7 +36,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
     { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
   ];
-
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
   );
@@ -63,7 +53,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
         avgPrice: Math.round(services.reduce((sum, s)               => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round((services.reduce((sum, s)               => sum + s.rating, 0) / services.length) * 10) / 10
       }};
-=======
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
@@ -75,7 +64,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
         avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s)              => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
         avgRating: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round((INNOVATIVE_SERVICES_2027.reduce((sum, s)              => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
-
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
     return {
       count: anyanyanyanyanyanyanyanyanyanyanyanyanyservices.length,
@@ -83,29 +71,7 @@ const AllServices2027: React.FC = (): JSX.Element => {;
       avgRating: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round((services.reduce((sum, s)              => sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -114,16 +80,9 @@ const AllServices2027: React.FC = (): JSX.Element => {;
       };
     };
   };
-
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {;
       y: 0,;
@@ -132,9 +91,7 @@ const AllServices2027: React.FC = (): JSX.Element => {;
         duration: 0.5;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <>
       <SEOHead
@@ -143,35 +100,20 @@ const AllServices2027: React.FC = (): JSX.Element => {;
         canonical="/all-services-2027"
         url="https://ziontechgroup.com/all-services-2027"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               All Services 2027
             </h1>
@@ -183,13 +125,11 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               <Link
                 to="/comprehensive-pricing-2027"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
                 View Pricing
               </Link>
               <Link
                 to="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-
                 Get Started
               </Link>
             </div>
@@ -215,7 +155,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Category Overview */}
       <section className="py-20 bg-zion-slate">
         <div className="max-w-7xl mx-auto px-6">
@@ -236,10 +175,8 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           </div>;
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
-
               return (
                 <motion.div
                   key = {category.id}
@@ -248,7 +185,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
-
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -263,14 +199,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div className="flex justify-between">
-<<<<<<< HEAD
-                      <span>Avg. Rating:</span>
-                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <span>Avg. Rating:</span>;
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
                     </div>;
@@ -278,11 +206,9 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className = "py-20 bg-zion-slate-dark">
         <div className="max-w-7xl mx-auto px-6">
@@ -294,24 +220,16 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} available
             </div>
           </div>
-
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-<<<<<<< HEAD
-            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
-
-            {filteredServices.map((service)              => (
-=======
             className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-gray-400 text-xl mb-4">No services found</div>
@@ -320,7 +238,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           )}
         </div>
       </section>
-
       {/* Service Categories Deep Dive */}
       <section className="py-20 bg-zion-slate">
         <div className="max-w-7xl mx-auto px-6">
@@ -333,13 +250,11 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               providing targeted solutions that deliver measurable results.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* AI Services */}
             <motion.div
               variants={itemVariants}
               className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
@@ -347,14 +262,9 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Leverage the power of artificial intelligence to automate processes,
-                gain insights from data, and create intelligent solutions.
-=======
                 Transform your business with cutting-edge artificial intelligence solutions.
                 From predictive analytics to autonomous systems, our AI services drive innovation
                 and efficiency across all business operations.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -371,12 +281,10 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </motion.div>
-
             {/* Cybersecurity */}
             <motion.div
               variants={itemVariants}
               className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
                   <Shield className="w-6 h-6 text-white" />
@@ -384,14 +292,9 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Protect your digital assets with comprehensive security solutions
-                that detect, prevent, and respond to cyber threats.
-=======
                 Protect your digital assets with enterprise-grade security solutions.
                 Our cybersecurity services provide comprehensive protection against evolving threats
                 while ensuring compliance with industry standards.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -408,7 +311,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </motion.div>
-
             {/* Emerging Technology */}
             <motion.div
               variants={itemVariants}
@@ -440,7 +342,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </motion.div>
-
             {/* IT Services */}
             <motion.div
               variants={itemVariants}
@@ -475,35 +376,8 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Let's discuss how our innovative services can drive your success and
-            create a competitive advantage in your industry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </a>
-          </div>
-=======
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -533,18 +407,15 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               </Link>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>;
     </>;
   )};
-
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (category) {
       case 'AI Services':;
-=======;
             </a>;
           </div>;
         </div>;
@@ -552,13 +423,11 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
     </>;
   );
 };
-
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'AI Services':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
         return <Shield className="w-5 h-5" />;
@@ -569,19 +438,12 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       case 'Telecommunications':
         return <Signal className="w-5 h-5" />;
       default:
-<<<<<<< HEAD
-        return <Users className="w-5 h-5" />;
-
-=======
         return <Users className = "w-5 h-5" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <motion.div
       variants = {itemVariants}
       className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
-
       {/* Service Image */}
       <div className="relative h-48 overflow-hidden">
         <img
@@ -590,24 +452,20 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-
         {/* Category Badge */}
         <div className="absolute top-4 left-4 flex items-center space-x-2 bg-cyan-500/90 backdrop-blur-sm px-3 py-1 rounded-full">
           {getCategoryIcon(service.category)}
           <span className="text-white text-sm font-medium">{service.category}</span>
         </div>
-
         {/* AI Score Badge */}
         <div className="absolute top-4 right-4 bg-purple-500/90 backdrop-blur-sm px-3 py-1 rounded-full">
           <span className="text-white text-sm font-medium">AI Score: {service.aiScore}</span>
         </div>
       </div>
-
       {/* Service Content */}
       <div className="p-6">
         <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
         <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
@@ -615,14 +473,12 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
-
                 <CheckCircle className="w-3 h-3" />
                 <span>{feature}</span>
               </span>
             ))}
           </div>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between mb-4">
           <div className="text-2xl font-bold text-cyan-400">
@@ -633,32 +489,18 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             Market: {service.marketPrice}
           </div>
         </div>
-
         {/* Action Buttons */}
         <div className="flex space-x-3">
           <Link
             to={service.website}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
-
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
-<<<<<<< HEAD
-
-=======
           >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Contact
-          </Link>
-        </div>
-      </div>;
-    </motion.div>;
-  )};
-=======
             Contact;
           </Link>;
         </div>;
@@ -666,9 +508,4 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     </motion.div>;
   );
 };
-<<<<<<< HEAD
-export default AllServices2027;}}}}}}}
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default AllServices2027;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

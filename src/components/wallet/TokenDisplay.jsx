@@ -1,7 +1,4 @@
 import React from "react";
-import { BadgeDollarSign import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
 export function TokenDisplay() {
     const { wallet, loading } = useWallet();
@@ -29,9 +26,4 @@ export function TokenDisplay() {
             </div>
           </div>)}
       </CardContent>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card>}}
-=======
     </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

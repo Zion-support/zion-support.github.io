@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React from 'react.ts'
-import { Link              } from 'react-router-dom.ts'
-import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export default function Terms(...args: any[]): any {
-=======
-import React from 'react.ts'
-import { Link               } from 'react-router-dom.ts'
-import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle               } from 'lucide-react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react'
 
 
-export default function Terms(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Terms(...args[]):  {
 	return (
 		<>
 			{/* Hero Section */}
@@ -268,14 +262,6 @@ export default function Terms(...args[]: any):  {
 
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
-<<<<<<< HEAD
-					</Link>
-				</div>
-			</section>
-		</>
-	)
-}}
-=======
 					</Link>;
 				</div>;
 			</section>;
@@ -283,4 +269,3 @@ export default function Terms(...args[]: any):  {
 	);
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

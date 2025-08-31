@@ -1,117 +1,77 @@
 export interface CartItem {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   name: string;
   price: number;
   quantity: number;
   type: 'equipment' | 'service' | 'talent';
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  image?: string;
+  description?: string;
+  category?: string;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[]): number               => {;
+export const calculateCartTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]               => {;
-=======;
-export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[]): number              => {;
-  return items.reduce((total, item) => total + (item.price * item.quantity), 0);
-};
-
-export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
-
   if (existingItem) {
-    return cart.map(cartItem = >;
-      cartItem.id === item.id;
-        ? { ...cartItem, quantity: cartItem.quantity + item.quantity };
-        : cartItem;
+    return cart.map(cartItem =>
+      cartItem.id === item.id
+        ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+        : cartItem
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return [...cart, item];
 };
 
-<<<<<<< HEAD
-export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]               => {;
+export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]               => {
-  if (quantity <= 0) {;
-=======;
-export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]              => {;
-  return cart.filter(item => item.id !== itemId);
-};
-
-export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]              => {;
-  if (quantity <= 0) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const updateCartItemQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
+  if (quantity <= 0) {
     return removeFromCart(cart, itemId);
-<<<<<<< HEAD
-=======
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return cart.map(item =>
     item.id === itemId ? { ...item, quantity } : item
   );
 };
 
-export const clearCart = (): CartItem[] => {;
+export const clearCart = (): CartItem[] => {
   return [];
 };
 
-<<<<<<< HEAD
-export const getCartKey = (userId: anyanyanyanyanyanyanyanyanyanyanyanyanystring): string               => {;
-  return `cart_${userId}`;
+export const getCartItemCount = (cart: CartItem[]): number => {
+  return cart.reduce((total, item) => total + item.quantity, 0);
 };
 
-export const mergeCartItems = (existingItems: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], newItems: CartItem[]): CartItem[]              => {
-  const merged = [...existingItems];
+export const getCartItemById = (cart: CartItem[], itemId: string): CartItem | undefined => {
+  return cart.find(item => item.id === itemId);
+};
 
-  newItems.forEach(newItem => {
-    const existingIndex = merged.findIndex(item => item.id === newItem.id);
-    if (existingIndex >= 0 && merged[existingIndex]) {
-      merged[existingIndex].quantity += newItem.quantity;
-    } else {
-      merged.push(newItem);
+export const isItemInCart = (cart: CartItem[], itemId: string): boolean => {
+  return cart.some(item => item.id === itemId);
+};
 
-  });
+export const getCartItemsByType = (cart: CartItem[], type: CartItem['type']): CartItem[] => {
+  return cart.filter(item => item.type === type);
+};
 
-  return merged;
-};}}}}
+export const getCartItemsByCategory = (cart: CartItem[], category: string): CartItem[] => {
+  return cart.filter(item => item.category === category);
+};
+
+export const calculateCartSubtotal = (items: CartItem[]): number => {
+  return calculateCartTotal(items);
+};
+
+export const calculateCartTax = (items: CartItem[], taxRate: number = 0.08): number => {
+  return calculateCartSubtotal(items) * taxRate;
+};
+
+export const calculateCartTotalWithTax = (items: CartItem[], taxRate: number = 0.08): number => {
+  const subtotal = calculateCartSubtotal(items);
+  const tax = calculateCartTax(items, taxRate);
+  return subtotal + tax;
+};

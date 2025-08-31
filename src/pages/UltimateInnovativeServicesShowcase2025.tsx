@@ -29,17 +29,8 @@ import { Brain,
   DollarSign,
   Clock,
   Shield as ShieldIcon
-<<<<<<< HEAD
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES              } from '../data/ultimateInnovativeServices2025';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES               } from '../data/ultimateInnovativeServices2025';
-=======
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES              } from '../data/ultimateInnovativeServices2025';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function UltimateInnovativeServicesShowcase2025(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -50,36 +41,18 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
   const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
 
     if (selectedCategory !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(service => service.category === selectedCategory);
-
-    if (selectedSubcategory !== 'all') {
-      filtered = filtered.filter(service => service.subcategory === selectedSubcategory);
-=======
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedSubcategory !== 'all') {
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
-<<<<<<< HEAD
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     switch (sortBy) {
@@ -106,55 +79,14 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
           const innovationOrder = ['Revolutionary', 'Breakthrough', 'Advanced'];
           const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
-<<<<<<< HEAD
-          return aIndex - bIndex;
-        });
-=======
           return aIndex - bIndex})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return filtered}, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'AI & Automation': return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
-      case 'Blockchain & Web3': return <Globe className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'IoT & Edge Computing': return <Network className="w-6 h-6" />;
-      case 'Metaverse & AR/VR': return <Smartphone className="w-6 h-6" />;
-      case 'Robotics & Automation': return <Rocket className="w-6 h-6" />;
-      case 'Biotechnology': return <Database className="w-6 h-6" />;
-      case 'Space Technology': return <Zap className="w-6 h-6" />;
-      case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
-<<<<<<< HEAD
-      default: return <Star className="w-6 h-6" />;
-
-=======
       default: return <Star className = "w-6 h-6" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getInnovationBadge = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const type = level.split(' - ')[0];
-    switch (type) {
-      case 'Revolutionary':
-        return <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">🚀 Revolutionary</span>;
-      case 'Breakthrough':
-        return <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">💡 Breakthrough</span>;
-      case 'Advanced':
-        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
-      default:
-<<<<<<< HEAD
-        return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>;
-
-=======
         return <span className = "px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -175,11 +107,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
-<<<<<<< HEAD
-
-=======
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Discover the future of technology with our revolutionary micro SAAS services.
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
@@ -228,20 +156,10 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
                 value={selectedCategory};
                 onChange={(e) => {;
                   setSelectedCategory(e.target.value);
-<<<<<<< HEAD
-                  setSelectedSubcategory('all')}}
-                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-=======;
                   setSelectedSubcategory('all');
                 }}
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-
-=======
                 className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -470,23 +388,10 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
               <p className="text-lg font-medium mb-2">Zion Tech Group</p>
               <p className="text-sm">364 E Main St STE 1008, Middletown DE 19709</p>
               <p className="text-sm">https://ziontechgroup.com</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

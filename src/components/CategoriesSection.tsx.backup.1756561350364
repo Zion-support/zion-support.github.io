@@ -1,13 +1,9 @@
 import React from 'react.ts';
 import { Link             } from 'react-router-dom.ts';
 import { motion             } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
-=======
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight             } from 'lucide-react.ts';
 
 const categories = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
@@ -210,11 +206,7 @@ export function CategoriesSection(...args: any[]): any {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-<<<<<<< HEAD
-
-=======
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <Link
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"

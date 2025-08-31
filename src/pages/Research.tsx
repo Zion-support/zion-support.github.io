@@ -1,672 +1,787 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research(...args: any[]): any {
-=======
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon               } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { 
+  Microscope, 
+  Flask, 
+  Brain, 
+  Search, 
+  Filter, 
+  ArrowRight, 
+  BookOpen, 
+  Users, 
+  Calendar, 
+  MapPin, 
+  Clock, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Code, 
+  Network, 
+  Cpu, 
+  Globe, 
+  Lightbulb, 
+  Rocket, 
+  Award, 
+  CheckCircle, 
+  ExternalLink, 
+  Download, 
+  FileText, 
+  BarChart3, 
+  PieChart, 
+  LineChart, 
+  Target, 
+  Eye, 
+  Lock, 
+  Server, 
+  Smartphone, 
+  Wifi, 
+  Satellite, 
+  Atom, 
+  Dna, 
+  TestTube, 
+  Beaker, 
+  GraduationCap, 
+  Briefcase, 
+  Handshake, 
+  Building2
+} from 'lucide-react';
 
-export default function Research(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeStatus, setActiveStatus] = useState('all');
-  const [activeType, setActiveType] = useState('all');
+export default function Research() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedStatus, setSelectedStatus] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
+    { id: 'all', name: 'All Research Areas', icon: Microscope },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'cloud', name: 'Cloud Computing', icon: Cloud },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
+    { id: 'biotech', name: 'Biotechnology', icon: Dna },
+    { id: 'iot', name: 'Internet of Things', icon: Wifi },
+    { id: 'blockchain', name: 'Blockchain', icon: Network }
   ];
 
   const statuses = [
-    { id: 'all', name: 'All Statuses', count: 0 },
-    { id: 'active', name: 'Active', count: 0 },
-    { id: 'completed', name: 'Completed', count: 0 },
-    { id: 'planning', name: 'Planning', count: 0 },
-    { id: 'published', name: 'Published', count: 0 }
-  ];
-
-  const types = [
-    { id: 'all', name: 'All Types', count: 0 },
-    { id: 'research', name: 'Research Papers', count: 0 },
-    { id: 'patents', name: 'Patents', count: 0 },
-    { id: 'prototypes', name: 'Prototypes', count: 0 },
-    { id: 'collaborations', name: 'Collaborations', count: 0 }
+    { id: 'all', name: 'All Statuses', icon: Eye },
+    { id: 'active', name: 'Active Research', icon: TrendingUp },
+    { id: 'completed', name: 'Completed', icon: CheckCircle },
+    { id: 'planning', name: 'Planning Phase', icon: Calendar }
   ];
 
   const researchProjects = [
     {
       id: 1,
-      title: 'Quantum Machine Learning for Financial Modeling',
-      description: 'Exploring the application of quantum computing algorithms to enhance financial risk assessment and portfolio optimization.',
-      category: 'quantum',
+      title: 'Advanced AI-Powered Threat Detection Systems',
+      description: 'Developing next-generation cybersecurity solutions using machine learning algorithms to detect and prevent sophisticated cyber attacks in real-time.',
+      category: 'ai-ml',
       status: 'active',
-      type: 'research',
-      startDate: '2024-01-01',
-      endDate: '2025-12-31',
-      leadResearcher: 'Dr. Elena Vasquez',
-      team: ['Dr. Elena Vasquez', 'Dr. Michael Chen', 'Sarah Johnson', 'Alex Rodriguez'],
-      funding: 2500000,
-      institution: 'MIT',
-      abstract: 'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',
-      methodology: 'Hybrid quantum-classical approach using variational quantum algorithms',
-      expectedOutcomes: ['Quantum advantage demonstration', 'Financial model improvements', 'Patent applications'],
-      publications: [
-        {
-          title: 'Quantum Algorithms for Portfolio Optimization',
-          journal: 'Nature Quantum Information',
-          year: 2024,
-          doi: '10.1038/s41534-024-00800-5',
-          citations: 23
-
-      ],
-      tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
-      featured: true,
+      lead: 'Dr. Sarah Chen',
+      leadTitle: 'CTO & AI Research Lead',
+      leadAvatar: '/images/team/sarah-chen.jpg',
+      team: 8,
+      startDate: '2024-01-15',
+      estimatedCompletion: '2025-06-30',
+      budget: '$2.5M',
+      partners: ['MIT', 'Stanford', 'DARPA'],
+      tags: ['AI', 'Cybersecurity', 'Machine Learning', 'Real-time Detection'],
+      image: '🛡️',
       progress: 65,
-      impact: 'high'
+      publications: 3,
+      patents: 2,
+      featured: true
     },
     {
       id: 2,
-      title: 'Federated Learning for Privacy-Preserving Healthcare Analytics',
-      description: 'Developing secure federated learning frameworks that enable healthcare institutions to collaborate on AI models without sharing sensitive patient data.',
-      category: 'ai-ml',
-      status: 'completed',
-      type: 'research',
-      startDate: '2023-06-01',
-      endDate: '2024-11-30',
-      leadResearcher: 'Dr. Sarah Chen',
-      team: ['Dr. Sarah Chen', 'Dr. James Wilson', 'Lisa Anderson', 'David Kim'],
-      funding: 1800000,
-      institution: 'Stanford University',
-      abstract: 'This project addresses the critical need for privacy-preserving machine learning in healthcare by developing novel federated learning approaches.',
-      methodology: 'Differential privacy, secure multi-party computation, federated averaging',
-      expectedOutcomes: ['Privacy-preserving framework', 'Healthcare AI models', 'Open-source toolkit'],
-      publications: [
-        {
-          title: 'Privacy-Preserving Federated Learning in Healthcare',
-          journal: 'Nature Machine Intelligence',
-          year: 2024,
-          doi: '10.1038/s42256-024-00789-8',
-          citations: 45
-        },
-        {
-          title: 'Secure Multi-Party Computation for Medical Data',
-          journal: 'IEEE Transactions on Medical Imaging',
-          year: 2024,
-          doi: '10.1109/TMI.2024.001234',
-          citations: 18
-
-      ],
-      tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
-      featured: true,
-      progress: 100,
-      impact: 'very-high'
+      title: 'Quantum-Resistant Cryptography Framework',
+      description: 'Researching and developing cryptographic algorithms that can withstand attacks from quantum computers, ensuring long-term security of digital communications.',
+      category: 'cybersecurity',
+      status: 'active',
+      lead: 'Dr. Emily Watson',
+      leadTitle: 'Cybersecurity Director',
+      leadAvatar: '/images/team/emily-watson.jpg',
+      team: 6,
+      startDate: '2024-03-01',
+      estimatedCompletion: '2026-12-31',
+      budget: '$1.8M',
+      partners: ['NIST', 'University of Maryland', 'IBM Research'],
+      tags: ['Quantum Computing', 'Cryptography', 'Post-Quantum', 'Security'],
+      image: '🔐',
+      progress: 40,
+      publications: 2,
+      patents: 1,
+      featured: true
     },
     {
       id: 3,
-      title: 'Zero-Trust Architecture for Industrial IoT',
-      description: 'Researching and implementing zero-trust security frameworks specifically designed for industrial IoT environments.',
-      category: 'security',
+      title: 'Edge Computing for IoT Networks',
+      description: 'Exploring distributed computing architectures that bring processing power closer to IoT devices, reducing latency and improving network efficiency.',
+      category: 'iot',
       status: 'active',
-      type: 'prototypes',
-      startDate: '2024-03-01',
-      endDate: '2025-08-31',
-      leadResearcher: 'Michael Rodriguez',
-      team: ['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
-      funding: 1200000,
-      institution: 'Carnegie Mellon University',
-      abstract: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',
-      methodology: 'Threat modeling, security architecture design, prototype development, penetration testing',
-      expectedOutcomes: ['Zero-trust framework', 'Security prototypes', 'Best practices guide'],
-      publications: [
-        {
-          title: 'Zero-Trust Security for Industrial IoT',
-          journal: 'IEEE Security & Privacy',
-          year: 2024,
-          doi: '10.1109/MSEC.2024.001234',
-          citations: 12
-
-      ],
-      tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
-      featured: false,
-      progress: 40,
-      impact: 'high'
+      lead: 'Marcus Rodriguez',
+      leadTitle: 'Head of Cloud & DevOps',
+      leadAvatar: '/images/team/marcus-rodriguez.jpg',
+      team: 5,
+      startDate: '2024-02-15',
+      estimatedCompletion: '2025-09-30',
+      budget: '$1.2M',
+      partners: ['Intel', 'Cisco', 'University of California'],
+      tags: ['Edge Computing', 'IoT', 'Distributed Systems', 'Network Optimization'],
+      image: '🌐',
+      progress: 55,
+      publications: 1,
+      patents: 0,
+      featured: false
     },
     {
       id: 4,
-      title: 'Edge AI for Autonomous Vehicles',
-      description: 'Developing lightweight AI models optimized for edge computing in autonomous vehicle systems.',
-      category: 'emerging',
-      status: 'planning',
-      type: 'research',
-      startDate: '2025-01-01',
-      endDate: '2026-12-31',
-      leadResearcher: 'Dr. David Thompson',
-      team: ['Dr. David Thompson', 'Dr. Lisa Chen', 'Marcus Rodriguez', 'Jennifer Kim'],
-      funding: 3000000,
-      institution: 'UC Berkeley',
-      abstract: 'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',
-      methodology: 'Model compression, knowledge distillation, edge computing optimization, real-time inference',
-      expectedOutcomes: ['Edge AI framework', 'Autonomous vehicle models', 'Performance benchmarks'],
-      publications: [],
-      tags: ['Edge Computing', 'Autonomous Vehicles', 'AI Optimization', 'Real-time Systems', 'Computer Vision'],
-      featured: false,
-      progress: 15,
-      impact: 'medium'
+      title: 'Biometric Authentication Using Neural Networks',
+      description: 'Developing advanced biometric identification systems that combine multiple biometric modalities with deep learning for enhanced security and accuracy.',
+      category: 'ai-ml',
+      status: 'completed',
+      lead: 'AI Research Team',
+      leadTitle: 'Senior AI Researchers',
+      leadAvatar: '/images/team/ai-team.jpg',
+      team: 7,
+      startDate: '2023-06-01',
+      estimatedCompletion: '2024-05-31',
+      budget: '$1.5M',
+      partners: ['FBI', 'Department of Homeland Security', 'Carnegie Mellon'],
+      tags: ['Biometrics', 'Neural Networks', 'Authentication', 'Security'],
+      image: '👁️',
+      progress: 100,
+      publications: 5,
+      patents: 3,
+      featured: false
     },
     {
       id: 5,
-      title: 'Blockchain for Supply Chain Transparency',
-      description: 'Investigating blockchain technology applications for enhancing supply chain transparency and traceability.',
-      category: 'emerging',
-      status: 'completed',
-      type: 'collaborations',
-      startDate: '2023-01-01',
-      endDate: '2024-06-30',
-      leadResearcher: 'Dr. Robert Kim',
-      team: ['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
-      funding: 900000,
-      institution: 'Columbia University',
-      abstract: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',
-      methodology: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation',
-      expectedOutcomes: ['Blockchain framework', 'Supply chain pilots', 'Industry partnerships'],
-      publications: [
-        {
-          title: 'Blockchain-Enabled Supply Chain Transparency',
-          journal: 'Journal of Supply Chain Management',
-          year: 2024,
-          doi: '10.1111/jscm.12345',
-          citations: 28
-
-      ],
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
-      featured: false,
-      progress: 100,
-      impact: 'medium'
+      title: 'Blockchain-Based Supply Chain Transparency',
+      description: 'Researching blockchain applications for creating transparent, traceable supply chains that improve efficiency and reduce fraud.',
+      category: 'blockchain',
+      status: 'active',
+      lead: 'Blockchain Research Team',
+      leadTitle: 'Blockchain Specialists',
+      leadAvatar: '/images/team/blockchain-team.jpg',
+      team: 4,
+      startDate: '2024-04-01',
+      estimatedCompletion: '2025-12-31',
+      budget: '$900K',
+      partners: ['Walmart', 'Maersk', 'MIT Media Lab'],
+      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Traceability'],
+      image: '⛓️',
+      progress: 30,
+      publications: 1,
+      patents: 0,
+      featured: false
     },
     {
       id: 6,
-      title: 'Neuromorphic Computing for Edge AI',
-      description: 'Researching brain-inspired computing architectures for energy-efficient AI processing at the edge.',
-      category: 'ai-ml',
+      title: 'Quantum Machine Learning Algorithms',
+      description: 'Exploring the intersection of quantum computing and machine learning to develop algorithms that can solve complex problems exponentially faster.',
+      category: 'quantum',
+      status: 'planning',
+      lead: 'Quantum Research Team',
+      leadTitle: 'Quantum Computing Experts',
+      leadAvatar: '/images/team/quantum-team.jpg',
+      team: 6,
+      startDate: '2025-01-01',
+      estimatedCompletion: '2027-06-30',
+      budget: '$3.2M',
+      partners: ['Google Quantum AI', 'IBM Quantum', 'University of Waterloo'],
+      tags: ['Quantum Computing', 'Machine Learning', 'Algorithms', 'Quantum Advantage'],
+      image: '⚛️',
+      progress: 0,
+      publications: 0,
+      patents: 0,
+      featured: false
+    },
+    {
+      id: 7,
+      title: 'Sustainable Cloud Infrastructure',
+      description: 'Researching energy-efficient cloud computing architectures and renewable energy integration for sustainable data center operations.',
+      category: 'cloud',
       status: 'active',
-      type: 'research',
-      startDate: '2024-09-01',
-      endDate: '2026-08-31',
-      leadResearcher: 'Dr. Jennifer Park',
-      team: ['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
-      funding: 2200000,
-      institution: 'Georgia Tech',
-      abstract: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',
-      methodology: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design',
-      expectedOutcomes: ['Neuromorphic framework', 'Energy-efficient models', 'Hardware prototypes'],
-      publications: [
-        {
-          title: 'Neuromorphic Computing for Edge AI Applications',
-          journal: 'Nature Electronics',
-          year: 2024,
-          doi: '10.1038/s41928-024-01123-4',
-          citations: 19
-<<<<<<< HEAD
-
-      ],
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
-      featured: true,
-      progress: 55,
-      impact: 'high'
-
-=======
-        };
-      ],;
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
-      featured: true,;
-      progress: 55,;
-      impact: 'high';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      lead: 'Sustainability Team',
+      leadTitle: 'Environmental Engineers',
+      leadAvatar: '/images/team/sustainability-team.jpg',
+      team: 5,
+      startDate: '2024-01-01',
+      estimatedCompletion: '2025-12-31',
+      budget: '$1.1M',
+      partners: ['Microsoft', 'Amazon Web Services', 'Stanford Energy'],
+      tags: ['Sustainability', 'Cloud Computing', 'Renewable Energy', 'Green Tech'],
+      image: '🌱',
+      progress: 45,
+      publications: 2,
+      patents: 1,
+      featured: false
+    },
+    {
+      id: 8,
+      title: 'Neuromorphic Computing for AI',
+      description: 'Developing brain-inspired computing architectures that mimic neural networks for more efficient AI processing and learning.',
+      category: 'ai-ml',
+      status: 'planning',
+      lead: 'Neuromorphic Team',
+      leadTitle: 'Computational Neuroscientists',
+      leadAvatar: '/images/team/neuromorphic-team.jpg',
+      team: 8,
+      startDate: '2025-03-01',
+      estimatedCompletion: '2028-06-30',
+      budget: '$4.1M',
+      partners: ['Intel Neuromorphic', 'IBM Research', 'MIT Brain Sciences'],
+      tags: ['Neuromorphic Computing', 'AI', 'Neural Networks', 'Brain-Inspired'],
+      image: '🧠',
+      progress: 0,
+      publications: 0,
+      patents: 0,
+      featured: false
+    }
   ];
 
-  // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length});
+  const publications = [
+    {
+      id: 1,
+      title: 'Advanced Threat Detection Using Deep Learning: A Comprehensive Study',
+      authors: ['Dr. Sarah Chen', 'Dr. Emily Watson', 'Marcus Rodriguez'],
+      journal: 'IEEE Transactions on Cybersecurity',
+      year: 2024,
+      doi: '10.1109/TCS.2024.001234',
+      citations: 45,
+      abstract: 'This paper presents a novel approach to cybersecurity threat detection using deep neural networks...',
+      tags: ['AI', 'Cybersecurity', 'Deep Learning'],
+      pdfUrl: '/research/papers/threat-detection-2024.pdf'
+    },
+    {
+      id: 2,
+      title: 'Quantum-Resistant Cryptographic Protocols: Implementation and Analysis',
+      authors: ['Dr. Emily Watson', 'Quantum Research Team'],
+      journal: 'Cryptography and Communications',
+      year: 2024,
+      doi: '10.1007/CRC.2024.005678',
+      citations: 32,
+      abstract: 'We analyze the performance and security characteristics of post-quantum cryptographic algorithms...',
+      tags: ['Quantum Computing', 'Cryptography', 'Post-Quantum'],
+      pdfUrl: '/research/papers/quantum-crypto-2024.pdf'
+    },
+    {
+      id: 3,
+      title: 'Edge Computing Optimization for IoT Networks: A Machine Learning Approach',
+      authors: ['Marcus Rodriguez', 'IoT Research Team'],
+      journal: 'IEEE Internet of Things Journal',
+      year: 2024,
+      doi: '10.1109/JIOT.2024.009876',
+      citations: 28,
+      abstract: 'This research explores the application of machine learning techniques to optimize edge computing...',
+      tags: ['Edge Computing', 'IoT', 'Machine Learning'],
+      pdfUrl: '/research/papers/edge-computing-2024.pdf'
+    }
+  ];
 
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length});
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length});
-=======
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length;
+  const filteredProjects = researchProjects.filter(project => {
+    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
+    const matchesStatus = selectedStatus === 'all' || project.status === selectedStatus;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesStatus && matchesSearch;
   });
 
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length;
-  });
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length;
-  });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-    const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
-    const matchesType = activeType === 'all' || project.type === activeType;
-
-    return matchesSearch && matchesCategory && matchesStatus && matchesType;
-  });
-
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
-
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'from-green-500 to-emerald-600';
+      case 'completed': return 'from-blue-500 to-indigo-600';
+      case 'planning': return 'from-yellow-500 to-orange-600';
+      default: return 'from-gray-500 to-gray-600';
+    }
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'active': return 'text-green-400';
-      case 'completed': return 'text-blue-400';
-      case 'planning': return 'text-yellow-400';
-      case 'published': return 'text-purple-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const getStatusText = (status: string) => {
+    switch (status) {
+      case 'active': return 'Active Research';
+      case 'completed': return 'Completed';
+      case 'planning': return 'Planning Phase';
+      default: return 'Unknown';
+    }
   };
-
-<<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'very-high': return 'text-red-400';
-      case 'high': return 'text-orange-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-green-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  };
-
-<<<<<<< HEAD
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',;
-      month: 'short';
-    })};
-
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
-    if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
-      return `$${(amount / 1000).toFixed(0)}K`};
-    return `$${amount.toLocaleString()}`};
-=======
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'short';
-    });
-  };
-
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
-    if (amount >= 1000000) {;
-      return `$${(amount / 1000000).toFixed(1)}M`;
-    } else if (amount >= 1000) {
-      return `$${(amount / 1000).toFixed(0)}K`;
-
-    return `$${amount.toLocaleString()}`;
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <SEO 
+        title="Research & Development - Zion Tech Group"
+        description="Explore our cutting-edge research projects in AI, cybersecurity, quantum computing, and emerging technologies. Discover innovation at Zion Tech Group."
+        keywords="research, development, AI, cybersecurity, quantum computing, innovation, Zion Tech Group"
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <FlaskConical className="w-16 h-16 text-zion-cyan" />
-            </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Research & Innovation
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
-          </p>
-        </div>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search research projects..."
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
-
-            {/* Filters */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Categories */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Category</label>
-                <div className="flex flex-wrap gap-2">
-                  {categories.slice(0, 4).map((category) => (
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+            >
+              Research &
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Development</span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"
+            >
+              Pushing the boundaries of technology through innovative research in AI, cybersecurity, 
+              quantum computing, and emerging technologies. Discover the future with us.
+            </motion.p>
+            
+            {/* Search and Filter */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="relative flex-1">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search research projects..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex gap-2 overflow-x-auto pb-2">
+                  {categories.map((category) => (
                     <button
                       key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeCategory === category.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 whitespace-nowrap ${
+                        selectedCategory === category.id
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400'
                       }`}
-
-                      {category.icon}
-                      {category.name}
+                    >
+                      <category.icon className="w-4 h-4" />
+                      <span>{category.name}</span>
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Status */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Status</label>
-                <div className="flex flex-wrap gap-2">
-                  {statuses.map((status) => (
-                    <button
-                      key={status.id}
-                      onClick={() => setActiveStatus(status.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeStatus === status.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {status.name} ({status.count})
-                    </button>
-                  ))}
-                </div>
+              
+              <div className="flex gap-2 justify-center overflow-x-auto pb-2">
+                {statuses.map((status) => (
+                  <button
+                    key={status.id}
+                    onClick={() => setSelectedStatus(status.id)}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 whitespace-nowrap ${
+                      selectedStatus === status.id
+                        ? 'bg-purple-600 text-white border-purple-600'
+                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-purple-500 hover:text-purple-600 dark:hover:text-purple-400'
+                    }`}
+                  >
+                    <status.icon className="w-4 h-4" />
+                    <span>{status.name}</span>
+                  </button>
+                ))}
               </div>
-
-              {/* Types */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Type</label>
-                <div className="flex flex-wrap gap-2">
-                  {types.map((type) => (
-                    <button
-                      key={type.id}
-                      onClick={() => setActiveType(type.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeType === type.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {type.name} ({type.count})
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Featured Research */}
-      {researchProjects.filter(p               => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
+      {/* Featured Research Projects */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p               => p.featured).map((project) => (
-                <div
-                  key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Our most innovative and impactful research initiatives that are shaping the future of technology.
+            </p>
+          </div>
 
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {researchProjects.filter(p => p.featured).map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="p-8">
+                  <div className="flex items-center space-x-2 mb-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium rounded-full">
+                      Featured
+                    </span>
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">
+                      {categories.find(c => c.id === project.category)?.name}
+                    </span>
+                    <span className={`px-3 py-1 bg-gradient-to-r ${getStatusColor(project.status)} text-white text-sm font-medium rounded-full`}>
+                      {getStatusText(project.status)}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-500 dark:text-gray-400">
+                    <div className="flex items-center space-x-2">
+                      <Users className="w-4 h-4" />
+                      <span>{project.team} researchers</span>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 text-white">
-                        <span className={`text-sm font-medium ${getImpactColor(project.impact)}`}>
-                          {project.impact.replace('-', ' ').toUpperCase()}
+                    <div className="flex items-center space-x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>Started {new Date(project.startDate).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Target className="w-4 h-4" />
+                      <span>${project.budget}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <BarChart3 className="w-4 h-4" />
+                      <span>{project.progress}% complete</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white font-semibold text-sm">
+                          {project.lead.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center justify-between text-white">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-white">
+                          {project.lead}
                         </div>
-                        <div className="flex items-center gap-2">
-                          <DollarSign className="w-4 h-4" />
-                          <span className="text-sm">{formatFunding(project.funding)}</span>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">
+                          {project.leadTitle}
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === project.category)?.name}
-                      </span>
-                      <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {statuses.find(s => s.id === project.status)?.name}
-                      </span>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-
-                    <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
-
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {project.team.length} researchers
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <FileText className="w-4 h-4" />
-                        {project.publications.length} publications
-                      </div>
-                    </div>
-
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                    <Link
+                      to={`/research/${project.id}`}
+                      className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    >
                       Learn More
-                    </button>
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      )}
+      </section>
 
       {/* All Research Projects */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Research Projects
-          </h2>
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              All Research Projects
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              {filteredProjects.length} projects found
+            </p>
+          </div>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)               => (
-                <div
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project, index) => (
+                <motion.div
                   key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === project.category)?.name}
-                      </span>
-                      {project.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex gap-2">
+                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">
+                          {categories.find(c => c.id === project.category)?.name}
                         </span>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {statuses.find(s => s.id === project.status)?.name}
+                        <span className={`px-3 py-1 bg-gradient-to-r ${getStatusColor(project.status)} text-white text-sm font-medium rounded-full`}>
+                          {getStatusText(project.status)}
+                        </span>
                       </div>
-                      <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
-                        {project.impact.replace('-', ' ').toUpperCase()} Impact
-                      </div>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{project.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-4 h-4" />
-                      <span>{formatFunding(project.funding)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4" />
-                      <span>{project.team.length} researchers</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      <span>{project.publications.length} publications</span>
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-2">
-                      <span>Progress</span>
-                      <span>{project.progress}%</span>
-                    </div>
-                    <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                      <div
-                        className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1 mb-1">
+                      <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
                         <Users className="w-4 h-4" />
-                        Lead: {project.leadResearcher}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {project.institution}
+                        <span>{project.team}</span>
                       </div>
                     </div>
-
-                    <div className="flex gap-2">
-                      <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
-                        <FileText className="w-4 h-4" />
-                        Details
-                      </button>
-                      {project.publications.length > 0 && (
-                        <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                          Papers
-                        </button>
-                      )}
+                    
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors line-clamp-2">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
+                      {project.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-4 text-sm text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center justify-between">
+                        <span>Progress: {project.progress}%</span>
+                        <span>Budget: {project.budget}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span>Publications: {project.publications}</span>
+                        <span>Patents: {project.patents}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-1">
+                        {project.tags.slice(0, 2).map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {project.tags.length > 2 && (
+                          <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded">
+                            +{project.tags.length - 2}
+                          </span>
+                        )}
+                      </div>
+                      <Link
+                        to={`/research/${project.id}`}
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors text-sm"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-1 w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           ) : (
             <div className="text-center py-12">
-              <FlaskConical className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
+              <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Microscope className="w-12 h-12 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                No research projects found
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Try adjusting your search terms or filters.
               </p>
             </div>
           )}
         </div>
-      </div>
+      </section>
 
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Research Community
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-              Explore Collaborations
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
-              Contact Research Team
-<<<<<<< HEAD
-            </button>
+      {/* Publications Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Research Publications
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Our latest research findings published in leading academic journals and conferences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {publications.map((pub, index) => (
+              <motion.div
+                key={pub.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium rounded-full">
+                    Published {pub.year}
+                  </span>
+                  <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                    <Star className="w-4 h-4 text-yellow-500" />
+                    <span>{pub.citations} citations</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors line-clamp-3">
+                  {pub.title}
+                </h3>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm line-clamp-3">
+                  {pub.abstract}
+                </p>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center space-x-2">
+                    <Users className="w-4 h-4" />
+                    <span className="line-clamp-1">{pub.authors.join(', ')}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <BookOpen className="w-4 h-4" />
+                    <span>{pub.journal}</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap gap-1">
+                    {pub.tags.slice(0, 2).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex space-x-2">
+                    <Link
+                      to={pub.pdfUrl}
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors text-sm"
+                    >
+                      <Download className="w-4 h-4 mr-1" />
+                      PDF
+                    </Link>
+                    <a
+                      href={`https://doi.org/${pub.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium transition-colors text-sm"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      DOI
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Research Stats */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Research Impact
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Our research contributions and achievements in numbers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: Microscope, number: '12+', label: 'Active Research Projects' },
+              { icon: BookOpen, number: '25+', label: 'Published Papers' },
+              { icon: Award, number: '8+', label: 'Patents Filed' },
+              { icon: Users, number: '50+', label: 'Research Partners' }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 dark:text-gray-300">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
+          >
+            Join Our Research
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
+          >
+            Collaborate with us on cutting-edge research projects. Partner with our team 
+            to advance technology and create innovative solutions.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Partner With Us
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/careers"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              Join Our Team
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
-  )};
-=======;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

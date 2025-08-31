@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../components/SEO';
-import { Code, 
-=======
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
 import { Code,
@@ -26,13 +21,9 @@ import { Code,
   Star,
   ArrowRight,
   Brain
-<<<<<<< HEAD
-export default function MicroSAASSolutions(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function MicroSAASSolutions(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
       title: "Custom SAAS Development",
@@ -59,26 +50,14 @@ export default function MicroSAASSolutions(...args[]: any):  {
       features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
-<<<<<<< HEAD
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
-<<<<<<< HEAD
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-
-=======
       features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     };
-=======;
       title: "Analytics & Reporting",;
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       title: "Rapid Deployment",
@@ -93,15 +72,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
     {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
-<<<<<<< HEAD
-      icon: BarChart3
-    },
-    {
-      title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
-
-=======
       icon: BarChart3;
     },;
     {;
@@ -109,9 +79,7 @@ export default function MicroSAASSolutions(...args[]: any):  {
       description: "Enterprise-grade security and compliance standards",;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const industries = [
     {
       name: "Healthcare",
@@ -136,15 +104,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
     {
       name: "Retail",
       description: "E-commerce and point-of-sale solutions",
-<<<<<<< HEAD
-      icon: Building
-    },
-    {
-      name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
-
-=======
       icon: Building;
     },;
     {;
@@ -152,9 +111,7 @@ export default function MicroSAASSolutions(...args[]: any):  {
       description: "Property management and client portals",;
       icon: Building;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const processSteps = [
     {
       step: 1,
@@ -177,15 +134,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
       icon: Cpu,
       duration: "8-16 weeks"
     },
-<<<<<<< HEAD
-    {
-      step: 4,
-      title: "Testing & Deployment",
-      description: "Comprehensive testing and production deployment",
-      icon: Rocket,
-      duration: "2-4 weeks"
-
-=======
     {;
       step: 4,;
       title: "Testing & Deployment",;
@@ -193,9 +141,7 @@ export default function MicroSAASSolutions(...args[]: any):  {
       icon: Rocket,;
       duration: "2-4 weeks";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <>
       <SEO
@@ -203,7 +149,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
-
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -212,23 +157,19 @@ export default function MicroSAASSolutions(...args[]: any):  {
             <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
           </div>
-
           <div className="container-responsive relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8">
                 <Code className="w-10 h-10 text-white" />
               </div>
-
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Micro SAAS
                 <span className="text-gradient block">Solutions</span>
               </h1>
-
               <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
                 Transform your business with custom Micro SAAS solutions. From development to deployment,
                 we deliver scalable, secure, and efficient software-as-a-service applications.
               </p>
-
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2 text-zion-cyan">
                   <Code className="w-4 h-4" />
@@ -246,7 +187,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
@@ -262,14 +202,11 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-3">
@@ -283,7 +220,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <div className="container-responsive">
@@ -299,11 +235,9 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
-
                   <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed text-center">{benefit.description}</p>
                 </div>
@@ -311,7 +245,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
@@ -327,11 +260,9 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
                   <p className="text-zion-slate-light leading-relaxed">{industry.description}</p>
                 </div>
@@ -339,7 +270,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-20">
           <div className="container-responsive">
@@ -361,7 +291,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
                       {step.step}
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                   <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -372,7 +301,6 @@ export default function MicroSAASSolutions(...args[]: any):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
           <div className="container-responsive">
@@ -382,38 +310,22 @@ export default function MicroSAASSolutions(...args[]: any):  {
                 Let's discuss how custom Micro SAAS solutions can transform your business
                 and accelerate your growth in the digital marketplace.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                   Start Your Project
                 </a>
                 <a
                   href="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                   Get Consultation
                 </a>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap export default function CustomerExperience(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion            } from 'framer-motion.ts';
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap            } from 'lucide-react.ts';
 
 export default function CustomerExperience(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Heart,
@@ -23,15 +17,6 @@ export default function CustomerExperience(...args[]: any):  {
     {
       icon: Users,
       title: 'Personalization',
-<<<<<<< HEAD
-      description: 'Tailored experiences for every customer'
-    },
-    {
-      icon: Star,
-      title: 'Loyalty Programs',
-      description: 'Reward and retain your best customers'
-
-=======
       description: 'Tailored experiences for every customer';
     },;
     {;
@@ -39,7 +24,6 @@ export default function CustomerExperience(...args[]: any):  {
       title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -56,15 +40,6 @@ export default function CustomerExperience(...args[]: any):  {
     {
       title: 'Automated Engagement',
       description: 'Smart workflows for customer interactions',
-<<<<<<< HEAD
-      icon: Zap
-    },
-    {
-      title: 'Performance Analytics',
-      description: 'Track and improve customer experience metrics',
-      icon: TrendingUp
-
-=======
       icon: Zap;
     },;
     {;
@@ -72,7 +47,6 @@ export default function CustomerExperience(...args[]: any):  {
       description: 'Track and improve customer experience metrics',;
       icon: TrendingUp;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -349,23 +323,10 @@ export default function CustomerExperience(...args[]: any):  {
                   Schedule Demo
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

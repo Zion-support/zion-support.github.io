@@ -10,46 +10,11 @@ import { Shield,
   Globe,
   Server,
   Eye
-<<<<<<< HEAD
-export const SecurityComplianceSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const SecurityComplianceSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const securityFeatures = [
-    {
-      icon: Shield,
-      title: 'Zero Trust Security',
-      description: 'Implement comprehensive zero-trust architecture with continuous verification.',
-      benefits['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
-    },
-    {
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for data at rest and in transit.',
-      benefits['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
-    },
-    {
-      icon: Users,
-      title: 'Identity & Access Management',
-      description: 'Robust IAM solutions with multi-factor authentication.',
-      benefits['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
-    },
-    {
-      icon: Server,
-      title: 'Network Security',
-      description: 'Advanced network protection with intrusion detection and prevention.',
-<<<<<<< HEAD
-      benefits: ['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
-
-=======
       benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const securityFeatures = [
   {
     title: "SOC 2 Type II Compliance",
@@ -94,8 +59,6 @@ const securityFeatures = [
     color: "from-teal-500 to-green-600";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const complianceFeatures = [
   {
     category: "Data Protection",
@@ -132,35 +95,18 @@ export function SecurityComplianceSection(...args: any[]): any {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Security & Compliance
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -169,43 +115,27 @@ export function SecurityComplianceSection(...args: any[]): any {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Security Metrics */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
-
-          {securityMetrics.map((metric, index)               => {
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
-
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
           {securityMetrics.map((metric, index)                => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-600 rounded-full">
                     <IconComponent className="h-8 w-8 text-white" />
-=======
         {/* Security Certifications */}
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index)               => (
@@ -215,33 +145,15 @@ export function SecurityComplianceSection(...args: any[]): any {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
               <div className="flex items-start gap-4">
@@ -257,13 +169,11 @@ export function SecurityComplianceSection(...args: any[]): any {
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'
                     }`}></div>
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   </div>
                 </div>
               </div>
             )})}
         </motion.div>
-
         {/* Security Features Grid */}
         <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16">;
           {securityFeatures.map((feature, index)                => {;
@@ -274,20 +184,16 @@ export function SecurityComplianceSection(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className="bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300"
-
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-blue-600 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-white" />
@@ -296,44 +202,24 @@ export function SecurityComplianceSection(...args: any[]): any {
                     {feature.title}
                   </h3>
                 </div>
-
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-
         {/* Compliance Features */}
         <motion.div 
           className="mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
@@ -357,26 +243,21 @@ export function SecurityComplianceSection(...args: any[]): any {
               </motion.div>
             )})}
         </div>
-
         {/* Compliance Frameworks */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
-
 }}
           className="mb-16"
-
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
@@ -394,40 +275,21 @@ export function SecurityComplianceSection(...args: any[]): any {
               )})}
           </div>
         </motion.div>
-
         {/* Security Metrics */}
         <motion.div 
           className="mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -455,46 +317,23 @@ export function SecurityComplianceSection(...args: any[]): any {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
               Secure Your Business Today
@@ -518,12 +357,7 @@ export function SecurityComplianceSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default SecurityComplianceSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -531,8 +365,5 @@ export default SecurityComplianceSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

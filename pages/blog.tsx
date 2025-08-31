@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts'
-import { Link              } from 'react-router-dom.ts';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default function Blog(...args: any[]): any {
-=======
 import React from 'react.ts'
 import Link from 'next/link.ts'
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp               } from 'lucide-react.ts'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
 
-export default function Blog(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Blog(...args[]):  {
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -184,15 +178,9 @@ export default function Blog(...args[]: any):  {
               Explore our collection of articles covering the latest trends, best practices, and industry insights.
             </p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {blogPosts.filter(post              => !post.featured).map((post, index) => (
-=======
           
-          <div className="grid grid-cols-1 gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {blogPosts.filter(post               => !post.featured).map((post, index) => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post  => !post.featured).map((post, index) => (
               <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -260,15 +248,6 @@ export default function Blog(...args[]: any):  {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
                 Subscribe
               </button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}}}
-=======
             </div>;
           </div>;
         </div>;
@@ -276,4 +255,3 @@ export default function Blog(...args[]: any):  {
     </div>;
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

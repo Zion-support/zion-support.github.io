@@ -9,25 +9,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Real-time blockchain analytics and insights',;
     'Custom AI models for blockchain applications';
   ];
-
   const tiers = [
     {
       name: 'Developer',
       price: '$399/mo',
       details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,499/mo',
-      details: ['Unlimited storage', 'Custom AI models', 'Full blockchain suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$999/mo', 
@@ -38,9 +25,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full blockchain suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Blockchain optimization',;
     'Smart contract management',;
@@ -49,7 +34,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Automation and orchestration',;
     'Blockchain scaling and management';
   ];
-
   const benefits = [;
     'Improve blockchain performance by 50-80%',;
     'Reduce transaction processing time by 40-70%',;
@@ -58,7 +42,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Optimize resource utilization',;
     'Scale blockchain operations efficiently';
   ];
-
   const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
@@ -67,7 +50,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Media & Entertainment',;
     'Technology & SaaS';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-sky-500 via-blue-500 to-indigo-500 py-20 text-center">
@@ -79,7 +61,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <p className="text-sky-100 text-xl">Transform your blockchain operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -128,7 +109,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
@@ -140,7 +120,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-sky-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Blockchain Impact</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +131,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +142,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your blockchain operations with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

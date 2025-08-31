@@ -20,30 +20,6 @@ export function Skeleton(...args: any[]): any {
     rectangular: '',
     rounded: 'rounded-lg'
   };
-  
-  const animationClasses = {
-    pulse: 'animate-pulse',
-    wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',
-    none: ''
-  };
-  
-  const style = {
-    width: typeof width === 'number' ? `${width}px` : width,
-    height: typeof height === 'number' ? `${height}px` : height
-  };
-  
-  return (
-    <div
-      className={cn(
-        baseClasses,
-        variantClasses[variant],
-        animationClasses[animation],
-        className
-      )}
-      style={style}
-    />
-  );
-}
 
 // Predefined skeleton components for common use cases
 export function SkeletonText(...args: any[]): any {
@@ -57,9 +33,9 @@ export function SkeletonText(...args: any[]): any {
           className="h-4"
         />
       ))}
-    </div>
+    </>
   );
-}
+};
 
 export function SkeletonCard(...args: any[]): any {
   return (
@@ -77,8 +53,11 @@ export function SkeletonCard(...args: any[]): any {
         <Skeleton variant="rounded" width={100} height={32} />
       </div>
     </div>
-  );
-}
+    <Skeleton className="h-4 w-full mb-2" />
+    <Skeleton className="h-4 w-5/6 mb-2" />
+    <Skeleton className="h-4 w-4/6" />
+  </div>
+);
 
 export function SkeletonTable(...args: any[]): any {
   return (
@@ -104,8 +83,8 @@ export function SkeletonTable(...args: any[]): any {
         </div>
       ))}
     </div>
-  );
-}
+  </div>
+);
 
 export function SkeletonGrid(...args: any[]): any {
   return (
