@@ -261,30 +261,30 @@ export function ChatAssistant({
 
   // Voice recognition setup
   useEffect(() => {
-    if (enableVoice && 'webkitSpeechRecognition' in window) {
+    if (enabled && 'webkitSpeechRecognition' in window) {
       const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: anyany)  => {
+      recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyany)  => {
-        console.error('Speech recognition error: any', event.error);
+      recognitionRef.current.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
     }
-  }, [enableVoice]);
+  }, [enabled]);
 
   // Initialize with welcome message
-  useEffect(()  => {
+  useEffect(() => {
     if (enabled && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
+      const welcomeMessage: Message = {
         id: 'welcome',
         type: 'assistant',
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
@@ -316,17 +316,17 @@ export function ChatAssistant({
   }, [isListening]);
 
   // Send message
-  const sendMessage = useCallback(async (content: anystring)  => {
+  const sendMessage = useCallback(async (content: string) => {
     if (!content.trim()) return;
 
-    const userMessage: ChatMessage = {
-      id: anyDate.now().toString(),
+    const userMessage: Message = {
+      id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
       timestamp: new Date(),
     };
 
-    setMessages(prev  => [...prev, userMessage]);
+    setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
     setIsProcessing(true);
@@ -335,8 +335,8 @@ export function ChatAssistant({
       // Simulate AI response (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
       
-      const aiResponse: ChatMessage = {
-        id: any(Date.now() + 1).toString(),
+      const aiResponse: Message = {
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: generateAIResponse(content),
         timestamp: new Date(),
@@ -346,18 +346,18 @@ export function ChatAssistant({
         }
       };
 
-      setMessages(prev  => [...prev, aiResponse]);
+      setMessages(prev => [...prev, aiResponse]);
     } catch (error) {
       console.error('Error sending message:', error);
       
-      const errorMessage: ChatMessage = {
-        id: any(Date.now() + 1).toString(),
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),
       };
       
-      setMessages(prev  => [...prev, errorMessage]);
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsTyping(false);
       setIsProcessing(false);
@@ -365,7 +365,7 @@ export function ChatAssistant({
   }, []);
 
   // Generate AI response (replace with actual AI integration)
-  const generateAIResponse = (userInput: anystring): string  => {
+  const generateAIResponse = (userInput: string): string => {
     const responses = [
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
@@ -623,17 +623,19 @@ export function ChatAssistant({
               </div>
 
               {/* Suggestions */}
-              {enableSuggestions && showSuggestions && messages.length > 0 && (
-                <div className="px-4 pb-2">
+              {suggestions.length > 0 && (
+                <div className="p-4 border-t border-gray-200">
                   <div className="flex flex-wrap gap-2">
-                    {messages[messages.length - 1]?.metadata?.suggestions?.map((suggestion, index) => (
-                      <button
+                    {suggestions.map((suggestion, index) => (
+                      <motion.button
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs rounded-full hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                        className="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs rounded-full hover:bg-blue-100 transition-colors border border-blue-200"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         {suggestion}
-                      </button>
+                      </motion.button>
                     ))}
                   </div>
                 </div>
@@ -655,7 +657,8 @@ export function ChatAssistant({
                     />
                     
                     {/* File upload input */}
-                    {enableFileUpload && (
+                    {/* enableFileUpload and handleFileUpload are not defined in the original file, so this block is commented out */}
+                    {/* {enableFileUpload && (
                       <input
                         type="file"
                         onChange={handleFileUpload}
@@ -663,12 +666,13 @@ export function ChatAssistant({
                         id="file-upload"
                         accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png"
                       />
-                    )}
+                    )} */}
                   </div>
 
                   {/* Action buttons */}
                   <div className="flex items-center space-x-1">
-                    {enableFileUpload && (
+                    {/* enableFileUpload is not defined, so this block is commented out */}
+                    {/* {enableFileUpload && (
                       <label
                         htmlFor="file-upload"
                         className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors cursor-pointer"
@@ -676,9 +680,10 @@ export function ChatAssistant({
                       >
                         <Paperclip className="w-4 h-4" />
                       </label>
-                    )}
+                    )} */}
                     
-                    {enableVoice && (
+                    {/* enableVoice is not defined, so this block is commented out */}
+                    {/* {enableVoice && (
                       <button
                         onClick={toggleVoiceInput}
                         className={`p-2 rounded transition-colors ${
@@ -690,7 +695,7 @@ export function ChatAssistant({
                       >
                         {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                       </button>
-                    )}
+                    )} */}
 
                     <button
                       onClick={() => sendMessage(inputValue)}
@@ -698,7 +703,11 @@ export function ChatAssistant({
                       className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                       title="Send message"
                     >
-                      <Send className="w-4 h-4" />
+                      {isProcessing ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Send className="w-4 h-4" />
+                      )}
                     </button>
                   </div>
                 </div>
@@ -720,12 +729,15 @@ export function ChatAssistant({
                     </button>
                   </div>
                   
-                  <button
-                    onClick={() => setShowSuggestions(!showSuggestions)}
-                    className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                  >
-                    {showSuggestions ? 'Hide' : 'Show'} suggestions
-                  </button>
+                  {/* showSuggestions is not defined, so this block is commented out */}
+                  {/* {showSuggestions && (
+                    <button
+                      onClick={() => setShowSuggestions(!showSuggestions)}
+                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+                    >
+                      {showSuggestions ? 'Hide' : 'Show'} suggestions
+                    </button>
+                  )} */}
                 </div>
               </div>
             </>
@@ -872,18 +884,21 @@ export function ChatAssistant({
                   disabled={isProcessing}
                 />
                 
-                <button
-                  onClick={toggleSpeechRecognition}
-                  className={`p-2 rounded-lg transition-colors ${
-                    isListening 
-                      ? 'bg-red-100 text-red-600' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                  title={isListening ? 'Stop listening' : 'Start voice input'}
-                  disabled={isProcessing}
-                >
-                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                </button>
+                {/* enableVoice is not defined, so this block is commented out */}
+                {/* {enableVoice && (
+                  <button
+                    onClick={toggleSpeechRecognition}
+                    className={`p-2 rounded-lg transition-colors ${
+                      isListening 
+                        ? 'bg-red-100 text-red-600' 
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                    title={isListening ? 'Stop listening' : 'Start voice input'}
+                    disabled={isProcessing}
+                  >
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                  </button>
+                )} */}
                 
                 <button
                   onClick={handleSendMessage}
