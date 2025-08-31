@@ -35,7 +35,9 @@ import {
   Atom,
   Cloud,
   Database,
-  Workflow
+  Workflow,
+  Automation,
+  Signal
 } from 'lucide-react';
 
 // Footer sections data
@@ -44,6 +46,9 @@ const footerSections = [
     title: 'Services',
     items: [
       { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+      { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+      { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Automation },
+      { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: Signal },
       { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },

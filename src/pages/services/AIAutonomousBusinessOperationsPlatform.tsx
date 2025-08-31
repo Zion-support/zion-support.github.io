@@ -56,117 +56,113 @@ import {
   Video,
   Play,
   Briefcase,
-  WifiOff,
-  Signal,
-  Bluetooth,
-  Radio,
-  Antenna,
-  Router,
-  HardDrive,
-  MemoryStick,
-  Monitor,
-  Smartphone as Mobile,
-  Watch,
-  Car,
-  Plane,
-  Ship,
-  Train
+  Automation,
+  Gauge,
+  PieChart,
+  TrendingDown,
+  Calendar,
+  Clock4,
+  AlertCircle,
+  CheckSquare,
+  FileCheck,
+  UserCheck,
+  Target2
 } from 'lucide-react';
 
-const AIEdgeComputingPlatform: React.FC = () => {
+const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('starter');
 
   const features = [
     {
-      title: 'Intelligent Edge Processing',
-      description: 'AI-powered processing at the edge for real-time decision making and reduced latency',
-      icon: Brain,
-      category: 'ai'
+      title: 'Intelligent Process Automation',
+      description: 'AI-powered automation that learns and optimizes business processes in real-time',
+      icon: Automation,
+      category: 'automation'
     },
     {
-      title: 'Multi-Protocol Connectivity',
-      description: 'Support for WiFi, 5G, Bluetooth, LoRaWAN, and custom protocols',
-      icon: Signal,
-      category: 'connectivity'
-    },
-    {
-      title: 'Edge-to-Cloud Synchronization',
-      description: 'Seamless data synchronization between edge devices and cloud infrastructure',
-      icon: Cloud,
-      category: 'sync'
-    },
-    {
-      title: 'Real-time Analytics',
-      description: 'Instant data processing and analytics at the edge for immediate insights',
+      title: 'Predictive Analytics & Insights',
+      description: 'Advanced analytics that predict trends and provide actionable business intelligence',
       icon: BarChart3,
       category: 'analytics'
     },
     {
-      title: 'Autonomous Device Management',
-      description: 'Self-managing edge devices with automatic updates and optimization',
-      icon: Settings,
-      category: 'management'
+      title: 'Autonomous Decision Making',
+      description: 'AI systems that make intelligent decisions based on data and business rules',
+      icon: Brain,
+      category: 'ai'
     },
     {
-      title: 'Advanced Security & Privacy',
-      description: 'End-to-end encryption and privacy-preserving edge computing',
+      title: 'Real-time Performance Monitoring',
+      description: 'Continuous monitoring of all business operations with instant alerts',
+      icon: Gauge,
+      category: 'monitoring'
+    },
+    {
+      title: 'Smart Resource Allocation',
+      description: 'Intelligent allocation of resources based on demand and priorities',
+      icon: Target2,
+      category: 'optimization'
+    },
+    {
+      title: 'Automated Compliance & Risk Management',
+      description: 'Continuous compliance monitoring and risk assessment automation',
       icon: Shield,
-      category: 'security'
+      category: 'compliance'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$999',
+      price: '$1,499',
       period: '/month',
-      description: 'Perfect for small IoT deployments and startups',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 100 edge devices',
-        'Basic AI processing capabilities',
-        'Standard connectivity protocols',
+        'Up to 10 automated workflows',
+        'Basic AI insights dashboard',
+        'Standard compliance monitoring',
         'Email support',
-        'Basic analytics dashboard',
-        '5GB data storage',
-        'Integration with 10+ platforms'
+        '5 user accounts',
+        'Basic reporting tools',
+        'Integration with 10+ apps'
       ],
       cta: 'Get Started',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$2,999',
+      price: '$3,999',
       period: '/month',
-      description: 'Ideal for growing IoT networks and enterprises',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Up to 1,000 edge devices',
-        'Advanced AI processing',
-        'All connectivity protocols',
+        'Up to 50 automated workflows',
+        'Advanced AI analytics',
+        'Comprehensive compliance suite',
         'Priority support',
-        'Advanced analytics & reporting',
-        '100GB data storage',
-        'Integration with 50+ platforms',
-        'Custom protocol support',
+        '25 user accounts',
+        'Advanced reporting & dashboards',
+        'Integration with 50+ apps',
+        'Custom workflow development',
         'API access',
-        'Multi-location management'
+        'Multi-department management'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,999',
+      price: '$9,999',
       period: '/month',
-      description: 'For large-scale IoT deployments and complex networks',
+      description: 'For large enterprises and complex operations',
       features: [
-        'Unlimited edge devices',
-        'Enterprise AI processing',
-        'Custom protocol development',
+        'Unlimited automated workflows',
+        'Enterprise AI analytics',
+        'Full compliance & risk management',
         '24/7 dedicated support',
+        'Unlimited user accounts',
         'Custom analytics & reporting',
-        'Unlimited data storage',
-        'Integration with 200+ platforms',
+        'Integration with 200+ apps',
         'Full API access',
         'Custom integrations',
         'Dedicated account manager',
@@ -180,131 +176,98 @@ const AIEdgeComputingPlatform: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Smart Cities & Infrastructure',
-      description: 'Intelligent traffic management, environmental monitoring, and utility optimization',
-      icon: Building,
-      benefits: ['Real-time traffic optimization', 'Environmental monitoring', 'Utility cost reduction']
+      title: 'Financial Operations Automation',
+      description: 'Automate invoice processing, expense management, and financial reporting',
+      icon: Coins,
+      benefits: ['90% faster processing', 'Reduced errors by 95%', 'Real-time financial insights']
     },
     {
-      title: 'Industrial IoT & Manufacturing',
-      description: 'Predictive maintenance, quality control, and production optimization',
+      title: 'HR & Talent Management',
+      description: 'Automate recruitment, onboarding, performance reviews, and payroll',
+      icon: Users,
+      benefits: ['60% faster hiring', 'Improved employee satisfaction', 'Reduced HR costs']
+    },
+    {
+      title: 'Supply Chain Optimization',
+      description: 'Intelligent inventory management and supplier relationship automation',
       icon: Factory,
-      benefits: ['30% reduced downtime', 'Improved product quality', 'Production optimization']
+      benefits: ['25% inventory reduction', 'Faster supplier onboarding', 'Real-time tracking']
     },
     {
-      title: 'Connected Vehicles & Transportation',
-      description: 'Autonomous driving assistance, fleet management, and traffic prediction',
-      icon: Car,
-      benefits: ['Enhanced safety features', 'Efficient fleet management', 'Traffic prediction']
-    },
-    {
-      title: 'Healthcare & Medical Devices',
-      description: 'Patient monitoring, medical device management, and health analytics',
-      icon: Heart,
-      benefits: ['Continuous patient monitoring', 'Real-time health insights', 'Improved care quality']
+      title: 'Customer Service Automation',
+      description: 'AI-powered customer support and relationship management',
+      icon: MessageCircle,
+      benefits: ['24/7 customer support', '80% faster response times', 'Improved satisfaction']
     }
   ];
 
   const benefits = [
     {
-      title: 'Ultra-Low Latency',
-      description: 'Process data at the edge for instant response times',
-      icon: Zap,
-      metric: '<10ms latency'
+      title: 'Operational Efficiency',
+      description: 'Streamline operations and eliminate manual processes',
+      icon: TrendingUp,
+      metric: '85% faster'
     },
     {
-      title: 'Bandwidth Optimization',
-      description: 'Reduce data transmission and optimize network usage',
-      icon: Signal,
-      metric: '80% reduction'
-    },
-    {
-      title: 'Cost Efficiency',
-      description: 'Lower operational costs with edge processing',
+      title: 'Cost Reduction',
+      description: 'Significantly reduce operational costs and resource waste',
       icon: DollarSign,
-      metric: '60% savings'
+      metric: '40% savings'
     },
     {
       title: 'Scalability',
-      description: 'Scale from single devices to massive IoT networks',
-      icon: TrendingUp,
+      description: 'Scale operations seamlessly as your business grows',
+      icon: Rocket,
       metric: 'Unlimited scale'
+    },
+    {
+      title: 'Compliance & Risk',
+      description: 'Automated compliance monitoring and risk management',
+      icon: ShieldCheck,
+      metric: '99.9% compliance'
     }
   ];
 
   const industries = [
     {
-      name: 'Manufacturing',
-      icon: Factory,
-      description: 'Smart factories, predictive maintenance, and quality control'
-    },
-    {
       name: 'Healthcare',
       icon: Heart,
-      description: 'Medical devices, patient monitoring, and health analytics'
+      description: 'Patient care automation, compliance monitoring, and resource optimization'
     },
     {
-      name: 'Transportation',
-      icon: Car,
-      description: 'Connected vehicles, fleet management, and traffic optimization'
+      name: 'Financial Services',
+      icon: Coins,
+      description: 'Risk management, compliance automation, and customer service optimization'
     },
     {
-      name: 'Energy',
-      icon: Zap,
-      description: 'Smart grids, renewable energy, and consumption optimization'
+      name: 'Manufacturing',
+      icon: Factory,
+      description: 'Production optimization, quality control, and supply chain management'
     },
     {
       name: 'Retail',
       icon: ShoppingCart,
-      description: 'Smart stores, inventory management, and customer analytics'
+      description: 'Inventory management, customer service, and sales optimization'
     },
     {
-      name: 'Agriculture',
-      icon: Leaf,
-      description: 'Precision farming, crop monitoring, and resource optimization'
-    }
-  ];
-
-  const deviceTypes = [
-    {
-      name: 'Industrial Sensors',
-      icon: Activity,
-      description: 'Temperature, pressure, vibration, and environmental sensors'
+      name: 'Technology',
+      icon: Code,
+      description: 'Development automation, testing, and deployment optimization'
     },
     {
-      name: 'Smart Cameras',
-      icon: Eye,
-      description: 'AI-powered cameras for surveillance and analytics'
-    },
-    {
-      name: 'IoT Gateways',
-      icon: Router,
-      description: 'Edge computing gateways for data processing and routing'
-    },
-    {
-      name: 'Wearable Devices',
-      icon: Watch,
-      description: 'Health monitors, fitness trackers, and smart watches'
-    },
-    {
-      name: 'Connected Vehicles',
-      icon: Car,
-      description: 'Cars, trucks, and autonomous vehicles with edge computing'
-    },
-    {
-      name: 'Smart Appliances',
-      icon: Smartphone,
-      description: 'Home appliances with intelligent edge processing'
+      name: 'Education',
+      icon: GraduationCap,
+      description: 'Student management, course optimization, and administrative automation'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>AI Edge Computing Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered edge computing platform for IoT devices. Process data at the edge for ultra-low latency and real-time intelligence." />
-        <meta name="keywords" content="edge computing, IoT, AI processing, real-time analytics, low latency, smart devices, connected infrastructure" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-edge-computing-platform" />
+        <title>AI Autonomous Business Operations Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with AI-powered autonomous operations. Automate processes, optimize performance, and scale efficiently with intelligent business automation." />
+        <meta name="keywords" content="business automation, AI operations, process automation, business intelligence, autonomous business, workflow automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-business-operations-platform" />
       </Helmet>
 
       {/* Hero Section */}
@@ -317,26 +280,26 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="flex items-center space-x-2 bg-gradient-to-r from-green-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                <Signal className="w-4 h-4" />
-                <span>Edge Computing</span>
+              <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                <Automation className="w-4 h-4" />
+                <span>Autonomous Operations</span>
               </div>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Edge Computing Platform
+              AI Autonomous Business Operations Platform
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize IoT with AI-powered edge computing. Process data at the edge for ultra-low latency, 
-              real-time intelligence, and seamless connectivity across all your devices.
+              Transform your business operations with AI-powered automation. Streamline processes, 
+              optimize performance, and scale efficiently with intelligent business automation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
@@ -345,7 +308,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-green-600 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 hover:text-white transition-all duration-300"
+                className="border-2 border-blue-600 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -358,7 +321,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-20 right-20 w-32 h-32 border border-green-500/30 rounded-full"
+            className="absolute top-20 right-20 w-32 h-32 border border-blue-500/30 rounded-full"
           />
           <motion.div
             animate={{ rotate: -360 }}
@@ -378,11 +341,11 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Edge Computing Features
+              Revolutionary Business Automation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with edge computing to deliver unprecedented 
-              performance, intelligence, and connectivity for IoT devices.
+              Our platform combines cutting-edge AI with business process automation to deliver 
+              unprecedented operational efficiency and intelligence.
             </p>
           </motion.div>
 
@@ -393,9 +356,9 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-green-900/30 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-sm border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -406,46 +369,8 @@ const AIEdgeComputingPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Device Types Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Supported Device Types
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform supports a wide range of IoT devices and edge computing hardware, 
-              from simple sensors to complex industrial equipment.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {deviceTypes.map((device, index) => (
-              <motion.div
-                key={device.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-green-900/30 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/40 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                  <device.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{device.name}</h3>
-                <p className="text-gray-300">{device.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -458,7 +383,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform is designed to meet the unique needs of various industries, 
-              providing specialized edge computing and IoT solutions.
+              providing specialized automation and optimization solutions.
             </p>
           </motion.div>
 
@@ -469,9 +394,9 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-green-900/30 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-sm border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                   <industry.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
@@ -483,7 +408,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -495,7 +420,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your edge computing needs and scale as you grow.
+              Choose the plan that fits your business automation needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -506,15 +431,15 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-gradient-to-br from-slate-800/50 to-green-900/30 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-green-500 scale-105' 
-                    : 'border-green-500/20'
+                    ? 'border-blue-500 scale-105' 
+                    : 'border-blue-500/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -543,8 +468,8 @@ const AIEdgeComputingPlatform: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-600 to-cyan-600 text-white hover:from-green-700 hover:to-cyan-700'
-                      : 'border-2 border-green-600 text-green-400 hover:bg-green-600 hover:text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      : 'border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white'
                   }`}
                 >
                   {plan.cta}
@@ -568,8 +493,8 @@ const AIEdgeComputingPlatform: React.FC = () => {
               Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI Edge Computing Platform is transforming industries and 
-              enabling the next generation of IoT applications.
+              Discover how our AI Autonomous Business Operations Platform is transforming 
+              industries and solving complex operational challenges.
             </p>
           </motion.div>
 
@@ -580,10 +505,10 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-green-900/30 backdrop-blur-sm border border-green-500/20 rounded-xl p-8"
+                className="bg-gradient-to-br from-slate-800/50 to-blue-900/30 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
@@ -619,7 +544,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of edge computing with our revolutionary AI-powered platform.
+              Experience the future of business operations with our revolutionary AI-powered automation platform.
             </p>
           </motion.div>
 
@@ -632,12 +557,12 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p>
-                <div className="text-2xl font-bold text-green-400">{benefit.metric}</div>
+                <div className="text-2xl font-bold text-blue-400">{benefit.metric}</div>
               </motion.div>
             ))}
           </div>
@@ -653,17 +578,17 @@ const AIEdgeComputingPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IoT?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the edge computing revolution and transform your IoT devices with our AI-powered platform.
+              Join the automation revolution and transform your business operations with our AI-powered platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-cyan-700 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
@@ -671,7 +596,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-green-600 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 hover:text-white transition-all duration-300"
+                className="border-2 border-blue-600 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -686,15 +611,15 @@ const AIEdgeComputingPlatform: React.FC = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center space-y-2">
-              <Phone className="w-6 h-6 text-green-400" />
+              <Phone className="w-6 h-6 text-blue-400" />
               <span className="text-gray-300">+1 302 464 0950</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <Mail className="w-6 h-6 text-green-400" />
+              <Mail className="w-6 h-6 text-blue-400" />
               <span className="text-gray-300">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <MapPin className="w-6 h-6 text-green-400" />
+              <MapPin className="w-6 h-6 text-blue-400" />
               <span className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</span>
             </div>
           </div>
@@ -704,4 +629,4 @@ const AIEdgeComputingPlatform: React.FC = () => {
   );
 };
 
-export default AIEdgeComputingPlatform;
+export default AIAutonomousBusinessOperationsPlatform;

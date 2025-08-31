@@ -69,6 +69,7 @@ const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServices
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Sitemap-aligned pages
@@ -91,6 +92,11 @@ const AIProjectManagement = createLazyComponent(() => import('./pages/services/a
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
+
+// New Innovative Services 2025
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AIAutonomousBusinessOperationsPlatform'));
+const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AIEdgeComputingPlatform'));
 
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
@@ -271,6 +277,7 @@ function App() {
 
                   {/* 2025 Innovative Services Routes */}
                   <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                   {/* Enhanced Services Showcase 2025 */}
@@ -340,6 +347,11 @@ function App() {
                   <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                   <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                   <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
+
+                  {/* New Innovative Services 2025 */}
+                  <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                  <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />

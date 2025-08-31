@@ -60,7 +60,9 @@ import {
   Video,
   Play,
   GraduationCap,
-  Handshake
+  Handshake,
+  Automation,
+  Signal
 } from 'lucide-react';
 
 // Navigation items
@@ -71,6 +73,9 @@ const navigationItems = [
     icon: Zap,
     children: [
       { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Advanced AI and machine learning solutions' },
+      { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Revolutionary quantum-classical hybrid computing' },
+      { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Automation, description: 'AI-powered business process automation' },
+      { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: Signal, description: 'Ultra-low latency edge computing for IoT' },
       { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-generation quantum computing services' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable cloud infrastructure and automation' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Comprehensive security solutions' },
@@ -97,6 +102,7 @@ const navigationItems = [
     icon: Users,
     children: [
       { name: 'About Us', href: '/about', icon: Users, description: 'Our story and mission' },
+      { name: 'Innovative Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, description: 'Explore our cutting-edge services' },
       { name: 'Team', href: '/team', icon: Users2, description: 'Meet our experts' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
