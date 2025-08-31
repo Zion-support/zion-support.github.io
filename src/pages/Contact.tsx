@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Mail, 
   Phone, 
@@ -337,7 +338,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
-                        <p className="text-cyan-400 font-medium">{info.details}</p>
+                        <p className="text-cyan-400 font-medium">{info.value}</p>
                         <p className="text-gray-400 text-sm">{info.description}</p>
                       </div>
                     </motion.div>

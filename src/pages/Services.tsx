@@ -327,18 +327,6 @@ const Services: React.FC = () => {
                   <List className="w-5 h-5" />
                 </button>
               </div>
-
-              {/* Sort Dropdown */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 backdrop-blur-sm"
-              >
-                <option value="rating">Sort by Rating</option>
-                <option value="price">Sort by Price</option>
-                <option value="reviews">Sort by Reviews</option>
-                <option value="name">Sort by Name</option>
-              </select>
             </div>
           </div>
         </div>
