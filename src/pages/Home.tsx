@@ -63,30 +63,31 @@ import {
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() =>
-    [...Array(20)].map((_, i) => ({
+    [...Array(15)].map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
+      delay: i * 0.2,
+      duration: 8 + i * 0.5,
+      size: Math.random() * 2 + 1
     })), []
   );
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.08)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
 
       {/* Optimized floating particles */}
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
+          className="absolute bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/30"
           animate={{
-            x: [0, 200, 0],
-            y: [0, -200, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
+            x: [0, 150, 0],
+            y: [0, -150, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [0.8, 1.3, 0.8],
           }}
           transition={{
             duration: particle.duration,
@@ -97,107 +98,85 @@ const FuturisticBackground = React.memo(() => {
           style={{
             left: particle.left,
             top: particle.top,
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
           }}
         />
       ))}
-
-      {/* Enhanced gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-blue-500/5 via-transparent to-cyan-500/5"></div>
     </div>
   );
 });
 
-// Enhanced Hero Section with improved animations
+// Enhanced Hero Section with better performance
 const HeroSection = React.memo(() => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const heroTexts = [
-    "AI-Powered Solutions",
-    "Digital Transformation",
-    "Innovation at Scale",
-    "Future-Ready Technology"
-  ];
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prev) => (prev + 1) % heroTexts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [heroTexts.length]);
-
-  const scrollToServices = useCallback(() => {
-    const element = document.getElementById('services-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setIsVisible(true);
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
       <FuturisticBackground />
       
-      <div className="relative z-10 text-center max-w-6xl mx-auto">
-        {/* Enhanced Logo/Brand */}
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        {/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl mb-6 shadow-2xl shadow-cyan-400/25">
-            <Brain className="w-12 h-12 text-white" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Zion Tech Group
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              AI-Powered
+            </span>
+            <br />
+            <span className="text-white">Innovation</span>
           </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with cutting-edge AI solutions, quantum computing, 
+            and next-generation technology services that drive exponential growth.
+          </p>
         </motion.div>
 
-        {/* Dynamic Subtitle */}
+        {/* Subheading with animated features */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mb-12"
         >
-          <h2 className="text-2xl md:text-4xl font-semibold text-gray-300 mb-4">
-            Transforming Business Through
-          </h2>
-          <div className="h-16 md:h-20 flex items-center justify-center">
-            <motion.h3
-              key={currentTextIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl md:text-5xl font-bold text-cyan-400"
-            >
-              {heroTexts[currentTextIndex]}
-            </motion.h3>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base text-gray-400">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+              <span>Enterprise AI Solutions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+              <span>Quantum Computing</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <span>Cybersecurity</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+              <span>Edge Computing</span>
+            </div>
           </div>
         </motion.div>
 
-        {/* Enhanced Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed"
-        >
-          We deliver cutting-edge technology solutions that drive innovation, 
-          efficiency, and growth for forward-thinking organizations worldwide.
-        </motion.p>
-
-        {/* Enhanced CTA Buttons */}
+        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <button
-            onClick={scrollToServices}
-            className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-          >
+          <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
             <span className="flex items-center gap-2">
               Explore Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -218,21 +197,30 @@ const HeroSection = React.memo(() => {
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
         >
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-green-400" />
-            <span className="text-sm">ISO 27001 Certified</span>
+          <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-lg border border-slate-700/30 hover:border-cyan-500/30 transition-colors">
+            <ShieldCheck className="w-6 h-6 text-green-400" />
+            <div className="text-left">
+              <div className="text-white font-semibold">ISO 27001</div>
+              <div className="text-sm text-gray-400">Certified Security</div>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-blue-400" />
-            <span className="text-sm">500+ Clients Worldwide</span>
+          <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-lg border border-slate-700/30 hover:border-cyan-500/30 transition-colors">
+            <Users className="w-6 h-6 text-blue-400" />
+            <div className="text-left">
+              <div className="text-white font-semibold">500+</div>
+              <div className="text-sm text-gray-400">Global Clients</div>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-yellow-400" />
-            <span className="text-sm">Industry Leader 2024</span>
+          <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-lg border border-slate-700/30 hover:border-cyan-500/30 transition-colors">
+            <Award className="w-6 h-6 text-yellow-400" />
+            <div className="text-left">
+              <div className="text-white font-semibold">Industry</div>
+              <div className="text-sm text-gray-400">Leader 2024</div>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -240,14 +228,15 @@ const HeroSection = React.memo(() => {
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center cursor-pointer hover:border-cyan-400 transition-colors"
+          onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -654,17 +643,96 @@ const CTASection = React.memo(() => {
   );
 });
 
+// Floating Action Button Component
+const FloatingActionButton = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const openContact = () => {
+    window.location.href = '/contact';
+  };
+
+  return (
+    <>
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          scale: isVisible ? 1 : 0 
+        }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <div className="flex flex-col gap-3">
+          {/* Contact Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={openContact}
+            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
+            aria-label="Contact Us"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </motion.button>
+
+          {/* Scroll to Top Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToTop}
+            className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center text-white"
+            aria-label="Scroll to top"
+          >
+            <ArrowUpRight className="w-6 h-6" />
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Floating Action Button for Mobile */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: isVisible ? 1 : 0, 
+          scale: isVisible ? 1 : 0 
+        }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-6 left-6 z-50 md:hidden"
+      >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={openContact}
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
+          aria-label="Contact Us"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </motion.button>
+      </motion.div>
+    </>
+  );
+});
+
 // Main Home Component
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
       <StatisticsSection />
       <ServicesPreviewSection />
-      <TestimonialsSection />
-      <CTASection />
+      <FloatingActionButton />
     </div>
   );
-};
-
-export default Home;
+}
