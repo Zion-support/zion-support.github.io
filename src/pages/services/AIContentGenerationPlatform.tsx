@@ -1,27 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  PenTool, 
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { SEO               } from '../../components/SEO';
-import { PenTool, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-import { PenTool,
-  FileText,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-=======
 import { SEO              } from '../../components/SEO';
 import { PenTool, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -45,13 +23,6 @@ import { PenTool,
   DollarSign,
   Target,
   Award
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIContentGenerationPlatform(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIContentGenerationPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIContentGenerationPlatform(...args[]: any):  {
@@ -328,10 +299,6 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
               to deliver exceptional content creation capabilities.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -393,10 +360,6 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
               See how our AI content generation platform is transforming industries and driving measurable results.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
@@ -461,10 +424,6 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
               Our AI content generation platform delivers quantifiable results that directly impact your content strategy.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)               => (
@@ -519,10 +478,6 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
               Built on the latest AI and machine learning technologies to deliver superior content generation capabilities.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)  => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index)               => (
@@ -572,10 +527,6 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
               Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)               => (

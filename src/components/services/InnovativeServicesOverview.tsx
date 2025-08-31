@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
-=======
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory                } from '../../data/innovativeServices2025';
-
-interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
-=======
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory               } from '../../data/innovativeServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

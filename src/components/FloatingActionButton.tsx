@@ -1,549 +1,311 @@
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Plus, 
-=======
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Plus,
-  MessageCircle,
-  Phone,
-  Mail,
-  ArrowUp,
-  Settings,
-  HelpCircle,
-=======
-import React, { useState, useCallback, useEffect               } from 'react.ts';
-import { Plus, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageCircle, 
   Phone, 
   Mail, 
-  HelpCircle, 
-  Settings, 
-  X,
-  ChevronUp,
-  ChevronDown,
+  MapPin, 
+  Calendar, 
+  BookOpen, 
+  Users, 
+  Rocket, 
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
   Star,
   Heart,
   Share2,
   Download,
-<<<<<<< HEAD
-  Bookmark,
-  Calendar,
-  MapPin
+  Upload,
+  Settings,
+  HelpCircle,
+  X,
+  ChevronUp,
+  ChevronDown
 } from 'lucide-react';
 
-interface FloatingAction {
-  id: string;
-  icon: React.ComponentType<any>;
-=======
-<<<<<<< HEAD
-  Search
-interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
-
+interface FloatingActionButtonProps {
   enabled?: boolean;
-=======
-  Printer
- 
-} from 'lucide-react.ts';
-
-interface FloatingAction {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
-  icon: React.ComponentType<{ size?: number; className?: string 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  label: string;
-  action: ()               => void;
-  color: string;
-  priority?: 'high' | 'medium' | 'low';
+  showLabels?: boolean;
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
 }
 
-<<<<<<< HEAD
-interface FloatingActionButtonProps {
-  enabled: boolean;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  showLabels?: boolean;
-  actions?: FloatingAction[];
-  onAction?: (actionId: string) => void;
-=======
-interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
-
-  actions?: FloatingAction[];
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  showScrollToTop?: boolean;
-  showContactActions?: boolean;
-  showUtilityActions?: boolean;
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+interface ActionItem {
+  id: string;
+  icon: React.ReactNode;
+  label: string;
+  action: () => void;
+  color: string;
+  category: 'primary' | 'secondary' | 'utility';
 }
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   enabled = true,
-  position = 'bottom-right',
-  theme = 'auto',
   showLabels = true,
-  actions = [],
-  onAction
+  position = 'bottom-right'
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-<<<<<<< HEAD
-  const [isHovered, setIsHovered] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<'primary' | 'secondary' | 'utility'>('primary');
+  const [isVisible, setIsVisible] = useState(false);
+  const fabRef = useRef<HTMLDivElement>(null);
 
-  // Default actions if none provided
-  const defaultActions: FloatingAction[] = [
+  // Define action items
+  const actionItems: ActionItem[] = [
+    // Primary actions
     {
       id: 'contact',
-      icon: MessageCircle,
+      icon: <MessageCircle className="w-5 h-5" />,
       label: 'Contact Us',
       action: () => window.location.href = '/contact',
-      color: 'from-blue-500 to-cyan-500',
-      priority: 'high'
+      color: 'bg-blue-600 hover:bg-blue-700',
+      category: 'primary'
     },
     {
       id: 'phone',
-      icon: Phone,
+      icon: <Phone className="w-5 h-5" />,
       label: 'Call Now',
-      action: () => window.location.href = 'tel:+13024640950',
-      color: 'from-green-500 to-emerald-500',
-      priority: 'high'
+      action: () => window.open('tel:+13024640950'),
+      color: 'bg-green-600 hover:bg-green-700',
+      category: 'primary'
     },
     {
       id: 'email',
-      icon: Mail,
+      icon: <Mail className="w-5 h-5" />,
       label: 'Send Email',
-      action: () => window.location.href = 'mailto:kleber@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500',
-      priority: 'medium'
+      action: () => window.open('mailto:kleber@ziontechgroup.com'),
+      color: 'bg-purple-600 hover:bg-purple-700',
+      category: 'primary'
     },
     {
-      id: 'help',
-      icon: HelpCircle,
-      label: 'Get Help',
-      action: () => window.location.href = '/support',
-      color: 'from-orange-500 to-red-500',
-      priority: 'medium'
+      id: 'location',
+      icon: <MapPin className="w-5 h-5" />,
+      label: 'Visit Us',
+      action: () => window.open('https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'),
+      color: 'bg-red-600 hover:bg-red-700',
+      category: 'primary'
     },
+
+    // Secondary actions
     {
       id: 'services',
-      icon: Star,
+      icon: <Rocket className="w-5 h-5" />,
       label: 'Our Services',
       action: () => window.location.href = '/services',
-      color: 'from-yellow-500 to-orange-500',
-      priority: 'low'
+      color: 'bg-indigo-600 hover:bg-indigo-700',
+      category: 'secondary'
     },
     {
-      id: 'about',
-      icon: Heart,
-      label: 'About Us',
-      action: () => window.location.href = '/about',
-      color: 'from-pink-500 to-rose-500',
-      priority: 'low'
+      id: 'ai-solutions',
+      icon: <Brain className="w-5 h-5" />,
+      label: 'AI Solutions',
+      action: () => window.location.href = '/ai-services',
+      color: 'bg-pink-600 hover:bg-pink-700',
+      category: 'secondary'
+    },
+    {
+      id: 'cloud-services',
+      icon: <Cloud className="w-5 h-5" />,
+      label: 'Cloud Services',
+      action: () => window.location.href = '/cloud-devops',
+      color: 'bg-cyan-600 hover:bg-cyan-700',
+      category: 'secondary'
+    },
+    {
+      id: 'security',
+      icon: <Shield className="w-5 h-5" />,
+      label: 'Cybersecurity',
+      action: () => window.location.href = '/cybersecurity',
+      color: 'bg-orange-600 hover:bg-orange-700',
+      category: 'secondary'
+    },
+
+    // Utility actions
+    {
+      id: 'documentation',
+      icon: <BookOpen className="w-5 h-5" />,
+      label: 'Documentation',
+      action: () => window.location.href = '/documentation',
+      color: 'bg-gray-600 hover:bg-gray-700',
+      category: 'utility'
+    },
+    {
+      id: 'support',
+      icon: <HelpCircle className="w-5 h-5" />,
+      label: 'Get Support',
+      action: () => window.location.href = '/support',
+      color: 'bg-teal-600 hover:bg-teal-700',
+      category: 'utility'
+    },
+    {
+      id: 'team',
+      icon: <Users className="w-5 h-5" />,
+      label: 'Our Team',
+      action: () => window.location.href = '/team',
+      color: 'bg-emerald-600 hover:bg-emerald-700',
+      category: 'utility'
+    },
+    {
+      id: 'careers',
+      icon: <Star className="w-5 h-5" />,
+      label: 'Careers',
+      action: () => window.location.href = '/careers',
+      color: 'bg-yellow-600 hover:bg-yellow-700',
+      category: 'utility'
     }
-=======
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<any>('light');
+  ];
 
-<<<<<<< HEAD
-  // Hide button when scrolling down, show when scrolling up
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const isScrollingDown = scrollTop > (window as ).lastScrollTop;
+  // Filter actions by category
+  const getActionsByCategory = (category: 'primary' | 'secondary' | 'utility') => {
+    return actionItems.filter(item => item.category === category);
+  };
 
-    if (isScrollingDown && scrollTop > 100) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-
-    (window as ).lastScrollTop = scrollTop;
-  }, []);
-=======
-  // Detect theme
+  // Handle click outside to close
   useEffect(() => {
-    if (theme === 'auto') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
-      
-      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)               => {
-        setCurrentTheme(e.matches ? 'dark' : 'light');
-      };
-      
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    } else {
-      setCurrentTheme(theme);
-    }
-  }, [theme]);
-
-  // Show scroll to top button when scrolled down
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (fabRef.current && !fabRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setIsExpanded(false);
+      }
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Show FAB after delay
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handle scroll to show/hide FAB
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide FAB
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show FAB
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  // Quick actions
-  const quickActions = [
-    {
-      icon: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMessageCircle,
-      label: 'Chat Support',
-      action: ()               => {
-        // Trigger chat support
-        const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
-        if (chatButton) chatButton.click();
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-blue-500 to-blue-600',
-      delay: 0.1
-    },
-    {
-      icon: Phone,
-      label: 'Call Us',
-      action: ()               => {
-        window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1-555-0123';
-      },
-      color: 'from-green-500 to-green-600',
-      delay: 0.2
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      action: ()               => {
-        window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanycontact@ziontechgroup.com';
-      },
-      color: 'from-purple-500 to-purple-600',
-      delay: 0.3
-    },
-    {
-      icon: Search,
-      label: 'Search',
-      action: ()               => {
-        const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
-        if (searchInput) {
-          searchInput.focus();
-          searchInput.click();
-
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-orange-500 to-orange-600',
-      delay: 0.4
-    },
-    {
-      icon: Bookmark,
-      label: 'Bookmark',
-      action: ()               => {
-        if (navigator.share) {
-          navigator.share({
-            title: 'Zion Tech Group',
-            url: window.location.href
-          });
-        } else {
-          // Fallback for browsers that don't support Web Share API
-          const url = window.location.href;
-          const title = document.title;
-          const bookmarkUrl = `https://del.icio.us/post?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
-          window.open(bookmarkUrl, '_blank');
-
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-red-500 to-red-600',
-      delay: 0.5
-    },
-    {
-      icon: Download,
-      label: 'Download App',
-      action: ()               => {
-        // Trigger app download or PWA install
-        const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
-        if (installButton) {
-          installButton.click();
-        } else {
-          // Show app store links
-          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-          const isAndroid = /Android/.test(navigator.userAgent);
-
-          if (isIOS) {
-            window.open('https://apps.apple.com/app/zion-tech-group/id123456789', '_blank');
-          } else if (isAndroid) {
-            window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
-          } else {
-            // Show PWA install prompt
-            const deferredPrompt = (window as ).deferredPrompt;
-            if (deferredPrompt) {
-              deferredPrompt.prompt();
-
-
-
-      },
-      color: 'from-indigo-500 to-indigo-600',
-      delay: 0.6
-
-=======
-  // Default actions
-  const defaultActions: FloatingAction[] = [
-    // Contact actions
-    ...(showContactActions ? [
-      {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'contact',
-        icon: MessageCircle,
-        label: 'Contact Us',
-        action: ()               => {
-          const contactSection = document.getElementById('contact');
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyanyanyany'smooth' });
-          }
-        },
-        color: 'bg-blue-500 hover:bg-blue-600',
-        priority: 'high' as const
-      },
-      {
-        id: 'phone',
-        icon: Phone,
-        label: 'Call Now',
-        action: ()               => {
-          window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1234567890';
-        },
-        color: 'bg-green-500 hover:bg-green-600',
-        priority: 'high' as const
-      },
-      {
-        id: 'email',
-        icon: Mail,
-        label: 'Send Email',
-        action: ()               => {
-          window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanyinfo@ziontechgroup.com';
-        },
-        color: 'bg-purple-500 hover:bg-purple-600',
-        priority: 'medium' as const
-      },
-      {
-        id: 'location',
-        icon: MapPin,
-        label: 'Get Directions',
-        action: ()               => {
-          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
-        },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-red-500 hover:bg-red-600',
-        priority: 'medium' as const
-      }
-    ] : []),
-    
-    // Utility actions
-    ...(showUtilityActions ? [
-      {
-        id: 'bookmark',
-        icon: Bookmark,
-        label: 'Bookmark Page',
-        action: ()               => {
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: window.location.href
-            });
-          } else {
-            // Fallback for browsers without share API
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-              // Show success message
-              showNotification('Page URL copied to clipboard!');
-            });
-          }
-        },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-yellow-500 hover:bg-yellow-600',
-        priority: 'low' as const
-      },
-      {
-        id: 'share',
-        icon: Share2,
-        label: 'Share Page',
-        action: ()               => {
-          if (navigator.share) {
-            navigator.share({
-              title: document.title,
-              url: window.location.href
-            });
-          } else {
-            // Fallback for browsers without share API
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-              showNotification('Page URL copied to clipboard!');
-            });
-          }
-        },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-indigo-500 hover:bg-indigo-600',
-        priority: 'low' as const
-      },
-      {
-        id: 'download',
-        icon: Download,
-        label: 'Download Brochure',
-        action: ()               => {
-          // Create a temporary link to trigger download
-          const link = document.createElement('a');
-          link.href = '/brochure.pdf'; // Adjust path as needed
-          link.download = 'Zion-Tech-Group-Brochure.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-teal-500 hover:bg-teal-600',
-        priority: 'low' as const
-      },
-      {
-        id: 'print',
-        icon: Printer,
-        label: 'Print Page',
-        action: ()               => {
-          window.print();
-        },
-        color: 'bg-gray-500 hover:bg-gray-600',
-        priority: 'low' as const
-      }
-    ] : []),
-    
-    // Custom actions
-    ...actions
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  ];
-
-  const finalActions = actions.length > 0 ? actions : defaultActions;
-
-<<<<<<< HEAD
-  // Position classes
-=======
-  // Toggle expansion
-  const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev);
-  }, []);
-
-  // Scroll to top
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
-  // Show notification
-  const showNotification = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `
-      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
-      transform translate-x-full transition-transform duration-300 ease-in-out
-    `;
-    notification.textContent = message;
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-      notification.classList.remove('translate-x-full');
-    }, 100);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-      notification.classList.add('translate-x-full');
-      setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 300);
-    }, 3000);
-  }, []);
-
   // Get position classes
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':
-        return 'bottom-6 left-6';
+        return 'bottom-4 left-4';
       case 'top-right':
-        return 'top-6 right-6';
+        return 'top-4 right-4';
       case 'top-left':
-        return 'top-6 left-6';
+        return 'top-4 left-4';
       default:
-        return 'bottom-6 right-6';
+        return 'bottom-4 right-4';
     }
   };
 
-  // Theme classes
-  const getThemeClasses = () => {
-    switch (theme) {
-      case 'light':
-        return 'bg-white text-gray-900 shadow-lg border border-gray-200';
-      case 'dark':
-        return 'bg-gray-900 text-white shadow-lg border border-gray-700';
-      default:
-        return 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-lg border border-gray-200 dark:border-gray-700';
-    }
-  };
-
-  // Handle action click
-  const handleActionClick = useCallback((action: FloatingAction) => {
-    action.action();
-    if (onAction) {
-      onAction(action.id);
-    }
-    setIsExpanded(false);
-  }, [onAction]);
-
-  // Handle main button click
-  const handleMainButtonClick = useCallback(() => {
-    setIsExpanded(!isExpanded);
-  }, [isExpanded]);
-
-  // Handle hover
-  const handleHover = useCallback((hovering: boolean) => {
-    setIsHovered(hovering);
-  }, []);
-
-  if (!enabled) return null;
+  if (!enabled || !isVisible) return null;
 
   return (
-    <div className={`fixed z-50 ${getPositionClasses()}`}>
-      {/* Main Floating Action Button */}
+    <div ref={fabRef} className={`fixed z-50 ${getPositionClasses()}`}>
+      {/* Category Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="mb-4 flex space-x-2"
+          >
+            {(['primary', 'secondary', 'utility'] as const).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                  activeCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Action Items */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="mb-4 space-y-2"
+          >
+            {getActionsByCategory(activeCategory).map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-center space-x-2"
+              >
+                <button
+                  onClick={item.action}
+                  className={`${item.color} text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300`}
+                  aria-label={item.label}
+                  title={item.label}
+                >
+                  {item.icon}
+                </button>
+                {showLabels && (
+                  <motion.span
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap"
+                  >
+                    {item.label}
+                  </motion.span>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main FAB Button */}
       <motion.button
-        onClick={handleMainButtonClick}
-        onMouseEnter={() => handleHover(true)}
-        onMouseLeave={() => handleHover(false)}
-        className={`w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group`}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label={isExpanded ? 'Close actions' : 'Open actions'}
-        aria-expanded={isExpanded}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => {
+          setIsOpen(!isOpen);
+          if (!isOpen) {
+            setIsExpanded(false);
+            setActiveCategory('primary');
+          }
+        }}
+        className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
+        aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}
+        title={isOpen ? 'Close quick actions' : 'Quick actions'}
       >
         <AnimatePresence mode="wait">
-          {isExpanded ? (
+          {isOpen ? (
             <motion.div
               key="close"
               initial={{ rotate: -90, opacity: 0 }}
@@ -567,154 +329,104 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         </AnimatePresence>
       </motion.button>
 
-      {/* Action Buttons */}
+      {/* Expand/Collapse Button */}
       <AnimatePresence>
-        {isExpanded && (
-          <div className="absolute bottom-16 right-0 space-y-3">
-            {finalActions.map((action, index) => (
-              <motion.div
-                key={action.id}
-                initial={{ 
-                  opacity: 0, 
-                  scale: 0.8, 
-                  x: position.includes('right') ? 50 : -50,
-                  y: 0
-                }}
-                animate={{ 
-                  opacity: 1, 
-                  scale: 1, 
-                  x: 0,
-                  y: 0
-                }}
-                exit={{ 
-                  opacity: 0, 
-                  scale: 0.8, 
-                  x: position.includes('right') ? 50 : -50,
-                  y: 0
-                }}
-                transition={{ 
-                  duration: 0.3, 
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
-                }}
-                className="flex items-center space-x-3"
-              >
-                {/* Action Button */}
-                <motion.button
-                  onClick={() => handleActionClick(action)}
-                  className={`w-12 h-12 rounded-full bg-gradient-to-r ${action.color} text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group`}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={action.label}
-                  onMouseEnter={() => handleHover(true)}
-                  onMouseLeave={() => handleHover(false)}
+        {isOpen && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 bg-gray-600 hover:bg-gray-700 text-white p-2 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            aria-label={isExpanded ? 'Collapse' : 'Expand'}
+            title={isExpanded ? 'Collapse' : 'Expand'}
+          >
+            <AnimatePresence mode="wait">
+              {isExpanded ? (
+                <motion.div
+                  key="collapse"
+                  initial={{ rotate: 180 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <action.icon className="w-5 h-5" />
-                </motion.button>
-
-                {/* Label */}
-                {showLabels && (
-                  <motion.button
-                    initial={{ opacity: 0, x: position.includes('right') ? 20 : -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: position.includes('right') ? 20 : -20 }}
-                    transition={{ duration: 0.2, delay: index * 0.1 + 0.1 }}
-                    className={`px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${getThemeClasses()}`}
-                  >
-                    {action.label}
-                  </motion.button>
-                )}
-              </motion.div>
-            ))}
-          </div>
+                  <ChevronUp className="w-4 h-4" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="expand"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         )}
       </AnimatePresence>
 
-      {/* Quick Actions Bar (when hovered) */}
+      {/* Additional Actions (when expanded) */}
       <AnimatePresence>
-        {isHovered && !isExpanded && (
+        {isOpen && isExpanded && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.3 }}
-            className="absolute bottom-16 right-0 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-2"
+            className="mt-4 space-y-2"
           >
-            <div className="flex space-x-2">
-              {finalActions.slice(0, 3).map((action) => (
-                <motion.button
-                  key={action.id}
-                  onClick={() => handleActionClick(action)}
-                  className={`w-10 h-10 rounded-lg bg-gradient-to-r ${action.color} text-white flex items-center justify-center hover:scale-110 transition-transform duration-200`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={action.label}
-                >
-                  <action.icon className="w-4 h-4" />
-                </motion.button>
-              ))}
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => window.open('https://www.linkedin.com/company/zion-tech-group', '_blank')}
+                className="bg-blue-700 hover:bg-blue-800 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                aria-label="Follow us on LinkedIn"
+                title="LinkedIn"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </button>
+              {showLabels && (
+                <span className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium">
+                  Follow on LinkedIn
+                </span>
+              )}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
-      {/* Priority Indicator */}
-      {finalActions.some(action => action.priority === 'high') && (
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center"
-        >
-          <span className="text-xs text-white font-bold">
-            {finalActions.filter(action => action.priority === 'high').length}
-          </span>
-        </motion.div>
-      )}
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => window.open('https://twitter.com/ziontechgroup', '_blank')}
+                className="bg-sky-500 hover:bg-sky-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-sky-300"
+                aria-label="Follow us on Twitter"
+                title="Twitter"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </button>
+              {showLabels && (
+                <span className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium">
+                  Follow on Twitter
+                </span>
+              )}
+            </div>
 
-      {/* Contextual Actions (based on current page) */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className="absolute bottom-16 right-0 mt-4 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
-          >
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-              Quick Actions
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="flex items-center space-x-2">
               <button
-                onClick={() => window.location.href = '/pricing'}
-                className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                onClick={() => window.open('https://www.facebook.com/ziontechgroup', '_blank')}
+                className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                aria-label="Like us on Facebook"
+                title="Facebook"
               >
-                <Download className="w-4 h-4" />
-                <span>Pricing</span>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </button>
-              <button
-                onClick={() => window.location.href = '/case-studies'}
-                className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                <Bookmark className="w-4 h-4" />
-                <span>Case Studies</span>
-              </button>
-              <button
-                onClick={() => window.location.href = '/events'}
-                className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                <Calendar className="w-4 h-4" />
-                <span>Events</span>
-              </button>
-              <button
-                onClick={() => window.location.href = '/locations'}
-                className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                <MapPin className="w-4 h-4" />
-                <span>Locations</span>
-              </button>
+              {showLabels && (
+                <span className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-3 py-2 rounded-lg shadow-lg text-sm font-medium">
+                  Like on Facebook
+                </span>
+              )}
             </div>
           </motion.div>
         )}

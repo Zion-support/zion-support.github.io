@@ -356,48 +356,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* Render children */}
       {children}
 
-      {/* CSS for accessibility features */}
-      <style jsx>{`
-        .skip-link {
-          position: absolute;
-          top: -40px;
-          left: 6px;
-          background: #06b6d4;
-          color: white;
-          padding: 8px;
-          text-decoration: none;
-          border-radius: 4px;
-          z-index: 10000;
-        }
-        
-        .skip-link:focus {
-          top: 6px;
-        }
-        
-        .high-contrast {
-          filter: contrast(1.5);
-        }
-        
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-        
-        .high-saturation {
-          filter: saturate(1.5);
-        }
-        
-        .dyslexia-friendly {
-          font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
-          line-height: 1.6;
-          letter-spacing: 0.1em;
-        }
-        
-        .color-blind-friendly {
-          filter: grayscale(0.3) contrast(1.2);
-        }
-      `}</style>
+
     </>
   );
 };

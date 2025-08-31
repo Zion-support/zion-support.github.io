@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cookie, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Shield,
-  Cookie,
-  Settings,
-  Eye,
-  EyeOff,
-  Check,
-  X,
-=======
 import { SEO              } from '../components/SEO';
 import { Cookie, 
   Shield, 
@@ -27,31 +12,7 @@ import { Cookie,
   CheckCircle,
   AlertTriangle,
   ExternalLink,
-<<<<<<< HEAD
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  Info,
-  Lock,
-  Zap,
   ChevronDown,
-  ChevronRight
-} from 'lucide-react';
-
-const Cookies: React.FC = () => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>('essential');
-  const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
-  const companyEmail = 'privacy@ziontechgroup.com';
-  const companyPhone = '+1 (302) 464-0950';
-=======
-  ChevronDown,
-<<<<<<< HEAD
-  ChevronUp
-const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [expandedSections, setExpandedSections] = useState({
-=======
   ChevronUp,
   Lock,
   Globe,
@@ -200,10 +161,6 @@ export default function Cookies(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
-=======
   const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
@@ -431,19 +388,6 @@ export default function Cookies(...args: any[]): any {
         </div>
       </motion.div>
 
-<<<<<<< HEAD
-      {/* Cookie Management */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Managing Your Cookie Preferences</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {cookieManagement.map((method, index) => (
-=======
       {/* Cookie Types Explanation */}
       <section className="py-20">
         <div className="container mx-auto px-6">

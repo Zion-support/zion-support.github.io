@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react';
-export default function Infrastructure(...args[]):  {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe export default function Infrastructure(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe               } from 'lucide-react.ts';
@@ -123,10 +112,6 @@ export default function Infrastructure(...args[]: any):  {
               Enterprise-grade infrastructure that scales with your business
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)               => (
@@ -179,10 +164,6 @@ export default function Infrastructure(...args[]: any):  {
               Comprehensive IT infrastructure solutions for modern businesses
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (

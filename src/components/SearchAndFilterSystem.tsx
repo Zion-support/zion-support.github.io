@@ -15,12 +15,6 @@ import { Search,
   Cloud,
   Shield,
   Globe
-<<<<<<< HEAD
- } from 'lucide-react';
-interface SearchResult {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -49,17 +43,6 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
-<<<<<<< HEAD
-  type: 'service' | 'article' | 'team' | 'technology'}
-interface FilterOption {
-  id: string;
-  label: string;
-  value: string;
-  count: number}
-=======
-<<<<<<< HEAD
-  type: 'service' | 'article' | 'team' | 'technology';
-=======
 type: 'service' | 'article' | 'team' | 'technology';
 
 
@@ -96,9 +79,6 @@ interface FilterOption {
   id: string;
   label: string;
   value: string;
-<<<<<<< HEAD
-  count: number;
-=======
 count: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
 
 
@@ -138,21 +118,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }, { /* empty */ } as Record<string, any>);
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }, {} as Record<string, any>);
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }, { /* empty */ } as Record<string, any>);
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }, {} as Record<string, any>);
     return {

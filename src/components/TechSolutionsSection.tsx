@@ -13,62 +13,8 @@ import { Brain,
   Network,
   Code,
   Server
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const TechSolutionsSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const TechSolutionsSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const solutions = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Advanced AI solutions for automation, prediction, and intelligent decision-making.',
-      features['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Deep Learning'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      features['Threat Detection', 'Zero Trust Security', 'Compliance Management', 'Incident Response'],
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Serverless Architecture'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business operations.',
-      features['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Web & Mobile',
-      description: 'Modern web and mobile applications built with cutting-edge technologies.',
-      features['Progressive Web Apps', 'Native Mobile Apps', 'Responsive Design', 'Performance Optimization'],
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Innovation Lab',
-      description: 'Research and development of next-generation technologies and solutions.',
-<<<<<<< HEAD
-      features: ['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
-      color: 'from-indigo-500 to-purple-500'
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500';
@@ -118,9 +64,6 @@ const techSolutions = [
     color: "from-yellow-500 to-orange-500";
   };
 ];
-<<<<<<< HEAD
-export function TechSolutionsSection() {
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function TechSolutionsSection(...args: any[]): any {
@@ -149,43 +92,7 @@ export function TechSolutionsSection(...args: any[]): any {
             enhance security, and accelerate your digital transformation journey.
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techSolutions.map((solution, index) => (
-=======
 
-<<<<<<< HEAD
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {solutions.map((solution, index)                => {;
-            const IconComponent = solution.icon;
-            return (
-              <motion.div
-                key = {solution.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
-
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color} mr-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {solution.title}
-                  </h3>
-=======
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
           {techSolutions.map((solution, index)               => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

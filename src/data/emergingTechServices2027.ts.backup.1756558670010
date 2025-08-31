@@ -50,9 +50,6 @@ verified: boolean;
   useCases: string[];
   integrations: string[];
   compliance: string[];
-<<<<<<< HEAD
-  support: string[];
-=======
   support: string[]}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -421,23 +418,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     },
     images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-<<<<<<< HEAD
-    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],
-    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],
-    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],
-    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
-    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
-
-];}}
-=======
-<<<<<<< HEAD
-    technologyStack["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],
-    useCases["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],
-    integrations["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],
-    compliance["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
-    support["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
-  }
-=======;
     technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],;
     useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],;
     integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;

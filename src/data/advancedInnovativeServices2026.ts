@@ -1,6 +1,4 @@
 export interface AdvancedInnovativeService2026 {
-<<<<<<< HEAD
-=======
 
 
 

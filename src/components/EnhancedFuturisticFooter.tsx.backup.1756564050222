@@ -63,24 +63,6 @@ import { Phone,
   Network,
   Lock,
   Eye,
-<<<<<<< HEAD
-  FileText,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Zap,
-  Brain,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Infinity
-export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
-=======
   Smartphone,
   Monitor,
   Server,
@@ -93,33 +75,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   Atom
              } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {
-      title: 'Explore',
-      links: [
-        { name: 'Services', href: '/services' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Comp',
-      links: [
-        { name: 'About', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Blog', href: '/blog' }
-      ]
-<<<<<<< HEAD
-
-=======
     },
     {
       title: 'Company & Contact',
@@ -134,15 +89,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
         { name: 'Request Quote', href: '/request-quote', featured: true },
         { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
         { name: 'Partnerships', href: '/partners', featured: false },
-<<<<<<< HEAD
-        { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Press & Media', href: '/press', featured: false },
-        { name: 'Legal & Privacy', href: '/legal', featured: false },
-        { name: 'Terms of Service', href: '/terms', featured: false },
-        { name: 'Privacy Policy', href: '/privacy', featured: false }
-      ]
-    };
-=======;
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
@@ -281,12 +227,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
-                Transform your business with our innovative technology platforms.
-=======
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
                 We help businesses innovate and thrive in the digital age.
@@ -305,47 +245,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-start space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <span>Delaware, United States</span>
-                </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3">Quick Actions</h4>
-                <div className="space-y-2">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.name}
-                      to={action.href}
-                      className="flex items-center text-sm text-slate-300 hover:text-cyan-300 transition-colors group"
-
-                      <action.icon className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                      {action.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
-                <div className="flex space-x-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50 hover:scale-110`}
-                      aria-label={social.name}
-
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-=======
                 <div className="flex items-center space-x-3 text-slate-300">
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
@@ -354,30 +253,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {;
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Footer Sections */}
-            {footerSections.map((section) => (
-              <div key={section.title} className="space-y-4">
-                <h3 className={`text-sm font-semibold ${section.featured ? 'text-cyan-300' : 'text-white'} flex items-center gap-2`}>
-                  {section.featured && <Star className="w-4 h-4" />}
-                  {section.title}
-                </h3>
-                <div className="space-y-2">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className={`text-sm text-slate-300 hover:text-cyan-300 transition-colors flex items-center gap-2 group ${
-                        link.featured ? 'font-medium text-cyan-200' : ''
-                      }`}
-
-                      {link.featured && <Sparkles className="w-3 h-3 text-yellow-400" />}
-                      {link.name}
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    </Link>
-                  ))}
-                </div>
-=======
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (

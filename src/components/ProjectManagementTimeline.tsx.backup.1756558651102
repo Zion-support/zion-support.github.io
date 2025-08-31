@@ -23,8 +23,6 @@ import { Calendar,
   Trash2,
   Eye,
   Settings
-<<<<<<< HEAD
-=======
           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -51,9 +49,6 @@ interface Project {
   client: string;
   budget: number;
   tags: string[];
-<<<<<<< HEAD
-  milestones: Milestone[];
-=======
 milestones: Milestone[];
 
 
@@ -83,9 +78,6 @@ interface Milestone {
   dueDate: string;
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
   assignee: string;
-<<<<<<< HEAD
-  priority: 'low' | 'medium' | 'high';
-=======
 priority: 'low' | 'medium' | 'high';
 
 
@@ -102,23 +94,10 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 
   showFilters?: boolean;
   showStats?: boolean;
-<<<<<<< HEAD
-  maxProjects?: number;
-=======
   maxProjects?: number}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-<<<<<<< HEAD
-  showFilters = true,
-  showStats = true,
-  maxProjects = 10;
-}) => {;
-  const [projects, setProjects] = useState<any>([]);
-  const [filteredProjects, setFilteredProjects] = useState<any>([]);
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-  const [selectedPriority, setSelectedPriority] = useState<any>('all');
-=======
   showFilters = true,;
   showStats = true,;
   maxProjects = 10;
@@ -257,12 +236,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(p => p.status === selectedStatus);
-
-    if (selectedPriority !== 'all') {
-      filtered = filtered.filter(p => p.priority === selectedPriority);
-=======
       filtered = filtered.filter(p => p.status === selectedStatus)}
 
     if (selectedPriority !== 'all') {
@@ -283,8 +256,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-<<<<<<< HEAD
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -341,61 +312,21 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       case 'cancelled':
         return { color: 'text-red-400 bg-red-400/20', icon: <StopCircle className="w-4 h-4" /> };
       default:
-<<<<<<< HEAD
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
-
-=======
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get priority color
-<<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanystring)          => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
       default: return 'text-zinc-400 bg-zinc-400/20'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get milestone status color
-<<<<<<< HEAD
-  const getMilestoneStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20';
-      case 'completed': return 'text-green-400 bg-green-400/20';
-      case 'overdue': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
       default: return 'text-zinc-400 bg-zinc-400/20'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Format currency
-<<<<<<< HEAD
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanynumber)           => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0;
-    }).format(amount)};
-
-  // Calculate days remaining
-  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanystring)           => {
-=======;
   const formatCurrency = (amount: anyanyanyanyanyanyanyanyanynumber)          => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
@@ -840,28 +771,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <button
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
-<<<<<<< HEAD
-
-=======
           >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Create Project
-          </button>
-        </motion.div>
-      )};
-    </div>;
-  )};
-=======
             Create Project;
           </button>;
         </motion.div>;
       )};
     </div>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}</motion.div>}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

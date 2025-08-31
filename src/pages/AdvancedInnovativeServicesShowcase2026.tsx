@@ -21,21 +21,6 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
-<<<<<<< HEAD
-} from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
-const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import { ADVANCED_INNOVATIVE_SERVICES_2026              } from '../data/advancedInnovativeServices2026';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026               } from '../data/advancedInnovativeServices2026';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026              } from '../data/advancedInnovativeServices2026';
 
@@ -205,16 +190,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500/50"
-
-                {categories.map(category              => (
-=======
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500/50"
               >
                 {categories.map(category               => (
@@ -248,16 +223,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-<<<<<<< HEAD
-      >
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service)  => (
-=======
-<<<<<<< HEAD
-
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service)              => (
-=======
       >
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service)               => (

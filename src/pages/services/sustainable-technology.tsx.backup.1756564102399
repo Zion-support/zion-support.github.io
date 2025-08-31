@@ -16,15 +16,6 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
     {
       icon: Recycle,
       title: 'Circular Economy',
-<<<<<<< HEAD
-      description: 'Waste reduction and resource optimization'
-    },
-    {
-      icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Carbon footprint reduction and offsetting'
-
-=======
       description: 'Waste reduction and resource optimization';
     },;
     {;
@@ -49,15 +40,6 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
     {
       title: 'IoT Environmental Monitoring',
       description: 'Real-time environmental data collection',
-<<<<<<< HEAD
-      icon: '🌱'
-    },
-    {
-      title: 'Sustainable Software',
-      description: 'Eco-friendly application development',
-      icon: '💻'
-
-=======
       icon: '🌱';
     },;
     {;
@@ -78,10 +60,6 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -24,13 +24,6 @@ icon: React.ComponentType<{ className?: string;
 }>;
   title: string;
   description: string;
-<<<<<<< HEAD
-  gradient: string;
-
-interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
-
-  features: HeroFeature[];
-=======
 gradient: string;
 }
 
@@ -64,12 +57,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
 }
           }}
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -133,9 +120,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       ))};
     </motion.div>;
   );
-<<<<<<< HEAD
-</div></div></div>};
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

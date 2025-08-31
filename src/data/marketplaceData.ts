@@ -1,6 +1,4 @@
 export interface MarketplaceItem {
-<<<<<<< HEAD
-=======
 
 
 
@@ -209,19 +207,6 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item               => item.category === 'equipment').length
   },
   {
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item  => item.category === 'services').length
-  };
-    id: 'services',;
-=======
-<<<<<<< HEAD
-    id: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
-    name: 'Services',
-    description: 'Professional services and consulting',
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item              => item.category === 'services').length
-
-=======
     count: anyanyanyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item               => item.category === 'services').length
   };
 =======;

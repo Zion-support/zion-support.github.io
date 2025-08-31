@@ -1,17 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-<<<<<<< HEAD
-import { motion              } from 'framer-motion.ts';
-import { AlertTriangle,
-  RefreshCw,
-  Home,
-  Bug,
-  X,
-  Info,
-  Copy,
-  ExternalLink,
-  Shield,
-  Zap
-=======
 import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { AlertTriangle, 
   RefreshCw, 
@@ -31,9 +18,6 @@ interface Props extends React.PropsWithChildren<{}> {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)              => void;
   showDetails?: boolean;
-<<<<<<< HEAD
-  className?: string;
-=======
 
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -55,11 +39,6 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-<<<<<<< HEAD
-  errorId: string | null;
-  showDetails: boolean;
-  isRecovering: boolean;
-=======
   showErrorDetails: boolean;
   errorId: string;
 
@@ -105,10 +84,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.error('Error caught by boundary:', error, errorInfo);
-=======
     // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -119,18 +94,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
 
-<<<<<<< HEAD
-    // Log to external service (in production)
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-
-
-  private static generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-  private logErrorToService(error: Error, errorInfo: ErrorInfo) {
-    // This would typically send to a service like Sentry, LogRocket, etc.
-=======
     // Log to external service (e.g., Sentry, LogRocket)
     this.logErrorToService(error, errorInfo);
 
@@ -175,23 +138,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
       };
 
-<<<<<<< HEAD
-      // Example: Send to analytics service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: true
-        });
-
-      // Store in localStorage for debugging
-      const errors = JSON.parse(localStorage.getItem('error-log') || '[]');
-      errors.push(errorData);
-      localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
-    } catch (logError) {
-<<<<<<< HEAD
-      // // // console.error('Failed to log error:', logError);
-
-=======
       // // // // // // // console.error('Failed to log error:', logError);
 =======
       // Send to analytics endpoint
@@ -209,21 +155,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
-<<<<<<< HEAD
-  private handleRetry = () => {
-    this.setState({ isRecovering: anyanyanyanyanyanyanyanyanyanyanyanyanytrue });
-
-    // Attempt to recover by clearing error state
-    setTimeout(()              => {
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null,
-        isRecovering: false
-      });
-    }, 1000);
-=======
   handleRetry = () => {
     this.setState({
       hasError: false,
@@ -261,30 +192,6 @@ URL: ${window.location.href}
 Timestamp: ${new Date().toISOString()}
     `.trim();
 
-<<<<<<< HEAD
-      navigator.clipboard.writeText(errorText).then(()              => {
-        // Show success feedback
-        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          button.disabled = true;
-          setTimeout(() => {
-            button.textContent = originalText;
-            button.disabled = false;
-          }, 2000);
-
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-      });
-
-=======
     try {
       await navigator.clipboard.writeText(errorText);
       // Show success message
@@ -344,23 +251,6 @@ Timestamp: ${new Date().toISOString()}
 
       // Default error UI
       return (
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4 ${this.props.className || ''}`}
-
-          <div className="max-w-2xl w-full">
-            {/* Error Header */}
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.1 }}
-              className="text-center mb-8"
-
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-400" />
-=======
         <div className = "min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -381,26 +271,6 @@ Timestamp: ${new Date().toISOString()}
               </p>
             </div>
 
-<<<<<<< HEAD
-            {/* Error Details */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="bg-slate-800/50 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 mb-6"
-
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold text-white flex items-center space-x-2">
-                  <Bug className="w-5 h-5 text-red-400" />
-                  <span>Error Details</span>
-                </h2>
-                <button
-                  onClick={this.toggleDetails}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-
-                  {this.state.showDetails ? 'Hide' : 'Show'} Details
-                </button>
-=======
             {/* Error ID */}
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
               <div className="flex items-center justify-between">
@@ -412,32 +282,6 @@ Timestamp: ${new Date().toISOString()}
               </div>
             </div>
 
-<<<<<<< HEAD
-              {this.state.showDetails && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="space-y-4"
-
-                  <div className="bg-slate-900/50 rounded-lg p-4">
-                    <div className="text-sm text-gray-400 mb-2">Error ID</div>
-                    <div className="font-mono text-white text-sm">{this.state.errorId}</div>
-                  </div>
-
-                  <div className="bg-slate-900/50 rounded-lg p-4">
-                    <div className="text-sm text-gray-400 mb-2">Error Message</div>
-                    <div className="text-white">{this.state.error?.message}</div>
-                  </div>
-
-                  {this.state.error?.stack && (
-                    <div className="bg-slate-900/50 rounded-lg p-4">
-                      <div className="text-sm text-gray-400 mb-2">Stack Trace</div>
-                      <pre className="text-xs text-gray-300 overflow-x-auto whitespace-pre-wrap">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-=======
             {/* Error Details (Collapsible) */}
             {this.props.showDetails && this.state.error && (
               <div className="mb-6">
@@ -497,21 +341,6 @@ Timestamp: ${new Date().toISOString()}
             )}
 
             {/* Action Buttons */}
-<<<<<<< HEAD
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-
-              <button
-                onClick={this.handleRetry}
-                disabled={this.state.isRecovering}
-                className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
-
-                <RefreshCw className={`w-5 h-5 ${this.state.isRecovering ? 'animate-spin' : ''}`} />
-                <span>{this.state.isRecovering ? 'Recovering...' : 'Try Again'}</span>
-=======
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <button
                 onClick={this.handleRetry}
@@ -524,10 +353,6 @@ Timestamp: ${new Date().toISOString()}
               
               <button
                 onClick={this.handleGoHome}
-<<<<<<< HEAD
-                className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors duration-200"
-
-=======
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-medium"
               >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -536,22 +361,6 @@ Timestamp: ${new Date().toISOString()}
               </button>
             </div>
 
-<<<<<<< HEAD
-            {/* Additional Actions */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-wrap gap-3 justify-center"
-
-              <button
-                onClick={this.handleCopyError}
-                data-copy-button
-                className="flex items-center space-x-2 px-4 py-2 bg-slate-700 text-gray-300 rounded-lg hover:bg-slate-600 hover:text-white transition-colors duration-200"
-
-                <Copy className="w-4 h-4" />
-                <span>Copy Error</span>
-=======
             {/* Secondary Actions */}
             <div className="flex flex-wrap gap-3 justify-center">
               <button
@@ -584,34 +393,6 @@ Timestamp: ${new Date().toISOString()}
               )}
             </div>
 
-<<<<<<< HEAD
-              <button
-                onClick={this.handleReportIssue}
-                className="flex items-center space-x-2 px-4 py-2 bg-slate-700 text-gray-300 rounded-lg hover:bg-slate-600 hover:text-white transition-colors duration-200"
-
-                <ExternalLink className="w-4 h-4" />
-                <span>Report Issue</span>
-              </button>
-            </motion.div>
-
-            {/* Help Information */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="mt-8 text-center"
-
-              <div className="inline-flex items-center space-x-2 text-sm text-gray-500">
-                <Shield className="w-4 h-4" />
-                <span>Need help? Contact our support team</span>
-              </div>
-              <div className="mt-2 text-xs text-gray-600">
-                Error ID: {this.state.errorId}
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-=======
             {/* Help Section */}
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
               <div className="text-center">
@@ -688,35 +469,5 @@ export function withErrorBoundary<P extends object>(
   };
 }
 
-<<<<<<< HEAD
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-};
-
-// Hook for functional components
-export const useErrorBoundary: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [error, setError] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)              => {
-      setError(event.error);
-    };
-
-    const handleUnhandledRejection = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)              => {
-      setError(new Error(event.reason));
-    };
-
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-
-    return () => {
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, []);
-
-  return error;
-};}}}}}}}}}}}}}}}}}}}
-=======
 export default EnhancedErrorBoundary;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet           } from 'react-helmet-async.ts';
-import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain import { Link           } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet            } from 'react-helmet-async.ts';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain            } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function AISupplyChainOptimization(...args: []):  {
                   icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
-<<<<<<< HEAD
-
-              ].map((feature, index)           => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function AISupplyChainOptimization(...args: []):  {
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-<<<<<<< HEAD
-
-              ].map((area, index)           => (
-=======
                 }
               ].map((area, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -244,10 +231,6 @@ export default function AISupplyChainOptimization(...args: []):  {
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-<<<<<<< HEAD
-
-              ].map((capability, index)           => (
-=======
                 }
               ].map((capability, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -356,10 +339,6 @@ export default function AISupplyChainOptimization(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
-<<<<<<< HEAD
-
-              ].map((step, index)           => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -395,16 +374,6 @@ export default function AISupplyChainOptimization(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

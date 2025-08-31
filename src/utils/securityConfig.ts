@@ -82,11 +82,6 @@ export const generateCSPHeader = (): string => {
 };
 
 // Security middleware for Express/Node.js
-<<<<<<< HEAD
-export const securityMiddleware = (req: anyanyanyanyanyanyanyanyanyanyanyanyany, res: , next: )              => {
-  // Set security headers;
-  Object.entries(securityConfig.headers).forEach(([key, value]) => {;
-=======
 export const securityMiddleware = (req: Request, res: Response, next: NextFunction) => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
@@ -105,27 +100,6 @@ export const securityMiddleware = (req: Request, res: Response, next: NextFuncti
   next();
 };
 
-<<<<<<< HEAD
-// Input sanitization
-export const sanitizeInput = (input: anyanyanyanyanyanyanyanyanyanyanyanyanystring): string              => {
-  return input
-    .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol;
-    .replace(/on\w+=/gi, '') // Remove event handlers;
-    .trim();
-};
-
-// XSS Protection
-export const escapeHtml = (text: anyanyanyanyanyanyanyanyanyanyanyanyanystring): string              => {;
-  const map: { [key: string]: string } = {;
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;',
-  };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
-=======
 // Rate limiting middleware
 export const rateLimitMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const { rateLimit } = securityConfig;
@@ -190,12 +164,6 @@ export const helmetConfig = {
   noCache: false, // Set to true for sensitive routes
 };
 
-<<<<<<< HEAD
-// Validate CSRF Token
-export const validateCSRFToken = (token: anyanyanyanyanyanyanyanyanyanyanyanyanystring, storedToken: string): boolean              => {;
-  return token === storedToken && token.length > 0;
-};
-=======
 // Export default configuration
 export default securityConfig;
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

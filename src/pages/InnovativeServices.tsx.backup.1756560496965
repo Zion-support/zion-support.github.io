@@ -20,9 +20,6 @@ import { Brain,
   Lightbulb,
   Target,
   Award
-<<<<<<< HEAD
-const InnovativeServices: React.FC = (): JSX.Element => {
-=======
             } from 'lucide-react.ts';
 
 const InnovativeServices: React.FC = (): JSX.Element => {
@@ -135,14 +132,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
         'Renewable energy optimization',
         'Carbon footprint tracking',
         'Sustainable infrastructure',
-<<<<<<< HEAD
-        'Green data centers'
-      ],
-      benefits['Environmental impact', 'Cost savings', 'Regulatory compliance'],
-      color: 'from-zion-blue to-zion-green'
-<<<<<<< HEAD
-
-=======
     };
 =======;
         'Green data centers';
@@ -438,14 +427,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
                 Contact Our Team
               </motion.button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;

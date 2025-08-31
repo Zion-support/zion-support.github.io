@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Shield,
-  FileText,
-  TrendingUp,
-  Users,
-  Database,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion            } from 'framer-motion.ts';
 import { Shield, 
@@ -42,13 +32,6 @@ import { Shield,
   Award,
   Gauge,
   PieChart
-<<<<<<< HEAD
-import { SEO           } from '../../components/SEO';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO            } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import { SEO           } from '../../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -97,15 +80,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
     {
       icon: Database,
       title: 'Centralized Compliance Hub',
-<<<<<<< HEAD
-      description: 'Single source of truth for all compliance-related data, policies, and procedures'
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Analytics & Reporting',
-      description: 'Comprehensive dashboards and automated reporting for regulatory submissions'
-
-=======
       description: 'Single source of truth for all compliance-related data, policies, and procedures';
     },;
     {;
@@ -178,15 +152,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
         'Enterprise integrations',
         'Advanced AI models',
         'On-premise deployment option',
-<<<<<<< HEAD
-        'Dedicated compliance consultant',
-        'Custom training programs',
-        'White-label solutions'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'Dedicated compliance consultant',;
         'Custom training programs',;
         'White-label solutions';
@@ -221,15 +186,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
     {
       title: 'Basel III',
       description: 'Banking regulation compliance with automated risk calculations',
-<<<<<<< HEAD
-      icon: Scale
-    },
-    {
-      title: 'IFRS/GAAP',
-      description: 'Accounting standards compliance with automated financial reporting',
-      icon: BookOpen
-
-=======
       icon: Scale;
     },;
     {;
@@ -254,20 +210,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
     {
       title: 'Insurance Companies',
       description: 'State and federal insurance regulation compliance',
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: 'Fintech Startups',
-      description: 'Rapid compliance scaling for growing financial technology companies',
-      icon: Zap
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO
-=======
       icon: Shield;
     },;
     {;
@@ -376,11 +318,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
               Everything you need to stay compliant with evolving financial regulations
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)           => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)            => (
@@ -466,11 +403,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
               Comprehensive coverage of all major financial compliance requirements
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)           => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index)            => (
@@ -556,11 +488,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
               Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)           => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)            => (
@@ -643,11 +570,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
               From startups to enterprise institutions, our platform scales with your needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)           => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)            => (
@@ -733,11 +655,6 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
               Choose the plan that fits your organization size and compliance needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)           => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)            => (
@@ -928,23 +845,12 @@ export default function AIFinancialComplianceAssistant(...args[]: any):  {
 
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

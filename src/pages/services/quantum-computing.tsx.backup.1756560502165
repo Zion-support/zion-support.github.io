@@ -16,15 +16,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       icon: Shield,
       title: 'Quantum Cryptography',
-<<<<<<< HEAD
-      description: 'Unbreakable encryption for next-generation security'
-    },
-    {
-      icon: Cpu,
-      title: 'Quantum Simulation',
-      description: 'Model complex molecular and physical systems'
-
-=======
       description: 'Unbreakable encryption for next-generation security';
     },;
     {;
@@ -49,15 +40,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
     {
       title: 'Climate Research',
       description: 'Advanced climate modeling and prediction',
-<<<<<<< HEAD
-      icon: '🌍'
-    },
-    {
-      title: 'Logistics Optimization',
-      description: 'Solve complex routing and supply chain problems',
-      icon: '🚚'
-
-=======
       icon: '🌍';
     },;
     {;
@@ -78,10 +60,6 @@ import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight,
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

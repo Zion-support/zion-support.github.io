@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO             } from '../../components/SEO';
-import { motion             } from 'framer-motion.ts';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle             } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { SEO            } from '../../components/SEO';
 import { motion            } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle export default function BlockchainEnterpriseSolutions(...args: any[]): any {
-=======
 import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle            } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -45,15 +36,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
       title: 'Compliance Ready',
       description: 'Built-in regulatory compliance and governance frameworks',
       color: 'from-purple-500 to-pink-500'
-<<<<<<< HEAD
-    },
-    {
-      icon: TrendingUp,
-      title: 'Cost Efficiency',
-      description: 'Reduce intermediaries and streamline business processes',
-      color: 'from-indigo-500 to-purple-500'
-
-=======
     },;
     {;
       icon: TrendingUp,;
@@ -84,14 +66,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
       features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
     },
     {
-<<<<<<< HEAD
-      title: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols',
-      price: 'From $20,000',
-<<<<<<< HEAD
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
-
-=======
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
     };
 =======;
@@ -114,10 +88,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -497,23 +467,12 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
                 View Case Studies
               </motion.button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

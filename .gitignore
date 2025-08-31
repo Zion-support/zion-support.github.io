@@ -78,9 +78,6 @@ temp/
 # Vite
 .vite/
 core
-<<<<<<< HEAD
-tsconfig.tsbuildinfo
-=======
 
 # Automation and reports (exclude from build)
 automation/

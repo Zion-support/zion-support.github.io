@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion           } from 'framer-motion.ts';
-import { Link           } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight export function ContactSection(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion            } from 'framer-motion.ts';
 import { Link            } from 'react-router-dom.ts';
@@ -22,15 +16,6 @@ export function ContactSection(...args[]: any):  {
       title: "Email",
       value: "kleber@ziontechgroup.com",
       link: "mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-    },
-    {
-      icon: MapPin,
-      title: "Address",
-      value: "364 E Main St STE 1008 Middletown DE 19709",
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-
-=======
     },;
     {;
       icon: MapPin,;
@@ -153,25 +138,12 @@ export function ContactSection(...args[]: any):  {
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
             Contact Us Today
-<<<<<<< HEAD
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             <ArrowRight className="ml-2 h-5 w-5" />;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-
-export default ContactSection;
-}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default ContactSection;

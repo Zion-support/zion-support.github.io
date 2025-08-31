@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link               } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar                } from 'lucide-react.ts';
@@ -79,9 +68,6 @@ const featuredListings = [
     reviews: 178;
   };
 ];
-<<<<<<< HEAD
-export function FeaturedListingsSection() {
-=======
 
 export function FeaturedListingsSection(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -89,10 +75,6 @@ export function FeaturedListingsSection(...args: any[]): any {
   const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
   const filteredListings = selectedCategory === "All"
-<<<<<<< HEAD
-    ? featuredListings
-    : featuredListings.filter(listing => listing.category === selectedCategory);
-=======
     ? featuredListings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfeaturedListings.filter(listing               => listing.category === selectedCategory);
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -104,10 +86,6 @@ export function FeaturedListingsSection(...args: any[]): any {
         staggerChildren: 0.15,
         delayChildren: 0.1
   };
-<<<<<<< HEAD
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-=======
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)               => (
@@ -140,10 +118,6 @@ export function FeaturedListingsSection(...args: any[]): any {
             Discover our most popular and innovative technology solutions that are transforming businesses worldwide
           </p>
         </div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
-=======
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index)               => (

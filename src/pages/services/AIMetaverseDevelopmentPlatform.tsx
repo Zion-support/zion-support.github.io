@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIMetaverseDevelopmentPlatform() {
-=======
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles import { SEO              } from '../../components/SEO';
-=======
 import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

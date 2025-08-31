@@ -14,8 +14,6 @@ import { Rocket,
 	Star,
 	Play,
 	Pause
-<<<<<<< HEAD
-=======
            } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
@@ -37,10 +35,6 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-<<<<<<< HEAD
-	status: 'active' | 'beta' | 'new';
-
-=======
 status: 'active' | 'beta' | 'new';
 
 
@@ -120,13 +114,6 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-<<<<<<< HEAD
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
-		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanystring)            => {
-		switch (status) {;
-=======;
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
@@ -138,24 +125,9 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
-<<<<<<< HEAD
-			default: return 'bg-gray-500';
-
-=======
 			default: return 'bg-gray-500'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
-<<<<<<< HEAD
-	const getStatusText = (status: anyanyanyanyanyanyanyanyanyanystring)           => {;
-		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-			case 'new': return 'NEW';
-			case 'beta': return 'BETA';
-			case 'active': return 'ACTIVE';
-<<<<<<< HEAD
-			default: return 'UNKNOWN';
-
-=======
 			default: return 'UNKNOWN'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
@@ -401,23 +373,12 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 									{service.price}
 								</div>
 							</motion.div>
-<<<<<<< HEAD
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	)};
-=======;
 						))};
 					</div>;
 				</div>;
 			</div>;
 		</div>;
 	);
-<<<<<<< HEAD
-}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

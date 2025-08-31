@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../../components/SEO';
-import { motion               } from 'framer-motion.ts';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -325,42 +320,6 @@ const AIDevOpsAutomationPlatform = () => {
                 Our AI platform delivers measurable results that revolutionize your development and operations
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "AI Pipeline Optimization",
-                  description: "Machine learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.",
-                  icon: "🚀"
-                },
-                {
-                  title: "Intelligent Deployment Automation",
-                  description: "AI-driven deployment strategies with automatic rollback, canary deployments, and blue-green switching.",
-                  icon: "🤖"
-                },
-                {
-                  title: "Advanced GitOps Workflows",
-                  description: "Seamless GitOps implementation with automated infrastructure provisioning and configuration management.",
-                  icon: "📚"
-                },
-                {
-                  title: "Infrastructure as Code (IaC)",
-                  description: "Automated infrastructure provisioning using Terraform, CloudFormation, and Kubernetes manifests.",
-                  icon: "🏗️"
-                },
-                {
-                  title: "Multi-Cloud Orchestration",
-                  description: "Unified management across AWS, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.",
-                  icon: "☁️"
-                },
-                {
-                  title: "Security-First Automation",
-                  description: "Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.",
-                  icon: "🔒"
-                }
-              ].map((feature, index)               => (
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
@@ -396,18 +355,6 @@ const AIDevOpsAutomationPlatform = () => {
                 From code commit to production deployment, our AI automates every aspect of your DevOps pipeline
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { metric: "80%", description: "Reduction in deployment time" },
-                { metric: "90%", description: "Decrease in deployment failures" },
-                { metric: "75%", description: "Faster time to market" },
-                { metric: "85%", description: "Reduction in manual tasks" },
-                { metric: "70%", description: "Improvement in resource utilization" },
-                { metric: "95%", description: "Increase in deployment success rate" }
-              ].map((benefit, index)               => (
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {automationAreas.map((area, index) => (
@@ -450,32 +397,6 @@ const AIDevOpsAutomationPlatform = () => {
                 Cutting-edge artificial intelligence that continuously learns and optimizes your DevOps processes
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {[
-                {
-                  industry: "Financial Services",
-                  description: "Secure, compliant DevOps automation for banking applications with audit trails and regulatory compliance.",
-                  features: ["PCI DSS compliance", "SOX compliance", "Secure deployment pipelines"]
-                },
-                {
-                  industry: "E-commerce",
-                  description: "High-availability deployment automation for online retail platforms with zero-downtime updates.",
-                  features: ["Blue-green deployments", "Auto-scaling", "Performance monitoring"]
-                },
-                {
-                  industry: "Healthcare",
-                  description: "HIPAA-compliant DevOps automation for medical applications with secure data handling.",
-                  features: ["HIPAA compliance", "Data encryption", "Audit logging"]
-                },
-                {
-                  industry: "Manufacturing",
-                  description: "IoT-focused DevOps automation for industrial applications with edge computing support.",
-                  features: ["Edge deployment", "IoT integration", "Real-time monitoring"]
-                }
-              ].map((useCase, index)               => (
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -518,138 +439,6 @@ const AIDevOpsAutomationPlatform = () => {
                 Choose the plan that fits your development team size and DevOps requirements
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-              {[
-                "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI/CD", "GitHub Actions", "AWS", "Azure",
-                "GCP", "Ansible", "Helm", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"
-              ].map((tech, index)               => (
-                <motion.div
-                  key={index}
-                  initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  scale: 1 
-
-}}
-                  transition = {
-  { duration: 0.4,
-  delay: index * 0.05 
-
-}}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
-                  <span className="text-white font-medium">{tech}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your DevOps team size and automation requirements.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {[
-                {
-                  name: "Starter",
-                  price: "$199",
-                  period: "/month",
-                  description: "Perfect for small teams starting with DevOps automation",
-                  features: [
-                    "Up to 10 applications",
-                    "Basic CI/CD pipelines",
-                    "GitHub integration",
-                    "Email support",
-                    "Standard templates",
-                    "Monthly reports"
-                  ],
-                  popular: false
-                },
-                {
-                  name: "Professional",
-                  price: "$599",
-                  period: "/month",
-                  description: "Ideal for growing teams with advanced automation needs",
-                  features: [
-                    "Up to 50 applications",
-                    "Advanced CI/CD pipelines",
-                    "Multi-cloud support",
-                    "Priority support",
-                    "Custom integrations",
-                    "Real-time monitoring",
-                    "Advanced analytics",
-                    "Team collaboration tools"
-                  ],
-                  popular: true
-                },
-                {
-                  name: "Enterprise",
-                  price: "$1,499",
-                  period: "/month",
-                  description: "Comprehensive solution for large organizations",
-                  features: [
-                    "Unlimited applications",
-                    "Full automation suite",
-                    "Custom AI models",
-                    "24/7 dedicated support",
-                    "White-label solutions",
-                    "Advanced compliance",
-                    "Custom integrations",
-                    "Dedicated DevOps consultant"
-                  ],
-                  popular: false
-                }
-              ].map((plan, index)               => (
-                <motion.div
-                  key={index}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                  viewport={{ once: true }}
-                  className={`relative rounded-xl p-8 ${
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricing.map((plan, index) => (

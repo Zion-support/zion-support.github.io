@@ -1,13 +1,6 @@
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 export interface ServiceContact {
-<<<<<<< HEAD
-  phone: string;
-  email: string;
-  website: string;
-  address: string}
-export interface MicroSaasService {
-=======
 
 
 
@@ -25,9 +18,6 @@ export interface MicroSaasService {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -85,12 +75,6 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-<<<<<<< HEAD
-  compliance: string[]}
-=======
-<<<<<<< HEAD
-  compliance: string[];
-=======
 compliance: string[];
 
 

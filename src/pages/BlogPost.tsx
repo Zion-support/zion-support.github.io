@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-=======
 
 import React from 'react.ts';
 import { useParams, Link              } from 'react-router-dom.ts';
@@ -29,29 +22,9 @@ import { Calendar,
   Cpu,
   Network,
   BookOpen
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-export default function BlogPost() {
-=======
              } from 'lucide-react.ts';
 import { SEO              } from '../components/SEO';
 
-<<<<<<< HEAD
-const BlogPost: React.FC = (): JSX.Element => {
-	return (
-		<div className="min-h-screen bg-slate-950 text-white py-16">
-			<SEO title="Blog Post" description="Read our latest insights and articles from Zion Tech Group." />
-			<div className="container mx-auto max-w-3xl px-6">
-				<h1 className="text-3xl font-bold mb-4">Blog Post</h1>
-				<p className="text-slate-300">Coming soon.</p>
-			</div>
-		</div>
-	)
-
-export default BlogPost
-}
-=======
 export default function BlogPost(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { slug } = useParams();
@@ -190,9 +163,6 @@ export default function BlogPost(...args: any[]): any {
       }
     ]
   };
-<<<<<<< HEAD
-  const formatDate = (dateString: string) => {
-=======
 
   const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -202,9 +172,6 @@ export default function BlogPost(...args: any[]): any {
       day: 'numeric'
     });
   };
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {
-=======
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -219,9 +186,6 @@ export default function BlogPost(...args: any[]): any {
     };
     return categoryIcons[category] || BookOpen;
   };
-<<<<<<< HEAD
-  const getCategoryName = (category: string) => {
-=======
 
   const getCategoryName = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -404,10 +368,6 @@ export default function BlogPost(...args: any[]): any {
               Continue exploring insights and analysis on related topics
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (
-=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPost.relatedPosts.map((post, index)              => (

@@ -1,97 +1,8 @@
 import React from 'react.ts';
 import Link from 'next/link.ts';
 import { motion            } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock const ModernFooter: React.FC = (): JSX.Element => {
-=======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock, Brain, Cloud, BarChart3, Users, Rocket, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2            } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const ModernFooter: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const currentYear = new Date().getFullYear();
-
-  const serviceCategories = [
-    { 
-      name: 'AI & Machine Learning', 
-      icon: Brain, 
-      href: '/services#ai',
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      icon: Cloud, 
-      href: '/services#cloud',
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']
-    },
-    { 
-      name: 'Cybersecurity', 
-      icon: Shield, 
-      href: '/services#cybersecurity',
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']
-    },
-    { 
-      name: 'Data & Analytics', 
-      icon: BarChart3, 
-      href: '/services#data',
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']
-    },
-    { 
-      name: 'Enterprise Solutions', 
-      icon: Database, 
-      href: '/services#enterprise',
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
-    },
-    { 
-      name: 'Emerging Technologies', 
-      icon: Rocket, 
-      href: '/services#emerging',
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']
-    }
-  ];
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about#team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'News', href: '/news' },
-    { name: 'Events', href: '/events' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Data Processing Agreement', href: '/dpa' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
-  ];
-
-  const socialLinks = [;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  return (
-    <footer className = "bg-gray-900 text-white relative overflow-hidden">
-      {/* Animated Background */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 via-neon-purple/5 to-neon-pink/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.1),transparent_50%)]" />
-
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-gray-900" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.05),transparent_50%)]" />
       
@@ -150,11 +61,6 @@ const ModernFooter: React.FC = (): JSX.Element => {;
                   <li key={category.name}>
                     <Link
                       href={category.href}
-<<<<<<< HEAD
-                      className="flex items-center space-x-2 text-gray-300 hover:text-neon-blue transition-colors group"
-
-                      <category.icon className="w-4 h-4 text-neon-blue group-hover:text-neon-purple transition-colors" />
-=======
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors group"
                     >
                       <category.icon className="w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors" />
@@ -231,14 +137,6 @@ const ModernFooter: React.FC = (): JSX.Element => {;
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-<<<<<<< HEAD
-                    <p className="text-gray-300">Phone</p>
-                    <a
-                      href="tel:+13024640950"
-                      className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
-
-                      +1 (302) 464-0950
-=======
                     <p className="text-gray-400">Phone</p>
                     <a 
                       href={`tel:${contactInfo.phone}`}
@@ -253,14 +151,6 @@ const ModernFooter: React.FC = (): JSX.Element => {;
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-<<<<<<< HEAD
-                    <p className="text-gray-300">Email</p>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
-
-                      kleber@ziontechgroup.com
-=======
                     <p className="text-gray-400">Email</p>
                     <a 
                       href={`mailto:${contactInfo.email}`}
@@ -308,12 +198,6 @@ const ModernFooter: React.FC = (): JSX.Element => {;
                   className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                 />
                 <motion.button
-<<<<<<< HEAD
-                  className="px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg hover:from-neon-purple hover:to-neon-blue transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-
-=======
                   className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -345,23 +229,12 @@ const ModernFooter: React.FC = (): JSX.Element => {;
                   Accessibility
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </footer>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
       </div>;
     </footer>;
   );
-<<<<<<< HEAD
-</div></div>};
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
-import { Brain,
-  Users,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '@/components/SEO';
@@ -34,9 +22,6 @@ import { Brain,
   Globe,
   Smartphone,
   Cloud
-<<<<<<< HEAD
-export default function AIProjectManagementPlatform(...args: any[]): any {
-=======
              } from 'lucide-react.ts';
 
 export default function AIProjectManagementPlatform(...args: []):  {
@@ -65,15 +50,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       icon: Shield,
       title: 'Risk Assessment & Mitigation',
-<<<<<<< HEAD
-      description: 'AI continuously monitors project risks and provides proactive recommendations'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates'
-
-=======
       description: 'AI continuously monitors project risks and provides proactive recommendations';
     },;
     {;
@@ -127,15 +103,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
         'Full AI suite',
         'Custom integrations',
         'Dedicated support manager',
-<<<<<<< HEAD
-        'Advanced security features',
-        'Custom AI model training',
-        'On-premise deployment options',
-        'SLA guarantees'
-      ],
-      popular: false
-
-=======
         'Advanced security features',;
         'Custom AI model training',;
         'On-premise deployment options',;
@@ -160,15 +127,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       icon: BarChart3,
       title: '40% Cost Reduction',
-<<<<<<< HEAD
-      description: 'Eliminate waste through AI-driven efficiency improvements'
-    },
-    {
-      icon: Users,
-      title: 'Enhanced Team Productivity',
-      description: 'Automated workflows free up time for strategic work'
-
-=======
       description: 'Eliminate waste through AI-driven efficiency improvements';
     },;
     {;
@@ -193,20 +151,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
-<<<<<<< HEAD
-      icon: Building
-    },
-    {
-      title: 'Event Planning',
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',
-      icon: Calendar
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       icon: Building;
     },;
     {;
@@ -689,14 +633,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
             </div>
 
             <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;

@@ -1,7 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import SEO from '@/components/SEO';
-=======
 import { motion             } from 'framer-motion.ts';
 import { Accessibility, 
   Eye, 
@@ -86,8 +83,6 @@ export default function Accessibility(...args: any[]): any {
       ]
     }
   ];
-<<<<<<< HEAD
-=======
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
 			<SEO
@@ -113,8 +108,6 @@ export default function Accessibility(...args: any[]): any {
 			</div>
 		</div>
 	);
-<<<<<<< HEAD
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 =======

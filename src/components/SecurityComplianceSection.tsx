@@ -10,44 +10,8 @@ import { Shield,
   Globe,
   Server,
   Eye
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const SecurityComplianceSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const SecurityComplianceSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const securityFeatures = [
-    {
-      icon: Shield,
-      title: 'Zero Trust Security',
-      description: 'Implement comprehensive zero-trust architecture with continuous verification.',
-      benefits['Continuous authentication', 'Micro-segmentation', 'Least privilege access', 'Real-time monitoring']
-    },
-    {
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for data at rest and in transit.',
-      benefits['AES-256 encryption', 'TLS 1.3 protocols', 'Key management', 'Encrypted backups']
-    },
-    {
-      icon: Users,
-      title: 'Identity & Access Management',
-      description: 'Robust IAM solutions with multi-factor authentication.',
-      benefits['SSO integration', 'MFA enforcement', 'Role-based access', 'Privileged access management']
-    },
-    {
-      icon: Server,
-      title: 'Network Security',
-      description: 'Advanced network protection with intrusion detection and prevention.',
-<<<<<<< HEAD
-      benefits: ['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
     };
@@ -125,9 +89,6 @@ const complianceFeatures = [
     ];
   };
 ];
-<<<<<<< HEAD
-export function SecurityComplianceSection() {
-=======
 
 export function SecurityComplianceSection(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -155,20 +116,7 @@ export function SecurityComplianceSection(...args: any[]): any {
             Your data and systems are protected by the highest security standards.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        {/* Security Metrics */}
-        <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
-
-          {securityMetrics.map((metric, index)               => {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
@@ -184,9 +132,6 @@ export function SecurityComplianceSection(...args: any[]): any {
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-<<<<<<< HEAD
-          {securityMetrics.map((metric, index)  => {;
-=======
           {securityMetrics.map((metric, index)                => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -285,10 +230,6 @@ export function SecurityComplianceSection(...args: any[]): any {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
           </h3>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {complianceFeatures.map((category, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {complianceFeatures.map((category, index)               => (

@@ -1,6 +1,4 @@
 export interface InnovativeService2027 {
-<<<<<<< HEAD
-=======
 
 
 
@@ -31,13 +29,6 @@ export interface InnovativeService2027 {
   rating: number;
   reviews: number;
   launchDate: string;
-<<<<<<< HEAD
-  status: 'active' | 'beta' | 'coming-soon'}
-=======
-<<<<<<< HEAD
-  status: 'active' | 'beta' | 'coming-soon';
-
-=======
 status: 'active' | 'beta' | 'coming-soon';
 
 
@@ -151,15 +142,6 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-<<<<<<< HEAD
-export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
-=======
-<<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]               => {
-  if (category === 'All') {;
-    return innovativeServices2027};
-  return innovativeServices2027.filter(service => service.category === category)};
-=======
 export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;

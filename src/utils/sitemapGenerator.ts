@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { SitemapConfig, SitemapUrl } from '../types/sitemap';
-=======
 interface SitemapUrl {
 
 

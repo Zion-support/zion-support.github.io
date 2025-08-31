@@ -100,10 +100,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['40-60% faster hiring', '30-50% better candidates', '25-40% cost reduction'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['40-60% faster hiring', '30-50% better candidates', '25-40% cost reduction'].map((t)              => (

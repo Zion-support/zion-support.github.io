@@ -45,10 +45,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   useEffect(() => {
     setIsVisible(true);
-<<<<<<< HEAD
-
-    const interval = setInterval(() => {
-=======
     
     const interval = setInterval(() => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -58,12 +54,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     return () => clearInterval(interval);
   }, [features.length]);
 
-<<<<<<< HEAD
-  const handleCTAClick = useCallback(() => {
-    // Analytics tracking could be added here
-<<<<<<< HEAD
-    // // // console.log('Hero CTA clicked');
-=======
     // // // // // // // console.log('Hero CTA clicked');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
@@ -84,15 +74,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
 },
     visible: {
-<<<<<<< HEAD
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-
-
-=======
       opacity: 1,;
       y: 0,;
       transition: {;

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { LoginForm } from "./LoginForm";
-export function LoginContent(...args[]):  {
-=======
-<<<<<<< HEAD
-import { LoginForm                } from './LoginForm';
-=======
 import { LoginForm               } from './LoginForm';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

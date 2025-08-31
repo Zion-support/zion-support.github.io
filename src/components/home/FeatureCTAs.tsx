@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-=======
 
 import React from 'react.ts';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle               } from '@/components/ui/card';
@@ -42,13 +33,6 @@ import { ArrowRight,
   PenTool,
   Shield,
   Cloud
-<<<<<<< HEAD
- } from 'lucide-react';
-export function FeatureCTAs(...args[]):  {
-=======
-<<<<<<< HEAD
-export function FeatureCTAs(...args: any[]): any {
-=======
                } from 'lucide-react.ts';
 
 export function FeatureCTAs(...args[]: any):  {
@@ -186,10 +170,6 @@ export function FeatureCTAs(...args[]: any):  {
             From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
           </p>
         </div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((feature, index)  => (
-=======
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index)                => (

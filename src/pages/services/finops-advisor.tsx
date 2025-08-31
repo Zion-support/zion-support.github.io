@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart               } from 'lucide-react.ts';
@@ -69,9 +58,6 @@ export default function FinOpsAdvisor(...args: []):  {
                 optimizing resources, and improving financial operations.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -105,12 +91,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   icon: Database,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
@@ -136,9 +116,6 @@ export default function FinOpsAdvisor(...args: []):  {
                 Identify and optimize key areas of cloud spending for maximum cost savings.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -178,12 +155,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "Optimize support plans, licensing, and service agreements.",
                   icon: Shield,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((area, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((area, index)  => (
@@ -217,9 +188,6 @@ export default function FinOpsAdvisor(...args: []):  {
                 Implement industry-standard FinOps practices for sustainable cloud cost management.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -238,12 +206,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   step: "03",
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
@@ -318,9 +280,6 @@ export default function FinOpsAdvisor(...args: []):  {
                 Comprehensive tools and integrations for complete cloud financial management.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -360,12 +319,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "REST APIs for custom integrations and automated workflows.",
                   icon: Settings,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((tool, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((tool, index)  => (
@@ -399,9 +352,6 @@ export default function FinOpsAdvisor(...args: []):  {
                 Our systematic approach ensures successful FinOps implementation and cost optimization.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -425,12 +375,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function EnterpriseSolutions() {
-=======
 import React from 'react.ts';
 
 export default function EnterpriseSolutions(...args: any[]): any {

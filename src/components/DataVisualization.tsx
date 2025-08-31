@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  BarChart3,
-=======
-<<<<<<< HEAD
-import { AnimatePresence, motion               } from 'framer-motion.ts';
-import { Activity,
-    ArrowDown,
-    ArrowUp,
-    BarChart3,
-    DollarSign,
-    Download,
-    Eye,
-    Minus,
-    PieChart,
-    RefreshCw,
-    Share2,
-    Target,
-    TrendingUp,
-    Users
-import React, { useState               } from 'react.ts';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { BarChart3,
@@ -40,10 +16,6 @@ import { BarChart3,
   Download,
   Share2,
   RefreshCw
-<<<<<<< HEAD
- } from 'lucide-react';
-interface ChartData {
-=======
                } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -70,31 +42,9 @@ datasets: {;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    borderWidth: number;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-}[];
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     borderWidth: number}[]}
 interface MetricCard {
-<<<<<<< HEAD
-=======
 
 
 
@@ -116,12 +66,6 @@ interface MetricCard {
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-<<<<<<< HEAD
-  color: string}
-=======
-<<<<<<< HEAD
-  color: string;
-=======
 color: string;
 
 
@@ -204,16 +148,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Update chart data with new random values
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    setChartData(prev = > ({
-      ...prev,
-      datasets[{
-        ...prev.datasets[0],
-        data: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprev.datasets[0].data.map(()                => Math.floor(Math.random() * 100) + 20)
-      }]
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setChartData(prev = > ({;
       ...prev,;
@@ -233,30 +167,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     })));
     setIsLoading(false)};
   // Get change icon and color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getChangeDisplay = (change: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, changeType: string)               => {;
-    const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :;
-                 changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                 <Minus className="w-4 h-4" />;
-
-    const color = changeType === 'increase' ? 'text-green-400' :
-                  changeType === 'decrease' ? 'text-red-400' :
-                  'text-zinc-400';
-
-    return { icon, color };
-  };
-
-  // Generate pie chart data
-  const pieChartData = {
-  <<<<<<< HEAD
-    labels['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
-    datasets[{
-      data[35, 25, 20, 15, 5],
-      backgroundColor[
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
     datasets: [{
@@ -341,20 +251,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           </div>
         )}
       </div>
-<<<<<<< HEAD
-;
-      {/* Metrics Cards */};
-      {showMetrics && (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
-          {metrics.map((metric, index) => {;
-=======
-<<<<<<< HEAD
-
-      {/* Metrics Cards */}
-      {showMetrics && (
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index)                => {;
-=======;
 ;
       {/* Metrics Cards */};
       {showMetrics && (;

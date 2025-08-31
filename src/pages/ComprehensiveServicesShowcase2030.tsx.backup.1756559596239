@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO            } from '../components/SEO';
-import { innovativeMicroSaasServices2030            } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030            } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030            } from '../data/comprehensiveAIServices2030';
-
-const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('microsaas');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getFilteredServices = () => {;
-    let services[] = [];
-=======
 import React, { useState } from 'react.ts';
 import { SEO           } from '../components/SEO';
 import { innovativeMicroSaasServices2030           } from '../data/innovativeMicroSaasServices2030';
@@ -26,9 +11,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
 
   const getFilteredServices = () => {;
     let services: any[] = [];
-<<<<<<< HEAD
-
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -41,33 +23,14 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-<<<<<<< HEAD
-        break;
-
-    if (searchTerm) {
-      services = services.filter(service =>
-=======
         break}
 
     if (searchTerm) {
-<<<<<<< HEAD
-      services = services.filter(service => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanystring)            => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )};
-=======;
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some((tag: anyanyanyanyanyanyanyanyanyanystring)           => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
-<<<<<<< HEAD
-
-    if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory);
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -77,15 +40,8 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
     return services};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const getCategories = () => {;
-    let services[] = [];
-=======
   const getCategories = () => {;
     let services: any[] = [];
-<<<<<<< HEAD
-
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -98,9 +54,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
         break;
       case 'ai':
         services = comprehensiveAIServices2030;
-<<<<<<< HEAD
-        break;
-=======
         break}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -207,14 +160,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                   Learn More
-<<<<<<< HEAD
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )} else if (activeTab === 'it') {;
-=======;
                 </a>;
               </div>;
             </div>;
@@ -318,14 +263,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
 
                   Learn More
-<<<<<<< HEAD
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )} else {;
-=======;
                 </a>;
               </div>;
             </div>;
@@ -441,23 +378,12 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
 
                   Learn More
-<<<<<<< HEAD
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )};
-=======;
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       );
-<<<<<<< HEAD
-
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -605,16 +531,8 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-<<<<<<< HEAD
-                  setSelectedCategory('all')}}
-                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors";
-=======;
                   setSelectedCategory('all');
                 }}
-<<<<<<< HEAD
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-
-=======
                 className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
@@ -643,14 +561,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
 
                 Email Us
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </div>;

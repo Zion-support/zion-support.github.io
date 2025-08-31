@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export interface RevolutionaryMicroSaasService2025 {
-=======
 export interface RevolutionaryMicroSaasService {
 
 
@@ -38,10 +35,6 @@ contactInfo: {;
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
   
 
 

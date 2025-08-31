@@ -15,9 +15,6 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -63,9 +60,6 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  growthRate: string;
-=======
 growthRate: string;
 
 
@@ -108,9 +102,6 @@ export interface ITService {
   support: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  compliance: string[];
-=======
 compliance: string[];
 
 
@@ -155,9 +146,6 @@ export interface AIService {
   useCases: string[];
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  ethicalAI: string[];
-=======
 ethicalAI: string[];
 
 
@@ -330,13 +318,6 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     setupTime: "6-8 weeks",
     integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "Custom APIs"],
     freeTier: false,
-<<<<<<< HEAD
-    trialPeriod: "21 days",
-    innovationLevel: "Advanced",
-    marketSize: "$2.1 billion by 2026",
-    growthRate: "180% annual growth"
-
-=======
     trialPeriod: "30 days",
     innovationLevel: "Revolutionary",
     marketSize: "$376.3 billion by 2026",
@@ -815,10 +796,6 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     support: "16/7 support",
     innovationLevel: "Advanced",
     marketSize: "$2.8 billion by 2026",
-<<<<<<< HEAD
-    compliance: ["GDPR", "HIPAA", "Industry 4.0"]
-
-=======
     compliance["GDPR", "HIPAA", "Industry 4.0"]
   }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -912,18 +889,6 @@ export const revolutionaryAIServices2026: AIService[] = [
     useCases["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 billion by 2026",
-<<<<<<< HEAD
-    ethicalAI: ["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
-
-];
-
-// Export all services
-export const ALL_REVOLUTIONARY_SERVICES_2026 = [
-  ...revolutionaryMicroSaasServices2026,
-  ...revolutionaryITInfrastructureServices2026,
-  ...revolutionaryAIServices2026
-];}}}}}}}
-=======
     ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
   }
 ];

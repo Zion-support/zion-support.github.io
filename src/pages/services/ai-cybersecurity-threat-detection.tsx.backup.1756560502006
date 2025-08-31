@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '@/components/SEO';
-import { Shield,
-  Eye,
-  AlertTriangle,
-  Zap,
-  Lock,
-  Activity,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { SEO             } from '@/components/SEO';
@@ -34,9 +22,6 @@ import { Shield,
   Cpu,
   Brain,
   Users
-<<<<<<< HEAD
-export default function AICybersecurityThreatDetection(...args: any[]): any {
-=======
             } from 'lucide-react.ts';
 
 export default function AICybersecurityThreatDetection(...args: []):  {
@@ -65,15 +50,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
     {
       icon: Lock,
       title: 'Automated Response',
-<<<<<<< HEAD
-      description: 'Instant threat containment and remediation without human intervention'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Intelligence',
-      description: 'Live threat intelligence feeds and global attack pattern recognition'
-
-=======
       description: 'Instant threat containment and remediation without human intervention';
     },;
     {;
@@ -128,15 +104,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
         'Full AI suite',
         'Custom AI models',
         'Dedicated security team',
-<<<<<<< HEAD
-        'Advanced compliance',
-        'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
-      ],
-      popular: false
-
-=======
         'Advanced compliance',;
         'On-premise options',;
         'SLA guarantees',;
@@ -161,15 +128,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
     {
       icon: Target,
       title: 'Zero False Positives',
-<<<<<<< HEAD
-      description: 'Advanced AI reduces alert fatigue with intelligent filtering'
-    },
-    {
-      icon: BarChart3,
-      title: '60% Cost Reduction',
-      description: 'Automated security reduces manual intervention and operational costs'
-
-=======
       description: 'Advanced AI reduces alert fatigue with intelligent filtering';
     },;
     {;
@@ -194,15 +152,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
     {
       title: 'DDoS Attacks',
       description: 'Predictive AI blocks distributed attacks before they impact services',
-<<<<<<< HEAD
-      icon: Network
-    },
-    {
-      title: 'Insider Threats',
-      description: 'Behavioral analysis detects unusual user activities and data access patterns',
-      icon: Users
-
-=======
       icon: Network;
     },;
     {;
@@ -223,10 +172,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -778,16 +723,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 Contact Security Team
               </button>
             </div>
-<<<<<<< HEAD
-
-            <p className="text-gray-400 mt-6">
-              No credit card required • 30-day free trial • 24/7 security monitoring
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
             
             <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • 24/7 security monitoring;

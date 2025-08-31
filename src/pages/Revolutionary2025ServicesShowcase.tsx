@@ -83,32 +83,12 @@ import { Search,
   SkipForward2,
   PlayCircle,
   PauseCircle
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { revolutionary2025AdvancedMicroSaasServices              } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices              } from '../data/revolutionary-2025-specialized-it-ai-services';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices               } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices               } from '../data/revolutionary-2025-specialized-it-ai-services';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Combine all services
-const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
-  const [services, setServices] = useState<any>(ALL_SERVICES);
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices              } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices              } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-<<<<<<< HEAD
-const Revolutionary2025ServicesShowcase: React.FC = () => {;
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
-=======
 const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ALL_SERVICES);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

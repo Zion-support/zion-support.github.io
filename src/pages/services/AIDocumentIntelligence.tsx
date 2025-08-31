@@ -92,10 +92,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['99.5% OCR accuracy', 'Real-time processing', 'Enterprise security'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['99.5% OCR accuracy', 'Real-time processing', 'Enterprise security'].map((t)              => (

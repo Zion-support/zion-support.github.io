@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { User,
-  Mail,
-  Phone,
-  Building,
-  Globe,
-  MapPin,
-  Camera,
-  Save,
-  Edit,
-=======
 import React, { useState              } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -51,12 +34,6 @@ import { User,
   Brain,
   Cloud,
   Rocket
-<<<<<<< HEAD
- } from 'lucide-react';
-interface UserProfile {
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -86,13 +63,6 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
-<<<<<<< HEAD
-  avatar: string}
-interface NotificationSettings {
-=======
-<<<<<<< HEAD
-  avatar: string;
-=======
 avatar: string;
 
 
@@ -130,13 +100,6 @@ interface NotificationSettings {
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-<<<<<<< HEAD
-  weeklyReports: boolean}
-interface SecuritySettings {
-=======
-<<<<<<< HEAD
-  weeklyReports: boolean;
-=======
 weeklyReports: boolean;
 
 
@@ -173,14 +136,6 @@ interface SecuritySettings {
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-<<<<<<< HEAD
-loginHistory: Array<any>}
-const Profile: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
-=======
-<<<<<<< HEAD
-loginHistory: Array<any>;
-=======
 loginHistory: Array<any>;
 
 
@@ -196,10 +151,6 @@ loginHistory: Array<any>;
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const Profile: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('profile');
-=======
 const Profile: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('profile');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -295,19 +246,7 @@ const Profile: React.FC = (): JSX.Element => {;
       setError('Failed to change password. Please try again.')} finally {
       setIsLoading(false)}
   };
-<<<<<<< HEAD
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
-=======
 
-<<<<<<< HEAD
-  const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)               => {
-    setNotifications(prev => ({
-      ...prev,;
-      [key]: !prev[key];
-    }))};
-
-  const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-=======;
   const handleNotificationToggle = (key: anyanyanyanyanyanyanyanyanyanyanyanyanykeyof NotificationSettings)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => ({;
@@ -315,9 +254,6 @@ const Profile: React.FC = (): JSX.Element => {;
       [key]: !prev[key];
     }));
   };
-<<<<<<< HEAD
-  const getPasswordStrength = (password: string) => {;
-=======
 
   const getPasswordStrength = (password: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -485,17 +421,6 @@ const Profile: React.FC = (): JSX.Element => {;
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
-                value={profile.company}
-=======
-<<<<<<< HEAD
-                value={profile.comp}
-                onChange = {
-  (e) => setProfile(prev => ({ ...prev,
-  comp: e.target.value 
-
-}))}
-=======
                 value={profile.comp}
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onChange = {
@@ -533,16 +458,6 @@ const Profile: React.FC = (): JSX.Element => {;
   industry: e.target.value 
 }))}
                 disabled={!isEditing}
-<<<<<<< HEAD
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {industries.map((industry)  => (
-=======
-<<<<<<< HEAD
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-
-                {industries.map((industry)              => (
-=======
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)               => (

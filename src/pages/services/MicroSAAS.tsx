@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {
-=======
 import React from 'react.ts';
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings               } from 'lucide-react.ts';
 
@@ -146,10 +138,6 @@ const MicroSAAS = () => {
               and scale profitable software businesses.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microsaasServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {microsaasServices.map((service, index)              => (
@@ -186,10 +174,6 @@ const MicroSAAS = () => {
               SAAS applications.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {technologies.map((tech, index)              => (
@@ -224,10 +208,6 @@ const MicroSAAS = () => {
               domain-specific expertise and compliance requirements.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index)              => (

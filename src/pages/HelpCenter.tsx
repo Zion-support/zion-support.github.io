@@ -29,30 +29,6 @@ import { Search,
   MessageSquare,
   Calendar,
   Clock,
-<<<<<<< HEAD
-  CheckCircle,
-  AlertCircle,
-  Info
-} from 'lucide-react';
-interface HelpSection {
-=======
-<<<<<<< HEAD
-  MapPin
-interface FAQItem {
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   CheckCircle,
   AlertCircle,
   Info
@@ -122,30 +98,6 @@ interface FAQItem {
   question: string;
   answer: string;
   category: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  tags: string[];
-
-interface HelpCategory {
-  id: string;
-  title: string;
-  description: string;
-  icon: ;
-  color: string;
-  articleCount: number;
-  path: string;
-
-interface SupportOption {
-  title: string;
-  description: string;
-  icon: ;
-  color: string;
-  action: string;
-  path: string;
-
-const helpCategories: HelpCategory[] = [;
-=======
 
 
 
@@ -410,13 +362,6 @@ const faqData: FAQItem[] = [
     category: 'Security'
   }
 ];
-<<<<<<< HEAD
-export function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const handleSearch = (query: string) => {
-=======
 
 export function HelpCenter(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
@@ -437,37 +382,8 @@ export function HelpCenter(...args: any[]): any {
     setFilteredFAQs(filtered);
   };
   const filteredFAQ = selectedCategory === 'All' 
-<<<<<<< HEAD
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
-=======
     ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    switch (category) {
-      case 'getting-started': return BookOpen;
-      case 'services': return Code;
-      case 'marketplace': return Building;
-      case 'billing': return Award;
-      case 'account': return Users;
-      case 'troubleshooting': return AlertCircle;
-      default: return HelpCircle;
-
-  };
-
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    switch (category) {
-      case 'getting-started': return 'text-blue-500';
-      case 'services': return 'text-purple-500';
-      case 'marketplace': return 'text-green-500';
-      case 'billing': return 'text-yellow-500';
-      case 'account': return 'text-indigo-500';
-      case 'troubleshooting': return 'text-red-500';
-      default: return 'text-zion-cyan';
-
-  };
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
   return (
@@ -645,26 +561,6 @@ export function HelpCenter(...args: any[]): any {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                          className="overflow-hidden"
-
-                          <div className="px-6 pb-6">
-                            <div className="border-t border-zion-cyan/20 pt-4">
-                              <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
-                              <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
-                                <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
-                                  {getCategoryIcon(faq.category)({ className: anyanyanyanyanyanyanyanyanyanyanyanyany"h-4 w-4" })}
-                                  {helpCategories.find(c              => c.id === faq.category)?.title}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <Lightbulb className="h-4 w-4" />
-                                  Helpful
-                                </span>
-                              </div>
-                            </div>
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           className="border-t border-cyan-400/20"
                         >

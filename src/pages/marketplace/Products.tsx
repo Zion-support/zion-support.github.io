@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-=======
-<<<<<<< HEAD
-const Products: React.FC = (): JSX.Element => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Marketplace - Products</h1>
-			<p className="text-xl text-gray-300">Browse available products.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search, 
@@ -70,11 +54,6 @@ import { Search,
   Infinity,
   Zap as ZapIcon,
   MessageCircle
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-export default function MarketplaceProducts() {
-=======
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
@@ -383,9 +362,6 @@ export default function MarketplaceProducts(...args: any[]): any {
         return b.featured ? 1 : -1;
     }
   });
-<<<<<<< HEAD
-  const formatPrice = (price: number, currency: string) => {
-=======
 
   const formatPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, currency: string)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -394,10 +370,6 @@ export default function MarketplaceProducts(...args: any[]): any {
       currency: currency
     }).format(price);
   };
-<<<<<<< HEAD
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-=======
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (

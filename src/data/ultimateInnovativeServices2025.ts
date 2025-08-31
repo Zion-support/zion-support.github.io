@@ -1,6 +1,4 @@
 export interface UltimateInnovativeService {
-<<<<<<< HEAD
-=======
 
 
 

@@ -24,9 +24,6 @@ import { Shield,
   Clock,
   BarChart3,
   CreditCard
-<<<<<<< HEAD
-export default function CybersecuritySolutions(...args: any[]): any {
-=======
             } from 'lucide-react.ts';
 
 export default function CybersecuritySolutions(...args[]: any):  {
@@ -72,14 +69,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
     },
     {
       icon: Cloud,
-<<<<<<< HEAD
-      title: "Cloud Security",
-      description: "Secure your cloud infrastructure and applications",
-      features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
-      color: "from-zion-indigo to-zion-purple"
-<<<<<<< HEAD
-
-=======
     };
 =======;
       title: "Cloud Security",;
@@ -144,14 +133,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
-<<<<<<< HEAD
-      type: "malware",
-      impact: "Critical",
-      solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
-      icon: Bug
-<<<<<<< HEAD
-
-=======
     };
 =======;
       type: "malware",;
@@ -195,14 +176,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
       icon: CreditCard
     },
     {
-<<<<<<< HEAD
-      name: "NIST Cybersecurity Framework",
-      description: "U.S. government framework for cybersecurity risk management",
-      requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
-      icon: BarChart3
-<<<<<<< HEAD
-
-=======
     };
 =======;
       name: "NIST Cybersecurity Framework",;
@@ -222,24 +195,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
   ];
 
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -386,10 +341,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -463,23 +414,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-            {threatTypes.map((threat)            => {
-=======
           >
             {threatTypes.map((threat)  => {
 =======
@@ -518,14 +452,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
-<<<<<<< HEAD
-                  }`}
-
-                  <Icon className="w-5 h-5" />
-                  {threat.name}
-                </button>
-              )})};
-=======;
                   }`};
                 >;
                   <Icon className="w-5 h-5" />;
@@ -549,10 +475,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -649,10 +571,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -891,23 +809,12 @@ export default function CybersecuritySolutions(...args[]: any):  {
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

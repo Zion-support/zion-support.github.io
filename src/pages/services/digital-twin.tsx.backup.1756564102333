@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet             } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link             } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database              } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function DigitalTwin(...args: []):  {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
-<<<<<<< HEAD
-
-              ].map((feature, index)             => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function DigitalTwin(...args: []):  {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-<<<<<<< HEAD
-
-              ].map((application, index)             => (
-=======
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -322,16 +309,6 @@ export default function DigitalTwin(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

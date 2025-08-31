@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
-export default function BlockchainEnterpriseSolutions(...args[]):  {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../../components/SEO';
-import { motion               } from 'framer-motion.ts';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle               } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { SEO              } from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle export default function BlockchainEnterpriseSolutions(...args: any[]): any {
-=======
 import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle              } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -172,10 +156,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -226,10 +206,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               Comprehensive blockchain solutions tailored to your business needs and industry requirements
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)               => (
@@ -293,10 +269,6 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
               and business processes
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
             {useCases.map((useCase, index)               => (

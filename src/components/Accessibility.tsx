@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import { useState, useEffect               } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import {
-  Accessibility,
-  Type,
-  Eye,
-  Volume2,
-  Keyboard,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Accessibility as AccessibilityIcon, 
@@ -46,18 +34,6 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-<<<<<<< HEAD
-export function Accessibility() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    reducedMotion: false,
-    soundEnabled: true,
-    theme: 'auto'
-  });
-  useEffect(() => {
-=======
 
 export function Accessibility(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
@@ -112,9 +88,6 @@ theme: 'auto';
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-<<<<<<< HEAD
-  const applySettings = (newSettings: AccessibilitySettings) => {;
-=======
 
   const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -141,18 +114,7 @@ theme: 'auto';
     } else {
       root.classList.remove('light-theme', 'dark-theme');
   };
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-=======
 
-<<<<<<< HEAD
-  const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
-    const newSettings = {
-  ...settings,;
-  [key]: value ;
-
-};
-=======
   const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newSettings = {

@@ -1,11 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react.ts';
 type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
-<<<<<<< HEAD
-  theme: Theme;
-  setTheme: (theme: Theme)  => void;
-  isDark: boolean}
-=======
 
 
 
@@ -22,10 +17,6 @@ interface ThemeContextType {
 
 
   theme: anyanyanyanyanyanyanyanyanyanyanyanyanyanyTheme;
-<<<<<<< HEAD
-  setTheme: (theme: Theme)               => void;
-  isDark: boolean;
-=======
   setTheme: anyanyanyanyanyanyanyanyanyanyanyanyanyany(theme: Theme)                => void;
 isDark: boolean;
 
@@ -52,29 +43,14 @@ export const useTheme = () => {;
     throw new Error('useTheme must be used within a ThemeProvider');
   return context;
 };
-<<<<<<< HEAD
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-<<<<<<< HEAD
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-=======
 interface ThemeProviderProps extends React.PropsWithChildren<{
 }> {
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   children: React.ReactNode}
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-<<<<<<< HEAD
-  const [theme, setTheme] = useState<Theme>(() => {
-=======
-<<<<<<< HEAD
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'null') {
-=======
   const [theme, setTheme] = useState<any>(() => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof window !== 'null') {
@@ -98,21 +74,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         root.classList.add('dark');
         root.classList.remove('light')} else {
         root.classList.add('light');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        root.classList.remove('dark');
-
-    };
-
-    updateTheme();
-
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanyanyanydark)');
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()               => mediaQuery.removeEventListener('change', updateTheme);
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         root.classList.remove('dark')}
     };
@@ -120,9 +81,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     if (theme = == 'system') {;
       const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanyanyanydark)');
       mediaQuery.addEventListener('change', updateTheme);
-<<<<<<< HEAD
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
-=======
       return ()                => mediaQuery.removeEventListener('change', updateTheme)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

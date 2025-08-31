@@ -80,15 +80,6 @@ import { Brain,
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
-<<<<<<< HEAD
-} from 'lucide-react';
-import SEO from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-export default function ComprehensiveServicesOverview2026(...args[]):  {
-=======
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -215,26 +206,11 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s               => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '300-800%',
-<<<<<<< HEAD
-      innovationLevel: 'Advanced'
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       innovationLevel: 'Advanced';
     };
   ];
   const filteredCategories = selectedCategory === 'all'
-<<<<<<< HEAD
-    ? serviceCategories
-    : serviceCategories.filter(cat => cat.id === selectedCategory);
-  const toggleCategoryExpansion = (categoryId: string) => {;
-=======
     ? serviceCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyserviceCategories.filter(cat              => cat.id === selectedCategory);
 
   const toggleCategoryExpansion = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -453,16 +429,6 @@ export default function ComprehensiveServicesOverview2026(...args[]: any):  {
 }}
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
-<<<<<<< HEAD
-                      >
-                        <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)  => (
-=======
-<<<<<<< HEAD
-
-                        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)              => (
-=======
                       >
                         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex)               => (

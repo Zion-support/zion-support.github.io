@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
-=======
 import React from 'react.ts';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3             } from 'lucide-react.ts';
 
@@ -24,14 +20,6 @@ const CloudServices = () => {
     },
     {
       title: "Cloud Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
-      price: "From $6,500/month",
-      features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
-      icon: Shield
-<<<<<<< HEAD
-
-=======
     };
 =======;
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
@@ -57,14 +45,6 @@ const CloudServices = () => {
       features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
-<<<<<<< HEAD
-      name: "Google Cloud Platform",
-      description: "AI-first cloud platform with advanced analytics",
-      icon: Globe,
-<<<<<<< HEAD
-      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
-
-=======
       features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     };
 =======;
@@ -241,14 +221,6 @@ const CloudServices = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;

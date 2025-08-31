@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail               } from 'lucide-react.ts';
@@ -69,9 +58,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -105,12 +91,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   icon: Shield,
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
@@ -137,9 +117,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 transform your enterprise operations.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -163,12 +140,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   step: "04",
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (

@@ -1,115 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  RefreshCw, 
-  TrendingUp, 
-  BarChart3, 
-  Settings, 
-  Users, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Play, 
-  Download, 
-  Mail, 
-  Target, 
-  Activity, 
-  Database, 
-  Calculator, 
-  PieChart, 
-  Globe, 
-  Clock, 
-  Zap, 
-  Eye, 
-  Brain, 
-  Cpu, 
-  Cloud, 
-  Smartphone 
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-export default function DigitalTransformation() {
-  const features = [
-    {
-      icon: Brain,
-      title: "Digital Strategy",
-      description: "Develop comprehensive digital transformation roadmap and strategy."
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Migrate legacy systems to modern cloud infrastructure and platforms."
-    },
-    {
-      icon: Settings,
-      title: "Process Automation",
-      description: "Automate manual processes and workflows for improved efficiency."
-    },
-    {
-      icon: Users,
-      title: "Customer Experience",
-      description: "Enhance customer journey and digital touchpoints across all channels."
-    },
-    {
-      icon: Shield,
-      title: "Digital Security",
-      description: "Implement robust cybersecurity and data protection measures."
-    },
-    {
-      icon: TrendingUp,
-      title: "Data Analytics",
-      description: "Leverage data insights to drive business decisions and growth."
-    }
-  ];
-
-  const benefits = [
-    "Increase operational efficiency by 40%",
-    "Improve customer satisfaction by 60%",
-    "Reduce operational costs by 30%",
-    "Accelerate time-to-market by 50%",
-    "Enhance employee productivity by 35%",
-    "Boost revenue growth by 25%"
-  ];
-
-  const services = [
-    {
-      title: "Digital Strategy & Consulting",
-      description: "Comprehensive assessment and roadmap development for your digital transformation journey.",
-      icon: Target
-    },
-    {
-      title: "Legacy System Modernization",
-      description: "Transform outdated systems into modern, scalable, and efficient solutions.",
-      icon: RefreshCw
-    },
-    {
-      title: "Cloud Migration & Infrastructure",
-      description: "Seamless migration to cloud platforms with optimized infrastructure design.",
-      icon: Cloud
-    },
-    {
-      title: "Process Automation & Optimization",
-      description: "Streamline operations with intelligent automation and workflow optimization.",
-      icon: Settings
-    },
-    {
-      title: "Customer Experience Enhancement",
-      description: "Create seamless, personalized customer experiences across all touchpoints.",
-      icon: Users
-    },
-    {
-      title: "Data Strategy & Analytics",
-      description: "Build data-driven decision-making capabilities with advanced analytics.",
-      icon: BarChart3
-    }
-  ];
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone               } from 'lucide-react.ts';
@@ -177,16 +65,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-400">{feature.description}</p>
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -218,10 +96,6 @@ import { Link               } from 'react-router-dom.ts';
                   icon: TrendingUp,
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -286,10 +160,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Ensure digital security and regulatory compliance.",
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
-<<<<<<< HEAD
-
-              ].map((area, index)              => (
-=======
                 }
               ].map((area, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -362,10 +232,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Advanced cybersecurity and compliance solutions.",
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
-<<<<<<< HEAD
-
-              ].map((tech, index)              => (
-=======
                 }
               ].map((tech, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -411,15 +277,6 @@ import { Link               } from 'react-router-dom.ts';
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-              <div className="space-y-6">
-                {benefits.slice(3).map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <p className="text-slate-300 text-lg">{benefit}</p>
-                  </div>
-                ))}
-=======
 
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
@@ -454,14 +311,6 @@ import { Link               } from 'react-router-dom.ts';
                 End-to-end digital transformation solutions tailored to your business needs.
               </p>
             </div>
-<<<<<<< HEAD
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -484,10 +333,6 @@ import { Link               } from 'react-router-dom.ts';
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

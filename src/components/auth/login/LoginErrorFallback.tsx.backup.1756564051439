@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { AlertTriangle, RefreshCw interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
-
-  error: anyanyanyanyanyanyanyanyanyanyanyanyanyError;
-  resetErrorBoundary: ()              => void;
-
-export default function LoginErrorFallback(...args: any[]): any {;
-=======
 import React from 'react.ts';
 import { AlertTriangle, RefreshCw   
             } from 'lucide-react.ts';
@@ -41,28 +32,13 @@ export default function LoginErrorFallback(...args[]: any):  {
         <button
           onClick={resetErrorBoundary}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
-
-=======
         >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
-      </div>
-    </div>
-  )};
-=======;
           <RefreshCw className="w-4 h-4" />;
           Try Again;
         </button>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

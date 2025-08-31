@@ -21,24 +21,6 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
-<<<<<<< HEAD
-} from 'lucide-react';
-import { servicesCatalog } from "../data/servicesCatalog";
-import { innovativeServices2027 } from "../data/innovativeServices2027";
-export const ComprehensivePricingGuide2027: React.FC = () => {;
-=======
-<<<<<<< HEAD
-import { servicesCatalog               } from '../data/servicesCatalog';
-import { innovativeServices2027               } from '../data/innovativeServices2027';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { servicesCatalog                } from '../data/servicesCatalog';
-import { innovativeServices2027                } from '../data/innovativeServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { servicesCatalog               } from '../data/servicesCatalog';
 import { innovativeServices2027               } from '../data/innovativeServices2027';
@@ -112,21 +94,13 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-=======
 
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 ;
 ;
 };
-<<<<<<< HEAD
-  const getPriceRange = (price: string) => {;
-=======
 
   const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -135,27 +109,10 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High'};
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getPriceColor = (price: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const range = getPriceRange(price);
-    switch (range) {
-      case 'Low': return 'text-green-400';
-      case 'Medium': return 'text-yellow-400';
-      case 'High': return 'text-red-400';
-<<<<<<< HEAD
-      default: return 'text-white';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-white'}
   };
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string)  => {
-=======
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -250,16 +207,6 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
-                {categories.map(category  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-
-                {categories.map(category               => (
-=======
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {categories.map(category                => (
@@ -274,16 +221,6 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
-                {priceRanges.map(range  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-
-                {priceRanges.map(range               => (
-=======
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {priceRanges.map(range                => (
@@ -331,14 +268,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
   { duration: 0.8,
   delay: 0.4 
 }}
-<<<<<<< HEAD
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-=======
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-<<<<<<< HEAD
-
-          {sortedServices.map((service, index)               => (
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >

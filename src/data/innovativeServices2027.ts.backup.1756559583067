@@ -25,10 +25,6 @@ export interface InnovativeService2027 {
   rating: number;
   reviews: number;
   launchDate: string;
-<<<<<<< HEAD
-  status: 'active' | 'beta' | 'coming-soon';
-
-=======
 status: 'active' | 'beta' | 'coming-soon';
 
 
@@ -139,20 +135,11 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-<<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]            => {
-  if (category === 'All') {;
-    return innovativeServices2027};
-  return innovativeServices2027.filter(service => service.category === category)};
-=======
 export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]           => {;
   if (category === 'All') {;
     return innovativeServices2027;
 
   return innovativeServices2027.filter(service => service.category === category);
-<<<<<<< HEAD
-};}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

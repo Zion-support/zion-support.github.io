@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import {
-  Menu,
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation                } from 'react-router-dom.ts';
-import { motion, AnimatePresence                } from 'framer-motion.ts';
-import { MobileSidebarToggle                } from './MobileSidebarToggle';
-import { Menu, 
-=======
 import React, { useState, useEffect               } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
@@ -193,17 +178,6 @@ import { Menu,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
-<<<<<<< HEAD
-} from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
-=======
-<<<<<<< HEAD
-export const FuturisticNavigation: React.FC = (): JSX.Element => {
-=======
-<<<<<<< HEAD
-               } from 'lucide-react.ts';
-export const FuturisticNavigation: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -220,15 +194,6 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    setActiveDropdown(null)}, [location.pathname]);
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)                => {;
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setActiveDropdown(null);
   }, [location.pathname]);

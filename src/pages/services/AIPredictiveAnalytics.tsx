@@ -100,10 +100,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t) => (
-=======
 
         <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
           {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t)              => (

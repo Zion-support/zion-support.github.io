@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, CheckCircle, AlertCircle, Clock, Zap, Brain, Shield, Rocket } from 'lucide-react';
-
-interface LoadingState {
-  type: 'loading' | 'success' | 'error' | 'warning';
-  message: string;
-  progress?: number;
-  estimatedTime?: number;
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Loader2, Zap, Brain, Cloud, Atom               } from 'lucide-react.ts';
@@ -322,17 +311,6 @@ export function EnhancedLoadingSpinner({
     const config = iconConfig[loadingState.type];
     if (!config) return null;
 
-<<<<<<< HEAD
-    return (
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        className={`absolute -top-2 -right-2 ${config.color} bg-white dark:bg-zion-slate-900 rounded-full p-1`}
-      >
-        <config.icon className="w-4 h-4" />
-      </motion.div>
-    );
-=======
 
 
 

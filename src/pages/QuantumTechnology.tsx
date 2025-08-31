@@ -23,13 +23,6 @@ import { Atom,
   Cloud,
   Lock,
   Eye
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function QuantumTechnology(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function QuantumTechnology(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function QuantumTechnology(...args[]: any):  {
@@ -201,10 +194,6 @@ export default function QuantumTechnology(...args[]: any):  {
     };
   };
   const filteredApplications = selectedApplication === 'all'
-<<<<<<< HEAD
-    ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication);
-=======
     ? quantumApplications: anyanyanyanyanyanyanyanyanyanyanyanyanyquantumApplications.filter(app              => app.category === selectedApplication);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
@@ -285,10 +274,6 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumServices.map((service, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumServices.map((service, index)              => (
@@ -346,25 +331,6 @@ export default function QuantumTechnology(...args[]: any):  {
           {/* Application Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-            {applications.map((app)              => {
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             {applications.map((app)  => {
@@ -381,9 +347,6 @@ export default function QuantumTechnology(...args[]: any):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-<<<<<<< HEAD
-            {applications.map((app) => {;
-=======
             {applications.map((app)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -411,10 +374,6 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {filteredApplications.map((app, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {filteredApplications.map((app, index)              => (
@@ -479,10 +438,6 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumTechnologies.map((tech, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumTechnologies.map((tech, index)              => (
@@ -545,10 +500,6 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumAdvantages.map((advantage, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumAdvantages.map((advantage, index)              => (
@@ -595,9 +546,6 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -625,9 +573,6 @@ export default function QuantumTechnology(...args[]: any):  {
                 title: "Deployment & Optimization",
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
-<<<<<<< HEAD
-            ].map((phase, index) => (
-=======
 
             ].map((phase, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
