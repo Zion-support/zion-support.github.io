@@ -49,7 +49,15 @@ export function Footer() {
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" }
+        { name: "AI Project Management", href: "/services/ai-project-management" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
+        { name: "AI Customer Experience", href: "/services/ai-customer-experience-analytics" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
+        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "Micro SAAS Solutions", href: "/micro-saas" }
       ]
     },
     {
@@ -143,6 +151,29 @@ export function Footer() {
     { number: "25+", label: "Countries Served", icon: Globe },
     { number: "99%", label: "Client Satisfaction", icon: Star },
     { number: "15+", label: "Years Experience", icon: Award }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: '#'
+    },
+    {
+      icon: Clock,
+      text: 'Mon-Fri: 9AM-6PM EST',
+      href: '#'
+    }
   ];
 
   return (

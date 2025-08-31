@@ -1,0 +1,368 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  BarChart3, 
+  Target, 
+  TrendingUp, 
+  Zap, 
+  Brain, 
+  CheckCircle, 
+  ArrowRight,
+  Users,
+  Globe,
+  Star,
+  Award,
+  FileText,
+  Search,
+  Share2,
+  PieChart,
+  LineChart
+} from 'lucide-react';
+
+export default function AIBusinessIntelligenceAnalytics() {
+  const features = [
+    {
+      icon: Brain,
+      title: "Advanced AI Analytics",
+      description: "Machine learning algorithms for deep data insights and predictive modeling"
+    },
+    {
+      icon: LineChart,
+      title: "Real-Time Dashboards",
+      description: "Live business metrics with interactive visualizations and alerts"
+    },
+    {
+      icon: Target,
+      title: "Predictive Intelligence",
+      description: "Forecast business trends and identify growth opportunities"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive tracking of KPIs across all business functions"
+    },
+    {
+      icon: Zap,
+      title: "Automated Insights",
+      description: "AI-generated reports and actionable recommendations"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Analytics",
+      description: "Team-based insights with shared dashboards and workflows"
+    }
+  ];
+
+  const benefits = [
+    "Increase revenue by 30-50%",
+    "Improve decision-making speed by 70%",
+    "Reduce operational costs by 40%",
+    "Boost customer satisfaction by 55%",
+    "Real-time business monitoring",
+    "Predictive business insights"
+  ];
+
+  const analyticsModules = [
+    "Financial Analytics",
+    "Customer Analytics",
+    "Operational Analytics",
+    "Sales Analytics",
+    "Marketing Analytics",
+    "Performance Analytics",
+    "Risk Analytics",
+    "Competitive Intelligence"
+  ];
+
+  const pricing = [
+    {
+      name: "Starter",
+      price: "$2,800",
+      period: "/month",
+      description: "For small businesses",
+      features: [
+        "Up to 5 users",
+        "Basic AI analytics",
+        "Standard dashboards",
+        "Email support",
+        "Core integrations"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "$5,500",
+      period: "/month",
+      description: "For growing companies",
+      features: [
+        "Up to 25 users",
+        "Advanced AI analytics",
+        "Custom dashboards",
+        "Priority support",
+        "Full integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large organizations",
+      features: [
+        "Unlimited users",
+        "Custom AI models",
+        "White-label options",
+        "Dedicated support",
+        "SLA guarantees"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
+              <BarChart3 className="w-4 h-4 mr-2" />
+              AI-Powered Business Intelligence Analytics
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Business Intelligence Analytics
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business with advanced AI-powered analytics that provide deep insights, predictive intelligence, and real-time decision support for unprecedented growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Business Intelligence
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Leverage cutting-edge AI technology to uncover insights and make data-driven business decisions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-indigo-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Analytics Modules Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Analytics Suite
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform covers every aspect of business intelligence and analytics.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {analyticsModules.map((module, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-indigo-400" />
+                  <span className="text-white font-medium text-lg">{module}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Your Business Intelligence
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join organizations that have revolutionized their business intelligence with AI analytics.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Flexible Pricing for Every Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the business intelligence analytics solution that fits your organization's needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-indigo-500/50 ring-2 ring-indigo-500/20' 
+                    : 'border-slate-700/50'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-indigo-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
+                    : 'border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
+                }`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business Intelligence?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the AI revolution in business intelligence analytics and make data-driven decisions that drive growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
