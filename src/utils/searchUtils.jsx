@@ -27,22 +27,22 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     const description = result.description.toLowerCase();
     
     // Exact title match gets highest score
-    if (title === term)
+    if (title === searchTerm)
         score += 100;
     // Title starts with search term
-    else if (title.startsWith(term))
+    else if (title.startsWith(searchTerm))
         score += 80;
     // Title contains search term
-    else if (title.includes(term))
+    else if (title.includes(searchTerm))
         score += 60;
     // Description contains search term
-    if (description.includes(term))
+    if (description.includes(searchTerm))
         score += 30;
     // Tag matches
-    if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
+    if (result.tags?.some(tag => tag.toLowerCase().includes(searchTerm))) {
         score += 20;
     // Category match
-    if (result.category?.toLowerCase().includes(term)) {
+    if (result.category?.toLowerCase().includes(searchTerm)) {
         score += 15;
     // Boost score based on rating
     if (result.rating) {
@@ -212,10 +212,3 @@ export default {
     fuzzySearch,
     getSearchSuggestions
 };
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
-export default for;
