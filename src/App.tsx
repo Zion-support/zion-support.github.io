@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Enhanced Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
+import EnhancedHeader from './components/EnhancedHeader';
+import EnhancedFooter from './components/EnhancedFooter';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';

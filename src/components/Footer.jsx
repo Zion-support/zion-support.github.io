@@ -1,3 +1,3 @@
-import { EnhancedFooter } from './EnhancedFooter';
+import EnhancedFooter from './EnhancedFooter';
 
 export const Footer = EnhancedFooter;

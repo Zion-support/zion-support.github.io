@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { 
   Users, 
-=======
-<<<<<<< HEAD
-const About: React.FC = (): JSX.Element => {
-=======
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { SEO               } from '@/components/SEO';
-import { Users, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Target, 
   Award, 
   Globe, 
@@ -23,33 +13,24 @@ import { Users,
   Shield,
   Heart,
   Star,
-<<<<<<< HEAD
   CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-<<<<<<< HEAD
-export default function About() {
-=======
+  ArrowRight,
   TrendingUp,
   Lightbulb,
   Cpu,
-  Brain,
   Cloud,
   Lock,
   Database
-              } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function About(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
-function About() {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '25+', label: 'Countries Served', icon: Globe },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
+
   const values = [
     {
       icon: Brain,
@@ -72,6 +53,7 @@ function About() {
       description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
     }
   ];
+
   const team = [
     {
       name: 'Kleber Santos',
@@ -92,12 +74,14 @@ function About() {
       image: '/team/devops-team.jpg'
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
       />
+      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -118,6 +102,7 @@ function About() {
           </motion.div>
         </div>
       </section>
+
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -141,6 +126,7 @@ function About() {
                 and practical business applications.
               </p>
             </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -175,6 +161,7 @@ function About() {
           </div>
         </div>
       </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -187,21 +174,12 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
           </motion.div>
-<<<<<<< HEAD
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
-=======
-          
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {stats.map((stat, index)              => (
-              <motion.div 
-                key={index}
-                className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
@@ -216,6 +194,7 @@ function About() {
           </div>
         </div>
       </section>
+
       {/* Values Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -228,14 +207,9 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-300">The principles that guide everything we do</p>
           </motion.div>
-<<<<<<< HEAD
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-=======
-          
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -251,6 +225,7 @@ function About() {
           </div>
         </div>
       </section>
+
       {/* Team Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -263,14 +238,9 @@ function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
           </motion.div>
-<<<<<<< HEAD
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-=======
-          
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -291,6 +261,7 @@ function About() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -307,24 +278,23 @@ function About() {
               to drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/services"
+              </Link>
+              <Link
+                to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
               >
                 Explore Our Services
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-export default About;
+}
