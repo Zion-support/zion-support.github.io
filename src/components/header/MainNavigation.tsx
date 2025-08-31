@@ -58,9 +58,17 @@ import {
   GraduationCap,
   Handshake,
   ShoppingCart,
-  Truck,
+  ChevronRight,
   Calendar,
-  BookOpen
+  Award,
+  BookOpen,
+  Layers,
+  Factory,
+  HeartHandshake,
+  Briefcase,
+  PenTool,
+  Layout,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -123,6 +131,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </Link>
                       </li>
                       <li>
+                        <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Enterprise Intelligence</span>
+                        </Link>
+                      </li>
+                      <li>
+>>>>>>> b1ff6b8dd0c2bbded9177f8d69b0280f7fb2a968
                         <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Autonomous Logistics</span>
