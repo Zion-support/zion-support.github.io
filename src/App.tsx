@@ -217,13 +217,13 @@ function App() {
           />
 
           {/* Performance Optimizer */}
-          <PerformanceOptimizer enabled={true} />
+          <PerformanceOptimizer enabled={true} showMetrics={true} targetScore={95} />
 
           {/* Enhanced Accessibility */}
-          <EnhancedAccessibilityEnhancer enabled={true} />
+          <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
 
           {/* Mobile Experience Enhancer */}
-          <MobileExperienceEnhancer enabled={true} />
+          <MobileExperienceEnhancer enabled={true} showControls={true} />
 
           {/* Advanced Analytics */}
           <AdvancedAnalytics enabled={true} showMetrics={true} />
