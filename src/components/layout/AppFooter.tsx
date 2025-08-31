@@ -43,6 +43,7 @@ export function AppFooter() {
       title: "AI & Automation",
       services: [
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
+        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
@@ -84,6 +85,7 @@ export function AppFooter() {
     { name: "News & Events", href: "/news" },
     { name: "Partners", href: "/partners" },
     { name: "Case Studies", href: "/case-studies" },
+    { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
     { name: "Contact", href: "/contact" }
   ];
 

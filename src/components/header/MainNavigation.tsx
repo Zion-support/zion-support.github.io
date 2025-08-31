@@ -153,6 +153,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <BarChart3 className="w-3 h-3 mr-2" />
                         AI Data Analytics
@@ -192,6 +198,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum AI Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Neural Networks
                       </Link>
                     </li>
                     <li>
@@ -360,6 +372,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     </li>
                   </ul>
                 </div>
+                  </ul>
+                </div>
               </div>
               
               {/* Quick Actions */}
@@ -437,15 +451,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Users2 className="w-3 h-3 mr-2" />
-                        Find Experts
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/interview-assessment-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Brain className="w-3 h-3 mr-2" />
-                        AI Hiring
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cloud className="w-3 h-3 mr-2" />
+                        Cloud FinOps
                       </Link>
                     </li>
                   </ul>

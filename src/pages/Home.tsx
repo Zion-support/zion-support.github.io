@@ -349,6 +349,22 @@ const ServicesPreviewSection = React.memo(() => {
       href: "/services/edge-computing-platform",
       color: "from-green-500 to-emerald-500",
       features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
     }
   ];
 
@@ -371,7 +387,7 @@ const ServicesPreviewSection = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -586,7 +602,7 @@ const CTASection = React.memo(() => {
               transformation with Zion Tech Group. Let's discuss how we can help you.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
               <Link
                 to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -602,6 +618,18 @@ const CTASection = React.memo(() => {
                 className="px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
               >
                 Explore Services
+              </Link>
+            </div>
+            
+            <div className="flex justify-center">
+              <Link
+                to="/innovative-services-showcase-2026"
+                className="group px-8 py-4 border-2 border-purple-400/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 hover:scale-105"
+              >
+                <span className="flex items-center gap-2">
+                  <Rocket className="w-4 h-4" />
+                  View Innovation Showcase 2026
+                </span>
               </Link>
             </div>
             
