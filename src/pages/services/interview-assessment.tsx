@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
+  Users, 
   Brain, 
   Target, 
   BarChart3, 
@@ -17,91 +17,91 @@ import {
   Monitor,
   FileText,
   Share2,
-  Users,
-  Headphones
+  Video,
+  Mic
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AICustomerSupportAutomation() {
+export default function InterviewAssessment() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand customer queries and provide accurate responses 24/7."
+      title: "AI-Powered Assessment",
+      description: "Advanced AI algorithms evaluate candidate responses and provide objective scoring."
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Provide consistent support across email, chat, social media, and phone channels."
+      icon: Video,
+      title: "Video Interview Analysis",
+      description: "Analyze facial expressions, tone, and body language for comprehensive candidate evaluation."
     },
     {
       icon: Target,
-      title: "Personalized Responses",
-      description: "Deliver personalized customer experiences based on customer history and preferences."
+      title: "Customizable Assessments",
+      description: "Create role-specific assessments tailored to your organization's needs and requirements."
     },
     {
       icon: BarChart3,
       title: "Performance Analytics",
-      description: "Track support metrics and identify areas for improvement with comprehensive analytics."
+      description: "Get detailed insights into candidate performance with comprehensive analytics and reporting."
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamline support processes with intelligent automation and routing."
+      title: "Automated Screening",
+      description: "Streamline your hiring process with automated candidate screening and ranking."
     },
     {
       icon: Users,
-      title: "Human-AI Collaboration",
-      description: "Seamlessly hand off complex issues to human agents when needed."
+      title: "Bias-Free Evaluation",
+      description: "Ensure fair and objective candidate evaluation with AI-powered assessment tools."
     }
   ];
 
   const benefits = [
     {
       icon: Target,
-      title: "24/7 Availability",
-      description: "Provide round-the-clock customer support without increasing staff costs."
+      title: "Better Hiring Decisions",
+      description: "Make more informed hiring decisions with objective, data-driven candidate assessments."
     },
     {
       icon: Lightbulb,
-      title: "Faster Response Times",
-      description: "Reduce customer wait times with instant AI-powered responses and automated solutions."
+      title: "Reduced Bias",
+      description: "Eliminate unconscious bias in hiring with AI-powered objective evaluation."
     },
     {
       icon: Clock,
-      title: "Cost Efficiency",
-      description: "Lower support costs while maintaining high customer satisfaction levels."
+      title: "Faster Hiring",
+      description: "Accelerate your hiring process with automated screening and assessment."
     },
     {
       icon: Star,
-      title: "Improved Satisfaction",
-      description: "Enhance customer experience with quick, accurate, and personalized support."
+      title: "Improved Quality",
+      description: "Hire higher-quality candidates with comprehensive assessment and evaluation."
     }
   ];
 
-  const supportChannels = [
+  const assessmentTypes = [
     {
-      title: "Live Chat",
-      description: "AI-powered chatbots for instant customer support and issue resolution."
+      title: "Technical Skills",
+      description: "Evaluate coding abilities, problem-solving skills, and technical knowledge."
     },
     {
-      title: "Email Support",
-      description: "Automated email responses and intelligent ticket routing for efficient support."
+      title: "Soft Skills",
+      description: "Assess communication, teamwork, leadership, and interpersonal skills."
     },
     {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across all social platforms."
+      title: "Cultural Fit",
+      description: "Evaluate alignment with company values and organizational culture."
     },
     {
-      title: "Phone Support",
-      description: "Intelligent call routing and AI-assisted agent support for phone inquiries."
+      title: "Role-Specific",
+      description: "Custom assessments designed for specific job roles and requirements."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-blue-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -112,26 +112,26 @@ export default function AICustomerSupportAutomation() {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <MessageCircle className="h-8 w-8 text-white" />
+                <Users className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Customer Support Automation
+              AI Interview Assessment
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-teal-100">
-              Transform your customer support with AI-powered automation and intelligent assistance.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-indigo-100">
+              Transform your hiring process with AI-powered interview assessment and candidate evaluation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-teal-600 font-semibold rounded-lg hover:bg-teal-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-teal-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 View All Services
               </Link>
@@ -151,10 +151,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced Support Automation Features
+              Advanced Assessment Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive customer support automation capabilities.
+              Our AI-powered platform provides comprehensive interview assessment capabilities to improve your hiring process.
             </p>
           </motion.div>
 
@@ -168,8 +168,8 @@ export default function AICustomerSupportAutomation() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-teal-100 rounded-lg mb-6">
-                  <feature.icon className="h-8 w-8 text-teal-600" />
+                <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-lg mb-6">
+                  <feature.icon className="h-8 w-8 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -194,10 +194,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Customer Support Automation?
+              Why Choose Our AI Interview Assessment?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of AI-powered support that improves customer satisfaction and efficiency.
+              Experience the benefits of AI-powered assessment that improves hiring quality and efficiency.
             </p>
           </motion.div>
 
@@ -212,8 +212,8 @@ export default function AICustomerSupportAutomation() {
                 className="flex items-start space-x-4"
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg">
-                    <benefit.icon className="h-6 w-6 text-teal-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg">
+                    <benefit.icon className="h-6 w-6 text-indigo-600" />
                   </div>
                 </div>
                 <div>
@@ -230,7 +230,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Assessment Types Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -241,15 +241,15 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Multi-Channel Support
+              Comprehensive Assessment Types
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform supports all major customer support channels for comprehensive coverage.
+              Our platform supports various assessment types to meet your hiring needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {supportChannels.map((channel, index) => (
+            {assessmentTypes.map((assessmentType, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -259,10 +259,10 @@ export default function AICustomerSupportAutomation() {
                 className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {channel.title}
+                  {assessmentType.title}
                 </h3>
                 <p className="text-gray-600">
-                  {channel.description}
+                  {assessmentType.description}
                 </p>
               </motion.div>
             ))}
@@ -271,7 +271,7 @@ export default function AICustomerSupportAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -280,22 +280,22 @@ export default function AICustomerSupportAutomation() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Hiring Process?
             </h2>
-            <p className="text-xl mb-8 text-teal-100 max-w-3xl mx-auto">
-              Join companies that are already leveraging AI to provide exceptional customer support.
+            <p className="text-xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+              Join companies that are already leveraging AI to make better hiring decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-teal-600 font-semibold rounded-lg hover:bg-teal-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-teal-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 Explore All Services
               </Link>

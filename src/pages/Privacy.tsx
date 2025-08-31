@@ -2,454 +2,582 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
-  Lock, 
   Eye, 
+  Lock, 
   Database, 
-  Users, 
   Globe, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
-  Mail, 
-  Phone, 
-  MapPin, 
+  UserCheck,
+  FileText,
   Calendar,
-  ExternalLink,
-  Settings,
-  Trash2,
-  Download
+  Phone,
+  Mail,
+  MapPin,
+  ChevronRight,
+  CheckCircle,
+  AlertTriangle,
+  Info
 } from 'lucide-react';
 
-const Privacy: React.FC = () => {
-  const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
-  const companyAddress = '364 E Main St STE 1008, Middletown, DE 19709';
-  const companyEmail = 'privacy@ziontechgroup.com';
-  const companyPhone = '+1 (302) 464-0950';
+export default function Privacy() {
+  const lastUpdated = 'January 15, 2025';
+  const effectiveDate = 'January 15, 2025';
 
-  const privacySections = [
+  const dataCategories = [
     {
-      title: 'Information We Collect',
+      icon: UserCheck,
+      title: 'Personal Information',
+      description: 'Name, email address, phone number, company information, and other contact details.',
+      examples: ['Full name', 'Email address', 'Phone number', 'Company name', 'Job title']
+    },
+    {
       icon: Database,
-      content: [
-        'Personal information (name, email, phone number)',
-        'Business information (company name, job title)',
-        'Technical data (IP address, browser type, device information)',
-        'Usage data (pages visited, time spent, interactions)',
-        'Communication records (emails, support tickets, chat logs)'
-      ]
+      title: 'Technical Data',
+      description: 'Information about your device, browser, and how you interact with our services.',
+      examples: ['IP address', 'Browser type', 'Device information', 'Usage analytics', 'Cookies']
     },
     {
-      title: 'How We Use Your Information',
+      icon: Globe,
+      title: 'Usage Information',
+      description: 'Data about how you use our website, services, and applications.',
+      examples: ['Pages visited', 'Time spent on site', 'Features used', 'Search queries', 'Error logs']
+    },
+    {
       icon: Eye,
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our offerings',
-        'Process transactions and manage accounts',
-        'Analyze usage patterns and optimize performance',
-        'Ensure security and prevent fraud',
-        'Comply with legal obligations'
-      ]
-    },
-    {
-      title: 'Information Sharing',
-      icon: Users,
-      content: [
-        'We do not sell your personal information',
-        'Share with service providers under strict agreements',
-        'Disclose when required by law or court order',
-        'Share with your consent for specific purposes',
-        'Aggregate data for analytics (no personal identification)'
-      ]
-    },
-    {
-      title: 'Data Security',
-      icon: Lock,
-      content: [
-        'Encryption in transit and at rest',
-        'Regular security audits and assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures'
-      ]
+      title: 'Marketing Data',
+      description: 'Information about your preferences and interactions with our marketing communications.',
+      examples: ['Email preferences', 'Content interests', 'Campaign responses', 'Social media interactions']
     }
   ];
 
-  const yourRights = [
+  const dataUses = [
     {
+      icon: CheckCircle,
+      title: 'Service Provision',
+      description: 'To provide, maintain, and improve our services and customer support.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Communication',
+      description: 'To communicate with you about our services, updates, and relevant information.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Analytics',
+      description: 'To analyze usage patterns and improve our website and services.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Marketing',
+      description: 'To send you relevant marketing communications with your consent.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Legal Compliance',
+      description: 'To comply with legal obligations and protect our rights and safety.'
+    }
+  ];
+
+  const dataSharing = [
+    {
+      icon: Shield,
+      title: 'Service Providers',
+      description: 'Trusted third-party vendors who help us operate our business and provide services.',
+      examples: ['Cloud hosting providers', 'Analytics services', 'Email marketing platforms', 'Customer support tools']
+    },
+    {
+      icon: Globe,
+      title: 'Business Partners',
+      description: 'Strategic partners with whom we collaborate to provide integrated solutions.',
+      examples: ['Technology partners', 'Consulting firms', 'Industry associations', 'Research institutions']
+    },
+    {
+      icon: FileText,
+      title: 'Legal Requirements',
+      description: 'When required by law, court order, or government request.',
+      examples: ['Regulatory compliance', 'Legal proceedings', 'Government investigations', 'Public safety']
+    },
+    {
+      icon: UserCheck,
+      title: 'With Your Consent',
+      description: 'When you explicitly authorize us to share your information.',
+      examples: ['Integration requests', 'Referral programs', 'Joint marketing initiatives', 'Custom solutions']
+    }
+  ];
+
+  const userRights = [
+    {
+      icon: Eye,
       title: 'Access',
-      description: 'Request a copy of your personal data',
-      icon: CheckCircle
+      description: 'Request a copy of the personal data we hold about you.'
     },
     {
+      icon: FileText,
       title: 'Correction',
-      description: 'Update or correct inaccurate information',
-      icon: CheckCircle
+      description: 'Request correction of inaccurate or incomplete personal data.'
     },
     {
+      icon: Database,
       title: 'Deletion',
-      description: 'Request deletion of your personal data',
-      icon: CheckCircle
+      description: 'Request deletion of your personal data in certain circumstances.'
     },
     {
-      title: 'Portability',
-      description: 'Receive your data in a portable format',
-      icon: CheckCircle
-    },
-    {
+      icon: Lock,
       title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: CheckCircle
+      description: 'Request restriction of processing in certain circumstances.'
     },
     {
+      icon: Globe,
+      title: 'Portability',
+      description: 'Request transfer of your data to another service provider.'
+    },
+    {
+      icon: UserCheck,
       title: 'Objection',
-      description: 'Object to certain processing activities',
-      icon: CheckCircle
+      description: 'Object to processing of your data for certain purposes.'
     }
   ];
 
-  const cookies = [
+  const securityMeasures = [
     {
-      category: 'Essential',
-      description: 'Required for basic website functionality',
-      examples: 'Authentication, security, session management',
-      duration: 'Session or 1 year'
+      icon: Shield,
+      title: 'Encryption',
+      description: 'All data is encrypted in transit and at rest using industry-standard protocols.'
     },
     {
-      category: 'Analytics',
-      description: 'Help us understand how visitors use our site',
-      examples: 'Page views, user behavior, performance metrics',
-      duration: '2 years'
+      icon: Lock,
+      title: 'Access Controls',
+      description: 'Strict access controls and authentication mechanisms protect your data.'
     },
     {
-      category: 'Functional',
-      description: 'Enable enhanced features and personalization',
-      examples: 'Language preferences, form data, user settings',
-      duration: '1 year'
+      icon: Database,
+      title: 'Data Minimization',
+      description: 'We only collect and retain data that is necessary for our services.'
     },
     {
-      category: 'Marketing',
-      description: 'Used for targeted advertising and campaigns',
-      examples: 'Ad tracking, remarketing, campaign analytics',
-      duration: '2 years'
+      icon: Eye,
+      title: 'Regular Audits',
+      description: 'Regular security audits and assessments ensure ongoing protection.'
+    },
+    {
+      icon: UserCheck,
+      title: 'Employee Training',
+      description: 'All employees receive regular training on data protection and privacy.'
+    },
+    {
+      icon: Globe,
+      title: 'Incident Response',
+      description: 'Comprehensive incident response plans for any data security issues.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="pt-24 pb-16 px-4 sm:px-6 lg:px-8"
-      >
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-8">
+                <Shield className="w-4 h-4 mr-2" />
+                Privacy & Data Protection
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Privacy
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  {' '}Policy
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                We are committed to protecting your privacy and ensuring the security of your personal information. This policy explains how we collect, use, and safeguard your data.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#data-collection"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 group"
+                >
+                  Learn More
+                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      {/* Policy Overview */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <Shield className="w-10 h-10 text-white" />
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Policy Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              This Privacy Policy describes how Zion Tech Group collects, uses, and protects your personal information when you use our services.
+            </p>
           </motion.div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Privacy Policy
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            We are committed to protecting your privacy and ensuring the security of your personal information. 
-            This policy explains how we collect, use, and safeguard your data.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <Calendar className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Last Updated</h3>
+                <p className="text-gray-400">{lastUpdated}</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <FileText className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Effective Date</h3>
+                <p className="text-gray-400">{effectiveDate}</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <Globe className="w-16 h-16 text-green-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Scope</h3>
+                <p className="text-gray-400">Global Coverage</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Collection */}
+      <section id="data-collection" className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Information We Collect
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We collect various types of information to provide and improve our services, ensure security, and communicate with you effectively.
+            </p>
+          </motion.div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="flex items-center text-gray-400">
-              <Calendar className="w-4 h-4 mr-2" />
-              Last updated: {lastUpdated}
-            </div>
-            <div className="flex items-center text-gray-400">
-              <Globe className="w-4 h-4 mr-2" />
-              Version: 2.1
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Company Information */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Company Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                  <p className="text-gray-300">{companyAddress}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <a href={`mailto:${companyEmail}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-                    {companyEmail}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                  <a href={`tel:${companyPhone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-                    {companyPhone}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Shield className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Data Protection Officer</h3>
-                  <p className="text-gray-300">Available upon request</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Privacy Overview */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Privacy Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {privacySections.map((section, index) => (
+            {dataCategories.map((category, index) => (
               <motion.div
-                key={section.title}
+                key={category.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                    <section.icon className="w-6 h-6 text-white" />
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{section.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                  <p className="text-gray-400 mb-4 leading-relaxed">{category.description}</p>
+                  
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-300">Examples:</p>
+                    <ul className="space-y-1">
+                      {category.examples.map((example, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <ul className="space-y-2">
-                  {section.content.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-2 text-sm">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>
         </div>
-      </motion.div>
+      </section>
 
-      {/* Your Rights */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Your Privacy Rights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {yourRights.map((right, index) => (
+      {/* How We Use Data */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How We Use Your Information
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We use the information we collect for specific, legitimate business purposes that benefit both you and our services.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {dataUses.map((use, index) => (
+              <motion.div
+                key={use.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <use.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{use.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{use.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Data Sharing */}
+      <section className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Information Sharing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are committed to protecting your privacy and only share your information in specific, limited circumstances.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dataSharing.map((sharing, index) => (
+              <motion.div
+                key={sharing.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <sharing.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{sharing.title}</h3>
+                  <p className="text-gray-400 mb-4 leading-relaxed">{sharing.description}</p>
+                  
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-300">Examples:</p>
+                    <ul className="space-y-1">
+                      {sharing.examples.map((example, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Rights */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Your Rights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              You have important rights regarding your personal information. We are committed to honoring these rights and providing you with control over your data.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index) => (
               <motion.div
                 key={right.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <right.icon className="w-6 h-6 text-white" />
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <right.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{right.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{right.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{right.title}</h3>
-                <p className="text-gray-400 text-sm">{right.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </motion.div>
+      </section>
 
-      {/* Cookie Policy */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Cookie Policy</h2>
-          <div className="space-y-4">
-            {cookies.map((cookie, index) => (
+      {/* Security Measures */}
+      <section className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Data Security
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We implement comprehensive security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityMeasures.map((measure, index) => (
               <motion.div
-                key={cookie.category}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl"
+                key={measure.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{cookie.category}</h3>
-                    <p className="text-sm text-gray-400">{cookie.description}</p>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <measure.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <span className="text-sm text-gray-400">Examples:</span>
-                    <p className="text-sm text-gray-300">{cookie.examples}</p>
-                  </div>
-                  <div>
-                    <span className="text-sm text-gray-400">Duration:</span>
-                    <p className="text-sm text-gray-300">{cookie.duration}</p>
-                  </div>
-                  <div className="text-right">
-                    <button className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors duration-300 text-sm">
-                      Manage
-                    </button>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{measure.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{measure.description}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </motion.div>
-
-      {/* Data Retention */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.0 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Data Retention</h2>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Account Data</h3>
-                  <p className="text-gray-300">Retained while your account is active and for 7 years after deactivation for legal compliance.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Transaction Records</h3>
-                  <p className="text-gray-300">Kept for 10 years to comply with financial and tax regulations.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Analytics Data</h3>
-                  <p className="text-gray-300">Aggregated and anonymized data may be retained indefinitely for business intelligence.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Deletion Requests</h3>
-                  <p className="text-gray-300">Personal data is deleted within 30 days of receiving a valid deletion request.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* International Transfers */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.1 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">International Data Transfers</h2>
-            <div className="space-y-4">
-              <p className="text-gray-300">
-                {companyName} operates globally and may transfer your personal data to countries outside your residence. 
-                We ensure all transfers comply with applicable data protection laws through:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300">Standard Contractual Clauses (SCCs) approved by relevant authorities</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300">Adequacy decisions for countries with equivalent data protection standards</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300">Binding corporate rules for intra-group transfers</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300">Other appropriate safeguards as required by law</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      </section>
 
       {/* Contact Information */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-        className="px-4 sm:px-6 lg:px-8 pb-16"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Questions About Privacy?</h2>
-            <p className="text-gray-300 mb-6">
-              If you have any questions about this privacy policy or how we handle your data, 
-              please don't hesitate to contact us.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`mailto:${companyEmail}`}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Contact Privacy Team
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                General Contact
-              </a>
+      <section id="contact" className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="p-12 rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Questions About Privacy?
+                </h2>
+                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                  If you have any questions about this Privacy Policy or how we handle your data, please don't hesitate to contact us.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                  <div className="text-center">
+                    <Mail className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                    <p className="text-blue-100">privacy@ziontechgroup.com</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Phone className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                    <p className="text-blue-100">+1 (302) 555-0123</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <MapPin className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                    <p className="text-blue-100">123 Innovation Drive<br />Middletown, DE 19709</p>
+                  </div>
+                </div>
+                
+                <div className="mt-8 p-6 bg-white/10 rounded-2xl border border-white/20">
+                  <div className="flex items-start space-x-3">
+                    <Info className="w-6 h-6 text-blue-200 mt-1 flex-shrink-0" />
+                    <div className="text-left">
+                      <h4 className="text-lg font-semibold text-white mb-2">Data Protection Officer</h4>
+                      <p className="text-blue-100">
+                        For specific privacy concerns or to exercise your data rights, you can also contact our Data Protection Officer directly at{' '}
+                        <a href="mailto:dpo@ziontechgroup.com" className="underline hover:text-white transition-colors">
+                          dpo@ziontechgroup.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Background Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </section>
     </div>
   );
-};
-
-export default Privacy;
+}
