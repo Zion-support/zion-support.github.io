@@ -57,7 +57,9 @@ export function Footer() {
         { name: "White Papers", href: "/white-papers" },
         { name: "Webinars", href: "/webinars" },
         { name: "Training", href: "/training" },
-        { name: "Research", href: "/research-development" }
+        { name: "Research", href: "/research-development" },
+        { name: "Innovation Showcase 2029", href: "/innovative-services-showcase-2029" },
+        { name: "Comprehensive Pricing 2029", href: "/comprehensive-pricing-2029" }
       ]
     }
   ];
@@ -92,15 +94,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>

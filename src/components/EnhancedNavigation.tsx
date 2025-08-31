@@ -466,15 +466,15 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
                 <div className="flex items-center space-x-4 text-slate-400">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-4 text-slate-400">
                   <Mail className="w-4 h-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-4 text-slate-400">
                   <MapPin className="w-4 h-4" />
-                  <span>123 Tech Street, Digital City</span>
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
                 <Link
                   to="/contact"

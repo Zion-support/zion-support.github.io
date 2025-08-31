@@ -74,19 +74,19 @@ const Contact: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+              value: '+1 302 464 0950',
       description: 'Available Mon-Fri, 9AM-6PM EST'
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'contact@ziontechgroup.com',
+              value: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Office',
-      value: 'San Francisco, CA',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
       description: 'Global headquarters and innovation center'
     },
     {
@@ -125,11 +125,11 @@ const Contact: React.FC = () => {
 
   const offices = [
     {
-      city: "San Francisco",
+      city: "Middletown",
       country: "United States",
-      address: "123 Innovation Drive, Suite 100",
-      phone: "+1 (555) 123-4567",
-      email: "sf@ziontechgroup.com"
+      address: "364 E Main St STE 1008",
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com"
     },
     {
       city: "London",
