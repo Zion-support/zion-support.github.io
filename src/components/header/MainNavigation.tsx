@@ -202,6 +202,33 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-resource-planning" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Database className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI ERP Platform</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-computing-solutions" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Atom className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Quantum Computing</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-manufacturing-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Factory className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Manufacturing</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 

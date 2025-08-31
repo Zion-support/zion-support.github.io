@@ -275,25 +275,25 @@ const HeroSection = () => {
 const ServicesSection = () => {
   const services = [
     {
-      title: "AI Autonomous Business Operations",
-      description: "Transform your business with AI that autonomously manages, optimizes, and scales your entire business ecosystem.",
-      icon: Brain,
+      title: "AI Enterprise Resource Planning",
+      description: "Transform your business operations with AI-powered ERP that autonomously manages, optimizes, and scales your entire business ecosystem.",
+      icon: Database,
       color: "from-zion-purple to-zion-purple-dark",
-      link: "/services/ai-autonomous-business-operations-platform"
+      link: "/services/ai-enterprise-resource-planning"
     },
     {
-      title: "Quantum Edge Computing",
-      description: "Revolutionize your infrastructure with the world's first quantum-enhanced edge computing platform.",
+      title: "AI Quantum Computing Solutions",
+      description: "Revolutionize your computational capabilities with AI-powered quantum computing that achieves 1000x faster processing.",
       icon: Atom,
       color: "from-zion-cyan to-zion-purple",
-      link: "/services/quantum-edge-computing-solutions"
+      link: "/services/ai-quantum-computing-solutions"
     },
     {
-      title: "AI Customer Experience Analytics",
-      description: "Transform customer relationships with AI-powered analytics that understand and optimize every interaction.",
-      icon: BarChart3,
+      title: "AI Autonomous Manufacturing",
+      description: "Transform your manufacturing with AI-powered automation, quality control, and predictive maintenance.",
+      icon: Factory,
       color: "from-zion-purple to-zion-cyan",
-      link: "/services/ai-customer-experience-analytics-platform"
+      link: "/services/ai-autonomous-manufacturing-platform"
     },
     {
       title: "AI Project Management",
@@ -421,13 +421,22 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Link
-            to="/comprehensive-services-showcase-2025"
-            className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/comprehensive-services-showcase-2025"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/comprehensive-pricing-guide-2026"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-purple border-2 border-zion-purple hover:bg-zion-purple hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                View Pricing Guide
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
         </motion.div>
       </div>
     </section>
