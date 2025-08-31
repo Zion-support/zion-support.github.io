@@ -9,7 +9,38 @@ import {
   Twitter, 
   Github,
   Facebook,
-  Instagram
+  Instagram,
+  Zap,
+  Brain,
+  Server,
+  Shield,
+  Users,
+  Building2,
+  FileText,
+  Rocket,
+  Target,
+  Atom,
+  Network,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Workflow,
+  MessageCircle,
+  Calendar,
+  PenTool,
+  Activity,
+  Cpu,
+  Wifi,
+  Satellite,
+  Handshake,
+  BookOpen,
+  Video,
+  GraduationCap,
+  Lightbulb,
+  Star,
+  HelpCircle,
+  BarChart3,
+  ShoppingCart
 } from 'lucide-react';
 
 export function Footer() {
@@ -17,49 +48,76 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "AI & Automation Services",
+      icon: Brain,
       links: [
-        { name: "AI Solutions", href: "/ai-services" },
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
+        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
+        { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
+      ]
+    },
+    {
+      title: "IT & Infrastructure",
+      icon: Server,
+      links: [
+        { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
-        { name: "Micro SaaS", href: "/micro-saas" }
+        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
+        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
+        { name: "IoT & Edge Computing", href: "/services/iot-edge" },
+        { name: "Cloud FinOps", href: "/services/cloud-finops-optimizer" }
       ]
     },
     {
-      title: "Solutions",
+      title: "Industry Solutions",
+      icon: Target,
       links: [
-        { name: "Enterprise", href: "/solutions/enterprise" },
         { name: "Healthcare", href: "/solutions/healthcare" },
-        { name: "Finance", href: "/solutions/finance" },
+        { name: "Financial", href: "/solutions/financial" },
         { name: "Manufacturing", href: "/solutions/manufacturing" },
+        { name: "Government", href: "/solutions/government" },
         { name: "Retail", href: "/solutions/retail" },
-        { name: "Government", href: "/solutions/government" }
+        { name: "Enterprise", href: "/enterprise" },
+        { name: "Digital Transformation", href: "/digital-transformation" },
+        { name: "Cloud Solutions", href: "/cloud-solutions" },
+        { name: "Emerging Tech", href: "/emerging-tech" }
       ]
     },
     {
-      title: "Company",
+      title: "Company & Resources",
+      icon: Building2,
       links: [
         { name: "About Us", href: "/about" },
+        { name: "Leadership", href: "/leadership" },
         { name: "Careers", href: "/careers" },
         { name: "News", href: "/news" },
         { name: "Events", href: "/events" },
         { name: "Partners", href: "/partners" },
-        { name: "Contact", href: "/contact" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
+        { name: "Contact", href: "/contact" },
         { name: "Blog", href: "/blog" },
         { name: "Documentation", href: "/docs" },
-        { name: "White Papers", href: "/white-papers" },
-        { name: "Webinars", href: "/webinars" },
-        { name: "Training", href: "/training" },
-        { name: "Research", href: "/research-development" }
+        { name: "Case Studies", href: "/case-studies" }
       ]
     }
+  ];
+
+  const quickLinks = [
+    { name: "Get Started", href: "/signup", icon: Rocket },
+    { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
+    { name: "Support", href: "/help", icon: HelpCircle },
+    { name: "Pricing", href: "/pricing", icon: BarChart3 },
+    { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+    { name: "Innovation Showcase", href: "/innovative-services-showcase-2026", icon: Star }
   ];
 
   const socialLinks = [
@@ -103,12 +161,32 @@ export function Footer() {
                 <span>San Francisco, CA</span>
               </div>
             </div>
+
+            {/* Quick Links */}
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-3">Quick Actions</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {quickLinks.slice(0, 4).map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-zinc-400 hover:text-zion-cyan transition-colors text-sm flex items-center"
+                  >
+                    <link.icon className="w-3 h-3 mr-2" />
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-white font-semibold mb-4 flex items-center">
+                <section.icon className="w-4 h-4 mr-2" />
+                {section.title}
+              </h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
@@ -123,6 +201,106 @@ export function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Additional Resources Section */}
+        <div className="border-t border-zinc-800 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Resources
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/white-papers" className="text-zinc-400 hover:text-white transition-colors">
+                    White Papers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/webinars" className="text-zinc-400 hover:text-white transition-colors">
+                    Webinars
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/training" className="text-zinc-400 hover:text-white transition-colors">
+                    Training
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/research-development" className="text-zinc-400 hover:text-white transition-colors">
+                    Research & Development
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                <Shield className="w-4 h-4 mr-2" />
+                Legal & Compliance
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/accessibility" className="text-zinc-400 hover:text-white transition-colors">
+                    Accessibility
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/security" className="text-zinc-400 hover:text-white transition-colors">
+                    Security
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/compliance" className="text-zinc-400 hover:text-white transition-colors">
+                    Compliance
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                <Star className="w-4 h-4 mr-2" />
+                Innovation
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/innovative-services-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
+                    Innovation Showcase 2026
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/comprehensive-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
+                    Comprehensive Showcase 2025
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/innovative-ai-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
+                    AI Services Showcase 2025
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/emerging-tech" className="text-zinc-400 hover:text-white transition-colors">
+                    Emerging Technology
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Footer */}
@@ -149,16 +327,16 @@ export function Footer() {
               ))}
             </div>
 
-            {/* Legal Links */}
+            {/* Additional Quick Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
-                Privacy Policy
+              <Link to="/sitemap" className="text-zinc-400 hover:text-white transition-colors">
+                Sitemap
               </Link>
-              <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
-                Terms of Service
+              <Link to="/help" className="text-zinc-400 hover:text-white transition-colors">
+                Support
               </Link>
-              <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
-                Cookie Policy
+              <Link to="/contact" className="text-zinc-400 hover:text-white transition-colors">
+                Contact
               </Link>
             </div>
           </div>

@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, 
+  TrendingUp, 
+  Shield, 
   Brain, 
-  Zap, 
-  Users, 
-  Clock, 
+  BarChart3, 
+  AlertTriangle, 
   CheckCircle, 
   ArrowRight, 
-  Shield, 
+  Zap, 
   Target, 
-  TrendingUp,
+  Users,
+  DollarSign,
   Activity,
   Lock,
   Cloud,
   Network,
   Database,
   Workflow,
+  MessageCircle,
   Calendar,
   FileText,
   Video,
@@ -41,107 +43,95 @@ import {
   Cpu,
   Server,
   Globe,
+  Clock,
+  Eye,
+  Search,
+  Settings,
+  Palette,
+  Phone,
+  Mail,
+  MapPin,
   HelpCircle,
   ChevronRight,
   ChevronDown,
   Plus,
   Minus,
-  ExternalLink,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  MapPin,
-  Settings,
-  Palette,
-  Eye,
-  Search,
-  Cog,
-  ShoppingCart,
-  DollarSign
+  ExternalLink
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function AIFinancialTradingRiskManagement() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand natural language and provide instant, accurate responses to customer inquiries."
-    },
-    {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone with unified conversation history."
-    },
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support with instant responses and no waiting times."
-    },
-    {
-      icon: Users,
-      title: "Personalized Experiences",
-      description: "AI-driven personalization that remembers customer preferences and provides tailored support."
+      title: "AI-Powered Risk Assessment",
+      description: "Advanced machine learning algorithms continuously analyze market data to identify potential risks in real-time."
     },
     {
       icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with compliance features for data protection and privacy regulations."
+      title: "Real-time Risk Monitoring",
+      description: "24/7 monitoring of trading activities with instant alerts for any risk threshold breaches."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Risk Modeling",
+      description: "Forecast potential market risks using historical data analysis and predictive analytics."
+    },
+    {
+      icon: BarChart3,
+      title: "Comprehensive Risk Analytics",
+      description: "Deep insights into portfolio risk exposure, volatility analysis, and correlation assessments."
+    },
+    {
+      icon: Lock,
+      title: "Regulatory Compliance",
+      description: "Automated compliance monitoring ensuring adherence to financial regulations and reporting requirements."
     },
     {
       icon: Cloud,
       title: "Scalable Infrastructure",
-      description: "Cloud-native platform that scales automatically with your customer support volume."
+      description: "Cloud-native architecture that scales with your trading volume and risk management needs."
     }
   ];
 
-  const capabilities = [
+  const riskTypes = [
     {
-      category: "Intelligent Automation",
-      description: "Advanced AI capabilities that handle complex customer interactions automatically",
+      category: "Market Risk",
+      description: "Monitor and manage exposure to market fluctuations, volatility, and directional changes",
       items: [
-        "Natural language processing",
-        "Sentiment analysis",
-        "Intent recognition",
-        "Context-aware responses",
-        "Multi-language support",
-        "Voice recognition"
+        "Price volatility analysis",
+        "Market correlation monitoring",
+        "Sector-specific risk assessment",
+        "Global market exposure tracking"
       ]
     },
     {
-      category: "Customer Experience",
-      description: "Enhanced customer journey with seamless support interactions",
+      category: "Credit Risk",
+      description: "Assess and manage counterparty default risks and credit exposure",
       items: [
-        "Proactive support notifications",
-        "Personalized recommendations",
-        "Customer journey mapping",
-        "Feedback collection",
-        "Satisfaction scoring",
-        "Loyalty program integration"
+        "Counterparty credit scoring",
+        "Credit limit monitoring",
+        "Default probability modeling",
+        "Collateral management"
       ]
     },
     {
-      category: "Operational Efficiency",
-      description: "Streamlined support operations with automated workflows",
+      category: "Operational Risk",
+      description: "Identify and mitigate risks from internal processes, systems, and human factors",
       items: [
-        "Ticket routing automation",
-        "Escalation management",
-        "Performance analytics",
-        "Resource optimization",
-        "Quality assurance",
-        "Training recommendations"
+        "System failure monitoring",
+        "Process automation risks",
+        "Human error prevention",
+        "Business continuity planning"
       ]
     },
     {
-      category: "Integration & Analytics",
-      description: "Seamless integration with existing systems and comprehensive reporting",
+      category: "Liquidity Risk",
+      description: "Manage risks related to asset liquidity and funding availability",
       items: [
-        "CRM integration",
-        "Knowledge base management",
-        "Real-time analytics",
-        "Performance dashboards",
-        "Custom reporting",
-        "API connectivity"
+        "Liquidity stress testing",
+        "Funding gap analysis",
+        "Asset liquidity scoring",
+        "Emergency funding protocols"
       ]
     }
   ];
@@ -149,55 +139,55 @@ export default function AICustomerSupportAutomation() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Improved Customer Satisfaction",
-      description: "Faster response times and accurate solutions lead to higher customer satisfaction scores"
+      title: "Reduced Risk Exposure",
+      description: "Minimize potential losses through proactive risk identification and management"
     },
     {
-      icon: Clock,
-      title: "Reduced Response Times",
-      description: "Instant responses and 24/7 availability eliminate customer waiting times"
+      icon: Shield,
+      title: "Enhanced Compliance",
+      description: "Automated regulatory reporting and compliance monitoring"
     },
     {
       icon: Users,
-      title: "Increased Support Capacity",
-      description: "Handle multiple customer inquiries simultaneously without additional staff"
+      title: "Improved Decision Making",
+      description: "Data-driven insights for better trading and risk management decisions"
     },
     {
       icon: Cog,
-      title: "Lower Operational Costs",
-      description: "Automate routine tasks and reduce manual support workload"
+      title: "Operational Efficiency",
+      description: "Streamlined risk management processes with automated workflows"
     }
   ];
 
   const technologies = [
-    { name: "Natural Language Processing", icon: Brain, description: "Advanced NLP for understanding customer intent" },
-    { name: "Machine Learning", icon: Activity, description: "AI algorithms that learn and improve over time" },
-    { name: "Voice Recognition", icon: MessageCircle, description: "Speech-to-text and text-to-speech capabilities" },
-    { name: "Sentiment Analysis", icon: TrendingUp, description: "Real-time emotion detection and response adjustment" },
-    { name: "Predictive Analytics", icon: BarChart, description: "Forecast customer needs and optimize support" },
-    { name: "API Integration", icon: Workflow, description: "Seamless connectivity with existing business systems" }
+    { name: "Machine Learning", icon: Brain, description: "Advanced AI algorithms for risk prediction and analysis" },
+    { name: "Real-time Analytics", icon: Activity, description: "Instant processing of market data and risk metrics" },
+    { name: "Blockchain Security", icon: Network, description: "Secure and transparent transaction monitoring" },
+    { name: "Cloud Computing", icon: Cloud, description: "Scalable infrastructure for high-performance computing" },
+    { name: "Big Data Processing", icon: Database, description: "Handling massive datasets for comprehensive analysis" },
+    { name: "API Integration", icon: Workflow, description: "Seamless integration with existing trading systems" }
   ];
 
   const useCases = [
     {
-      title: "E-commerce",
-      description: "Automated order tracking, product recommendations, and return processing",
-      icon: ShoppingCart
+      title: "Hedge Funds",
+      description: "Advanced risk management for complex trading strategies and portfolio optimization",
+      icon: TrendingUp
     },
     {
-      title: "Financial Services",
-      description: "Account inquiries, transaction support, and security assistance",
-      icon: DollarSign
+      title: "Investment Banks",
+      description: "Comprehensive risk monitoring for trading desks and investment portfolios",
+      icon: Building2
     },
     {
-      title: "Healthcare",
-      description: "Appointment scheduling, medical information, and patient support",
-      icon: Shield
+      title: "Asset Managers",
+      description: "Portfolio risk assessment and optimization for institutional clients",
+      icon: Users
     },
     {
-      title: "Technology Support",
-      description: "Technical troubleshooting, software assistance, and product guidance",
-      icon: Cog
+      title: "Trading Firms",
+      description: "Real-time risk monitoring for high-frequency and algorithmic trading",
+      icon: Zap
     }
   ];
 
@@ -208,16 +198,16 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 text-zion-purple text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
+              <Shield className="w-4 h-4 mr-2" />
               AI-Powered Service
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support
-              <span className="block text-zion-cyan">Automation</span>
+              AI Financial Trading
+              <span className="block text-zion-cyan">Risk Management</span>
             </h1>
             <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI automation. Provide instant, 
-              accurate, and personalized support across all channels while reducing costs and improving satisfaction.
+              Protect your trading operations with intelligent risk management powered by advanced AI. 
+              Monitor, analyze, and mitigate risks in real-time across all your financial instruments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -244,11 +234,11 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Support Automation Features
+              Advanced Risk Management Features
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive customer support automation 
-              designed to enhance customer experience and operational efficiency.
+              Our AI-powered platform provides comprehensive risk management capabilities designed 
+              specifically for modern financial trading operations.
             </p>
           </div>
           
@@ -269,29 +259,29 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Risk Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Capabilities
+              Comprehensive Risk Coverage
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform offers a wide range of capabilities that cover every aspect 
-              of modern customer support operations.
+              Our platform monitors and manages all types of financial risks, providing 
+              complete protection for your trading operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {capabilities.map((capability, index) => (
+            {riskTypes.map((risk, index) => (
               <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold text-zion-cyan mb-4 flex items-center">
-                  <Zap className="w-6 h-6 mr-2" />
-                  {capability.category}
+                  <AlertTriangle className="w-6 h-6 mr-2" />
+                  {risk.category}
                 </h3>
-                <p className="text-zinc-300 mb-4">{capability.description}</p>
+                <p className="text-zinc-300 mb-4">{risk.description}</p>
                 <ul className="space-y-3">
-                  {capability.items.map((item, itemIndex) => (
+                  {risk.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center text-zinc-300">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {item}
@@ -312,7 +302,7 @@ export default function AICustomerSupportAutomation() {
               Business Benefits
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Transform your customer support operations with AI-powered automation, 
+              Transform your risk management approach with AI-powered insights and automation, 
               delivering measurable improvements across all key metrics.
             </p>
           </div>
@@ -342,8 +332,8 @@ export default function AICustomerSupportAutomation() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI customer support automation solutions are designed for various industries, 
-              from e-commerce to healthcare, providing tailored support experiences.
+              Our AI risk management solutions are designed for various financial institutions 
+              and trading operations, from hedge funds to investment banks.
             </p>
           </div>
 
@@ -372,8 +362,8 @@ export default function AICustomerSupportAutomation() {
               Advanced Technologies
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to deliver intelligent, scalable, and 
-              secure customer support automation solutions.
+              We leverage cutting-edge technologies to deliver robust, scalable, and 
+              intelligent risk management solutions for modern financial markets.
             </p>
           </div>
 
@@ -399,11 +389,11 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Risk Management?
             </h2>
             <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Join leading companies that have already enhanced their customer support 
-              capabilities with Zion Tech Group's AI-powered automation solutions.
+              Join leading financial institutions that have already enhanced their risk management 
+              capabilities with Zion Tech Group's AI-powered solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -430,27 +420,27 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Related AI Services
+              Related AI Financial Services
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Explore our comprehensive suite of AI-powered services designed to 
-              transform your business operations and customer experiences.
+              Explore our comprehensive suite of AI-powered financial services designed to 
+              transform your trading and investment operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link
-              to="/services/ai-sales-copilot"
+              to="/services/ai-financial-trading-platform"
               className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Sales Copilot
+                AI Financial Trading Platform
               </h3>
               <p className="text-zinc-300 mb-4">
-                Intelligent sales assistant that helps teams close more deals with AI-powered insights and automation.
+                Advanced algorithmic trading platform powered by artificial intelligence for optimal execution and performance.
               </p>
               <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                 Learn More
@@ -459,17 +449,17 @@ export default function AICustomerSupportAutomation() {
             </Link>
 
             <Link
-              to="/services/ai-marketing-automation"
+              to="/services/ai-business-intelligence"
               className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-white" />
+                <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Marketing Automation
+                AI Business Intelligence
               </h3>
               <p className="text-zinc-300 mb-4">
-                Automated marketing campaigns with AI-powered personalization and optimization for better ROI.
+                Comprehensive business intelligence platform with AI-powered analytics and insights for strategic decision making.
               </p>
               <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                 Learn More
@@ -478,17 +468,17 @@ export default function AICustomerSupportAutomation() {
             </Link>
 
             <Link
-              to="/services/ai-content-creation-studio"
+              to="/services/ai-data-analytics-platform"
               className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="w-6 h-6 text-white" />
+                <Database className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Content Creation Studio
+                AI Data Analytics Platform
               </h3>
               <p className="text-zinc-300 mb-4">
-                AI-powered content creation platform for generating engaging marketing materials and communications.
+                Advanced data analytics platform leveraging AI and machine learning for comprehensive business insights.
               </p>
               <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                 Learn More

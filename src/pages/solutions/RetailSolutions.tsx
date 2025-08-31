@@ -1,33 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, 
+  ShoppingCart, 
+  TrendingUp, 
+  Users, 
+  Shield, 
+  Cloud, 
   Brain, 
   Zap, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  Shield, 
   Target, 
-  TrendingUp,
-  Activity,
+  BarChart3, 
+  Smartphone,
+  CreditCard,
+  Package,
+  Truck,
+  Store,
+  Globe,
   Lock,
-  Cloud,
-  Network,
-  Database,
-  Workflow,
-  Calendar,
-  FileText,
-  Video,
-  BookOpen,
+  Activity,
+  CheckCircle,
+  ArrowRight,
   Star,
   Award,
   Lightbulb,
   Rocket,
   Building2,
+  Network,
+  Database,
+  Workflow,
+  MessageCircle,
+  Calendar,
+  FileText,
+  Video,
+  BookOpen,
+  Users2,
+  Cog,
   Monitor,
-  Smartphone,
+  Smartphone as MobileIcon,
   Wifi,
   Satellite,
   Atom,
@@ -38,110 +47,88 @@ import {
   PieChart,
   LineChart,
   BarChart,
-  Cpu,
-  Server,
-  Globe,
-  HelpCircle,
-  ChevronRight,
-  ChevronDown,
-  Plus,
-  Minus,
-  ExternalLink,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  MapPin,
-  Settings,
-  Palette,
-  Eye,
-  Search,
-  Cog,
-  ShoppingCart,
-  DollarSign
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  BarChart as BarChartIcon2
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function RetailSolutions() {
   const features = [
     {
+      icon: ShoppingCart,
+      title: "Omnichannel Commerce",
+      description: "Seamlessly integrate online and offline shopping experiences with unified inventory and customer data management."
+    },
+    {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand natural language and provide instant, accurate responses to customer inquiries."
+      title: "AI-Powered Personalization",
+      description: "Deliver personalized shopping experiences using advanced AI algorithms for product recommendations and targeted marketing."
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone with unified conversation history."
-    },
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support with instant responses and no waiting times."
-    },
-    {
-      icon: Users,
-      title: "Personalized Experiences",
-      description: "AI-driven personalization that remembers customer preferences and provides tailored support."
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast demand, optimize pricing, and improve inventory management with machine learning-powered insights."
     },
     {
       icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with compliance features for data protection and privacy regulations."
+      title: "Enhanced Security",
+      description: "Protect customer data and transactions with enterprise-grade cybersecurity and fraud detection systems."
     },
     {
       icon: Cloud,
-      title: "Scalable Infrastructure",
-      description: "Cloud-native platform that scales automatically with your customer support volume."
+      title: "Cloud-Native Architecture",
+      description: "Scalable, resilient infrastructure that grows with your business and ensures high availability."
+    },
+    {
+      icon: Users,
+      title: "Customer Experience Management",
+      description: "Comprehensive tools for managing customer journeys, loyalty programs, and satisfaction metrics."
     }
   ];
 
-  const capabilities = [
+  const solutions = [
     {
-      category: "Intelligent Automation",
-      description: "Advanced AI capabilities that handle complex customer interactions automatically",
+      category: "E-commerce Platforms",
       items: [
-        "Natural language processing",
-        "Sentiment analysis",
-        "Intent recognition",
-        "Context-aware responses",
-        "Multi-language support",
-        "Voice recognition"
+        "AI-Powered Product Recommendations",
+        "Personalized Shopping Experiences",
+        "Multi-channel Inventory Management",
+        "Advanced Search & Filtering",
+        "Mobile-First Design",
+        "Progressive Web Apps (PWA)"
       ]
     },
     {
-      category: "Customer Experience",
-      description: "Enhanced customer journey with seamless support interactions",
+      category: "Retail Analytics",
       items: [
-        "Proactive support notifications",
-        "Personalized recommendations",
-        "Customer journey mapping",
-        "Feedback collection",
-        "Satisfaction scoring",
-        "Loyalty program integration"
+        "Customer Behavior Analysis",
+        "Sales Performance Tracking",
+        "Inventory Optimization",
+        "Demand Forecasting",
+        "Price Optimization",
+        "Competitive Intelligence"
       ]
     },
     {
-      category: "Operational Efficiency",
-      description: "Streamlined support operations with automated workflows",
+      category: "Supply Chain Management",
       items: [
-        "Ticket routing automation",
-        "Escalation management",
-        "Performance analytics",
-        "Resource optimization",
-        "Quality assurance",
-        "Training recommendations"
+        "Real-time Inventory Tracking",
+        "Automated Replenishment",
+        "Supplier Management",
+        "Logistics Optimization",
+        "Returns Management",
+        "Quality Control"
       ]
     },
     {
-      category: "Integration & Analytics",
-      description: "Seamless integration with existing systems and comprehensive reporting",
+      category: "Customer Engagement",
       items: [
-        "CRM integration",
-        "Knowledge base management",
-        "Real-time analytics",
-        "Performance dashboards",
-        "Custom reporting",
-        "API connectivity"
+        "Loyalty Programs",
+        "Personalized Marketing",
+        "Customer Support Automation",
+        "Social Media Integration",
+        "Email Marketing Automation",
+        "SMS & Push Notifications"
       ]
     }
   ];
@@ -149,56 +136,33 @@ export default function AICustomerSupportAutomation() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Improved Customer Satisfaction",
-      description: "Faster response times and accurate solutions lead to higher customer satisfaction scores"
-    },
-    {
-      icon: Clock,
-      title: "Reduced Response Times",
-      description: "Instant responses and 24/7 availability eliminate customer waiting times"
+      title: "Increased Revenue",
+      description: "Drive sales growth through personalized experiences and optimized operations"
     },
     {
       icon: Users,
-      title: "Increased Support Capacity",
-      description: "Handle multiple customer inquiries simultaneously without additional staff"
+      title: "Enhanced Customer Satisfaction",
+      description: "Improve customer loyalty and retention with seamless shopping experiences"
     },
     {
       icon: Cog,
-      title: "Lower Operational Costs",
-      description: "Automate routine tasks and reduce manual support workload"
+      title: "Operational Efficiency",
+      description: "Streamline processes and reduce costs through automation and optimization"
+    },
+    {
+      icon: Shield,
+      title: "Risk Mitigation",
+      description: "Protect against fraud, data breaches, and operational disruptions"
     }
   ];
 
   const technologies = [
-    { name: "Natural Language Processing", icon: Brain, description: "Advanced NLP for understanding customer intent" },
-    { name: "Machine Learning", icon: Activity, description: "AI algorithms that learn and improve over time" },
-    { name: "Voice Recognition", icon: MessageCircle, description: "Speech-to-text and text-to-speech capabilities" },
-    { name: "Sentiment Analysis", icon: TrendingUp, description: "Real-time emotion detection and response adjustment" },
-    { name: "Predictive Analytics", icon: BarChart, description: "Forecast customer needs and optimize support" },
-    { name: "API Integration", icon: Workflow, description: "Seamless connectivity with existing business systems" }
-  ];
-
-  const useCases = [
-    {
-      title: "E-commerce",
-      description: "Automated order tracking, product recommendations, and return processing",
-      icon: ShoppingCart
-    },
-    {
-      title: "Financial Services",
-      description: "Account inquiries, transaction support, and security assistance",
-      icon: DollarSign
-    },
-    {
-      title: "Healthcare",
-      description: "Appointment scheduling, medical information, and patient support",
-      icon: Shield
-    },
-    {
-      title: "Technology Support",
-      description: "Technical troubleshooting, software assistance, and product guidance",
-      icon: Cog
-    }
+    { name: "AI & Machine Learning", icon: Brain, description: "Advanced algorithms for personalization and automation" },
+    { name: "Cloud Computing", icon: Cloud, description: "Scalable infrastructure and services" },
+    { name: "IoT & Edge Computing", icon: Wifi, description: "Real-time data collection and processing" },
+    { name: "Blockchain", icon: Network, description: "Secure transactions and supply chain transparency" },
+    { name: "Big Data Analytics", icon: BarChart3, description: "Comprehensive insights and reporting" },
+    { name: "Mobile Technologies", icon: Smartphone, description: "Cross-platform mobile solutions" }
   ];
 
   return (
@@ -208,16 +172,16 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 text-zion-purple text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              AI-Powered Service
+              <Target className="w-4 h-4 mr-2" />
+              Industry Solutions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support
-              <span className="block text-zion-cyan">Automation</span>
+              Retail Technology
+              <span className="block text-zion-cyan">Solutions</span>
             </h1>
             <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI automation. Provide instant, 
-              accurate, and personalized support across all channels while reducing costs and improving satisfaction.
+              Transform your retail business with cutting-edge AI, cloud, and digital solutions. 
+              Enhance customer experiences, optimize operations, and drive growth in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -244,11 +208,11 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Support Automation Features
+              Why Choose Zion Tech Group for Retail?
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive customer support automation 
-              designed to enhance customer experience and operational efficiency.
+              Our comprehensive retail solutions combine cutting-edge technology with deep industry expertise 
+              to deliver measurable business outcomes.
             </p>
           </div>
           
@@ -269,29 +233,28 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Solutions Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Capabilities
+              Comprehensive Retail Solutions
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform offers a wide range of capabilities that cover every aspect 
-              of modern customer support operations.
+              From e-commerce platforms to supply chain optimization, we provide end-to-end solutions 
+              that address every aspect of modern retail operations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {capabilities.map((capability, index) => (
+            {solutions.map((solution, index) => (
               <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold text-zion-cyan mb-4 flex items-center">
                   <Zap className="w-6 h-6 mr-2" />
-                  {capability.category}
+                  {solution.category}
                 </h3>
-                <p className="text-zinc-300 mb-4">{capability.description}</p>
                 <ul className="space-y-3">
-                  {capability.items.map((item, itemIndex) => (
+                  {solution.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center text-zinc-300">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {item}
@@ -312,8 +275,8 @@ export default function AICustomerSupportAutomation() {
               Business Benefits
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Transform your customer support operations with AI-powered automation, 
-              delivering measurable improvements across all key metrics.
+              Our retail solutions deliver measurable improvements across all key business metrics, 
+              helping you stay competitive in an evolving market.
             </p>
           </div>
 
@@ -334,46 +297,16 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Use Cases
+              Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI customer support automation solutions are designed for various industries, 
-              from e-commerce to healthcare, providing tailored support experiences.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-zinc-300 text-sm">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Technologies
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to deliver intelligent, scalable, and 
-              secure customer support automation solutions.
+              We leverage the latest technologies to deliver innovative retail solutions that 
+              provide competitive advantages and future-proof your business.
             </p>
           </div>
 
@@ -399,11 +332,11 @@ export default function AICustomerSupportAutomation() {
         <div className="container mx-auto max-w-7xl">
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Retail Business?
             </h2>
             <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Join leading companies that have already enhanced their customer support 
-              capabilities with Zion Tech Group's AI-powered automation solutions.
+              Join leading retailers who have already transformed their operations with Zion Tech Group's 
+              innovative solutions. Let's discuss how we can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -425,32 +358,31 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Related Services */}
+      {/* Related Solutions */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Related AI Services
+              Explore Other Industry Solutions
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Explore our comprehensive suite of AI-powered services designed to 
-              transform your business operations and customer experiences.
+              Discover how our technology solutions can transform other industries and business processes.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link
-              to="/services/ai-sales-copilot"
+              to="/solutions/healthcare"
               className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-white" />
+                <Shield className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Sales Copilot
+                Healthcare Solutions
               </h3>
               <p className="text-zinc-300 mb-4">
-                Intelligent sales assistant that helps teams close more deals with AI-powered insights and automation.
+                AI-powered healthcare analytics, patient management, and clinical decision support systems.
               </p>
               <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                 Learn More
@@ -459,36 +391,36 @@ export default function AICustomerSupportAutomation() {
             </Link>
 
             <Link
-              to="/services/ai-marketing-automation"
+              to="/solutions/financial"
+              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                Financial Solutions
+              </h3>
+              <p className="text-zinc-300 mb-4">
+                Advanced trading platforms, risk management, and financial analytics powered by AI.
+              </p>
+              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              to="/solutions/manufacturing"
               className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-white" />
+                <Cog className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Marketing Automation
+                Manufacturing Solutions
               </h3>
               <p className="text-zinc-300 mb-4">
-                Automated marketing campaigns with AI-powered personalization and optimization for better ROI.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              to="/services/ai-content-creation-studio"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Content Creation Studio
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                AI-powered content creation platform for generating engaging marketing materials and communications.
+                Smart manufacturing, predictive maintenance, and supply chain optimization with IoT and AI.
               </p>
               <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                 Learn More
