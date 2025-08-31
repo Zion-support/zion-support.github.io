@@ -73,18 +73,28 @@ export function Header() {
             {/* Desktop Navigation */}
             <MainNavigation className="hidden lg:flex" />
 
-            {/* Search Button */}
+            {/* Mobile Menu Button */}
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
-              onClick={toggleSearch}
-              aria-label="Open search"
+              className="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
             >
-              <Search className="block h-6 w-6" aria-hidden="true" />
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
             {/* Right Side Actions */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
+              {/* Search */}
+              <button
+                type="button"
+                className="hidden md:inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
+                onClick={toggleSearch}
+                aria-label="Search"
+              >
+                <Search className="h-5 w-5" />
+              </button>
+
               {/* Notifications */}
               <button
                 type="button"
@@ -120,21 +130,9 @@ export function Header() {
               >
                 Get Started
               </Link>
+            </div>
 
-              {/* Mobile Menu Button */}
-              <button
-                type="button"
-                className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark lg:hidden transition-all duration-300"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle mobile menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMobileMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
+
             </div>
           </div>
         </div>
