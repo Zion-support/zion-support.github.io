@@ -111,37 +111,37 @@ export default function Services() {
 
   const featuredServices = [
     {
-      title: "AI Legal Document Analysis",
-      description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
+      title: "AI Enterprise Automation Suite",
+      description: "Transform business operations with intelligent automation that works 24/7. Reduce costs by 60%, increase productivity by 80%.",
       price: "From $299/month",
-      features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
-      href: "/services/ai-legal-document-analysis",
+      features: ["AI-Powered Process Automation", "Intelligent Workflow Orchestration", "Real-time Business Intelligence"],
+      href: "/services/ai-enterprise-automation-suite",
       color: "from-blue-400 to-purple-500",
       popular: true
     },
     {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
-      color: "from-green-400 to-blue-500"
+      title: "AI Cybersecurity Threat Intelligence Advanced",
+      description: "Stay ahead of evolving cyber threats with our AI-powered platform. Detect threats 10x faster, reduce false positives by 90%.",
+      price: "From $499/month",
+      features: ["Real-time Threat Detection", "AI-Powered Behavioral Analytics", "Advanced Malware Detection"],
+      href: "/services/ai-cybersecurity-threat-intelligence-advanced",
+      color: "from-red-400 to-orange-500"
     },
     {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
+      title: "AI Financial Risk Management Platform",
+      description: "Transform financial risk management with AI-powered analytics. Reduce financial losses by 70%, improve returns by 40%.",
+      price: "From $399/month",
+      features: ["AI-Powered Risk Assessment", "Real-time Market Monitoring", "Compliance & Regulatory Reporting"],
+      href: "/services/ai-financial-risk-management-platform",
+      color: "from-green-400 to-emerald-500"
+    },
+    {
+      title: "AI Supply Chain Optimization Enhanced",
+      description: "Revolutionary supply chain optimization with AI. Reduce costs by 40% and improve delivery times by 50%",
       price: "From $399/month",
       features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
       href: "/services/ai-supply-chain-optimization-enhanced",
       color: "from-blue-400 to-indigo-500"
-    },
-    {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500"
     }
   ];
 
@@ -263,13 +263,12 @@ export default function Services() {
                 >
                   Get Started
                 </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all duration-300"
+                <Link
+                  to="/innovative-services-showcase-2025"
+                  className="px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all duration-300 text-center"
                 >
                   View All Services
-                </motion.button>
+                </Link>
               </div>
             </motion.div>
           </div>

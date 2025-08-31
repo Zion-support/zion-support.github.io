@@ -1,435 +1,570 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Atom,
-  Cloud,
-  Shield,
-  TrendingUp,
-  Users,
-  CheckCircle,
+import { 
+  Brain, 
+  Shield, 
+  TrendingUp, 
+  Zap, 
+  Cpu, 
+  Database, 
+  Network, 
+  Globe,
   ArrowRight,
+  CheckCircle,
   Star,
-  Clock,
-  DollarSign,
-  Target,
+  Users,
   Rocket,
+  Target,
   Lightbulb,
+  Atom,
+  Lock,
+  BarChart3,
   Code,
   Server,
-  Network,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
   Activity,
   FileText,
   MessageCircle,
   Search,
+  BarChart,
+  Users2,
   Settings,
   Palette,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  Zap,
-  Workflow,
-  Eye,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  Microscope,
-  CircuitBoard,
-  Building,
-  ShoppingCart,
-  Home,
-  PieChart,
-  Calculator,
-  Receipt,
-  CreditCard,
-  PiggyBank,
-  TrendingDown,
-  ArrowUpDown,
-  RefreshCw,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  FileCheck,
+  TrendingUp as TrendingUpIcon,
   Scale,
-  Gavel,
-  BookOpen,
-  Clipboard,
-  Truck,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Bike,
-  Motorcycle,
-  Bus
+  Gauge,
+  Bot as BotIcon,
+  Shield as ShieldIcon,
+  TrendingUp as TrendingUpIcon2
 } from 'lucide-react';
 
-const InnovativeServicesShowcase2025: React.FC = () => {
-  const serviceCategories = [
+export default function InnovativeServicesShowcase2025() {
+  const featuredServices = [
     {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions for enterprise transformation",
-      services: [
-        {
-          name: "AI Enterprise Intelligence Platform",
-          description: "Comprehensive AI-powered business intelligence and analytics",
-          href: "/services/ai-enterprise-intelligence-platform",
-          icon: Brain,
-          price: "$2,999/month",
-          features: ["Predictive Analytics", "Business Intelligence", "Enterprise Security", "Process Automation"],
-          benefits: ["30% efficiency improvement", "Real-time insights", "AI-powered decision making"]
-        },
-        {
-          name: "AI Quantum Neural Network Platform",
-          description: "Revolutionary quantum computing with AI integration",
-          href: "/services/ai-quantum-neural-network-platform",
-          icon: Atom,
-          price: "$9,999/month",
-          features: ["Quantum Neural Networks", "AI Quantum Algorithms", "Quantum Circuit Design", "Quantum Simulation"],
-          benefits: ["1000x speedup", "Quantum advantage", "Exponential processing power"]
-        },
-        {
-          name: "AI Sales Copilot",
-          description: "Intelligent sales automation and lead management",
-          href: "/services/ai-sales-copilot",
-          icon: TrendingUp,
-          price: "$299/month",
-          features: ["AI Lead Scoring", "Email Automation", "Prospect Research", "Sales Analytics"],
-          benefits: ["35% conversion increase", "50% faster lead qualification", "400% ROI"]
-        }
-      ]
+      title: "AI Enterprise Automation Suite",
+      description: "Transform business operations with intelligent automation that works 24/7. Reduce costs by 60%, increase productivity by 80%.",
+      price: "From $299/month",
+      features: ["AI-Powered Process Automation", "Intelligent Workflow Orchestration", "Real-time Business Intelligence"],
+      href: "/services/ai-enterprise-automation-suite",
+      color: "from-blue-400 to-purple-500",
+      popular: true,
+      icon: BotIcon,
+      category: "AI Automation"
     },
     {
-      title: "Customer Success & Support",
-      description: "AI-powered customer experience and support automation solutions",
-      services: [
-        {
-          name: "AI Customer Success Automation",
-          description: "Intelligent automation for customer success operations",
-          href: "/services/ai-customer-success-automation",
-          icon: Users,
-          price: "$299/month",
-          features: ["AI-Powered Insights", "Automated Workflows", "Performance Metrics", "Proactive Communication"],
-          benefits: ["40% retention increase", "60% task reduction", "35% satisfaction improvement"]
-        },
-        {
-          name: "AI Customer Support Automation",
-          description: "Advanced AI-powered customer support and helpdesk automation",
-          href: "/services/ai-customer-support-automation",
-          icon: MessageCircle,
-          price: "$199/month",
-          features: ["24/7 Support", "Intelligent Routing", "Knowledge Base", "Sentiment Analysis"],
-          benefits: ["70% faster resolution", "90% customer satisfaction", "50% cost reduction"]
-        }
-      ]
+      title: "AI Cybersecurity Threat Intelligence Advanced",
+      description: "Stay ahead of evolving cyber threats with our AI-powered platform. Detect threats 10x faster, reduce false positives by 90%.",
+      price: "From $499/month",
+      features: ["Real-time Threat Detection", "AI-Powered Behavioral Analytics", "Advanced Malware Detection"],
+      href: "/services/ai-cybersecurity-threat-intelligence-advanced",
+      color: "from-red-400 to-orange-500",
+      popular: false,
+      icon: ShieldIcon,
+      category: "Cybersecurity"
     },
     {
-      title: "Supply Chain & Operations",
-      description: "AI-powered optimization for supply chain and operational efficiency",
-      services: [
-        {
-          name: "AI Supply Chain Optimization Enhanced",
-          description: "Advanced AI-powered supply chain optimization and management",
-          href: "/services/ai-supply-chain-optimization-enhanced",
-          icon: Truck,
-          price: "$499/month",
-          features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"],
-          benefits: ["25-40% cost reduction", "95% delivery accuracy", "30% inventory cost reduction"]
-        },
-        {
-          name: "AI Workflow Orchestrator",
-          description: "Intelligent workflow automation and process optimization",
-          href: "/services/ai-workflow-orchestrator",
-          icon: Workflow,
-          price: "$399/month",
-          features: ["Process Automation", "Workflow Design", "Performance Monitoring", "Optimization Engine"],
-          benefits: ["60% process efficiency", "45% time savings", "Real-time optimization"]
-        }
-      ]
+      title: "AI Financial Risk Management Platform",
+      description: "Transform financial risk management with AI-powered analytics. Reduce financial losses by 70%, improve returns by 40%.",
+      price: "From $399/month",
+      features: ["AI-Powered Risk Assessment", "Real-time Market Monitoring", "Compliance & Regulatory Reporting"],
+      href: "/services/ai-financial-risk-management-platform",
+      color: "from-green-400 to-emerald-500",
+      popular: false,
+      icon: TrendingUpIcon2,
+      category: "Financial Services"
     },
     {
-      title: "Financial & Risk Management",
-      description: "AI-powered financial services and risk management solutions",
-      services: [
-        {
-          name: "AI Financial Risk Management Enhanced",
-          description: "Comprehensive AI-powered financial risk assessment and monitoring",
-          href: "/services/ai-financial-risk-management-enhanced",
-          icon: Shield,
-          price: "$399/month",
-          features: ["Risk Assessment", "Real-time Monitoring", "Predictive Analytics", "Compliance Tracking"],
-          benefits: ["40-60% loss reduction", "85% accuracy improvement", "75% compliance improvement"]
-        },
-        {
-          name: "AI Financial Trading Risk Management",
-          description: "Advanced risk management for financial trading operations",
-          href: "/services/ai-financial-trading-risk-management",
-          icon: TrendingUp,
-          price: "$599/month",
-          features: ["Portfolio Risk", "Market Risk", "Credit Risk", "Operational Risk"],
-          benefits: ["30% risk-adjusted returns", "70% monitoring reduction", "90% compliance improvement"]
-        }
-      ]
+      title: "AI Supply Chain Optimization Enhanced",
+      description: "Revolutionary supply chain optimization with AI. Reduce costs by 40% and improve delivery times by 50%.",
+      price: "From $399/month",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
+      href: "/services/ai-supply-chain-optimization-enhanced",
+      color: "from-blue-400 to-indigo-500",
+      popular: false,
+      icon: Network,
+      category: "Supply Chain"
     },
     {
-      title: "Business Intelligence & Analytics",
-      description: "AI-powered business intelligence and data analytics platforms",
-      services: [
-        {
-          name: "AI Business Intelligence Dashboard",
-          description: "Comprehensive business intelligence and analytics dashboard",
-          href: "/services/ai-business-intelligence-dashboard",
-          icon: BarChart3,
-          price: "$399/month",
-          features: ["Real-time Analytics", "Custom Dashboards", "Data Visualization", "Predictive Insights"],
-          benefits: ["50% faster insights", "Real-time decision making", "Customizable reporting"]
-        },
-        {
-          name: "AI Data Analytics Platform",
-          description: "Advanced AI-powered data analytics and insights platform",
-          href: "/services/ai-data-analytics-platform",
-          icon: Database,
-          price: "$599/month",
-          features: ["Big Data Processing", "Machine Learning", "Predictive Analytics", "Data Mining"],
-          benefits: ["100x faster processing", "90% accuracy improvement", "Real-time insights"]
-        }
-      ]
+      title: "AI Sales Copilot",
+      description: "Intelligent sales automation with 40% conversion improvement. Lead scoring, predictive analytics, and automated follow-ups.",
+      price: "From $2,200/month",
+      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
+      href: "/services/ai-sales-copilot",
+      color: "from-green-400 to-emerald-500",
+      popular: false,
+      icon: Users,
+      category: "Sales & Marketing"
     },
     {
-      title: "Project & Process Management",
-      description: "AI-powered project management and process optimization solutions",
-      services: [
-        {
-          name: "AI Project Management Platform",
-          description: "Intelligent project management with AI-powered insights",
-          href: "/services/ai-project-management-platform",
-          icon: Clock,
-          price: "$299/month",
-          features: ["Task Automation", "Resource Optimization", "Risk Prediction", "Performance Analytics"],
-          benefits: ["40% project efficiency", "30% time savings", "25% cost reduction"]
-        },
-        {
-          name: "AI Predictive Maintenance",
-          description: "AI-powered predictive maintenance and asset optimization",
-          href: "/services/ai-predictive-maintenance",
-          icon: Activity,
-          price: "$399/month",
-          features: ["Equipment Monitoring", "Failure Prediction", "Maintenance Scheduling", "Cost Optimization"],
-          benefits: ["50% downtime reduction", "30% maintenance cost reduction", "90% failure prediction accuracy"]
-        }
-      ]
-    },
-    {
-      title: "Marketing & Sales Automation",
-      description: "AI-powered marketing and sales automation solutions",
-      services: [
-        {
-          name: "AI Marketing Automation Platform",
-          description: "Comprehensive AI-powered marketing automation and optimization",
-          href: "/services/ai-marketing-automation-platform",
-          icon: TrendingUp,
-          price: "$299/month",
-          features: ["Campaign Automation", "Lead Scoring", "Personalization", "Performance Analytics"],
-          benefits: ["45% conversion increase", "60% time savings", "35% ROI improvement"]
-        },
-        {
-          name: "AI HR Platform",
-          description: "AI-powered human resources and talent management platform",
-          href: "/services/ai-hr-platform",
-          icon: Users,
-          price: "$199/month",
-          features: ["Recruitment AI", "Performance Analytics", "Employee Engagement", "Talent Development"],
-          benefits: ["50% faster hiring", "40% retention improvement", "35% productivity increase"]
-        }
-      ]
+      title: "AI Healthcare Analytics Platform",
+      description: "Advanced healthcare analytics powered by AI. Improve patient outcomes and operational efficiency.",
+      price: "From $599/month",
+      features: ["Patient Analytics", "Operational Insights", "Predictive Healthcare"],
+      href: "/services/ai-healthcare-analytics-platform",
+      color: "from-purple-400 to-pink-500",
+      popular: false,
+      icon: Activity,
+      category: "Healthcare"
     }
   ];
 
+  const serviceCategories = [
+    {
+      name: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions for business transformation",
+      icon: Brain,
+      count: 15,
+      color: "from-cyan-400 to-blue-500",
+      services: ["AI Business Intelligence", "Machine Learning", "Natural Language Processing", "Computer Vision"]
+    },
+    {
+      name: "Cybersecurity & Threat Intelligence",
+      description: "Advanced security solutions to protect your digital assets and infrastructure",
+      icon: Shield,
+      count: 12,
+      color: "from-red-400 to-pink-500",
+      services: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
+    },
+    {
+      name: "Financial Services & Risk Management",
+      description: "AI-powered financial solutions for modern institutions",
+      icon: TrendingUp,
+      count: 8,
+      color: "from-green-400 to-emerald-500",
+      services: ["Risk Assessment", "Portfolio Optimization", "Compliance Reporting", "Fraud Detection"]
+    },
+    {
+      name: "Enterprise Automation",
+      description: "Intelligent automation solutions for business operations",
+      icon: Bot,
+      count: 10,
+      color: "from-purple-400 to-indigo-500",
+      services: ["Process Automation", "Workflow Orchestration", "Business Intelligence", "Integration"]
+    },
+    {
+      name: "Supply Chain & Logistics",
+      description: "Smart supply chain and logistics optimization solutions",
+      icon: Network,
+      count: 6,
+      color: "from-blue-400 to-cyan-500",
+      services: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Real-time Tracking"]
+    },
+    {
+      name: "Healthcare Technology",
+      description: "Innovative healthcare solutions powered by AI",
+      icon: Activity,
+      count: 7,
+      color: "from-pink-400 to-purple-500",
+      services: ["Patient Analytics", "Diagnostic Support", "Operational Efficiency", "Predictive Healthcare"]
+    }
+  ];
+
+  const stats = [
+    { number: '100+', label: 'AI Services', icon: Brain },
+    { number: '50+', label: 'Industry Solutions', icon: Target },
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star },
+    { number: '24/7', label: 'AI Availability', icon: Clock }
+  ];
+
+  const benefits = [
+    "Reduce operational costs by 40-70%",
+    "Increase productivity by 60-80%",
+    "Improve accuracy by 90-99%",
+    "Accelerate decision-making by 3-5x",
+    "Enable 24/7 automated operations",
+    "Achieve regulatory compliance automatically"
+  ];
+
+  const industries = [
+    { name: "Healthcare", icon: "🏥", description: "AI-powered diagnostics and patient care" },
+    { name: "Finance", icon: "💳", description: "Risk management and fraud detection" },
+    { name: "Manufacturing", icon: "🏭", description: "Predictive maintenance and quality control" },
+    { name: "Retail", icon: "🛍️", description: "Customer analytics and inventory optimization" },
+    { name: "Technology", icon: "💻", description: "Software development and cloud solutions" },
+    { name: "Government", icon: "🏛️", description: "Digital transformation and security" }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              Innovation Showcase 2025
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovative AI Services
-              <span className="text-zion-cyan"> Showcase 2025</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive collection of AI-powered micro SAAS services, IT solutions, 
-              and innovative technologies designed to transform your business operations and drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-slate-900 font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-colors"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Innovative Services Showcase 2025 - Zion Tech Group | Cutting-Edge AI & Technology Solutions</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive showcase of innovative AI, cybersecurity, financial, and automation services designed to transform your business in 2025." />
+        <meta name="keywords" content="AI services 2025, innovative technology solutions, AI automation, cybersecurity, financial services, enterprise solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2025" />
+      </Helmet>
 
-      {/* Services Categories */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {serviceCategories.map((category, categoryIndex) => (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden pt-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative z-10 container mx-auto px-4 py-24">
             <motion.div
-              key={categoryIndex}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-              className="mb-20"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  {category.title}
-                </h2>
-                <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-                  {category.description}
-                </p>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
+                Innovation Showcase 2025
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={serviceIndex}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-6 hover:border-zion-cyan/50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-zion-cyan/10 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-zion-cyan" />
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                    <p className="text-zion-slate-light mb-4">{service.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-zion-slate-light flex items-center">
-                            <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-zion-cyan mb-2">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="text-sm text-zion-slate-light flex items-center">
-                            <Star className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <Link
-                      to={service.href}
-                      className="w-full py-3 px-6 bg-zion-cyan text-slate-900 font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors text-center block"
-                    >
-                      Learn More
-                    </Link>
-                  </motion.div>
-                ))}
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Innovative <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services Showcase</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Discover our comprehensive collection of cutting-edge AI, cybersecurity, financial, and automation services 
+                designed to transform your business and drive innovation across every aspect of your operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+                >
+                  Explore Services
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all duration-300"
+                >
+                  Schedule Demo
+                </motion.button>
               </div>
             </motion.div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Choose from our comprehensive suite of AI-powered services and start your digital transformation journey today
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-slate-900 font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-colors"
-              >
-                Contact Sales
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center space-y-2">
-              <Phone className="w-6 h-6 text-zion-cyan" />
-              <span className="text-white">+1 302 464 0950</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <Mail className="w-6 h-6 text-zion-cyan" />
-              <span className="text-white">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <MapPin className="w-6 h-6 text-zion-cyan" />
-              <span className="text-white text-center">364 E Main St STE 1008<br />Middletown DE 19709</span>
+        {/* Stats Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-4">
+                    <stat.icon className="w-12 h-12 text-blue-400" />
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </section>
 
-export default InnovativeServicesShowcase2025;
+        {/* Featured Services Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Innovative Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our most popular and cutting-edge services that are transforming businesses across industries
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative bg-zinc-800/50 border rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 ${
+                    service.popular ? 'ring-2 ring-blue-500/50' : ''
+                  }`}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-4">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-400 uppercase tracking-wide">{service.category}</div>
+                      <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-white mb-2">{service.price}</div>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    to={service.href}
+                    className="inline-flex items-center justify-center w-full py-3 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Categories Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Service <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Categories</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive range of services organized by category and industry
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {serviceCategories.map((category, index) => (
+                <motion.div
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-zinc-800/50 border border-zinc-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
+                      <category.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{category.name}</h3>
+                      <div className="text-sm text-gray-400">{category.count} services</div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4">{category.description}</p>
+                  
+                  <div className="space-y-2">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                        {service}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Transform Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Business Results</span>
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-gray-300">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our services are designed to serve businesses across all major industries
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-zinc-800/50 border border-zinc-700/50 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <div className="text-4xl mb-4">{industry.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
+                  <p className="text-gray-300">{industry.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Transform</span> Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Join hundreds of businesses that have transformed their operations with our innovative services. 
+                Start your journey today and experience the future of business technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+                >
+                  Get Started
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all duration-300"
+                >
+                  Schedule Consultation
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Touch</span>
+                </h2>
+                <p className="text-xl text-gray-300 mb-12">
+                  Ready to explore our innovative services? Our experts are here to help you find the perfect solution.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                    <Phone className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                  <p className="text-gray-300">+1 302 464 0950</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                    <Mail className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                    <MapPin className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              >
+                Schedule a Consultation
+              </motion.button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
