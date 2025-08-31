@@ -21,6 +21,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -213,6 +214,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 function App() {
   return (
     <HelmetProvider>
+      <EnhancedAccessibilityPanel />
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
