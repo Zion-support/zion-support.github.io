@@ -1,8 +1,9 @@
+# Robots.txt for Zion Tech Group
+# Website: https://ziontechgroup.com
+# Generated: 2025-08-29
+
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap
 
 # Allow all major search engines
 User-agent: Googlebot
@@ -17,44 +18,29 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
 
-User-agent: YandexBot
-Allow: /
-
-# Allow crawling of all content
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /docs/
-Allow: /white-papers/
-Allow: /webinars/
-Allow: /training/
-Allow: /case-studies/
-Allow: /news/
-Allow: /events/
-Allow: /partners/
-Allow: /careers/
-Allow: /leadership/
-
-# Allow crawling of assets
+# Allow access to static assets
 Allow: /css/
 Allow: /js/
 Allow: /images/
 Allow: /assets/
+Allow: /favicon.ico
+Allow: /logo192.png
+Allow: /manifest.json
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /node_modules/
+# Sitemap locations
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.json
 
-# Crawl delay for respectful crawling
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Host
+# Host directive
 Host: https://ziontechgroup.com

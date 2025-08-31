@@ -60,7 +60,10 @@ import {
   Briefcase,
   Award,
   Truck,
-  Layers
+  Layers,
+  Calendar,
+  PenTool,
+  Sparkles
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -107,6 +110,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       icon: Rocket,
       services: [
         { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
         { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Smart Home Energy", href: "/services/ai-smart-home-energy-management-platform", icon: Leaf },

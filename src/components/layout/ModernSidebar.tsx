@@ -49,49 +49,72 @@ const ModernSidebar: React.FC = () => {
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Users },
       { name: 'Contact', href: '/contact', icon: Phone },
-      { name: 'Blog', href: '/blog', icon: FileText },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'Events', href: '/events', icon: Calendar },
+      { name: 'Pricing', href: '/pricing', icon: BarChart3 },
+      { name: 'Leadership', href: '/leadership', icon: Users },
+      { name: 'Partners', href: '/partners', icon: Users },
     ],
     services: [
+      { name: 'All Services', href: '/services', icon: Zap },
       { name: 'AI Services', href: '/ai-services', icon: Brain },
+      { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
       { name: 'IT Services', href: '/it-services', icon: Cpu },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-      { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
-      { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Smartphone },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
-      { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', icon: Database },
-      { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Users },
-      { name: 'AI Supply Chain Intelligence', href: '/services/ai-supply-chain-intelligence', icon: Globe },
+      { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Globe },
+      { name: 'Blockchain Enterprise', href: '/services/blockchain-enterprise-solutions', icon: Lock },
+      { name: 'Quantum Computing', href: '/services/quantum-edge-computing-solutions', icon: Rocket },
+      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-dashboard', icon: BarChart3 },
+      { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
     ],
     solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Database },
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Globe },
-      { name: 'AI-Powered Analytics', href: '/solutions/ai-analytics', icon: Brain },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
-      { name: 'Security Compliance', href: '/solutions/security-compliance', icon: Shield },
-      { name: 'Performance Optimization', href: '/solutions/performance', icon: Zap },
+      { name: 'All Solutions', href: '/solutions', icon: Database },
+      { name: 'Enterprise', href: '/enterprise', icon: Database },
+      { name: 'Industry Solutions', href: '/industry-solutions', icon: Globe },
+      { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
+      { name: 'Healthcare', href: '/solutions/healthcare', icon: MessageCircle },
+      { name: 'Financial', href: '/solutions/financial', icon: BarChart3 },
+      { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Settings },
+      { name: 'Government', href: '/solutions/government', icon: Shield },
+      { name: 'Retail', href: '/solutions/retail', icon: Smartphone },
     ],
     resources: [
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'Blog', href: '/blog', icon: FileText },
       { name: 'Case Studies', href: '/case-studies', icon: FileText },
       { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'API Reference', href: '/api', icon: Cpu },
-      { name: 'Support Center', href: '/help', icon: MessageCircle },
-      { name: 'Community Forum', href: '/forum', icon: Users },
-      { name: 'Innovative Services Showcase 2026', href: '/innovative-services-showcase-2026', icon: Rocket },
-      { name: 'Comprehensive Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: BarChart3 },
+      { name: 'Webinars', href: '/webinars', icon: Calendar },
+      { name: 'Training', href: '/training', icon: Users },
+      { name: 'Research & Development', href: '/research-development', icon: Rocket },
+      { name: 'News', href: '/news', icon: FileText },
+      { name: 'Events', href: '/events', icon: Calendar },
+      { name: 'Support', href: '/support', icon: MessageCircle },
+      { name: 'Help Center', href: '/help', icon: MessageCircle },
     ],
-    comp: [
+    showcases: [
+      { name: 'Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: Rocket },
+      { name: 'AI Services 2025', href: '/innovative-ai-services-showcase-2025', icon: Brain },
+      { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Zap },
+      { name: 'Services Hub', href: '/innovative-services-hub', icon: Globe },
+      { name: 'Services 2026', href: '/innovative-services-showcase-2026', icon: Rocket },
+      { name: 'Services 2032', href: '/innovative-services-showcase-2032', icon: Rocket },
+      { name: 'Pricing Guide 2025', href: '/comprehensive-pricing-guide-2025', icon: BarChart3 },
+      { name: 'Pricing Guide 2032', href: '/comprehensive-pricing-guide-2032', icon: BarChart3 },
+    ],
+    legal: [
       { name: 'Privacy Policy', href: '/privacy', icon: Lock },
       { name: 'Terms of Service', href: '/terms', icon: FileText },
       { name: 'Cookie Policy', href: '/cookies', icon: Lock },
       { name: 'Accessibility', href: '/accessibility', icon: Users },
       { name: 'Security', href: '/security', icon: Shield },
       { name: 'Compliance', href: '/compliance', icon: Shield },
+    ],
+    account: [
+      { name: 'Sign Up', href: '/signup', icon: Users },
+      { name: 'Get Started', href: '/get-started', icon: Rocket },
+      { name: 'Request Quote', href: '/request-quote', icon: Mail },
+      { name: 'Marketplace', href: '/marketplace', icon: Globe },
     ]
   };
 
@@ -233,8 +256,14 @@ const ModernSidebar: React.FC = () => {
             {/* Resources Section */}
             {renderNavSection('Resources', navigation.resources, 'resources')}
 
-            {/* Company Section */}
-            {renderNavSection('Company', navigation.comp, 'comp')}
+            {/* Showcases Section */}
+            {renderNavSection('Showcases', navigation.showcases, 'showcases')}
+
+            {/* Account Section */}
+            {renderNavSection('Account', navigation.account, 'account')}
+
+            {/* Legal Section */}
+            {renderNavSection('Legal', navigation.legal, 'legal')}
           </nav>
 
           {/* Contact Information */}

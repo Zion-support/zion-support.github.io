@@ -133,7 +133,8 @@ export function Footer() {
         { name: "News & Press", href: "/news", icon: FileText },
         { name: "Events & Webinars", href: "/events", icon: Calendar },
         { name: "Contact Us", href: "/contact", icon: Phone },
-        { name: "Get Started", href: "/get-started", icon: Rocket }
+        { name: "Get Started", href: "/get-started", icon: Rocket },
+        { name: "Sign Up", href: "/signup", icon: Users }
       ]
     },
     {

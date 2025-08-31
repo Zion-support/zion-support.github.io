@@ -83,7 +83,10 @@
     "pm2:simple:deploy": "./scripts/pm2-automation.sh deploy",
     "pm2:simple:build": "./scripts/pm2-automation.sh build",
     "pm2:simple:test": "./scripts/pm2-automation.sh test",
-    "pm2:simple:lint": "./scripts/pm2-automation.sh lint"
+    "pm2:simple:lint": "./scripts/pm2-automation.sh lint",
+    "sitemap:generate": "node scripts/generate-sitemap.js",
+    "links:check": "node scripts/check-links.js",
+    "analysis:full": "npm run sitemap:generate && npm run links:check"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
