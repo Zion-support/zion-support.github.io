@@ -6,87 +6,50 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
+}
 
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
+  }
+}
 
-
-<<<<<<< HEAD
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
   endpoint: string,
-  options: RequestInit = { /* empty */ }
+  options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
 
-=======
-interface ApiClientOptions {
-  method?: string;
-  body?: string;
-  headers?: Record<string, string>;
-}
-
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
-  const { method = 'GET', body, headers = {} } = options;
-  
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const config: RequestInit = {
-  method,
+    method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
-      ...headers,;
-  ;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-
-},;
+      ...options.headers,
+    },
+    ...options,
   };
 
-  if (body) {
-    config.body = body;
-  }
-
   try {
-<<<<<<< HEAD
     const response = await fetch(url, config);
 
     if (!response.ok) {
       throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+    }
 
     const data = await response.json();
     return data;
   } catch (error) {
     if (error instanceof ApiError) {
       throw error;
-
-    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
-
-=======
-    const response = await fetch(endpoint, config);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
-    return await response.json();
-  } catch (error) {
-    console.error('API request failed:', error);
-    throw error;
+    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const api = {
-<<<<<<< HEAD
   // Health check
   health: () => apiRequest('/health'),
 
@@ -98,21 +61,32 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(userData),
     }),
-=======
-  get: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
-  
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
-  
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
-  
-  delete: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  // Auth
+  login: (credentials: { email: string; password: string }) =>
+    apiRequest<{ token: string; user: any }>('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify(credentials),
+    }),
+
+  register: (userData: { name: string; email: string; password: string }) =>
+    apiRequest<{ token: string; user: any }>('/auth/register', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+    }),
+
+  logout: () => apiRequest('/auth/logout', { method: 'POST' }),
+
+  // Services
+  getServices: () => apiRequest<Array<any>>('/services'),
+  getService: (id: string) => apiRequest<any>(`/services/${id}`),
+
+  // Contact
+  sendContact: (contactData: { name: string; email: string; message: string }) =>
+    apiRequest('/contact', {
+      method: 'POST',
+      body: JSON.stringify(contactData),
+    }),
 };
 
-// Export types for use in components
-export type { ApiResponse };
-export { ApiError };}}}}}}}
+export default api;
