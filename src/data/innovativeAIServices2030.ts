@@ -404,11 +404,11 @@ export const innovativeAIServices2030: AIService[] = [
     reviewCount: 267,
     innovationLevel: "Innovative",
     marketSize: "$4.7B by 2030",
-    competitors["Oracle NetSuite", "SAP Business One", "QuickBooks Enterprise", "Fishbowl"],
-    aiCapabilities[
-      "Demand forecasting", "Inventory optimization", "Predictive analytics",
-      "Automated reordering", "Trend analysis", "Real-time monitoring"
-    ],
+          competitors: ["Oracle NetSuite", "SAP Business One", "QuickBooks Enterprise", "Fishbowl"],
+          aiCapabilities: [
+        "Demand forecasting", "Inventory optimization", "Predictive analytics",
+        "Automated reordering", "Trend analysis", "Real-time monitoring"
+      ],
     sustainabilityScore: 92,
     complianceStandards["ISO 9001", "SOC 2", "GDPR", "Industry-specific"],
     deploymentOptions["Cloud", "On-premise", "Hybrid"],

@@ -436,7 +436,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with audit-based pricing",
       marketPrice: "$799-1,599/month"
     },
-    features[
+    features: [
       "Smart contract auditing",
       "DeFi protocol analysis",
       "Vulnerability detection",
@@ -448,36 +448,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Security reporting",
       "Remediation guidance"
     ],
-    benefits[
+    benefits: [
       "Prevent smart contract exploits",
       "Ensure DeFi protocol security",
       "Meet regulatory requirements",
       "Protect digital assets",
       "Build user trust"
     ],
-    useCases[
+    useCases: [
       "Smart contract development",
       "DeFi protocol security",
       "NFT platform security",
       "Cryptocurrency exchanges",
       "Blockchain applications"
     ],
-    targetAudience[
+    targetAudience: [
       "Blockchain developers",
       "DeFi protocols",
       "Cryptocurrency exchanges",
       "NFT platforms",
       "Financial institutions"
     ],
-    technologies[
+    technologies: [
       "Static analysis", "Dynamic analysis", "Formal verification",
       "Penetration testing", "Code review", "Security testing"
     ],
-    integrations[
+    integrations: [
       "Development environments", "CI/CD pipelines", "Blockchain networks",
       "Security tools", "Compliance platforms", "Audit systems"
     ],
-    support[
+    support: [
       "24/7 security support",
       "Blockchain consultation",
       "Audit assistance",
@@ -492,13 +492,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 134,
     innovationLevel: "Innovative",
     marketSize: "$8.9B by 2030",
-    competitors["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],
-    securityCapabilities[
+    competitors: ["Consensys Diligence", "Trail of Bits", "OpenZeppelin", "Quantstamp"],
+    securityCapabilities: [
       "Smart contract auditing", "DeFi security", "Vulnerability detection",
       "Penetration testing", "Code review", "Compliance verification"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "NIST", "Industry-specific"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "Industry-specific"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -508,12 +508,11 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 3 seconds",
     availability: "Global",
     location: "Global",
+    tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
+    createdAt: "2030-01-15T10:00:00.000Z",
+    featured: true,
+    trending: true
   }
-    tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;
-    createdAt: "2030-01-15T10:00:00.000Z",;
-    featured: true,;
-    trending: true;
-  };
 ];
-export default innovativeCybersecurityServices2030;}}
+export default innovativeCybersecurityServices2030;
