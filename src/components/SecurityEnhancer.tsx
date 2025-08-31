@@ -38,7 +38,7 @@ interface SecurityCheck {
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
 
-const SecurityEnhancer = (): JSX.Element => {
+const SecurityEnhancer = (): React.ReactElement => {
   const [metrics, setMetrics] = useState<SecurityMetrics>({
     overallScore: 85,
     vulnerabilities: 3,
@@ -156,7 +156,7 @@ const SecurityEnhancer = (): JSX.Element => {
                     <p className="text-sm text-zion-slate-light">{check.description}</p>
                   </div>
                 </div>
-                <Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">
+                <Badge className="border-zion-cyan/30 text-zion-cyan">
                   {check.category}
                 </Badge>
               </div>
@@ -183,4 +183,4 @@ const SecurityEnhancer = (): JSX.Element => {
   );
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancer;export { SecurityEnhancer };
