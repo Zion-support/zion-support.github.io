@@ -298,6 +298,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Financial Risk Management
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-business-intelligence-platform-enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI BI Platform Enterprise
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-cybersecurity-threat-detection-enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Cybersecurity Enterprise
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-computing-solutions-enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        AI Quantum Computing Enterprise
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-blockchain-web3-solutions-enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        AI Blockchain Web3 Enterprise
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -312,6 +336,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <Link to="/innovative-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium flex items-center justify-center">
                     Innovation Showcase 2026
                     <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/enterprise-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium flex items-center justify-center">
+                    Enterprise Showcase 2025
+                    <Star className="w-4 h-4 ml-2"/>
                   </Link>
                   <Link to="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium flex items-center justify-center">
                     Comprehensive Showcase 2025

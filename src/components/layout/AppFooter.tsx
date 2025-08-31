@@ -81,7 +81,11 @@ export function AppFooter() {
         { name: "AI HR Platform", href: "/services/ai-hr-platform" },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
         { name: "AI Predictive Maintenance", href: "/services/ai-predictive-maintenance" },
-        { name: "AI Financial Risk Management", href: "/services/ai-financial-trading-risk-management" }
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-trading-risk-management" },
+        { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
+        { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
+        { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
+        { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
       ]
     }
   ];
