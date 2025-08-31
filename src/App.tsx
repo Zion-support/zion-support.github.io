@@ -18,6 +18,10 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 
+// New Layout Components
+import { EnhancedHeader } from './components/header/EnhancedHeader';
+import { EnhancedFooter } from './components/layout/EnhancedFooter';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -33,6 +37,7 @@ const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
@@ -82,6 +87,9 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Enhanced Header */}
+            <EnhancedHeader />
+            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
@@ -108,6 +116,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/pricing" element={<Pricing />} />
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
@@ -159,6 +168,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Enhanced Footer */}
+            <EnhancedFooter />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
