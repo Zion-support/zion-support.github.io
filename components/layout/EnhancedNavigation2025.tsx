@@ -1,91 +1,65 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025() {
-=======
-import React, { useState, useEffect } from 'react.ts';
-import Link from 'next/link.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
+import Link from 'next/link';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
 
-export default function EnhancedNavigation2025(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function EnhancedNavigation2025() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<any>(null);
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll)}, []);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	const navigation = [
 		{
 			name: 'Services',
 			href: '/services',
-<<<<<<< HEAD
 			children: [
-				{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Predictive analytics and insights' },
-				{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat detection' },
-				{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform', description: 'Rapid application development' },
-				{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite', description: 'Automated content generation' },
-				{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales automation' },
-=======
-			children[
 				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
 				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
 				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
 				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
 				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
 			name: 'Solutions',
 			href: '/solutions',
-<<<<<<< HEAD
 			children: [
-				{ name: 'Financial Services', href: '/solutions/financial', description: 'AI risk management & compliance' },
-				{ name: 'Healthcare', href: '/solutions/healthcare', description: 'Patient data security & AI diagnostics' },
-				{ name: 'Manufacturing', href: '/solutions/manufacturing', description: 'IoT & predictive maintenance' },
-				{ name: 'Retail & E-commerce', href: '/solutions/retail', description: 'Customer analytics & personalization' },
-=======
-			children[
 				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
 				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
 				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
 				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			]
 		},
 		{
-			name: 'Comp',
+			name: 'Company',
 			href: '/about',
-			children[
+			children: [
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
-				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },;
-				{ name: 'Careers', href: '/careers', description: 'Join our team' },;
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
-			];
-		},;
-		{ name: 'Blog', href: '/blog' },;
-		{ name: 'Pricing', href: '/pricing' },;
+				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+				{ name: 'Careers', href: '/careers', description: 'Join our team' },
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
+			]
+		},
+		{ name: 'Blog', href: '/blog' },
+		{ name: 'Pricing', href: '/pricing' },
 	];
 
-<<<<<<< HEAD
-	const toggleDropdown = (name: string)  => {;
-		setActiveDropdown(activeDropdown === name ? null : name)};
-=======
-	const toggleDropdown = (name: string) => {;
+	const toggleDropdown = (name: string) => {
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-	const closeMobileMenu = () => {;
+	const closeMobileMenu = () => {
 		setIsOpen(false);
-		setActiveDropdown(null)};
+		setActiveDropdown(null);
+	};
 
 	return (
-		<nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
 		}`}>
 			{/* Top Contact Bar */}
@@ -102,134 +76,136 @@ export default function EnhancedNavigation2025(...args[]):  {
 								<span>kleber@ziontechgroup.com</span>
 							</div>
 						</div>
-						<div className="flex items-center gap-2">
-							<Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-							<span className="text-yellow-400 font-semibold">Revolutionary Technology Solutions</span>
+						<div className="flex items-center gap-4">
+							<div className="flex items-center gap-2 text-cyan-300">
+								<Sparkles className="w-4 h-4" />
+								<span>Innovation Hub</span>
+							</div>
+							<div className="flex items-center gap-2 text-purple-300">
+								<Zap className="w-4 h-4" />
+								<span>AI-Powered Solutions</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			{/* Main Navigation */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between h-16">
-					{/* Logo */}
-					<Link href="/" className="flex items-center gap-3 group">
-						<div className="relative">
-							<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-								<Zap className="w-6 h-6 text-white" />
-							</div>
-							<div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+			<div className="bg-black/95 backdrop-blur-md border-b border-gray-800/50">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="flex items-center justify-between h-16">
+						{/* Logo */}
+						<div className="flex-shrink-0">
+							<Link href="/" className="flex items-center gap-3">
+								<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+									<span className="text-white font-bold text-xl">Z</span>
+								</div>
+								<div className="hidden sm:block">
+									<div className="text-white font-bold text-xl">Zion Tech Group</div>
+									<div className="text-cyan-400 text-xs">Innovation • Technology • Growth</div>
+								</div>
+							</Link>
 						</div>
-						<div className="hidden sm:block">
-							<div className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">Zion Tech Group</div>
-							<div className="text-xs text-gray-400">Future Technology Solutions</div>
-						</div>
-					</Link>
 
-					{/* Desktop Navigation */}
-					<div className="hidden lg: flex lg:items-center lg:space-x-8">
-						{navigation.map((item)  => (
-							<div key={item.name} className="relative group">
-								{item.children ? (
-									<button
-										onClick={() => toggleDropdown(item.name)}
-										className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-										aria-expanded={activeDropdown === item.name}
-										aria-haspopup="true"
-
-										<span>{item.name}</span>
-										<ChevronDown
-											className={`w-4 h-4 transition-transform duration-200 ${
-												activeDropdown === item.name ? 'rotate-180' : ''
-											}`}
-										/>
-									</button>
-								) : (
-									<Link
-										href={item.href}
-										className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-
-										{item.name}
-									</Link>
-								)}
-
-								{/* Dropdown Menu */}
-								{item.children && (
-									<div className={`absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl shadow-cyan-500/25 p-4 transition-all duration-200 ${
-										activeDropdown === item.name ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-									}`}>
-										<div className="grid gap-3">
-											{item.children.map((child) => (
-												<Link
-													key={child.name}
-													href={child.href}
-													className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
-													onClick={() => setActiveDropdown(null)}
-
-													<div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-														<span className="text-cyan-400 text-sm">→</span>
-													</div>
-													<div>
-														<div className="font-medium text-white group-hover:text-cyan-300 transition-colors duration-200">
-															{child.name}
-														</div>
-														<div className="text-sm text-gray-300">
-															{child.description}
+						{/* Desktop Navigation */}
+						<div className="hidden lg:block">
+							<div className="ml-10 flex items-baseline space-x-8">
+								{navigation.map((item) => (
+									<div key={item.name} className="relative group">
+										{item.children ? (
+											<div>
+												<button
+													onClick={() => toggleDropdown(item.name)}
+													className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 group-hover:text-cyan-400 transition-colors"
+												>
+													{item.name}
+													<ChevronDown className="w-4 h-4" />
+												</button>
+												{activeDropdown === item.name && (
+													<div className="absolute left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-700/50 p-4 z-50">
+														<div className="grid grid-cols-1 gap-3">
+															{item.children.map((child) => (
+																<Link
+																	key={child.name}
+																	href={child.href}
+																	onClick={closeMobileMenu}
+																	className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
+																>
+																	<div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+																	<div>
+																		<div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+																			{child.name}
+																		</div>
+																		<div className="text-gray-400 text-sm mt-1">
+																			{child.description}
+																		</div>
+																	</div>
+																</Link>
+															))}
 														</div>
 													</div>
-												</Link>
-											))}
-										</div>
+												)}
+											</div>
+										) : (
+											<Link
+												href={item.href}
+												className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hover:text-cyan-400 transition-colors"
+											>
+												{item.name}
+											</Link>
+										)}
 									</div>
-								)}
+								))}
 							</div>
-						))}
-					</div>
+						</div>
 
-					{/* Right side actions */}
-					<div className="flex items-center space-x-4">
-						<Link href="/request-quote/">
-							<button className="hidden sm:flex px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-colors">
-								Request a quote
+						{/* CTA Button */}
+						<div className="hidden lg:block">
+							<Link
+								href="/contact"
+								className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
+							>
+								Get Started
+							</Link>
+						</div>
+
+						{/* Mobile menu button */}
+						<div className="lg:hidden">
+							<button
+								onClick={() => setIsOpen(!isOpen)}
+								className="text-gray-300 hover:text-white p-2 rounded-md"
+							>
+								{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 							</button>
-						</Link>
-						<button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
-							{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			{/* Mobile Navigation */}
 			{isOpen && (
-				<div className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50">
-					<div className="px-4 py-4 space-y-3">
+				<div className="lg:hidden bg-gray-900/95 backdrop-blur-md border-b border-gray-800/50">
+					<div className="px-2 pt-2 pb-3 space-y-1">
 						{navigation.map((item) => (
 							<div key={item.name}>
 								{item.children ? (
 									<div>
 										<button
 											onClick={() => toggleDropdown(item.name)}
-											className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
-											aria-expanded={activeDropdown === item.name}
-
-											<span>{item.name}</span>
-											<ChevronRight
-												className={`w-4 h-4 transition-transform duration-200 ${
-													activeDropdown === item.name ? 'rotate-90' : ''
-												}`}
-											/>
+											className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between"
+										>
+											{item.name}
+											<ChevronRight className="w-4 h-4" />
 										</button>
 										{activeDropdown === item.name && (
-											<div className="ml-4 mt-2 space-y-2">
+											<div className="pl-4 space-y-1">
 												{item.children.map((child) => (
 													<Link
 														key={child.name}
 														href={child.href}
-														className="block px-4 py-2 text-gray-400 hover:text-cyan-300 transition-colors duration-200"
 														onClick={closeMobileMenu}
-
+														className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+													>
 														{child.name}
 													</Link>
 												))}
@@ -239,39 +215,26 @@ export default function EnhancedNavigation2025(...args[]):  {
 								) : (
 									<Link
 										href={item.href}
-										className="block px-4 py-3 text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 										onClick={closeMobileMenu}
-
+										className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+									>
 										{item.name}
 									</Link>
 								)}
 							</div>
 						))}
-
-						{/* Mobile CTA */}
-						<div className="pt-4 border-t border-gray-700">
-							<Link href="/request-quote/" onClick={closeMobileMenu}>
-								<button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg">
-									Request a quote
-								</button>
+						<div className="pt-4">
+							<Link
+								href="/contact"
+								onClick={closeMobileMenu}
+								className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white block w-full text-center px-6 py-3 rounded-lg font-medium"
+							>
+								Get Started
 							</Link>
-<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
 			)}
 		</nav>
-	)};
-=======;
-						</div>;
-					</div>;
-				</div>;
-			)};
-		</nav>;
 	);
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
