@@ -20,6 +20,9 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
+import { EnhancedSEOAccessibility } from './components/EnhancedSEOAccessibility';
+import { EnhancedUserExperience } from './components/EnhancedUserExperience';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -212,6 +215,11 @@ function App() {
 
           {/* Advanced Analytics */}
           <AdvancedAnalytics enabled={true} showMetrics={true} />
+
+          {/* Enhanced Components */}
+          <EnhancedPerformanceMonitor />
+          <EnhancedSEOAccessibility />
+          <EnhancedUserExperience />
 
           {/* Header */}
           <EnhancedHeader />
