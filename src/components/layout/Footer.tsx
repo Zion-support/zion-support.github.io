@@ -60,7 +60,10 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
+        { name: "AI Customer Success Platform", href: "/services/ai-customer-success-platform" },
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" }
       ]
     },
     {
@@ -91,6 +94,17 @@ export function Footer() {
         { name: "Digital Transformation", href: "/digital-transformation" },
         { name: "Cloud Solutions", href: "/cloud-solutions" },
         { name: "Emerging Tech", href: "/emerging-tech" }
+      ]
+    },
+    {
+      title: "Latest Innovations 2026",
+      icon: Star,
+      links: [
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
+        { name: "AI Customer Success Platform", href: "/services/ai-customer-success-platform" },
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" },
+        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
+        { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025" }
       ]
     },
     {
@@ -132,7 +146,7 @@ export function Footer() {
     <footer className="bg-zinc-900 border-t border-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -149,19 +163,15 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-zinc-400">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 text-zion-cyan" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 text-zion-cyan" />
                 <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-4 text-zinc-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
               <div className="flex items-center space-x-3 text-zinc-400">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4 text-zion-cyan" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>

@@ -359,6 +359,30 @@ const ServicesPreviewSection = React.memo(() => {
       features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
     },
     {
+      icon: Database,
+      title: "AI Enterprise Solutions",
+      description: "Comprehensive AI-powered enterprise resource planning and management",
+      href: "/services/ai-enterprise-resource-planning",
+      color: "from-emerald-500 to-teal-500",
+      features: ["Resource Planning", "Process Automation", "Business Intelligence", "Supply Chain Optimization"]
+    },
+    {
+      icon: Users,
+      title: "Customer Success AI",
+      description: "AI-driven customer success and relationship management platforms",
+      href: "/services/ai-customer-success-platform",
+      color: "from-pink-500 to-rose-500",
+      features: ["Customer Insights", "Success Automation", "Churn Prevention", "Growth Analytics"]
+    },
+    {
+      icon: Truck,
+      title: "Supply Chain AI",
+      description: "Intelligent supply chain optimization and logistics management",
+      href: "/services/ai-supply-chain-intelligence",
+      color: "from-orange-500 to-amber-500",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+    },
+    {
       icon: Zap,
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",
@@ -387,7 +411,7 @@ const ServicesPreviewSection = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

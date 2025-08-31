@@ -289,6 +289,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Financial Risk Management
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-resource-planning" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Database className="w-3 h-3 mr-2" />
+                        AI Enterprise Resource Planning
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-success-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI Customer Success Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Truck className="w-3 h-3 mr-2" />
+                        AI Supply Chain Intelligence
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
