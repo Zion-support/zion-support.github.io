@@ -17,6 +17,8 @@ import {
   Rocket,
   Sun,
   Moon
+} from 'lucide-react';
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,14 +29,17 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)};
+      setScrolled(window.scrollY > 20);
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null)}, [location.pathname]);
+    setActiveDropdown(null);
+  }, [location.pathname]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -69,15 +74,10 @@ export function AppHeader() {
 
   const isActiveRoute = (path) => {
     if (path === '/') {
-<<<<<<< HEAD
       return location.pathname === '/';
-
+    }
     return location.pathname.startsWith(path);
   };
-=======
-      return location.pathname === '/'}
-    return location.pathname.startsWith(path)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <motion.header
@@ -89,7 +89,7 @@ export function AppHeader() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -97,22 +97,8 @@ export function AppHeader() {
             <motion.div
               className="relative"
               whileHover={{ scale: 1.1 }}
-<<<<<<< HEAD
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-
-=======
-              transition = {
-  { type: "spring", stiffness: 400,
-  damping: 10 
-
-
-
-
-
-
-}}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
@@ -137,7 +123,7 @@ export function AppHeader() {
                       className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2"
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-
+                    >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
@@ -147,47 +133,20 @@ export function AppHeader() {
                       {activeDropdown === item.name && (
                         <motion.div
                           className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
-                          initial = {
-  { opacity: 0, y: -10,
-  scale: 0.95 
-
-
-
-
-
-
-}}
-                          animate = {
-  { opacity: 1, y: 0,
-  scale: 1 
-
-
-
-
-
-
-}}
-                          exit = {
-  { opacity: 0, y: -10,
-  scale: 0.95 
-
-
-
-
-
-
-}}
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                           onMouseEnter={() => setActiveDropdown(item.name)}
                           onMouseLeave={() => setActiveDropdown(null)}
-
+                        >
                           <div className="grid grid-cols-1 gap-2">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
-
+                              >
                                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
                                   <dropdownItem.icon className="w-5 h-5 text-white" />
                                 </div>
@@ -211,7 +170,7 @@ export function AppHeader() {
                         ? 'text-zion-cyan'
                         : 'text-zion-slate-light hover:text-zion-cyan'
                     }`}
-
+                  >
                     {item.name}
                   </Link>
                 )}
@@ -225,7 +184,7 @@ export function AppHeader() {
             <button
               onClick={toggleDarkMode}
               className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
-
+            >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
 
@@ -233,7 +192,7 @@ export function AppHeader() {
             <Link
               to="/contact"
               className="hidden sm:inline-flex items-center px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-
+            >
               Get Started
             </Link>
 
@@ -241,7 +200,7 @@ export function AppHeader() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-
+            >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -253,38 +212,11 @@ export function AppHeader() {
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
-            initial = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
-
-}}
-            exit = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-
+          >
             <div className="container mx-auto px-4 py-4">
               <nav className="space-y-4">
                 {navigationItems.map((item) => (
@@ -294,7 +226,7 @@ export function AppHeader() {
                         <button
                           className="flex items-center justify-between w-full text-left text-zinc-300 hover:text-white transition-colors duration-300 p-3 rounded-lg hover:bg-zinc-800/50"
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-
+                        >
                           <span className="font-medium">{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                             activeDropdown === item.name ? 'rotate-180' : ''
@@ -307,7 +239,7 @@ export function AppHeader() {
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="block p-3 rounded-lg hover:bg-zinc-800/50 text-zinc-300 hover:text-white transition-colors duration-300"
-
+                              >
                                 {dropdownItem.name}
                               </Link>
                             ))}
@@ -322,7 +254,7 @@ export function AppHeader() {
                             ? 'text-zion-cyan bg-zion-cyan/10'
                             : 'text-zinc-300 hover:text-white hover:bg-zinc-800/50'
                         }`}
-
+                      >
                         {item.name}
                       </Link>
                     )}
@@ -334,9 +266,5 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </motion.header>
-<<<<<<< HEAD
   );
-}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
