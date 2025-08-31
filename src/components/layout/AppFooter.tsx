@@ -47,14 +47,14 @@ export function AppFooter() {
       color: "text-zion-cyan",
       bgColor: "bg-zion-cyan/20",
       services: [
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Autonomous Logistics Optimization", href: "/services/ai-autonomous-logistics-optimization" },
+        { name: "AI Autonomous Manufacturing Platform", href: "/services/ai-autonomous-manufacturing-platform" },
         { name: "AI Business Intelligence Dashboard", href: "/services/ai-business-intelligence-dashboard" },
         { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
         { name: "AI Marketing Automation Platform", href: "/services/ai-marketing-automation-platform" },
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" }
       ]
     },
     {
@@ -290,14 +290,14 @@ export function AppFooter() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link 
-              to="/innovative-services-showcase-2032"
+              to="/innovative-services-showcase-2026"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Rocket className="w-6 h-6 text-zion-purple" />
-                <h4 className="text-lg font-semibold text-white">2032 Innovation Showcase</h4>
+                <h4 className="text-lg font-semibold text-white">2026 Innovation Showcase</h4>
               </div>
-              <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
+              <p className="text-zion-slate-light text-sm">Explore our revolutionary AI autonomous platforms and services.</p>
             </Link>
             <Link 
               to="/comprehensive-services-showcase-2025"

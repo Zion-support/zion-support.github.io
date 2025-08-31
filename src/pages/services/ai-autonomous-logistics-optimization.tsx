@@ -1,21 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Factory, 
+  Truck, 
   Brain, 
   Zap, 
-  Cpu, 
-  Settings, 
+  Route, 
+  Package, 
   CheckCircle, 
   ArrowRight,
   Users,
   Globe,
-  Monitor,
+  MapPin,
   Clock,
   DollarSign,
   Star,
   Award,
   Rocket,
+  Cpu,
+  Monitor,
   Smartphone,
   Cloud,
   Target,
@@ -24,86 +26,79 @@ import {
   Heart,
   Sparkles,
   Play,
+  Factory,
   BarChart3,
   Activity,
   Network,
   Database,
   Shield,
+  Settings,
   Gauge,
+  Fuel,
   Calendar,
   AlertTriangle,
   CheckSquare,
   FileText,
   Code,
   Palette,
-  Wrench,
-  Cog,
-  HardDrive,
-  Layers,
-  Workflow,
-  Eye,
-  Lock,
-  Key,
-  Server,
-  Car,
-  Pill,
-  Utensils
+  ShoppingCart,
+  Snowflake
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIAutonomousManufacturingPlatform() {
+export default function AIAutonomousLogisticsOptimization() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Production Optimization",
-      description: "Advanced machine learning algorithms that continuously optimize production processes for maximum efficiency and quality."
+      title: "AI-Powered Route Optimization",
+      description: "Advanced algorithms that continuously learn and optimize delivery routes in real-time for maximum efficiency."
     },
     {
-      icon: Factory,
-      title: "Autonomous Manufacturing Lines",
-      description: "Self-operating production lines with intelligent quality control and predictive maintenance capabilities."
+      icon: Truck,
+      title: "Autonomous Fleet Management",
+      description: "Intelligent fleet coordination with predictive maintenance and real-time vehicle tracking."
     },
     {
-      icon: Cpu,
-      title: "Smart IoT Integration",
-      description: "Seamless integration with IoT sensors and devices for real-time monitoring and control."
+      icon: Route,
+      title: "Dynamic Route Planning",
+      description: "Real-time route adjustments based on traffic, weather, and delivery priorities."
     },
     {
-      icon: Settings,
-      title: "Predictive Maintenance",
-      description: "AI-driven equipment monitoring that predicts failures before they occur, reducing downtime by 80%."
+      icon: Package,
+      title: "Smart Inventory Management",
+      description: "AI-driven demand forecasting and automated inventory optimization across all locations."
     },
     {
       icon: Activity,
-      title: "Quality Assurance Automation",
-      description: "Automated quality control with computer vision and AI algorithms ensuring 99.9% defect detection."
+      title: "Predictive Analytics",
+      description: "Machine learning models that predict delivery times, delays, and optimize resource allocation."
     },
     {
-      icon: Workflow,
-      title: "Supply Chain Optimization",
-      description: "Intelligent supply chain management with demand forecasting and inventory optimization."
+      icon: Network,
+      title: "Supply Chain Intelligence",
+      description: "End-to-end visibility and optimization across the entire supply chain network."
     }
   ];
 
   const benefits = [
-    "Increase production efficiency by up to 45% with AI optimization",
-    "Reduce manufacturing costs by 30% through automation",
-    "Achieve 99.9% quality control accuracy",
-    "Minimize downtime with predictive maintenance",
-    "Real-time production monitoring and analytics",
-    "Seamless integration with existing MES and ERP systems"
+    "Reduce delivery costs by up to 40% with AI optimization",
+    "Improve delivery accuracy to 99.5%",
+    "Real-time fleet monitoring and predictive maintenance",
+    "Automated route planning saves 25% in fuel costs",
+    "24/7 autonomous logistics operations",
+    "Seamless integration with existing ERP and WMS systems"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small manufacturing operations",
+      description: "Perfect for small logistics operations",
       features: [
-        "AI production optimization",
-        "Basic quality control",
-        "Up to 10 production lines",
+        "AI route optimization",
+        "Basic fleet tracking",
+        "Up to 50 vehicles",
         "Email support",
         "Standard reporting"
       ],
@@ -111,13 +106,13 @@ export default function AIAutonomousManufacturingPlatform() {
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing manufacturers",
+      description: "Ideal for growing logistics companies",
       features: [
         "Advanced AI optimization",
-        "Full quality control automation",
-        "Up to 50 production lines",
+        "Full fleet management",
+        "Up to 200 vehicles",
         "Priority support",
         "Advanced analytics",
         "Custom integrations"
@@ -126,13 +121,13 @@ export default function AIAutonomousManufacturingPlatform() {
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,499",
       period: "/month",
-      description: "For large manufacturing enterprises",
+      description: "For large logistics enterprises",
       features: [
-        "Enterprise AI manufacturing",
+        "Enterprise AI logistics",
         "Custom optimization models",
-        "Unlimited production lines",
+        "Unlimited vehicles",
         "Dedicated support team",
         "Custom analytics",
         "API access & integrations"
@@ -143,42 +138,42 @@ export default function AIAutonomousManufacturingPlatform() {
 
   const useCases = [
     {
-      title: "Automotive Manufacturing",
-      description: "Optimize assembly lines with AI-powered quality control and predictive maintenance.",
-      icon: Car
+      title: "E-commerce Delivery",
+      description: "Optimize last-mile delivery with AI-powered route planning and real-time tracking.",
+      icon: Package
     },
     {
-      title: "Electronics Production",
-      description: "Ensure precision manufacturing with automated quality assurance and defect detection.",
-      icon: Smartphone
+      title: "Manufacturing Supply Chain",
+      description: "Streamline raw material delivery and finished product distribution with predictive analytics.",
+      icon: Factory
     },
     {
-      title: "Pharmaceutical Manufacturing",
-      description: "Maintain strict quality standards with AI-powered compliance monitoring.",
-      icon: Pill
+      title: "Retail Distribution",
+      description: "Optimize store replenishment and cross-docking operations for maximum efficiency.",
+      icon: ShoppingCart
     },
     {
-      title: "Food & Beverage",
-      description: "Optimize production efficiency while maintaining food safety standards.",
-      icon: Utensils
+      title: "Cold Chain Logistics",
+      description: "Monitor temperature-sensitive shipments with IoT sensors and AI-powered alerts.",
+      icon: Snowflake
     }
   ];
 
   const industries = [
-    "Automotive & Aerospace",
-    "Electronics & Semiconductors",
-    "Pharmaceuticals & Healthcare",
+    "E-commerce & Retail",
+    "Manufacturing & Industrial",
+    "Healthcare & Pharmaceuticals",
     "Food & Beverage",
-    "Chemical & Materials",
+    "Automotive & Aerospace",
     "Energy & Utilities"
   ];
 
   return (
     <>
       <SEO 
-        title="AI Autonomous Manufacturing Platform | Zion Tech Group"
-        description="Revolutionary AI-powered autonomous manufacturing platform. Increase efficiency by 45%, reduce costs by 30%, and achieve 99.9% quality control. Transform your manufacturing operations today."
-        keywords="AI manufacturing, autonomous manufacturing, production optimization, quality control, predictive maintenance, manufacturing AI, Industry 4.0"
+        title="AI Autonomous Logistics Optimization | Zion Tech Group"
+        description="Revolutionary AI-powered logistics optimization platform. Reduce costs by 40%, improve delivery accuracy to 99.5%, and achieve autonomous fleet management. Transform your supply chain today."
+        keywords="AI logistics, autonomous logistics, route optimization, fleet management, supply chain optimization, delivery optimization, logistics AI"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -192,20 +187,20 @@ export default function AIAutonomousManufacturingPlatform() {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
-                <Factory className="w-4 h-4 mr-2" />
-                AI-Powered Autonomous Manufacturing
+                <Truck className="w-4 h-4 mr-2" />
+                AI-Powered Autonomous Logistics
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Autonomous
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Manufacturing</span>
-                <br />Platform
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics</span>
+                <br />Optimization
               </h1>
               
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Transform your manufacturing operations with autonomous AI that never sleeps. 
-                Increase efficiency by 45%, reduce costs by 30%, and achieve 99.9% quality 
-                control with cutting-edge artificial intelligence.
+                Transform your logistics operations with autonomous AI that never sleeps. 
+                Reduce costs by 40%, improve delivery accuracy to 99.5%, and achieve 
+                unprecedented efficiency in your supply chain.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -254,11 +249,11 @@ export default function AIAutonomousManufacturingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Revolutionary Manufacturing Features
+                Revolutionary Logistics Features
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                 Our AI platform combines cutting-edge technology with autonomous capabilities 
-                to provide unmatched manufacturing optimization.
+                to provide unmatched logistics optimization.
               </p>
             </motion.div>
             
@@ -295,8 +290,8 @@ export default function AIAutonomousManufacturingPlatform() {
                 Why Choose Our Platform?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Experience unprecedented manufacturing efficiency with autonomous AI that continuously 
-                learns, optimizes, and improves your production processes.
+                Experience unprecedented logistics efficiency with autonomous AI that continuously 
+                learns, optimizes, and improves your operations.
               </p>
             </motion.div>
             
@@ -346,7 +341,7 @@ export default function AIAutonomousManufacturingPlatform() {
                 Transparent Pricing
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Choose the plan that fits your manufacturing needs. All plans include 
+                Choose the plan that fits your logistics needs. All plans include 
                 our core AI-powered optimization features.
               </p>
             </motion.div>
@@ -420,7 +415,7 @@ export default function AIAutonomousManufacturingPlatform() {
                 Industry Solutions
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our platform is designed to meet the unique manufacturing challenges 
+                Our platform is designed to meet the unique logistics challenges 
                 of various industries.
               </p>
             </motion.div>
@@ -458,7 +453,7 @@ export default function AIAutonomousManufacturingPlatform() {
                 Industries We Serve
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our AI manufacturing platform is trusted by leading companies across 
+                Our AI logistics platform is trusted by leading companies across 
                 multiple industries worldwide.
               </p>
             </motion.div>
@@ -491,11 +486,11 @@ export default function AIAutonomousManufacturingPlatform() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Manufacturing?
+                Ready to Optimize Your Logistics?
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Join thousands of manufacturers that trust our AI-powered 
-                autonomous manufacturing platform.
+                Join thousands of companies that trust our AI-powered 
+                autonomous logistics optimization platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -503,7 +498,7 @@ export default function AIAutonomousManufacturingPlatform() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
                 >
-                  <Factory className="w-5 h-5 mr-2" />
+                  <Truck className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </motion.button>
                 <motion.button
