@@ -43,6 +43,9 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
@@ -129,6 +132,9 @@ function App() {
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/research-development" element={<ResearchDevelopment />} />
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />

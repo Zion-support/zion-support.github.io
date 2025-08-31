@@ -14,7 +14,8 @@ import {
   Brain,
   Cloud,
   Cpu,
-  Zap
+  Zap,
+  Users
 } from 'lucide-react';
 
 const Header = () => {
@@ -40,9 +41,24 @@ const Header = () => {
       dropdown: [
         { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI platforms' },
         { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Digital transformation' },
-        { name: 'Cloud & DevOps', href: '/services', icon: Cloud, description: 'Scalable infrastructure' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions', icon: Cloud, description: 'Scalable infrastructure' },
         { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'Advanced security' },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' }
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Cpu, description: 'Business modernization' },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Users, description: 'Sector-specific solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Zap, description: 'Next-generation technology' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Users, description: 'Large-scale business solutions' },
+        { name: 'Healthcare Tech', href: '/healthcare-solutions', icon: Shield, description: 'Medical technology solutions' },
+        { name: 'Financial Solutions', href: '/financial-solutions', icon: Shield, description: 'Fintech innovations' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions', icon: Cpu, description: 'Industry 4.0 solutions' },
+        { name: 'Government', href: '/government-solutions', icon: Shield, description: 'Public sector technology' },
+        { name: 'Retail Solutions', href: '/retail-solutions', icon: Users, description: 'E-commerce & retail tech' }
       ]
     },
     { name: 'About', href: '/about' },
