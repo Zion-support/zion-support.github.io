@@ -60,6 +60,14 @@ const Research = createLazyComponent(() => import('./pages/Research'));
 const Categories = createLazyComponent(() => import('./pages/Categories'));
 const Login = createLazyComponent(() => import('./pages/Login'));
 
+// 2028 Innovative AI Services
+const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-vehicle-management-platform'));
+const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
+const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
+
+// 2028 Services Showcase
+const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
+
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -156,6 +164,14 @@ function App() {
                     <Route path="/research" element={<Research />} />
                     <Route path="/categories" element={<Categories />} />
                     <Route path="/login" element={<Login />} />
+
+                    {/* 2028 Innovative AI Services */}
+                    <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
+                    <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
+                    <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+
+                    {/* 2028 Services Showcase */}
+                    <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
 
                     {/* 404 Page */}
                     <Route
