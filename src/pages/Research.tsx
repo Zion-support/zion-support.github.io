@@ -323,7 +323,7 @@ export default function Research() {
                       {category.name}
                     </button>
                   ))}
-                </select>
+                </div>
               </div>
               {/* Status */}
               <div className="space-y-3">
@@ -354,8 +354,9 @@ export default function Research() {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: bg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
+                    >
                       {type.name} ({type.count})
                     </button>
                   ))}
@@ -366,17 +367,18 @@ export default function Research() {
         </div>
       </div>
       {/* Featured Research */}
-      {researchProjects.filter(p  => p.featured).length > 0 && (
+      {researchProjects.filter(p => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p  => p.featured).map((project) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {researchProjects.filter(p => p.featured).map((project) => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                >
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -384,33 +386,17 @@ export default function Research() {
                         Featured
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{paper.title}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{paper.abstract}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {paper.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex items-center space-x-4 text-sm text-gray-400">
-                      <div className="flex items-center space-x-1">
-                        <Eye className="w-4 h-4" />
-                        <span>{paper.views}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Download className="w-4 h-4" />
-                        <span>{paper.downloads}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Share2 className="w-4 h-4" />
-                        <span>Share</span>
-                      </div>
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                        Featured
+                      </span>
                     </div>
                   </div>
                   <div className="p-6">
+                    <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(project.category)}
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
                         {categories.find(c => c.id === project.category)?.name}
                       </span>
