@@ -1,187 +1,76 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, CheckCircle, AlertCircle, Clock, Zap, Brain, Shield, Rocket } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Loader2, Circle, CheckCircle, AlertCircle, Clock, Zap, Brain, Server, Cloud, Shield } from 'lucide-react';
 
-interface LoadingState {
-  type: 'loading' | 'success' | 'error' | 'warning';
-  message: string;
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'dots' | 'pulse' | 'spinner' | 'progress' | 'success' | 'error' | 'loading';
+  text?: string;
+  showText?: boolean;
+  className?: string;
+  ariaLabel?: string;
   progress?: number;
-  estimatedTime?: number;
-}
-
-interface EnhancedLoadingSpinnerProps {
-  enabled?: boolean;
-  showProgress?: boolean;
-  showEstimatedTime?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: () => void;
-  autoComplete?: boolean;
-  autoCompleteDelay?: number;
+  theme?: 'light' | 'dark' | 'auto';
 }
 
 export function EnhancedLoadingSpinner({
-  enabled = true,
-  showProgress = true,
-  showEstimatedTime = true,
-  size = 'medium',
-  variant = 'futuristic',
-  onComplete,
-  autoComplete = false,
-  autoCompleteDelay = 3000
-}: EnhancedLoadingSpinnerProps) {
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-    type: 'loading',
-    message: 'Loading...',
-    progress: 0,
-    estimatedTime: 3
-  });
-
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
-
-  // Size configurations
-  const sizeConfig = {
-    small: { spinner: 20, container: 60, text: 'text-sm' },
-    medium: { spinner: 32, container: 80, text: 'text-base' },
-    large: { spinner: 48, container: 120, text: 'text-lg' }
+  size = 'md',
+  variant = 'default',
+  text,
+  showText = true,
+  className = '',
+  ariaLabel,
+  progress,
+  theme = 'auto'
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
   };
 
-  const config = sizeConfig[size];
+  const textSizeClasses = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'
+  };
 
-  // Loading steps for themed variant
-  const loadingSteps = [
-    { icon: Brain, message: 'Initializing AI systems...', color: 'text-zion-cyan' },
-    { icon: Shield, message: 'Securing connections...', color: 'text-zion-purple' },
-    { icon: Zap, message: 'Optimizing performance...', color: 'text-zion-yellow' },
-    { icon: Rocket, message: 'Launching application...', color: 'text-zion-green' }
-  ];
-
-  // Progress simulation
-  useEffect(() => {
-    if (!enabled || !showProgress) return;
-
-    const interval = setInterval(() => {
-      setLoadingState(prev => {
-        if (prev.progress! >= 100) {
-          clearInterval(interval);
-          if (autoComplete) {
-            setTimeout(() => {
-              setLoadingState({
-                type: 'success',
-                message: 'Ready!',
-                progress: 100,
-                estimatedTime: 0
-              });
-              setTimeout(() => {
-                setIsVisible(false);
-                onComplete?.();
-              }, 1000);
-            }, autoCompleteDelay);
-          }
-          return prev;
-        }
-
-        const newProgress = Math.min(prev.progress! + Math.random() * 15, 100);
-        const newEstimatedTime = Math.max(0, prev.estimatedTime! - 0.1);
-
-        return {
-          ...prev,
-          progress: newProgress,
-          estimatedTime: newEstimatedTime
-        };
-      });
-    }, 200);
-
-    return () => clearInterval(interval);
-  }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]);
-
-  // Step progression for themed variant
-  useEffect(() => {
-    if (variant !== 'themed') return;
-
-    const stepInterval = setInterval(() => {
-      setCurrentStep(prev => {
-        if (prev >= loadingSteps.length - 1) {
-          clearInterval(stepInterval);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(stepInterval);
-  }, [variant]);
-
-  // Auto-complete effect
-  useEffect(() => {
-    if (autoComplete && enabled) {
-      const timer = setTimeout(() => {
-        setLoadingState({
-          type: 'success',
-          message: 'Loading complete!',
-          progress: 100,
-          estimatedTime: 0
-        });
-        
-        setTimeout(() => {
-          setIsVisible(false);
-          onComplete?.();
-        }, 1000);
-      }, autoCompleteDelay);
-
-      return () => clearTimeout(timer);
+  const getDefaultText = () => {
+    if (text) return text;
+    
+    switch (variant) {
+      case 'success':
+        return 'Completed successfully';
+      case 'error':
+        return 'An error occurred';
+      case 'loading':
+        return 'Loading...';
+      case 'progress':
+        return progress ? `${Math.round(progress)}% complete` : 'Processing...';
+      default:
+        return 'Loading...';
     }
-  }, [autoComplete, enabled, autoCompleteDelay, onComplete]);
-
-  if (!enabled || !isVisible) return null;
+  };
 
   const renderSpinner = () => {
     switch (variant) {
-      case 'futuristic':
+      case 'dots':
         return (
-          <div className="relative">
-            {/* Outer ring */}
-            <motion.div
-              className="absolute inset-0 border-4 border-zion-cyan/20 rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            />
-            
-            {/* Inner ring */}
-            <motion.div
-              className="absolute inset-2 border-4 border-zion-purple/40 rounded-full"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-            />
-            
-            {/* Center dot */}
-            <motion.div
-              className="absolute inset-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            />
-            
-            {/* Orbiting particles */}
-            {[...Array(3)].map((_, i) => (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-zion-yellow rounded-full"
-                style={{
-                  top: '50%',
-                  left: '50%',
-                  marginTop: -4,
-                  marginLeft: -4
-                }}
+                className={`${sizeClasses[size]} bg-current rounded-full`}
                 animate={{
-                  x: [0, 30, 0],
-                  y: [0, -30, 0],
-                  rotate: [0, 360]
+                  scale: [1, 1.2, 1],
+                  opacity: [0.5, 1, 0.5]
                 }}
                 transition={{
-                  duration: 2,
+                  duration: 1.4,
                   repeat: Infinity,
-                  delay: i * 0.3,
+                  delay: i * 0.2,
                   ease: "easeInOut"
                 }}
               />
@@ -189,200 +78,295 @@ export function EnhancedLoadingSpinner({
           </div>
         );
 
-      case 'minimal':
+      case 'pulse':
         return (
           <motion.div
-            className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            className={`${sizeClasses[size]} bg-current rounded-full`}
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
           />
         );
 
-      case 'themed':
+      case 'spinner':
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        );
+
+      case 'progress':
         return (
           <div className="relative">
-            <motion.div
-              className="w-full h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
+            <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full`}>
               <motion.div
-                key={currentStep}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="text-white text-xs font-bold"
-              >
-                {loadingSteps[currentStep].icon && React.createElement(loadingSteps[currentStep].icon, { size: 16 })}
-              </motion.div>
-            </motion.div>
+                className="absolute inset-0 border-4 border-current border-t-transparent rounded-full"
+                initial={{ rotate: -90 }}
+                animate={{ rotate: progress ? (progress / 100) * 360 - 90 : -90 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              />
+            </div>
+            {progress !== undefined && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className={`${textSizeClasses[size]} font-medium`}>
+                  {Math.round(progress)}%
+                </span>
+              </div>
+            )}
           </div>
+        );
+
+      case 'success':
+        return (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          >
+            <CheckCircle className={`${sizeClasses[size]} text-green-500`} />
+          </motion.div>
+        );
+
+      case 'error':
+        return (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          >
+            <AlertCircle className={`${sizeClasses[size]} text-red-500`} />
+          </motion.div>
+        );
+
+      case 'loading':
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
         );
 
       default:
         return (
           <motion.div
-            className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
+            className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full`}
             animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
           />
         );
     }
   };
 
-  const renderMessage = () => {
-    if (variant === 'themed') {
-      return (
-        <motion.div
-          key={currentStep}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.3 }}
-          className={`text-center ${loadingSteps[currentStep].color} font-medium`}
-        >
-          {loadingSteps[currentStep].message}
-        </motion.div>
-      );
-    }
-
-    return (
-      <motion.div
-        key={loadingState.message}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center text-zion-slate-600 dark:text-zion-slate-400 font-medium"
-      >
-        {loadingState.message}
-      </motion.div>
-    );
-  };
-
-  const renderProgress = () => {
-    if (!showProgress || loadingState.progress === undefined) return null;
-
-    return (
-      <div className="w-full mt-4">
-        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
-          <span>Progress</span>
-          <span>{Math.round(loadingState.progress)}%</span>
-        </div>
-        <div className="w-full bg-zion-slate-200 dark:bg-zion-slate-700 rounded-full h-2 overflow-hidden">
-          <motion.div
-            className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${loadingState.progress}%` }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          />
-        </div>
-      </div>
-    );
-  };
-
-  const renderEstimatedTime = () => {
-    if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
-
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="flex items-center justify-center space-x-2 mt-3 text-xs text-zion-slate-500"
-      >
-        <Clock className="w-3 h-3" />
-        <span>Estimated time: {loadingState.estimatedTime.toFixed(1)}s</span>
-      </motion.div>
-    );
-  };
-
-  const renderStatusIcon = () => {
-    if (loadingState.type === 'loading') return null;
-
-    const iconConfig = {
-      success: { icon: CheckCircle, color: 'text-zion-green' },
-      error: { icon: AlertCircle, color: 'text-zion-red' },
-      warning: { icon: AlertCircle, color: 'text-zion-yellow' }
-    };
-
-    const config = iconConfig[loadingState.type];
-    if (!config) return null;
-
-    return (
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        className={`absolute -top-2 -right-2 ${config.color} bg-white dark:bg-zion-slate-900 rounded-full p-1`}
-      >
-        <config.icon className="w-4 h-4" />
-      </motion.div>
-    );
+  const getThemeClasses = () => {
+    if (theme === 'light') return 'text-gray-700';
+    if (theme === 'dark') return 'text-white';
+    return 'text-zion-cyan dark:text-zion-cyan-light';
   };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        className="flex flex-col items-center justify-center p-6"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8 }}
-        transition={{ duration: 0.3 }}
-      >
-        {/* Main spinner container */}
-        <div className="relative">
-          <div
-            className="relative"
-            style={{
-              width: config.container,
-              height: config.container
-            }}
-            role="status"
-            aria-label="Loading content"
-            aria-live="polite"
-          >
-            {renderSpinner()}
-          </div>
-          {renderStatusIcon()}
-        </div>
-
-        {/* Loading message */}
-        <div className={`mt-4 ${config.text}`}>
-          {renderMessage()}
-        </div>
-
-        {/* Progress bar */}
-        {renderProgress()}
-
-        {/* Estimated time */}
-        {renderEstimatedTime()}
-
-        {/* Loading steps for themed variant */}
-        {variant === 'themed' && (
-          <div className="flex space-x-2 mt-4">
-            {loadingSteps.map((step, index) => (
-              <div
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                  index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'
-                }`}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Accessibility announcement */}
-        <div className="sr-only" aria-live="polite">
-          {loadingState.type === 'loading' && `Loading: ${loadingState.message}`}
-          {loadingState.type === 'success' && 'Loading complete'}
-          {loadingState.type === 'error' && 'Loading failed'}
-          {loadingState.type === 'warning' && 'Loading warning'}
-          {showProgress && loadingState.progress !== undefined && `Progress: ${Math.round(loadingState.progress)}%`}
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <div
+      className={`flex flex-col items-center justify-center space-y-3 ${className}`}
+      role="status"
+      aria-label={ariaLabel || getDefaultText()}
+      aria-live="polite"
+    >
+      {renderSpinner()}
+      
+      {showText && (
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className={`${textSizeClasses[size]} font-medium text-center ${getThemeClasses()}`}
+        >
+          {getDefaultText()}
+        </motion.p>
+      )}
+    </div>
   );
 }
 
-// Export as ZionLoadingSpinner for backward compatibility
-export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+// Specialized loading components for different contexts
+export function AILoadingSpinner({ size = 'lg', text }: { size?: 'sm' | 'md' | 'lg' | 'xl'; text?: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4 p-8">
+      <motion.div
+        className="relative"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+      >
+        <Brain className={`${size === 'sm' ? 'w-8 h-8' : size === 'md' ? 'w-12 h-12' : size === 'lg' ? 'w-16 h-16' : 'w-20 h-20'} text-zion-cyan`} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="text-center"
+      >
+        <h3 className="text-lg font-semibold text-zion-slate-dark dark:text-white mb-2">
+          AI Processing
+        </h3>
+        <p className="text-zion-slate-light dark:text-zion-slate-light">
+          {text || 'Analyzing your request with advanced AI algorithms...'}
+        </p>
+      </motion.div>
+    </div>
+  );
+}
 
-export default EnhancedLoadingSpinner;
+export function ServiceLoadingSpinner({ service, size = 'lg' }: { service: string; size?: 'sm' | 'md' | 'lg' | 'xl' }) {
+  const getServiceIcon = () => {
+    switch (service.toLowerCase()) {
+      case 'ai':
+      case 'artificial intelligence':
+        return <Brain className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-16 h-16'} text-zion-cyan`} />;
+      case 'cloud':
+      case 'cloud computing':
+        return <Cloud className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-16 h-16'} text-zion-cyan`} />;
+      case 'cybersecurity':
+      case 'security':
+        return <Shield className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-16 h-16'} text-zion-cyan`} />;
+      case 'infrastructure':
+      case 'server':
+        return <Server className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-16 h-16'} text-zion-cyan`} />;
+      default:
+        return <Zap className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : size === 'lg' ? 'w-12 h-12' : 'w-16 h-16'} text-zion-cyan`} />;
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4 p-8">
+      <motion.div
+        animate={{ 
+          scale: [1, 1.1, 1],
+          rotate: [0, 5, -5, 0]
+        }}
+        transition={{ 
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        {getServiceIcon()}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+        className="text-center"
+      >
+        <h3 className="text-lg font-semibold text-zion-slate-dark dark:text-white mb-2">
+          Initializing {service}
+        </h3>
+        <p className="text-zion-slate-light dark:text-zion-slate-light">
+          Setting up your {service.toLowerCase()} service...
+        </p>
+      </motion.div>
+    </div>
+  );
+}
+
+export function PageLoadingSpinner({ pageName }: { pageName: string }) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-dark">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center"
+      >
+        <motion.div
+          className="w-20 h-20 mx-auto mb-6"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        >
+          <Circle className="w-full h-full text-zion-cyan" strokeWidth={1} />
+        </motion.div>
+        
+        <h1 className="text-2xl font-bold text-white mb-2">
+          Loading {pageName}
+        </h1>
+        
+        <p className="text-zion-slate-light">
+          Please wait while we prepare your experience...
+        </p>
+        
+        <motion.div
+          className="mt-6 flex justify-center space-x-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2 h-2 bg-zion-cyan rounded-full"
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{
+                duration: 1.4,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+// Loading overlay component
+export function LoadingOverlay({ 
+  isVisible, 
+  children, 
+  spinnerVariant = 'default',
+  text = 'Loading...',
+  backdrop = true 
+}: {
+  isVisible: boolean;
+  children: React.ReactNode;
+  spinnerVariant?: 'default' | 'dots' | 'pulse' | 'spinner' | 'progress' | 'success' | 'error' | 'loading';
+  text?: string;
+  backdrop?: boolean;
+}) {
+  if (!isVisible) return <>{children}</>;
+
+  return (
+    <div className="relative">
+      {children}
+      <div className={`absolute inset-0 flex items-center justify-center ${backdrop ? 'bg-black/50 backdrop-blur-sm' : ''}`}>
+        <EnhancedLoadingSpinner
+          variant={spinnerVariant}
+          text={text}
+          size="lg"
+          className="bg-white dark:bg-zion-slate-dark rounded-lg p-6 shadow-xl"
+        />
+      </div>
+    </div>
+  );
+}
