@@ -20,8 +20,8 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import enhancedInnovativeServices2030 from '../data/enhancedInnovativeServices2030';
-import enhancedITandAIServices2030 from '../data/enhancedITandAIServices2030';
+import enhancedInnovativeServices2025 from '../data/enhancedInnovativeServices2025';
+import enhancedITandAIServices2025 from '../data/enhancedITandAIServices2025';
 
 interface Service {
   id: string;
@@ -72,8 +72,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 
   // Combine all services
   const allServices: Service[] = [
-    ...enhancedInnovativeServices2030,
-    ...enhancedITandAIServices2030
+    ...enhancedInnovativeServices2025,
+    ...enhancedITandAIServices2025
   ];
 
   // Filter and sort services

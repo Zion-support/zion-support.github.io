@@ -48,12 +48,16 @@ export function Header({ className }: HeaderProps) {
       items: [
         { name: 'AI & Machine Learning', href: '/services#ai-ml' },
         { name: 'Quantum Computing', href: '/services#quantum' },
-        { name: 'Cybersecurity', href: '/services#cybersecurity' },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
-        { name: 'Data & Analytics', href: '/services#data-analytics' },
-        { name: 'Digital Transformation', href: '/services#digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
-        { name: 'Emerging Technologies', href: '/services#emerging-tech' }
+        { name: 'AI Cybersecurity', href: '/services#cybersecurity' },
+        { name: 'AI Healthcare', href: '/services#healthcare' },
+        { name: 'AI Financial Trading', href: '/services#financial' },
+        { name: 'AI Supply Chain', href: '/services#supply-chain' },
+        { name: 'AI Marketing & SEO', href: '/services#marketing' },
+        { name: 'AI Project Management', href: '/services#project-management' },
+        { name: 'AI DevOps & Infrastructure', href: '/services#devops' },
+        { name: 'AI IoT & Edge Computing', href: '/services#iot-edge' },
+        { name: 'Space Technology', href: '/services#space-tech' },
+        { name: 'Micro SAAS Solutions', href: '/services#micro-saas' }
       ]
     },
     {
