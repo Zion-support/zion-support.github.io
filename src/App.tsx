@@ -57,6 +57,11 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const SpaceTech = createLazyComponent(() => import('./pages/SpaceTech'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const News = createLazyComponent(() => import('./pages/News'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -143,6 +148,11 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/space-tech" element={<SpaceTech />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
 
                     {/* 404 Page */}
                     <Route

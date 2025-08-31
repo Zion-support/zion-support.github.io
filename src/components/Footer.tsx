@@ -31,21 +31,21 @@ const Footer = () => {
       links: [
         { name: 'AI Solutions', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite' },
         { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions' },
-        { name: 'Healthcare Tech', href: '/solutions' },
-        { name: 'Financial Solutions', href: '/solutions' },
-        { name: 'Manufacturing', href: '/solutions' },
-        { name: 'Government', href: '/solutions' },
-        { name: 'Retail Solutions', href: '/solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' },
+        { name: 'Space Tech', href: '/space-tech' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'AI Services', href: '/ai-services' }
       ]
     },
     {
@@ -83,17 +83,17 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 302 464 0950',
+      href: 'tel:+13024640950'
     },
     {
       icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
+      text: 'Middletown, DE',
       href: '#'
     },
     {

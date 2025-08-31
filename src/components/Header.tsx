@@ -14,7 +14,11 @@ import {
   Brain,
   Cloud,
   Cpu,
-  Zap
+  Zap,
+  Building,
+  Users,
+  Briefcase,
+  Rocket
 } from 'lucide-react';
 
 const Header = () => {
@@ -40,9 +44,20 @@ const Header = () => {
       dropdown: [
         { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI platforms' },
         { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Digital transformation' },
-        { name: 'Cloud & DevOps', href: '/services', icon: Cloud, description: 'Scalable infrastructure' },
-        { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'Advanced security' },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' }
+        { name: 'Cloud & DevOps', href: '/cloud-solutions', icon: Cloud, description: 'Scalable infrastructure' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'Advanced security' },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Rocket, description: 'Business transformation' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise', href: '/enterprise', icon: Building, description: 'Enterprise solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Briefcase, description: 'Industry-specific solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket, description: 'Next-gen technology' },
+        { name: 'Space Tech', href: '/space-tech', icon: Rocket, description: 'Space technology solutions' }
       ]
     },
     { name: 'About', href: '/about' },
