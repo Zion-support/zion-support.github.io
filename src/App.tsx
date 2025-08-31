@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { SEO } from './components/SEO';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
@@ -18,6 +19,7 @@ import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashbo
 import { AIContentOptimizer } from './components/AIContentOptimizer';
 import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
 import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
@@ -220,8 +222,39 @@ function App() {
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
 
+            {/* Enhanced Performance Monitor */}
+            <EnhancedPerformanceMonitor enabled={true} showMetrics={true} autoOptimize={true} />
+
             {/* Enhanced Accessibility Enhancer */}
             <EnhancedAccessibilityEnhancer enabled={true} />
+
+            {/* Enhanced SEO */}
+            <EnhancedSEO 
+              title="Zion Tech Group - Leading AI & Technology Solutions"
+              description="Transform your business with Zion Tech Group's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation services."
+              keywords={[
+                'AI Solutions',
+                'Artificial Intelligence',
+                'Cloud Services',
+                'Cybersecurity',
+                'Digital Transformation',
+                'Technology Consulting',
+                'Machine Learning',
+                'Data Analytics',
+                'IT Services',
+                'Enterprise Solutions'
+              ]}
+              type="website"
+              openGraph={{
+                title: "Zion Tech Group - Leading AI & Technology Solutions",
+                description: "Transform your business with cutting-edge AI solutions and technology services",
+                image: "/images/zion-tech-group-og.jpg",
+                url: "https://ziontechgroup.com",
+                type: "website",
+                siteName: "Zion Tech Group",
+                locale: "en_US"
+              }}
+            />
 
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />

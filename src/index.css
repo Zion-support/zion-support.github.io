@@ -98,10 +98,11 @@
   
   /* Accessibility */
   --sr-only: 0 0 0 0;
+  /* Accessibility */
+  --high-contrast: 1;
+  --reduced-motion: 1;
+  --large-text: 1;
 }
---high-contrast: 1;
---reduced-motion: 1;
---large-text: 1;
 
 /* Accessibility Classes */
 .sr-only {
@@ -1022,110 +1023,110 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
 
-  /* Enhanced Futuristic Utilities */
-  .neon-glow {
-    box-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor;
-  }
+/* Enhanced Futuristic Utilities */
+.neon-glow {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
 
-  .neon-text {
-    text-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor;
-  }
+.neon-text {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor;
+}
 
-  .glass-morphism {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-  .holographic {
-    background: linear-gradient(
-      45deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.1) 50%,
-      transparent 70%
-    );
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-  }
+.holographic {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
 
-  .cyber-border {
-    position: relative;
-  }
+.cyber-border {
+  position: relative;
+}
 
-  .cyber-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    padding: 2px;
-    background: linear-gradient(45deg, #22ddd2, #a855f7, #22ddd2);
-    border-radius: inherit;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-  }
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(45deg, #22ddd2, #a855f7, #22ddd2);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
 
-  .matrix-bg {
-    background-image: 
-      linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: matrix-rain 20s linear infinite;
-  }
+.matrix-bg {
+  background-image: 
+    linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: matrix-rain 20s linear infinite;
+}
 
-  .hover-lift {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .hover-lift:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 
-      0 20px 40px rgba(34, 221, 210, 0.3),
-      0 0 60px rgba(34, 221, 210, 0.1);
-  }
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(34, 221, 210, 0.3),
+    0 0 60px rgba(34, 221, 210, 0.1);
+}
 
-  .btn-futuristic {
-    background: linear-gradient(135deg, #22ddd2, #a855f7);
-    border: none;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
+.btn-futuristic {
+  background: linear-gradient(135deg, #22ddd2, #a855f7);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
-  .btn-futuristic::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
+.btn-futuristic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
 
-  .btn-futuristic:hover::before {
-    left: 100%;
-  }
+.btn-futuristic:hover::before {
+  left: 100%;
+}
 
-  .card-futuristic {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    transition: all 0.3s ease;
-  }
+.card-futuristic {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
 
-  .card-futuristic:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(34, 221, 210, 0.3);
-    box-shadow: 
-      0 8px 32px rgba(34, 221, 210, 0.2),
-      0 0 0 1px rgba(34, 221, 210, 0.1);
-  }
+.card-futuristic:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(34, 221, 210, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(34, 221, 210, 0.2),
+    0 0 0 1px rgba(34, 221, 210, 0.1);
 }
