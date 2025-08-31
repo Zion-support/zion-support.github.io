@@ -301,6 +301,54 @@ const ServicesSection = () => {
       icon: Workflow,
       color: "from-zion-cyan to-zion-purple",
       link: "/services/ai-project-management-platform"
+    },
+    {
+      icon: Chip,
+      title: "Edge Computing",
+      description: "Ultra-low latency IoT and edge solutions",
+      href: "/services/edge-computing-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
+    },
+    {
+      icon: Database,
+      title: "AI Enterprise Solutions",
+      description: "Comprehensive AI-powered enterprise resource planning and management",
+      href: "/services/ai-enterprise-resource-planning",
+      color: "from-emerald-500 to-teal-500",
+      features: ["Resource Planning", "Process Automation", "Business Intelligence", "Supply Chain Optimization"]
+    },
+    {
+      icon: Users,
+      title: "Customer Success AI",
+      description: "AI-driven customer success and relationship management platforms",
+      href: "/services/ai-customer-success-platform",
+      color: "from-pink-500 to-rose-500",
+      features: ["Customer Insights", "Success Automation", "Churn Prevention", "Growth Analytics"]
+    },
+    {
+      icon: Truck,
+      title: "Supply Chain AI",
+      description: "Intelligent supply chain optimization and logistics management",
+      href: "/services/ai-supply-chain-intelligence",
+      color: "from-orange-500 to-amber-500",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
     }
   ];
 
@@ -350,7 +398,7 @@ const ServicesSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Atom className="w-8 h-8 text-purple-400" />
+                  <Atom className="w-8 h-4" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">Quantum AI</h4>
                 <p className="text-gray-400 text-sm">1000x faster computation</p>
@@ -383,7 +431,7 @@ const ServicesSection = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

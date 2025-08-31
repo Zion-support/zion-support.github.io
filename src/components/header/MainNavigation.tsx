@@ -183,6 +183,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-resource-planning" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Database className="w-3 h-3 mr-2" />
+                        AI Enterprise Resource Planning
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-success-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI Customer Success Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Truck className="w-3 h-3 mr-2" />
+                        AI Supply Chain Intelligence
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
