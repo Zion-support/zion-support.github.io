@@ -57,140 +57,109 @@ import {
   PieChart,
   LineChart,
   BarChart3 as BarChartIcon,
-  Activity as ActivityIcon,
-  User,
-  Smile,
-  Frown,
-  TrendingDown,
-  Target as TargetIcon,
-  MousePointer,
-  Smartphone as PhoneIcon,
-  Globe as GlobeIcon,
-  Calendar,
-  Clock as ClockIcon,
-  Filter,
-  Search,
-  Download,
-  Share2,
-  Bell,
-  Settings as SettingsIcon,
-  Zap as ZapIcon,
-  Award as AwardIcon,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageSquare,
-  Mail as MailIcon,
-  Phone as PhoneCallIcon,
-  Video,
-  Camera,
-  Microphone,
-  Headphones,
-  Monitor as MonitorIcon,
-  Tablet,
-  Smartphone as MobileIcon
+  Activity as ActivityIcon
 } from 'lucide-react';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AIDigitalTwinPlatform() {
   const features = [
     {
-      title: "Real-time Sentiment Analysis",
-      description: "Instant analysis of customer emotions and satisfaction levels across all touchpoints",
-      icon: Smile,
-      benefits: ["Live sentiment tracking", "Emotion detection", "Mood analysis"]
+      title: "Real-time Synchronization",
+      description: "Live data synchronization between physical assets and digital representations",
+      icon: RefreshCw,
+      benefits: ["Real-time updates", "Live monitoring", "Instant alerts"]
     },
     {
-      title: "Omnichannel Journey Mapping",
-      description: "Complete customer journey visualization across all platforms and interactions",
-      icon: Network,
-      benefits: ["Cross-platform tracking", "Journey optimization", "Touchpoint analysis"]
-    },
-    {
-      title: "Predictive Customer Behavior",
-      description: "AI-powered predictions of customer actions and churn risk",
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms for predictive insights",
       icon: Brain,
-      benefits: ["Churn prediction", "Behavior forecasting", "Proactive engagement"]
+      benefits: ["Predictive maintenance", "Anomaly detection", "Performance optimization"]
     },
     {
-      title: "Personalization Engine",
-      description: "Dynamic content and experience personalization based on real-time insights",
-      icon: Target,
-      benefits: ["Dynamic content", "Personalized experiences", "A/B testing"]
+      title: "3D Visualization",
+      description: "Immersive 3D models with interactive controls and real-time data overlay",
+      icon: Monitor,
+      benefits: ["Interactive models", "Data visualization", "Virtual walkthroughs"]
+    },
+    {
+      title: "Predictive Maintenance",
+      description: "AI-driven maintenance scheduling and failure prediction",
+      icon: AlertTriangle,
+      benefits: ["Failure prediction", "Maintenance optimization", "Cost reduction"]
     }
   ];
 
   const useCases = [
     {
-      title: "E-commerce Optimization",
-      description: "Enhance online shopping experiences with personalized recommendations",
-      icon: ShoppingCart,
-      examples: ["Product recommendations", "Cart abandonment analysis", "Personalized offers"]
+      title: "Manufacturing",
+      description: "Production line optimization and quality control",
+      icon: Cpu,
+      examples: ["Production monitoring", "Quality assurance", "Efficiency optimization"]
     },
     {
-      title: "Customer Support",
-      description: "Improve support quality and response times with AI insights",
-      icon: MessageSquare,
-      examples: ["Support ticket analysis", "Response optimization", "Customer satisfaction"]
+      title: "Smart Buildings",
+      description: "Building management and energy optimization",
+      icon: Building2,
+      examples: ["Energy management", "HVAC optimization", "Space utilization"]
     },
     {
-      title: "Marketing Campaigns",
-      description: "Optimize marketing efforts with customer behavior insights",
-      icon: Target,
-      examples: ["Campaign performance", "Audience segmentation", "ROI optimization"]
+      title: "Healthcare",
+      description: "Patient monitoring and medical device management",
+      icon: Heart,
+      examples: ["Patient tracking", "Device monitoring", "Treatment optimization"]
     },
     {
-      title: "Product Development",
-      description: "Guide product decisions with customer feedback and usage data",
-      icon: Lightbulb,
-      examples: ["Feature prioritization", "User feedback analysis", "Product roadmap"]
+      title: "Infrastructure",
+      description: "Critical infrastructure monitoring and maintenance",
+      icon: Network,
+      examples: ["Bridge monitoring", "Road conditions", "Utility management"]
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$1,500",
+      price: "$3,500",
       period: "/month",
-      description: "Perfect for small businesses starting with CX analytics",
+      description: "Perfect for small-scale digital twin projects",
       features: [
-        "Up to 10,000 monthly interactions",
-        "Basic sentiment analysis",
-        "Standard reporting",
+        "Up to 10 digital twins",
+        "Basic AI analytics",
+        "Standard visualization",
         "Email support",
-        "Core analytics dashboard"
+        "Basic reporting"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$4,500",
+      price: "$8,500",
       period: "/month",
-      description: "Ideal for growing businesses with advanced CX needs",
+      description: "Ideal for medium-scale digital twin deployments",
       features: [
-        "Up to 100,000 monthly interactions",
+        "Up to 100 digital twins",
         "Advanced AI analytics",
-        "Omnichannel tracking",
+        "3D visualization",
         "Priority support",
-        "Custom dashboards",
-        "API access"
+        "Advanced reporting",
+        "Custom integrations"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,000",
+      price: "$18,000",
       period: "/month",
-      description: "For large enterprises with complex CX requirements",
+      description: "For large-scale digital twin implementations",
       features: [
-        "Unlimited interactions",
+        "Unlimited digital twins",
         "Custom AI models",
-        "Advanced personalization",
+        "Advanced 3D visualization",
         "24/7 support",
+        "Custom analytics",
         "White-label options",
-        "Dedicated account manager"
+        "Dedicated infrastructure"
       ],
       cta: "Contact Sales",
       popular: false
@@ -198,63 +167,36 @@ export default function AICustomerExperienceAnalytics() {
   ];
 
   const technologies = [
-    "TensorFlow", "PyTorch", "Scikit-learn", "NLTK", "SpaCy", "BERT",
-    "Apache Kafka", "Redis", "Elasticsearch", "PostgreSQL", "MongoDB", "InfluxDB",
-    "React", "Vue.js", "Angular", "Node.js", "Python", "Java", "Scala",
-    "AWS", "Google Cloud", "Azure", "Kubernetes", "Docker", "Terraform"
+    "Unity 3D", "Unreal Engine", "Three.js", "WebGL", "OpenGL", "Vulkan",
+    "TensorFlow", "PyTorch", "Scikit-learn", "Apache Spark", "Kafka", "Redis",
+    "PostgreSQL", "MongoDB", "InfluxDB", "TimescaleDB", "Kubernetes", "Docker",
+    "MQTT", "OPC UA", "REST APIs", "GraphQL", "WebSockets", "gRPC"
   ];
 
   const benefits = [
     {
-      title: "Increased Customer Satisfaction",
-      description: "Deliver personalized experiences that exceed customer expectations",
-      icon: Smile,
-      metrics: ["25% improvement in NPS", "40% higher satisfaction scores", "Improved retention"]
-    },
-    {
-      title: "Higher Conversion Rates",
-      description: "Optimize customer journeys to maximize conversion opportunities",
+      title: "Operational Efficiency",
+      description: "Optimize operations with real-time insights and predictive analytics",
       icon: TrendingUp,
-      metrics: ["30% increase in conversions", "Reduced cart abandonment", "Higher engagement"]
+      metrics: ["15-25% efficiency improvement", "30% reduction in downtime", "20% cost savings"]
     },
     {
-      title: "Reduced Customer Churn",
-      description: "Identify and address customer issues before they lead to churn",
-      icon: Heart,
-      metrics: ["20% reduction in churn", "Proactive issue resolution", "Better retention"]
+      title: "Risk Mitigation",
+      description: "Identify and prevent potential issues before they occur",
+      icon: Shield,
+      metrics: ["90% early warning accuracy", "60% reduction in failures", "Proactive maintenance"]
     },
     {
-      title: "Improved ROI",
-      description: "Maximize marketing and customer experience investment returns",
-      icon: DollarSign,
-      metrics: ["35% higher marketing ROI", "Optimized resource allocation", "Better targeting"]
-    }
-  ];
-
-  const analyticsFeatures = [
-    {
-      title: "Real-time Dashboards",
-      description: "Live monitoring of customer experience metrics and KPIs",
+      title: "Data-Driven Decisions",
+      description: "Make informed decisions based on comprehensive data analysis",
       icon: BarChart3,
-      features: ["Live data updates", "Custom KPIs", "Interactive charts"]
+      metrics: ["Real-time insights", "Historical analysis", "Predictive modeling"]
     },
     {
-      title: "Advanced Segmentation",
-      description: "AI-powered customer segmentation for targeted experiences",
-      icon: Users,
-      features: ["Behavioral segmentation", "Demographic analysis", "Predictive clustering"]
-    },
-    {
-      title: "Automated Insights",
-      description: "AI-generated insights and recommendations for optimization",
-      icon: Lightbulb,
-      features: ["Automated reporting", "Smart recommendations", "Trend detection"]
-    },
-    {
-      title: "Integration Hub",
-      description: "Seamless integration with your existing tools and platforms",
-      icon: Network,
-      features: ["API-first approach", "Webhook support", "Custom integrations"]
+      title: "Cost Optimization",
+      description: "Reduce operational costs through intelligent resource management",
+      icon: DollarSign,
+      metrics: ["25% maintenance cost reduction", "Energy optimization", "Resource planning"]
     }
   ];
 
@@ -270,16 +212,16 @@ export default function AICustomerExperienceAnalytics() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <BarChart3 className="w-4 h-4 mr-2" />
-              AI Customer Experience Analytics
+              <Monitor className="w-4 h-4 mr-2" />
+              AI Digital Twin Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Understand Your Customers
-              <span className="block text-zion-cyan">Like Never Before</span>
+              Digital Twins
+              <span className="block text-zion-cyan">Powered by AI</span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform customer experience with AI-powered analytics that provide real-time insights, 
-              predictive behavior modeling, and personalized engagement strategies.
+              Create intelligent digital replicas of physical assets with real-time data synchronization, 
+              AI-powered analytics, and predictive insights. Transform how you monitor, maintain, and optimize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -311,11 +253,11 @@ export default function AICustomerExperienceAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced CX Analytics Capabilities
+              Advanced Digital Twin Capabilities
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with comprehensive analytics to deliver 
-              unprecedented insights into customer behavior and satisfaction.
+              Our platform combines cutting-edge AI with immersive visualization to create 
+              the most advanced digital twin solution available.
             </p>
           </motion.div>
 
@@ -348,56 +290,8 @@ export default function AICustomerExperienceAnalytics() {
         </div>
       </section>
 
-      {/* Analytics Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Platform
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive analytics tools designed to give you complete visibility into 
-              your customer experience and business performance.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                <div className="space-y-3">
-                  {feature.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckSquare className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feat}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -410,8 +304,8 @@ export default function AICustomerExperienceAnalytics() {
               Measurable Business Impact
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              AI-powered customer experience analytics deliver tangible results that directly 
-              impact your bottom line and customer relationships.
+              Digital twins deliver tangible results that directly impact your bottom line 
+              and operational excellence.
             </p>
           </motion.div>
 
@@ -445,7 +339,7 @@ export default function AICustomerExperienceAnalytics() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -458,8 +352,8 @@ export default function AICustomerExperienceAnalytics() {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Customer experience analytics are transforming industries across the globe, 
-              enabling data-driven decisions and personalized experiences.
+              Digital twins are transforming industries across the globe, enabling 
+              unprecedented levels of insight and control.
             </p>
           </motion.div>
 
@@ -493,7 +387,7 @@ export default function AICustomerExperienceAnalytics() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -506,7 +400,7 @@ export default function AICustomerExperienceAnalytics() {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your customer experience analytics needs and scale as you grow.
+              Choose the plan that fits your digital twin needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -564,7 +458,7 @@ export default function AICustomerExperienceAnalytics() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -600,7 +494,7 @@ export default function AICustomerExperienceAnalytics() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -609,11 +503,11 @@ export default function AICustomerExperienceAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
+              Ready to Create Your Digital Twin?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join leading organizations that are already leveraging AI-powered analytics 
-              to gain competitive advantages and drive customer satisfaction.
+              Join leading organizations that are already leveraging digital twins 
+              to gain competitive advantages and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

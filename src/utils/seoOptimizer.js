@@ -15,8 +15,7 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
-        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
-  and innovative IT services for the healthcare industry.'
+        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
 };
     static KEYWORD_MAPPINGS = {
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
@@ -57,11 +56,8 @@ export class SEOOptimizer {
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
-        const pathSegments = path.split('/').filter(Boolean);
         
-        if (path === '/') {
-            return `${this.siteName} - Revolutionary Micro SaaS & AI Solutions`;
-        }
+        const pathSegments = path.split('/').filter(Boolean);
         
         if (pathSegments.length === 0) {
             return this.siteName;

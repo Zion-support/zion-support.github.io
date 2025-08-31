@@ -1,140 +1,131 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Factory, 
+  Shield, 
   Brain, 
   Zap, 
-  Cpu, 
-  Settings, 
+  Eye, 
+  Lock, 
+  AlertTriangle, 
   CheckCircle, 
   ArrowRight,
   Users,
   Globe,
-  Monitor,
+  Server,
+  Database,
+  Network,
+  Activity,
+  BarChart3,
   Clock,
   DollarSign,
   Star,
   Award,
   Rocket,
+  Cpu,
+  Fingerprint,
+  Key,
+  Monitor,
   Smartphone,
   Cloud,
+  ShieldCheck,
+  Bug,
+  FileText,
+  Code,
+  Palette,
   Target,
   TrendingUp,
   Lightbulb,
   Heart,
   Sparkles,
   Play,
-  BarChart3,
-  Activity,
-  Network,
-  Database,
-  Shield,
-  Gauge,
-  Calendar,
-  AlertTriangle,
-  CheckSquare,
-  FileText,
-  Code,
-  Palette,
-  Wrench,
-  Cog,
-  HardDrive,
-  Layers,
-  Workflow,
-  Eye,
-  Lock,
-  Key,
-  Server,
-  Car,
-  Pill,
-  Utensils
+  Factory
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIAutonomousManufacturingPlatform() {
+export default function AIAutonomousCybersecurityPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Production Optimization",
-      description: "Advanced machine learning algorithms that continuously optimize production processes for maximum efficiency and quality."
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms that continuously learn and adapt to new cyber threats in real-time."
     },
     {
-      icon: Factory,
-      title: "Autonomous Manufacturing Lines",
-      description: "Self-operating production lines with intelligent quality control and predictive maintenance capabilities."
+      icon: Shield,
+      title: "Autonomous Response System",
+      description: "Self-healing security infrastructure that automatically responds to threats without human intervention."
     },
     {
-      icon: Cpu,
-      title: "Smart IoT Integration",
-      description: "Seamless integration with IoT sensors and devices for real-time monitoring and control."
+      icon: Eye,
+      title: "360° Security Monitoring",
+      description: "Comprehensive monitoring across all endpoints, networks, and cloud environments with predictive analytics."
     },
     {
-      icon: Settings,
-      title: "Predictive Maintenance",
-      description: "AI-driven equipment monitoring that predicts failures before they occur, reducing downtime by 80%."
+      icon: Lock,
+      title: "Zero-Trust Architecture",
+      description: "Implements zero-trust security principles with continuous verification and least-privilege access."
     },
     {
       icon: Activity,
-      title: "Quality Assurance Automation",
-      description: "Automated quality control with computer vision and AI algorithms ensuring 99.9% defect detection."
+      title: "Behavioral Analytics",
+      description: "AI-driven user and entity behavior analytics to detect anomalies and insider threats."
     },
     {
-      icon: Workflow,
-      title: "Supply Chain Optimization",
-      description: "Intelligent supply chain management with demand forecasting and inventory optimization."
+      icon: Network,
+      title: "Network Traffic Analysis",
+      description: "Deep packet inspection and network flow analysis for threat detection and prevention."
     }
   ];
 
   const benefits = [
-    "Increase production efficiency by up to 45% with AI optimization",
-    "Reduce manufacturing costs by 30% through automation",
-    "Achieve 99.9% quality control accuracy",
-    "Minimize downtime with predictive maintenance",
-    "Real-time production monitoring and analytics",
-    "Seamless integration with existing MES and ERP systems"
+    "99.9% threat detection accuracy with AI learning",
+    "Real-time autonomous threat response",
+    "Reduced security operations costs by 60%",
+    "24/7 automated security monitoring",
+    "Compliance with SOC2, ISO27001, GDPR",
+    "Seamless integration with existing infrastructure"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small manufacturing operations",
+      description: "Perfect for small businesses",
       features: [
-        "AI production optimization",
-        "Basic quality control",
-        "Up to 10 production lines",
+        "AI threat detection",
+        "Basic autonomous response",
+        "Up to 100 endpoints",
         "Email support",
-        "Standard reporting"
+        "Standard compliance reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing manufacturers",
+      description: "Ideal for growing organizations",
       features: [
-        "Advanced AI optimization",
-        "Full quality control automation",
-        "Up to 50 production lines",
+        "Advanced AI threat detection",
+        "Full autonomous response",
+        "Up to 500 endpoints",
         "Priority support",
-        "Advanced analytics",
-        "Custom integrations"
+        "Advanced compliance reports",
+        "Custom security policies"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,999",
       period: "/month",
-      description: "For large manufacturing enterprises",
+      description: "For large enterprises",
       features: [
-        "Enterprise AI manufacturing",
-        "Custom optimization models",
-        "Unlimited production lines",
-        "Dedicated support team",
-        "Custom analytics",
+        "Enterprise-grade AI security",
+        "Custom autonomous workflows",
+        "Unlimited endpoints",
+        "Dedicated security team",
+        "Custom compliance frameworks",
         "API access & integrations"
       ],
       popular: false
@@ -143,42 +134,33 @@ export default function AIAutonomousManufacturingPlatform() {
 
   const useCases = [
     {
-      title: "Automotive Manufacturing",
-      description: "Optimize assembly lines with AI-powered quality control and predictive maintenance.",
-      icon: Car
+      title: "Financial Services",
+      description: "Protect sensitive financial data with AI-powered fraud detection and compliance automation.",
+      icon: DollarSign
     },
     {
-      title: "Electronics Production",
-      description: "Ensure precision manufacturing with automated quality assurance and defect detection.",
-      icon: Smartphone
+      title: "Healthcare",
+      description: "Secure patient data with HIPAA-compliant autonomous security and threat prevention.",
+      icon: Heart
     },
     {
-      title: "Pharmaceutical Manufacturing",
-      description: "Maintain strict quality standards with AI-powered compliance monitoring.",
-      icon: Pill
+      title: "Manufacturing",
+      description: "Protect industrial systems with OT security and autonomous incident response.",
+      icon: Factory
     },
     {
-      title: "Food & Beverage",
-      description: "Optimize production efficiency while maintaining food safety standards.",
-      icon: Utensils
+      title: "Government",
+      description: "Secure critical infrastructure with autonomous cybersecurity and compliance management.",
+      icon: Shield
     }
-  ];
-
-  const industries = [
-    "Automotive & Aerospace",
-    "Electronics & Semiconductors",
-    "Pharmaceuticals & Healthcare",
-    "Food & Beverage",
-    "Chemical & Materials",
-    "Energy & Utilities"
   ];
 
   return (
     <>
       <SEO 
-        title="AI Autonomous Manufacturing Platform | Zion Tech Group"
-        description="Revolutionary AI-powered autonomous manufacturing platform. Increase efficiency by 45%, reduce costs by 30%, and achieve 99.9% quality control. Transform your manufacturing operations today."
-        keywords="AI manufacturing, autonomous manufacturing, production optimization, quality control, predictive maintenance, manufacturing AI, Industry 4.0"
+        title="AI Autonomous Cybersecurity Platform | Zion Tech Group"
+        description="Next-generation autonomous cybersecurity platform powered by AI. Real-time threat detection, autonomous response, and 99.9% accuracy. Protect your business with cutting-edge security technology."
+        keywords="AI cybersecurity, autonomous security, threat detection, cybersecurity platform, AI security, cyber defense, security automation"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -192,20 +174,20 @@ export default function AIAutonomousManufacturingPlatform() {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-8">
-                <Factory className="w-4 h-4 mr-2" />
-                AI-Powered Autonomous Manufacturing
+                <Shield className="w-4 h-4 mr-2" />
+                AI-Powered Autonomous Security
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Autonomous
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Manufacturing</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Cybersecurity</span>
                 <br />Platform
               </h1>
               
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Transform your manufacturing operations with autonomous AI that never sleeps. 
-                Increase efficiency by 45%, reduce costs by 30%, and achieve 99.9% quality 
-                control with cutting-edge artificial intelligence.
+                Experience the future of cybersecurity with our autonomous AI platform. 
+                Real-time threat detection, intelligent response, and 99.9% accuracy - 
+                all powered by cutting-edge artificial intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -254,11 +236,11 @@ export default function AIAutonomousManufacturingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Revolutionary Manufacturing Features
+                Revolutionary Security Features
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                 Our AI platform combines cutting-edge technology with autonomous capabilities 
-                to provide unmatched manufacturing optimization.
+                to provide unmatched cybersecurity protection.
               </p>
             </motion.div>
             
@@ -295,8 +277,8 @@ export default function AIAutonomousManufacturingPlatform() {
                 Why Choose Our Platform?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Experience unprecedented manufacturing efficiency with autonomous AI that continuously 
-                learns, optimizes, and improves your production processes.
+                Experience unprecedented security with autonomous AI that never sleeps, 
+                never gets tired, and continuously improves.
               </p>
             </motion.div>
             
@@ -346,8 +328,8 @@ export default function AIAutonomousManufacturingPlatform() {
                 Transparent Pricing
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Choose the plan that fits your manufacturing needs. All plans include 
-                our core AI-powered optimization features.
+                Choose the plan that fits your security needs. All plans include 
+                our core AI-powered security features.
               </p>
             </motion.div>
             
@@ -420,7 +402,7 @@ export default function AIAutonomousManufacturingPlatform() {
                 Industry Solutions
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our platform is designed to meet the unique manufacturing challenges 
+                Our platform is designed to meet the unique security challenges 
                 of various industries.
               </p>
             </motion.div>
@@ -445,43 +427,6 @@ export default function AIAutonomousManufacturingPlatform() {
           </div>
         </section>
 
-        {/* Industries Section */}
-        <section className="py-20 bg-zion-slate-dark/50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our AI manufacturing platform is trusted by leading companies across 
-                multiple industries worldwide.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-zion-purple/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Factory className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-zion-slate-light text-sm font-medium">{industry}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -491,11 +436,11 @@ export default function AIAutonomousManufacturingPlatform() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Manufacturing?
+                Ready to Secure Your Future?
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Join thousands of manufacturers that trust our AI-powered 
-                autonomous manufacturing platform.
+                Join thousands of organizations that trust our AI-powered 
+                autonomous cybersecurity platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -503,7 +448,7 @@ export default function AIAutonomousManufacturingPlatform() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
                 >
-                  <Factory className="w-5 h-5 mr-2" />
+                  <Shield className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </motion.button>
                 <motion.button

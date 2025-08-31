@@ -47,150 +47,109 @@ import {
   DollarSign,
   Phone,
   Mail,
-  MapPin,
-  Monitor,
-  Gauge,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  CheckSquare,
-  PieChart,
-  LineChart,
-  BarChart3 as BarChartIcon,
-  Activity as ActivityIcon,
-  User,
-  Smile,
-  Frown,
-  TrendingDown,
-  Target as TargetIcon,
-  MousePointer,
-  Smartphone as PhoneIcon,
-  Globe as GlobeIcon,
-  Calendar,
-  Clock as ClockIcon,
-  Filter,
-  Search,
-  Download,
-  Share2,
-  Bell,
-  Settings as SettingsIcon,
-  Zap as ZapIcon,
-  Award as AwardIcon,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageSquare,
-  Mail as MailIcon,
-  Phone as PhoneCallIcon,
-  Video,
-  Camera,
-  Microphone,
-  Headphones,
-  Monitor as MonitorIcon,
-  Tablet,
-  Smartphone as MobileIcon
+  MapPin
 } from 'lucide-react';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AIEdgeComputingPlatform() {
   const features = [
     {
-      title: "Real-time Sentiment Analysis",
-      description: "Instant analysis of customer emotions and satisfaction levels across all touchpoints",
-      icon: Smile,
-      benefits: ["Live sentiment tracking", "Emotion detection", "Mood analysis"]
+      title: "Real-time AI Processing",
+      description: "Ultra-low latency AI inference at the edge for instant decision making",
+      icon: Zap,
+      benefits: ["Sub-10ms response times", "Offline AI capabilities", "Real-time analytics"]
     },
     {
-      title: "Omnichannel Journey Mapping",
-      description: "Complete customer journey visualization across all platforms and interactions",
+      title: "Distributed Intelligence",
+      description: "AI models distributed across edge nodes for optimal performance",
       icon: Network,
-      benefits: ["Cross-platform tracking", "Journey optimization", "Touchpoint analysis"]
+      benefits: ["Load balancing", "Fault tolerance", "Scalable architecture"]
     },
     {
-      title: "Predictive Customer Behavior",
-      description: "AI-powered predictions of customer actions and churn risk",
-      icon: Brain,
-      benefits: ["Churn prediction", "Behavior forecasting", "Proactive engagement"]
+      title: "Edge Security",
+      description: "Advanced security protocols for edge computing environments",
+      icon: Shield,
+      benefits: ["Zero-trust architecture", "Encrypted communications", "Threat detection"]
     },
     {
-      title: "Personalization Engine",
-      description: "Dynamic content and experience personalization based on real-time insights",
-      icon: Target,
-      benefits: ["Dynamic content", "Personalized experiences", "A/B testing"]
+      title: "IoT Integration",
+      description: "Seamless integration with IoT devices and sensors",
+      icon: Smartphone,
+      benefits: ["Device management", "Data collection", "Protocol support"]
     }
   ];
 
   const useCases = [
     {
-      title: "E-commerce Optimization",
-      description: "Enhance online shopping experiences with personalized recommendations",
-      icon: ShoppingCart,
-      examples: ["Product recommendations", "Cart abandonment analysis", "Personalized offers"]
+      title: "Smart Cities",
+      description: "Traffic optimization, environmental monitoring, and public safety",
+      icon: Building2,
+      examples: ["Traffic light optimization", "Air quality monitoring", "Emergency response"]
     },
     {
-      title: "Customer Support",
-      description: "Improve support quality and response times with AI insights",
-      icon: MessageSquare,
-      examples: ["Support ticket analysis", "Response optimization", "Customer satisfaction"]
+      title: "Industrial IoT",
+      description: "Predictive maintenance and quality control in manufacturing",
+      icon: Cpu,
+      examples: ["Equipment monitoring", "Quality assurance", "Energy optimization"]
     },
     {
-      title: "Marketing Campaigns",
-      description: "Optimize marketing efforts with customer behavior insights",
-      icon: Target,
-      examples: ["Campaign performance", "Audience segmentation", "ROI optimization"]
+      title: "Autonomous Vehicles",
+      description: "Real-time decision making for self-driving cars",
+      icon: Car,
+      examples: ["Object detection", "Path planning", "Safety systems"]
     },
     {
-      title: "Product Development",
-      description: "Guide product decisions with customer feedback and usage data",
-      icon: Lightbulb,
-      examples: ["Feature prioritization", "User feedback analysis", "Product roadmap"]
+      title: "Healthcare Monitoring",
+      description: "Patient monitoring and early warning systems",
+      icon: Heart,
+      examples: ["Vital signs tracking", "Fall detection", "Medication reminders"]
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$1,500",
+      price: "$2,500",
       period: "/month",
-      description: "Perfect for small businesses starting with CX analytics",
+      description: "Perfect for small IoT deployments",
       features: [
-        "Up to 10,000 monthly interactions",
-        "Basic sentiment analysis",
-        "Standard reporting",
+        "Up to 100 edge nodes",
+        "Basic AI models",
+        "Standard security",
         "Email support",
-        "Core analytics dashboard"
+        "Basic analytics"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$4,500",
+      price: "$7,500",
       period: "/month",
-      description: "Ideal for growing businesses with advanced CX needs",
+      description: "Ideal for medium-scale edge computing",
       features: [
-        "Up to 100,000 monthly interactions",
-        "Advanced AI analytics",
-        "Omnichannel tracking",
+        "Up to 500 edge nodes",
+        "Advanced AI models",
+        "Enhanced security",
         "Priority support",
-        "Custom dashboards",
-        "API access"
+        "Advanced analytics",
+        "Custom integrations"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,000",
+      price: "$15,000",
       period: "/month",
-      description: "For large enterprises with complex CX requirements",
+      description: "For large-scale edge deployments",
       features: [
-        "Unlimited interactions",
+        "Unlimited edge nodes",
         "Custom AI models",
-        "Advanced personalization",
+        "Enterprise security",
         "24/7 support",
+        "Custom analytics",
         "White-label options",
-        "Dedicated account manager"
+        "Dedicated infrastructure"
       ],
       cta: "Contact Sales",
       popular: false
@@ -198,64 +157,9 @@ export default function AICustomerExperienceAnalytics() {
   ];
 
   const technologies = [
-    "TensorFlow", "PyTorch", "Scikit-learn", "NLTK", "SpaCy", "BERT",
-    "Apache Kafka", "Redis", "Elasticsearch", "PostgreSQL", "MongoDB", "InfluxDB",
-    "React", "Vue.js", "Angular", "Node.js", "Python", "Java", "Scala",
-    "AWS", "Google Cloud", "Azure", "Kubernetes", "Docker", "Terraform"
-  ];
-
-  const benefits = [
-    {
-      title: "Increased Customer Satisfaction",
-      description: "Deliver personalized experiences that exceed customer expectations",
-      icon: Smile,
-      metrics: ["25% improvement in NPS", "40% higher satisfaction scores", "Improved retention"]
-    },
-    {
-      title: "Higher Conversion Rates",
-      description: "Optimize customer journeys to maximize conversion opportunities",
-      icon: TrendingUp,
-      metrics: ["30% increase in conversions", "Reduced cart abandonment", "Higher engagement"]
-    },
-    {
-      title: "Reduced Customer Churn",
-      description: "Identify and address customer issues before they lead to churn",
-      icon: Heart,
-      metrics: ["20% reduction in churn", "Proactive issue resolution", "Better retention"]
-    },
-    {
-      title: "Improved ROI",
-      description: "Maximize marketing and customer experience investment returns",
-      icon: DollarSign,
-      metrics: ["35% higher marketing ROI", "Optimized resource allocation", "Better targeting"]
-    }
-  ];
-
-  const analyticsFeatures = [
-    {
-      title: "Real-time Dashboards",
-      description: "Live monitoring of customer experience metrics and KPIs",
-      icon: BarChart3,
-      features: ["Live data updates", "Custom KPIs", "Interactive charts"]
-    },
-    {
-      title: "Advanced Segmentation",
-      description: "AI-powered customer segmentation for targeted experiences",
-      icon: Users,
-      features: ["Behavioral segmentation", "Demographic analysis", "Predictive clustering"]
-    },
-    {
-      title: "Automated Insights",
-      description: "AI-generated insights and recommendations for optimization",
-      icon: Lightbulb,
-      features: ["Automated reporting", "Smart recommendations", "Trend detection"]
-    },
-    {
-      title: "Integration Hub",
-      description: "Seamless integration with your existing tools and platforms",
-      icon: Network,
-      features: ["API-first approach", "Webhook support", "Custom integrations"]
-    }
+    "TensorFlow Lite", "ONNX Runtime", "Intel OpenVINO", "NVIDIA TensorRT",
+    "Apache Kafka", "Redis", "PostgreSQL", "MongoDB", "Kubernetes", "Docker",
+    "MQTT", "CoAP", "HTTP/3", "WebRTC", "ZeroMQ", "gRPC"
   ];
 
   return (
@@ -270,16 +174,17 @@ export default function AICustomerExperienceAnalytics() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <BarChart3 className="w-4 h-4 mr-2" />
-              AI Customer Experience Analytics
+              <Cpu className="w-4 h-4 mr-2" />
+              AI Edge Computing Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Understand Your Customers
-              <span className="block text-zion-cyan">Like Never Before</span>
+              AI at the Edge
+              <span className="block text-zion-cyan">Intelligence Everywhere</span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform customer experience with AI-powered analytics that provide real-time insights, 
-              predictive behavior modeling, and personalized engagement strategies.
+              Deploy AI models directly to edge devices for real-time processing, 
+              reduced latency, and enhanced privacy. Transform your IoT infrastructure 
+              with intelligent edge computing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -311,11 +216,11 @@ export default function AICustomerExperienceAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced CX Analytics Capabilities
+              Edge Computing Redefined
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with comprehensive analytics to deliver 
-              unprecedented insights into customer behavior and satisfaction.
+              Our AI Edge Computing Platform brings intelligence to where data is generated, 
+              enabling real-time insights and actions.
             </p>
           </motion.div>
 
@@ -348,102 +253,6 @@ export default function AICustomerExperienceAnalytics() {
         </div>
       </section>
 
-      {/* Analytics Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Platform
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive analytics tools designed to give you complete visibility into 
-              your customer experience and business performance.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                <div className="space-y-3">
-                  {feature.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckSquare className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feat}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              AI-powered customer experience analytics deliver tangible results that directly 
-              impact your bottom line and customer relationships.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light mb-6">{benefit.description}</p>
-                <div className="space-y-3">
-                  {benefit.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckSquare className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
@@ -455,11 +264,11 @@ export default function AICustomerExperienceAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Customer experience analytics are transforming industries across the globe, 
-              enabling data-driven decisions and personalized experiences.
+              Discover how AI Edge Computing is transforming industries and creating 
+              new possibilities for innovation.
             </p>
           </motion.div>
 
@@ -506,7 +315,7 @@ export default function AICustomerExperienceAnalytics() {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your customer experience analytics needs and scale as you grow.
+              Choose the plan that fits your edge computing needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -609,11 +418,11 @@ export default function AICustomerExperienceAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
+              Ready to Deploy AI at the Edge?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join leading organizations that are already leveraging AI-powered analytics 
-              to gain competitive advantages and drive customer satisfaction.
+              Join leading organizations that are already leveraging AI Edge Computing 
+              to gain competitive advantages and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
