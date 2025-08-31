@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 import type { Config } from 'tailwindcss'
-=======
-import type { Config } from 'tailwindcss.ts'
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-export default {
+export default (async () => {
+  const forms = await import('@tailwindcss/forms');
+  const typography = await import('@tailwindcss/typography');
+  const aspectRatio = await import('@tailwindcss/aspect-ratio');
+  
+  return {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
@@ -339,8 +339,9 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+    forms.default,
+    typography.default,
+    aspectRatio.default,
   ],
-} satisfies Config
+} satisfies Config;
+})();
