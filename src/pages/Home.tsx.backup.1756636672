@@ -41,6 +41,17 @@ import {
   Cloud
 } from 'lucide-react';
 
+<<<<<<< HEAD
+export default function Home() {
+  const heroStats = [
+    { label: 'AI Solutions', value: '50+', icon: Brain },
+    { label: 'Enterprise Clients', value: '200+', icon: Building },
+    { label: 'Success Rate', value: '98%', icon: CheckCircle },
+    { label: 'Years Experience', value: '15+', icon: Star }
+  ];
+
+  const featuredServices = [
+=======
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() =>
@@ -229,6 +240,7 @@ const HeroSection = React.memo(() => {
 // Enhanced Services Section
 const ServicesSection = () => {
   const services = [
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
     {
       name: 'AI Edge Computing Platform',
       description: 'Deploy AI models directly to edge devices for real-time processing and reduced latency',
@@ -289,6 +301,78 @@ const ServicesSection = () => {
     {
       name: 'Emerging Tech',
       icon: Zap,
+<<<<<<< HEAD
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'Edge Computing', href: '/services/edge-computing-platform' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Space Technology', href: '/services/space-tech' }
+      ]
+    },
+    {
+      name: 'Enterprise Solutions',
+      icon: Building,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'IoT & Edge', href: '/services/iot-edge' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' }
+      ]
+    }
+  ];
+
+  const microSaaSProducts = [
+    {
+      name: 'AI Sales Copilot',
+      description: 'Complete sales automation suite with AI-powered insights',
+      icon: TrendingUp,
+      href: '/services/ai-sales-copilot',
+      price: '$299/month'
+    },
+    {
+      name: 'AI Support Helpdesk',
+      description: 'Intelligent customer support platform with 24/7 availability',
+      icon: MessageCircle,
+      href: '/services/ai-support-helpdesk',
+      price: '$199/month'
+    },
+    {
+      name: 'AI Content Generator',
+      description: 'AI-powered content creation and optimization platform',
+      icon: BookOpen,
+      href: '/services/ai-content-generator',
+      price: '$149/month'
+    },
+    {
+      name: 'AI Lead Scoring',
+      description: 'Machine learning-based lead prioritization and scoring',
+      icon: Target,
+      href: '/services/ai-lead-scoring',
+      price: '$99/month'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      content: 'Zion Tech Group transformed our AI strategy. Their Enterprise Orchestrator increased our efficiency by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Director of IT, HealthFirst',
+      content: 'The AI Healthcare Analytics platform has revolutionized our diagnostic capabilities and patient care.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP Operations, FinTech Solutions',
+      content: 'Outstanding cybersecurity solutions. Their AI-powered threat detection is cutting-edge and reliable.',
+      rating: 5
+=======
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",
       href: "/services/ai-quantum-neural-network-platform",
@@ -318,6 +402,7 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
     }
   ];
 
@@ -593,6 +678,9 @@ const ServicesSection = () => {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+      </section>
+=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
@@ -1041,6 +1129,7 @@ const Home: React.FC = () => {
       <WhyChooseUsSection />
       <CTASection />
       <FloatingActionButton />
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
     </div>
   );
 }

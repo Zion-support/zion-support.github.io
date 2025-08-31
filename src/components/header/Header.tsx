@@ -9,6 +9,10 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
@@ -43,6 +47,9 @@ export function Header() {
               </Link>
               <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Careers
+              </Link>
+              <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Pricing
               </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-zion-slate-light text-xs">Follow us:</span>
@@ -118,7 +125,7 @@ export function Header() {
 
               {/* Get Started CTA */}
               <Link
-                to="/get-started"
+                to="/contact"
                 className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-sm font-medium rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
                 Get Started

@@ -1,174 +1,117 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Search, 
-  BookOpen, 
-  Scale, 
   FileText, 
+  Scale, 
   Brain, 
   Zap, 
   Shield, 
-  Clock, 
   Users, 
-  CheckCircle,
+  TrendingUp, 
+  CheckCircle, 
   ArrowRight,
+  BookOpen,
+  Clock,
+  DollarSign,
   Star,
+  Award,
   Globe,
-  Database,
-  Eye,
-  Settings,
-  Download,
-  Share2,
-  Filter,
-  AlertTriangle,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  TrendingUp,
   Lock,
-  Cloud,
+  BarChart3,
+  Workflow,
+  Database,
   Cpu,
   Network,
-  Server,
-  Database as DatabaseIcon,
-  Code,
-  Bot,
-  Workflow,
+  Eye,
   MessageCircle,
   Phone,
   Mail,
-  MapPin,
-  DollarSign,
-  Calendar,
-  Award,
-  Rocket,
-  Leaf,
-  Coins,
-  Satellite,
-  Gamepad2,
-  Palette,
-  Gauge,
-  Wifi,
-  ShieldCheck,
-  Sparkles,
-  Atom,
-  Cpu as CpuIcon,
-  Network as NetworkIcon,
-  Server as ServerIcon,
-  Code as CodeIcon,
-  Bot as BotIcon,
-  Workflow as WorkflowIcon,
-  MessageCircle as MessageCircleIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  DollarSign as DollarSignIcon,
-  Calendar as CalendarIcon,
-  Award as AwardIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,
-  Coins as CoinsIcon,
-  Satellite as SatelliteIcon,
-  Gamepad2 as Gamepad2Icon,
-  Palette as PaletteIcon,
-  Gauge as GaugeIcon,
-  Wifi as WifiIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Sparkles as SparklesIcon,
-  Atom as AtomIcon
+  MapPin
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function AIAutonomousLegalResearchPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Legal Research",
-      description: "Advanced natural language processing that understands legal terminology and context",
-      benefits: ["Semantic search", "Context-aware results", "Legal precedent analysis"]
+      title: "AI-Powered Case Analysis",
+      description: "Advanced AI algorithms analyze legal precedents, case law, and judicial decisions with 99.7% accuracy"
     },
     {
       icon: Search,
-      title: "Intelligent Case Law Search",
-      description: "Find relevant cases, statutes, and regulations with unprecedented accuracy",
-      benefits: ["Multi-jurisdiction search", "Citation tracking", "Related case discovery"]
+      title: "Intelligent Legal Research",
+      description: "Natural language search across millions of legal documents, statutes, and regulations in real-time"
     },
     {
-      icon: BookOpen,
-      title: "Comprehensive Legal Database",
-      description: "Access to millions of legal documents, cases, and regulatory materials",
-      benefits: ["Real-time updates", "Historical archives", "Multi-source integration"]
+      icon: Workflow,
+      title: "Automated Document Review",
+      description: "AI-driven contract analysis, risk assessment, and compliance checking with automated workflows"
     },
     {
-      icon: Scale,
-      title: "Legal Analysis & Insights",
-      description: "AI-generated summaries, key points, and legal reasoning analysis",
-      benefits: ["Automated summaries", "Risk assessment", "Strategy recommendations"]
-    },
-    {
-      icon: Zap,
-      title: "Automated Citation Management",
-      description: "Intelligent citation formatting and verification for legal documents",
-      benefits: ["Auto-formatting", "Citation checking", "Bibliography generation"]
+      icon: BarChart3,
+      title: "Predictive Legal Analytics",
+      description: "Machine learning models predict case outcomes, settlement probabilities, and legal strategy effectiveness"
     },
     {
       icon: Shield,
       title: "Compliance Monitoring",
-      description: "Track regulatory changes and ensure legal compliance across jurisdictions",
-      benefits: ["Regulatory alerts", "Compliance dashboards", "Risk monitoring"]
+      description: "Real-time regulatory compliance tracking and automated alerts for legal and regulatory changes"
+    },
+    {
+      icon: Database,
+      title: "Centralized Knowledge Base",
+      description: "Unified platform for legal research, document management, and knowledge sharing across teams"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Legal Professional",
-      price: "$199",
+      name: "Starter",
+      price: "$299",
       period: "/month",
-      description: "Perfect for individual lawyers and small law firms",
+      description: "Perfect for solo practitioners and small law firms",
       features: [
-        "Up to 3 users",
-        "Basic legal research tools",
-        "Standard case law database",
+        "Up to 1,000 legal document searches/month",
+        "Basic AI case analysis",
+        "Standard compliance monitoring",
         "Email support",
-        "Basic AI insights",
-        "Citation management"
+        "Basic reporting and analytics"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Law Firm",
-      price: "$499",
+      name: "Professional",
+      price: "$799",
       period: "/month",
       description: "Ideal for growing law firms and legal departments",
       features: [
-        "Up to 10 users",
-        "Advanced research algorithms",
-        "Full legal database access",
+        "Up to 10,000 legal document searches/month",
+        "Advanced AI case analysis",
+        "Real-time compliance monitoring",
         "Priority support",
-        "Advanced AI insights",
-        "Compliance monitoring",
-        "Team collaboration tools"
+        "Advanced analytics and reporting",
+        "Custom workflows",
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
       description: "For large law firms and corporate legal departments",
       features: [
-        "Unlimited users",
-        "Custom AI models",
-        "API access",
-        "Dedicated support",
+        "Unlimited legal document searches",
+        "Full AI-powered legal research suite",
+        "Custom AI model training",
+        "24/7 dedicated support",
+        "Advanced security and compliance",
+        "White-label solutions",
         "Custom integrations",
-        "Advanced analytics",
-        "White-label options"
+        "Dedicated account manager"
       ],
       cta: "Contact Sales",
       popular: false
@@ -179,130 +122,104 @@ export default function AIAutonomousLegalResearchPlatform() {
     {
       icon: Clock,
       title: "90% Time Savings",
-      description: "Reduce legal research time from hours to minutes with AI-powered search and analysis"
-    },
-    {
-      icon: CheckCircle,
-      title: "95% Accuracy Rate",
-      description: "Advanced AI algorithms ensure highly accurate legal research results and citations"
+      description: "Reduce legal research time from hours to minutes with AI-powered automation"
     },
     {
       icon: DollarSign,
-      title: "40% Cost Reduction",
-      description: "Lower research costs and increase billable hours with automated legal research"
+      title: "60% Cost Reduction",
+      description: "Lower legal research costs and improve billing efficiency"
+    },
+    {
+      icon: TrendingUp,
+      title: "95% Accuracy Rate",
+      description: "AI models trained on millions of legal documents ensure high accuracy"
     },
     {
       icon: Users,
       title: "Team Collaboration",
-      description: "Enable multiple team members to collaborate on research projects seamlessly"
+      description: "Enable seamless collaboration across legal teams with shared knowledge base"
     }
   ];
 
   const useCases = [
     {
-      title: "Case Law Research",
-      description: "Find relevant precedents and case law for ongoing litigation",
+      title: "Contract Analysis & Review",
+      description: "Automated contract review, risk assessment, and compliance checking",
+      icon: FileText
+    },
+    {
+      title: "Legal Research & Precedent Analysis",
+      description: "AI-powered case law research and precedent identification",
       icon: Search
     },
     {
       title: "Regulatory Compliance",
-      description: "Stay updated on changing regulations and compliance requirements",
+      description: "Real-time monitoring of regulatory changes and compliance requirements",
       icon: Shield
     },
     {
-      title: "Contract Analysis",
-      description: "Analyze contracts for legal risks and compliance issues",
-      icon: FileText
-    },
-    {
-      title: "Legal Strategy",
-      description: "Develop winning legal strategies with comprehensive research insights",
-      icon: Target
+      title: "Litigation Strategy",
+      description: "Predictive analytics for case outcomes and legal strategy optimization",
+      icon: BarChart3
     }
   ];
 
-  const stats = [
-    { number: '10M+', label: 'Legal Documents', icon: Database },
-    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
-    { number: '90%', label: 'Time Savings', icon: Clock },
-    { number: '50+', label: 'Jurisdictions', icon: Globe }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <SEO 
+        title="AI Autonomous Legal Research Platform | Zion Tech Group"
+        description="Revolutionary AI-powered legal research platform that automates case analysis, document review, and compliance monitoring. Reduce research time by 90% and costs by 60%."
+        keywords="AI legal research, legal automation, case analysis, legal AI, compliance monitoring, legal technology"
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Legal Technology
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous Legal Research Platform
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize legal research with AI-powered intelligence. Access millions of legal documents, 
-              get instant insights, and build stronger cases with unprecedented speed and accuracy.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Transform legal research with AI-powered automation. Analyze millions of legal documents, 
+              predict case outcomes, and ensure compliance with unprecedented speed and accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
+              </button>
+              <button className="px-8 py-4 border border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
+                Watch Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-blue-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Legal Professionals
+              Revolutionary Legal Research Technology
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge technology with deep legal expertise to deliver 
-              unprecedented research capabilities.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Our AI platform combines cutting-edge machine learning with comprehensive legal databases 
+              to deliver unprecedented research capabilities.
             </p>
           </motion.div>
 
@@ -312,23 +229,14 @@ export default function AIAutonomousLegalResearchPlatform() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-blue-900/20 border border-blue-500/20 rounded-xl p-6 hover:border-blue-400/40 transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-300" />
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-blue-100">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -336,41 +244,36 @@ export default function AIAutonomousLegalResearchPlatform() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-blue-900/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Legal Research Platform?
+              Transform Your Legal Practice
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your legal practice with AI-powered research that saves time, reduces costs, 
-              and improves outcomes.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Experience unprecedented efficiency and accuracy in legal research and analysis.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
               >
-                <div className="flex-shrink-0">
-                  <benefit.icon className="h-12 w-12 text-blue-400" />
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-blue-300" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-blue-100">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -378,36 +281,36 @@ export default function AIAutonomousLegalResearchPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Legal Need
+              Comprehensive Legal Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From solo practitioners to large law firms, our platform adapts to your specific legal research requirements.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              From contract analysis to litigation strategy, our platform covers every aspect of legal practice.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-blue-900/20 border border-blue-500/20 rounded-xl p-8 hover:border-blue-400/40 transition-all duration-300"
               >
-                <useCase.icon className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-blue-300" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-blue-100 text-lg">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -415,36 +318,34 @@ export default function AIAutonomousLegalResearchPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-blue-900/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Flexible Pricing Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your practice size and research needs. All plans include a 14-day free trial.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Choose the plan that best fits your legal practice needs and scale as you grow.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative p-8 rounded-2xl border-2 ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-blue-900/20 border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-blue-500 bg-gradient-to-br from-gray-800 to-gray-900' 
-                    : 'border-gray-700 bg-gray-800/50'
-                } backdrop-blur-sm`}
+                    ? 'border-blue-400 shadow-lg shadow-blue-400/25' 
+                    : 'border-blue-500/20'
+                }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -456,32 +357,29 @@ export default function AIAutonomousLegalResearchPlatform() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center mb-4">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-blue-100 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-blue-100">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <span className="text-blue-100">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                    : 'bg-blue-500/20 text-blue-300 border border-blue-400 hover:bg-blue-500/30'
+                }`}>
                   {plan.cta}
-                </Link>
+                </button>
               </motion.div>
             ))}
           </div>
@@ -489,67 +387,69 @@ export default function AIAutonomousLegalResearchPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Legal Research?
+              Ready to Transform Your Legal Practice?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of legal professionals who have already revolutionized their practice with AI-powered research.
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of legal professionals who have already revolutionized their research capabilities 
+              with our AI platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
-              >
+              </button>
+              <button className="px-8 py-4 border border-blue-400 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
-              </Link>
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Contact Section */}
+      <section className="py-20 bg-blue-900/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Get in Touch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-blue-400 mb-4" />
+                <Phone className="w-8 h-8 text-blue-300 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
+                <a href="tel:+13024640950" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  +1 (302) 464-0950
+                </a>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-blue-400 mb-4" />
+                <Mail className="w-8 h-8 text-blue-300 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-blue-400 mb-4" />
+                <MapPin className="w-8 h-8 text-blue-300 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-blue-100">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
               </div>
             </div>
-          </motion.div>
+            <p className="text-blue-100">
+              Ready to revolutionize your legal practice? Contact us today to learn more about our 
+              AI Autonomous Legal Research Platform.
+            </p>
+          </div>
         </div>
       </section>
     </div>

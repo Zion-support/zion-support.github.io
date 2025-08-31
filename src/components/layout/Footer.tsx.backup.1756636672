@@ -76,6 +76,8 @@ export function Footer() {
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform", icon: Database },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: TrendingUp },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
+<<<<<<< HEAD
+=======
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
         { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
@@ -83,6 +85,7 @@ export function Footer() {
         { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
         { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
         { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
         { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
         { name: "AI Content Marketing Studio", href: "/services/ai-content-marketing-studio", icon: PenTool }
@@ -145,6 +148,9 @@ export function Footer() {
       ]
     },
     {
+<<<<<<< HEAD
+      title: "Resources",
+=======
       title: "Legal & Education",
       icon: BookOpen,
       links: [
@@ -170,6 +176,7 @@ export function Footer() {
     },
     {
       title: "Resources & Support",
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
       icon: BookOpen,
       links: [
         { name: "Blog", href: "/blog", icon: PenTool },
@@ -263,6 +270,20 @@ export function Footer() {
         </div>
 
         {/* Main Footer Content */}
+<<<<<<< HEAD
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Company Info */}
+          <div className="text-center mb-12">
+            <Link to="/" className="inline-flex items-center space-x-3 group mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+                <p className="text-sm text-slate-400 font-medium">Innovation • Technology • Growth</p>
+=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info - Spans 2 columns on large screens */}
           <div className="lg:col-span-2">
@@ -273,12 +294,16 @@ export function Footer() {
               <div>
                 <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-zion-cyan text-sm">Innovation • Technology • Growth</p>
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
               </div>
             </Link>
             <p className="text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, quantum computing innovations, 
               and transformative digital experiences that empower businesses to achieve unprecedented growth.
             </p>
+<<<<<<< HEAD
+          </div>
+=======
             
             {/* Contact Info */}
             <div className="space-y-4 mb-8">
@@ -305,6 +330,7 @@ export function Footer() {
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
+>>>>>>> 18a0fe03be93a69f0dbcf662cad2fc48a0dda347
 
           {/* Footer Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12">
