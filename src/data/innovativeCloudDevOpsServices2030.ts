@@ -80,36 +80,36 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "Resource tagging automation",
       "API-first architecture"
     ],
-    benefits[
+    benefits: [
       "Reduce cloud costs by 35%",
       "Improve operational efficiency by 50%",
       "Eliminate vendor lock-in",
       "Enhance security posture",
       "Simplify compliance management"
     ],
-    useCases[
+    useCases: [
       "Multi-cloud management",
       "Cost optimization",
       "Compliance automation",
       "Disaster recovery",
       "Resource orchestration"
     ],
-    targetAudience[
+    targetAudience: [
       "Enterprise organizations",
       "Multi-cloud users",
       "DevOps teams",
       "Cloud architects",
       "IT operations"
     ],
-    technologies[
+    technologies: [
       "Kubernetes", "Terraform", "Ansible", "Cloud APIs", "Container orchestration",
       "Infrastructure as code", "Microservices", "API management"
     ],
-    integrations[
+    integrations: [
       "AWS", "Azure", "Google Cloud", "Kubernetes", "Terraform", "Ansible",
       "Jenkins", "GitLab", "GitHub Actions", "Monitoring tools"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Cloud architecture consultation",
       "Implementation assistance",
@@ -124,13 +124,13 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     reviewCount: 223,
     innovationLevel: "Innovative",
     marketSize: "$28.9B by 2030",
-    competitors["HashiCorp", "CloudBolt", "Flexera", "Scalr"],
-    technicalCapabilities[
+    competitors: ["HashiCorp", "CloudBolt", "Flexera", "Scalr"],
+    technicalCapabilities: [
       "Multi-cloud orchestration", "Cost optimization", "Resource management",
       "Compliance automation", "Disaster recovery", "Performance monitoring"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -160,7 +160,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       pricingModel: "Monthly subscription with pipeline-based pricing",
       marketPrice: "$599-1,199/month"
     },
-    features[
+    features: [
       "AI-powered pipeline optimization",
       "Predictive deployment analysis",
       "Automated testing orchestration",
@@ -172,36 +172,36 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "Compliance automation",
       "Real-time analytics"
     ],
-    benefits[
+    benefits: [
       "Reduce deployment time by 60%",
       "Improve deployment success rate by 80%",
       "Automate repetitive tasks",
       "Enhance code quality",
       "Optimize resource utilization"
     ],
-    useCases[
+    useCases: [
       "CI/CD pipeline optimization",
       "Infrastructure automation",
       "Testing automation",
       "Deployment management",
       "Performance optimization"
     ],
-    targetAudience[
+    targetAudience: [
       "DevOps teams",
       "Software development teams",
       "IT operations",
       "Platform engineers",
       "Site reliability engineers"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Kubernetes", "Docker", "Jenkins", "GitLab CI",
       "Terraform", "Ansible", "Prometheus", "Grafana"
     ],
-    integrations[
+    integrations: [
       "GitHub", "GitLab", "Bitbucket", "Jenkins", "CircleCI", "Travis CI",
       "Kubernetes", "Docker", "AWS", "Azure", "Google Cloud"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "DevOps consultation",
       "Implementation assistance",
@@ -217,7 +217,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     innovationLevel: "Innovative",
     marketSize: "$18.7B by 2030",
     competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions"],
-    technicalCapabilities[
+    technicalCapabilities: [
       "Pipeline optimization", "Deployment automation", "Testing automation",
       "Infrastructure automation", "Performance monitoring", "Error prediction"
     ],

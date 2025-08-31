@@ -95,22 +95,22 @@ export const innovativeAIServices2030: AIService[] = [
       "Marketing campaigns",
       "Customer support"
     ],
-    targetAudience[
+    targetAudience: [
       "Content creators",
       "E-learning companies",
       "Marketing agencies",
       "Accessibility services",
       "Entertainment industry"
     ],
-    technologies[
+    technologies: [
       "Deep learning", "Neural networks", "Natural language processing",
       "Audio processing", "Machine learning", "Voice synthesis"
     ],
-    integrations[
+    integrations: [
       "Content management systems", "E-learning platforms", "Marketing tools",
       "CRM systems", "Social media platforms", "Video editing software"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Voice cloning consultation",
       "API documentation",
@@ -125,14 +125,14 @@ export const innovativeAIServices2030: AIService[] = [
     reviewCount: 156,
     innovationLevel: "Innovative",
     marketSize: "$2.1B by 2030",
-    competitors["Descript", "Resemble AI", "Synthesia", "ElevenLabs"],
-    aiCapabilities[
+    competitors: ["Descript", "Resemble AI", "Synthesia", "ElevenLabs"],
+    aiCapabilities: [
       "Voice cloning", "Text-to-speech", "Voice customization",
       "Emotion synthesis", "Multi-language support", "Real-time processing"
     ],
     sustainabilityScore: 85,
-    complianceStandards["GDPR", "CCPA", "SOC 2", "ISO 27001"],
-    deploymentOptions["Cloud", "API", "SDK"],
+    complianceStandards: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+    deploymentOptions: ["Cloud", "API", "SDK"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -162,7 +162,7 @@ export const innovativeAIServices2030: AIService[] = [
       pricingModel: "Monthly subscription with developer-based pricing",
       marketPrice: "$199-399/month"
     },
-    features[
+    features: [
       "Automated code analysis",
       "Bug detection and prevention",
       "Code quality scoring",
@@ -174,36 +174,36 @@ export const innovativeAIServices2030: AIService[] = [
       "Multi-language support",
       "Integration with CI/CD"
     ],
-    benefits[
+    benefits: [
       "Reduce code review time by 70%",
       "Improve code quality by 40%",
       "Prevent security vulnerabilities",
       "Enforce coding standards",
       "Accelerate development cycles"
     ],
-    useCases[
+    useCases: [
       "Software development",
       "Code quality assurance",
       "Security auditing",
       "Team collaboration",
       "Continuous integration"
     ],
-    targetAudience[
+    targetAudience: [
       "Software development teams",
       "DevOps engineers",
       "Quality assurance teams",
       "Startups",
       "Enterprise developers"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Static code analysis", "Natural language processing",
       "Pattern recognition", "AI algorithms", "Code parsing"
     ],
-    integrations[
+    integrations: [
       "GitHub", "GitLab", "Bitbucket", "Jenkins", "CircleCI", "GitHub Actions",
       "VS Code", "IntelliJ", "Eclipse", "Slack", "Teams"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Code review consultation",
       "API documentation",
@@ -218,14 +218,14 @@ export const innovativeAIServices2030: AIService[] = [
     reviewCount: 234,
     innovationLevel: "Innovative",
     marketSize: "$1.8B by 2030",
-    competitors["SonarQube", "CodeClimate", "DeepCode", "Snyk"],
-    aiCapabilities[
+    competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk"],
+    aiCapabilities: [
       "Code analysis", "Bug detection", "Security scanning",
       "Performance optimization", "Code quality scoring", "Automated reviews"
     ],
     sustainabilityScore: 90,
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -235,7 +235,7 @@ export const innovativeAIServices2030: AIService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-    tags["AI Code Review", "Software Development", "Code Quality", "Security", "DevOps"],
+    tags: ["AI Code Review", "Software Development", "Code Quality", "Security", "DevOps"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -255,7 +255,7 @@ export const innovativeAIServices2030: AIService[] = [
       pricingModel: "Monthly subscription with data volume pricing",
       marketPrice: "$399-799/month"
     },
-    features[
+    features: [
       "Real-time sentiment analysis",
       "Multi-channel monitoring",
       "Emotion detection",
@@ -267,36 +267,36 @@ export const innovativeAIServices2030: AIService[] = [
       "Custom sentiment models",
       "API integration"
     ],
-    benefits[
+    benefits: [
       "Improve customer satisfaction by 35%",
       "Reduce customer churn by 25%",
       "Enable proactive customer service",
       "Enhance brand reputation",
       "Optimize marketing campaigns"
     ],
-    useCases[
+    useCases: [
       "Customer service optimization",
       "Brand monitoring",
       "Marketing campaign analysis",
       "Product development",
       "Crisis management"
     ],
-    targetAudience[
+    targetAudience: [
       "Customer service teams",
       "Marketing departments",
       "Product managers",
       "Brand managers",
       "E-commerce businesses"
     ],
-    technologies[
+    technologies: [
       "Natural language processing", "Machine learning", "Sentiment analysis",
       "Text analytics", "Deep learning", "Real-time processing"
     ],
-    integrations[
+    integrations: [
       "CRM systems", "Social media platforms", "Support ticketing systems",
       "Email platforms", "Review platforms", "Analytics tools"
     ],
-    support[
+    support: [
       "24/7 customer support",
       "Sentiment analysis consultation",
       "API documentation",
@@ -311,14 +311,14 @@ export const innovativeAIServices2030: AIService[] = [
     reviewCount: 189,
     innovationLevel: "Innovative",
     marketSize: "$3.2B by 2030",
-    competitors["Brandwatch", "Sprinklr", "Hootsuite Insights", "Mention"],
-    aiCapabilities[
+    competitors: ["Brandwatch", "Sprinklr", "Hootsuite Insights", "Mention"],
+    aiCapabilities: [
       "Sentiment analysis", "Emotion detection", "Trend analysis",
       "Real-time monitoring", "Custom models", "Multi-language support"
     ],
     sustainabilityScore: 88,
-    complianceStandards["GDPR", "CCPA", "SOC 2", "ISO 27001"],
-    deploymentOptions["Cloud", "API", "On-premise"],
+    complianceStandards: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+    deploymentOptions: ["Cloud", "API", "On-premise"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,

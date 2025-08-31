@@ -172,36 +172,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Forensic analysis tools",
       "Threat hunting training"
     ],
-    benefits[
+    benefits: [
       "Reduce threat detection time by 90%",
       "Prevent 95% of cyber attacks",
       "Automate incident response",
       "Improve security team efficiency",
       "Enhance threat visibility"
     ],
-    useCases[
+    useCases: [
       "Enterprise security operations",
       "SOC operations",
       "Incident response",
       "Threat intelligence",
       "Security research"
     ],
-    targetAudience[
+    targetAudience: [
       "Security operations centers",
       "Enterprise security teams",
       "Managed security providers",
       "Government agencies",
       "Financial institutions"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Deep learning", "Behavioral analytics", "Threat intelligence",
       "Automation", "Real-time processing", "Big data analytics"
     ],
-    integrations[
+    integrations: [
       "SIEM systems", "EDR platforms", "Firewalls", "Identity management",
       "Vulnerability scanners", "Threat intelligence feeds"
     ],
-    support[
+    support: [
       "24/7 security support",
       "Threat hunting consultation",
       "Incident response assistance",
@@ -216,13 +216,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 245,
     innovationLevel: "Innovative",
     marketSize: "$22.8B by 2030",
-    competitors["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    securityCapabilities[
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    securityCapabilities: [
       "Threat detection", "Behavioral analysis", "Incident response",
       "Threat intelligence", "Forensic analysis", "Automation"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -232,7 +232,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
-    tags["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
+    tags: ["AI Threat Hunting", "Cybersecurity", "Threat Detection", "Incident Response", "SOC"],
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -252,7 +252,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with user-based pricing",
       marketPrice: "$499-999/month"
     },
-    features[
+    features: [
       "Identity-based access control",
       "Application-level security",
       "Continuous authentication",
@@ -264,36 +264,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Mobile device support",
       "API security"
     ],
-    benefits[
+    benefits: [
       "Eliminate VPN vulnerabilities",
       "Improve user experience",
       "Enhance security posture",
       "Reduce attack surface",
       "Simplify compliance"
     ],
-    useCases[
+    useCases: [
       "Remote work security",
       "Cloud application access",
       "Third-party access",
       "IoT device security",
       "Branch office connectivity"
     ],
-    targetAudience[
+    targetAudience: [
       "Enterprise organizations",
       "Remote workforces",
       "Cloud-first companies",
       "Healthcare organizations",
       "Financial institutions"
     ],
-    technologies[
+    technologies: [
       "Zero trust architecture", "Identity management", "Multi-factor authentication",
       "Application security", "Network segmentation", "Risk assessment"
     ],
-    integrations[
+    integrations: [
       "Identity providers", "Cloud platforms", "Enterprise applications",
       "Security tools", "Compliance platforms", "SIEM systems"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Security consultation",
       "Implementation assistance",
@@ -308,13 +308,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 198,
     innovationLevel: "Innovative",
     marketSize: "$18.7B by 2030",
-    competitors["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],
-    securityCapabilities[
+    competitors: ["Zscaler", "Cloudflare", "Akamai", "Perimeter 81"],
+    securityCapabilities: [
       "Access control", "Identity verification", "Risk assessment",
       "Application security", "Network segmentation", "Compliance automation"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    deploymentOptions["Cloud", "Hybrid", "On-premise"],
+    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    deploymentOptions: ["Cloud", "Hybrid", "On-premise"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -324,7 +324,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-    tags["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
+    tags: ["Zero Trust", "Network Security", "Access Control", "Identity Management", "VPN Alternative"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -344,7 +344,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with asset-based pricing",
       marketPrice: "$399-799/month"
     },
-    features[
+    features: [
       "AI-powered risk prioritization",
       "Automated vulnerability scanning",
       "Patch management automation",
@@ -356,36 +356,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Integration capabilities",
       "Mobile app support"
     ],
-    benefits[
+    benefits: [
       "Reduce remediation time by 60%",
       "Improve risk prioritization by 80%",
       "Automate patch management",
       "Enhance compliance posture",
       "Optimize security resources"
     ],
-    useCases[
+    useCases: [
       "Security operations",
       "Compliance management",
       "Risk assessment",
       "Asset management",
       "Patch management"
     ],
-    targetAudience[
+    targetAudience: [
       "Security teams",
       "IT operations",
       "Compliance officers",
       "Risk managers",
       "Managed service providers"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Vulnerability scanning", "Risk assessment",
       "Automation", "Configuration management", "Asset discovery"
     ],
-    integrations[
+    integrations: [
       "Vulnerability scanners", "Patch management tools", "Configuration management",
       "SIEM systems", "Compliance platforms", "IT service management"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Vulnerability consultation",
       "Implementation assistance",
@@ -400,13 +400,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 167,
     innovationLevel: "Innovative",
     marketSize: "$12.4B by 2030",
-    competitors["Qualys", "Rapid7", "Tenable", "Nessus"],
-    securityCapabilities[
+    competitors: ["Qualys", "Rapid7", "Tenable", "Nessus"],
+    securityCapabilities: [
       "Vulnerability scanning", "Risk assessment", "Patch management",
       "Configuration management", "Compliance tracking", "Asset discovery"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "PCI DSS"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
