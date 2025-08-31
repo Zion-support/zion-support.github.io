@@ -25,12 +25,12 @@ export function EnhancedFooter() {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-solutions', description: 'Machine learning & automation' },
-        { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' },
-        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
-        { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
+        { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', description: 'Cutting-edge AI & quantum solutions' },
+        { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous operations' },
+        { name: 'AI-Quantum Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', description: 'Revolutionary computing power' },
+        { name: 'AI Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent city management' },
+        { name: 'Cloud FinOps Optimization', href: '/services/cloud-finops-optimizer', description: 'Cost optimization platform' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-access', description: 'Modern security architecture' },
       ]
     },
     {
@@ -47,12 +47,12 @@ export function EnhancedFooter() {
     {
       title: 'Resources',
       links: [
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', description: 'Complete pricing & ROI analysis' },
         { name: 'Blog', href: '/blog', description: 'Insights & updates' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
         { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
         { name: 'Webinars', href: '/webinars', description: 'Educational content' },
         { name: 'Documentation', href: '/documentation', description: 'Technical guides' },
-        { name: 'API Reference', href: '/api', description: 'Developer resources' },
       ]
     },
     {
@@ -90,22 +90,22 @@ export function EnhancedFooter() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
       description: 'Send us a message'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 302 464 0950',
+      href: 'tel:+13024640950',
       description: 'Call us directly'
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Street, Innovation City, IC 12345',
-      href: 'https://maps.google.com/?q=123+Tech+Street+Innovation+City',
+      value: '364 E Main St STE 1008 Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       description: 'Visit our headquarters'
     }
   ];

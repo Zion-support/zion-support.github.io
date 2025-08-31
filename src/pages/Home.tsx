@@ -137,31 +137,31 @@ export default function Home() {
   const services = [
     {
       icon: Brain,
-      title: "AI Autonomous Business Operations",
-      description: "Automate complex business processes with intelligent AI agents",
+      title: "AI Autonomous Business Manager",
+      description: "Fully autonomous business operations with AI-driven decision making",
       color: "from-purple-500 to-pink-500",
-      link: "/services/ai-autonomous-business-operations"
+      link: "/services/ai-autonomous-business-manager"
     },
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure & DevOps",
-      description: "Scalable cloud solutions with automated deployment and management",
+      icon: Atom,
+      title: "AI-Quantum Hybrid Platform",
+      description: "Revolutionary quantum-AI computing for complex problem solving",
       color: "from-blue-500 to-cyan-500",
-      link: "/services/cloud-infrastructure-devops"
+      link: "/services/quantum-ai-hybrid-platform"
     },
     {
-      icon: Shield,
-      title: "Cybersecurity & Zero Trust",
-      description: "Advanced security solutions for modern threat landscapes",
-      color: "from-red-500 to-orange-500",
-      link: "/services/cybersecurity-zero-trust"
-    },
-    {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
+      icon: Building,
+      title: "AI Smart City Infrastructure",
+      description: "Intelligent city management with IoT and real-time analytics",
       color: "from-green-500 to-emerald-500",
-      link: "/services/digital-transformation"
+      link: "/services/ai-smart-city-infrastructure-management"
+    },
+    {
+      icon: Car,
+      title: "AI Autonomous Vehicle Platform",
+      description: "End-to-end autonomous vehicle fleet management and safety",
+      color: "from-orange-500 to-red-500",
+      link: "/services/ai-autonomous-vehicle-management-platform"
     }
   ];
 
@@ -391,6 +391,71 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services 2028 Showcase */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Innovative Services 2028
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Discover the future of technology with our cutting-edge AI services, quantum computing solutions, 
+              and innovative micro SAAS platforms designed to transform your business.
+            </p>
+            <Link
+              to="/innovative-services-showcase-2028"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore All Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <Link to={service.link} className="block">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 text-center group-hover:text-blue-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm text-center leading-relaxed">
+                    {service.description}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/comprehensive-pricing-guide-2028"
+              className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+            >
+              View Pricing Guide
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

@@ -37,8 +37,8 @@ export function EnhancedHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false },
+    { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -458,12 +458,21 @@ export function EnhancedHeader() {
 
             {/* Direct Links */}
             <Link 
-              to="/pricing" 
+              to="/innovative-services-showcase-2028" 
               className={`text-sm font-medium transition-colors ${
                 scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
               }`}
             >
-              Pricing
+              Innovative Services 2028
+            </Link>
+
+            <Link 
+              to="/comprehensive-pricing-guide-2028" 
+              className={`text-sm font-medium transition-colors ${
+                scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+              }`}
+            >
+              Pricing Guide 2028
             </Link>
 
             <Link 
