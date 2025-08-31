@@ -85,6 +85,10 @@ const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/ser
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
 const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/AIRealEstateInvestmentPlatform'));
 
+// New AI Services 2025
+const AICustomerChurnPrediction = createLazyComponent(() => import('./pages/services/AICustomerChurnPrediction'));
+const AIContentPerformanceAnalytics = createLazyComponent(() => import('./pages/services/AIContentPerformanceAnalytics'));
+
 // New Micro SAAS Services Showcase 2025
 const NewMicroSaasServicesShowcase2025 = createLazyComponent(() => import('./pages/NewMicroSaasServicesShowcase2025'));
 
@@ -188,6 +192,10 @@ function App() {
                     <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
                     <Route path="/services/ai-real-estate-investment-platform" element={<AIRealEstateInvestmentPlatform />} />
+                    
+                    {/* New AI Services 2025 */}
+                    <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
+                    <Route path="/services/ai-content-performance-analytics" element={<AIContentPerformanceAnalytics />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />

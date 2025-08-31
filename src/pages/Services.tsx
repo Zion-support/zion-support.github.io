@@ -350,6 +350,39 @@ export default function Services() {
       features: ['Content automation', 'Distribution', 'Analytics', 'A/B testing'],
       pricing: '$179/month',
       featured: false
+    },
+    {
+      name: 'AI Customer Churn Prediction',
+      description: 'AI-powered platform to predict and prevent customer churn with 95%+ accuracy',
+      category: 'AI & Analytics',
+      icon: TrendingDown,
+      href: '/services/ai-customer-churn-prediction',
+      color: 'from-red-600 to-pink-600',
+      features: ['Churn prediction', 'Real-time analytics', 'Early warning system', 'Behavioral analysis'],
+      pricing: 'From $299/month',
+      featured: true
+    },
+    {
+      name: 'AI Content Performance Analytics',
+      description: 'AI-driven analytics platform to optimize content performance and engagement',
+      category: 'AI & Analytics',
+      icon: BarChart3,
+      href: '/services/ai-content-performance-analytics',
+      color: 'from-blue-600 to-purple-600',
+      features: ['Performance tracking', 'Predictive insights', 'Audience intelligence', 'Multi-platform analytics'],
+      pricing: 'From $199/month',
+      featured: false
+    },
+    {
+      name: 'AI Legal Document Automation',
+      description: 'AI-powered platform for automated legal document creation and compliance',
+      category: 'Enterprise Solutions',
+      icon: FileText,
+      href: '/services/ai-legal-document-automation-platform',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Document generation', 'Legal compliance', 'Template library', 'Collaborative workflow'],
+      pricing: 'From $299/month',
+      featured: false
     }
   ];
 

@@ -2,111 +2,122 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  TrendingDown,
-  Users,
   BarChart3,
-  Shield,
+  TrendingUp,
+  Target,
+  Users,
+  Eye,
+  Clock,
   Zap,
   CheckCircle,
   ArrowRight,
   Brain,
-  Target,
-  AlertTriangle,
-  PieChart,
-  Clock,
-  DollarSign,
-  Star,
   Globe,
-  Lock,
-  Cloud,
   MessageCircle,
-  Settings,
   Play,
   Download,
-  ShoppingCart,
-  Heart
+  Search,
+  Filter,
+  PieChart,
+  LineChart,
+  Activity,
+  Calendar,
+  BookOpen,
+  PenTool,
+  Share2,
+  Heart,
+  Star,
+  DollarSign,
+  Lock,
+  Cloud,
+  Settings,
+  Bell,
+  Mail,
+  Smartphone,
+  Monitor,
+  Tablet
 } from 'lucide-react';
 
-export default function AICustomerChurnPrediction() {
+export default function AIContentPerformanceAnalytics() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Predictions',
-      description: 'Advanced machine learning algorithms that predict customer churn with 95%+ accuracy'
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms analyze content performance and predict engagement patterns'
     },
     {
       icon: BarChart3,
       title: 'Real-time Analytics',
-      description: 'Live dashboards showing customer behavior patterns and churn risk indicators'
+      description: 'Live dashboards showing content performance metrics, audience engagement, and ROI tracking'
     },
     {
       icon: Target,
-      title: 'Predictive Scoring',
-      description: 'Individual customer churn risk scores based on behavior, usage, and engagement patterns'
+      title: 'Predictive Performance',
+      description: 'AI predicts which content will perform best before publishing, optimizing your content strategy'
     },
     {
-      icon: AlertTriangle,
-      title: 'Early Warning System',
-      description: 'Proactive alerts when customers show signs of potential churn'
+      icon: Users,
+      title: 'Audience Intelligence',
+      description: 'Deep insights into audience behavior, preferences, and content consumption patterns'
     },
     {
-      icon: PieChart,
-      title: 'Behavioral Analysis',
-      description: 'Deep insights into customer usage patterns and satisfaction indicators'
+      icon: Globe,
+      title: 'Multi-platform Analytics',
+      description: 'Track performance across all channels: website, social media, email, and mobile apps'
     },
     {
-      icon: Clock,
-      title: 'Historical Trend Analysis',
-      description: 'Learn from past churn patterns to improve future predictions'
+      icon: Zap,
+      title: 'Automated Optimization',
+      description: 'AI automatically suggests content improvements and A/B testing opportunities'
     }
   ];
 
   const benefits = [
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 25%',
-    'Save $50,000+ annually on customer acquisition',
-    'Improve customer retention strategies',
-    'Data-driven decision making',
-    'Automated risk assessment'
+    'Increase content engagement by up to 60%',
+    'Reduce content creation costs by 40%',
+    'Improve SEO rankings with data-driven insights',
+    'Optimize content for maximum ROI',
+    'Automated performance tracking',
+    'Real-time optimization recommendations'
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$299',
+      name: 'Creator',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for content creators and small teams',
       features: [
-        'Up to 1,000 customers',
-        'Basic churn prediction',
-        'Email alerts',
-        'Standard dashboard',
-        'Email support'
+        'Up to 100 content pieces',
+        'Basic analytics dashboard',
+        'Social media tracking',
+        'Email support',
+        'Standard reports'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Ideal for growing businesses and marketing teams',
       features: [
-        'Up to 10,000 customers',
-        'Advanced AI predictions',
-        'Real-time alerts',
-        'Custom dashboards',
+        'Up to 1,000 content pieces',
+        'Advanced AI insights',
+        'Multi-platform analytics',
         'Priority support',
+        'Custom dashboards',
         'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$899',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations and agencies',
       features: [
-        'Unlimited customers',
+        'Unlimited content pieces',
         'Custom AI models',
         'White-label solution',
         'Advanced integrations',
@@ -119,24 +130,51 @@ export default function AICustomerChurnPrediction() {
 
   const useCases = [
     {
-      title: 'E-commerce',
-      description: 'Predict cart abandonment and reduce customer churn in online retail',
-      icon: ShoppingCart
+      title: 'Content Marketing',
+      description: 'Optimize blog posts, articles, and whitepapers for maximum engagement',
+      icon: BookOpen
     },
     {
-      title: 'SaaS Companies',
-      description: 'Identify at-risk subscribers and improve retention rates',
-      icon: Cloud
+      title: 'Social Media',
+      description: 'Track performance across all social platforms and optimize posting strategy',
+      icon: Share2
     },
     {
-      title: 'Financial Services',
-      description: 'Monitor account activity and predict customer departure',
-      icon: DollarSign
+      title: 'Email Marketing',
+      description: 'Analyze email content performance and improve open rates and click-throughs',
+      icon: Mail
     },
     {
-      title: 'Healthcare',
-      description: 'Track patient engagement and predict appointment cancellations',
-      icon: Heart
+      title: 'Video Content',
+      description: 'Track video performance metrics and optimize for viewer engagement',
+      icon: Play
+    }
+  ];
+
+  const metrics = [
+    {
+      icon: Eye,
+      title: 'Engagement Rate',
+      value: '45%',
+      description: 'Average improvement in content engagement'
+    },
+    {
+      icon: Users,
+      title: 'Audience Growth',
+      value: '2.3x',
+      description: 'Faster audience growth with optimized content'
+    },
+    {
+      icon: TrendingUp,
+      title: 'ROI Increase',
+      value: '180%',
+      description: 'Average ROI improvement for content marketing'
+    },
+    {
+      icon: Clock,
+      title: 'Time Saved',
+      value: '60%',
+      description: 'Reduction in content optimization time'
     }
   ];
 
@@ -150,10 +188,10 @@ export default function AICustomerChurnPrediction() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-flex items-center px-4 py-2 bg-red-500/20 text-red-400 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium mb-6"
             >
-              <TrendingDown className="h-4 w-4 mr-2" />
-              Churn Prediction Platform
+              <BarChart3 className="h-4 w-4 mr-2" />
+              Content Analytics Platform
             </motion.div>
             
             <motion.h1 
@@ -162,9 +200,9 @@ export default function AICustomerChurnPrediction() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
-              AI-Powered Customer
-              <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Churn Prediction
+              AI-Driven Content
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Performance Analytics
               </span>
             </motion.h1>
             
@@ -174,8 +212,8 @@ export default function AICustomerChurnPrediction() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
-              Predict customer churn before it happens with our advanced AI platform. 
-              Reduce churn by up to 40% and increase customer lifetime value with data-driven insights.
+              Transform your content strategy with AI-powered analytics. Predict performance, 
+              optimize engagement, and maximize ROI across all your content channels.
             </motion.p>
 
             <motion.div
@@ -186,7 +224,7 @@ export default function AICustomerChurnPrediction() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -200,8 +238,33 @@ export default function AICustomerChurnPrediction() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Metrics Section */}
       <section className="py-20 bg-gray-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => (
+              <motion.div
+                key={metric.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+                  <metric.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
+                <p className="text-gray-400 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2 
@@ -211,7 +274,7 @@ export default function AICustomerChurnPrediction() {
               viewport={{ once: true }}
               className="text-4xl font-bold text-white mb-4"
             >
-              Powerful Features for Churn Prevention
+              Powerful Analytics Features
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -220,7 +283,7 @@ export default function AICustomerChurnPrediction() {
               viewport={{ once: true }}
               className="text-xl text-gray-300 max-w-3xl mx-auto"
             >
-              Our AI platform provides comprehensive tools to identify, analyze, and prevent customer churn.
+              Our AI platform provides comprehensive tools to analyze, optimize, and predict content performance.
             </motion.p>
           </div>
 
@@ -232,9 +295,9 @@ export default function AICustomerChurnPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300"
+                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-red-600 to-pink-600 mb-4">
+                <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -246,7 +309,7 @@ export default function AICustomerChurnPrediction() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-900/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2 
@@ -256,7 +319,7 @@ export default function AICustomerChurnPrediction() {
               viewport={{ once: true }}
               className="text-4xl font-bold text-white mb-4"
             >
-              Transform Your Customer Retention
+              Transform Your Content Strategy
             </motion.h2>
           </div>
 
@@ -272,6 +335,42 @@ export default function AICustomerChurnPrediction() {
               >
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-white mb-4"
+            >
+              Perfect for Every Content Type
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+                  <useCase.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
+                <p className="text-gray-400 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -298,7 +397,7 @@ export default function AICustomerChurnPrediction() {
               viewport={{ once: true }}
               className="text-xl text-gray-300"
             >
-              Choose the plan that fits your business needs
+              Choose the plan that fits your content needs
             </motion.p>
           </div>
 
@@ -312,13 +411,13 @@ export default function AICustomerChurnPrediction() {
                 viewport={{ once: true }}
                 className={`bg-gray-800/50 rounded-xl p-6 border ${
                   plan.popular 
-                    ? 'border-red-500/50 bg-red-500/10' 
+                    ? 'border-blue-500/50 bg-blue-500/10' 
                     : 'border-gray-700'
                 } relative`}
               >
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -346,7 +445,7 @@ export default function AICustomerChurnPrediction() {
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
@@ -358,44 +457,8 @@ export default function AICustomerChurnPrediction() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-white mb-4"
-            >
-              Perfect for Every Industry
-            </motion.h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-red-600 to-pink-600 mb-4">
-                  <useCase.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-400 text-sm">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -403,14 +466,14 @@ export default function AICustomerChurnPrediction() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Stop Customer Churn?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Content?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses that have transformed their customer retention with our AI platform.
+              Join thousands of content creators and marketers who have transformed their content strategy with our AI platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
