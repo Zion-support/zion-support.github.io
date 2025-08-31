@@ -328,27 +328,27 @@ const ServicesPreviewSection = React.memo(() => {
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Advanced security protocols and threat protection",
-      href: "/services/cybersecurity",
+      title: "Quantum AI Cybersecurity",
+      description: "Future-proof quantum-resistant security platform",
+      href: "/services/quantum-ai-cybersecurity-platform",
       color: "from-red-500 to-orange-500",
-      features: ["Threat Detection", "Incident Response", "Compliance"]
+      features: ["Quantum Encryption", "AI Threat Detection", "Real-time Monitoring"]
     },
     {
-      icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and automation",
-      href: "/services/cloud-devops",
+      icon: BarChart3,
+      title: "AI Enterprise Intelligence",
+      description: "AI-powered business intelligence and analytics",
+      href: "/services/ai-enterprise-intelligence-platform",
       color: "from-blue-500 to-cyan-500",
-      features: ["AWS/Azure", "Kubernetes", "CI/CD"]
+      features: ["Predictive Analytics", "Real-time Insights", "Decision Support"]
     },
     {
-      icon: Chip,
-      title: "Edge Computing",
-      description: "Ultra-low latency IoT and edge solutions",
-      href: "/services/edge-computing-platform",
+      icon: Users,
+      title: "AI HR Management",
+      description: "Intelligent HR automation and workforce management",
+      href: "/services/ai-hr-management-platform",
       color: "from-green-500 to-emerald-500",
-      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+      features: ["AI Screening", "Performance Analytics", "Employee Engagement"]
     }
   ];
 

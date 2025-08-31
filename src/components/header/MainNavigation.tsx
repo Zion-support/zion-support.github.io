@@ -138,6 +138,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        Quantum AI Cybersecurity
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Brain className="w-3 h-3 mr-2" />
                         AI Healthcare
@@ -286,6 +298,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <MessageCircle className="w-3 h-3 mr-2" />
                         AI Support
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-hr-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Management
                       </Link>
                     </li>
                     {/* Additional solutions from remote branch */}
@@ -461,6 +479,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <Link to="/research-development" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                     <Lightbulb className="w-3 h-3 mr-2" />
                     Research
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/innovative-services-showcase-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                    <Rocket className="w-3 h-3 mr-2" />
+                    Innovative Services 2025
                   </Link>
                 </li>
               </ul>

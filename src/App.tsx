@@ -81,6 +81,11 @@ const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
 
+// New Innovative Services 2025 - Additional
+const AIEnterpriseIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-intelligence-platform'));
+const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-cybersecurity-platform'));
+const AIHRManagementPlatform = createLazyComponent(() => import('./pages/services/ai-hr-management-platform'));
+
 // Additional service pages from remote branch
 const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sales-copilot'));
 const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
@@ -107,6 +112,7 @@ const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Legal and Policy Pages
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
@@ -119,7 +125,6 @@ const Compliance = createLazyComponent(() => import('./pages/Compliance'));
 // Additional pages from main branch
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
-const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
@@ -217,6 +222,11 @@ function App() {
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
 
+                    {/* New Innovative Services 2025 - Additional */}
+                    <Route path="/services/ai-enterprise-intelligence-platform" element={<AIEnterpriseIntelligencePlatform />} />
+                    <Route path="/services/quantum-ai-cybersecurity-platform" element={<QuantumAICybersecurityPlatform />} />
+                    <Route path="/services/ai-hr-management-platform" element={<AIHRManagementPlatform />} />
+
                     {/* Additional service routes from remote branch */}
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                     <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
@@ -243,6 +253,7 @@ function App() {
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/innovative-services-showcase-2025" element={<ModernLayout><InnovativeServicesShowcase2025 /></ModernLayout>} />
 
                     {/* Legal and Policy Pages */}
                     <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />
@@ -255,7 +266,6 @@ function App() {
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
                     <Route path="/industry-solutions" element={<IndustrySolutions />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
 

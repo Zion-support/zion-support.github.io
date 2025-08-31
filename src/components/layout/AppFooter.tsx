@@ -47,7 +47,9 @@ export function AppFooter() {
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
         { name: "AI Project Management", href: "/services/ai-project-management-platform" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" }
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
+        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
+        { name: "Quantum AI Cybersecurity", href: "/services/quantum-ai-cybersecurity-platform" }
       ]
     },
     {
@@ -69,7 +71,8 @@ export function AppFooter() {
         { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform" }
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" }
       ]
     }
   ];
