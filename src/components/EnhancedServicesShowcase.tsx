@@ -72,7 +72,12 @@ const EnhancedServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [selectedDeliveryTime, setSelectedDeliveryTime] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
 
   // Combine all services
   const allServices: Service[] = [
@@ -90,7 +95,47 @@ const EnhancedServicesShowcase: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
       
-      return matchesSearch && matchesCategory && matchesInnovation;
+      // Price range filtering
+      let matchesPrice = true;
+      if (selectedPriceRange !== 'all') {
+        const price = service.price;
+        switch (selectedPriceRange) {
+          case 'under-1000':
+            matchesPrice = price < 1000;
+            break;
+          case '1000-5000':
+            matchesPrice = price >= 1000 && price <= 5000;
+            break;
+          case '5000-10000':
+            matchesPrice = price > 5000 && price <= 10000;
+            break;
+          case 'over-10000':
+            matchesPrice = price > 10000;
+            break;
+        }
+      }
+      
+      // Delivery time filtering
+      let matchesDelivery = true;
+      if (selectedDeliveryTime !== 'all') {
+        const delivery = service.estimatedDelivery.toLowerCase();
+        switch (selectedDeliveryTime) {
+          case 'under-1-week':
+            matchesDelivery = delivery.includes('1 week') || delivery.includes('3-5 days');
+            break;
+          case '1-2-weeks':
+            matchesDelivery = delivery.includes('2 weeks') || delivery.includes('1-2 weeks');
+            break;
+          case '2-4-weeks':
+            matchesDelivery = delivery.includes('4 weeks') || delivery.includes('2-4 weeks');
+            break;
+          case 'over-4-weeks':
+            matchesDelivery = delivery.includes('6 weeks') || delivery.includes('8 weeks') || delivery.includes('12 weeks');
+            break;
+        }
+      }
+      
+      return matchesSearch && matchesCategory && matchesInnovation && matchesPrice && matchesDelivery;
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -98,6 +143,12 @@ const EnhancedServicesShowcase: React.FC = () => {
           return a.price - b.price;
         case 'price-high':
           return b.price - a.price;
+        case 'innovation-high':
+          return b.innovationLevel.localeCompare(a.innovationLevel);
+        case 'delivery-fast':
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
+        case 'roi-high':
+          return b.roi.localeCompare(a.roi);
         case 'roi':
           return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
         case 'name':
@@ -106,8 +157,33 @@ const EnhancedServicesShowcase: React.FC = () => {
       }
     });
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+  const startIndex = (currentPage - 1) * servicesPerPage;
+  const endIndex = startIndex + servicesPerPage;
+  const currentServices = filteredServices.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory, selectedInnovationLevel, selectedPriceRange, selectedDeliveryTime, sortBy]);
+
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: 'under-1000', label: 'Under $1,000' },
+    { value: '1000-5000', label: '$1,000 - $5,000' },
+    { value: '5000-10000', label: '$5,000 - $10,000' },
+    { value: 'over-10000', label: 'Over $10,000' }
+  ];
+  const deliveryTimes = [
+    { value: 'all', label: 'All Delivery Times' },
+    { value: 'under-1-week', label: 'Under 1 Week' },
+    { value: '1-2-weeks', label: '1-2 Weeks' },
+    { value: '2-4-weeks', label: '2-4 Weeks' },
+    { value: 'over-4-weeks', label: 'Over 4 Weeks' }
+  ];
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
@@ -178,7 +254,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       {/* Filters and Search */}
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 mb-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -227,13 +303,42 @@ const EnhancedServicesShowcase: React.FC = () => {
               <option value="price-low" className="bg-slate-800 text-white">Price: Low to High</option>
               <option value="price-high" className="bg-slate-800 text-white">Price: High to Low</option>
               <option value="roi" className="bg-slate-800 text-white">Highest ROI</option>
+              <option value="innovation-high" className="bg-slate-800 text-white">Highest Innovation</option>
+              <option value="delivery-fast" className="bg-slate-800 text-white">Fastest Delivery</option>
+              <option value="roi-high" className="bg-slate-800 text-white">Highest ROI %</option>
+            </select>
+
+            {/* Price Range Filter */}
+            <select
+              value={selectedPriceRange}
+              onChange={(e) => setSelectedPriceRange(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {priceRanges.map(range => (
+                <option key={range.value} value={range.value} className="bg-slate-800 text-white">
+                  {range.label}
+                </option>
+              ))}
+            </select>
+
+            {/* Delivery Time Filter */}
+            <select
+              value={selectedDeliveryTime}
+              onChange={(e) => setSelectedDeliveryTime(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {deliveryTimes.map(time => (
+                <option key={time.value} value={time.value} className="bg-slate-800 text-white">
+                  {time.label}
+                </option>
+              ))}
             </select>
           </div>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {currentServices.map((service) => (
             <div
               key={service.id}
               className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -440,10 +545,92 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         )}
 
-        {/* Results Count */}
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-12 mb-8">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              Previous
+            </button>
+            
+            {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              let pageNum;
+              if (totalPages <= 5) {
+                pageNum = i + 1;
+              } else if (currentPage <= 3) {
+                pageNum = i + 1;
+              } else if (currentPage >= totalPages - 2) {
+                pageNum = totalPages - 4 + i;
+              } else {
+                pageNum = currentPage - 2 + i;
+              }
+              
+              return (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                    currentPage === pageNum
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              );
+            })}
+            
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              Next
+            </button>
+          </div>
+        )}
+
+        {/* Results Summary and View Toggle */}
         {filteredServices.length > 0 && (
-          <div className="text-center mt-8 text-slate-400">
-            Showing {filteredServices.length} of {allServices.length} services
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 text-slate-400">
+            <div className="text-center sm:text-left mb-4 sm:mb-0">
+              <p>Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services</p>
+              <p className="text-sm">Page {currentPage} of {totalPages}</p>
+            </div>
+            
+            {/* View Mode Toggle */}
+            <div className="flex items-center space-x-2">
+              <span className="text-sm">View:</span>
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`p-2 rounded-lg transition-colors duration-200 ${
+                  viewMode === 'grid'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                }`}
+                title="Grid View"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-2 rounded-lg transition-colors duration-200 ${
+                  viewMode === 'list'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                }`}
+                title="List View"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
         )}
       </div>
