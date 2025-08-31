@@ -111,6 +111,13 @@ const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/se
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
+// New Innovative Micro SAAS Services 2025 - Additional
+const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
+const AIDocumentProcessingAutomation = createLazyComponent(() => import('./pages/services/ai-document-processing-automation'));
+const AIRevenueOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-revenue-operations-platform'));
+const AILearningManagementSystem = createLazyComponent(() => import('./pages/services/ai-learning-management-system'));
+const AIEnergyManagementSustainability = createLazyComponent(() => import('./pages/services/ai-energy-management-sustainability'));
+
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -286,6 +293,13 @@ function App() {
                     <Route path="/services/ai-quantum-computing-solutions" element={<AIQuantumComputingSolutions />} />
                     <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
                     <Route path="/services/edge-computing-solutions" element={<EdgeComputingSolutions />} />
+
+                    {/* New Innovative Micro SAAS Services 2025 - Additional */}
+                    <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                    <Route path="/services/ai-document-processing-automation" element={<AIDocumentProcessingAutomation />} />
+                    <Route path="/services/ai-revenue-operations-platform" element={<AIRevenueOperationsPlatform />} />
+                    <Route path="/services/ai-learning-management-system" element={<AILearningManagementSystem />} />
+                    <Route path="/services/ai-energy-management-sustainability" element={<AIEnergyManagementSustainability />} />
 
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
