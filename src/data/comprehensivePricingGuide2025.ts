@@ -1,772 +1,637 @@
+import { ProductListing } from "@/types/listings";
+
 export interface PricingTier {
+  id: string;
   name: string;
   price: number;
   currency: string;
   billingCycle: string;
-  description: string;
   features: string[];
-  limitations: string[];
-  bestFor: string[];
-  roi: string;
-  implementationTime: string;
-  supportLevel: string;
+  bestFor: string;
+  popular?: boolean;
 }
 
 export interface ServicePricing {
   serviceId: string;
-  serviceName: string;
+  serviceTitle: string;
   category: string;
+  subcategory: string;
   description: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
-    competitor: string;
-    competitorPrice: string;
-    ourPrice: string;
-    savings: string;
-  }[];
-  volumeDiscounts: {
-    users: string;
-    discount: string;
-    additionalBenefits: string[];
-  }[];
-  customEnterprise: {
-    features: string[];
-    benefits: string[];
-    contactInfo: {
-      phone: string;
-      email: string;
-      website: string;
-    };
+  marketPrice: string;
+  roi: string;
+  setupTime: string;
+  aiScore: number;
+  rating: number;
+  reviewCount: number;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
   };
+  competitors: string[];
+  integrations: string[];
+  useCases: string[];
+  targetAudience: string[];
+  benefits: string[];
+  tags: string[];
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
-  // AI Content Generation Platform
+  // AI Business Intelligence Platform
   {
-    serviceId: "ai-content-generation-platform",
-    serviceName: "AI Content Generation Platform",
-    category: "AI & Content Creation",
-    description: "Advanced AI-powered content creation platform for blogs, social media, and marketing campaigns",
+    serviceId: "ai-business-intelligence-platform",
+    serviceTitle: "AI Business Intelligence & Analytics Platform",
+    category: "AI Development",
+    subcategory: "Business Intelligence",
+    description: "Next-generation BI platform powered by AI that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.",
     pricingTiers: [
       {
+        id: "starter",
         name: "Starter",
-        price: 99,
+        price: 12999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Perfect for small businesses and content creators",
+        billingCycle: "one-time",
         features: [
-          "Up to 50 content pieces per month",
-          "Basic AI models (GPT-3.5)",
-          "5 brand voice profiles",
-          "Basic SEO optimization",
+          "Basic AI-powered analytics",
+          "Up to 5 data sources",
+          "Standard reporting templates",
           "Email support",
-          "Standard templates"
+          "Basic integrations"
         ],
-        limitations: [
-          "Limited to 3 team members",
-          "Basic analytics",
-          "Standard response time"
-        ],
-        bestFor: [
-          "Small businesses",
-          "Content creators",
-          "Startups",
-          "Individual marketers"
-        ],
-        roi: "200-300%",
-        implementationTime: "1-2 weeks",
-        supportLevel: "Email support"
+        bestFor: "Small businesses starting with AI analytics"
       },
       {
+        id: "professional",
         name: "Professional",
-        price: 299,
+        price: 18999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Ideal for growing businesses and marketing teams",
+        billingCycle: "one-time",
         features: [
-          "Up to 200 content pieces per month",
-          "Advanced AI models (GPT-4, Claude)",
-          "Unlimited brand voice profiles",
-          "Advanced SEO optimization",
+          "Advanced AI algorithms",
+          "Up to 20 data sources",
+          "Custom dashboards",
           "Priority support",
-          "Custom templates",
-          "Team collaboration",
-          "Advanced analytics",
-          "API access"
+          "Advanced integrations",
+          "Real-time monitoring"
         ],
-        limitations: [
-          "Limited to 10 team members",
-          "Standard SLA"
-        ],
-        bestFor: [
-          "Growing businesses",
-          "Marketing agencies",
-          "E-commerce companies",
-          "Medium-sized teams"
-        ],
-        roi: "300-500%",
-        implementationTime: "2-3 weeks",
-        supportLevel: "Priority support + chat"
+        bestFor: "Growing businesses needing advanced analytics",
+        popular: true
       },
       {
+        id: "enterprise",
         name: "Enterprise",
-        price: 999,
+        price: 29999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "For large organizations with advanced content needs",
+        billingCycle: "one-time",
         features: [
-          "Unlimited content generation",
-          "Premium AI models + custom training",
-          "Advanced brand consistency",
-          "Multi-language support (50+ languages)",
-          "White-label options",
-          "Dedicated account manager",
-          "Custom integrations",
-          "Advanced security features",
-          "SLA guarantees"
+          "Full AI suite with custom models",
+          "Unlimited data sources",
+          "Custom AI training",
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
         ],
-        limitations: [
-          "Annual contract required",
-          "Minimum 50 team members"
-        ],
-        bestFor: [
-          "Large enterprises",
-          "Global brands",
-          "Publishing companies",
-          "Multinational corporations"
-        ],
-        roi: "500-800%",
-        implementationTime: "3-4 weeks",
-        supportLevel: "24/7 dedicated support"
+        bestFor: "Large enterprises requiring custom AI solutions"
       }
     ],
-    marketComparison: [
-      {
-        competitor: "Jasper",
-        competitorPrice: "$39-125/month",
-        ourPrice: "$99-999/month",
-        savings: "Better value with advanced features"
-      },
-      {
-        competitor: "Copy.ai",
-        competitorPrice: "$49-99/month",
-        ourPrice: "$99-999/month",
-        savings: "Superior AI models and brand consistency"
-      },
-      {
-        competitor: "Writesonic",
-        competitorPrice: "$19-199/month",
-        ourPrice: "$99-999/month",
-        savings: "Enterprise-grade features and support"
-      }
+    marketPrice: "$12,000-20,000",
+    roi: "450% within 8 months",
+    setupTime: "6-8 weeks",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 234,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-business-intelligence",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["Tableau", "Power BI", "Qlik"],
+    integrations: ["Salesforce", "HubSpot", "MySQL", "PostgreSQL", "MongoDB", "AWS", "Azure"],
+    useCases: ["Business intelligence", "Data analytics", "Performance monitoring", "Strategic planning"],
+    targetAudience: ["Data analysts", "Business leaders", "Consultants", "Enterprise organizations"],
+    benefits: [
+      "Real-time business insights",
+      "Predictive analytics capabilities",
+      "Automated reporting",
+      "Data-driven decision making",
+      "Cost optimization",
+      "Competitive advantage"
     ],
-    volumeDiscounts: [
-      {
-        users: "10-25",
-        discount: "15% off",
-        additionalBenefits: ["Priority support", "Custom onboarding"]
-      },
-      {
-        users: "26-50",
-        discount: "25% off",
-        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
-      },
-      {
-        users: "50+",
-        discount: "35% off",
-        additionalBenefits: ["White-label options", "Custom AI training"]
-      }
-    ],
-    customEnterprise: {
-      features: [
-        "Custom AI model training",
-        "On-premise deployment",
-        "Advanced security compliance",
-        "Custom integrations",
-        "Dedicated infrastructure",
-        "White-label solutions"
-      ],
-      benefits: [
-        "Maximum ROI potential",
-        "Complete customization",
-        "Highest security standards",
-        "Exclusive features",
-        "Strategic partnership"
-      ],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-content-generation"
-      }
-    }
+    tags: ["AI BI", "Predictive Analytics", "Real-time Insights", "Automated Reporting", "Data Visualization"]
   },
 
-  // AI Customer Service Automation
+  // AI Customer Experience Platform
   {
-    serviceId: "ai-customer-service-automation",
-    serviceName: "AI Customer Service Automation",
-    category: "AI & Customer Service",
-    description: "Intelligent customer service automation with AI chatbots and automated support",
+    serviceId: "ai-customer-experience-platform",
+    serviceTitle: "AI Customer Experience & Personalization Platform",
+    category: "AI Development",
+    subcategory: "Customer Experience",
+    description: "Comprehensive CX platform that uses AI to deliver personalized experiences, predict customer behavior, and optimize customer journeys across all touchpoints.",
     pricingTiers: [
       {
+        id: "starter",
         name: "Starter",
-        price: 99,
+        price: 15999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Basic automation for small support teams",
+        billingCycle: "one-time",
         features: [
-          "Up to 1,000 conversations/month",
-          "Basic AI chatbot",
-          "Email and chat support",
-          "Basic integrations",
-          "Standard templates",
-          "Email support"
-        ],
-        limitations: [
-          "Limited to 3 support agents",
-          "Basic analytics",
-          "Standard response time"
-        ],
-        bestFor: [
-          "Small businesses",
-          "Startups",
-          "Small support teams"
-        ],
-        roi: "250-400%",
-        implementationTime: "2-3 weeks",
-        supportLevel: "Email support"
-      },
-      {
-        name: "Professional",
-        price: 199,
-        currency: "$",
-        billingCycle: "monthly",
-        description: "Advanced automation for growing support teams",
-        features: [
-          "Up to 10,000 conversations/month",
-          "Advanced AI with sentiment analysis",
-          "Multi-channel support",
-          "Advanced integrations",
-          "Custom workflows",
-          "Priority support",
-          "Advanced analytics",
-          "API access"
-        ],
-        limitations: [
-          "Limited to 15 support agents",
-          "Standard SLA"
-        ],
-        bestFor: [
-          "Growing businesses",
-          "Medium support teams",
-          "E-commerce companies"
-        ],
-        roi: "400-600%",
-        implementationTime: "3-4 weeks",
-        supportLevel: "Priority support + chat"
-      },
-      {
-        name: "Enterprise",
-        price: 799,
-        currency: "$",
-        billingCycle: "monthly",
-        description: "Full automation for large support operations",
-        features: [
-          "Unlimited conversations",
-          "Premium AI with custom training",
-          "Omnichannel support",
-          "Advanced integrations",
-          "Custom workflows",
-          "Dedicated account manager",
-          "Advanced analytics",
-          "SLA guarantees",
-          "White-label options"
-        ],
-        limitations: [
-          "Annual contract required",
-          "Minimum 25 support agents"
-        ],
-        bestFor: [
-          "Large enterprises",
-          "Global support teams",
-          "High-volume operations"
-        ],
-        roi: "600-1000%",
-        implementationTime: "4-6 weeks",
-        supportLevel: "24/7 dedicated support"
-      }
-    ],
-    marketComparison: [
-      {
-        competitor: "Intercom",
-        competitorPrice: "$74-1,200/month",
-        ourPrice: "$99-799/month",
-        savings: "More affordable with better AI capabilities"
-      },
-      {
-        competitor: "Zendesk",
-        competitorPrice: "$49-215/month",
-        ourPrice: "$99-799/month",
-        savings: "Superior AI automation and analytics"
-      },
-      {
-        competitor: "Freshdesk",
-        competitorPrice: "$15-79/month",
-        ourPrice: "$99-799/month",
-        savings: "Advanced AI features and enterprise support"
-      }
-    ],
-    volumeDiscounts: [
-      {
-        users: "15-30",
-        discount: "20% off",
-        additionalBenefits: ["Priority support", "Custom onboarding"]
-      },
-      {
-        users: "31-50",
-        discount: "30% off",
-        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
-      },
-      {
-        users: "50+",
-        discount: "40% off",
-        additionalBenefits: ["White-label options", "Custom AI training"]
-      }
-    ],
-    customEnterprise: {
-      features: [
-        "Custom AI training",
-        "On-premise deployment",
-        "Advanced security compliance",
-        "Custom integrations",
-        "Dedicated infrastructure",
-        "White-label solutions"
-      ],
-      benefits: [
-        "Maximum automation efficiency",
-        "Complete customization",
-        "Highest security standards",
-        "Exclusive features",
-        "Strategic partnership"
-      ],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-customer-service"
-      }
-    }
-  },
-
-  // AI Sales Intelligence Platform
-  {
-    serviceId: "ai-sales-intelligence-platform",
-    serviceName: "AI Sales Intelligence Platform",
-    category: "AI & Sales",
-    description: "Advanced sales intelligence with AI-powered insights and predictive analytics",
-    pricingTiers: [
-      {
-        name: "Starter",
-        price: 199,
-        currency: "$",
-        billingCycle: "monthly",
-        description: "Basic sales intelligence for small sales teams",
-        features: [
-          "Up to 5 sales users",
-          "Basic lead scoring",
-          "Sales analytics",
-          "CRM integrations",
+          "Basic AI personalization",
+          "Up to 3 customer touchpoints",
+          "Standard customer analytics",
           "Email support",
-          "Standard reports"
+          "Basic integrations"
         ],
-        limitations: [
-          "Limited analytics depth",
-          "Basic predictive models",
-          "Standard response time"
-        ],
-        bestFor: [
-          "Small sales teams",
-          "Startups",
-          "Individual sales professionals"
-        ],
-        roi: "300-500%",
-        implementationTime: "3-4 weeks",
-        supportLevel: "Email support"
+        bestFor: "Small businesses starting with AI CX"
       },
       {
+        id: "professional",
         name: "Professional",
-        price: 399,
+        price: 22999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Advanced intelligence for growing sales organizations",
+        billingCycle: "one-time",
         features: [
-          "Up to 25 sales users",
-          "Advanced lead scoring",
-          "Predictive analytics",
-          "Competitor intelligence",
+          "Advanced AI personalization",
+          "Up to 10 customer touchpoints",
+          "Customer journey mapping",
           "Priority support",
-          "Advanced reports",
-          "API access",
-          "Custom dashboards"
+          "Advanced integrations",
+          "Behavioral analytics"
         ],
-        limitations: [
-          "Limited to 25 users",
-          "Standard SLA"
-        ],
-        bestFor: [
-          "Growing sales teams",
-          "Medium businesses",
-          "B2B companies"
-        ],
-        roi: "500-800%",
-        implementationTime: "4-5 weeks",
-        supportLevel: "Priority support + chat"
+        bestFor: "Growing businesses needing advanced CX",
+        popular: true
       },
       {
+        id: "enterprise",
         name: "Enterprise",
-        price: 1299,
+        price: 34999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Full intelligence platform for large sales organizations",
+        billingCycle: "one-time",
         features: [
-          "Unlimited sales users",
-          "Premium predictive models",
-          "Advanced competitor intelligence",
+          "Full AI CX suite with custom models",
+          "Unlimited touchpoints",
           "Custom AI training",
-          "Dedicated account manager",
-          "Advanced analytics",
-          "SLA guarantees",
-          "White-label options"
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
         ],
-        limitations: [
-          "Annual contract required",
-          "Minimum 50 sales users"
-        ],
-        bestFor: [
-          "Large sales organizations",
-          "Enterprise companies",
-          "Global sales teams"
-        ],
-        roi: "800-1200%",
-        implementationTime: "5-6 weeks",
-        supportLevel: "24/7 dedicated support"
+        bestFor: "Large enterprises requiring custom CX solutions"
       }
     ],
-    marketComparison: [
-      {
-        competitor: "Gong",
-        competitorPrice: "$1,200-1,800/month",
-        ourPrice: "$199-1,299/month",
-        savings: "Significantly more affordable with better features"
-      },
-      {
-        competitor: "Chorus",
-        competitorPrice: "$1,000-1,500/month",
-        ourPrice: "$199-1,299/month",
-        savings: "Better value with advanced AI capabilities"
-      },
-      {
-        competitor: "SalesLoft",
-        competitorPrice: "$50-1,000/month",
-        ourPrice: "$199-1,299/month",
-        savings: "Superior AI intelligence and analytics"
-      }
+    marketPrice: "$15,000-25,000",
+    roi: "380% within 10 months",
+    setupTime: "8-10 weeks",
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 189,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-experience",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["Adobe Experience Cloud", "Salesforce Marketing Cloud", "HubSpot"],
+    integrations: ["CRM Systems", "Marketing Automation", "E-commerce Platforms", "Social Media", "Analytics Tools"],
+    useCases: ["Customer personalization", "Journey optimization", "Behavior prediction", "CX improvement"],
+    targetAudience: ["Marketing teams", "Customer success", "E-commerce businesses", "Service companies"],
+    benefits: [
+      "Personalized customer experiences",
+      "Improved customer satisfaction",
+      "Increased conversion rates",
+      "Better customer retention",
+      "Data-driven CX decisions",
+      "Competitive advantage"
     ],
-    volumeDiscounts: [
-      {
-        users: "25-50",
-        discount: "25% off",
-        additionalBenefits: ["Priority support", "Custom onboarding"]
-      },
-      {
-        users: "51-100",
-        discount: "35% off",
-        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
-      },
-      {
-        users: "100+",
-        discount: "45% off",
-        additionalBenefits: ["White-label options", "Custom AI training"]
-      }
-    ],
-    customEnterprise: {
-      features: [
-        "Custom AI training",
-        "On-premise deployment",
-        "Advanced security compliance",
-        "Custom integrations",
-        "Dedicated infrastructure",
-        "White-label solutions"
-      ],
-      benefits: [
-        "Maximum sales intelligence",
-        "Complete customization",
-        "Highest security standards",
-        "Exclusive features",
-        "Strategic partnership"
-      ],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-sales-intelligence"
-      }
-    }
+    tags: ["Customer Experience", "AI Personalization", "Behavior Prediction", "Journey Optimization", "Omnichannel"]
   },
 
-  // AI Financial Analytics Platform
+  // AI Financial Technology Platform
   {
-    serviceId: "ai-financial-analytics-platform",
-    serviceName: "AI Financial Analytics Platform",
-    category: "AI & Finance",
-    description: "Advanced financial analytics with AI-powered insights and portfolio optimization",
+    serviceId: "ai-fintech-platform",
+    serviceTitle: "AI-Powered Financial Technology Platform",
+    category: "AI Development",
+    subcategory: "Financial Technology",
+    description: "Advanced fintech platform featuring AI-driven risk assessment, fraud detection, automated trading, and personalized financial advisory services.",
     pricingTiers: [
       {
+        id: "starter",
+        name: "Starter",
+        price: 24999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Basic AI risk assessment",
+          "Fraud detection",
+          "Up to 3 financial products",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small financial institutions starting with AI"
+      },
+      {
+        id: "professional",
         name: "Professional",
-        price: 599,
+        price: 34999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Advanced analytics for financial professionals",
+        billingCycle: "one-time",
         features: [
-          "Up to 10 users",
-          "Advanced financial modeling",
-          "Portfolio optimization",
-          "Risk assessment",
+          "Advanced AI risk assessment",
+          "Advanced fraud detection",
+          "Up to 10 financial products",
           "Priority support",
-          "Advanced reports",
-          "API access",
-          "Custom dashboards"
+          "Advanced integrations",
+          "Automated trading"
         ],
-        limitations: [
-          "Limited to 10 users",
-          "Standard SLA",
-          "Basic compliance features"
-        ],
-        bestFor: [
-          "Financial advisors",
-          "Small investment firms",
-          "Family offices"
-        ],
-        roi: "600-1000%",
-        implementationTime: "6-8 weeks",
-        supportLevel: "Priority support + chat"
+        bestFor: "Growing financial institutions needing advanced AI",
+        popular: true
       },
       {
+        id: "enterprise",
         name: "Enterprise",
-        price: 2999,
+        price: 49999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Full platform for large financial institutions",
+        billingCycle: "one-time",
         features: [
-          "Unlimited users",
-          "Premium AI models",
-          "Advanced compliance",
+          "Full AI fintech suite with custom models",
+          "Unlimited financial products",
           "Custom AI training",
-          "Dedicated account manager",
-          "Advanced analytics",
-          "SLA guarantees",
-          "White-label options"
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
         ],
-        limitations: [
-          "Annual contract required",
-          "Minimum 100 users"
-        ],
-        bestFor: [
-          "Large investment firms",
-          "Banks",
-          "Hedge funds",
-          "Institutional investors"
-        ],
-        roi: "1000-1500%",
-        implementationTime: "8-12 weeks",
-        supportLevel: "24/7 dedicated support"
+        bestFor: "Large financial institutions requiring custom AI solutions"
       }
     ],
-    marketComparison: [
-      {
-        competitor: "Bloomberg Terminal",
-        competitorPrice: "$24,000/year",
-        ourPrice: "$599-2,999/month",
-        savings: "Significantly more affordable with better AI capabilities"
-      },
-      {
-        competitor: "FactSet",
-        competitorPrice: "$12,000-36,000/year",
-        ourPrice: "$599-2,999/month",
-        savings: "Better value with advanced AI analytics"
-      },
-      {
-        competitor: "Refinitiv",
-        competitorPrice: "$15,000-45,000/year",
-        ourPrice: "$599-2,999/month",
-        savings: "Superior AI features and affordability"
-      }
+    marketPrice: "$24,000-40,000",
+    roi: "600% within 18 months",
+    setupTime: "12-16 weeks",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 156,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-fintech-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["Plaid", "Stripe", "Square"],
+    integrations: ["Banking APIs", "Trading Platforms", "Payment Gateways", "Regulatory Systems", "Analytics Tools"],
+    useCases: ["Risk assessment", "Fraud detection", "Automated trading", "Financial advisory"],
+    targetAudience: ["Banks", "Credit unions", "Investment firms", "Fintech startups"],
+    benefits: [
+      "Improved risk management",
+      "Enhanced fraud prevention",
+      "Automated trading capabilities",
+      "Personalized financial advice",
+      "Regulatory compliance",
+      "Cost reduction"
     ],
-    volumeDiscounts: [
-      {
-        users: "50-100",
-        discount: "30% off",
-        additionalBenefits: ["Priority support", "Custom onboarding"]
-      },
-      {
-        users: "101-250",
-        discount: "40% off",
-        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
-      },
-      {
-        users: "250+",
-        discount: "50% off",
-        additionalBenefits: ["White-label options", "Custom AI training"]
-      }
-    ],
-    customEnterprise: {
-      features: [
-        "Custom AI training",
-        "On-premise deployment",
-        "Advanced security compliance",
-        "Custom integrations",
-        "Dedicated infrastructure",
-        "White-label solutions"
-      ],
-      benefits: [
-        "Maximum financial intelligence",
-        "Complete customization",
-        "Highest security standards",
-        "Exclusive features",
-        "Strategic partnership"
-      ],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-financial-analytics"
-      }
-    }
+    tags: ["Fintech", "AI Trading", "Risk Assessment", "Fraud Detection", "Financial Advisory"]
   },
 
   // AI Healthcare Analytics Platform
   {
     serviceId: "ai-healthcare-analytics-platform",
-    serviceName: "AI Healthcare Analytics Platform",
-    category: "AI & Healthcare",
-    description: "Advanced healthcare analytics with AI-powered patient insights and predictive modeling",
+    serviceTitle: "AI Healthcare Analytics & Predictive Medicine Platform",
+    category: "AI Development",
+    subcategory: "Healthcare",
+    description: "Comprehensive healthcare analytics platform using AI for disease prediction, treatment optimization, patient monitoring, and healthcare resource management.",
     pricingTiers: [
       {
+        id: "starter",
+        name: "Starter",
+        price: 29999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Basic AI disease prediction",
+          "Patient monitoring",
+          "Up to 3 medical specialties",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small healthcare facilities starting with AI"
+      },
+      {
+        id: "professional",
         name: "Professional",
-        price: 799,
+        price: 39999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Advanced analytics for healthcare organizations",
+        billingCycle: "one-time",
         features: [
-          "Up to 25 users",
-          "Advanced patient analytics",
-          "Predictive modeling",
-          "HIPAA compliance",
+          "Advanced AI disease prediction",
+          "Advanced patient monitoring",
+          "Up to 10 medical specialties",
           "Priority support",
-          "Advanced reports",
-          "API access",
-          "Custom dashboards"
+          "Advanced integrations",
+          "Treatment optimization"
         ],
-        limitations: [
-          "Limited to 25 users",
-          "Standard SLA",
-          "Basic compliance features"
-        ],
-        bestFor: [
-          "Hospitals",
-          "Clinics",
-          "Healthcare systems"
-        ],
-        roi: "400-700%",
-        implementationTime: "8-10 weeks",
-        supportLevel: "Priority support + chat"
+        bestFor: "Growing healthcare facilities needing advanced AI",
+        popular: true
       },
       {
+        id: "enterprise",
         name: "Enterprise",
-        price: 3999,
+        price: 59999,
         currency: "$",
-        billingCycle: "monthly",
-        description: "Full platform for large healthcare organizations",
+        billingCycle: "one-time",
         features: [
-          "Unlimited users",
-          "Premium AI models",
-          "Advanced compliance",
+          "Full AI healthcare suite with custom models",
+          "Unlimited medical specialties",
           "Custom AI training",
-          "Dedicated account manager",
-          "Advanced analytics",
-          "SLA guarantees",
-          "White-label options"
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
         ],
-        limitations: [
-          "Annual contract required",
-          "Minimum 100 users"
-        ],
-        bestFor: [
-          "Large health systems",
-          "Academic medical centers",
-          "Government agencies"
-        ],
-        roi: "700-1000%",
-        implementationTime: "10-12 weeks",
-        supportLevel: "24/7 dedicated support"
+        bestFor: "Large healthcare systems requiring custom AI solutions"
       }
     ],
-    marketComparison: [
+    marketPrice: "$28,000-50,000",
+    roi: "700% within 24 months",
+    setupTime: "16-20 weeks",
+    aiScore: 98,
+    rating: 4.9,
+    reviewCount: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-healthcare-analytics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+    integrations: ["EMR Systems", "Medical Devices", "Lab Systems", "Pharmacy Systems", "Insurance Platforms"],
+    useCases: ["Disease prediction", "Treatment optimization", "Patient monitoring", "Resource management"],
+    targetAudience: ["Hospitals", "Clinics", "Research institutions", "Pharmaceutical companies"],
+    benefits: [
+      "Improved diagnostic accuracy",
+      "Better treatment outcomes",
+      "Reduced healthcare costs",
+      "Enhanced patient care",
+      "Resource optimization",
+      "Research acceleration"
+    ],
+    tags: ["Healthcare AI", "Predictive Medicine", "Patient Monitoring", "Treatment Optimization", "Medical Analytics"]
+  },
+
+  // AI Supply Chain Optimization
+  {
+    serviceId: "ai-supply-chain-optimization",
+    serviceTitle: "AI Supply Chain Optimization & Predictive Logistics Platform",
+    category: "AI Development",
+    subcategory: "Supply Chain",
+    description: "Intelligent supply chain platform using AI for demand forecasting, inventory optimization, route planning, and real-time supply chain visibility.",
+    pricingTiers: [
       {
-        competitor: "Epic",
-        competitorPrice: "$1,200-2,000/month",
-        ourPrice: "$799-3,999/month",
-        savings: "Better value with advanced AI capabilities"
+        id: "starter",
+        name: "Starter",
+        price: 18999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Basic AI demand forecasting",
+          "Inventory optimization",
+          "Up to 3 warehouses",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small businesses starting with AI supply chain"
       },
       {
-        competitor: "Cerner",
-        competitorPrice: "$1,000-1,800/month",
-        ourPrice: "$799-3,999/month",
-        savings: "Superior AI analytics and affordability"
+        id: "professional",
+        name: "Professional",
+        price: 25999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Advanced AI demand forecasting",
+          "Advanced inventory optimization",
+          "Up to 10 warehouses",
+          "Priority support",
+          "Advanced integrations",
+          "Route planning"
+        ],
+        bestFor: "Growing businesses needing advanced supply chain AI",
+        popular: true
       },
       {
-        competitor: "IBM Watson Health",
-        competitorPrice: "$2,000-5,000/month",
-        ourPrice: "$799-3,999/month",
-        savings: "More affordable with better features"
+        id: "enterprise",
+        name: "Enterprise",
+        price: 39999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Full AI supply chain suite with custom models",
+          "Unlimited warehouses",
+          "Custom AI training",
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
+        ],
+        bestFor: "Large enterprises requiring custom supply chain AI solutions"
       }
     ],
-    volumeDiscounts: [
+    marketPrice: "$18,000-30,000",
+    roi: "450% within 12 months",
+    setupTime: "10-12 weeks",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 145,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-supply-chain",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["SAP Ariba", "Oracle SCM", "JDA Software"],
+    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "Analytics Platforms"],
+    useCases: ["Demand forecasting", "Inventory optimization", "Route planning", "Supplier management"],
+    targetAudience: ["Manufacturers", "Retailers", "Logistics companies", "E-commerce businesses"],
+    benefits: [
+      "Reduced inventory costs",
+      "Improved demand forecasting",
+      "Optimized logistics",
+      "Better supplier relationships",
+      "Increased efficiency",
+      "Cost savings"
+    ],
+    tags: ["Supply Chain AI", "Demand Forecasting", "Inventory Optimization", "Route Planning", "Logistics"]
+  },
+
+  // AI Cybersecurity Platform
+  {
+    serviceId: "ai-cybersecurity-platform",
+    serviceTitle: "AI-Powered Advanced Cybersecurity & Threat Intelligence Platform",
+    category: "Cybersecurity",
+    subcategory: "AI Security",
+    description: "Next-generation cybersecurity platform featuring AI-driven threat detection, behavioral analysis, automated incident response, and zero-trust security architecture.",
+    pricingTiers: [
       {
-        users: "50-100",
-        discount: "25% off",
-        additionalBenefits: ["Priority support", "Custom onboarding"]
+        id: "starter",
+        name: "Starter",
+        price: 21999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Basic AI threat detection",
+          "Behavioral analysis",
+          "Up to 100 endpoints",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small businesses starting with AI cybersecurity"
       },
       {
-        users: "101-250",
-        discount: "35% off",
-        additionalBenefits: ["Dedicated account manager", "Custom integrations"]
+        id: "professional",
+        name: "Professional",
+        price: 29999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Advanced AI threat detection",
+          "Advanced behavioral analysis",
+          "Up to 1000 endpoints",
+          "Priority support",
+          "Advanced integrations",
+          "Automated incident response"
+        ],
+        bestFor: "Growing businesses needing advanced AI cybersecurity",
+        popular: true
       },
       {
-        users: "250+",
-        discount: "45% off",
-        additionalBenefits: ["White-label options", "Custom AI training"]
+        id: "enterprise",
+        name: "Enterprise",
+        price: 44999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Full AI cybersecurity suite with custom models",
+          "Unlimited endpoints",
+          "Custom AI training",
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
+        ],
+        bestFor: "Large enterprises requiring custom AI cybersecurity solutions"
       }
     ],
-    customEnterprise: {
-      features: [
-        "Custom AI training",
-        "On-premise deployment",
-        "Advanced security compliance",
-        "Custom integrations",
-        "Dedicated infrastructure",
-        "White-label solutions"
-      ],
-      benefits: [
-        "Maximum healthcare intelligence",
-        "Complete customization",
-        "Highest security standards",
-        "Exclusive features",
-        "Strategic partnership"
-      ],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-healthcare-analytics"
+    marketPrice: "$20,000-35,000",
+    roi: "500% within 14 months",
+    setupTime: "12-16 weeks",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 178,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-cybersecurity",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
+    integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Identity Management", "Cloud Security"],
+    useCases: ["Threat detection", "Incident response", "Behavioral analysis", "Compliance"],
+    targetAudience: ["Enterprise organizations", "Financial institutions", "Healthcare providers", "Government agencies"],
+    benefits: [
+      "Enhanced threat detection",
+      "Faster incident response",
+      "Reduced false positives",
+      "Improved compliance",
+      "Cost savings",
+      "Peace of mind"
+    ],
+    tags: ["AI Cybersecurity", "Threat Intelligence", "Behavioral Analysis", "Zero Trust", "Incident Response"]
+  },
+
+  // AI Marketing Automation Platform
+  {
+    serviceId: "ai-marketing-automation-platform",
+    serviceTitle: "AI Marketing Automation & Personalization Platform",
+    category: "AI Development",
+    subcategory: "Marketing",
+    description: "Intelligent marketing automation platform using AI for customer segmentation, personalized campaigns, predictive analytics, and ROI optimization.",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 13999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Basic AI customer segmentation",
+          "Personalized campaigns",
+          "Up to 10,000 contacts",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small businesses starting with AI marketing"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 19999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Advanced AI customer segmentation",
+          "Advanced personalized campaigns",
+          "Up to 100,000 contacts",
+          "Priority support",
+          "Advanced integrations",
+          "Predictive analytics"
+        ],
+        bestFor: "Growing businesses needing advanced AI marketing",
+        popular: true
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 29999,
+        currency: "$",
+        billingCycle: "one-time",
+        features: [
+          "Full AI marketing suite with custom models",
+          "Unlimited contacts",
+          "Custom AI training",
+          "24/7 dedicated support",
+          "Full API access",
+          "White-label solutions",
+          "Advanced security features"
+        ],
+        bestFor: "Large enterprises requiring custom AI marketing solutions"
       }
-    }
+    ],
+    marketPrice: "$13,000-22,000",
+    roi: "350% within 10 months",
+    setupTime: "8-10 weeks",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 267,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-marketing-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    competitors: ["HubSpot", "Marketo", "Pardot"],
+    integrations: ["CRM Systems", "Email Platforms", "Social Media", "Analytics Tools", "E-commerce Platforms"],
+    useCases: ["Customer segmentation", "Campaign personalization", "ROI optimization", "Lead generation"],
+    targetAudience: ["Marketing teams", "Sales teams", "E-commerce businesses", "Agencies"],
+    benefits: [
+      "Improved customer engagement",
+      "Higher conversion rates",
+      "Better ROI tracking",
+      "Automated workflows",
+      "Personalized experiences",
+      "Cost optimization"
+    ],
+    tags: ["Marketing AI", "Automation", "Personalization", "Customer Segmentation", "ROI Optimization"]
   }
 ];
 
