@@ -225,8 +225,8 @@ function App() {
               </Suspense>
             </main>
 
-            {/* Footer */}
-            <Footer />
+            {/* Footer - Using AppFooter for enhanced features */}
+            <AppFooter />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
