@@ -36,12 +36,7 @@ export interface Revolutionary2028CybersecurityBlockchainService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028CybersecurityBlockchainService[] = [
   // AI-Powered Threat Intelligence Platform
   {
@@ -302,5 +297,4 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     customers: 450,
     rating: 4.8,
     reviews: 320
-
 ];}}

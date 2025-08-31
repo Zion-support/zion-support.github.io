@@ -1,8 +1,6 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
-
 export interface CybersecurityService {
-
   id: string;
   title: string;
   description: string;
@@ -47,12 +45,7 @@ pricing: {
   image: string;
   createdAt: string;
   featured: boolean;
-<<<<<<< HEAD
-  trending: boolean;
-=======
   trending: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Zion Tech Group Contact Information
 const zionContact = {
   phone: "+1 302 464 0950",
@@ -64,14 +57,7 @@ const zionContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
     id: "quantum-resistant-encryption",
@@ -159,18 +145,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
-=======
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
   },
-
   {
     id: "ai-threat-hunting-platform",
     title: "Zion AI Threat Hunting Platform",
@@ -263,7 +243,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "zero-trust-network-access",
     title: "Zion Zero Trust Network Access Platform",
@@ -356,7 +335,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "ai-powered-vulnerability-management",
     title: "Zion AI-Powered Vulnerability Management",
@@ -449,7 +427,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,
     trending: true
   },
-
   {
     id: "blockchain-security-audit",
     title: "Zion Blockchain Security Audit Platform",
@@ -536,15 +513,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 3 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
-<<<<<<< HEAD
-
-=======
   }
 =======;
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;
@@ -553,8 +521,5 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     featured: true,;
     trending: true;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default innovativeCybersecurityServices2030;}}

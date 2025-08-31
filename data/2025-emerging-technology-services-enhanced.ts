@@ -36,12 +36,7 @@ export interface EmergingTechnologyService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
   {
@@ -302,5 +297,4 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     customers: 34,
     rating: 4.9,
     reviews: 23
-
 ];}}

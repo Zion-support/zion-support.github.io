@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown const Header: React.FC = () => {
-=======
 import { Menu, X, ChevronDown } from 'lucide-react';
-
 const Header: React.FC = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-
   const navigation = [;
     { name: 'Home', path: '/' },;
     { name: 'About', path: '/about' },;
@@ -20,43 +14,33 @@ const Header: React.FC = () => {;
     { name: 'Blog', path: '/blog' },;
     { name: 'Contact', path: '/contact' };
   ];
-
   const isActive = (path: string) => {;
     return location.pathname === path;
   };
-
   const closeMenu = () => {;
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
-
   const toggleDropdown = (name: string) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   useEffect(() => {
     const handleResize = () => {;
       if (window.innerWidth > 768) {;
         setIsMenuOpen(false);
         setActiveDropdown(null);
-
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   useEffect(() => {
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const isActive = (path: string) => router.pathname === path;
-
   const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
     <div className="relative">
       <button
@@ -66,11 +50,9 @@ const Header: React.FC = () => {;
             ? 'bg-white/10 text-white'
             : 'text-gray-300 hover:text-white hover:bg-white/10'
         }`}
-
         <span>Services</span>
         <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
-
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
           <div className="p-4">
@@ -85,13 +67,8 @@ const Header: React.FC = () => {;
                     setIsCompanyDropdownOpen(false);
                     setIsResourcesDropdownOpen(false);
                   }}
-<<<<<<< HEAD
-
-                  {item.icon && <item.icon className="h-5 w-5" />}
-=======
                 >
                   {item.icon && <item.icon className = "h-5 w-5" />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div>
                     <div className="font-medium">{item.name}</div>
                   </div>
@@ -103,7 +80,6 @@ const Header: React.FC = () => {;
       )};
     </div>;
   );
-
   return (
     <header className = "bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,7 +93,6 @@ const Header: React.FC = () => {;
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -127,41 +102,34 @@ const Header: React.FC = () => {;
                 className={`text-gray-300 hover:text-white transition-colors duration-200 ${
                   isActive(item.path) ? 'text-blue-400 font-semibold' : ''
                 }`}
-
                 {item.name}
               </Link>
             ))}
           </nav>
-
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/pricing"
               className="text-gray-300 hover:text-white transition-colors duration-200"
-
               Pricing
             </Link>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
               aria-label="Toggle menu"
-
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -169,35 +137,16 @@ const Header: React.FC = () => {;
             initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }}
             exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
             className="md:hidden bg-gray-900 border-t border-gray-800"
-
             <nav className="px-4 py-6 space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -209,25 +158,21 @@ const Header: React.FC = () => {;
                       : 'text-gray-300 hover:text-white hover:bg-gray-700'
                   }`}
                   onClick={closeMenu}
-
                   {item.name}
                 </Link>
               ))}
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-700 space-y-2">
                 <Link
                   to="/pricing"
                   className="block w-full text-center px-6 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                   onClick={closeMenu}
-
                   Pricing
                 </Link>
                 <Link
                   to="/contact"
                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                   onClick={closeMenu}
-
                   Get Started
                 </Link>;
               </div>;
@@ -238,6 +183,5 @@ const Header: React.FC = () => {;
     </header>;
   );
 };
-
 export default Header;
 }}

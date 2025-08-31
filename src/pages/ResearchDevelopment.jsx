@@ -20,13 +20,8 @@ const ResearchDevelopment = () => {
         {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
-<<<<<<< HEAD
-            focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
-
-=======
             focus["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -42,12 +37,10 @@ const ResearchDevelopment = () => {
               Pushing the boundaries of technology through innovative research and cutting-edge development
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {researchAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
                 <p className="text-gray-300 mb-4">{area.description}</p>
-
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Research Focus</h4>
                   <ul className="space-y-1">
@@ -59,7 +52,6 @@ const ResearchDevelopment = () => {
                 </div>
               </div>))}
           </div>
-
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Collaborate With Us</h3>

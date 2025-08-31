@@ -1,27 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from "@/lib/utils";
-import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
-
-export function MainNavigation({ className }: { className?: string }) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-
-  return (
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
-      <NavLink 
-        to="/" 
-        className={({ isActive }) => 
-          cn("text-sm font-medium transition-colors hover:text-primary", 
-             isActive ? "text-zion-cyan" : "text-muted-foreground")
-        }
-      >
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { cn  } from '@/lib/utils';
+import { NavLink  } from 'react-router-dom.ts';
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp  } from 'lucide-react';
+export function MainNavigation(...args[]):  {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+    return (<nav className = {
+  cn("hidden md:flex items-center space-x-6",
+  className)
+}>
+      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
       </NavLink>
-      
       {/* Services Dropdown */}
       <div className="relative group">
         <button 
@@ -81,7 +74,6 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
       {/* Solutions Dropdown */}
       <div className="relative group">
         <button 
@@ -139,7 +131,6 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
       {/* Company Dropdown */}
       <div className="relative group">
         <button
@@ -170,7 +161,6 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
       {/* Resources Dropdown */}
       <div className="relative group">
         <button
@@ -201,30 +191,18 @@ export function MainNavigation({ className }: { className?: string }) {
           </div>
         )}
       </div>
-      
       {/* Support */}
       <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
         Support
       </Link>
-      
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />
-        Pricing
-      </Link>
-      
-      {/* Get Started Button */}
-      <NavLink 
-        to="/contact" 
-        className={({ isActive }) => 
-          cn("text-sm font-medium transition-colors hover:text-primary", 
-             isActive ? "text-zion-cyan" : "text-muted-foreground",
-             "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")
-        }
-      >
-        Get Started
-      </NavLink>
-    </nav>
-  );
+        Pricing;
+      </Link>;
+      <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")}>;
+        Get Started;
+      </NavLink>;
+    </nav>);
 }

@@ -1,39 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle export const EnterpriseCallToAction = () => {
-  const enterpriseFeatures = [
-    {
-      icon: Building2,
-      title: 'Enterprise-Grade Infrastructure',
-      description: 'Scalable solutions designed for large organizations with complex requirements'
-    },
-    {
-      icon: Users,
-      title: 'Dedicated Team',
-      description: 'Assigned IT professionals who understand your business and infrastructure'
-    },
-    {
-      icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support across all time zones with local expertise in multiple regions'
-    },
-    {
-      icon: Shield,
-      title: 'Advanced Security',
-      description: 'Enterprise-level security measures and compliance management'
-    },
-    {
-      icon: Award,
-      title: 'Proven Track Record',
-      description: 'Successfully serving Fortune 500 companies and government agencies'
-
-  ];
-
-=======
 import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
-
 export const EnterpriseCallToAction = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const enterpriseBenefits = [
     'Customized solutions tailored to your business needs',
     'Dedicated account manager and support team',
@@ -44,7 +11,6 @@ export const EnterpriseCallToAction = () => {
     'Vendor management and procurement assistance',
     'Training and change management programs'
   ];
-
   const contactMethods = [
     {
       icon: Phone,
@@ -69,9 +35,7 @@ export const EnterpriseCallToAction = () => {
       action: 'Book Consultation',
       link: '#consultation',
       color: 'purple'
-
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +49,6 @@ export const EnterpriseCallToAction = () => {
             dedicated support teams, and strategic consulting to drive your digital transformation.
           </p>
         </div>
-
         {/* Enterprise Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {enterpriseFeatures.map((feature, index) => (
@@ -98,7 +61,6 @@ export const EnterpriseCallToAction = () => {
             </div>
           ))}
         </div>
-
         {/* Enterprise Benefits */}
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -113,7 +75,6 @@ export const EnterpriseCallToAction = () => {
             ))}
           </div>
         </div>
-
         {/* Contact Methods */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {contactMethods.map((method, index) => (
@@ -126,14 +87,12 @@ export const EnterpriseCallToAction = () => {
               <a
                 href={method.link}
                 className={`inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-${method.color}-500 to-${method.color}-600 text-white font-semibold rounded-lg hover:from-${method.color}-600 hover:to-${method.color}-700 transition-all duration-300`}
-
                 <span>{method.action}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           ))}
         </div>
-
         {/* Enterprise CTA */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center">
           <h3 className="text-4xl font-bold text-white mb-6">
@@ -143,22 +102,18 @@ export const EnterpriseCallToAction = () => {
             Join hundreds of enterprise organizations that trust Zion with their critical IT operations.
             Let's discuss how we can help you achieve your technology goals.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a
               href="#enterprise-demo"
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg"
-
               Request Enterprise Demo
             </a>
             <a
               href="#enterprise-quote"
               className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
-
               Get Enterprise Quote
             </a>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-white mb-2">500+</div>
@@ -174,7 +129,6 @@ export const EnterpriseCallToAction = () => {
             </div>
           </div>
         </div>
-
         {/* Enterprise Process */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -219,7 +173,6 @@ export const EnterpriseCallToAction = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-3xl mx-auto border border-white/20">
@@ -234,13 +187,11 @@ export const EnterpriseCallToAction = () => {
               <a
                 href="#enterprise-contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
                 Contact Enterprise Team
               </a>
               <a
                 href="#enterprise-case-studies"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 View Case Studies
               </a>
             </div>
@@ -248,9 +199,4 @@ export const EnterpriseCallToAction = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,17 +1,13 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
-
 const router = Router();
-
 // Validation middleware
 const validate = (req: any, res: any, next: any) => {;
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-
   next();
 };
-
 // GET /api/users
 router.get('/users', async (_req, res) => {
   try {
@@ -20,7 +16,6 @@ router.get('/users', async (_req, res) => {
       { id: 1, name: 'John Doe', email: 'john@example.com' },;
       { id: 2, name: 'Jane Smith', email: 'jane@example.com' };
     ];
-
     res.json({
       success: true,
       data: users,
@@ -31,9 +26,7 @@ router.get('/users', async (_req, res) => {
       success: false,
       error: 'Failed to fetch users'
     });
-
 });
-
 // POST /api/users
 router.post('/users', [
   body('name').isLength({ min: 2 }).trim().escape(),
@@ -42,19 +35,10 @@ router.post('/users', [
 ], async (req: any, res: any) => {
   try {
     const { name, email } = req.body;
-
     // Example user creation - replace with actual database operation
     const newUser = {
   id: Date.now(),
       name,
-<<<<<<< HEAD
-      email,
-      createdAt: new Date().toISOString()
-    };
-
-    res.status(201).json({
-      success: true,
-=======
       email,;
   ;
   ;
@@ -62,17 +46,9 @@ router.post('/users', [
   ;
   createdAt: new Date().toISOString();
     ;
-
-
-
-
-
-
 };
-    
     res.status(201).json({ 
       success: true, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       data: newUser,
       message: 'User created successfully'
     });
@@ -81,24 +57,15 @@ router.post('/users', [
       success: false,
       error: 'Failed to create user'
     });
-
 });
-
 // GET /api/users/:id
 router.get('/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
-
     // Example user lookup - replace with actual database query
     const user = {
   id: parseInt(id),
       name: 'John Doe',
-<<<<<<< HEAD
-      email: 'john@example.com',
-      createdAt: new Date().toISOString()
-    };
-
-=======
       email: 'john@example.com',;
   ;
   ;
@@ -106,21 +73,12 @@ router.get('/users/:id', async (req, res) => {
   ;
   createdAt: new Date().toISOString();
     ;
-
-
-
-
-
-
 };
-    
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!user) {
       return res.status(404).json({
         success: false,
         error: 'User not found'
       });
-
     return res.json({
       success: true,
       data: user
@@ -130,7 +88,5 @@ router.get('/users/:id', async (req, res) => {
       success: false,
       error: 'Failed to fetch user'
     });
-
 });
-
 export default router;}}}}}

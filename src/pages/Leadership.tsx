@@ -20,13 +20,8 @@ import {
   Mail,
   Phone,
   MapPin
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function Leadership() {
   const leadershipTeam = [
     {
@@ -62,15 +57,6 @@ export default function Leadership() {
     {
       name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
-<<<<<<< HEAD
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
-      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily@ziontechgroup.com',
-      phone: '+1 302 464 0953'
-
-=======
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
       expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;
@@ -78,9 +64,7 @@ export default function Leadership() {
       email: 'emily@ziontechgroup.com',;
       phone: '+1 302 464 0953';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const values = [
     {
       icon: Brain,
@@ -95,15 +79,6 @@ export default function Leadership() {
     {
       icon: Shield,
       title: 'Trust & Security',
-<<<<<<< HEAD
-      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone, everywhere.'
-
-=======
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
     },;
     {;
@@ -111,9 +86,7 @@ export default function Leadership() {
       title: 'Global Impact',;
       description: 'We believe technology should make the world better for everyone, everywhere.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const achievements = [
     {
       metric: '500+',
@@ -128,20 +101,6 @@ export default function Leadership() {
     {
       metric: '95%',
       label: 'Client Satisfaction',
-<<<<<<< HEAD
-      description: 'Consistently high satisfaction ratings from our clients'
-    },
-    {
-      metric: '25+',
-      label: 'Industry Awards',
-      description: 'Recognition for innovation and excellence in technology'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       description: 'Consistently high satisfaction ratings from our clients';
     },;
     {;
@@ -150,15 +109,12 @@ export default function Leadership() {
       description: 'Recognition for innovation and excellence in technology';
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
@@ -175,7 +131,6 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -187,7 +142,6 @@ export default function Leadership() {
               Meet the experienced professionals who are driving innovation and growth at Zion Tech Group.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-12">
             {leadershipTeam.map((leader, index) => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
@@ -203,7 +157,6 @@ export default function Leadership() {
                     <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
                     <p className="text-cyan-400 text-lg font-semibold mb-4">{leader.title}</p>
                     <p className="text-slate-300 mb-6 leading-relaxed">{leader.bio}</p>
-
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -211,34 +164,29 @@ export default function Leadership() {
                           <span
                             key={skillIndex}
                             className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
-
                             {skill}
                           </span>
                         ))}
                       </div>
                     </div>
-
                     <div className="flex items-center space-x-4">
                       <a
                         href={leader.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
                         <Linkedin className="w-5 h-5" />
                         <span>LinkedIn</span>
                       </a>
                       <a
                         href={`mailto:${leader.email}`}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
                         <Mail className="w-5 h-5" />
                         <span>Email</span>
                       </a>
                       <a
                         href={`tel:${leader.phone}`}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
                         <Phone className="w-5 h-5" />
                         <span>Call</span>
                       </a>
@@ -250,7 +198,6 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-
       {/* Comp Values */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -262,7 +209,6 @@ export default function Leadership() {
               The principles that guide everything we do and shape our comp culture.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
@@ -276,7 +222,6 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-
       {/* Achievements */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -288,7 +233,6 @@ export default function Leadership() {
               Milestones that demonstrate our commitment to excellence and innovation.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
@@ -300,7 +244,6 @@ export default function Leadership() {
           </div>
         </div>
       </section>
-
       {/* Comp Culture */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -316,21 +259,18 @@ export default function Leadership() {
               <Link
                 to="/careers"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-
                 Get in Touch
               </Link>
             </div>
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -341,7 +281,6 @@ export default function Leadership() {
                 Ready to discuss how our leadership team can help transform your business?
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -353,7 +292,6 @@ export default function Leadership() {
                   Middletown DE 19709
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-cyan-400" />
@@ -364,7 +302,6 @@ export default function Leadership() {
                   Mon-Fri 9AM-6PM EST
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-cyan-400" />

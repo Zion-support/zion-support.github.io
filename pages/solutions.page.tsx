@@ -32,11 +32,7 @@ import { Brain,
   DollarSign,
   Search,
   Filter
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -121,15 +117,6 @@ const solutionCategories = [
     color: 'from-indigo-500 to-purple-600',
     solutions[
       'Process Automation',
-<<<<<<< HEAD
-      'Customer Experience',
-      'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
-      'Technology Consulting'
-    ]
-
-=======
       'Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
@@ -137,9 +124,7 @@ const solutionCategories = [
       'Technology Consulting';
     ];
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const industrySolutions = [
   {
     industry: 'Healthcare',
@@ -212,15 +197,6 @@ const industrySolutions = [
     solutions[
       'Digital Services',
       'Data Security',
-<<<<<<< HEAD
-      'Process Automation',
-      'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
-    ],
-    color: 'from-gray-500 to-slate-600'
-
-=======
       'Process Automation',;
       'Citizen Engagement',;
       'Regulatory Compliance',;
@@ -228,9 +204,7 @@ const industrySolutions = [
     ],;
     color: 'from-gray-500 to-slate-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const featuredSolutions = [
   {
     id: 1,
@@ -297,15 +271,6 @@ const featuredSolutions = [
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
-<<<<<<< HEAD
-      'Improved scalability'
-    ],
-    price: 'Starting at $1,800/month',
-    implementation: '8-16 weeks',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600'
-
-=======
       'Improved scalability';
     ],;
     price: 'Starting at $1,800/month',;
@@ -313,29 +278,17 @@ const featuredSolutions = [
     icon: Cloud,;
     color: 'from-blue-500 to-cyan-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default function Solutions(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-
   const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
-
   const filteredSolutions = featuredSolutions.filter(solution => {;
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-    return matchesCategory && matchesSearch;
-  });
-=======
-    
     return matchesCategory && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
@@ -345,26 +298,13 @@ export default function Solutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Rocket className="w-5 h-5" />
               <span className="font-medium">Technology Solutions</span>
@@ -379,7 +319,6 @@ export default function Solutions(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Search & Filters */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -398,40 +337,26 @@ export default function Solutions(...args[]):  {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {categories.map(category => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
               </div>
-
               {/* Industry Filter */}
               <div>
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {industries.map(industry => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -440,7 +365,6 @@ export default function Solutions(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Solution Categories */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -448,41 +372,20 @@ export default function Solutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {solutionCategories.map((category, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -490,36 +393,17 @@ export default function Solutions(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
-
                   <Link href={`/solutions#${category.id}`}>
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -537,14 +421,6 @@ export default function Solutions(...args[]):  {
                       </div>
                       <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
-<<<<<<< HEAD
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              )})};
-=======;
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
                       </div>;
                     </div>;
@@ -552,11 +428,9 @@ export default function Solutions(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -564,41 +438,20 @@ export default function Solutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industrySolutions.map((industry, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = industry.icon;
               return (
                 <motion.div
@@ -606,36 +459,17 @@ export default function Solutions(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -652,19 +486,7 @@ export default function Solutions(...args[]):  {
                     <Link
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-<<<<<<< HEAD
-
-=======
                     >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                      View {industry.industry} Solutions
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       View {industry.industry} Solutions;
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
@@ -672,11 +494,9 @@ export default function Solutions(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* Featured Solutions */}
       <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -684,41 +504,20 @@ export default function Solutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredSolutions.map((solution, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = solution.icon;
               return (
                 <motion.div
@@ -726,36 +525,17 @@ export default function Solutions(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -772,10 +552,8 @@ export default function Solutions(...args[]):  {
                       <div className="text-sm text-zion-slate-light">Starting Price</div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-zion-slate-light mb-4">{solution.description}</p>
-
                   {/* Features */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Key Features</h4>
@@ -788,7 +566,6 @@ export default function Solutions(...args[]):  {
                       ))}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Business Benefits</h4>
@@ -801,7 +578,6 @@ export default function Solutions(...args[]):  {
                       ))}
                     </div>
                   </div>
-
                   {/* Implementation & CTA */}
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-zion-slate-light">
@@ -813,19 +589,7 @@ export default function Solutions(...args[]):  {
                     <Link
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-<<<<<<< HEAD
-
-=======
                     >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       Learn More;
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
@@ -833,11 +597,9 @@ export default function Solutions(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className = "py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -845,27 +607,14 @@ export default function Solutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -877,33 +626,18 @@ export default function Solutions(...args[]):  {
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-
                 View Case Studies
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

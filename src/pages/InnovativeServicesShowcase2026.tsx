@@ -1,71 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Shield, 
-  Zap, 
-  Cloud, 
-  Lock, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
- } from 'lucide-react';
-import { INNOVATIVE_SERVICES  } from "../data/servicesData";
-export default function InnovativeServicesShowcase2026(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('innovation');
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },;
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' };
-  ];
-  const filteredServices = INNOVATIVE_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-      case 'innovation':
-        return a.innovationLevel === 'Cutting-edge' ? -1 : 1;
-      case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-
-const InnovativeServicesShowcase2026: React.FC = () => {
-=======
 import {
   Brain,
   Shield,
@@ -99,15 +33,11 @@ import {
 import { INNOVATIVE_SERVICES } from '../data/servicesData';
 export default function InnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('innovation');
-
   const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
-
   const filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
-
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(service =>;
@@ -115,11 +45,9 @@ export default function InnovativeServicesShowcase2026() {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-
     // Filter by category
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -131,12 +59,9 @@ export default function InnovativeServicesShowcase2026() {
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
           return 0;
-
     });
-
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
-
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI & Automation':;
@@ -157,12 +82,7 @@ export default function InnovativeServicesShowcase2026() {
         return <TrendingUp className="w-5 h-5" />;
       case 'Sustainability':
         return <Leaf className="w-5 h-5" />;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       default:
-<<<<<<< HEAD
-        return <Star className="w-5 h-5" />;
-
-=======
         return 0}
   });
   const containerVariants = {
@@ -173,9 +93,7 @@ export default function InnovativeServicesShowcase2026() {
         staggerChildren: 0.1
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
@@ -186,61 +104,14 @@ export default function InnovativeServicesShowcase2026() {
   ;
   'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
     ;
-
-
-
-
-
-
 };
-
     return (
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
         {level};
       </span>;
     );
   };
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
-        title="Innovative Services Showcase 2026 - Zion Tech Group"
-        description="Explore our cutting-edge 2026 innovative micro SAAS services including AI, Quantum Computing, Blockchain, and more. Transform your business with revolutionary technology solutions."
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 sm:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Innovative Services
-              </span>
-              <br />
-              <span className="text-white">Showcase 2026</span>
-            </h1>
-            <p className="text-xl sm:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
-              Discover revolutionary micro SAAS solutions that combine cutting-edge AI, quantum computing, blockchain, and emerging technologies to transform your business operations.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
-              <span className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400" />
-                Revolutionary AI Solutions
-              </span>
-              <span className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-blue-400" />
-                Quantum Computing
-              </span>
-              <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                Advanced Security
-              </span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -293,7 +164,6 @@ export default function InnovativeServicesShowcase2026() {
             <div className="flex items-center gap-2 text-cyan-400">
               <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </motion.div>
         </div>
@@ -325,21 +195,13 @@ export default function InnovativeServicesShowcase2026() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-=======
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   {categories.map(category  => (
                     <option key={category.id} value={category.id}>{category.name}</option>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   ))}
                 </select>
               </div>
-
               {/* Sort Filter */}
               <div className="flex items-center gap-2">
                 <span className="text-slate-400 text-sm">Sort by:</span>
@@ -347,7 +209,6 @@ export default function InnovativeServicesShowcase2026() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-
                   <option value="innovation">Innovation Level</option>
                   <option value="price">Price</option>
                   <option value="roi">ROI</option>
@@ -357,7 +218,6 @@ export default function InnovativeServicesShowcase2026() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <motion.div
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
@@ -373,53 +233,16 @@ export default function InnovativeServicesShowcase2026() {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-<<<<<<< HEAD
-
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-cyan-400/10 rounded-lg text-cyan-400">
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div>
-                      <div className="text-xs uppercase tracking-wide text-cyan-300/70">
-                        {service.category}
-                      </div>
-                      <div className="text-xs text-slate-400">
-                        {service.subcategory}
-                      </div>
-                    </div>
-                  </div>
-                  {getInnovationBadge(service.innovationLevel)}
-=======
               >
                 {/* Innovation Level Badge */}
                 <div className="absolute top-4 right-4">
@@ -432,9 +255,7 @@ export default function InnovativeServicesShowcase2026() {
                   }`}>
                     {service.innovationLevel}
                   </span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-
                 {/* Title and Description */}
                 <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-300 transition-colors">
                   {service.title}
@@ -442,7 +263,6 @@ export default function InnovativeServicesShowcase2026() {
                 <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <div className="text-xs font-semibold text-cyan-300/80 mb-2">Key Features:</div>
@@ -451,7 +271,6 @@ export default function InnovativeServicesShowcase2026() {
                       <span
                         key={idx}
                         className="text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded"
-
                         {feature}
                       </span>
                     ))}
@@ -462,7 +281,6 @@ export default function InnovativeServicesShowcase2026() {
                     )}
                   </div>
                 </div>
-
                 {/* Pricing and ROI */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-cyan-400">
@@ -478,7 +296,6 @@ export default function InnovativeServicesShowcase2026() {
                     </div>
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <div className="text-xs font-semibold text-cyan-300/80 mb-2">Key Benefits:</div>
@@ -491,19 +308,16 @@ export default function InnovativeServicesShowcase2026() {
                     ))}
                   </ul>
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-4">
                   {service.tags.slice(0, 4).map((tag, idx) => (
                     <span
                       key={idx}
                       className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full"
-
                       {tag}
                     </span>
                   ))}
                 </div>
-
                 {/* Contact and CTA */}
                 <div className="border-t border-slate-700 pt-4">
                   <div className="flex items-center justify-between mb-3">
@@ -514,13 +328,11 @@ export default function InnovativeServicesShowcase2026() {
                       Support: {service.supportLevel}
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="text-xs text-slate-400">
                       <a
                         href={`tel:${service.contactInfo.phone}`}
                         className="text-cyan-300 hover:text-cyan-200 transition-colors"
-
                         {service.contactInfo.phone}
                       </a>
                     </div>
@@ -570,7 +382,6 @@ export default function InnovativeServicesShowcase2026() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
@@ -578,32 +389,18 @@ export default function InnovativeServicesShowcase2026() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
               Let's discuss how we can help you achieve your goals.
             </p>
-
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -616,7 +413,6 @@ export default function InnovativeServicesShowcase2026() {
                   </a>
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-cyan-400" />
@@ -628,7 +424,6 @@ export default function InnovativeServicesShowcase2026() {
                   </a>
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-cyan-400" />
@@ -640,7 +435,6 @@ export default function InnovativeServicesShowcase2026() {
                 </p>
               </div>
             </div>
-
             <div className="bg-slate-800/50 rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
               <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -677,14 +471,6 @@ export default function InnovativeServicesShowcase2026() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -692,10 +478,4 @@ export default function InnovativeServicesShowcase2026() {
     </div>;
   );
 };
-
 export default InnovativeServicesShowcase2026;
-<<<<<<< HEAD
-}}}}}
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -29,7 +29,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
             title: "Hire & Collaborate",
             description: "Select your preferred talent, set up milestones, and begin your project with full transparency and support.",
             color: "text-zion-purple"
-
     ];
     const talentSteps = [
         {
@@ -55,7 +54,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
             title: "Deliver & Grow",
             description: "Complete projects successfully, build your reputation, and expand your client base through our platform.",
             color: "text-zion-purple"
-
     ];
     const platformFeatures = [
         {
@@ -81,7 +79,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
             title: "Project Management",
             description: "Built-in tools for tracking progress, managing milestones, and ensuring smooth project delivery.",
             color: "text-zion-purple"
-
     ];
     const benefits = [
         {
@@ -105,7 +102,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                 "Portfolio building tools",
                 "Professional growth support"
             ]
-
     ];
     return (<>
       <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com/how-it-works"/>
@@ -117,7 +113,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
               Discover how our AI-powered marketplace connects talented professionals with innovative projects
             </p>
           </div>
-
           {/* Platform Overview */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -142,7 +137,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
               </div>
             </div>
           </div>
-
           {/* How It Works for Clients */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Clients</h2>
@@ -164,7 +158,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                 </Card>))}
             </div>
           </div>
-
           {/* How It Works for Talent */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Talent</h2>
@@ -186,7 +179,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                 </Card>))}
             </div>
           </div>
-
           {/* Platform Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Platform Features</h2>
@@ -206,7 +198,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                 </Card>))}
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Zion?</h2>
@@ -229,7 +220,6 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                 </Card>))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -247,9 +237,4 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}</section>}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

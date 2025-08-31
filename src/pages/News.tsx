@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-const News: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">News</h1>
-			<p className="text-xl text-gray-300">Latest updates from Zion Tech Group.</p>
-		</div>
-	</div>
-);
-
-export default News;
-=======
 import React from 'react';
-
 export default function News() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
@@ -29,5 +16,3 @@ export default function News() {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

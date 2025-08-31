@@ -6,27 +6,18 @@ import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, Ey
         description: 'Custom hook for managing API calls with loading states and error handling',
         language: 'typescript',
         code: `import { useState, useEffect } from 'react';
-
 interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-<<<<<<< HEAD
-  body?: any;
-  headers?: Record<string, string>;
-=======
   body?;headers?: Record<string, string>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const execute = async () => {
     try {
       setLoading(true);
       setError(null);
-
       const response = await fetch(url, {
         method,
         headers: {
@@ -35,38 +26,17 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         },
         body: body ? JSON.stringify(body) : null,
       });
-
       if (!response.ok) {
-<<<<<<< HEAD
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-
-      const result = await response.json();
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-
-=======
         throw new Error(\`HTTP error! status: \${response.status}\`)}
-
       const result = await response.json();
       setData(result)} catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred')} finally {
       setLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   useEffect(() => {
     if (method === 'GET') {
-<<<<<<< HEAD
-      execute();
-
-=======
       execute()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [url]);
-
   return { data, loading, error, execute }}`,
         tags['react', 'hooks', 'api', 'typescript'],
         complexity: 'medium',
@@ -81,19 +51,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         language: 'css',
         code: `@layer utilities {
   .animate-float {
-<<<<<<< HEAD
-    animation: float 3s ease-in-out infinite;
-
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-
-=======
     animation: float 3s ease-in-out infinite}
-  
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate}
-  
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   .animate-shimmer {
     background: linear-gradient(
       90deg,
@@ -102,32 +62,16 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       transparent
     );
     background-size: 200% 100%;
-<<<<<<< HEAD
-    animation: shimmer 1.5s infinite;
-
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-
-@keyframes glow {
-  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
-=======
     animation: shimmer 1.5s infinite}
 }
-
 @keyframes float {
   0%, 100% { transform: translateY(0px)}
   50% { transform: translateY(-10px)}
 }
-
 @keyframes glow {
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 @keyframes shimmer {
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}
@@ -150,217 +94,84 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   validateOnBlur: true,
       validateOnSubmit: true,
       showErrors: true,
-<<<<<<< HEAD
-      ...options
-    };
-
-    this.rules = new Map();
-    this.errors = new Map();
-    this.init();
-
-  addRule(field, rule) {
-    if (!this.rules.has(field)) {
-      this.rules.set(field, []);
-
-    this.rules.get(field).push(rule);
-=======
   ...options
-    
-
-
-
-
-
-
 };
-    
     this.rules = new Map();
     this.errors = new Map();
     this.init()}
-
   addRule(field, rule) {
     if (!this.rules.has(field)) {
       this.rules.set(field, [])}
     this.rules.get(field).push(rule)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   validateField(field) {
     const value = this.form[field]?.value;
     const fieldErrors = [];
-
     for (const result = rule(value, this.form);
       if (result !== true) {
-<<<<<<< HEAD
-        fieldErrors.push(result);
-
-
-    this.errors.set(field, fieldErrors);
-    this.updateFieldUI(field);
-    return fieldErrors.length === 0;
-
-  validateForm() {
-    let isValid = true;
-    for (const field of this.rules.keys()) {
-      if (!this.validateField(field)) {
-        isValid = false;
-
-
-    return isValid;
-
-  updateFieldUI(field) {
-    const fieldElement = this.form[field];
-=======
         fieldErrors.push(result)}
     }
-
     this.errors.set(field, fieldErrors);
     this.updateFieldUI(field);
     return fieldErrors.length === 0}
-
   validateForm() {
     let isValid = true;
     for (const fieldElement = this.form[field];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const errors = this.errors.get(field) || [];
-
     if (errors.length > 0) {
       fieldElement.classList.add('error');
       this.showFieldErrors(field, errors)} else {
       fieldElement.classList.remove('error');
-<<<<<<< HEAD
-      this.hideFieldErrors(field);
-
-=======
       this.hideFieldErrors(field)}
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   showFieldErrors(field, errors) {
     // Implementation for showing field-specific errors
-
   hideFieldErrors(field) {
     // Implementation for hiding field-specific errors
-
   init() {
     if (this.options.validateOnBlur) {
       this.form.addEventListener('blur', (e) => {
         if (e.target.name) {
-<<<<<<< HEAD
-          this.validateField(e.target.name);
-
-      }, true);
-=======
           this.validateField(e.target.name)}
       }, true)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     if (this.options.validateOnSubmit) {
       this.form.addEventListener('submit', (e) => {
         if (!this.validateForm()) {
-<<<<<<< HEAD
-          e.preventDefault();
-
-      });
-
-
-=======
           e.preventDefault()}
       })}
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }`,
         tags['javascript', 'forms', 'validation', 'class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-
 ];
-<<<<<<< HEAD
-const mockCodeAnalysis = [
-    {
-        id: '1',
-        snippetId: '1',
-        quality: 92,
-        performance: 88,
-        security: 95,
-        maintainability: 90,
-        suggestions[
-            'Consider adding request timeout handling',
-            'Add retry logic for failed requests',
-            'Implement request cancellation with AbortController'
-        ],
-        warnings[
-            'No input validation for URL parameter',
-            'Consider rate limiting for API calls'
-        ],
-        timestamp: '2024-01-15T10:30:00Z'
-    },
-    {
-        id: '2',
-        snippetId: '2',
-        quality: 85,
-        performance: 95,
-        security: 100,
-        maintainability: 88,
-        suggestions[
-            'Add vendor prefixes for better browser support',
-            'Consider using CSS custom properties for colors',
-            'Add animation performance optimizations'
-        ],
-        warnings[],
-        timestamp: '2024-01-10T14:20:00Z'
-
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockAIGenerations = [
     {
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',
         generatedCode: `import { useState, useEffect } from 'react';
-
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
-<<<<<<< HEAD
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
-=======
       // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return initialValue;
-
 =======
       return item ? JSON.parse(item) : initialValue} catch (error) {
       console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
-
   const setValue = (value: T | ((val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
-<<<<<<< HEAD
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
-
-=======
       // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
       console.error(\`Error setting localStorage key "\${key}":\`, error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return [storedValue, setValue] as const}`,
         language: 'typescript',
         confidence: 0.94,
@@ -370,7 +181,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 3: With custom serializer'
         ],
         timestamp: '2024-01-15T11:45:00Z'
-
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);
@@ -393,12 +203,7 @@ export function AdvancedAICodeGenerator() {
             case 'low': return 'text-green-500';
             case 'medium': return 'text-yellow-500';
             case 'high': return 'text-red-500';
-<<<<<<< HEAD
-            default: return 'text-gray-500';
-
-=======
             default: return 'text-gray-500'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getQualityColor = (score) => {
         if (score >= 90)
@@ -415,22 +220,10 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
   id: Date.now().toString(),
                 prompt: aiPrompt,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
-=======
                 generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
   generatedCode: `// Generated code for: ${aiPrompt
-
-
-
-
-
-
 }\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[
@@ -448,12 +241,7 @@ export function AdvancedAICodeGenerator() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
         <Code className="w-6 h-6"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
@@ -470,12 +258,7 @@ export function AdvancedAICodeGenerator() {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -498,7 +281,6 @@ export function AdvancedAICodeGenerator() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-zion-slate-light/50">
         <div className="flex items-center space-x-4">
@@ -530,7 +312,6 @@ export function AdvancedAICodeGenerator() {
           </button>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         <button onClick={() => setActiveTab('generator')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'generator'
@@ -558,7 +339,6 @@ export function AdvancedAICodeGenerator() {
           AI Generations
         </button>
       </div>
-
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
         {activeTab === 'generator' && (<div className="space-y-6">
@@ -593,7 +373,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>
             </div>
-
             {generatedCode && (<div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -613,7 +392,6 @@ export function AdvancedAICodeGenerator() {
                 </pre>
               </div>)}
           </div>)}
-
         {activeTab === 'snippets' && (<div className="space-y-4">
             {codeSnippets.map((snippet) => (<div key={snippet.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
@@ -660,7 +438,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analysis' && (<div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
@@ -708,7 +485,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>
             </div>
-
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
                 const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
@@ -749,7 +525,6 @@ export function AdvancedAICodeGenerator() {
                         {new Date(analysis.timestamp).toLocaleDateString()}
                       </span>
                     </div>
-
                     {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
                         <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
                           <CheckCircle className="w-4 h-4 inline mr-1"/>
@@ -761,7 +536,6 @@ export function AdvancedAICodeGenerator() {
                             </li>))}
                         </ul>
                       </div>)}
-
                     {analysis.warnings.length > 0 && (<div>
                         <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
                           <AlertCircle className="w-4 h-4 inline mr-1"/>
@@ -776,7 +550,6 @@ export function AdvancedAICodeGenerator() {
                   </div>)})}
             </div>
           </div>)}
-
         {activeTab === 'ai' && (<div className="space-y-4">
             {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-start justify-between mb-4">
@@ -809,11 +582,9 @@ export function AdvancedAICodeGenerator() {
                     </button>
                   </div>
                 </div>
-
                 <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-48 overflow-y-auto mb-3">
                   <code>{generation.generatedCode}</code>
                 </div>
-
                 {generation.alternatives.length > 0 && (<div>
                     <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Alternative Approaches:
@@ -827,9 +598,4 @@ export function AdvancedAICodeGenerator() {
               </div>))}
           </div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

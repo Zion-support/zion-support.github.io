@@ -14,16 +14,10 @@ export interface Service {
   link: string;
   icon: string;
   isPopular?: boolean;
-<<<<<<< HEAD
-  isNew?: boolean;
-=======
   isNew?: boolean}
-
 // Import enhanced services
 import { enhancedServices2025 } from './enhanced-2025-services';
 import { specializedIndustryServices } from './specialized-industry-services';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const services: Service[] = [
   // AI Services
   {
@@ -115,7 +109,6 @@ export const services: Service[] = [
     icon: '📊',
     isNew: true
   },
-
   // IT Services
   {
     id: 'managed-it-services',
@@ -205,7 +198,6 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cloud-migration',
     icon: '☁️'
   },
-
   // SAAS Services
   {
     id: 'project-management-platform',
@@ -295,7 +287,6 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/hr-management-system',
     icon: '👨‍💼'
   },
-
   // Development Services
   {
     id: 'web-development',
@@ -384,7 +375,6 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-development',
     icon: '🔌'
   },
-
   // Analytics Services
   {
     id: 'business-intelligence',
@@ -414,45 +404,31 @@ export const services: Service[] = [
     },
     link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
-
 ];
-
 // Enhanced Services from 2025
 export const enhancedServices = enhancedServices2025;
-
 // Specialized Industry Services
 export const specializedServices = specializedIndustryServices;
-
 // Combined Services Array
 export const allServices = [
   ...services,
   ...enhancedServices2025,
   ...specializedIndustryServices
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return allServices.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return allServices.filter(service => service.isPopular);
 };
-
 export const getNewServices = () => {
-<<<<<<< HEAD
-  return services.filter(service => service.isNew);
-};}}
-=======
   return allServices.filter(service => service.isNew);
 };
-
 export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry);
 };
-
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

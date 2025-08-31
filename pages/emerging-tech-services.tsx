@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState  } from 'react.ts';
-import { EMERGING_TECH_SERVICES_2027  } from "../data/emergingTechServices2027";
-
-const EmergingTechServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-=======
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
-
 const EmergingTechServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
-
   const categories = [;
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },;
     { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },;
@@ -26,12 +14,10 @@ const EmergingTechServices: NextPage = () => {;
     { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },;
     { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' };
   ];
-
   const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
-
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
@@ -41,44 +27,12 @@ const EmergingTechServices: NextPage = () => {;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
-<<<<<<< HEAD
-        return 0;
-
-=======
         return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
-
-<<<<<<< HEAD
-  const getInnovationColor = (level: string) => {;
-    switch (level) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'from-red-500 to-pink-600';
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
-      case 'Advanced': return 'from-blue-500 to-cyan-600';
-<<<<<<< HEAD
-      default: return 'from-gray-500 to-gray-600';
-
-=======
       default: return 'from-gray-500 to-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
-<<<<<<< HEAD
-  const getBadgeColor = (badge: string) => {;
-    switch (badge) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
-<<<<<<< HEAD
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-
-=======
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -87,7 +41,6 @@ const EmergingTechServices: NextPage = () => {;
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <Helmet>
         <title>Emerging Tech Services 2027 - Zion Tech Group | Revolutionary Technology Solutions</title>
         <meta name="description" content="Discover the future of technology with Zion Tech Group's revolutionary emerging tech services. From quantum computing to biocomputing, we're pioneering the next generation of innovation." />
@@ -95,7 +48,6 @@ const EmergingTechServices: NextPage = () => {;
         <meta name="author" content="Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/emerging-tech-services" />
       </Helmet>
-
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -121,7 +73,6 @@ const EmergingTechServices: NextPage = () => {;
             </div>
           </div>
         </div>
-
         {/* Search and Filter Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-400/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -138,21 +89,14 @@ const EmergingTechServices: NextPage = () => {;
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-
             {/* Category Filter */}
             <div className="relative">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-
-                {categories.map((category) => (
-=======
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
                 {categories.map((category)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -162,14 +106,12 @@ const EmergingTechServices: NextPage = () => {;
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
-
             {/* Sort By */}
             <div className="relative">
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -180,7 +122,6 @@ const EmergingTechServices: NextPage = () => {;
             </div>
           </div>
         </div>
-
         {/* Category Pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
@@ -192,12 +133,10 @@ const EmergingTechServices: NextPage = () => {;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-
               {category.name}
             </button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sortedServices.map((service, index)  => (
@@ -205,7 +144,6 @@ const EmergingTechServices: NextPage = () => {;
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
@@ -213,18 +151,15 @@ const EmergingTechServices: NextPage = () => {;
                   {service.badge}
                 </span>
               </div>
-
               {/* Service Title and Description */}
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-
               {/* Innovation Level */}
               <div className="mb-4">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} text-white`}>
                   {service.innovationLevel}
                 </span>
               </div>
-
               {/* Pricing */}
               <div className="mb-4">
                 <div className="text-2xl font-bold text-blue-400">
@@ -235,13 +170,11 @@ const EmergingTechServices: NextPage = () => {;
                   ${service.pricing.yearly.toLocaleString()}/year
                 </div>
               </div>
-
               {/* ROI */}
               <div className="mb-4">
                 <div className="text-sm text-gray-400">Expected ROI</div>
                 <div className="text-lg font-bold text-green-400">{service.roi}</div>
               </div>
-
               {/* Key Features */}
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
@@ -259,13 +192,11 @@ const EmergingTechServices: NextPage = () => {;
                   )}
                 </div>
               </div>
-
               {/* Market Size */}
               <div className="mb-4">
                 <div className="text-sm text-gray-400">Market Size</div>
                 <div className="text-sm font-medium text-white">{service.marketSize}</div>
               </div>
-
               {/* Contact Info */}
               <div className="border-t border-white/20 pt-4 mb-4">
                 <div className="text-xs text-gray-400 mb-2">Contact Information</div>
@@ -275,18 +206,15 @@ const EmergingTechServices: NextPage = () => {;
                   <div>🌐 {service.contactInfo.website}</div>
                 </div>
               </div>
-
               {/* CTA Button */}
               <a
                 href={service.link}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-
                 Learn More
               </a>
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-blue-400/30">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -299,22 +227,12 @@ const EmergingTechServices: NextPage = () => {;
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-
               📞 Call +1 (302) 464-0950
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -322,6 +240,4 @@ const EmergingTechServices: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default EmergingTechServices;}}}

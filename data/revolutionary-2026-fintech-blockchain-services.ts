@@ -36,12 +36,7 @@ export interface Revolutionary2026FintechBlockchainService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [
   // Autonomous Supply Chain Optimization AI
   {
@@ -302,5 +297,4 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     customers: 123,
     rating: 4.9,
     reviews: 89
-
 ];}}

@@ -43,9 +43,7 @@ const valueMetrics = [
     value: "99.9%",
     description: "Enterprise-grade security with zero compromise",
     color: "from-red-500 to-pink-600"
-
 ];
-
 const competitiveAdvantages = [
   {
     title: "AI-Powered Intelligence",
@@ -70,9 +68,7 @@ const competitiveAdvantages = [
     description: "Round-the-clock technical support from certified professionals and AI assistants",
     icon: <Users className="w-6 h-6" />,
     color: "from-orange-500 to-red-600"
-
 ];
-
 const marketComparison = [
   {
     category: "AI Business Intelligence",
@@ -97,9 +93,7 @@ const marketComparison = [
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
-
 ];
-
 const successStories = [
   {
     comp: "TechCorp Solutions",
@@ -124,9 +118,7 @@ const successStories = [
     solution: "AI Financial Analyst Pro",
     results: "Automated 90% of reporting, improved accuracy by 99.5%",
     roi: "400% in 6 months"
-
 ];
-
 export function ValuePropositionShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -135,19 +127,10 @@ export function ValuePropositionShowcase() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-
-
   };
-
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
       y: 0,
@@ -155,19 +138,10 @@ export function ValuePropositionShowcase() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-
-
   };
-
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
-
-
-
-
-
-
 },
     visible: {
       scale: 1,
@@ -175,10 +149,7 @@ export function ValuePropositionShowcase() {
       transition: {
         duration: 0.4,
         ease: "easeOut"
-
-
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,25 +159,12 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition={{ duration: 0.6 }}
-
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Unmatched Value & ROI
           </h2>
@@ -215,25 +173,21 @@ export function ValuePropositionShowcase() {
             exceptional value with proven returns that transform your business operations.
           </p>
         </motion.div>
-
         {/* Value Metrics */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-
           {valueMetrics.map((metric, index) => (
             <motion.div
               key={index}
               className="text-center"
               variants={itemVariants}
-
               <motion.div
                 className={`w-20 h-20 bg-gradient-to-r ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-white`}
                 variants={cardVariants}
                 whileHover={{ scale: 1.1 }}
-
                 {metric.icon}
               </motion.div>
               <h3 className="text-2xl font-bold text-white mb-2">{metric.value}</h3>
@@ -242,48 +196,22 @@ export function ValuePropositionShowcase() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Competitive Advantages */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
           </h3>
@@ -293,22 +221,11 @@ export function ValuePropositionShowcase() {
                 key={index}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
-
-=======
                 whileHover = {
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
   0.3)" 
-
-
-
-
-
-
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
                   {advantage.icon}
                 </div>
@@ -318,48 +235,22 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
-
         {/* Market Comparison */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Pricing Analysis
           </h3>
@@ -370,7 +261,6 @@ export function ValuePropositionShowcase() {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover={{ y: -3 }}
-
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
                   <div className="lg:col-span-1">
                     <h4 className="text-lg font-bold text-white mb-2">{comparison.category}</h4>
@@ -381,7 +271,6 @@ export function ValuePropositionShowcase() {
                       </div>
                     </div>
                   </div>
-
                   <div className="lg:col-span-2">
                     <div className="text-zion-cyan-light text-sm mb-2">Competitors:</div>
                     <div className="space-y-1">
@@ -393,13 +282,11 @@ export function ValuePropositionShowcase() {
                       ))}
                     </div>
                   </div>
-
                   <div className="lg:col-span-1 text-center">
                     <div className="text-zion-cyan-light text-sm mb-1">Our Price:</div>
                     <div className="text-2xl font-bold text-zion-cyan">{comparison.ourPricing}</div>
                     <div className="text-green-400 text-sm font-medium">{comparison.savings} savings</div>
                   </div>
-
                   <div className="lg:col-span-1">
                     <div className="text-zion-cyan-light text-sm mb-2">Key Advantage:</div>
                     <p className="text-white text-sm">{comparison.advantage}</p>
@@ -409,48 +296,22 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
-
         {/* Success Stories */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.7 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real Success Stories
           </h3>
@@ -461,23 +322,18 @@ export function ValuePropositionShowcase() {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
-
                 <div className="mb-4">
                   <h4 className="text-lg font-bold text-white mb-1">{story.comp}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
                 </div>
-
                 <div className="mb-4">
                   <h5 className="text-zion-cyan font-semibold mb-2">Challenge:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.challenge}</p>
-
                   <h5 className="text-zion-cyan font-semibold mb-2">Solution:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.solution}</p>
-
                   <h5 className="text-zion-cyan font-semibold mb-2">Results:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.results}</p>
                 </div>
-
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-3 rounded-lg border border-green-500/30">
                   <div className="text-center">
                     <div className="text-green-400 font-bold text-lg">{story.roi}</div>
@@ -488,48 +344,22 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           className="text-center"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience Unmatched Value?
@@ -542,13 +372,11 @@ export function ValuePropositionShowcase() {
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-
                 Start Your Transformation
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"
-
                 Call: +1 302 464 0950
               </a>
             </div>
@@ -560,9 +388,4 @@ export function ValuePropositionShowcase() {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}}}}}}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -53,7 +53,6 @@ export default function FAQ() {
         {
             question: "How can I get started on Zion?",
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
-
     ];
     return (<>
       <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
@@ -99,9 +98,4 @@ export default function FAQ() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -36,12 +36,7 @@ export interface Revolutionary2028AIAutomationService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomationService[] = [
   // AI-Powered Autonomous Manufacturing
   {
@@ -302,5 +297,4 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     customers: 420,
     rating: 4.8,
     reviews: 320
-
 ];}}

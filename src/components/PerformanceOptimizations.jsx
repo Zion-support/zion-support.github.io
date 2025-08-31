@@ -40,51 +40,19 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
                 top: (startIndex + index) * itemHeight,
                 height: itemHeight,
                 width: '100%'
-<<<<<<< HEAD
-
-        }));
-    }, [items, scrollTop, itemHeight, containerHeight]);
-=======
             }
         }))}, [items, scrollTop, itemHeight, containerHeight]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleScroll = useCallback((e) => {
-<<<<<<< HEAD
-        setScrollTop(e.currentTarget.scrollTop)}, []);
-    return (<div style = {
-  { height: containerHeight,
-  overflow: 'auto' 
-
-}} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
-      <div style = {
-  { height: items.length * itemHeight,
-  position: 'relative' 
-
-}}>
-=======
         setScrollTop(e.currentTarget.scrollTop);
     }, []);
     return (<div style = {
   { height: containerHeight,
   overflow: 'auto' 
-
-
-
-
-
-
 }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
       <div style = {
   { height: items.length * itemHeight,
   position: 'relative' 
-
-
-
-
-
-
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">
             <div className="flex items-center justify-between">
               <span className="text-zion-slate-light">{item.title}</span>
@@ -104,16 +72,10 @@ export function PerformanceOptimizations() {
         { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
     ]);
     const handleItemClick = useCallback((item) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Item clicked:', item);
-=======
         // // // // // // // console.log('Item clicked:', item);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
 =======
         console.log('Item clicked:', item)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
                 id: Date.now(),
@@ -130,7 +92,6 @@ export function PerformanceOptimizations() {
           Advanced performance features for better user experience
         </p>
       </div>
-
       {/* Memoized Data Grid */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -143,7 +104,6 @@ export function PerformanceOptimizations() {
         </div>
         <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
       </div>
-
       {/* Virtual Scrolling */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -155,7 +115,6 @@ export function PerformanceOptimizations() {
             value: Math.floor(Math.random() * 1000)
         }))} itemHeight={60} containerHeight={400}/>
       </div>
-
       {/* Lazy Loading */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -164,14 +123,12 @@ export function PerformanceOptimizations() {
         <button onClick={() => setShowExpensive(!showExpensive)} className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors">
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
-
         {showExpensive && (<Suspense fallback={<LoadingSpinner />}>
             <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
               <LazyExpensiveComponent />
             </div>
           </Suspense>)}
       </div>
-
       {/* Performance Metrics */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -192,9 +149,4 @@ export function PerformanceOptimizations() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -2,173 +2,8 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight export default function ServicesOverview() {
-=======
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    const serviceCategories = [
-        {
-            name: "AI & Machine Learning",
-            description: "Cutting-edge artificial intelligence solutions for business transformation",
-            icon: Brain,
-            color: "from-purple-600 to-blue-600",
-            services[
-                {
-                    name: "AI Strategy & Consulting",
-                    description: "Strategic guidance on implementing AI solutions",
-                    price: "From $2,500",
-                    href: "/services/ai"
-                },
-                {
-                    name: "Machine Learning Development",
-                    description: "Custom ML models and algorithms",
-                    price: "From $5,000",
-                    href: "/services/ai"
-                },
-                {
-                    name: "AI-Powered Applications",
-                    description: "Intelligent automation and insights",
-                    price: "From $8,500",
-                    href: "/services/ai"
-
-            ]
-        },
-        {
-            name: "Data Analytics & BI",
-            description: "Transform raw data into actionable business intelligence",
-            icon: Database,
-            color: "from-blue-600 to-indigo-600",
-            services[
-                {
-                    name: "Business Intelligence & Reporting",
-                    description: "Interactive dashboards and automated reporting",
-                    price: "From $3,500/month",
-                    href: "/services/data-analytics"
-                },
-                {
-                    name: "Predictive Analytics & Forecasting",
-                    description: "Machine learning for future insights",
-                    price: "From $5,000/month",
-                    href: "/services/data-analytics"
-                },
-                {
-                    name: "Data Engineering & ETL",
-                    description: "Robust data pipelines and warehouses",
-                    price: "From $4,500/month",
-                    href: "/services/data-analytics"
-
-            ]
-        },
-        {
-            name: "IoT & Edge Computing",
-            description: "Connected ecosystems and real-time edge processing",
-            icon: Wifi,
-            color: "from-green-600 to-emerald-600",
-            services[
-                {
-                    name: "IoT Device Management Platform",
-                    description: "Comprehensive IoT device management",
-                    price: "From $4,200/month",
-                    href: "/services/iot-edge-computing"
-                },
-                {
-                    name: "Edge Computing Infrastructure",
-                    description: "Real-time data processing at the edge",
-                    price: "From $5,500/month",
-                    href: "/services/iot-edge-computing"
-                },
-                {
-                    name: "Smart City & Industrial IoT",
-                    description: "IoT solutions for smart cities and manufacturing",
-                    price: "From $6,500/month",
-                    href: "/services/iot-edge-computing"
-
-            ]
-        },
-        {
-            name: "Blockchain & Web3",
-            description: "Decentralized applications and blockchain solutions",
-            icon: LinkIcon,
-            color: "from-purple-600 to-indigo-600",
-            services[
-                {
-                    name: "Smart Contract Development",
-                    description: "Secure, audited smart contracts",
-                    price: "From $8,500/project",
-                    href: "/services/blockchain-web3"
-                },
-                {
-                    name: "DeFi Platform Development",
-                    description: "Complete DeFi platforms and protocols",
-                    price: "From $25,000/project",
-                    href: "/services/blockchain-web3"
-                },
-                {
-                    name: "NFT Marketplace & Collections",
-                    description: "Custom NFT platforms and generative art",
-                    price: "From $12,000/project",
-                    href: "/services/blockchain-web3"
-
-            ]
-        },
-        {
-            name: "DevOps & Cloud",
-            description: "Modern software delivery and cloud infrastructure",
-            icon: Cloud,
-            color: "from-orange-600 to-red-600",
-            services[
-                {
-                    name: "Cloud Migration & Strategy",
-                    description: "Multi-cloud strategy and migration",
-                    price: "From $8,500/project",
-                    href: "/services/devops-cloud"
-                },
-                {
-                    name: "CI/CD Pipeline Development",
-                    description: "Automated software delivery pipelines",
-                    price: "From $6,500/project",
-                    href: "/services/devops-cloud"
-                },
-                {
-                    name: "Container Orchestration & Kubernetes",
-                    description: "Enterprise-grade container management",
-                    price: "From $7,500/project",
-                    href: "/services/devops-cloud"
-
-            ]
-        },
-        {
-            name: "Cybersecurity",
-            description: "Advanced security solutions and threat protection",
-            icon: Shield,
-            color: "from-red-600 to-pink-600",
-            services[
-                {
-                    name: "Security Assessment & Auditing",
-                    description: "Comprehensive security evaluations",
-                    price: "From $5,000",
-                    href: "/services/cybersecurity"
-                },
-                {
-                    name: "Threat Detection & Response",
-                    description: "Real-time security monitoring",
-                    price: "From $4,500/month",
-                    href: "/services/cybersecurity"
-                },
-                {
-                    name: "Compliance & Governance",
-                    description: "Regulatory compliance and security frameworks",
-                    price: "From $6,000/month",
-                    href: "/services/cybersecurity"
-
-            ]
-
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },
@@ -181,18 +16,10 @@ export default function ServicesOverview() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -200,12 +27,9 @@ export default function ServicesOverview() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-
-
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -219,7 +43,6 @@ export default function ServicesOverview() {
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -234,7 +57,6 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -244,7 +66,6 @@ export default function ServicesOverview() {
               Explore our comprehensive range of technology solutions organized by category
             </p>
           </motion.div>
-
           <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {serviceCategories.map((category, index) => (<motion.div key={category.name} variants={itemVariants} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                 <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
@@ -258,7 +79,6 @@ export default function ServicesOverview() {
                     </div>
                   </div>
                 </div>
-
                 <div className="p-8">
                   <div className="grid md:grid-cols-3 gap-6">
                     {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
@@ -273,7 +93,6 @@ export default function ServicesOverview() {
                         </div>
                       </div>))}
                   </div>
-
                   <div className="mt-8 text-center">
                     <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}>
                       Explore All {category.name} Services
@@ -285,7 +104,6 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
-
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -295,7 +113,6 @@ export default function ServicesOverview() {
               We combine deep technical expertise with business acumen to deliver solutions that drive real value
             </p>
           </motion.div>
-
           <motion.div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={itemVariants} className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -306,7 +123,6 @@ export default function ServicesOverview() {
                 Certified professionals with deep expertise across multiple technology domains
               </p>
             </motion.div>
-
             <motion.div variants={itemVariants} className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-green-600"/>
@@ -316,7 +132,6 @@ export default function ServicesOverview() {
                 Track record of successful implementations and measurable business outcomes
               </p>
             </motion.div>
-
             <motion.div variants={itemVariants} className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-purple-600"/>
@@ -329,7 +144,6 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -349,9 +163,4 @@ export default function ServicesOverview() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,4 @@
 export interface UltimateInnovativeService {
-
   id: string;
   title: string;
   description: string;
@@ -29,12 +28,7 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  caseStudies?: string[];
-=======
   caseStudies?: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const SERVICE_CATEGORIES = [
   'AI & Automation',
   'Quantum Computing',
@@ -47,20 +41,7 @@ export const SERVICE_CATEGORIES = [
   'Space Technology',;
   'Green Technology';
 ];
-
 export const SERVICE_SUBCATEGORIES = {
-  <<<<<<< HEAD
-  'AI & Automation'['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
-  'Quantum Computing'['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
-  'Blockchain & Web3'['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
-  'Cybersecurity'['Zero Trust Architecture', 'Threat Intelligence', 'Incident Response', 'Compliance Automation'],
-  'IoT & Edge Computing'['Edge AI', 'Industrial IoT', 'Smart Cities', 'Connected Devices'],
-  'Metaverse & AR/VR'['Virtual Worlds', 'Augmented Reality', 'Digital Twins', 'Virtual Events'],
-  'Robotics & Automation'['Autonomous Systems', 'Collaborative Robots', 'Service Robots', 'Industrial Automation'],
-  'Biotechnology'['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
-  'Space Technology'['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
-  'Green Technology'['Renewable Energy', 'Carbon Capture', 'Sustainable Materials', 'Clean Transportation']
-=======
   'AI & Automation': ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
   'Quantum Computing': ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
   'Blockchain & Web3': ['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
@@ -77,15 +58,7 @@ export const SERVICE_SUBCATEGORIES = {
   ;
   'Clean Transportation'];
 ;
-
-
-
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-
 };
-
 export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -214,13 +187,8 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       integrations['Research Platforms', 'Cloud Services', 'Scientific Instruments', 'AI Frameworks'],
       apiEndpoints: 75,
       uptime: '99.9%',
-<<<<<<< HEAD
-      security: ['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
-
-=======
       security['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
   {
     id: 'blockchain-autonomous-ecosystem',
@@ -275,7 +243,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'quantum-cybersecurity-suite',
@@ -330,7 +297,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'iot-edge-intelligence-platform',
@@ -385,7 +351,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'metaverse-creation-platform',
@@ -440,7 +405,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'autonomous-robotics-platform',
@@ -495,7 +459,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'biotech-ai-platform',
@@ -550,7 +513,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'space-tech-platform',
@@ -605,7 +567,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
   },
   {
     id: 'green-tech-optimization-platform',
@@ -660,6 +621,4 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
-
 ];}}}}}}}}}}}

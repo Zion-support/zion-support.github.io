@@ -1,8 +1,6 @@
 import { ProductListing  } from '@/types/listings';
-
 // Emerging Technology Services 2030 - Zion Tech Group
 // Next-generation technology solutions for the future
-
 export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   // Quantum Internet Infrastructure
   {
@@ -35,7 +33,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "16-20 weeks",
     integrations["Quantum Computers", "Fiber Networks", "Quantum Repeaters", "Quantum Memory", "Classical Networks"]
   },
-
   // Neuromorphic Computing Platform
   {
     id: "neuromorphic-computing-platform",
@@ -67,7 +64,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "14-18 weeks",
     integrations["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]
   },
-
   // DNA Data Storage Platform
   {
     id: "dna-data-storage-platform",
@@ -99,7 +95,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "12-16 weeks",
     integrations["DNA Synthesizers", "Sequencing Machines", "Data Encoding", "Storage Systems", "Retrieval Tools"]
   },
-
   // Fusion Energy Management Platform
   {
     id: "fusion-energy-management-platform",
@@ -131,7 +126,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "20-24 weeks",
     integrations["Fusion Reactors", "Power Grids", "Energy Storage", "Monitoring Systems", "Control Systems"]
   },
-
   // Holographic Display Technology
   {
     id: "holographic-display-technology",
@@ -163,7 +157,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "10-14 weeks",
     integrations["3D Content", "Display Systems", "Content Creation Tools", "Streaming Platforms", "VR/AR Systems"]
   },
-
   // Biometric Authentication Platform
   {
     id: "biometric-authentication-platform",
@@ -195,7 +188,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     setupTime: "6-8 weeks",
     integrations["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]
   },
-
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
@@ -225,12 +217,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     competitors["DJI", "Skydio", "Autel Robotics"],
     roi: "800% within 20 months",
     setupTime: "8-12 weeks",
-<<<<<<< HEAD
-    integrations: ["Drone Hardware", "Navigation Systems", "Communication Networks", "Ground Control Stations", "Analytics Platforms"]
-
-];}
-=======
     integrations["Drone Hardware", "Navigation Systems", "Communication Networks", "Ground Control Stations", "Analytics Platforms"]
   }
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

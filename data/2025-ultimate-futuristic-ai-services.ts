@@ -36,12 +36,7 @@ export interface UltimateFuturisticAIService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
   // AI Consciousness Evolution Platform
   {
@@ -510,5 +505,4 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     customers: 123,
     rating: 4.7,
     reviews: 67
-
 ];}}

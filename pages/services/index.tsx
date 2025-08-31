@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { servicesCatalog } from '../../src/data/servicesCatalog';
-
 export default function ServicesIndex(...args[]):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -9,7 +8,6 @@ export default function ServicesIndex(...args[]):  {
         <title>Services — Zion</title>
         <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
       </Helmet>
-
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
@@ -18,7 +16,6 @@ export default function ServicesIndex(...args[]):  {
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0" /></div>
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
-
       <header className="relative z-10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <div className="text-2xl font-bold tracking-wide">
@@ -32,7 +29,6 @@ export default function ServicesIndex(...args[]):  {
           </div>
         </nav>
       </header>
-
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
@@ -42,7 +38,6 @@ export default function ServicesIndex(...args[]):  {
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>
           <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
         </section>
-
         {/* Expanded catalog pulled from data with prices and links */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="mb-6 text-2xl font-bold">More Services</h2>
@@ -99,7 +94,6 @@ export default function ServicesIndex(...args[]):  {
             ))}
           </div>
         </section>
-
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
             <h3 className="text-2xl font-bold">Need something custom?</h3>
@@ -107,23 +101,10 @@ export default function ServicesIndex(...args[]):  {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </main>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div></div></div></div></div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

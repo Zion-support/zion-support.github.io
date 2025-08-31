@@ -27,18 +27,10 @@ async function prerender() {
   const template = readFileSync(resolve('dist/index.html'), 'utf8');
   const rendered = template.replace('<!--app-html-->', html);
   writeFileSync(resolve('dist/index.html'), rendered);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // // // console.log('Pre-rendered homepage to dist/index.html');
-
-prerender().catch((err) => {
-  // // // console.error('Error prerendering:', err);
-=======
   // // // // // // // console.log('Pre-rendered homepage to dist/index.html');
 }
 prerender().catch((err) => {
   // // // // // // // console.error('Error prerendering:', err);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }
@@ -47,4 +39,3 @@ prerender().catch((err) => {
 prerender().catch((err) => {
   console.error('Error prerendering:', err);
   process.exit(1)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

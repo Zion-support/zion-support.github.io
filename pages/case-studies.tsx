@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap export default function CaseStudies() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
-
-
 export default function CaseStudies(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const caseStudies = [
 		{
 			id: 1,
@@ -78,11 +70,8 @@ export default function CaseStudies(...args[]):  {
 			duration: '4 months',
 			team: 6,
 			rating: 5
-
 	]
-
 	const industries = ['All', 'Technology', 'Healthcare', 'Manufacturing', 'Financial Services', 'Retail', 'Education']
-
 	return (
 		<>
 			{/* Hero Section */}
@@ -98,7 +87,6 @@ export default function CaseStudies(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Industry Filter */}
 			<section className="py-12 border-b border-gray-200">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -107,14 +95,12 @@ export default function CaseStudies(...args[]):  {
 							<button
 								key={industry}
 								className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors"
-
 								{industry}
 							</button>
 						))}
 					</div>
 				</div>
 			</section>
-
 			{/* Featured Case Study */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -146,7 +132,6 @@ export default function CaseStudies(...args[]):  {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -165,7 +150,6 @@ export default function CaseStudies(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Case Studies Grid */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -204,7 +188,6 @@ export default function CaseStudies(...args[]):  {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-
 									View Details <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -212,7 +195,6 @@ export default function CaseStudies(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Success Metrics */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -242,7 +224,6 @@ export default function CaseStudies(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Process */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -292,7 +273,6 @@ export default function CaseStudies(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-blue-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -305,24 +285,13 @@ export default function CaseStudies(...args[]):  {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-
 								Get Started Today
 							</Link>
 							<Link
 								to="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-
 								Explore Our Services →
 							</Link>
-<<<<<<< HEAD
-						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 						</div>;
 					</div>;
 				</div>;
@@ -330,4 +299,3 @@ export default function CaseStudies(...args[]):  {
 		</>;
 	);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

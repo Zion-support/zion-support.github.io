@@ -23,7 +23,6 @@ export function TestimonialsSection() {
             content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
             rating: 5,
             avatar: '👩‍🔬'
-
     ];
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
@@ -39,7 +38,6 @@ export function TestimonialsSection() {
             Don't just take our word for it - hear from the businesses we've helped transform
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (<div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center mb-4">
@@ -51,20 +49,13 @@ export function TestimonialsSection() {
                   <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.comp}</p>
                 </div>
               </div>
-
               <div className="mb-4">
                 {renderStars(testimonial.rating)}
               </div>
-
               <p className="text-gray-700 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
             </div>))}
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

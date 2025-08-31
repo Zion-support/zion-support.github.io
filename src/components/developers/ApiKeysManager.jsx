@@ -1,16 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { useApiKeys } from '../../hooks/useApiKeys';
-import { Button } from '../ui/button';
-import { Checkbox } from '../ui/checkbox';
-import { Label } from '../ui/label';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
-import CodeBlock from './CodeBlock';
-import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings export default function ApiKeysManager() {
-=======
 import { useApiKeys } from "../../hooks/useApiKeys";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
@@ -22,7 +10,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import CodeBlock from "./CodeBlock";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export default function ApiKeysManager() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [newKeyName, setNewKeyName] = useState('');
@@ -54,12 +41,7 @@ export default function ApiKeysManager() {
     if (loading) {
         return (<div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
@@ -70,7 +52,6 @@ export default function ApiKeysManager() {
           Create New API Key
         </Button>
       </div>
-
       {/* Create New API Key Dialog */}
       <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
         <DialogTrigger asChild>
@@ -83,13 +64,11 @@ export default function ApiKeysManager() {
               Create a new API key with specific permissions
             </DialogDescription>
           </DialogHeader>
-
           <div className="space-y-4">
             <div>
               <Label htmlFor="keyName" className="text-white">Key Name</Label>
               <input id="keyName" type="text" value={newKeyName} onChange={(e) => setNewKeyName(e.target.value)} placeholder="e.g., Production API Key" className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"/>
             </div>
-
             <div>
               <Label className="text-white">Permissions</Label>
               <div className="space-y-2 mt-2">
@@ -97,7 +76,6 @@ export default function ApiKeysManager() {
               </div>
             </div>
           </div>
-
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowCreateDialog(false)} className="border-zinc-700 text-white hover:bg-zinc-800">
               Cancel
@@ -108,7 +86,6 @@ export default function ApiKeysManager() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-
       {/* New API Key Display */}
       {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
           <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>
@@ -124,7 +101,6 @@ export default function ApiKeysManager() {
             I've Copied the Key
           </Button>
         </div>)}
-
       {/* API Keys List */}
       <div className="space-y-4">
         {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
@@ -138,12 +114,10 @@ export default function ApiKeysManager() {
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>
                 </div>
-
                 <div className="flex items-center gap-4 text-sm text-zinc-400">
                   <span>Created: {new Date(apiKey.createdAt).toLocaleDateString()}</span>
                   {apiKey.lastUsed && (<span>Last used: {new Date(apiKey.lastUsed).toLocaleDateString()}</span>)}
                 </div>
-
                 <div className="mt-2">
                   <span className="text-zinc-400 text-sm">Permissions: </span>
                   <div className="flex flex-wrap gap-1 mt-1">
@@ -153,12 +127,10 @@ export default function ApiKeysManager() {
                   </div>
                 </div>
               </div>
-
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" onClick={() => toggleApiKey(apiKey.id)} className="text-zinc-400 hover:text-white">
                   {apiKey.isActive ? <EyeOff className="h-4 w-4"/> : <Eye className="h-4 w-4"/>}
                 </Button>
-
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">
@@ -178,7 +150,6 @@ export default function ApiKeysManager() {
                 </DropdownMenu>
               </div>
             </div>
-
             {/* Key Preview */}
             <div className="mt-3 pt-3 border-t border-zinc-800">
               <Popover>
@@ -200,7 +171,6 @@ export default function ApiKeysManager() {
             </div>
           </div>))}
       </div>
-
       {/* Regenerate Confirmation Dialog */}
       <AlertDialog open={showRegenerateConfirm !== null} onOpenChange={() => setShowRegenerateConfirm(null)}>
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -217,19 +187,13 @@ export default function ApiKeysManager() {
             <AlertDialogAction onClick={() => {
             if (showRegenerateConfirm) {
                 regenerateApiKey(showRegenerateConfirm);
-<<<<<<< HEAD
-                setShowRegenerateConfirm(null);
-
-=======
                 setShowRegenerateConfirm(null)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }} className="bg-blue-600 hover:bg-blue-700">
               Regenerate Key
             </AlertDialogAction>
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-
       {/* Delete Confirmation Dialog */}
       <AlertDialog open={showDeleteConfirm !== null} onOpenChange={() => setShowDeleteConfirm(null)}>
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -246,21 +210,11 @@ export default function ApiKeysManager() {
             <AlertDialogAction onClick={() => {
             if (showDeleteConfirm) {
                 deleteApiKey(showDeleteConfirm);
-<<<<<<< HEAD
-                setShowDeleteConfirm(null);
-
-=======
                 setShowDeleteConfirm(null)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }} className="bg-red-600 hover:bg-red-700">
               Delete Key
             </AlertDialogAction>
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

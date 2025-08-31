@@ -36,12 +36,7 @@ export interface RevolutionaryAIService2026 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
   // AI Multimodal Fusion Platform
   {
@@ -302,5 +297,4 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     customers: 220,
     rating: 4.8,
     reviews: 134
-
 ];}}

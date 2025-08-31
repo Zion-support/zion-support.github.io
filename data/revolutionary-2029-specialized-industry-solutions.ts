@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionarySpecializedIndustryService2029 {
   id: string;
   name: string;
@@ -38,13 +37,9 @@ export interface RevolutionarySpecializedIndustryService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] = [
   // AI-Powered Healthcare Platform
   {
@@ -99,7 +94,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 18,
     isPopular: true
   },
-
   // Fintech Innovation Platform
   {
     id: 'fintech-innovation-platform',
@@ -150,17 +144,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     launchDate: '2025-01-08',
     customers: 41,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 320
-
-];
-
-export default revolutionarySpecializedIndustrySolutions2029;}}
-=======
     reviews: 25,
     isNew: true
   },
-
   // Smart Manufacturing Solutions
   {
     id: 'smart-manufacturing-solutions',
@@ -213,7 +199,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     rating: 4.7,
     reviews: 19
   },
-
   // Retail Technology Platform
   {
     id: 'retail-technology-platform',
@@ -267,7 +252,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     reviews: 22,
     isPopular: true
   },
-
   // Education Technology Platform
   {
     id: 'education-technology-platform',
@@ -320,7 +304,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     rating: 4.6,
     reviews: 31
   },
-
   // Legal Technology Platform
   {
     id: 'legal-technology-platform',
@@ -374,7 +357,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     reviews: 24,
     isNew: true
   },
-
   // Real Estate Technology Platform
   {
     id: 'real-estate-technology-platform',
@@ -427,7 +409,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     rating: 4.8,
     reviews: 20
   },
-
   // Transportation & Logistics Platform
   {
     id: 'transportation-logistics-platform',
@@ -481,7 +462,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     reviews: 18,
     isPopular: true
   },
-
   // Energy & Utilities Platform
   {
     id: 'energy-utilities-platform',
@@ -534,7 +514,6 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     rating: 4.8,
     reviews: 15
   },
-
   // Agriculture Technology Platform
   {
     id: 'agriculture-technology-platform',
@@ -589,23 +568,18 @@ export default revolutionarySpecializedIndustrySolutions2029;}}
     isNew: true
   }
 ];
-
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category);
 };
-
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular);
 };
-
 export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew);
 };
-
 export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

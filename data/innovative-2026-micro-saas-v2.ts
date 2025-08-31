@@ -36,12 +36,7 @@ export interface Innovative2026MicroSaasServiceV2 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -458,6 +453,5 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     customers: 75,
     rating: 4.9,
     reviews: 40
-
 ];
 }}

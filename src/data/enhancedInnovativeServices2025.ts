@@ -1,16 +1,9 @@
 export interface ServiceContact {
-
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-
-=======
   address: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface MicroSaasService {
-
   id: number;
   name: string;
   category: string;
@@ -30,14 +23,8 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string;
-
-=======
   trialPeriod: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface ITService {
-
   id: number;
   name: string;
   category: string;
@@ -54,14 +41,8 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-<<<<<<< HEAD
-  support: string;
-
-=======
   support: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export interface AIService {
-
   id: number;
   name: string;
   category: string;
@@ -80,12 +61,7 @@ export interface AIService {
   trainingData: string;
   compliance: string[];
   aiScore: number;
-<<<<<<< HEAD
-  useCases: string[];
-
-=======
   useCases: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -930,14 +906,6 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     marketPrice: "$2,999-8,999/month",
     competitors["ISARA", "PQShield", "Cryptosense"],
     roi: "600% within 18 months",
-<<<<<<< HEAD
-    setupTime: "24 hours",
-    integrations["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
-    freeTier: false,
-    trialPeriod: "7 days"
-<<<<<<< HEAD
-
-=======
   };
 =======;
     setupTime: "24 hours",;
@@ -945,8 +913,6 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: false,;
     trialPeriod: "7 days";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export default ENHANCED_INNOVATIVE_SERVICES_2025;
 }}}}}

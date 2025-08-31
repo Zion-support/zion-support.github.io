@@ -36,12 +36,7 @@ export interface Innovative2029MicroSaasService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
   reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [
   // AI & Machine Learning Services
   {
@@ -301,5 +296,4 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     customers: 23,
     rating: 4.7,
     reviews: 56
-
 ];}}

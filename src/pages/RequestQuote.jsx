@@ -14,7 +14,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
         canonical="https://ziontechgroup.com/request-quote"
       />
       <Header />
-
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -27,7 +26,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
-
           {/* Benefits Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
@@ -41,7 +39,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
@@ -53,7 +50,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
@@ -65,7 +61,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
@@ -78,7 +73,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
               </CardContent>
             </Card>
           </div>
-
           {/* Services Overview */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -101,7 +95,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">IT Infrastructure</CardTitle>
@@ -118,7 +111,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Strategic Consulting</CardTitle>
@@ -135,7 +127,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
@@ -154,7 +145,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
               </Card>
             </div>
           </div>
-
           {/* Quote Form Section */}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -165,10 +155,8 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
                 Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
               </p>
             </div>
-
             <QuoteRequestForm />
           </div>
-
           {/* Additional Information */}
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-white mb-6">
@@ -188,12 +176,6 @@ import {CheckCircle, Clock, Users, Zapexport default function RequestQuote() {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
-<<<<<<< HEAD
-  );
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

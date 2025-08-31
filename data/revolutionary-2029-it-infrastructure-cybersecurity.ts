@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionaryITInfrastructureService2029 {
   id: string;
   name: string;
@@ -38,13 +37,9 @@ export interface RevolutionaryITInfrastructureService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] = [
   // Zero Trust Network Access
   {
@@ -99,7 +94,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 22,
     isPopular: true
   },
-
   // Cloud FinOps Optimizer
   {
     id: 'cloud-finops-optimizer',
@@ -153,7 +147,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 35,
     isPopular: true
   },
-
   // AI-Powered Compliance Assistant
   {
     id: 'ai-compliance-assistant',
@@ -207,7 +200,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 24,
     isNew: true
   },
-
   // Advanced Threat Intelligence Platform
   {
     id: 'advanced-threat-intelligence',
@@ -260,7 +252,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     rating: 4.9,
     reviews: 18
   },
-
   // Quantum-Ready Infrastructure
   {
     id: 'quantum-ready-infrastructure',
@@ -314,7 +305,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 12,
     isNew: true
   },
-
   // Edge Computing Security
   {
     id: 'edge-computing-security',
@@ -365,16 +355,8 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     launchDate: '2025-01-18',
     customers: 31,
     rating: 4.7,
-<<<<<<< HEAD
-    reviews: 220
-
-];
-
-export default revolutionaryITInfrastructureCybersecurityServices2029;}}
-=======
     reviews: 19
   },
-
   // AI-Powered Network Monitoring
   {
     id: 'ai-network-monitoring',
@@ -427,7 +409,6 @@ export default revolutionaryITInfrastructureCybersecurityServices2029;}}
     rating: 4.6,
     reviews: 28
   },
-
   // DevSecOps Automation Platform
   {
     id: 'devsecops-automation',
@@ -481,7 +462,6 @@ export default revolutionaryITInfrastructureCybersecurityServices2029;}}
     reviews: 21,
     isPopular: true
   },
-
   // Data Privacy & Governance Platform
   {
     id: 'data-privacy-governance',
@@ -534,7 +514,6 @@ export default revolutionaryITInfrastructureCybersecurityServices2029;}}
     rating: 4.7,
     reviews: 16
   },
-
   // Hybrid Cloud Management
   {
     id: 'hybrid-cloud-management',
@@ -589,23 +568,18 @@ export default revolutionaryITInfrastructureCybersecurityServices2029;}}
     isNew: true
   }
 ];
-
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.category === category);
 };
-
 export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular);
 };
-
 export const getNewITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.isNew);
 };
-
 export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

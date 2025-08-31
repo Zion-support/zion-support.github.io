@@ -1,36 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-  innovativeMicroSaasServices2031,
-  innovativeITInfrastructureServices2031,
-  innovativeAIServices2031
-} from '../src/data/innovativeServices2031';
-import {
-  Brain,
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-=======
 import React from 'react.ts';
 import Head from 'next/head.ts';
 import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-<<<<<<< HEAD
- } from "../src/data/innovativeServices2031";
-import { Brain, 
-=======
 } from "../src/data/innovativeServices2031";
 import { 
   Brain, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
   CheckCircle, 
   TrendingUp, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Phone,
   Mail,
   Globe,
@@ -40,24 +19,11 @@ import {
   Target,
   Award,
   Clock
-<<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = () => {
-  const scrollToContact = () => {
-=======
  } from 'lucide-react';
-
-<<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
-  const scrollToContact = () => {;
-    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
-=======
 const InnovativeServicesShowcase2031: React.FC = () => {;
   const scrollToContact = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
   return (
     <>
       <Helmet>
@@ -66,7 +32,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
         <meta name="keywords" content="innovative services 2031, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2031" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -77,36 +42,30 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 Revolutionary Services 2031
               </span>
             </div>
-
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Starts Here</span>
             </h1>
-
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience Zion Tech Group's cutting-edge portfolio of innovative micro SAAS, IT infrastructure, and AI services designed to revolutionize your business in 2031 and beyond.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button
                 onClick={() => document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-
                 Explore Services
               </button>
             </div>
           </div>
         </section>
-
         {/* Services Overview */}
         <section id="services-overview" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
@@ -118,7 +77,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 Our comprehensive service portfolio is built on three foundational pillars, each designed to deliver breakthrough results and competitive advantages.
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {/* Micro SAAS Services */}
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
@@ -148,7 +106,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   </li>
                 </ul>
               </div>
-
               {/* IT Infrastructure Services */}
               <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-2xl border border-blue-500/30 backdrop-blur-sm">
                 <div className="text-center mb-6">
@@ -177,7 +134,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   </li>
                 </ul>
               </div>
-
               {/* AI Services */}
               <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 p-8 rounded-2xl border border-green-500/30 backdrop-blur-sm">
                 <div className="text-center mb-6">
@@ -209,7 +165,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
             </div>
           </div>
         </section>
-
         {/* Micro SAAS Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -221,7 +176,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 Transform your business operations with our cutting-edge micro SAAS platforms designed for the future.
               </p>
             </div>
-
             <div className="space-y-8">
               {innovativeMicroSaasServices2031.map((service) => (
                 <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
@@ -233,16 +187,13 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                         </span>
                         <span className="text-sm text-gray-400">{service.pricing}</span>
                       </div>
-
                       <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                       <p className="text-gray-300 mb-6">{service.description}</p>
-
                       <div className="flex items-center mb-6">
                         <span className="text-3xl font-bold text-white">${service.price.toLocaleString()}</span>
                         <span className="text-gray-400 ml-2">/month</span>
                         <span className="ml-4 text-sm text-gray-400">Market: {service.marketPrice}</span>
                       </div>
-
                       <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="text-center p-3 bg-white/5 rounded-lg">
                           <div className="text-sm text-gray-400">ROI</div>
@@ -253,7 +204,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                           <div className="text-white font-semibold">{service.setupTime}</div>
                         </div>
                       </div>
-
                       <div className="flex items-center space-x-4 mb-6">
                         <span className="text-sm text-gray-400">Innovation Level:</span>
                         <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white">
@@ -261,7 +211,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                         </span>
                       </div>
                     </div>
-
                     <div>
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
@@ -274,7 +223,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
                         <div className="space-y-2">
@@ -286,7 +234,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                           ))}
                         </div>
                       </div>
-
                       <div className="flex flex-wrap gap-2 mb-6">
                         {service.tags.slice(0, 4).map((tag, index) => (
                           <span key={index} className="px-2 py-1 bg-white/10 text-xs text-gray-300 rounded">
@@ -294,11 +241,9 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                           </span>
                         ))}
                       </div>
-
                       <button
                         onClick={scrollToContact}
                         className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-
                         Get Started
                       </button>
                     </div>
@@ -308,7 +253,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -320,7 +264,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 Let's discuss how our innovative services can revolutionize your operations and drive unprecedented growth.
               </p>
             </div>
-
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -334,7 +277,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <div className="text-gray-300">+1 302 464 0950</div>
                     </div>
                   </div>
-
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
@@ -344,7 +286,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <div className="text-gray-300">kleber@ziontechgroup.com</div>
                     </div>
                   </div>
-
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4">
                       <Globe className="w-6 h-6 text-white" />
@@ -354,7 +295,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <div className="text-gray-300">https://ziontechgroup.com</div>
                     </div>
                   </div>
-
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
@@ -365,7 +305,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                     </div>
                   </div>
                 </div>
-
                 <div className="mt-8 p-6 bg-white/5 rounded-xl border border-white/10">
                   <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech Group?</h4>
                   <ul className="space-y-2 text-gray-300">
@@ -388,7 +327,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                   </ul>
                 </div>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-6">Request a Consultation</h3>
                 <form className="space-y-6">
@@ -400,7 +338,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       placeholder="Your full name"
                     />
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Email</label>
                     <input
@@ -409,7 +346,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       placeholder="your.email@comp.com"
                     />
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
                     <input
@@ -418,7 +354,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       placeholder="Your comp name"
                     />
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Service Interest</label>
                     <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-500">
@@ -429,7 +364,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <option value="consultation">General Consultation</option>
                     </select>
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Message</label>
                     <textarea
@@ -438,11 +372,9 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       placeholder="Tell us about your project or requirements..."
                     ></textarea>
                   </div>
-
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-
                     Send Message
                   </button>
                 </form>
@@ -450,7 +382,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -464,24 +395,14 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
               <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-
                 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <a
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-
                 Visit Our Website
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </section>;
@@ -489,6 +410,4 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default InnovativeServicesShowcase2031;}

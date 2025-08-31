@@ -16,23 +16,11 @@ export default function WishlistPage() {
     useEffect(() => {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
-<<<<<<< HEAD
-            router.push('/login');
-
-=======
-<<<<<<< HEAD
-            router.push('/login')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    }, [user, isAuthLoading, router]);
-=======
             router('/login');
         }
     }, [user, isAuthLoading, navigate]);
-    
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
         return null; // Or a loading spinner
-
     const { items, dispatch } = useCart();
     const addToCart = (item) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
@@ -42,31 +30,17 @@ export default function WishlistPage() {
         dispatch({ type: 'SET_ITEMS', payload: cart })};
     const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {
         acc[p.id] = p;
-<<<<<<< HEAD
-        return acc;
-    }, { /* empty */ });
-    const talentMap = TALENT_PROFILES.reduce((acc, t) => {
-        acc[t.id] = t;
-        return acc;
-    }, { /* empty */ });
-=======
         return acc}, {});
     const talentMap = TALENT_PROFILES.reduce((acc, t) => {
         acc[t.id] = t;
         return acc}, {});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="container py-8">
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
       {loading ? (<p>Loading...</p>) : favorites.length === 0 ? (<p>No items saved.</p>) : (<div className="responsive-grid">
           {favorites.map(fav => {
                 if (fav.item_type === 'talent') {
                     const talent = talentMap[fav.item_id];
-<<<<<<< HEAD
-                    return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { /* empty */ }} onBook={() => { /* empty */ }} isAuthenticated={true}/>) : null;
-
-=======
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { }} onBook={() => { }} isAuthenticated={true}/>) : null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const item = productMap[fav.item_id];
                 return item ? (<div key={fav.item_id} className="relative">
                 <ProductListingCard listing={item}/>
@@ -75,9 +49,4 @@ export default function WishlistPage() {
                 </Button>
               </div>) : null})}
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

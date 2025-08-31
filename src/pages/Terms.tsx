@@ -1,22 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import {
-  FileText,
-  Shield,
-  Users,
-  Globe,
-  CheckCircle,
-=======
 import { SEO } from '@/components/SEO';
 import { 
   Shield, 
   FileText, 
   CheckCircle, 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   AlertTriangle,
   Users,
   Globe,
@@ -25,10 +13,6 @@ import {
   Mail,
   Phone,
   MapPin,
-<<<<<<< HEAD
-  Calendar
-import { SEO } from '../components/SEO';
-=======
   Calendar,
   CheckCircle,
   AlertTriangle,
@@ -40,21 +24,8 @@ import { SEO } from '../components/SEO';
   Brain,
   Cpu
 } from 'lucide-react';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
-
-const Terms: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function Terms() {
   const lastUpdated = 'December 15, 2024';
-
   const termsSections = [
     {
       title: 'Acceptance of Terms',
@@ -73,10 +44,6 @@ export default function Terms() {
     },
     {
       title: 'Intellectual Property',
-<<<<<<< HEAD
-      description: 'All content and technology remain the property of Zion Tech Group.'
-
-=======
       content: 'All content, software, and materials provided by Zion Tech Group are protected by intellectual property rights. Users may not copy, modify, or distribute our proprietary materials without permission.',
       icon: Lock
     },
@@ -90,9 +57,7 @@ export default function Terms() {
       content: 'Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
       icon: AlertTriangle
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const prohibitedActivities = [
     'Attempting to gain unauthorized access to our systems',
     'Using our services for illegal or harmful purposes',
@@ -101,7 +66,6 @@ export default function Terms() {
     'Sharing account credentials with unauthorized users',
     'Violating any applicable laws or regulations'
   ];
-
   const terminationConditions = [
     'Violation of these Terms of Service',
     'Non-payment of service fees',
@@ -110,7 +74,6 @@ export default function Terms() {
     'Failure to comply with legal requirements',
     'Mutual agreement to terminate services'
   ];
-
   const userObligations = [
     {
       obligation: 'Compliance',
@@ -125,21 +88,10 @@ export default function Terms() {
       description: 'Ensure all content submitted through our services meets our content standards.'
     },
     {
-<<<<<<< HEAD
-      obligation: 'Payment Terms',
-      description: 'Pay all fees and charges in accordance with agreed payment schedules.'
-    },
-    {
-      obligation: 'Confidentiality',
-      description: 'Maintain the confidentiality of any proprietary information shared with you.'
-
-=======
       obligation: 'Security',
       description: 'Maintain the security of your account credentials and report any suspicious activity.'
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const contactInfo = [
     {
       icon: Mail,
@@ -154,78 +106,24 @@ export default function Terms() {
       href: 'tel:+13024640950'
     },
     {
-<<<<<<< HEAD
-      level: 'Premium Support',
-      description: 'Dedicated support team and 24/7 emergency response',
-      response: '1-2 hours',
-      included: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       icon: MapPin,
       label: 'Address',
       value: '364 E Main St STE 1008, Middletown DE 19709',
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     }
   ];
-
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's Terms of Service to understand the rules and guidelines for using our AI-powered technology solutions and services."
         keywords="terms of service, Zion Tech Group, legal terms, service agreement, user responsibilities"
       />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-center"
-
-            <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <FileText className="w-4 h-4 mr-2" />
-              Legal Terms & Conditions
-=======
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
                 <FileText className="w-8 h-8 text-white" />
               </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Terms of Service
@@ -237,13 +135,6 @@ export default function Terms() {
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Terms Overview */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       {/* Key Terms Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -251,79 +142,44 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Key Terms Overview
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Terms Overview
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Understanding these fundamental terms helps ensure a smooth
               relationship between you and Zion Tech Group.
             </p>
           </motion.div>
-          
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {termsSections.map((section, index)  => (
 =======
-      
       <div className="relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
         <div className="relative z-10">
           {/* Header */}
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               <motion.div
-<<<<<<< HEAD
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <section.icon className="w-8 h-8 text-blue-400" />
-=======
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -332,113 +188,20 @@ export default function Terms() {
                   <FileText className="w-5 h-5 text-blue-400 mr-2" />
                   <span className="text-blue-400 font-medium">Legal Information</span>
                 </div>
-                
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   Terms of Service
                 </h1>
-                
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                   These terms govern your use of Zion Tech Group's services. Please read them carefully 
                   before using our AI-powered technology solutions and consulting services.
                 </p>
-                
                 <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
                   <Clock className="w-4 h-4" />
                   <span>Last updated: {lastUpdated}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             </div>
           </section>
-
-<<<<<<< HEAD
-      {/* User Obligations */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Your Obligations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              As a user of our services, you have certain responsibilities
-              that help ensure a secure and productive environment.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userObligations.map((obligation, index) => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-
-                <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
-                <p className="text-gray-300">{obligation.description}</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Prohibited Activities */}
-<<<<<<< HEAD
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -446,18 +209,12 @@ export default function Terms() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Prohibited Activities
-=======
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Calendar className="w-6 h-6 text-cyan-400" />
                 <span>Last Updated</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 To maintain a secure and professional environment, certain activities
@@ -472,22 +229,13 @@ export default function Terms() {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-
-=======
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
@@ -512,7 +260,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Service Levels */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -520,213 +267,61 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Service Levels & Support
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
               Prohibited Activities
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide different levels of support to meet your business needs
               and ensure optimal service delivery.
             </p>
           </motion.div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="grid md: grid-cols-2 gap-6">
               {prohibitedActivities.map((activity, index)  => (
                 <motion.div
                   key={index}
-<<<<<<< HEAD
-                  initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-}}
-                  whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                  viewport={{ once: true }}
-                  transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                  className="flex items-start space-x-3"
-=======
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
                     level.included ? 'border-blue-400/50' : 'border-slate-700/50'
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
-<<<<<<< HEAD
-
-                  <div className="text-center mb-4">
-                    <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
-                    {level.included && (
-                      <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">
-                        Included
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-gray-300 text-center mb-4">{level.description}</p>
-                  <div className="text-center">
-                    <span className="text-sm text-gray-400">Response Time:</span>
-                    <div className="text-lg font-semibold text-white">{level.response}</div>
-                  </div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-300">{activity}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Intellectual Property */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Intellectual Property Rights
-              </h2>
-              <p className="text-lg text-gray-300 mb-6">
-                Understanding intellectual property rights is crucial for both
-                protecting our innovations and respecting your contributions.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-white font-semibold">Our IP</h3>
-                    <p className="text-gray-300 text-sm">All software, designs, and proprietary technology remain our property</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-white font-semibold">Your IP</h3>
-                    <p className="text-gray-300 text-sm">You retain ownership of content and data you provide</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-white font-semibold">Licenses</h3>
-                    <p className="text-gray-300 text-sm">We grant limited licenses for authorized use of our services</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-
-              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                <div className="text-center mb-6">
-                  <Scale className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white">IP Protection</h3>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
-                    <span className="text-gray-300">Copyright</span>
-                    <span className="text-green-400">✓</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
-                    <span className="text-gray-300">Trademarks</span>
-                    <span className="text-green-400">✓</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
-                    <span className="text-gray-300">Patents</span>
-                    <span className="text-green-400">✓</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
-                    <span className="text-gray-300">Trade Secrets</span>
-                    <span className="text-green-400">✓</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-=======
       {/* Termination Conditions */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -735,12 +330,10 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -752,7 +345,6 @@ export default function Terms() {
               We reserve the right to terminate services under the following conditions
             </p>
           </motion.div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="grid md: grid-cols-2 gap-6">
               {terminationConditions.map((condition, index)  => (
@@ -761,18 +353,15 @@ export default function Terms() {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
-
 }}
                   className="flex items-start space-x-3"
                 >
@@ -781,52 +370,23 @@ export default function Terms() {
                 </motion.div>
               ))}
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
-
       {/* Legal Information */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-<<<<<<< HEAD
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-=======
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Legal Information
@@ -845,7 +405,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -891,7 +450,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -934,7 +492,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -970,7 +527,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1007,7 +563,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1043,7 +598,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1079,7 +633,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1109,7 +662,6 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1154,18 +706,15 @@ export default function Terms() {
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4">
                       <section.icon className="w-6 h-6 text-white" />
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-3">
                       {section.title}
                     </h3>
-                    
                     <p className="text-gray-300 leading-relaxed">
                       {section.content}
                     </p>
                   </motion.div>
                 ))}
               </div>
-
               {/* User Obligations */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -1177,7 +726,6 @@ export default function Terms() {
                 <h2 className="text-3xl font-bold text-white text-center mb-12">
                   User Obligations
                 </h2>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {userObligations.map((obligation, index) => (
                     <motion.div
@@ -1196,17 +744,8 @@ export default function Terms() {
                       </p>
                     </motion.div>
                   ))}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                 </div>
               </motion.div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Contact Information */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       {/* Limitation of Liability */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -1214,26 +753,13 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Limitation of Liability
             </h2>
@@ -1242,7 +768,6 @@ export default function Terms() {
               the scope of our liability and your responsibilities.
             </p>
           </motion.div>
-
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1285,7 +810,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -1293,26 +817,13 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Termination & Cancellation
             </h2>
@@ -1321,7 +832,6 @@ export default function Terms() {
               helps ensure a smooth transition for all parties.
             </p>
           </motion.div>
-
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
@@ -1362,7 +872,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -1370,59 +879,36 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Questions About Terms?
-=======
             initial = {
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Questions About These Terms?
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               If you have questions about these terms or need clarification,
               please contact our legal team.
             </p>
           </motion.div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
 =======
               {/* Prohibited Activities */}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1433,7 +919,6 @@ export default function Terms() {
                 <h2 className="text-3xl font-bold text-white text-center mb-8">
                   Prohibited Activities
                 </h2>
-                
                 <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {prohibitedActivities.map((activity, index) => (
@@ -1452,7 +937,6 @@ export default function Terms() {
                   </div>
                 </div>
               </motion.div>
-
               {/* Termination Conditions */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -1464,7 +948,6 @@ export default function Terms() {
                 <h2 className="text-3xl font-bold text-white text-center mb-8">
                   Termination Conditions
                 </h2>
-                
                 <div className="bg-orange-900/20 border border-orange-500/30 rounded-xl p-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {terminationConditions.map((condition, index) => (
@@ -1483,7 +966,6 @@ export default function Terms() {
                   </div>
                 </div>
               </motion.div>
-
               {/* Contact Information */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -1495,12 +977,10 @@ export default function Terms() {
                 <h2 className="text-3xl font-bold text-white mb-8">
                   Questions About These Terms?
                 </h2>
-                
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   If you have any questions about these Terms of Service or need clarification 
                   on any provision, please don't hesitate to contact our legal team.
                 </p>
-                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                   {contactInfo.map((contact, index) => (
                     <motion.div
@@ -1514,11 +994,9 @@ export default function Terms() {
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4">
                         <contact.icon className="w-6 h-6 text-white" />
                       </div>
-                      
                       <h3 className="text-lg font-semibold text-white mb-2">
                         {contact.label}
                       </h3>
-                      
                       <a
                         href={contact.href}
                         className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
@@ -1534,33 +1012,18 @@ export default function Terms() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -1572,24 +1035,11 @@ export default function Terms() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-
                 Contact Us
               </a>
               <a
                 href="/privacy"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-<<<<<<< HEAD
-
-                Privacy Policy
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}}}}</section>}
-=======
               >
                 Privacy Policy;
               </a>;
@@ -1598,11 +1048,7 @@ export default function Terms() {
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 =======
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   );
 };
-
 export default Terms;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

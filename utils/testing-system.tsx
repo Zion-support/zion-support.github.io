@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React from 'react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import '@testing - library / jest - dom';
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
@@ -15,5 +12,4 @@ export class TestingSystem {
       case 'hover':
         // Handle hover
         break;
-
 }}}

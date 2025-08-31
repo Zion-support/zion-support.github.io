@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
-
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -19,11 +18,9 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
-
 // Layout Components
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -33,7 +30,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
     </Suspense>
   );
 };
-
 // Core pages
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
@@ -43,23 +39,19 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
-
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
-
+// New Innovative Services 2025
+const AIAutonomousBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-business-intelligence-platform'));
+const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence-platform'));
+const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
-
-// New pages we created
-const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
-const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
-const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
-const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
-const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
-
+// Pricing page
+const Pricing = createLazyComponent(() => import('./pages/Pricing').then(module => ({ default: module.Pricing })));
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
@@ -88,7 +80,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-
 function App() {
   return (
     <HelmetProvider>
@@ -97,12 +88,10 @@ function App() {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             {/* Enhanced Navigation */}
             <EnhancedNavigation />
-            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
-            
             {/* Main Content */}
             <main id="main-content" className="flex-1 pt-32">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
@@ -129,23 +118,19 @@ function App() {
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
-
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
-
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-autonomous-business-intelligence-platform" element={<AIAutonomousBusinessIntelligence />} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalytics />} />
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-
-                    {/* New pages we created */}
-                    <Route path="/enterprise" element={<Enterprise />} />
-                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
-                    <Route path="/emerging-tech" element={<EmergingTech />} />
-
+                    {/* Pricing Route */}
+                    <Route path="/pricing" element={<Pricing />} />
                     {/* 404 Page */}
                     <Route
                       path="*"
@@ -183,34 +168,24 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
-
             {/* Enhanced Footer */}
             <EnhancedFooter />
-
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
-
             {/* Enhanced Accessibility Enhancer */}
             <EnhancedAccessibilityEnhancer enabled={true} />
-
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />
-
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />
-
             {/* Advanced Analytics Dashboard */}
             <AdvancedAnalyticsDashboard enabled={true} />
-
             {/* AI Content Optimizer */}
             <AIContentOptimizer enabled={true} />
-
             {/* Security Monitoring System */}
             <SecurityMonitoringSystem enabled={true} />
-
             {/* User Experience Optimizer */}
             <UserExperienceOptimizer enabled={true} />
-
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
           </div>
@@ -219,5 +194,4 @@ function App() {
     </HelmetProvider>
   );
 }
-
 export default App;

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-const Security: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Security</h1>
-			<p className="text-xl text-gray-300">Our commitment to security and compliance.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -31,11 +21,8 @@ import {
   ChevronUp,
   Mail
 } from 'lucide-react';
-
 export default function Security() {
   const [expandedCompliance, setExpandedCompliance] = useState<string | null>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const securityFeatures = [
     {
       icon: Shield,
@@ -104,7 +91,6 @@ export default function Security() {
       ]
     }
   ];
-
   const complianceFrameworks = [
     {
       name: 'SOC 2 Type II',
@@ -172,7 +158,6 @@ export default function Security() {
       color: 'text-green-400'
     }
   ];
-
   const securityMetrics = [
     {
       metric: '99.99%',
@@ -195,7 +180,6 @@ export default function Security() {
       description: 'Continuous security monitoring'
     }
   ];
-
   const bestPractices = [
     {
       title: 'Regular Security Training',
@@ -218,18 +202,15 @@ export default function Security() {
       icon: Zap
     }
   ];
-
   const toggleCompliance = (name: string) => {
     setExpandedCompliance(expandedCompliance === name ? null : name);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Security & Compliance - Zion Tech Group"
         description="Learn about Zion Tech Group's comprehensive security measures, compliance certifications, and data protection practices."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
@@ -253,7 +234,6 @@ export default function Security() {
           </motion.div>
         </div>
       </section>
-
       {/* Security Metrics */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -276,7 +256,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Security Features */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -291,7 +270,6 @@ export default function Security() {
               Multi-layered security approach to protect your data and systems
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
               <motion.div
@@ -305,12 +283,10 @@ export default function Security() {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl mb-6">
                     <feature.icon className="w-8 h-8 text-red-400" />
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     {feature.description}
                   </p>
-                  
                   <ul className="space-y-2">
                     {feature.features.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300 text-sm">
@@ -325,7 +301,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Compliance Frameworks */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -340,7 +315,6 @@ export default function Security() {
               We maintain the highest standards of compliance across multiple frameworks
             </p>
           </motion.div>
-
           <div className="space-y-6">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
@@ -374,7 +348,6 @@ export default function Security() {
                     </div>
                   </div>
                 </div>
-                
                 {expandedCompliance === framework.name && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -401,7 +374,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Best Practices */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -416,7 +388,6 @@ export default function Security() {
               We follow industry-leading security practices to ensure your protection
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {bestPractices.map((practice, index) => (
               <motion.div
@@ -440,7 +411,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Security Resources */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -455,7 +425,6 @@ export default function Security() {
               Access our security documentation and resources
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -481,7 +450,6 @@ export default function Security() {
                 </div>
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -506,7 +474,6 @@ export default function Security() {
                 </div>
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -534,7 +501,6 @@ export default function Security() {
           </div>
         </div>
       </section>
-
       {/* Contact Security Team */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">

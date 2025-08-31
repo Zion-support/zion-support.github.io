@@ -115,9 +115,7 @@ const testimonials = [
     results['Improved grid efficiency', 'Better renewable energy integration', 'Cost optimization'],
     image: '/api/placeholder/100/100',
     featured: false
-
 ];
-
 const industries = [
   'All Industries',
   'Technology',
@@ -128,37 +126,23 @@ const industries = [
   'Energy',
   'Startup'
 ];
-
 const ratings = [
   'All Ratings',
   '5 Stars',
   '4+ Stars',
   '3+ Stars'
 ];
-
 export default function Testimonials() {
   const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
   const [selectedRating, setSelectedRating] = useState('All Ratings');
   const [searchQuery, setSearchQuery] = useState('');
-
   const filteredTestimonials = testimonials.filter(testimonial => {
-<<<<<<< HEAD
-    const matchesIndustry = selectedIndustry === 'All Industries' || testimonial.industry === selectedIndustry;
-    const matchesRating = selectedRating === 'All Ratings' ||
-      (selectedRating === '5 Stars' && testimonial.rating === 5) ||
-      (selectedRating === '4+ Stars' && testimonial.rating >= 4) ||
-      (selectedRating === '3+ Stars' && testimonial.rating >= 3);
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const matchesSearch = testimonial.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
       testimonial.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       testimonial.company.toLowerCase().includes(searchQuery.toLowerCase());
-
     return matchesIndustry && matchesRating && matchesSearch});
-
   const featuredTestimonials = filteredTestimonials.filter(t => t.featured);
   const regularTestimonials = filteredTestimonials.filter(t => !t.featured);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -168,78 +152,42 @@ export default function Testimonials() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Quote className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Client
               <span className="text-gradient block">Success Stories</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Discover how we've helped organizations across industries transform their
               business with cutting-edge technology solutions. Real results from real clients.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Star className="w-4 h-4" />
@@ -257,7 +205,6 @@ export default function Testimonials() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-12 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -273,35 +220,29 @@ export default function Testimonials() {
                   className="pl-10 pr-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
                 />
               </div>
-
               <select
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-
                 {industries.map(industry => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
-
               <select
                 value={selectedRating}
                 onChange={(e) => setSelectedRating(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-
                 {ratings.map(rating => (
                   <option key={rating} value={rating}>{rating}</option>
                 ))}
               </select>
             </div>
-
             <div className="text-zion-slate-light text-sm">
               Showing {filteredTestimonials.length} of {testimonials.length} testimonials
             </div>
           </div>
         </div>
       </section>
-
       {/* Featured Testimonials */}
       {featuredTestimonials.length > 0 && (
         <section className="py-20">
@@ -310,33 +251,19 @@ export default function Testimonials() {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-
               <h2 className="text-4xl font-bold text-white mb-4">Featured Success Stories</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                 Highlighted testimonials showcasing exceptional results and transformative
                 impact across different industries and use cases.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredTestimonials.map((testimonial, index) => (
                 <motion.div
@@ -344,40 +271,20 @@ export default function Testimonials() {
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
-
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-1">{testimonial.name}</h3>
                       <p className="text-zion-cyan font-semibold mb-1">{testimonial.role}</p>
@@ -389,11 +296,9 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-
                   <blockquote className="text-zion-slate-light mb-6 leading-relaxed italic">
                     "{testimonial.content}"
                   </blockquote>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Project: {testimonial.project}</h4>
                     <ul className="space-y-2">
@@ -405,7 +310,6 @@ export default function Testimonials() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                       {testimonial.industry}
@@ -420,7 +324,6 @@ export default function Testimonials() {
           </div>
         </section>
       )}
-
       {/* All Testimonials */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -428,33 +331,19 @@ export default function Testimonials() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">All Client Testimonials</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Browse through all our client success stories and discover how we can
               help transform your business with innovative technology solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularTestimonials.map((testimonial, index) => (
               <motion.div
@@ -462,57 +351,34 @@ export default function Testimonials() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-lg font-bold text-white">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
-
                   <div>
                     <h3 className="text-lg font-bold text-white">{testimonial.name}</h3>
                     <p className="text-zion-cyan text-sm">{testimonial.role}</p>
                     <p className="text-zion-slate-light text-xs">{testimonial.comp}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-
                 <blockquote className="text-zion-slate-light text-sm mb-4 leading-relaxed italic line-clamp-4">
                   "{testimonial.content}"
                 </blockquote>
-
                 <div className="flex items-center justify-between">
                   <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {testimonial.industry}
@@ -526,7 +392,6 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -534,43 +399,27 @@ export default function Testimonials() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Success Stories?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our technology solutions can transform your business
               and help you achieve similar results. Your success story starts here.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start Your Project
               </a>
               <a
                 href="/services"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Explore Our Services
               </a>
             </div>
@@ -578,9 +427,4 @@ export default function Testimonials() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

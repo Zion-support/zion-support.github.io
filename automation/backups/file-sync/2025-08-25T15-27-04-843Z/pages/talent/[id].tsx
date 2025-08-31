@@ -1,22 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-interface TalentProfile {
-  full_name: string;
-  skills?: string[];
-<<<<<<< HEAD
-  availability_type?: string;
-
-interface TalentProfileWithSocial extends TalentProfile {
-  social?: Record<string, string>;
-
-=======
   availability_type?: string}
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   <div className = "min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
@@ -53,15 +40,6 @@ const TalentProfilePage: React.FC = () => {;
         setTimeout(() => {
           const mockProfile: TalentProfileWithSocial = {
             full_name: `Talent ${id}`,
-<<<<<<< HEAD
-            skills['React', 'TypeScript', 'Node.js'],
-            availability_type: 'Full-time',
-            social: {
-              linkedin: 'https://linkedin.com/in/talent',
-              github: 'https://github.com/talent'
-<<<<<<< HEAD
-
-=======
             }
 =======;
             skills: ['React', 'TypeScript', 'Node.js'],;
@@ -70,25 +48,14 @@ const TalentProfilePage: React.FC = () => {;
               linkedin: 'https://linkedin.com/in/talent',;
               github: 'https://github.com/talent';
             };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           };
           setProfile(mockProfile);
           setLoading(false)}, 1000)} catch (err) {
         setError('Talent not found');
-<<<<<<< HEAD
-        setLoading(false);
-
-    };
-    if (id) {
-      fetchProfile();
-
-=======
         setLoading(false)}
     };
     if (id) {
       fetchProfile()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [id]);
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <Navigate to="/404" replace />;
@@ -122,18 +89,9 @@ const TalentProfilePage: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-300 hover:text-blue-100 underline"
-
                   {platform}
                 </a>
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        )}
-      </div>;
-    </main>;
-  )};
-=======
             </div>;
           </div>;
         )};
@@ -141,6 +99,5 @@ const TalentProfilePage: React.FC = () => {;
     </main>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default TalentProfilePage;
 }}}}}

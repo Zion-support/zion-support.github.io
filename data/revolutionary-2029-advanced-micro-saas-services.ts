@@ -37,16 +37,9 @@ export interface RevolutionaryService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-
-export const revolutionary2029AdvancedMicroSaasServices: Revolutionary2029AdvancedMicroSaasService[] = [
-  // AI-Powered Autonomous Business Intelligence Platform
-=======
   popular?: boolean;
 }
-
 export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryService2029[] = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
     id: 'ai-autonomous-business-operations',
     name: 'AI Autonomous Business Operations',
@@ -249,12 +242,6 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     launchDate: '2029-01-10',
     customers: 234,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 280
-
-];
-}}
-=======
     reviews: 89,
     popular: true
   },
@@ -565,23 +552,18 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     popular: true
   }
 ];
-
 export const getServicesByCategory = (category: string) => {
   return revolutionaryServices2029.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return revolutionaryServices2029.filter(service => service.isPopular);
 };
-
 export const getNewServices = () => {
   return revolutionaryServices2029.filter(service => service.isNew);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

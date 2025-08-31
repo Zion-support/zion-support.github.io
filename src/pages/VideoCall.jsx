@@ -17,7 +17,6 @@ export default function VideoCall() {
             name: 'You',
             isVideoEnabled: true,
             isMuted: false
-
     ]);
     const handleJoinCall = () => {
         setIsJoining(true);
@@ -35,13 +34,9 @@ export default function VideoCall() {
         });
         // Navigate back after a short delay
         setTimeout(() => {
-<<<<<<< HEAD
-            router(-1)}, 1500)};
-=======
             router(-1);
         }, 1500);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -52,16 +47,10 @@ export default function VideoCall() {
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
-<<<<<<< HEAD
-            toast(`${randomUser.name} joined the call`);
-
-=======
             toast(`${randomUser.name} joined the call`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
-
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
         {!hasJoined ? (<div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
             <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
@@ -71,7 +60,6 @@ export default function VideoCall() {
             </Button>
           </div>) : (<div className="space-y-4">
             <VideoCallRoom roomId={roomId || ''} participants={participants} onLeave={handleLeaveCall}/>
-
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -80,11 +68,4 @@ export default function VideoCall() {
             </div>
           </div>)}
       </main>
-<<<<<<< HEAD
-
-    </>);
-}}}
-=======
-      
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

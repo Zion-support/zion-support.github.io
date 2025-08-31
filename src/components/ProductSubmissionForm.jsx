@@ -55,35 +55,18 @@ export function ProductSubmissionForm() {
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
-<<<<<<< HEAD
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
-
-=======
                 setImagePreview(reader.result)};
             reader.readAsDataURL(file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleVideoChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-<<<<<<< HEAD
-            form.setValue("video", file);
-
-=======
             form.setValue("video", file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleModelChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-<<<<<<< HEAD
-            form.setValue("model", file);
-
-=======
             form.setValue("model", file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply AI-generated content to the form
     const handleApplyGenerated = (content) => {
@@ -102,12 +85,7 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Create the product listing
@@ -121,8 +99,6 @@ export function ProductSubmissionForm() {
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
-  
-
 },
                 createdAt: new Date().toISOString(),
             };
@@ -132,12 +108,7 @@ export function ProductSubmissionForm() {
                 .select('id')
                 .single();
             if (productError) {
-<<<<<<< HEAD
-                throw new Error(productError.message);
-
-=======
                 throw new Error(productError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // If we have an image, upload it
             if (values.image) {
                 const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -145,12 +116,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(imagePath, values.image);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Get the public URL for the image
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
@@ -163,14 +129,8 @@ export function ProductSubmissionForm() {
                 })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload video if provided
             if (values.video) {
                 const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
@@ -178,12 +138,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(videoPath, values.video);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(videoPath);
@@ -192,14 +147,8 @@ export function ProductSubmissionForm() {
                     .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload model if provided
             if (values.model) {
                 const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -207,12 +156,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(modelPath, values.model);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(modelPath);
@@ -221,47 +165,24 @@ export function ProductSubmissionForm() {
                     .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Show success message
             toast({
                 title: "Product Published!",
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
-<<<<<<< HEAD
-            navigate(`/marketplace/listing/${productRecord.id}`);
-
-=======
-<<<<<<< HEAD
-            router(`/marketplace/listing/${productRecord.id}`)}
-=======
             router(`/marketplace/listing/${productRecord.id}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -273,7 +194,6 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -287,7 +207,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="description" render={({ field }) => (<FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
@@ -298,7 +217,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField control={form.control} name="price" render={({ field }) => (<FormItem>
                     <FormLabel>Price (USD)</FormLabel>
@@ -310,7 +228,6 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>)}/>
-
               <FormField control={form.control} name="category" render={({ field }) => (<FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
@@ -327,7 +244,6 @@ export function ProductSubmissionForm() {
                     <FormMessage />
                   </FormItem>)}/>
             </div>
-
             <FormField control={form.control} name="tags" render={({ field }) => (<FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -338,7 +254,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="image" render={() => (<FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
@@ -348,14 +263,12 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"/>
                       </AspectRatio>
                     </div>)}
                 </FormItem>)}/>
-
             <FormField control={form.control} name="video" render={() => (<FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -366,19 +279,12 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="model" render = {
   () => (<FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
                     <Input type="file" accept="model/gltf-binary,
   .glb" onChange={handleModelChange
-
-
-
-
-
-
 } className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
@@ -386,7 +292,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <div className="flex justify-end">
               <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 {isSubmitting ? "Publishing..." : "Publish Product"}
@@ -395,24 +300,11 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-
       <TabsContent value="ai">
         <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
   {
             title: form.getValues("title"),
   category: form.getValues("category")
-        
-
-
-
-
-
-
 }}/>
       </TabsContent>
-<<<<<<< HEAD
-    </Tabs>);
-}}}}}}}}}}}}}}}}}}}
-=======
     </Tabs>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -11,13 +11,7 @@ export interface AdditionalRealService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
@@ -39,7 +33,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
   },
   {
     id: 'ai-sales-outreach-agent',
@@ -520,7 +513,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 5,
     rating: 4.7,
     reviews: 3
-
   {
     id: 'ai-email-responder',
     name: 'AI Email Responder',
@@ -3907,7 +3899,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 12,
     rating: 4.5,
     reviews: 7
-
   ,
   {
     id: 'gdpr-dsar-portal',
@@ -4708,5 +4699,4 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 7,
     rating: 4.9,
     reviews: 6
-
 ];}}}}}
