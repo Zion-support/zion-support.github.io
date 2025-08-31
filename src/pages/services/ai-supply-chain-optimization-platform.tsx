@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Heart, 
+  Truck, 
   TrendingUp, 
   Target, 
   Zap, 
@@ -27,7 +27,7 @@ import {
   Mail,
   ShoppingCart,
   DollarSign,
-  Heart as HeartIcon,
+  Heart,
   Factory,
   BarChart3,
   Calendar,
@@ -56,142 +56,137 @@ import {
   Warehouse,
   MapPin,
   Navigation,
-  Compass,
-  Stethoscope,
-  Activity as ActivityIcon,
-  Pill,
-  Microscope,
-  Shield as ShieldIcon
+  Compass
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIHealthcareAnalyticsPlatform() {
+export default function AISupplyChainOptimizationPlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI Disease Prediction',
-      description: 'Predict disease progression and patient outcomes with 90% accuracy using advanced ML algorithms'
+      title: 'AI Demand Forecasting',
+      description: 'Predict demand patterns with 95% accuracy using advanced machine learning algorithms'
     },
     {
-      icon: Heart,
-      title: 'Patient Risk Assessment',
-      description: 'Identify high-risk patients and provide early intervention recommendations'
+      icon: Truck,
+      title: 'Route Optimization',
+      description: 'Optimize delivery routes in real-time for maximum efficiency and cost savings'
     },
     {
       icon: TrendingUp,
-      title: 'Treatment Optimization',
-      description: 'Optimize treatment plans based on patient data and clinical outcomes'
+      title: 'Inventory Management',
+      description: 'Smart inventory optimization with automated reorder points and safety stock calculations'
     },
     {
       icon: Target,
-      title: 'Population Health Analytics',
-      description: 'Analyze population health trends and identify intervention opportunities'
+      title: 'Supplier Analytics',
+      description: 'Evaluate supplier performance and identify optimization opportunities with AI insights'
     },
     {
       icon: AlertTriangle,
-      title: 'Real-time Monitoring',
-      description: 'Continuous patient monitoring with instant alerts for critical changes'
+      title: 'Risk Management',
+      description: 'Proactive identification and mitigation of supply chain disruptions and bottlenecks'
     },
     {
       icon: BarChart3,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered insights to support clinical decision-making and improve outcomes'
+      title: 'Performance Analytics',
+      description: 'Comprehensive dashboards for tracking KPIs and identifying improvement areas'
     }
   ];
 
   const benefits = [
-    'Improve patient outcomes by 40% with predictive analytics and early intervention',
-    'Reduce hospital readmissions by 35% through proactive patient monitoring',
-    'Optimize resource allocation and reduce healthcare costs by 25%',
-    'Enhance clinical decision-making with AI-powered insights and recommendations',
-    'Improve population health management with comprehensive analytics',
-    'Ensure HIPAA compliance with enterprise-grade security and privacy controls'
+    'Reduce supply chain costs by up to 30% through intelligent optimization',
+    'Improve delivery accuracy by 95% with AI-powered route planning',
+    'Reduce inventory carrying costs by 25% with predictive demand forecasting',
+    'Minimize supply chain disruptions with proactive risk management',
+    'Increase customer satisfaction through faster, more reliable deliveries',
+    'Gain real-time visibility into all supply chain operations'
   ];
 
   const useCases = [
     {
-      industry: 'Hospitals & Health Systems',
-      applications: ['Patient monitoring', 'Readmission prevention', 'Resource optimization', 'Quality improvement'],
+      industry: 'E-commerce & Retail',
+      applications: ['Order fulfillment', 'Last-mile delivery', 'Inventory optimization', 'Returns management'],
+      icon: ShoppingCart
+    },
+    {
+      industry: 'Manufacturing',
+      applications: ['Raw material sourcing', 'Production planning', 'Quality control', 'Distribution optimization'],
+      icon: Factory
+    },
+    {
+      industry: 'Logistics & Transportation',
+      applications: ['Fleet management', 'Route optimization', 'Load balancing', 'Real-time tracking'],
+      icon: Truck
+    },
+    {
+      industry: 'Healthcare & Pharmaceuticals',
+      applications: ['Medical supply chain', 'Cold chain logistics', 'Regulatory compliance', 'Emergency response'],
       icon: Heart
-    },
-    {
-      industry: 'Primary Care',
-      applications: ['Preventive care', 'Chronic disease management', 'Risk assessment', 'Population health'],
-      icon: Stethoscope
-    },
-    {
-      industry: 'Pharmaceuticals',
-      applications: ['Clinical trials', 'Drug safety monitoring', 'Market analysis', 'Patient outcomes'],
-      icon: Pill
-    },
-    {
-      industry: 'Insurance & Payers',
-      applications: ['Risk assessment', 'Claims analysis', 'Fraud detection', 'Population health'],
-      icon: ShieldIcon
     }
   ];
 
   const technologies = [
-    'Machine Learning & Deep Learning',
-    'Natural Language Processing',
-    'Predictive Analytics',
-    'Real-time Data Processing',
-    'HIPAA-Compliant Security',
+    'Machine Learning & AI',
+    'Internet of Things (IoT)',
+    'Real-time Analytics',
+    'Predictive Modeling',
+    'Blockchain for Transparency',
     'Cloud-Native Architecture'
   ];
 
   const pricing = [
     {
-      plan: 'Clinical',
-      price: '$699',
+      plan: 'Starter',
+      price: '$499',
       period: '/month',
-      description: 'Perfect for small clinics and medical practices',
+      description: 'Perfect for small businesses with basic supply chain needs',
       features: [
-        'Up to 1,000 patient records',
-        'Basic AI analytics',
-        'Patient risk assessment',
-        'Clinical decision support',
+        'Up to 100 SKUs',
+        'Basic demand forecasting',
+        'Route optimization (limited)',
+        'Inventory tracking',
         'Basic reporting',
-        'HIPAA compliance',
-        'Email support'
+        'Email support',
+        'Mobile app access'
       ],
       cta: 'Get Started',
       popular: false
     },
     {
-      plan: 'Health System',
-      price: '$1,399',
+      plan: 'Professional',
+      price: '$999',
       period: '/month',
-      description: 'Ideal for hospitals and health systems',
+      description: 'Ideal for growing businesses with complex supply chain operations',
       features: [
-        'Up to 50,000 patient records',
-        'Advanced AI analytics',
-        'Population health management',
-        'Real-time monitoring',
+        'Up to 1,000 SKUs',
+        'Advanced AI forecasting',
+        'Full route optimization',
+        'Supplier analytics',
+        'Risk management',
         'Advanced reporting',
-        'Custom integrations',
         'Priority support',
-        'Clinical training',
-        'API access'
+        'API access',
+        'Custom integrations'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
       plan: 'Enterprise',
-      price: '$2,799',
+      price: '$1,999',
       period: '/month',
-      description: 'For large healthcare organizations and networks',
+      description: 'For large organizations with complex global supply chains',
       features: [
-        'Unlimited patient records',
-        'Custom AI model development',
-        'Multi-site management',
-        'Advanced analytics',
+        'Unlimited SKUs',
+        'Custom AI model training',
+        'Multi-location optimization',
+        'Advanced risk modeling',
         'Custom reporting',
         'Dedicated account manager',
         'On-premise options',
         'Custom training programs',
-        'Healthcare consulting'
+        'Supply chain consulting'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -220,17 +215,17 @@ export default function AIHealthcareAnalyticsPlatform() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 
-        title="AI-Powered Healthcare Analytics Platform - Zion Tech Group"
-        description="Transform healthcare delivery with AI-powered analytics, patient monitoring, and clinical decision support. Improve outcomes and reduce costs with intelligent healthcare technology."
-        keywords="AI healthcare analytics, patient monitoring, clinical decision support, population health, healthcare technology, medical analytics"
-        canonical="https://ziontechgroup.com/services/ai-healthcare-analytics-platform"
+        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
+        description="Transform your supply chain with AI-powered optimization, demand forecasting, and route planning. Reduce costs and improve efficiency with intelligent automation."
+        keywords="AI supply chain optimization, demand forecasting, route optimization, inventory management, logistics automation, supply chain analytics"
+        canonical="https://ziontechgroup.com/services/ai-supply-chain-optimization-platform"
       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -238,25 +233,25 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Healthcare
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-                Analytics Platform
+              AI-Powered Supply Chain
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Optimization Platform
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Revolutionize healthcare delivery with intelligent analytics, predictive insights, 
-              and clinical decision support that improves patient outcomes and reduces costs.
+              Revolutionize your supply chain operations with intelligent automation, predictive analytics, 
+              and real-time optimization that drives efficiency and reduces costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="inline-flex items-center px-8 py-4 border border-emerald-400 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300">
-                <Heart className="mr-2 w-5 h-5" />
+              <button className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
+                <Truck className="mr-2 w-5 h-5" />
                 Schedule Demo
               </button>
             </div>
@@ -275,10 +270,10 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced Healthcare Analytics Features
+              Intelligent Supply Chain Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive tools for improving patient care and clinical outcomes
+              Everything you need to optimize your supply chain operations and drive business growth
             </p>
           </motion.div>
 
@@ -293,9 +288,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-emerald-400 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -320,7 +315,7 @@ export default function AIHealthcareAnalyticsPlatform() {
               Why Choose Our Platform?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Proven results and measurable impact on healthcare delivery and patient outcomes
+              Proven results and measurable impact on your supply chain operations
             </p>
           </motion.div>
 
@@ -337,7 +332,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 variants={itemVariants}
                 className="flex items-start space-x-4"
               >
-                <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                 <p className="text-lg text-slate-300">{benefit}</p>
               </motion.div>
             ))}
@@ -356,10 +351,10 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Healthcare Applications
+              Industry Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how different healthcare organizations leverage our platform for improved care delivery
+              Discover how different industries leverage our platform for supply chain excellence
             </p>
           </motion.div>
 
@@ -376,7 +371,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 variants={itemVariants}
                 className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{useCase.industry}</h3>
@@ -405,7 +400,7 @@ export default function AIHealthcareAnalyticsPlatform() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your healthcare analytics needs
+              Choose the plan that fits your supply chain optimization needs
             </p>
           </motion.div>
 
@@ -422,13 +417,13 @@ export default function AIHealthcareAnalyticsPlatform() {
                 variants={itemVariants}
                 className={`relative bg-slate-800/50 p-8 rounded-2xl border ${
                   plan.popular 
-                    ? 'border-emerald-400 ring-2 ring-emerald-400/20' 
+                    ? 'border-blue-400 ring-2 ring-blue-400/20' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -446,7 +441,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
@@ -456,7 +451,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                   to={plan.plan === 'Enterprise' ? '/contact' : '/contact'}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -469,7 +464,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -478,22 +473,22 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Healthcare Delivery?
+              Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Join leading healthcare organizations using our AI-powered platform for improved patient care
+              Join leading companies using our AI-powered platform for supply chain excellence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-emerald-400 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us
@@ -508,23 +503,23 @@ export default function AIHealthcareAnalyticsPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <Phone className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
+              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-slate-300 hover:text-emerald-400 transition-colors">
+              <a href="tel:+13024640950" className="text-slate-300 hover:text-blue-400 transition-colors">
                 +1 (302) 464-0950
               </a>
             </div>
             <div>
-              <Mail className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
+              <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-emerald-400 transition-colors">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-blue-400 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div>
-              <Globe className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
+              <Globe className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-slate-300 hover:text-emerald-400 transition-colors">
+              <a href="https://ziontechgroup.com" className="text-slate-300 hover:text-blue-400 transition-colors">
                 ziontechgroup.com
               </a>
             </div>

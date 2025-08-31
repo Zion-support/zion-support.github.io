@@ -44,8 +44,16 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// Additional Innovative Services
+const AIContentMarketingAutomation = createLazyComponent(() => import('./pages/services/ai-content-marketing-automation'));
+const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
+const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/ai-financial-risk-management'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -119,8 +127,16 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
 
+                    {/* Additional Innovative Services */}
+                    <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
+                    <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
 
                     {/* 404 Page */}
                     <Route
