@@ -112,6 +112,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Home
       </NavLink>
       
+      <NavLink 
+        to="/comprehensive-pricing-guide-2025" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Pricing
+      </NavLink>
+      
       {/* Services Dropdown */}
       <div className="relative navigation-dropdown">
         <button 
@@ -183,6 +194,15 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-workflow-automation" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Workflow className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Workflow Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
@@ -227,6 +247,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <div className="flex items-center space-x-3">
                           <Network className="w-4 h-4 text-zion-purple" />
                           <span className="text-zion-slate-light group-hover:text-white transition-colors">Blockchain Solutions</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-purple transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-computing-solutions" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Atom className="w-4 h-4 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Quantum Computing</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-purple transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-cybersecurity-threat-intelligence" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Shield className="w-4 h-4 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Cybersecurity</span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-purple transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>

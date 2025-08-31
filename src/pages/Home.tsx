@@ -301,6 +301,27 @@ const ServicesSection = () => {
       icon: Workflow,
       color: "from-zion-cyan to-zion-purple",
       link: "/services/ai-project-management-platform"
+    },
+    {
+      title: "AI Enterprise Workflow Automation",
+      description: "Streamline business processes with intelligent workflow automation that learns and optimizes over time.",
+      icon: Workflow,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-enterprise-workflow-automation"
+    },
+    {
+      title: "AI Quantum Computing Solutions",
+      description: "Harness quantum computing power with AI-enhanced algorithms for exponential performance improvements.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-quantum-computing-solutions"
+    },
+    {
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Protect your organization with AI-powered threat detection and automated response systems.",
+      icon: Shield,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-cybersecurity-threat-intelligence"
     }
   ];
 
