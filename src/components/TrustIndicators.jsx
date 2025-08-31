@@ -24,7 +24,6 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
             title: "Verified Community",
             description: "10,000+ verified professionals and companies",
             color: "text-zion-purple"
-
     ];
     const certifications = [
         { name: "SOC 2 Type II", status: "Certified", year: "2024" },
@@ -50,7 +49,6 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
             to ensure your business operations remain secure and uninterrupted.
           </p>
         </div>
-
         {/* Trust Indicators Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {indicators.map((indicator, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
@@ -65,7 +63,6 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
               </p>
             </div>))}
         </div>
-
         {/* Stats Section */}
         {showStats && (<div className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -82,7 +79,6 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>))}
             </div>
           </div>)}
-
         {/* Certifications Section */}
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -99,7 +95,6 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>))}
             </div>
           </div>)}
-
         {/* Customer Testimonials Preview */}
         <div className="mt-16 text-center">
           <div className="flex justify-center items-center gap-2 mb-4">
@@ -111,12 +106,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -136,9 +126,4 @@ export function TrustIndicatorsCompact({ className }) {
         <Zap className="w-4 h-4"/>
         <span>99.9% Uptime</span>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -24,12 +24,7 @@ export default function SearchResultsPage() {
     useEffect(() => {
         if (initialQuery !== query) {
             setQuery(initialQuery);
-<<<<<<< HEAD
-            refetch();
-
-=======
             refetch()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
@@ -39,12 +34,7 @@ export default function SearchResultsPage() {
             return;
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
-<<<<<<< HEAD
-                fetchNextPage();
-
-=======
                 fetchNextPage()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         observer.observe(el);
         return () => observer.disconnect()}, [loader.current, hasNextPage, isFetchingNextPage]);
@@ -68,9 +58,4 @@ export default function SearchResultsPage() {
         </div>)}
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
-<<<<<<< HEAD
-    </main>);
-</div>}}}
-=======
     </main>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

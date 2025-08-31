@@ -15,11 +15,8 @@ import { CheckCircle,
   Cloud,
   Brain,
   Globe
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const caseStudies = [
   {
     id: 1,
@@ -160,23 +157,12 @@ const caseStudies = [
       operations: "Streamlined",
       mobile: "First priority"
     },
-<<<<<<< HEAD
-    technologies["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
-    duration: "15 months",
-    roi: "500%",
-    image: "/images/case-study-6.jpg"
-<<<<<<< HEAD
-
-=======
   };
-=======;
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
     duration: "15 months",;
     roi: "500%",;
     image: "/images/case-study-6.jpg";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
@@ -187,28 +173,11 @@ export default function CaseStudies(...args[]):  {
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-<<<<<<< HEAD
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesTechnology = selectedTechnology === 'All' ||
-=======
   const filteredCaseStudies = caseStudies.filter(study => {;
     const matchesTechnology = selectedTechnology === 'All' || ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
-<<<<<<< HEAD
-    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                         study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-    return matchesIndustry && matchesTechnology && matchesSearch;
-  });
-=======
     
     return matchesIndustry && matchesTechnology && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -278,15 +247,9 @@ export default function CaseStudies(...args[]):  {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {industries.map(industry => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -297,15 +260,9 @@ export default function CaseStudies(...args[]):  {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {technologies.map(tech => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {technologies.map(tech  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
                 </select>
@@ -499,23 +456,10 @@ export default function CaseStudies(...args[]):  {
 
                 View Our Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

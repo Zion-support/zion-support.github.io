@@ -15,7 +15,6 @@ A comprehensive, AI-powered technology services platform built with modern web t
 - **Accessibility** - WCAG 2.1 AA compliance
 - **Performance** - Fast loading and smooth interactions
 - **Cross-Browser** - Compatible with all modern browsers
-=======
 # Zion Tech Group - Enhanced Technology Platform
 
 A comprehensive, AI-powered technology services platform built with modern web technologies and enhanced accessibility features.
@@ -68,17 +67,13 @@ A comprehensive, AI-powered technology services platform built with modern web t
 - **Routing**: React Router DOM
 - **Forms**: React Hook Form + Zod validation
 - **Icons**: Lucide React + Heroicons
->>>>>>> cursor/analyze-improve-and-deploy-application-58ef
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
-<<<<<<< HEAD
 - npm or yarn package manager
-=======
 - npm or yarn
->>>>>>> cursor/analyze-improve-and-deploy-application-58ef
 
 ### Installation
 ```bash
@@ -91,7 +86,6 @@ npm install
 
 # Start development server
 npm run dev
-<<<<<<< HEAD
 
 # Build for production
 npm run build
@@ -207,7 +201,6 @@ We welcome contributions from the community! Please read our contributing guidel
 - **Documentation** - Improve documentation and guides
 - **Testing** - Add tests and improve coverage
 - **Design** - Enhance UI/UX and accessibility
-=======
 
 # Build for production
 npm run build

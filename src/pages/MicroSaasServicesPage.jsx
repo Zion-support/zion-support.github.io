@@ -654,7 +654,6 @@ export default function MicroSAASServicesPage() {
       {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
         </div>)}
-
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/>
@@ -672,7 +671,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -700,34 +698,24 @@ import {Star,
             ArrowRight,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
-
 export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-
-<<<<<<< HEAD
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-=======
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
     return `${currency}${price}`;
   };
-
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -739,7 +727,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </CardDescription>
           </div>
         </div>
-
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
             {service.category}
@@ -749,7 +736,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </Badge>
         </div>
       </CardHeader>
-
       <CardContent className="relative z-10 space-y-4">
         {/* Pricing */}
         <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
@@ -767,7 +753,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             </Badge>
           </div>
         </div>
-
         {/* Features */}
         <div>
           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -786,7 +771,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             {service.description}
           </p>
         </div>
-
         {/* AI Score */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -798,7 +782,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             {service.subcategory}
           </Badge>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div>
@@ -810,7 +793,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
             <p className="text-sm text-zion-cyan font-medium">{service.marketPrice}</p>
           </div>
         </div>
-
         {/* Features Preview */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Key Features:</p>
@@ -823,7 +805,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </Badge>)}
           </div>
         </div>
-
         {/* Benefits */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Benefits:</p>
@@ -834,7 +815,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </div>))}
           </div>
         </div>
-
         {/* Target Audience */}
         <div>
           <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
@@ -844,7 +824,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </Badge>))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <div className="flex space-x-3 pt-4">
           <Button asChild className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -863,36 +842,10 @@ export default function MicroSaasServicesPage() { /* empty */ }
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/micro-saas-services"/>
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"/>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6">
-              Micro SAAS Services
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
-              we provide cutting-edge technology that drives growth and efficiency.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover:from-zion-purple-light hover:to-zion-cyan-light">
-                <Phone className="w-5 h-5 mr-2"/>
-                +1 302 464 0950
-              </Button>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">
-                <Mail className="w-5 h-5 mr-2"/>
-                kleber@ziontechgroup.com
-              </Button>
-            </div>
-=======
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -912,11 +865,9 @@ export default function MicroSaasServicesPage() { /* empty */ }
               <TrendingUp className="h-5 w-5 mr-2"/>
               Start Free Trial
             </Button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -936,7 +887,6 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -949,34 +899,7 @@ export default function MicroSaasServicesPage() { /* empty */ }
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-12">
-        {filteredServices.length === 0 ? (<div className="text-center py-20">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-zion-slate-light mb-6">Try adjusting your search criteria or filters</p>
-            <Button onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('all');
-                setSelectedPricing('all');
-            }} className="bg-zion-purple text-white hover:bg-zion-purple-light">
-              Clear Filters
-            </Button>
-          </div>) : (<>
-            <div className="mb-8">
-              <p className="text-zion-slate-light">
-                Showing <span className="text-zion-cyan font-medium">{filteredServices.length}</span> of{' '}
-                <span className="text-zion-cyan font-medium">{MICRO_SAAS_SERVICES.length}</span> services
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
-            </div>
-          </>)}
-=======
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1044,24 +967,16 @@ export default function MicroSaasServicesPage() { /* empty */ }
               </Card>))}
           </div>
         </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Business with Micro SAAS?
           </h2>
-<<<<<<< HEAD
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution for your business needs.
-            Get in touch today for a personalized consultation.
-=======
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
             improve productivity, and drive growth. No long-term contracts, cancel time.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">

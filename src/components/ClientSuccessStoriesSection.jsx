@@ -174,7 +174,6 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         role: "Chief Technology Officer",
         rating: 5,
         featured: false
-
 ];
 const industryStats = [
     { industry: "FinTech", projects: 45, successRate: "98%", avgROI: "340%" },
@@ -202,18 +201,10 @@ export function ClientSuccessStoriesSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -221,8 +212,6 @@ export function ClientSuccessStoriesSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-
-
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -231,27 +220,14 @@ export function ClientSuccessStoriesSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Client <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
@@ -260,36 +236,17 @@ export function ClientSuccessStoriesSection() {
             Discover how Zion Tech Group has transformed businesses across industries, delivering
             exceptional results and measurable business impact through innovative technology solutions.
           </p>
-
           {/* Overall stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {overallStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
@@ -299,71 +256,32 @@ export function ClientSuccessStoriesSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Industry Performance */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Performance</span>
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industryStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
-
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{stat.projects}</div>
@@ -381,68 +299,30 @@ export function ClientSuccessStoriesSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Success Stories */}
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
-
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
           </h3>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {successStories.map((story, index) => (<motion.div key={story.id} initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
-
-
-
-
-
-
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
                   {/* Header */}
@@ -462,7 +342,6 @@ export function ClientSuccessStoriesSection() {
                         FEATURED
                       </div>)}
                   </div>
-
                   {/* Challenge & Solution */}
                   <div className="mb-4">
                     <div className="mb-3">
@@ -474,7 +353,6 @@ export function ClientSuccessStoriesSection() {
                       <p className="text-zion-slate-light text-sm leading-relaxed">{story.solution}</p>
                     </div>
                   </div>
-
                   {/* Quick Results */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -486,14 +364,12 @@ export function ClientSuccessStoriesSection() {
                       <div className="text-zion-slate-light text-xs">Efficiency</div>
                     </div>
                   </div>
-
                   {/* Project Info */}
                   <div className="flex items-center justify-between text-zion-slate-light/80 text-xs mb-4">
                     <span>Team: {story.team}</span>
                     <span>Duration: {story.duration}</span>
                     <span>Budget: {story.budget}</span>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -501,36 +377,17 @@ export function ClientSuccessStoriesSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedStory === story.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
-
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>
                         {/* Detailed Metrics */}
                         <div className="mb-4">
@@ -547,7 +404,6 @@ export function ClientSuccessStoriesSection() {
                               </div>))}
                           </div>
                         </div>
-
                         {/* Technologies */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Technologies Used:</h5>
@@ -557,7 +413,6 @@ export function ClientSuccessStoriesSection() {
                               </span>))}
                           </div>
                         </div>
-
                         {/* Testimonial */}
                         <div className="mb-4 p-3 rounded-lg bg-zion-cyan/10 border border-zion-cyan/20">
                           <p className="text-zion-slate-light/90 text-sm italic mb-2">"{story.testimonial}"</p>
@@ -577,35 +432,16 @@ export function ClientSuccessStoriesSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
-
-
-
-
-
-
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
@@ -628,9 +464,4 @@ export function ClientSuccessStoriesSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

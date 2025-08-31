@@ -1,715 +1,438 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'react';
-import {
-  Users, TrendingUp, MousePointer, Eye, Clock, Target,
-  BarChart3, PieChart, Activity, Zap, Lightbulb, CheckCircle,
-  AlertTriangle, Info, Settings, RefreshCw, Download, Share2,
-  Maximize2, Minimize2, X, Search, Filter, Calendar,
-  Smartphone, Monitor, Globe, Heart, Star, ThumbsUp
+import React, { useEffect, useCallback, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  MousePointer, 
+  Zap, 
+  TrendingUp, 
+  Eye, 
+  Clock, 
+  Target,
+  CheckCircle,
+  AlertCircle,
+  Loader2
 } from 'lucide-react';
 
-interface UserBehavior {
-  id: string;
-  action: string;
-  timestamp: Date;
-  duration: number;
-  success: boolean;
-  userType: 'new' | 'returning' | 'power';
-  device: 'desktop' | 'mobile' | 'tablet';
-  location: string;
-  sessionId: string;
-}
-
-interface UXMetric {
-  id: string;
-  name: string;
-  value: number;
-  target: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  change: number;
-  category: 'engagement' | 'performance' | 'conversion' | 'satisfaction';
-}
-
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  category: 'ui' | 'ux' | 'performance' | 'accessibility';
-  priority: number;
-  estimatedImprovement: number;
-  implementation: string;
+interface UXMetrics {
+  scrollDepth: number;
+  timeOnPage: number;
+  interactions: number;
+  loadTime: number;
+  errors: number;
 }
 
 interface UserExperienceOptimizerProps {
   enabled?: boolean;
-  showRealTime?: boolean;
-  autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
+  enableSmoothScrolling?: boolean;
+  enableLoadingStates?: boolean;
+  enableInteractionTracking?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
-export function UserExperienceOptimizer({
+export const UserExperienceOptimizer: React.FC<UserExperienceOptimizerProps> = ({
   enabled = true,
-  showRealTime = true,
-  autoAnalyze = true,
-  onOptimizationComplete
-}: UserExperienceOptimizerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisComplete, setAnalysisComplete] = useState(false);
-  const [userBehaviors, setUserBehaviors] = useState<UserBehavior[]>([]);
-  const [uxMetrics, setUxMetrics] = useState<UXMetric[]>([]);
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState<OptimizationSuggestion[]>([]);
-  const [selectedView, setSelectedView] = useState<'metrics' | 'behaviors' | 'suggestions'>('metrics');
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [overallScore, setOverallScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(90);
+  enableSmoothScrolling = true,
+  enableLoadingStates = true,
+  enableInteractionTracking = true,
+  enablePerformanceMonitoring = true,
+}) => {
+  const [metrics, setMetrics] = useState<UXMetrics>({
+    scrollDepth: 0,
+    timeOnPage: 0,
+    interactions: 0,
+    loadTime: 0,
+    errors: 0,
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [showMetrics, setShowMetrics] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  
+  const startTime = useRef(Date.now());
+  const interactionCount = useRef(0);
+  const errorCount = useRef(0);
+  const scrollTimeout = useRef<NodeJS.Timeout>();
 
-  const analysisIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  // Smooth scrolling enhancement
+  const setupSmoothScrolling = useCallback(() => {
+    if (!enableSmoothScrolling) return;
 
-  // Generate sample user behaviors
-  const generateUserBehaviors = useCallback(() => {
-    const actions = ['Page View', 'Button Click', 'Form Submit', 'Navigation', 'Search', 'Purchase'];
-    const userTypes = ['new', 'returning', 'power'];
-    const devices = ['desktop', 'mobile', 'tablet'];
-    const locations = ['US', 'UK', 'CA', 'AU', 'DE', 'FR'];
+    // Add smooth scrolling to all internal links
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
     
-    const newBehaviors: UserBehavior[] = Array.from({ length: 50 }, (_, index) => ({
-      id: `behavior-${index}`,
-      action: actions[Math.floor(Math.random() * actions.length)],
-      timestamp: new Date(Date.now() - Math.random() * 86400000),
-      duration: Math.floor(Math.random() * 300) + 1,
-      success: Math.random() > 0.2,
-      userType: userTypes[Math.floor(Math.random() * userTypes.length)] as any,
-      device: devices[Math.floor(Math.random() * devices.length)] as any,
-      location: locations[Math.floor(Math.random() * locations.length)],
-      sessionId: `session-${Math.floor(Math.random() * 1000)}`
-    }));
-    
-    setUserBehaviors(newBehaviors);
-  }, []);
-
-  // Generate UX metrics
-  const generateUXMetrics = useCallback(() => {
-    const metrics: UXMetric[] = [
-      {
-        id: 'engagement',
-        name: 'User Engagement Rate',
-        value: Math.floor(Math.random() * 30) + 60,
-        target: 80,
-        unit: '%',
-        trend: 'up',
-        change: Math.floor(Math.random() * 15) + 5,
-        category: 'engagement'
-      },
-      {
-        id: 'bounce',
-        name: 'Bounce Rate',
-        value: Math.floor(Math.random() * 20) + 20,
-        target: 25,
-        unit: '%',
-        trend: 'down',
-        change: Math.floor(Math.random() * 10) + 2,
-        category: 'engagement'
-      },
-      {
-        id: 'conversion',
-        name: 'Conversion Rate',
-        value: Math.floor(Math.random() * 5) + 2,
-        target: 5,
-        unit: '%',
-        trend: 'up',
-        change: Math.floor(Math.random() * 2) + 1,
-        category: 'conversion'
-      },
-      {
-        id: 'satisfaction',
-        name: 'User Satisfaction',
-        value: Math.floor(Math.random() * 20) + 70,
-        target: 85,
-        unit: '/100',
-        trend: 'up',
-        change: Math.floor(Math.random() * 10) + 2,
-        category: 'satisfaction'
-      },
-      {
-        id: 'loadTime',
-        name: 'Page Load Time',
-        value: Math.floor(Math.random() * 2) + 1,
-        target: 2,
-        unit: 's',
-        trend: 'down',
-        change: Math.floor(Math.random() * 0.5) + 0.1,
-        category: 'performance'
-      },
-      {
-        id: 'sessionDuration',
-        name: 'Session Duration',
-        value: Math.floor(Math.random() * 3) + 2,
-        target: 5,
-        unit: 'min',
-        trend: 'up',
-        change: Math.floor(Math.random() * 1) + 0.2,
-        category: 'engagement'
-      }
-    ];
-    
-    setUxMetrics(metrics);
-  }, []);
-
-  // Generate optimization suggestions
-  const generateOptimizationSuggestions = useCallback(() => {
-    const suggestions: OptimizationSuggestion[] = [
-      {
-        id: 'ui-1',
-        title: 'Improve Button Contrast',
-        description: 'Increase button contrast for better visibility and accessibility',
-        impact: 'high',
-        effort: 'low',
-        category: 'ui',
-        priority: 1,
-        estimatedImprovement: 15,
-        implementation: 'Update CSS variables for button colors and ensure WCAG AA compliance'
-      },
-      {
-        id: 'ux-1',
-        title: 'Add Progress Indicators',
-        description: 'Implement progress bars for multi-step processes',
-        impact: 'medium',
-        effort: 'medium',
-        category: 'ux',
-        priority: 2,
-        estimatedImprovement: 12,
-        implementation: 'Create reusable progress component and integrate with form flows'
-      },
-      {
-        id: 'perf-1',
-        title: 'Optimize Image Loading',
-        description: 'Implement lazy loading and WebP format for images',
-        impact: 'high',
-        effort: 'medium',
-        category: 'performance',
-        priority: 1,
-        estimatedImprovement: 20,
-        implementation: 'Add lazy loading attributes and convert images to WebP format'
-      },
-      {
-        id: 'acc-1',
-        title: 'Enhance Screen Reader Support',
-        description: 'Add ARIA labels and improve semantic HTML structure',
-        impact: 'medium',
-        effort: 'low',
-        category: 'accessibility',
-        priority: 3,
-        estimatedImprovement: 10,
-        implementation: 'Audit all interactive elements and add appropriate ARIA attributes'
-      }
-    ];
-    
-    setOptimizationSuggestions(suggestions);
-  }, []);
-
-  // Start UX analysis
-  const startUXAnalysis = useCallback(() => {
-    setIsAnalyzing(true);
-    setAnalysisComplete(false);
-    
-    // Simulate analysis process
-    setTimeout(() => {
-      generateUserBehaviors();
-      generateUXMetrics();
-      generateOptimizationSuggestions();
-      setIsAnalyzing(false);
-      setAnalysisComplete(true);
-      
-      // Calculate overall UX score
-      const avgMetrics = uxMetrics.reduce((sum, metric) => {
-        const normalizedValue = metric.trend === 'up' ? 
-          Math.min(100, metric.value + metric.change) : 
-          Math.max(0, metric.value - metric.change);
-        return sum + (normalizedValue / metric.target) * 100;
-      }, 0) / uxMetrics.length;
-      
-      setOverallScore(Math.round(avgMetrics));
-      
-      if (onOptimizationComplete) {
-        onOptimizationComplete(optimizationSuggestions);
-      }
-    }, 2500);
-  }, [generateUserBehaviors, generateUXMetrics, generateOptimizationSuggestions, uxMetrics, optimizationSuggestions, onOptimizationComplete]);
-
-  // Auto-analyze when component opens
-  useEffect(() => {
-    if (autoAnalyze && isOpen && !analysisComplete) {
-      startUXAnalysis();
-    }
-  }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]);
-
-  // Setup real-time updates
-  useEffect(() => {
-    if (showRealTime && isOpen && analysisComplete) {
-      analysisIntervalRef.current = setInterval(() => {
-        generateUserBehaviors();
-        generateUXMetrics();
-      }, 45000); // Update every 45 seconds
-      
-      return () => {
-        if (analysisIntervalRef.current) {
-          clearInterval(analysisIntervalRef.current);
+    internalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
         }
-      };
-    }
-  }, [showRealTime, isOpen, analysisComplete, generateUserBehaviors, generateUXMetrics]);
+      });
+    });
 
-  // Get trend display
-  const getTrendDisplay = (trend: string, change: number) => {
-    const colors = {
-      up: 'text-green-600',
-      down: 'text-red-600',
-      stable: 'text-gray-600'
+    // Enhanced scroll behavior for the page
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, [enableSmoothScrolling]);
+
+  // Loading states management
+  const setupLoadingStates = useCallback(() => {
+    if (!enableLoadingStates) return;
+
+    // Show loading state for navigation
+    const handleBeforeUnload = () => {
+      setIsLoading(true);
     };
+
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('load', handleLoad);
+
+    // Add loading states to forms
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      form.addEventListener('submit', () => {
+        setIsLoading(true);
+      });
+    });
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('load', handleLoad);
+    };
+  }, [enableLoadingStates]);
+
+  // Interaction tracking
+  const setupInteractionTracking = useCallback(() => {
+    if (!enableInteractionTracking) return;
+
+    const trackInteraction = () => {
+      interactionCount.current++;
+      setMetrics(prev => ({ ...prev, interactions: interactionCount.current }));
+    };
+
+    // Track clicks
+    document.addEventListener('click', trackInteraction);
     
-    const icons = {
-      up: <TrendingUp className="w-4 h-4" />,
-      down: <TrendingDown className="w-4 h-4" />,
-      stable: <Activity className="w-4 h-4" />
-    };
+    // Track form interactions
+    document.addEventListener('input', trackInteraction);
+    document.addEventListener('change', trackInteraction);
     
-    return (
-      <div className={`flex items-center space-x-1 ${colors[trend as keyof typeof colors]}`}>
-        {icons[trend as keyof typeof icons]}
-        <span className="text-sm font-medium">+{change.toFixed(1)}</span>
-      </div>
-    );
-  };
-
-  // Get impact color
-  const getImpactColor = (impact: string) => {
-    const colors = {
-      high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      setScrollProgress(Math.min(scrollPercent, 100));
+      setMetrics(prev => ({ ...prev, scrollDepth: Math.round(scrollPercent) }));
     };
-    return colors[impact as keyof typeof colors] || colors.low;
-  };
 
-  // Get effort color
-  const getEffortColor = (effort: string) => {
-    const colors = {
-      high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
+    // Throttled scroll tracking
+    const throttledScrollTrack = () => {
+      if (scrollTimeout.current) return;
+      
+      scrollTimeout.current = setTimeout(() => {
+        trackScrollDepth();
+        scrollTimeout.current = undefined;
+      }, 100);
     };
-    return colors[effort as keyof typeof colors] || colors.low;
-  };
 
-  // Filter behaviors by timeframe
-  const getFilteredBehaviors = () => {
-    const now = Date.now();
-    const timeframes = {
-      '1h': 3600000,
-      '24h': 86400000,
-      '7d': 604800000,
-      '30d': 2592000000
+    window.addEventListener('scroll', throttledScrollTrack);
+
+    return () => {
+      document.removeEventListener('click', trackInteraction);
+      document.removeEventListener('input', trackInteraction);
+      document.removeEventListener('change', trackInteraction);
+      window.removeEventListener('scroll', throttledScrollTrack);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
     };
+  }, [enableInteractionTracking]);
+
+  // Performance monitoring
+  const setupPerformanceMonitoring = useCallback(() => {
+    if (!enablePerformanceMonitoring) return;
+
+    // Monitor page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime: Math.round(loadTime) }));
+
+    // Monitor errors
+    const handleError = (event: ErrorEvent) => {
+      errorCount.current++;
+      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
+      console.warn('UX Error detected:', event.error);
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      errorCount.current++;
+      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
+      console.warn('UX Unhandled rejection:', event.reason);
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, [enablePerformanceMonitoring]);
+
+  // Time tracking
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
+      setMetrics(prev => ({ ...prev, timeOnPage: timeSpent }));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Setup all UX optimizations
+  useEffect(() => {
+    if (!enabled) return;
+
+    const cleanupSmooth = setupSmoothScrolling();
+    const cleanupLoading = setupLoadingStates();
+    const cleanupInteraction = setupInteractionTracking();
+    const cleanupPerformance = setupPerformanceMonitoring();
+
+    return () => {
+      cleanupSmooth?.();
+      cleanupLoading?.();
+      cleanupInteraction?.();
+      cleanupPerformance?.();
+    };
+  }, [
+    enabled,
+    setupSmoothScrolling,
+    setupLoadingStates,
+    setupInteractionTracking,
+    setupPerformanceMonitoring
+  ]);
+
+  // Enhanced hover effects
+  useEffect(() => {
+    if (!enabled) return;
+
+    // Add enhanced hover effects to interactive elements
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
-    return userBehaviors.filter(behavior => 
-      now - behavior.timestamp.getTime() <= timeframes[selectedTimeframe]
-    );
-  };
+    interactiveElements.forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        element.classList.add('enhanced-hover');
+      });
+      
+      element.addEventListener('mouseleave', () => {
+        element.classList.remove('enhanced-hover');
+      });
+    });
+
+    // Add CSS for enhanced hover effects
+    const style = document.createElement('style');
+    style.textContent = `
+      .enhanced-hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+      
+      .ux-loading {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .ux-loading::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        animation: loading-shimmer 1.5s infinite;
+      }
+      
+      @keyframes loading-shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, [enabled]);
 
   if (!enabled) return null;
 
   return (
     <>
-      {/* Floating UX Optimizer Button */}
+      {/* UX Metrics Toggle Button */}
       <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-72 z-50 bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setShowMetrics(!showMetrics)}
+        className="fixed bottom-4 right-20 z-50 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        aria-label="UX Metrics"
+        aria-expanded={showMetrics}
       >
-        <Users className="w-6 h-6" />
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <TrendingUp className="w-6 h-6" />
       </motion.button>
 
-      {/* UX Optimizer Modal */}
+      {/* UX Metrics Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {showMetrics && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 100, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 100, scale: 0.8 }}
+            className="fixed bottom-20 right-4 z-40 bg-slate-900/95 backdrop-blur-lg border border-green-500/30 rounded-2xl p-6 w-80 max-h-96 overflow-y-auto"
           >
-            <motion.div
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-                isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'
-              }`}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20">
-                <div className="flex items-center space-x-3">
-                  <Users className="w-8 h-8 text-green-600" />
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      User Experience Optimizer
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Real-time UX metrics and optimization recommendations
-                    </p>
-                  </div>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-green-400" />
+                UX Metrics
+              </h3>
+              <button
+                onClick={() => setShowMetrics(false)}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Close UX metrics panel"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              {/* Scroll Progress */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-300">Scroll Progress</span>
+                  <span className="text-green-400 font-semibold">{Math.round(scrollProgress)}%</span>
                 </div>
-                
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={startUXAnalysis}
-                    disabled={isAnalyzing}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    <RefreshCw className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`} />
-                  </button>
-                  
-                  <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
-                  </button>
-                  
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
+                <div className="w-full bg-slate-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${scrollProgress}%` }}
+                  />
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-                {isAnalyzing ? (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-4"></div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      Analyzing user experience...
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Gathering metrics and generating optimization suggestions
-                    </p>
-                  </div>
-                ) : analysisComplete ? (
-                  <div className="space-y-6">
-                    {/* Overall UX Score */}
-                    <div className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-xl p-6 border border-green-200 dark:border-green-700">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Overall UX Score
-                        </h3>
-                        <Users className="w-6 h-6 text-green-600" />
-                      </div>
-                      
-                      <div className="flex items-center space-x-6">
-                        <div className="text-center">
-                          <div className={`text-4xl font-bold mb-2 ${
-                            overallScore >= 85 ? 'text-green-600' :
-                            overallScore >= 70 ? 'text-yellow-600' :
-                            'text-red-600'
-                          }`}>
-                            {overallScore}/100
-                          </div>
-                          <div className="text-sm text-gray-600 dark:text-gray-400">
-                            UX Score
-                          </div>
-                        </div>
-                        
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-                            <span>Target: {targetScore}/100</span>
-                            <span>{Math.round((overallScore / targetScore) * 100)}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                            <div 
-                              className={`h-3 rounded-full transition-all duration-500 ${
-                                overallScore >= 85 ? 'bg-green-500' :
-                                overallScore >= 70 ? 'bg-yellow-500' :
-                                'bg-red-500'
-                              }`}
-                              style={{ width: `${Math.min((overallScore / targetScore) * 100, 100)}%` }}
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Navigation Tabs */}
-                    <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
-                      {[
-                        { key: 'metrics', label: 'UX Metrics', icon: BarChart3, count: uxMetrics.length },
-                        { key: 'behaviors', label: 'User Behaviors', icon: MousePointer, count: getFilteredBehaviors().length },
-                        { key: 'suggestions', label: 'Optimizations', icon: Lightbulb, count: optimizationSuggestions.length }
-                      ].map(({ key, label, icon: Icon, count }) => (
-                        <button
-                          key={key}
-                          onClick={() => setSelectedView(key as any)}
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
-                            selectedView === key
-                              ? 'bg-white dark:bg-gray-700 text-green-600 dark:text-green-400 shadow-sm'
-                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                          }`}
-                        >
-                          <Icon className="w-4 h-4" />
-                          <span>{label}</span>
-                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
-                            {count}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-
-                    {/* UX Metrics View */}
-                    {selectedView === 'metrics' && (
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Key UX Metrics
-                          </h3>
-                          <div className="flex items-center space-x-2">
-                            <select
-                              value={selectedTimeframe}
-                              onChange={(e) => setSelectedTimeframe(e.target.value as any)}
-                              className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                            >
-                              <option value="1h">Last Hour</option>
-                              <option value="24h">Last 24 Hours</option>
-                              <option value="7d">Last 7 Days</option>
-                              <option value="30d">Last 30 Days</option>
-                            </select>
-                          </div>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {uxMetrics.map((metric, index) => (
-                            <motion.div
-                              key={metric.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <div className="flex items-center justify-between mb-3">
-                                <h4 className="font-medium text-gray-900 dark:text-white">
-                                  {metric.name}
-                                </h4>
-                                {getTrendDisplay(metric.trend, metric.change)}
-                              </div>
-                              
-                              <div className="text-center mb-3">
-                                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                                  {metric.value}{metric.unit}
-                                </div>
-                                <div className="text-sm text-gray-500 dark:text-gray-400">
-                                  Target: {metric.target}{metric.unit}
-                                </div>
-                              </div>
-                              
-                              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div 
-                                  className={`h-2 rounded-full transition-all duration-300 ${
-                                    metric.value >= metric.target ? 'bg-green-500' :
-                                    metric.value >= metric.target * 0.8 ? 'bg-yellow-500' :
-                                    'bg-red-500'
-                                  }`}
-                                  style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
-                                ></div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* User Behaviors View */}
-                    {selectedView === 'behaviors' && (
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            User Behavior Analysis
-                          </h3>
-                          <button
-                            onClick={() => setShowAdvanced(!showAdvanced)}
-                            className="px-3 py-1 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-                          >
-                            {showAdvanced ? 'Hide' : 'Show'} Advanced
-                          </button>
-                        </div>
-                        
-                        <div className="grid gap-4">
-                          {getFilteredBehaviors().slice(0, 20).map((behavior, index) => (
-                            <motion.div
-                              key={behavior.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.05 }}
-                            >
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-4">
-                                  <div className={`p-2 rounded-lg ${
-                                    behavior.success ? 'bg-green-100 dark:bg-green-900/30' : 'bg-red-100 dark:bg-red-900/30'
-                                  }`}>
-                                    {behavior.success ? 
-                                      <CheckCircle className="w-4 h-4 text-green-600" /> :
-                                      <AlertTriangle className="w-4 h-4 text-red-600" />
-                                    }
-                                  </div>
-                                  
-                                  <div>
-                                    <h4 className="font-medium text-gray-900 dark:text-white">
-                                      {behavior.action}
-                                    </h4>
-                                    <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-                                      <span>Duration: {behavior.duration}s</span>
-                                      <span>Type: {behavior.userType}</span>
-                                      <span>Device: {behavior.device}</span>
-                                      <span>Location: {behavior.location}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                
-                                <div className="text-right text-sm text-gray-500 dark:text-gray-400">
-                                  <div>{behavior.timestamp.toLocaleTimeString()}</div>
-                                  <div>{behavior.timestamp.toLocaleDateString()}</div>
-                                </div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Optimization Suggestions View */}
-                    {selectedView === 'suggestions' && (
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Optimization Suggestions
-                        </h3>
-                        
-                        <div className="grid gap-4">
-                          {optimizationSuggestions
-                            .sort((a, b) => a.priority - b.priority)
-                            .map((suggestion, index) => (
-                            <motion.div
-                              key={suggestion.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <div className="flex items-start justify-between">
-                                <div className="flex-1">
-                                  <div className="flex items-center space-x-3 mb-2">
-                                    <div className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(suggestion.impact)}`}>
-                                      {suggestion.impact} impact
-                                    </div>
-                                    <div className={`px-2 py-1 rounded-full text-xs font-medium ${getEffortColor(suggestion.effort)}`}>
-                                      {suggestion.effort} effort
-                                    </div>
-                                    <div className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">
-                                      Priority {suggestion.priority}
-                                    </div>
-                                  </div>
-                                  
-                                  <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                                    {suggestion.title}
-                                  </h4>
-                                  
-                                  <p className="text-gray-600 dark:text-gray-400 mb-3">
-                                    {suggestion.description}
-                                  </p>
-                                  
-                                  <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
-                                    <span>Estimated Improvement: +{suggestion.estimatedImprovement}%</span>
-                                    <span>Category: {suggestion.category}</span>
-                                  </div>
-                                  
-                                  {showAdvanced && (
-                                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-                                      <h5 className="font-medium text-gray-900 dark:text-white mb-2">Implementation:</h5>
-                                      <p className="text-sm text-gray-600 dark:text-gray-400">{suggestion.implementation}</p>
-                                    </div>
-                                  )}
-                                </div>
-                                
-                                <div className="flex items-center space-x-2">
-                                  <button className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors">
-                                    <CheckCircle className="w-4 h-4" />
-                                  </button>
-                                  <button className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
-                                    <Info className="w-4 h-4" />
-                                  </button>
-                                </div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Action Buttons */}
-                    <div className="flex items-center justify-center space-x-4 pt-6">
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                        <Download className="w-4 h-4" />
-                        <span>Export Report</span>
-                      </button>
-                      
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                        <Lightbulb className="w-4 h-4" />
-                        <span>Apply All Suggestions</span>
-                      </button>
-                      
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                        <Share2 className="w-4 h-4" />
-                        <span>Share Report</span>
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <Users className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      Ready to optimize user experience?
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-6">
-                      Click the analyze button to start UX optimization
-                    </p>
-                    <button
-                      onClick={startUXAnalysis}
-                      className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                    >
-                      Start UX Analysis
-                    </button>
-                  </div>
-                )}
+              {/* Time on Page */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm">Time on Page</span>
+                </div>
+                <span className="text-green-400 font-semibold">
+                  {Math.floor(metrics.timeOnPage / 60)}:{(metrics.timeOnPage % 60).toString().padStart(2, '0')}
+                </span>
               </div>
-            </motion.div>
+
+              {/* Interactions */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <MousePointer className="w-4 h-4" />
+                  <span className="text-sm">Interactions</span>
+                </div>
+                <span className="text-blue-400 font-semibold">{metrics.interactions}</span>
+              </div>
+
+              {/* Load Time */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Zap className="w-4 h-4" />
+                  <span className="text-sm">Load Time</span>
+                </div>
+                <span className="text-purple-400 font-semibold">{metrics.loadTime}ms</span>
+              </div>
+
+              {/* Errors */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <AlertCircle className="w-4 h-4" />
+                  <span className="text-sm">Errors</span>
+                </div>
+                <span className={`font-semibold ${metrics.errors > 0 ? 'text-red-400' : 'text-green-400'}`}>
+                  {metrics.errors}
+                </span>
+              </div>
+
+              {/* Performance Indicators */}
+              <div className="pt-4 border-t border-slate-700">
+                <h4 className="text-sm font-medium text-white mb-2">Performance</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-400">Scroll Depth</span>
+                    <span className={`font-semibold ${
+                      metrics.scrollDepth > 80 ? 'text-green-400' : 
+                      metrics.scrollDepth > 50 ? 'text-yellow-400' : 'text-red-400'
+                    }`}>
+                      {metrics.scrollDepth > 80 ? 'Excellent' : 
+                       metrics.scrollDepth > 50 ? 'Good' : 'Needs Improvement'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-400">Engagement</span>
+                    <span className={`font-semibold ${
+                      metrics.interactions > 10 ? 'text-green-400' : 
+                      metrics.interactions > 5 ? 'text-yellow-400' : 'text-red-400'
+                    }`}>
+                      {metrics.interactions > 10 ? 'High' : 
+                       metrics.interactions > 5 ? 'Medium' : 'Low'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Global Loading Indicator */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-center justify-center"
+          >
+            <div className="bg-slate-900/95 border border-slate-700/50 rounded-2xl p-8 text-center">
+              <Loader2 className="w-12 h-12 text-green-400 animate-spin mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Loading...</h3>
+              <p className="text-gray-400">Please wait while we process your request</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Scroll to Top Button */}
+      {scrollProgress > 20 && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-20 right-4 z-40 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          aria-label="Scroll to top"
+        >
+          <Target className="w-6 h-6" />
+        </motion.button>
+      )}
     </>
   );
-}
+};

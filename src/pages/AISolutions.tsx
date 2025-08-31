@@ -808,4 +808,3 @@ export default function AISolutions() {
   );
 }
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,21 +1,4 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  X,
-  RefreshCw,
-  Settings,
-  BarChart3,
-  Cpu,
-  Memory,
-  HardDrive,
-  Network
-} from 'lucide-react';
+import React, { useEffect, useRef, useCallback } from 'react';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -26,318 +9,259 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceOptimizerProps {
-  enabled?: boolean;
-  showMetrics?: boolean;
-  autoOptimize?: boolean;
+  children: React.ReactNode;
+  enableLazyLoading?: boolean;
+  enableIntersectionObserver?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enabled = true,
-  showMetrics = false,
-  autoOptimize = true
+  children,
+  enableLazyLoading = true,
+  enableIntersectionObserver = true,
+  enablePerformanceMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const performanceDataRef = useRef<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+  });
 
-  // Performance optimization strategies
-  const optimizationStrategies = useMemo(() => [
-    {
-      name: 'Image Optimization',
-      action: () => optimizeImages(),
-      priority: 'high'
-    },
-    {
-      name: 'Bundle Splitting',
-      action: () => optimizeBundleSplitting(),
-      priority: 'high'
-    },
-    {
-      name: 'Caching Strategy',
-      action: () => optimizeCaching(),
-      priority: 'medium'
-    },
-    {
-      name: 'Critical CSS',
-      action: () => optimizeCriticalCSS(),
-      priority: 'medium'
-    }
-  ], []);
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    if (!enablePerformanceMonitoring) return;
 
-  // Optimize images for better performance
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-    return 'Images optimized with lazy loading and async decoding';
-  }, []);
-
-  // Optimize bundle splitting
-  const optimizeBundleSplitting = useCallback(() => {
-    // This would typically be done at build time
-    return 'Bundle splitting optimization applied';
-  }, []);
-
-  // Optimize caching strategy
-  const optimizeCaching = useCallback(() => {
-    // Implement service worker caching strategies
-    return 'Caching strategy optimized';
-  }, []);
-
-  // Optimize critical CSS
-  const optimizeCriticalCSS = useCallback(() => {
-    // Inline critical CSS for above-the-fold content
-    return 'Critical CSS optimization applied';
-  }, []);
-
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
+    // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       try {
-        // First Contentful Paint
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const fcp = entries[entries.length - 1];
-          if (fcp) {
-            setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-          }
-        }).observe({ entryTypes: ['paint'] });
-
-        // Largest Contentful Paint
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const lcp = entries[entries.length - 1];
-          if (lcp) {
-            setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-          }
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const fid = entries[entries.length - 1];
-          if (fid) {
-            setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-          }
-        }).observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        new PerformanceObserver((entryList) => {
-          let cls = 0;
-          entryList.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              cls += entry.value;
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+              performanceDataRef.current.lcp = entry.startTime;
+            } else if (entry.entryType === 'first-input-delay') {
+              const fid = (entry as any).processingStart - entry.startTime;
+              console.log('FID:', fid);
+              performanceDataRef.current.fid = fid;
+            } else if (entry.entryType === 'layout-shift') {
+              console.log('CLS:', (entry as any).value);
+              performanceDataRef.current.cls = (entry as any).value;
             }
-          });
-          setMetrics(prev => ({ ...prev, cls }));
-        }).observe({ entryTypes: ['layout-shift'] });
+          }
+        });
 
-        // Time to First Byte
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigationEntry) {
-          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-        }
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       } catch (error) {
-        console.warn('Performance measurement failed:', error);
+        console.warn('Performance monitoring failed:', error);
       }
+    }
+
+    // Monitor First Contentful Paint
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              console.log('FCP:', entry.startTime);
+              performanceDataRef.current.fcp = entry.startTime;
+            }
+          }
+        });
+
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (error) {
+        console.warn('FCP monitoring failed:', error);
+      }
+    }
+
+    // Monitor Time to First Byte
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+              const navEntry = entry as PerformanceNavigationTiming;
+              const ttfb = navEntry.responseStart - navEntry.requestStart;
+              console.log('TTFB:', ttfb);
+              performanceDataRef.current.ttfb = ttfb;
+            }
+          }
+        });
+
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (error) {
+        console.warn('TTFB monitoring failed:', error);
+      }
+    }
+  }, [enablePerformanceMonitoring]);
+
+  // Lazy loading with Intersection Observer
+  const setupLazyLoading = useCallback(() => {
+    if (!enableLazyLoading || !enableIntersectionObserver) return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    if (images.length === 0) return;
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset.src;
+          if (src) {
+            img.src = src;
+            img.classList.remove('lazy');
+            img.removeAttribute('data-src');
+            observerRef.current?.unobserve(img);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01,
+    });
+
+    images.forEach((img) => {
+      observerRef.current?.observe(img);
+    });
+  }, [enableLazyLoading, enableIntersectionObserver]);
+
+  // Resource hints for performance
+  const addResourceHints = useCallback(() => {
+    // Preconnect to external domains
+    const domains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.google-analytics.com',
+    ];
+
+    domains.forEach(domain => {
+      if (!document.querySelector(`link[href="${domain}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      }
+    });
+
+    // DNS prefetch for additional domains
+    const dnsDomains = [
+      '//cdn.jsdelivr.net',
+      '//unpkg.com',
+    ];
+
+    dnsDomains.forEach(domain => {
+      if (!document.querySelector(`link[href="${domain}"]`)) {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = domain;
+        document.head.appendChild(link);
+      }
+    });
+  }, []);
+
+  // Critical CSS inline loading
+  const loadCriticalCSS = useCallback(() => {
+    const criticalCSS = document.querySelector('link[data-critical]');
+    if (criticalCSS) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = criticalCSS.getAttribute('href') || '';
+      link.media = 'print';
+      link.onload = () => {
+        link.media = 'all';
+      };
+      document.head.appendChild(link);
     }
   }, []);
 
-  // Auto-optimize based on metrics
-  const autoOptimize = useCallback(() => {
-    if (!metrics || !autoOptimize) return;
-
-    const optimizations: string[] = [];
+  // Performance optimization suggestions
+  const getOptimizationSuggestions = useCallback(() => {
+    const metrics = performanceDataRef.current;
+    const suggestions: string[] = [];
 
     if (metrics.fcp > 1800) {
-      optimizations.push('First Contentful Paint is slow - optimizing critical rendering path');
-      optimizationStrategies[2].action(); // Critical CSS
+      suggestions.push('First Contentful Paint is slow. Optimize critical rendering path.');
     }
 
     if (metrics.lcp > 2500) {
-      optimizations.push('Largest Contentful Paint is slow - optimizing images and content');
-      optimizationStrategies[0].action(); // Image optimization
+      suggestions.push('Largest Contentful Paint is slow. Optimize images and fonts.');
     }
 
     if (metrics.fid > 100) {
-      optimizations.push('First Input Delay is high - optimizing JavaScript execution');
-      optimizationStrategies[1].action(); // Bundle splitting
+      suggestions.push('First Input Delay is high. Reduce JavaScript execution time.');
     }
 
     if (metrics.cls > 0.1) {
-      optimizations.push('Cumulative Layout Shift is high - optimizing layout stability');
-      optimizationStrategies[3].action(); // Caching
+      suggestions.push('Cumulative Layout Shift is high. Ensure stable layouts.');
     }
 
-    if (optimizations.length > 0) {
-      setOptimizations(optimizations);
+    if (metrics.ttfb > 600) {
+      suggestions.push('Time to First Byte is slow. Optimize server response time.');
     }
-  }, [metrics, autoOptimize, optimizationStrategies]);
 
-  // Run manual optimization
-  const runOptimization = useCallback(async () => {
-    setIsOptimizing(true);
-    const results: string[] = [];
+    return suggestions;
+  }, []);
 
-    for (const strategy of optimizationStrategies) {
-      try {
-        const result = strategy.action();
-        results.push(result);
-        await new Promise(resolve => setTimeout(resolve, 100)); // Small delay between optimizations
-      } catch (error) {
-        console.warn(`Optimization ${strategy.name} failed:`, error);
+  // Apply optimizations
+  const applyOptimizations = useCallback(() => {
+    const suggestions = getOptimizationSuggestions();
+    
+    if (suggestions.length > 0) {
+      console.log('Performance optimization suggestions:', suggestions);
+      
+      // Auto-apply some optimizations
+      if (suggestions.some(s => s.includes('images'))) {
+        // Optimize images
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          if (img.loading !== 'lazy') {
+            img.loading = 'lazy';
+          }
+        });
+      }
+
+      if (suggestions.some(s => s.includes('JavaScript'))) {
+        // Defer non-critical scripts
+        const scripts = document.querySelectorAll('script:not([data-critical])');
+        scripts.forEach(script => {
+          if (!script.defer && !script.async) {
+            script.defer = true;
+          }
+        });
       }
     }
+  }, [getOptimizationSuggestions]);
 
-    setOptimizations(results);
-    setIsOptimizing(false);
-  }, [optimizationStrategies]);
-
+  // Initialize performance monitoring
   useEffect(() => {
-    if (enabled) {
-      measurePerformance();
-      
-      // Measure performance after page load
-      const timer = setTimeout(() => {
-        measurePerformance();
-      }, 2000);
+    monitorPerformance();
+    addResourceHints();
+    loadCriticalCSS();
+  }, [monitorPerformance, addResourceHints, loadCriticalCSS]);
 
-      return () => clearTimeout(timer);
-    }
-  }, [enabled, measurePerformance]);
-
+  // Setup lazy loading
   useEffect(() => {
-    if (metrics) {
-      autoOptimize();
-    }
-  }, [metrics, autoOptimize]);
+    setupLazyLoading();
 
-  if (!enabled) return null;
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [setupLazyLoading]);
 
-  return (
-    <>
-      {/* Performance Metrics Display */}
-      {showMetrics && metrics && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4 text-white text-sm z-50 max-w-xs"
-        >
-          <h3 className="font-semibold mb-2 text-cyan-400">Performance Metrics</h3>
-          <div className="space-y-1 text-xs">
-            <div className="flex justify-between">
-              <span>FCP:</span>
-              <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
-                {Math.round(metrics.fcp)}ms
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>LCP:</span>
-              <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
-                {Math.round(metrics.lcp)}ms
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
-                {Math.round(metrics.fid)}ms
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>CLS:</span>
-              <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
-                {metrics.cls.toFixed(3)}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>TTFB:</span>
-              <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
-                {Math.round(metrics.ttfb)}ms
-              </span>
-            </div>
-          </div>
-          
-          <button
-            onClick={runOptimization}
-            disabled={isOptimizing}
-            className="mt-3 w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 disabled:bg-slate-600 rounded text-xs font-medium transition-colors"
-          >
-            {isOptimizing ? 'Optimizing...' : 'Run Optimization'}
-          </button>
-        </motion.div>
-      )}
+  // Apply optimizations after metrics are collected
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      applyOptimizations();
+    }, 5000); // Wait 5 seconds for metrics to be collected
 
-      {/* Optimization Results */}
-      <AnimatePresence>
-        {optimizations.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed top-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4 text-white text-sm z-50 max-w-xs"
-          >
-            <h3 className="font-semibold mb-2 text-green-400">Optimizations Applied</h3>
-            <div className="space-y-2 text-xs">
-              {optimizations.map((optimization, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
-                  <span>{optimization}</span>
-                </div>
-              ))}
-            </div>
-            <button
-              onClick={() => setOptimizations([])}
-              className="mt-3 w-full px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-xs font-medium transition-colors"
-            >
-              Dismiss
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+    return () => clearTimeout(timer);
+  }, [applyOptimizations]);
 
-      {/* Performance Monitoring Script */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            // Preload critical resources
-            const criticalResources = [
-              '/fonts/inter-var.woff2',
-              '/css/critical.css'
-            ];
-            
-            criticalResources.forEach(resource => {
-              const link = document.createElement('link');
-              link.rel = 'preload';
-              link.href = resource;
-              link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-              link.crossOrigin = resource.endsWith('.woff2') ? 'anonymous' : '';
-              document.head.appendChild(link);
-            });
-
-            // Optimize scroll performance
-            let ticking = false;
-            function updateScroll() {
-              ticking = false;
-              // Update scroll-based animations here
-            }
-            
-            function requestTick() {
-              if (!ticking) {
-                requestAnimationFrame(updateScroll);
-                ticking = true;
-              }
-            }
-            
-            window.addEventListener('scroll', requestTick, { passive: true });
-          `
-        }}
-      />
-    </>
-  );
+  return <>{children}</>;
 };

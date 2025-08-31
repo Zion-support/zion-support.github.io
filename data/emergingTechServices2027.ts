@@ -35,12 +35,7 @@ export interface EmergingTechService2027 {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Quantum Internet Infrastructure
@@ -460,16 +455,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     },
     roi: "1200-2500%",
     estimatedDelivery: "48-60 weeks",
-<<<<<<< HEAD
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
-];}}}}}}}
-=======
     contactInfo: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
@@ -478,4 +463,3 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     };
   };
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

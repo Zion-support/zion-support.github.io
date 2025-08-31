@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink import { SEOHead } from '../components/SEOHead';
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-=======
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { SEOHead } from "../components/SEOHead";
 import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -41,12 +35,7 @@ const InnovativeNewServices2025 = () => {
             case 'Edge Computing':
                 return Cloud;
             default:
-<<<<<<< HEAD
-                return Zap;
-
-=======
                 return Zap}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -59,16 +48,10 @@ const InnovativeNewServices2025 = () => {
             case 'Edge Computing':
                 return 'from-orange-500 to-red-600';
             default:
-<<<<<<< HEAD
-                return 'from-gray-500 to-gray-600';
-
-=======
                 return 'from-gray-500 to-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>
-
       {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -88,7 +71,6 @@ const InnovativeNewServices2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="py-8 bg-black/50 border-y border-gray-700">
         <div className="max-w-7xl mx-auto px-6">
@@ -114,7 +96,6 @@ const InnovativeNewServices2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-8 bg-black/30">
         <div className="max-w-7xl mx-auto px-6">
@@ -127,7 +108,6 @@ const InnovativeNewServices2025 = () => {
                   </option>))}
               </select>
             </div>
-
             <div className="flex items-center gap-4">
               <label className="text-gray-300 font-medium">Price Range:</label>
               <select value={selectedPriceRange} onChange={(e) => setSelectedPriceRange(e.target.value)} className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none">
@@ -139,7 +119,6 @@ const InnovativeNewServices2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -161,11 +140,9 @@ const InnovativeNewServices2025 = () => {
                         <div className="text-sm text-gray-400">{service.pricingModel}</div>
                       </div>
                     </div>
-
                     {/* Title and Description */}
                     <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
                     {/* Features */}
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold mb-3 text-cyan-400">Key Features</h4>
@@ -176,7 +153,6 @@ const InnovativeNewServices2025 = () => {
                           </li>))}
                       </ul>
                     </div>
-
                     {/* Benefits */}
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold mb-3 text-green-400">Key Benefits</h4>
@@ -187,13 +163,11 @@ const InnovativeNewServices2025 = () => {
                           </li>))}
                       </ul>
                     </div>
-
                     {/* Market Price */}
                     <div className="mb-6 p-4 bg-gray-800/50 rounded-lg">
                       <div className="text-sm text-gray-400 mb-1">Market Price Range</div>
                       <div className="text-lg font-semibold text-yellow-400">{service.marketPrice}</div>
                     </div>
-
                     {/* CTA */}
                     <div className="flex flex-col gap-3">
                       <Link to={`/contact?service=${service.id}`} className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
@@ -203,7 +177,6 @@ const InnovativeNewServices2025 = () => {
                         Schedule Consultation
                       </Link>
                     </div>
-
                     {/* Contact Info */}
                     <div className="mt-6 pt-6 border-t border-gray-700">
                       <div className="text-center text-sm text-gray-400">
@@ -223,7 +196,6 @@ const InnovativeNewServices2025 = () => {
                   </div>
                 </div>)})}
           </div>
-
           {filteredServices.length === 0 && (<div className="text-center py-20">
               <h3 className="text-2xl font-bold text-gray-400 mb-4">No services found</h3>
               <p className="text-gray-500 mb-6">Try adjusting your filters to see more services</p>
@@ -235,7 +207,6 @@ const InnovativeNewServices2025 = () => {
             </div>)}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center px-6">

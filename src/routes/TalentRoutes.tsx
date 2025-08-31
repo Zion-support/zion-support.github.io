@@ -6,23 +6,11 @@ import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
-
 export default function TalentRoutes() {
   return (
-<<<<<<< HEAD
-    <Routes>
-      <Route path = "directory" element={<TalentDirectory />} />
-      <Route path="list" element={<TalentsPage />} />
-      <Route path="profile/:id" element={<TalentProfilePage />} />
-      <Route path="saved" element={<SavedTalentsPage />} />
-      <Route path="create" element={<CreateTalentProfile />} />
-      <Route path="my-profile" element={<ProfilePage />} />
-    </Routes>
-=======;
     <>;
       <Route path = "directory" element={<TalentDirectory />} />;
       <Route path="list" element={<TalentsPage />} />;
     </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

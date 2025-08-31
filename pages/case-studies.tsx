@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap export default function CaseStudies() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
 
 
 export default function CaseStudies(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const caseStudies = [
 		{
 			id: 1,
@@ -314,15 +308,6 @@ export default function CaseStudies(...args[]):  {
 
 								Explore Our Services →
 							</Link>
-<<<<<<< HEAD
-						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 						</div>;
 					</div>;
 				</div>;
@@ -330,4 +315,3 @@ export default function CaseStudies(...args[]):  {
 		</>;
 	);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

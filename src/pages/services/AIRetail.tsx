@@ -9,25 +9,12 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     'Integration with major e-commerce and POS platforms',;
     'Custom AI models for retail-specific insights';
   ];
-
   const tiers = [
     {
       name: 'Small Retailer',
       price: '$299/mo',
       details: ['Up to 1,000 products', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Retailer',
-      price: '$799/mo',
-      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Retailer',
-      price: '$1,999/mo',
-      details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Retailer', 
       price: '$799/mo', 
@@ -38,9 +25,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
       price: '$1,999/mo', ;
       details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'E-commerce optimization and conversion rate improvement',;
     'Brick-and-mortar store analytics and optimization',;
@@ -49,7 +34,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     'Price optimization and competitive analysis',;
     'Omnichannel retail experience enhancement';
   ];
-
   const benefits = [;
     'Increase sales conversion rates by 20-40%',;
     'Improve customer retention by 30-50%',;
@@ -58,7 +42,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     'Enhance customer experience and satisfaction',;
     'Scale retail operations efficiently';
   ];
-
   const industries = [;
     'E-commerce & Online Retail',;
     'Brick & Mortar Stores',;
@@ -67,7 +50,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     'Home & Garden',;
     'Food & Beverage Retail';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           <p className="text-indigo-100 text-xl">Transform your retail business with AI-powered insights that optimize pricing, enhance customer experience, and maximize sales performance.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +100,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['20-40% conversion improvement', '30-50% retention increase', '25-40% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +108,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +119,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-blue-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Retail Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +130,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +141,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your retail business with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

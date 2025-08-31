@@ -16,23 +16,14 @@ class CodeQualityMonitor {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-<<<<<<< HEAD
-    // // // console.log(message);
-=======
     // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-<<<<<<< HEAD
-      // // // console.error('Failed to write to log file:', error.message);
-
-=======
       // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async analyzeFile(filePath) {
     try {
@@ -305,11 +296,7 @@ class CodeQualityMonitor {
 // Run the code quality monitor
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {
-<<<<<<< HEAD
-  // // // console.error('Fatal error:', error);
-=======
   // // // // // // // console.error('Fatal error:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

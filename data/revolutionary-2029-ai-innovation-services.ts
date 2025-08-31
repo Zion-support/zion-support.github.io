@@ -38,12 +38,9 @@ export interface RevolutionaryAIInnovationService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
   // AI-Powered Autonomous Code Review
@@ -468,17 +465,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Production-ready platform with real AI marketing optimization models, comprehensive campaign management, and advanced analytics.',
-    launchDate: '2024-03-01',
-    customers: 520,
-    rating: 4.8,
-    reviews: 380
-
-];
-
-export default revolutionaryAIInnovationServices2029;}}
-=======
     implementationDetails: 'AI models, document processing, compliance engine',
     launchDate: '2025-01-28',
     customers: 22,
@@ -558,4 +544,3 @@ export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) =>
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
