@@ -418,6 +418,63 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
+        {/* Latest Innovative Services 2026 */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-cyan/30"
+          >
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-4">
+                <Rocket className="w-4 h-4" />
+                Latest Innovation 2026
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Revolutionary New Services
+              </h3>
+              <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+                Experience our cutting-edge AI Autonomous Logistics, AI-Powered SEO, and AI Content Marketing Studio platforms
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Truck className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">AI Autonomous Logistics</h4>
+                <p className="text-zion-slate-light text-sm">35% cost reduction, 40% faster delivery</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-8 h-8 text-zion-purple" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">AI-Powered SEO</h4>
+                <p className="text-zion-slate-light text-sm">300% more organic traffic</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <PenTool className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">AI Content Marketing Studio</h4>
+                <p className="text-zion-slate-light text-sm">250% engagement increase</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300"
+              >
+                Explore Latest Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
         {/* 2032 Innovation Highlight */}
         <div className="mb-16">
           <motion.div

@@ -272,6 +272,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </Link>
                       </li>
                       <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-seo" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Search className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI-Powered SEO</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-content-marketing-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <PenTool className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Content Marketing Studio</span>
+                        </Link>
+                      </li>
+                      <li>
                         <Link to="/services/ai-business-intelligence-platform-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI BI Platform Enterprise</span>
