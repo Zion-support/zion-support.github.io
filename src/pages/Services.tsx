@@ -135,6 +135,7 @@ const Services = () => {
   const services = [
     // AI & Automation Services
     {
+<<<<<<< HEAD
       id: 'ai-autonomous-business-operations',
       title: 'AI Autonomous Business Operations Platform',
       description: 'Revolutionary AI platform that autonomously manages and optimizes entire business operations.',
@@ -357,6 +358,7 @@ const Services = () => {
       price: '$4,999/month',
       features: ['Infrastructure monitoring', 'Performance optimization', 'Automated management', '24/7 support'],
       link: '/services/it-infrastructure-management'
+
     }
   ];
 
