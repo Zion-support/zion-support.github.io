@@ -41,7 +41,7 @@ export function Header() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Support
               </Link>
               <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
@@ -94,50 +94,34 @@ export function Header() {
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
+
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
               <button
                 type="button"
-                className="hidden md:inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
+                className="p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white rounded-lg transition-all duration-300"
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                aria-label="Search"
+                aria-label="Toggle search"
               >
                 <Search className="h-5 w-5" />
               </button>
 
-              {/* Notifications */}
-              <button
-                type="button"
-                className="hidden md:inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300 relative"
-                aria-label="Notifications"
-              >
-                <Bell className="h-5 w-5" />
-                <span className="absolute -top-1 -right-1 h-3 w-3 bg-zion-cyan rounded-full"></span>
-              </button>
+              {/* User Menu */}
+              <div className="relative">
+                <button
+                  type="button"
+                  className="p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white rounded-lg transition-all duration-300"
+                  aria-label="User menu"
+                >
+                  <User className="h-5 w-5" />
+                </button>
+              </div>
 
-              {/* User Account */}
+              {/* CTA Button */}
               <Link
-                to="/signup"
-                className="hidden md:inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
-                aria-label="Account"
-              >
-                <User className="h-5 w-5" />
-              </Link>
-
-              {/* Cart */}
-              <Link
-                to="/marketplace"
-                className="hidden md:inline-flex items-center justify-center rounded-lg p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark transition-all duration-300"
-                aria-label="Marketplace"
-              >
-                <ShoppingBag className="h-5 w-5" />
-              </Link>
-
-              {/* Get Started CTA */}
-              <Link
-                to="/get-started"
-                className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-sm font-medium rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
+                to="/contact"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark font-semibold rounded-lg transition-all duration-300"
               >
                 Get Started
               </Link>
@@ -147,25 +131,23 @@ export function Header() {
 
         {/* Search Bar */}
         {isSearchOpen && (
-          <div className="border-t border-zion-purple/20 bg-zion-slate-dark">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-              <div className="relative">
+          <div className="border-t border-zion-purple/20 bg-zion-slate-dark py-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="relative max-w-2xl mx-auto">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
                   type="text"
-                  placeholder="Search services, solutions, documentation..."
-                  className="w-full px-4 py-3 pl-12 pr-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  placeholder="Search for services, solutions, or information..."
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                 />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
               </div>
             </div>
           </div>
         )}
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <MobileMenu onClose={closeMobileMenu} />
-        )}
       </header>
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </>
   );
 }

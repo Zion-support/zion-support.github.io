@@ -1,79 +1,116 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
+import { cn } from "@/lib/utils";
+import {
   Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Star,
+  Briefcase,
   Target,
-  TrendingUp,
-  Award,
-  Settings,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Server,
+  Cloud,
+  Lock,
+  BarChart,
+  Cpu,
+  Workflow,
+  Database,
   Globe,
   Rocket,
-  Heart,
-  Lock,
-  Database,
-  Network,
-  Palette,
-  Video,
-  PenTool,
-  Atom,
-  Server,
+  Lightbulb,
+  Code,
+  Monitor,
   Smartphone,
-  BarChart3,
+  Network,
+  Wifi,
+  Activity,
   Search,
-  FileText,
-  Calendar,
-  Briefcase,
-  Info,
+  Settings,
+  Palette,
+  Zap,
   Phone,
   Mail,
   MapPin,
-  Building2,
-  TestTube,
-  Newspaper,
-  Handshake,
-  Monitor,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Star,
+  Users2,
+  Cog,
+  Menu,
+  X,
+  ArrowRight,
+  Video,
   GraduationCap,
-  Lightbulb,
-  Code,
-  Activity,
-  Workflow,
-  Truck
+  Handshake,
+  ShoppingCart,
+  Truck,
+  Heart,
+  Scale,
+  BookOpen,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Dna,
+  Pill,
+  Stethoscope,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Building,
+  Factory,
+  Warehouse,
+  Store,
+  Bank,
+  CreditCard,
+  PiggyBank,
+  ChartLine,
+  PieChart,
+  TrendingDown,
+  AlertTriangle,
+  CheckCircle,
+  Calendar,
+  UserCheck,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserHeart,
+  UserStar,
+  UserCheckCircle,
+  Newspaper,
+  Award,
+  Eye,
+  Camera,
+  Film,
+  Image,
+  ChevronDown,
+  ChevronRight,
+  ExternalLink,
+  Brain,
+  Shield,
+  Users
 } from 'lucide-react';
 
-interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ComponentType<any>;
-  children?: SidebarItem[];
-  featured?: boolean;
-  description?: string;
+interface MainSidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-interface NavigationSection {
-  title: string;
-  items: SidebarItem[];
-}
-
-export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   const location = useLocation();
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
@@ -83,326 +120,243 @@ export function MainSidebar() {
     );
   };
 
-  const navigation: NavigationSection[] = [
+  const isActive = (path: string) => location.pathname === path;
+
+  const sidebarSections = [
     {
       title: 'Main',
       items: [
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Building2 },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
+        { name: 'Contact', href: '/contact', icon: MessageCircle },
         { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Blog', href: '/blog', icon: BookOpen }
       ]
     },
     {
-      title: 'AI & Automation',
+      title: 'Services',
+      expandable: true,
       items: [
-        {
-          name: 'AI Autonomous Business Operations',
-          href: '/services/ai-autonomous-business-operations-platform',
-          icon: Brain,
-          description: 'Autonomous Business Management'
-        },
-        {
-          name: 'AI Customer Experience Analytics',
-          href: '/services/ai-customer-experience-analytics-platform',
-          icon: BarChart3,
-          description: 'Customer Insights & Analytics'
-        },
-        {
-          name: 'AI Project Management',
-          href: '/services/ai-project-management-platform',
-          icon: Workflow,
-          description: 'Intelligent Project Management'
-        },
-        {
-          name: 'AI Marketing Automation',
-          href: '/services/ai-marketing-automation-platform',
-          icon: TrendingUp,
-          description: 'Smart Marketing Solutions'
-        },
-        {
-          name: 'AI Content Creation Studio',
-          href: '/services/ai-content-creation-studio',
-          icon: PenTool,
-          description: 'AI-Powered Content Generation'
-        },
-        {
-          name: 'AI Sales Copilot',
-          href: '/services/ai-sales-copilot',
-          icon: Users,
-          description: 'Intelligent Sales Assistant'
-        }
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/it-services', icon: Server, description: 'Technology infrastructure' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Scalable cloud services' },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security & protection' },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom, description: 'Quantum solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Rocket, description: 'Business modernization' }
       ]
     },
     {
-      title: 'IT & Infrastructure',
+      title: 'Solutions',
+      expandable: true,
       items: [
-        {
-          name: 'Cloud & DevOps',
-          href: '/services/cloud-devops',
-          icon: Cloud,
-          description: 'Infrastructure & Automation'
-        },
-        {
-          name: 'Cybersecurity',
-          href: '/services/cybersecurity',
-          icon: Shield,
-          description: 'Security & Protection'
-        },
-        {
-          name: 'Infrastructure Management',
-          href: '/services/it-infrastructure-management',
-          icon: Server,
-          description: 'IT Infrastructure Solutions'
-        },
-        {
-          name: 'Digital Transformation',
-          href: '/services/digital-transformation',
-          icon: Rocket,
-          description: 'Business Transformation'
-        },
-        {
-          name: 'Quantum Edge Computing',
-          href: '/services/quantum-edge-computing-solutions',
-          icon: Atom,
-          description: 'Next-Gen Computing'
-        },
-        {
-          name: 'Blockchain Solutions',
-          href: '/services/blockchain-enterprise-solutions',
-          icon: Database,
-          description: 'Distributed Ledger Technology'
-        }
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large business solutions' },
+        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Digital health' },
+        { name: 'Finance', href: '/solutions/finance', icon: DollarSign, description: 'Fintech innovation' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Factory, description: 'Smart manufacturing' },
+        { name: 'Retail', href: '/solutions/retail', icon: Store, description: 'Digital commerce' },
+        { name: 'Education', href: '/solutions/education', icon: GraduationCap, description: 'EdTech solutions' }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
+      title: 'Company',
+      expandable: true,
       items: [
-        {
-          name: 'Comprehensive Solutions',
-          href: '/services/micro-saas-solutions-comprehensive',
-          icon: Rocket,
-          description: 'Complete SaaS Platforms'
-        },
-        {
-          name: 'AI HR Management',
-          href: '/services/ai-hr-management-platform',
-          icon: Users,
-          description: 'Human Resources Automation'
-        },
-        {
-          name: 'AI Compliance Assistant',
-          href: '/services/ai-compliance-assistant',
-          icon: Shield,
-          description: 'Regulatory Compliance'
-        },
-        {
-          name: 'Cloud FinOps Optimizer',
-          href: '/services/cloud-finops-optimizer',
-          icon: DollarSign,
-          description: 'Cloud Cost Optimization'
-        },
-        {
-          name: 'AI Customer Success',
-          href: '/services/ai-customer-success-automation',
-          icon: Heart,
-          description: 'Customer Success Automation'
-        },
-        {
-          name: 'AI Content Optimizer',
-          href: '/services/ai-content-optimizer-pro',
-          icon: Search,
-          description: 'Content Optimization'
-        }
+        { name: 'Leadership', href: '/leadership', icon: Users, description: 'Our team' },
+        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join us' },
+        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
+        { name: 'Research', href: '/research-development', icon: Lightbulb, description: 'Innovation research' }
       ]
     },
     {
       title: 'Resources',
+      expandable: true,
       items: [
-        {
-          name: 'Documentation',
-          href: '/docs',
-          icon: BookOpen,
-          description: 'API & Technical Docs'
-        },
-        {
-          name: 'Training',
-          href: '/training',
-          icon: GraduationCap,
-          description: 'Learning & Development'
-        },
-        {
-          name: 'Webinars',
-          href: '/webinars',
-          icon: Video,
-          description: 'Educational Content'
-        },
-        {
-          name: 'White Papers',
-          href: '/white-papers',
-          icon: FileText,
-          description: 'Research & Insights'
-        },
-        {
-          name: 'Case Studies',
-          href: '/case-studies',
-          icon: BarChart3,
-          description: 'Success Stories'
-        },
-        {
-          name: 'Help Center',
-          href: '/help',
-          icon: HelpCircle,
-          description: 'Support & Guidance'
-        }
+        { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
+        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Learning programs' },
+        { name: 'Webinars', href: '/webinars', icon: Video, description: 'Live sessions' },
+        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry insights' },
+        { name: 'Knowledge Base', href: '/knowledge-base', icon: BookOpen, description: 'Help articles' }
+      ]
+    },
+    {
+      title: 'Support',
+      expandable: true,
+      items: [
+        { name: 'Help Desk', href: '/helpdesk', icon: HelpCircle, description: 'Get support' },
+        { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Reach our team' },
+        { name: 'Community', href: '/community', icon: Users2, description: 'Connect with others' },
+        { name: 'Status', href: '/status', icon: Activity, description: 'System status' },
+        { name: 'Support Portal', href: '/support', icon: HelpCircle, description: 'Support resources' }
       ]
     }
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const quickActions = [
+    { name: 'Get Started', href: '/contact', icon: Rocket, variant: 'primary' },
+    { name: 'Request Quote', href: '/contact', icon: DollarSign, variant: 'secondary' },
+    { name: 'View Pricing', href: '/pricing', icon: BarChart3, variant: 'secondary' }
+  ];
+
+  const contactInfo = [
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
+    { icon: MapPin, text: 'Middletown, DE', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }
+  ];
 
   return (
     <>
-      {/* Mobile Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-        aria-label="Toggle sidebar"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Sidebar Overlay */}
+      {/* Overlay */}
       {isOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/50 z-40"
-          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
-      <div className={`
-        fixed lg:sticky top-0 left-0 h-full w-80 bg-zion-blue-dark border-r border-zion-purple/30 
-        transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        overflow-y-auto
-      `}>
-        <div className="p-6">
-          {/* Logo & Brand */}
-          <div className="flex items-center mb-8">
-            <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-3">
-              <Zap className="w-6 h-6 text-white" />
+      <div className={cn(
+        "fixed top-0 left-0 z-50 h-full w-80 bg-zion-slate-darker border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto",
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      )}>
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center">
+                <Zap className="h-5 w-5 text-zion-slate-dark" />
+              </div>
+              <span className="text-lg font-bold text-white">Zion Tech</span>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-white">Zion Tech</h1>
-              <p className="text-zion-cyan text-sm">Innovation Hub</p>
-            </div>
+            <button
+              onClick={onClose}
+              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
 
-          {/* Search Bar */}
-          <div className="mb-6">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                className="w-full pl-10 pr-4 py-2 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan/20"
-              />
-            </div>
-          </div>
-
-          {/* Navigation Sections */}
-          <div className="space-y-6">
-            {navigation.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="space-y-3">
-                <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  {section.title}
+          {/* Content */}
+          <div className="flex-1 overflow-y-auto">
+            <div className="p-6 space-y-8">
+              {/* Quick Actions */}
+              <div>
+                <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
+                  Quick Actions
                 </h3>
-                <div className="space-y-1">
-                  {section.items.map((item, itemIndex) => (
+                <div className="space-y-3">
+                  {quickActions.map((action) => (
                     <Link
-                      key={itemIndex}
-                      to={item.href}
-                      className={`
-                        flex items-center px-3 py-2 rounded-lg text-sm transition-all duration-200 group
-                        ${isActive(item.href) 
-                          ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30' 
-                          : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
-                        }
-                      `}
-                      onClick={() => setIsOpen(false)}
+                      key={action.name}
+                      to={action.href}
+                      className={cn(
+                        "flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 group",
+                        action.variant === 'primary'
+                          ? "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan/80"
+                          : "bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white"
+                      )}
                     >
-                      <item.icon className={`w-4 h-4 mr-3 ${isActive(item.href) ? 'text-zion-cyan' : 'text-zion-slate-light group-hover:text-zion-cyan'}`} />
-                      <div className="flex-1">
-                        <div className="font-medium">{item.name}</div>
-                        {item.description && (
-                          <div className="text-xs text-zion-slate-light mt-1">{item.description}</div>
-                        )}
-                      </div>
+                      <action.icon className="h-5 w-5" />
+                      <span className="font-medium">{action.name}</span>
+                      <ArrowRight className="h-4 w-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Quick Actions */}
-          <div className="mt-8 pt-6 border-t border-zion-purple/20">
-            <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider mb-3">
-              Quick Actions
-            </h3>
-            <div className="space-y-2">
-              <Link
-                to="/contact"
-                className="flex items-center px-3 py-2 bg-zion-purple/20 hover:bg-zion-purple/30 rounded-lg text-zion-purple hover:text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <MessageCircle className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">Get Support</span>
-              </Link>
-              <Link
-                to="/pricing"
-                className="flex items-center px-3 py-2 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded-lg text-zion-cyan hover:text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <DollarSign className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">View Pricing</span>
-              </Link>
-              <Link
-                to="/request-quote"
-                className="flex items-center px-3 py-2 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light rounded-lg text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <Rocket className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">Request Quote</span>
-              </Link>
+              {/* Navigation Sections */}
+              {sidebarSections.map((section) => (
+                <div key={section.title}>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider">
+                      {section.title}
+                    </h3>
+                    {section.expandable && (
+                      <button
+                        onClick={() => toggleSection(section.title)}
+                        className="p-1 text-zion-slate-light hover:text-white transition-colors"
+                      >
+                        {expandedSections.includes(section.title) ? (
+                          <ChevronDown className="h-4 w-4" />
+                        ) : (
+                          <ChevronRight className="h-4 w-4" />
+                        )}
+                      </button>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-1">
+                    {section.items.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className={cn(
+                          "flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 group",
+                          isActive(item.href)
+                            ? "bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30"
+                            : "text-zion-slate-light hover:bg-zion-slate-dark hover:text-white"
+                        )}
+                      >
+                        <item.icon className="h-5 w-5" />
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium truncate">{item.name}</div>
+                          {item.description && (
+                            <div className="text-xs text-zion-slate-light truncate">
+                              {item.description}
+                            </div>
+                          )}
+                        </div>
+                        {isActive(item.href) && (
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full" />
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {/* Contact Information */}
+              <div className="pt-6 border-t border-zion-purple/20">
+                <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
+                  Contact Info
+                </h3>
+                <div className="space-y-3">
+                  {contactInfo.map((contact, index) => (
+                    <a
+                      key={index}
+                      href={contact.href}
+                      target={contact.href.startsWith('http') ? '_blank' : undefined}
+                      rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-zion-cyan transition-colors group"
+                    >
+                      <contact.icon className="h-4 w-4" />
+                      <span className="text-sm">{contact.text}</span>
+                      {contact.href.startsWith('http') && (
+                        <ExternalLink className="h-3 w-3 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                      )}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="mt-8 pt-6 border-t border-zion-purple/20">
-            <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider mb-3">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm text-zion-slate-light">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2 text-zion-cyan" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2 text-zion-cyan" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start">
-                <MapPin className="w-4 h-4 mr-2 text-zion-cyan mt-0.5" />
-                <span>Middletown, DE 19709</span>
+          {/* Footer */}
+          <div className="p-6 border-t border-zion-purple/20">
+            <div className="text-center">
+              <p className="text-xs text-zion-slate-light mb-2">
+                © {new Date().getFullYear()} Zion Tech Group
+              </p>
+              <div className="flex items-center justify-center space-x-4 text-xs">
+                <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Privacy
+                </Link>
+                <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Terms
+                </Link>
+                <Link to="/security" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Security
+                </Link>
               </div>
             </div>
           </div>
