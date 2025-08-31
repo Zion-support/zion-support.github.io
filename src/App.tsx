@@ -90,11 +90,28 @@ const Talent = createLazyComponent(() => import('./pages/Talent'));
 const VideoCall = createLazyComponent(() => import('./pages/VideoCall'));
 const Wishlist = createLazyComponent(() => import('./pages/Wishlist'));
 
+// Enhanced Services and additional pages
+const EnhancedServices = createLazyComponent(() => import('./pages/EnhancedServices'));
+const QuantumNeuralNetwork = createLazyComponent(() => import('./pages/quantum-neural-network-platform'));
+const AutonomousBusinessOperations = createLazyComponent(() => import('./pages/autonomous-business-operations-platform'));
+const AIPoweredITAssetManagement = createLazyComponent(() => import('./pages/ai-powered-it-asset-management'));
+const ITOnsiteServices = createLazyComponent(() => import('./pages/OnsiteSupport'));
+const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
+const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sales-copilot'));
+
 // New pages I've created
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Events = createLazyComponent(() => import('./pages/Events'));
+
+// Additional pages referenced in navigation and footer
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Compliance = createLazyComponent(() => import('./pages/Compliance'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Status = createLazyComponent(() => import('./pages/Status'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -234,11 +251,28 @@ function App() {
                     <Route path="/video-call/:roomId" element={<VideoCall />} />
                     <Route path="/wishlist" element={<Wishlist />} />
                     
+                    {/* Enhanced Services and additional pages */}
+                    <Route path="/enhanced-services" element={<EnhancedServices />} />
+                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetwork />} />
+                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperations />} />
+                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
+                    <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+                    <Route path="/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/ai-sales-copilot" element={<AISalesCopilot />} />
+                    
                     {/* New pages I've created */}
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/events" element={<Events />} />
+                    
+                    {/* Additional pages referenced in navigation and footer */}
+                    <Route path="/security" element={<Security />} />
+                    <Route path="/compliance" element={<Compliance />} />
+                    <Route path="/community" element={<Community />} />
+                    <Route path="/accessibility" element={<Accessibility />} />
+                    <Route path="/status" element={<Status />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
                   </Routes>
                 </AnimatePresence>
               </main>
