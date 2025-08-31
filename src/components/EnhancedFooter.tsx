@@ -1,218 +1,243 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
-  Phone, 
   Mail, 
+  Phone, 
   MapPin, 
   Globe, 
   Linkedin, 
   Twitter, 
-  Facebook, 
-  Instagram,
   Github,
-  Youtube,
-  ArrowRight,
-  Star,
-  Shield,
+  Facebook,
+  Instagram,
   Zap,
   Brain,
-  Cloud,
+  Server,
+  Shield,
   Users,
-  Award,
-  TrendingUp,
-  Lightbulb,
+  Building2,
+  FileText,
   Rocket,
   Target,
-  CheckCircle,
-  Heart,
-  MessageCircle,
-  HelpCircle,
-  BookOpen,
-  ShoppingCart,
-  Cpu,
-  Database,
+  Atom,
   Network,
+  Cloud,
   Lock,
-  BarChart3,
-  Code,
-  Server,
-  Smartphone,
-  Cpu as CpuIcon,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Bot,
+  TrendingUp,
   Workflow,
-  Eye,
-  Sparkles,
-  ExternalLink,
-  Building,
+  MessageCircle,
+  Calendar,
+  PenTool,
+  Activity,
+  Cpu,
+  Wifi,
+  Satellite,
   Handshake,
-  FileText,
+  BookOpen,
   Video,
   GraduationCap,
-  Atom,
-  PenTool,
+  Lightbulb,
+  Star,
+  HelpCircle,
+  BarChart3,
+  ShoppingCart,
+  Heart,
+  Factory,
+  DollarSign,
+  Briefcase,
+  Award,
+  ExternalLink,
+  ArrowUp,
+  Sparkles,
+  CheckCircle,
+  Monitor,
+  Headphones,
+  Truck,
+  Search,
+  Layers,
+  Database,
+  Calculator,
   Leaf,
-  ChevronRight,
-  ChevronDown,
-  DollarSign
+  Store,
+  Plane,
+  Ship,
+  Train,
+  Car,
+  Warehouse,
+  CreditCard,
+  PiggyBank,
+  ChartLine,
+  PieChart,
+  TrendingDown,
+  AlertTriangle,
+  Clock,
+  UserCheck,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserHeart,
+  UserStar,
+  UserCheckCircle,
+  UserPlusCircle,
+  UserMinusCircle,
+  UserXCircle,
+  UserCogCircle,
+  UserEditCircle,
+  UserSearchCircle,
+  UserVoiceCircle,
+  UserHeartCircle,
+  UserStarCircle,
+  Code,
+  Home,
+  Scale,
+  ChevronUp
 } from 'lucide-react';
 
-export function EnhancedFooter() {
+export const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const footerSections = [
     {
-      title: 'Featured Services',
+      title: 'Company',
       links: [
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Press & Media', href: '/press' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
-      title: 'Core Services',
+      title: 'Services',
       links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles }
+        { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Data Analytics', href: '/data-analytics' },
+        { name: 'Micro SAAS', href: '/micro-saas' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
-        { name: 'Careers', href: '/careers', icon: Target },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
+        { name: 'Enterprise', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Government', href: '/solutions/government' }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Documentation', href: '/documentation', icon: FileText },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' }
+      ]
+    },
+    {
+      title: 'Support',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Documentation', href: '/api' },
+        { name: 'Developer Portal', href: '/developer-portal' },
+        { name: 'Community', href: '/community' },
+        { name: 'Contact Support', href: '/contact' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
-  const quickLinks = [
-    { name: 'Contact Us', href: '/contact', icon: MessageCircle },
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
-    { name: 'Support', href: '/help', icon: HelpCircle },
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
-    { name: 'Terms of Service', href: '/terms', icon: FileText },
-    { name: 'Cookie Policy', href: '/cookies', icon: Cookie }
+  const contactInfo = [
+    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
   ];
 
   return (
-    <footer className="bg-zion-slate-dark border-t border-white/20">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-7 h-7 text-white" />
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
-                <p className="text-blue-400 text-sm font-medium">Innovation Group</p>
-              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
             </div>
-            
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services that transform businesses and drive exponential growth.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Leading the future of technology with cutting-edge AI solutions, 
+              quantum computing, and innovative micro SAAS services. 
+              Transforming businesses through digital innovation.
             </p>
             
+            {/* Contact Information */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-green-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span className="max-w-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="mt-6">
-              <h4 className="text-white font-semibold mb-3">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
+              {contactInfo.map((contact, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <contact.icon className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  {contact.href !== '#' ? (
+                    <a 
+                      href={contact.href} 
+                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {contact.text}
+                    </a>
+                  ) : (
+                    <span className="text-gray-300">{contact.text}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
-              <ul className="space-y-3">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                {section.title === 'Company' && <Building2 className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title === 'Services' && <Server className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title === 'Solutions' && <Target className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title === 'Support' && <HelpCircle className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title}
+              </h3>
+              <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
-                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''
-                      }`}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
                     >
-                      <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
-                        link.featured ? 'text-blue-400' : 'text-blue-400'
-                      }`} />
-                      <span className="text-sm">{link.name}</span>
-                      {link.featured && (
-                        <Star className="w-3 h-3 text-yellow-400 ml-1" />
-                      )}
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">
+                        {link.name}
+                      </span>
                     </Link>
                   </li>
                 ))}
@@ -221,38 +246,23 @@ export function EnhancedFooter() {
           ))}
         </div>
 
-        {/* Quick Links Section */}
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
-              >
-                <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
-                <span className="text-sm">{link.name}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-white/20">
+        {/* Newsletter Signup */}
+        <div className="mt-16 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Innovation
+              Stay Updated with Latest Tech Insights
             </h3>
             <p className="text-gray-300 mb-6">
-              Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              Get the latest updates on AI advancements, quantum computing breakthroughs, 
+              and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 Subscribe
               </button>
             </div>
@@ -261,8 +271,8 @@ export function EnhancedFooter() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="border-t border-gray-700">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
@@ -271,76 +281,46 @@ export function EnhancedFooter() {
 
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
+              </Link>
+              <Link to="/accessibility" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Accessibility
               </Link>
             </div>
 
-            {/* Back to Top */}
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <ArrowRight className="w-4 h-4 rotate-[-90deg]" />
-            </button>
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-cyan-500/20 border border-gray-600 hover:border-cyan-400 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Contact Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="fixed bottom-6 right-6 z-50"
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110 z-40"
+        aria-label="Scroll to top"
       >
-        <Link
-          to="/contact"
-          className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105"
-        >
-          <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          <span className="hidden sm:block font-medium">Contact Us</span>
-        </Link>
-      </motion.div>
+        <ChevronUp className="w-6 h-6 mx-auto" />
+      </button>
     </footer>
   );
-}
-
-// Placeholder icon components
-const Handshake = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
-
-const FileText = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-  </svg>
-);
-
-const Video = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-  </svg>
-);
-
-const GraduationCap = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-  </svg>
-);
-
-const Cookie = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-  </svg>
-);
+};
