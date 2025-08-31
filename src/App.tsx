@@ -138,6 +138,8 @@ const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/s
 const AIAutonomousHealthcareDiagnostics = createLazyComponent(() => import('./pages/services/ai-autonomous-healthcare-diagnostics'));
 const AIAutonomousCybersecurityOperations = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-operations'));
 
+
+
 // New Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
@@ -183,6 +185,9 @@ const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages
 
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
+
+// Comprehensive Pricing Guide 2027
+const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 
 // Innovative Services Showcase 2029
 const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2029'));
@@ -402,6 +407,9 @@ function App() {
 
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2027 */}
+                    <Route path="/comprehensive-pricing-guide-2027" element={<ModernLayout><ComprehensivePricingGuide2027 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
@@ -470,6 +478,11 @@ function App() {
                     <Route path="/services/ai-autonomous-financial-advisor" element={<ModernLayout><AIAutonomousFinancialAdvisor /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-healthcare-diagnostics" element={<ModernLayout><AIAutonomousHealthcareDiagnostics /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-cybersecurity-operations" element={<ModernLayout><AIAutonomousCybersecurityOperations /></ModernLayout>} />
+
+                    {/* New Innovative Services 2027 */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-financial-advisor-platform" element={<ModernLayout><AIAutonomousFinancialAdvisorPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-healthcare-diagnostics-platform" element={<ModernLayout><AIAutonomousHealthcareDiagnosticsPlatform /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<ModernLayout><AIPoweredCustomerChurnPredictor /></ModernLayout>} />

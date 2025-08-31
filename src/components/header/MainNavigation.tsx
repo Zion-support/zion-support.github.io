@@ -222,6 +222,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI HR Platform</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-financial-advisor-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Brain className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Financial Advisor</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-healthcare-diagnostics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Heart className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Healthcare Diagnostics</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
 

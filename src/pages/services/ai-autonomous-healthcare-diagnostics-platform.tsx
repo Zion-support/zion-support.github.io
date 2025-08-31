@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Route, 
-  Package, 
-  Globe, 
-  Zap, 
+  Brain, 
+  Heart, 
   Shield, 
-  TrendingUp, 
   Users, 
   Clock, 
   DollarSign,
@@ -22,68 +18,135 @@ import {
   Lock,
   Activity,
   Phone,
-  Mail
+  Mail,
+  Stethoscope,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Dna,
+  Pill,
+  Eye,
+  Brain as BrainIcon,
+  Activity as ActivityIcon,
+  TrendingUp,
+  Target,
+  Zap,
+  Globe,
+  Building2,
+  CreditCard,
+  PiggyBank,
+  ChartLine,
+  Coins,
+  Wallet,
+  Calculator,
+  AlertTriangle,
+  CheckSquare,
+  FileText,
+  BookOpen,
+  GraduationCap,
+  Handshake,
+  Rocket,
+  Lightbulb,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Wifi,
+  Satellite,
+  Atom,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Truck,
+  Factory,
+  Warehouse,
+  Store,
+  Bank,
+  Building,
+  Leaf,
+  Gamepad2,
+  MessageCircle,
+  Settings,
+  Cog,
+  Palette,
+  Menu,
+  X,
+  Video,
+  Calendar,
+  UserCheck,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserHeart,
+  UserStar,
+  UserCheckCircle
 } from 'lucide-react';
 
-const AIAutonomousLogisticsPlatform = () => {
+const AIAutonomousHealthcareDiagnosticsPlatform = () => {
   const features = [
     {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "AI-Powered Route Optimization",
-      description: "Advanced algorithms that optimize delivery routes in real-time, reducing fuel costs by up to 25% and delivery times by 30%."
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Medical Imaging",
+      description: "Advanced computer vision algorithms analyze X-rays, MRIs, CT scans, and ultrasounds with 95%+ accuracy rates."
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Machine learning models predict demand patterns, optimize inventory levels, and forecast delivery delays before they occur."
+      title: "Predictive Health Analytics",
+      description: "Machine learning models predict disease progression, treatment outcomes, and patient risk factors in real-time."
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Clinical Decision Support",
+      description: "AI-powered diagnostic suggestions, treatment recommendations, and drug interaction warnings for healthcare providers."
     },
     {
       icon: <Cloud className="w-6 h-6" />,
-      title: "Real-time Tracking & Monitoring",
-      description: "Live GPS tracking, IoT sensor integration, and automated alerts for package status and delivery updates."
+      title: "Real-time Patient Monitoring",
+      description: "24/7 vital sign monitoring, early warning systems, and automated alerts for critical health changes."
     },
     {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Blockchain Security",
-      description: "Immutable tracking records, secure payment processing, and tamper-proof delivery confirmations."
-    },
-    {
-      icon: <Activity className="w-6 h-6" />,
-      title: "Autonomous Fleet Management",
-      description: "AI-driven vehicle maintenance scheduling, driver performance analytics, and automated dispatching systems."
+      icon: <Users className="w-6 h-6" />,
+      title: "Personalized Medicine",
+      description: "AI-driven treatment plans based on genetic profiles, medical history, and individual patient characteristics."
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics Dashboard",
-      description: "Comprehensive reporting on delivery efficiency, cost analysis, and customer satisfaction metrics."
+      title: "Population Health Analytics",
+      description: "Comprehensive reporting on disease trends, outbreak detection, and public health insights."
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Clinic",
+      price: "$399",
       period: "/month",
-      description: "Perfect for small logistics companies",
+      description: "Perfect for small medical practices",
       features: [
-        "Up to 100 shipments/month",
-        "Basic route optimization",
-        "Real-time tracking",
+        "Up to 100 patients/month",
+        "Basic AI diagnostics",
+        "Medical imaging analysis",
         "Email support",
         "Mobile app access"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$799",
+      name: "Hospital",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for medium-sized hospitals",
       features: [
-        "Up to 1,000 shipments/month",
-        "Advanced AI optimization",
+        "Up to 1,000 patients/month",
+        "Advanced AI algorithms",
         "Predictive analytics",
-        "API access",
+        "Clinical decision support",
         "Priority support",
         "Custom integrations"
       ],
@@ -91,11 +154,11 @@ const AIAutonomousLogisticsPlatform = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "/month",
-      description: "For large-scale operations",
+      description: "For large healthcare systems",
       features: [
-        "Unlimited shipments",
+        "Unlimited patients",
         "Full AI suite",
         "Custom AI models",
         "Dedicated support",
@@ -109,23 +172,46 @@ const AIAutonomousLogisticsPlatform = () => {
   const benefits = [
     {
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      title: "Cost Reduction",
-      description: "Reduce operational costs by 20-35% through optimized routes and predictive maintenance."
+      title: "Improved Accuracy",
+      description: "AI diagnostics reduce diagnostic errors by 30-40% and improve detection rates for rare conditions."
     },
     {
       icon: <Clock className="w-8 h-8 text-blue-500" />,
-      title: "Faster Deliveries",
-      description: "Improve delivery times by 25-40% with AI-powered route optimization and real-time traffic analysis."
+      title: "Faster Diagnosis",
+      description: "Reduce diagnosis time by 50-70% with instant AI analysis and automated reporting."
     },
     {
       icon: <Shield className="w-8 h-8 text-purple-500" />,
-      title: "Enhanced Security",
-      description: "Blockchain-based tracking ensures tamper-proof delivery records and secure transactions."
+      title: "Better Patient Outcomes",
+      description: "Early detection and personalized treatment plans lead to 25-35% better patient outcomes."
     },
     {
       icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: "Customer Satisfaction",
-      description: "Real-time updates and accurate ETAs lead to 95% customer satisfaction rates."
+      title: "Cost Reduction",
+      description: "Reduce healthcare costs by 20-30% through improved efficiency and reduced misdiagnosis."
+    }
+  ];
+
+  const diagnosticCapabilities = [
+    {
+      title: "Radiology & Imaging",
+      description: "AI analysis of X-rays, CT scans, MRIs, and ultrasounds with instant results and detailed reports.",
+      icon: <Eye className="w-8 h-8 text-blue-500" />
+    },
+    {
+      title: "Pathology & Lab Tests",
+      description: "Automated analysis of blood tests, tissue samples, and cellular structures for accurate diagnosis.",
+      icon: <Microscope className="w-8 h-8 text-green-500" />
+    },
+    {
+      title: "Cardiology",
+      description: "ECG analysis, heart rhythm monitoring, and cardiovascular disease prediction with AI algorithms.",
+      icon: <Heart className="w-8 h-8 text-red-500" />
+    },
+    {
+      title: "Neurology",
+      description: "Brain imaging analysis, seizure detection, and neurological disorder diagnosis assistance.",
+      icon: <BrainIcon className="w-8 h-8 text-purple-500" />
     }
   ];
 
@@ -140,16 +226,16 @@ const AIAutonomousLogisticsPlatform = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
-              <Truck className="w-4 h-4 mr-2" />
-              AI-Powered Logistics
+              <Heart className="w-4 h-4 mr-2" />
+              AI-Powered Healthcare
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
-              <span className="text-zion-cyan"> Logistics Platform</span>
+              <span className="text-zion-cyan"> Healthcare Diagnostics</span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Revolutionize your logistics operations with autonomous AI that optimizes routes, predicts demand, 
-              and manages your entire supply chain in real-time.
+              Revolutionize healthcare delivery with autonomous AI that analyzes medical images, predicts outcomes, 
+              and provides accurate diagnostics in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-zion-cyan text-white rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors flex items-center justify-center">
@@ -175,10 +261,10 @@ const AIAutonomousLogisticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Logistics
+              Advanced AI Medical Intelligence
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI platform combines cutting-edge technology with practical logistics solutions to transform your operations.
+              Our platform combines cutting-edge artificial intelligence with medical expertise to deliver unprecedented diagnostic accuracy.
             </p>
           </motion.div>
 
@@ -201,7 +287,7 @@ const AIAutonomousLogisticsPlatform = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Diagnostic Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -212,10 +298,47 @@ const AIAutonomousLogisticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Platform?
+              Comprehensive Diagnostic Capabilities
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience unprecedented efficiency and cost savings with our AI-powered logistics solution.
+              Our AI platform covers all major medical specialties with specialized diagnostic algorithms.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {diagnosticCapabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-zion-cyan/50 transition-colors"
+              >
+                <div className="flex items-center mb-4">{capability.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-zion-slate-light">{capability.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose AI Healthcare Diagnostics?
+            </h2>
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+              Experience unprecedented accuracy and efficiency in medical diagnostics with our AI-powered platform.
             </p>
           </motion.div>
 
@@ -239,7 +362,7 @@ const AIAutonomousLogisticsPlatform = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -252,7 +375,7 @@ const AIAutonomousLogisticsPlatform = () => {
               Transparent Pricing
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI features.
+              Choose the plan that fits your healthcare facility. All plans include our core AI features and 24/7 support.
             </p>
           </motion.div>
 
@@ -319,11 +442,10 @@ const AIAutonomousLogisticsPlatform = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Logistics?
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already using our AI platform to optimize their logistics operations 
-              and reduce costs significantly.
+              Join thousands of healthcare providers already using our AI platform to improve diagnostic accuracy and patient outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-zion-cyan text-white rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
@@ -341,7 +463,7 @@ const AIAutonomousLogisticsPlatform = () => {
       <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-700">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
-            Questions about our AI Autonomous Logistics Platform?
+            Questions about our AI Autonomous Healthcare Diagnostics Platform?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center text-zion-cyan">
@@ -363,4 +485,4 @@ const AIAutonomousLogisticsPlatform = () => {
   );
 };
 
-export default AIAutonomousLogisticsPlatform;
+export default AIAutonomousHealthcareDiagnosticsPlatform;
