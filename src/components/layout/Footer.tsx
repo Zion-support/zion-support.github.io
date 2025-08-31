@@ -67,7 +67,8 @@ export function Footer() {
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+    { name: "Website", href: "https://ziontechgroup.com", icon: Globe }
   ];
 
   return (
@@ -92,15 +93,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
