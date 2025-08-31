@@ -83,7 +83,8 @@
     "pm2:simple:deploy": "./scripts/pm2-automation.sh deploy",
     "pm2:simple:build": "./scripts/pm2-automation.sh build",
     "pm2:simple:test": "./scripts/pm2-automation.sh test",
-    "pm2:simple:lint": "./scripts/pm2-automation.sh lint"
+    "pm2:simple:lint": "./scripts/pm2-automation.sh lint",
+    "build:prod": "vite build --mode production"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

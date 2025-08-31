@@ -23,19 +23,15 @@ import {
   Truck,
   Wrench,
   Cpu
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const iotEdgeSolutions = [
   {
     id: 1,
     title: "IoT Device Management",
     description: "Comprehensive platform for managing and monitoring IoT devices at scale.",
     icon: Wifi,
-    features[
+    features: [
       "Device provisioning",
       "Remote monitoring",
       "Firmware updates",
@@ -44,14 +40,14 @@ const iotEdgeSolutions = [
     price: "From $30,000",
     timeline: "16-24 weeks",
     category: "IoT Platform",
-    technologies["MQTT", "CoAP", "HTTP", "WebSocket"]
+    technologies: ["MQTT", "CoAP", "HTTP", "WebSocket"]
   },
   {
     id: 2,
     title: "Edge Computing Infrastructure",
     description: "Distributed edge computing solutions for real-time data processing.",
     icon: Server,
-    features[
+    features: [
       "Edge nodes setup",
       "Data processing",
       "Load balancing",
@@ -60,14 +56,14 @@ const iotEdgeSolutions = [
     price: "From $40,000",
     timeline: "20-32 weeks",
     category: "Edge Computing",
-    technologies["Kubernetes", "Docker", "Apache Kafka", "Redis"]
+    technologies: ["Kubernetes", "Docker", "Apache Kafka", "Redis"]
   },
   {
     id: 3,
     title: "Real-Time Data Analytics",
     description: "Streaming analytics platform for processing IoT data in real-time.",
     icon: Activity,
-    features[
+    features: [
       "Stream processing",
       "Real-time alerts",
       "Predictive analytics",
@@ -76,14 +72,14 @@ const iotEdgeSolutions = [
     price: "From $35,000",
     timeline: "18-26 weeks",
     category: "Analytics",
-    technologies["Apache Spark", "Apache Flink", "InfluxDB", "Grafana"]
+    technologies: ["Apache Spark", "Apache Flink", "InfluxDB", "Grafana"]
   },
   {
     id: 4,
     title: "Smart City Solutions",
     description: "IoT infrastructure for smart city applications and urban management.",
     icon: Globe,
-    features[
+    features: [
       "Traffic management",
       "Environmental monitoring",
       "Smart lighting",
@@ -92,14 +88,14 @@ const iotEdgeSolutions = [
     price: "From $100,000",
     timeline: "32-48 weeks",
     category: "Smart Cities",
-    technologies["LoRaWAN", "NB-IoT", "5G", "Cloud Platforms"]
+    technologies: ["LoRaWAN", "NB-IoT", "5G", "Cloud Platforms"]
   },
   {
     id: 5,
     title: "Industrial IoT (IIoT)",
     description: "Connected manufacturing and industrial automation solutions.",
     icon: Cpu,
-    features[
+    features: [
       "Equipment monitoring",
       "Predictive maintenance",
       "Quality control",
@@ -108,14 +104,14 @@ const iotEdgeSolutions = [
     price: "From $80,000",
     timeline: "24-36 weeks",
     category: "Industrial IoT",
-    technologies["OPC UA", "Modbus", "Ethernet/IP", "Profinet"]
+    technologies: ["OPC UA", "Modbus", "Ethernet/IP", "Profinet"]
   },
   {
     id: 6,
     title: "IoT Security Framework",
     description: "Comprehensive security solutions for IoT and edge computing environments.",
     icon: Shield,
-    features[
+    features: [
       "Device authentication",
       "Data encryption",
       "Access control",
@@ -124,17 +120,10 @@ const iotEdgeSolutions = [
     price: "From $45,000",
     timeline: "16-24 weeks",
     category: "Security",
-<<<<<<< HEAD
     technologies: ["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
-
-=======
-    technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotTechnologies = [
   {
     name: "MQTT Protocol",
@@ -808,9 +797,5 @@ export default function IoTEdge() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}}}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

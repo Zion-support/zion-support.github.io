@@ -1,11 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import CreateTalentProfile from "../pages/CreateTalentProfile";
-import ProfilePage from "../pages/ProfilePage";
-import SavedTalentsPage from "../pages/SavedTalentsPage";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentProfilePage from "../pages/TalentProfilePage";
-import TalentsPage from "../pages/TalentsPage";
 
 export default function TalentRoutes() {
   return (

@@ -540,7 +540,8 @@ export default defineConfig({
       'index.html'
     ];
     
-    for (const filePath = path.join(this.projectRoot, file);
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
         this.log(`Critical file missing: ${file}`, 'WARN');
       }
@@ -585,7 +586,8 @@ export default defineConfig({
         const now = Date.now();
         const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
         
-        for (const filePath = path.join(logsDir, file);
+        for (const file of files) {
+          const filePath = path.join(logsDir, file);
           const stats = fs.statSync(filePath);
           
           if (now - stats.mtime.getTime() > maxAge) {
@@ -662,10 +664,4 @@ setInterval(() => {
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 300000); // Every 5 minutes
 
-export default traverse;
-export default traverse;
-export default traverse;
-export default traverse;
-export default traverse;
-export default traverse;
-export default traverse;
+module.exports = BuildHealthMonitor;
