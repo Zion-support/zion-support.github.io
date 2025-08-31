@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-31T13:16:15.112Z",
+  "timestamp": "2025-08-31T20:26:09.366Z",
   "summary": {
     "totalFilesAnalyzed": 0,
     "generatedDocs": 4,
@@ -12,25 +12,25 @@
         "type": "guide",
         "path": "/Users/miami2/zion-app-clone/automation/docs/installation.md",
         "name": "Installation Guide",
-        "timestamp": "2025-08-31T13:16:15.110Z"
+        "timestamp": "2025-08-31T20:26:09.364Z"
       },
       {
         "type": "guide",
         "path": "/Users/miami2/zion-app-clone/automation/docs/development.md",
         "name": "Development Guide",
-        "timestamp": "2025-08-31T13:16:15.110Z"
+        "timestamp": "2025-08-31T20:26:09.364Z"
       },
       {
         "type": "guide",
         "path": "/Users/miami2/zion-app-clone/automation/docs/deployment.md",
         "name": "Deployment Guide",
-        "timestamp": "2025-08-31T13:16:15.110Z"
+        "timestamp": "2025-08-31T20:26:09.364Z"
       },
       {
         "type": "readme",
         "path": "/Users/miami2/zion-app-clone/automation/README.md",
         "name": "README.md",
-        "timestamp": "2025-08-31T13:16:15.111Z"
+        "timestamp": "2025-08-31T20:26:09.365Z"
       }
     ],
     "documentationCoverage": 0,
@@ -43,25 +43,25 @@
       "type": "guide",
       "path": "/Users/miami2/zion-app-clone/automation/docs/installation.md",
       "name": "Installation Guide",
-      "timestamp": "2025-08-31T13:16:15.110Z"
+      "timestamp": "2025-08-31T20:26:09.364Z"
     },
     {
       "type": "guide",
       "path": "/Users/miami2/zion-app-clone/automation/docs/development.md",
       "name": "Development Guide",
-      "timestamp": "2025-08-31T13:16:15.110Z"
+      "timestamp": "2025-08-31T20:26:09.364Z"
     },
     {
       "type": "guide",
       "path": "/Users/miami2/zion-app-clone/automation/docs/deployment.md",
       "name": "Deployment Guide",
-      "timestamp": "2025-08-31T13:16:15.110Z"
+      "timestamp": "2025-08-31T20:26:09.364Z"
     },
     {
       "type": "readme",
       "path": "/Users/miami2/zion-app-clone/automation/README.md",
       "name": "README.md",
-      "timestamp": "2025-08-31T13:16:15.111Z"
+      "timestamp": "2025-08-31T20:26:09.365Z"
     }
   ],
   "missing": []
