@@ -95,6 +95,7 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
 const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
+const PodcastTranscriptionInsights = createLazyComponent(() => import('./pages/services/podcast-transcription-insights'));
 
 // New Innovative Micro SAAS Services 2025
 const AIBusinessIntelligenceDashboard = createLazyComponent(() => import('./pages/services/ai-business-intelligence-dashboard'));
@@ -431,6 +432,7 @@ function App() {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                    <Route path="/services/podcast-transcription-insights" element={<PodcastTranscriptionInsights />} />
 
                     {/* New Innovative Services 2025 - Content Creation & Analytics */}
                     <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
