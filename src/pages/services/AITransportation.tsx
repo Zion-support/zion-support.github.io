@@ -9,25 +9,12 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Integration with major transportation management systems',;
     'Custom AI models for transportation-specific insights';
   ];
-
   const tiers = [
     {
       name: 'Small Fleet',
       price: '$399/mo',
       details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Medium Fleet',
-      price: '$999/mo',
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support']
-    },
-    {
-      name: 'Large Fleet',
-      price: '$2,499/mo',
-      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Medium Fleet', 
       price: '$999/mo', 
@@ -38,9 +25,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
       price: '$2,499/mo', ;
       details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [;
     'Fleet management and route optimization',;
     'Public transportation optimization',;
@@ -49,7 +34,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Ride-sharing and mobility services',;
     'Freight and cargo transportation';
   ];
-
   const benefits = [;
     'Reduce fuel costs by 15-30%',;
     'Improve delivery efficiency by 25-40%',;
@@ -58,7 +42,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Enhance driver safety and compliance',;
     'Scale transportation operations efficiently';
   ];
-
   const industries = [;
     'Logistics & Freight',;
     'Public Transportation',;
@@ -67,7 +50,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Construction & Heavy Equipment',;
     'Emergency Services';
   ];
-
   return (
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center">
@@ -79,7 +61,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           <p className="text-amber-100 text-xl">Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -119,7 +100,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {['15-30% fuel cost reduction', '25-40% efficiency improvement', '20-35% maintenance savings'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -128,7 +108,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -140,7 +119,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-orange-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Transportation Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,7 +130,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +141,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-gray-600 mb-2">Ready to transform your transportation with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

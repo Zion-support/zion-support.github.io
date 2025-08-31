@@ -15,26 +15,13 @@ const AdvancedServices = () => {
                 animationDuration: `${3 + Math.random() * 4}s`,
             }}/>))}
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
   { opacity: 0,
   y: 50 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }}>
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -44,7 +31,6 @@ const AdvancedServices = () => {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Discover cutting-edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies that transform businesses and drive innovation.
             </p>
-
             {/* Key Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
               {[
@@ -62,46 +48,22 @@ const AdvancedServices = () => {
                 icon: "🔒",
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and GDPR compliant with advanced threat protection"
-<<<<<<< HEAD
-
-        ].map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.2 }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
-=======
             }
         ].map((benefit, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.2 
-
-
-
-
-
-
 }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </motion.div>))}
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">
@@ -114,10 +76,8 @@ const AdvancedServices = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <FuturisticServicesShowcase />
-
       {/* Technology Stack Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
@@ -125,21 +85,9 @@ const AdvancedServices = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 50 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Powered by Cutting-Edge Technology
@@ -148,7 +96,6 @@ const AdvancedServices = () => {
               Our micro SAAS solutions leverage the latest advancements in artificial intelligence, quantum computing, and cloud-native architectures.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
             { name: "AI/ML", icon: "🤖", color: "from-cyan-400 to-blue-500" },
@@ -160,30 +107,12 @@ const AdvancedServices = () => {
         ].map((tech, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} viewport={{ once: true }} className="text-center group">
                 <div className={`w-20 h-20 mx-auto mb-4 bg-gradient-to-br ${tech.color} rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110`}>
                   {tech.icon}
@@ -193,7 +122,6 @@ const AdvancedServices = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5"></div>
@@ -201,21 +129,9 @@ const AdvancedServices = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 50 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
@@ -224,7 +140,6 @@ const AdvancedServices = () => {
               We combine deep technical expertise with business acumen to deliver solutions that drive real results.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
             {
@@ -262,40 +177,17 @@ const AdvancedServices = () => {
                 title: "Partnership Approach",
                 description: "We work as an extension of your team, not just a vendor",
                 stats: "Long-term strategic partnerships"
-<<<<<<< HEAD
-
-        ].map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
-=======
             }
         ].map((feature, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -304,7 +196,6 @@ const AdvancedServices = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -312,21 +203,9 @@ const AdvancedServices = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 50 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/40 backdrop-blur-sm">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -342,7 +221,6 @@ const AdvancedServices = () => {
                 View Case Studies
               </button>
             </div>
-
             {/* Contact Info */}
             <div className="mt-8 pt-8 border-t border-cyan-500/30">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -360,11 +238,6 @@ const AdvancedServices = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServices;
 }}

@@ -16,13 +16,6 @@ class AutoCommitFixes {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-<<<<<<< HEAD
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-
-=======
     // // // // // // // console.log(message);
 
     try {
@@ -31,7 +24,6 @@ class AutoCommitFixes {
       // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async checkGitStatus() {
     try {
@@ -233,10 +225,7 @@ class AutoCommitFixes {
 // Run the auto commit fixes
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
-<<<<<<< HEAD
-=======
   // // // // // // // console.error('Fatal error:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -1,74 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search const AIBusinessIntelligence = () => {
-    const biFeatures = [
-        {
-            icon: Brain,
-            title: "AI Analytics",
-            description: "Intelligent data analysis and pattern recognition",
-            features: ["Predictive analytics", "Machine learning insights", "Natural language queries", "Automated reporting"]
-        },
-        {
-            icon: BarChart3,
-            title: "Advanced Visualization",
-            description: "Interactive charts and dashboards for data insights",
-            features: ["Real-time dashboards", "Custom visualizations", "Interactive charts", "Mobile-responsive views"]
-        },
-        {
-            icon: Search,
-            title: "Data Discovery",
-            description: "Intelligent data exploration and insights discovery",
-            features: ["Data mining", "Trend analysis", "Anomaly detection", "Correlation discovery"]
-        },
-        {
-            icon: Activity,
-            title: "Real-time Monitoring",
-            description: "Live monitoring and alerting for business metrics",
-            features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
-
-    ];
-    const biSolutions = [
-        {
-            title: "Sales Analytics",
-            description: "Comprehensive sales performance and forecasting",
-            icon: TrendingUp,
-            capabilities: ["Sales forecasting", "Performance tracking", "Pipeline analysis", "Revenue optimization"]
-        },
-        {
-            title: "Customer Analytics",
-            description: "Deep insights into customer behavior and preferences",
-            icon: Users,
-            capabilities: ["Customer segmentation", "Behavior analysis", "Lifetime value", "Churn prediction"]
-        },
-        {
-            title: "Financial Analytics",
-            description: "Financial performance and risk analysis",
-            icon: PieChart,
-            capabilities: ["Financial reporting", "Risk assessment", "Budget analysis", "Cost optimization"]
-        },
-        {
-            title: "Operational Analytics",
-            description: "Operational efficiency and process optimization",
-            icon: Cpu,
-            capabilities: ["Process optimization", "Efficiency metrics", "Resource allocation", "Performance monitoring"]
-        },
-        {
-            title: "Market Analytics",
-            description: "Market trends and competitive intelligence",
-            icon: Globe,
-            capabilities: ["Market research", "Competitive analysis", "Trend forecasting", "Opportunity identification"]
-        },
-        {
-            title: "Predictive Analytics",
-            description: "Future-focused insights and forecasting",
-            icon: Lightbulb,
-            capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
-
-    ];
-=======
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
 const AIBusinessIntelligence = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const benefits = [
         "Data-driven decision making across all business areas",
         "Real-time insights and instant access to critical information",
@@ -107,7 +39,6 @@ const AIBusinessIntelligence = () => {
             phase: "Deployment & Training",
             description: "Deploy system and train users",
             duration: "2-4 weeks"
-
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -137,7 +68,6 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-
       {/* BI Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,7 +80,6 @@ const AIBusinessIntelligence = () => {
               and insights for informed decision making.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {biFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -168,7 +97,6 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-
       {/* BI Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +109,6 @@ const AIBusinessIntelligence = () => {
               aspects of your business operations.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biSolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -199,7 +126,6 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +163,6 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -248,7 +173,6 @@ const AIBusinessIntelligence = () => {
             A structured approach to implementing AI-powered business
             intelligence in your organization.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -261,7 +185,6 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

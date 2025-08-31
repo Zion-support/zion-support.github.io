@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState, useMemo  } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_2027  } from "../data/expandedInnovativeServices2027";
-=======
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const ExpandedServicesShowcase2027: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,25 +10,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
   const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories and subcategories
-<<<<<<< HEAD
-  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-    return cats}, []);
-
-  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
-      return subcats}
-=======
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
     return cats;
   }, []);
 
   const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
       return subcats;
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
     return subcats}, [selectedCategory]);
 
@@ -46,20 +27,10 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
-=======
       
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const resetFilters = () => {;
     setSearchTerm('');
@@ -117,15 +88,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-<<<<<<< HEAD
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-
-            <select
-              value={selectedCategory}
-              onChange={(e) => {
-=======
               onChange={(e) => setSearchTerm(e.target.value)};
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400";
             />;
@@ -133,24 +95,12 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
             <select;
               value={selectedCategory};
               onChange={(e) => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 setSelectedCategory(e.target.value);
-<<<<<<< HEAD
-                setSelectedSubcategory('all')}}
-              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400";
-=======;
                 setSelectedSubcategory('all');
               }}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-
-              {categories.map(cat => (
-=======
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               {categories.map(cat  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
                 </option>
@@ -160,15 +110,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-<<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-
-              {subcategories.map(subcat => (
-=======
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
                 </option>
@@ -309,14 +253,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
 
                 View Detailed Pricing
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </main>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -324,6 +260,5 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ExpandedServicesShowcase2027;}

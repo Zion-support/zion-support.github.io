@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 import { additionalEnhancedServices } from '../data/additional-real-services'
-=======
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Services(...args[]):  {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -26,13 +22,8 @@ export default function Services(...args[]):  {
 	const categories = ['all', ...new Set(allServices.map(service => service.category))]
 
 	// Filter and sort services
-<<<<<<< HEAD
-	const filteredServices = additionalEnhancedServices
-		.filter(service =>
-=======
 	const filteredServices = allServices
 		.filter(service => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 			(selectedCategory === 'all' || service.category === selectedCategory) &&
 			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -134,15 +125,9 @@ export default function Services(...args[]):  {
 							<select
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-
-								{categories.map(category => (
-=======
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								{categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category}
 									</option>
@@ -156,13 +141,8 @@ export default function Services(...args[]):  {
 							<select
 								value={sortBy}
 								onChange={(e) => setSortBy(e.target.value)}
-<<<<<<< HEAD
-								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-
-=======
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 								<option value="popularity">Most Popular</option>
 								<option value="price">Price: Low to High</option>
 								<option value="rating">Highest Rated</option>
@@ -437,31 +417,13 @@ export default function Services(...args[]):  {
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
 								to="/contact"
-<<<<<<< HEAD
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-
-=======
 								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200"
 							>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<a
 								href="tel:+13024640950"
-<<<<<<< HEAD
-								className="rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-colors"
-
-								Call Now
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 								className="w-full sm:w-auto rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-all duration-200"
 							>
 								Call Now
@@ -474,4 +436,3 @@ export default function Services(...args[]):  {
 	);
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

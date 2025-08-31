@@ -36,13 +36,8 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
-<<<<<<< HEAD
-            features: ["Workflow automation", "Document processing", "Approval systems"]
-
-=======
             features["Workflow automation", "Document processing", "Approval systems"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -74,7 +69,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
             title: "Treasury Operations",
             description: "Automated treasury management and cash flow optimization",
             icon: "💰"
-
     ];
     const benefits = [
         "Reduce operational costs by 25-40%",
@@ -111,7 +105,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -123,7 +116,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
               Our AI-powered solutions address every aspect of modern financial operations
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg w-fit mb-4">
@@ -141,7 +133,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -153,7 +144,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
               Discover how our financial solutions are transforming the industry
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -163,7 +153,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -175,7 +164,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
               See real results with our AI-powered financial solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">
@@ -192,7 +180,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -213,9 +200,4 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

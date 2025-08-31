@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export default function Events() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react'
 
 
 export default function Events(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const upcomingEvents = [
 		{
 			id: 1,
@@ -264,15 +258,6 @@ export default function Events(...args[]):  {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 
 							View Services <span aria-hidden="true">→</span>
-<<<<<<< HEAD
-						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}}
-=======
 						</Link>;
 					</div>;
 				</div>;
@@ -280,4 +265,3 @@ export default function Events(...args[]):  {
 		</>;
 	);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
