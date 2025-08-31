@@ -111,37 +111,37 @@ export default function Services() {
 
   const featuredServices = [
     {
+      title: "AI Legal Document Analysis",
+      description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
+      price: "From $299/month",
+      features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
+      href: "/services/ai-legal-document-analysis",
+      color: "from-blue-400 to-purple-500",
+      popular: true
+    },
+    {
+      title: "AI Real Estate Investment Analytics",
+      description: "Transform real estate investments with 92% prediction accuracy",
+      price: "From $199/month",
+      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
+      href: "/services/ai-real-estate-investment-analytics",
+      color: "from-green-400 to-blue-500"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Reduce costs by 40% and improve delivery times by 50%",
+      price: "From $399/month",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
+      href: "/services/ai-supply-chain-optimization-enhanced",
+      color: "from-blue-400 to-indigo-500"
+    },
+    {
       title: "AI Sales Copilot",
       description: "Intelligent sales automation with 40% conversion improvement",
       price: "From $2,200/month",
       features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
       href: "/services/ai-sales-copilot",
-      color: "from-green-400 to-emerald-500",
-      popular: true
-    },
-    {
-      title: "Cloud FinOps Optimizer",
-      description: "Reduce cloud costs by 40% with AI-powered optimization",
-      price: "From $1,800/month",
-      features: ["Cost Optimization", "Waste Detection", "Real-time Monitoring"],
-      href: "/services/cloud-finops-optimizer",
-      color: "from-blue-400 to-indigo-500"
-    },
-    {
-      title: "AI Compliance Assistant",
-      description: "Automated compliance monitoring with 90% violation reduction",
-      price: "From $2,500/month",
-      features: ["24/7 Monitoring", "Regulatory Updates", "Risk Assessment"],
-      href: "/services/ai-compliance-assistant",
-      color: "from-red-400 to-pink-500"
-    },
-    {
-      title: "AI Healthcare Platform",
-      description: "Revolutionize healthcare with AI-powered diagnostics and patient care",
-      price: "From $3,000/month",
-      features: ["Medical Imaging", "Patient Monitoring", "Drug Discovery"],
-      href: "/services/ai-healthcare-platform",
-      color: "from-purple-400 to-pink-500"
+      color: "from-green-400 to-emerald-500"
     }
   ];
 
@@ -498,6 +498,40 @@ export default function Services() {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* New Services 2026 Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-4">
+                <Rocket className="w-4 h-4 mr-2" />
+                New in 2026
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Innovations</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience our newest AI-powered solutions designed to revolutionize industries and drive unprecedented business growth.
+              </p>
+            </motion.div>
+
+            <div className="text-center mb-12">
+              <Link
+                to="/innovative-services-showcase-2026"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              >
+                Explore All New Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </section>

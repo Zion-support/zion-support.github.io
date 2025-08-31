@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { 
   Building2, 
   Users, 
-  User, 
+  Globe, 
+  Phone, 
   Mail, 
-  Lock, 
-  Eye, 
-  EyeOff,
+  MessageSquare, 
+  Calendar,
   CheckCircle,
   Star,
   Zap,
@@ -24,7 +24,7 @@ import {
   BarChart3,
   Atom,
   Network,
-  Lock as LockIcon,
+  Lock,
   Cpu,
   Wifi,
   Satellite,
@@ -37,18 +37,11 @@ import {
   HelpCircle,
   BarChart as BarChartIcon,
   ShoppingCart,
-  ArrowRight,
-  Globe,
-  Phone,
-  MapPin,
-  Calendar,
-  DollarSign,
-  Package,
-  Truck,
-  Headphones,
-  Award,
   Clock,
-  MessageSquare
+  Eye,
+  EyeOff,
+  ArrowRight,
+  User
 } from 'lucide-react';
 
 export default function Signup() {
@@ -59,100 +52,117 @@ export default function Signup() {
     password: '',
     confirmPassword: '',
     companyName: '',
-    jobTitle: '',
-    phone: '',
-    userType: 'individual',
-    industry: '',
     companySize: '',
-    interests: [] as string[]
+    industry: '',
+    role: '',
+    phone: '',
+    agreeToTerms: false,
+    subscribeToNewsletter: false
   });
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+  const [currentStep, setCurrentStep] = useState(1);
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
-  const userTypes = [
-    {
-      id: 'individual',
-      title: 'Individual',
-      description: 'Personal use and learning',
-      icon: User,
-      features: ['Access to basic features', 'Personal projects', 'Community access']
-    },
-    {
-      id: 'business',
-      title: 'Business',
-      description: 'Small to medium businesses',
-      icon: Building2,
-      features: ['Team collaboration', 'Business tools', 'Priority support']
-    },
-    {
-      id: 'enterprise',
-      title: 'Enterprise',
-      description: 'Large organizations',
-      icon: Users,
-      features: ['Custom solutions', 'Dedicated support', 'Advanced features']
-    }
+  const companySizes = [
+    { value: 'startup', label: 'Startup (1-50 employees)' },
+    { value: 'small', label: 'Small Business (51-200 employees)' },
+    { value: 'medium', label: 'Medium Business (201-1000 employees)' },
+    { value: 'large', label: 'Large Enterprise (1000+ employees)' }
   ];
 
-  const interestCategories = [
-    {
-      title: "AI & Automation",
-      icon: Brain,
-      interests: [
-        { id: "ai-enterprise-automation", name: "AI Enterprise Automation" },
-        { id: "ai-data-analytics", name: "AI Data Analytics" },
-        { id: "ai-cybersecurity", name: "AI Cybersecurity" },
-        { id: "ai-healthcare", name: "AI Healthcare Solutions" },
-        { id: "ai-quantum", name: "AI Quantum Computing" }
-      ]
-    },
-    {
-      title: "IT & Infrastructure",
-      icon: Server,
-      interests: [
-        { id: "cloud-devops", name: "Cloud & DevOps" },
-        { id: "cybersecurity", name: "Cybersecurity" },
-        { id: "it-infrastructure", name: "IT Infrastructure" },
-        { id: "digital-transformation", name: "Digital Transformation" },
-        { id: "edge-computing", name: "Edge Computing" }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Target,
-      interests: [
-        { id: "healthcare", name: "Healthcare Solutions" },
-        { id: "finance", name: "Financial Solutions" },
-        { id: "manufacturing", name: "Manufacturing Solutions" },
-        { id: "government", name: "Government Solutions" },
-        { id: "retail", name: "Retail Solutions" }
-      ]
-    },
-    {
-      title: "Micro SaaS & Specialized",
-      icon: Zap,
-      interests: [
-        { id: "ai-project-management", name: "AI Project Management" },
-        { id: "ai-marketing", name: "AI Marketing Automation" },
-        { id: "ai-customer-support", name: "AI Customer Support" },
-        { id: "ai-business-intelligence", name: "AI Business Intelligence" }
-      ]
-    }
+  const industries = [
+    { value: 'technology', label: 'Technology' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'finance', label: 'Financial Services' },
+    { value: 'manufacturing', label: 'Manufacturing' },
+    { value: 'retail', label: 'Retail & E-commerce' },
+    { value: 'education', label: 'Education' },
+    { value: 'government', label: 'Government' },
+    { value: 'nonprofit', label: 'Non-profit' },
+    { value: 'other', label: 'Other' }
   ];
 
-  const handleInterestToggle = (interestId: string) => {
-    setSelectedInterests(prev => 
-      prev.includes(interestId) 
-        ? prev.filter(id => id !== interestId)
-        : [...prev, interestId]
-    );
+  const roles = [
+    { value: 'executive', label: 'C-Level Executive' },
+    { value: 'director', label: 'Director/VP' },
+    { value: 'manager', label: 'Manager' },
+    { value: 'developer', label: 'Developer/Engineer' },
+    { value: 'consultant', label: 'Consultant' },
+    { value: 'student', label: 'Student' },
+    { value: 'other', label: 'Other' }
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validateStep = (step: number) => {
+    const newErrors: {[key: string]: string} = {};
+
+    if (step === 1) {
+      if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+      if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+      if (!formData.email.trim()) newErrors.email = 'Email is required';
+      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+      if (!formData.password) newErrors.password = 'Password is required';
+      else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters';
+      if (!formData.confirmPassword) newErrors.confirmPassword = 'Please confirm your password';
+      else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = 'Passwords do not match';
+    }
+
+    if (step === 2) {
+      if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+      if (!formData.companySize) newErrors.companySize = 'Please select company size';
+      if (!formData.industry) newErrors.industry = 'Please select industry';
+      if (!formData.role) newErrors.role = 'Please select your role';
+    }
+
+    if (step === 3) {
+      if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const nextStep = () => {
+    if (validateStep(currentStep)) {
+      setCurrentStep(prev => Math.min(prev + 1, 3));
+    }
+  };
+
+  const prevStep = () => {
+    setCurrentStep(prev => Math.max(prev - 1, 1));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', { ...formData, interests: selectedInterests });
+    if (validateStep(currentStep)) {
+      // Handle form submission
+      console.log('Form submitted:', formData);
+    }
+  };
+
+  const getStepStatus = (step: number) => {
+    if (step < currentStep) return 'completed';
+    if (step === currentStep) return 'current';
+    return 'upcoming';
   };
 
   return (
@@ -171,13 +181,13 @@ export default function Signup() {
               Join Zion Tech Group
             </h1>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
-              Unlock the power of cutting-edge AI, cloud, and technology solutions. 
+              Create your account to access our cutting-edge AI, cloud, and technology solutions. 
               Start your digital transformation journey today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Free to Start</span>
+                <span>Free Account</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
@@ -185,198 +195,135 @@ export default function Signup() {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>No Credit Card Required</span>
+                <span>Premium Support</span>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
+      {/* Progress Steps */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="flex items-center justify-between mb-8">
+            {[
+              { step: 1, title: 'Account Details', icon: User },
+              { step: 2, title: 'Company Info', icon: Building2 },
+              { step: 3, title: 'Terms & Finish', icon: CheckCircle }
+            ].map(({ step, title, icon: Icon }) => (
+              <div key={step} className="flex flex-col items-center">
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all duration-300 ${
+                  getStepStatus(step) === 'completed' 
+                    ? 'bg-zion-cyan text-white' 
+                    : getStepStatus(step) === 'current'
+                    ? 'bg-zion-cyan/20 text-zion-cyan border-2 border-zion-cyan'
+                    : 'bg-zinc-700 text-zinc-400'
+                }`}>
+                  {getStepStatus(step) === 'completed' ? (
+                    <CheckCircle className="w-6 h-6" />
+                  ) : (
+                    <Icon className="w-6 h-6" />
+                  )}
+                </div>
+                <span className={`text-sm font-medium ${
+                  getStepStatus(step) === 'completed' 
+                    ? 'text-zion-cyan' 
+                    : getStepStatus(step) === 'current'
+                    ? 'text-white'
+                    : 'text-zinc-400'
+                }`}>
+                  {title}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Signup Form */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Create Your Account</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* User Type Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-4">
-                    Account Type *
-                  </label>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {userTypes.map((type) => (
-                      <label key={type.id} className="relative cursor-pointer">
-                        <input
-                          type="radio"
-                          name="userType"
-                          value={type.id}
-                          checked={formData.userType === type.id}
-                          onChange={(e) => setFormData({...formData, userType: e.target.value})}
-                          className="sr-only"
-                        />
-                        <div className={`p-4 border-2 rounded-lg transition-all duration-300 ${
-                          formData.userType === type.id
-                            ? 'border-zion-cyan bg-zion-cyan/10'
-                            : 'border-zinc-600 hover:border-zinc-500 bg-zinc-700/30'
-                        }`}>
-                          <div className="text-center">
-                            <type.icon className={`w-8 h-8 mx-auto mb-2 ${
-                              formData.userType === type.id ? 'text-zion-cyan' : 'text-zinc-400'
-                            }`} />
-                            <div className={`font-medium ${
-                              formData.userType === type.id ? 'text-white' : 'text-zinc-300'
-                            }`}>
-                              {type.title}
-                            </div>
-                            <div className="text-xs text-zinc-400 mt-1">{type.description}</div>
-                          </div>
-                        </div>
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8"
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Step 1: Account Details */}
+              {currentStep === 1 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
+                >
+                  <h2 className="text-2xl font-bold text-white mb-6">Account Details</h2>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        First Name *
                       </label>
-                    ))}
+                      <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.firstName ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Enter first name"
+                      />
+                      {errors.firstName && (
+                        <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.lastName ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Enter last name"
+                      />
+                      {errors.lastName && (
+                        <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {/* Personal Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="Enter your first name"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="Enter your last name"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                    />
-                  </div>
-                </div>
-
-                {/* Contact Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-zinc-300 mb-2">
                       Email Address *
                     </label>
                     <input
                       type="email"
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="your.email@company.com"
+                      name="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                        errors.email ? 'border-red-500' : 'border-zinc-600'
+                      }`}
+                      placeholder="Enter email address"
                     />
+                    {errors.email && (
+                      <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                    )}
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-zinc-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    />
-                  </div>
-                </div>
 
-                {/* Business Information (for business/enterprise users) */}
-                {(formData.userType === 'business' || formData.userType === 'enterprise') && (
-                  <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium text-zinc-300 mb-2">
-                          Company Name *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                          placeholder="Enter your company name"
-                          value={formData.companyName}
-                          onChange={(e) => setFormData({...formData, companyName: e.target.value})}
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-zinc-300 mb-2">
-                          Job Title
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                          placeholder="Your job title"
-                          value={formData.jobTitle}
-                          onChange={(e) => setFormData({...formData, jobTitle: e.target.value})}
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium text-zinc-300 mb-2">
-                          Industry
-                        </label>
-                        <select
-                          className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                          value={formData.industry}
-                          onChange={(e) => setFormData({...formData, industry: e.target.value})}
-                        >
-                          <option value="">Select industry</option>
-                          <option value="technology">Technology</option>
-                          <option value="healthcare">Healthcare</option>
-                          <option value="finance">Finance</option>
-                          <option value="manufacturing">Manufacturing</option>
-                          <option value="retail">Retail</option>
-                          <option value="government">Government</option>
-                          <option value="education">Education</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-zinc-300 mb-2">
-                          Company Size
-                        </label>
-                        <select
-                          className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                          value={formData.companySize}
-                          onChange={(e) => setFormData({...formData, companySize: e.target.value})}
-                        >
-                          <option value="">Select company size</option>
-                          <option value="1-10">1-10 employees</option>
-                          <option value="11-50">11-50 employees</option>
-                          <option value="51-200">51-200 employees</option>
-                          <option value="201-1000">201-1000 employees</option>
-                          <option value="1000+">1000+ employees</option>
-                        </select>
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {/* Password Fields */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-zinc-300 mb-2">
                       Password *
@@ -384,11 +331,13 @@ export default function Signup() {
                     <div className="relative">
                       <input
                         type={showPassword ? 'text' : 'password'}
-                        required
-                        className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12"
-                        placeholder="Create a strong password"
+                        name="password"
                         value={formData.password}
-                        onChange={(e) => setFormData({...formData, password: e.target.value})}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
+                          errors.password ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Create a password"
                       />
                       <button
                         type="button"
@@ -398,7 +347,12 @@ export default function Signup() {
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
+                    {errors.password && (
+                      <p className="text-red-400 text-sm mt-1">{errors.password}</p>
+                    )}
+                    <p className="text-zinc-400 text-sm mt-1">Must be at least 8 characters long</p>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-zinc-300 mb-2">
                       Confirm Password *
@@ -406,11 +360,13 @@ export default function Signup() {
                     <div className="relative">
                       <input
                         type={showConfirmPassword ? 'text' : 'password'}
-                        required
-                        className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12"
-                        placeholder="Confirm your password"
+                        name="confirmPassword"
                         value={formData.confirmPassword}
-                        onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-12 ${
+                          errors.confirmPassword ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                        placeholder="Confirm your password"
                       />
                       <button
                         type="button"
@@ -420,246 +376,251 @@ export default function Signup() {
                         {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
+                    {errors.confirmPassword && (
+                      <p className="text-red-400 text-sm mt-1">{errors.confirmPassword}</p>
+                    )}
                   </div>
-                </div>
 
-                {/* Interests Selection */}
-                <div>
-                  <label className="block text-sm font-medium text-zinc-300 mb-4">
-                    Areas of Interest (Optional)
-                  </label>
-                  <div className="space-y-4">
-                    {interestCategories.map((category) => (
-                      <div key={category.title} className="border border-zinc-600 rounded-lg p-4">
-                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                          <category.icon className="w-5 h-5 mr-2 text-zion-cyan" />
-                          {category.title}
-                        </h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          {category.interests.map((interest) => (
-                            <label key={interest.id} className="flex items-start space-x-3 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                checked={selectedInterests.includes(interest.id)}
-                                onChange={() => handleInterestToggle(interest.id)}
-                                className="mt-1 w-4 h-4 text-zion-cyan bg-zinc-700 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
-                              />
-                              <div>
-                                <div className="text-sm font-medium text-white">{interest.name}</div>
-                              </div>
-                            </label>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                  <div className="pt-4">
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Continue
+                      <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    </button>
                   </div>
-                </div>
+                </motion.div>
+              )}
 
-                {/* Terms and Conditions */}
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="mt-1 w-4 h-4 text-zion-cyan bg-zinc-700 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
-                  />
-                  <div className="text-sm text-zinc-400">
-                    I agree to the{' '}
-                    <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
-                      Terms of Service
-                    </Link>{' '}
-                    and{' '}
-                    <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
-                      Privacy Policy
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
+              {/* Step 2: Company Information */}
+              {currentStep === 2 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
                 >
-                  Create Account
-                </button>
+                  <h2 className="text-2xl font-bold text-white mb-6">Company Information</h2>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleInputChange}
+                      className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                        errors.companyName ? 'border-red-500' : 'border-zinc-600'
+                      }`}
+                      placeholder="Enter company name"
+                    />
+                    {errors.companyName && (
+                      <p className="text-red-400 text-sm mt-1">{errors.companyName}</p>
+                    )}
+                  </div>
 
-                {/* Login Link */}
-                <div className="text-center text-zinc-400">
-                  Already have an account?{' '}
-                  <Link to="/login" className="text-zion-cyan hover:text-zion-cyan-light font-medium">
-                    Sign in
-                  </Link>
-                </div>
-              </form>
-            </motion.div>
-          </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Company Size *
+                      </label>
+                      <select
+                        name="companySize"
+                        value={formData.companySize}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.companySize ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select company size</option>
+                        {companySizes.map(size => (
+                          <option key={size.value} value={size.value}>
+                            {size.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.companySize && (
+                        <p className="text-red-400 text-sm mt-1">{errors.companySize}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Industry *
+                      </label>
+                      <select
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.industry ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select industry</option>
+                        {industries.map(industry => (
+                          <option key={industry.value} value={industry.value}>
+                            {industry.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.industry && (
+                        <p className="text-red-400 text-sm mt-1">{errors.industry}</p>
+                      )}
+                    </div>
+                  </div>
 
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Benefits */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                <Star className="w-5 h-5 mr-2 text-zion-cyan" />
-                Why Join Zion Tech Group?
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
-                  <div>
-                    <div className="text-white font-medium">Access to Innovation</div>
-                    <div className="text-sm text-zinc-400">Latest AI and emerging technologies</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Your Role *
+                      </label>
+                      <select
+                        name="role"
+                        value={formData.role}
+                        onChange={handleInputChange}
+                        className={`w-full px-4 py-3 bg-zinc-700/50 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${
+                          errors.role ? 'border-red-500' : 'border-zinc-600'
+                        }`}
+                      >
+                        <option value="">Select your role</option>
+                        {roles.map(role => (
+                          <option key={role.value} value={role.value}>
+                            {role.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.role && (
+                        <p className="text-red-400 text-sm mt-1">{errors.role}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                        placeholder="Enter phone number"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
-                  <div>
-                    <div className="text-white font-medium">Expert Community</div>
-                    <div className="text-sm text-zinc-400">Connect with industry professionals</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
-                  <div>
-                    <div className="text-white font-medium">Free Resources</div>
-                    <div className="text-sm text-zinc-400">Whitepapers, webinars, and guides</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
-                  <div>
-                    <div className="text-white font-medium">Early Access</div>
-                    <div className="text-sm text-zinc-400">Be first to try new features</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
-                What You'll Get
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Package className="w-5 h-5 text-zion-cyan" />
-                  <span className="text-white text-sm">Free Trial Access</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Video className="w-5 h-5 text-zion-cyan" />
-                  <span className="text-white text-sm">Exclusive Webinars</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <FileText className="w-5 h-5 text-zion-cyan" />
-                  <span className="text-white text-sm">Resource Library</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Users className="w-5 h-5 text-zion-cyan" />
-                  <span className="text-white text-sm">Community Access</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <TrendingUp className="w-5 h-5 text-zion-cyan" />
-                  <span className="text-white text-sm">Market Insights</span>
-                </div>
-              </div>
-            </motion.div>
+                  <div className="pt-4 flex space-x-4">
+                    <button
+                      type="button"
+                      onClick={prevStep}
+                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                    >
+                      Back
+                    </button>
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Continue
+                      <ArrowRight className="w-5 h-5 ml-2 inline" />
+                    </button>
+                  </div>
+                </motion.div>
+              )}
 
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
-            >
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                <MessageSquare className="w-5 h-5 mr-2 text-zion-cyan" />
-                Need Help?
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <div className="text-white font-medium">Email</div>
-                    <div className="text-sm text-zinc-400">kleber@ziontechgroup.com</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <div className="text-white font-medium">Phone</div>
-                    <div className="text-sm text-zinc-400">+1 302 464 0950</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Globe className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <div className="text-white font-medium">Website</div>
-                    <div className="text-sm text-zinc-400">ziontechgroup.com</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+              {/* Step 3: Terms & Finish */}
+              {currentStep === 3 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
+                >
+                  <h2 className="text-2xl font-bold text-white mb-6">Terms & Finish</h2>
+                  
+                  <div className="space-y-4">
+                    <label className="flex items-start space-x-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="agreeToTerms"
+                        checked={formData.agreeToTerms}
+                        onChange={handleInputChange}
+                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                      />
+                      <div>
+                        <span className="text-zinc-300">
+                          I agree to the{' '}
+                          <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light underline">
+                            Terms of Service
+                          </Link>
+                          {' '}and{' '}
+                          <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light underline">
+                            Privacy Policy
+                          </Link>
+                          *
+                        </span>
+                        {errors.agreeToTerms && (
+                          <p className="text-red-400 text-sm mt-1">{errors.agreeToTerms}</p>
+                        )}
+                      </div>
+                    </label>
 
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-6 text-center"
-            >
-              <Rocket className="w-12 h-12 text-white mx-auto mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Ready to Get Started?</h3>
-              <p className="text-zinc-100 mb-4">Join thousands of professionals already using our platform.</p>
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center bg-white text-zion-purple font-semibold px-6 py-3 rounded-lg hover:bg-zinc-100 transition-colors"
-              >
-                Get Custom Quote
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </motion.div>
-          </div>
+                    <label className="flex items-start space-x-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="subscribeToNewsletter"
+                        checked={formData.subscribeToNewsletter}
+                        onChange={handleInputChange}
+                        className="mt-1 text-zion-cyan focus:ring-zion-cyan rounded"
+                      />
+                      <span className="text-zinc-300">
+                        Subscribe to our newsletter for updates on new features, industry insights, and exclusive offers
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="pt-4 flex space-x-4">
+                    <button
+                      type="button"
+                      onClick={prevStep}
+                      className="flex-1 border border-zinc-600 text-zinc-300 hover:bg-zinc-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300"
+                    >
+                      Back
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Create Account
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </form>
+          </motion.div>
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* Login Link */}
       <div className="bg-zinc-800/30 border-t border-zinc-700/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Join the Future of Technology
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Be part of a community that's shaping the future with AI, cloud, and emerging technologies.
+            <p className="text-zinc-300 mb-4">
+              Already have an account?{' '}
+              <Link to="/login" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
+                Sign in here
+              </Link>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Services
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-              >
-                Contact Sales
-              </Link>
-            </div>
           </motion.div>
         </div>
       </div>
