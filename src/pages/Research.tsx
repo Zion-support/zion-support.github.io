@@ -319,6 +319,7 @@ export default function Research() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
+                    >
                       {category.icon}
                       {category.name}
                     </button>
@@ -338,6 +339,7 @@ export default function Research() {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
+                    >
                       {status.name} ({status.count})
                     </button>
                   ))}
