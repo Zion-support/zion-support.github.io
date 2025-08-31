@@ -292,6 +292,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Space Technology</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-business-intelligence-platform-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI BI Platform Enterprise</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-cybersecurity-threat-detection-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Cybersecurity Enterprise</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-quantum-computing-solutions-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Quantum Computing Enterprise</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-blockchain-web3-solutions-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Network className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Blockchain Web3 Enterprise</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -315,6 +339,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                       Pricing Guide 2032
                       <DollarSign className="w-4 h-4 ml-2"/>
+                    </Link>
+                    <Link to="/enterprise-services-showcase-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                      Enterprise Showcase 2025
+                      <Star className="w-4 h-4 ml-2"/>
                     </Link>
                   </div>
                 </div>
