@@ -125,10 +125,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/solutions/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare</Link></li>
-                    <li><Link to="/services/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Services</Link></li>
-                    <li><Link to="/solutions/education" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
-                    <li><Link to="/solutions/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
-                    <li><Link to="/solutions/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
+                    <li><Link to="/financial-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Services</Link></li>
+                    <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise</Link></li>
+                    <li><Link to="/industry-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Industry Solutions</Link></li>
+                    <li><Link to="/manufacturing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -137,10 +137,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     Technology Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/solutions/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-                    <li><Link to="/solutions/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain</Link></li>
-                    <li><Link to="/solutions/space-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Space Technology</Link></li>
-                    <li><Link to="/solutions/green-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green Technology</Link></li>
+                    <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+                    <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain</Link></li>
+                    <li><Link to="/services/space-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Space Technology</Link></li>
+                    <li><Link to="/services/sustainability" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green Technology</Link></li>
                   </ul>
                 </div>
               </div>
@@ -179,7 +179,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
                 <li><Link to="/about/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link></li>
-                <li><Link to="/about/story" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Story</Link></li>
                 <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
                 <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
                 <li><Link to="/news" className="text-zion-slate-light hover:text-zion-cyan transition-colors">News</Link></li>

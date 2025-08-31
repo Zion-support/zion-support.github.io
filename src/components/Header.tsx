@@ -66,25 +66,25 @@ export function Header({ className }: HeaderProps) {
     {
       title: 'Services',
       items: [
-        { name: 'AI & Machine Learning', href: '/services#ai-ml' },
-        { name: 'Quantum Computing', href: '/services#quantum' },
-        { name: 'Cybersecurity', href: '/services#cybersecurity' },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
-        { name: 'Data & Analytics', href: '/services#data-analytics' },
-        { name: 'Digital Transformation', href: '/services#digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
-        { name: 'Emerging Technologies', href: '/services#emerging-tech' }
+        { name: 'AI & Machine Learning', href: '/ai-services' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Data & Analytics', href: '/services/ai-business-intelligence' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Emerging Technologies', href: '/emerging-tech' }
       ]
     },
     {
       title: 'Solutions',
       items: [
         { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Transportation & Logistics', href: '/solutions/transportation' },
-        { name: 'Education', href: '/solutions/education' }
+        { name: 'Financial Services', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Enterprise', href: '/enterprise' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' }
       ]
     },
     {
@@ -92,7 +92,6 @@ export function Header({ className }: HeaderProps) {
       items: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
-        { name: 'Our Story', href: '/about/story' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News', href: '/news' },

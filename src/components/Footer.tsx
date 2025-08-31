@@ -34,25 +34,25 @@ const Footer = () => {
         { name: 'Cloud & DevOps', href: '/services' },
         { name: 'Cybersecurity', href: '/services' },
         { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions' },
-        { name: 'Healthcare Tech', href: '/solutions' },
-        { name: 'Financial Solutions', href: '/solutions' },
-        { name: 'Manufacturing', href: '/solutions' },
-        { name: 'Government', href: '/solutions' },
-        { name: 'Retail Solutions', href: '/solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
@@ -63,37 +63,37 @@ const Footer = () => {
       title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
         { name: 'Training', href: '/training' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research' }
+        { name: 'Research', href: '/research-development' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
     },
     {
       icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
+      text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'
     },
     {
@@ -234,14 +234,14 @@ const Footer = () => {
             >
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
               <div className="flex space-x-4">
-                <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">
-                  Privacy Policy
-                </Link>
                 <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">
                   Terms of Service
                 </Link>
-                <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-200">
-                  Cookie Policy
+                <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link to="/accessibility" className="hover:text-blue-400 transition-colors duration-200">
+                  Accessibility
                 </Link>
               </div>
             </motion.div>
