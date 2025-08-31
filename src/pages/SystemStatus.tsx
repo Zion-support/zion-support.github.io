@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp import { SEO              } from '../components/SEO';
-=======
-<<<<<<< HEAD
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp              } from 'lucide-react.ts';
-import SEO from '../components/SEO';
-=======
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp              } from 'lucide-react.ts';
-import { SEO              } from '../components/SEO';
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  CheckCircle, 
+  AlertTriangle, 
+  XCircle, 
+  Clock, 
+  Activity, 
+  Server, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Brain, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  RefreshCw, 
+  ExternalLink, 
+  TrendingUp 
+} from 'lucide-react';
 
 interface ServiceStatus {
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -34,6 +29,7 @@ interface ServiceStatus {
   lastUpdated: string;
   description: string;
   icon: React.ComponentType<any>;
+}
 
 interface Incident {
   id: string;
@@ -44,31 +40,19 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
+}
 
-const services: ServiceStatus[] = [;
+const services: ServiceStatus[] = [
   {
-id: 'api',;
-name: 'API Services',;
-status: 'operational',;
-uptime: 99.99,;
-responseTime: 45,;
-lastUpdated: '2025-08-27T16:48:00Z',;
-description: 'Core API endpoints and microservices',;
-icon: Server;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-},
+    id: 'api',
+    name: 'API Services',
+    status: 'operational',
+    uptime: 99.99,
+    responseTime: 45,
+    lastUpdated: '2025-08-27T16:48:00Z',
+    description: 'Core API endpoints and microservices',
+    icon: Server
+  },
   {
     id: 'database',
     name: 'Database Systems',
@@ -118,7 +102,7 @@ icon: Server;
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Data analytics and reporting systems',
     icon: BarChart3
-
+  }
 ];
 
 const incidents: Incident[] = [
@@ -131,10 +115,10 @@ const incidents: Incident[] = [
     startTime: '2025-08-27T14:00:00Z',
     affectedServices: ['database', 'analytics'],
     endTime: '2025-08-27T16:00:00Z'
-
+  }
 ];
 
-const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+const getStatusColor = (status: ServiceStatus['status']) => {
   switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
@@ -146,10 +130,10 @@ const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceSt
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+  }
 };
 
-const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+const getStatusIcon = (status: ServiceStatus['status']) => {
   switch (status) {
     case 'operational':
       return CheckCircle;
@@ -161,10 +145,10 @@ const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceSta
       return Clock;
     default:
       return Clock;
-
+  }
 };
 
-const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyIncident['severity'])              => {
+const getSeverityColor = (severity: Incident['severity']) => {
   switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
@@ -176,10 +160,10 @@ const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyIncid
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+  }
 };
 
-export default function SystemStatus(...args: any[]): any {
+export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -209,6 +193,8 @@ export default function SystemStatus(...args: any[]): any {
       <SEO
         title="System Status - Zion Tech Group"
         description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
+        keywords="system status, uptime, performance, monitoring, Zion Tech Group"
+        canonicalUrl="https://ziontechgroup.com/system-status"
       />
 
       {/* Header */}
@@ -219,7 +205,7 @@ export default function SystemStatus(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-
+          >
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
             System Status
           </motion.div>
@@ -229,7 +215,7 @@ export default function SystemStatus(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-
+          >
             System Status
           </motion.h1>
 
@@ -238,51 +224,26 @@ export default function SystemStatus(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
-
+          >
             Real-time monitoring of our services, infrastructure, and performance metrics.
           </motion.p>
         </div>
       </div>
 
       {/* Overall Status */}
-<<<<<<< HEAD
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center">
-              <div className="flex items-center justify-center gap-4 mb-6">
-                {getStatusIcon(systemStatus.overall)}
-                <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
-                  <div className="text-zion-slate-light">Uptime (30 days)</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-500 mb-2">{services.length}</div>
-                  <div className="text-zion-slate-light">Services</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-500 mb-2">0</div>
-                  <div className="text-zion-slate-light">Active Incidents</div>
-                </div>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Overall Status */}
             <div className="text-center">
               <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${getStatusColor(overallStatus)}`}>
                 {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2" })}
                 {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
               <p className="text-gray-400">All systems operational</p>
@@ -313,34 +274,22 @@ export default function SystemStatus(...args: any[]): any {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6"
-
-          {services.map((service, index)              => (
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {services.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
-
+            >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                     <service.icon className="w-5 h-5 text-cyan-400" />
                   </div>
-
-                  <h3 className="text-lg font-semibold text-white mb-3">{service.name}</h3>
-
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Uptime:</span>
-                      <span className="text-green-500 font-medium">{service.uptime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Response:</span>
-                      <span className="text-zion-cyan font-medium">{service.responseTime}</span>
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                 </div>
                 <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
                   {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
@@ -376,7 +325,7 @@ export default function SystemStatus(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-
+          >
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
@@ -386,7 +335,7 @@ export default function SystemStatus(...args: any[]): any {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
-
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
@@ -448,7 +397,7 @@ export default function SystemStatus(...args: any[]): any {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-
+        >
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
@@ -490,7 +439,7 @@ export default function SystemStatus(...args: any[]): any {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
           className="text-center"
-
+        >
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Need Help?
@@ -502,13 +451,13 @@ export default function SystemStatus(...args: any[]): any {
               <a
                 href="/support"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-
+              >
                 Get Support
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-
+              >
                 Contact Us
               </a>
             </div>
@@ -517,8 +466,4 @@ export default function SystemStatus(...args: any[]): any {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}}}}}}}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
