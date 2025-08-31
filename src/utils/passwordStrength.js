@@ -116,6 +116,7 @@ export const getPatternPenalty = (password) => {
   keyboardPatterns.forEach(pattern => {
     if (password.toLowerCase().includes(pattern)) {
       penalty += 3;
+    }
   });
   return penalty;
 };
@@ -160,6 +161,7 @@ export const getPasswordStrength = (password) => {
  */
 export const getPasswordStrengthDetails = (password) => {
   const score = calculatePasswordScore(password);
+  const strength = getPasswordStrength(password);
   return {
     strength,
     score,

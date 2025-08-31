@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  PenTool, 
-  Image, 
-  Video, 
-  Music, 
-  FileText, 
+  DollarSign, 
+  TrendingUp, 
+  Shield, 
+  Database, 
+  BarChart3, 
   CheckCircle,
   Star,
   ArrowRight,
@@ -13,13 +13,11 @@ import {
   Mail,
   MapPin,
   MessageSquare,
-  FileText as FileTextIcon,
+  FileText,
   Search,
   Clock,
-  DollarSign,
   Target,
   Lightbulb,
-  Shield,
   Smartphone,
   Code,
   Server,
@@ -35,8 +33,12 @@ import {
   Cpu,
   Network,
   Atom,
-  Globe,
-  Globe as GlobeIcon,
+  CreditCard,
+  Building2,
+  Gauge,
+  Activity,
+  LineChart,
+  PieChart,
   TargetIcon,
   LightbulbIcon,
   ShieldIcon,
@@ -54,6 +56,7 @@ import {
   MailIcon,
   MapPinIcon,
   MessageSquareIcon,
+  FileTextIcon,
   SearchIcon,
   ClockIcon,
   DollarSignIcon,
@@ -77,132 +80,134 @@ import {
   FileTextIcon as FileTextIcon2,
   SearchIcon as SearchIcon2,
   ClockIcon as ClockIcon2,
-  DollarSignIcon as DollarSignIcon2
+  DollarSignIcon as DollarSignIcon2,
+  Globe,
+  Globe as GlobeIcon
 } from 'lucide-react';
 
-const AIContentCreationStudio: React.FC = () => {
+const FintechOperationsCompliance: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
-      category: "AI Text Generation",
+      category: "Financial Operations Management",
       items: [
-        "Blog Posts & Articles",
-        "Social Media Content",
-        "Marketing Copy",
-        "Product Descriptions",
-        "Email Campaigns",
-        "SEO-Optimized Content"
+        "Payment Processing & Settlement",
+        "Treasury Management Systems",
+        "Cash Flow Optimization",
+        "Multi-Currency Operations",
+        "Financial Risk Management",
+        "Portfolio Management Tools"
       ]
     },
     {
-      category: "AI Image Creation",
+      category: "Regulatory Compliance",
       items: [
-        "Product Photography",
-        "Marketing Graphics",
-        "Social Media Images",
-        "Website Visuals",
-        "Brand Assets",
-        "Custom Illustrations"
+        "KYC/AML Compliance Automation",
+        "Regulatory Reporting (SEC, FINRA, etc.)",
+        "Compliance Monitoring & Alerts",
+        "Audit Trail Management",
+        "Regulatory Change Management",
+        "Compliance Risk Assessment"
       ]
     },
     {
-      category: "AI Video Production",
+      category: "AI-Powered Financial Analytics",
       items: [
-        "Product Demos",
-        "Marketing Videos",
-        "Social Media Clips",
-        "Training Videos",
-        "Brand Stories",
-        "Animated Content"
+        "Predictive Financial Modeling",
+        "Fraud Detection & Prevention",
+        "Credit Risk Assessment",
+        "Market Analysis & Forecasting",
+        "Portfolio Optimization",
+        "Real-time Financial Insights"
       ]
     },
     {
-      category: "AI Audio Generation",
+      category: "Security & Risk Management",
       items: [
-        "Voice-overs",
-        "Podcast Content",
-        "Background Music",
-        "Sound Effects",
-        "Audio Books",
-        "Multilingual Audio"
+        "Multi-Factor Authentication",
+        "Encryption & Data Protection",
+        "Fraud Prevention Systems",
+        "Risk Scoring & Monitoring",
+        "Incident Response Management",
+        "Business Continuity Planning"
       ]
     },
     {
-      category: "Content Management",
+      category: "Integration & APIs",
       items: [
-        "Content Calendar",
-        "Workflow Automation",
-        "Team Collaboration",
-        "Version Control",
-        "Performance Analytics",
-        "Content Optimization"
+        "Banking System Integration",
+        "Payment Gateway APIs",
+        "Accounting Software Integration",
+        "Third-party Financial Services",
+        "Real-time Data Synchronization",
+        "Custom API Development"
       ]
     },
     {
-      category: "AI-Powered Insights",
+      category: "Reporting & Analytics",
       items: [
-        "Content Performance Analysis",
-        "Audience Engagement Metrics",
-        "Trend Prediction",
-        "Competitive Analysis",
-        "SEO Recommendations",
-        "ROI Tracking"
+        "Financial Performance Dashboards",
+        "Regulatory Compliance Reports",
+        "Custom Financial Reports",
+        "Real-time Analytics",
+        "Predictive Insights",
+        "Automated Reporting"
       ]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Content Creator",
-      price: "$1,999",
+      name: "Fintech Starter",
+      price: "$4,999",
       period: "/month",
-      description: "Essential AI content creation for small businesses",
+      description: "Essential financial operations for small fintech companies",
       features: [
-        "AI Text Generation (100 pieces/month)",
-        "Basic Image Creation (50 images/month)",
-        "Content Calendar",
+        "Basic Financial Operations Management",
+        "KYC/AML Compliance Tools",
+        "Financial Dashboard",
         "Email Support",
-        "Integration with 15+ Platforms",
-        "Basic Analytics Dashboard"
+        "Integration with 25+ Financial Platforms",
+        "Monthly Compliance Reports"
       ],
       popular: false,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Content Studio Pro",
-      price: "$4,999",
-      period: "/month",
-      description: "Advanced AI content creation for growing businesses",
-      features: [
-        "Unlimited AI Text Generation",
-        "Unlimited Image Creation",
-        "AI Video Production (25 videos/month)",
-        "AI Audio Generation (50 audio pieces/month)",
-        "Priority Support (6-hour response)",
-        "Integration with 35+ Platforms",
-        "Advanced Analytics & Insights",
-        "Team Collaboration Tools"
-      ],
-      popular: true,
-      color: "from-pink-500 to-rose-500"
-    },
-    {
-      name: "Enterprise Studio",
+      name: "Fintech Professional",
       price: "$12,999",
       period: "/month",
-      description: "Complete AI content creation for major organizations",
+      description: "Advanced financial solutions for growing fintech companies",
       features: [
-        "Unlimited All Content Types",
-        "Custom AI Model Training",
-        "White-label Solutions",
-        "Advanced Workflow Automation",
+        "Comprehensive Financial Operations",
+        "Advanced Compliance Management",
+        "AI-Powered Analytics",
+        "Priority Support (4-hour response)",
+        "Integration with 50+ Financial Platforms",
+        "Custom Financial Templates",
+        "Advanced Security Features",
+        "API Access & Webhooks"
+      ],
+      popular: true,
+      color: "from-violet-500 to-purple-500"
+    },
+    {
+      name: "Enterprise Fintech",
+      price: "$24,999",
+      period: "/month",
+      description: "Complete financial infrastructure for major fintech organizations",
+      features: [
+        "Unlimited Financial Operations",
+        "Enterprise Compliance Management",
+        "Advanced AI Analytics",
+        "Custom Financial Development",
         "24/7 Dedicated Support",
-        "Integration with 100+ Platforms",
-        "Custom Brand Guidelines",
-        "API Access & Webhooks",
+        "Integration with 100+ Financial Platforms",
+        "White-label Solutions",
+        "On-premise Deployment",
         "SLA Guarantees",
-        "Custom Compliance Features"
+        "Custom Compliance Frameworks"
       ],
       popular: false,
       color: "from-green-500 to-emerald-500"
@@ -211,122 +216,133 @@ const AIContentCreationStudio: React.FC = () => {
 
   const benefits = [
     {
-      icon: Zap,
-      title: "Speed & Efficiency",
-      description: "Create content 10x faster with AI automation"
-    },
-    {
       icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce content creation costs by up to 70%"
+      title: "Cost Efficiency",
+      description: "Reduce operational costs and improve financial performance"
     },
     {
-      icon: Star,
-      title: "Quality & Consistency",
-      description: "Maintain high-quality, consistent brand voice"
+      icon: Shield,
+      title: "Compliance",
+      description: "Ensure regulatory compliance and reduce compliance risks"
+    },
+    {
+      icon: TrendingUp,
+      title: "Growth",
+      description: "Scale operations efficiently and support business growth"
+    },
+    {
+      icon: Zap,
+      title: "Automation",
+      description: "Automate manual processes and improve efficiency"
     },
     {
       icon: Globe,
       title: "Global Reach",
-      description: "Create content in multiple languages and formats"
+      description: "Operate globally with multi-currency and compliance support"
     },
     {
-      icon: TrendingUp,
-      title: "Performance",
-      description: "AI-optimized content for better engagement"
-    },
-    {
-      icon: Users,
-      title: "Scalability",
-      description: "Scale content production without adding staff"
+      icon: Star,
+      title: "Innovation",
+      description: "Leverage AI and advanced technology for competitive advantage"
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Generate product descriptions, marketing copy, and visual content at scale",
-      results: "70% faster content creation, 40% increase in conversions, 24/7 content production"
+      industry: "Digital Banking",
+      description: "Manage digital banking operations, compliance, and customer experience",
+      results: "99.9% uptime, 40% cost reduction, 100% compliance rate"
     },
     {
-      industry: "Marketing Agencies",
-      description: "Deliver high-quality content for multiple clients efficiently",
-      results: "5x content output, 60% cost reduction, improved client satisfaction"
+      industry: "Payment Processing",
+      description: "Process payments, manage fraud, and ensure compliance",
+      results: "99.99% transaction success, 60% fraud reduction, real-time processing"
     },
     {
-      industry: "SaaS Companies",
-      description: "Create technical documentation, marketing materials, and user guides",
-      results: "80% faster documentation, consistent brand voice, improved user experience"
+      industry: "Investment Management",
+      description: "Portfolio management, risk assessment, and regulatory compliance",
+      results: "25% portfolio optimization, 100% regulatory compliance, automated reporting"
     },
     {
-      industry: "Educational Institutions",
-      description: "Generate learning materials, course content, and educational resources",
-      results: "Massive content scaling, personalized learning materials, cost-effective production"
+      industry: "Lending & Credit",
+      description: "Credit assessment, risk management, and compliance automation",
+      results: "50% faster credit decisions, 30% risk reduction, automated compliance"
     },
     {
-      industry: "Media & Publishing",
-      description: "Create articles, social media content, and multimedia materials",
-      results: "10x content volume, AI-powered insights, audience engagement optimization"
+      industry: "Cryptocurrency & DeFi",
+      description: "Crypto operations, compliance, and risk management",
+      results: "Real-time monitoring, regulatory compliance, automated risk management"
     }
   ];
 
-  const contentTypes = [
+  const complianceFrameworks = [
     {
-      type: "Text Content",
-      examples: "Blog posts, articles, social media posts, emails, product descriptions",
-      aiCapabilities: "Natural language generation, SEO optimization, tone adjustment",
-      output: "Unlimited text generation with human-like quality"
+      name: "Bank Secrecy Act (BSA)",
+      description: "Anti-money laundering regulations",
+      requirements: "Customer identification, transaction monitoring, suspicious activity reporting",
+      impact: "Critical for all financial institutions"
     },
     {
-      type: "Visual Content",
-      examples: "Images, graphics, infographics, social media visuals, brand assets",
-      aiCapabilities: "Image generation, style transfer, brand consistency",
-      output: "High-resolution visuals in any style or format"
+      name: "Know Your Customer (KYC)",
+      description: "Customer identification and verification",
+      requirements: "Identity verification, risk assessment, ongoing monitoring",
+      impact: "Essential for customer onboarding and compliance"
     },
     {
-      type: "Video Content",
-      examples: "Product demos, marketing videos, social media clips, training videos",
-      aiCapabilities: "Video generation, editing automation, voice synthesis",
-      output: "Professional-quality videos with minimal human input"
+      name: "Payment Card Industry (PCI DSS)",
+      description: "Credit card security standards",
+      requirements: "Data security, access control, vulnerability management",
+      impact: "Required for credit card processing"
     },
     {
-      type: "Audio Content",
-      examples: "Voice-overs, podcasts, background music, sound effects",
-      aiCapabilities: "Voice cloning, music generation, audio enhancement",
-      output: "Studio-quality audio in multiple languages and styles"
+      name: "General Data Protection Regulation (GDPR)",
+      description: "European data protection regulation",
+      requirements: "Data privacy, consent management, data rights",
+      impact: "Global impact on data handling"
+    },
+    {
+      name: "Sarbanes-Oxley (SOX)",
+      description: "Corporate financial reporting standards",
+      requirements: "Financial controls, audit trails, internal controls",
+      impact: "Required for public companies"
     }
   ];
 
-  const performanceMetrics = [
+  const financialMetrics = [
     {
-      metric: "Content Creation Speed",
-      description: "Time to create professional content",
-      improvement: "10x faster than traditional methods",
-      impact: "Increased content volume and faster time-to-market"
+      metric: "Transaction Success Rate",
+      description: "Percentage of successful financial transactions",
+      target: "99.99%",
+      current: "99.97%",
+      improvement: "0.02% increase needed"
     },
     {
-      metric: "Cost per Content Piece",
-      description: "Average cost to create one content piece",
-      improvement: "70% cost reduction",
-      impact: "Significant budget savings and ROI improvement"
+      metric: "Compliance Rate",
+      description: "Regulatory compliance percentage",
+      target: "100%",
+      current: "99.8%",
+      improvement: "0.2% increase needed"
     },
     {
-      metric: "Content Quality Score",
-      description: "AI-generated content quality rating",
-      improvement: "95% quality score",
-      impact: "Professional-grade content without human errors"
+      metric: "Fraud Detection Rate",
+      description: "Percentage of fraudulent transactions detected",
+      target: "95%",
+      current: "92%",
+      improvement: "3% increase needed"
     },
     {
-      metric: "Engagement Rate",
-      description: "Audience engagement with AI-generated content",
-      improvement: "40% increase in engagement",
-      impact: "Better audience connection and conversion rates"
+      metric: "Processing Speed",
+      description: "Average transaction processing time",
+      target: "<100ms",
+      current: "120ms",
+      improvement: "20ms reduction needed"
     },
     {
-      metric: "SEO Performance",
-      description: "Search engine optimization results",
-      improvement: "60% better SEO rankings",
-      impact: "Improved organic traffic and visibility"
+      metric: "Cost per Transaction",
+      description: "Operational cost per financial transaction",
+      target: "$0.01",
+      current: "$0.015",
+      improvement: "$0.005 reduction needed"
     }
   ];
 
@@ -334,7 +350,7 @@ const AIContentCreationStudio: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-violet-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -342,30 +358,30 @@ const AIContentCreationStudio: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="w-24 h-24 bg-gradient-to-r from-pink-500 to-rose-500 rounded-3xl p-6 mx-auto mb-8">
-              <PenTool className="w-12 h-12 text-white" />
+            <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-violet-500 rounded-3xl p-6 mx-auto mb-8">
+              <DollarSign className="w-12 h-12 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI-Powered Content
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-                Creation Studio Pro
+              AI Financial Operations
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
+                & Compliance Platform
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your content creation with our comprehensive AI-powered platform. 
-              From text and images to videos and audio, we're enabling unlimited creative possibilities.
+              Revolutionize your financial operations with our comprehensive AI-powered platform. 
+              From payment processing to regulatory compliance, we're enabling the future of fintech.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-violet-700 transition-all duration-300 transform hover:scale-105"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
                 View Pricing
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Get Demo
@@ -383,8 +399,8 @@ const AIContentCreationStudio: React.FC = () => {
             { id: 'features', name: 'Features', icon: CheckCircle },
             { id: 'pricing', name: 'Pricing', icon: DollarSign },
             { id: 'benefits', name: 'Benefits', icon: Star },
-            { id: 'content-types', name: 'Content Types', icon: FileText },
-            { id: 'metrics', name: 'Performance', icon: BarChart3 },
+            { id: 'compliance', name: 'Compliance', icon: Shield },
+            { id: 'metrics', name: 'Financial Metrics', icon: BarChart3 },
             { id: 'use-cases', name: 'Use Cases', icon: Target },
             { id: 'contact', name: 'Contact', icon: MessageSquare }
           ].map((tab) => (
@@ -393,7 +409,7 @@ const AIContentCreationStudio: React.FC = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-blue-600 to-violet-600 text-white shadow-lg'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
@@ -415,11 +431,11 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">The Future of Content Creation</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">The Future of Financial Technology</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our AI-Powered Content Creation Studio Pro represents the next generation of 
-                creative tools. Combining cutting-edge AI, advanced automation, and professional 
-                quality to revolutionize how content is created and managed.
+                Our AI Financial Operations & Compliance Platform represents the next generation of 
+                fintech infrastructure. Combining cutting-edge AI, advanced security, and comprehensive 
+                compliance to revolutionize how financial services operate.
               </p>
             </div>
 
@@ -432,7 +448,7 @@ const AIContentCreationStudio: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-4 mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-violet-500 rounded-2xl p-4 mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -441,29 +457,29 @@ const AIContentCreationStudio: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-blue-600/20 to-violet-600/20 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Capabilities</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full p-4 mx-auto mb-4">
-                    <PenTool className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full p-4 mx-auto mb-4">
+                    <DollarSign className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">AI Content Generation</h4>
-                  <p className="text-gray-300">Text, images, videos, and audio creation</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full p-4 mx-auto mb-4">
-                    <BarChart3 className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Analytics & Insights</h4>
-                  <p className="text-gray-300">Performance tracking and optimization</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Financial Operations</h4>
+                  <p className="text-gray-300">Comprehensive financial management and automation</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full p-4 mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Team Collaboration</h4>
-                  <p className="text-gray-300">Workflow management and team coordination</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Compliance & Security</h4>
+                  <p className="text-gray-300">Regulatory compliance and advanced security features</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full p-4 mx-auto mb-4">
+                    <BarChart3 className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">AI Analytics</h4>
+                  <p className="text-gray-300">AI-powered insights and predictive analytics</p>
                 </div>
               </div>
             </div>
@@ -479,10 +495,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Content Creation Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Financial Features</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our platform provides everything you need for modern content creation, from 
-                AI-powered generation to advanced management and analytics.
+                Our platform provides everything you need for modern financial operations, from 
+                payment processing to regulatory compliance and AI-powered analytics.
               </p>
             </div>
 
@@ -496,8 +512,8 @@ const AIContentCreationStudio: React.FC = () => {
                   className="bg-gray-800 rounded-2xl p-6"
                 >
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg p-2 mr-3">
-                      <PenTool className="w-4 h-4 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-violet-500 rounded-lg p-2 mr-3">
+                      <DollarSign className="w-4 h-4 text-white" />
                     </div>
                     {category.category}
                   </h3>
@@ -524,10 +540,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Content Creation Investment</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Financial Technology Investment</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Choose the plan that best fits your content creation needs. All plans include our core 
-                AI content generation features with different levels of customization and support.
+                Choose the plan that best fits your financial technology needs. All plans include our core 
+                financial operations features with different levels of customization and support.
               </p>
             </div>
 
@@ -539,11 +555,11 @@ const AIContentCreationStudio: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-gray-800 rounded-2xl p-8 ${
-                    plan.popular ? 'ring-2 ring-pink-500' : ''
+                    plan.popular ? 'ring-2 ring-blue-500' : ''
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-violet-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   )}
@@ -579,7 +595,7 @@ const AIContentCreationStudio: React.FC = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-violet-700 transition-all duration-300"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Sales
@@ -599,8 +615,8 @@ const AIContentCreationStudio: React.FC = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Platform?</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our AI-Powered Content Creation Studio Pro delivers measurable results that transform 
-                content creation and enable organizations to achieve their creative goals.
+                Our AI Financial Operations & Compliance Platform delivers measurable results that transform 
+                financial operations and enable organizations to achieve their fintech goals.
               </p>
             </div>
 
@@ -613,7 +629,7 @@ const AIContentCreationStudio: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-800 rounded-2xl p-6 flex items-start"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-4 mr-4 flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-violet-500 rounded-2xl p-4 mr-4 flex-shrink-0">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -624,28 +640,28 @@ const AIContentCreationStudio: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Content Creation Impact</h3>
+            <div className="bg-gradient-to-r from-blue-600/20 to-violet-600/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Financial Performance</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-pink-400 mb-2">10x</div>
-                  <p className="text-gray-300">Faster Content Creation</p>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">99.99%</div>
+                  <p className="text-gray-300">Transaction Success Rate</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
                   <p className="text-gray-300">Cost Reduction</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-rose-400 mb-2">40%</div>
-                  <p className="text-gray-300">Engagement Increase</p>
+                  <div className="text-3xl font-bold text-violet-400 mb-2">100%</div>
+                  <p className="text-gray-300">Compliance Rate</p>
                 </div>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* Content Types Tab */}
-        {activeTab === 'content-types' && (
+        {/* Compliance Tab */}
+        {activeTab === 'compliance' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -653,46 +669,70 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Content Types & Capabilities</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Regulatory Compliance</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our platform supports all major content types, from text and images to videos and audio. 
-                Each content type is powered by advanced AI for professional-quality results.
+                Stay compliant with all major financial regulations and standards. Our platform ensures 
+                your operations meet regulatory requirements while maintaining operational efficiency.
               </p>
             </div>
 
             <div className="space-y-6">
-              {contentTypes.map((contentType, index) => (
+              {complianceFrameworks.map((framework, index) => (
                 <motion.div
-                  key={contentType.type}
+                  key={framework.name}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-800 rounded-2xl p-6"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{contentType.type}</h3>
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl p-3">
-                      <FileText className="w-6 h-6 text-white" />
+                    <h3 className="text-xl font-bold text-white">{framework.name}</h3>
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-violet-500 rounded-xl p-3">
+                      <Shield className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  <p className="text-gray-300 mb-4">{contentType.examples}</p>
+                  <p className="text-gray-300 mb-4">{framework.description}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="text-pink-400 font-semibold mb-2">AI Capabilities:</h4>
-                      <p className="text-gray-300 text-sm">{contentType.aiCapabilities}</p>
+                      <h4 className="text-blue-400 font-semibold mb-2">Requirements:</h4>
+                      <p className="text-gray-300 text-sm">{framework.requirements}</p>
                     </div>
                     <div>
-                      <h4 className="text-rose-400 font-semibold mb-2">Output:</h4>
-                      <p className="text-gray-300 text-sm">{contentType.output}</p>
+                      <h4 className="text-violet-400 font-semibold mb-2">Impact:</h4>
+                      <p className="text-gray-300 text-sm">{framework.impact}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            <div className="bg-gradient-to-r from-blue-600/20 to-violet-600/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Compliance Automation</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Automated Monitoring</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Real-time compliance monitoring</li>
+                    <li>• Automated regulatory reporting</li>
+                    <li>• Compliance risk alerts</li>
+                    <li>• Audit trail automation</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Regulatory Updates</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Regulatory change notifications</li>
+                    <li>• Compliance requirement updates</li>
+                    <li>• Impact assessment tools</li>
+                    <li>• Implementation guidance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
 
-        {/* Performance Metrics Tab */}
+        {/* Financial Metrics Tab */}
         {activeTab === 'metrics' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -701,15 +741,15 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Performance Metrics</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Key Financial Metrics</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Track and measure your content creation performance with our comprehensive 
+                Track and measure your financial operations performance with our comprehensive 
                 metrics dashboard and AI-powered insights.
               </p>
             </div>
 
             <div className="space-y-6">
-              {performanceMetrics.map((metric, index) => (
+              {financialMetrics.map((metric, index) => (
                 <motion.div
                   key={metric.metric}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -719,19 +759,23 @@ const AIContentCreationStudio: React.FC = () => {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{metric.metric}</h3>
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl p-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-violet-500 rounded-xl p-3">
                       <BarChart3 className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <p className="text-gray-300 mb-4">{metric.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <h4 className="text-pink-400 font-semibold mb-2">Improvement:</h4>
-                      <p className="text-gray-300 text-sm">{metric.improvement}</p>
+                      <h4 className="text-blue-400 font-semibold mb-2">Target:</h4>
+                      <p className="text-gray-300 text-sm">{metric.target}</p>
                     </div>
                     <div>
-                      <h4 className="text-rose-400 font-semibold mb-2">Impact:</h4>
-                      <p className="text-gray-300 text-sm">{metric.impact}</p>
+                      <h4 className="text-violet-400 font-semibold mb-2">Current:</h4>
+                      <p className="text-gray-300 text-sm">{metric.current}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">Improvement Needed:</h4>
+                      <p className="text-gray-300 text-sm">{metric.improvement}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -751,8 +795,8 @@ const AIContentCreationStudio: React.FC = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our platform has been successfully implemented across various industries, delivering 
-                measurable results and transforming content creation processes.
+                Our platform has been successfully implemented across various fintech industries, delivering 
+                measurable results and transforming financial operations.
               </p>
             </div>
 
@@ -786,10 +830,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Transform Your Content Creation</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Transform Your Financial Operations</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Ready to revolutionize your content creation process? Contact our team to 
-                schedule a personalized demo and discuss your specific content needs.
+                Ready to revolutionize your financial technology operations? Contact our team to 
+                schedule a personalized demo and discuss your specific fintech needs.
               </p>
             </div>
 
@@ -800,27 +844,27 @@ const AIContentCreationStudio: React.FC = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Phone className="w-6 h-6 text-blue-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Phone</h4>
-                      <a href="tel:+13024640950" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 transition-colors">
                         +1 (302) 464-0950
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Mail className="w-6 h-6 text-blue-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Email</h4>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
                         kleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <MapPin className="w-6 h-6 text-blue-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Address</h4>
                       <p className="text-gray-300">
@@ -831,25 +875,25 @@ const AIContentCreationStudio: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <Globe className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Globe className="w-6 h-6 text-blue-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Website</h4>
-                      <a href="https://ziontechgroup.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
                         https://ziontechgroup.com
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-lg">
+                <div className="mt-8 p-6 bg-gradient-to-r from-blue-600/20 to-violet-600/20 rounded-lg">
                   <h4 className="text-white font-semibold mb-3">Why Choose Zion Tech Group?</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Industry-leading AI content creation expertise</li>
+                    <li>• Industry-leading fintech expertise</li>
                     <li>• Proven track record of successful implementations</li>
                     <li>• 24/7 technical support and monitoring</li>
-                    <li>• Competitive pricing with premium AI features</li>
-                    <li>• Global network of content creation partners</li>
-                    <li>• Future-proof AI content technology solutions</li>
+                    <li>• Competitive pricing with premium fintech features</li>
+                    <li>• Global network of financial technology partners</li>
+                    <li>• Future-proof fintech technology solutions</li>
                   </ul>
                 </div>
               </div>
@@ -864,7 +908,7 @@ const AIContentCreationStudio: React.FC = () => {
                       <label className="block text-white font-medium mb-2">First Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -872,7 +916,7 @@ const AIContentCreationStudio: React.FC = () => {
                       <label className="block text-white font-medium mb-2">Last Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Enter your last name"
                       />
                     </div>
@@ -882,7 +926,7 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Email</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -891,20 +935,20 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Company</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Enter your company name"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-white font-medium mb-2">Industry</label>
-                    <select className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
-                      <option value="">Select your industry</option>
-                      <option value="ecommerce">E-commerce</option>
-                      <option value="marketing-agencies">Marketing Agencies</option>
-                      <option value="saas">SaaS Companies</option>
-                      <option value="education">Educational Institutions</option>
-                      <option value="media-publishing">Media & Publishing</option>
+                    <label className="block text-white font-medium mb-2">Fintech Industry</label>
+                    <select className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      <option value="">Select your fintech industry</option>
+                      <option value="digital-banking">Digital Banking</option>
+                      <option value="payment-processing">Payment Processing</option>
+                      <option value="investment-management">Investment Management</option>
+                      <option value="lending-credit">Lending & Credit</option>
+                      <option value="cryptocurrency-defi">Cryptocurrency & DeFi</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -913,14 +957,14 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Message</label>
                     <textarea
                       rows={4}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                      placeholder="Tell us about your content creation needs and requirements..."
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Tell us about your fintech operations and compliance needs..."
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                    className="w-full py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-violet-700 transition-all duration-300 transform hover:scale-105"
                   >
                     <MessageSquare className="w-5 h-5 inline mr-2" />
                     Request Demo
@@ -933,7 +977,7 @@ const AIContentCreationStudio: React.FC = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 py-16">
+      <div className="bg-gradient-to-r from-blue-600/20 to-violet-600/20 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -941,23 +985,23 @@ const AIContentCreationStudio: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Content Creation?
+              Ready to Revolutionize Financial Technology?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-               Join the organizations already transforming their content creation with our 
-               AI-Powered Content Creation Studio Pro. The future of creative content is here.
+               Join the organizations already transforming their financial operations with our 
+               AI Financial Operations & Compliance Platform. The future of fintech is here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-violet-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
@@ -970,4 +1014,4 @@ const AIContentCreationStudio: React.FC = () => {
   );
 };
 
-export default AIContentCreationStudio;
+export default FintechOperationsCompliance;

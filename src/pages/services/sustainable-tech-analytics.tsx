@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  PenTool, 
-  Image, 
-  Video, 
-  Music, 
-  FileText, 
+  Leaf, 
+  TrendingUp, 
+  Globe, 
+  Database, 
+  BarChart3, 
   CheckCircle,
   Star,
   ArrowRight,
@@ -13,7 +13,7 @@ import {
   Mail,
   MapPin,
   MessageSquare,
-  FileText as FileTextIcon,
+  FileText,
   Search,
   Clock,
   DollarSign,
@@ -35,8 +35,18 @@ import {
   Cpu,
   Network,
   Atom,
-  Globe,
-  Globe as GlobeIcon,
+  Recycle,
+  Sun,
+  Wind,
+  Droplets,
+  TreePine,
+  Factory,
+  Car,
+  Building2,
+  Gauge,
+  Activity,
+  LineChart,
+  PieChart,
   TargetIcon,
   LightbulbIcon,
   ShieldIcon,
@@ -54,6 +64,7 @@ import {
   MailIcon,
   MapPinIcon,
   MessageSquareIcon,
+  FileTextIcon,
   SearchIcon,
   ClockIcon,
   DollarSignIcon,
@@ -80,253 +91,258 @@ import {
   DollarSignIcon as DollarSignIcon2
 } from 'lucide-react';
 
-const AIContentCreationStudio: React.FC = () => {
+const SustainableTechAnalytics: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
     {
-      category: "AI Text Generation",
+      category: "Environmental Impact Assessment",
       items: [
-        "Blog Posts & Articles",
-        "Social Media Content",
-        "Marketing Copy",
-        "Product Descriptions",
-        "Email Campaigns",
-        "SEO-Optimized Content"
+        "Carbon Footprint Calculation",
+        "Life Cycle Analysis (LCA)",
+        "Environmental Risk Assessment",
+        "Sustainability Metrics Tracking",
+        "Regulatory Compliance Monitoring",
+        "Impact Forecasting & Modeling"
       ]
     },
     {
-      category: "AI Image Creation",
+      category: "Energy Efficiency Analytics",
       items: [
-        "Product Photography",
-        "Marketing Graphics",
-        "Social Media Images",
-        "Website Visuals",
-        "Brand Assets",
-        "Custom Illustrations"
+        "Energy Consumption Monitoring",
+        "Renewable Energy Integration",
+        "Smart Grid Optimization",
+        "Energy Performance Benchmarking",
+        "Efficiency Improvement Recommendations",
+        "Cost-Benefit Analysis"
       ]
     },
     {
-      category: "AI Video Production",
+      category: "Resource Management",
       items: [
-        "Product Demos",
-        "Marketing Videos",
-        "Social Media Clips",
-        "Training Videos",
-        "Brand Stories",
-        "Animated Content"
+        "Water Usage Optimization",
+        "Waste Reduction Strategies",
+        "Circular Economy Modeling",
+        "Supply Chain Sustainability",
+        "Resource Efficiency Tracking",
+        "Sustainable Procurement Analysis"
       ]
     },
     {
-      category: "AI Audio Generation",
+      category: "Climate Risk Management",
       items: [
-        "Voice-overs",
-        "Podcast Content",
-        "Background Music",
-        "Sound Effects",
-        "Audio Books",
-        "Multilingual Audio"
+        "Climate Scenario Modeling",
+        "Extreme Weather Impact Assessment",
+        "Adaptation Strategy Development",
+        "Vulnerability Analysis",
+        "Resilience Planning",
+        "Climate Finance Optimization"
       ]
     },
     {
-      category: "Content Management",
+      category: "ESG Performance Tracking",
       items: [
-        "Content Calendar",
-        "Workflow Automation",
-        "Team Collaboration",
-        "Version Control",
-        "Performance Analytics",
-        "Content Optimization"
+        "Environmental Metrics Dashboard",
+        "Social Impact Measurement",
+        "Governance Compliance Tracking",
+        "Stakeholder Engagement Analysis",
+        "ESG Reporting Automation",
+        "Performance Benchmarking"
       ]
     },
     {
-      category: "AI-Powered Insights",
+      category: "AI-Powered Sustainability",
       items: [
-        "Content Performance Analysis",
-        "Audience Engagement Metrics",
-        "Trend Prediction",
-        "Competitive Analysis",
-        "SEO Recommendations",
-        "ROI Tracking"
+        "Predictive Sustainability Analytics",
+        "Automated Impact Assessment",
+        "Intelligent Optimization Recommendations",
+        "Real-time Monitoring & Alerts",
+        "Machine Learning Insights",
+        "Sustainability AI Chatbot"
       ]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Content Creator",
-      price: "$1,999",
+      name: "Green Starter",
+      price: "$2,999",
       period: "/month",
-      description: "Essential AI content creation for small businesses",
+      description: "Essential sustainability analytics for small organizations",
       features: [
-        "AI Text Generation (100 pieces/month)",
-        "Basic Image Creation (50 images/month)",
-        "Content Calendar",
+        "Basic Environmental Impact Assessment",
+        "Energy Efficiency Monitoring",
+        "Sustainability Dashboard",
         "Email Support",
-        "Integration with 15+ Platforms",
-        "Basic Analytics Dashboard"
-      ],
-      popular: false,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "Content Studio Pro",
-      price: "$4,999",
-      period: "/month",
-      description: "Advanced AI content creation for growing businesses",
-      features: [
-        "Unlimited AI Text Generation",
-        "Unlimited Image Creation",
-        "AI Video Production (25 videos/month)",
-        "AI Audio Generation (50 audio pieces/month)",
-        "Priority Support (6-hour response)",
-        "Integration with 35+ Platforms",
-        "Advanced Analytics & Insights",
-        "Team Collaboration Tools"
-      ],
-      popular: true,
-      color: "from-pink-500 to-rose-500"
-    },
-    {
-      name: "Enterprise Studio",
-      price: "$12,999",
-      period: "/month",
-      description: "Complete AI content creation for major organizations",
-      features: [
-        "Unlimited All Content Types",
-        "Custom AI Model Training",
-        "White-label Solutions",
-        "Advanced Workflow Automation",
-        "24/7 Dedicated Support",
-        "Integration with 100+ Platforms",
-        "Custom Brand Guidelines",
-        "API Access & Webhooks",
-        "SLA Guarantees",
-        "Custom Compliance Features"
+        "Integration with 20+ Sustainability Tools",
+        "Monthly Sustainability Reports"
       ],
       popular: false,
       color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "Sustainability Pro",
+      price: "$7,999",
+      period: "/month",
+      description: "Advanced sustainability solutions for growing organizations",
+      features: [
+        "Comprehensive Environmental Analytics",
+        "Advanced Energy & Resource Management",
+        "Climate Risk Assessment",
+        "Priority Support (4-hour response)",
+        "Integration with 50+ Sustainability Tools",
+        "Custom Sustainability Templates",
+        "AI-Powered Recommendations",
+        "API Access & Webhooks"
+      ],
+      popular: true,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Enterprise Green",
+      price: "$19,999",
+      period: "/month",
+      description: "Complete sustainability infrastructure for major organizations",
+      features: [
+        "Unlimited Sustainability Analytics",
+        "Enterprise ESG Performance Tracking",
+        "Global Climate Risk Management",
+        "Custom Sustainability Development",
+        "24/7 Dedicated Support",
+        "Integration with 100+ Sustainability Tools",
+        "White-label Solutions",
+        "On-premise Deployment",
+        "SLA Guarantees",
+        "Custom Compliance Frameworks"
+      ],
+      popular: false,
+      color: "from-violet-500 to-purple-500"
     }
   ];
 
   const benefits = [
     {
-      icon: Zap,
-      title: "Speed & Efficiency",
-      description: "Create content 10x faster with AI automation"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce content creation costs by up to 70%"
-    },
-    {
-      icon: Star,
-      title: "Quality & Consistency",
-      description: "Maintain high-quality, consistent brand voice"
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Create content in multiple languages and formats"
+      icon: Leaf,
+      title: "Environmental Impact",
+      description: "Reduce environmental footprint and achieve sustainability goals"
     },
     {
       icon: TrendingUp,
-      title: "Performance",
-      description: "AI-optimized content for better engagement"
+      title: "Cost Savings",
+      description: "Lower operational costs through efficiency improvements"
     },
     {
-      icon: Users,
-      title: "Scalability",
-      description: "Scale content production without adding staff"
+      icon: Shield,
+      title: "Compliance",
+      description: "Meet regulatory requirements and industry standards"
+    },
+    {
+      icon: Star,
+      title: "Brand Value",
+      description: "Enhance brand reputation and stakeholder trust"
+    },
+    {
+      icon: Globe,
+      title: "Global Impact",
+      description: "Contribute to global sustainability initiatives"
+    },
+    {
+      icon: Zap,
+      title: "Innovation",
+      description: "Drive innovation through sustainable technology adoption"
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Generate product descriptions, marketing copy, and visual content at scale",
-      results: "70% faster content creation, 40% increase in conversions, 24/7 content production"
+      industry: "Manufacturing",
+      description: "Optimize production processes, reduce waste, and improve energy efficiency",
+      results: "30% waste reduction, 25% energy savings, 40% cost reduction"
     },
     {
-      industry: "Marketing Agencies",
-      description: "Deliver high-quality content for multiple clients efficiently",
-      results: "5x content output, 60% cost reduction, improved client satisfaction"
+      industry: "Retail & E-commerce",
+      description: "Track supply chain sustainability, optimize logistics, and reduce carbon footprint",
+      results: "35% carbon reduction, 20% logistics optimization, sustainable sourcing"
     },
     {
-      industry: "SaaS Companies",
-      description: "Create technical documentation, marketing materials, and user guides",
-      results: "80% faster documentation, consistent brand voice, improved user experience"
+      industry: "Financial Services",
+      description: "ESG risk assessment, sustainable investment analysis, and climate finance",
+      results: "ESG compliance 100%, sustainable portfolio growth, climate risk mitigation"
     },
     {
-      industry: "Educational Institutions",
-      description: "Generate learning materials, course content, and educational resources",
-      results: "Massive content scaling, personalized learning materials, cost-effective production"
+      industry: "Real Estate",
+      description: "Building sustainability certification, energy efficiency, and green building design",
+      results: "LEED certification, 40% energy savings, green building compliance"
     },
     {
-      industry: "Media & Publishing",
-      description: "Create articles, social media content, and multimedia materials",
-      results: "10x content volume, AI-powered insights, audience engagement optimization"
+      industry: "Transportation",
+      description: "Fleet optimization, route planning, and sustainable mobility solutions",
+      results: "25% fuel reduction, 30% emissions decrease, sustainable mobility"
     }
   ];
 
-  const contentTypes = [
+  const sustainabilityMetrics = [
     {
-      type: "Text Content",
-      examples: "Blog posts, articles, social media posts, emails, product descriptions",
-      aiCapabilities: "Natural language generation, SEO optimization, tone adjustment",
-      output: "Unlimited text generation with human-like quality"
+      metric: "Carbon Footprint",
+      description: "Total greenhouse gas emissions from operations",
+      unit: "CO2e (tons)",
+      target: "Net Zero by 2030",
+      current: "Reduced by 45%"
     },
     {
-      type: "Visual Content",
-      examples: "Images, graphics, infographics, social media visuals, brand assets",
-      aiCapabilities: "Image generation, style transfer, brand consistency",
-      output: "High-resolution visuals in any style or format"
+      metric: "Energy Efficiency",
+      description: "Energy consumption per unit of production",
+      unit: "kWh/unit",
+      target: "30% improvement",
+      current: "25% achieved"
     },
     {
-      type: "Video Content",
-      examples: "Product demos, marketing videos, social media clips, training videos",
-      aiCapabilities: "Video generation, editing automation, voice synthesis",
-      output: "Professional-quality videos with minimal human input"
+      metric: "Water Usage",
+      description: "Water consumption and recycling rates",
+      unit: "Gallons/unit",
+      target: "50% reduction",
+      current: "35% achieved"
     },
     {
-      type: "Audio Content",
-      examples: "Voice-overs, podcasts, background music, sound effects",
-      aiCapabilities: "Voice cloning, music generation, audio enhancement",
-      output: "Studio-quality audio in multiple languages and styles"
+      metric: "Waste Reduction",
+      description: "Waste generation and recycling rates",
+      unit: "% recycled",
+      target: "90% recycling",
+      current: "75% achieved"
+    },
+    {
+      metric: "Renewable Energy",
+      description: "Percentage of energy from renewable sources",
+      unit: "% renewable",
+      target: "100% renewable",
+      current: "60% achieved"
     }
   ];
 
-  const performanceMetrics = [
+  const sustainabilityFrameworks = [
     {
-      metric: "Content Creation Speed",
-      description: "Time to create professional content",
-      improvement: "10x faster than traditional methods",
-      impact: "Increased content volume and faster time-to-market"
+      name: "UN Sustainable Development Goals (SDGs)",
+      description: "Global framework for sustainable development",
+      focus: "17 goals covering social, economic, and environmental aspects",
+      relevance: "International sustainability standards and reporting"
     },
     {
-      metric: "Cost per Content Piece",
-      description: "Average cost to create one content piece",
-      improvement: "70% cost reduction",
-      impact: "Significant budget savings and ROI improvement"
+      name: "Global Reporting Initiative (GRI)",
+      description: "Sustainability reporting standards",
+      focus: "Environmental, social, and governance performance",
+      relevance: "Corporate sustainability reporting and disclosure"
     },
     {
-      metric: "Content Quality Score",
-      description: "AI-generated content quality rating",
-      improvement: "95% quality score",
-      impact: "Professional-grade content without human errors"
+      name: "Science Based Targets (SBTi)",
+      description: "Climate action targets aligned with climate science",
+      focus: "Carbon reduction targets and climate action",
+      relevance: "Climate risk management and net-zero strategies"
     },
     {
-      metric: "Engagement Rate",
-      description: "Audience engagement with AI-generated content",
-      improvement: "40% increase in engagement",
-      impact: "Better audience connection and conversion rates"
-    },
-    {
-      metric: "SEO Performance",
-      description: "Search engine optimization results",
-      improvement: "60% better SEO rankings",
-      impact: "Improved organic traffic and visibility"
+      name: "Task Force on Climate-related Financial Disclosures (TCFD)",
+      description: "Climate risk disclosure framework",
+      focus: "Climate-related financial risks and opportunities",
+      relevance: "Financial risk assessment and climate finance"
     }
   ];
 
@@ -334,7 +350,7 @@ const AIContentCreationStudio: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -342,30 +358,30 @@ const AIContentCreationStudio: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="w-24 h-24 bg-gradient-to-r from-pink-500 to-rose-500 rounded-3xl p-6 mx-auto mb-8">
-              <PenTool className="w-12 h-12 text-white" />
+            <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl p-6 mx-auto mb-8">
+              <Leaf className="w-12 h-12 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI-Powered Content
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-                Creation Studio Pro
+              AI-Powered
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                Sustainability Analytics
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your content creation with our comprehensive AI-powered platform. 
-              From text and images to videos and audio, we're enabling unlimited creative possibilities.
+              Transform your organization's sustainability journey with our comprehensive analytics platform. 
+              From environmental impact assessment to ESG performance tracking, we're enabling a greener future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
                 View Pricing
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Get Demo
@@ -383,8 +399,8 @@ const AIContentCreationStudio: React.FC = () => {
             { id: 'features', name: 'Features', icon: CheckCircle },
             { id: 'pricing', name: 'Pricing', icon: DollarSign },
             { id: 'benefits', name: 'Benefits', icon: Star },
-            { id: 'content-types', name: 'Content Types', icon: FileText },
-            { id: 'metrics', name: 'Performance', icon: BarChart3 },
+            { id: 'metrics', name: 'Sustainability Metrics', icon: BarChart3 },
+            { id: 'frameworks', name: 'Frameworks', icon: FileText },
             { id: 'use-cases', name: 'Use Cases', icon: Target },
             { id: 'contact', name: 'Contact', icon: MessageSquare }
           ].map((tab) => (
@@ -393,7 +409,7 @@ const AIContentCreationStudio: React.FC = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
               }`}
             >
@@ -415,11 +431,11 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">The Future of Content Creation</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Building a Sustainable Future</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our AI-Powered Content Creation Studio Pro represents the next generation of 
-                creative tools. Combining cutting-edge AI, advanced automation, and professional 
-                quality to revolutionize how content is created and managed.
+                Our AI-Powered Sustainability Analytics Platform represents the next generation of 
+                environmental management. Combining cutting-edge AI, advanced analytics, and proven 
+                sustainability frameworks to revolutionize how organizations approach environmental responsibility.
               </p>
             </div>
 
@@ -432,7 +448,7 @@ const AIContentCreationStudio: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-4 mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-4 mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -441,29 +457,29 @@ const AIContentCreationStudio: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Capabilities</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full p-4 mx-auto mb-4">
-                    <PenTool className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full p-4 mx-auto mb-4">
+                    <Leaf className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">AI Content Generation</h4>
-                  <p className="text-gray-300">Text, images, videos, and audio creation</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Environmental Impact</h4>
+                  <p className="text-gray-300">Comprehensive environmental assessment and monitoring</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full p-4 mx-auto mb-4">
                     <BarChart3 className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-lg font-semibold text-white mb-2">Analytics & Insights</h4>
-                  <p className="text-gray-300">Performance tracking and optimization</p>
+                  <p className="text-gray-300">AI-powered sustainability analytics and reporting</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full p-4 mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full p-4 mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Team Collaboration</h4>
-                  <p className="text-gray-300">Workflow management and team coordination</p>
+                  <h4 className="text-lg font-semibold text-white mb-2">Compliance & Risk</h4>
+                  <p className="text-gray-300">Regulatory compliance and climate risk management</p>
                 </div>
               </div>
             </div>
@@ -479,10 +495,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Content Creation Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Sustainability Features</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our platform provides everything you need for modern content creation, from 
-                AI-powered generation to advanced management and analytics.
+                Our platform provides everything you need for modern sustainability management, from 
+                environmental impact assessment to ESG performance tracking and climate risk management.
               </p>
             </div>
 
@@ -496,8 +512,8 @@ const AIContentCreationStudio: React.FC = () => {
                   className="bg-gray-800 rounded-2xl p-6"
                 >
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg p-2 mr-3">
-                      <PenTool className="w-4 h-4 text-white" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg p-2 mr-3">
+                      <Leaf className="w-4 h-4 text-white" />
                     </div>
                     {category.category}
                   </h3>
@@ -524,10 +540,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Content Creation Investment</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Sustainable Investment</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Choose the plan that best fits your content creation needs. All plans include our core 
-                AI content generation features with different levels of customization and support.
+                Choose the plan that best fits your sustainability goals. All plans include our core 
+                sustainability features with different levels of customization and support.
               </p>
             </div>
 
@@ -539,11 +555,11 @@ const AIContentCreationStudio: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-gray-800 rounded-2xl p-8 ${
-                    plan.popular ? 'ring-2 ring-pink-500' : ''
+                    plan.popular ? 'ring-2 ring-green-500' : ''
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   )}
@@ -579,7 +595,7 @@ const AIContentCreationStudio: React.FC = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Sales
@@ -599,8 +615,8 @@ const AIContentCreationStudio: React.FC = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Platform?</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our AI-Powered Content Creation Studio Pro delivers measurable results that transform 
-                content creation and enable organizations to achieve their creative goals.
+                Our AI-Powered Sustainability Analytics Platform delivers measurable results that transform 
+                environmental management and enable organizations to achieve their sustainability goals.
               </p>
             </div>
 
@@ -613,7 +629,7 @@ const AIContentCreationStudio: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gray-800 rounded-2xl p-6 flex items-start"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl p-4 mr-4 flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-4 mr-4 flex-shrink-0">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -624,75 +640,27 @@ const AIContentCreationStudio: React.FC = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Content Creation Impact</h3>
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Sustainability Impact</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-pink-400 mb-2">10x</div>
-                  <p className="text-gray-300">Faster Content Creation</p>
+                  <div className="text-3xl font-bold text-green-400 mb-2">45%</div>
+                  <p className="text-gray-300">Average Carbon Reduction</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
-                  <p className="text-gray-300">Cost Reduction</p>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">30%</div>
+                  <p className="text-gray-300">Cost Savings</p>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-rose-400 mb-2">40%</div>
-                  <p className="text-gray-300">Engagement Increase</p>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>
+                  <p className="text-gray-300">Compliance Rate</p>
                 </div>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* Content Types Tab */}
-        {activeTab === 'content-types' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-12"
-          >
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Content Types & Capabilities</h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Our platform supports all major content types, from text and images to videos and audio. 
-                Each content type is powered by advanced AI for professional-quality results.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {contentTypes.map((contentType, index) => (
-                <motion.div
-                  key={contentType.type}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-800 rounded-2xl p-6"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{contentType.type}</h3>
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl p-3">
-                      <FileText className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <p className="text-gray-300 mb-4">{contentType.examples}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <h4 className="text-pink-400 font-semibold mb-2">AI Capabilities:</h4>
-                      <p className="text-gray-300 text-sm">{contentType.aiCapabilities}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-rose-400 font-semibold mb-2">Output:</h4>
-                      <p className="text-gray-300 text-sm">{contentType.output}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-
-        {/* Performance Metrics Tab */}
+        {/* Sustainability Metrics Tab */}
         {activeTab === 'metrics' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -701,15 +669,15 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Performance Metrics</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Key Sustainability Metrics</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Track and measure your content creation performance with our comprehensive 
+                Track and measure your organization's sustainability performance with our comprehensive 
                 metrics dashboard and AI-powered insights.
               </p>
             </div>
 
             <div className="space-y-6">
-              {performanceMetrics.map((metric, index) => (
+              {sustainabilityMetrics.map((metric, index) => (
                 <motion.div
                   key={metric.metric}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -719,19 +687,91 @@ const AIContentCreationStudio: React.FC = () => {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-xl font-bold text-white">{metric.metric}</h3>
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl p-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-3">
                       <BarChart3 className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <p className="text-gray-300 mb-4">{metric.description}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="text-pink-400 font-semibold mb-2">Improvement:</h4>
-                      <p className="text-gray-300 text-sm">{metric.improvement}</p>
+                      <h4 className="text-green-400 font-semibold mb-2">Target:</h4>
+                      <p className="text-gray-300 text-sm">{metric.target}</p>
                     </div>
                     <div>
-                      <h4 className="text-rose-400 font-semibold mb-2">Impact:</h4>
-                      <p className="text-gray-300 text-sm">{metric.impact}</p>
+                      <h4 className="text-emerald-400 font-semibold mb-2">Current Progress:</h4>
+                      <p className="text-gray-300 text-sm">{metric.current}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Real-time Monitoring</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Environmental Sensors</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Air quality monitoring</li>
+                    <li>• Water quality sensors</li>
+                    <li>• Energy consumption tracking</li>
+                    <li>• Waste generation monitoring</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Data Analytics</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Real-time data processing</li>
+                    <li>• Predictive analytics</li>
+                    <li>• Automated reporting</li>
+                    <li>• Performance benchmarking</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Frameworks Tab */}
+        {activeTab === 'frameworks' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Sustainability Frameworks</h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Our platform supports all major sustainability frameworks and standards, ensuring 
+                compliance and alignment with global best practices.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {sustainabilityFrameworks.map((framework, index) => (
+                <motion.div
+                  key={framework.name}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-800 rounded-2xl p-6"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white">{framework.name}</h3>
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-3">
+                      <FileText className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4">{framework.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">Focus Area:</h4>
+                      <p className="text-gray-300 text-sm">{framework.focus}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-emerald-400 font-semibold mb-2">Relevance:</h4>
+                      <p className="text-gray-300 text-sm">{framework.relevance}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -752,7 +792,7 @@ const AIContentCreationStudio: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Our platform has been successfully implemented across various industries, delivering 
-                measurable results and transforming content creation processes.
+                measurable sustainability results and transforming environmental management practices.
               </p>
             </div>
 
@@ -786,10 +826,10 @@ const AIContentCreationStudio: React.FC = () => {
             className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Transform Your Content Creation</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Start Your Sustainability Journey</h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Ready to revolutionize your content creation process? Contact our team to 
-                schedule a personalized demo and discuss your specific content needs.
+                Ready to transform your organization's sustainability performance? Contact our team to 
+                schedule a personalized demo and discuss your specific sustainability needs.
               </p>
             </div>
 
@@ -800,27 +840,27 @@ const AIContentCreationStudio: React.FC = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Phone className="w-6 h-6 text-green-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Phone</h4>
-                      <a href="tel:+13024640950" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="tel:+13024640950" className="text-green-400 hover:text-green-300 transition-colors">
                         +1 (302) 464-0950
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Mail className="w-6 h-6 text-green-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Email</h4>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300 transition-colors">
                         kleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <MapPin className="w-6 h-6 text-green-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Address</h4>
                       <p className="text-gray-300">
@@ -831,25 +871,25 @@ const AIContentCreationStudio: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <Globe className="w-6 h-6 text-pink-400 mr-4 mt-1" />
+                    <Globe className="w-6 h-6 text-green-400 mr-4 mt-1" />
                     <div>
                       <h4 className="text-white font-semibold">Website</h4>
-                      <a href="https://ziontechgroup.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+                      <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300 transition-colors">
                         https://ziontechgroup.com
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-lg">
+                <div className="mt-8 p-6 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg">
                   <h4 className="text-white font-semibold mb-3">Why Choose Zion Tech Group?</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Industry-leading AI content creation expertise</li>
+                    <li>• Industry-leading sustainability expertise</li>
                     <li>• Proven track record of successful implementations</li>
                     <li>• 24/7 technical support and monitoring</li>
-                    <li>• Competitive pricing with premium AI features</li>
-                    <li>• Global network of content creation partners</li>
-                    <li>• Future-proof AI content technology solutions</li>
+                    <li>• Competitive pricing with premium sustainability features</li>
+                    <li>• Global network of sustainability partners</li>
+                    <li>• Future-proof sustainability technology solutions</li>
                   </ul>
                 </div>
               </div>
@@ -864,7 +904,7 @@ const AIContentCreationStudio: React.FC = () => {
                       <label className="block text-white font-medium mb-2">First Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -872,7 +912,7 @@ const AIContentCreationStudio: React.FC = () => {
                       <label className="block text-white font-medium mb-2">Last Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                         placeholder="Enter your last name"
                       />
                     </div>
@@ -882,7 +922,7 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Email</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -891,20 +931,20 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Company</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                       placeholder="Enter your company name"
                     />
                   </div>
                   
                   <div>
                     <label className="block text-white font-medium mb-2">Industry</label>
-                    <select className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    <select className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500">
                       <option value="">Select your industry</option>
-                      <option value="ecommerce">E-commerce</option>
-                      <option value="marketing-agencies">Marketing Agencies</option>
-                      <option value="saas">SaaS Companies</option>
-                      <option value="education">Educational Institutions</option>
-                      <option value="media-publishing">Media & Publishing</option>
+                      <option value="manufacturing">Manufacturing</option>
+                      <option value="retail">Retail & E-commerce</option>
+                      <option value="financial">Financial Services</option>
+                      <option value="real-estate">Real Estate</option>
+                      <option value="transportation">Transportation</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -913,14 +953,14 @@ const AIContentCreationStudio: React.FC = () => {
                     <label className="block text-white font-medium mb-2">Message</label>
                     <textarea
                       rows={4}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                      placeholder="Tell us about your content creation needs and requirements..."
+                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+                      placeholder="Tell us about your sustainability goals and requirements..."
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                    className="w-full py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                   >
                     <MessageSquare className="w-5 h-5 inline mr-2" />
                     Request Demo
@@ -933,7 +973,7 @@ const AIContentCreationStudio: React.FC = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-pink-600/20 to-rose-600/20 py-16">
+      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -941,23 +981,23 @@ const AIContentCreationStudio: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Content Creation?
+              Ready to Build a Sustainable Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-               Join the organizations already transforming their content creation with our 
-               AI-Powered Content Creation Studio Pro. The future of creative content is here.
+               Join the organizations already transforming their sustainability performance with our 
+               AI-Powered Sustainability Analytics Platform. The future of environmental responsibility is here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
@@ -970,4 +1010,4 @@ const AIContentCreationStudio: React.FC = () => {
   );
 };
 
-export default AIContentCreationStudio;
+export default SustainableTechAnalytics;
