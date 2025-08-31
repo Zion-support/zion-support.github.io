@@ -90,7 +90,11 @@ export function AppFooter() {
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" }
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
+        { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
+        { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
+        { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
+        { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
       ]
     }
   ];
