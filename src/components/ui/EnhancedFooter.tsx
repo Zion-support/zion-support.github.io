@@ -27,20 +27,20 @@ const footerSections = [
       { name: 'AI Solutions', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform' }
+      { name: 'Edge & IoT', href: '/services/ai-iot-edge-computing-platform' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'Enterprise', href: '/solutions/Enterprise' },
-      { name: 'Healthcare', href: '/solutions/Healthcare' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions' },
-      { name: 'Retail', href: '/solutions/RetailSolutions' }
+      { name: 'Enterprise', href: '/enterprise' },
+      { name: 'Healthcare', href: '/healthcare' },
+      { name: 'Financial', href: '/financial-solutions' },
+      { name: 'Manufacturing', href: '/manufacturing-solutions' },
+      { name: 'Government', href: '/government-solutions' },
+      { name: 'Retail', href: '/retail-solutions' }
     ]
   },
   {

@@ -59,6 +59,23 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const Healthcare = createLazyComponent(() => import('./pages/Healthcare'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/RetailSolutions'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const Press = createLazyComponent(() => import('./pages/Press'));
+const Developer = createLazyComponent(() => import('./pages/Developer'));
+const Docs = createLazyComponent(() => import('./pages/Docs'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -145,8 +162,25 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/healthcare" element={<Healthcare />} />
+                    <Route path="/government-solutions" element={<GovernmentSolutions />} />
+                    <Route path="/retail-solutions" element={<RetailSolutions />} />
+                                            <Route path="/leadership" element={<Leadership />} />
+                        <Route path="/careers" element={<Careers />} />
+                        <Route path="/privacy" element={<Privacy />} />
+                        <Route path="/terms" element={<Terms />} />
+                        <Route path="/cookies" element={<Cookies />} />
+                        <Route path="/accessibility" element={<Accessibility />} />
+                        <Route path="/news" element={<News />} />
+                        <Route path="/blog" element={<Blog />} />
+                        <Route path="/support" element={<Support />} />
+                        <Route path="/training" element={<Training />} />
+                        <Route path="/community" element={<Community />} />
+                        <Route path="/press" element={<Press />} />
+                        <Route path="/developer" element={<Developer />} />
+                        <Route path="/docs" element={<Docs />} />
 
-                    {/* 404 Page */}
+                        {/* 404 Page */}
                     <Route
                       path="*"
                       element={

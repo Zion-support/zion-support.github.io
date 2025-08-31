@@ -31,9 +31,9 @@ const navigation: NavigationItem[] = [
       { name: 'AI Solutions', href: '/ai-services', description: 'Cutting-edge artificial intelligence services' },
       { name: 'IT Services', href: '/it-services', description: 'Enterprise technology infrastructure' },
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security protocols' },
+      { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', description: 'Advanced security protocols' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Scalable cloud infrastructure' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' }
+      { name: 'Edge & IoT', href: '/services/ai-iot-edge-computing-platform', description: 'Ultra-low latency solutions' }
     ]
   },
   {
@@ -41,12 +41,12 @@ const navigation: NavigationItem[] = [
     href: '/solutions',
     description: 'Industry-specific technology solutions',
     children: [
-      { name: 'Enterprise', href: '/solutions/Enterprise', description: 'Large-scale business solutions' },
-      { name: 'Healthcare', href: '/solutions/Healthcare', description: 'Medical technology innovations' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions', description: 'Fintech and banking solutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions', description: 'Industrial automation' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions', description: 'Public sector technology' },
-      { name: 'Retail', href: '/solutions/RetailSolutions', description: 'E-commerce and retail tech' }
+      { name: 'Enterprise', href: '/enterprise', description: 'Large-scale business solutions' },
+      { name: 'Healthcare', href: '/healthcare', description: 'Medical technology innovations' },
+      { name: 'Financial', href: '/financial-solutions', description: 'Fintech and banking solutions' },
+      { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industrial automation' },
+      { name: 'Government', href: '/government-solutions', description: 'Public sector technology' },
+      { name: 'Retail', href: '/retail-solutions', description: 'E-commerce and retail tech' }
     ]
   },
   {
