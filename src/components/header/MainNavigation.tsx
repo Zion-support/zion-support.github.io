@@ -50,7 +50,8 @@ import {
   Star,
   Users2,
   Cog,
-  Palette as PaletteIcon
+  Palette as PaletteIcon,
+  PenTool
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -184,6 +185,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Shield className="w-3 h-3 mr-2" />
                         AI Compliance Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <PenTool className="w-3 h-3 mr-2" />
+                        AI Content Creation Studio
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI Customer Experience Analytics
                       </Link>
                     </li>
                   </ul>
@@ -485,6 +498,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <Link to="/innovative-services-showcase-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                     <Rocket className="w-3 h-3 mr-2" />
                     Innovative Services 2025
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pricing-guide" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                    <DollarSign className="w-3 h-3 mr-2" />
+                    Pricing Guide
                   </Link>
                 </li>
               </ul>

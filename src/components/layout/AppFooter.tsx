@@ -72,7 +72,9 @@ export function AppFooter() {
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
         { name: "AI HR Platform", href: "/services/ai-hr-platform" },
-        { name: "AI HR Management", href: "/services/ai-hr-management-platform" }
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" }
       ]
     }
   ];
@@ -92,7 +94,8 @@ export function AppFooter() {
     { name: "White Papers", href: "/white-papers" },
     { name: "Webinars", href: "/webinars" },
     { name: "Training", href: "/training" },
-    { name: "Research & Development", href: "/research-development" }
+    { name: "Research & Development", href: "/research-development" },
+    { name: "Pricing Guide", href: "/pricing-guide" }
   ];
 
   const supportLinks = [

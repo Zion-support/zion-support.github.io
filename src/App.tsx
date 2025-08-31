@@ -97,6 +97,10 @@ const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITIn
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
+// New Innovative Services 2025 - Content Creation & Analytics
+const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
+const PricingGuide = createLazyComponent(() => import('./components/PricingGuide'));
+
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
 const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
@@ -237,6 +241,10 @@ function App() {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* New Innovative Services 2025 - Content Creation & Analytics */}
+                    <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                    <Route path="/pricing-guide" element={<PricingGuide />} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
