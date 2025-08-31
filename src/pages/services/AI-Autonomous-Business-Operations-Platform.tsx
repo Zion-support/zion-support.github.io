@@ -1,284 +1,240 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Bot, 
-  Zap, 
-  Shield, 
+  Workflow, 
   TrendingUp, 
+  Shield, 
+  Users, 
   CheckCircle, 
   ArrowRight,
+  Automation,
+  Business,
+  Operations,
+  AI,
+  Cloud,
+  Security,
+  Analytics,
+  Integration,
+  Zap,
+  Brain,
   Cpu,
   Database,
   Network,
-  Lock,
-  BarChart3,
-  Users,
-  Globe,
-  Rocket,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Workflow,
-  Brain,
-  Settings,
-  Target,
-  Lightbulb
+  Globe
 } from 'lucide-react';
 
-const AIAutonomousBusinessOperationsPlatform = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+const AIAutonomousBusinessOperationsPlatform: React.FC = () => {
   const features = [
     {
       icon: <Bot className="w-6 h-6" />,
-      title: "Autonomous Operations",
-      description: "AI-powered systems that run your business operations 24/7 without human intervention"
+      title: "Autonomous Decision Making",
+      description: "AI-powered decision engines that operate independently with human oversight and approval workflows"
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Process Automation",
-      description: "Intelligent workflow automation that adapts and optimizes based on real-time data"
+      title: "Intelligent Process Automation",
+      description: "End-to-end business process automation with machine learning optimization and continuous improvement"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Predictive Decision Making",
-      description: "Advanced AI algorithms that make data-driven decisions and predict future outcomes"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Advanced forecasting and trend analysis to optimize business operations and resource allocation"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Automated risk assessment and mitigation strategies for business continuity"
+      title: "Compliance Automation",
+      description: "Automated regulatory compliance monitoring and reporting with real-time alerts and audit trails"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Human-AI Collaboration",
+      description: "Seamless integration between human workers and AI systems for optimal productivity and decision quality"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Optimization",
+      description: "Continuous monitoring and optimization of business processes for maximum efficiency and cost savings"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$1,999",
+      price: "$3,999",
       period: "/month",
+      description: "Perfect for small businesses starting their automation journey",
       features: [
-        "Basic autonomous operations",
-        "Up to 5 business processes",
-        "Standard automation workflows",
+        "Up to 10 automated processes",
+        "Basic AI decision support",
+        "Standard compliance features",
         "Email support",
-        "Basic analytics dashboard",
-        "Up to 100GB data processing"
+        "10GB data storage",
+        "Basic analytics dashboard"
       ],
+      cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$4,999",
+      price: "$8,999",
       period: "/month",
+      description: "Ideal for growing businesses requiring advanced automation",
       features: [
-        "Advanced autonomous systems",
-        "Up to 25 business processes",
-        "Custom automation workflows",
+        "Up to 50 automated processes",
+        "Advanced AI decision engines",
+        "Enhanced compliance automation",
         "Priority support",
-        "Advanced analytics & reporting",
-        "Up to 1TB data processing",
-        "API integrations",
-        "Custom model training"
+        "50GB data storage",
+        "Advanced analytics",
+        "Custom workflow builder"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,999",
+      price: "$24,999",
       period: "/month",
+      description: "For large organizations requiring full autonomous operations",
       features: [
-        "Full autonomous business suite",
-        "Unlimited business processes",
-        "Custom AI model development",
-        "24/7 dedicated support",
-        "White-label solutions",
-        "Unlimited data processing",
-        "On-premise deployment",
-        "Custom integrations"
+        "Unlimited automated processes",
+        "Full autonomous decision making",
+        "Enterprise compliance suite",
+        "Dedicated support team",
+        "Unlimited storage",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated account manager"
       ],
+      cta: "Contact Sales",
       popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Manufacturing",
-      description: "Automated production lines, quality control, and supply chain management with AI optimization",
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      title: "Financial Services",
-      description: "Automated trading, risk assessment, and compliance monitoring with real-time decision making",
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      title: "Healthcare",
-      description: "Patient care automation, medical device management, and administrative process optimization",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Retail & E-commerce",
-      description: "Inventory management, customer service automation, and dynamic pricing optimization",
-      icon: <Target className="w-8 h-8" />
     }
   ];
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "24/7 Operations",
-      description: "Your business never sleeps with continuous autonomous operations"
+      icon: <Automation className="w-8 h-8" />,
+      title: "Operational Excellence",
+      description: "Achieve unprecedented efficiency through intelligent automation and optimization"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Increased Efficiency",
-      description: "Reduce operational costs by up to 60% through intelligent automation"
+      icon: <Business className="w-8 h-8" />,
+      title: "Cost Reduction",
+      description: "Significantly reduce operational costs while improving quality and speed"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Data-Driven Insights",
-      description: "Make better decisions with real-time analytics and predictive modeling"
+      icon: <Operations className="w-8 h-8" />,
+      title: "Scalable Growth",
+      description: "Scale your operations seamlessly without proportional cost increases"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Human Focus",
-      description: "Free your team to focus on strategic initiatives and innovation"
+      icon: <AI className="w-8 h-8" />,
+      title: "Intelligent Insights",
+      description: "Gain deep insights into your business operations with AI-powered analytics"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Native",
+      description: "Built for modern cloud infrastructure with seamless scaling and deployment"
+    },
+    {
+      icon: <Security className="w-8 h-8" />,
+      title: "Enterprise Security",
+      description: "Bank-grade security with compliance automation and audit trails"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Finance & Banking",
+      description: "Automated risk assessment, fraud detection, and regulatory compliance",
+      icon: <TrendingUp className="w-6 h-6" />
+    },
+    {
+      title: "Healthcare",
+      description: "Patient care automation, medical record management, and compliance monitoring",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Manufacturing",
+      description: "Supply chain optimization, quality control, and predictive maintenance",
+      icon: <Cpu className="w-6 h-6" />
+    },
+    {
+      title: "Retail & E-commerce",
+      description: "Inventory management, customer service automation, and demand forecasting",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-        transition={{ duration: 0.8 }}
-        className="relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6"
-            >
-              <Bot className="w-4 h-4 mr-2" />
-              Next-Generation Business Automation
-            </motion.div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Autonomous Business
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                Operations Platform
-              </span>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Autonomous Business Operations Platform
             </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with the world's most advanced autonomous operations platform. 
-              Our AI-powered systems run your business 24/7, making intelligent decisions and optimizing 
-              every aspect of your operations.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with fully autonomous AI operations. Automate complex decision-making, 
+              optimize processes, and achieve unprecedented efficiency while maintaining human oversight and control.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white rounded-lg font-semibold hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:scale-105 shadow-lg shadow-zion-purple/25"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <button className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-slate-900 transition-all duration-300">
-                Watch Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Benefits Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Autonomous Operations?
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Discover how autonomous operations can revolutionize your business
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group text-center"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-colors"
               >
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-zion-cyan/30 transition-colors">
-                  <div className="text-zion-cyan">
-                    {benefit.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Features
+              Revolutionary Autonomous Features
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Cutting-edge capabilities that set our platform apart from traditional automation solutions
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of business operations with AI-powered automation
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <div className="text-zion-cyan">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-lg">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
+                <div className="text-blue-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -286,41 +242,73 @@ const AIAutonomousBusinessOperationsPlatform = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our platform transforms industries with intelligent autonomous operations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how autonomous operations are transforming industries worldwide
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/30 transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 text-center"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <div className="text-zion-cyan">
-                      {useCase.icon}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-lg">
-                      {useCase.description}
-                    </p>
-                  </div>
-                </div>
+                <div className="text-blue-400 mb-4 flex justify-center">{useCase.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Autonomous Operations?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your organization with cutting-edge AI automation technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-blue-400 mb-4 flex justify-center">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -328,154 +316,136 @@ const AIAutonomousBusinessOperationsPlatform = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Pricing Plans
+              Transparent Pricing
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose the perfect plan for your organization's autonomous operations needs
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your organization's automation needs and budget
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-8 ${
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                   plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-purple/30'
+                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    : 'border-white/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <Link
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-cyan-dark text-slate-900 hover:from-zion-cyan-light hover:to-zion-cyan'
-                      : 'bg-zion-purple/20 text-zion-purple border border-zion-purple hover:bg-zion-purple hover:text-white'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-transparent border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white'
                   }`}
                 >
-                  Get Started
-                </Link>
+                  {plan.cta}
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-purple/30 rounded-2xl p-12">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Proven Return on Investment
-              </h2>
-              <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-                Our clients see measurable results within the first 90 days of implementation
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-4 gap-8 text-center">
-              <div className="bg-zion-blue-dark/50 rounded-xl p-6">
-                <div className="text-4xl font-bold text-zion-cyan mb-2">60%</div>
-                <div className="text-white font-semibold mb-2">Cost Reduction</div>
-                <div className="text-zion-slate-light text-sm">in operational expenses</div>
-              </div>
-              <div className="bg-zion-blue-dark/50 rounded-xl p-6">
-                <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
-                <div className="text-white font-semibold mb-2">Operations</div>
-                <div className="text-zion-slate-light text-sm">continuous business operations</div>
-              </div>
-              <div className="bg-zion-blue-dark/50 rounded-xl p-6">
-                <div className="text-4xl font-bold text-zion-cyan mb-2">85%</div>
-                <div className="text-white font-semibold mb-2">Efficiency Gain</div>
-                <div className="text-zion-slate-light text-sm">in process automation</div>
-              </div>
-              <div className="bg-zion-blue-dark/50 rounded-xl p-6">
-                <div className="text-4xl font-bold text-zion-cyan mb-2">90 Days</div>
-                <div className="text-white font-semibold mb-2">ROI Timeline</div>
-                <div className="text-zion-slate-light text-sm">to see positive returns</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-purple/30 rounded-2xl p-12 text-center">
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Automate Your Business?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join the autonomous operations revolution and transform your business with AI-powered automation
+            <p className="text-xl text-gray-300 mb-8">
+              Join the autonomous operations revolution and transform your business today
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white rounded-lg font-semibold hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:scale-105"
-              >
-                Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-slate-900 transition-all duration-300"
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-colors"
+              >
+                Contact Sales Team
               </a>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-zion-cyan mb-2" />
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-zion-slate-light">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-zion-cyan mb-2" />
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-zion-cyan mb-2" />
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-blue-400 mb-2">Phone</h4>
+              <a href="tel:+13024640950" className="text-white hover:text-blue-400 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-blue-400 mb-2">Email</h4>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-blue-400 mb-2">Address</h4>
+              <p className="text-white">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

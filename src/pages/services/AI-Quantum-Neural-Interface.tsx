@@ -2,341 +2,244 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-  Atom, 
+  Cpu, 
   Zap, 
   Shield, 
-  Cpu, 
-  Network, 
-  Database, 
-  Lock, 
-  Users, 
   TrendingUp, 
+  Users, 
   CheckCircle, 
-  Star, 
   ArrowRight,
-  Globe,
-  Rocket,
-  Target,
-  Lightbulb,
-  Sparkles,
-  Eye,
-  Workflow,
-  BarChart3,
-  Settings,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Palette,
-  Handshake,
-  Building2,
-  FileText,
-  HelpCircle,
-  ChevronRight,
-  Play,
-  Pause,
-  RotateCcw,
-  Maximize2,
-  Minimize2,
-  Volume2,
-  VolumeX,
-  Mic,
-  MicOff,
-  Video,
-  VideoOff,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Watch,
-  Headphones,
-  Speaker,
-  Camera,
-  Image,
-  File,
-  Folder,
-  HardDrive,
+  Quantum,
+  NeuralNetwork,
+  AI,
   Cloud,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Gamepad2,
-  Coins,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Settings,
-  Palette
+  Security,
+  Analytics,
+  Integration
 } from 'lucide-react';
 
-export default function AIQuantumNeuralInterface() {
+const AIQuantumNeuralInterface: React.FC = () => {
   const features = [
     {
+      icon: <Brain className="w-6 h-6" />,
       title: "Quantum Neural Processing",
-      description: "Advanced quantum computing algorithms for neural network optimization",
-      icon: Brain,
-      color: "from-purple-600 to-pink-600"
+      description: "Advanced quantum computing algorithms for neural network optimization and training acceleration"
     },
     {
-      title: "Real-time Neural Interface",
-      description: "Direct brain-computer interface with sub-millisecond response times",
-      icon: Zap,
-      color: "from-blue-600 to-cyan-600"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Hybrid AI Architecture",
+      description: "Seamless integration of classical AI with quantum computing for unprecedented performance"
     },
     {
-      title: "AI Consciousness Simulation",
-      description: "Sophisticated AI models that simulate human consciousness patterns",
-      icon: Atom,
-      color: "from-green-600 to-emerald-600"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Learning",
+      description: "Continuous adaptation and learning from quantum data streams with minimal latency"
     },
     {
-      title: "Neural Security Protocol",
-      description: "Advanced encryption and security for neural data transmission",
-      icon: Shield,
-      color: "from-red-600 to-orange-600"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Medical Research",
-      description: "Advanced neurological research and brain mapping",
-      icon: Brain,
-      benefits: ["Precise brain mapping", "Disease detection", "Treatment optimization"]
+      icon: <Shield className="w-6 h-6" />,
+      title: "Quantum Security",
+      description: "Post-quantum cryptography and quantum-resistant security protocols"
     },
     {
-      title: "Education Enhancement",
-      description: "Direct knowledge transfer and learning acceleration",
-      icon: Users,
-      benefits: ["Knowledge transfer", "Learning acceleration", "Memory enhancement"]
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Scalable Performance",
+      description: "Linear scaling with quantum bits for exponential performance improvements"
     },
     {
-      title: "Entertainment",
-      description: "Immersive virtual reality and gaming experiences",
-      icon: Gamepad2,
-      benefits: ["Full immersion", "Emotional response", "Interactive storytelling"]
-    },
-    {
-      title: "Communication",
-      description: "Telepathic communication and thought sharing",
-      icon: MessageCircle,
-      benefits: ["Thought sharing", "Emotional connection", "Universal language"]
+      icon: <Users className="w-6 h-6" />,
+      title: "Multi-User Access",
+      description: "Secure multi-tenant access with role-based permissions and isolation"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,500",
+      name: "Starter",
+      price: "$2,999",
       period: "/month",
-      description: "For academic and research institutions",
+      description: "Perfect for research institutions and small teams",
       features: [
-        "Basic neural interface",
-        "Data collection tools",
-        "Research analytics",
+        "Up to 10 quantum qubits",
+        "Basic neural network training",
+        "Standard security protocols",
         "Email support",
-        "5 concurrent users"
+        "5GB quantum data storage"
       ],
-      cta: "Start Research Plan",
+      cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$5,000",
+      price: "$7,999",
       period: "/month",
-      description: "For healthcare and technology companies",
+      description: "Ideal for enterprises and advanced research",
       features: [
-        "Advanced neural processing",
-        "Real-time monitoring",
-        "Custom algorithms",
+        "Up to 50 quantum qubits",
+        "Advanced neural optimization",
+        "Enhanced security features",
         "Priority support",
-        "25 concurrent users",
-        "API access"
+        "25GB quantum data storage",
+        "Custom model training"
       ],
-      cta: "Start Professional Plan",
+      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,000",
+      price: "$19,999",
       period: "/month",
-      description: "For large corporations and government",
+      description: "For large organizations requiring maximum performance",
       features: [
-        "Full quantum neural interface",
-        "Custom consciousness models",
-        "Dedicated support team",
-        "Unlimited users",
-        "White-label solution",
-        "On-premise deployment"
+        "Unlimited quantum qubits",
+        "Custom quantum algorithms",
+        "Dedicated security team",
+        "24/7 phone support",
+        "Unlimited storage",
+        "Custom integrations",
+        "Dedicated account manager"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const technicalSpecs = [
+  const benefits = [
     {
-      category: "Neural Interface",
-      specs: [
-        "Response time: <1ms",
-        "Accuracy: 99.9%",
-        "Bandwidth: 100TB/s",
-        "Channels: 10,000+"
-      ]
+      icon: <Quantum className="w-8 h-8" />,
+      title: "Quantum Advantage",
+      description: "Achieve computational superiority with quantum neural networks"
     },
     {
-      category: "Quantum Processing",
-      specs: [
-        "Qubits: 1000+",
-        "Coherence time: 100s",
-        "Error rate: <0.01%",
-        "Scalability: Linear"
-      ]
+      icon: <NeuralNetwork className="w-8 h-8" />,
+      title: "Neural Evolution",
+      description: "Continuous learning and adaptation through quantum-enhanced algorithms"
     },
     {
-      category: "AI Models",
-      specs: [
-        "Parameters: 100B+",
-        "Training data: 1PB+",
-        "Inference speed: Real-time",
-        "Accuracy: 99.99%"
-      ]
+      icon: <AI className="w-8 h-8" />,
+      title: "AI Revolution",
+      description: "Transform your AI capabilities with quantum computing power"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Native",
+      description: "Built for modern cloud infrastructure with seamless scaling"
+    },
+    {
+      icon: <Security className="w-8 h-8" />,
+      title: "Future-Proof Security",
+      description: "Quantum-resistant security protocols for long-term protection"
+    },
+    {
+      icon: <Analytics className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Deep insights into quantum neural network performance and optimization"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-zion-blue text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue via-zion-purple to-zion-cyan py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-zion-cyan bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Quantum Neural Interface
             </h1>
-            <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              The world's first commercial quantum neural interface platform, enabling direct brain-computer communication 
-              and AI consciousness simulation for unprecedented human-AI collaboration.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize your AI capabilities with the world's first quantum-enhanced neural interface. 
+              Experience exponential performance improvements and unlock new possibilities in artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white font-semibold rounded-lg transition-colors"
               >
-                Watch Demo
-              </motion.button>
+                Call +1 302 464 0950
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Revolutionary Neural Technology
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Revolutionary Features
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the future of human-AI interaction with our cutting-edge quantum neural interface platform.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of AI with quantum-enhanced neural networks
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-blue border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <div className="text-purple-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Transformative Applications
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose AI Quantum Neural Interface?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how our quantum neural interface is revolutionizing industries and human capabilities.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your organization with cutting-edge quantum AI technology
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-blue-dark border border-zion-purple/30 rounded-xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                    <useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold">{useCase.title}</h3>
-                    <p className="text-zion-slate-light">{useCase.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-purple-400 mb-4 flex justify-center">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -344,19 +247,20 @@ export default function AIQuantumNeuralInterface() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Choose Your Plan
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing options designed for research, professional, and enterprise needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your organization's needs and budget
             </p>
           </motion.div>
 
@@ -367,90 +271,49 @@ export default function AIQuantumNeuralInterface() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-zion-blue border rounded-xl p-8 ${
+                viewport={{ once: true }}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                   plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-purple/30'
+                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                    : 'border-white/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
-                      : 'bg-zion-blue border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
+                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                      : 'bg-transparent border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white'
                   }`}
                 >
                   {plan.cta}
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-20 bg-zion-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Technical Specifications
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Industry-leading performance metrics that set new standards for neural interface technology.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {technicalSpecs.map((spec, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-blue-dark border border-zion-purple/30 rounded-xl p-6"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-zion-cyan">{spec.category}</h3>
-                <ul className="space-y-3">
-                  {spec.specs.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-zion-slate-light">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -458,39 +321,68 @@ export default function AIQuantumNeuralInterface() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Experience the Future?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Experience the Future of AI?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Join the revolution in human-AI interaction. Start your free trial today and discover 
-              the limitless possibilities of quantum neural interfaces.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the quantum revolution and transform your AI capabilities today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white font-semibold rounded-lg transition-colors"
               >
-                Schedule Demo
-              </motion.button>
+                Contact Sales Team
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">Phone</h4>
+              <a href="tel:+13024640950" className="text-white hover:text-purple-400 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">Email</h4>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-400 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">Address</h4>
+              <p className="text-white">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default AIQuantumNeuralInterface;

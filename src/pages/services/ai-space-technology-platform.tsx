@@ -1,308 +1,251 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
-  Satellite, 
   Rocket, 
+  Satellite, 
   Globe, 
-  Zap, 
   Shield, 
-  BarChart3, 
-  Clock, 
-  DollarSign, 
-  CheckCircle,
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Space,
+  Technology,
+  AI,
+  Cloud,
+  Security,
+  Analytics,
+  Integration,
+  Zap,
+  Brain,
   Cpu,
   Database,
-  Cloud,
-  Lock,
-  Activity,
-  Target,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin as MapPinIcon,
   Network,
   Orbit,
-  Eye,
   Planet,
-  Comet,
-  Meteor,
-  Sun,
-  Moon
+  Star,
+  Telescope,
+  Navigation,
+  Communication
 } from 'lucide-react';
 
 const AISpaceTechnologyPlatform: React.FC = () => {
   const features = [
     {
-      icon: Satellite,
-      title: "Satellite Constellation Management",
-      description: "AI-powered management of satellite networks with autonomous orbital optimization and collision avoidance."
+      icon: <Satellite className="w-6 h-6" />,
+      title: "Satellite Intelligence",
+      description: "AI-powered satellite data analysis for Earth observation, weather forecasting, and environmental monitoring"
     },
     {
-      icon: Eye,
-      title: "Space Observation & Analytics",
-      description: "Advanced AI algorithms for processing astronomical data and space imagery with unprecedented accuracy."
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Launch Optimization",
+      description: "Machine learning algorithms for optimal launch windows, trajectory planning, and fuel efficiency"
     },
     {
-      icon: Orbit,
-      title: "Orbital Mechanics AI",
-      description: "Intelligent trajectory planning and orbital maneuver optimization for space missions."
+      icon: <Globe className="w-6 h-6" />,
+      title: "Space Traffic Management",
+      description: "AI-driven collision avoidance and orbital debris tracking for safe space operations"
     },
     {
-      icon: Network,
-      title: "Space Communication Networks",
-      description: "AI-optimized inter-satellite communication and ground station coordination systems."
+      icon: <Shield className="w-6 h-6" />,
+      title: "Space Security",
+      description: "Advanced threat detection and cybersecurity for space assets and communications"
     },
     {
-      icon: Zap,
-      title: "Real-time Space Monitoring",
-      description: "Continuous monitoring of space debris, solar activity, and cosmic events with predictive analytics."
+      icon: <Users className="w-6 h-6" />,
+      title: "Mission Control AI",
+      description: "Intelligent mission planning and real-time decision support for space operations"
     },
     {
-      icon: Shield,
-      title: "Space Security & Defense",
-      description: "Advanced threat detection and space situational awareness for national security applications."
+      icon: <Zap className="w-6 h-6" />,
+      title: "Autonomous Operations",
+      description: "Self-managing space systems with minimal human intervention for deep space missions"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Space Explorer",
-      price: "$2,999",
+      name: "Explorer",
+      price: "$4,999",
       period: "/month",
-      description: "For space research institutions and universities",
+      description: "Perfect for research institutions and space startups",
       features: [
-        "Up to 100 satellite observations/month",
-        "Basic orbital calculations",
-        "Space weather monitoring",
+        "Basic satellite data analysis",
+        "Launch window optimization",
+        "Standard space traffic monitoring",
         "Email support",
-        "Research data access"
+        "25GB data storage",
+        "Basic mission planning tools"
       ],
+      cta: "Get Started",
       popular: false
     },
     {
-      name: "Space Enterprise",
-      price: "$7,999",
+      name: "Professional",
+      price: "$12,999",
       period: "/month",
-      description: "For commercial space companies and startups",
+      description: "Ideal for space agencies and commercial space companies",
       features: [
-        "Up to 1,000 satellite operations/month",
-        "Advanced AI space analytics",
-        "Custom mission planning",
-        "API access",
+        "Advanced satellite intelligence",
+        "Full launch optimization suite",
+        "Comprehensive space traffic management",
         "Priority support",
-        "Custom integrations"
+        "100GB data storage",
+        "Advanced mission control AI",
+        "Custom space security protocols"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Space Command",
-      price: "$19,999",
+      name: "Enterprise",
+      price: "$39,999",
       period: "/month",
-      description: "For government and military applications",
+      description: "For large space organizations requiring maximum capabilities",
       features: [
-        "Unlimited space operations",
-        "Full AI space autonomy",
-        "Custom space algorithms",
-        "White-label options",
-        "Dedicated space engineers",
-        "On-premise deployment"
+        "Full AI space technology suite",
+        "Custom satellite constellations",
+        "Advanced space security systems",
+        "Dedicated support team",
+        "Unlimited storage",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated account manager"
       ],
+      cta: "Contact Sales",
       popular: false
     }
   ];
 
   const benefits = [
     {
-      metric: "99.9%",
-      description: "Satellite tracking accuracy"
+      icon: <Space className="w-8 h-8" />,
+      title: "Space Innovation",
+      description: "Pioneer the future of space exploration with cutting-edge AI technology"
     },
     {
-      metric: "1000x",
-      description: "Faster space data processing"
+      icon: <Technology className="w-8 h-8" />,
+      title: "Advanced Technology",
+      description: "Leverage the latest AI breakthroughs for space applications"
     },
     {
-      metric: "24/7",
-      description: "Continuous space monitoring"
+      icon: <AI className="w-8 h-8" />,
+      title: "Intelligent Operations",
+      description: "Automate complex space operations with AI-driven decision making"
     },
     {
-      metric: "Global",
-      description: "Coverage and reach"
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Native",
+      description: "Built for modern cloud infrastructure with seamless scaling and deployment"
+    },
+    {
+      icon: <Security className="w-8 h-8" />,
+      title: "Space Security",
+      description: "Bank-grade security with advanced threat detection for space assets"
+    },
+    {
+      icon: <Analytics className="w-8 h-8" />,
+      title: "Deep Insights",
+      description: "Gain unprecedented insights into space operations and satellite data"
     }
   ];
 
   const useCases = [
     {
-      icon: Satellite,
-      title: "Satellite Operations",
-      description: "Autonomous satellite constellation management and mission control."
-    },
-    {
-      icon: Eye,
-      title: "Astronomy Research",
-      description: "AI-powered analysis of astronomical data and space phenomena."
-    },
-    {
-      icon: Globe,
       title: "Earth Observation",
-      description: "Environmental monitoring and climate change analysis from space."
+      description: "Climate monitoring, disaster response, and environmental protection",
+      icon: <Globe className="w-6 h-6" />
     },
     {
-      icon: Rocket,
-      title: "Space Missions",
-      description: "Mission planning and execution for interplanetary exploration."
+      title: "Satellite Communications",
+      description: "Global connectivity, IoT networks, and emergency communications",
+      icon: <Satellite className="w-6 h-6" />
     },
     {
-      icon: Network,
-      title: "Space Communications",
-      description: "Global communication networks and internet connectivity from space."
+      title: "Space Exploration",
+      description: "Mars missions, asteroid mining, and deep space exploration",
+      icon: <Rocket className="w-6 h-6" />
     },
     {
-      icon: Shield,
-      title: "Space Defense",
-      description: "National security and space situational awareness systems."
+      title: "Space Tourism",
+      description: "Commercial space travel, orbital hotels, and space experiences",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
-  const spaceTechnologies = [
+  const technologies = [
     {
-      icon: Cpu,
-      title: "AI & Machine Learning",
-      description: "Advanced algorithms for space data processing and autonomous decision-making."
+      title: "Machine Learning",
+      description: "Advanced ML algorithms for space data analysis and mission optimization",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      icon: Database,
-      title: "Big Data Analytics",
-      description: "Processing massive amounts of space data in real-time."
+      title: "Computer Vision",
+      description: "AI-powered image recognition for satellite imagery and space object identification",
+      icon: <Telescope className="w-6 h-6" />
     },
     {
-      icon: Cloud,
-      title: "Cloud Computing",
-      description: "Scalable cloud infrastructure for space applications."
+      title: "Predictive Analytics",
+      description: "Forecasting models for space weather, orbital mechanics, and mission planning",
+      icon: <Analytics className="w-6 h-6" />
     },
     {
-      icon: Network,
-      title: "5G & IoT",
-      description: "Next-generation communication networks for space connectivity."
-    },
-    {
-      icon: Lock,
-      title: "Cybersecurity",
-      description: "Advanced security protocols for space systems and communications."
-    },
-    {
-      icon: Activity,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring and alerting systems for space operations."
+      title: "Autonomous Systems",
+      description: "Self-managing space systems with minimal human intervention",
+      icon: <Cpu className="w-6 h-6" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>AI Space Technology Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize space technology with our AI-powered platform. Achieve 99.9% satellite tracking accuracy and 1000x faster space data processing with autonomous space operations." />
-        <meta name="keywords" content="AI space technology, satellite management, space analytics, orbital mechanics, space communication, space monitoring" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-space-technology-platform" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-zion-cyan/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Satellite className="w-4 h-4" />
-              <span>AI Space Technology</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Space Technology
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Platform</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Space Technology Platform
             </h1>
-            
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Pioneer the future of space exploration with our revolutionary AI-powered space technology platform. 
-              Achieve 99.9% satellite tracking accuracy and unlock autonomous space operations.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize space exploration with AI-powered technology. From satellite intelligence to 
+              autonomous mission control, experience the future of space operations.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors"
               >
-                Launch Space Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg transition-colors"
               >
-                Schedule Demo
-              </motion.button>
+                Call +1 302 464 0950
+              </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Performance That Reaches for the Stars
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Space Technology Platform delivers performance metrics that push the boundaries of what's possible in space.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl lg:text-5xl font-bold text-zion-cyan mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-zion-slate-light">
-                  {benefit.description}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Revolutionary Space Technology Features
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Revolutionary Space Technology
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience the cutting-edge capabilities that make our platform the most advanced space technology solution available.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of space exploration with AI-powered technology
             </p>
           </motion.div>
 
@@ -313,17 +256,12 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-indigo-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-cyan/30 transition-all duration-300">
-                  <feature.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {feature.description}
-                </p>
+                <div className="text-indigo-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -331,81 +269,110 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Transform Space Operations with AI
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Space Applications
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our platform is revolutionizing multiple space applications with unprecedented AI capabilities.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how AI is transforming space exploration and operations
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 text-center"
               >
-                <div className="w-12 h-12 bg-zion-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-purple/30 transition-all duration-300">
-                  <useCase.icon className="w-6 h-6 text-zion-purple" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {useCase.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {useCase.description}
-                </p>
+                <div className="text-indigo-400 mb-4 flex justify-center">{useCase.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technology Stack Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technologies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technology Stack
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Technologies
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Built with the latest technologies to ensure maximum performance and reliability in space applications.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge AI technologies powering the future of space exploration
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {spaceTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 text-center"
               >
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-cyan/30 transition-all duration-300">
-                  <tech.icon className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {tech.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {tech.description}
-                </p>
+                <div className="text-indigo-400 mb-4 flex justify-center">{tech.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-3">{tech.title}</h3>
+                <p className="text-gray-300 text-sm">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose AI Space Technology?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your space operations with cutting-edge AI technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="text-indigo-400 mb-4 flex justify-center">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -413,38 +380,40 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Space Technology Pricing Plans
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Access the power of AI space technology with flexible pricing designed for every level of space operations.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your space technology needs and budget
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-zion-slate-dark p-8 rounded-2xl border-2 ${
+                viewport={{ once: true }}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                   plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-purple/20'
+                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
+                    : 'border-white/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -453,32 +422,31 @@ const AISpaceTechnologyPlatform: React.FC = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
-                      : 'bg-zion-purple/20 text-zion-purple border border-zion-purple hover:bg-zion-purple hover:text-white'
+                      ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                      : 'bg-transparent border-2 border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white'
                   }`}
                 >
-                  Get Started
-                </motion.button>
+                  {plan.cta}
+                </a>
               </motion.div>
             ))}
           </div>
@@ -486,98 +454,63 @@ const AISpaceTechnologyPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-12 text-center border border-zion-cyan/30"
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Launch into the Future of Space Technology?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Explore the Future of Space?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join the space revolution and unlock the full potential of AI-powered space operations. 
-              Start your space technology journey today with our cutting-edge platform.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the space technology revolution and transform your space operations today
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors"
               >
-                Launch Space Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white font-semibold rounded-lg transition-colors"
               >
-                Contact Space Experts
-              </motion.button>
+                Contact Sales Team
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Ready to explore the final frontier? Our space technology experts are here to guide you.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-zion-cyan font-medium">+1 302 464 0950</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-zion-cyan font-medium">kleber@ziontechgroup.com</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPinIcon className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-zion-cyan font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </motion.div>
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-indigo-400 mb-2">Phone</h4>
+              <a href="tel:+13024640950" className="text-white hover:text-indigo-400 transition-colors">
+                +1 302 464 0950
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-indigo-400 mb-2">Email</h4>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-indigo-400 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-indigo-400 mb-2">Address</h4>
+              <p className="text-white">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
           </div>
         </div>
       </section>
