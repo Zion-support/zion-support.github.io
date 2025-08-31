@@ -65,7 +65,7 @@ interface Service {
   };
 }
 
-const InnovativeServicesShowcase2025: React.FC = () => {
+const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -147,11 +147,13 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     { label: 'Over $5,000', value: '5000-999999' }
   ];
 
+  const innovationLevels = ['Emerging', 'Established', 'Cutting-edge', 'Revolutionary'];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Innovative Services Showcase 2025 - Zion Tech Group"
-        description="Discover our cutting-edge AI, IT, and Micro SaaS services designed to transform your business. Explore innovative solutions with proven ROI and competitive pricing."
+        title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
+        description="Explore our complete pricing guide for AI, IT, and Micro SaaS services. Find competitive pricing, ROI projections, and detailed service breakdowns."
       />
       
       {/* Hero Section */}
@@ -165,9 +167,9 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Innovative Services
+                Comprehensive Pricing Guide
               </span>
-              <span className="block text-white">Showcase 2025</span>
+              <span className="block text-white">2027</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -175,8 +177,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
-              Discover cutting-edge AI, IT, and Micro SaaS solutions designed to transform your business. 
-              Our innovative services deliver proven ROI and competitive advantages in today's digital landscape.
+              Transparent pricing for all our innovative AI, IT, and Micro SaaS services. 
+              Compare costs, understand ROI, and find the perfect solution for your business needs.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -186,15 +188,15 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             >
               <div className="flex items-center space-x-2 text-cyan-400">
                 <CheckCircle className="w-5 h-5" />
-                <span>20+ Innovative Services</span>
+                <span>20+ Services</span>
               </div>
               <div className="flex items-center space-x-2 text-blue-400">
                 <TrendingUp className="w-5 h-5" />
                 <span>Proven ROI</span>
               </div>
               <div className="flex items-center space-x-2 text-purple-400">
-                <Star className="w-5 h-5" />
-                <span>Cutting-edge Technology</span>
+                <DollarSign className="w-5 h-5" />
+                <span>Competitive Pricing</span>
               </div>
             </motion.div>
           </div>
@@ -204,7 +206,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -245,6 +247,45 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
             </div>
+
+            {/* Innovation Level Filter */}
+            <div className="relative">
+              <select
+                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
+              >
+                <option value="all">All Innovation Levels</option>
+                {innovationLevels.map(level => (
+                  <option key={level} value={level}>{level}</option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Summary */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white text-center">
+            <Brain className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-1">AI Solutions</div>
+            <div className="text-sm opacity-90">Starting from $299/month</div>
+          </div>
+          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-6 text-white text-center">
+            <Server className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-1">IT Services</div>
+            <div className="text-sm opacity-90">Starting from $1,600/month</div>
+          </div>
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-6 text-white text-center">
+            <ShoppingCart className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-1">Micro SaaS</div>
+            <div className="text-sm opacity-90">Starting from $199/month</div>
+          </div>
+          <div className="bg-gradient-to-r from-yellow-600 to-orange-600 rounded-xl p-6 text-white text-center">
+            <Rocket className="w-8 h-8 mx-auto mb-3" />
+            <div className="text-2xl font-bold mb-1">Emerging Tech</div>
+            <div className="text-sm opacity-90">Starting from $3,500/month</div>
           </div>
         </div>
       </div>
@@ -390,7 +431,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                         className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
                       >
-                        <span>Get Started</span>
+                        <span>Get Quote</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>
@@ -422,9 +463,9 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Need Custom Pricing?</h2>
           <p className="text-xl text-cyan-100 mb-6">
-            Let's discuss how our innovative services can drive growth and efficiency for your organization.
+            Contact us for enterprise pricing, custom solutions, and volume discounts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -448,4 +489,4 @@ const InnovativeServicesShowcase2025: React.FC = () => {
   );
 };
 
-export default InnovativeServicesShowcase2025;
+export default ComprehensivePricingGuide2027;
