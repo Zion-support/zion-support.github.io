@@ -131,6 +131,11 @@ const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/Block
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
+// Additional AI Services
+const AIContentIntelligence = createLazyComponent(() => import('./pages/services/AI-Content-Intelligence-Platform'));
+const AICustomerExperience = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics'));
+const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
@@ -149,6 +154,7 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformationPage = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -293,6 +299,11 @@ function App() {
                     <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
                     <Route path="/solutions/space-tech" element={<SpaceTech />} />
 
+                    {/* Additional AI Services */}
+                    <Route path="/services/ai-content-intelligence-platform" element={<AIContentIntelligence />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperience />} />
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
@@ -311,6 +322,7 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/services-overview" element={<ServicesOverview />} />
 
                     {/* Missing pages referenced in navigation */}
                     <Route path="/request-quote" element={<ModernLayout><RequestQuote /></ModernLayout>} />
