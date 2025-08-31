@@ -67,7 +67,8 @@ import {
   HeartHandshake,
   Briefcase,
   PenTool,
-  Layout
+  Layout,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -171,6 +172,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Workflow Orchestrator</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-content-marketing-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <PenTool className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Content Marketing Studio</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-devops-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI DevOps Automation</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -269,6 +282,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-space-technology-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Satellite className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Space Technology</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
                         </Link>
                       </li>
                     </ul>
