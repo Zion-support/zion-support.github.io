@@ -562,6 +562,33 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/help" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <HelpCircle className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-zion-slate-light group-hover:text-white transition-colors">Help Center</span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/faq" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <HelpCircle className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-zion-slate-light group-hover:text-white transition-colors">FAQ</span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/sitemap" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <Globe className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-zion-slate-light group-hover:text-white transition-colors">Sitemap</span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -579,6 +606,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
         }
       >
         Pricing
+      </NavLink>
+
+      <NavLink 
+        to="/marketplace" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Marketplace
       </NavLink>
 
       <NavLink 

@@ -1,324 +1,549 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Send, Calculator, Clock, Shield, Users, Zap, Brain, Server } from 'lucide-react';
-
-interface QuoteRequest {
-  companyName: string;
-  contactName: string;
-  email: string;
-  phone: string;
-  serviceType: string;
-  projectScope: string;
-  timeline: string;
-  budget: string;
-  additionalInfo: string;
-}
+import { Link } from 'react-router-dom';
+import { 
+  Calculator, 
+  Brain, 
+  Server, 
+  Shield, 
+  Users, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Target,
+  Mail,
+  Phone,
+  Building,
+  FileText,
+  Clock,
+  DollarSign
+} from 'lucide-react';
 
 export default function RequestQuote() {
-  const [formData, setFormData] = useState<QuoteRequest>({
+  const [formData, setFormData] = useState({
     companyName: '',
     contactName: '',
     email: '',
     phone: '',
-    serviceType: '',
-    projectScope: '',
+    companySize: '',
+    industry: '',
+    projectType: [],
     timeline: '',
     budget: '',
-    additionalInfo: ''
+    description: '',
+    urgency: 'medium'
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCheckboxChange = (value: string) => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      projectType: prev.projectType.includes(value)
+        ? prev.projectType.filter(type => type !== value)
+        : [...prev.projectType, value]
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    // Handle form submission
+    console.log('Form submitted:', formData);
+    setCurrentStep(3);
   };
 
-  const serviceTypes = [
-    'AI Enterprise Automation',
-    'AI Data Analytics',
-    'AI Business Intelligence',
-    'AI Cybersecurity',
-    'AI Healthcare Platform',
-    'AI Quantum Computing',
-    'Cloud & DevOps',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Blockchain Solutions',
-    'Micro SaaS Development',
-    'Digital Transformation',
-    'Custom AI Solution',
+  const projectTypes = [
+    { id: 'ai-automation', label: 'AI & Automation', icon: Brain, description: 'Intelligent process automation and AI solutions' },
+    { id: 'it-infrastructure', label: 'IT Infrastructure', icon: Server, description: 'Cloud migration, DevOps, and infrastructure modernization' },
+    { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits, threat detection, and compliance' },
+    { id: 'digital-transformation', label: 'Digital Transformation', icon: TrendingUp, description: 'End-to-end business transformation' },
+    { id: 'custom-development', label: 'Custom Development', icon: FileText, description: 'Tailored software solutions and integrations' },
+    { id: 'consulting', label: 'Technology Consulting', icon: Users, description: 'Strategic technology planning and advisory' }
+  ];
+
+  const companySizes = [
+    '1-10 employees',
+    '11-50 employees',
+    '51-200 employees',
+    '201-1000 employees',
+    '1000+ employees'
+  ];
+
+  const industries = [
+    'Healthcare',
+    'Financial Services',
+    'Manufacturing',
+    'Retail',
+    'Technology',
+    'Government',
+    'Education',
+    'Real Estate',
+    'Transportation',
+    'Energy',
     'Other'
   ];
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="bg-zinc-800/50 rounded-lg p-12 border border-zinc-700/50 text-center max-w-2xl mx-4">
-          <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Send className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl font-bold text-white mb-4">Quote Request Sent!</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Thank you for your interest in Zion Tech Group. Our team will review your requirements 
-            and get back to you within 24 hours with a detailed quote and proposal.
-          </p>
-          <div className="bg-zinc-700/50 rounded-lg p-6 mb-8">
-            <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-            <div className="space-y-3 text-left">
-              <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-300">We'll review your requirements within 24 hours</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Calculator className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-300">Receive a detailed quote and project timeline</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Users className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Schedule a consultation with our experts</span>
-              </div>
-            </div>
-          </div>
-          <button
-            onClick={() => setIsSubmitted(false)}
-            className="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded-lg transition-colors"
+  const timelines = [
+    'Immediate (1-3 months)',
+    'Short-term (3-6 months)',
+    'Medium-term (6-12 months)',
+    'Long-term (12+ months)',
+    'Flexible'
+  ];
+
+  const budgets = [
+    'Under $25,000',
+    '$25,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $250,000',
+    '$250,000 - $500,000',
+    '$500,000+',
+    'To be determined'
+  ];
+
+  const urgencyLevels = [
+    { value: 'low', label: 'Low', description: 'Planning phase, no immediate deadline' },
+    { value: 'medium', label: 'Medium', description: 'Looking to start within 3-6 months' },
+    { value: 'high', label: 'High', description: 'Need to start within 1-3 months' },
+    { value: 'urgent', label: 'Urgent', description: 'Critical need, immediate start required' }
+  ];
+
+  const renderStep1 = () => (
+    <div className="space-y-8">
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white mb-4">Company Information</h3>
+        <p className="text-zion-slate-light">Tell us about your organization and project needs</p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Company Name *</label>
+          <input
+            type="text"
+            name="companyName"
+            value={formData.companyName}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            placeholder="Enter your company name"
+            required
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Contact Name *</label>
+          <input
+            type="text"
+            name="contactName"
+            value={formData.contactName}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Email Address *</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            placeholder="Enter your phone number"
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Company Size *</label>
+          <select
+            name="companySize"
+            value={formData.companySize}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            required
           >
-            Request Another Quote
-          </button>
+            <option value="">Select company size</option>
+            {companySizes.map(size => (
+              <option key={size} value={size}>{size}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Industry *</label>
+          <select
+            name="industry"
+            value={formData.industry}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            required
+          >
+            <option value="">Select industry</option>
+            {industries.map(industry => (
+              <option key={industry} value={industry}>{industry}</option>
+            ))}
+          </select>
         </div>
       </div>
-    );
-  }
+      
+      <div className="text-center">
+        <button
+          type="button"
+          onClick={() => setCurrentStep(2)}
+          disabled={!formData.companyName || !formData.contactName || !formData.email || !formData.companySize || !formData.industry}
+          className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Continue to Project Details
+          <ArrowRight className="ml-2 w-5 h-5 inline" />
+        </button>
+      </div>
+    </div>
+  );
+
+  const renderStep2 = () => (
+    <div className="space-y-8">
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white mb-4">Project Details</h3>
+        <p className="text-zion-slate-light">Describe your project requirements and timeline</p>
+      </div>
+      
+      <div>
+        <label className="block text-sm font-medium text-white mb-4">Project Type *</label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {projectTypes.map(type => (
+            <label key={type.id} className="flex items-start space-x-3 p-4 bg-zion-slate-dark/30 border border-zion-purple/30 rounded-lg hover:border-zion-cyan/50 transition-colors cursor-pointer">
+              <input
+                type="checkbox"
+                checked={formData.projectType.includes(type.id)}
+                onChange={() => handleCheckboxChange(type.id)}
+                className="mt-1 w-4 h-4 text-zion-cyan bg-zion-slate-dark border-zion-purple/30 rounded focus:ring-zion-cyan"
+              />
+              <div className="flex-1">
+                <div className="flex items-center space-x-2 mb-1">
+                  <type.icon className="w-5 h-5 text-zion-cyan" />
+                  <span className="font-medium text-white">{type.label}</span>
+                </div>
+                <p className="text-sm text-zion-slate-light">{type.description}</p>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Project Timeline *</label>
+          <select
+            name="timeline"
+            value={formData.timeline}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            required
+          >
+            <option value="">Select timeline</option>
+            {timelines.map(timeline => (
+              <option key={timeline} value={timeline}>{timeline}</option>
+            ))}
+          </select>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-white mb-2">Budget Range *</label>
+          <select
+            name="budget"
+            value={formData.budget}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            required
+          >
+            <option value="">Select budget range</option>
+            {budgets.map(budget => (
+              <option key={budget} value={budget}>{budget}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+      
+      <div>
+        <label className="block text-sm font-medium text-white mb-2">Project Description *</label>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleInputChange}
+          rows={4}
+          className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+          placeholder="Describe your project requirements, goals, and any specific challenges you're facing..."
+          required
+        />
+      </div>
+      
+      <div>
+        <label className="block text-sm font-medium text-white mb-4">Project Urgency</label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {urgencyLevels.map(level => (
+            <label key={level.value} className="flex items-center space-x-3 p-4 bg-zion-slate-dark/30 border border-zion-purple/30 rounded-lg hover:border-zion-cyan/50 transition-colors cursor-pointer">
+              <input
+                type="radio"
+                name="urgency"
+                value={level.value}
+                checked={formData.urgency === level.value}
+                onChange={handleInputChange}
+                className="w-4 h-4 text-zion-cyan bg-zion-slate-dark border-zion-purple/30 focus:ring-zion-cyan"
+              />
+              <div>
+                <div className="font-medium text-white">{level.label}</div>
+                <div className="text-sm text-zion-slate-light">{level.description}</div>
+              </div>
+            </label>
+          ))}
+        </div>
+      </div>
+      
+      <div className="flex justify-between">
+        <button
+          type="button"
+          onClick={() => setCurrentStep(1)}
+          className="px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300"
+        >
+          Back
+        </button>
+        <button
+          type="submit"
+          disabled={formData.projectType.length === 0 || !formData.timeline || !formData.budget || !formData.description}
+          className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Submit Quote Request
+          <ArrowRight className="ml-2 w-5 h-5 inline" />
+        </button>
+      </div>
+    </div>
+  );
+
+  const renderStep3 = () => (
+    <div className="text-center space-y-8">
+      <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto">
+        <CheckCircle className="w-10 h-10 text-white" />
+      </div>
+      
+      <div>
+        <h3 className="text-3xl font-bold text-white mb-4">Thank You!</h3>
+        <p className="text-xl text-zion-slate-light mb-6">
+          Your quote request has been submitted successfully. Our team will review your 
+          requirements and get back to you within 24 hours with a detailed proposal.
+        </p>
+      </div>
+      
+      <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-8">
+        <h4 className="text-xl font-semibold text-white mb-4">What Happens Next?</h4>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div className="flex items-start space-x-3">
+            <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center flex-shrink-0">
+              <Clock className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <div className="font-medium text-white">24-Hour Response</div>
+              <div className="text-sm text-zion-slate-light">We'll review and respond within 24 hours</div>
+            </div>
+          </div>
+          
+          <div className="flex items-start space-x-3">
+            <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
+              <Calculator className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <div className="font-medium text-white">Detailed Quote</div>
+              <div className="text-sm text-zion-slate-light">Comprehensive proposal with pricing and timeline</div>
+            </div>
+          </div>
+          
+          <div className="flex items-start space-x-3">
+            <div className="w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
+              <Users className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <div className="font-medium text-white">Expert Consultation</div>
+              <div className="text-sm text-zion-slate-light">Free consultation with our technology experts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300"
+        >
+          Contact Our Team
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+        <Link
+          to="/services"
+          className="inline-flex items-center px-8 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300"
+        >
+          Explore Services
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
-    <>
-      <Helmet>
-        <title>Request Quote - Zion Tech Group</title>
-        <meta name="description" content="Get a custom quote for Zion Tech Group's AI, IT, and Micro SaaS services. Request pricing for enterprise solutions, custom development, and consulting services." />
-        <meta name="keywords" content="request quote, custom pricing, enterprise solutions, AI services quote, Zion Tech Group pricing" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get personalized pricing for Zion Tech Group's cutting-edge AI, IT, and Micro SaaS solutions. 
-              Our experts will analyze your requirements and provide a detailed proposal.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-zinc-800/50 rounded-lg p-8 border border-zinc-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-300 mb-2">Company Name *</label>
-                      <input
-                        type="text"
-                        name="companyName"
-                        value={formData.companyName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your Company"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Contact Name *</label>
-                      <input
-                        type="text"
-                        name="contactName"
-                        value={formData.contactName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-300 mb-2">Email *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Phone</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-gray-300 mb-2">Service Type *</label>
-                    <select
-                      name="serviceType"
-                      value={formData.serviceType}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    >
-                      <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => (
-                        <option key={index} value={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-gray-300 mb-2">Project Scope *</label>
-                    <textarea
-                      name="projectScope"
-                      value={formData.projectScope}
-                      onChange={handleInputChange}
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                      placeholder="Describe your project requirements, goals, and expected outcomes..."
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-300 mb-2">Timeline</label>
-                      <select
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      >
-                        <option value="">Select timeline</option>
-                        <option value="ASAP">ASAP</option>
-                        <option value="1-3 months">1-3 months</option>
-                        <option value="3-6 months">3-6 months</option>
-                        <option value="6+ months">6+ months</option>
-                        <option value="Flexible">Flexible</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Budget Range</label>
-                      <select
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                      >
-                        <option value="">Select budget range</option>
-                        <option value="$10K - $50K">$10K - $50K</option>
-                        <option value="$50K - $100K">$50K - $100K</option>
-                        <option value="$100K - $250K">$100K - $250K</option>
-                        <option value="$250K - $500K">$250K - $500K</option>
-                        <option value="$500K+">$500K+</option>
-                        <option value="To be discussed">To be discussed</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-gray-300 mb-2">Additional Information</label>
-                    <textarea
-                      name="additionalInfo"
-                      value={formData.additionalInfo}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                      placeholder="Any additional details, constraints, or specific requirements..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? 'Sending Request...' : 'Request Quote'}
-                  </button>
-                </form>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+                <Calculator className="w-12 h-12 text-white" />
               </div>
             </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Get Your Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? 
+              Get a personalized quote for your project in just a few minutes.
+            </p>
+          </div>
+        </div>
+      </div>
 
-            {/* Benefits Sidebar */}
-            <div className="space-y-6">
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700/50">
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <Zap className="w-5 h-5 text-cyan-400 mr-2" />
-                  Why Choose Zion Tech Group?
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Industry-leading AI expertise</li>
-                  <li>• Proven track record of success</li>
-                  <li>• Custom solutions tailored to your needs</li>
-                  <li>• Competitive pricing and flexible terms</li>
-                  <li>• Ongoing support and maintenance</li>
-                </ul>
+      {/* Quote Form */}
+      <div className="py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-3xl p-8 md:p-12">
+              {/* Progress Steps */}
+              <div className="flex items-center justify-between mb-12">
+                {[1, 2, 3].map((step) => (
+                  <div key={step} className="flex items-center">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold transition-all duration-300 ${
+                      currentStep >= step
+                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
+                        : 'bg-zion-slate-dark/50 border border-zion-purple/30 text-zion-slate-light'
+                    }`}>
+                      {currentStep > step ? <CheckCircle className="w-6 h-6" /> : step}
+                    </div>
+                    {step < 3 && (
+                      <div className={`w-16 h-1 mx-4 transition-all duration-300 ${
+                        currentStep > step ? 'bg-gradient-to-r from-zion-cyan to-zion-purple' : 'bg-zion-slate-dark/50'
+                      }`} />
+                    )}
+                  </div>
+                ))}
               </div>
 
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700/50">
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <Shield className="w-5 h-5 text-green-400 mr-2" />
-                  What's Included
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Detailed project analysis</li>
-                  <li>• Custom solution design</li>
-                  <li>• Implementation timeline</li>
-                  <li>• Cost breakdown</li>
-                  <li>• Support and maintenance plan</li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700/50">
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <Clock className="w-5 h-5 text-purple-400 mr-2" />
-                  Response Time
-                </h3>
-                <p className="text-gray-300">
-                  We typically respond to quote requests within 24 hours during business days. 
-                  For urgent projects, we can expedite the process.
-                </p>
-              </div>
+              {/* Form Content */}
+              <form onSubmit={handleSubmit}>
+                {currentStep === 1 && renderStep1()}
+                {currentStep === 2 && renderStep2()}
+                {currentStep === 3 && renderStep3()}
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Why Choose Zion Tech Group */}
+      <div className="py-24 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We deliver exceptional value through our proven expertise, innovative solutions, 
+              and commitment to your success.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Proven Excellence</h3>
+              <p className="text-zion-slate-light">500+ successful projects delivered on time and budget</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-zion-slate-light">Certified professionals with deep industry expertise</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
+              <p className="text-zion-slate-light">Cutting-edge AI and emerging technologies</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Global Support</h3>
+              <p className="text-zion-slate-light">24/7 support and maintenance services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-3xl p-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Don't wait to transform your business. Contact us today to discuss your 
+              project requirements and get started on your digital transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Our Team
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-xl hover:bg-zion-purple hover:text-white transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

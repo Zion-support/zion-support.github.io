@@ -149,7 +149,7 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Get Started", href: "/signup", icon: Rocket },
+    { name: "Get Started", href: "/get-started", icon: Rocket },
     { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
     { name: "Support", href: "/help", icon: HelpCircle },
     { name: "Pricing", href: "/pricing", icon: BarChart3 },
@@ -274,6 +274,39 @@ export function Footer() {
                 <li>
                   <Link to="/research-development" className="text-zinc-400 hover:text-white transition-colors">
                     Research & Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sitemap" className="text-zinc-400 hover:text-white transition-colors">
+                    Sitemap
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                <HelpCircle className="w-4 h-4 mr-2" />
+                Help & Support
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/help" className="text-zinc-400 hover:text-white transition-colors">
+                    Help Center
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faq" className="text-zinc-400 hover:text-white transition-colors">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-zinc-400 hover:text-white transition-colors">
+                    Contact Support
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/request-quote" className="text-zinc-400 hover:text-white transition-colors">
+                    Request Quote
                   </Link>
                 </li>
               </ul>

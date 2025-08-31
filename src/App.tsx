@@ -52,7 +52,6 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const News = createLazyComponent(() => import('./pages/News'));
 const Events = createLazyComponent(() => import('./pages/Events'));
 const Partners = createLazyComponent(() => import('./pages/Partners'));
-const Help = createLazyComponent(() => import('./pages/Help'));
 const Pricing = createLazyComponent(() => import('./pages/Pricing'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Docs = createLazyComponent(() => import('./pages/Documentation'));
@@ -189,6 +188,15 @@ const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
 // Additional pages
 const Research = createLazyComponent(() => import('./pages/Research'));
+
+// New pages we created
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Signup = createLazyComponent(() => import('./pages/Signup'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -425,6 +433,10 @@ function App() {
                     <Route path="/request-quote" element={<ModernLayout><RequestQuote /></ModernLayout>} />
                     <Route path="/marketplace" element={<ModernLayout><Marketplace /></ModernLayout>} />
                     <Route path="/signup" element={<ModernLayout><Signup /></ModernLayout>} />
+                    <Route path="/get-started" element={<ModernLayout><GetStarted /></ModernLayout>} />
+                    <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
+                    <Route path="/faq" element={<ModernLayout><FAQ /></ModernLayout>} />
+                    <Route path="/sitemap" element={<ModernLayout><Sitemap /></ModernLayout>} />
 
                     {/* 404 Page */}
                     <Route

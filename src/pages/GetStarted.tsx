@@ -1,642 +1,279 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Check, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Shield, 
+  Rocket, 
   Brain, 
-  Cloud, 
-  Cpu,
-  Users,
-  Database,
-  Globe,
-  Clock,
-  HelpCircle,
-  MessageCircle,
-  Phone,
-  Mail,
-  Play,
-  Download,
-  BookOpen,
-  Video,
+  Server, 
+  Shield, 
+  Users, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle,
+  Star,
   TrendingUp,
-  Award
+  Globe,
+  Target
 } from 'lucide-react';
 
-const GetStarted = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
+export default function GetStarted() {
   const steps = [
     {
-      id: 1,
-      title: 'Choose Your Plan',
-      description: 'Select the plan that best fits your business needs',
-      icon: Star,
-      color: 'from-blue-500 to-cyan-500'
+      icon: Target,
+      title: "Assessment & Discovery",
+      description: "We analyze your current technology landscape and identify opportunities for improvement.",
+      features: ["Technology Audit", "Gap Analysis", "ROI Assessment", "Implementation Roadmap"]
     },
     {
-      id: 2,
-      title: 'Create Account',
-      description: 'Set up your account and complete your profile',
-      icon: Shield,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 3,
-      title: 'Configure Services',
-      description: 'Customize your AI services and integrations',
       icon: Brain,
-      color: 'from-green-500 to-emerald-500'
+      title: "AI Strategy Development",
+      description: "Custom AI solutions designed to address your specific business challenges.",
+      features: ["AI Readiness Assessment", "Custom AI Strategy", "Pilot Program Design", "Success Metrics"]
     },
     {
-      id: 4,
-      title: 'Start Building',
-      description: 'Begin creating and deploying your AI solutions',
-      icon: Zap,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const plans = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: 79,
-      features: [
-        'AI Content Generation (100 requests/month)',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '5GB Storage',
-        'Standard API Access'
-      ],
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      popular: false
+      icon: Server,
+      title: "Implementation & Deployment",
+      description: "Expert execution of your technology transformation with minimal disruption.",
+      features: ["Phased Rollout", "Change Management", "Training & Support", "Performance Monitoring"]
     },
     {
-      id: 'professional',
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: 239,
-      features: [
-        'AI Content Generation (1000 requests/month)',
-        'Advanced Analytics & Reporting',
-        'Priority Email Support',
-        '50GB Storage',
-        'Full API Access',
-        'Custom AI Model Training'
-      ],
-      icon: Star,
-      color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      price: 799,
-      features: [
-        'Unlimited AI Content Generation',
-        'Custom AI Model Development',
-        'Dedicated Account Manager',
-        'Unlimited Storage',
-        'Custom API Development',
-        '24/7 Phone Support'
-      ],
-      icon: Shield,
-      color: 'from-emerald-500 to-teal-500',
-      popular: false
-    }
-  ];
-
-  const onboardingFeatures = [
-    {
-      title: 'Quick Setup Wizard',
-      description: 'Get up and running in under 10 minutes with our guided setup process',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Pre-built Templates',
-      description: 'Start with industry-specific templates and customize as needed',
-      icon: BookOpen,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Comprehensive video guides for every feature and workflow',
-      icon: Video,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 support from our team of AI and technology experts',
-      icon: HelpCircle,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const resources = [
-    {
-      title: 'Getting Started Guide',
-      description: 'Complete step-by-step guide to get you up and running',
-      icon: BookOpen,
-      href: '/help/getting-started',
-      type: 'Guide'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Visual walkthroughs of key features and workflows',
-      icon: Video,
-      href: '/help/videos',
-      type: 'Video'
-    },
-    {
-      title: 'API Documentation',
-      description: 'Comprehensive API reference and integration guides',
-      icon: Cpu,
-      href: '/docs/api',
-      type: 'Technical'
-    },
-    {
-      title: 'Best Practices',
-      description: 'Learn from our experts about optimal AI implementation',
       icon: TrendingUp,
-      href: '/help/best-practices',
-      type: 'Guide'
+      title: "Optimization & Growth",
+      description: "Continuous improvement and scaling of your technology solutions.",
+      features: ["Performance Analytics", "Continuous Optimization", "Scalability Planning", "Innovation Pipeline"]
     }
   ];
 
-  const nextStep = () => {
-    if (currentStep < steps.length) {
-      setCurrentStep(currentStep + 1);
+  const serviceCategories = [
+    {
+      icon: Brain,
+      title: "AI & Automation",
+      description: "Transform your business with intelligent automation",
+      services: ["AI Business Intelligence", "Process Automation", "Predictive Analytics", "Natural Language Processing"],
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: Server,
+      title: "IT Infrastructure",
+      description: "Modernize your technology foundation",
+      services: ["Cloud Migration", "DevOps Implementation", "Cybersecurity", "Digital Transformation"],
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Protect your digital assets and data",
+      services: ["Threat Detection", "Compliance Management", "Security Audits", "Incident Response"],
+      color: "from-red-500 to-orange-600"
+    },
+    {
+      icon: Users,
+      title: "Digital Solutions",
+      description: "Enhance customer and employee experiences",
+      services: ["Customer Experience", "Employee Productivity", "Digital Workflows", "Mobile Solutions"],
+      color: "from-green-500 to-emerald-600"
     }
-  };
+  ];
 
-  const prevStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+                <Rocket className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Join hundreds of organizations that have accelerated their digital transformation 
+              with Zion Tech Group's cutting-edge AI, cloud, and technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple text-zion-purple font-semibold rounded-xl hover:bg-zion-purple hover:text-white transition-all duration-300"
+              >
+                Get Free Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case 1:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Choose Your Plan</h3>
-              <p className="text-gray-300">Select the plan that best fits your business needs and budget</p>
+      {/* Why Choose Zion Tech Group */}
+      <div className="py-24 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We combine cutting-edge technology with deep industry expertise to deliver 
+              solutions that drive real business value.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Proven Track Record</h3>
+              <p className="text-zion-slate-light">500+ successful projects across industries</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {plans.map((plan) => (
-                <div
-                  key={plan.id}
-                  onClick={() => setSelectedPlan(plan.id)}
-                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 cursor-pointer transition-all duration-300 ${
-                    selectedPlan === plan.id
-                      ? 'border-cyan-500/50 ring-2 ring-cyan-500/30'
-                      : 'border-slate-700/50 hover:border-cyan-500/30'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
-                      <plan.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h4 className="text-xl font-semibold text-white mb-1">{plan.name}</h4>
-                    <p className="text-gray-300 text-sm mb-3">{plan.description}</p>
-                    <div className="text-2xl font-bold text-white">${plan.price}/month</div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-zion-slate-light">Certified professionals with deep expertise</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
+              <p className="text-zion-slate-light">Latest AI and emerging technologies</p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
+              <p className="text-zion-slate-light">Serving clients worldwide with local expertise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Getting Started Process */}
+      <div className="py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Your Journey to Digital Excellence
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our proven 4-step process ensures your success from initial assessment 
+              to ongoing optimization and growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-2xl p-8 h-full">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl mb-6">
+                    <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <ul className="space-y-2 mb-4">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span>{feature}</span>
+                  <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{step.description}</p>
+                  <ul className="space-y-2">
+                    {step.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  
-                  <button className="w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium">
-                    Select Plan
-                  </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        );
-      
-      case 2:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Create Your Account</h3>
-              <p className="text-gray-300">Set up your account and complete your profile</p>
-            </div>
-            
-            <div className="max-w-md mx-auto">
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
-                  <input
-                    type="password"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Create a strong password"
-                  />
-                </div>
-                
-                <button
-                  type="button"
-                  onClick={nextStep}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-                >
-                  Create Account
-                </button>
-              </form>
-            </div>
-          </div>
-        );
-      
-      case 3:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Configure Your Services</h3>
-              <p className="text-gray-300">Customize your AI services and set up integrations</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">AI Service Configuration</h4>
-                <div className="space-y-3">
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Content Generation</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Data Analytics</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Predictive Modeling</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Natural Language Processing</span>
-                  </label>
-                </div>
-              </div>
-              
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
-                <h4 className="text-lg font-semibold text-white mb-4">Integration Setup</h4>
-                <div className="space-y-3">
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">CRM Integration</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Email Marketing</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Social Media</span>
-                  </label>
-                  <label className="flex items-center space-x-3">
-                    <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500" />
-                    <span className="text-gray-300">Web Analytics</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <button
-                onClick={nextStep}
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-              >
-                Continue Configuration
-              </button>
-            </div>
-          </div>
-        );
-      
-      case 4:
-        return (
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">You're All Set!</h3>
-              <p className="text-gray-300">Your account is ready. Start building amazing AI-powered solutions!</p>
-            </div>
-            
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Check className="w-10 h-10 text-white" />
-              </div>
-              <h4 className="text-2xl font-bold text-white mb-4">Welcome to Zion Tech Group!</h4>
-              <p className="text-gray-300 mb-6">
-                Your account has been successfully created and configured. You now have access to our powerful AI platform.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  to="/dashboard"
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-                >
-                  Go to Dashboard
-                </Link>
-                <Link
-                  to="/help/getting-started"
-                  className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold"
-                >
-                  View Tutorials
-                </Link>
-              </div>
-            </div>
-          </div>
-        );
-      
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get Started in
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                {' '}Minutes
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses already using our AI-powered solutions. 
-              Get up and running in under 10 minutes with our simple onboarding process.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => setCurrentStep(1)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold text-lg"
-              >
-                Start Now
-              </button>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
-              >
-                Talk to Sales
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Progress Steps */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between mb-12">
-            {steps.map((step, index) => (
-              <div key={step.id} className="flex items-center">
-                <div className={`relative ${index < steps.length - 1 ? 'mr-8' : ''}`}>
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      currentStep >= step.id
-                        ? `bg-gradient-to-br ${step.color}`
-                        : 'bg-slate-700/50 border border-slate-600/50'
-                    }`}
-                  >
-                    {currentStep > step.id ? (
-                      <Check className="w-6 h-6 text-white" />
-                    ) : (
-                      <step.icon className={`w-6 h-6 ${
-                        currentStep >= step.id ? 'text-white' : 'text-gray-400'
-                      }`} />
-                    )}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                    <ArrowRight className="w-8 h-8 text-zion-purple" />
                   </div>
-                  
-                  {index < steps.length - 1 && (
-                    <div className={`absolute top-1/2 left-full w-8 h-0.5 transform -translate-y-1/2 ${
-                      currentStep > step.id ? 'bg-cyan-500' : 'bg-slate-700/50'
-                    }`} />
-                  )}
-                </div>
-                
-                <div className="text-center">
-                  <h3 className={`text-sm font-semibold ${
-                    currentStep >= step.id ? 'text-white' : 'text-gray-400'
-                  }`}>
-                    {step.title}
-                  </h3>
-                  <p className={`text-xs ${
-                    currentStep >= step.id ? 'text-gray-300' : 'text-gray-500'
-                  }`}>
-                    {step.description}
-                  </p>
-                </div>
+                )}
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Step Content */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          {renderStepContent()}
+      {/* Service Categories */}
+      <div className="py-24 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Explore Our Service Categories
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover how our comprehensive technology solutions can address your 
+              specific business challenges and drive growth.
+            </p>
+          </div>
           
-          {/* Navigation */}
-          {currentStep > 1 && currentStep < steps.length && (
-            <div className="flex justify-between mt-12">
-              <button
-                onClick={prevStep}
-                className="px-6 py-3 border border-slate-600 text-gray-300 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
-              >
-                Previous Step
-              </button>
-              <button
-                onClick={nextStep}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-              >
-                Next Step
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Onboarding Features */}
-      <section className="py-20 px-6 bg-slate-800/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our comprehensive onboarding process ensures you get the most out of our platform
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {onboardingFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border border-zion-purple/30 rounded-2xl p-8">
+                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
-              </motion.div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
+                <p className="text-zion-slate-light mb-6">{category.description}</p>
+                <ul className="space-y-3 mb-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      <span>{service}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Access our comprehensive library of guides, tutorials, and documentation
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <resource.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full">
-                    {resource.type}
-                  </span>
-                  <Link
-                    to={resource.href}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group-hover:translate-x-1"
-                  >
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+      <div className="py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-3xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Start Your Transformation?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Let's discuss how Zion Tech Group can help you achieve your technology goals 
+              and drive business growth.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => setCurrentStep(1)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold text-lg"
-              >
-                Start Free Trial
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Demo
+                Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple text-zion-purple font-semibold rounded-xl hover:bg-zion-purple hover:text-white transition-all duration-300"
+              >
+                Get Free Quote
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
-
-export default GetStarted;
+}
