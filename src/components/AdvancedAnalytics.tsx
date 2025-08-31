@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -8,725 +7,612 @@ import {
   Eye, 
   MousePointer, 
   Clock, 
-  TrendingUp, 
-  TrendingDown,
-  Activity,
-  Zap,
-  Target,
-  MapPin,
-  Globe,
+  Globe, 
+  Device,
   Smartphone,
   Monitor,
   Tablet,
-  Settings,
-  X,
+  MapPin,
+  Calendar,
   Download,
   Share2,
-  Filter,
-  Calendar,
-  RefreshCw
-              } from 'lucide-react.ts';
+  Heart,
+  MessageCircle,
+  Search,
+  X,
+  Settings,
+  RefreshCw,
+  Info,
+  AlertCircle,
+  CheckCircle,
+  Zap
+} from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AnalyticsData {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-import React, { useEffect, useCallback, useState } from 'react';
-import { motion } from 'framer-motion';
-
-interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  timestamp: number;
-  sessionId: string;
-  userId?: string;
-  page: string;
-  referrer: string;
-  userAgent: string;
-  screenResolution: string;
-  viewport: string;
-  language: string;
-  timezone: string;
-}
-
-interface UserBehavior {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   pageViews: number;
+  uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
-  conversionRate: number;
-  topPages: Array<any>;
-  userAgents: Array<any>;
-  locations: Array<any>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  topPages: Array<{ path: string; views: number }>;
+  topReferrers: Array<{ source: string; visits: number }>;
+  deviceTypes: Array<{ type: string; percentage: number }>;
+  locations: Array<{ country: string; visits: number }>;
+  userEngagement: {
+    scrollDepth: number;
+    timeOnPage: number;
+    interactions: number;
+  };
   performance: {
     loadTime: number;
     firstPaint: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
+    largestPaint: number;
   };
-  interactions: {
-    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number;
-  };
-}
-
-interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  enabled: boolean;
-  trackingId?: string;
-  enableHeatmap?: boolean;
-  enableSessionRecording?: boolean;
-  enableAITesting?: boolean;
-
-}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export function AdvancedAnalytics(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  const [isOpen, setIsOpen] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<any>({
-=======
-  topPages: string[];
-  userJourney: string[];
-  engagementScore: number;
-}
-
-interface BusinessMetrics {
-  leads: number;
-  conversions: number;
-  revenue: number;
-  customerLifetimeValue: number;
-  churnRate: number;
-  acquisitionCost: number;
 }
 
 interface AdvancedAnalyticsProps {
-  enableTracking?: boolean;
-  enableHeatmaps?: boolean;
-  enableA/BTesting?: boolean;
-  enablePersonalization?: boolean;
-  enablePredictiveAnalytics?: boolean;
-  apiEndpoint?: string;
+  enabled?: boolean;
+  showMetrics?: boolean;
+  trackingId?: string;
 }
 
 export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
-  enableTracking = true,
-  enableHeatmaps = true,
-  enableA/BTesting = true,
-  enablePersonalization = true,
-  enablePredictiveAnalytics = true,
-  apiEndpoint = '/api/analytics'
+  enabled = true,
+  showMetrics = false,
+  trackingId = 'zion-tech-group'
 }) => {
-  const [sessionId] = useState(() => generateSessionId());
-  const [userId, setUserId] = useState<string | null>(null);
-  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+  const [isOpen, setIsOpen] = useState(false);
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,
+    uniqueVisitors: 0,
     sessionDuration: 0,
     bounceRate: 0,
-    conversionRate: 0,
     topPages: [],
-    userJourney: [],
-    engagementScore: 0
+    topReferrers: [],
+    deviceTypes: [],
+    locations: [],
+    userEngagement: {
+      scrollDepth: 0,
+      timeOnPage: 0,
+      interactions: 0
+    },
+    performance: {
+      loadTime: 0,
+      firstPaint: 0,
+      largestPaint: 0
+    }
   });
-  const [businessMetrics, setBusinessMetrics] = useState<BusinessMetrics>({
-    leads: 0,
-    conversions: 0,
-    revenue: 0,
-    customerLifetimeValue: 0,
-    churnRate: 0,
-    acquisitionCost: 0
-  });
+  const [isVisible, setIsVisible] = useState(false);
   const [isTracking, setIsTracking] = useState(false);
-  const [sessionStart, setSessionStart] = useState<any>(Date.now());
-  const [currentPage, setCurrentPage] = useState<any>(window.location.pathname);
-  const [userSession, setUserSession] = useState<any>('');
-  const [heatmapData, setHeatmapData] = useState<Array<any>>([]);
-  
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  const trackingRef = useRef<{
-    pageViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
-    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number;
-    startTime: number;
-  }>({
-    pageViews: 1,
-    clicks: 0,
-    scrolls: 0,
-    formSubmissions: 0,
-    errors: 0,
-    startTime: Date.now()
-  });
-  // Generate unique session ID
-  useEffect(()               => {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    setUserSession(sessionId);
-    localStorage.setItem('analytics_session_id', sessionId);
-  }, []);
-  // Track page views
-  const trackPageView = useCallback((path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const [trackingEvents, setTrackingEvents] = useState<string[]>([]);
+  const startTimeRef = useRef<number>(Date.now());
+  const scrollDepthRef = useRef<number>(0);
+  const interactionCountRef = useRef<number>(0);
+
+  // Initialize analytics tracking
+  const initializeTracking = useCallback(() => {
     if (!enabled) return;
-    setCurrentPage(path);
-    trackingRef.current.pageViews++;
-    const pageViewData = {
-      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
-      path,
-      timestamp: new Date().toISOString(),
-=======
 
-  // Generate unique session ID
-  function generateSessionId(): string {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  }
+    setIsTracking(true);
+    
+    // Track page view
+    trackEvent('page_view', {
+      page: window.location.pathname,
+      title: document.title,
+      url: window.location.href
+    });
 
-  // Track page view
-  const trackPageView = useCallback((page: string) => {
-    if (!enableTracking) return;
-
-    const event: AnalyticsEvent = {
-      event: 'page_view',
-      category: 'engagement',
-      action: 'view',
-      label: page,
-      timestamp: Date.now(),
-      sessionId,
-      userId: userId || undefined,
-      page,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Track performance metrics
-    trackPerformance();
-    // Setup click tracking
-    const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {
-      const target = e.target as HTMLElement;
-      const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
-      
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      trackInteraction('click', { target, position });
-      // Add to heatmap data
-      if (enableHeatmap) {
-        setHeatmapData(prev               => [...prev, { x: position.x, y: position.y, type: 'click' }]);
-      }
-    };
-    // Setup scroll tracking
-    let scrollTimeout: NodeJS.Timeout;
-    const handleScroll = () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        trackInteraction('scroll', { 
-          scrollY: window.scrollY, 
-          scrollHeight: document.documentElement.scrollHeight 
-        });
-      }, 100);
-    };
-    // Setup form submission tracking
-    const handleFormSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyEvent)               => {
-      const form = e.target as HTMLFormElement;
-      trackInteraction('form', { 
-        formId: form.id || form.className,
-        formAction: form.action,
-        formMethod: form.method
-      });
-    };
-    // Setup error tracking
-    const handleError = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)               => {
-      trackInteraction('error', {
-        message: e.message,
-        filename: e.filename,
-        lineno: e.lineno,
-        colno: e.colno,
-        error: e.error?.stack
-      });
-    };
-    // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)               => {
-      trackInteraction('error', {
-        message: e.reason?.message || 'Unhandled Promise Rejection',
-        reason: e.reason
-      });
-    };
-    // Add event listeners
-    document.addEventListener('click', handleClick);
-    document.addEventListener('scroll', handleScroll);
-    document.addEventListener('submit', handleFormSubmit);
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
-    // Track page visibility changes
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart;
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        const firstPaint = performance.getEntriesByType('paint').find(entry => entry.name === 'first-paint')?.startTime || 0;
+        const largestPaint = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
+
         setAnalyticsData(prev => ({
           ...prev,
-          sessionDuration: sessionDuration / 1000 // Convert to seconds
+          performance: {
+            loadTime,
+            firstPaint,
+            largestPaint
+          }
         }));
-      } else {
-        // Page visible - track session resume
-        setSessionStart(Date.now());
       }
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    // Cleanup
-    return () => {
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('submit', handleFormSubmit);
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      clearTimeout(scrollTimeout);
-    };
-  }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]);
-  // Setup performance observer for LCP
-  useEffect(() => {
-    if (!enabled || !('PerformanceObserver' in window)) return;
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          setAnalyticsData(prev => ({
-            ...prev,
-            performance: anyanyanyanyanyanyanyanyanyanyanyanyanyany{
-              ...prev.performance,
-              largestContentfulPaint: lastEntry.startTime
-            }
-          }));
-        }
-      });
-
-      lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
-
-      return ()               => lcpObserver.disconnect();
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
     }
+
+    // Track user engagement
+    trackScrollDepth();
+    trackTimeOnPage();
+    trackUserInteractions();
   }, [enabled]);
-  // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, data: )               => {
-    if (!trackingId) return;
-    try {
-      const analyticsPayload = {
-        trackingId,
-        eventType,
-        data,
-        timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date().toISOString(),
-        sessionId: userSession
-      };
-      // Send to analytics endpoint
-      await fetch('/api/analytics', {
-=======
 
-    trackEvent(event);
-    updateUserBehavior(page);
-  }, [enableTracking, sessionId, userId]);
+  // Track custom events
+  const trackEvent = useCallback((eventName: string, properties: Record<string, any> = {}) => {
+    if (!isTracking) return;
 
-  // Track user interaction
-  const trackInteraction = useCallback((category: string, action: string, label?: string, value?: number) => {
-    if (!enableTracking) return;
-
-    const event: AnalyticsEvent = {
-      event: 'interaction',
-      category,
-      action,
-      label,
-      value,
-      timestamp: Date.now(),
-      sessionId,
-      userId: userId || undefined,
-      page: window.location.pathname,
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    const event = {
+      name: eventName,
+      properties: {
+        ...properties,
+        timestamp: Date.now(),
+        sessionId: getSessionId(),
+        userId: getUserId()
+      }
     };
 
-    trackEvent(event);
-  }, [enableTracking, sessionId, userId]);
+    // Add to tracking events
+    setTrackingEvents(prev => [...prev.slice(-9), `${eventName}: ${JSON.stringify(properties)}`]);
 
-  // Track conversion
-  const trackConversion = useCallback((goal: string, value?: number) => {
-    if (!enableTracking) return;
+    // Send to analytics service (mock implementation)
+    console.log('Analytics Event:', event);
+    
+    // In production, send to actual analytics service
+    // sendToAnalytics(event);
+  }, [isTracking]);
 
-    const event: AnalyticsEvent = {
-      event: 'conversion',
-      category: 'business',
-      action: 'convert',
-      label: goal,
-      value,
-      timestamp: Date.now(),
-      sessionId,
-      userId: userId || undefined,
-      page: window.location.pathname,
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  // Track scroll depth
+  const trackScrollDepth = useCallback(() => {
+    let maxScrollDepth = 0;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      
+      if (scrollPercent > maxScrollDepth) {
+        maxScrollDepth = scrollPercent;
+        scrollDepthRef.current = maxScrollDepth;
+        
+        setAnalyticsData(prev => ({
+          ...prev,
+          userEngagement: {
+            ...prev.userEngagement,
+            scrollDepth: maxScrollDepth
+          }
+        }));
+
+        // Track significant scroll milestones
+        if (maxScrollDepth % 25 === 0) {
+          trackEvent('scroll_milestone', { depth: maxScrollDepth });
+        }
+      }
     };
 
-    trackEvent(event);
-    updateBusinessMetrics(goal, value);
-  }, [enableTracking, sessionId, userId]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [trackEvent]);
 
-  // Send event to analytics API
-  const trackEvent = useCallback(async (event: AnalyticsEvent) => {
-    try {
-      await fetch(apiEndpoint, {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      });
-    } catch (error) {
-      console.warn('Failed to send analytics event:', error);
-      // Store locally for retry
-      storeEventLocally(event);
-    }
-  }, [apiEndpoint]);
+  // Track time on page
+  const trackTimeOnPage = useCallback(() => {
+    const updateTimeOnPage = () => {
+      const timeOnPage = Math.round((Date.now() - startTimeRef.current) / 1000);
+      
+      setAnalyticsData(prev => ({
+        ...prev,
+        userEngagement: {
+          ...prev.userEngagement,
+          timeOnPage
+        }
+      }));
 
-  // Store event locally if API fails
-  const storeEventLocally = useCallback((event: AnalyticsEvent) => {
-    const storedEvents = JSON.parse(localStorage.getItem('zion_analytics_events') || '[]');
-    storedEvents.push(event);
-    localStorage.setItem('zion_analytics_events', JSON.stringify(storedEvents));
-  }, []);
+      // Track time milestones
+      if (timeOnPage % 30 === 0 && timeOnPage > 0) {
+        trackEvent('time_milestone', { seconds: timeOnPage });
+      }
+    };
 
-  // Update user behavior metrics
-  const updateUserBehavior = useCallback((page: string) => {
-    setUserBehavior(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
-      topPages: [...new Set([...prev.topPages, page])].slice(0, 10),
-      userJourney: [...prev.userJourney, page].slice(-10)
-    }));
-  }, []);
+    const interval = setInterval(updateTimeOnPage, 1000);
+    return () => clearInterval(interval);
+  }, [trackEvent]);
 
-  // Update business metrics
-  const updateBusinessMetrics = useCallback((goal: string, value?: number) => {
-    setBusinessMetrics(prev => ({
-      ...prev,
-      conversions: prev.conversions + 1,
-      revenue: prev.revenue + (value || 0)
-    }));
-  }, []);
+  // Track user interactions
+  const trackUserInteractions = useCallback(() => {
+    const handleInteraction = (event: Event) => {
+      interactionCountRef.current++;
+      
+      setAnalyticsData(prev => ({
+        ...prev,
+        userEngagement: {
+          ...prev.userEngagement,
+          interactions: interactionCountRef.current
+        }
+      }));
 
-  // Heatmap tracking
-  const setupHeatmapTracking = useCallback(() => {
-    if (!enableHeatmaps) return;
-
-    let clickData: { x: number; y: number; timestamp: number }[] = [];
-    let scrollData: { depth: number; timestamp: number }[] = [];
-
-    // Track clicks
-    document.addEventListener('click', (e) => {
-      const rect = (e.target as HTMLElement).getBoundingClientRect();
-      clickData.push({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-        timestamp: Date.now()
-      });
-    });
-
-    // Track scroll depth
-    let maxScroll = 0;
-    document.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > maxScroll) {
-        maxScroll = scrollDepth;
-        scrollData.push({
-          depth: maxScroll,
-          timestamp: Date.now()
+      // Track specific interaction types
+      if (event.target instanceof HTMLButtonElement) {
+        trackEvent('button_click', { 
+          buttonText: event.target.textContent,
+          buttonId: event.target.id || 'unknown'
         });
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-      }
-    });
-
-    // Send heatmap data periodically
-    setInterval(() => {
-      if (clickData.length > 0 || scrollData.length > 0) {
-        trackEvent({
-          event: 'heatmap_data',
-          category: 'user_behavior',
-          action: 'heatmap',
-          timestamp: Date.now(),
-          sessionId,
-          userId: userId || undefined,
-          page: window.location.pathname,
-          referrer: document.referrer,
-          userAgent: navigator.userAgent,
-          screenResolution: `${screen.width}x${screen.height}`,
-          viewport: `${window.innerWidth}x${window.innerHeight}`,
-          language: navigator.language,
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      } else if (event.target instanceof HTMLAnchorElement) {
+        trackEvent('link_click', { 
+          linkText: event.target.textContent,
+          linkHref: event.target.href
         });
-        clickData = [];
-        scrollData = [];
+      } else if (event.target instanceof HTMLFormElement) {
+        trackEvent('form_interaction', { 
+          formId: event.target.id || 'unknown',
+          formAction: event.target.action
+        });
       }
-    }, 30000); // Send every 30 seconds
-  }, [enableHeatmaps, trackEvent, sessionId, userId]);
-
-  // A/B Testing
-  const setupABTesting = useCallback(() => {
-    if (!enableA/BTesting) return;
-
-    const testVariants = {
-      'header_cta': ['primary', 'secondary', 'tertiary'],
-      'hero_layout': ['centered', 'left-aligned', 'split'],
-      'pricing_display': ['cards', 'table', 'comparison']
     };
 
-    const userVariant = Math.floor(Math.random() * 100);
-    const variant = userVariant < 33 ? 'A' : userVariant < 66 ? 'B' : 'C';
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('submit', handleInteraction);
+    
+    return () => {
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('submit', handleInteraction);
+    };
+  }, [trackEvent]);
 
-    // Store variant for this session
-    sessionStorage.setItem('ab_test_variant', variant);
-
-    // Apply variant-specific changes
-    applyABTestVariant(variant);
-  }, [enableA/BTesting]);
-
-  // Apply A/B test variant
-  const applyABTestVariant = useCallback((variant: string) => {
-    const header = document.querySelector('[data-ab-test="header_cta"]');
-    if (header) {
-      header.setAttribute('data-variant', variant);
-    }
-
-    // Track variant assignment
-    trackEvent({
-      event: 'ab_test_assigned',
-      category: 'experimentation',
-      action: 'assign',
-      label: variant,
-      timestamp: Date.now(),
-      sessionId,
-      userId: userId || undefined,
-      page: window.location.pathname,
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    });
-  }, [trackEvent, sessionId, userId]);
-
-  // Personalization
-  const setupPersonalization = useCallback(() => {
-    if (!enablePersonalization) return;
-
-    // Analyze user behavior for personalization
-    const userPreferences = analyzeUserPreferences();
-    applyPersonalization(userPreferences);
-  }, [enablePersonalization]);
-
-  // Analyze user preferences
-  const analyzeUserPreferences = useCallback(() => {
-    const preferences = {
-      interests: [] as string[],
-      behavior: 'explorer' as 'explorer' | 'focused' | 'casual',
-      technicalLevel: 'beginner' as 'beginner' | 'intermediate' | 'advanced'
+  // Generate mock analytics data
+  const generateMockData = useCallback(() => {
+    const mockData: AnalyticsData = {
+      pageViews: Math.floor(Math.random() * 10000) + 5000,
+      uniqueVisitors: Math.floor(Math.random() * 5000) + 2000,
+      sessionDuration: Math.floor(Math.random() * 300) + 120,
+      bounceRate: Math.random() * 40 + 20,
+      topPages: [
+        { path: '/', views: Math.floor(Math.random() * 2000) + 1000 },
+        { path: '/services', views: Math.floor(Math.random() * 1500) + 800 },
+        { path: '/about', views: Math.floor(Math.random() * 1000) + 500 },
+        { path: '/contact', views: Math.floor(Math.random() * 800) + 400 },
+        { path: '/ai-services', views: Math.floor(Math.random() * 600) + 300 }
+      ],
+      topReferrers: [
+        { source: 'Google', visits: Math.floor(Math.random() * 1000) + 500 },
+        { source: 'Direct', visits: Math.floor(Math.random() * 800) + 400 },
+        { source: 'LinkedIn', visits: Math.floor(Math.random() * 600) + 300 },
+        { source: 'Twitter', visits: Math.floor(Math.random() * 400) + 200 }
+      ],
+      deviceTypes: [
+        { type: 'Desktop', percentage: Math.floor(Math.random() * 30) + 50 },
+        { type: 'Mobile', percentage: Math.floor(Math.random() * 30) + 30 },
+        { type: 'Tablet', percentage: Math.floor(Math.random() * 20) + 20 }
+      ],
+      locations: [
+        { country: 'United States', visits: Math.floor(Math.random() * 2000) + 1000 },
+        { country: 'Canada', visits: Math.floor(Math.random() * 500) + 200 },
+        { country: 'United Kingdom', visits: Math.floor(Math.random() * 300) + 100 },
+        { country: 'Germany', visits: Math.floor(Math.random() * 200) + 50 }
+      ],
+      userEngagement: {
+        scrollDepth: scrollDepthRef.current,
+        timeOnPage: Math.round((Date.now() - startTimeRef.current) / 1000),
+        interactions: interactionCountRef.current
+      },
+      performance: {
+        loadTime: Math.random() * 2000 + 500,
+        firstPaint: Math.random() * 1000 + 200,
+        largestPaint: Math.random() * 2000 + 500
+      }
     };
 
-    // Analyze page views to determine interests
-    if (userBehavior.topPages.includes('/ai-services')) {
-      preferences.interests.push('AI');
-    }
-    if (userBehavior.topPages.includes('/cybersecurity')) {
-      preferences.interests.push('Security');
-    }
-
-    // Analyze engagement for behavior type
-    if (userBehavior.engagementScore > 80) {
-      preferences.behavior = 'focused';
-    } else if (userBehavior.engagementScore > 40) {
-      preferences.behavior = 'explorer';
-    } else {
-      preferences.behavior = 'casual';
-    }
-
-    return preferences;
-  }, [userBehavior]);
-
-  // Apply personalization
-  const applyPersonalization = useCallback((preferences: any) => {
-    // Personalize content based on preferences
-    const contentElements = document.querySelectorAll('[data-personalize]');
-    contentElements.forEach(element => {
-      const personalizationKey = element.getAttribute('data-personalize');
-      if (personalizationKey === 'interests' && preferences.interests.includes('AI')) {
-        element.classList.add('ai-focused');
-      }
-    });
+    setAnalyticsData(mockData);
   }, []);
 
-  // Predictive analytics
-  const setupPredictiveAnalytics = useCallback(() => {
-    if (!enablePredictiveAnalytics) return;
-
-    // Predict user intent and next actions
-    const predictions = predictUserIntent();
-    if (predictions.likelyToConvert > 0.7) {
-      showConversionOptimization();
+  // Get session ID
+  const getSessionId = useCallback(() => {
+    let sessionId = sessionStorage.getItem('analytics_session_id');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('analytics_session_id', sessionId);
     }
-  }, [enablePredictiveAnalytics]);
+    return sessionId;
+  }, []);
 
-  // Predict user intent
-  const predictUserIntent = useCallback(() => {
-    const predictions = {
-      likelyToConvert: 0,
-      nextPage: '',
-      recommendedAction: ''
-    };
-
-    // Simple prediction based on behavior
-    if (userBehavior.pageViews > 5 && userBehavior.sessionDuration > 300) {
-      predictions.likelyToConvert = 0.8;
-      predictions.nextPage = '/pricing';
-      predictions.recommendedAction = 'show_pricing';
-    } else if (userBehavior.pageViews > 2) {
-      predictions.likelyToConvert = 0.5;
-      predictions.nextPage = '/contact';
-      predictions.recommendedAction = 'show_contact';
+  // Get user ID
+  const getUserId = useCallback(() => {
+    let userId = localStorage.getItem('analytics_user_id');
+    if (!userId) {
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      localStorage.setItem('analytics_user_id', userId);
     }
-
-    return predictions;
-  }, [userBehavior]);
-
-  // Show conversion optimization
-  const showConversionOptimization = useCallback(() => {
-    // Show personalized CTA or offer
-    const ctaElement = document.querySelector('[data-cta="conversion"]');
-    if (ctaElement) {
-      ctaElement.classList.add('highlight');
-      ctaElement.setAttribute('data-predicted-conversion', 'high');
-    }
+    return userId;
   }, []);
 
   // Initialize analytics
   useEffect(() => {
-    if (!enableTracking) return;
+    if (!enabled) return;
+    
+    initializeTracking();
+    generateMockData();
+    
+    // Show component after delay
+    const timer = setTimeout(() => setIsVisible(true), 4000);
+    
+    return () => clearTimeout(timer);
+  }, [enabled, initializeTracking, generateMockData]);
 
-    setIsTracking(true);
-    trackPageView(window.location.pathname);
-
-    // Track route changes
-    const handleRouteChange = () => {
-      trackPageView(window.location.pathname);
-    };
-
-    window.addEventListener('popstate', handleRouteChange);
-    window.addEventListener('pushstate', handleRouteChange);
-
-    // Track session duration
-    const startTime = Date.now();
-    const trackSessionDuration = () => {
-      const duration = Date.now() - startTime;
-      setUserBehavior(prev => ({ ...prev, sessionDuration: duration }));
-    };
-
-    window.addEventListener('beforeunload', trackSessionDuration);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-      window.removeEventListener('pushstate', handleRouteChange);
-      window.removeEventListener('beforeunload', trackSessionDuration);
-    };
-  }, [enableTracking, trackPageView]);
-
-  // Setup advanced features
+  // Update mock data periodically
   useEffect(() => {
-    setupHeatmapTracking();
-    setupABTesting();
-    setupPersonalization();
-    setupPredictiveAnalytics();
-  }, [setupHeatmapTracking, setupABTesting, setupPersonalization, setupPredictiveAnalytics]);
+    if (!isTracking) return;
+    
+    const interval = setInterval(generateMockData, 30000); // Update every 30 seconds
+    return () => clearInterval(interval);
+  }, [isTracking, generateMockData]);
 
-  // Track engagement score
-  useEffect(() => {
-    const calculateEngagementScore = () => {
-      let score = 0;
-      score += userBehavior.pageViews * 10;
-      score += Math.min(userBehavior.sessionDuration / 1000, 50);
-      score += userBehavior.userJourney.length * 5;
-      
-      setUserBehavior(prev => ({ ...prev, engagementScore: Math.min(score, 100) }));
-    };
+  if (!enabled || !isVisible) return null;
 
-    calculateEngagementScore();
-  }, [userBehavior.pageViews, userBehavior.sessionDuration, userBehavior.userJourney]);
-
-  // Expose tracking functions globally for external use
-  useEffect(() => {
-    (window as any).zionAnalytics = {
-      trackPageView,
-      trackInteraction,
-      trackConversion,
-      userBehavior,
-      businessMetrics
-    };
-  }, [trackPageView, trackInteraction, trackConversion, userBehavior, businessMetrics]);
-
-  // Development mode analytics dashboard
-  if (process.env.NODE_ENV === 'development' && isTracking) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed bottom-4 left-4 bg-black/90 text-white p-4 rounded-lg text-xs max-w-sm z-50"
+  return (
+    <>
+      {/* Floating Analytics Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-4 left-20 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-colors focus:outline-none focus:ring-4 focus:ring-purple-300"
+        aria-label="Open analytics dashboard"
+        title="Analytics Dashboard"
       >
-        <h3 className="font-bold mb-2 text-green-400">Analytics Dashboard</h3>
-        <div className="space-y-2">
-          <div>Session: {sessionId.slice(-8)}</div>
-          <div>Page Views: {userBehavior.pageViews}</div>
-          <div>Engagement: {userBehavior.engagementScore.toFixed(0)}%</div>
-          <div>Conversions: {businessMetrics.conversions}</div>
-          <div>Revenue: ${businessMetrics.revenue}</div>
-        </div>
-        <div className="mt-2 text-xs text-gray-400">
-          {enableHeatmaps && 'Heatmaps ✓'} {enableA/BTesting && 'A/B Testing ✓'} {enablePersonalization && 'Personalization ✓'}
-        </div>
-      </motion.div>
-    );
-  }
+        <BarChart3 className="w-6 h-6" />
+      </motion.button>
 
-  return null;
+      {/* Analytics Dashboard */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+            onClick={() => setIsOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center space-x-2">
+                    <BarChart3 className="w-7 h-7 text-purple-600" />
+                    <span>Analytics Dashboard</span>
+                  </h2>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={generateMockData}
+                      className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                      title="Refresh data"
+                    >
+                      <RefreshCw className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                      aria-label="Close analytics dashboard"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Key Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <Eye className="w-8 h-8 text-blue-600" />
+                      <div>
+                        <p className="text-sm text-blue-600 dark:text-blue-400">Page Views</p>
+                        <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">
+                          {analyticsData.pageViews.toLocaleString()}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <Users className="w-8 h-8 text-green-600" />
+                      <div>
+                        <p className="text-sm text-green-600 dark:text-green-400">Unique Visitors</p>
+                        <p className="text-2xl font-bold text-green-900 dark:text-green-100">
+                          {analyticsData.uniqueVisitors.toLocaleString()}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-8 h-8 text-purple-600" />
+                      <div>
+                        <p className="text-sm text-purple-600 dark:text-purple-400">Session Duration</p>
+                        <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">
+                          {Math.round(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <TrendingUp className="w-8 h-8 text-orange-600" />
+                      <div>
+                        <p className="text-sm text-orange-600 dark:text-orange-400">Bounce Rate</p>
+                        <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">
+                          {analyticsData.bounceRate.toFixed(1)}%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Performance Metrics */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                    <Zap className="w-5 h-5 text-yellow-500" />
+                    <span>Performance Metrics</span>
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Load Time</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {analyticsData.performance.loadTime.toFixed(0)}ms
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">First Paint</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {analyticsData.performance.firstPaint.toFixed(0)}ms
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Largest Paint</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {analyticsData.performance.largestPaint.toFixed(0)}ms
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* User Engagement */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                    <MousePointer className="w-5 h-5 text-blue-500" />
+                    <span>User Engagement</span>
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Scroll Depth</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {analyticsData.userEngagement.scrollDepth}%
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Time on Page</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {Math.round(analyticsData.userEngagement.timeOnPage / 60)}m {analyticsData.userEngagement.timeOnPage % 60}s
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Interactions</p>
+                      <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {analyticsData.userEngagement.interactions}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Top Pages and Referrers */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Top Pages</h3>
+                    <div className="space-y-2">
+                      {analyticsData.topPages.map((page, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                          <span className="text-sm text-gray-700 dark:text-gray-300">{page.path}</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{page.views.toLocaleString()}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Top Referrers</h3>
+                    <div className="space-y-2">
+                      {analyticsData.topReferrers.map((referrer, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                          <span className="text-sm text-gray-700 dark:text-gray-300">{referrer.source}</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{referrer.visits.toLocaleString()}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Device Types and Locations */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                      <Device className="w-5 h-5 text-green-500" />
+                      <span>Device Types</span>
+                    </h3>
+                    <div className="space-y-2">
+                      {analyticsData.deviceTypes.map((device, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                          <div className="flex items-center space-x-2">
+                            {device.type === 'Mobile' ? (
+                              <Smartphone className="w-4 h-4 text-blue-500" />
+                            ) : device.type === 'Tablet' ? (
+                              <Tablet className="w-4 h-4 text-green-500" />
+                            ) : (
+                              <Monitor className="w-4 h-4 text-purple-500" />
+                            )}
+                            <span className="text-sm text-gray-700 dark:text-gray-300">{device.type}</span>
+                          </div>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{device.percentage}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                      <MapPin className="w-5 h-5 text-red-500" />
+                      <span>Top Locations</span>
+                    </h3>
+                    <div className="space-y-2">
+                      {analyticsData.locations.map((location, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                          <span className="text-sm text-gray-700 dark:text-gray-300">{location.country}</span>
+                          <span className="text-sm font-medium text-gray-900 dark:text-white">{location.visits.toLocaleString()}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tracking Events */}
+                {showMetrics && (
+                  <div className="mb-8">
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                      <Info className="w-5 h-5 text-blue-500" />
+                      <span>Recent Tracking Events</span>
+                    </h3>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg max-h-40 overflow-y-auto">
+                      {trackingEvents.length > 0 ? (
+                        <div className="space-y-1">
+                          {trackingEvents.map((event, index) => (
+                            <div key={index} className="text-xs text-gray-600 dark:text-gray-400 font-mono">
+                              {event}
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-sm text-gray-500 dark:text-gray-400">No events tracked yet</p>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Status Indicator */}
+                <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <div className={`w-3 h-3 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />
+                    <span className="text-sm text-gray-700 dark:text-gray-300">
+                      Tracking: {isTracking ? 'Active' : 'Inactive'}
+                    </span>
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    Session ID: {getSessionId().substring(0, 8)}...
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <p>Analytics dashboard. Use Tab to navigate metrics and Enter to view detailed information.</p>
+      </div>
+    </>
+  );
 };
