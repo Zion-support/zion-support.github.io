@@ -105,6 +105,11 @@ const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/
 const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
 
+// Import new service data
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from './data/innovativeMicroSaasServices2026';
+import { INNOVATIVE_IT_SERVICES_2026 } from './data/innovativeITServices2026';
+import { INNOVATIVE_AI_SERVICES_2026 } from './data/innovativeAIServices2026';
+
 // New Innovative Services 2026 - Additional
 const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
 const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
