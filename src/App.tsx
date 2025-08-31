@@ -23,6 +23,9 @@ const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages
 const ComprehensivePricingGuide2029 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2029'));
 const ComprehensiveServices2029 = createLazyComponent(() => import('./pages/ComprehensiveServices2029'));
 const InnovativeAIServices2029 = createLazyComponent(() => import('./pages/InnovativeAIServices2029'));
+const InnovativeMicroSAASServices2029 = createLazyComponent(() => import('./pages/InnovativeMicroSAASServices2029'));
+const ComprehensiveITServices2029 = createLazyComponent(() => import('./pages/ComprehensiveITServices2029'));
+const AdvancedAIServices2029 = createLazyComponent(() => import('./pages/AdvancedAIServices2029'));
 
 // Simple loading component
 const LoadingSpinner = () => (
@@ -82,13 +85,28 @@ function App() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="p-4 space-y-3">
-                      <a href="/comprehensive-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Comprehensive Services</a>
-                      <a href="/innovative-ai-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">AI Services</a>
-                      <a href="/innovative-services-showcase-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Innovative Services</a>
-                      <a href="/comprehensive-pricing-guide-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Pricing Guide</a>
-                      <a href="/services" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">All Services</a>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Core Services</h4>
+                          <div className="space-y-2">
+                            <a href="/comprehensive-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm">Comprehensive Services</a>
+                            <a href="/services" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm">All Services</a>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Specialized Solutions</h4>
+                          <div className="space-y-2">
+                            <a href="/innovative-micro-saas-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm">Micro SAAS</a>
+                            <a href="/comprehensive-it-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm">IT Services</a>
+                            <a href="/advanced-ai-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm">AI Services</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                        <a href="/comprehensive-pricing-guide-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm font-medium">View Pricing Guide</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -115,8 +133,9 @@ function App() {
                   <div className="font-medium text-gray-900 dark:text-white">Services</div>
                   <div className="ml-4 space-y-2">
                     <a href="/comprehensive-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Comprehensive Services</a>
-                    <a href="/innovative-ai-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">AI Services</a>
-                    <a href="/innovative-services-showcase-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Innovative Services</a>
+                    <a href="/innovative-micro-saas-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Micro SAAS</a>
+                    <a href="/comprehensive-it-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">IT Services</a>
+                    <a href="/advanced-ai-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">AI Services</a>
                     <a href="/comprehensive-pricing-guide-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Pricing Guide</a>
                     <a href="/services" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">All Services</a>
                   </div>
@@ -145,6 +164,9 @@ function App() {
             <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
             <Route path="/comprehensive-services-2029" element={<ComprehensiveServices2029 />} />
             <Route path="/innovative-ai-services-2029" element={<InnovativeAIServices2029 />} />
+            <Route path="/innovative-micro-saas-services-2029" element={<InnovativeMicroSAASServices2029 />} />
+            <Route path="/comprehensive-it-services-2029" element={<ComprehensiveITServices2029 />} />
+            <Route path="/advanced-ai-services-2029" element={<AdvancedAIServices2029 />} />
             
             {/* Fallback Route */}
             <Route path="*" element={
@@ -206,8 +228,9 @@ function App() {
                 <h4 className="text-lg font-semibold mb-4">Services</h4>
                 <ul className="space-y-3 text-sm text-gray-400">
                   <li><a href="/comprehensive-services-2029" className="hover:text-white transition-colors">Comprehensive Services</a></li>
-                  <li><a href="/innovative-ai-services-2029" className="hover:text-white transition-colors">AI Services</a></li>
-                  <li><a href="/innovative-services-showcase-2029" className="hover:text-white transition-colors">Innovative Services</a></li>
+                  <li><a href="/innovative-micro-saas-services-2029" className="hover:text-white transition-colors">Micro SAAS</a></li>
+                  <li><a href="/comprehensive-it-services-2029" className="hover:text-white transition-colors">IT Services</a></li>
+                  <li><a href="/advanced-ai-services-2029" className="hover:text-white transition-colors">AI Services</a></li>
                   <li><a href="/comprehensive-pricing-guide-2029" className="hover:text-white transition-colors">Pricing Guide</a></li>
                   <li><a href="/services" className="hover:text-white transition-colors">All Services</a></li>
                 </ul>

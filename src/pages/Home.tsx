@@ -47,41 +47,65 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI Solutions</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Cutting-edge artificial intelligence solutions that automate, optimize, and transform your business processes.
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Advanced AI services including chatbots, computer vision, and predictive analytics.
               </p>
+              <a href="/advanced-ai-services-2029" className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Learn More →
+              </a>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">IT Services</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Comprehensive IT infrastructure, cloud solutions, and digital transformation services.
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Cloud infrastructure, cybersecurity, and managed IT services for enterprise.
               </p>
+              <a href="/comprehensive-it-services-2029" className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Learn More →
+              </a>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Micro SAAS</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Scalable software-as-a-service solutions designed for modern businesses and startups.
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Innovative micro SAAS solutions for business intelligence and automation.
               </p>
+              <a href="/innovative-micro-saas-services-2029" className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Learn More →
+              </a>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Innovation Hub</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Cutting-edge technology solutions and research development services.
+              </p>
+              <a href="/innovative-services-showcase-2029" className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Learn More →
+              </a>
             </div>
           </div>
 
