@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,6 +17,7 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Layout Components
 import Header from './components/Header';
@@ -87,7 +88,85 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
+// Service Worker Registration Hook
+const useServiceWorker = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      const registerSW = async () => {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          console.log('Service Worker registered successfully:', registration);
+
+          // Handle updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New version available
+                  if (confirm('A new version is available! Would you like to update?')) {
+                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                  }
+                }
+              });
+            }
+          });
+
+          // Handle controller change
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
+            window.location.reload();
+          });
+
+        } catch (error) {
+          console.error('Service Worker registration failed:', error);
+        }
+      };
+
+      registerSW();
+    }
+  }, []);
+};
+
+// PWA Install Prompt Hook
+const usePWAInstall = () => {
+  useEffect(() => {
+    let deferredPrompt: any;
+
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      
+      // Show custom install button or notification
+      const installButton = document.getElementById('pwa-install-btn');
+      if (installButton) {
+        installButton.style.display = 'block';
+        installButton.addEventListener('click', () => {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult: any) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+              }
+              deferredPrompt = null;
+            });
+          }
+        });
+      }
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+};
+
 function App() {
+  // Initialize PWA features
+  useServiceWorker();
+  usePWAInstall();
+
   return (
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -211,6 +290,18 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+
+            {/* PWA Install Button (Hidden by default) */}
+            <button
+              id="pwa-install-btn"
+              className="fixed bottom-24 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 z-50"
+              style={{ display: 'none' }}
+            >
+              📱 Install App
+            </button>
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor enabled={true} showMetrics={true} autoHide={false} />
           </div>
         </Router>
       </ErrorBoundary>
