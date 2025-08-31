@@ -17,7 +17,7 @@ class LintErrorFixer {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -58,7 +58,7 @@ class LintErrorFixer {;
 <<<<<<< HEAD;
           otherLines.push(line);
 ;
-
+;
 =======;
           otherLines.push(line)};
       };
@@ -89,7 +89,7 @@ class LintErrorFixer {;
 <<<<<<< HEAD;
       return false;
 ;
-
+;
 =======;
       return false};
   };
@@ -124,7 +124,7 @@ class LintErrorFixer {;
 ;
       return false;
 ;
-
+;
 =======;
           return true};
       } catch (fixError) {;
@@ -144,7 +144,7 @@ class LintErrorFixer {;
 <<<<<<< HEAD;
       return false;
 ;
-
+;
 =======;
       return false};
   };
@@ -191,7 +191,7 @@ class LintErrorFixer {;
       for (const fixed = await this.fixFile(file);
         if (fixed) totalFixed++;
 <<<<<<< HEAD;
-
+;
 ;
     this.log(`📊 Fixed ${totalFixed}/${totalFiles} files`);
     return { totalFiles, totalFixed };
@@ -221,7 +221,7 @@ class LintErrorFixer {;
 ;
 =======;
       this.scanDirectory(baseDir, files, pattern)};
-
+;
     return files.filter(file =>;
       !file.includes('node_modules') &&;
       !file.includes('.next') &&;
@@ -241,9 +241,9 @@ class LintErrorFixer {;
       } else {;
         files.push(fullPath);
 ;
-
 ;
-
+;
+;
 =======;
         this.scanDirectory(fullPath, files, pattern)} else {;
         files.push(fullPath)};

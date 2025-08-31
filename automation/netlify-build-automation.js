@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 /**;
  * Netlify Build Automation;
  * Integrates with Netlify API to monitor builds and trigger deployments;
@@ -11,7 +11,7 @@
  * - Build performance optimization;
  * - Error reporting and notifications;
  */;
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -39,14 +39,14 @@ class NetlifyBuildAutomation {;
 ;
     this.initialize();
   };
-
+;
   initialize() {;
     this.setupLogging();
     this.validateConfiguration();
     this.ensureLogDirectory();
     this.log('Netlify Build Automation initialized');
   };
-
+;
   setupLogging() {;
     this.log = (message) => {;
       const timestamp = new Date().toISOString();
@@ -72,34 +72,34 @@ class NetlifyBuildAutomation {;
       };
     };
   };
-
+;
   validateConfiguration() {;
     if (!this.config.netlifySiteId) {;
       this.error('NETLIFY_SITE_ID environment variable is required');
       throw new Error('Missing NETLIFY_SITE_ID');
     };
-
+;
     if (!this.config.netlifyToken) {;
       this.error('NETLIFY_TOKEN environment variable is required');
       throw new Error('Missing NETLIFY_TOKEN');
     };
-
+;
     this.log('Netlify configuration validated successfully');
   };
-
+;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.config.logFile);
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
     };
   };
-
+;
   async start() {;
     if (this.isRunning) {;
       this.log('Automation is already running');
       return;
     };
-
+;
     this.isRunning = true;
     this.log('Starting Netlify Build Automation...');
 ;
@@ -123,7 +123,7 @@ class NetlifyBuildAutomation {;
 ;
     this.log('Netlify Build Automation started successfully');
   };
-
+;
   async checkNetlifyStatus() {;
     try {;
       this.log('Checking Netlify connection...');
@@ -140,12 +140,12 @@ class NetlifyBuildAutomation {;
           this.log(`Publish directory: ${buildSettings.dir || 'Not set'}`);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to check Netlify status', error);
     };
   };
-
+;
   async monitorBuildStatus() {;
     try {;
       // Check if there are local changes;
@@ -167,7 +167,7 @@ class NetlifyBuildAutomation {;
           this.log(`Build already in progress: ${currentBuild.state}`);
         };
       };
-
+;
       // Monitor existing builds;
       await this.monitorExistingBuilds();
 ;
@@ -175,7 +175,7 @@ class NetlifyBuildAutomation {;
       this.error('Build status monitoring failed', error);
     };
   };
-
+;
   async checkLocalChanges() {;
     try {;
       const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -189,14 +189,14 @@ class NetlifyBuildAutomation {;
         this.log(`Found ${changedFiles.length} changed files`);
         return true;
       };
-
+;
       return false;
     } catch (error) {;
       this.error('Failed to check local changes', error);
       return false;
     };
   };
-
+;
   async getCurrentBuild() {;
     try {;
       const builds = await this.getBuilds(1);
@@ -206,7 +206,7 @@ class NetlifyBuildAutomation {;
       return null;
     };
   };
-
+;
   async monitorExistingBuilds() {;
     try {;
       const builds = await this.getBuilds(5);
@@ -229,12 +229,12 @@ class NetlifyBuildAutomation {;
           await this.onBuildSuccess(build);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to monitor existing builds', error);
     };
   };
-
+;
   async triggerBuild() {;
     try {;
       this.log('Triggering new Netlify build...');
@@ -269,13 +269,13 @@ class NetlifyBuildAutomation {;
       } else {;
         throw new Error('Failed to trigger build');
       };
-
+;
     } catch (error) {;
       this.error('Failed to trigger build', error);
       throw error;
     };
   };
-
+;
   async commitAndPushChanges() {;
     try {;
       this.log('Committing and pushing changes...');
@@ -298,7 +298,7 @@ class NetlifyBuildAutomation {;
       throw error;
     };
   };
-
+;
   async investigateBuildTimeout(build) {;
     try {;
       this.log(`Investigating build timeout for build ${build.id}...`);
@@ -320,12 +320,12 @@ class NetlifyBuildAutomation {;
           await this.retryBuild(build.id);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to investigate build timeout', error);
     };
   };
-
+;
   async analyzeBuildError(build) {;
     try {;
       this.log(`Analyzing build error for build ${build.id}...`);
@@ -347,12 +347,12 @@ class NetlifyBuildAutomation {;
           await this.retryBuild(build.id);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to analyze build error', error);
     };
   };
-
+;
   async onBuildSuccess(build) {;
     try {;
       this.log(`Build ${build.id} completed successfully`);
@@ -364,7 +364,7 @@ class NetlifyBuildAutomation {;
         buildRecord.completedAt = new Date().toISOString();
         buildRecord.duration = build.duration;
       };
-
+;
       // Perform post-build optimizations;
       await this.performPostBuildOptimizations(build);
 ;
@@ -375,7 +375,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to process build success', error);
     };
   };
-
+;
   async checkBuildHealth() {;
     try {;
       this.log('Performing build health check...');
@@ -394,7 +394,7 @@ class NetlifyBuildAutomation {;
         // Analyze failure patterns;
         await this.analyzeFailurePatterns(failedBuilds);
       };
-
+;
       // Check build configuration;
       await this.checkBuildConfiguration();
 ;
@@ -402,7 +402,7 @@ class NetlifyBuildAutomation {;
       this.error('Build health check failed', error);
     };
   };
-
+;
   async performDailyOptimization() {;
     try {;
       this.log('Performing daily build optimization...');
@@ -425,7 +425,7 @@ class NetlifyBuildAutomation {;
       this.error('Daily optimization failed', error);
     };
   };
-
+;
   // Netlify API methods;
   async makeNetlifyRequest(endpoint, method = 'GET', data = null) {;
     return new Promise((resolve, reject) => {;
@@ -445,7 +445,7 @@ class NetlifyBuildAutomation {;
         const postData = JSON.stringify(data);
         options.headers['Content-Length'] = Buffer.byteLength(postData);
       };
-
+;
       const req = https.request(options, (res) => {;
         let responseData = '';
 ;
@@ -474,11 +474,11 @@ class NetlifyBuildAutomation {;
       if (data) {;
         req.write(JSON.stringify(data));
       };
-
+;
       req.end();
     });
   };
-
+;
   async getSiteInfo() {;
     try {;
       return await this.makeNetlifyRequest(`/sites/${this.config.netlifySiteId}`);
@@ -487,7 +487,7 @@ class NetlifyBuildAutomation {;
       return null;
     };
   };
-
+;
   async getBuilds(limit = 10) {;
     try {;
       return await this.makeNetlifyRequest(`/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`);
@@ -496,7 +496,7 @@ class NetlifyBuildAutomation {;
       return [];
     };
   };
-
+;
   async getBuildLogs(buildId) {;
     try {;
       return await this.makeNetlifyRequest(`/builds/${buildId}/log`);
@@ -505,7 +505,7 @@ class NetlifyBuildAutomation {;
       return null;
     };
   };
-
+;
   async getBuildSettings() {;
     try {;
       return await this.makeNetlifyRequest(`/sites/${this.config.netlifySiteId}/build_settings`);
@@ -514,7 +514,7 @@ class NetlifyBuildAutomation {;
       return null;
     };
   };
-
+;
   // Analysis and fix methods;
   analyzeTimeoutCauses(logs) {;
     const causes = [];
@@ -522,22 +522,22 @@ class NetlifyBuildAutomation {;
     if (logs.includes('JavaScript heap out of memory')) {;
       causes.push('memory_limit');
     };
-
+;
     if (logs.includes('Build exceeded maximum time limit')) {;
       causes.push('time_limit');
     };
-
+;
     if (logs.includes('Network timeout') || logs.includes('ETIMEDOUT')) {;
       causes.push('network_timeout');
     };
-
+;
     if (logs.includes('Dependency resolution')) {;
       causes.push('dependency_resolution');
     };
-
+;
     return causes;
   };
-
+;
   analyzeErrorPatterns(logs) {;
     const errors = [];
 ;
@@ -546,22 +546,22 @@ class NetlifyBuildAutomation {;
     if (tsErrors) {;
       errors.push({ type: 'typescript', count: tsErrors.length, examples: tsErrors.slice(0, 3) });
     };
-
+;
     // Build errors;
     const buildErrors = logs.match(/Build failed|Compilation failed|Module not found/g);
     if (buildErrors) {;
       errors.push({ type: 'build', count: buildErrors.length, examples: buildErrors.slice(0, 3) });
     };
-
+;
     // Dependency errors;
     const depErrors = logs.match(/Cannot resolve module|Peer dependency conflict|Version conflict/g);
     if (depErrors) {;
       errors.push({ type: 'dependency', count: depErrors.length, examples: depErrors.slice(0, 3) });
     };
-
+;
     return errors;
   };
-
+;
   async applyTimeoutFixes(causes) {;
     try {;
       this.log('Applying timeout fixes...');
@@ -582,13 +582,13 @@ class NetlifyBuildAutomation {;
             break;
         };
       };
-
+;
       this.log('Timeout fixes applied');
     } catch (error) {;
       this.error('Failed to apply timeout fixes', error);
     };
   };
-
+;
   async applyBuildFixes(errors) {;
     try {;
       this.log('Applying build fixes...');
@@ -606,13 +606,13 @@ class NetlifyBuildAutomation {;
             break;
         };
       };
-
+;
       this.log('Build fixes applied');
     } catch (error) {;
       this.error('Failed to apply build fixes', error);
     };
   };
-
+;
   async retryBuild(buildId) {;
     try {;
       this.log(`Retrying build ${buildId}...`);
@@ -630,7 +630,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to retry build', error);
     };
   };
-
+;
   async cancelBuild(buildId) {;
     try {;
       await this.makeNetlifyRequest(`/builds/${buildId}/cancel`, 'POST');
@@ -639,7 +639,7 @@ class NetlifyBuildAutomation {;
       this.error(`Failed to cancel build ${buildId}`, error);
     };
   };
-
+;
   // Fix implementation methods;
   async fixMemoryLimit() {;
     this.log('Fixing memory limit issues...');
@@ -652,7 +652,7 @@ class NetlifyBuildAutomation {;
         packageJson.scripts.build = `NODE_OPTIONS='--max-old-space-size=4096' ${packageJson.scripts.build}`;
         fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
       };
-
+;
       // Update Netlify build settings if possible;
       await this.updateNetlifyBuildSettings({;
         cmd: `NODE_OPTIONS='--max-old-space-size=4096' npm run build`;
@@ -662,7 +662,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix memory limit', error);
     };
   };
-
+;
   async fixTimeLimit() {;
     this.log('Fixing time limit issues...');
 ;
@@ -679,7 +679,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix time limit', error);
     };
   };
-
+;
   async fixNetworkTimeout() {;
     this.log('Fixing network timeout issues...');
 ;
@@ -695,7 +695,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix network timeout', error);
     };
   };
-
+;
   async fixDependencyResolution() {;
     this.log('Fixing dependency resolution issues...');
 ;
@@ -709,7 +709,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix dependency resolution', error);
     };
   };
-
+;
   async fixTypeScriptErrors() {;
     this.log('Fixing TypeScript errors...');
 ;
@@ -724,7 +724,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix TypeScript errors', error);
     };
   };
-
+;
   async fixBuildErrors() {;
     this.log('Fixing build errors...');
 ;
@@ -739,7 +739,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix build errors', error);
     };
   };
-
+;
   async fixDependencyErrors() {;
     this.log('Fixing dependency errors...');
 ;
@@ -754,7 +754,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix dependency errors', error);
     };
   };
-
+;
   async updateNetlifyBuildSettings(settings) {;
     try {;
       await this.makeNetlifyRequest(;
@@ -768,7 +768,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to update Netlify build settings', error);
     };
   };
-
+;
   async optimizeBuildProcess() {;
     this.log('Optimizing build process...');
 ;
@@ -784,23 +784,23 @@ class NetlifyBuildAutomation {;
             'module.exports = {\n  swcMinify: true,';
           );
         };
-
+;
         fs.writeFileSync('next.config.js', config);
       };
-
+;
       // Add optimized build script;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.scripts) {;
         packageJson.scripts['build:optimized'] = 'NODE_OPTIONS='--max-old-space-size=4096' npm run build';
       };
-
+;
       fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 ;
     } catch (error) {;
       this.error('Failed to optimize build process', error);
     };
   };
-
+;
   async checkBuildConfiguration() {;
     this.log('Checking build configuration...');
 ;
@@ -812,17 +812,17 @@ class NetlifyBuildAutomation {;
         this.error('Build script not found in package.json');
         return false;
       };
-
+;
       // Check Next.js configuration;
       if (fs.existsSync('next.config.js')) {;
         this.log('Next.js configuration found');
       };
-
+;
       // Check TypeScript configuration;
       if (fs.existsSync('tsconfig.json')) {;
         this.log('TypeScript configuration found');
       };
-
+;
       this.log('Build configuration is valid');
       return true;
 ;
@@ -831,7 +831,7 @@ class NetlifyBuildAutomation {;
       return false;
     };
   };
-
+;
   async cleanupBuildArtifacts() {;
     this.log('Cleaning up build artifacts...');
 ;
@@ -844,7 +844,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to cleanup build artifacts', error);
     };
   };
-
+;
   async updateDependenciesIfNeeded() {;
     try {;
       const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
@@ -859,12 +859,12 @@ class NetlifyBuildAutomation {;
         // Check for security issues;
         execSync('npm audit fix', { stdio: 'pipe' });
       };
-
+;
     } catch (error) {;
       this.error('Failed to update dependencies', error);
     };
   };
-
+;
   async checkBuildPerformance() {;
     this.log('Checking build performance...');
 ;
@@ -890,12 +890,12 @@ class NetlifyBuildAutomation {;
           };
         };
       };
-
+;
     } catch (error) {;
       this.error('Build performance check failed', error);
     };
   };
-
+;
   async applyPerformanceOptimizations() {;
     this.log('Applying performance optimizations...');
 ;
@@ -915,7 +915,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to apply performance optimizations', error);
     };
   };
-
+;
   async optimizeBuildConfiguration() {;
     this.log('Optimizing build configuration...');
 ;
@@ -931,24 +931,24 @@ class NetlifyBuildAutomation {;
             'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },';
           );
         };
-
+;
         fs.writeFileSync('next.config.js', config);
       };
-
+;
       // Update package.json with optimized scripts;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.scripts) {;
         packageJson.scripts['build:fast'] = 'NODE_OPTIONS='--max-old-space-size=4096' npm run build';
         packageJson.scripts['build:analyze'] = 'ANALYZE=true npm run build';
       };
-
+;
       fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 ;
     } catch (error) {;
       this.error('Failed to optimize build configuration', error);
     };
   };
-
+;
   async checkDeploymentStatus(build) {;
     try {;
       this.log(`Checking deployment status for build ${build.id}...`);
@@ -967,12 +967,12 @@ class NetlifyBuildAutomation {;
           await this.investigateDeploymentFailure(latestDeploy);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to check deployment status', error);
     };
   };
-
+;
   async investigateDeploymentFailure(deployment) {;
     try {;
       this.log(`Investigating deployment failure for ${deployment.id}...`);
@@ -994,12 +994,12 @@ class NetlifyBuildAutomation {;
           await this.retryDeployment(deployment.id);
         };
       };
-
+;
     } catch (error) {;
       this.error('Failed to investigate deployment failure', error);
     };
   };
-
+;
   analyzeDeploymentErrors(logs) {;
     const errors = [];
 ;
@@ -1007,18 +1007,18 @@ class NetlifyBuildAutomation {;
     if (logs.includes('404 Not Found')) {;
       errors.push({ type: 'missing_files', message: 'Build files not found' });
     };
-
+;
     if (logs.includes('Permission denied')) {;
       errors.push({ type: 'permission', message: 'Permission issues' });
     };
-
+;
     if (logs.includes('Build timeout')) {;
       errors.push({ type: 'timeout', message: 'Build timeout during deployment' });
     };
-
+;
     return errors;
   };
-
+;
   async applyDeploymentFixes(errors) {;
     try {;
       this.log('Applying deployment fixes...');
@@ -1036,13 +1036,13 @@ class NetlifyBuildAutomation {;
             break;
         };
       };
-
+;
       this.log('Deployment fixes applied');
     } catch (error) {;
       this.error('Failed to apply deployment fixes', error);
     };
   };
-
+;
   async fixMissingFiles() {;
     this.log('Fixing missing files issue...');
 ;
@@ -1052,12 +1052,12 @@ class NetlifyBuildAutomation {;
         this.log('Build output not found, running build...');
         execSync('npm run build', { stdio: 'pipe' });
       };
-
+;
     } catch (error) {;
       this.error('Failed to fix missing files', error);
     };
   };
-
+;
   async fixPermissionIssues() {;
     this.log('Fixing permission issues...');
 ;
@@ -1069,7 +1069,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix permission issues', error);
     };
   };
-
+;
   async fixDeploymentTimeout() {;
     this.log('Fixing deployment timeout...');
 ;
@@ -1081,7 +1081,7 @@ class NetlifyBuildAutomation {;
       this.error('Failed to fix deployment timeout', error);
     };
   };
-
+;
   async retryDeployment(deploymentId) {;
     try {;
       this.log(`Retrying deployment ${deploymentId}...`);
@@ -1095,12 +1095,12 @@ class NetlifyBuildAutomation {;
       this.error('Failed to retry deployment', error);
     };
   };
-
+;
   async stop() {;
     this.isRunning = false;
     this.log('Netlify Build Automation stopped');
   };
-
+;
   getStatus() {;
     return {;
       isRunning: this.isRunning,;
@@ -1114,7 +1114,7 @@ class NetlifyBuildAutomation {;
     };
   };
 };
-
+;
 // Main execution;
 if (require.main === module) {;
   const automation = new NetlifyBuildAutomation();
@@ -1138,5 +1138,5 @@ if (require.main === module) {;
     process.exit(1);
   });
 };
-
+;
 module.exports = NetlifyBuildAutomation;

@@ -20,7 +20,7 @@ class AutomationDashboard {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -73,7 +73,7 @@ class AutomationDashboard {;
 <<<<<<< HEAD;
         });
 ;
-
+;
 ;
 =======;
         })};
@@ -103,21 +103,21 @@ class AutomationDashboard {;
         averageExecutionTime: system.averageExecutionTime,;
   <<<<<<< HEAD;
         uptime: system.uptime;
-
+;
 ;
 };
       this.metrics.set(name, metrics)};
 =======;
   uptime: system.uptime;
-
 ;
-
 ;
-
+;
+;
+;
 };
       this.metrics.set(name, metrics);
 <<<<<<< HEAD;
-
+;
 ;
 =======;
     };
@@ -162,7 +162,7 @@ class AutomationDashboard {;
 <<<<<<< HEAD;
         });
 ;
-
+;
 ;
 =======;
         })};
@@ -203,7 +203,7 @@ class AutomationDashboard {;
     } finally {;
       system.isRunning = false;
 ;
-
+;
 =======;
       return { success: false, error: error.message, executionTime }} finally {;
       system.isRunning = false};
@@ -242,14 +242,14 @@ class AutomationDashboard {;
 <<<<<<< HEAD;
         await this.sleep(2000);
 ;
-
+;
     this.log(`📊 Completed ${results.length} systems`);
     return results;
 ;
 =======;
         await this.sleep(2000)};
     };
-
+;
     this.log(`📊 Completed ${results.length} systems`);
     return results};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -269,7 +269,7 @@ class AutomationDashboard {;
 <body class='bg-gray-100'>;
     <div class='container mx-auto px-4 py-8'>;
         <h1 class='text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>;
-
+;
         <!-- System Status -->;
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
             ${systems.map(system => `;
@@ -345,9 +345,9 @@ class AutomationDashboard {;
                     y: {;
                         beginAtZero: true,;
                         max: 100;
-
 ;
-
+;
+;
         });
         function runAllSystems() {;
             fetch('/api/run-all', { method: 'POST' });
@@ -406,13 +406,13 @@ class AutomationDashboard {;
       metrics: { /* empty */ },;
 =======;
   averageSuccessRate: this.calculateAverageSuccessRate();
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 },;
       systems: {},;
       metrics: {},;
@@ -501,7 +501,7 @@ class AutomationDashboard {;
 <<<<<<< HEAD;
         });
 ;
-
+;
     return recommendations;
 ;
 =======;
@@ -600,7 +600,7 @@ class AutomationDashboard {;
       this.log(`📊 API available at: http://localhost:${port}/api/status`);
     });
 ;
-
+;
 =======;
       this.log(`📊 API available at: http://localhost:${port}/api/status`)})};
 };

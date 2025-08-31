@@ -21,7 +21,7 @@ class LintMonitor {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -76,12 +76,12 @@ class LintMonitor {;
       this.lastCheck = new Date();
       this.log(`❌ Lint check failed - ${this.errorCount} errors found`);
 <<<<<<< HEAD;
-
+;
       return { success: false, errors: this.errorCount, output: errorOutput };
 ;
-
+;
 =======;
-
+;
       return { success: false, errors: this.errorCount, output: errorOutput }};
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -98,7 +98,7 @@ class LintMonitor {;
 <<<<<<< HEAD;
       return false;
 ;
-
+;
 =======;
       return false};
   };
@@ -129,7 +129,7 @@ class LintMonitor {;
             await this.checkLintStatus();
           }, 2000);
 ;
-
+;
     }, 30000);
     // Store interval for cleanup;
     this.checkInterval = checkInterval;
@@ -189,7 +189,7 @@ class LintMonitor {;
       } catch (fixError) {;
         this.log(`❌ Failed to auto-fix ${filePath}: ${fixError.message}`);
 ;
-
+;
 ;
   async start() {;
     if (this.isRunning) {;
@@ -236,11 +236,11 @@ class LintMonitor {;
 ;
 =======;
       this.checkInterval = null};
-
+;
     if (this.watcher) {;
       this.watcher.close();
       this.watcher = null};
-
+;
     this.log('🛑 Lint Monitor stopped')};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   status() {;
@@ -260,13 +260,13 @@ class LintMonitor {;
 ;
 =======;
   uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0;
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
 ;
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
@@ -281,13 +281,13 @@ class LintMonitor {;
       totalErrors: 0,;
       autoFixes: 0,;
   filesWatched: 0;
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
     try {;
       const lines = logContent.split('\n');
@@ -302,7 +302,7 @@ class LintMonitor {;
 ;
     return stats;
 ;
-
+;
 =======;
       stats.filesWatched = lines.filter(line => line.includes('File changed')).length} catch (error) {;
       this.log('❌ Could not read stats from log file')};

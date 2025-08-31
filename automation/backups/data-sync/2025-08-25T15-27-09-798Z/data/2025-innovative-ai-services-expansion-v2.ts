@@ -811,7 +811,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     customers: 480,;
         rating: 4.8,;
     reviews: 67;
-
+;
 ];};
 =======;
     color: 'from-gray-500 to-slate-600',;

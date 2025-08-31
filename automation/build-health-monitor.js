@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -22,14 +22,14 @@ class BuildHealthMonitor {;
     // Initialize monitoring;
     this.startMonitoring();
   };
-
+;
   ensureLogsDirectory() {;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
     };
   };
-
+;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -44,7 +44,7 @@ class BuildHealthMonitor {;
       console.error('Failed to write to log file:', error.message);
     };
   };
-
+;
   async startMonitoring() {;
     this.log('Starting build health monitoring...');
 ;
@@ -70,7 +70,7 @@ class BuildHealthMonitor {;
 ;
     this.log('Build health monitoring started successfully');
   };
-
+;
   async performHealthCheck() {;
     if (this.monitoring) return;
 ;
@@ -87,12 +87,12 @@ class BuildHealthMonitor {;
       } else {;
         this.log('No issues detected, build health is good');
       };
-
+;
       // Test build if needed;
       if (this.shouldTestBuild()) {;
         await this.testBuild();
       };
-
+;
     } catch (error) {;
       this.log(`Health check failed: ${error.message}`, 'ERROR');
       this.errorCount++;
@@ -100,7 +100,7 @@ class BuildHealthMonitor {;
       this.monitoring = false;
     };
   };
-
+;
   async detectIssues() {;
     const issues = [];
 ;
@@ -112,7 +112,7 @@ class BuildHealthMonitor {;
         description: 'Next.js imports detected in Vite project';
       });
     };
-
+;
     // Check for TypeScript errors;
     const tsErrors = await this.checkTypeScriptErrors();
     if (tsErrors.length > 0) {;
@@ -123,7 +123,7 @@ class BuildHealthMonitor {;
         details: tsErrors;
       });
     };
-
+;
     // Check for missing dependencies;
     if (await this.hasMissingDependencies()) {;
       issues.push({;
@@ -132,7 +132,7 @@ class BuildHealthMonitor {;
         description: 'Missing critical dependencies detected';
       });
     };
-
+;
     // Check for build configuration issues;
     if (await this.hasBuildConfigIssues()) {;
       issues.push({;
@@ -141,10 +141,10 @@ class BuildHealthMonitor {;
         description: 'Build configuration issues detected';
       });
     };
-
+;
     return issues;
   };
-
+;
   async hasNextJSImports() {;
     try {;
       const result = execSync(;
@@ -156,7 +156,7 @@ class BuildHealthMonitor {;
       return false;
     };
   };
-
+;
   async checkTypeScriptErrors() {;
     try {;
       const result = execSync('npx tsc --noEmit', {;
@@ -175,7 +175,7 @@ class BuildHealthMonitor {;
       return errors.slice(0, 10); // Limit to first 10 errors;
     };
   };
-
+;
   async hasMissingDependencies() {;
     try {;
       // Check if key dependencies exist;
@@ -188,13 +188,13 @@ class BuildHealthMonitor {;
           return true; // Missing dependency;
         };
       };
-
+;
       return false;
     } catch (error) {;
       return true;
     };
   };
-
+;
   async hasBuildConfigIssues() {;
     try {;
       // Check if vite.config.ts exists and is valid;
@@ -202,19 +202,19 @@ class BuildHealthMonitor {;
       if (!fs.existsSync(configPath)) {;
         return true;
       };
-
+;
       // Try to validate the config;
       const configContent = fs.readFileSync(configPath, 'utf8');
       if (configContent.includes('require(') && configContent.includes('export default')) {;
         return true; // Mixed module systems;
       };
-
+;
       return false;
     } catch (error) {;
       return true;
     };
   };
-
+;
   async autoFixIssues(issues) {;
     for (const issue of issues) {;
       try {;
@@ -234,7 +234,7 @@ class BuildHealthMonitor {;
             await this.fixBuildConfig();
             break;
         };
-
+;
         this.fixCount++;
         this.log(`Successfully fixed: ${issue.type}`);
 ;
@@ -243,7 +243,7 @@ class BuildHealthMonitor {;
       };
     };
   };
-
+;
   async fixNextJSImports() {;
     this.log('Running Next.js import fix script...');
 ;
@@ -262,7 +262,7 @@ class BuildHealthMonitor {;
       throw new Error(`Next.js import fix failed: ${error.message}`);
     };
   };
-
+;
   async runInlineNextJSFix() {;
     this.log('Running inline Next.js import fixes...');
 ;
@@ -295,7 +295,7 @@ class BuildHealthMonitor {;
             modified = true;
           };
         };
-
+;
         if (modified) {;
           fs.writeFileSync(file, newContent, 'utf8');
           fixedCount++;
@@ -304,10 +304,10 @@ class BuildHealthMonitor {;
         this.log(`Error processing ${file}: ${error.message}`, 'WARN');
       };
     };
-
+;
     this.log(`Fixed Next.js imports in ${fixedCount} files`);
   };
-
+;
   async fixTypeScriptErrors(errors) {;
     this.log('Attempting to fix TypeScript errors...');
 ;
@@ -324,7 +324,7 @@ class BuildHealthMonitor {;
       this.log(`Failed to save TypeScript report: ${error.message}`, 'WARN');
     };
   };
-
+;
   async fixMissingDependencies() {;
     this.log('Installing missing dependencies...');
 ;
@@ -338,7 +338,7 @@ class BuildHealthMonitor {;
       throw new Error(`Dependency installation failed: ${error.message}`);
     };
   };
-
+;
   async fixBuildConfig() {;
     this.log('Fixing build configuration...');
 ;
@@ -351,7 +351,7 @@ class BuildHealthMonitor {;
         fs.copyFileSync(configPath, backupPath);
         this.log('Backed up existing vite.config.ts');
       };
-
+;
       // Create a clean config;
       const cleanConfig = this.generateCleanViteConfig();
       fs.writeFileSync(configPath, cleanConfig);
@@ -361,12 +361,12 @@ class BuildHealthMonitor {;
       throw new Error(`Build config fix failed: ${error.message}`);
     };
   };
-
+;
   generateCleanViteConfig() {;
     return `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-
+;
 export default defineConfig({;
   plugins: [react()],;
   resolve: {;
@@ -413,7 +413,7 @@ export default defineConfig({;
   };
 })`;
   };
-
+;
   findSourceFiles() {;
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     const files = [];
@@ -434,11 +434,11 @@ export default defineConfig({;
         };
       };
     };
-
+;
     traverse(this.projectRoot);
     return files;
   };
-
+;
   shouldTestBuild() {;
     // Test build if we haven't done so recently or if we've made fixes;
     const now = Date.now();
@@ -447,7 +447,7 @@ export default defineConfig({;
 ;
     return timeSinceLastBuild > 3600000 || this.fixCount > 0; // 1 hour or after fixes;
   };
-
+;
   async testBuild() {;
     this.log('Testing build...');
 ;
@@ -477,7 +477,7 @@ export default defineConfig({;
       };
     };
   };
-
+;
   async triggerBuildAlert() {;
     this.log('Build consistently failing, triggering alert...', 'WARN');
 ;
@@ -491,7 +491,7 @@ export default defineConfig({;
       this.log(`Failed to create build alert: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async performDeepScan() {;
     this.log('Performing deep scan...');
 ;
@@ -509,7 +509,7 @@ export default defineConfig({;
       this.log(`Deep scan failed: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async performWeeklyMaintenance() {;
     this.log('Performing weekly maintenance...');
 ;
@@ -528,7 +528,7 @@ export default defineConfig({;
       this.log(`Weekly maintenance failed: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async checkFileIntegrity() {;
     this.log('Checking file integrity...');
 ;
@@ -546,7 +546,7 @@ export default defineConfig({;
       };
     };
   };
-
+;
   async checkDependencyHealth() {;
     this.log('Checking dependency health...');
 ;
@@ -560,7 +560,7 @@ export default defineConfig({;
       this.log('Security vulnerabilities detected, consider running npm audit fix', 'WARN');
     };
   };
-
+;
   async cleanupTemporaryFiles() {;
     this.log('Cleaning up temporary files...');
 ;
@@ -574,7 +574,7 @@ export default defineConfig({;
     // Implementation would depend on specific cleanup needs;
     this.log('Temporary file cleanup completed');
   };
-
+;
   async cleanupOldLogs() {;
     this.log('Cleaning up old logs...');
 ;
@@ -584,7 +584,7 @@ export default defineConfig({;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days;
-
+;
         for (const filePath = path.join(logsDir, file);
           const stats = fs.statSync(filePath);
 ;
@@ -598,7 +598,7 @@ export default defineConfig({;
       this.log(`Log cleanup failed: ${error.message}`, 'WARN');
     };
   };
-
+;
   async checkForDependencyUpdates() {;
     this.log('Checking for dependency updates...');
 ;
@@ -613,7 +613,7 @@ export default defineConfig({;
       this.log('Some dependencies may be outdated', 'INFO');
     };
   };
-
+;
   async optimizeBuildConfig() {;
     this.log('Optimizing build configuration...');
 ;
@@ -621,7 +621,7 @@ export default defineConfig({;
     // For now, just log that it's completed;
     this.log('Build configuration optimization completed');
   };
-
+;
   getStats() {;
     return {;
       errorCount: this.errorCount,;
@@ -631,14 +631,14 @@ export default defineConfig({;
       uptime: process.uptime();
     };
   };
-
+;
   async stop() {;
     this.log('Stopping build health monitor...');
     this.monitoring = false;
     process.exit(0);
   };
 };
-
+;
 // Handle graceful shutdown;
 process.on('SIGINT', async () => {;
   if (monitor) {;
@@ -661,7 +661,7 @@ setInterval(() => {;
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 300000); // Every 5 minutes;
-
+;
 export default traverse;
 export default traverse;
 export default traverse;

@@ -19,7 +19,7 @@ class AutomationFactory {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
 =======;
     this.loadStatus()};
   ensureLogDirectory() {;
@@ -38,7 +38,7 @@ class AutomationFactory {;
     } catch (error) {;
       this.log(`Error loading status: ${error.message}`);
 ;
-
+;
 =======;
         this.runningScripts = new Map(Object.entries(status.runningScripts || {}))};
     } catch (error) {;
@@ -52,24 +52,24 @@ class AutomationFactory {;
         runningScripts: Object.fromEntries(this.runningScripts),;
   <<<<<<< HEAD;
         totalScripts: this.scripts.size;
-
+;
 ;
 };
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {;
       this.log(`Error saving status: ${error.message}`)};
 =======;
   totalScripts: this.scripts.size;
-
 ;
-
 ;
-
+;
+;
+;
 };
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
     } catch (error) {;
       this.log(`Error saving status: ${error.message}`);
 <<<<<<< HEAD;
-
+;
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
@@ -95,11 +95,11 @@ class AutomationFactory {;
     const scriptTypes = {;
   'lint-monitor': { file: 'lint-monitor.js',;
   description: 'Continuous lint monitoring';
-
 ;
-
 ;
-
+;
+;
+;
 ;
 },;
       'lint-fixer': { file: 'lint-error-fixer.js', description: 'Automated lint error fixing' },;
@@ -118,7 +118,7 @@ class AutomationFactory {;
 <<<<<<< HEAD;
         });
 ;
-
+;
 ;
 =======;
         })};
@@ -139,21 +139,21 @@ class CodeQualityMonitor {;
       performance: 0,;
   <<<<<<< HEAD;
       lastUpdated: new Date().toISOString();
-
+;
 ;
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')};
 =======;
   lastUpdated: new Date().toISOString();
-
 ;
-
 ;
-
+;
+;
+;
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
 <<<<<<< HEAD;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -192,7 +192,7 @@ class CodeQualityMonitor {;
 <<<<<<< HEAD;
       return null;
 ;
-
+;
 =======;
       return null};
   };
@@ -209,14 +209,14 @@ class CodeQualityMonitor {;
         totalComplexity += lines.length * 0.1; // Simplified complexity metric;
       });
 <<<<<<< HEAD;
-
+;
       return Math.min(Math.floor(totalComplexity), 100);
     } catch (error) {;
       return Math.floor(Math.random() * 10) + 1;
 ;
-
+;
 =======;
-
+;
       return Math.min(Math.floor(totalComplexity), 100)} catch (error) {;
       return Math.floor(Math.random() * 10) + 1};
   };
@@ -236,7 +236,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       return Math.floor(Math.random() * 100) + 50;
 ;
-
+;
   calculateTestCoverage() {;
     // Placeholder for test coverage calculation;
     return Math.floor(Math.random() * 100);
@@ -285,7 +285,7 @@ class CodeQualityMonitor {;
     const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
 ;
-
+;
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {;
   if (metrics) {;
@@ -385,13 +385,13 @@ class PerformanceOptimizer {;
 ;
 =======;
   recommendations: this.generateRecommendations();
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
 ;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -402,7 +402,7 @@ class PerformanceOptimizer {;
 <<<<<<< HEAD;
       return null;
 ;
-
+;
 =======;
       return null};
   };
@@ -419,7 +419,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
 =======;
         recommendations['Consider code splitting', 'Remove unused dependencies'];
       }} catch (error) {;
@@ -438,7 +438,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
   analyzeDependencies() {;
     try {;
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
@@ -465,7 +465,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
   findUnusedDependencies() {;
     // Placeholder for unused dependency detection;
     return ['example-unused-package'];
@@ -492,7 +492,7 @@ class PerformanceOptimizer {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
-
+;
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {;
   if (report) {;
@@ -543,7 +543,7 @@ optimizer.optimizePerformance().then(report => {;
 =======;
       return false;
 <<<<<<< HEAD;
-
+;
     const script = this.scripts.get(scriptName);
 =======;
     };
@@ -574,7 +574,7 @@ optimizer.optimizePerformance().then(report => {;
 ;
 =======;
             this.log(`Script '${scriptName}' failed with code ${code}`, 'ERROR')};
-
+;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
           script.lastRun = new Date().toISOString();
           this.saveStatus();
@@ -592,7 +592,7 @@ optimizer.optimizePerformance().then(report => {;
 <<<<<<< HEAD;
       return false;
 ;
-
+;
 =======;
       return false};
   };
@@ -607,7 +607,7 @@ optimizer.optimizePerformance().then(report => {;
 <<<<<<< HEAD;
         results.push({ name, success });
 ;
-
+;
     this.log(`Completed running ${results.length} scripts`);
     return results;
 ;
@@ -619,7 +619,7 @@ optimizer.optimizePerformance().then(report => {;
 =======;
         results.push({ name, success })};
     };
-
+;
     this.log(`Completed running ${results.length} scripts`);
     return results};
   generateAllScripts() {;
@@ -633,12 +633,12 @@ optimizer.optimizePerformance().then(report => {;
 =======;
     // // // // // // // // console.log('\\nAvailable Automation Scripts:');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
     for (const [name, script] of this.scripts) {;
       const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase();
       const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : 'Never';
 <<<<<<< HEAD;
-
+;
 <<<<<<< HEAD;
       // // // // // console.log(`\n${name}:`);
       // // // // // console.log(`  Description: ${script.description}`);
@@ -652,7 +652,7 @@ optimizer.optimizePerformance().then(report => {;
       const duration = Date.now() - info.startTime;
       // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
 ;
-
+;
 =======;
       // // // // // // // // console.log(`\n${name}:`);
       // // // // // // // // console.log(`  Description: ${script.description}`);
@@ -661,21 +661,21 @@ optimizer.optimizePerformance().then(report => {;
       // // // // // // // // console.log(`  Success Count: ${script.successCount}`);
       // // // // // // // // console.log(`  Error Count: ${script.errorCount}`);
     };
-
+;
     // // // // // // // // console.log('\nRunning Scripts:');
     for (const [name, info] of this.runningScripts) {;
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     };
 =======;
-
+;
       console.log(`\n${name}:`);
       console.log(`  Description: ${script.description}`);
       console.log(`  Status: ${status}`);
       console.log(`  Last Run: ${lastRun}`);
       console.log(`  Success Count: ${script.successCount}`);
       console.log(`  Error Count: ${script.errorCount}`)};
-
+;
     console.log('\nRunning Scripts:');
     for (const [name, info] of this.runningScripts) {;
       const duration = Date.now() - info.startTime;
@@ -702,12 +702,12 @@ optimizer.optimizePerformance().then(report => {;
     // Run initial analysis;
     this.runAllScripts();
 <<<<<<< HEAD;
-
+;
     this.log('Continuous mode active. Press Ctrl+C to stop.');
 ;
-
+;
 =======;
-
+;
     this.log('Continuous mode active. Press Ctrl+C to stop.')};
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;

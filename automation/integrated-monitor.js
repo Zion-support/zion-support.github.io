@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 /**;
  * Integrated Browser Error Monitor & Auto-Fixer;
  * Combines real-time browser monitoring with automatic source code fixes;
@@ -11,7 +11,7 @@
  * 4. Provides comprehensive reporting and analytics;
  * 5. Integrates with PM2 for process management;
  */;
-
+;
 const BrowserErrorMonitor = require('./browser-error-monitor');
 const BrowserErrorFixer = require('./browser-error-fixer');
 const fs = require('fs').promises;
@@ -53,7 +53,7 @@ class IntegratedMonitor {;
       console.error('❌ Failed to initialize Integrated Monitor:', error);
       return false;
 ;
-
+;
   async start() {;
     if (this.isRunning) {;
       // console.log('⚠️  Integrated Monitor is already running');
@@ -98,7 +98,7 @@ class IntegratedMonitor {;
     } catch (restartError) {;
       console.error('❌ Failed to restart browser monitor:', restartError);
 ;
-
+;
   async runFixCycle() {;
     try {;
       // console.log('🔧 Starting integrated fix cycle...');
@@ -132,7 +132,7 @@ class IntegratedMonitor {;
       console.error('❌ Error during fix cycle:', error);
       this.stats.failedFixes++;
 ;
-
+;
   async generateIntegratedReport(recentErrors, fixesApplied) {;
     try {;
       const report = {;
@@ -153,7 +153,7 @@ class IntegratedMonitor {;
           failedFixes: this.stats.failedFixes,;
           successRate: this.stats.totalErrors > 0 ?;
             (((this.stats.runtimeFixes + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 100;
-
+;
       };
 ;
       const reportPath = path.join(this.browserMonitor.CONFIG.logDir, 'integrated-monitor-report.json');
@@ -163,7 +163,7 @@ class IntegratedMonitor {;
     } catch (error) {;
       console.error('❌ Failed to generate integrated report:', error);
 ;
-
+;
   async getStatus() {;
     return {;
       isRunning: this.isRunning,;
@@ -193,7 +193,7 @@ class IntegratedMonitor {;
       console.error('❌ Integrated health check failed:', error);
       return false;
 ;
-
+;
 ;
 // PM2 process management;
 const integratedMonitor = new IntegratedMonitor();

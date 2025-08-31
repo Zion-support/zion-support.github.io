@@ -19,7 +19,7 @@ class LintAutomationManager {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -56,7 +56,7 @@ class LintAutomationManager {;
 <<<<<<< HEAD;
       return { success: false, output: error.stdout || error.message };
 ;
-
+;
 =======;
       return { success: false, output: error.stdout || error.message }};
   };
@@ -74,7 +74,7 @@ class LintAutomationManager {;
 <<<<<<< HEAD;
       return { success: false, output: error.stdout || error.message };
 ;
-
+;
 =======;
       return { success: false, output: error.stdout || error.message }};
   };
@@ -118,7 +118,7 @@ class LintAutomationManager {;
     } catch (error) {;
       this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`);
 ;
-
+;
   async start() {;
     if (this.isRunning) {;
       this.log('⚠️ Automation is already running');
@@ -175,7 +175,7 @@ class LintAutomationManager {;
     this.log(`📊 Status: ${status}`);
     return { running: this.isRunning };
 ;
-
+;
 =======;
       this.watcher = null};
     this.log('🛑 Lint Automation Manager stopped')};

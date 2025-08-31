@@ -110,9 +110,9 @@ module.exports = {;
       restart_delay: 2000,;
       // Run health check every 15 minutes;
       cron_restart: '*/15 * * * *';
-
+;
   ],;
-
+;
   deploy: {;
     production: {;
       user: 'node',;
@@ -123,7 +123,7 @@ module.exports = {;
       'pre-deploy-local': '',;
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',;
       'pre-setup': '';
-
+;
 ;
 };
 }}}

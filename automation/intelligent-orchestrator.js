@@ -17,7 +17,7 @@ class IntelligentOrchestrator {;
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
 ;
-
+;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -65,7 +65,7 @@ class IntelligentOrchestrator {;
 <<<<<<< HEAD;
         });
 ;
-
+;
 ;
   async runSystem(systemName, options = { /* empty */ }) {;
     const system = this.automationSystems.get(systemName);
@@ -105,7 +105,7 @@ class IntelligentOrchestrator {;
 <<<<<<< HEAD;
       return { success: false, error: error.message, executionTime };
 ;
-
+;
 =======;
       return { success: false, error: error.message, executionTime }};
   };
@@ -136,18 +136,18 @@ class IntelligentOrchestrator {;
         const priorityOrder = {;
   high: 3, medium: 2,;
   low: 1;
-
+;
 };
         return priorityOrder[b.priority] - priorityOrder[a.priority]});
 =======;
         const priorityOrder = {;
   high: 3, medium: 2,;
   low: 1;
-
 ;
-
 ;
-
+;
+;
+;
 ;
 };
         return priorityOrder[b.priority] - priorityOrder[a.priority];
@@ -164,7 +164,7 @@ class IntelligentOrchestrator {;
 <<<<<<< HEAD;
           await this.sleep(2000);
 ;
-
+;
 ;
     this.log(`📊 Priority execution completed: ${results.length} systems`);
     return results;
@@ -212,13 +212,13 @@ class IntelligentOrchestrator {;
       hasMissingTests: false,;
       lastBuildTime: null,;
   codeComplexity: 0;
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
     try {;
       // Check for lint errors;
@@ -248,7 +248,7 @@ class IntelligentOrchestrator {;
       state.lastBuildTime = Date.now() - buildStart} catch (error) {;
       // Build failed;
 <<<<<<< HEAD;
-
+;
     return state;
 ;
 =======;
@@ -284,7 +284,7 @@ class IntelligentOrchestrator {;
       if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {;
         systems.push(systemName);
 ;
-
+;
     return systems;
 ;
 =======;
@@ -364,14 +364,14 @@ class IntelligentOrchestrator {;
 ;
         });
 ;
-
+;
     this.log('✅ Intelligent file watcher started');
 ;
 =======;
               this.handleIntelligentFileChange(filePath)}, 3000)};
         })};
     };
-
+;
     this.log('✅ Intelligent file watcher started')};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async handleIntelligentFileChange(filePath) {;
@@ -388,7 +388,7 @@ class IntelligentOrchestrator {;
 ;
 =======;
         await this.runSystem('lint-fixer')};
-
+;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
       // If it's a component, consider generating tests;
       if (filePath.includes('components/')) {;
@@ -397,9 +397,9 @@ class IntelligentOrchestrator {;
 <<<<<<< HEAD;
           await this.runSystem('test-generator');
 ;
-
 ;
-
+;
+;
   generateIntelligenceReport() {;
     const report = {;
       timestamp: new Date().toISOString(),;
@@ -415,11 +415,11 @@ class IntelligentOrchestrator {;
     const report = {;
   timestamp: new Date().toISOString(),;
   systems: {;
-
 ;
-
 ;
-
+;
+;
+;
 ;
 },;
       learningData: {},;
@@ -457,7 +457,7 @@ class IntelligentOrchestrator {;
       if (system.averageExecutionTime > 30000) {;
         report.recommendations.push(`Optimize ${name} system performance (avg time: ${system.averageExecutionTime}ms)`);
 ;
-
+;
     return report;
 ;
 =======;
@@ -493,7 +493,7 @@ class IntelligentOrchestrator {;
 <<<<<<< HEAD;
         this.log(`✅ Decreased priority for ${name} due to high success rate`);
 ;
-
+;
 ;
   sleep(ms) {;
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -525,16 +525,16 @@ class IntelligentOrchestrator {;
 ;
     return status;
 ;
-
+;
 =======;
   report: this.generateIntelligenceReport();
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
 ;
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);

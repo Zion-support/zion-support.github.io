@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 /**;
  * Browser Console Error Monitor & Auto-Fixer;
  * PM2 automation script for Zion.app;
@@ -11,7 +11,7 @@
  * 4. Reports and logs all activities;
  * 5. Integrates with existing health check system;
  */;
-
+;
 const puppeteer = require('puppeteer');
 const fs = require('fs').promises;
 const path = require('path');
@@ -43,7 +43,7 @@ const CONFIG = {;
       'net::ERR_': 'network-fix',;
       'timeout': 'timeout-fix',;
       'connection refused': 'connection-fix';
-
+;
   },;
   fixStrategies: {;
     'null-check-fix': 'Add null/undefined checks',;
@@ -57,7 +57,7 @@ const CONFIG = {;
     'network-fix': 'Fix network connectivity',;
     'timeout-fix': 'Increase timeout values',;
     'connection-fix': 'Fix connection issues';
-
+;
 };
 ;
 class BrowserErrorMonitor {;
@@ -106,7 +106,7 @@ class BrowserErrorMonitor {;
       console.error('❌ Failed to initialize Browser Error Monitor:', error);
       return false;
 ;
-
+;
   async setupErrorListeners() {;
     // Listen for console errors;
     this.page.on('console', async (msg) => {;
@@ -207,7 +207,7 @@ class BrowserErrorMonitor {;
     } else {;
       return 'error';
 ;
-
+;
   async getErrorLocation() {;
     try {;
       const url = this.page.url();
@@ -216,7 +216,7 @@ class BrowserErrorMonitor {;
     } catch (error) {;
       return { url: 'unknown', title: 'unknown' };
 ;
-
+;
   async attemptAutoFix(error) {;
     try {;
       const fixStrategy = this.identifyFixStrategy(error);
@@ -240,12 +240,12 @@ class BrowserErrorMonitor {;
           this.stats.failedFixes++;
           // console.log(`❌ Auto-fix failed: ${fixStrategy} - ${fixResult.reason}`);
 ;
-
+;
     } catch (fixError) {;
       console.error('❌ Error during auto-fix attempt:', fixError);
       this.stats.failedFixes++;
 ;
-
+;
   identifyFixStrategy(error) {;
     const message = error.message || error.failureReason || '';
 ;
@@ -254,7 +254,7 @@ class BrowserErrorMonitor {;
         if (message.includes(pattern)) {;
           return strategy;
 ;
-
+;
 ;
     return null;
 ;
@@ -289,7 +289,7 @@ class BrowserErrorMonitor {;
     } catch (fixError) {;
       return { success: false, reason: fixError.message };
 ;
-
+;
   // Fix implementations;
   async fixNullCheck(error) {;
     // Inject null check helper;
@@ -328,7 +328,7 @@ class BrowserErrorMonitor {;
     } catch (reloadError) {;
       return { success: false, reason: 'Failed to reload page' };
 ;
-
+;
   async fixReferenceError(error) {;
     // Inject global error handler;
     await this.page.evaluate(() => {;
@@ -365,7 +365,7 @@ class BrowserErrorMonitor {;
     } catch (reloadError) {;
       return { success: false, reason: 'Failed to reload resources' };
 ;
-
+;
   async fixMissingResource(error) {;
     // Log missing resource for manual review;
     // console.log(`📝 Missing resource detected: ${error.url || 'unknown'}`);
@@ -429,7 +429,7 @@ class BrowserErrorMonitor {;
       console.error('❌ Health check failed:', error);
       return false;
 ;
-
+;
   async generateReport() {;
     try {;
       const report = {;
@@ -443,7 +443,7 @@ class BrowserErrorMonitor {;
           failedFixes: this.stats.failedFixes,;
           successRate: this.stats.totalErrors > 0 ?;
             ((this.stats.fixedErrors / this.stats.totalErrors) * 100).toFixed(2) : 100;
-
+;
       };
 ;
       const reportPath = path.join(CONFIG.logDir, 'browser-error-report.json');
@@ -453,7 +453,7 @@ class BrowserErrorMonitor {;
     } catch (error) {;
       console.error('❌ Failed to generate report:', error);
 ;
-
+;
   async start() {;
     if (this.isRunning) {;
       // console.log('⚠️ Monitor is already running');
@@ -493,7 +493,7 @@ class BrowserErrorMonitor {;
     await new Promise(resolve => setTimeout(resolve, 2000));
     await this.start();
 ;
-
+;
 // PM2 process management;
 const monitor = new BrowserErrorMonitor();
 ;

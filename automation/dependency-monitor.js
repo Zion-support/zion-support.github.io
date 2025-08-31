@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -10,7 +10,7 @@ const cron = require('node-cron');
 =======;
 // // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -30,7 +30,7 @@ class DependencyMonitor {;
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
 ;
-
+;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -40,7 +40,7 @@ class DependencyMonitor {;
 =======;
     // // // // // // // // console.log(logEntry.trim());
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
@@ -52,7 +52,7 @@ class DependencyMonitor {;
     };
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
   async startMonitoring() {;
     this.log('Starting dependency monitoring...');
 ;
@@ -98,7 +98,7 @@ class DependencyMonitor {;
     } finally {;
       this.monitoring = false;
 ;
-
+;
   async detectDependencyIssues() {;
     const issues = [];
 ;
@@ -174,10 +174,10 @@ class DependencyMonitor {;
         } catch (parseError) {;
           return [];
 ;
-
+;
       return [];
 ;
-
+;
   async hasMissingDependencies() {;
     try {;
       // Check if package.json exists;
@@ -200,14 +200,14 @@ class DependencyMonitor {;
             require.resolve(dep);
           } catch (e) {;
             return true; // Missing dependency;
-
 ;
-
+;
+;
       return false;
     } catch (error) {;
       return true;
 ;
-
+;
   async checkPeerDependencies() {;
     try {;
       const result = execSync('npm ls --json', {;
@@ -246,10 +246,10 @@ class DependencyMonitor {;
         } catch (parseError) {;
           return [];
 ;
-
+;
       return [];
 ;
-
+;
   async checkDependencyConflicts() {;
     try {;
       const result = execSync('npm ls --json', {;
@@ -288,10 +288,10 @@ class DependencyMonitor {;
         } catch (parseError) {;
           return [];
 ;
-
+;
       return [];
 ;
-
+;
   async autoFixDependencyIssues(issues) {;
     for (const issue of issues) {;
       try {;
@@ -317,7 +317,7 @@ class DependencyMonitor {;
       } catch (error) {;
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
 ;
-
+;
 ;
   async fixOutdatedPackages(outdatedPackages) {;
     this.log('Fixing outdated packages...');
@@ -350,7 +350,7 @@ class DependencyMonitor {;
     } catch (error) {;
       throw new Error(`Failed to update packages: ${error.message}`);
 ;
-
+;
   async fixMissingDependencies() {;
     this.log('Installing missing dependencies...');
 ;
@@ -363,7 +363,7 @@ class DependencyMonitor {;
     } catch (error) {;
       throw new Error(`Failed to install dependencies: ${error.message}`);
 ;
-
+;
   async fixPeerDependencies(issues) {;
     this.log('Fixing peer dependency issues...');
 ;
@@ -383,7 +383,7 @@ class DependencyMonitor {;
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Peer dependency report saved to: ${reportPath}`);
 ;
-
+;
   async fixDependencyConflicts(conflicts) {;
     this.log('Fixing dependency conflicts...');
 ;
@@ -403,7 +403,7 @@ class DependencyMonitor {;
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Dependency conflict report saved to: ${reportPath}`);
 ;
-
+;
   async performSecurityAudit() {;
     this.log('Performing security audit...');
 ;
@@ -428,7 +428,7 @@ class DependencyMonitor {;
     } catch (error) {;
       this.log(`Security audit failed: ${error.message}`, 'ERROR');
 ;
-
+;
   async autoFixSecurityVulnerabilities(audit) {;
     this.log('Attempting to auto-fix security vulnerabilities...');
 ;
@@ -454,7 +454,7 @@ class DependencyMonitor {;
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Security audit report saved to: ${reportPath}`);
 ;
-
+;
   async performWeeklyUpdates() {;
     this.log('Performing weekly dependency updates...');
 ;
@@ -486,7 +486,7 @@ class DependencyMonitor {;
     } catch (error) {;
       this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR');
 ;
-
+;
   async checkMajorUpdates() {;
     try {;
       const result = execSync('npm outdated --json', {;
@@ -514,7 +514,7 @@ class DependencyMonitor {;
     } catch (error) {;
       return [];
 ;
-
+;
   async performSafeUpdates() {;
     try {;
       // Update only minor and patch versions;
@@ -526,7 +526,7 @@ class DependencyMonitor {;
     } catch (error) {;
       this.log(`Safe updates failed: ${error.message}`, 'WARN');
 ;
-
+;
   async cleanupOldReports() {;
     this.log('Cleaning up old dependency reports...');
 ;
@@ -537,12 +537,12 @@ class DependencyMonitor {;
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
 <<<<<<< HEAD;
-
+;
         for (const file of files) {;
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {;
             const filePath = path.join(logsDir, file);
 =======;
-
+;
         for (const filePath = path.join(logsDir, file);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             const stats = fs.statSync(filePath);
@@ -551,13 +551,13 @@ class DependencyMonitor {;
               fs.unlinkSync(filePath);
               this.log(`Removed old report: ${file}`);
 ;
-
 ;
-
+;
+;
     } catch (error) {;
       this.log(`Report cleanup failed: ${error.message}`, 'WARN');
 ;
-
+;
   getStats() {;
     return {;
       vulnerabilitiesFound: this.vulnerabilitiesFound,;
@@ -571,7 +571,7 @@ class DependencyMonitor {;
     this.monitoring = false;
     process.exit(0);
 ;
-
+;
 // Handle graceful shutdown;
 process.on('SIGINT', async () => {;
   if (monitor) {;

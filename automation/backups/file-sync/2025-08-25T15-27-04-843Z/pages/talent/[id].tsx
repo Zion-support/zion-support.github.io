@@ -60,7 +60,7 @@ const TalentProfilePage: React.FC = () => {;
               linkedin: 'https://linkedin.com/in/talent',;
               github: 'https://github.com/talent';
 <<<<<<< HEAD;
-
+;
 =======;
             };
 =======;
@@ -90,8 +90,8 @@ const TalentProfilePage: React.FC = () => {;
       fetchProfile()};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   }, [id]);
-  if (loading) return <ProfileLoadingState   />;
-  if (error || !profile) return <Navigate to='/404' replace   />;
+  if (loading) return <ProfileLoadingState      />;
+  if (error || !profile) return <Navigate to='/404' replace      />;
   return (;
     <main className = 'min-h-screen bg-zion-blue py-8 text-white'>;
       <div className='container mx-auto px-4 space-y-4'>;
@@ -122,7 +122,7 @@ const TalentProfilePage: React.FC = () => {;
                   target='_blank';
                   rel='noopener noreferrer';
                   className='text-blue-300 hover:text-blue-100 underline';
-
+;
                   {platform};
                 </a>;
               ))};

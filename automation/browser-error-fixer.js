@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 /**;
  * Advanced Browser Error Auto-Fixer;
  * Automatically fixes source code issues based on browser console errors;
@@ -11,7 +11,7 @@
  * 4. Creates backup files before making changes;
  * 5. Reports all fixes applied;
  */;
-
+;
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
@@ -29,7 +29,7 @@ class BrowserErrorFixer {;
           {;
             regex: /Unexpected token '([^']+)'/,;
             fix: (match, filePath) => this.fixUnexpectedToken(match[1], filePath);
-
+;
         ];
       },;
       'Cannot read property': {;
@@ -38,7 +38,7 @@ class BrowserErrorFixer {;
           {;
             regex: /Cannot read property '([^']+)' of (null|undefined)/,;
             fix: (match, filePath) => this.fixNullPropertyAccess(match[1], filePath);
-
+;
         ];
       },;
       'is not a function': {;
@@ -47,7 +47,7 @@ class BrowserErrorFixer {;
           {;
             regex: /([a-zA-Z_$][a-zA-Z0-9_$]*) is not a function/,;
             fix: (match, filePath) => this.fixFunctionCall(match[1], filePath);
-
+;
         ];
       },;
       'ReferenceError': {;
@@ -56,7 +56,7 @@ class BrowserErrorFixer {;
           {;
             regex: /ReferenceError: ([a-zA-Z_$][a-zA-Z0-9_$]*) is not defined/,;
             fix: (match, filePath) => this.fixReferenceError(match[1], filePath);
-
+;
         ];
       },;
       'TypeError': {;
@@ -65,9 +65,9 @@ class BrowserErrorFixer {;
           {;
             regex: /TypeError: Cannot read properties of (undefined|null)/,;
             fix: (match, filePath) => this.fixTypeError(match[1], filePath);
-
+;
         ];
-
+;
     };
 ;
   async analyzeError(error) {;
@@ -80,7 +80,7 @@ class BrowserErrorFixer {;
     } else {;
       // console.log(`⚠️  No fix strategy identified for this error`);
 ;
-
+;
   identifyFixStrategy(error) {;
     const message = error.message || '';
 ;
@@ -88,7 +88,7 @@ class BrowserErrorFixer {;
       if (message.includes(errorType)) {;
         return strategy;
 ;
-
+;
     return null;
 ;
   async applyFixStrategy(strategy, error) {;
@@ -111,11 +111,11 @@ class BrowserErrorFixer {;
             timestamp: new Date().toISOString();
           });
 ;
-
+;
     } catch (error) {;
       console.error(`❌ Error applying fix strategy:`, error);
 ;
-
+;
   async findRelevantSourceFiles(error) {;
     const sourceFiles = [];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -134,7 +134,7 @@ class BrowserErrorFixer {;
 ;
         } catch (err) {;
           // Directory doesn't exist, skip;
-
+;
 ;
       // If no source files found, search project root;
       if (sourceFiles.length === 0) {;
@@ -146,7 +146,7 @@ class BrowserErrorFixer {;
       console.error('Error finding source files:', error);
       return [];
 ;
-
+;
   async findFilesRecursively(dir, extensions, maxDepth = 3) {;
     const files = [];
 ;
@@ -164,10 +164,10 @@ class BrowserErrorFixer {;
           } else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {;
             files.push(fullPath);
 ;
-
+;
       } catch (err) {;
         // Skip directories we can't read;
-
+;
 ;
     await search(dir, 0);
     return files;
@@ -183,9 +183,9 @@ class BrowserErrorFixer {;
           if (fix) {;
             fixes.push(fix);
 ;
-
 ;
-
+;
+;
     return fixes;
 ;
   async createBackup(filePath) {;
@@ -197,7 +197,7 @@ class BrowserErrorFixer {;
     } catch (error) {;
       console.error(`❌ Failed to create backup for ${filePath}:`, error);
 ;
-
+;
   async applyFixes(filePath, originalContent, fixes) {;
     try {;
       let modifiedContent = originalContent;
@@ -212,7 +212,7 @@ class BrowserErrorFixer {;
     } catch (error) {;
       console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
 ;
-
+;
   applySingleFix(content, fix) {;
     if (fix.type === 'replace') {;
       return content.replace(fix.search, fix.replace);
@@ -310,7 +310,7 @@ class BrowserErrorFixer {;
       console.error('❌ Failed to generate fix report:', error);
       return null;
 ;
-
+;
   async cleanupBackups(keepRecent = 5) {;
     try {;
       if (this.backupsCreated.length <= keepRecent) {;
@@ -324,13 +324,13 @@ class BrowserErrorFixer {;
           // console.log(`🗑️  Removed old backup: ${path.relative(this.projectRoot, backup)}`);
         } catch (err) {;
           // Backup already removed or inaccessible;
-
+;
 ;
       this.backupsCreated = this.backupsCreated.slice(-keepRecent);
     } catch (error) {;
       console.error('❌ Error during backup cleanup:', error);
 ;
-
+;
   async runFixCycle(errorLog) {;
     // console.log('🚀 Starting browser error auto-fix cycle...');
 ;
@@ -343,7 +343,7 @@ class BrowserErrorFixer {;
     // console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length} fixes.`);
     return this.fixesApplied;
 ;
-
+;
 // Export for use in other modules;
 module.exports = BrowserErrorFixer;
 ;

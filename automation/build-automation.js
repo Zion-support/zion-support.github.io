@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -22,14 +22,14 @@ class BuildAutomation {;
     // Initialize automation;
     this.startAutomation();
   };
-
+;
   ensureLogsDirectory() {;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
     };
   };
-
+;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -42,7 +42,7 @@ class BuildAutomation {;
       console.error('Failed to write to log file:', error.message);
     };
   };
-
+;
   async startAutomation() {;
     this.log('Starting build automation...');
 ;
@@ -68,7 +68,7 @@ class BuildAutomation {;
 ;
     this.log('Build automation started successfully');
   };
-
+;
   async performBuildTest() {;
     if (this.monitoring) return;
 ;
@@ -86,7 +86,7 @@ class BuildAutomation {;
         this.log('Build test failed, attempting to fix...');
         await this.autoFixBuildIssues(buildResult.errors);
       };
-
+;
     } catch (error) {;
       this.log(`Build test failed: ${error.message}`, 'ERROR');
       this.buildFailures++;
@@ -94,7 +94,7 @@ class BuildAutomation {;
       this.monitoring = false;
     };
   };
-
+;
   async testBuild() {;
     this.log('Testing build process...');
 ;
@@ -106,7 +106,7 @@ class BuildAutomation {;
         fs.rmSync(path.join(this.projectRoot, 'dist'), { recursive: true, force: true });
         this.log('Cleaned previous build');
       };
-
+;
       // Run build;
       execSync('npm run build', {;
         cwd: this.projectRoot,;
@@ -134,7 +134,7 @@ class BuildAutomation {;
       };
     };
   };
-
+;
   parseBuildErrors(errorOutput) {;
     const errors = [];
     const lines = errorOutput.toString().split('\n');
@@ -144,10 +144,10 @@ class BuildAutomation {;
         errors.push(line.trim());
       };
     };
-
+;
     return errors.slice(0, 20); // Limit to first 20 errors;
   };
-
+;
   async autoFixBuildIssues(errors) {;
     this.log('Attempting to auto-fix build issues...');
 ;
@@ -172,12 +172,12 @@ class BuildAutomation {;
         this.log('No automatic fixes available, creating manual intervention report');
         await this.createBuildFailureReport(errors, []);
       };
-
+;
     } catch (error) {;
       this.log(`Error fixing build issues: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async analyzeAndFixErrors(errors) {;
     const fixes = [];
 ;
@@ -208,10 +208,10 @@ class BuildAutomation {;
         this.log(`Failed to fix error: ${fixError.message}`, 'WARN');
       };
     };
-
+;
     return fixes;
   };
-
+;
   async fixNextJSImports() {;
     this.log('Fixing Next.js imports...');
 ;
@@ -230,7 +230,7 @@ class BuildAutomation {;
       throw new Error(`Next.js import fix failed: ${error.message}`);
     };
   };
-
+;
   async runInlineNextJSFix() {;
     this.log('Running inline Next.js import fixes...');
 ;
@@ -264,7 +264,7 @@ class BuildAutomation {;
             modified = true;
           };
         };
-
+;
         if (modified) {;
           fs.writeFileSync(file, newContent, 'utf8');
           fixedCount++;
@@ -273,10 +273,10 @@ class BuildAutomation {;
         this.log(`Error processing ${file}: ${error.message}`, 'WARN');
       };
     };
-
+;
     this.log(`Fixed Next.js imports in ${fixedCount} files`);
   };
-
+;
   async fixModuleResolution() {;
     this.log('Fixing module resolution issues...');
 ;
@@ -289,7 +289,7 @@ class BuildAutomation {;
           stdio: 'inherit';
         });
       };
-
+;
       // Check for missing packages;
       const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
       const missingDeps = [];
@@ -303,7 +303,7 @@ class BuildAutomation {;
           };
         };
       };
-
+;
       if (missingDeps.length > 0) {;
         this.log(`Installing missing dependencies: ${missingDeps.join(', ')}`);
         execSync(`npm install ${missingDeps.join(' ')}`, {;
@@ -311,12 +311,12 @@ class BuildAutomation {;
           stdio: 'inherit';
         });
       };
-
+;
     } catch (error) {;
       throw new Error(`Module resolution fix failed: ${error.message}`);
     };
   };
-
+;
   async fixTypeScriptIssues() {;
     this.log('Fixing TypeScript issues...');
 ;
@@ -340,7 +340,7 @@ class BuildAutomation {;
       this.log(`TypeScript issues report saved to: ${reportPath}`);
     };
   };
-
+;
   async fixViteConfig() {;
     this.log('Fixing Vite configuration...');
 ;
@@ -361,17 +361,17 @@ class BuildAutomation {;
         fs.writeFileSync(configPath, config);
         this.log('Regenerated vite.config.ts');
       };
-
+;
     } catch (error) {;
       throw new Error(`Vite config fix failed: ${error.message}`);
     };
   };
-
+;
   generateDefaultViteConfig() {;
     return `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-
+;
 export default defineConfig({;
   plugins: [react()],;
   resolve: {;
@@ -418,7 +418,7 @@ export default defineConfig({;
   };
 })`;
   };
-
+;
   async fixCSSIssues() {;
     this.log('Fixing CSS processing issues...');
 ;
@@ -430,7 +430,7 @@ export default defineConfig({;
         const config = this.generateDefaultTailwindConfig();
         fs.writeFileSync(tailwindConfig, config);
       };
-
+;
       // Check if PostCSS is configured;
       const postcssConfig = path.join(this.projectRoot, 'postcss.config.js');
       if (!fs.existsSync(postcssConfig)) {;
@@ -438,12 +438,12 @@ export default defineConfig({;
         const config = this.generateDefaultPostCSSConfig();
         fs.writeFileSync(postcssConfig, config);
       };
-
+;
     } catch (error) {;
       throw new Error(`CSS fix failed: ${error.message}`);
     };
   };
-
+;
   generateDefaultTailwindConfig() {;
     return `/** @type {import('tailwindcss').Config} */;
 export default {;
@@ -457,7 +457,7 @@ export default {;
   plugins: [],;
 }`;
   };
-
+;
   generateDefaultPostCSSConfig() {;
     return `export default {;
   plugins: {;
@@ -466,7 +466,7 @@ export default {;
   },;
 }`;
   };
-
+;
   async createBuildFailureReport(errors, fixes) {;
     this.log('Creating build failure report...');
 ;
@@ -481,7 +481,7 @@ export default {;
       this.log(`Failed to create build failure report: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async performBuildOptimization() {;
     this.log('Performing build optimization...');
 ;
@@ -501,7 +501,7 @@ export default {;
       this.log(`Build optimization failed: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async performBuildAnalysis() {;
     this.log('Performing build analysis...');
 ;
@@ -521,7 +521,7 @@ export default {;
       this.log(`Build analysis failed: ${error.message}`, 'ERROR');
     };
   };
-
+;
   async optimizeViteConfig() {;
     this.log('Optimizing Vite configuration...');
 ;
@@ -535,18 +535,18 @@ export default {;
           this.log('Adding manual chunking for better performance');
           // Implementation would add manual chunking configuration;
         };
-
+;
         if (!config.includes('build.target')) {;
           this.log('Setting build target for better compatibility');
           // Implementation would add build target configuration;
         };
       };
-
+;
     } catch (error) {;
       this.log(`Vite config optimization failed: ${error.message}`, 'WARN');
     };
   };
-
+;
   async optimizeBuildScripts() {;
     this.log('Optimizing build scripts...');
 ;
@@ -559,20 +559,20 @@ export default {;
         if (!packageJson.scripts['build:analyze']) {;
           packageJson.scripts['build:analyze'] = 'vite build --mode analyze';
         };
-
+;
         if (!packageJson.scripts['build:prod']) {;
           packageJson.scripts['build:prod'] = 'vite build --mode production';
         };
-
+;
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
         this.log('Build scripts optimized');
       };
-
+;
     } catch (error) {;
       this.log(`Build script optimization failed: ${error.message}`, 'WARN');
     };
   };
-
+;
   async cleanupBuildArtifacts() {;
     this.log('Cleaning up build artifacts...');
 ;
@@ -586,12 +586,12 @@ export default {;
           this.log(`Cleaned up ${dir} directory`);
         };
       };
-
+;
     } catch (error) {;
       this.log(`Build artifact cleanup failed: ${error.message}`, 'WARN');
     };
   };
-
+;
   async analyzeBuildPerformance() {;
     this.log('Analyzing build performance...');
 ;
@@ -599,7 +599,7 @@ export default {;
     // For now, just log that it's completed;
     this.log('Build performance analysis completed');
   };
-
+;
   async analyzeBuildConfiguration() {;
     this.log('Analyzing build configuration...');
 ;
@@ -607,7 +607,7 @@ export default {;
     // For now, just log that it's completed;
     this.log('Build configuration analysis completed');
   };
-
+;
   async generateBuildMetrics() {;
     this.log('Generating build metrics...');
 ;
@@ -628,7 +628,7 @@ export default {;
       this.log(`Build metrics generation failed: ${error.message}`, 'WARN');
     };
   };
-
+;
   findSourceFiles() {;
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     const files = [];
@@ -649,11 +649,11 @@ export default {;
         };
       };
     };
-
+;
     traverse(this.projectRoot);
     return files;
   };
-
+;
   getStats() {;
     return {;
       buildSuccesses: this.buildSuccesses,;
@@ -663,14 +663,14 @@ export default {;
       uptime: process.uptime();
     };
   };
-
+;
   async stop() {;
     this.log('Stopping build automation...');
     this.monitoring = false;
     process.exit(0);
   };
 };
-
+;
 // Handle graceful shutdown;
 process.on('SIGINT', async () => {;
   if (automation) {;

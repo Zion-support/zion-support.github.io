@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -30,7 +30,7 @@ class CodeQualityMonitor {;
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
 ;
-
+;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -56,7 +56,7 @@ class CodeQualityMonitor {;
       testCoverage: 0,;
       performance: 0,;
   lastUpdated: new Date().toISOString();
-
+;
 ;
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')};
@@ -85,7 +85,7 @@ class CodeQualityMonitor {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
   async startMonitoring() {;
     this.log('Starting code quality monitoring...');
 ;
@@ -131,7 +131,7 @@ class CodeQualityMonitor {;
     } finally {;
       this.monitoring = false;
 ;
-
+;
   async detectQualityIssues() {;
     const issues = [];
 ;
@@ -145,7 +145,7 @@ class CodeQualityMonitor {;
         details: syntaxErrors;
       });
 <<<<<<< HEAD;
-
+;
     // Check for unused imports;
     const unusedImports = await this.checkUnusedImports();
     if (unusedImports.length > 0) {;
@@ -178,12 +178,12 @@ class CodeQualityMonitor {;
 ;
     return issues;
 =======;
-
+;
       return Math.min(Math.floor(totalComplexity), 100)} catch (error) {;
       return Math.floor(Math.random() * 10) + 1};
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-
+;
   async checkSyntaxErrors() {;
     try {;
 <<<<<<< HEAD;
@@ -206,12 +206,12 @@ class CodeQualityMonitor {;
         .map(line => line.trim());
         .filter(line => line.length > 0);
 <<<<<<< HEAD;
-
+;
       return errors.slice(0, 20); // Limit to first 20 errors;
-
+;
 =======;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
-
+;
       // Lower file size = higher maintainability;
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {;
       return Math.floor(Math.random() * 100) + 50};
@@ -227,7 +227,7 @@ class CodeQualityMonitor {;
     const projectRoot = path.resolve(__dirname, '..');
 =======;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-
+;
   async checkUnusedImports() {;
     try {;
       // Use ESLint to check for unused imports;
@@ -246,7 +246,7 @@ class CodeQualityMonitor {;
 ;
       return unusedImportErrors.slice(0, 10);
 ;
-
+;
   async checkFormatting() {;
     try {;
       // Use Prettier to check formatting;
@@ -265,7 +265,7 @@ class CodeQualityMonitor {;
 ;
       return formattingErrors;
 ;
-
+;
   async checkPotentialBugs() {;
     const bugs = [];
 ;
@@ -309,7 +309,7 @@ class CodeQualityMonitor {;
 ;
         } catch (error) {;
           // Skip files that can't be processed;
-
+;
 ;
     } catch (error) {;
       this.log(`Bug detection failed: ${error.message}`, 'WARN');
@@ -322,7 +322,7 @@ class CodeQualityMonitor {;
       if (lines[i].includes(searchTerm)) {;
         return i + 1;
 ;
-
+;
     return 0;
 ;
   async autoFixQualityIssues(issues) {;
@@ -347,15 +347,15 @@ class CodeQualityMonitor {;
       } catch (error) {;
         this.log(`Failed to fix issue ${issue.type}: ${error.message}`, 'WARN');
 ;
-
+;
     this.log('Auto-fix attempts completed');
 ;
   async fixSyntaxErrors(errors) {;
     this.log('Attempting to fix syntax errors...');
 <<<<<<< HEAD;
-
+;
 =======;
-
+;
     // Create a detailed report;
     const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n\nThese errors require manual attention.`;
 ;
@@ -375,7 +375,7 @@ class CodeQualityMonitor {;
     // Try to auto-fix some common syntax issues;
     await this.autoFixCommonSyntaxIssues();
   };
-
+;
   async autoFixCommonSyntaxIssues() {;
     this.log('Attempting to auto-fix common syntax issues...');
 ;
@@ -393,12 +393,12 @@ class CodeQualityMonitor {;
           newContent = newContent.replace(/// debugger; // TODO: Remove in production/g, '// // debugger; // TODO: Remove in production // TODO: Remove in production');
           modified = true;
         };
-
+;
         if (newContent.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {;
           newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
           modified = true;
         };
-
+;
         if (modified) {;
           fs.writeFileSync(file, newContent, 'utf8');
           fixedCount++;
@@ -407,11 +407,11 @@ class CodeQualityMonitor {;
         // Skip files that can't be processed;
       };
     };
-
+;
     this.log(`Auto-fixed common syntax issues in ${fixedCount} files`);
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-
+;
   async fixUnusedImports(errors) {;
     this.log('Attempting to fix unused imports...');
 ;
@@ -428,7 +428,7 @@ class CodeQualityMonitor {;
       // Fallback: manual cleanup;
       await this.manualCleanupUnusedImports();
 ;
-
+;
   async manualCleanupUnusedImports() {;
     this.log('Performing manual unused import cleanup...');
 ;
@@ -454,7 +454,7 @@ class CodeQualityMonitor {;
 ;
       } catch (error) {;
         // Skip files that can't be processed;
-
+;
 ;
     this.log(`Manually cleaned up unused imports in ${cleanedCount} files`);
 ;
@@ -471,7 +471,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       this.log(`Prettier formatting failed: ${error.message}`, 'ERROR');
 ;
-
+;
   async fixPotentialBugs(bugs) {;
     this.log('Fixing potential bugs...');
 ;
@@ -503,11 +503,11 @@ class CodeQualityMonitor {;
             fs.writeFileSync(filePath, newContent, 'utf8');
             fixedCount++;
 ;
-
+;
       } catch (error) {;
         this.log(`Failed to fix bug in ${bug.file}: ${error.message}`, 'WARN');
 ;
-
+;
     this.log(`Fixed ${fixedCount} potential bugs`);
 ;
   async performDeepAnalysis() {;
@@ -526,7 +526,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       this.log(`Deep analysis failed: ${error.message}`, 'ERROR');
 ;
-
+;
   async performWeeklyCleanup() {;
     this.log('Performing weekly code cleanup...');
 ;
@@ -544,7 +544,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       this.log(`Weekly cleanup failed: ${error.message}`, 'ERROR');
 ;
-
+;
   async checkCodeComplexity() {;
     this.log('Checking code complexity...');
 ;
@@ -572,7 +572,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       this.log('Security vulnerabilities detected, consider running npm audit fix', 'WARN');
 ;
-
+;
   async cleanupOldReports() {;
     this.log('Cleaning up old reports...');
 ;
@@ -583,12 +583,12 @@ class CodeQualityMonitor {;
         const now = Date.now();
         const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days;
 <<<<<<< HEAD;
-
+;
         for (const file of files) {;
           if (file.includes('-report.txt')) {;
             const filePath = path.join(logsDir, file);
 =======;
-
+;
         for (const filePath = path.join(logsDir, file);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             const stats = fs.statSync(filePath);
@@ -597,13 +597,13 @@ class CodeQualityMonitor {;
               fs.unlinkSync(filePath);
               this.log(`Removed old report: ${file}`);
 ;
-
 ;
-
+;
+;
     } catch (error) {;
       this.log(`Report cleanup failed: ${error.message}`, 'WARN');
 ;
-
+;
   async optimizeCodeStructure() {;
     this.log('Optimizing code structure...');
 ;
@@ -630,7 +630,7 @@ class CodeQualityMonitor {;
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
 <<<<<<< HEAD;
-
+;
         if (stat.isDirectory()) {;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {;
             traverse(fullPath);
@@ -638,7 +638,7 @@ class CodeQualityMonitor {;
         } else if (extensions.some(ext => item.endsWith(ext))) {;
           files.push(fullPath);
 ;
-
+;
 ;
     traverse(this.projectRoot);
     return files;
@@ -656,14 +656,14 @@ class CodeQualityMonitor {;
     this.monitoring = false;
     process.exit(0);
 ;
-
+;
 // Handle graceful shutdown;
 process.on('SIGINT', async () => {;
   if (monitor) {;
     await monitor.stop();
 ;
 =======;
-
+;
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
           walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath)};

@@ -51,13 +51,13 @@ class PerformanceOptimizer {;
 ;
 =======;
   recommendations: this.generateRecommendations();
-
 ;
-
 ;
-
 ;
-
+;
+;
+;
+;
 };
 ;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -68,7 +68,7 @@ class PerformanceOptimizer {;
 <<<<<<< HEAD;
       return null;
 ;
-
+;
 =======;
       return null};
   };
@@ -85,7 +85,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
 =======;
         recommendations['Consider code splitting', 'Remove unused dependencies'];
       }} catch (error) {;
@@ -104,7 +104,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
   analyzeDependencies() {;
     try {;
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
@@ -131,7 +131,7 @@ class PerformanceOptimizer {;
     } catch (error) {;
       return { error: error.message };
 ;
-
+;
   findUnusedDependencies() {;
     // Placeholder for unused dependency detection;
     return ['example-unused-package'];
@@ -158,7 +158,7 @@ class PerformanceOptimizer {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
-
+;
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {;
   if (report) {;
