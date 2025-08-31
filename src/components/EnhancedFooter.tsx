@@ -69,9 +69,11 @@ export function EnhancedFooter() {
       links: [
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: 'AI Quantum Healthcare Diagnostics', href: '/services/ai-quantum-healthcare-diagnostics', icon: Heart, featured: true },
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Bot, featured: true },
+        { name: 'AI Smart City Platform', href: '/services/ai-smart-city-platform', icon: Globe, featured: true },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true }
       ]
     },
     {
@@ -161,13 +163,13 @@ export function EnhancedFooter() {
             </p>
             
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
+              <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:text-blue-400">+1 302 464 0950</a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
+              <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
                 <Mail className="w-4 h-4 text-green-400" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-green-400">kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />

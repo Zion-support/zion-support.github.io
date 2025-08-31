@@ -181,7 +181,6 @@ export function EnhancedHeader() {
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Server },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
@@ -209,6 +208,30 @@ export function EnhancedHeader() {
       href: '/services/Quantum-AI-Trading-Platform',
       icon: Atom,
       color: 'from-orange-500 to-red-500',
+      featured: true
+    },
+    {
+      name: 'AI Quantum Healthcare Diagnostics',
+      description: 'Revolutionary quantum-enhanced medical diagnostics',
+      href: '/services/ai-quantum-healthcare-diagnostics',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      featured: true
+    },
+    {
+      name: 'AI Autonomous Business Operations',
+      description: 'Self-managing business operations platform',
+      href: '/services/ai-autonomous-business-operations-platform',
+      icon: Bot,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Smart City Platform',
+      description: 'Intelligent urban infrastructure management',
+      href: '/services/ai-smart-city-platform',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
       featured: true
     },
     {
@@ -501,6 +524,18 @@ export function EnhancedHeader() {
                       <ChevronRight className="w-4 h-4 text-gray-400" />
                     </Link>
                   ))}
+                </div>
+                
+                {/* Mobile All Services Link */}
+                <div className="mt-4 px-4">
+                  <Link
+                    to="/zion-cutting-edge-services-2029"
+                    className="flex items-center justify-center w-full px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors border border-white/20"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span>View All Services</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               </div>
 
