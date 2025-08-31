@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Modern Design System */
-@import './modern-design-system.css';
-
 /* Enhanced Futuristic Design System with Superior Contrast */
 :root {
   --neon-blue: #00d4ff;

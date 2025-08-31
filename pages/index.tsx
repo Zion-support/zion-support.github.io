@@ -21,11 +21,15 @@ const Home: NextPage = () => {
           </p>
           
           <div className="flex justify-center gap-6 mb-12">
-            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
+            <Link href="/services">
+              <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
+                Our Services
+              </span>
             </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get in Touch
+            <Link href="/contact">
+              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
+                Get in Touch
+              </span>
             </Link>
           </div>
           
