@@ -1,7 +1,7 @@
 import {
-    AlertTriangle,
-    RefreshCw,
-    Shield
+  AlertTriangle,
+  RefreshCw,
+  Shield
 } from 'lucide-react';
 import React, { useCallback, useState } from 'react';
 import { Alert, AlertDescription } from './ui/alert';
@@ -38,7 +38,7 @@ interface SecurityCheck {
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
 
-const SecurityEnhancer: React.FC = (): JSX.Element => {
+const SecurityEnhancer = (): JSX.Element => {
   const [metrics, setMetrics] = useState<SecurityMetrics>({
     overallScore: 85,
     vulnerabilities: 3,
@@ -156,7 +156,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
                     <p className="text-sm text-zion-slate-light">{check.description}</p>
                   </div>
                 </div>
-                <Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">
+                <Badge className="border-zion-cyan/30 text-zion-cyan">
                   {check.category}
                 </Badge>
               </div>
@@ -183,4 +183,4 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   );
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancer;export { SecurityEnhancer };
