@@ -65,7 +65,7 @@ const Blog: React.FC = () => {
     {
       id: 2,
       title: 'Zero-Trust Security: The New Standard for Enterprise Protection',
-      excerpt: 'Learn about the zero-trust security model and how it's becoming the gold standard for protecting modern enterprise networks.',
+      excerpt: 'Learn about the zero-trust security model and how it\'s becoming the gold standard for protecting modern enterprise networks.',
       content: 'In today\'s interconnected digital landscape, traditional perimeter-based security models are no longer sufficient. Zero-trust security represents a paradigm shift that assumes no user or device can be trusted by default, requiring continuous verification and strict access controls.',
       author: 'Michael Rodriguez',
       date: '2024-01-12',

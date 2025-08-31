@@ -75,13 +75,11 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalT
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
-              // Additional pages
-              const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-              const Careers = createLazyComponent(() => import('./pages/Careers'));
-              const Partners = createLazyComponent(() => import('./pages/Partners'));
-              const News = createLazyComponent(() => import('./pages/News'));
-              const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
-              const Research = createLazyComponent(() => import('./pages/Research'));
+// Additional pages
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Research = createLazyComponent(() => import('./pages/Research'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -178,19 +176,17 @@ function App() {
                     <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
 
                     {/* New pages we created */}
-                    <Route path="/enterprise" element={<Enterprise />} />
-                    <Route path="/industry-solutions" element={<IndustrySolutions />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/cloud-solutions" element={<CloudSolutions />} />
-                    <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/enterprise" element={<ModernLayout><Enterprise /></ModernLayout>} />
+                    <Route path="/industry-solutions" element={<ModernLayout><IndustrySolutions /></ModernLayout>} />
+                    <Route path="/digital-transformation" element={<ModernLayout><DigitalTransformation /></ModernLayout>} />
+                    <Route path="/cloud-solutions" element={<ModernLayout><CloudSolutions /></ModernLayout>} />
+                    <Route path="/emerging-tech" element={<ModernLayout><EmergingTech /></ModernLayout>} />
                     
-                                              {/* Additional pages */}
-                          <Route path="/solutions" element={<Solutions />} />
-                          <Route path="/careers" element={<Careers />} />
-                          <Route path="/partners" element={<Partners />} />
-                          <Route path="/news" element={<News />} />
-                          <Route path="/case-studies" element={<CaseStudies />} />
-                          <Route path="/research" element={<Research />} />
+                    {/* Additional pages */}
+                    <Route path="/solutions" element={<ModernLayout><Solutions /></ModernLayout>} />
+                    <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
+                    <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
+                    <Route path="/research" element={<ModernLayout><Research /></ModernLayout>} />
 
                     {/* 404 Page */}
                     <Route
