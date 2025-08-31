@@ -31,7 +31,19 @@ import {
   ChevronRight,
   ChevronDown,
   Plus,
-  Minus
+  Minus,
+  Star,
+  CheckCircle,
+  BookOpen as BookOpenIcon,
+  FileText,
+  Video,
+  GraduationCap,
+  Lightbulb,
+  Shield as ShieldIcon,
+  Lock,
+  Eye,
+  Heart,
+  Zap as ZapIcon
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -57,11 +69,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Home', href: '/', icon: Home, badge: null },
     { name: 'Services', href: '/services', icon: Zap, badge: 'New', hasDropdown: true },
     { name: 'Solutions', href: '/solutions', icon: Target, badge: null },
-    { name: 'About', href: '/about', icon: Users, badge: null },
-    { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
-    { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
-    { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
+    { name: 'Company', href: '/about', icon: Users, badge: null },
+    { name: 'Resources', href: '/resources', icon: BookOpen, badge: null },
+    { name: 'Support', href: '/help', icon: HelpCircle, badge: null },
     { name: 'Pricing', href: '/pricing', icon: DollarSign, badge: null },
+    { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
   ];
 
   const serviceCategories = [
@@ -78,7 +90,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics' },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' }
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' }
       ]
     },
     {
@@ -129,7 +143,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       services: [
         { name: 'Digital Twin Solutions', href: '/services/digital-twin' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: '5G Enterprise Solutions', href: '/services/5g-enterprise-solutions' },
         { name: 'IT Consulting', href: '/services/it-consulting' }
       ]
@@ -145,6 +159,78 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Mobile App Development', href: '/services/mobile-development' },
         { name: 'Web Application Development', href: '/services/web-development' },
         { name: 'E-commerce Solutions', href: '/services/ecommerce-personalization' }
+      ]
+    }
+  ];
+
+  const solutionCategories = [
+    {
+      id: 'industry-solutions',
+      title: 'Industry Solutions',
+      icon: Target,
+      color: 'text-green-500',
+      solutions: [
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+        { name: 'Government Solutions', href: '/solutions/government' },
+        { name: 'Retail Solutions', href: '/solutions/retail' },
+        { name: 'Education Solutions', href: '/solutions/education' },
+        { name: 'Startup Solutions', href: '/solutions/startup' }
+      ]
+    },
+    {
+      id: 'technology-solutions',
+      title: 'Technology Solutions',
+      icon: Zap,
+      color: 'text-blue-500',
+      solutions: [
+        { name: 'Quantum Edge Computing', href: '/solutions/quantum-edge-computing' },
+        { name: 'AI Autonomous Business', href: '/solutions/ai-autonomous-business' },
+        { name: 'Blockchain & Web3', href: '/solutions/blockchain-web3' },
+        { name: 'IoT Edge Computing', href: '/solutions/iot-edge-computing' },
+        { name: 'Space Technology', href: '/solutions/space-tech' }
+      ]
+    }
+  ];
+
+  const resourceCategories = [
+    {
+      id: 'content',
+      title: 'Content & Learning',
+      icon: BookOpenIcon,
+      color: 'text-purple-500',
+      resources: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Tutorials', href: '/tutorials' }
+      ]
+    },
+    {
+      id: 'technical',
+      title: 'Technical Resources',
+      icon: FileText,
+      color: 'text-cyan-500',
+      resources: [
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Developer Portal', href: '/developer' },
+        { name: 'Code Examples', href: '/code-examples' }
+      ]
+    },
+    {
+      id: 'research',
+      title: 'Research & Innovation',
+      icon: Lightbulb,
+      color: 'text-yellow-500',
+      resources: [
+        { name: 'Research & Development', href: '/research-development' },
+        { name: 'Innovation Lab', href: '/innovation-lab' },
+        { name: 'Technology Trends', href: '/tech-trends' },
+        { name: 'Future Insights', href: '/future-insights' }
       ]
     }
   ];
@@ -168,6 +254,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing', views: '1.8k' },
     { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', views: '1.5k' },
     { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', views: '1.2k' }
+  ];
+
+  const achievements = [
+    { number: '500+', label: 'Projects', icon: CheckCircle, color: 'text-green-500' },
+    { number: '50+', label: 'Team Members', icon: Users, color: 'text-blue-500' },
+    { number: '25+', label: 'Countries', icon: Globe, color: 'text-purple-500' },
+    { number: '99%', label: 'Satisfaction', icon: Star, color: 'text-yellow-500' }
   ];
 
   return (
@@ -225,7 +318,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div key={item.name}>
                     {item.hasDropdown ? (
                       <button
-                        onClick={() => toggleSection('services')}
+                        onClick={() => toggleSection(item.name.toLowerCase())}
                         className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 ${
                           isActive(item.href) 
                             ? 'bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' 
@@ -242,7 +335,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                               {item.badge}
                             </span>
                           )}
-                          {expandedSections.includes('services') ? (
+                          {expandedSections.includes(item.name.toLowerCase()) ? (
                             <ChevronDown className="w-4 h-4" />
                           ) : (
                             <ChevronRight className="w-4 h-4" />
@@ -316,6 +409,90 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               </div>
             )}
 
+            {/* Solutions Dropdown */}
+            {expandedSections.includes('solutions') && (
+              <div className="ml-4 space-y-4">
+                {solutionCategories.map((category) => (
+                  <div key={category.id}>
+                    <button
+                      onClick={() => toggleSection(category.id)}
+                      className="flex items-center justify-between w-full text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-200"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <category.icon className={`w-4 h-4 ${category.color}`} />
+                        <span>{category.title}</span>
+                      </div>
+                      {expandedSections.includes(category.id) ? (
+                        <Minus className="w-4 h-4" />
+                      ) : (
+                        <Plus className="w-4 h-4" />
+                      )}
+                    </button>
+                    
+                    {expandedSections.includes(category.id) && (
+                      <div className="mt-2 ml-6 space-y-1">
+                        {category.solutions.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            to={solution.href}
+                            className={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
+                              isActive(solution.href)
+                                ? 'bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300'
+                                : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800'
+                            }`}
+                          >
+                            {solution.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Resources Dropdown */}
+            {expandedSections.includes('resources') && (
+              <div className="ml-4 space-y-4">
+                {resourceCategories.map((category) => (
+                  <div key={category.id}>
+                    <button
+                      onClick={() => toggleSection(category.id)}
+                      className="flex items-center justify-between w-full text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors duration-200"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <category.icon className={`w-4 h-4 ${category.color}`} />
+                        <span>{category.title}</span>
+                      </div>
+                      {expandedSections.includes(category.id) ? (
+                        <Minus className="w-4 h-4" />
+                      ) : (
+                        <Plus className="w-4 h-4" />
+                      )}
+                    </button>
+                    
+                    {expandedSections.includes(category.id) && (
+                      <div className="mt-2 ml-6 space-y-1">
+                        {category.resources.map((resource) => (
+                          <Link
+                            key={resource.name}
+                            to={resource.href}
+                            className={`block px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
+                              isActive(resource.href)
+                                ? 'bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300'
+                                : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800'
+                            }`}
+                          >
+                            {resource.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Quick Actions */}
             <div>
               <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
@@ -335,6 +512,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       {action.name}
                     </span>
                   </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Achievements */}
+            <div>
+              <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+                Our Achievements
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {achievements.map((achievement) => (
+                  <div key={achievement.label} className="text-center p-3 bg-gray-50 dark:bg-slate-800 rounded-lg">
+                    <div className="flex justify-center mb-2">
+                      <achievement.icon className={`w-6 h-6 ${achievement.color}`} />
+                    </div>
+                    <div className="text-lg font-bold text-gray-900 dark:text-white">{achievement.number}</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">{achievement.label}</div>
+                  </div>
                 ))}
               </div>
             </div>

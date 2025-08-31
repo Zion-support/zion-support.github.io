@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MainNavigation } from './header/MainNavigation';
 import { 
   Menu, 
   X, 
@@ -12,7 +11,20 @@ import {
   ChevronDown,
   Globe,
   Search,
-  Bell
+  Bell,
+  Brain,
+  Shield,
+  Cloud,
+  Atom,
+  Rocket,
+  Code,
+  Target,
+  Users,
+  MessageCircle,
+  BookOpen,
+  HelpCircle,
+  DollarSign,
+  Settings
 } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -45,33 +57,138 @@ export function Header({ className }: HeaderProps) {
       name: 'Services',
       href: '/services',
       dropdown: true,
+      icon: Zap,
       items: [
-        { name: 'AI & Machine Learning', href: '/services#ai-ml' },
-        { name: 'Quantum Computing', href: '/services#quantum' },
-        { name: 'Cybersecurity', href: '/services#cybersecurity' },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
-        { name: 'Data & Analytics', href: '/services#data-analytics' },
-        { name: 'Digital Transformation', href: '/services#digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
-        { name: 'Emerging Technologies', href: '/services#emerging-tech' }
+        {
+          category: 'AI & Machine Learning',
+          icon: Brain,
+          services: [
+            { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+            { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+            { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+            { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite' },
+            { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
+            { name: 'AI Project Management', href: '/services/ai-project-management' },
+            { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
+            { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
+            { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
+            { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform' }
+          ]
+        },
+        {
+          category: 'Cybersecurity',
+          icon: Shield,
+          services: [
+            { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
+            { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
+            { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
+            { name: 'Zero Trust Network', href: '/services/zero-trust-network-access' },
+            { name: 'SOC2 Compliance', href: '/services/soc2-compliance-automation' }
+          ]
+        },
+        {
+          category: 'Cloud & DevOps',
+          icon: Cloud,
+          services: [
+            { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+            { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+            { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+            { name: 'Cloud Migration', href: '/services/cloud-migration-services' },
+            { name: 'Edge Computing', href: '/services/iot-edge-computing' }
+          ]
+        },
+        {
+          category: 'Quantum Computing',
+          icon: Atom,
+          services: [
+            { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing' },
+            { name: 'Quantum Neural Networks', href: '/services/quantum-neural-networks' },
+            { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading' },
+            { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform' }
+          ]
+        },
+        {
+          category: 'Digital Transformation',
+          icon: Rocket,
+          services: [
+            { name: 'Digital Twin Solutions', href: '/services/digital-twin' },
+            { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+            { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+            { name: '5G Enterprise Solutions', href: '/services/5g-enterprise-solutions' }
+          ]
+        },
+        {
+          category: 'Micro SaaS',
+          icon: Code,
+          services: [
+            { name: 'Custom SaaS Development', href: '/services/micro-saas-solutions' },
+            { name: 'API Development', href: '/services/api-development' },
+            { name: 'Mobile App Development', href: '/services/mobile-development' },
+            { name: 'Web Application Development', href: '/services/web-development' }
+          ]
+        }
       ]
     },
     {
       name: 'Solutions',
       href: '/solutions',
       dropdown: true,
+      icon: Target,
       items: [
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Transportation & Logistics', href: '/solutions/transportation' },
-        { name: 'Education', href: '/solutions/education' }
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+        { name: 'Government Solutions', href: '/solutions/government' },
+        { name: 'Retail Solutions', href: '/solutions/retail' },
+        { name: 'Education Solutions', href: '/solutions/education' },
+        { name: 'Startup Solutions', href: '/solutions/startup' },
+        { name: 'Enterprise Solutions', href: '/enterprise' }
       ]
     },
-    { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
+    {
+      name: 'Company',
+      href: '/about',
+      dropdown: true,
+      icon: Users,
+      items: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      dropdown: true,
+      icon: BookOpen,
+      items: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Research & Development', href: '/research-development' }
+      ]
+    },
+    {
+      name: 'Support',
+      href: '/help',
+      dropdown: true,
+      icon: HelpCircle,
+      items: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Contact Support', href: '/contact' },
+        { name: 'Training', href: '/training' },
+        { name: 'Tutorials', href: '/tutorials' }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
   return (
@@ -101,7 +218,76 @@ export function Header({ className }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <MainNavigation />
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 group"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                    </button>
+                    
+                    {/* Mega Menu for Services */}
+                    {item.name === 'Services' && (
+                      <div className="absolute top-full left-0 w-screen max-w-6xl bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="p-6">
+                          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                            {item.items.map((category) => (
+                              <div key={category.category} className="space-y-4">
+                                <div className="flex items-center space-x-2 text-cyan-400">
+                                  <category.icon className="w-5 h-5" />
+                                  <h3 className="font-semibold text-white">{category.category}</h3>
+                                </div>
+                                <div className="space-y-2">
+                                  {category.services.map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="block text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded px-2 py-1 transition-colors duration-200"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Regular Dropdown for other items */}
+                    {item.name !== 'Services' && (
+                      <div className="absolute top-full left-0 w-64 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="p-4 space-y-2">
+                          {item.items?.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Right Side Actions */}
@@ -192,7 +378,7 @@ export function Header({ className }: HeaderProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 max-h-screen overflow-y-auto"
           >
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Search */}
@@ -214,7 +400,10 @@ export function Header({ className }: HeaderProps) {
                         onClick={() => toggleDropdown(item.name)}
                         className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                       >
-                        <span>{item.name}</span>
+                        <div className="flex items-center space-x-2">
+                          <item.icon className="w-4 h-4" />
+                          <span>{item.name}</span>
+                        </div>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
@@ -229,16 +418,43 @@ export function Header({ className }: HeaderProps) {
                             transition={{ duration: 0.2 }}
                             className="ml-4 mt-2 space-y-2"
                           >
-                            {item.items?.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
+                            {item.name === 'Services' ? (
+                              // Special handling for Services mega menu
+                              <div className="space-y-4">
+                                {item.items.map((category) => (
+                                  <div key={category.category} className="space-y-2">
+                                    <div className="flex items-center space-x-2 text-cyan-400">
+                                      <category.icon className="w-4 h-4" />
+                                      <span className="text-sm font-medium">{category.category}</span>
+                                    </div>
+                                    <div className="ml-6 space-y-1">
+                                      {category.services.slice(0, 3).map((service) => (
+                                        <Link
+                                          key={service.name}
+                                          to={service.href}
+                                          className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                                          onClick={() => setIsMobileMenuOpen(false)}
+                                        >
+                                          {service.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              // Regular dropdown items
+                              item.items?.map((subItem) => (
+                                <Link
+                                  key={subItem.name}
+                                  to={subItem.href}
+                                  className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ))
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -246,10 +462,11 @@ export function Header({ className }: HeaderProps) {
                   ) : (
                     <Link
                       to={item.href}
-                      className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                      className="flex items-center space-x-2 px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {item.name}
+                      <item.icon className="w-4 h-4" />
+                      <span>{item.name}</span>
                     </Link>
                   )}
                 </div>
