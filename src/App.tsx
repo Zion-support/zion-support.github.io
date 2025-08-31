@@ -328,6 +328,10 @@ function App() {
                     <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
                     <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
                     <Route path="/case-studies" element={<ModernLayout><CaseStudies /></ModernLayout>} />
+                    <Route path="/team" element={<ModernLayout><Team /></ModernLayout>} />
+                    <Route path="/press" element={<ModernLayout><Press /></ModernLayout>} />
+                    <Route path="/investors" element={<ModernLayout><Investors /></ModernLayout>} />
+                    <Route path="/legal" element={<ModernLayout><Legal /></ModernLayout>} />
 
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
