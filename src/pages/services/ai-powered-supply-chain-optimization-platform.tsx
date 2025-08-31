@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingDown, 
-  Users, 
-  DollarSign, 
+  Truck, 
+  TrendingUp, 
   Target, 
   Zap, 
-  Shield, 
   Cloud, 
   Brain, 
   CheckCircle,
@@ -23,7 +21,6 @@ import {
   Download,
   Share2,
   Filter,
-  Search,
   AlertTriangle,
   Lightbulb,
   BarChart,
@@ -32,93 +29,96 @@ import {
   Activity as ActivityIcon,
   Eye as EyeIcon,
   Settings as SettingsIcon,
-  Download as DownloadIcon,
+  Download as DownloadDownloadIcon,
   Share2 as Share2Icon,
   Filter as FilterIcon,
-  Search as SearchIcon,
   AlertTriangle as AlertTriangleIcon,
   Lightbulb as LightbulbIcon,
-  UserMinus,
-  UserCheck,
-  Bell,
-  Target as TargetIcon,
   BarChart3,
-  TrendingUp,
+  TrendingDown,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  DollarSign,
+  Users,
+  Package,
+  Route,
+  Warehouse,
+  Globe as GlobeIcon,
+  Factory,
+  ShoppingCart
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIPoweredCustomerChurnPredictor() {
+export default function AIPoweredSupplyChainOptimizationPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Churn Prediction",
-      description: "Advanced machine learning algorithms that analyze customer behavior patterns to predict churn risk with 95%+ accuracy",
-      benefits: ["Early warning system", "Behavioral pattern analysis", "Predictive scoring"]
+      title: "AI-Powered Demand Forecasting",
+      description: "Advanced machine learning algorithms that predict demand patterns with 95%+ accuracy, optimizing inventory levels and reducing stockouts",
+      benefits: ["Predictive analytics", "Seasonal pattern recognition", "Demand variability analysis"]
     },
     {
-      icon: TrendingDown,
-      title: "Real-time Risk Monitoring",
-      description: "Continuous monitoring of customer engagement metrics and automatic risk assessment updates",
-      benefits: ["Live risk scoring", "Automated alerts", "Real-time dashboards"]
+      icon: Route,
+      title: "Intelligent Route Optimization",
+      description: "AI-driven logistics optimization that reduces transportation costs, delivery times, and carbon footprint",
+      benefits: ["Dynamic routing", "Real-time optimization", "Multi-modal transport"]
     },
     {
-      icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent segmentation based on churn risk, value, and behavior patterns for targeted retention strategies",
-      benefits: ["Risk-based segmentation", "Value prioritization", "Behavioral clustering"]
-    },
-    {
-      icon: Target,
-      title: "Personalized Retention Campaigns",
-      description: "AI-generated retention strategies and automated campaign recommendations for high-risk customers",
-      benefits: ["Custom retention plans", "Automated campaigns", "ROI optimization"]
+      icon: Warehouse,
+      title: "Smart Inventory Management",
+      description: "Automated inventory optimization that balances stock levels, reduces carrying costs, and improves cash flow",
+      benefits: ["Just-in-time inventory", "Safety stock optimization", "ABC analysis"]
     },
     {
       icon: Zap,
-      title: "Automated Intervention System",
-      description: "Smart triggers and automated actions to prevent churn before it happens",
-      benefits: ["Proactive interventions", "Smart triggers", "Automated workflows"]
+      title: "Real-time Supply Chain Monitoring",
+      description: "24/7 visibility into supply chain operations with instant alerts for disruptions and performance issues",
+      benefits: ["Live tracking", "Disruption alerts", "Performance metrics"]
+    },
+    {
+      icon: Target,
+      title: "Supplier Performance Analytics",
+      description: "Comprehensive supplier evaluation and scoring to optimize partnerships and reduce supply chain risks",
+      benefits: ["Supplier scoring", "Risk assessment", "Performance tracking"]
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive reporting on churn patterns, retention success rates, and ROI of retention efforts",
-      benefits: ["Churn analytics", "Retention metrics", "ROI tracking"]
+      title: "Advanced Analytics & Reporting",
+      description: "Deep insights into supply chain performance, cost optimization opportunities, and ROI of improvements",
+      benefits: ["Cost analysis", "Performance metrics", "ROI tracking"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses starting with churn prevention",
+      description: "Perfect for small businesses starting their supply chain optimization journey",
       features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
-        "Email alerts",
-        "Standard reporting",
+        "Up to 5 locations",
+        "Basic demand forecasting",
+        "Inventory optimization",
+        "Monthly reports",
         "Email support",
-        "Basic retention suggestions"
+        "Basic analytics"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing companies with advanced churn prevention needs",
+      description: "Ideal for growing businesses with complex supply chain operations",
       features: [
-        "Up to 10,000 customers",
-        "Advanced ML algorithms",
-        "Real-time monitoring",
-        "Automated campaigns",
+        "Up to 25 locations",
+        "Advanced AI algorithms",
+        "Route optimization",
+        "Supplier analytics",
         "Priority support",
-        "Custom retention strategies",
+        "Custom reporting",
         "API access",
         "Advanced analytics"
       ],
@@ -127,12 +127,12 @@ export default function AIPoweredCustomerChurnPredictor() {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade churn prevention",
+      description: "For large organizations requiring enterprise-grade supply chain optimization",
       features: [
-        "Unlimited customers",
-        "Custom ML models",
+        "Unlimited locations",
+        "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
         "Advanced integrations",
@@ -147,47 +147,80 @@ export default function AIPoweredCustomerChurnPredictor() {
 
   const useCases = [
     {
-      industry: "SaaS & Subscription",
-      description: "Predict subscription cancellations and implement targeted retention strategies",
-      metrics: ["Churn rate reduction", "LTV improvement", "Retention cost savings"]
+      industry: "Manufacturing",
+      description: "Optimize production planning, inventory management, and supplier relationships for efficient manufacturing operations",
+      metrics: ["Production efficiency", "Inventory turnover", "Supplier performance"]
     },
     {
-      industry: "E-commerce",
-      description: "Identify customers at risk of leaving and personalize retention efforts",
-      metrics: ["Customer retention", "Repeat purchase rate", "Lifetime value"]
+      industry: "Retail & E-commerce",
+      description: "Streamline inventory management, optimize distribution networks, and improve customer delivery experiences",
+      metrics: ["Stock availability", "Delivery speed", "Customer satisfaction"]
     },
     {
-      industry: "Financial Services",
-      description: "Monitor account activity and predict account closures for proactive retention",
-      metrics: ["Account retention", "Product adoption", "Revenue protection"]
+      industry: "Logistics & Transportation",
+      description: "Optimize route planning, reduce fuel costs, and improve fleet utilization for better operational efficiency",
+      metrics: ["Route efficiency", "Fuel savings", "Fleet utilization"]
     },
     {
-      industry: "Telecommunications",
-      description: "Predict service cancellations and implement targeted retention campaigns",
-      metrics: ["Service retention", "Plan upgrades", "Churn prevention ROI"]
+      industry: "Healthcare & Pharmaceuticals",
+      description: "Ensure critical supplies availability, optimize cold chain logistics, and maintain regulatory compliance",
+      metrics: ["Supply availability", "Cold chain integrity", "Regulatory compliance"]
     }
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Reduce Churn by 30-50%",
-      description: "Proactive identification and intervention significantly reduces customer churn rates"
+      title: "Reduce Supply Chain Costs by 15-30%",
+      description: "AI optimization significantly reduces transportation, inventory, and operational costs"
+    },
+    {
+      icon: Clock,
+      title: "Improve Delivery Performance",
+      description: "Better route optimization and inventory management lead to faster, more reliable deliveries"
     },
     {
       icon: DollarSign,
-      title: "Increase Customer LTV",
-      description: "Better retention strategies lead to higher customer lifetime value and revenue"
+      title: "Increase Cash Flow",
+      description: "Optimized inventory levels reduce carrying costs and improve working capital efficiency"
+    },
+    {
+      icon: Shield,
+      title: "Reduce Supply Chain Risks",
+      description: "Proactive monitoring and AI-driven insights help prevent disruptions and mitigate risks"
+    }
+  ];
+
+  const optimizationTools = [
+    {
+      icon: Brain,
+      title: "Demand Forecasting Engine",
+      description: "AI-powered demand prediction with machine learning algorithms"
+    },
+    {
+      icon: Route,
+      title: "Route Optimization System",
+      description: "Dynamic routing algorithms for multi-stop deliveries"
+    },
+    {
+      icon: Warehouse,
+      title: "Inventory Optimization",
+      description: "Smart inventory management and stock level optimization"
+    },
+    {
+      icon: Package,
+      title: "Logistics Management",
+      description: "End-to-end logistics tracking and optimization"
+    },
+    {
+      icon: Factory,
+      title: "Production Planning",
+      description: "AI-driven production scheduling and capacity planning"
     },
     {
       icon: Users,
-      title: "Improve Customer Experience",
-      description: "Personalized retention efforts enhance customer satisfaction and loyalty"
-    },
-    {
-      icon: Target,
-      title: "Optimize Marketing ROI",
-      description: "Targeted retention campaigns reduce marketing waste and improve efficiency"
+      title: "Supplier Management",
+      description: "Supplier performance tracking and relationship optimization"
     }
   ];
 
@@ -202,36 +235,36 @@ export default function AIPoweredCustomerChurnPredictor() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4 mr-2" />
-              AI-Powered Churn Prevention
+            <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
+              <Truck className="w-4 h-4 mr-2" />
+              AI-Powered Supply Chain Optimization
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Stop Customer Churn Before It
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400"> Happens</span>
+              Optimize Your Supply Chain with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400"> AI Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Our AI-powered customer churn predictor uses advanced machine learning to identify at-risk customers 
-              and automatically trigger retention strategies, helping you reduce churn by up to 50%.
+              Our AI-powered supply chain optimization platform uses advanced machine learning to predict demand, 
+              optimize routes, and streamline operations, reducing costs by up to 30% while improving performance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25"
               >
                 <span className="flex items-center gap-2">
-                  Get Started Today
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5" />
                 </span>
               </Link>
               
-              <button className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300">
+              <button className="inline-flex items-center px-8 py-4 border-2 border-orange-400/50 text-orange-400 font-semibold rounded-xl hover:bg-orange-400/10 hover:border-orange-400 transition-all duration-300">
                 <span className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Download Brochure
+                  Download Supply Chain Guide
                 </span>
               </button>
             </div>
@@ -250,10 +283,10 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Churn Prevention
+              Advanced Supply Chain Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our comprehensive churn prediction platform combines cutting-edge AI with proven retention strategies
+              Our comprehensive platform combines cutting-edge AI with proven optimization strategies
             </p>
           </motion.div>
 
@@ -265,9 +298,9 @@ export default function AIPoweredCustomerChurnPredictor() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-red-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -286,7 +319,7 @@ export default function AIPoweredCustomerChurnPredictor() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Optimization Tools Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -297,10 +330,49 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Customer Retention
+              Complete Optimization Toolkit
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See measurable improvements in customer retention and business growth
+              Everything you need to optimize your supply chain operations and reduce costs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {optimizationTools.map((tool, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-orange-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <tool.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{tool.title}</h3>
+                <p className="text-gray-400 text-sm">{tool.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Supply Chain
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              See measurable improvements in efficiency, cost reduction, and operational performance
             </p>
           </motion.div>
 
@@ -314,7 +386,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -328,7 +400,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -341,7 +413,7 @@ export default function AIPoweredCustomerChurnPredictor() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs and start preventing churn today
+              Choose the plan that fits your business size and supply chain complexity
             </p>
           </motion.div>
 
@@ -355,13 +427,13 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/25' 
+                    ? 'border-orange-500 shadow-lg shadow-orange-500/25' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -387,7 +459,7 @@ export default function AIPoweredCustomerChurnPredictor() {
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   {plan.cta}
@@ -399,7 +471,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -412,7 +484,7 @@ export default function AIPoweredCustomerChurnPredictor() {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our churn prediction platform works across various industries and business models
+              Our supply chain optimization platform works across various industries and business models
             </p>
           </motion.div>
 
@@ -451,18 +523,18 @@ export default function AIPoweredCustomerChurnPredictor() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-to-r from-red-500/10 to-pink-600/10 border border-red-500/20 rounded-3xl p-12">
+            <div className="bg-gradient-to-r from-orange-500/10 to-red-600/10 border border-orange-500/20 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Stop Customer Churn?
+                Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses that have reduced churn and increased customer lifetime value 
-                with our AI-powered prediction platform.
+                Join thousands of businesses that have reduced costs and improved efficiency 
+                with our AI-powered supply chain optimization platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <span className="flex items-center gap-2">
                     Start Free Trial
@@ -471,7 +543,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-orange-400/50 text-orange-400 font-semibold rounded-xl hover:bg-orange-400/10 hover:border-orange-400 transition-all duration-300"
                 >
                   <span className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
@@ -499,24 +571,24 @@ export default function AIPoweredCustomerChurnPredictor() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <MapPin className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
             <div className="mt-8">
               <p className="text-gray-400">
-                Visit our website: <a href="https://ziontechgroup.com" className="text-red-400 hover:text-red-300 underline">https://ziontechgroup.com</a>
+                Visit our website: <a href="https://ziontechgroup.com" className="text-orange-400 hover:text-orange-300 underline">https://ziontechgroup.com</a>
               </p>
             </div>
           </motion.div>

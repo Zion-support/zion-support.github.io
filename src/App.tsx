@@ -98,6 +98,12 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+
+// New Innovative Micro SAAS Services 2026 - Additional
+const AIPoweredCustomerChurnPredictor = createLazyComponent(() => import('./pages/services/ai-powered-customer-churn-predictor'));
+const AIPoweredSEOOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-powered-seo-optimization-platform'));
+const AIPoweredFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-powered-financial-risk-management-platform'));
+const AIPoweredSupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-powered-supply-chain-optimization-platform'));
 const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
@@ -348,6 +354,9 @@ function App() {
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
+                    <Route path="/services/ai-powered-seo-optimization-platform" element={<AIPoweredSEOOptimizationPlatform />} />
+                    <Route path="/services/ai-powered-financial-risk-management-platform" element={<AIPoweredFinancialRiskManagementPlatform />} />
+                    <Route path="/services/ai-powered-supply-chain-optimization-platform" element={<AIPoweredSupplyChainOptimizationPlatform />} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

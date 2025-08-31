@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingDown, 
-  Users, 
-  DollarSign, 
+  Search, 
+  TrendingUp, 
   Target, 
   Zap, 
   Shield, 
@@ -23,7 +22,6 @@ import {
   Download,
   Share2,
   Filter,
-  Search,
   AlertTriangle,
   Lightbulb,
   BarChart,
@@ -35,90 +33,91 @@ import {
   Download as DownloadIcon,
   Share2 as Share2Icon,
   Filter as FilterIcon,
-  Search as SearchIcon,
   AlertTriangle as AlertTriangleIcon,
   Lightbulb as LightbulbIcon,
-  UserMinus,
-  UserCheck,
-  Bell,
-  Target as TargetIcon,
   BarChart3,
-  TrendingUp,
+  TrendingDown,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Monitor,
+  Smartphone,
+  Globe as GlobeIcon,
+  FileText,
+  Users,
+  DollarSign
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIPoweredCustomerChurnPredictor() {
+export default function AIPoweredSEOOptimizationPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Churn Prediction",
-      description: "Advanced machine learning algorithms that analyze customer behavior patterns to predict churn risk with 95%+ accuracy",
-      benefits: ["Early warning system", "Behavioral pattern analysis", "Predictive scoring"]
+      title: "AI-Powered Keyword Research",
+      description: "Advanced machine learning algorithms that discover high-value keywords with low competition and high search volume",
+      benefits: ["Competitive analysis", "Search intent matching", "Long-tail keyword discovery"]
     },
     {
-      icon: TrendingDown,
-      title: "Real-time Risk Monitoring",
-      description: "Continuous monitoring of customer engagement metrics and automatic risk assessment updates",
-      benefits: ["Live risk scoring", "Automated alerts", "Real-time dashboards"]
+      icon: Search,
+      title: "Intelligent Content Optimization",
+      description: "AI-driven content recommendations that optimize your pages for search engines and user experience",
+      benefits: ["Content gap analysis", "Semantic optimization", "Readability scoring"]
     },
     {
-      icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent segmentation based on churn risk, value, and behavior patterns for targeted retention strategies",
-      benefits: ["Risk-based segmentation", "Value prioritization", "Behavioral clustering"]
+      icon: TrendingUp,
+      title: "Real-time Performance Tracking",
+      description: "Comprehensive monitoring of search rankings, traffic patterns, and conversion metrics with instant alerts",
+      benefits: ["Live ranking updates", "Traffic analytics", "Conversion tracking"]
     },
     {
       icon: Target,
-      title: "Personalized Retention Campaigns",
-      description: "AI-generated retention strategies and automated campaign recommendations for high-risk customers",
-      benefits: ["Custom retention plans", "Automated campaigns", "ROI optimization"]
+      title: "Competitive Intelligence",
+      description: "Deep analysis of competitor strategies, backlink profiles, and content performance to identify opportunities",
+      benefits: ["Competitor tracking", "Backlink analysis", "Content benchmarking"]
     },
     {
       icon: Zap,
-      title: "Automated Intervention System",
-      description: "Smart triggers and automated actions to prevent churn before it happens",
-      benefits: ["Proactive interventions", "Smart triggers", "Automated workflows"]
+      title: "Automated Technical SEO",
+      description: "Smart detection and fixing of technical SEO issues like broken links, schema markup, and page speed",
+      benefits: ["Issue detection", "Auto-fixing", "Performance optimization"]
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive reporting on churn patterns, retention success rates, and ROI of retention efforts",
-      benefits: ["Churn analytics", "Retention metrics", "ROI tracking"]
+      title: "Advanced Analytics & Reporting",
+      description: "Comprehensive insights into search performance, user behavior, and ROI of SEO efforts",
+      benefits: ["Performance metrics", "User behavior analysis", "ROI tracking"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "Perfect for small businesses starting with churn prevention",
+      description: "Perfect for small businesses starting their SEO journey",
       features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
-        "Email alerts",
-        "Standard reporting",
+        "Up to 5 websites",
+        "Basic keyword research",
+        "Content optimization",
+        "Monthly reports",
         "Email support",
-        "Basic retention suggestions"
+        "Basic analytics"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$399",
       period: "/month",
-      description: "Ideal for growing companies with advanced churn prevention needs",
+      description: "Ideal for growing businesses with advanced SEO needs",
       features: [
-        "Up to 10,000 customers",
-        "Advanced ML algorithms",
-        "Real-time monitoring",
-        "Automated campaigns",
+        "Up to 25 websites",
+        "Advanced AI algorithms",
+        "Competitive analysis",
+        "Technical SEO audit",
         "Priority support",
-        "Custom retention strategies",
+        "Custom reporting",
         "API access",
         "Advanced analytics"
       ],
@@ -127,12 +126,12 @@ export default function AIPoweredCustomerChurnPredictor() {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$999",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade churn prevention",
+      description: "For large organizations requiring enterprise-grade SEO solutions",
       features: [
-        "Unlimited customers",
-        "Custom ML models",
+        "Unlimited websites",
+        "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
         "Advanced integrations",
@@ -147,47 +146,80 @@ export default function AIPoweredCustomerChurnPredictor() {
 
   const useCases = [
     {
-      industry: "SaaS & Subscription",
-      description: "Predict subscription cancellations and implement targeted retention strategies",
-      metrics: ["Churn rate reduction", "LTV improvement", "Retention cost savings"]
-    },
-    {
       industry: "E-commerce",
-      description: "Identify customers at risk of leaving and personalize retention efforts",
-      metrics: ["Customer retention", "Repeat purchase rate", "Lifetime value"]
+      description: "Optimize product pages, category pages, and content for better search visibility and conversions",
+      metrics: ["Organic traffic growth", "Product page rankings", "Conversion rate improvement"]
     },
     {
-      industry: "Financial Services",
-      description: "Monitor account activity and predict account closures for proactive retention",
-      metrics: ["Account retention", "Product adoption", "Revenue protection"]
+      industry: "SaaS & B2B",
+      description: "Target high-intent keywords and optimize landing pages for lead generation and conversions",
+      metrics: ["Lead generation", "Keyword rankings", "Organic traffic quality"]
     },
     {
-      industry: "Telecommunications",
-      description: "Predict service cancellations and implement targeted retention campaigns",
-      metrics: ["Service retention", "Plan upgrades", "Churn prevention ROI"]
+      industry: "Local Business",
+      description: "Dominate local search results and Google My Business optimization for better local visibility",
+      metrics: ["Local pack rankings", "Local traffic", "Review management"]
+    },
+    {
+      industry: "Content Publishers",
+      description: "Optimize content strategy, improve rankings, and increase organic traffic and engagement",
+      metrics: ["Content performance", "Traffic growth", "Engagement metrics"]
     }
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Reduce Churn by 30-50%",
-      description: "Proactive identification and intervention significantly reduces customer churn rates"
+      title: "Increase Organic Traffic by 200-500%",
+      description: "AI-optimized content and strategies significantly improve search rankings and traffic"
     },
     {
       icon: DollarSign,
-      title: "Increase Customer LTV",
-      description: "Better retention strategies lead to higher customer lifetime value and revenue"
+      title: "Reduce Customer Acquisition Costs",
+      description: "Organic traffic reduces dependency on paid advertising and lowers overall marketing costs"
     },
     {
       icon: Users,
-      title: "Improve Customer Experience",
-      description: "Personalized retention efforts enhance customer satisfaction and loyalty"
+      title: "Improve User Experience",
+      description: "SEO optimization enhances site usability, speed, and mobile experience for better engagement"
     },
     {
       icon: Target,
-      title: "Optimize Marketing ROI",
-      description: "Targeted retention campaigns reduce marketing waste and improve efficiency"
+      title: "Long-term Sustainable Growth",
+      description: "SEO provides lasting results that compound over time, unlike paid advertising"
+    }
+  ];
+
+  const seoTools = [
+    {
+      icon: Search,
+      title: "Keyword Research Suite",
+      description: "Advanced keyword discovery, competition analysis, and search volume insights"
+    },
+    {
+      icon: FileText,
+      title: "Content Optimizer",
+      description: "AI-powered content recommendations, readability scoring, and semantic optimization"
+    },
+    {
+      icon: Monitor,
+      title: "Technical SEO Auditor",
+      description: "Comprehensive technical analysis, issue detection, and automated fixing"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Tracker",
+      description: "Real-time ranking monitoring, traffic analytics, and conversion tracking"
+    },
+    {
+      icon: Globe,
+      title: "Backlink Analyzer",
+      description: "Link profile analysis, competitor backlink research, and link building opportunities"
+    },
+    {
+      icon: Users,
+      title: "User Experience Optimizer",
+      description: "Page speed optimization, mobile responsiveness, and user behavior analysis"
     }
   ];
 
@@ -202,36 +234,36 @@ export default function AIPoweredCustomerChurnPredictor() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4 mr-2" />
-              AI-Powered Churn Prevention
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+              <Search className="w-4 h-4 mr-2" />
+              AI-Powered SEO Optimization
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Stop Customer Churn Before It
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400"> Happens</span>
+              Dominate Search Results with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> AI-Powered SEO</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Our AI-powered customer churn predictor uses advanced machine learning to identify at-risk customers 
-              and automatically trigger retention strategies, helping you reduce churn by up to 50%.
+              Our AI-powered SEO platform uses advanced machine learning to optimize your content, 
+              discover high-value keywords, and skyrocket your search rankings for sustainable organic growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-red-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
               >
                 <span className="flex items-center gap-2">
-                  Get Started Today
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5" />
                 </span>
               </Link>
               
-              <button className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300">
+              <button className="inline-flex items-center px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300">
                 <span className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Download Brochure
+                  Download SEO Guide
                 </span>
               </button>
             </div>
@@ -250,10 +282,10 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Churn Prevention
+              Powerful SEO Tools & Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our comprehensive churn prediction platform combines cutting-edge AI with proven retention strategies
+              Our comprehensive SEO platform combines cutting-edge AI with proven optimization strategies
             </p>
           </motion.div>
 
@@ -265,9 +297,9 @@ export default function AIPoweredCustomerChurnPredictor() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-red-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -286,7 +318,7 @@ export default function AIPoweredCustomerChurnPredictor() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* SEO Tools Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -297,10 +329,49 @@ export default function AIPoweredCustomerChurnPredictor() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Customer Retention
+              Complete SEO Toolkit
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See measurable improvements in customer retention and business growth
+              Everything you need to dominate search results and grow your organic traffic
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {seoTools.map((tool, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <tool.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{tool.title}</h3>
+                <p className="text-gray-400 text-sm">{tool.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Search Performance
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              See measurable improvements in search rankings, organic traffic, and business growth
             </p>
           </motion.div>
 
@@ -314,7 +385,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -328,7 +399,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -341,7 +412,7 @@ export default function AIPoweredCustomerChurnPredictor() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs and start preventing churn today
+              Choose the plan that fits your business needs and start dominating search results today
             </p>
           </motion.div>
 
@@ -355,13 +426,13 @@ export default function AIPoweredCustomerChurnPredictor() {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/25' 
+                    ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -387,7 +458,7 @@ export default function AIPoweredCustomerChurnPredictor() {
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   {plan.cta}
@@ -399,7 +470,7 @@ export default function AIPoweredCustomerChurnPredictor() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -412,7 +483,7 @@ export default function AIPoweredCustomerChurnPredictor() {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our churn prediction platform works across various industries and business models
+              Our SEO platform works across various industries and business models
             </p>
           </motion.div>
 
@@ -451,18 +522,18 @@ export default function AIPoweredCustomerChurnPredictor() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-to-r from-red-500/10 to-pink-600/10 border border-red-500/20 rounded-3xl p-12">
+            <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 border border-blue-500/20 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Stop Customer Churn?
+                Ready to Dominate Search Results?
               </h2>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses that have reduced churn and increased customer lifetime value 
-                with our AI-powered prediction platform.
+                Join thousands of businesses that have increased their organic traffic and search rankings 
+                with our AI-powered SEO platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <span className="flex items-center gap-2">
                     Start Free Trial
@@ -471,7 +542,7 @@ export default function AIPoweredCustomerChurnPredictor() {
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-red-400/50 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 hover:border-red-400 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border-2 border-blue-400/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300"
                 >
                   <span className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
@@ -499,24 +570,24 @@ export default function AIPoweredCustomerChurnPredictor() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
             <div className="mt-8">
               <p className="text-gray-400">
-                Visit our website: <a href="https://ziontechgroup.com" className="text-red-400 hover:text-red-300 underline">https://ziontechgroup.com</a>
+                Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">https://ziontechgroup.com</a>
               </p>
             </div>
           </motion.div>
