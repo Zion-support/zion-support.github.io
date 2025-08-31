@@ -72,6 +72,13 @@ const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 
+// 2029 Cutting-Edge Services
+const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
+
+// New Innovative Services
+const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
+const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -386,6 +393,10 @@ function App() {
                   {/* 2029 Cutting-Edge Services */}
                   <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                   <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+
+                  {/* New Innovative Services */}
+                  <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
+                  <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
 
                   {/* 404 Page */}
                   <Route

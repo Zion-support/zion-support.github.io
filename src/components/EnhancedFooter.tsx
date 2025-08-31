@@ -38,7 +38,7 @@ import {
   Code,
   Server,
   Smartphone,
-  Cpu,
+  Cpu as CpuIcon,
   Wifi,
   ShieldCheck,
   Globe2,
@@ -51,7 +51,13 @@ import {
   Handshake,
   FileText,
   Video,
-  GraduationCap
+  GraduationCap,
+  Atom,
+  PenTool,
+  Leaf,
+  ChevronRight,
+  ChevronDown,
+  DollarSign
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -59,12 +65,21 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'Featured Services',
+      links: [
+        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
+        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+      ]
+    },
+    {
+      title: 'Core Services',
       links: [
         { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Chip },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
         { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles }
       ]
@@ -113,11 +128,20 @@ export function EnhancedFooter() {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
   ];
 
+  const quickLinks = [
+    { name: 'Contact Us', href: '/contact', icon: MessageCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
+    { name: 'Support', href: '/help', icon: HelpCircle },
+    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { name: 'Terms of Service', href: '/terms', icon: FileText },
+    { name: 'Cookie Policy', href: '/cookies', icon: Cookie }
+  ];
+
   return (
     <footer className="bg-zion-slate-dark border-t border-white/20">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -148,6 +172,25 @@ export function EnhancedFooter() {
                 <span className="max-w-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
+
+            {/* Social Links */}
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Footer Sections */}
@@ -159,10 +202,17 @@ export function EnhancedFooter() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group"
+                      className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
+                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''
+                      }`}
                     >
-                      <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
+                      <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
+                        link.featured ? 'text-blue-400' : 'text-blue-400'
+                      }`} />
                       <span className="text-sm">{link.name}</span>
+                      {link.featured && (
+                        <Star className="w-3 h-3 text-yellow-400 ml-1" />
+                      )}
                     </Link>
                   </li>
                 ))}
@@ -171,8 +221,24 @@ export function EnhancedFooter() {
           ))}
         </div>
 
+        {/* Quick Links Section */}
+        <div className="mt-12 pt-8 border-t border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group"
+              >
+                <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
+                <span className="text-sm">{link.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Newsletter Section */}
-        <div className="mt-16 pt-8 border-t border-white/20">
+        <div className="mt-12 pt-8 border-t border-white/20">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Innovation
@@ -186,7 +252,7 @@ export function EnhancedFooter() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
             </div>
@@ -203,22 +269,6 @@ export function EnhancedFooter() {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center space-x-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-gray-400 ${social.color} transition-colors`}
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
               <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
@@ -231,6 +281,14 @@ export function EnhancedFooter() {
                 Cookie Policy
               </Link>
             </div>
+
+            {/* Back to Top */}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <ArrowRight className="w-4 h-4 rotate-[-90deg]" />
+            </button>
           </div>
         </div>
       </div>
@@ -244,7 +302,7 @@ export function EnhancedFooter() {
       >
         <Link
           to="/contact"
-          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105"
         >
           <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
           <span className="hidden sm:block font-medium">Contact Us</span>
@@ -278,5 +336,11 @@ const GraduationCap = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+  </svg>
+);
+
+const Cookie = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
   </svg>
 );

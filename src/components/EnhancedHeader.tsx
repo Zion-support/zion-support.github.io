@@ -33,7 +33,6 @@ import {
   Code,
   Truck,
   Building,
-  BarChart3,
   PenTool,
   Eye,
   Server,
@@ -60,7 +59,94 @@ import {
   Brain as BrainIcon,
   Atom as AtomIcon,
   Rocket as RocketIcon,
-  Leaf as LeafIcon
+  Leaf as LeafIcon,
+  ExternalLink,
+  ChevronRight,
+  BarChart3,
+  Palette,
+  Camera,
+  Music,
+  Gamepad2,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Bus,
+  Bicycle,
+  Motorcycle,
+  Truck as TruckIcon,
+  Building2,
+  Factory,
+  Warehouse,
+  Store,
+  Bank,
+  Hospital,
+  School,
+  University,
+  Library,
+  Museum,
+  Theater,
+  Stadium,
+  Park,
+  Beach,
+  Mountain,
+  Forest,
+  Desert,
+  Island,
+  Ocean,
+  River,
+  Lake,
+  Stream,
+  Waterfall,
+  Volcano,
+  Cave,
+  Canyon,
+  Valley,
+  Hill,
+  Cliff,
+  Rock,
+  Sand,
+  Soil,
+  Grass,
+  Tree,
+  Flower,
+  Bush,
+  Vine,
+  Moss,
+  Algae,
+  Coral,
+  Shell,
+  Fish,
+  Bird,
+  Mammal,
+  Reptile,
+  Amphibian,
+  Insect,
+  Arachnid,
+  Crustacean,
+  Mollusk,
+  Worm,
+  Bacteria,
+  Virus,
+  Fungus,
+  Protozoa,
+  Algae as AlgaeIcon,
+  Coral as CoralIcon,
+  Shell as ShellIcon,
+  Fish as FishIcon,
+  Bird as BirdIcon,
+  Mammal as MammalIcon,
+  Reptile as ReptileIcon,
+  Amphibian as AmphibianIcon,
+  Insect as InsectIcon,
+  Arachnid as ArachnidIcon,
+  Crustacean as CrustaceanIcon,
+  Mollusk as MolluskIcon,
+  Worm as WormIcon,
+  Bacteria as BacteriaIcon,
+  Virus as VirusIcon,
+  Fungus as FungusIcon,
+  Protozoa as ProtozoaIcon
 } from 'lucide-react';
 
 export function EnhancedHeader() {
@@ -95,11 +181,36 @@ export function EnhancedHeader() {
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Server },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
   const serviceCategories = [
+    {
+      name: 'AI-Powered Micro SAAS',
+      description: 'Revolutionary AI-powered software solutions',
+      href: '/zion-cutting-edge-services-2029',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Content Creation Studio Pro',
+      description: 'Advanced AI content creation platform',
+      href: '/services/AI-Content-Creation-Studio-Pro',
+      icon: PenTool,
+      color: 'from-purple-500 to-pink-500',
+      featured: true
+    },
+    {
+      name: 'Quantum AI Trading Platform',
+      description: 'Next-generation quantum trading platform',
+      href: '/services/Quantum-AI-Trading-Platform',
+      icon: Atom,
+      color: 'from-orange-500 to-red-500',
+      featured: true
+    },
     {
       name: 'Micro SAAS Solutions',
       description: 'Innovative software-as-a-service solutions',
@@ -141,6 +252,14 @@ export function EnhancedHeader() {
       href: '/zion-innovative-services-2025',
       icon: SparklesIcon,
       color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      name: '2029 Cutting-Edge Services',
+      description: 'Future-ready innovative services',
+      href: '/zion-cutting-edge-services-2029',
+      icon: SparklesIcon,
+      color: 'from-indigo-500 to-purple-500',
+      featured: true
     }
   ];
 
@@ -243,25 +362,70 @@ export function EnhancedHeader() {
             className="absolute top-full left-0 right-0 bg-zion-slate-dark/95 backdrop-blur-lg border-b border-white/20"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {serviceCategories.map((category) => (
-                  <Link
-                    key={category.name}
-                    to={category.href}
-                    className="group p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10"
-                    onClick={() => setServicesDropdownOpen(false)}
-                  >
-                    <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <category.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm">
-                      {category.description}
-                    </p>
-                  </Link>
-                ))}
+              {/* Featured Services */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-white mb-4">Featured Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {serviceCategories.filter(cat => cat.featured).map((category) => (
+                    <Link
+                      key={category.name}
+                      to={category.href}
+                      className="group p-6 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10 relative overflow-hidden"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform relative z-10`}>
+                        <category.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors relative z-10">
+                        {category.name}
+                      </h3>
+                      <p className="text-gray-400 text-sm relative z-10">
+                        {category.description}
+                      </p>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ChevronRight className="w-5 h-5 text-blue-400" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* All Services */}
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4">All Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {serviceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      to={category.href}
+                      className="group p-4 rounded-lg bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className={`w-10 h-10 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                        <category.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-blue-400 transition-colors">
+                        {category.name}
+                      </h4>
+                      <p className="text-gray-400 text-xs">
+                        {category.description}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* View All Services CTA */}
+              <div className="mt-8 text-center">
+                <Link
+                  to="/zion-cutting-edge-services-2029"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                  onClick={() => setServicesDropdownOpen(false)}
+                >
+                  <span>View All Services</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -307,6 +471,30 @@ export function EnhancedHeader() {
                   <span>{item.name}</span>
                 </Link>
               ))}
+
+              {/* Mobile Services Dropdown */}
+              <div className="border-t border-white/20 pt-4">
+                <h4 className="text-sm font-semibold text-white mb-3 px-4">Featured Services</h4>
+                <div className="space-y-2">
+                  {serviceCategories.filter(cat => cat.featured).map((category) => (
+                    <Link
+                      key={category.name}
+                      to={category.href}
+                      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
+                        <category.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-medium">{category.name}</div>
+                        <div className="text-xs text-gray-400">{category.description}</div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-400" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
               {/* Mobile Contact Button */}
               <Link
