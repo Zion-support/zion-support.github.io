@@ -653,6 +653,40 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Pricing Guide Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transparent</span> Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Get complete pricing information for all our revolutionary services. 
+                Real market prices, proven ROI, and detailed comparisons.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/comprehensive-pricing-guide-2033"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                >
+                  View Complete Pricing Guide
+                </Link>
+                <Link
+                  to="/innovative-services-showcase-2033"
+                  className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                >
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">

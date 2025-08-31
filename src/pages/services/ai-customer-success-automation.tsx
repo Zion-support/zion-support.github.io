@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Truck,
+  Users,
   TrendingUp,
+  MessageCircle,
   CheckCircle,
   Star,
   ArrowRight,
@@ -38,121 +39,132 @@ import {
   Briefcase,
   Globe,
   Building,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Bike,
-  Motorcycle,
-  Bus,
-  Truck as TruckIcon,
-  Ship as ShipIcon,
-  Plane as PlaneIcon,
-  Train as TrainIcon,
-  Car as CarIcon,
-  Bike as BikeIcon,
-  Motorcycle as MotorcycleIcon,
-  Bus as BusIcon,
-  Package as PackageIcon,
-  Route as RouteIcon,
-  Warehouse as WarehouseIcon,
-  Factory as FactoryIcon
+  Shield as ShieldIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Server as ServerIcon,
+  Cloud as CloudIcon,
+  Lock as LockIcon,
+  BarChart as BarChartIcon,
+  Cpu as CpuIcon,
+  Workflow as WorkflowIcon,
+  Database as DatabaseIcon,
+  Target as TargetIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Monitor as MonitorIcon,
+  Smartphone as SmartphoneIcon,
+  Network as NetworkIcon,
+  Wifi as WifiIcon,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+  Palette as PaletteIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Atom as AtomIcon,
+  Leaf as LeafIcon,
+  Gamepad2 as GamepadIcon,
+  Coins as CoinsIcon,
+  Satellite as SatelliteIcon,
+  MessageCircle as MessageCircleIcon,
+  Star as StarIcon,
+  Users2 as Users2Icon,
+  Cog as CogIcon
 } from 'lucide-react';
 
-const AISupplyChainOptimizationEnhanced: React.FC = () => {
+const AICustomerSuccessAutomation: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Demand Forecasting",
-      description: "Predict demand patterns with 95% accuracy using machine learning algorithms"
+      title: "AI-Powered Customer Insights",
+      description: "Advanced analytics and predictive modeling to understand customer behavior and needs"
     },
     {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "Optimize delivery routes reducing costs by up to 30% and improving delivery times"
-    },
-    {
-      icon: Warehouse,
-      title: "Smart Inventory Management",
-      description: "Automated inventory tracking with real-time alerts and predictive restocking"
-    },
-    {
-      icon: Truck,
-      title: "Fleet Management & Tracking",
-      description: "Real-time GPS tracking, fuel optimization, and maintenance scheduling"
+      icon: Workflow,
+      title: "Automated Success Workflows",
+      description: "Intelligent automation of customer success processes and touchpoints"
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into supply chain performance and optimization opportunities"
+      title: "Real-time Performance Metrics",
+      description: "Comprehensive dashboards showing customer health, engagement, and success metrics"
+    },
+    {
+      icon: MessageCircle,
+      title: "Proactive Communication",
+      description: "Automated outreach and personalized messaging based on customer behavior patterns"
+    },
+    {
+      icon: Target,
+      title: "Success Goal Tracking",
+      description: "Set and monitor customer success goals with AI-powered recommendations"
     },
     {
       icon: Shield,
-      title: "Risk Management & Compliance",
-      description: "Identify and mitigate supply chain risks with AI-powered threat detection"
+      title: "Churn Prevention",
+      description: "Early warning systems and intervention strategies to prevent customer churn"
     }
   ];
 
   const benefits = [
-    "Reduce supply chain costs by 25-40%",
-    "Improve delivery accuracy by 95%",
-    "Reduce inventory carrying costs by 30%",
-    "Increase supplier performance by 45%",
-    "Reduce lead times by 35%",
-    "Improve customer satisfaction by 60%"
+    "Increase customer retention by 40%",
+    "Reduce manual follow-up tasks by 60%",
+    "Improve customer satisfaction scores by 35%",
+    "Accelerate time-to-value by 50%",
+    "Reduce customer churn by 30%",
+    "Increase upsell opportunities by 45%"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses starting their supply chain optimization journey",
+      description: "Perfect for small teams getting started with customer success automation",
       features: [
-        "Up to 100 SKUs",
-        "Basic demand forecasting",
-        "Route optimization",
-        "Inventory tracking",
+        "Up to 500 customers",
+        "Basic AI insights",
+        "Standard workflows",
         "Email support",
-        "Standard reporting"
+        "Core metrics dashboard"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$999",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chain operations",
+      description: "Ideal for growing businesses with advanced customer success needs",
       features: [
-        "Up to 1,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-modal optimization",
-        "Real-time tracking",
+        "Up to 2,000 customers",
+        "Advanced AI analytics",
+        "Custom workflows",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics"
+        "Advanced reporting",
+        "Integration APIs"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,299",
       period: "/month",
-      description: "For large organizations with global supply chain operations",
+      description: "For large organizations requiring enterprise-grade customer success automation",
       features: [
-        "Unlimited SKUs",
+        "Unlimited customers",
         "Custom AI models",
-        "Global optimization",
         "White-label solution",
-        "Dedicated account manager",
+        "Dedicated success manager",
         "Advanced security",
-        "Custom development"
+        "Custom integrations"
       ],
       cta: "Contact Sales",
       popular: false
@@ -161,47 +173,24 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
 
   const useCases = [
     {
-      title: "E-commerce & Retail",
-      description: "Optimize inventory, reduce shipping costs, and improve delivery times",
+      title: "SaaS Companies",
+      description: "Automate onboarding, feature adoption tracking, and renewal processes",
+      icon: Code
+    },
+    {
+      title: "E-commerce",
+      description: "Personalized recommendations, order tracking, and customer support automation",
       icon: ShoppingCart
     },
     {
-      title: "Manufacturing",
-      description: "Streamline production planning, reduce lead times, and optimize supplier networks",
-      icon: Factory
+      title: "Financial Services",
+      description: "Compliance monitoring, risk assessment, and customer relationship management",
+      icon: Coins
     },
     {
-      title: "Logistics & Transportation",
-      description: "Optimize routes, reduce fuel costs, and improve fleet utilization",
-      icon: Truck
-    },
-    {
-      title: "Healthcare & Pharmaceuticals",
-      description: "Ensure critical supplies availability and optimize distribution networks",
+      title: "Healthcare",
+      description: "Patient engagement, appointment scheduling, and health monitoring automation",
       icon: Shield
-    }
-  ];
-
-  const industries = [
-    {
-      title: "Automotive",
-      icon: Car,
-      description: "Just-in-time manufacturing and global parts distribution"
-    },
-    {
-      title: "Food & Beverage",
-      icon: Package,
-      description: "Cold chain optimization and perishable goods management"
-    },
-    {
-      title: "Electronics",
-      icon: Cog,
-      description: "Component sourcing and global supply chain coordination"
-    },
-    {
-      title: "Fashion & Apparel",
-      icon: Palette,
-      description: "Seasonal demand planning and fast fashion logistics"
     }
   ];
 
@@ -217,15 +206,15 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+              AI-Powered Customer Success
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="text-zion-cyan"> Optimization</span>
+              AI Customer Success
+              <span className="text-zion-cyan"> Automation</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with AI-powered optimization, predictive analytics, 
-              and intelligent automation that reduces costs, improves efficiency, and enhances customer satisfaction.
+              Transform your customer success operations with intelligent automation, predictive analytics, 
+              and AI-powered insights that drive retention, satisfaction, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -257,10 +246,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Supply Chain Features
+              Powerful Features for Customer Success
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to optimize your supply chain operations
+              Everything you need to automate and optimize your customer success operations
             </p>
           </motion.div>
 
@@ -299,7 +288,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
               Proven Results
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See the measurable impact of AI-powered supply chain optimization
+              See the measurable impact of AI-powered customer success automation
             </p>
           </motion.div>
 
@@ -323,47 +312,8 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
         </div>
       </section>
 
-      {/* Industry Solutions */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored optimization strategies for your industry
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.title}</h3>
-                <p className="text-zion-slate-light">{industry.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -376,7 +326,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain needs
+              Choose the plan that fits your business needs
             </p>
           </motion.div>
 
@@ -437,7 +387,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -447,10 +397,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Business Type
+              Perfect for Every Industry
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI supply chain optimization works across all business sizes and types
+              Our AI customer success automation works across all business types
             </p>
           </motion.div>
 
@@ -476,7 +426,7 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -485,10 +435,10 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Customer Success?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of companies using AI to transform their supply chain operations
+              Join thousands of companies using AI to automate and optimize their customer success operations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -533,4 +483,4 @@ const AISupplyChainOptimizationEnhanced: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimizationEnhanced;
+export default AICustomerSuccessAutomation;

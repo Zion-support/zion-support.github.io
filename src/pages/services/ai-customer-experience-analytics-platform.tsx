@@ -1,258 +1,185 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Users,
-  TrendingUp,
-  BarChart3,
-  Brain,
-  Eye,
-  MessageCircle,
-  Heart,
-  Star,
-  Target,
-  Zap,
-  CheckCircle,
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe,
   ArrowRight,
+  CheckCircle,
+  Star,
+  Rocket,
+  Target,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Workflow,
+  Activity,
+  BarChart3,
+  Code,
+  Server,
+  Cloud,
+  Lock,
+  MessageCircle,
+  Calendar,
+  FileText,
+  Settings,
+  Cog,
+  Monitor,
+  Smartphone,
+  Wifi,
+  Eye,
+  Search,
+  Palette,
   Phone,
   Mail,
   MapPin,
   Clock,
   DollarSign,
-  Shield,
-  Cloud,
-  Database,
-  Workflow,
-  Globe,
-  Activity,
-  PieChart,
-  LineChart,
-  BarChart,
-  Search,
-  Filter,
-  Settings,
-  Download,
-  Share2,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  ExternalLink,
-  Calendar,
-  Tag,
-  Hash,
-  AtSign,
-  Percent,
-  Infinity,
-  Sparkles,
-  Lightbulb,
-  Code,
-  Server,
-  Lock,
-  Unlock,
-  EyeOff,
-  EyeOn,
-  RefreshCw,
-  RotateCw,
-  Crop,
-  Scissors,
-  Move,
-  ZoomIn,
-  ZoomOut,
-  Maximize,
-  Minimize,
-  Fullscreen,
-  FullscreenExit,
-  Volume2,
-  VolumeX,
-  SkipBack,
-  SkipForward,
-  Repeat,
-  Shuffle,
-  ThumbsUp,
-  ThumbsDown,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Plus,
-  Minus,
-  X,
-  AlertTriangle,
-  CheckCircle2,
-  XCircle,
-  Info as InfoIcon,
-  HelpCircle as HelpCircleIcon,
-  ExternalLink as ExternalLinkIcon,
-  Calendar as CalendarIcon,
-  Clock as ClockIcon,
-  Tag as TagIcon,
-  Hash as HashIcon,
-  AtSign as AtSignIcon,
-  Percent as PercentIcon,
-  Infinity as InfinityIcon,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle as MessageCircleIcon,
+  Star as StarIcon,
+  Users2,
+  Cog as CogIcon,
+  ShoppingCart,
+  Handshake,
+  BookOpen,
+  Video,
+  GraduationCap,
+  PenTool,
+  Briefcase,
+  Globe as GlobeIcon,
+  Building as BuildingIcon,
+  Shield as ShieldIcon,
   Zap as ZapIcon,
-  Battery,
-  Wifi,
-  Signal,
-  Bluetooth,
-  WifiOff,
-  SignalOff,
-  BluetoothOff,
-  BatteryOff,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryEmpty,
-  BatteryHalf,
-  BatteryQuarter,
-  BatteryThreeQuarters,
-  BatteryOneQuarter,
-  BatteryTwoThirds,
-  BatteryOneThird,
-  BatteryTwoThirds as BatteryTwoThirdsIcon,
-  BatteryOneThird as BatteryOneThirdIcon,
-  BatteryQuarter as BatteryQuarterIcon,
-  BatteryThreeQuarters as BatteryThreeQuartersIcon,
-  BatteryHalf as BatteryHalfIcon,
-  BatteryEmpty as BatteryEmptyIcon,
-  BatteryLow as BatteryLowIcon,
-  BatteryMedium as BatteryMediumIcon,
-  BatteryFull as BatteryFullIcon,
-  BatteryCharging as BatteryChargingIcon,
-  BatteryOff as BatteryOffIcon,
-  WifiOff as WifiOffIcon,
-  SignalOff as SignalOffIcon,
-  BluetoothOff as BluetoothOffIcon,
+  Brain as BrainIcon,
+  Server as ServerIcon,
+  Cloud as CloudIcon,
+  Lock as LockIcon,
+  BarChart as BarChartIcon,
+  Cpu as CpuIcon,
+  Workflow as WorkflowIcon,
+  Database as DatabaseIcon,
+  Target as TargetIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Monitor as MonitorIcon,
+  Smartphone as SmartphoneIcon,
+  Network as NetworkIcon,
   Wifi as WifiIcon,
-  Signal as SignalIcon,
-  Bluetooth as BluetoothIcon,
-  ShoppingCart
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+  Palette as PaletteIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Atom as AtomIcon,
+  Leaf as LeafIcon,
+  Gamepad2 as GamepadIcon,
+  Coins as CoinsIcon,
+  Satellite as SatelliteIcon
 } from 'lucide-react';
 
-const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState<any>(null);
-
+const AICustomerExperienceAnalyticsPlatform = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'AI-Powered Customer Insights',
-      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict future actions with 95% accuracy.',
-      benefits: ['Predictive customer behavior', 'Real-time sentiment analysis', 'Automated insight generation']
+      icon: Eye,
+      title: "Real-Time Customer Journey Tracking",
+      description: "Monitor every touchpoint and interaction across all channels with millisecond precision and AI-powered insights."
     },
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: '360° Customer View',
-      description: 'Comprehensive customer profiles combining data from all touchpoints for complete visibility into the customer journey.',
-      benefits: ['Unified customer data', 'Cross-channel tracking', 'Historical behavior analysis']
+      icon: Brain,
+      title: "Predictive Customer Behavior Analysis",
+      description: "Anticipate customer needs and preferences using advanced machine learning algorithms and behavioral pattern recognition."
     },
     {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: 'Advanced Analytics Dashboard',
-      description: 'Interactive dashboards with real-time metrics, customizable reports, and automated alerts for proactive decision-making.',
-      benefits: ['Real-time monitoring', 'Custom reporting', 'Automated alerts']
+      icon: BarChart3,
+      title: "Advanced Sentiment Analysis",
+      description: "Understand customer emotions and satisfaction levels through natural language processing and voice tone analysis."
     },
     {
-      icon: <Workflow className="w-8 h-8" />,
-      title: 'Automated Customer Journey Mapping',
-      description: 'AI automatically maps and optimizes customer journeys, identifying friction points and opportunities for improvement.',
-      benefits: ['Journey optimization', 'Friction point detection', 'Conversion improvement']
+      icon: Workflow,
+      title: "Automated Experience Optimization",
+      description: "Continuously improve customer experiences through AI-driven A/B testing and real-time optimization recommendations."
+    },
+    {
+      icon: Users,
+      title: "Personalized Customer Segmentation",
+      description: "Create dynamic customer segments based on behavior, preferences, and predicted lifetime value for targeted engagement."
+    },
+    {
+      icon: Shield,
+      title: "Privacy-First Analytics",
+      description: "Ensure GDPR and CCPA compliance while maintaining comprehensive customer insights through privacy-preserving AI techniques."
     }
   ];
 
-  const metrics = [
-    {
-      id: 'customer-satisfaction',
-      name: 'Customer Satisfaction Score',
-      description: 'Measure and track customer satisfaction across all touchpoints',
-      icon: <Heart className="w-6 h-6" />,
-      category: 'Satisfaction'
-    },
-    {
-      id: 'net-promoter-score',
-      name: 'Net Promoter Score',
-      description: 'Track customer loyalty and likelihood to recommend',
-      icon: <Star className="w-6 h-6" />,
-      category: 'Loyalty'
-    },
-    {
-      id: 'customer-effort-score',
-      name: 'Customer Effort Score',
-      description: 'Measure how easy it is for customers to interact with your brand',
-      icon: <Target className="w-6 h-6" />,
-      category: 'Ease of Use'
-    },
-    {
-      id: 'customer-lifetime-value',
-      name: 'Customer Lifetime Value',
-      description: 'Predict and optimize customer value over time',
-      icon: <TrendingUp className="w-6 h-6" />,
-      category: 'Value'
-    },
-    {
-      id: 'churn-prediction',
-      name: 'Churn Prediction',
-      description: 'Identify customers at risk of leaving before they churn',
-      icon: <AlertTriangle className="w-6 h-6" />,
-      category: 'Retention'
-    },
-    {
-      id: 'sentiment-analysis',
-      name: 'Sentiment Analysis',
-      description: 'Real-time analysis of customer emotions and opinions',
-      icon: <MessageCircle className="w-6 h-6" />,
-      category: 'Emotion'
-    }
+  const benefits = [
+    "Increase customer satisfaction scores by up to 35% through personalized experiences",
+    "Reduce customer churn by 40% with predictive analytics and proactive engagement",
+    "Boost conversion rates by 25% through AI-optimized customer journeys",
+    "Improve customer lifetime value by 50% with targeted personalization",
+    "Reduce support costs by 30% through predictive issue resolution",
+    "Achieve 90%+ accuracy in customer behavior prediction and segmentation"
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: 'Starter',
-      price: 199,
-      period: 'month',
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for small businesses starting their customer analytics journey",
       features: [
-        'Up to 10,000 customer profiles',
-        'Basic AI analytics',
-        'Standard dashboards',
-        'Email support',
-        'Basic reporting',
-        '5 user seats'
+        "Basic customer journey tracking",
+        "Up to 10,000 customer interactions/month",
+        "Standard sentiment analysis",
+        "Basic reporting dashboard",
+        "Email support",
+        "3 team members"
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: 499,
-      period: 'month',
+      name: "Professional",
+      price: "$499",
+      period: "/month",
+      description: "Ideal for growing businesses with complex customer interactions",
       features: [
-        'Up to 100,000 customer profiles',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        'Advanced reporting',
-        'Unlimited user seats',
-        'API access',
-        'Custom integrations'
+        "Advanced customer journey tracking",
+        "Unlimited customer interactions",
+        "Advanced sentiment analysis",
+        "Predictive analytics",
+        "Priority support",
+        "Unlimited team members",
+        "Custom integrations"
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: 1299,
-      period: 'month',
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations",
       features: [
-        'Unlimited customer profiles',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Custom analytics',
-        'Advanced security',
-        'SLA guarantee',
-        'On-premise option'
+        "Full customer experience analytics",
+        "Custom AI model training",
+        "White-label solutions",
+        "Dedicated support team",
+        "On-premise deployment options",
+        "Custom compliance frameworks"
       ],
       popular: false
     }
@@ -260,352 +187,225 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
 
   const useCases = [
     {
-      title: 'E-commerce Optimization',
-      description: 'Improve conversion rates and customer retention through data-driven insights',
-      icon: <ShoppingCart className="w-6 h-6" />
+      industry: "E-commerce",
+      description: "Personalized product recommendations, cart abandonment analysis, and customer journey optimization.",
+      icon: ShoppingCart
     },
     {
-      title: 'Customer Service Enhancement',
-      description: 'Provide personalized support and proactive issue resolution',
-      icon: <MessageCircle className="w-6 h-6" />
+      industry: "Healthcare",
+      description: "Patient experience monitoring, appointment scheduling optimization, and care quality improvement.",
+      icon: Shield
     },
     {
-      title: 'Marketing Personalization',
-      description: 'Deliver targeted campaigns based on customer behavior and preferences',
-      icon: <Target className="w-6 h-6" />
+      industry: "Banking",
+      description: "Customer service optimization, fraud detection, and personalized financial product recommendations.",
+      icon: DollarSign
     },
     {
-      title: 'Product Development',
-      description: 'Use customer feedback to guide product improvements and innovation',
-      icon: <Lightbulb className="w-6 h-6" />
+      industry: "Telecommunications",
+      description: "Network quality monitoring, customer service optimization, and churn prediction and prevention.",
+      icon: Network
     }
   ];
 
-  const handleAnalyzeMetric = () => {
-    if (!selectedMetric) return;
-    
-    setIsAnalyzing(true);
-    // Simulate analysis
-    setTimeout(() => {
-      setAnalysisResults({
-        metric: selectedMetric,
-        currentValue: '85.2',
-        trend: '+5.3%',
-        insights: [
-          'Customer satisfaction has improved by 5.3% this month',
-          'Positive feedback increased in mobile app interactions',
-          'Response time improvements contributed to higher scores'
-        ],
-        recommendations: [
-          'Continue mobile app optimization efforts',
-          'Maintain current response time standards',
-          'Expand positive feedback collection channels'
-        ]
-      });
-      setIsAnalyzing(false);
-    }, 3000);
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              Advanced AI Analytics Platform
-            </motion.div>
-            
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-6"
-            >
-              AI Customer Experience Analytics Platform
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-            >
-              Transform customer insights into actionable intelligence with our AI-powered analytics platform. 
-              Understand your customers better, predict their needs, and deliver exceptional experiences that drive growth.
-            </motion.p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Helmet>
+        <title>AI Customer Experience Analytics Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform customer insights with our AI Customer Experience Analytics Platform. Track journeys, analyze behavior, and optimize experiences in real-time." />
+        <meta name="keywords" content="customer experience analytics, AI analytics, customer journey tracking, sentiment analysis, customer behavior prediction" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-customer-experience-analytics-platform" />
+      </Helmet>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link
-                to="/contact"
-                className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors text-lg"
-              >
-                Start Analyzing Today
-              </Link>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer Experience
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                {" "}Analytics Platform
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Unlock the power of customer data with AI-driven analytics that track every interaction, 
+              predict behavior patterns, and optimize experiences in real-time for maximum customer satisfaction.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors text-lg"
+                href={`tel:${contactInfo.phone}`}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
               >
-                Call: +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: {contactInfo.phone}
               </a>
-            </motion.div>
-          </div>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Quote
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI-Powered Analytics Tools
+              Revolutionary Customer Analytics
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform combines cutting-edge artificial intelligence with comprehensive analytics 
-              to deliver insights that transform customer experiences and drive business growth.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with comprehensive analytics to deliver unprecedented customer insights.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-8 hover:border-zion-cyan/50 transition-all"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center text-zion-cyan flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="text-zion-cyan flex items-center">
-                          <CheckCircle className="w-4 h-4 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Interactive Analytics Demo */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Experience Our Analytics Platform
+              Transform Your Customer Experience
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Try our interactive analytics demo. Select a metric and watch as AI analyzes 
-              your customer data to provide actionable insights and recommendations.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience unprecedented customer satisfaction and loyalty with data-driven insights.
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-blue-darker border border-zion-purple/30 rounded-lg p-8">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Metric Selection */}
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Choose Analytics Metric</h3>
-                  <div className="space-y-3">
-                    {metrics.map((metric) => (
-                      <button
-                        key={metric.id}
-                        onClick={() => setSelectedMetric(metric.id)}
-                        className={`w-full p-4 text-left rounded-lg border transition-all ${
-                          selectedMetric === metric.id
-                            ? 'border-zion-cyan bg-zion-cyan/10'
-                            : 'border-zion-purple/20 hover:border-zion-purple/40'
-                        }`}
-                      >
-                        <div className="flex items-center space-x-3">
-                          <div className="text-zion-cyan">{metric.icon}</div>
-                          <div>
-                            <h4 className="font-semibold text-white">{metric.name}</h4>
-                            <p className="text-sm text-zion-slate-light">{metric.description}</p>
-                            <span className="inline-block px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded mt-1">
-                              {metric.category}
-                            </span>
-                          </div>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Analysis Results */}
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">AI Analysis Results</h3>
-                  <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 min-h-[400px]">
-                    {isAnalyzing ? (
-                      <div className="flex items-center justify-center h-full">
-                        <div className="text-center">
-                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-                          <p className="text-zion-cyan">Analyzing customer data...</p>
-                        </div>
-                      </div>
-                    ) : analysisResults ? (
-                      <div className="space-y-6">
-                        <div className="text-center">
-                          <h4 className="text-2xl font-bold text-white mb-2">
-                            {analysisResults.metric.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                          </h4>
-                          <div className="text-4xl font-bold text-zion-cyan mb-2">
-                            {analysisResults.currentValue}
-                          </div>
-                          <div className="text-zion-slate-light">
-                            Trend: <span className="text-green-400">{analysisResults.trend}</span>
-                          </div>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-zion-cyan mb-3">Key Insights</h5>
-                          <ul className="space-y-2">
-                            {analysisResults.insights.map((insight: string, idx: number) => (
-                              <li key={idx} className="text-zion-slate-light flex items-start">
-                                <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                                {insight}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h5 className="text-lg font-semibold text-zion-cyan mb-3">Recommendations</h5>
-                          <ul className="space-y-2">
-                            {analysisResults.recommendations.map((rec: string, idx: number) => (
-                              <li key={idx} className="text-zion-slate-light flex items-start">
-                                <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                                {rec}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="text-center text-zion-slate-light h-full flex items-center justify-center">
-                        <p>Select a metric and click analyze to get AI-powered insights</p>
-                      </div>
-                    )}
-                  </div>
-
-                  <button
-                    onClick={handleAnalyzeMetric}
-                    disabled={!selectedMetric || isAnalyzing}
-                    className={`w-full mt-4 px-6 py-3 rounded-lg font-semibold transition-colors ${
-                      selectedMetric && !isAnalyzing
-                        ? 'bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light'
-                        : 'bg-zion-purple/20 text-zion-slate-light cursor-not-allowed'
-                    }`}
-                  >
-                    {isAnalyzing ? 'Analyzing...' : 'Analyze with AI'}
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Analytics Plan
+              Flexible Pricing Plans
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Flexible pricing plans designed to scale with your customer analytics needs. 
-              Start with essential insights and grow to enterprise-level analytics.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs and scale as you grow.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative bg-zion-blue-dark border rounded-lg p-8 ${
-                  plan.popular 
-                    ? 'border-zion-cyan ring-2 ring-zion-cyan/20' 
-                    : 'border-zion-purple/30'
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/25' 
+                    : 'border-slate-700'
                 }`}
               >
-                {plan.popular && (
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-
+                
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">
-                    ${plan.price}
-                    <span className="text-lg text-zion-slate-light">/{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {tier.price}
+                    <span className="text-lg text-gray-400">{tier.period}</span>
                   </div>
+                  <p className="text-gray-300">{tier.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link
-                  to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                    plan.popular
-                      ? 'bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light'
-                      : 'bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
                   Get Started
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -613,118 +413,108 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect For Every Industry
+              Industry Applications
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI Customer Experience Analytics Platform helps businesses across all industries 
-              understand their customers better and deliver exceptional experiences.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is designed to transform customer experiences across various industries.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
               >
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center text-zion-cyan mx-auto mb-4">
-                  {useCase.icon}
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{useCase.industry}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light">{useCase.description}</p>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center mb-16"
           >
-            <div className="bg-zion-blue-dark border border-zion-cyan/30 rounded-lg p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Customer Experience?
-              </h2>
-              <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-                Join leading businesses that are already using AI analytics to understand their customers 
-                better and deliver exceptional experiences. Get started today with a free consultation.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link
-                  to="/contact"
-                  className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors text-lg"
-                >
-                  Start Free Trial
-                </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors text-lg"
-                >
-                  Call: +1 302 464 0950
-                </a>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">95%</div>
-                  <div className="text-zion-slate-light">Prediction Accuracy</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">24/7</div>
-                  <div className="text-zion-slate-light">Real-time Monitoring</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">30-Day</div>
-                  <div className="text-zion-slate-light">Money Back Guarantee</div>
-                </div>
-              </div>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Customer Experience?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Contact us today to learn how our AI Customer Experience Analytics Platform can revolutionize your customer insights.
+            </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Contact Information */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-zion-cyan mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-zion-slate-light">+1 302 464 0950</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
               </div>
-              <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-zion-cyan mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                {contactInfo.phone}
+              </a>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                {contactInfo.email}
+              </a>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href={`tel:${contactInfo.phone}`}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Start Your Customer Analytics Journey Today
+            </a>
           </div>
         </div>
       </section>
