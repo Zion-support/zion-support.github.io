@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts'
-import ReactDOM from 'react-dom/client.ts'
-import { BrowserRouter as Router  } from 'react-router-dom.ts'
-import { HelmetProvider  } from 'react-helmet-async.ts'
-import App from './App.tsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App'
 import './index.css'
 
 // Service worker registration function
@@ -11,7 +10,7 @@ const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: any'/',
+        scope: '/',
       });
       
       if (registration.installing) {
@@ -23,7 +22,7 @@ const registerServiceWorker = async () => {
       }
       
       // Handle updates
-      registration.addEventListener('updatefound', ()  => {
+      registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
@@ -47,7 +46,7 @@ const registerServiceWorker = async () => {
 };
 
 // Performance monitoring
-const reportWebVitals = (metric: any)  => {
+const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric);
   }
@@ -117,30 +116,6 @@ const renderApp = () => {
 };
 
 // Initialize the application
-=======
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
-import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
-import { ErrorBoundary } from './components/ErrorBoundary'
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary>
-          <App />
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
-  </React.StrictMode>,
-)
-
-// Register service worker with error handling
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
 try {
   renderApp();
   
@@ -164,7 +139,6 @@ try {
   }
   
 } catch (error) {
-<<<<<<< HEAD
   console.error('Failed to render application:', error);
   
   // Fallback error display
@@ -204,7 +178,4 @@ try {
       </div>
     `;
   }
-=======
-  console.warn('Service worker registration error:', error);
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
