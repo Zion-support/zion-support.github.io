@@ -461,19 +461,9 @@ export function HomePageSEO() {
       title="AI-Powered Business Solutions & Quantum Computing | Zion Tech Group"
       description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity."
       keywords="AI business solutions, quantum computing, autonomous operations, digital transformation, IT services, cybersecurity, machine learning, neural networks"
-      ogType="website"
-      structuredData={{
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Zion Tech Group - AI-Powered Business Solutions",
-        "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
-        "url": "https://ziontechgroup.com",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "AI-powered business solutions and quantum computing services"
-        }
-      }}
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
     />
   );
 }
@@ -481,21 +471,12 @@ export function HomePageSEO() {
 export function ServicesPageSEO() {
   return (
     <SEO
-      title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
-      description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
-      keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
-      ogType="website"
-      structuredData={{
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Technology Services",
-        "provider": {
-          "@type": "Organization",
-          "name": "Zion Tech Group"
-        },
-        "serviceType": "AI Solutions, Quantum Computing, IT Services",
-        "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
-      }}
+      title="Comprehensive AI & IT Services | Zion Tech Group"
+      description="Explore our comprehensive suite of AI services, quantum computing solutions, cybersecurity, and digital transformation services. Expert IT consulting and innovative technology solutions."
+      keywords="AI services, quantum computing, cybersecurity, digital transformation, IT consulting, cloud services, machine learning, enterprise solutions"
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
     />
   );
 }
@@ -503,26 +484,12 @@ export function ServicesPageSEO() {
 export function ContactPageSEO() {
   return (
     <SEO
-      title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
-      description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
-      keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
-      ogType="website"
-      structuredData={{
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact Zion Tech Group",
-        "description": "Get in touch with Zion Tech Group for technology consulting and solutions",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-0123",
-            "contactType": "customer service",
-            "email": "info@ziontechgroup.com"
-          }
-        }
-      }}
+      title="Contact Zion Tech Group | Get Expert AI & IT Solutions"
+      description="Contact Zion Tech Group for expert AI solutions, quantum computing, and digital transformation services. Get in touch with our technology experts today."
+      keywords="contact Zion Tech Group, AI solutions, IT consulting, technology services, digital transformation, quantum computing"
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
     />
   );
 }
