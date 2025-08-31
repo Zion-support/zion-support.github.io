@@ -25,7 +25,7 @@ import { Accessibility,
   ZoomOut,
   Users
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function Accessibility() {
   const accessibilityFeatures = [

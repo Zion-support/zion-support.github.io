@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Cpu, Network, Lock, Eye, Target, TrendingUp, BarChart3, Code2, Server, Chip, Bot, Sparkles, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, BarChart, Users2, Settings as SettingsIcon } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');

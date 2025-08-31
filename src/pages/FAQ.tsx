@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 interface FAQItem {
   id: string;
