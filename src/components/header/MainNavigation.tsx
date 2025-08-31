@@ -164,6 +164,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Business Intelligence</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-education-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <GraduationCap className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Education Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-agriculture-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Leaf className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Agriculture Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-energy-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Zap className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Energy Management</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>

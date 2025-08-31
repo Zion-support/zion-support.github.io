@@ -134,6 +134,11 @@ const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/s
 const AIAutonomousHealthcareDiagnostics = createLazyComponent(() => import('./pages/services/ai-autonomous-healthcare-diagnostics'));
 const AIAutonomousCybersecurityOperations = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-operations'));
 
+// New Innovative AI Services 2025 - Additional
+const AIAutonomousEducationPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-education-platform'));
+const AIAutonomousAgriculturePlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-agriculture-platform'));
+const AIAutonomousEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-energy-management-platform'));
+
 // New Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
@@ -450,6 +455,11 @@ function App() {
                     <Route path="/services/ai-autonomous-financial-advisor" element={<ModernLayout><AIAutonomousFinancialAdvisor /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-healthcare-diagnostics" element={<ModernLayout><AIAutonomousHealthcareDiagnostics /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-cybersecurity-operations" element={<ModernLayout><AIAutonomousCybersecurityOperations /></ModernLayout>} />
+
+                    {/* New Innovative AI Services 2025 - Additional */}
+                    <Route path="/services/ai-autonomous-education-platform" element={<ModernLayout><AIAutonomousEducationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-agriculture-platform" element={<ModernLayout><AIAutonomousAgriculturePlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-energy-management-platform" element={<ModernLayout><AIAutonomousEnergyManagementPlatform /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />

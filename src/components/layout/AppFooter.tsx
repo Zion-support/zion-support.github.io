@@ -60,7 +60,10 @@ export function AppFooter() {
         { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
         { name: "AI Marketing Automation Platform", href: "/services/ai-marketing-automation-platform" },
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" }
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
+        { name: "AI Autonomous Education Platform", href: "/services/ai-autonomous-education-platform" },
+        { name: "AI Autonomous Agriculture Platform", href: "/services/ai-autonomous-agriculture-platform" },
+        { name: "AI Autonomous Energy Management", href: "/services/ai-autonomous-energy-management-platform" }
       ]
     },
     {
