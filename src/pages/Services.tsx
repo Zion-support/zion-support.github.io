@@ -120,6 +120,38 @@ export default function Services() {
       popular: true
     },
     {
+      title: "AI Legal Document Analysis",
+      description: "Revolutionize legal document review with 99.5% accuracy",
+      price: "From $299/month",
+      features: ["AI Analysis", "Compliance Monitoring", "Risk Assessment"],
+      href: "/services/ai-legal-document-analysis",
+      color: "from-blue-400 to-indigo-500"
+    },
+    {
+      title: "AI Real Estate Investment Platform",
+      description: "AI-powered real estate analysis with 95% accuracy",
+      price: "From $99/month",
+      features: ["Market Analysis", "Predictive Analytics", "ROI Calculator"],
+      href: "/services/ai-real-estate-investment-platform",
+      color: "from-green-400 to-emerald-500"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Transform supply chain with 95% forecast accuracy",
+      price: "From $499/month",
+      features: ["Demand Forecasting", "Route Optimization", "Risk Management"],
+      href: "/services/ai-supply-chain-optimization-platform",
+      color: "from-blue-400 to-indigo-500"
+    },
+    {
+      title: "AI E-commerce Optimization",
+      description: "Boost conversions by 35% with AI-powered optimization",
+      price: "From $199/month",
+      features: ["Product Recommendations", "Dynamic Pricing", "Customer Analytics"],
+      href: "/services/ai-ecommerce-optimization-platform",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
       title: "Cloud FinOps Optimizer",
       description: "Reduce cloud costs by 40% with AI-powered optimization",
       price: "From $1,800/month",
@@ -169,6 +201,38 @@ export default function Services() {
       icon: Atom,
       href: "/services/AI-Quantum-Hybrid-Platform",
       features: ["Quantum ML", "Hybrid Algorithms", "Quantum Security", "Optimization"]
+    },
+    {
+      name: "AI-Legal-Document-Analysis",
+      title: "AI Legal Document Analysis",
+      description: "AI-powered legal document review with 99.5% accuracy",
+      icon: Shield,
+      href: "/services/ai-legal-document-analysis",
+      features: ["Document Analysis", "Compliance", "Risk Assessment", "Legal Research"]
+    },
+    {
+      name: "AI-Real-Estate-Platform",
+      title: "AI Real Estate Investment Platform",
+      description: "AI-powered real estate analysis and investment insights",
+      icon: TrendingUp,
+      href: "/services/ai-real-estate-investment-platform",
+      features: ["Market Analysis", "Predictive Analytics", "ROI Calculator", "Global Markets"]
+    },
+    {
+      name: "AI-Supply-Chain-Optimization",
+      title: "AI Supply Chain Optimization",
+      description: "AI-driven supply chain management and optimization",
+      icon: Package,
+      href: "/services/ai-supply-chain-optimization-platform",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+    },
+    {
+      name: "AI-Ecommerce-Optimization",
+      title: "AI E-commerce Optimization",
+      description: "AI-powered e-commerce optimization and personalization",
+      icon: ShoppingCart,
+      href: "/services/ai-ecommerce-optimization-platform",
+      features: ["Product Recommendations", "Dynamic Pricing", "Customer Analytics", "Visual Search"]
     }
   ];
 
