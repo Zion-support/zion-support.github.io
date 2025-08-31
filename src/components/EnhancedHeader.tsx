@@ -339,6 +339,18 @@ export function EnhancedHeader() {
               />
             </form>
 
+            {/* Contact Information */}
+            <div className="flex items-center space-x-4 text-sm">
+              <a href="tel:+13024640950" className="flex items-center text-gray-300 hover:text-blue-400 transition-colors group">
+                <Phone className="w-4 h-4 mr-2 group-hover:text-blue-400 transition-colors" />
+                <span className="group-hover:text-blue-400 transition-colors">+1 302 464 0950</span>
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-blue-400 transition-colors group">
+                <Mail className="w-4 h-4 mr-2 group-hover:text-blue-400 transition-colors" />
+                <span className="group-hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</span>
+              </a>
+            </div>
+
             {/* Contact Button */}
             <Link
               to="/contact"

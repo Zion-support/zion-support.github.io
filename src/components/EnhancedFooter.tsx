@@ -161,18 +161,18 @@ export function EnhancedFooter() {
             </p>
             
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-green-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />
-                <span className="max-w-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
+              <a href="tel:+13024640950" className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors group">
+                <Phone className="w-4 h-4 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                <span className="group-hover:text-blue-400 transition-colors">+1 302 464 0950</span>
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-gray-300 hover:text-green-400 transition-colors group">
+                <Mail className="w-4 h-4 text-green-400 group-hover:text-green-300 transition-colors" />
+                <span className="group-hover:text-green-400 transition-colors">kleber@ziontechgroup.com</span>
+              </a>
+              <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-3 text-gray-300 hover:text-purple-400 transition-colors group">
+                <MapPin className="w-4 h-4 text-purple-400 mt-0.5 group-hover:text-purple-300 transition-colors" />
+                <span className="max-w-xs group-hover:text-purple-400 transition-colors">364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </a>
             </div>
 
             {/* Social Links */}

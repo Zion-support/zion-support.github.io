@@ -89,6 +89,11 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
 
+// 2025 New Innovative Services
+const AIBlockchainIntegrationPlatform = lazy(() => import('./pages/services/ai-blockchain-integration-platform'));
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/ai-quantum-computing-platform'));
+const AIEdgeComputingPlatform = lazy(() => import('./pages/services/ai-edge-computing-platform'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -406,6 +411,9 @@ function App() {
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                  
+                  {/* 2025 New Blockchain and Edge Services */}
+                  <Route path="/services/ai-blockchain-integration-platform" element={<AIBlockchainIntegrationPlatform />} />
 
                   {/* New Innovative Services 2025 - Additional */}
                   <Route path="/services/ai-customer-journey-orchestration-platform" element={<AICustomerJourneyOrchestrationPlatform />} />
