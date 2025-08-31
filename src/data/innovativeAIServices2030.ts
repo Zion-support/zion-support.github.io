@@ -441,7 +441,7 @@ export const innovativeAIServices2030: AIService[] = [
       pricingModel: "Monthly subscription with learner-based pricing",
       marketPrice: "$299-599/month"
     },
-    features[
+    features: [
       "Personalized learning paths",
       "Adaptive content delivery",
       "Real-time progress tracking",
@@ -453,36 +453,36 @@ export const innovativeAIServices2030: AIService[] = [
       "Mobile learning support",
       "Advanced analytics"
     ],
-    benefits[
+    benefits: [
       "Improve learning outcomes by 150%",
       "Reduce learning time by 35%",
       "Increase engagement by 80%",
       "Personalize education experience",
       "Track learning progress effectively"
     ],
-    useCases[
+    useCases: [
       "Corporate training",
       "K-12 education",
       "Higher education",
       "Professional development",
       "Skills training"
     ],
-    targetAudience[
+    targetAudience: [
       "Educational institutions",
       "Corporate training departments",
       "Online learning platforms",
       "Training providers",
       "Individual learners"
     ],
-    technologies[
+    technologies: [
       "Machine learning", "Natural language processing", "Adaptive algorithms",
       "Data analytics", "Cloud computing", "Mobile development"
     ],
-    integrations[
+    integrations: [
       "LMS systems", "HR platforms", "CRM systems", "Video conferencing tools",
       "Assessment platforms", "Content management systems"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Learning consultation",
       "Platform training",
@@ -497,14 +497,14 @@ export const innovativeAIServices2030: AIService[] = [
     reviewCount: 312,
     innovationLevel: "Innovative",
     marketSize: "$8.9B by 2030",
-    competitors["Coursera", "Udemy", "Pluralsight", "LinkedIn Learning"],
-    aiCapabilities[
+    competitors: ["Coursera", "Udemy", "Pluralsight", "LinkedIn Learning"],
+    aiCapabilities: [
       "Personalized learning", "Adaptive content", "Progress tracking",
       "Learning analytics", "Content recommendation", "Assessment automation"
     ],
     sustainabilityScore: 90,
-    complianceStandards["FERPA", "COPPA", "GDPR", "SOC 2", "ISO 27001"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["FERPA", "COPPA", "GDPR", "SOC 2", "ISO 27001"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -514,12 +514,11 @@ export const innovativeAIServices2030: AIService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
+    tags: ["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",
+    createdAt: "2030-01-15T10:00:00.000Z",
+    featured: true,
+    trending: true
   }
-    tags: ["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],;
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",;
-    createdAt: "2030-01-15T10:00:00.000Z",;
-    featured: true,;
-    trending: true;
-  };
 ];
-export default innovativeAIServices2030;}}
+export default innovativeAIServices2030;
