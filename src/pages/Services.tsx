@@ -111,62 +111,117 @@ export default function Services() {
 
   const featuredServices = [
     {
-      title: "AI Legal Document Analysis",
-      description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
+      title: "AI Legal Document Automation Platform",
+      description: "Intelligent legal document generation, review, and automation with AI-powered contract analysis",
       price: "From $299/month",
-      features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
-      href: "/services/ai-legal-document-analysis",
+      features: ["AI Contract Analysis", "Compliance Checking", "Risk Assessment"],
+      href: "/services/ai-legal-document-automation-platform",
       color: "from-blue-400 to-purple-500",
       popular: true
     },
     {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
-      color: "from-green-400 to-blue-500"
+      title: "AI Healthcare Analytics Platform",
+      description: "Advanced healthcare analytics using AI to predict patient outcomes and optimize treatment plans",
+      price: "From $499/month",
+      features: ["Predictive Analytics", "Treatment Optimization", "Population Health"],
+      href: "/services/ai-healthcare-analytics-platform",
+      color: "from-red-400 to-pink-500"
     },
     {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
+      title: "AI Financial Risk Management Platform",
+      description: "Intelligent financial risk assessment and management with AI-powered market analysis",
       price: "From $399/month",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
-      href: "/services/ai-supply-chain-optimization-enhanced",
-      color: "from-blue-400 to-indigo-500"
+      features: ["Risk Assessment", "Market Prediction", "Portfolio Optimization"],
+      href: "/services/ai-financial-risk-management-platform",
+      color: "from-yellow-400 to-orange-500"
     },
     {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
+      title: "AI Supply Chain Optimization Platform",
+      description: "Intelligent supply chain optimization with AI demand forecasting and inventory management",
+      price: "From $299/month",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
+      href: "/services/ai-supply-chain-optimization-platform",
       color: "from-green-400 to-emerald-500"
     },
     {
-      title: "AI Autonomous Logistics Platform",
-      description: "Revolutionary logistics automation with 60% cost reduction and 70% efficiency improvement",
-      price: "From $1,999/month",
-      features: ["Autonomous Routing", "Real-time Tracking", "Predictive Analytics"],
-      href: "/services/ai-autonomous-logistics-platform",
-      color: "from-blue-400 to-cyan-500",
-      popular: true
+      title: "AI Carbon Footprint Management Platform",
+      description: "Intelligent carbon footprint tracking and management for sustainability goals",
+      price: "From $199/month",
+      features: ["Emission Tracking", "Sustainability Reporting", "Goal Tracking"],
+      href: "/services/ai-carbon-footprint-management-platform",
+      color: "from-emerald-400 to-green-500"
     },
     {
-      title: "AI-Powered SEO",
-      description: "Advanced SEO optimization using artificial intelligence for 300% traffic growth",
-      price: "From $99/month",
-      features: ["AI Content Optimization", "Keyword Research", "Performance Analytics"],
+      title: "AI Mental Health Support Platform",
+      description: "Intelligent mental health support with AI-powered therapy and mood tracking",
+      price: "From $19/month",
+      features: ["Mood Tracking", "Therapy Support", "Crisis Intervention"],
+      href: "/services/ai-mental-health-support-platform",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      title: "AI Smart Home Energy Management Platform",
+      description: "Intelligent smart home energy management with AI optimization and automation",
+      price: "From $9/month",
+      features: ["Energy Optimization", "Smart Integration", "Predictive Analytics"],
+      href: "/services/ai-smart-home-energy-management-platform",
+      color: "from-blue-400 to-cyan-500"
+    },
+    {
+      title: "AI Autonomous Legal Research Platform",
+      description: "Intelligent legal research platform with AI-powered case law analysis and precedent research",
+      price: "From $380/month",
+      features: ["Case Law Analysis", "Legal Research", "Citation Analysis"],
+      href: "/services/ai-autonomous-legal-research-platform",
+      color: "from-indigo-400 to-purple-500"
+    },
+    {
+      title: "AI Educational Content Creation Platform",
+      description: "Intelligent educational content creation with AI-powered learning materials and assessments",
+      price: "From $250/month",
+      features: ["Content Generation", "Learning Paths", "Interactive Assessments"],
+      href: "/services/ai-educational-content-creation-platform",
+      color: "from-green-400 to-teal-500"
+    },
+    {
+      title: "AI Real Estate Investment Analytics Platform",
+      description: "Intelligent real estate investment analytics with AI market analysis and property valuation",
+      price: "From $420/month",
+      features: ["Market Analysis", "Property Valuation", "Investment Scoring"],
+      href: "/services/ai-real-estate-investment-analytics-platform",
+      color: "from-orange-400 to-red-500"
+    },
+    {
+      title: "AI Autonomous Logistics Platform",
+      description: "Intelligent autonomous logistics with AI route optimization and fleet management",
+      price: "From $580/month",
+      features: ["Route Optimization", "Fleet Management", "Real-time Tracking"],
+      href: "/services/ai-autonomous-logistics-platform",
+      color: "from-blue-400 to-indigo-500"
+    },
+    {
+      title: "AI-Powered SEO Platform",
+      description: "Intelligent SEO platform with AI content optimization and competitor analysis",
+      price: "From $320/month",
+      features: ["Content Optimization", "Competitor Analysis", "Keyword Research"],
       href: "/services/ai-powered-seo",
       color: "from-purple-400 to-pink-500"
     },
     {
       title: "Quantum Edge Computing Solutions",
-      description: "Next-generation edge computing with quantum capabilities for ultra-fast processing",
-      price: "From $2,999/month",
-      features: ["Quantum Processing", "Edge Analytics", "Real-time Optimization"],
+      description: "Revolutionary quantum edge computing combining quantum and edge computing for ultra-fast processing",
+      price: "From $1,200/month",
+      features: ["Quantum Processing", "Edge Computing", "Real-time Algorithms"],
       href: "/services/quantum-edge-computing-solutions",
-      color: "from-indigo-400 to-purple-500"
+      color: "from-purple-400 to-indigo-500"
+    },
+    {
+      title: "AI Space Technology Platform",
+      description: "Intelligent space technology platform with AI satellite data analysis and mission optimization",
+      price: "From $850/month",
+      features: ["Satellite Analysis", "Mission Optimization", "Autonomous Navigation"],
+      href: "/services/ai-space-technology-platform",
+      color: "from-gray-400 to-blue-500"
     }
   ];
 
@@ -404,6 +459,24 @@ export default function Services() {
               <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
                 Our most popular solutions that are transforming businesses across industries.
               </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/innovative-services-showcase-2025"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  <Rocket className="w-5 h-5" />
+                  View All Innovative Services
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/comprehensive-pricing-guide-2025"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-full font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300"
+                >
+                  <DollarSign className="w-5 h-5" />
+                  View Complete Pricing Guide
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

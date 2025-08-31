@@ -51,20 +51,6 @@ import {
   Users2,
   Cog,
   Palette as PaletteIcon,
-<<<<<<< HEAD
-  Menu,
-  X,
-  ArrowRight,
-  Video,
-  GraduationCap,
-  Handshake,
-  ShoppingCart,
-  Truck,
-  Heart,
-  Scale,
-  Home,
-  BookOpen
-=======
   ShoppingCart,
   Calendar,
   Handshake,
@@ -114,7 +100,6 @@ import {
   Star as StarIcon,
   Users2 as Users2Icon,
   Cog as CogIcon
->>>>>>> origin/main
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -126,225 +111,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-<<<<<<< HEAD
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-
-  return (
-    <>
-      {/* Desktop Navigation */}
-      <nav className={cn("hidden lg:flex items-center space-x-8", className)}>
-        <NavLink 
-          to="/" 
-          className={({ isActive }) => 
-            cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
-              isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
-            )
-          }
-        >
-          Home
-        </NavLink>
-        
-        {/* Services Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsServicesOpen(true)} 
-            onMouseLeave={() => setIsServicesOpen(false)} 
-            className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-          >
-            <Zap className="w-4 h-4" />
-            <span>Services</span>
-            <ChevronDown className="w-3 h-3" />
-          </button>
-          {isServicesOpen && (
-            <div
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
-              className="absolute top-full left-0 mt-2 w-[1000px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-            >
-              <div className="p-6">
-                <div className="grid grid-cols-4 gap-8">
-                  {/* AI & Automation Column */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                      <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                        <Brain className="w-5 h-5 text-zion-cyan"/>
-                      </div>
-                      <h4 className="text-zion-cyan font-bold text-lg">AI & Automation</h4>
-                    </div>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link to="/services/ai-autonomous-business-manager" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Brain className="w-3 h-3 mr-2" />
-                          AI Autonomous Business Manager
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <TrendingUp className="w-3 h-3 mr-2" />
-                          AI Business Intelligence
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-enterprise-resource-planning" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Database className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Enterprise Resource Planning</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Autonomous Manufacturing</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Autonomous Logistics</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Quantum Neural Network</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-space-technology-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Satellite className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Space Technology</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* IT & Infrastructure Column */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                      <div className="p-2 bg-zion-purple/20 rounded-lg">
-                        <Server className="w-5 h-5 text-zion-purple"/>
-                      </div>
-                      <h4 className="text-zion-purple font-bold text-lg">IT & Infrastructure</h4>
-                    </div>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Cloud className="w-3 h-3 mr-2" />
-                          Cloud & DevOps
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Shield className="w-3 h-3 mr-2" />
-                          Cybersecurity
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Micro SaaS & Specialized Column */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                      <div className="p-2 bg-zion-blue/20 rounded-lg">
-                        <Building2 className="w-5 h-5 text-zion-blue"/>
-                      </div>
-                      <h4 className="text-zion-blue font-bold text-lg">Micro SaaS & Specialized</h4>
-                    </div>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link to="/services/micro-saas-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Code className="w-3 h-3 mr-2" />
-                          Micro SaaS Solutions
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Atom className="w-3 h-3 mr-2" />
-                          Blockchain Solutions
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Legal & Education Column */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                      <div className="p-2 bg-zion-green/20 rounded-lg">
-                        <GraduationCap className="w-5 h-5 text-zion-green"/>
-                      </div>
-                      <h4 className="text-zion-green font-bold text-lg">Legal & Education</h4>
-                    </div>
-                    <ul className="space-y-3">
-                      <li>
-                        <Link to="/services/ai-autonomous-legal-research-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <FileText className="w-3 h-3 mr-2" />
-                          AI Legal Research Platform
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-educational-content-creation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <GraduationCap className="w-3 h-3 mr-2" />
-                          AI Educational Content
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-real-estate-investment-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <BarChart3 className="w-3 h-3 mr-2" />
-                          AI Real Estate Analytics
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Solutions Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsSolutionsOpen(true)} 
-            onMouseLeave={() => setIsSolutionsOpen(false)} 
-            className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-          >
-            <Target className="w-4 h-4" />
-            <span>Solutions</span>
-            <ChevronDown className="w-3 h-3" />
-          </button>
-          {isSolutionsOpen && (
-            <div
-              onMouseEnter={() => setIsSolutionsOpen(true)}
-              onMouseLeave={() => setIsSolutionsOpen(false)}
-              className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-            >
-              <div className="p-6">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                    <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                      <Target className="w-5 h-5 text-zion-cyan"/>
-                    </div>
-                    <h4 className="text-zion-cyan font-bold text-lg">Industry Solutions</h4>
-                  </div>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link to="/solutions/enterprise" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-3">
-                          <Building2 className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors">Enterprise</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/solutions/healthcare" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-3">
-                          <Heart className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors">Healthcare</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
-=======
 
   return (
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
@@ -533,7 +299,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-financial-trading-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Shield className="w-3 h-3 mr-2" />
                         AI Financial Risk Management
->>>>>>> origin/main
                       </Link>
                     </li>
                   </ul>
@@ -543,50 +308,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
           )}
         </div>
 
-<<<<<<< HEAD
-        {/* Company Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsCompanyOpen(true)} 
-            onMouseLeave={() => setIsCompanyOpen(false)} 
-            className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-          >
-            <Building2 className="w-4 h-4" />
-            <span>Company</span>
-            <ChevronDown className="w-3 h-3" />
-          </button>
-          {isCompanyOpen && (
-            <div
-              onMouseEnter={() => setIsCompanyOpen(true)}
-              onMouseLeave={() => setIsCompanyOpen(false)}
-              className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-            >
-              <div className="p-6">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
-                    <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                      <Building2 className="w-5 h-5 text-zion-cyan"/>
-                    </div>
-                    <h4 className="text-zion-cyan font-bold text-lg">About Zion Tech</h4>
-                  </div>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link to="/about" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-3">
-                          <Users className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors">About Us</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/careers" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-3">
-                          <Users2 className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors">Careers</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
-=======
                 {/* IT & Infrastructure Services */}
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
@@ -704,7 +425,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-financial-trading-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Shield className="w-3 h-3 mr-2" />
                         AI Financial Risk Management
->>>>>>> origin/main
                       </Link>
                     </li>
                   </ul>
@@ -865,233 +585,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 Home
               </NavLink>
               
-<<<<<<< HEAD
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="pl-4 space-y-1">
-                    <Link 
-                      to="/services/ai-autonomous-business-manager" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Autonomous Business Manager
-                    </Link>
-                    <Link 
-                      to="/services/ai-business-intelligence" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Business Intelligence
-                    </Link>
-                    <Link 
-                      to="/services/cloud-devops" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Cloud & DevOps
-                    </Link>
-                    <Link 
-                      to="/services/cybersecurity" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Cybersecurity
-                    </Link>
-                    <Link 
-                      to="/services/micro-saas-solutions" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Micro SaaS Solutions
-                    </Link>
-                    <Link 
-                      to="/services/blockchain" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Blockchain Solutions
-                    </Link>
-                    <Link 
-                      to="/services/ai-autonomous-legal-research-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Legal Research Platform
-                    </Link>
-                    <Link 
-                      to="/services/ai-educational-content-creation-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Educational Content
-                    </Link>
-                    <Link 
-                      to="/services/ai-real-estate-investment-analytics-platform" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      AI Real Estate Analytics
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                >
-                  <span>Solutions</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isSolutionsOpen && (
-                  <div className="pl-4 space-y-1">
-                    <Link 
-                      to="/solutions/enterprise" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Enterprise
-                    </Link>
-                    <Link 
-                      to="/solutions/healthcare" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Healthcare
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsCompanyOpen(!isCompanyOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                >
-                  <span>Company</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isCompanyOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isCompanyOpen && (
-                  <div className="pl-4 space-y-1">
-                    <Link 
-                      to="/about" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      About Us
-                    </Link>
-                    <Link 
-                      to="/careers" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Careers
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                >
-                  <span>Resources</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isResourcesOpen && (
-                  <div className="pl-4 space-y-1">
-                    <Link 
-                      to="/blog" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Blog & Insights
-                    </Link>
-                    <Link 
-                      to="/docs" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Documentation
-                    </Link>
-                    <Link 
-                      to="/white-papers" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      White Papers
-                    </Link>
-                    <Link 
-                      to="/webinars" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Webinars
-                    </Link>
-                    <Link 
-                      to="/training" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Training
-                    </Link>
-                    <Link 
-                      to="/research-development" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Research
-                    </Link>
-                    <Link 
-                      to="/case-studies" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Case Studies
-                    </Link>
-                    <Link 
-                      to="/innovative-services-showcase-2025" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Innovative Services 2025
-                    </Link>
-                    <Link 
-                      to="/pricing-guide" 
-                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Pricing Guide
-                    </Link>
-                  </div>
-                )}
-              </div>
-              
-              <NavLink 
-                to="/contact" 
-                className={({ isActive }) => 
-                  cn("block px-3 py-2 rounded-md text-sm font-medium transition-colors", 
-                    isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
-                  )
-                }
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </NavLink>
-=======
               {/* Bottom Links */}
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
                 <div className="grid grid-cols-3 gap-4">
@@ -1350,14 +843,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </Link>
                 </li>
               </ul>
->>>>>>> origin/main
             </div>
           </div>
         )}
       </div>
-<<<<<<< HEAD
-    </>
-=======
 
       {/* Support */}
       <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
@@ -1384,7 +873,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Get Started
       </NavLink>
     </nav>
->>>>>>> origin/main
   );
 }
 

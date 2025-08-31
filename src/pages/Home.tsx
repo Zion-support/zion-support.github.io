@@ -113,10 +113,6 @@ const FuturisticBackground = React.memo(() => {
   );
 });
 
-<<<<<<< HEAD
-// Enhanced Hero Section
-const HeroSection = () => {
-=======
 // Enhanced Hero Section with better performance
 const HeroSection = React.memo(() => {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -127,7 +123,6 @@ const HeroSection = React.memo(() => {
     "Quantum Edge Computing",
     "Enterprise Automation",
     "Customer Experience Analytics"
-=======
 // Enhanced Hero Section with improved animations
 const HeroSection = React.memo(() => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -136,7 +131,6 @@ const HeroSection = React.memo(() => {
     "Digital Transformation",
     "Innovation at Scale",
     "Future-Ready Technology"
->>>>>>> origin/main
   ];
 
   useEffect(() => {
@@ -155,46 +149,19 @@ const HeroSection = React.memo(() => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <FuturisticBackground />
-      
-=======
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
       <FuturisticBackground />
       
       <div className="relative z-10 text-center max-w-6xl mx-auto">
         {/* Enhanced Logo/Brand */}
->>>>>>> origin/main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-<<<<<<< HEAD
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/30 text-zion-cyan text-sm font-medium mb-8"
-          >
-            <Sparkles className="w-4 h-4 mr-2" />
-            Leading AI & Technology Solutions 2025
-          </motion.div>
-
-          {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-=======
           <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl mb-6 shadow-2xl shadow-cyan-400/25">
             <Brain className="w-12 h-12 text-white" />
           </div>
@@ -250,28 +217,16 @@ const HeroSection = React.memo(() => {
           <button
             onClick={scrollToServices}
             className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
->>>>>>> origin/main
           >
             <span className="flex items-center gap-2">
               Explore Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
-<<<<<<< HEAD
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="text-lg sm:text-xl lg:text-2xl text-zinc-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-=======
           </button>
           
           <Link
             to="/contact"
             className="group px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/main
           >
             <span className="flex items-center gap-2">
               Get Started
@@ -280,51 +235,6 @@ const HeroSection = React.memo(() => {
           </Link>
         </motion.div>
 
-<<<<<<< HEAD
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-          >
-            <Link
-              to="/comprehensive-services-showcase-2025"
-              className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light rounded-xl shadow-2xl shadow-zion-cyan/25 hover:shadow-zion-cyan/40 transition-all duration-300 hover:-translate-y-1"
-            >
-              Explore Our Services
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/contact"
-              className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              Get Started Today
-              <Phone className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-            </Link>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-            className="flex flex-wrap justify-center items-center gap-6 text-sm text-zion-cyan"
-          >
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-zion-cyan" />
-              <span className="text-sm">ISO 27001 Certified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-zion-cyan" />
-              <span className="text-sm">500+ Clients Worldwide</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-zion-cyan" />
-              <span className="text-sm">Industry Leader 2025</span>
-            </div>
-          </motion.div>
-=======
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -352,31 +262,20 @@ const HeroSection = React.memo(() => {
             <Globe className="w-5 h-5 text-purple-400" />
             <span className="text-sm">25+ Countries Served</span>
           </div>
->>>>>>> origin/main
         </motion.div>
       </div>
 
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-<<<<<<< HEAD
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-=======
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
->>>>>>> origin/main
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-          className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center cursor-pointer hover:border-zion-cyan-light transition-colors"
-          onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
-=======
           className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center"
->>>>>>> origin/main
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
@@ -789,7 +688,6 @@ const TestimonialsSection = React.memo(() => {
   );
 });
 
-=======
 // Latest Innovations Section
 const LatestInnovationsSection = () => {
   const latestServices = [
@@ -995,135 +893,6 @@ const CTASection = React.memo(() => {
   );
 });
 
-<<<<<<< HEAD
-// Floating Action Button Component
-const FloatingActionButton = React.memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const openContact = () => {
-    window.location.href = '/contact';
-  };
-
-  return (
-    <>
-      {/* Floating Action Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <div className="flex flex-col gap-3">
-          {/* Contact Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={openContact}
-            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Contact Us"
-          >
-            <MessageCircle className="w-6 h-6" />
-          </motion.button>
-
-          {/* Scroll to Top Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={scrollToTop}
-            className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Scroll to top"
-          >
-            <ArrowUpRight className="w-6 h-6" />
-          </motion.button>
-        </div>
-      </motion.div>
-
-      {/* Floating Action Button for Mobile */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 left-6 z-50 md:hidden"
-      >
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={openContact}
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-          aria-label="Contact Us"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </motion.button>
-      </motion.div>
-    </>
-  );
-});
-
-// Main Home Component
-const Home: React.FC = () => {
-  // SEO structured data for the home page
-  const homePageStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Zion Tech Group - AI-Powered Technology Solutions",
-    "description": "Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions.",
-    "url": "https://ziontechgroup.com",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud computing, and digital transformation services.",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
-      }
-    }
-  };
-
-  return (
-    <div className="min-h-screen">
-      <SEO
-        title="AI-Powered Technology Solutions & Digital Transformation"
-        description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
-        keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
-        canonical="https://ziontechgroup.com"
-        structuredData={homePageStructuredData}
-      />
-      <HeroSection />
-      <ServicesSection />
-      <LatestInnovationsSection />
-      <WhyChooseUsSection />
-=======
 // Main Home Component
 const Home: React.FC = () => {
   return (
@@ -1132,7 +901,6 @@ const Home: React.FC = () => {
       <StatisticsSection />
       <ServicesPreviewSection />
       <TestimonialsSection />
->>>>>>> origin/main
       <CTASection />
       <FloatingActionButton />
     </div>

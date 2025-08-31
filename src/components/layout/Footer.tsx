@@ -66,7 +66,6 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
-<<<<<<< HEAD
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -86,27 +85,12 @@ export function Footer() {
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
-=======
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
-        { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
-        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
-        { name: "AI Supply Chain Optimization Platform", href: "/services/ai-supply-chain-optimization-platform" },
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Customer Experience Optimization", href: "/services/ai-customer-experience-optimization-platform" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
->>>>>>> origin/main
       ]
     },
     {
       title: "Cloud & Infrastructure",
       icon: Cloud,
       links: [
-<<<<<<< HEAD
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
         { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
@@ -115,17 +99,6 @@ export function Footer() {
         { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign },
         { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
-=======
-        { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
-        { name: "Cloud & DevOps", href: "/services/cloud-devops" },
-        { name: "Cybersecurity", href: "/services/cybersecurity" },
-        { name: "Digital Transformation", href: "/services/digital-transformation" },
-        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
-        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
-        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
-        { name: "IoT & Edge Computing", href: "/services/iot-edge" },
-        { name: "Cloud FinOps", href: "/services/cloud-finops-optimizer" }
->>>>>>> origin/main
       ]
     },
     {
@@ -143,58 +116,6 @@ export function Footer() {
       ]
     },
     {
-<<<<<<< HEAD
-      title: "Emerging Technologies",
-      icon: Sparkles,
-      links: [
-        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-        { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions", icon: Atom },
-        { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
-        { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
-        { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
-        { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
-        { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
-      ]
-    },
-    {
-      title: "Legal & Education",
-      icon: BookOpen,
-      links: [
-        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: Scale },
-        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
-        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
-        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText }
-      ]
-    },
-    {
-      title: "Company & About",
-      icon: Building2,
-      links: [
-        { name: "About Zion Tech Group", href: "/about", icon: Users },
-        { name: "Leadership Team", href: "/leadership", icon: Award },
-        { name: "Careers & Jobs", href: "/careers", icon: Users },
-        { name: "Partners & Alliances", href: "/partners", icon: Handshake },
-        { name: "News & Press", href: "/news", icon: FileText },
-        { name: "Events & Webinars", href: "/events", icon: Calendar },
-        { name: "Contact Us", href: "/contact", icon: Phone },
-        { name: "Get Started", href: "/get-started", icon: Rocket }
-      ]
-    },
-    {
-      title: "Resources & Support",
-      icon: BookOpen,
-      links: [
-        { name: "Documentation", href: "/docs", icon: BookOpen },
-        { name: "Blog & Insights", href: "/blog", icon: FileText },
-        { name: "White Papers", href: "/white-papers", icon: FileText },
-        { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-        { name: "Training & Certification", href: "/training", icon: GraduationCap },
-        { name: "Webinars", href: "/webinars", icon: Monitor },
-        { name: "Help & Support", href: "/help", icon: Headphones },
-        { name: "Research & Development", href: "/research-development", icon: Lightbulb }
-=======
       title: "Company & Resources",
       icon: Building2,
       links: [
@@ -208,7 +129,6 @@ export function Footer() {
         { name: "Blog", href: "/blog" },
         { name: "Documentation", href: "/docs" },
         { name: "Case Studies", href: "/case-studies" }
->>>>>>> origin/main
       ]
     }
   ];
@@ -244,30 +164,6 @@ export function Footer() {
   };
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gradient-to-br from-zion-slate-darker via-zion-blue-dark to-zion-slate-darker border-t border-zion-purple/30 relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
-          {/* Company Info - Spans 2 columns on large screens */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
-                <Globe className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                <p className="text-zion-cyan text-sm">Innovation • Technology • Growth</p>
-              </div>
-            </div>
-            
-            <p className="text-zinc-300 mb-8 max-w-md leading-relaxed">
-=======
     <footer className="bg-zinc-900 border-t border-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
@@ -281,36 +177,11 @@ export function Footer() {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
             <p className="text-zinc-400 mb-6 max-w-md">
->>>>>>> origin/main
               Transforming businesses through innovative AI, cloud, and technology solutions. 
               We help organizations of all sizes accelerate their digital transformation journey.
             </p>
             
             {/* Contact Info */}
-<<<<<<< HEAD
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <a href="tel:+13024640950" className="hover:underline">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-zinc-400">
-                <div className="p-2 bg-zion-purple/20 rounded-lg">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-=======
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Mail className="w-4 h-4" />
@@ -323,7 +194,6 @@ export function Footer() {
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> origin/main
               </div>
             </div>
 
@@ -371,38 +241,6 @@ export function Footer() {
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Quick Links Section */}
-        <div className="border-t border-zion-purple/20 pt-8 mb-8">
-          <div className="flex items-center space-x-2 mb-6">
-            <Zap className="w-5 h-5 text-zion-cyan" />
-            <h4 className="text-white font-semibold">Quick Access</h4>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="flex items-center space-x-2 p-3 bg-zion-purple/10 rounded-lg border border-zion-purple/20 hover:bg-zion-purple/20 hover:border-zion-cyan/30 transition-all duration-300 group"
-              >
-                <link.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform" />
-                <span className="text-zinc-300 group-hover:text-white transition-colors text-sm font-medium">
-                  {link.name}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-2xl p-6 mb-8 border border-zion-purple/30">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-center md:text-left">
-              <h4 className="text-white font-semibold text-lg mb-2">Stay Updated</h4>
-              <p className="text-zinc-300 text-sm">
-                Get the latest updates on AI innovations, technology trends, and exclusive insights.
-              </p>
-=======
         {/* Additional Resources Section */}
         <div className="border-t border-zinc-800 pt-8 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -433,7 +271,6 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
->>>>>>> origin/main
             </div>
             <div className="flex w-full md:w-auto space-x-2">
               <input
@@ -448,15 +285,9 @@ export function Footer() {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Bottom Bar */}
-        <div className="border-t border-zion-purple/20 pt-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-=======
         {/* Bottom Footer */}
         <div className="border-t border-zinc-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
->>>>>>> origin/main
             {/* Copyright */}
             <div className="text-center lg:text-left">
               <p className="text-zinc-400 text-sm">

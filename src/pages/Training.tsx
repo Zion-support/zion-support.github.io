@@ -656,7 +656,6 @@ export default function Training() {
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
             {filteredCourses.map((course, index) => (
-=======
   GraduationCap, 
   BookOpen, 
   Video, 
@@ -1155,7 +1154,6 @@ const Training: React.FC = () => {
     </div>
   );
 }
-=======
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
               >
