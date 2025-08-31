@@ -105,163 +105,149 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const images = document.querySelectorAll('img[data-src]');
     if (images.length === 0) return;
 
-    observerRef.current = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          const src = img.dataset.src;
+          const src = img.getAttribute('data-src');
           if (src) {
             img.src = src;
-            img.classList.remove('lazy');
             img.removeAttribute('data-src');
-            observerRef.current?.unobserve(img);
+            img.classList.remove('lazy');
+            observer.unobserve(img);
           }
         }
       });
     }, {
       rootMargin: '50px 0px',
-      threshold: 0.01,
+      threshold: 0.01
     });
 
-    images.forEach((img) => {
-      observerRef.current?.observe(img);
-    });
+    images.forEach((img) => imageObserver.observe(img));
+
+    return imageObserver;
   }, [enableLazyLoading, enableIntersectionObserver]);
 
-  // Resource hints for performance
-  const addResourceHints = useCallback(() => {
-    // Preconnect to external domains
-    const domains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.google-analytics.com',
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css',
+      '/js/critical.js'
     ];
 
-    domains.forEach(domain => {
-      if (!document.querySelector(`link[href="${domain}"]`)) {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      }
-    });
-
-    // DNS prefetch for additional domains
-    const dnsDomains = [
-      '//cdn.jsdelivr.net',
-      '//unpkg.com',
-    ];
-
-    dnsDomains.forEach(domain => {
-      if (!document.querySelector(`link[href="${domain}"]`)) {
-        const link = document.createElement('link');
-        link.rel = 'dns-prefetch';
-        link.href = domain;
-        document.head.appendChild(link);
-      }
-    });
-  }, []);
-
-  // Critical CSS inline loading
-  const loadCriticalCSS = useCallback(() => {
-    const criticalCSS = document.querySelector('link[data-critical]');
-    if (criticalCSS) {
+    criticalResources.forEach((resource) => {
       const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = criticalCSS.getAttribute('href') || '';
-      link.media = 'print';
-      link.onload = () => {
-        link.media = 'all';
-      };
-      document.head.appendChild(link);
-    }
-  }, []);
-
-  // Performance optimization suggestions
-  const getOptimizationSuggestions = useCallback(() => {
-    const metrics = performanceDataRef.current;
-    const suggestions: string[] = [];
-
-    if (metrics.fcp > 1800) {
-      suggestions.push('First Contentful Paint is slow. Optimize critical rendering path.');
-    }
-
-    if (metrics.lcp > 2500) {
-      suggestions.push('Largest Contentful Paint is slow. Optimize images and fonts.');
-    }
-
-    if (metrics.fid > 100) {
-      suggestions.push('First Input Delay is high. Reduce JavaScript execution time.');
-    }
-
-    if (metrics.cls > 0.1) {
-      suggestions.push('Cumulative Layout Shift is high. Ensure stable layouts.');
-    }
-
-    if (metrics.ttfb > 600) {
-      suggestions.push('Time to First Byte is slow. Optimize server response time.');
-    }
-
-    return suggestions;
-  }, []);
-
-  // Apply optimizations
-  const applyOptimizations = useCallback(() => {
-    const suggestions = getOptimizationSuggestions();
-    
-    if (suggestions.length > 0) {
-      console.log('Performance optimization suggestions:', suggestions);
+      link.rel = 'preload';
+      link.href = resource;
       
-      // Auto-apply some optimizations
-      if (suggestions.some(s => s.includes('images'))) {
-        // Optimize images
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-          if (img.loading !== 'lazy') {
-            img.loading = 'lazy';
-          }
-        });
+      if (resource.endsWith('.woff2')) {
+        link.as = 'font';
+        link.type = 'font/woff2';
+        link.crossOrigin = 'anonymous';
+      } else if (resource.endsWith('.css')) {
+        link.as = 'style';
+      } else if (resource.endsWith('.js')) {
+        link.as = 'script';
       }
+      
+      document.head.appendChild(link);
+    });
+  }, []);
 
-      if (suggestions.some(s => s.includes('JavaScript'))) {
-        // Defer non-critical scripts
-        const scripts = document.querySelectorAll('script:not([data-critical])');
-        scripts.forEach(script => {
-          if (!script.defer && !script.async) {
-            script.defer = true;
-          }
-        });
+  // Optimize images
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
-    }
-  }, [getOptimizationSuggestions]);
+      
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+      
+      // Add fetchpriority="high" for above-the-fold images
+      const rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+    });
+  }, []);
 
-  // Initialize performance monitoring
+  // Optimize fonts
+  const optimizeFonts = useCallback(() => {
+    const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+    fontLinks.forEach((link) => {
+      link.setAttribute('crossorigin', 'anonymous');
+    });
+  }, []);
+
+  // Setup performance monitoring
   useEffect(() => {
     monitorPerformance();
-    addResourceHints();
-    loadCriticalCSS();
-  }, [monitorPerformance, addResourceHints, loadCriticalCSS]);
+  }, [monitorPerformance]);
 
   // Setup lazy loading
   useEffect(() => {
-    setupLazyLoading();
-
+    const imageObserver = setupLazyLoading();
+    
     return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
+      if (imageObserver) {
+        imageObserver.disconnect();
       }
     };
   }, [setupLazyLoading]);
 
-  // Apply optimizations after metrics are collected
+  // Setup resource optimization
   useEffect(() => {
-    const timer = setTimeout(() => {
-      applyOptimizations();
-    }, 5000); // Wait 5 seconds for metrics to be collected
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeFonts();
+  }, [preloadCriticalResources, optimizeImages, optimizeFonts]);
 
+  // Performance reporting
+  useEffect(() => {
+    const reportPerformance = () => {
+      const metrics = performanceDataRef.current;
+      
+      // Send to analytics (replace with your analytics service)
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'performance_metrics', {
+          event_category: 'performance',
+          event_label: 'core_web_vitals',
+          value: Math.round(metrics.lcp),
+          custom_parameters: {
+            fcp: Math.round(metrics.fcp),
+            lcp: Math.round(metrics.lcp),
+            fid: Math.round(metrics.fid),
+            cls: metrics.cls.toFixed(3),
+            ttfb: Math.round(metrics.ttfb)
+          }
+        });
+      }
+      
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.group('Performance Metrics');
+        console.log('FCP:', metrics.fcp, 'ms');
+        console.log('LCP:', metrics.lcp, 'ms');
+        console.log('FID:', metrics.fid, 'ms');
+        console.log('CLS:', metrics.cls);
+        console.log('TTFB:', metrics.ttfb, 'ms');
+        console.groupEnd();
+      }
+    };
+
+    // Report after page load
+    const timer = setTimeout(reportPerformance, 5000);
+    
     return () => clearTimeout(timer);
-  }, [applyOptimizations]);
+  }, []);
 
   return <>{children}</>;
 };
+
+export default PerformanceOptimizer;
