@@ -20,13 +20,8 @@ const MicroSAAS = () => {
         {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
-<<<<<<< HEAD
-            features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
-
-=======
             features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -43,12 +38,10 @@ const MicroSAAS = () => {
               with focused functionality and rapid deployment
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {microSaasServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Key Features</h4>
                   <ul className="space-y-1">
@@ -58,7 +51,6 @@ const MicroSAAS = () => {
                       </li>))}
                   </ul>
                 </div>
-
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                     Learn More
@@ -69,7 +61,6 @@ const MicroSAAS = () => {
                 </div>
               </div>))}
           </div>
-
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>

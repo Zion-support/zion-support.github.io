@@ -23,15 +23,9 @@ const serviceCategories = [
             {
                 name: "AI Image Generator Pro",
                 price: "$399",
-<<<<<<< HEAD
-                features: ["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],
-                benefits: ["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"]
-
-=======
                 features["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],
                 benefits["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$150-500",
         deliveryTime: "Immediate",
@@ -51,15 +45,9 @@ const serviceCategories = [
             {
                 name: "Predictive Analytics Engine",
                 price: "$799",
-<<<<<<< HEAD
-                features: ["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],
-                benefits: ["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"]
-
-=======
                 features["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],
                 benefits["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$500-1500",
         deliveryTime: "1-3 weeks",
@@ -79,15 +67,9 @@ const serviceCategories = [
             {
                 name: "Penetration Testing Service",
                 price: "$2,499",
-<<<<<<< HEAD
-                features: ["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],
-                benefits: ["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"]
-
-=======
                 features["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],
                 benefits["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$800-3000",
         deliveryTime: "Immediate - 2 weeks",
@@ -107,15 +89,9 @@ const serviceCategories = [
             {
                 name: "DevOps Automation Platform",
                 price: "$699",
-<<<<<<< HEAD
-                features: ["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],
-                benefits: ["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"]
-
-=======
                 features["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],
                 benefits["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$700-5000",
         deliveryTime: "1-4 weeks",
@@ -135,15 +111,9 @@ const serviceCategories = [
             {
                 name: "Database Performance Optimization",
                 price: "$899",
-<<<<<<< HEAD
-                features: ["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],
-                benefits: ["Faster queries", "Better performance", "Reduced costs", "Improved user experience"]
-
-=======
                 features["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],
                 benefits["Faster queries", "Better performance", "Reduced costs", "Improved user experience"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$900-2000",
         deliveryTime: "1-3 weeks",
@@ -169,15 +139,9 @@ const serviceCategories = [
             {
                 name: "Custom API Development",
                 price: "$1,999",
-<<<<<<< HEAD
-                features: ["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],
-                benefits: ["System integration", "Scalable architecture", "Developer experience", "API monetization"]
-
-=======
                 features["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],
                 benefits["System integration", "Scalable architecture", "Developer experience", "API monetization"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$2000-8000",
         deliveryTime: "3-8 weeks",
@@ -191,15 +155,9 @@ const serviceCategories = [
             {
                 name: "E-commerce Platform Development",
                 price: "$5,999",
-<<<<<<< HEAD
-                features: ["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],
-                benefits: ["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"]
-
-=======
                 features["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],
                 benefits["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$5000-15000",
         deliveryTime: "8-10 weeks",
@@ -213,15 +171,9 @@ const serviceCategories = [
             {
                 name: "Marketing Automation Platform",
                 price: "$799",
-<<<<<<< HEAD
-                features: ["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],
-                benefits: ["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"]
-
-=======
                 features["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],
                 benefits["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$500-1500",
         deliveryTime: "2-3 weeks",
@@ -235,15 +187,9 @@ const serviceCategories = [
             {
                 name: "Third-Party Integration Service",
                 price: "$1,499",
-<<<<<<< HEAD
-                features: ["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],
-                benefits: ["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"]
-
-=======
                 features["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],
                 benefits["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$1000-3000",
         deliveryTime: "2-3 weeks",
@@ -263,15 +209,9 @@ const serviceCategories = [
             {
                 name: "Web3 DApp Development",
                 price: "$5,999",
-<<<<<<< HEAD
-                features: ["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],
-                benefits: ["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"]
-
-=======
                 features["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],
                 benefits["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$4000-10000",
         deliveryTime: "4-8 weeks",
@@ -285,15 +225,9 @@ const serviceCategories = [
             {
                 name: "IoT Platform Development",
                 price: "$4,999",
-<<<<<<< HEAD
-                features: ["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],
-                benefits: ["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"]
-
-=======
                 features["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],
                 benefits["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$4000-12000",
         deliveryTime: "8-10 weeks",
@@ -307,20 +241,13 @@ const serviceCategories = [
             {
                 name: "Hardware Prototyping Service",
                 price: "$2,999",
-<<<<<<< HEAD
-                features: ["3D printing", "PCB design", "Component sourcing", "Design validation"],
-                benefits: ["Faster development", "Cost reduction", "Design validation", "Market testing"]
-
-=======
                 features["3D printing", "PCB design", "Component sourcing", "Design validation"],
                 benefits["Faster development", "Cost reduction", "Design validation", "Market testing"]
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ],
         marketPrice: "$2000-8000",
         deliveryTime: "4-6 weeks",
         link: "/micro-saas-services"
-
 ];
 // Why choose Zion Tech Group
 const whyChooseUs = [
@@ -343,7 +270,6 @@ const whyChooseUs = [
         title: "Proven Results",
         description: "Track record of successful project deliveries",
         icon: <Star className="w-6 h-6 text-zion-yellow"/>
-
 ];
 export function ServicesOverview() {
     return (<div className="py-20 bg-zion-blue-dark">
@@ -357,7 +283,6 @@ export function ServicesOverview() {
             Discover our complete range of professional services designed to accelerate your business growth and digital transformation
           </p>
         </div>
-
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {serviceCategories.map((category, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hover:border-zion-cyan/50 transition-all duration-300">
@@ -370,14 +295,12 @@ export function ServicesOverview() {
                   <p className="text-zion-slate-light text-sm">{category.description}</p>
                 </div>
               </div>
-
               <div className="space-y-4 mb-6">
                 {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-zion-blue-dark rounded p-4">
                     <div className="flex justify-between items-start mb-3">
                       <h4 className="text-white font-semibold">{service.name}</h4>
                       <span className="text-zion-cyan font-bold">{service.price}</span>
                     </div>
-
                     <div className="mb-3">
                       <h5 className="text-zion-slate-light text-sm font-medium mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -387,7 +310,6 @@ export function ServicesOverview() {
                           </li>))}
                       </ul>
                     </div>
-
                     <div>
                       <h5 className="text-zion-slate-light text-sm font-medium mb-2">Benefits:</h5>
                       <ul className="space-y-1">
@@ -399,7 +321,6 @@ export function ServicesOverview() {
                     </div>
                   </div>))}
               </div>
-
               <div className="flex items-center justify-between mb-4 text-sm">
                 <div className="text-zion-slate-light">
                   <span className="font-medium">Market Price:</span> {category.marketPrice}
@@ -408,7 +329,6 @@ export function ServicesOverview() {
                   <span className="font-medium">Delivery:</span> {category.deliveryTime}
                 </div>
               </div>
-
               <Link to={category.link}>
                 <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white">
                   View {category.title}
@@ -416,7 +336,6 @@ export function ServicesOverview() {
               </Link>
             </div>))}
         </div>
-
         {/* Why Choose Us */}
         <div className="bg-zion-blue rounded-lg p-8 mb-16">
           <div className="text-center mb-12">
@@ -427,7 +346,6 @@ export function ServicesOverview() {
               We combine technical expertise with business acumen to deliver solutions that drive real results
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
@@ -438,7 +356,6 @@ export function ServicesOverview() {
               </div>))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -462,9 +379,4 @@ export function ServicesOverview() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

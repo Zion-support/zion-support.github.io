@@ -118,15 +118,9 @@ const governmentSolutions = [
     price: "From $45,000",
     timeline: "12-20 weeks",
     category: "Compliance",
-<<<<<<< HEAD
-    compliance: ["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
-
-=======
     compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const complianceStandards = [
   {
     name: "FISMA",
@@ -150,15 +144,9 @@ const complianceStandards = [
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
-<<<<<<< HEAD
-    requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"]
-
-=======
     requirements["Identify", "Protect", "Detect", "Respond", "Recover"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 const successStories = [
   {
     id: 1,
@@ -186,9 +174,7 @@ const successStories = [
     solution: "Modernized permit system with cloud integration and APIs",
     results: "40% faster processing, 70% cost reduction, improved user experience",
     logo: "CMS"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -217,19 +203,14 @@ const processSteps = [
     description: "Validate compliance and obtain necessary certifications",
     icon: CheckCircle,
     duration: "2-4 weeks"
-
 ];
-
 export default function GovernmentSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'Citizen Services', 'Security', 'Analytics', 'System Modernization', 'Emergency Management', 'Compliance'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? governmentSolutions
     : governmentSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -239,78 +220,42 @@ export default function GovernmentSolutions() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <Building2 className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Government
               <span className="text-gradient block">Solutions</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Secure, compliant, and innovative technology solutions designed specifically for government agencies.
               From citizen services to cybersecurity, we help government organizations deliver better public services.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Shield className="w-4 h-4" />
@@ -328,7 +273,6 @@ export default function GovernmentSolutions() {
           </motion.div>
         </div>
       </section>
-
       {/* Compliance Standards */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -336,32 +280,18 @@ export default function GovernmentSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Compliance & Standards</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our solutions meet the highest government compliance standards and regulatory requirements
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {complianceStandards.map((standard, index) => (
               <motion.div
@@ -369,42 +299,21 @@ export default function GovernmentSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <standard.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{standard.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{standard.description}</p>
-
                 <div className="space-y-2">
                   {standard.requirements.map((req, reqIndex) => (
                     <div key={reqIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
@@ -418,7 +327,6 @@ export default function GovernmentSolutions() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -426,32 +334,18 @@ export default function GovernmentSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A comprehensive approach that ensures security, compliance, and quality at every step
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -459,35 +353,16 @@ export default function GovernmentSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -496,7 +371,6 @@ export default function GovernmentSolutions() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -507,7 +381,6 @@ export default function GovernmentSolutions() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -515,32 +388,18 @@ export default function GovernmentSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Government Technology Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed specifically for government agencies and public sector organizations
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -552,12 +411,10 @@ export default function GovernmentSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -565,43 +422,22 @@ export default function GovernmentSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -610,23 +446,19 @@ export default function GovernmentSolutions() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.compliance.slice(0, 2).map((comp, compIndex) => (
                     <span
                       key={compIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {comp}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -641,7 +473,6 @@ export default function GovernmentSolutions() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20">
         <div className="container-responsive">
@@ -649,32 +480,18 @@ export default function GovernmentSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Government agencies that have transformed public services with our technology solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -682,35 +499,16 @@ export default function GovernmentSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -720,7 +518,6 @@ export default function GovernmentSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -735,7 +532,6 @@ export default function GovernmentSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -747,7 +543,6 @@ export default function GovernmentSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -755,43 +550,27 @@ export default function GovernmentSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Government Services?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our government technology solutions can improve public services,
               enhance security, and ensure compliance for your agency.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Schedule Consultation
               </a>
             </div>
@@ -799,9 +578,4 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

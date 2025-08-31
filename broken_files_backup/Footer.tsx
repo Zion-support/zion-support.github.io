@@ -7,7 +7,6 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ex
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";
-=======
 import { Link } from 'react-router-dom';
 import {
   Mail,
@@ -85,8 +84,6 @@ export function Footer() {
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
                 <Youtube className="h-5 w-5" />;
               </a>;
-=======;
-=======;
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from 'framer-motion';
@@ -140,15 +137,6 @@ const Footer: React.FC = () => {;
     },
     {
       title: "Support",
-<<<<<<< HEAD
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support", path: "/support" },
-        { label: "Request Quote", path: "/request-quote" }
-      ]
-
-=======
       links: [;
         { label: "Contact Us", path: "/contact" },;
         { label: "Help Center", path: "/help" },;
@@ -156,7 +144,6 @@ const Footer: React.FC = () => {;
         { label: "Request Quote", path: "/request-quote" };
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const contactInfo = [;
@@ -167,15 +154,6 @@ const Footer: React.FC = () => {;
   ];
 
   const containerVariants: Variants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -183,7 +161,6 @@ const Footer: React.FC = () => {;
         staggerChildren: 0.1;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants: Variants = {
@@ -197,15 +174,6 @@ const Footer: React.FC = () => {;
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -213,7 +181,6 @@ const Footer: React.FC = () => {;
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -247,7 +214,6 @@ const Footer: React.FC = () => {;
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
-=======
             <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
             <ul className="space-y-2 mb-6">
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
@@ -258,7 +224,6 @@ const Footer: React.FC = () => {;
           </div>
 
           <div>
-=======
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-2">
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
@@ -266,13 +231,11 @@ const Footer: React.FC = () => {;
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
-=======
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg flex items-center gap-2">
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Services
-=======
               <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
@@ -332,10 +295,6 @@ const Footer: React.FC = () => {;
                     key={link.label}
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
-<<<<<<< HEAD
-                    transition={{ type: "spring", stiffness: 300 }}
-
-=======
                     transition = {
   { type: "spring",
   stiffness: 300 
@@ -347,7 +306,6 @@ const Footer: React.FC = () => {;
 
 }}
                   >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <Link
                       to={link.path}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
@@ -379,7 +337,6 @@ const Footer: React.FC = () => {;
               {t('footer.sections.newsletter.description')}
             </p>
             <FooterNewsletter />
-=======
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
@@ -497,7 +454,6 @@ const Footer: React.FC = () => {;
 
                 {t('footer.bottom.api_status')}
               </Link>
-=======
             <h3 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Latest <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Insights</span>
             </h3>
@@ -548,9 +504,6 @@ const Footer: React.FC = () => {;
   );
 </div></div></div></div></div></div></div></div></div>}
 
-<<<<<<< HEAD
-export default Footer;}}}}}}}}}}}}}}}}</motion.div>})
-=======
 export default Footer;
 export default Footer;
 export default Footer;
@@ -559,4 +512,3 @@ export default Footer;
 export default Footer;
 export default Footer;
 export default Footer;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

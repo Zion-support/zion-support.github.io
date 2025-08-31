@@ -6,14 +6,8 @@ export default function TalentOnboarding() {
     const { user, isLoading } = useAuth();
     // If not authenticated, redirect to login
     if (!isLoading && !user) {
-<<<<<<< HEAD
-        return <Navigate to="/login" replace/>;
-
-=======
         return <Navigate to="/login" replace/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
-
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">
@@ -23,15 +17,7 @@ export default function TalentOnboarding() {
               to get discovered for AI and tech projects on the Zion Marketplace.
             </p>
           </div>
-
           <TalentOnboardingForm />
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}
-=======
-      
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

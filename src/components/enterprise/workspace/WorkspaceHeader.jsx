@@ -1,11 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Bell, Users, Settings export function WorkspaceHeader({ company }) {
-=======
 import { Bell, Users, Settings } from "lucide-react";
 export function WorkspaceHeader({ comp }) {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -19,7 +15,6 @@ export function WorkspaceHeader({ comp }) {
             </p>
           </div>
         </div>
-
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4"/>
@@ -32,7 +27,6 @@ export function WorkspaceHeader({ comp }) {
           </Button>
         </div>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -47,9 +41,4 @@ export function WorkspaceHeader({ comp }) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -39,12 +39,7 @@ function generateInnovationListing(index) {
         location: "Global",
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
-<<<<<<< HEAD
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -63,13 +58,6 @@ export default function CategoryDetail() {
             title: "Services",
             description: "On-demand IT support, consulting, development, and more",
   icon: <Briefcase className="w-6 h-6"/>
-        
-
-
-
-
-
-
 },
         'talents': {
             title: "Talents",
@@ -125,7 +113,6 @@ export default function CategoryDetail() {
             title: "Business Solutions",
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
-
     };
     useEffect(() => {
         setIsLoading(true);
@@ -189,19 +176,11 @@ export default function CategoryDetail() {
                         title: listing.title,
                         category: listing.category,
                         image: listing.images?.[0]
-<<<<<<< HEAD
-
-
-            });
-
-=======
                     }
                 }
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
-
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -209,7 +188,6 @@ export default function CategoryDetail() {
               ← Back to Categories
             </Link>
           </div>
-
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -223,7 +201,6 @@ export default function CategoryDetail() {
               {category.description}
             </p>
           </div>
-
           {isLoading ? (<div className="flex justify-center items-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>
             </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -231,11 +208,4 @@ export default function CategoryDetail() {
             </div>)}
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}
-=======
-      
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

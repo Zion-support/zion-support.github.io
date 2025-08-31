@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
   showText?: boolean;
   className?: string;
-
 const sizeClasses = {
   sm: 'w-8 h-8',
   md: 'w-12 h-12',
@@ -18,14 +16,7 @@ const sizeClasses = {
   ;
   xl: 'w-32 h-32';
 ;
-
-
-
-
-
-
 };
-
 const colorClasses = {
   primary: 'border-cyan-400',
   secondary: 'border-blue-400',
@@ -36,14 +27,7 @@ const colorClasses = {
   ;
   cyan: 'border-cyan-400';
 ;
-
-
-
-
-
-
 };
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -56,7 +40,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-
         {/* Animated spinner */}
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
@@ -66,16 +49,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             duration: 1,
             repeat: Infinity,
   ease: "linear"
-          
-
-
-
-
-
-
 }}
         />
-
         {/* Center dot for larger sizes */}
         {size === 'xl' && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -83,7 +58,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </div>
         )}
       </div>
-
       {/* Loading text */}
       {showText && text && (
         <motion.div
@@ -91,18 +65,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-4 text-center"
-
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
-<<<<<<< HEAD
-          </div>
-        </motion.div>
-      )}
-
-      {/* Screen reader text */}
-      <span className="sr-only">Loading, please wait</span>
-    </div>
-=======
           </div>;
         </motion.div>;
       )};
@@ -110,10 +74,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Screen reader text */};
       <span className="sr-only">Loading, please wait</span>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
-
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
   size = 'sm',
@@ -128,19 +90,14 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
         duration: 1,
         repeat: Infinity,
   ease: "linear"
-      
-
 ;
 ;
 ;
-
-
 }};
     />;
     <span className="sr-only">Loading</span>;
   </div>;
 );
-
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{
   text?: string;
@@ -159,15 +116,6 @@ export const FullScreenLoader: React.FC<{
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
             ZION
-<<<<<<< HEAD
-          </div>
-        </div>
-      )}
-
-      <LoadingSpinner size="lg" color="cyan" text={text} />
-    </div>
-  </div>
-=======
           </div>;
         </div>;
       )};
@@ -175,9 +123,7 @@ export const FullScreenLoader: React.FC<{
       <LoadingSpinner size="lg" color="cyan" text={text} />;
     </div>;
   </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 );
-
 // Skeleton loading component
 export const SkeletonLoader: React.FC<{
   className?: string;
@@ -189,15 +135,6 @@ export const SkeletonLoader: React.FC<{
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map((_, index) => (
       <div
-<<<<<<< HEAD
-        key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${
-          index === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
-      />
-    ))</div>}
-  </div>
-=======
         key={index};
         className={`h-4 bg-gray-300 rounded mb-2 ${;
           index === lines - 1 ? 'w-3/4' : 'w-full';
@@ -205,7 +142,5 @@ export const SkeletonLoader: React.FC<{
       />;
     ))};
   </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 );
-
 export default LoadingSpinner;</motion.div></motion.div>}

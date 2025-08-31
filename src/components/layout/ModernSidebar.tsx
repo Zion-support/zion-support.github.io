@@ -63,6 +63,9 @@ const ModernSidebar: React.FC = () => {
       { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
       { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Smartphone },
       { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
+      { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', icon: Database },
+      { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Users },
+      { name: 'AI Supply Chain Intelligence', href: '/services/ai-supply-chain-intelligence', icon: Globe },
     ],
     solutions: [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Database },
@@ -79,6 +82,8 @@ const ModernSidebar: React.FC = () => {
       { name: 'API Reference', href: '/api', icon: Cpu },
       { name: 'Support Center', href: '/help', icon: MessageCircle },
       { name: 'Community Forum', href: '/forum', icon: Users },
+      { name: 'Innovative Services Showcase 2026', href: '/innovative-services-showcase-2026', icon: Rocket },
+      { name: 'Comprehensive Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: BarChart3 },
     ],
     comp: [
       { name: 'Privacy Policy', href: '/privacy', icon: Lock },

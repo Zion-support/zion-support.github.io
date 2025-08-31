@@ -55,12 +55,7 @@ export function ServiceProviderRegistrationForm() {
         const serviceInput = form.getValues("services");
         if (serviceInput && !serviceTags.includes(serviceInput)) {
             setServiceTags([...serviceTags, serviceInput]);
-<<<<<<< HEAD
-            form.setValue("services", "");
-
-=======
             form.setValue("services", "")}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle removing service tags
     const handleRemoveService = (service) => {
@@ -69,12 +64,7 @@ export function ServiceProviderRegistrationForm() {
     const handleServiceKeyPress = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
-<<<<<<< HEAD
-            handleAddService();
-
-=======
             handleAddService()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle avatar upload
     const handleAvatarUpload = (e) => {
@@ -82,15 +72,8 @@ export function ServiceProviderRegistrationForm() {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-<<<<<<< HEAD
-                setUploadedAvatar(reader.result);
-            };
-            reader.readAsDataURL(file);
-
-=======
                 setUploadedAvatar(reader.result)};
             reader.readAsDataURL(file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
@@ -100,12 +83,7 @@ export function ServiceProviderRegistrationForm() {
                 title: "More information needed",
                 description: "Please provide at least a detailed bio before generating enhanced content.",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             setIsGenerating(true);
             // Call the Supabase Edge Function
@@ -117,47 +95,23 @@ export function ServiceProviderRegistrationForm() {
                         bio: formData.bio,
                         services: serviceTags,
                         location: formData.location
-
-
             });
             if (error) {
-<<<<<<< HEAD
-                throw new Error(error.message);
-
-=======
                 throw new Error(error.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional services for your profile.",
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error generating enhanced profile:", error);
-=======
             // // // // // // // console.error("Error generating enhanced profile:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsGenerating(false);
-
-=======
             })}
         finally {
             setIsGenerating(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
@@ -166,16 +120,9 @@ export function ServiceProviderRegistrationForm() {
             if (generatedContent.services && generatedContent.services.length > 0) {
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
-<<<<<<< HEAD
-                    setServiceTags([...serviceTags, ...newServices]);
-
-
-
-=======
                     setServiceTags([...serviceTags, ...newServices])}
             }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -185,22 +132,12 @@ export function ServiceProviderRegistrationForm() {
                 description: "Please add at least one service to your profile.",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
             if (!user?.id) {
-<<<<<<< HEAD
-                throw new Error("User not authenticated");
-
-=======
                 throw new Error("User not authenticated")}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Enhance profile if not already done
             let finalServices = serviceTags;
             if (values.enhancedProfile && !generatedContent) {
@@ -213,38 +150,19 @@ export function ServiceProviderRegistrationForm() {
                                 bio: values.bio,
                                 services: serviceTags,
                                 location: values.location
-
-
                     });
                     if (aiData) {
                         finalSummary = aiData.summary || values.bio;
                         // Merge AI suggested services with user-provided services
                         const aiServices = aiData.services || [];
-<<<<<<< HEAD
-                        finalServices = [...new Set([...serviceTags, ...aiServices])];
-
-
-=======
                         finalServices = [...new Set([...serviceTags, ...aiServices])]}
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 catch (error) {
-<<<<<<< HEAD
-                    // // // console.error("Error enhancing profile:", error);
-=======
                     // // // // // // // console.error("Error enhancing profile:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Continue with submission even if enhancement fails
-
-
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
-<<<<<<< HEAD
-                finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-
-=======
                 finalServices = [...new Set([...serviceTags, ...generatedContent.services])]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Get user email for notification
             const { data: userData } = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
@@ -277,7 +195,6 @@ export function ServiceProviderRegistrationForm() {
                 location: values.location,
                 website: values.website || null,
               });
-
             if (serviceError) throw serviceError;
             */
             // Send notification email if available
@@ -298,57 +215,27 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
               `
-<<<<<<< HEAD
-
-                    });
-
-=======
                         }
                     })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 catch (emailError) {
-<<<<<<< HEAD
-                    // // // console.error("Failed to send notification email:", emailError);
-=======
                     // // // // // // // console.error("Failed to send notification email:", emailError);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                     // Continue with submission even if email fails
-
-
             toast({
                 title: "Profile Created Successfully",
                 description: "Your service provider profile has been published and is now visible in the directory.",
             });
             // Redirect to service provider dashboard or profile page
             setTimeout(() => {
-<<<<<<< HEAD
-                window.location.href = "/service-dashboard";
-            }, 1500);
-
-=======
                 window.location.href = "/service-dashboard"}, 1500)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error creating profile:", error);
-=======
             // // // // // // // console.error("Error creating profile:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -358,7 +245,6 @@ export function ServiceProviderRegistrationForm() {
             Showcase your services and expertise to potential clients.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -378,7 +264,6 @@ export function ServiceProviderRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
@@ -391,7 +276,6 @@ export function ServiceProviderRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="location" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
@@ -404,7 +288,6 @@ export function ServiceProviderRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="website" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
@@ -418,7 +301,6 @@ export function ServiceProviderRegistrationForm() {
                         </FormItem>)}/>
                   </div>
                 </div>
-
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -430,7 +312,6 @@ export function ServiceProviderRegistrationForm() {
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50"/>
                         </div>)}
                     </div>
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4"/>
                       <span>Upload Photo</span>
@@ -442,9 +323,7 @@ export function ServiceProviderRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className="bg-zion-blue-light/50"/>
-
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Service Description</h3>
@@ -458,7 +337,6 @@ export function ServiceProviderRegistrationForm() {
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>)}/>
-
                 {/* AI Enhancement Option */}
                 <FormField control={form.control} name="enhancedProfile" render={({ field }) => (<FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
@@ -474,14 +352,12 @@ export function ServiceProviderRegistrationForm() {
                         <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
                       </FormControl>
                     </FormItem>)}/>
-
                 {form.watch("enhancedProfile") && (<div className="flex justify-end">
                     <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile} disabled={isGenerating}>
                       <Sparkles className="mr-2 h-4 w-4"/>
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>)}
-
                 {/* Generated Content Display */}
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
@@ -493,13 +369,11 @@ export function ServiceProviderRegistrationForm() {
                         <Check className="mr-1 h-3 w-3"/> Apply
                       </Button>
                     </div>
-
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-
                       {generatedContent.services && generatedContent.services.length > 0 && (<div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
@@ -511,9 +385,7 @@ export function ServiceProviderRegistrationForm() {
                     </div>
                   </div>)}
               </div>
-
               <Separator className="bg-zion-blue-light/50"/>
-
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -534,7 +406,6 @@ export function ServiceProviderRegistrationForm() {
                         </FormDescription>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (<Badge key={service} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
                         {service}
@@ -545,7 +416,6 @@ export function ServiceProviderRegistrationForm() {
                     {serviceTags.length === 0 && (<p className="text-zion-slate text-sm italic">No services added yet</p>)}
                   </div>
                 </div>
-
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
@@ -562,7 +432,6 @@ export function ServiceProviderRegistrationForm() {
                         </FormDescription>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <FormField control={form.control} name="availability" render={({ field }) => (<FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -574,7 +443,6 @@ export function ServiceProviderRegistrationForm() {
                                 Available for Work
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="limited" value="limited" checked={field.value === "limited"} onChange={() => field.onChange("limited")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
@@ -582,7 +450,6 @@ export function ServiceProviderRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="unavailable" value="unavailable" checked={field.value === "unavailable"} onChange={() => field.onChange("unavailable")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
@@ -597,7 +464,6 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
@@ -611,9 +477,4 @@ export function ServiceProviderRegistrationForm() {
           </form>
         </Form>
       </Card>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

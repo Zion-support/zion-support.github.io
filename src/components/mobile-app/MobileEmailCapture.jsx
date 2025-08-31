@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) return;
-
     setStatus('loading');
-
     // Simulate API call
     setTimeout(() => {
       if (email.includes('@')) {
@@ -16,16 +13,8 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
         setEmail('');
         setTimeout(() => setStatus('idle'), 3000)} else {
         setStatus('error');
-<<<<<<< HEAD
-        setTimeout(() => setStatus('idle'), 3000);
-
-    }, 1000);
-  };
-=======
         setTimeout(() => setStatus('idle'), 3000)}
     }, 1000)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   const getStatusIcon = () => {
     switch (status) {
       case 'success':
@@ -33,14 +22,8 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
       case 'error':
         return <AlertCircle className="h-5 w-5 text-red-400" />;
       default:
-<<<<<<< HEAD
-        return <Mail className="h-5 w-5 text-blue-400" />;
-
-=======
         return <Mail className="h-5 w-5 text-blue-400" />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   const getStatusText = () => {
     switch (status) {
       case 'success':
@@ -48,14 +31,8 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
       case 'error':
         return 'Please enter a valid email address.';
       default:
-<<<<<<< HEAD
-        return 'Get early access and exclusive updates';
-
-=======
         return 'Get early access and exclusive updates'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -67,18 +44,15 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
             Get early access to the Zion mobile app and receive exclusive updates, features, and special offers.
           </p>
         </div>
-
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
           <div className="flex items-center justify-center mb-6">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
               {getStatusIcon()}
             </div>
           </div>
-
           <h3 className="text-2xl font-bold text-white mb-4">
             {getStatusText()}
           </h3>
-
           {status === 'idle' && (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3">
@@ -93,7 +67,6 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
                 <button
                   type="submit"
                   className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 whitespace-nowrap"
-
                   Notify Me
                 </button>
               </div>
@@ -102,39 +75,33 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
               </p>
             </form>
           )}
-
           {status === 'loading' && (
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto mb-4"></div>
               <p className="text-gray-300">Processing your request...</p>
             </div>
           )}
-
           {status === 'success' && (
             <div className="text-center">
               <p className="text-green-400 mb-4">Successfully subscribed!</p>
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 Subscribe Another Email
               </button>
             </div>
           )}
-
           {status === 'error' && (
             <div className="text-center">
               <p className="text-red-400 mb-4">Invalid email address. Please try again.</p>
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 Try Again
               </button>
             </div>
           )}
         </div>
-
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -160,10 +127,4 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
-}}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

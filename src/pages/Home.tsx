@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import {
   Users,
   TrendingUp,
@@ -301,6 +302,75 @@ const ServicesSection = () => {
       icon: Workflow,
       color: "from-zion-cyan to-zion-purple",
       link: "/services/ai-project-management-platform"
+    },
+    {
+      title: "AI Enterprise Workflow Automation",
+      description: "Streamline business processes with intelligent workflow automation that learns and optimizes over time.",
+      icon: Workflow,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-enterprise-workflow-automation"
+    },
+    {
+      title: "AI Quantum Computing Solutions",
+      description: "Harness quantum computing power with AI-enhanced algorithms for exponential performance improvements.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-quantum-computing-solutions"
+    },
+    {
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Protect your organization with AI-powered threat detection and automated response systems.",
+      icon: Shield,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-cybersecurity-threat-intelligence"
+    },
+    {
+      icon: Chip,
+      title: "Edge Computing",
+      description: "Ultra-low latency IoT and edge solutions",
+      href: "/services/edge-computing-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
+    },
+    {
+      icon: Database,
+      title: "AI Enterprise Solutions",
+      description: "Comprehensive AI-powered enterprise resource planning and management",
+      href: "/services/ai-enterprise-resource-planning",
+      color: "from-emerald-500 to-teal-500",
+      features: ["Resource Planning", "Process Automation", "Business Intelligence", "Supply Chain Optimization"]
+    },
+    {
+      icon: Users,
+      title: "Customer Success AI",
+      description: "AI-driven customer success and relationship management platforms",
+      href: "/services/ai-customer-success-platform",
+      color: "from-pink-500 to-rose-500",
+      features: ["Customer Insights", "Success Automation", "Churn Prevention", "Growth Analytics"]
+    },
+    {
+      icon: Truck,
+      title: "Supply Chain AI",
+      description: "Intelligent supply chain optimization and logistics management",
+      href: "/services/ai-supply-chain-intelligence",
+      color: "from-orange-500 to-amber-500",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
     }
   ];
 
@@ -350,7 +420,7 @@ const ServicesSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Atom className="w-8 h-8 text-purple-400" />
+                  <Atom className="w-8 h-4" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">Quantum AI</h4>
                 <p className="text-gray-400 text-sm">1000x faster computation</p>
@@ -383,7 +453,7 @@ const ServicesSection = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -580,9 +650,46 @@ const CTASection = () => {
 };
 
 // Main Home Component
-export default function Home() {
+const Home: React.FC = () => {
+  // SEO structured data for the home page
+  const homePageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group - AI-Powered Technology Solutions",
+    "description": "Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions.",
+    "url": "https://ziontechgroup.com",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading provider of AI-powered technology solutions, cybersecurity, cloud computing, and digital transformation services.",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
+    <div className="min-h-screen">
+      <SEO
+        title="AI-Powered Technology Solutions & Digital Transformation"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
+        keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
+        canonical="https://ziontechgroup.com"
+        structuredData={homePageStructuredData}
+      />
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />

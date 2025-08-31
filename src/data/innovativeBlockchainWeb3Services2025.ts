@@ -1,5 +1,4 @@
 export interface InnovativeBlockchainWeb3Service {
-
   id: string;
   title: string;
   description: string;
@@ -29,12 +28,7 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  marketSize?: string;
-=======
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
   // DeFi Platform & Yield Farming
   {
@@ -100,7 +94,6 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     competitors["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],
     marketSize: "$67.8 billion by 2025"
   },
-
   // NFT Marketplace & Creation Platform
   {
     id: "nft-marketplace-creation-platform",
@@ -165,7 +158,6 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],
     marketSize: "$23.4 billion by 2025"
   },
-
   // DAO Governance & Management Platform
   {
     id: "dao-governance-management-platform",
@@ -230,7 +222,6 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     competitors["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],
     marketSize: "$12.8 billion by 2025"
   },
-
   // Web3 Identity & Authentication Platform
   {
     id: "web3-identity-authentication-platform",
@@ -295,7 +286,6 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     competitors["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],
     marketSize: "$18.9 billion by 2025"
   },
-
   // Cross-Chain Bridge & Interoperability Platform
   {
     id: "cross-chain-bridge-interoperability",
@@ -359,5 +349,4 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     },
     competitors["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],
     marketSize: "$15.6 billion by 2025"
-
 ];}}

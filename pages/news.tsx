@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Calendar, Clock, ArrowRight, Tag, User export default function News() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
 
 export default function News(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const newsArticles = [
 		{
 			id: 1,
@@ -257,15 +251,6 @@ export default function News(...args[]):  {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 
 							Learn more <span aria-hidden="true">→</span>
-<<<<<<< HEAD
-						</Link>
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 						</Link>;
 					</div>;
 				</div>;
@@ -273,4 +258,3 @@ export default function News(...args[]):  {
 		</>;
 	);
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

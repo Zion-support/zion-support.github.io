@@ -60,12 +60,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
             case 'z-a':
                 return b.title.localeCompare(a.title);
             default:
-<<<<<<< HEAD
-                return 0;
-
-=======
                 return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     return (<>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -76,7 +71,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               {description}
             </p>
           </div>
-
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -84,7 +78,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
-
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">
@@ -100,7 +93,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                     </SelectItem>))}
                 </SelectContent>
               </Select>
-
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">
@@ -118,7 +110,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               </Select>
             </div>
           </div>
-
           {/* Results Count */}
           <div className="mb-6">
             <p className="text-zion-slate-light">
@@ -126,7 +117,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-
           {/* Listings Grid */}
           {isLoading ? (<div className="flex justify-center py-20">
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>
@@ -144,9 +134,4 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

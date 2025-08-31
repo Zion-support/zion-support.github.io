@@ -22,17 +22,9 @@ export function PointsBadge() {
         return acc}, { purchase: 0, post: 0, referral: 0 });
     const handleLogout = async () => {
         if (signOut) {
-<<<<<<< HEAD
-            await signOut();
-
-        else if (logout) {
-            await logout();
-
-=======
             await signOut()}
         else if (logout) {
             await logout()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<DropdownMenu>
       <TooltipProvider>
@@ -64,9 +56,4 @@ export function PointsBadge() {
         </DropdownMenuItem>
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
-<<<<<<< HEAD
-    </DropdownMenu>);
-}}}}
-=======
     </DropdownMenu>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
