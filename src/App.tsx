@@ -10,7 +10,6 @@ import { Footer } from './components/layout/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
-import { MobileResponsivenessEnhancer } from './components/MobileResponsivenessEnhancer';
 import { SEO } from './components/SEO';
 import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -24,7 +23,6 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
-import { FloatingActionButton } from './components/ui/FloatingActionButton';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -455,18 +453,10 @@ function App() {
             <PerformanceOptimizer enabled={true} showMetrics={false} />
 
             {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
-
-            {/* Mobile Responsiveness Enhancer */}
-            <MobileResponsivenessEnhancer 
-              enabled={true} 
-              showMobileIndicator={false}
-              enableTouchGestures={true}
-              enableMobileOptimizations={true}
-            />
+            <EnhancedAccessibilityEnhancer enabled={true} showSettings={false} />
 
             {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={false} />
+            <AdvancedAnalytics enabled={true} />
 
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />
