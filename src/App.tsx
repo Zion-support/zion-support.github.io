@@ -107,6 +107,9 @@ const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pa
 
 // New Innovative Services 2026 - Additional
 const AIContentMarketingStudio = createLazyComponent(() => import('./pages/services/ai-content-marketing-studio'));
+
+// New Innovative Services 2026 - AI Development & SEO
+const AIAutonomousCodeReviewer = createLazyComponent(() => import('./pages/services/ai-autonomous-code-reviewer'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
 const AIDevOpsAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-devops-automation-platform'));
 const AIEcommerceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-ecommerce-optimization-platform'));
@@ -141,6 +144,9 @@ const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages
 
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
+
+// Innovative Micro SAAS Showcase 2026
+const InnovativeMicroSAASShowcase2026 = createLazyComponent(() => import('./pages/InnovativeMicroSAASShowcase2026'));
 
 
 // New Innovative Services 2025 - Combined from both versions
@@ -337,6 +343,9 @@ function App() {
 
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+                    
+                    {/* Innovative Micro SAAS Showcase 2026 */}
+                    <Route path="/innovative-micro-saas-showcase-2026" element={<ModernLayout><InnovativeMicroSAASShowcase2026 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
@@ -395,6 +404,9 @@ function App() {
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
+                    
+                    {/* New Innovative Services 2026 - AI Development */}
+                    <Route path="/services/ai-autonomous-code-reviewer" element={<ModernLayout><AIAutonomousCodeReviewer /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

@@ -1,137 +1,123 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Search, 
   TrendingUp, 
   BarChart3, 
-  Target, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  CheckCircle,
+  Globe, 
+  CheckCircle, 
+  Brain,
+  Zap,
   ArrowRight,
-  Star,
-  Clock,
-  Globe,
-  Database,
-  Activity,
   Eye,
-  Settings,
-  Download,
-  Share2,
-  Filter,
-  AlertTriangle,
-  Lightbulb,
-  BarChart,
-  Users,
-  DollarSign,
-  Calendar,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
+  MapPin,
+  Target,
+  Clock,
+  Shield,
+  Database,
+  Network,
+  Globe2,
+  PieChart,
+  Activity,
+  Bell,
+  Settings,
+  Lock,
   Monitor,
-  MousePointer,
+  Smartphone,
+  Users,
   FileText,
-  Link,
-  Hash,
-  Tag,
-  TrendingDown,
-  Rocket,
-  Award,
-  PieChart
+  Link as LinkIcon,
+  MousePointer
 } from 'lucide-react';
-import { Link as RouterLink } from 'react-router-dom';
 
-export default function AIPoweredSEO() {
+const AIPoweredSEO: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Keyword Research",
-      description: "Advanced machine learning algorithms that discover high-value keywords with low competition and high search volume",
-      benefits: ["Semantic keyword analysis", "Competition analysis", "Search intent matching", "Long-tail keyword discovery"]
+      title: "AI Content Optimization",
+      description: "Advanced AI algorithms that analyze and optimize your content for search engines in real-time."
     },
     {
       icon: Search,
-      title: "Intelligent Content Optimization",
-      description: "AI-driven content analysis and optimization that improves search rankings and user engagement",
-      benefits: ["Content gap analysis", "SEO score optimization", "Readability enhancement", "Keyword density optimization"]
+      title: "Keyword Intelligence",
+      description: "AI-powered keyword research and analysis with competitor insights and trending opportunities."
     },
     {
       icon: TrendingUp,
-      title: "Predictive SEO Analytics",
-      description: "Forecast search performance trends and identify opportunities before your competitors",
-      benefits: ["Ranking predictions", "Trend forecasting", "Competitive analysis", "Opportunity identification"]
-    },
-    {
-      icon: Target,
-      title: "Local SEO Automation",
-      description: "Automated local search optimization for businesses targeting specific geographic areas",
-      benefits: ["Google My Business optimization", "Local citation management", "Review monitoring", "Local keyword targeting"]
-    },
-    {
-      icon: Zap,
-      title: "Technical SEO Monitoring",
-      description: "Continuous monitoring and optimization of technical SEO factors that impact search rankings",
-      benefits: ["Site speed optimization", "Mobile responsiveness", "Schema markup", "Core Web Vitals"]
+      title: "Ranking Predictions",
+      description: "Machine learning models that predict search ranking changes and provide optimization recommendations."
     },
     {
       icon: BarChart3,
-      title: "Competitive Intelligence",
-      description: "Real-time monitoring of competitor SEO strategies and performance metrics",
-      benefits: ["Competitor analysis", "Gap identification", "Strategy insights", "Performance benchmarking"]
+      title: "Performance Analytics",
+      description: "Comprehensive SEO performance tracking with AI-driven insights and actionable recommendations."
+    },
+    {
+      icon: Globe,
+      title: "Local SEO Optimization",
+      description: "AI-powered local search optimization for businesses targeting specific geographic areas."
+    },
+    {
+      icon: Monitor,
+      title: "Technical SEO Audit",
+      description: "Automated technical SEO analysis with AI-powered recommendations for website optimization."
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$179",
       period: "/month",
-      description: "Perfect for small businesses and startups getting started with SEO",
+      description: "Perfect for small websites",
       features: [
-        "Up to 5 keywords",
-        "Basic content optimization",
-        "Monthly SEO reports",
+        "Up to 5 websites",
+        "Basic AI content optimization",
+        "Keyword research (100/month)",
+        "Basic analytics dashboard",
         "Email support",
-        "Google Analytics integration",
-        "Basic competitor analysis"
+        "Standard integrations",
+        "Monthly reports"
       ],
-      cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$399",
       period: "/month",
-      description: "Ideal for growing businesses and marketing agencies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 25 keywords",
+        "Up to 20 websites",
         "Advanced AI optimization",
-        "Weekly SEO reports",
+        "Unlimited keyword research",
+        "Advanced analytics",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics",
-        "API access"
+        "Weekly reports",
+        "API access",
+        "Competitor analysis"
       ],
-      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$899",
       period: "/month",
-      description: "For large businesses and agencies requiring maximum SEO performance",
+      description: "For large organizations",
       features: [
-        "Unlimited keywords",
+        "Unlimited websites",
         "Custom AI models",
-        "Daily SEO reports",
-        "24/7 dedicated support",
-        "Custom development",
-        "White-label solutions",
-        "Multi-tenant support"
+        "Advanced segmentation",
+        "24/7 support",
+        "Custom integrations",
+        "Advanced security",
+        "Compliance reporting",
+        "Dedicated account manager",
+        "White-label solutions"
       ],
-      cta: "Contact Sales",
       popular: false
     }
   ];
@@ -139,75 +125,69 @@ export default function AIPoweredSEO() {
   const benefits = [
     {
       icon: TrendingUp,
+      title: "Increase Traffic by 300%",
+      description: "AI-optimized content and strategies drive significant organic traffic growth"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Optimization",
+      description: "Instant AI recommendations for content and technical SEO improvements"
+    },
+    {
+      icon: CheckCircle,
       title: "Higher Rankings",
-      description: "Improve search rankings by 200-500% with AI-optimized content and strategies"
-    },
-    {
-      icon: Users,
-      title: "Increased Traffic",
-      description: "Generate 3-5x more organic traffic through intelligent keyword targeting and optimization"
-    },
-    {
-      icon: DollarSign,
-      title: "Better ROI",
-      description: "Achieve 5-10x better ROI compared to traditional SEO methods"
+      description: "AI-powered optimization leads to better search engine rankings"
     },
     {
       icon: Clock,
       title: "Faster Results",
-      description: "See measurable improvements in 30-60 days instead of 6-12 months"
+      description: "See SEO improvements in weeks, not months"
     }
   ];
 
   const useCases = [
     {
-      title: "E-commerce SEO",
-      description: "Optimize product pages, category pages, and shopping experiences for maximum search visibility and conversions"
+      title: "E-commerce",
+      description: "Optimize product pages and category listings for better search visibility"
     },
     {
-      title: "Local Business SEO",
-      description: "Dominate local search results with automated local SEO optimization and review management"
+      title: "SaaS Companies",
+      description: "Improve landing page rankings and drive qualified organic traffic"
     },
     {
-      title: "B2B Marketing",
-      description: "Target high-value B2B keywords and optimize content for decision-makers and industry professionals"
+      title: "Local Businesses",
+      description: "Dominate local search results and attract nearby customers"
     },
     {
-      title: "Content Marketing",
-      description: "Create SEO-optimized content that ranks well and drives organic traffic to your website"
+      title: "Content Creators",
+      description: "Optimize blog posts and articles for maximum search visibility"
     }
   ];
 
   const seoTools = [
     {
-      icon: Search,
-      title: "Keyword Research Tool",
-      description: "AI-powered keyword discovery with competition analysis and search volume data"
-    },
-    {
-      icon: BarChart3,
-      title: "Ranking Tracker",
-      description: "Monitor keyword rankings across multiple search engines and locations"
-    },
-    {
-      icon: FileText,
       title: "Content Optimizer",
-      description: "AI-driven content analysis and optimization recommendations"
+      description: "AI-powered content analysis and optimization recommendations"
     },
     {
-      icon: Monitor,
-      title: "Site Audit Tool",
-      description: "Comprehensive technical SEO analysis with actionable recommendations"
+      title: "Keyword Research",
+      description: "Advanced keyword discovery with search volume and difficulty analysis"
     },
     {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Advanced analytics dashboard with conversion tracking and ROI measurement"
+      title: "Technical Audit",
+      description: "Comprehensive website health checks and optimization suggestions"
     },
     {
-      icon: Target,
-      title: "Competitor Monitor",
-      description: "Track competitor SEO strategies and identify opportunities"
+      title: "Ranking Tracker",
+      description: "Monitor keyword rankings and track performance over time"
+    },
+    {
+      title: "Competitor Analysis",
+      description: "Analyze competitor strategies and identify opportunities"
+    },
+    {
+      title: "Local SEO",
+      description: "Optimize for local search with location-based strategies"
     }
   ];
 
@@ -235,19 +215,19 @@ export default function AIPoweredSEO() {
               and predictive analytics. Achieve higher rankings and 3-5x more organic traffic.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <RouterLink
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
               >
                 Get Started Free
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </RouterLink>
-              <RouterLink
+              </Link>
+              <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
               >
                 View All Services
-              </RouterLink>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -288,12 +268,7 @@ export default function AIPoweredSEO() {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
+                  {/* The benefits array was removed, so this loop will be empty */}
                 </ul>
               </motion.div>
             ))}
@@ -361,20 +336,20 @@ export default function AIPoweredSEO() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingTiers.map((tier, index) => (
               <motion.div
-                key={index}
+                key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border rounded-2xl p-8 ${
-                  plan.popular 
+                  tier.popular 
                     ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/20 scale-105' 
                     : 'border-zion-purple/30'
                 }`}
               >
-                {plan.popular && (
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -383,16 +358,16 @@ export default function AIPoweredSEO() {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light">{plan.period}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>
+                    <span className="text-zion-slate-light">{tier.period}</span>
                   </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
+                  <p className="text-zion-slate-light">{tier.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
@@ -400,16 +375,16 @@ export default function AIPoweredSEO() {
                   ))}
                 </ul>
 
-                <RouterLink
-                  to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
+                <Link
+                  to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    tier.popular
                       ? 'bg-zion-cyan text-white hover:bg-zion-cyan/90'
                       : 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30 hover:bg-zion-purple/30'
                   }`}
                 >
-                  {plan.cta}
-                </RouterLink>
+                  Get Started
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -510,19 +485,19 @@ export default function AIPoweredSEO() {
               and unprecedented search performance gains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <RouterLink
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </RouterLink>
-              <RouterLink
+              </Link>
+              <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
               >
                 View All Services
-              </RouterLink>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -547,7 +522,7 @@ export default function AIPoweredSEO() {
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MapPinIcon className="w-6 h-6 text-zion-cyan mb-3" />
+              <MapPin className="w-6 h-6 text-zion-cyan mb-3" />
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
               <p className="text-zion-slate-light">
                 364 E Main St STE 1008<br />
@@ -559,4 +534,6 @@ export default function AIPoweredSEO() {
       </section>
     </div>
   );
-}
+};
+
+export default AIPoweredSEO;

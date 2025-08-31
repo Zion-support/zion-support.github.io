@@ -2,115 +2,114 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  TrendingDown, 
-  Users, 
-  BarChart3, 
-  AlertTriangle, 
+  Code, 
+  Shield, 
+  Zap, 
+  Brain, 
   CheckCircle, 
-  Brain,
-  Zap,
-  ArrowRight,
-  Eye,
-  Phone,
-  Mail,
-  MapPin,
-  Target,
+  AlertTriangle,
+  GitBranch,
   Clock,
-  Shield,
+  Users,
+  BarChart3,
+  Lock,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Eye,
+  FileCode,
+  Bug,
+  Cpu,
   Database,
   Network,
   Globe,
-  PieChart,
-  Activity,
-  Bell,
-  Settings,
-  Lock
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 
-const AIPoweredCustomerChurnPredictor: React.FC = () => {
+const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Predictive AI Analytics",
-      description: "Advanced machine learning algorithms that predict customer churn with 95% accuracy up to 90 days in advance."
+      icon: Code,
+      title: "Intelligent Code Analysis",
+      description: "AI-powered code review that understands context, patterns, and best practices across multiple programming languages."
     },
     {
-      icon: Users,
-      title: "Customer Behavior Analysis",
-      description: "Deep insights into customer usage patterns, engagement levels, and satisfaction indicators."
+      icon: Shield,
+      title: "Security Vulnerability Detection",
+      description: "Automated detection of security flaws, SQL injection risks, and common security vulnerabilities in real-time."
     },
     {
-      icon: AlertTriangle,
-      title: "Early Warning System",
-      description: "Real-time alerts when customers show signs of potential churn, allowing proactive intervention."
+      icon: Bug,
+      title: "Bug Prediction & Prevention",
+      description: "Machine learning algorithms that predict potential bugs before they reach production environments."
+    },
+    {
+      icon: GitBranch,
+      title: "Git Integration",
+      description: "Seamless integration with Git workflows, providing automated reviews on pull requests and commits."
     },
     {
       icon: BarChart3,
-      title: "Churn Risk Scoring",
-      description: "Individual customer churn risk scores with actionable recommendations for retention strategies."
+      title: "Code Quality Metrics",
+      description: "Comprehensive metrics including cyclomatic complexity, maintainability index, and technical debt analysis."
     },
     {
-      icon: Target,
-      title: "Personalized Retention Campaigns",
-      description: "AI-generated personalized retention strategies and campaigns for high-risk customers."
-    },
-    {
-      icon: Activity,
-      title: "Performance Tracking",
-      description: "Comprehensive tracking of retention efforts and ROI measurement for all campaigns."
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Built-in collaboration tools for team code reviews with AI-assisted suggestions and explanations."
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small development teams",
       features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
-        "Email alerts",
-        "Basic analytics dashboard",
+        "Up to 5 developers",
+        "Basic code analysis",
+        "Security vulnerability scanning",
+        "Git integration",
         "Email support",
-        "Standard integrations",
-        "Monthly reports"
+        "Basic reporting",
+        "5 repositories"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$399",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing development teams",
       features: [
-        "Up to 10,000 customers",
-        "Advanced AI prediction models",
-        "Real-time alerts",
-        "Advanced analytics",
+        "Up to 20 developers",
+        "Advanced AI analysis",
+        "Bug prediction algorithms",
+        "Custom rule sets",
         "Priority support",
-        "Custom integrations",
-        "Weekly reports",
-        "API access",
-        "Retention campaign templates"
+        "Advanced analytics",
+        "Unlimited repositories",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited customers",
+        "Unlimited developers",
         "Custom AI models",
-        "Advanced segmentation",
+        "On-premise deployment",
         "24/7 support",
         "Custom integrations",
-        "Advanced security",
+        "Advanced security features",
         "Compliance reporting",
-        "Dedicated account manager",
-        "White-label solutions"
+        "Dedicated account manager"
       ],
       popular: false
     }
@@ -118,43 +117,24 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
 
   const benefits = [
     {
-      icon: TrendingDown,
-      title: "Reduce Churn by 40%",
-      description: "Proactive intervention strategies prevent customer loss before it happens"
+      icon: TrendingUp,
+      title: "50% Faster Code Reviews",
+      description: "AI automation reduces review time while maintaining quality standards"
     },
     {
-      icon: Zap,
-      title: "Real-time Insights",
-      description: "Instant notifications and alerts when customers show churn risk"
+      icon: Shield,
+      title: "90% Fewer Security Issues",
+      description: "Proactive vulnerability detection prevents security breaches"
     },
     {
       icon: CheckCircle,
-      title: "Increased Revenue",
-      description: "Retain valuable customers and improve lifetime value"
+      title: "Improved Code Quality",
+      description: "Consistent code standards and best practices across teams"
     },
     {
       icon: Clock,
-      title: "Early Intervention",
-      description: "Identify at-risk customers up to 90 days before they churn"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "SaaS Companies",
-      description: "Predict subscription cancellations and reduce monthly churn rates"
-    },
-    {
-      title: "E-commerce",
-      description: "Identify customers likely to stop purchasing and re-engage them"
-    },
-    {
-      title: "Financial Services",
-      description: "Predict account closures and prevent customer attrition"
-    },
-    {
-      title: "Telecommunications",
-      description: "Reduce customer turnover and improve retention rates"
+      title: "24/7 Availability",
+      description: "Continuous code monitoring and instant feedback"
     }
   ];
 
@@ -162,31 +142,31 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-purple-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4" />
-              AI-Powered Retention
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              AI-Powered Development
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered Customer
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                Churn Predictor
+              AI Autonomous
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Code Reviewer
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Stop losing customers before they leave. Our AI predicts churn with 95% accuracy 
-              and provides actionable insights to retain your most valuable customers.
+              Revolutionize your development workflow with AI-powered code review that never sleeps. 
+              Get instant feedback, security insights, and quality improvements on every commit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-purple-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -211,14 +191,14 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Intelligent Churn
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                Prediction & Prevention
+              Intelligent Code Review
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Powered by AI
               </span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI analyzes thousands of data points to identify customers at risk of churning 
-              and provides personalized retention strategies.
+              Our AI understands your codebase, learns your patterns, and provides intelligent insights 
+              that go beyond simple syntax checking.
             </p>
           </motion.div>
 
@@ -230,9 +210,9 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-red-500/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -255,8 +235,8 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Transform Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                Customer Retention
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Development Process
               </span>
             </h2>
           </motion.div>
@@ -271,7 +251,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex items-start gap-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -284,7 +264,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -295,56 +275,14 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Perfect For
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                Every Industry
-              </span>
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered churn prediction works across all industries and business models.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 text-center hover:border-red-500/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Simple, Transparent
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 Pricing
               </span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your customer base and business needs. 
-              All plans include our core AI-powered churn prediction capabilities.
+              Choose the plan that fits your team size and development needs. 
+              All plans include our core AI-powered code review capabilities.
             </p>
           </motion.div>
 
@@ -358,13 +296,13 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                   tier.popular 
-                    ? 'border-red-500 shadow-2xl shadow-red-500/20' 
+                    ? 'border-purple-500 shadow-2xl shadow-purple-500/20' 
                     : 'border-slate-700'
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -382,7 +320,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -392,7 +330,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-red-500 to-purple-500 text-white hover:from-red-600 hover:to-purple-600'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -405,7 +343,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -415,19 +353,19 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to Stop
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                Customer Churn?
+              Ready to Revolutionize
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Your Code Review Process?
               </span>
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses that have reduced churn and increased customer lifetime value 
-              with our AI-powered prediction platform.
+              Join thousands of developers who trust AI to improve their code quality, 
+              security, and development velocity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-purple-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -445,37 +383,37 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                  <a href="tel:+13024640950" className="text-red-400 hover:text-red-300">
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
                     +1 302 464 0950
                   </a>
                 </div>
               </div>
               
               <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-red-400 hover:text-red-300">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
               </div>
               
               <div className="flex flex-col items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -494,4 +432,4 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
   );
 };
 
-export default AIPoweredCustomerChurnPredictor;
+export default AIAutonomousCodeReviewer;

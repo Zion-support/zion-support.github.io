@@ -382,6 +382,20 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    },
+    {
+      icon: Code,
+      title: "AI Autonomous Code Reviewer",
+      description: "AI-powered code review that never sleeps, providing instant feedback and security insights",
+      link: "/services/ai-autonomous-code-reviewer",
+      color: "from-purple-500 to-cyan-500"
+    },
+    {
+      icon: Search,
+      title: "AI-Powered SEO Platform",
+      description: "Revolutionize your search engine optimization with AI that understands search algorithms",
+      link: "/services/ai-powered-seo",
+      color: "from-blue-500 to-green-500"
     }
   ];
 
@@ -502,13 +516,22 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Link
-            to="/comprehensive-services-showcase-2025"
-            className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/comprehensive-services-showcase-2025"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/innovative-micro-saas-showcase-2026"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-purple border-2 border-zion-purple hover:bg-zion-purple hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              Micro SAAS Showcase 2026
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
