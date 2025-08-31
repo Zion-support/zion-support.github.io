@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { EnhancedSEO, SEOConfigs } from '../components/EnhancedSEO';
 import {
   Users,
   TrendingUp,
@@ -642,11 +643,13 @@ const CTASection = () => {
 // Main Home Component
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <CTASection />
-    </div>
+    <EnhancedSEO data={SEOConfigs.home}>
+      <div className="min-h-screen bg-zion-blue-dark">
+        <HeroSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <CTASection />
+      </div>
+    </EnhancedSEO>
   );
 }
