@@ -1,0 +1,348 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, Star, Zap, Shield, Users, Globe } from 'lucide-react';
+
+const Pricing = () => {
+  const pricingTiers = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small businesses and startups getting started with AI tools",
+      features: [
+        "AI Content Generation (500 credits/month)",
+        "Basic AI Image Editing",
+        "AI Meeting Assistant (10 hours/month)",
+        "Email Support",
+        "Basic Analytics Dashboard",
+        "Mobile App Access",
+        "AI Sales Copilot (Basic)",
+        "AI Compliance Assistant (Basic)"
+      ],
+      popular: false,
+      cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses and professional teams",
+      features: [
+        "Everything in Starter",
+        "AI Content Generation (2000 credits/month)",
+        "Advanced AI Image & Video Editing",
+        "AI Code Assistant (Basic)",
+        "AI Meeting Assistant (50 hours/month)",
+        "AI Translation (25 languages)",
+        "Priority Support",
+        "Advanced Analytics",
+        "API Access (5000 calls/month)",
+        "Team Collaboration Tools",
+        "AI Project Management Platform",
+        "AI Marketing Automation",
+        "AI Customer Support Automation"
+      ],
+      popular: true,
+      cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Business",
+      price: "$799",
+      period: "/month",
+      description: "Comprehensive solution for established businesses",
+      features: [
+        "Everything in Professional",
+        "AI Content Generation (10000 credits/month)",
+        "AI Code Assistant (Advanced)",
+        "AI Data Analytics Platform",
+        "AI Threat Detection",
+        "Multi-Cloud Management",
+        "AI-Powered CRM",
+        "Business Process Automation",
+        "AI Meeting Assistant (Unlimited)",
+        "AI Translation (100+ languages)",
+        "24/7 Support",
+        "Custom Integrations",
+        "API Access (50000 calls/month)",
+        "Advanced Security Features",
+        "AI Predictive Maintenance",
+        "AI HR Platform",
+        "AI Financial Risk Management"
+      ],
+      popular: false,
+      cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Enterprise",
+      price: "$2,999",
+      period: "/month",
+      description: "Tailored solutions for large organizations with specific requirements",
+      features: [
+        "Everything in Business",
+        "Unlimited AI Content Generation",
+        "Custom AI Model Training",
+        "Zero Trust Security Suite",
+        "Edge Computing Solutions",
+        "AI Market Research Platform",
+        "AI Legal Document Review",
+        "AI Financial Advisor",
+        "AI Healthcare Assistant",
+        "Dedicated Account Manager",
+        "Custom Development",
+        "On-Premise Deployment",
+        "SLA Guarantees",
+        "Compliance Certifications",
+        "Quantum AI Solutions",
+        "Blockchain Integration",
+        "IoT Edge Computing Platform"
+      ],
+      popular: false,
+      cta: "Contact Sales",
+      link: "/contact"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Fast Implementation",
+      description: "Get up and running in days, not months"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Bank-level security and compliance"
+    },
+    {
+      icon: Users,
+      title: "24/7 Support",
+      description: "Round-the-clock technical support"
+    },
+    {
+      icon: Globe,
+      title: "Global Infrastructure",
+      description: "Deployed across multiple continents"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6"
+            >
+              Simple, Transparent Pricing
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            >
+              Choose the perfect plan for your AI and technology needs. Start with a free trial and scale as you grow.
+            </motion.p>
+          </div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-gray-800/50 border rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300 ${
+                  tier.popular
+                    ? 'border-cyan-500 shadow-2xl shadow-cyan-500/25 scale-105'
+                    : 'border-gray-700 hover:border-gray-600'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <Star className="w-4 h-4" />
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    {tier.period && (
+                      <span className="text-lg text-gray-400 ml-1">{tier.period}</span>
+                    )}
+                  </div>
+                  <p className="text-gray-300 text-sm">{tier.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-gray-300 text-sm">
+                      <Check className="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={tier.link}
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400 transform hover:scale-105'
+                      : 'bg-transparent border border-gray-600 text-white hover:bg-gray-700 hover:border-gray-500'
+                  }`}
+                >
+                  {tier.cta}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          >
+            Why Choose Zion Tech Group?
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          
+          <div className="space-y-6">
+            {[
+              {
+                question: "Can I change my plan at any time?",
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated."
+              },
+              {
+                question: "Is there a free trial available?",
+                answer: "Yes, all plans come with a 14-day free trial. No credit card required to start."
+              },
+              {
+                question: "What payment methods do you accept?",
+                answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise plans."
+              },
+              {
+                question: "Do you offer custom pricing for large teams?",
+                answer: "Yes, we offer custom pricing and features for enterprise customers. Contact our sales team for details."
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 rounded-lg p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-gray-300">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
+          >
+            Need a Custom Solution?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-gray-300 mb-8"
+          >
+            Contact us for enterprise pricing and custom solutions tailored to your specific needs.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"
+            >
+              Contact Sales
+            </a>
+            <a
+              href="/contact"
+              className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
+            >
+              Schedule Demo
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Pricing;

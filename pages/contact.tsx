@@ -1,20 +1,29 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react'
 
-const Contact: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Contact - Zion Tech Solutions</title>
-        <meta name="description" content="Contact page" />
-      </Head>
-      
-      <main>
-        <h1>Contact</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
+
+export default function Contact(...args[]):  {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		comp: '',
+		message: ''
+	})
+	const [isSubmitted, setIsSubmitted] = useState(false)
+
+		// // // // // // // console.log('Form submitted:', formData)
+		setIsSubmitted(true)
+		// Reset form after submission
+		setTimeout(() => {
+			setIsSubmitted(false)
+			setFormData({ name: '', email: '', company: '', message: '' })
+		}, 3000)
+
+						</div>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
 };
-
-export default Contact;

@@ -1,0 +1,301 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Users, 
+  Lock, 
+  Eye, 
+  Info, 
+  Calendar, 
+  Globe, 
+  CheckCircle, 
+  AlertTriangle, 
+  Mail 
+} from 'lucide-react';
+
+export default function TermsOfService() {
+  const compName = 'Zion Tech Group';
+  const website = 'https://ziontechgroup.com';
+  
+  const termsSections = [
+    {
+      id: 'services',
+      title: 'Description of Services',
+      icon: Shield,
+      content: `Zion Tech Group provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include artificial intelligence and machine learning solutions, cybersecurity consulting and implementation, cloud infrastructure and digital transformation, software development and consulting, and technology strategy and advisory services.`
+    },
+    {
+      id: 'accounts',
+      title: 'User Accounts and Responsibilities',
+      icon: Users,
+      content: `When you create an account with us, you must provide accurate, complete, and current information. You are responsible for maintaining the security of your account and password, all activities that occur under your account, notifying us immediately of any unauthorized use, and ensuring your account information is up to date.`
+    },
+    {
+      id: 'acceptable-use',
+      title: 'Acceptable Use Policy',
+      icon: Shield,
+      content: `You agree not to use our website or services to violate any applicable laws or regulations, infringe on intellectual property rights, transmit harmful or malicious code, engage in unauthorized access or interference with our systems, or use our services for any illegal or unauthorized purpose.`
+    },
+    {
+      id: 'privacy',
+      title: 'Privacy and Data Protection',
+      icon: Lock,
+      content: `We are committed to protecting your privacy and personal information. Our collection, use, and protection of your data is governed by our Privacy Policy, which is incorporated into these Terms by reference.`
+    },
+    {
+      id: 'intellectual-property',
+      title: 'Intellectual Property Rights',
+      icon: Eye,
+      content: `All content, features, and functionality on our website, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, and software, are owned by Zion Tech Group and are protected by international copyright, trademark, and other intellectual property laws.`
+    },
+    {
+      id: 'disclaimers',
+      title: 'Disclaimers and Limitations',
+      icon: Shield,
+      content: `Our services are provided "as is" and "as available" without warranties of any kind. We disclaim all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.`
+    },
+    {
+      id: 'liability',
+      title: 'Limitation of Liability',
+      icon: Info,
+      content: `In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, goodwill, or other intangible losses.`
+    },
+    {
+      id: 'termination',
+      title: 'Termination',
+      icon: Shield,
+      content: `We may terminate or suspend your account and access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.`
+    },
+    {
+      id: 'governing-law',
+      title: 'Governing Law',
+      icon: Calendar,
+      content: `These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.`
+    },
+    {
+      id: 'changes',
+      title: 'Changes to Terms',
+      icon: Globe,
+      content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
+    },
+    {
+      id: 'contact',
+      title: 'Contact Information',
+      icon: Mail,
+      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`
+    }
+  ];
+
+  const keyProvisions = [
+    {
+      title: 'Service Usage',
+      description: 'Services are provided "as is" without warranties of any kind',
+      icon: CheckCircle
+    },
+    {
+      title: 'Data Security',
+      description: 'We implement industry-standard security measures to protect your data',
+      icon: Shield
+    },
+    {
+      title: 'Payment Terms',
+      description: 'Fees are billed according to your service agreement and are non-refundable',
+      icon: CheckCircle
+    },
+    {
+      title: 'Intellectual Property',
+      description: 'All content and services remain the property of Zion Tech Group',
+      icon: Lock
+    },
+    {
+      title: 'Liability Limits',
+      description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
+      icon: AlertTriangle
+    },
+    {
+      title: 'Termination Rights',
+      description: 'Either party may terminate services with appropriate notice as specified in service agreements',
+      icon: AlertTriangle
+    }
+  ];
+
+  const disputeResolution = [
+    {
+      step: '1',
+      title: 'Direct Communication',
+      description: 'Attempt to resolve disputes through direct communication with our support team'
+    },
+    {
+      step: '2',
+      title: 'Escalation',
+      description: 'If direct communication fails, escalate to management for resolution'
+    },
+    {
+      step: '3',
+      title: 'Mediation',
+      description: 'For complex disputes, engage in mediation with a neutral third party'
+    },
+    {
+      step: '4',
+      title: 'Arbitration',
+      description: 'As a last resort, resolve disputes through binding arbitration'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
+        <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
+        <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Info className="w-8 h-8 text-zion-cyan" />
+                Agreement to Terms
+              </h2>
+              <div className="space-y-4 text-zion-slate-light leading-relaxed">
+                <p>
+                  These Terms of Service ("Terms") govern your use of the {compName} website located at {website} and related services provided by {compName} ("we," "our," or "us").
+                </p>
+                <p>
+                  By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our website or use our services.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Terms Content */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="space-y-16">
+              {termsSections.map((section, index) => (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="mb-12"
+                >
+                  <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <section.icon className="w-8 h-8 text-zion-cyan" />
+                    {section.title}
+                  </h2>
+                  <div className="space-y-4 text-zion-slate-light leading-relaxed">
+                    <p>{section.content}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Key Provisions */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Key Provisions</h2>
+              <p className="text-xl text-gray-300">Important terms and conditions you should know</p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {keyProvisions.map((provision, index) => (
+                <motion.div
+                  key={provision.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                >
+                  <provision.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{provision.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{provision.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Dispute Resolution */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Dispute Resolution Process</h2>
+              <p className="text-xl text-gray-300">Our approach to resolving conflicts and disputes</p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {disputeResolution.map((step, index) => (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">{step.step}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3 justify-center">
+                <Mail className="w-8 h-8 text-zion-cyan" />
+                Contact Information
+              </h2>
+              <div className="space-y-4 text-zion-slate-light leading-relaxed max-w-2xl mx-auto">
+                <p>
+                  For questions about these Terms of Service or any other legal matters, please contact us:
+                </p>
+                <div className="space-y-2">
+                  <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+                  <p><strong>Phone:</strong> +1 302 464 0950</p>
+                  <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

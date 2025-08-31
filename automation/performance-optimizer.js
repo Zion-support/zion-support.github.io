@@ -8,6 +8,14 @@ class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
+    this.ensureLogDirectory();
+  }
+
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
   }
 
   log(message) {
@@ -20,16 +28,16 @@ class PerformanceOptimizer {
   async optimizePerformance() {
     try {
       this.log('Starting performance optimization...');
-      
+
       // Analyze bundle size
       const bundleAnalysis = this.analyzeBundleSize();
-      
+
       // Optimize images
       const imageOptimization = this.optimizeImages();
-      
+
       // Check for unused dependencies
       const dependencyAnalysis = this.analyzeDependencies();
-      
+
       // Generate optimization report
       const report = {
         timestamp: new Date().toISOString(),
@@ -38,7 +46,7 @@ class PerformanceOptimizer {
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()
       };
-      
+
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
@@ -67,7 +75,7 @@ class PerformanceOptimizer {
       return {
         optimized: 0,
         totalImages: 0,
-        savings: '0KB'
+        recommendations: ['Use WebP format', 'Implement lazy loading']
       };
     } catch (error) {
       return { error: error.message };
@@ -76,45 +84,74 @@ class PerformanceOptimizer {
 
   analyzeDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
+      // Placeholder for dependency analysis
       return {
-        totalDependencies: dependencies.length + devDependencies.length,
-        productionDependencies: dependencies.length,
-        devDependencies: devDependencies.length,
-        potentialUnused: this.findUnusedDependencies()
+        totalDependencies: 0,
+        unusedDependencies: 0,
+        recommendations: ['Remove unused packages', 'Update outdated packages']
       };
     } catch (error) {
       return { error: error.message };
     }
   }
 
-  findUnusedDependencies() {
-    // Placeholder for unused dependency detection
-    return ['example-unused-package'];
-  }
-
   generateRecommendations() {
     return [
-      'Implement code splitting for better performance',
-      'Optimize images using WebP format',
-      'Remove unused dependencies',
-      'Enable gzip compression',
-      'Use React.memo for expensive components'
+      'Implement code splitting for better initial load times',
+      'Use dynamic imports for route-based code splitting',
+      'Optimize images and use modern formats',
+      'Remove unused dependencies and code',
+      'Implement proper caching strategies'
     ];
   }
 
   saveReport(report) {
-    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    try {
+      const reportPath = path.join(__dirname, 'logs', 'performance-report.json');
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      this.log(`Performance report saved to: ${reportPath}`);
+    } catch (error) {
+      this.log(`Failed to save report: ${error.message}`, 'ERROR');
+    }
+  }
+
+  start() {
+    this.log('Performance Optimizer started');
+    
+    // Run optimization every 6 hours
+    setInterval(() => {
+      this.optimizePerformance();
+    }, 6 * 60 * 60 * 1000);
+    
+    // Initial optimization
+    setTimeout(() => {
+      this.optimizePerformance();
+    }, 30000);
+  }
+
+  stop() {
+    this.log('Performance Optimizer stopped');
   }
 }
 
-const optimizer = new PerformanceOptimizer();
-optimizer.optimizePerformance().then(report => {
-  if (report) {
-    console.log('Performance report:', report);
-  }
-});
+// Export the class
+module.exports = PerformanceOptimizer;
+
+// If running directly, start the optimizer
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.start();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    optimizer.log('Shutting down Performance Optimizer...');
+    optimizer.stop();
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    optimizer.log('Shutting down Performance Optimizer...');
+    optimizer.stop();
+    process.exit(0);
+  });
+}
