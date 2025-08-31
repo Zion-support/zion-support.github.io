@@ -118,6 +118,8 @@ const AIAutonomousSupplyChainIntelligence = createLazyComponent(() => import('./
 const AIAutonomousCybersecurityIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-intelligence'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
+const AIPoweredCustomerChurnPredictor = createLazyComponent(() => import('./pages/services/ai-powered-customer-churn-predictor'));
+const AICybersecurityIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-cybersecurity-intelligence-platform'));
 
 // New Innovative Services 2026 - Additional
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -426,6 +428,7 @@ function App() {
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
+                    <Route path="/services/ai-cybersecurity-intelligence-platform" element={<ModernLayout><AICybersecurityIntelligencePlatform /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

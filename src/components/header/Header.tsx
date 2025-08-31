@@ -41,6 +41,9 @@ export function Header() {
               <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Pricing
               </Link>
+              <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Contact
+              </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-zion-slate-light text-xs">Follow us:</span>
                 <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" 
