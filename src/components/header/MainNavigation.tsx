@@ -60,7 +60,8 @@ import {
   ShoppingCart,
   Heart,
   Scale,
-  Home
+  Home,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -106,10 +107,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
             <div
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
-              className="absolute top-full left-0 mt-2 w-[1000px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+              className="absolute top-full left-0 mt-2 w-[1200px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
             >
               <div className="p-6">
-                <div className="grid grid-cols-4 gap-8">
+                <div className="grid grid-cols-5 gap-8">
                   {/* AI & Automation Column */}
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
@@ -120,15 +121,27 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     </div>
                     <ul className="space-y-3">
                       <li>
-                        <Link to="/services/ai-autonomous-business-manager" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <Brain className="w-3 h-3 mr-2" />
-                          AI Autonomous Business Manager
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Truck className="w-3 h-3 mr-2" />
+                          AI Autonomous Logistics Platform
                         </Link>
                       </li>
                       <li>
-                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                          <TrendingUp className="w-3 h-3 mr-2" />
-                          AI Business Intelligence
+                        <Link to="/services/ai-powered-seo" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Search className="w-3 h-3 mr-2" />
+                          AI-Powered SEO Platform
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-business-intelligence-dashboard" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <BarChart3 className="w-3 h-3 mr-2" />
+                          AI Business Intelligence Dashboard
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Target className="w-3 h-3 mr-2" />
+                          AI Project Management Platform
                         </Link>
                       </li>
                     </ul>
@@ -174,9 +187,33 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/services/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                           <Atom className="w-3 h-3 mr-2" />
                           Blockchain Solutions
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Quantum & Edge Computing Column */}
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
+                      <div className="p-2 bg-zion-green/20 rounded-lg">
+                        <Cpu className="w-5 h-5 text-zion-green"/>
+                      </div>
+                      <h4 className="text-zion-green font-bold text-lg">Quantum & Edge Computing</h4>
+                    </div>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Atom className="w-3 h-3 mr-2" />
+                          Quantum Edge Computing
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Brain className="w-3 h-3 mr-2" />
+                          AI-Quantum Hybrid Platform
                         </Link>
                       </li>
                     </ul>

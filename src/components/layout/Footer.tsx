@@ -337,6 +337,82 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Contact Information */}
+        <div className="border-t border-zion-purple/20 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-center md:justify-start space-x-3">
+                  <Phone className="w-5 h-5 text-zion-cyan" />
+                  <a href="tel:+13024640950" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+                <div className="flex items-center justify-center md:justify-start space-x-3">
+                  <Mail className="w-5 h-5 text-zion-cyan" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center justify-center md:justify-start space-x-3">
+                  <MapPin className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-zion-slate-light">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white mb-4">Business Hours</h3>
+              <div className="space-y-2 text-zion-slate-light">
+                <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                <p>Saturday: 10:00 AM - 2:00 PM EST</p>
+                <p>Sunday: Closed</p>
+                <p className="text-zion-cyan font-medium">24/7 Emergency Support Available</p>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+              <div className="space-y-2">
+                <a href="/contact" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Request Consultation
+                </a>
+                <a href="/pricing" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  View Pricing
+                </a>
+                <a href="/demo" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Schedule Demo
+                </a>
+                <a href="/support" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Get Support
+                </a>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
+              <div className="flex justify-center md:justify-start space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-zion-purple/20 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/30 transition-all duration-300"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-zion-purple/20 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">

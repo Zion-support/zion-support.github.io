@@ -59,7 +59,10 @@ import {
   CheckCircle2,
   Clock3,
   Target2,
-  Building2
+  Building2,
+  Truck,
+  Search,
+  Atom
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -852,6 +855,125 @@ const FloatingActionButton = React.memo(() => {
   );
 });
 
+// Innovative Services Showcase Component
+const InnovativeServicesShowcase: React.FC = () => {
+  const innovativeServices = [
+    {
+      title: "AI Autonomous Logistics Platform",
+      description: "Revolutionize logistics with AI-powered route optimization, autonomous fleet management, and real-time supply chain visibility. Reduce costs by 35% and improve delivery efficiency by 40%.",
+      icon: Truck,
+      href: "/services/ai-autonomous-logistics-platform",
+      features: ["Route Optimization", "Fleet Management", "Supply Chain Visibility", "Predictive Analytics"],
+      price: "From $299/month"
+    },
+    {
+      title: "AI-Powered SEO Platform",
+      description: "Transform your SEO with cutting-edge AI that analyzes, optimizes, and predicts performance. Increase organic traffic by 300% and improve rankings by 85% within months.",
+      icon: Search,
+      href: "/services/ai-powered-seo",
+      features: ["Content Optimization", "Keyword Research", "Technical SEO", "Predictive Analytics"],
+      price: "From $99/month"
+    },
+    {
+      title: "Quantum Edge Computing Solutions",
+      description: "Transform edge computing with quantum technology that delivers 1000x faster processing, 75% energy reduction, and unbreakable security through quantum encryption.",
+      icon: Atom,
+      href: "/services/quantum-edge-computing-solutions",
+      features: ["Quantum Processing", "Edge Intelligence", "Quantum Security", "Adaptive Computing"],
+      price: "From $499/month"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-blue-dark/30 to-zion-slate-dark/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Latest Innovative Services
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Discover our newest AI-powered solutions that are transforming industries and driving unprecedented business growth
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {innovativeServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="group relative p-8 bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 rounded-2xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105"
+            >
+              <div className="absolute top-4 right-4">
+                <div className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full border border-zion-cyan/30">
+                  New
+                </div>
+              </div>
+              
+              <div className="p-4 bg-zion-cyan/20 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-8 h-8 text-zion-cyan" />
+              </div>
+              
+              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                {service.title}
+              </h3>
+              
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                {service.description}
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-zion-slate-light text-sm">
+                      <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <div className="text-lg font-bold text-zion-cyan">{service.price}</div>
+              </div>
+              
+              <Link
+                to={service.href}
+                className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 group-hover:scale-105"
+              >
+                Learn More
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-all duration-300"
+          >
+            View All Services
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 // Main Home Component
 const Home: React.FC = () => {
   // SEO structured data for the home page
@@ -897,6 +1019,7 @@ const Home: React.FC = () => {
       <ServicesSection />
       <LatestInnovationsSection />
       <WhyChooseUsSection />
+      <InnovativeServicesShowcase />
       <CTASection />
       <FloatingActionButton />
     </div>
