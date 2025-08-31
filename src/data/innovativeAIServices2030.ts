@@ -81,16 +81,16 @@ export const innovativeAIServices2030: AIService[] = [
       "Accessibility features",
       "Content creation tools"
     ],
-    benefits[
-      "Reduce content creation time by 80%",
-      "Enable multilingual content",
+          benefits: [
+        "Reduce content creation time by 80%",
+        "Enable multilingual content",
       "Improve accessibility",
       "Maintain brand voice consistency",
       "Scale voice content production"
     ],
-    useCases[
-      "Content creation",
-      "E-learning platforms",
+          useCases: [
+        "Content creation",
+        "E-learning platforms",
       "Accessibility services",
       "Marketing campaigns",
       "Customer support"

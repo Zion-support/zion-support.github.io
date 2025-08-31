@@ -68,9 +68,9 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       pricingModel: "Monthly subscription with resource-based pricing",
       marketPrice: "$799-1,599/month"
     },
-    features[
-      "Unified cloud dashboard",
-      "Automated resource provisioning",
+          features: [
+        "Unified cloud dashboard",
+        "Automated resource provisioning",
       "Cost optimization algorithms",
       "Performance monitoring",
       "Security policy enforcement",
