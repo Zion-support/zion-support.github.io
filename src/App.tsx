@@ -82,7 +82,6 @@ const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Docs = createLazyComponent(() => import('./pages/Documentation'));
 const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
-const Training = createLazyComponent(() => import('./pages/Training'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
@@ -151,8 +150,6 @@ const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/
 // Comprehensive Pricing Guide 2033
 const ComprehensivePricingGuide2033 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2033'));
 
-// Comprehensive Pricing Guide 2025
-const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
 const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-data-analytics-platform'));
@@ -195,7 +192,6 @@ const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoT
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
 // Showcase pages
-const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 
@@ -496,16 +492,11 @@ function App() {
               </Suspense>
             </main>
 
-<<<<<<< HEAD
             {/* Footer - Using AppFooter for enhanced features */}
             <AppFooter />
-=======
-            {/* Footer */}
-            <EnhancedFooter />
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-ae2e
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer />
