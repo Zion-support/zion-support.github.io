@@ -1,182 +1,44 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { Search, ChevronDown, ChevronUp, HelpCircle, Brain, Cloud, Shield, Rocket, Heart, Globe, ShoppingCart, Star, Building, BookOpen, Settings } from 'lucide-react';
-
-export default function FAQ() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['general-1']));
-=======
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO              } from '../components/SEO';
-
-interface FAQItem {
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  icon: React.ComponentType<any>;
-
-const faqData: FAQItem[] = [;
-  {
-id: 'ai-services',;
-question: 'What AI services does Zion Tech Group offer?',;
-answer: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, AI-powered cybersecurity, and custom AI solution development for businesses.',;
-category: 'AI Services',;
-icon: Brain;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-},
-  {
-    id: 'cybersecurity',
-    question: 'How does Zion Tech Group ensure cybersecurity?',
-    answer: 'We implement enterprise-grade security measures including zero-trust architecture, AI-powered threat detection, regular security audits, compliance with industry standards, and 24/7 monitoring.',
-    category: 'Security',
-    icon: Shield
-  },
-  {
-    id: 'cloud-solutions',
-    question: 'What cloud solutions are available?',
-    answer: 'Our cloud services include cloud migration, infrastructure as code, container orchestration, serverless computing, multi-cloud strategy, and cloud security implementation.',
-    category: 'Cloud',
-    icon: Cloud
-  },
-  {
-    id: 'pricing',
-    question: 'How is pricing structured for your services?',
-    answer: 'We offer flexible pricing models including project-based pricing, subscription plans, and custom enterprise solutions. Contact us for a personalized quote based on your specific needs.',
-    category: 'General',
-    icon: Zap
-  },
-  {
-    id: 'support',
-    question: 'What kind of support do you provide?',
-    answer: 'We offer 24/7 technical support, dedicated account managers, comprehensive documentation, training programs, and ongoing maintenance and updates.',
-    category: 'Support',
-    icon: HelpCircle
-  },
-  {
-    id: 'implementation',
-    question: 'How long does it take to implement your solutions?',
-    answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in weeks, while complex enterprise systems may take several months. We provide detailed project timelines during planning.',
-    category: 'General',
-    icon: Zap
-  },
-  {
-    id: 'customization',
-    question: 'Can you customize solutions for our specific needs?',
-    answer: 'Absolutely! We specialize in custom development and can tailor any solution to meet your unique business requirements, industry standards, and compliance needs.',
-    category: 'General',
-    icon: Zap
-  },
-  {
-    id: 'maintenance',
-    question: 'Do you provide ongoing maintenance and updates?',
-    answer: 'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.',
-    category: 'Support',
-    icon: HelpCircle
-
-];
-
-const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
-
-export default function FAQ(...args: any[]): any {
-  const [activeItem, setActiveItem] = useState<any>(null);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-=======
-import { SEO              } from '../components/SEO';
-=======
-import { motion, AnimatePresence              } from 'framer-motion.ts';
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-import { Search, 
+import { motion } from 'framer-motion';
+import { 
+  Search, 
   ChevronDown, 
-  ChevronUp,
-<<<<<<< HEAD
-  MessageCircle,
-=======
-  Shield,
+  ChevronUp, 
+  HelpCircle, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Heart, 
+  Globe, 
+  ShoppingCart, 
+  Star, 
+  Building, 
+  BookOpen, 
+  Settings,
   Zap,
-  Brain,
-  Cloud,
   Users,
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+  Lock,
+  CheckCircle,
+  MessageCircle,
   Phone,
   Mail,
-  Clock,
-<<<<<<< HEAD
-  HelpCircle,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Users,
-  Globe
-             } from 'lucide-react.ts';
-=======
-  MessageCircle,
-  Star,
-  Award,
-  Globe,
-  Lock,
-  CheckCircle
+  Clock
 } from 'lucide-react';
-import { SEO              } from '@/components/SEO';
-import { Button              } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
-const FAQ: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+const FAQ: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set([0]));
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['general-1']));
 
-  const toggleItem = (index: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+  const toggleItem = (itemId: string) => {
     const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(index)) {
-      newExpanded.delete(index);
+    if (newExpanded.has(itemId)) {
+      newExpanded.delete(itemId);
     } else {
-      newExpanded.add(index);
+      newExpanded.add(itemId);
     }
     setExpandedItems(newExpanded);
-=======
-  const [openItems, setOpenItems] = useState<any>({});
-
-  const toggleItem = (categoryIndex: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, questionIndex: number)              => {
-    const key = `${categoryIndex}-${questionIndex}`;
-    setOpenItems(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const faqCategories = [
     {
@@ -198,7 +60,7 @@ const FAQ: React.FC = (): JSX.Element => {
         {
           id: 'general-3',
           question: 'Where are you located?',
-          answer: 'Our headquarters is located in the United States, and we serve clients globally. We have a distributed team that allows us to provide 24/7 support and services to clients worldwide.'
+          answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown, DE 19709, and we serve clients globally. We have a distributed team that allows us to provide 24/7 support and services to clients worldwide.'
         },
         {
           id: 'general-4',
@@ -349,242 +211,151 @@ const FAQ: React.FC = (): JSX.Element => {
     }
   ];
 
-  const toggleItem = (itemId: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemId)) {
-      newExpanded.delete(itemId);
-    } else {
-      newExpanded.add(itemId);
-    }
-    setExpandedItems(newExpanded);
-  };
-
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-<<<<<<< HEAD
     items: category.items.filter(item =>
       item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
-    questions: anyanyanyanyanyanyanyanyanyanyanyanyanycategory.questions.filter(q              =>
-      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchQuery.toLowerCase())
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     )
   })).filter(category => category.items.length > 0);
 
+  const contactInfo = [
+    {
+      title: 'Phone Support',
+      value: '+1 (302) 464-0950',
+      icon: Phone,
+      link: 'tel:+13024640950'
+    },
+    {
+      title: 'Email Support',
+      value: 'kleber@ziontechgroup.com',
+      icon: Mail,
+      link: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      title: 'Live Chat',
+      value: 'Available 24/7',
+      icon: MessageCircle,
+      link: '/chat'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-slate-300 mb-8">
-              Find answers to common questions about our services, solutions, and processes
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search FAQ topics..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
-                />
-              </div>
-            </div>
-<<<<<<< HEAD
-=======
-            {searchQuery && (
-              <p className="text-center text-gray-400 mt-4">
-                Found {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''} matching "{searchQuery}"
-              </p>
-            )}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Categories */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          {faqCategories.map((category, categoryIndex) => {
-            const categoryQuestions = searchQuery 
-              ? category.questions.filter(q => 
-                  q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                  q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-                )
-              : category.questions;
-
-            if (categoryQuestions.length === 0) return null;
-
-            return (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                className="mb-16"
-              >
-                <div className="flex items-center mb-8">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg mr-4">
-                    <category.icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-white">{category.title}</h2>
-                </div>
-
-                <div className="space-y-4">
-                  {categoryQuestions.map((item, questionIndex) => {
-                    const globalIndex = faqCategories
-                      .slice(0, categoryIndex)
-                      .reduce((acc, cat) => acc + cat.questions.length, 0) + questionIndex;
-                    const isExpanded = expandedItems.has(globalIndex);
-
-                    return (
-                      <motion.div
-                        key={questionIndex}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (questionIndex * 0.05) }}
-                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300"
-                      >
-                        <button
-                          onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors duration-200 rounded-xl"
-                        >
-                          <h3 className="text-lg font-semibold text-white pr-4">
-                            {item.question}
-                          </h3>
-                          {isExpanded ? (
-                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                          ) : (
-                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                          )}
-                        </button>
-                        
-                        {isExpanded && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="px-6 pb-4"
-                          >
-                            <p className="text-gray-300 leading-relaxed">
-                              {item.answer}
-                            </p>
-                          </motion.div>
-                        )}
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="pt-24 pb-16 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our team is here to help. 
-              Get in touch with us for personalized assistance.
-            </p>
+            <HelpCircle className="w-10 h-10 text-white" />
           </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
-            {contactInfo.map((info, index)              => (
-              <motion.div
-                key={info.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-xl mb-4">
-                  <info.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                {info.link ? (
-                  <a
-                    href={info.link}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                  >
-                    {info.value}
-                  </a>
-                ) : (
-                  <p className="text-gray-300">{info.value}</p>
-                )}
-              </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Find answers to common questions about our services, solutions, and processes
+          </p>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search FAQ topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-gray-400"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* FAQ Content */}
-      <div className="container mx-auto px-4 py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="px-4 sm:px-6 lg:px-8 pb-16"
+      >
         <div className="max-w-6xl mx-auto">
-          {filteredCategories.map((category) => (
-            <div key={category.id} className="mb-12">
+          {filteredCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + categoryIndex * 0.1 }}
+              className="mb-12"
+            >
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
                   <category.icon className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold">{category.title}</h2>
+                <h2 className="text-2xl font-bold text-white">{category.title}</h2>
               </div>
               
               <div className="space-y-4">
-                {category.items.map((item) => (
-                  <div key={item.id} className="bg-slate-800 rounded-lg border border-slate-700">
+                {category.items.map((item, itemIndex) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 + categoryIndex * 0.1 + itemIndex * 0.05 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:border-cyan-400/50 transition-all duration-300"
+                  >
                     <button
                       onClick={() => toggleItem(item.id)}
-                      className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors rounded-lg"
                     >
-                      <span className="font-medium text-lg pr-4">{item.question}</span>
+                      <span className="font-medium text-lg pr-4 text-white">{item.question}</span>
                       {expandedItems.has(item.id) ? (
-                        <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                        <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                        <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       )}
                     </button>
                     
                     {expandedItems.has(item.id) && (
-                      <div className="px-6 pb-6">
-                        <div className="text-slate-300 leading-relaxed">
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-6 pb-6"
+                      >
+                        <div className="text-gray-300 leading-relaxed">
                           {item.answer}
                         </div>
-                      </div>
+                      </motion.div>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
 
           {/* No Results */}
           {filteredCategories.length === 0 && (
-            <div className="text-center py-12">
-              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">No FAQ items found</h3>
-              <p className="text-slate-400 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center py-12"
+            >
+              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-white">No FAQ items found</h3>
+              <p className="text-gray-400 mb-6">
                 Try adjusting your search terms or browse our help categories
               </p>
               <button
@@ -593,32 +364,54 @@ const FAQ: React.FC = (): JSX.Element => {
               >
                 Clear Search
               </button>
-            </div>
+            </motion.div>
           )}
 
-<<<<<<< HEAD
           {/* Contact Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-              <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-16 text-center"
+          >
+            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4 text-white">Still Have Questions?</h3>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Can't find the answer you're looking for? Our support team is here to help.
                 Get in touch with us for personalized assistance.
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={info.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <info.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-sm font-semibold text-white mb-1">{info.title}</h4>
+                    {info.link ? (
+                      <a
+                        href={info.link}
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm"
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-gray-300 text-sm">{info.value}</p>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors font-medium"
-=======
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index)              => (
-                <motion.div
-                  key={info.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg transition-all duration-300 transform hover:scale-105 font-medium"
                 >
                   Contact Support
                 </a>
@@ -630,9 +423,11 @@ const FAQ: React.FC = (): JSX.Element => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
-}
+};
+
+export default FAQ;

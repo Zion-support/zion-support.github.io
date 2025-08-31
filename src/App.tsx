@@ -70,6 +70,7 @@ const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServices
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ZionInnovativeServices2025 = lazy(() => import('./pages/ZionInnovativeServices2025'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -281,6 +282,7 @@ function App() {
                   {/* 2025 Innovative Services Routes */}
                   <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                  <Route path="/zion-innovative-services-2025" element={<ZionInnovativeServices2025 />} />
 
                   {/* Enhanced Services Showcase 2025 */}
                   <Route path="/enhanced-services-showcase-2025" element={

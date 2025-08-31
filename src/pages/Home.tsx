@@ -29,7 +29,7 @@ import {
   BarChart3,
   Code,
   Server,
-  Chip,
+  Cpu,
   Wifi,
   ShieldCheck,
   Globe2,

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-=======
-import React, { useState, useRef, useEffect, useCallback } from 'react';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -12,29 +8,18 @@ import {
   Mic, 
   MicOff, 
   Send, 
-<<<<<<< HEAD
-=======
   Bot, 
   User, 
   Sparkles,
   Settings,
-  Mic,
-  MicOff,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Paperclip,
-  Bot,
-  User,
-  Settings,
   Lightbulb,
-<<<<<<< HEAD
   Moon,
-  Sun
-=======
+  Sun,
   TrendingUp,
   Shield,
   Clock,
   Star
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 interface ChatMessage {
@@ -61,13 +46,8 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enableSuggestions?: boolean;
 }
 
-<<<<<<< HEAD
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({
-  enabled = true,
-=======
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({ 
   enabled = true, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   position = 'bottom-right',
   theme = 'auto',
   maxMessages = 50,
@@ -100,531 +80,269 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handler = (e: MediaQueryListEvent) => setCurrentTheme(e.matches ? 'dark' : 'light');
-      mediaQuery.addEventListener('change', handler);
-      return () => mediaQuery.removeEventListener('change', handler);
+      const handleChange = (e: MediaQueryListEvent) => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     } else {
       setCurrentTheme(theme);
     }
   }, [theme]);
 
-<<<<<<< HEAD
-  // Voice recognition setup
+  // Initialize speech recognition
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
-
-      recognitionRef.current.onresult = (event: any) => {
+      const recognition = new (window as any).webkitSpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      
+      recognition.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
-
-      recognitionRef.current.onerror = (event: any) => {
+      
+      recognition.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
+      
+      recognitionRef.current = recognition;
     }
   }, [enableVoice]);
 
-  // Initialize with welcome message
-  useEffect(() => {
-    if (enabled && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
-        id: 'welcome',
-        type: 'assistant',
-        content: 'Hello! I\'m your AI assistant. How can I help you today?',
-        timestamp: new Date(),
-        metadata: {
-          suggestions: [
-            'Tell me about your services',
-            'How can I get started?',
-            'What are your pricing options?',
-            'Can you help with my project?'
-          ]
-        }
-      };
-      setMessages([welcomeMessage]);
-    }
-  }, [enabled, messages.length]);
-=======
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      setIsMinimized(false);
-    }
-  };
-
-  const toggleMinimize = () => {
-    setIsMinimized(!isMinimized);
-  };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-
-  const handleSendMessage = async () => {
-    if (!inputValue.trim() || isProcessing) return;
+  const handleSendMessage = useCallback(async (content: string) => {
+    if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
       type: 'user',
-      content: inputValue.trim(),
-      timestamp: new Date()
+      content: content.trim(),
+      timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prev.slice(-maxMessages + 1), userMessage]);
     setInputValue('');
-    setIsProcessing(true);
     setIsTyping(true);
 
     // Simulate AI response
     setTimeout(() => {
-<<<<<<< HEAD
-      const aiResponse: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: `I understand you're asking about "${userMessage.content}". Let me help you with that. This is a simulated response - in a real implementation, this would connect to an AI service.`,
-        timestamp: new Date(),
-        metadata: {
-          confidence: 0.85,
-          suggestions: [
-            'Would you like more details?',
-            'Can I help with something else?',
-            'Should we schedule a consultation?'
-          ]
-        }
-      };
-
-      setMessages(prev => [...prev, aiResponse]);
-=======
       const aiMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: `I received your message: "${userMessage.content}". This is a simulated response.`,
+        content: `Thank you for your message: "${content.trim()}". This is a demo response. In a real implementation, this would connect to an AI service.`,
         timestamp: new Date(),
-        metadata: {
-          confidence: 0.95,
-          suggestions: ['How can I help you further?', 'Would you like to know more?']
-        }
       };
-
-      setMessages(prev => [...prev, aiMessage]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+      
+      setMessages(prev => [...prev.slice(-maxMessages + 1), aiMessage]);
       setIsTyping(false);
-      setIsProcessing(false);
-    }, 2000);
-  };
+    }, 1000 + Math.random() * 2000);
+  }, [maxMessages]);
 
-<<<<<<< HEAD
-  const handleVoiceInput = () => {
-    if (recognitionRef.current) {
+  const handleVoiceInput = useCallback(() => {
+    if (recognitionRef.current && !isListening) {
       setIsListening(true);
       recognitionRef.current.start();
     }
-  };
+  }, [isListening]);
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {
-        id: Date.now().toString(),
-        type: 'user',
-        content: `Uploaded file: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`,
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, fileMessage]);
-    }
-  };
-
-  const handleSuggestionClick = (suggestion: string) => {
-    setInputValue(suggestion);
-    inputRef.current?.focus();
-  };
-
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
+  const toggleChat = useCallback(() => {
+    setIsOpen(prev => !prev);
     if (!isOpen) {
-      setIsMinimized(false);
+      setTimeout(() => inputRef.current?.focus(), 100);
     }
-  };
+  }, [isOpen]);
 
-  const toggleMinimize = () => {
-    setIsMinimized(!isMinimized);
-  };
+  const toggleMinimize = useCallback(() => {
+    setIsMinimized(prev => !prev);
+  }, []);
 
-  const getPositionClasses = () => {
-    switch (position) {
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'top-right':
-        return 'top-4 right-4';
-      case 'top-left':
-        return 'top-4 left-4';
-      default:
-        return 'bottom-4 right-4';
-    }
-  };
-
-  const getThemeClasses = () => {
-    return currentTheme === 'dark' 
-      ? 'bg-gray-900 text-white border-gray-700' 
-      : 'bg-white text-gray-900 border-gray-200';
-  };
+  const suggestions = [
+    'How can I help you today?',
+    'Tell me about your project',
+    'What services do you need?',
+    'Schedule a consultation'
+  ];
 
   if (!enabled) return null;
 
   return (
-    <>
-      {/* Chat Toggle Button */}
-      <motion.button
-        onClick={toggleChat}
-        className={`fixed ${getPositionClasses()} z-50 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
-=======
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-
-  const toggleVoiceInput = () => {
-    if (isListening) {
-      setIsListening(false);
-      // Stop voice recognition
-    } else {
-      setIsListening(true);
-      // Start voice recognition
-    }
-  };
-
-  const handleFileUpload = () => {
-    // Implement file upload functionality
-    console.log('File upload clicked');
-  };
-
-  if (!enabled) return null;
-
-  const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
-
-  const themeClasses = {
-    light: 'bg-white text-gray-900 border-gray-200',
-    dark: 'bg-gray-900 text-white border-gray-700'
-  };
-
-  return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <div className={`fixed ${position === 'bottom-right' ? 'bottom-4 right-4' : position === 'bottom-left' ? 'bottom-4 left-4' : position === 'top-right' ? 'top-4 right-4' : 'top-4 left-4'} z-50`}>
       {/* Chat Toggle Button */}
       {!isOpen && (
         <motion.button
-          onClick={toggleChat}
-          className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={toggleChat}
+          className="bg-zion-500 hover:bg-zion-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-200"
+          aria-label="Open chat assistant"
         >
-          <MessageCircle className="w-6 h-6 mx-auto" />
+          <MessageCircle className="w-6 h-6" />
         </motion.button>
       )}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className={`fixed ${getPositionClasses()} z-40 w-96 max-h-[600px] ${getThemeClasses()} rounded-2xl shadow-2xl border transition-all duration-300 ${
-              isMinimized ? 'h-16' : 'h-[500px]'
-            }`}
+            className={`bg-white dark:bg-zion-slate-800 rounded-lg shadow-2xl border border-zion-slate-200 dark:border-zion-slate-700 w-80 max-h-96 flex flex-col ${isMinimized ? 'h-16' : ''}`}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-3">
-                <Bot className="w-6 h-6 text-blue-600" />
-                <span className="font-semibold">AI Assistant</span>
-              </div>
-              <div className="flex items-center gap-2">
-=======
-            className={`w-96 h-[500px] ${themeClasses[currentTheme]} rounded-2xl shadow-2xl border overflow-hidden`}
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.3, type: "spring" }}
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">AI Assistant</h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Powered by Zion Tech</p>
-                </div>
+            <div className="flex items-center justify-between p-4 border-b border-zion-slate-200 dark:border-zion-slate-700 bg-zion-50 dark:bg-zion-slate-700 rounded-t-lg">
+              <div className="flex items-center space-x-2">
+                <Bot className="w-5 h-5 text-zion-500" />
+                <span className="font-semibold text-zion-slate-900 dark:text-white">AI Assistant</span>
               </div>
               <div className="flex items-center space-x-2">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <button
                   onClick={toggleMinimize}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
+                  className="p-1 hover:bg-zion-slate-200 dark:hover:bg-zion-slate-600 rounded transition-colors"
+                  aria-label={isMinimized ? 'Maximize chat' : 'Minimize chat'}
                 >
-<<<<<<< HEAD
                   {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={toggleChat}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
+                  className="p-1 hover:bg-zion-slate-200 dark:hover:bg-zion-slate-600 rounded transition-colors"
+                  aria-label="Close chat"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
+            {/* Chat Content */}
             {!isMinimized && (
               <>
                 {/* Messages */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[350px]">
+                <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-64">
+                  {messages.length === 0 && (
+                    <div className="text-center text-zion-slate-500 dark:text-zion-slate-400 py-8">
+                      <Bot className="w-8 h-8 mx-auto mb-2 text-zion-400" />
+                      <p className="text-sm">Hello! How can I help you today?</p>
+                    </div>
+                  )}
+                  
                   {messages.map((message) => (
-                    <motion.div
+                    <div
                       key={message.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
-                        className={`max-w-[80%] p-3 rounded-2xl ${
+                        className={`max-w-xs px-3 py-2 rounded-lg ${
                           message.type === 'user'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
+                            ? 'bg-zion-500 text-white'
+                            : 'bg-zion-slate-100 dark:bg-zion-slate-700 text-zion-slate-900 dark:text-white'
                         }`}
                       >
                         <p className="text-sm">{message.content}</p>
-                        {message.metadata?.suggestions && (
-                          <div className="mt-2 space-y-1">
-                            {message.metadata.suggestions.map((suggestion, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleSuggestionClick(suggestion)}
-                                className="block w-full text-left text-xs p-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded transition-colors"
-                              >
-                                💡 {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
+                        <p className="text-xs opacity-70 mt-1">
+                          {message.timestamp.toLocaleTimeString()}
+                        </p>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
+                  
                   {isTyping && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="flex justify-start"
-                    >
-                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-2xl">
+                    <div className="flex justify-start">
+                      <div className="bg-zion-slate-100 dark:bg-zion-slate-700 px-3 py-2 rounded-lg">
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-zion-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-zion-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-zion-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
+                  
                   <div ref={messagesEndRef} />
                 </div>
 
+                {/* Suggestions */}
+                {enableSuggestions && showSuggestions && messages.length === 0 && (
+                  <div className="px-4 pb-2">
+                    <div className="grid grid-cols-2 gap-2">
+                      {suggestions.map((suggestion, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSendMessage(suggestion)}
+                          className="text-xs bg-zion-100 dark:bg-zion-slate-700 hover:bg-zion-200 dark:hover:bg-zion-slate-600 text-zion-slate-700 dark:text-zion-slate-300 px-2 py-1 rounded transition-colors"
+                        >
+                          {suggestion}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Input Area */}
-                <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center gap-2">
+                <div className="p-4 border-t border-zion-slate-200 dark:border-zion-slate-700">
+                  <div className="flex items-center space-x-2">
                     {enableFileUpload && (
-                      <label className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer transition-colors">
-                        <Paperclip className="w-4 h-4" />
-                        <input
-                          type="file"
-                          className="hidden"
-                          onChange={handleFileUpload}
-                          accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
-                        />
-                      </label>
+                      <button
+                        className="p-2 hover:bg-zion-slate-100 dark:hover:bg-zion-slate-700 rounded transition-colors"
+                        aria-label="Attach file"
+                      >
+                        <Paperclip className="w-4 h-4 text-zion-slate-500" />
+                      </button>
                     )}
+                    
                     <input
                       ref={inputRef}
                       type="text"
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
-                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
                       placeholder="Type your message..."
-                      className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      disabled={isProcessing}
+                      className="flex-1 px-3 py-2 border border-zion-slate-300 dark:border-zion-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-500 focus:border-transparent bg-white dark:bg-zion-slate-700 text-zion-slate-900 dark:text-white"
                     />
+                    
                     {enableVoice && (
                       <button
                         onClick={handleVoiceInput}
-                        disabled={isListening || isProcessing}
+                        disabled={isListening}
                         className={`p-2 rounded transition-colors ${
                           isListening
-                            ? 'bg-red-500 text-white'
-                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                            ? 'bg-red-100 text-red-600'
+                            : 'hover:bg-zion-slate-100 dark:hover:bg-zion-slate-700 text-zion-slate-500'
                         }`}
+                        aria-label={isListening ? 'Stop listening' : 'Start voice input'}
                       >
                         {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                       </button>
                     )}
+                    
                     <button
-                      onClick={handleSendMessage}
-                      disabled={!inputValue.trim() || isProcessing}
-                      className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      onClick={() => handleSendMessage(inputValue)}
+                      disabled={!inputValue.trim() || isTyping}
+                      className="p-2 bg-zion-500 hover:bg-zion-600 disabled:bg-zion-slate-300 text-white rounded transition-colors disabled:cursor-not-allowed"
+                      aria-label="Send message"
                     >
                       <Send className="w-4 h-4" />
                     </button>
                   </div>
+                  
+                  {/* Toggle Suggestions */}
+                  <button
+                    onClick={() => setShowSuggestions(!showSuggestions)}
+                    className="text-xs text-zion-slate-500 hover:text-zion-600 dark:hover:text-zion-400 mt-2 transition-colors"
+                  >
+                    {showSuggestions ? 'Hide' : 'Show'} suggestions
+                  </button>
                 </div>
               </>
             )}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
-=======
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 h-80">
-              {messages.length === 0 ? (
-                <div className="text-center text-gray-500 dark:text-gray-400 py-8">
-                  <Bot className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                  <p>How can I help you today?</p>
-                </div>
-              ) : (
-                messages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div
-                      className={`max-w-xs px-4 py-2 rounded-2xl ${
-                        message.type === 'user'
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
-                      }`}
-                    >
-                      <p className="text-sm">{message.content}</p>
-                      <p className="text-xs opacity-70 mt-1">
-                        {message.timestamp.toLocaleTimeString()}
-                      </p>
-                    </div>
-                  </div>
-                ))
-              )}
-              {isTyping && (
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-2 rounded-2xl">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input Area */}
-            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-2">
-                <div className="flex-1 relative">
-                  <input
-                    ref={inputRef}
-                    type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Type your message..."
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
-                    disabled={isProcessing}
-                  />
-                </div>
-                <button
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim() || isProcessing}
-                  className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  <Send className="w-4 h-4" />
-                </button>
-              </div>
-              
-              {/* Action Buttons */}
-              <div className="flex items-center justify-between mt-3">
-                <div className="flex items-center space-x-2">
-                  {enableVoice && (
-                    <button
-                      onClick={toggleVoiceInput}
-                      className={`p-2 rounded-full transition-colors ${
-                        isListening 
-                          ? 'bg-red-500 text-white' 
-                          : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
-                      }`}
-                    >
-                      {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                    </button>
-                  )}
-                  {enableFileUpload && (
-                    <button
-                      onClick={handleFileUpload}
-                      className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                    >
-                      <Paperclip className="w-4 h-4" />
-                    </button>
-                  )}
-                </div>
-                
-                <button
-                  onClick={() => setShowSuggestions(!showSuggestions)}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                >
-                  <Sparkles className="w-4 h-4" />
-                </button>
-              </div>
-
-              {/* Suggestions */}
-              {showSuggestions && enableSuggestions && (
-                <div className="mt-3 space-y-2">
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Quick suggestions:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {['Hello', 'Help', 'Features', 'Pricing'].map((suggestion) => (
-                      <button
-                        key={suggestion}
-                        onClick={() => setInputValue(suggestion)}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                      >
-                        {suggestion}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   );
 };

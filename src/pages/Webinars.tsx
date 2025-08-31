@@ -1,49 +1,12 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-
-export default function Webinars(...args: any[]): any {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="Webinars - Zion Tech Group" description="Upcoming and past webinars." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
-				<p className="text-zinc-300">Explore our upcoming and recorded sessions.</p>
-			</div>
-		</div>
-	);
-
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars(...args: any[]): any {
-=======
-
-import React, { useState              } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { BookOpen, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Zap, 
-  Globe,
   Video,
-  Database,
-  Target,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Calendar,
   Clock,
-  User,
   Users,
   Play,
-  Video,
   Search,
   Filter,
   Star,
@@ -51,7 +14,6 @@ import { BookOpen,
   Heart,
   Share2,
   ArrowRight,
-<<<<<<< HEAD
   CheckCircle,
   Zap,
   Brain,
@@ -61,71 +23,12 @@ import { BookOpen,
   Target,
   Rocket,
   BarChart3,
-  Atom,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  FileText,
-  GraduationCap,
-  Lightbulb,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Settings,
-  Tool,
-  Wrench,
-  Cog,
-  Key,
-  Unlock,
-  Eye as EyeIcon,
-  EyeOff,
-  Copy,
-  Check,
-  X,
-  Plus,
-  Minus,
-  SortAsc,
-  SortDesc,
+  User,
   Grid,
-  List,
-  Bookmark,
-  Download,
-  Upload,
-  RefreshCw,
-  Save,
-  Edit,
-  Trash2,
-  Archive,
-  Tag,
-  Hash,
-  Hash as HashIcon,
-  Hash as HashIcon2,
-  Hash as HashIcon3,
-  Hash as HashIcon4,
-  Hash as HashIcon5,
-  Hash as HashIcon6,
-  Hash as HashIcon7,
-  Hash as HashIcon8,
-  Hash as HashIcon9,
-  Hash as HashIcon10
+  List
 } from 'lucide-react';
 
-export default function Webinars() {
-=======
-  CheckCircle
-             } from 'lucide-react.ts';
-import { SEO              } from '@/components/SEO';
-import { Button              } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
-
-const Webinars: React.FC = (): JSX.Element => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+const Webinars: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -168,14 +71,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/ai-business-intelligence.jpg',
       isLive: false,
       registrationRequired: true,
-      series: null,
-      abstract: 'This webinar explores how artificial intelligence is transforming traditional business intelligence systems, enabling organizations to make faster, more accurate decisions based on real-time data insights.',
-      keyTopics: [
-        'AI-powered analytics and reporting',
-        'Real-time decision support systems',
-        'Implementation strategies and best practices',
-        'ROI measurement and success metrics'
-      ]
+      series: null
     },
     {
       id: 2,
@@ -195,14 +91,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/zero-trust-security.jpg',
       isLive: true,
       registrationRequired: false,
-      series: null,
-      abstract: 'This live webinar provides hands-on guidance for implementing Zero Trust security architecture in enterprise environments, with real-time Q&A and interactive demonstrations.',
-      keyTopics: [
-        'Zero Trust design principles',
-        'Implementation roadmap and phases',
-        'Technology selection and integration',
-        'Monitoring and compliance considerations'
-      ]
+      series: null
     },
     {
       id: 3,
@@ -222,14 +111,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/cloud-native-development.jpg',
       isLive: false,
       registrationRequired: false,
-      series: 'Cloud Development Series',
-      abstract: 'This recorded webinar covers the fundamentals of cloud-native application development, including practical examples and implementation guidance for modern software development.',
-      keyTopics: [
-        'Microservices architecture patterns',
-        'Container orchestration strategies',
-        'CI/CD pipeline optimization',
-        'Performance monitoring and scaling'
-      ]
+      series: 'Cloud Development Series'
     },
     {
       id: 4,
@@ -249,14 +131,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/data-analytics-leaders.jpg',
       isLive: false,
       registrationRequired: true,
-      series: 'Business Leadership Series',
-      abstract: 'This executive-focused webinar provides business leaders with the knowledge and tools needed to harness the power of data analytics for strategic decision making.',
-      keyTopics: [
-        'Understanding data analytics fundamentals',
-        'Building a data-driven culture',
-        'Measuring analytics ROI',
-        'Future trends in business analytics'
-      ]
+      series: 'Business Leadership Series'
     },
     {
       id: 5,
@@ -276,14 +151,7 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/healthcare-digital-transformation.jpg',
       isLive: false,
       registrationRequired: false,
-      series: 'Healthcare Technology Series',
-      abstract: 'This webinar examines the digital transformation of healthcare, covering emerging technologies, implementation challenges, and future trends in patient care.',
-      keyTopics: [
-        'Emerging healthcare technologies',
-        'Implementation challenges and solutions',
-        'Patient experience and engagement',
-        'Regulatory compliance considerations'
-      ]
+      series: 'Healthcare Technology Series'
     },
     {
       id: 6,
@@ -303,155 +171,11 @@ const Webinars: React.FC = (): JSX.Element => {
       thumbnail: '/images/webinars/mlops-enterprise.jpg',
       isLive: false,
       registrationRequired: true,
-      series: 'AI Operations Series',
-      abstract: 'This comprehensive webinar covers MLOps implementation strategies, tools, and best practices for organizations looking to scale their machine learning operations.',
-      keyTopics: [
-        'MLOps principles and methodologies',
-        'Tool selection and integration',
-        'Model lifecycle management',
-        'Performance monitoring and optimization'
-      ]
-    },
-    {
-      id: 7,
-      title: 'Edge Computing: Transforming IoT and Mobile Applications',
-      description: 'Discover how edge computing is revolutionizing IoT deployments and mobile applications through distributed computing architectures.',
-      category: 'cloud',
-      type: 'recorded',
-      host: 'Rachel Green',
-      date: '2025-01-08',
-      time: '14:30',
-      duration: '70 min',
-      attendees: 567,
-      maxAttendees: 800,
-      rating: 4.5,
-      featured: false,
-      tags: ['Edge Computing', 'IoT', 'Mobile', 'Distributed Systems'],
-      thumbnail: '/images/webinars/edge-computing-iot.jpg',
-      isLive: false,
-      registrationRequired: false,
-      series: 'Cloud Infrastructure Series',
-      abstract: 'This webinar explores edge computing technologies and their applications in IoT and mobile computing, providing implementation guidance for modern applications.',
-      keyTopics: [
-        'Edge computing architectures and models',
-        'IoT integration strategies',
-        'Performance optimization techniques',
-        'Security and privacy considerations'
-      ]
-    },
-    {
-      id: 8,
-      title: 'Blockchain in Supply Chain: Transparency and Traceability Solutions',
-      description: 'Learn how blockchain technology is revolutionizing supply chain management through enhanced transparency, traceability, and trust.',
-      category: 'industry',
-      type: 'upcoming',
-      host: 'Marcus Chen',
-      date: '2025-02-10',
-      time: '13:00',
-      duration: '60 min',
-      attendees: 0,
-      maxAttendees: 400,
-      rating: 4.4,
-      featured: false,
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Traceability'],
-      thumbnail: '/images/webinars/blockchain-supply-chain.jpg',
-      isLive: false,
-      registrationRequired: true,
-      series: 'Supply Chain Innovation Series',
-      abstract: 'This webinar examines blockchain applications in supply chain management, covering implementation strategies, use cases, and business benefits for modern organizations.',
-      keyTopics: [
-        'Blockchain fundamentals and applications',
-        'Supply chain use cases and benefits',
-        'Implementation challenges and solutions',
-        'ROI analysis and business case development'
-      ]
+      series: 'AI Operations Series'
     }
   ];
 
-<<<<<<< HEAD
   const filteredWebinars = webinars.filter(webinar => {
-=======
-  const allWebinars = [...upcomingWebinars, ...pastWebinars];
-
-<<<<<<< HEAD
-  const filteredWebinars = (showPast ? pastWebinars: anyanyanyanyanyanyanyanyanyanyanyanyanyupcomingWebinars).filter(webinar               => {;
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    return matchesCategory && matchesSearch});
-
-  const stats = [
-    { label: 'Webinars Delivered', value: '100+', icon: Video },
-    { label: 'Attendees Served', value: '25K+', icon: Users },
-    { label: 'Expert Speakers', value: '15+', icon: Star },;
-    { label: 'Topics Covered', value: '20+', icon: BookOpen };
-  ];
-
-  const contactInfo = {
-  email: 'webinars@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008,
-  Middletown DE 19709';
-  ;
-
-};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Webinars - Zion Tech Group"
-        description="Join our educational webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry experts."
-      />
-      
-=======
-      currentAttendees: anyanyanyanyanyanyanyanyanyanyanyanyany189,;
-      featured: false,;
-      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
-      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
-      registrationRequired: true,;
-      recordingAvailable: false;
-    };
-  ];
-
-  // Update counts
-  React.useEffect(()              => {
-    categories.forEach(cat = > {;
-      cat.count = webinars.filter(w => w.category === cat.id).length;
-    });
-
-    filterTypes.forEach(type = > {;
-      if (type.id === 'all') {;
-        type.count = webinars.length;
-      } else {
-        type.count = webinars.filter(w => w.type === type.id).length;
-
-    });
-  }, []);
-
-  const filteredWebinars = webinars.filter(webinar => {;
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
-    const matchesType = filterType === 'all' || webinar.type === filterType;
-
-    return matchesSearch && matchesCategory && matchesType;
-=======
-  // Update category counts
-  categories.forEach(category => {
-    if (category.id === 'all') {
-      category.count = allWebinars.length;
-    } else {
-      category.count = allWebinars.filter(webinar => webinar.category === category.id).length;
-    }
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-  });
-
-  const filteredWebinars = allWebinars.filter(webinar => {
-    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -460,7 +184,6 @@ const Webinars: React.FC = (): JSX.Element => {
     return matchesSearch && matchesCategory && matchesType;
   });
 
-<<<<<<< HEAD
   const upcomingWebinars = filteredWebinars.filter(w => w.type === 'upcoming');
   const liveWebinars = filteredWebinars.filter(w => w.type === 'live');
   const recordedWebinars = filteredWebinars.filter(w => w.type === 'recorded');
@@ -474,82 +197,23 @@ const Webinars: React.FC = (): JSX.Element => {
     });
   };
 
-  const formatTime = (timeString: string) => {
-    return timeString;
-  };
-
   const handleRegister = (webinarId: number, title: string) => {
-    // Simulate registration
     console.log(`Registering for: ${title}`);
-    // In a real app, this would open a registration form
   };
 
   const handleJoin = (webinarId: number, title: string) => {
-    // Simulate joining
     console.log(`Joining: ${title}`);
-    // In a real app, this would redirect to the live webinar
   };
 
   const handleWatch = (webinarId: number, title: string) => {
-    // Simulate watching
     console.log(`Watching: ${title}`);
-    // In a real app, this would open the recorded webinar
-=======
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : BookOpen;
-  };
-
-  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      weekday: 'long', 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-<<<<<<< HEAD
-  const formatTimeUntil = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    const now = new Date();
-    const webinarDate = new Date(dateString);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays < 0) return 'Past';
-    if (diffDays === 0) return 'Today';
-    if (diffDays < 7) return `${diffDays} days`;
-    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
-    return `${Math.ceil(diffDays / 30)} months`;
-  };
-
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
-=======
-  const getRegistrationStatus = (webinar: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
-    if (webinar.isLive) {
-      return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
-    } else if (webinar.attendees >= webinar.maxAttendees) {
-      return { status: 'Full', color: 'from-gray-500 to-slate-500', icon: Users };
-    } else if (webinar.watchUrl) {
-      return { status: 'Watch Now', color: 'from-blue-500 to-cyan-500', icon: Play };
-    } else {
-      return { status: 'Register Now', color: 'from-green-500 to-emerald-500', icon: CheckCircle };
-    }
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -560,21 +224,21 @@ const Webinars: React.FC = (): JSX.Element => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Webinars
             </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               Join our expert-led webinars to learn about the latest technology trends, 
               best practices, and innovative solutions from Zion Tech Group.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
+            <div className="flex flex-wrap justify-center gap-4 text-slate-300">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <CheckCircle className="w-5 h-5 text-cyan-400" />
                 <span>Live & Recorded</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <CheckCircle className="w-5 h-5 text-cyan-400" />
                 <span>Expert Speakers</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                <CheckCircle className="w-5 h-5 text-cyan-400" />
                 <span>Free Access</span>
               </div>
             </div>
@@ -613,18 +277,18 @@ const Webinars: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
+          className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6"
         >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="text"
                 placeholder="Search webinars..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
@@ -633,7 +297,7 @@ const Webinars: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
@@ -648,7 +312,7 @@ const Webinars: React.FC = (): JSX.Element => {
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 {webinarTypes.map((type) => (
                   <option key={type.id} value={type.id}>
@@ -664,8 +328,8 @@ const Webinars: React.FC = (): JSX.Element => {
                 onClick={() => setViewMode('grid')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
                   viewMode === 'grid'
-                    ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                    : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                    : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-700/70'
                 }`}
               >
                 <Grid className="w-4 h-4 mx-auto" />
@@ -674,8 +338,8 @@ const Webinars: React.FC = (): JSX.Element => {
                 onClick={() => setViewMode('list')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
                   viewMode === 'list'
-                    ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                    : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                    : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-700/70'
                 }`}
               >
                 <List className="w-4 h-4 mx-auto" />
@@ -684,7 +348,7 @@ const Webinars: React.FC = (): JSX.Element => {
 
             {/* Quick Actions */}
             <div className="flex space-x-3">
-              <button className="flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-colors flex items-center justify-center">
+              <button className="flex-1 px-4 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors flex items-center justify-center">
                 <Calendar className="w-4 h-4 mr-2" />
                 My Webinars
               </button>
@@ -699,7 +363,7 @@ const Webinars: React.FC = (): JSX.Element => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-zinc-400"
+          className="text-slate-400"
         >
           Showing {filteredWebinars.length} of {webinars.length} webinars
         </motion.div>
@@ -718,7 +382,7 @@ const Webinars: React.FC = (): JSX.Element => {
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse mr-3"></div>
               Live Now
             </h2>
-            <p className="text-zinc-300">Join these webinars happening right now!</p>
+            <p className="text-slate-300">Join these webinars happening right now!</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -745,10 +409,10 @@ const Webinars: React.FC = (): JSX.Element => {
                     <h3 className="text-xl font-bold text-white mb-2">
                       {webinar.title}
                     </h3>
-                    <p className="text-zinc-300 text-sm mb-3 line-clamp-2">
+                    <p className="text-slate-300 text-sm mb-3 line-clamp-2">
                       {webinar.description}
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-zinc-400 mb-4">
+                    <div className="flex items-center space-x-4 text-sm text-slate-400 mb-4">
                       <span className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{webinar.host}</span>
@@ -788,7 +452,7 @@ const Webinars: React.FC = (): JSX.Element => {
             className="mb-8"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Upcoming Webinars</h2>
-            <p className="text-zinc-300">Register for these upcoming sessions</p>
+            <p className="text-slate-300">Register for these upcoming sessions</p>
           </motion.div>
 
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'}>
@@ -798,53 +462,27 @@ const Webinars: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-                className={`bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl overflow-hidden hover:border-zion-cyan/30 transition-all duration-300 ${
+                className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
-<<<<<<< HEAD
                 {viewMode === 'grid' ? (
                   // Grid View
                   <div className="p-6">
                     {webinar.featured && (
-                      <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
+                      <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-xs font-medium mb-4">
                         Featured
                       </div>
                     )}
                     
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-2 text-zinc-400 text-sm">
+                      <div className="flex items-center space-x-2 text-slate-400 text-sm">
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(webinar.date)}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-zinc-300">{webinar.rating}</span>
-=======
-                <Video className="w-16 h-16 text-zion-cyan-light mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No webinars found</h3>
-                <p className="text-zion-cyan-light">
-                  Try adjusting your search terms or category filter.
-                </p>
-              </motion.div>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-            ) : (
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-                {filteredWebinars.map((webinar)              => (
-                  <motion.div
-                    key={webinar.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
-
-                    {/* Thumbnail */}
-                    <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Play className="w-16 h-16 text-zion-cyan" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                        <span className="text-sm text-slate-300">{webinar.rating}</span>
                       </div>
                     </div>
 
@@ -852,7 +490,7 @@ const Webinars: React.FC = (): JSX.Element => {
                       {webinar.title}
                     </h3>
                     
-                    <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
+                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">
                       {webinar.description}
                     </p>
 
@@ -860,14 +498,14 @@ const Webinars: React.FC = (): JSX.Element => {
                       {webinar.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full"
+                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between text-sm text-zinc-500 mb-4">
+                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                       <span className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{webinar.host}</span>
@@ -879,12 +517,12 @@ const Webinars: React.FC = (): JSX.Element => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-400">
+                      <span className="text-sm text-slate-400">
                         {webinar.attendees} registered
                       </span>
                       <button
                         onClick={() => handleRegister(webinar.id, webinar.title)}
-                        className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
                       >
                         <Calendar className="w-4 h-4" />
                         <span>Register</span>
@@ -897,7 +535,7 @@ const Webinars: React.FC = (): JSX.Element => {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         {webinar.featured && (
-                          <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3">
+                          <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-xs font-medium mb-3">
                             Featured
                           </div>
                         )}
@@ -906,11 +544,11 @@ const Webinars: React.FC = (): JSX.Element => {
                           {webinar.title}
                         </h3>
                         
-                        <p className="text-zinc-400 text-sm mb-3 line-clamp-2">
+                        <p className="text-slate-400 text-sm mb-3 line-clamp-2">
                           {webinar.description}
                         </p>
 
-                        <div className="flex items-center space-x-6 text-sm text-zinc-500 mb-3">
+                        <div className="flex items-center space-x-6 text-sm text-slate-500 mb-3">
                           <span className="flex items-center space-x-1">
                             <User className="w-4 h-4" />
                             <span>{webinar.host}</span>
@@ -933,7 +571,7 @@ const Webinars: React.FC = (): JSX.Element => {
                           {webinar.tags.map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
-                              className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full"
+                              className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
                             >
                               {tag}
                             </span>
@@ -944,12 +582,12 @@ const Webinars: React.FC = (): JSX.Element => {
                       <div className="flex flex-col items-end space-y-3 ml-6">
                         <div className="flex items-center space-x-1">
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-zinc-300">{webinar.rating}</span>
+                          <span className="text-sm text-slate-300">{webinar.rating}</span>
                         </div>
                         
                         <button
                           onClick={() => handleRegister(webinar.id, webinar.title)}
-                          className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                          className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
                         >
                           <Calendar className="w-4 h-4" />
                           <span>Register</span>
@@ -974,7 +612,7 @@ const Webinars: React.FC = (): JSX.Element => {
             className="mb-8"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Recorded Webinars</h2>
-            <p className="text-zinc-300">Watch past webinars on-demand</p>
+            <p className="text-slate-300">Watch past webinars on-demand</p>
           </motion.div>
 
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'}>
@@ -984,7 +622,7 @@ const Webinars: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
-                className={`bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl overflow-hidden hover:border-zion-cyan/30 transition-all duration-300 ${
+                className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
@@ -992,19 +630,19 @@ const Webinars: React.FC = (): JSX.Element => {
                   // Grid View
                   <div className="p-6">
                     {webinar.featured && (
-                      <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
+                      <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-xs font-medium mb-4">
                         Featured
                       </div>
                     )}
                     
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-2 text-zinc-400 text-sm">
+                      <div className="flex items-center space-x-2 text-slate-400 text-sm">
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(webinar.date)}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-zinc-300">{webinar.rating}</span>
+                        <span className="text-sm text-slate-300">{webinar.rating}</span>
                       </div>
                     </div>
 
@@ -1012,7 +650,7 @@ const Webinars: React.FC = (): JSX.Element => {
                       {webinar.title}
                     </h3>
                     
-                    <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
+                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">
                       {webinar.description}
                     </p>
 
@@ -1020,14 +658,14 @@ const Webinars: React.FC = (): JSX.Element => {
                       {webinar.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full"
+                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between text-sm text-zinc-500 mb-4">
+                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                       <span className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{webinar.host}</span>
@@ -1039,12 +677,12 @@ const Webinars: React.FC = (): JSX.Element => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-400">
+                      <span className="text-sm text-slate-400">
                         {webinar.attendees} views
                       </span>
                       <button
                         onClick={() => handleWatch(webinar.id, webinar.title)}
-                        className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
                       >
                         <Play className="w-4 h-4" />
                         <span>Watch</span>
@@ -1057,7 +695,7 @@ const Webinars: React.FC = (): JSX.Element => {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         {webinar.featured && (
-                          <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3">
+                          <div className="inline-block bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-xs font-medium mb-3">
                             Featured
                           </div>
                         )}
@@ -1066,11 +704,11 @@ const Webinars: React.FC = (): JSX.Element => {
                           {webinar.title}
                         </h3>
                         
-                        <p className="text-zinc-400 text-sm mb-3 line-clamp-2">
+                        <p className="text-slate-400 text-sm mb-3 line-clamp-2">
                           {webinar.description}
                         </p>
 
-                        <div className="flex items-center space-x-6 text-sm text-zinc-500 mb-3">
+                        <div className="flex items-center space-x-6 text-sm text-slate-500 mb-3">
                           <span className="flex items-center space-x-1">
                             <User className="w-4 h-4" />
                             <span>{webinar.host}</span>
@@ -1093,7 +731,7 @@ const Webinars: React.FC = (): JSX.Element => {
                           {webinar.tags.map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
-                              className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full"
+                              className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
                             >
                               {tag}
                             </span>
@@ -1104,12 +742,12 @@ const Webinars: React.FC = (): JSX.Element => {
                       <div className="flex flex-col items-end space-y-3 ml-6">
                         <div className="flex items-center space-x-1">
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-zinc-300">{webinar.rating}</span>
+                          <span className="text-sm text-slate-300">{webinar.rating}</span>
                         </div>
                         
                         <button
                           onClick={() => handleWatch(webinar.id, webinar.title)}
-                          className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                          className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 flex items-center space-x-2"
                         >
                           <Play className="w-4 h-4" />
                           <span>Watch</span>
@@ -1125,7 +763,7 @@ const Webinars: React.FC = (): JSX.Element => {
       )}
 
       {/* CTA Section */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
+      <div className="bg-slate-800/30 border-t border-slate-700/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1136,16 +774,16 @@ const Webinars: React.FC = (): JSX.Element => {
             <h2 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Webinars
             </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Get notified about upcoming webinars, new recordings, and exclusive content.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 Subscribe
               </button>
             </div>
@@ -1154,4 +792,6 @@ const Webinars: React.FC = (): JSX.Element => {
       </div>
     </div>
   );
-}
+};
+
+export default Webinars;

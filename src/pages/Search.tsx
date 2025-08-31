@@ -1,48 +1,26 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { 
-  Search, 
-=======
-import React, { useState, useEffect } from 'react.ts';
-<<<<<<< HEAD
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight import { useSearchParams              } from 'react-router-dom.ts';
-=======
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '../components/SEO';
-import { Link              } from 'react-router-dom.ts';
-import { Search, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Search as SearchIcon, 
   Filter, 
   Grid, 
   List, 
   Star, 
   Eye, 
-  ExternalLink, 
   Clock, 
   User, 
-  Tag, 
   Calendar, 
-  FileText, 
   Code, 
   Cloud, 
   Shield, 
   Bot, 
   Database, 
   Server, 
-  Monitor, 
-  Smartphone, 
-  Package, 
-  Users, 
   TrendingUp, 
-  Award, 
   CheckCircle, 
   ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Zap,
+  RefreshCw,
   Globe,
   Target,
   BarChart3,
@@ -52,187 +30,47 @@ import { Search,
   HardDrive,
   Network,
   Lightbulb,
-  Settings as Cog,
   BookOpen,
   Video,
   Headphones,
-  DollarSign,
-  Percent,
-  X,
-  Plus,
-  Minus,
-  RefreshCw,
-  RotateCcw,
-  Maximize2,
-  Minimize2,
-  Volume2,
-  VolumeX,
-  Power,
-  PowerOff,
-  Battery,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryEmpty,
-  Wifi,
-  WifiOff,
-  Signal,
-  SignalOff,
-  Bluetooth,
-  BluetoothOff,
-  Lock,
-  Unlock,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Camera,
-  Image,
-  File,
-  Folder,
-  Archive,
-  Trash2,
-  Edit,
-  Copy,
-  Share,
-  Link as LinkIcon,
-  Bookmark,
-  BookmarkPlus,
-  BookmarkMinus,
-  Flag,
-  Report,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  Heart,
-  HeartOff,
-  HeartHandshake,
-  Gift,
-  CreditCard,
-  Wallet,
-  Receipt,
-  Calculator,
-  TrendingDown,
-  Activity,
-  PieChart,
-  LineChart,
-  BarChart,
-  ScatterChart,
-  Radar,
-  Gauge,
-  Thermometer,
-  Droplets,
-  Sun,
-  Moon,
-  Cloud as CloudIcon,
-  CloudRain,
-  CloudLightning,
-  CloudSnow,
-  Wind,
-  Umbrella,
-  Snowflake,
-  Fire,
-  Leaf,
-  Tree,
-  Flower,
-  Seedling,
-  Sprout,
-  Plant,
-  TreePine,
-  Mountain,
-  MountainSnow,
-  Volcano,
-  Island,
-  Beach,
-  Desert,
-  Forest,
-  Jungle,
-  Ocean,
-  River,
-  Lake,
-  Water,
-  Fish,
-  Bird,
-  Cat,
-  Dog,
-  Horse,
-  Cow,
-  Pig,
-  Sheep,
-  Goat,
-  Chicken,
-  Duck,
-  Turkey,
-  Eagle,
-  Hawk,
-  Owl,
-  Crow,
-  Sparrow,
-  Robin,
-  Bluebird,
-  Cardinal,
-  Goldfinch,
-  Hummingbird,
-  Woodpecker,
-  Seagull,
-  Pelican,
-  Flamingo,
-  Penguin,
-  Ostrich,
-  Emu,
-  Kiwi,
-  Toucan,
-  Parrot,
-  Macaw,
-  Cockatoo,
-  Canary,
-  Finch
-<<<<<<< HEAD
+  Zap,
+  Brain,
+  Users,
+  Building
 } from 'lucide-react';
-export default function SearchPage() {
-=======
-             } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export default function SearchPage(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+const Search: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<any>([]);
+  const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
-<<<<<<< HEAD
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
-=======
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedItem, setExpandedItem] = useState<any>(null);
-  const [recentSearches, setRecentSearches] = useState<any>([]);
-  const [popularSearches, setPopularSearches] = useState<any>([]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [
-    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },
-    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },
-    { id: 'talent', name: 'Talent', icon: <Users className="w-4 h-4" />, count: 0 },
-    { id: 'equipment', name: 'Equipment', icon: <Building className="w-4 h-4" />, count: 0 },
-    { id: 'companies', name: 'Companies', icon: <Building className="w-4 h-4" />, count: 0 }
+    { id: 'all', name: 'All Categories', icon: Globe, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 24 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 18 },
+    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 16 },
+    { id: 'data', name: 'Data & Analytics', icon: BarChart3, count: 14 },
+    { id: 'development', name: 'Software Development', icon: Code, count: 12 },
+    { id: 'devops', name: 'DevOps & Automation', icon: Zap, count: 5 }
   ];
-  const sortOptions = [
-    { value: 'relevance', label: 'Relevance' },
-    { value: 'newest', label: 'Newest' },
-    { value: 'rating', label: 'Highest Rated' },
-    { value: 'price-low', label: 'Price: Low to High' },
-    { value: 'price-high', label: 'Price: High to Low' }
+
+  const types = [
+    { id: 'all', name: 'All Types', count: 0 },
+    { id: 'software', name: 'Software', count: 25 },
+    { id: 'service', name: 'Services', count: 15 },
+    { id: 'hardware', name: 'Hardware', count: 8 },
+    { id: 'article', name: 'Articles', count: 12 },
+    { id: 'guide', name: 'Guides', count: 8 }
   ];
-  // Mock search data - in a real app, this would come from an API
+
+  // Mock search data
   const mockSearchData = [
-    // AI & Machine Learning
     {
       id: 'ai-chatbot',
       title: 'AI Chatbot Platform',
@@ -265,7 +103,6 @@ export default function SearchPage(...args: any[]): any {
       author: 'AI Team',
       readTime: '8 min read'
     },
-    // Cloud Solutions
     {
       id: 'cloud-migration',
       title: 'Cloud Migration Service',
@@ -282,7 +119,6 @@ export default function SearchPage(...args: any[]): any {
       author: 'Cloud Team',
       readTime: '12 min read'
     },
-    // Security & Compliance
     {
       id: 'threat-detection',
       title: 'Advanced Threat Detection System',
@@ -299,7 +135,6 @@ export default function SearchPage(...args: any[]): any {
       author: 'Security Team',
       readTime: '10 min read'
     },
-    // Data & Analytics
     {
       id: 'data-warehouse',
       title: 'Enterprise Data Warehouse Solution',
@@ -316,7 +151,6 @@ export default function SearchPage(...args: any[]): any {
       author: 'Data Team',
       readTime: '15 min read'
     },
-    // Development Tools
     {
       id: 'code-generator',
       title: 'AI-Powered Code Generator',
@@ -333,7 +167,6 @@ export default function SearchPage(...args: any[]): any {
       author: 'Dev Team',
       readTime: '6 min read'
     },
-    // Blog Posts
     {
       id: 'ai-trends-2024',
       title: 'Top AI Trends to Watch in 2024',
@@ -349,26 +182,10 @@ export default function SearchPage(...args: any[]): any {
       date: '2024-01-20',
       author: 'AI Research Team',
       readTime: '12 min read'
-    },
-    {
-      id: 4,
-      type: 'service',
-      title: 'Cloud Migration Consulting',
-      description: 'Expert consulting services for migrating legacy systems to cloud infrastructure',
-      category: 'Consulting',
-      rating: 4.6,
-      reviews: 203,
-      price: '$300/hour',
-      location: 'Remote',
-      company: 'Zion Tech Group',
-      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
-      featured: false
     }
   ];
+
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     // Load recent searches from localStorage
     const saved = localStorage.getItem('recentSearches');
     if (saved) {
@@ -386,9 +203,26 @@ export default function SearchPage(...args: any[]): any {
       'Green IT',
       'Digital transformation'
     ]);
+
+    // Update category counts
+    categories.forEach(cat => {
+      if (cat.id !== 'all') {
+        cat.count = mockSearchData.filter(item => item.category === cat.id).length;
+      }
+    });
+
+    // Update type counts
+    types.forEach(type => {
+      if (type.id !== 'all') {
+        type.count = mockSearchData.filter(item => item.type === type.id).length;
+      }
+    });
+
+    categories[0].count = mockSearchData.length;
+    types[0].count = mockSearchData.length;
   }, []);
 
-  const performSearch = async (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const performSearch = async (query: string) => {
     if (!query.trim()) {
       setSearchResults([]);
       return;
@@ -430,48 +264,44 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     performSearch(searchQuery);
   };
 
-  const handleQuickSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const handleQuickSearch = (query: string) => {
     setSearchQuery(query);
     performSearch(query);
   };
 
-  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const toggleItemExpansion = (itemId: string) => {
     setExpandedItem(expandedItem === itemId ? null : itemId);
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getCategoryColor = (category: string) => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
       case 'security': return 'bg-red-500/20 text-red-400';
       case 'data': return 'bg-green-500/20 text-green-400';
       case 'development': return 'bg-orange-500/20 text-orange-400';
-      case 'hardware': return 'bg-gray-500/20 text-gray-400';
-      case 'services': return 'bg-cyan-500/20 text-cyan-400';
-      case 'blog': return 'bg-pink-500/20 text-pink-400';
-      case 'documentation': return 'bg-indigo-500/20 text-indigo-400';
+      case 'devops': return 'bg-cyan-500/20 text-cyan-400';
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
 
-  const getTypeColor = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getTypeColor = (type: string) => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
       case 'hardware': return 'bg-orange-500/20 text-orange-400';
       case 'article': return 'bg-purple-500/20 text-purple-400';
       case 'guide': return 'bg-cyan-500/20 text-cyan-400';
-      case 'case-study': return 'bg-pink-500/20 text-pink-400';
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+  const renderStars = (rating: number) => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -492,7 +322,7 @@ export default function SearchPage(...args: any[]): any {
     return stars;
   };
 
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -502,11 +332,6 @@ export default function SearchPage(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Search - Zion Tech Group"
-        description="Search our comprehensive collection of technology solutions, services, articles, and resources. Find exactly what you need to accelerate your digital transformation."
-      />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -518,107 +343,7 @@ export default function SearchPage(...args: any[]): any {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
-              <Search className="w-10 h-10 text-green-400" />
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    if (searchQuery) {
-      performSearch();
-  }, [searchQuery, activeCategory, sortBy]);
-  const performSearch = async () => {
-    setLoading(true);
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    // Filter result based on search query and category
-    let filteredResults = mockResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
-      return matchesQuery && matchesCategory;
-    };
-    // Sort results
-    filteredResults.sort((a, b) => {
-      switch (sortBy) {
-        case 'newest':
-          return b.id - a.id;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-        default:
-          return 0;
-    });
-    setResults(filteredResults);
-    setLoading(false);
-  };
-<<<<<<< HEAD
-  const handleSearch = (e: React.FormEvent) => {
-=======
-
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
-  };
-<<<<<<< HEAD
-  const getTypeIcon = (type: string) => {
-=======
-
-  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    switch (type) {
-      case 'service':
-        return <Server className="w-5 h-5 text-zion-cyan" />;
-      case 'talent':
-        return <Users className="w-5 h-5 text-zion-purple" />;
-      case 'equipment':
-        return <Building className="w-5 h-5 text-zion-orange" />;
-      default:
-        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
-  };
-<<<<<<< HEAD
-  const getTypeLabel = (type: string) => {
-=======
-
-  const getTypeLabel = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    switch (type) {
-      case 'service':
-        return 'Service';
-      case 'talent':
-        return 'Talent';
-      case 'equipment':
-        return 'Equipment';
-      default:
-        return 'Unknown';
-  };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Search Header */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">
-            Search Zion Tech Group
-          </h1>
-          {/* Search Form */}
-          <form onSubmit={handleSearch} className="max-w-4xl mx-auto">
-            <div className="relative">
-              <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-6 h-6" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for services, talent, equipment, companies..."
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-md font-semibold hover:bg-zion-cyan-light transition-colors"
-                Search
-              </button>
+              <SearchIcon className="w-10 h-10 text-green-400" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Find What You <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Need</span>
@@ -630,13 +355,14 @@ export default function SearchPage(...args: any[]): any {
           </motion.div>
         </div>
       </section>
+
       {/* Search Form */}
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSearch} className="relative">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+                <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search for solutions, services, articles, or resources..."
@@ -645,43 +371,6 @@ export default function SearchPage(...args: any[]): any {
                   className="w-full pl-14 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200 text-lg"
                 />
                 <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeCategory === category.id
-                      ? 'bg-zion-cyan text-zion-slate-dark'
-                      : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                  }`}
-
-                  {category.icon}
-                  {category.name}
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length: anyanyanyanyanyanyanyanyanyanyanyanyanyresults.filter(r              => r.type === category.id).length}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Sort Options */}
-            <div className="flex items-center gap-2">
-              <span className="text-zion-slate-light">Sort by:</span>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
-
-                {sortOptions.map((option)              => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   type="submit"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                 >
@@ -692,6 +381,7 @@ export default function SearchPage(...args: any[]): any {
           </div>
         </div>
       </section>
+
       {/* Quick Search Options */}
       {!searchQuery && searchResults.length === 0 && (
         <section className="py-16">
@@ -714,6 +404,7 @@ export default function SearchPage(...args: any[]): any {
                   </div>
                 </div>
               )}
+
               {/* Popular Searches */}
               <div className="mb-12">
                 <h3 className="text-xl font-bold text-white mb-6">Popular Searches</h3>
@@ -729,11 +420,12 @@ export default function SearchPage(...args: any[]): any {
                   ))}
                 </div>
               </div>
+
               {/* Search Categories */}
               <div>
                 <h3 className="text-xl font-bold text-white mb-6">Browse by Category</h3>
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {categories.slice(1).map((category)              => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {categories.slice(1).map((category) => (
                     <button
                       key={category.id}
                       onClick={() => {
@@ -743,8 +435,12 @@ export default function SearchPage(...args: any[]): any {
                       }}
                       className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-left"
                     >
-                      <h4 className="text-lg font-bold text-white mb-2">{category.name}</h4>
+                      <div className="flex items-center gap-3 mb-3">
+                        <category.icon className="w-8 h-8 text-green-400" />
+                        <h4 className="text-lg font-bold text-white">{category.name}</h4>
+                      </div>
                       <p className="text-gray-300 text-sm">Explore {category.name.toLowerCase()} solutions and resources</p>
+                      <div className="text-sm text-gray-400 mt-2">{category.count} items available</div>
                     </button>
                   ))}
                 </div>
@@ -753,6 +449,7 @@ export default function SearchPage(...args: any[]): any {
           </div>
         </section>
       )}
+
       {/* Search Results */}
       {searchQuery && (
         <section className="py-16">
@@ -768,6 +465,7 @@ export default function SearchPage(...args: any[]): any {
                     {isSearching ? 'Searching...' : `${searchResults.length} results found`}
                   </p>
                 </div>
+
                 {/* Filters and View Mode */}
                 <div className="flex items-center gap-4 mt-4 lg:mt-0">
                   {/* Category Filter */}
@@ -777,14 +475,15 @@ export default function SearchPage(...args: any[]): any {
                       setSelectedCategory(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {categories.map((category)              => (
+                    {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name}
                       </option>
                     ))}
                   </select>
+
                   {/* Type Filter */}
                   <select
                     value={selectedType}
@@ -792,14 +491,15 @@ export default function SearchPage(...args: any[]): any {
                       setSelectedType(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {types.map((type)              => (
+                    {types.map((type) => (
                       <option key={type.id} value={type.id}>
                         {type.name}
                       </option>
                     ))}
                   </select>
+
                   {/* View Mode Toggle */}
                   <div className="flex items-center gap-2">
                     <button
@@ -825,6 +525,7 @@ export default function SearchPage(...args: any[]): any {
                   </div>
                 </div>
               </div>
+
               {/* Loading State */}
               {isSearching && (
                 <div className="text-center py-12">
@@ -834,11 +535,12 @@ export default function SearchPage(...args: any[]): any {
                   <p className="text-gray-300">Searching for "{searchQuery}"...</p>
                 </div>
               )}
+
               {/* No Results */}
               {!isSearching && searchResults.length === 0 && (
                 <div className="text-center py-12">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-gray-500/20 to-slate-500/20 rounded-full mb-4">
-                    <Search className="w-8 h-8 text-gray-400" />
+                    <SearchIcon className="w-8 h-8 text-gray-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">No results found</h3>
                   <p className="text-gray-300 mb-6">
@@ -852,12 +554,13 @@ export default function SearchPage(...args: any[]): any {
                   </button>
                 </div>
               )}
+
               {/* Search Results */}
               {!isSearching && searchResults.length > 0 && (
                 <>
                   {viewMode === 'grid' ? (
-                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                      {searchResults.map((item, index)              => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {searchResults.map((item, index) => (
                         <motion.div
                           key={item.id}
                           initial={{ opacity: 0, y: 20 }}
@@ -875,6 +578,7 @@ export default function SearchPage(...args: any[]): any {
                                   {types.find(t => t.id === item.type)?.name}
                                 </span>
                               </div>
+
                               <div className="flex items-center gap-3 mb-4">
                                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">
                                   <item.icon className="w-6 h-6 text-green-400" />
@@ -883,9 +587,11 @@ export default function SearchPage(...args: any[]): any {
                                   {item.title}
                                 </h3>
                               </div>
+
                               <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3">
                                 {item.description}
                               </p>
+
                               {item.rating && (
                                 <div className="flex items-center gap-2 mb-4 text-sm">
                                   <div className="flex items-center gap-1">
@@ -894,6 +600,7 @@ export default function SearchPage(...args: any[]): any {
                                   </div>
                                 </div>
                               )}
+
                               <div className="flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-2 text-gray-400 text-sm">
                                   <Calendar className="w-4 h-4" />
@@ -905,6 +612,7 @@ export default function SearchPage(...args: any[]): any {
                                   </button>
                                 </div>
                               </div>
+
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {item.tags.slice(0, 3).map((tag, tagIndex) => (
                                   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
@@ -912,6 +620,7 @@ export default function SearchPage(...args: any[]): any {
                                   </span>
                                 ))}
                               </div>
+
                               <Link
                                 to={item.url}
                                 className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 text-center block"
@@ -940,6 +649,7 @@ export default function SearchPage(...args: any[]): any {
                                   <item.icon className="w-8 h-8 text-green-400" />
                                 </div>
                               </div>
+
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-3 mb-2">
                                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
@@ -949,12 +659,15 @@ export default function SearchPage(...args: any[]): any {
                                     {types.find(t => t.id === item.type)?.name}
                                   </span>
                                 </div>
+
                                 <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200 mb-2">
                                   {item.title}
                                 </h3>
+
                                 <p className="text-gray-300 text-sm mb-3 leading-relaxed">
                                   {item.description}
                                 </p>
+
                                 {item.rating && (
                                   <div className="flex items-center gap-4 text-sm mb-3">
                                     <div className="flex items-center gap-1">
@@ -965,6 +678,7 @@ export default function SearchPage(...args: any[]): any {
                                     <div className="text-gray-400">{item.readTime}</div>
                                   </div>
                                 )}
+
                                 <div className="flex flex-wrap gap-2 mb-3">
                                   {item.tags.map((tag, tagIndex) => (
                                     <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
@@ -973,6 +687,7 @@ export default function SearchPage(...args: any[]): any {
                                   ))}
                                 </div>
                               </div>
+
                               <div className="flex-shrink-0 text-right">
                                 <div className="flex items-center gap-2 mb-3">
                                   <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
@@ -999,11 +714,7 @@ export default function SearchPage(...args: any[]): any {
         </section>
       )}
     </div>
-  )};
-            </div>;
-          )};
-        </div>;
-      </div>;
-    </div>;
   );
-}
+};
+
+export default Search;
