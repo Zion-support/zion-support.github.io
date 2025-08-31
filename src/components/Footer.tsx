@@ -29,23 +29,29 @@ const Footer = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'AI & Machine Learning', href: '/ai-services' },
+        { name: 'Cybersecurity', href: '/services#cybersecurity' },
+        { name: 'Healthcare Tech', href: '/services#healthcare' },
+        { name: 'Financial Technology', href: '/services#fintech' },
+        { name: 'Quantum Computing', href: '/services#quantum' },
+        { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
+        { name: 'Data & Analytics', href: '/services#data-analytics' },
+        { name: 'Process Automation', href: '/services#automation' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Digital Transformation', href: '/services#digital-transformation' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions' },
-        { name: 'Healthcare Tech', href: '/solutions' },
-        { name: 'Financial Solutions', href: '/solutions' },
-        { name: 'Manufacturing', href: '/solutions' },
-        { name: 'Government', href: '/solutions' },
-        { name: 'Retail Solutions', href: '/solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Healthcare Technology', href: '/services#healthcare' },
+        { name: 'Financial Services', href: '/services#fintech' },
+        { name: 'Manufacturing & Logistics', href: '/industry-solutions' },
+        { name: 'Government & Defense', href: '/industry-solutions' },
+        { name: 'Retail & E-commerce', href: '/industry-solutions' },
+        { name: 'Education & Training', href: '/services#micro-saas' }
       ]
     },
     {
@@ -56,7 +62,8 @@ const Footer = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' }
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
@@ -83,17 +90,17 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
     },
     {
       icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
+      text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'
     },
     {

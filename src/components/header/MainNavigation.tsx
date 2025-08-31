@@ -64,9 +64,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     AI & ML Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/services/ai-autonomous-research-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Research Assistant</Link></li>
-                    <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
-                    <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
+                    <li><Link to="/services/ai-quantum-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Trading</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-threat-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
+                    <li><Link to="/services/ai-healthcare-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare Analytics</Link></li>
                     <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI Platform</Link></li>
                     <li><Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Neural Network</Link></li>
                     <li><Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>

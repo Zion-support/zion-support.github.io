@@ -50,6 +50,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative Services 2025
+const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Financial-Trading-Platform'));
+const AICybersecurityThreatIntelligencePlatform = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence-Platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
+
 // New Innovative AI Services 2025
 const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Neural-Network-Platform'));
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
@@ -140,6 +145,11 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligencePlatform />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
 
                     {/* New Innovative AI Services 2025 */}
                     <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />

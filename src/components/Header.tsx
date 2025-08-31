@@ -69,8 +69,12 @@ export function Header({ className }: HeaderProps) {
         { name: 'AI & Machine Learning', href: '/services#ai-ml' },
         { name: 'Quantum Computing', href: '/services#quantum' },
         { name: 'Cybersecurity', href: '/services#cybersecurity' },
+        { name: 'Healthcare Tech', href: '/services#healthcare' },
+        { name: 'Financial Technology', href: '/services#fintech' },
         { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
         { name: 'Data & Analytics', href: '/services#data-analytics' },
+        { name: 'Process Automation', href: '/services#automation' },
+        { name: 'Micro SaaS', href: '/services#micro-saas' },
         { name: 'Digital Transformation', href: '/services#digital-transformation' },
         { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
         { name: 'Emerging Technologies', href: '/services#emerging-tech' }
