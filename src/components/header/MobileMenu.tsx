@@ -98,6 +98,8 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           links: [
             { name: "AI Space Technology", href: "/services/ai-space-technology-platform" },
             { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
+            { name: "AI Autonomous Vehicles", href: "/services/ai-autonomous-vehicle-platform" },
+            { name: "Quantum Financial Trading", href: "/services/ai-quantum-financial-trading-platform" },
             { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform" },
             { name: "AI-Powered SEO", href: "/services/ai-powered-seo" },
             { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive" },

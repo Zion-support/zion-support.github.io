@@ -54,7 +54,9 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Vehicle Platform", href: "/services/ai-autonomous-vehicle-platform" },
+        { name: "AI Quantum Financial Trading", href: "/services/ai-quantum-financial-trading-platform" }
       ]
     },
     {
@@ -283,7 +285,27 @@ export function AppFooter() {
               Discover cutting-edge AI services, revolutionary IT solutions, and innovative Micro SaaS platforms designed for 2025 and beyond.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <Link 
+              to="/services/ai-autonomous-vehicle-platform"
+              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="flex items-center space-x-3 mb-3">
+                <Car className="w-6 h-6 text-blue-400" />
+                <h4 className="text-lg font-semibold text-white">AI Autonomous Vehicles</h4>
+              </div>
+              <p className="text-zion-slate-light text-sm">Revolutionary autonomous vehicle platform for fleets and logistics.</p>
+            </Link>
+            <Link 
+              to="/services/ai-quantum-financial-trading-platform"
+              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="flex items-center space-x-3 mb-3">
+                <TrendingUp className="w-6 h-6 text-purple-400" />
+                <h4 className="text-lg font-semibold text-white">Quantum Financial Trading</h4>
+              </div>
+              <p className="text-zion-slate-light text-sm">Quantum AI-powered financial trading platform for superior returns.</p>
+            </Link>
             <Link 
               to="/innovative-services-showcase-2032"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -295,21 +317,11 @@ export function AppFooter() {
               <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
             </Link>
             <Link 
-              to="/comprehensive-services-showcase-2025"
+              to="/pricing"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
-                <Star className="w-6 h-6 text-zion-cyan" />
-                <h4 className="text-lg font-semibold text-white">2025 Services Showcase</h4>
-              </div>
-              <p className="text-zion-slate-light text-sm">Comprehensive overview of all our current services and capabilities.</p>
-            </Link>
-            <Link 
-              to="/pricing"
-              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="flex items-center space-x-3 mb-3">
-                <TrendingUp className="w-6 h-6 text-zion-purple" />
+                <TrendingUp className="w-6 h-6 text-zion-cyan" />
                 <h4 className="text-lg font-semibold text-white">Pricing & Plans</h4>
               </div>
               <p className="text-zion-slate-light text-sm">Transparent pricing for all our services and solutions.</p>

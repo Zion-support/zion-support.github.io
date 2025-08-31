@@ -203,7 +203,7 @@ const HeroSection = () => {
               { number: "500+", label: "Enterprise Clients", icon: Building2 },
               { number: "99.9%", label: "Uptime SLA", icon: ShieldCheck },
               { number: "24/7", label: "Global Support", icon: Globe2 },
-              { number: "50+", label: "AI Services", icon: Brain }
+              { number: "60+", label: "AI Services", icon: Brain }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -322,6 +322,20 @@ const ServicesSection = () => {
       icon: Shield,
       color: "from-zion-purple to-zion-cyan",
       link: "/services/ai-cybersecurity-threat-intelligence"
+    },
+    {
+      title: "AI Autonomous Vehicle Platform",
+      description: "Revolutionize transportation with our cutting-edge AI autonomous vehicle platform for fleets and logistics.",
+      icon: Car,
+      color: "from-zion-blue to-zion-purple",
+      link: "/services/ai-autonomous-vehicle-platform"
+    },
+    {
+      title: "AI Quantum Financial Trading",
+      description: "Experience unprecedented trading performance with quantum computing and AI-powered financial algorithms.",
+      icon: TrendingUp,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-quantum-financial-trading-platform"
     },
     {
       icon: Chip,

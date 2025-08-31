@@ -192,7 +192,8 @@ const Pricing = () => {
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Start with a free 14-day trial and upgrade or downgrade at any time. 
-              Annual plans include significant savings.
+              Annual plans include significant savings. Our pricing is competitive with 
+              industry standards and provides exceptional value for enterprise-grade AI solutions.
             </p>
           </motion.div>
         </div>
@@ -262,6 +263,69 @@ const Pricing = () => {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Comparison Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Market Comparison</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how our pricing compares to industry standards and understand the value 
+              we provide for enterprise AI solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Industry Average</h3>
+              <div className="text-3xl font-bold text-gray-400 mb-2">$899</div>
+              <div className="text-sm text-gray-500 mb-4">per month</div>
+              <ul className="text-left space-y-2 text-sm text-gray-300">
+                <li>• Basic AI features</li>
+                <li>• Limited customization</li>
+                <li>• Standard support</li>
+                <li>• Basic security</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/50 rounded-xl p-6 text-center relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  Best Value
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Zion Tech Group</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">$299</div>
+              <div className="text-sm text-gray-500 mb-4">per month</div>
+              <ul className="text-left space-y-2 text-sm text-gray-300">
+                <li>• Advanced AI capabilities</li>
+                <li>• Full customization</li>
+                <li>• Priority support</li>
+                <li>• Enterprise security</li>
+                <li>• Quantum computing access</li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Competitor Premium</h3>
+              <div className="text-3xl font-bold text-gray-400 mb-2">$1,499</div>
+              <div className="text-sm text-gray-500 mb-4">per month</div>
+              <ul className="text-left space-y-2 text-sm text-gray-300">
+                <li>• Advanced features</li>
+                <li>• Good customization</li>
+                <li>• Premium support</li>
+                <li>• Enhanced security</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

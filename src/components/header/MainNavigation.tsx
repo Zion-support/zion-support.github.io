@@ -332,6 +332,23 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </div>
                   <ul className="space-y-2">
                     <li>
+                      <Link to="/services/ai-autonomous-vehicle-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Car className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Autonomous Vehicles</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-financial-trading-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <TrendingUp className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Financial Trading</span>
+                        </div>
+                      </Link>
+                    </li>
+                  <ul className="space-y-2">
+                    <li>
                       <Link to="/services/ai-space-technology-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
                           <Satellite className="w-3 h-3 text-zion-purple" />
@@ -344,6 +361,22 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <div className="flex items-center space-x-2">
                           <Atom className="w-3 h-3 text-zion-purple" />
                           <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Computing</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-vehicle-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Car className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Autonomous Vehicles</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-financial-trading-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <TrendingUp className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Financial Trading</span>
                         </div>
                       </Link>
                     </li>
@@ -395,6 +428,22 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </div>
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-vehicle-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Rocket className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">🚗 AI Autonomous Vehicles</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-financial-trading-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <TrendingUp className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">💰 Quantum Financial Trading</span>
+                        </div>
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -410,10 +459,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link 
-                    to="/comprehensive-services-showcase-2025" 
+                    to="/comprehensive-services-overview" 
                     className="flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors font-medium group"
                   >
-                    <span>2025 Services Showcase</span>
+                    <span>Services Overview</span>
                     <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </Link>
                 </div>
@@ -631,6 +680,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
       </div>
 
       {/* Direct Links */}
+      <NavLink 
+        to="/comprehensive-services-overview" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Services Overview
+      </NavLink>
+
       <NavLink 
         to="/pricing" 
         className={({ isActive }) => 

@@ -62,7 +62,7 @@ export function Header() {
             </div>
 
             {/* Desktop Navigation */}
-            <MainNavigation className="hidden lg:flex" />
+            <MainNavigation className="hidden xl:flex" />
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
@@ -115,7 +115,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark lg:hidden transition-all duration-300"
+                className="inline-flex items-center justify-center rounded-lg p-3 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-slate-dark xl:hidden transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle mobile menu"
               >

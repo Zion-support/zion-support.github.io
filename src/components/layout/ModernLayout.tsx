@@ -18,9 +18,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({ children, showSidebar = tru
         {showSidebar && <ModernSidebar />}
         
         <main className={`flex-1 transition-all duration-300 ${showSidebar ? 'lg:ml-80' : ''}`}>
-          <div className="container mx-auto px-4 lg:px-8 py-8 lg:py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
             <Breadcrumb />
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8 lg:space-y-12">
               {children}
             </div>
           </div>
