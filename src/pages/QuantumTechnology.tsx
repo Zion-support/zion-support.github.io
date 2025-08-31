@@ -23,18 +23,9 @@ import { Atom,
   Cloud,
   Lock,
   Eye
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function QuantumTechnology(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function QuantumTechnology(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function QuantumTechnology(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
   const quantumServices = [
@@ -201,14 +192,8 @@ export default function QuantumTechnology(...args[]: any):  {
     };
   };
   const filteredApplications = selectedApplication === 'all'
-<<<<<<< HEAD
-    ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication);
-=======
     ? quantumApplications: anyanyanyanyanyanyanyanyanyanyanyanyanyquantumApplications.filter(app              => app.category === selectedApplication);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -285,14 +270,9 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumServices.map((service, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -346,26 +326,6 @@ export default function QuantumTechnology(...args[]: any):  {
           {/* Application Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-            {applications.map((app)              => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             {applications.map((app)  => {
             initial = {
@@ -381,13 +341,7 @@ export default function QuantumTechnology(...args[]: any):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-<<<<<<< HEAD
-            {applications.map((app) => {;
-=======
             {applications.map((app)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const Icon = app.icon;
               return (
                 <button
@@ -411,14 +365,9 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {filteredApplications.map((app, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {filteredApplications.map((app, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -479,14 +428,9 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumTechnologies.map((tech, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumTechnologies.map((tech, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -545,14 +489,9 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {quantumAdvantages.map((advantage, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {quantumAdvantages.map((advantage, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -595,12 +534,8 @@ export default function QuantumTechnology(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: "01",
@@ -625,12 +560,8 @@ export default function QuantumTechnology(...args[]: any):  {
                 title: "Deployment & Optimization",
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
-<<<<<<< HEAD
-            ].map((phase, index) => (
-=======
 
             ].map((phase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="relative"

@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
-=======
 import React from 'react.ts';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const CloudServices = () => {
   const cloudServices = [
     {
@@ -106,14 +97,9 @@ const CloudServices = () => {
               and accelerate your business growth.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -146,14 +132,9 @@ const CloudServices = () => {
               solutions for your specific needs.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudPlatforms.map((platform, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <platform.icon className="w-8 h-8 text-white"/>

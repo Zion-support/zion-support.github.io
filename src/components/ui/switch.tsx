@@ -1,39 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from "../../utils/cn";
-interface SwitchProps {
-=======
-<<<<<<< HEAD
-import { cn               } from '../../utils/cn';
-=======
 import React from 'react.ts';
 import { cn               } from '../../utils/cn';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SwitchProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   checked?: boolean;
   onCheckedChange?: (checked: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean)               => void;
   disabled?: boolean;
   className?: string;
   id?: string;
   'aria-label'?: string;
-<<<<<<< HEAD
-export function Switch({
-  checked = false,
-  onCheckedChange,
-  disabled = false,
-  className,;
-  id,;
-  'aria-label': ariaLabel,;
-  ...props;
-}: SwitchProps) {;
-  const handleToggle = () => {;
-    if (!disabled && onCheckedChange) {;
-      onCheckedChange(!checked);
-  };
-=======
 
 export function Switch(...args: any[]): any {;
   const handleToggle = () => {;
@@ -43,7 +18,6 @@ export function Switch(...args: any[]): any {;
   
 };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <button
       type = "button"

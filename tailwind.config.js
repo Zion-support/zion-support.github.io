@@ -22,17 +22,5 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-  darkMode: 'class',
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
-=======
   plugins: [],
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }

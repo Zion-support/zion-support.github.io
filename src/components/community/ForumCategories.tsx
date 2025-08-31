@@ -1,7 +1,5 @@
 import React from 'react.ts';
 interface ForumCategoryInfo {
-<<<<<<< HEAD
-=======
 
 
 
@@ -17,7 +15,6 @@ interface ForumCategoryInfo {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
@@ -27,33 +24,9 @@ interface ForumCategoryInfo {
 lastPost?: {;
     title: string;
     author: string;
-<<<<<<< HEAD
     date: string}}
-export default function ForumCategories(...args[]):  {
-=======
-<<<<<<< HEAD
-    date: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
-=======
-    date: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ForumCategories(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',

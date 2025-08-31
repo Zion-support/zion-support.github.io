@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Atom,
-  Zap,
-  CheckCircle,
-  BarChart3,
-  Sparkles,
-  ArrowRight,
-  Brain,
-  Cpu,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Atom, 
   Zap, 
@@ -34,15 +19,6 @@ import {
   LineChart,
   Activity,
   Target,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Shield,
-  TrendingUp,
-  Layers
-import { SEO              } from '@/components/SEO';
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lightbulb,
   Search,
   Filter,
@@ -70,15 +46,9 @@ import { SEO              } from '@/components/SEO';
   Bluetooth,
   Radio
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-export default function QuantumComputingSolutions() {
-=======
 import { SEO              } from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function QuantumComputingSolutions(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Atom,
@@ -254,96 +224,6 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               1000x faster than classical computers. From AI enhancement to cryptography, unlock new possibilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-
-                Explore Quantum Solutions
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
-                Visit Our Site
-              </a>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <motion.div
-            className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
-            transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-          />
-        </div>
-      </section>
-
-      {/* Quantum Applications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary <span className="text-cyan-400">Quantum Applications</span>
-            </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Discover how quantum computing is transforming industries and solving previously impossible problems
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {quantumApplications.map((app, index)              => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-                    <app.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{app.name}</h3>
-                    <p className="text-cyan-400 text-sm font-medium">Quantum Application</p>
-                  </div>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">{app.description}</p>
-                <ul className="space-y-2">
-                  {app.useCases.map((useCase, idx) => (
-                    <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {useCase}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -379,18 +259,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               Cutting-edge quantum technology that revolutionizes computational capabilities.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -424,29 +295,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               Comprehensive quantum computing solutions for enterprise applications.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)              => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
-                    <Zap className="h-6 w-6 text-white" />
-=======
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {capabilities.map((capability, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -492,19 +343,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               Transform your industry with quantum computing solutions.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {researchAreas.map((area, index)              => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -545,14 +386,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               Access to quantum computing power at competitive prices. All plans include a 30-day free trial.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -619,19 +455,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               Transform your business with the power of quantum computing.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
-            {quantumTechnologies.map((tech, index)              => (
-              <motion.a
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

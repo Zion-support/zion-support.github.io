@@ -48,11 +48,7 @@ website: string;
     security: string[]};
   competitors?: string[];
   marketSize?: string;
-<<<<<<< HEAD
-  uniqueValue?: string;
-=======
   uniqueValue?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   // Quantum AI Services

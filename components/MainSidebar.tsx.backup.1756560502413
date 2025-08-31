@@ -1,62 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link            } from 'react-router-dom.ts';
-import { useNavigate            } from 'react-router-dom.ts';
-import { Home,
-  Briefcase,
-  Users,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Shield,
-  Handshake,
-  ChevronDown,
-  ChevronRight,
-  Brain,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  Palette,
-  Target,
-  Rocket,
-  Eye,
-  DollarSign,
-  ShoppingCart,
-  Clock,
-  Cloud,
-  Search,
-  Building,
-  Zap,
-  Heart,
-  Lightbulb,
-  TrendingUp,
-  BarChart3,
-  Lock,
-  AlertTriangle,
-  Server,
-  CheckCircle,
-  Truck,
-  Car,
-  TestTube,
-  PenTool,
-  Building2,
-  Atom,
-  FileText,
-  Quote,
-  Newspaper,
-  Calendar,
-  Video,
-  HelpCircle,
-  LifeBuoy,
-  Store,
-  PieChart,
-  Share2,
-  Monitor,
-=======
 import React, { useState            } from 'react.ts';
 import Link from 'next/link.ts';
 import { useRouter             } from 'next/router.ts';
@@ -114,7 +55,6 @@ import { Home,
   PieChart, 
   Share2, 
   Monitor, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Smartphone,
   Settings,
   User,
@@ -124,12 +64,6 @@ import { Home,
   Leaf,
   Sun,
   Wind
-<<<<<<< HEAD
-interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()            => void;
-=======
   
 } from 'lucide-react.ts';
 
@@ -137,36 +71,18 @@ interface SidebarProps extends React.PropsWithChildren<{}> {
 
   isOpen: anyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: ()             => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-<<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)            => {
-    setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-=======
-<<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)             => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section);
-        [...prev, section];
-    )};
-=======
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanystring)            => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
         : [...prev, section];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanystring)             => router.pathname === path;
 
@@ -186,7 +102,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
       { name: 'Solutions', href: '/solutions', icon: Target },
@@ -222,19 +137,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     comp[
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-<<<<<<< HEAD
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
-      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ];
-=======;
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },;
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },;
       { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },;
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },;
     ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   const quickActions = [;
@@ -301,13 +208,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Backdrop */}
       {isOpen && (
-<<<<<<< HEAD
-        <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-=======
         <div 
           className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           onClick={onClose}
         />
       )}
@@ -432,25 +334,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
           <div className="text-xs text-zion-slate-light text-center">
-<<<<<<< HEAD
-            © {new Date().getFullYear()} Zion Tech Group
-          </div>
-        </div>
-      </div>;
-    </>;
-  )};
-=======
             © {new Date().getFullYear()} Zion Tech Group;
           </div>;
         </div>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-</div>};
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default MainSidebar;}}

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '@/components/SEO';
-import { Heart,
-  Brain,
-  Activity,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { SEO           } from '@/components/SEO';
@@ -18,7 +7,6 @@ import { Heart,
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Clock,
   Target,
@@ -33,13 +21,9 @@ import { Heart,
   PieChart,
   TrendingUp,
   AlertTriangle
-<<<<<<< HEAD
-export default function AIHealthcareAnalyticsPlatform(...args: any[]): any {
-=======
           } from 'lucide-react.ts';
 
 export default function AIHealthcareAnalyticsPlatform(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -64,15 +48,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       icon: Zap,
       title: 'Real-Time Monitoring',
-<<<<<<< HEAD
-      description: 'Continuous patient monitoring with instant alerts for critical health changes'
-    },
-    {
-      icon: Eye,
-      title: 'Medical Image Analysis',
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
-
-=======
       description: 'Continuous patient monitoring with instant alerts for critical health changes';
     },;
     {;
@@ -80,7 +55,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       title: 'Medical Image Analysis',;
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -127,15 +101,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         'Full AI suite',
         'Custom AI models',
         'Dedicated support team',
-<<<<<<< HEAD
-        'Advanced compliance',
-        'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
-      ],
-      popular: false
-
-=======
         'Advanced compliance',;
         'On-premise options',;
         'SLA guarantees',;
@@ -143,7 +108,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -160,15 +124,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       icon: Clock,
       title: '24/7 Patient Monitoring',
-<<<<<<< HEAD
-      description: 'Continuous monitoring ensures patient safety around the clock'
-    },
-    {
-      icon: BarChart3,
-      title: '40% Cost Reduction',
-      description: 'AI optimization reduces healthcare costs and improves efficiency'
-
-=======
       description: 'Continuous monitoring ensures patient safety around the clock';
     },;
     {;
@@ -176,7 +131,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       title: '40% Cost Reduction',;
       description: 'AI optimization reduces healthcare costs and improves efficiency';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -193,15 +147,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       title: 'Treatment Optimization',
       description: 'AI recommends optimal treatment plans based on patient data and outcomes',
-<<<<<<< HEAD
-      icon: Heart
-    },
-    {
-      title: 'Drug Safety Monitoring',
-      description: 'Real-time monitoring of drug interactions and adverse effects',
-      icon: Shield
-
-=======
       icon: Heart;
     },;
     {;
@@ -209,7 +154,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       description: 'Real-time monitoring of drug interactions and adverse effects',;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceStandards = [;
@@ -222,13 +166,8 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
       />
@@ -777,16 +716,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 Contact Healthcare Team
               </button>
             </div>
-<<<<<<< HEAD
-
-            <p className="text-gray-400 mt-6">
-              No credit card required • 30-day free trial • HIPAA compliant
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
             
             <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • HIPAA compliant;
@@ -795,6 +724,5 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

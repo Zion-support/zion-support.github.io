@@ -1,93 +1,11 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Heart, 
-  Zap, 
-  Rocket, 
-  Target, 
-  Users, 
-  Globe, 
-  Database, 
-  Cloud,
-  CheckCircle,
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search,
   Filter,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   ArrowRight,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Star,
   Clock,
-<<<<<<< HEAD
-  DollarSign,
-  BarChart3,
-  Cpu,
-  Network,
-  BookOpen,
-  GraduationCap,
-  Building2,
-  Atom,
-  Satellite,
-  Search,
-  FileText,
-  Server,
-  Truck,
-  Leaf,
-  TrendingUp,
-  Lock,
-  Lightbulb,
-  Sparkles
-} from 'lucide-react';
-
-export default function ComprehensiveServicesShowcase2026() {
-  const aiServices = [
-    {
-      icon: Brain,
-      title: "AI Autonomous Research Assistant",
-      description: "AI-powered research that works 24/7, continuously gathering and analyzing data from multiple sources",
-      price: "From $299/month",
-      features: ["Autonomous research", "Multi-source intelligence", "Predictive analytics", "Collaborative research"],
-      link: "/services/ai-autonomous-research-assistant",
-      category: "AI & Research"
-    },
-    {
-      icon: Shield,
-      title: "AI Cybersecurity Threat Intelligence",
-      description: "Advanced AI-powered threat detection with 99.9% accuracy and real-time response capabilities",
-      price: "From $499/month",
-      features: ["AI threat detection", "Real-time monitoring", "Predictive intelligence", "Automated response"],
-      link: "/services/ai-cybersecurity-threat-intelligence",
-      category: "Cybersecurity"
-    },
-    {
-      icon: Heart,
-      title: "AI Healthcare Diagnostics Platform",
-      description: "Revolutionary AI-powered healthcare diagnostics with 99.7% accuracy for early disease detection",
-      price: "From $799/month",
-      features: ["AI-powered diagnosis", "Multi-modal analysis", "Predictive healthcare", "HIPAA compliant"],
-      link: "/services/ai-healthcare-diagnostics-platform",
-      category: "Healthcare"
-    },
-    {
-<<<<<<< HEAD
-      title: "AI Smart Home Energy Management Platform",
-      description: "Transform your home into an intelligent, energy-efficient ecosystem. Our AI platform optimizes energy consumption, reduces costs by up to 30%, and gives you complete control.",
-      price: "From $19/month",
-      features: ["AI Energy Optimization", "Smart Device Integration", "Real-time Monitoring", "Predictive Analytics"],
-      href: "/services/ai-smart-home-energy-management-platform",
-      color: "from-green-400 to-blue-500",
-      popular: false,
-      icon: Home,
-      benefits: ["30% energy savings", "$200+ monthly savings", "25% environmental impact", "24/7 convenience"]
-=======
   CheckCircle,
   ArrowRight
 import { SEO              } from '../components/SEO';
@@ -137,11 +55,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
       icon: Search,
       title: "AI-Powered SEO Platform",
@@ -168,7 +81,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Risk management"],
       link: "/services/ai-supply-chain-optimization-enhanced",
       category: "Supply Chain"
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
   ];
 
@@ -414,14 +326,8 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -435,13 +341,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-<<<<<<< HEAD
-                )}
-                
-                <div className="flex justify-center mb-6">
-                  <div className={`p-3 bg-gradient-to-r ${service.color} rounded-full`}>
-                    <service.icon className="h-8 w-8 text-white" />
-=======
               Revolutionary Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                 2026
@@ -452,11 +351,7 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
-<<<<<<< HEAD
-
-=======
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
@@ -563,115 +458,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
 
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-<<<<<<< HEAD
-
-                  {/* Service Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-blue-500/20 rounded-lg">
-                        {getCategoryIcon(service.category)}
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                        <p className="text-sm text-zinc-400">{service.category}</p>
-                      </div>
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                      {service.innovationLevel}
-                    </span>
-                  </div>
-                  {/* Description */}
-                  <p className="text-zinc-300 mb-4 line-clamp-3">{service.description}</p>
-                  {/* Pricing */}
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl font-bold text-white">
-                        ${'price' in service ? service.price.toLocaleString() : service.hourlyRate}
-                      </span>
-                      <span className="text-zinc-400">
-                        /{'pricingModel' in service ? service.pricingModel : 'hour'}
-                      </span>
-                    </div>
-                    <p className="text-sm text-zinc-400">{'marketPrice' in service ? service.marketPrice : `$${service.projectRate?.toLocaleString()}/project`}</p>
-                  </div>
-                  {/* Key Features */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
-                    <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                          <span className="line-clamp-1">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Benefits */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Benefits</h4>
-                    <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">
-                          <Zap className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                          <span className="line-clamp-1">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Market Info */}
-                  <div className="mb-4 p-3 bg-white/5 rounded-lg">
-                    <div className="grid grid-cols-2 gap-3 text-sm">
-                      <div>
-                        <span className="text-zinc-400">Market Size:</span>
-                        <p className="text-white font-medium">{'marketSize' in service ? service.marketSize : 'N/A'}</p>
-                      </div>
-                      <div>
-                        <span className="text-zinc-400">Growth Rate:</span>
-                        <p className="text-white font-medium">{'growthRate' in service ? service.growthRate : 'N/A'}</p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* Target Audience */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Target Audience</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.targetAudience.slice(0, 3).map((audience, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
-                          {audience}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Contact Information */}
-                  <div className="border-t border-white/10 pt-4">
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center gap-2 text-zinc-300">
-                        <Phone className="w-4 h-4 text-blue-400" />
-                        <span>{service.contactInfo.phone}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zinc-300">
-                        <Mail className="w-4 h-4 text-green-400" />
-                        <span>{service.contactInfo.email}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zinc-300">
-                        <MapPin className="w-4 h-4 text-red-400" />
-                        <span className="line-clamp-1">{service.contactInfo.address}</span>
-                      </div>
-                    </div>
-                    {/* CTA Button */}
-                    <a
-                      href={service.contactInfo.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-
-                      Learn More
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </motion.div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <category.icon className="h-5 w-5" />
                   {category.name}
@@ -679,95 +465,11 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
                     {category.count}
                   </span>
                 </motion.button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
-<<<<<<< HEAD
-          </div>
-
-          {/* Search and Filter */}
-          <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
-                Price Range: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
-              </label>
-              <input
-                type="range"
-                min="0"
-                max="100000"
-                value={priceRange[1]}
-                onChange = {
-  (e) => setPriceRange([priceRange[0],
-  parseInt(e.target.value)])
-
-}
-                className="w-full"
-              />
-            </div>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)              => (
-              <motion.div
-                key={service.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-}}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    {React.createElement(getCategoryIcon(service.category), {
-                      className: "h-8 w-8 text-blue-400"
-                    })}
-                    <div>
-                      <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-gray-400">{service.category}</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-green-400">
-                      {formatPrice(service.price, service.pricingModel)}
-                    </div>
-                    <div className="text-sm text-gray-400">{service.pricingModel}</div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">{service.title}</h3>
-                <p className="text-gray-300 mb-6 text-center">{service.description}</p>
-                
-                <div className="text-center mb-6">
-                  <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-=======
                   <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
                     {service.category}
                   </span>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 </div>
 
                 {/* Service Content */}

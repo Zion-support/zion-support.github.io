@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";
-import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
-import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO                } from '../components/SEO';
-import { innovativeMicroSaasServices2030                } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030                } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030                } from '../data/comprehensiveAIServices2030';
-
-const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('microsaas');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getFilteredServices = () => {;
-    let services[] = [];
-=======
 import React, { useState } from 'react.ts';
 import { SEO               } from '../components/SEO';
 import { innovativeMicroSaasServices2030               } from '../data/innovativeMicroSaasServices2030';
@@ -30,7 +6,6 @@ import { comprehensiveAIServices2030               } from '../data/comprehensive
 
 const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getFilteredServices = () => {;
@@ -46,17 +21,6 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
         services = comprehensiveAIServices2030;
         break}
     if (searchTerm) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      services = services.filter(service => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )};
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;

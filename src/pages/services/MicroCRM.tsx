@@ -1,55 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Target, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-const MicroCRM: React.FC = () => {
-  const services = [
-    {
-      title: "Contact Management",
-      description: "Organize and track customer information, interactions, and history in one centralized location.",
-      icon: Target
-    },
-    {
-      title: "Sales Pipeline",
-      description: "Visualize and manage your sales process from lead to close with customizable stages.",
-      icon: Target
-    },
-    {
-      title: "Task Management",
-      description: "Set reminders, track follow-ups, and manage customer-related tasks efficiently.",
-      icon: Target
-    },
-    {
-      title: "Communication Tools",
-      description: "Integrated email, SMS, and phone tools for seamless customer communication.",
-      icon: Target
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: "Local Services",
-      description: "Perfect for plumbers, electricians, and contractors who need to track jobs and customers."
-    },
-    {
-      industry: "Small Retail",
-      description: "Ideal for boutique shops and local stores managing customer relationships and sales."
-    },
-    {
-      industry: "Professional Services",
-      description: "Great for consultants, lawyers, and accountants tracking client interactions."
-    },
-    {
-      industry: "Healthcare",
-      description: "Suitable for small medical practices managing patient relationships and appointments."
-    }
-  ];
-=======
 import React from 'react.ts';
 import SEO from '@/components/SEO';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-futuristic text-white">

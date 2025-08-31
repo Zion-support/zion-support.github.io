@@ -83,20 +83,6 @@ import { Search,
   SkipForward2,
   PlayCircle,
   PauseCircle
-<<<<<<< HEAD
-import { revolutionary2025AdvancedMicroSaasServices             } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices             } from '../data/revolutionary-2025-specialized-it-ai-services';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices              } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices              } from '../data/revolutionary-2025-specialized-it-ai-services';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Combine all services
-const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
-  const [services, setServices] = useState<any>(ALL_SERVICES);
-=======
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices             } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices             } from '../data/revolutionary-2025-specialized-it-ai-services';
@@ -104,7 +90,6 @@ import { revolutionary2025SpecializedITAIServices             } from '../data/re
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ALL_SERVICES);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -116,60 +101,28 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
   useEffect(() => {
     let filtered = ALL_SERVICES;
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
-<<<<<<< HEAD
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-
-    if (selectedPriceRange !== 'all') {
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)};
     if (selectedPriceRange !== 'all') {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {
-<<<<<<< HEAD
-          return price >= min && price <= max;
-
-        return price >= min;
-      });
-
-=======
           return price >= min && price <= max}
         return price >= min})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
-<<<<<<< HEAD
-          return roi >= min && roi <= max;
-
-        return roi >= min;
-      });
-
-=======
           return roi >= min && roi <= max}
         return roi >= min})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -180,12 +133,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
         case 'customers':
           return b.customers - a.customers;
         default:
-<<<<<<< HEAD
-          return a.name.localeCompare(b.name);
-
-=======
           return a.name.localeCompare(b.name)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
@@ -196,7 +144,6 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
         : [...prev, serviceId]
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -2880,14 +2827,6 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
               Visit Website
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -2895,7 +2834,6 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;

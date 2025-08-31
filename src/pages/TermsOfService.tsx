@@ -1,39 +1,5 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { FileText,
-  Shield,
-  Users,
-  Globe,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Lock,
-  Eye,
-  Database
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'legal@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   const sections = [
@@ -65,7 +31,6 @@ export default function TermsOfService() {
   const website = 'https://ziontechgroup.com';
   
   const termsSections = [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     {
       id: 'services',
       title: 'Description of Services',
@@ -338,56 +303,9 @@ export default function TermsOfService() {
                   <p><strong>Phone:</strong> +1 302 464 0950</p>
                   <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
-<<<<<<< HEAD
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 text-zion-slate-light">
-                    <MapPin className="w-5 h-5 text-zion-cyan mt-0.5" />
-                    <span>{address}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-zion-slate-light">
-                    <Globe className="w-5 h-5 text-zion-cyan" />
-                    <span>{website}</span>
-                  </div>
-                </div>
-                <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                  <Download className="w-4 h-4" />
-                  Download PDF
-                </button>
-              </div>
-              <p className="text-zion-slate-light mt-6">
-                We will respond to your inquiry within 30 days of receipt.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-        {/* Table of Contents */}
-        <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.2 
-}}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Table of Contents
-              </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
-=======
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -413,40 +331,13 @@ export default function TermsOfService() {
                   </motion.a>
                 ))}
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Key Provisions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              animate = {
-  { opacity: 1,
-  y: 0 
-}}
-              transition = {
-  { duration: 0.6,
-  delay: 0.4 
-}}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Key Provisions
-              </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {keyProvisions.map((provision, index) => (
-=======
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
                 {keyProvisions.map((provision, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={provision.title}
                     initial = {
@@ -527,14 +418,9 @@ export default function TermsOfService() {
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Dispute Resolution Process
               </h2>
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {disputeResolution.map((step, index) => (
-=======
               
               <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
                 {disputeResolution.map((step, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={step.step}
                     initial = {
@@ -611,6 +497,5 @@ export default function TermsOfService() {
 =======
       </div>
     </>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 }

@@ -1,32 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-=======
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { cn               } from '@/lib/utils';
-import { Home,
-  Briefcase,
-  Users,
-  Settings,
-  BarChart3,
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Code,
-  Smartphone,
-  Globe,
-  Building,
-  Mail,
-  Phone,
-  MapPin,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Menu, 
   X, 
@@ -57,71 +30,6 @@ import {
   Network,
   Palette,
   Video,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Audio,
-  Document,
-  Folder,
-  File,
-  Archive,
-  Backup,
-  Restore,
-  Sync,
-  Share,
-  Export,
-  Import,
-  Download,
-  Upload,
-  Copy,
-  Paste,
-  Cut,
-  Delete,
-  Undo,
-  Redo,
-  Save,
-  Load,
-  Open,
-  Close,
-  Minimize,
-  Maximize,
-  Restore as RestoreIcon,
-  Move,
-  Resize,
-  Rotate,
-  Scale,
-  Transform,
-  Animate,
-  Transition,
-  Effect,
-  Filter,
-  Blend,
-  Mask,
-  Clip,
-  Crop,
-  Resize as ResizeIcon,
-  Rotate as RotateIcon,
-  Scale as ScaleIcon,
-  Transform as TransformIcon,
-  Animate as AnimateIcon,
-  Transition as TransitionIcon,
-  Effect as EffectIcon,
-  Filter as FilterIcon,
-  Blend as BlendIcon,
-  Mask as MaskIcon,
-  Clip as ClipIcon,
-  Crop as CropIcon,
-  Clock,
-  Handshake,
-  Leaf,
-  HardDrive,
-  RefreshCw
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void;
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   PenTool,
   Atom,
   Server,
@@ -135,15 +43,9 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-  Users
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
  
 } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   Building2,
   TestTube,
@@ -158,7 +60,6 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Truck
 } from 'lucide-react';
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SidebarItem {
 
 
@@ -195,35 +96,24 @@ interface SidebarItem {
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 interface NavigationSection {
   title: string;
   items: SidebarItem[];
 }
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 export function MainSidebar() {
 =======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function MainSidebar(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const toggleSection = (section: string) => {
 =======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -372,126 +262,8 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-<<<<<<< HEAD
-      name: 'Emerging Tech',
-      href: '#',
-      icon: Rocket,
-      children: [
-        {
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
-          icon: Atom,
-          description: 'Next-gen Computing'
-        },
-        {
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Lock,
-          description: 'Intelligent Security'
-        },
-        {
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
-          icon: Smartphone,
-          description: 'Connected Ecosystems'
-        },
-        {
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
-          icon: Video,
-          description: 'Creative AI'
-        }
-      ]
-    },
-    {
-      name: 'Business Solutions',
-      href: '#',
-      icon: Briefcase,
-      children: [
-        {
-          name: 'Marketplace',
-          href: '/marketplace',
-          icon: ShoppingCart,
-          description: 'Product & Service Hub'
-        },
-        {
-          name: 'Talent Solutions',
-          href: '/talent',
-          icon: Users,
-          description: 'HR & Recruitment'
-        },
-        {
-          name: 'Equipment Services',
-          href: '/equipment',
-          icon: Server,
-          description: 'Hardware Solutions'
-        },
-        {
-          name: 'Request Quote',
-          href: '/request-quote',
-          icon: MessageCircle,
-          description: 'Get Pricing'
-        }
-      ]
-    },
-    {
-      name: 'Comp',
-      href: '#',
-      icon: Info,
-      children: [
-        {
-          name: 'About Us',
-          href: '/about',
-          icon: Info,
-          description: 'Our Story'
-        },
-        {
-          name: 'Team',
-          href: '/team',
-          icon: Users,
-          description: 'Meet Our Team'
-        },
-        {
-          name: 'Careers',
-          href: '/careers',
-          icon: Briefcase,
-          description: 'Join Us'
-        },
-        {
-          name: 'Partners',
-          href: '/partners',
-          icon: Users,
-          description: 'Partnerships'
-        }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
-      children: [
-        {
-          name: 'Blog',
-          href: '/blog',
-          icon: FileText,
-          description: 'Latest Insights'
-        },
-        {
-          name: 'FAQ',
-          href: '/faq',
-          icon: HelpCircle,
-          description: 'Common Questions'
-        },
-        {
-          name: 'Help Center',
-          href: '/help',
-          icon: MessageCircle,
-          description: 'Support Resources'
-        },
-=======
       title: 'Resources',
       items: [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {
           name: 'Documentation',
           href: '/docs',

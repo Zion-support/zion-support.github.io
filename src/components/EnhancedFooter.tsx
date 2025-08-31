@@ -69,6 +69,7 @@ export function EnhancedFooter() {
       links: [
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
         { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
         { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
       ]
@@ -81,7 +82,8 @@ export function EnhancedFooter() {
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles }
+        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
       ]
     },
     {

@@ -90,23 +90,12 @@ import { Brain,
   MicOff,
   Volume2,
   VolumeX
-<<<<<<< HEAD
-} from 'lucide-react';
-const QuickAccess: React.FC = () => {;
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-=======
-<<<<<<< HEAD
-const QuickAccess: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
 const QuickAccess: React.FC = (): JSX.Element => {;
   const [hoveredCategory, setHoveredCategory] = useState<any>(null);
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const QuickAccess: React.FC = (): JSX.Element => {
   const quickLinks = [
     {
@@ -414,14 +403,9 @@ const QuickAccess: React.FC = (): JSX.Element => {
             <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

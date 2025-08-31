@@ -19,14 +19,7 @@ import { Zap,
   Rocket,
   Target,
   Globe
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -139,21 +132,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-<<<<<<< HEAD
-          className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
-        >
-          {saasServices.map((service, index)  => (
-=======
-<<<<<<< HEAD
-          className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16"
-
-          {saasServices.map((service, index)              => (
-=======
           className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16"
         >
           {saasServices.map((service, index)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={service.id}
               variants={itemVariants}

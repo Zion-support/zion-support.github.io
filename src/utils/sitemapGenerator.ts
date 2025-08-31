@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { SitemapConfig, SitemapUrl } from '../types/sitemap';
-=======
 interface SitemapUrl {
 
 
@@ -65,7 +62,6 @@ interface SitemapConfig {
 
 
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export class SitemapGenerator {
   private config: SitemapConfig;

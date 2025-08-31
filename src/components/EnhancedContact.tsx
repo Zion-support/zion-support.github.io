@@ -1,41 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Mail,
-=======
-<<<<<<< HEAD
-import { AnimatePresence, motion               } from 'framer-motion.ts';
-import { =======
-import React, { useState               } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Mail,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Mail,
-  MapPin,
-  Phone,
-  Send
-              } from 'lucide-react.ts';
-import React, { useState } from 'react.ts';
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageSquare,
   Building,
   Globe
  } from 'lucide-react';
 interface ContactFormData {
-<<<<<<< HEAD
-=======
 
 
 
@@ -51,18 +18,11 @@ interface ContactFormData {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-<<<<<<< HEAD
-  message: string}
-interface ContactFormErrors {
-  [key: string]: string}
-export function EnhancedContact(...args[]):  {
-=======
 message: string;
 
 
@@ -112,7 +72,6 @@ interface ContactFormErrors {
 }
 
 export function EnhancedContact(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -147,58 +106,7 @@ export function EnhancedContact(...args[]: any):  {
 ;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof ContactFormData, value: string)               => {
-    setFormData((prev: anyanyanyanyanyanyanyanyanyanyanyanyanyanyContactFormData)               => ({ ...prev, [field]: value }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors((prev: anyanyanyanyanyanyanyanyanyanyanyanyanyanyContactFormErrors)               => ({ ...prev, [field]: '' }));
-    }
-=======
-<<<<<<< HEAD
-  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof ContactFormData, value: string)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setFormData(prev => ({ ...prev, [field]: value }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev = > ({ ...prev, [field]: '' }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  };
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return}
-
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        comp: '',
-        service: 'general',
-        message: ''
-<<<<<<< HEAD
-      });
-    } catch (error) {
-<<<<<<< HEAD
-      console.error('Error submitting form:', error);
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
@@ -526,22 +434,8 @@ export function EnhancedContact(...args[]: any):  {
                     Comp </label>
                   <input
                     type="text"
-<<<<<<< HEAD
-                    id="company"
-                    value={formData.company}
-=======
-<<<<<<< HEAD
                     id="comp"
                     value={formData.comp}
-                    onChange = {
-  (e) => handleInputChange('comp',
-  e.target.value)
-
-}
-=======
-                    id="comp"
-                    value={formData.comp}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     onChange = {
   (e) => handleInputChange('comp',
   e.target.value)
@@ -563,12 +457,7 @@ export function EnhancedContact(...args[]: any):  {
   (e) => handleInputChange('service',
   e.target.value)
 }
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
-=======
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 >
                   {services.map(service                => (
                     <option key={service.value} value={service.value}>

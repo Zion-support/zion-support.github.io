@@ -16,18 +16,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
       price: '$199/mo',
       details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$599/mo',
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,499/mo',
-      details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$599/mo', 
@@ -38,7 +26,6 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
       price: '$1,499/mo', ;
       details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

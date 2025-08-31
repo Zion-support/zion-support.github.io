@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Link              } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-import {
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Rocket,
-  Lock,
-  Globe,
-  Heart,
-  Code,
-  Users,
-  BarChart3,
-  MessageCircle,
-<<<<<<< HEAD
-  Zap,
-=======
   Package,
   Truck,
   Warehouse,
@@ -266,7 +241,6 @@ import { Search,
   Clock,
   Users,
   Target,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   ArrowRight,
   Atom,
@@ -284,41 +258,6 @@ import { Search,
   Clock,
   Phone,
   Mail,
-<<<<<<< HEAD
-  MapPin,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Lightbulb,
-  Workflow,
-  Bot,
-  Sparkles,
-  Palette,
-  FileText,
-  Video,
-  TestTube,
-  GraduationCap,
-  ShoppingCart,
-  HelpCircle,
-  Activity,
-  Link as LinkIcon,
-  Layers,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon
-} from 'lucide-react';
-
-export default function InnovativeServicesShowcase2028() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-=======
   ExternalLink
              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
@@ -329,7 +268,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Enhanced service categories with real market prices and features
   const serviceCategories = [
@@ -554,40 +492,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const filteredServices = serviceCategories.flatMap(category => 
-    category.services.filter(service => 
-      (activeCategory === 'all' || service.category === activeCategory) &&
-      (searchQuery === '' || 
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()))
-    )
-  );
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-=======
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
   const innovationLevels = ['All', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
 
@@ -638,7 +542,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
       default:
         return <Rocket className="w-6 h-6" />;
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
@@ -651,7 +554,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default:
         return 'bg-gradient-to-r from-gray-600 to-slate-600';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   };
 
@@ -716,74 +618,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
             </div>
 
-<<<<<<< HEAD
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveCategory('all')}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  activeCategory === 'all'
-                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                }`}
-              >
-                All Services
-              </button>
-              {serviceCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-=======
-<<<<<<< HEAD
-      {/* Service Categories Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Service Categories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our diverse range of AI-powered solutions across multiple domains and industries.
-            </p>
-          </motion.div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-300 cursor-pointer group"
-
-                <div className="flex items-center justify-between mb-4">
-                  {category.icon}
-                  <span className="text-sm text-gray-400 bg-slate-700/50 px-2 py-1 rounded-full">
-                    {category.count} services
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                  {category.name}
-                </h3>
-                <p className="text-gray-300">{category.description}</p>
-              </motion.div>
-            ))}
-=======
             {/* Category Filter */}
             <div className="relative">
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -815,8 +649,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
                 ))}
               </select>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -825,15 +657,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {filteredServices.map((service, index) => (
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -849,7 +672,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
 
           <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {featuredServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -928,9 +750,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
                 </div>
               </motion.div>
             ))}
-<<<<<<< HEAD
-          </motion.div>
-=======
           </div>
 =======
       {/* Services Grid */}
@@ -1049,8 +868,6 @@ export default function InnovativeServicesShowcase2028(...args: any[]): any {
               </div>
             </motion.div>
           ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 

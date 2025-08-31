@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  BookOpen,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
@@ -45,18 +31,9 @@ import { Brain,
   Library,
   Briefcase,
   Award
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AILegalResearchPlatform(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AILegalResearchPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AILegalResearchPlatform(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",
@@ -211,14 +188,9 @@ export default function AILegalResearchPlatform(...args[]: any):  {
               Everything you need to research, analyze, and win cases with AI-powered insights
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -264,14 +236,9 @@ export default function AILegalResearchPlatform(...args[]: any):  {
               See measurable improvements in your research efficiency and case outcomes
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -317,14 +284,9 @@ export default function AILegalResearchPlatform(...args[]: any):  {
               Proven solutions across diverse legal practices and organizations
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -370,14 +332,9 @@ export default function AILegalResearchPlatform(...args[]: any):  {
               Choose the plan that fits your practice and scale as you grow
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

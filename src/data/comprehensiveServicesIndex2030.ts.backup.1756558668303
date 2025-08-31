@@ -46,17 +46,6 @@ export const SERVICE_STATISTICS_2030 = {
   totalServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
-<<<<<<< HEAD
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)          => sum + service.price, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
-  ),
-  averageRating: anyanyanyanyanyanyanyanyanyMath.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)          => sum + service.rating, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
-  ) / 10,
-  featuredServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service          => service.featured).length,
-  aiServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service          =>
-=======
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
@@ -66,15 +55,8 @@ export const SERVICE_STATISTICS_2030 = {
   ) / 10,
   featuredServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service           => service.featured).length,
   aiServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service           => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category.includes('AI') || service.aiScore > 90
-<<<<<<< HEAD
-  ).length,
-<<<<<<< HEAD
-  emergingTechServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service          =>
-=======
   emergingTechServices: anyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_INDEX_2030.filter(service           => 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     service.category === 'Emerging Technology'
   ).length
 =======
@@ -89,7 +71,6 @@ export const SERVICE_STATISTICS_2030 = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };
@@ -102,40 +83,14 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
   const roi = service.roi;
   if (typeof roi = == 'string') {;
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-    return roiNumber > 500;
-
-  return false;
-});
-=======
     return roiNumber > 500}
   return false});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Quick Setup Services (< 8 weeks)
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const setupTime = service.setupTime;
   if (typeof setupTime = == 'string') {;
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-    return weeks < 8;
-
-  return false;
-});
-
-// Export individual service arrays for specific use cases
-export {
-  REVOLUTIONARY_SERVICES_2030,
-  ADVANCED_AI_SERVICES_2030,
-  CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  EMERGING_TECHNOLOGY_SERVICES_2030,
-  SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  innovativeMicroSaasServices2030,
-  comprehensiveITServices2030,
-  comprehensiveAIServices2030
-};}}
-=======
     return weeks < 8}
   return false});
 
@@ -143,4 +98,3 @@ export {
 export {
   REVOLUTIONARY_SERVICES_2030
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

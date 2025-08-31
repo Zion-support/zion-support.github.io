@@ -38,23 +38,7 @@ contactInfo: {;
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  
-
-
-
-
-
-
-
-
-
-
-};
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -332,13 +316,8 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Stress reduction",
       "Crisis intervention"
     ],
-<<<<<<< HEAD
-    technologies: ["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
-
-=======
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default specializedHealthcareAIServices2025;}}

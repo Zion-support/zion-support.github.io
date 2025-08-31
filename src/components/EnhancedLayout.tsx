@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-import { ReactNode } from 'react';
-import { FuturisticNavigation } from "./FuturisticNavigation";
-import { FuturisticFooter } from "./FuturisticFooter";
-import { EnhancedSidebar } from "./EnhancedSidebar";
-import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { ReactNode                } from 'react.ts';
-import { FuturisticNavigation                } from './FuturisticNavigation';
-import { FuturisticFooter                } from './FuturisticFooter';
-import { EnhancedSidebar                } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground                } from './FuturisticAnimatedBackground';
-
-interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
-=======
 import React from 'react.ts';
 import { ReactNode               } from 'react.ts';
 import { FuturisticNavigation               } from './FuturisticNavigation';
 import { FuturisticFooter               } from './FuturisticFooter';
 import { EnhancedSidebar               } from './EnhancedSidebar';
 import { FuturisticAnimatedBackground               } from './FuturisticAnimatedBackground';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   children: ReactNode;
   showSidebar?: boolean}
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({

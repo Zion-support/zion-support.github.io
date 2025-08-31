@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
-interface UseAccessibilityOptions {
-=======
 import { useEffect, useRef, useCallback, useMemo               } from 'react.ts';
 
 interface UseAccessibilityOptions {
@@ -19,22 +15,11 @@ interface UseAccessibilityOptions {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
-<<<<<<< HEAD
-  enableLargeText?: boolean}
-interface AccessibilityFeatures {
-  isHighContrast: boolean;
-  isReducedMotion: boolean;
-  isLargeText: boolean;
-=======
-<<<<<<< HEAD
-  enableLargeText?: boolean;
-=======
 enableLargeText?: boolean;
 
 
@@ -49,7 +34,6 @@ enableLargeText?: boolean;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityFeatures {
 
@@ -69,32 +53,6 @@ interface AccessibilityFeatures {
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
-<<<<<<< HEAD
-  isScreenReader: boolean;
-
-export const useAccessibility = (options: UseAccessibilityOptions = { /* empty */;
-
-
-
-
-
-
-
-
-
-
-
-
-}) => {
-  const {
-    enableKeyboardNavigation = true,
-    enableFocusManagement = true,
-    enableScreenReaderSupport = true,
-    enableHighContrast = true,
-    enableReducedMotion = true,
-    enableLargeText = true
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   isScreenReader: boolean}
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const {;
@@ -136,30 +94,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       isScreenReader: false // Would need to detect screen reader usage
     }}, []);
   // Keyboard navigation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const handleKeyboardNavigation = useCallback((event: anyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (!enableKeyboardNavigation) return;
-
-    const { key, target, shiftKey } = event;
-    const currentElement = target as HTMLElement;
-
-    switch (key) {
-      case 'Tab':
-        // Handle tab navigation
-        if (shiftKey) {
-          // Shift + Tab: navigate backwards
-          event.preventDefault();
-          navigateFocus('backward', currentElement)} else {
-          // Tab: navigate forwards
-          event.preventDefault();
-<<<<<<< HEAD
-          navigateFocus('forward', currentElement);
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           navigateFocus('forward', currentElement)}
         break;
       case 'Escape':
@@ -185,21 +119,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         break}
   }, [enableKeyboardNavigation]);
   // Focus management
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const manageFocus = useCallback((element: anyanyanyanyanyanyanyanyanyanyanyanyanyHTMLElement)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (!enableFocusManagement) return;
-
-    // Store last focused element
-    if (document.activeElement instanceof HTMLElement) {
-<<<<<<< HEAD
-      lastFocusedElementRef.current = document.activeElement;
-
-    // Focus the new element
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       lastFocusedElementRef.current = document.activeElement}
 ;
     // Focus the new element;
@@ -210,21 +129,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     setTimeout(() => {
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
   // Focus trap for modals
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const createFocusTrap = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyanyanyHTMLElement)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (!enableFocusManagement) return;
-
-    focusTrapRef.current = container;
-    const focusableElements = getFocusableElements(container);
-
-    if (focusableElements.length > 0) {
-<<<<<<< HEAD
-      focusableElements[0].focus();
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       focusableElements[0].focus()}
     // Store focusable elements
     focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
@@ -248,25 +152,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     ].join(', ');
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
   // Navigate focus
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const navigateFocus = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyanyany'forward' | 'backward', currentElement: HTMLElement)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const container = focusTrapRef.current || document.body;
-    const focusableElements = getFocusableElements(container);
-
-    if (focusableElements.length === 0) return;
-
-    const currentIndex = focusableElements.indexOf(currentElement);
-    let nextIndex: number;
-
-<<<<<<< HEAD
-    if (direction = == 'forward') {
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1};
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'forward') {;
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
     } else {
@@ -274,27 +159,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     }
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
   // Vertical navigation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const navigateVertical = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyanyany'up' | 'down', currentElement: HTMLElement)              => {;
-    // Implementation for vertical navigation (e.g., in dropdowns, lists);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const container = currentElement.closest('[role="listbox"], [role="menu"], .dropdown, .list');
-    if (!container) return;
-
-    const items = Array.from(container.querySelectorAll('[role="option"], [role="menuitem"], .item, li'));
-    const currentIndex = items.indexOf(currentElement);
-
-    if (currentIndex === -1) return;
-
-    let nextIndex: number;
-<<<<<<< HEAD
-    if (direction = == 'up') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0};
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'up') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {
@@ -305,27 +169,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       manageFocus(nextElement)}
   }, [manageFocus]);
   // Horizontal navigation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const navigateHorizontal = useCallback((direction: anyanyanyanyanyanyanyanyanyanyanyanyany'left' | 'right', currentElement: HTMLElement)              => {;
-    // Implementation for horizontal navigation (e.g., in tabs, carousels);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const container = currentElement.closest('[role="tablist"], .tabs, .carousel');
-    if (!container) return;
-
-    const items = Array.from(container.querySelectorAll('[role="tab"], .tab, .slide'));
-    const currentIndex = items.indexOf(currentElement);
-
-    if (currentIndex === -1) return;
-
-    let nextIndex: number;
-<<<<<<< HEAD
-    if (direction = == 'left') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0};
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'left') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {
