@@ -58,6 +58,7 @@ const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
+const InnovativeServicesShowcase2030 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2030'));
 
 // New pages we created
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
@@ -65,6 +66,7 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const InnovationServicesMarketing = createLazyComponent(() => import('./pages/InnovationServicesMarketing'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -149,6 +151,7 @@ function App() {
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<InnovativeAIServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2030" element={<InnovativeServicesShowcase2030 />} />
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
@@ -156,6 +159,7 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/innovation-services-marketing" element={<InnovationServicesMarketing />} />
 
                     {/* 404 Page */}
                     <Route
