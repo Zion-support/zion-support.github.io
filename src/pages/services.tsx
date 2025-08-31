@@ -35,7 +35,8 @@ import { Brain,
   MessageSquare,
   FileText,
   Search,
-  Clock
+  Clock,
+  Atom
              } from 'lucide-react.ts';
 
 type Service = {
@@ -159,6 +160,17 @@ const Services: React.FC = (): JSX.Element => {
       color: "from-red-500 to-orange-500",
       featured: true,
       href: "/services/ai-cybersecurity-elite"
+    },
+    {
+      category: 'security',
+      icon: Shield,
+      title: "Advanced Cybersecurity Suite",
+      description: "Comprehensive cybersecurity protection with zero-trust architecture and AI-powered threat detection.",
+      features: ["Zero-Trust Security", "Advanced Threat Detection", "Compliance Ready", "24/7 Monitoring"],
+      pricing: "$2,999 - $19,999/month",
+      color: "from-red-500 to-orange-500",
+      featured: false,
+      href: "/it-services/advanced-cybersecurity-suite"
     },
     {
       category: 'quantum',
@@ -343,7 +355,7 @@ const Services: React.FC = (): JSX.Element => {
       ],
       pricing: "$299 - $1,999/month",
       cta: "Learn More",
-      ctaLink: "/services/ai-autonomous-research-assistant",
+      ctaLink: "/ai-services/ai-autonomous-research-assistant",
       icon: Brain,
       color: "from-blue-500 to-purple-500"
     },
@@ -358,7 +370,7 @@ const Services: React.FC = (): JSX.Element => {
       ],
       pricing: "$499 - $2,999/month",
       cta: "Learn More",
-      ctaLink: "/services/ai-supply-chain-optimization",
+      ctaLink: "/ai-services/ai-supply-chain-optimization",
       icon: Network,
       color: "from-green-500 to-blue-500"
     },
@@ -373,7 +385,7 @@ const Services: React.FC = (): JSX.Element => {
       ],
       pricing: "$199 - $1,499/month",
       cta: "Learn More",
-      ctaLink: "/services/ai-content-marketing-suite",
+      ctaLink: "/micro-saas/ai-content-marketing-suite",
       icon: FileText,
       color: "from-purple-500 to-pink-500"
     },
@@ -388,7 +400,7 @@ const Services: React.FC = (): JSX.Element => {
       ],
       pricing: "$399 - $1,999/month",
       cta: "Learn More",
-      ctaLink: "/services/ai-workflow-orchestrator",
+      ctaLink: "/micro-saas/ai-workflow-orchestrator",
       icon: GitFork,
       color: "from-indigo-500 to-purple-500"
     },
@@ -474,6 +486,32 @@ const Services: React.FC = (): JSX.Element => {
                     </a>
                   )}
                 </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <h2 className="text-2xl font-semibold text-teal-300 mb-6">Innovative AI Services</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {innovativeAIServices.map((s) => (
+              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-teal-400/40 transition-colors">
+                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
+                <p className="text-slate-300 mb-4">{s.description}</p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-teal-300 font-semibold">{s.pricing}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {s.features.slice(0, 4).map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-teal-400" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <a href={s.ctaLink} className="text-teal-400 hover:text-teal-300 underline font-medium">
+                  {s.cta}
+                </a>
               </div>
             ))}
           </div>
