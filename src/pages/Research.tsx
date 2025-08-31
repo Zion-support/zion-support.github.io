@@ -165,6 +165,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
+        }
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -195,48 +196,63 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-        };
-      ],;
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
-      featured: true,;
-      progress: 55,;
-      impact: 'high';
-    };
+        }
+      ],
+      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
+      featured: true,
+      progress: 55,
+      impact: 'high'
+    }
   ];
   // Update counts
-  categories.forEach(cat = > {;
+  categories.forEach(cat => {
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
-  statuses.forEach(status = > {;
+  statuses.forEach(status => {
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
-  types.forEach(type = > {;
+  types.forEach(type => {
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredProjects = researchProjects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
-      default: return 'text-zion-slate-light'}
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'ai-ml': return 'text-blue-400';
+      case 'security': return 'text-red-400';
+      case 'emerging': return 'text-green-400';
+      case 'healthcare': return 'text-purple-400';
+      default: return 'text-zion-slate-light';
+    }
   };
-      default: return 'text-zion-slate-light'}
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'text-green-400';
+      case 'completed': return 'text-blue-400';
+      case 'planned': return 'text-yellow-400';
+      case 'on-hold': return 'text-orange-400';
+      default: return 'text-zion-slate-light';
+    }
   };
-  const formatDate = (dateString: string) => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'short';
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short'
     });
   };
-  const formatFunding = (amount: number) => {;
-    if (amount >= 1000000) {;
+  const formatFunding = (amount: number) => {
+    if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
+    }
     return `$${amount.toLocaleString()}`;
   };
   return (
