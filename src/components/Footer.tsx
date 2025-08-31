@@ -31,28 +31,28 @@ const Footer = () => {
       links: [
         { name: 'AI Solutions', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops-automation' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
         { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions' },
-        { name: 'Healthcare Tech', href: '/solutions' },
-        { name: 'Financial Solutions', href: '/solutions' },
-        { name: 'Manufacturing', href: '/solutions' },
-        { name: 'Government', href: '/solutions' },
-        { name: 'Retail Solutions', href: '/solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail Solutions', href: '/solutions/retail' }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
@@ -64,27 +64,27 @@ const Footer = () => {
       links: [
         { name: 'Documentation', href: '/docs' },
         { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
+        { name: 'Support Center', href: '/help' },
         { name: 'Training', href: '/training' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Research', href: '/research' }
+        { name: 'Research', href: '/research-development' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
     },
     {
       icon: Mail,
@@ -93,8 +93,8 @@ const Footer = () => {
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
-      href: '#'
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       icon: Clock,

@@ -55,6 +55,17 @@ const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
 
+// Missing Service Pages
+const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
+const CloudDevOpsAutomation = createLazyComponent(() => import('./pages/services/cloud-devops-automation'));
+const ITInfrastructure = createLazyComponent(() => import('./pages/services/it-infrastructure'));
+const CybersecuritySolutions = createLazyComponent(() => import('./pages/services/cybersecurity-solutions'));
+const NetworkInfrastructure = createLazyComponent(() => import('./pages/services/network-infrastructure'));
+const ITOnsiteServices = createLazyComponent(() => import('./pages/services/it-onsite-services'));
+
+// Get Started Page
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
@@ -145,6 +156,17 @@ function App() {
                     <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+
+                    {/* Missing Service Pages */}
+                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                    <Route path="/services/cloud-devops-automation" element={<CloudDevOpsAutomation />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/cybersecurity-solutions" element={<CybersecuritySolutions />} />
+                    <Route path="/services/network-infrastructure" element={<NetworkInfrastructure />} />
+                    <Route path="/services/it-onsite-services" element={<ITOnsiteServices />} />
+
+                    {/* Get Started Page */}
+                    <Route path="/get-started" element={<GetStarted />} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />

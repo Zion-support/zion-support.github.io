@@ -200,11 +200,11 @@ export function Header({ className }: HeaderProps) {
                 <span className="hidden xl:inline">+1 (302) 464-0950</span>
               </a>
               <a 
-                href="mailto:kleber@ziontechgroup.com" 
+                href="mailto:info@ziontechgroup.com" 
                 className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span className="hidden xl:inline">kleber@ziontechgroup.com</span>
+                <span className="hidden xl:inline">info@ziontechgroup.com</span>
               </a>
             </div>
           </div>
@@ -267,11 +267,11 @@ export function Header({ className }: HeaderProps) {
                     <span>+1 (302) 464-0950</span>
                   </a>
                   <a 
-                    href="mailto:kleber@ziontechgroup.com" 
+                    href="mailto:info@ziontechgroup.com" 
                     className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <Mail className="w-5 h-5" />
-                    <span>kleber@ziontechgroup.com</span>
+                    <span>info@ziontechgroup.com</span>
                   </a>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="w-5 h-5" />
