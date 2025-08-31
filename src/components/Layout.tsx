@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import { ReactNode } from 'react';
-interface LayoutProps {
+import React, { useState } from 'react.ts';
+import { ReactNode               } from 'react.ts';
+interface LayoutProps extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
+<<<<<<< HEAD
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
+=======
+
+const navigation: NavItem[] = [;
+{ label: 'Home', href: '/';
+},
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
     label: 'Services',
     href: '/services',
@@ -24,12 +32,22 @@ const navigation: NavItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout(...args[]):  {
+export default function Layout(...args[]: any):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
+<<<<<<< HEAD
   const isActive = (href: string) => location.pathname === href;
   const toggleSidebarDropdown = (label: string) => {;
+=======
+<<<<<<< HEAD
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === href;
+  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
+=======
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
+  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
   return (

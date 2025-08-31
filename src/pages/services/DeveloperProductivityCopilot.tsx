@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail } from 'lucide-react';
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail              } from 'lucide-react.ts';
 
-const DeveloperProductivityCopilot: React.FC = () => {
+const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO title="Developer Productivity Copilot - Zion Tech Group" description="AI PR reviews, test generation, flaky test triage, and CI insights." />
@@ -12,7 +12,7 @@ const DeveloperProductivityCopilot: React.FC = () => {
           Speed up code reviews, raise test quality, and reduce cycle time with AI assistance across your toolchain.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
           {[
             'Static diffs + architectural risk scoring',
             'PR review suggestions and security hints',
@@ -20,7 +20,7 @@ const DeveloperProductivityCopilot: React.FC = () => {
             'Flaky test clustering and ownership',
             'CI insights: bottlenecks and failures',
             'Jira/GitHub/GitLab/Bitbucket integrations',
-          ].map((b) => (
+          ].map((b)              => (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>

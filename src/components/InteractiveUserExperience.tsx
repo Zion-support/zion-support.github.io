@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -6,10 +7,45 @@ import { Progress } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import {
   User,
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { Card, CardContent, CardHeader, CardTitle                } from './ui/card';
+import { Button                } from './ui/button';
+import { Badge                } from './ui/badge';
+import { Progress                } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger                } from './ui/tabs';
+import { User, 
+=======
+import React, { useState, useEffect, useCallback               } from 'react.ts';
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
+import { Button               } from './ui/button';
+import { Badge               } from './ui/badge';
+import { Progress               } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger               } from './ui/tabs';
+import { User,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Settings,
   Palette,
   Eye,
   MousePointer,
+<<<<<<< HEAD
+=======
+=======
+import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
+import { Button               } from './ui/button';
+import { Badge               } from './ui/badge';
+import { Progress               } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger               } from './ui/tabs';
+import { User, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  Settings, 
+  Palette, 
+  Eye, 
+  MousePointer, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Smartphone,
   Monitor,
   Zap,
@@ -18,12 +54,37 @@ import {
   MessageCircle,
   TrendingUp,
   Accessibility,
+<<<<<<< HEAD
   Languages,
   ShoppingCart,
   Activity
 } from 'lucide-react';
+=======
+  Languages
+<<<<<<< HEAD
+=======
+               } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface UserPreference {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   value: string | boolean | number;
@@ -31,23 +92,98 @@ interface UserPreference {
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
+<<<<<<< HEAD
 }
 
 interface UserActivity {
+=======
+=======
+description: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface UserActivity {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
+<<<<<<< HEAD
 }
 
 interface AccessibilityFeature {
+=======
+=======
+category: 'navigation' | 'interaction' | 'search' | 'purchase';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface AccessibilityFeature {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
+<<<<<<< HEAD
 }
 
 const InteractiveUserExperience: React.FC = () => {
@@ -56,12 +192,47 @@ const InteractiveUserExperience: React.FC = () => {
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<AccessibilityFeature[]>([]);
   const [activeTab, setActiveTab] = useState('preferences');
   const [isLoading, setIsLoading] = useState(true);
+=======
+=======
+impact: 'high' | 'medium' | 'low';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+const InteractiveUserExperience: React.FC = (): JSX.Element => {;
+  const [preferences, setPreferences] = useState<any>([]);
+  const [userActivities, setUserActivities] = useState<any>([]);
+  const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
+=======
+const InteractiveUserExperience: React.FC = (): JSX.Element => {;
+  const [preferences, setPreferences] = useState<any>([]);
+  const [userActivities, setUserActivities] = useState<any>([]);
+  const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const [currentTheme, setCurrentTheme] = useState('light');
+  const [fontSize, setFontSize] = useState(16);
+  const [contrast, setContrast] = useState('normal');
+  const [language, setLanguage] = useState('en');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Initialize sample data
   useEffect(() => {
     const samplePreferences: UserPreference[] = [
       {
-        id: '1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'Theme',
         value: 'dark',
         type: 'select',
@@ -124,9 +295,15 @@ const InteractiveUserExperience: React.FC = () => {
       }
     ];
 
+<<<<<<< HEAD
     const sampleAccessibility: AccessibilityFeature[] = [
+=======
+  // Initialize accessibility features
+  useEffect(()                => {
+    const features: AccessibilityFeature[] = [
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {
-        id: '1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'Screen Reader Support',
         enabled: true,
         description: 'Full compatibility with screen readers',
@@ -155,6 +332,7 @@ const InteractiveUserExperience: React.FC = () => {
       }
     ];
 
+<<<<<<< HEAD
     setPreferences(samplePreferences);
     setUserActivities(sampleActivities);
     setAccessibilityFeatures(sampleAccessibility);
@@ -168,6 +346,120 @@ const InteractiveUserExperience: React.FC = () => {
       )
     );
   }, []);
+=======
+    setAccessibilityFeatures(features)}, []);
+
+  // Simulate user activities
+  useEffect(()                => {
+    const activities: UserActivity[] = [
+      {
+        id: '1',
+        action: 'Visited Services Page',
+        timestamp: new Date(Date.now() - 300000),
+        duration: 45,
+        success: true,
+        category: 'navigation'
+      },
+      {
+        id: '2',
+        action: 'Searched for AI Services',
+        timestamp: new Date(Date.now() - 600000),
+        duration: 12,
+        success: true,
+        category: 'search'
+      },
+      {
+        id: '3',
+        action: 'Contacted Support',
+        timestamp: new Date(Date.now() - 900000),
+        duration: 180,
+        success: true,
+        category: 'interaction'
+      },
+      {
+        id: '4',
+        action: 'Downloaded Whitepaper',
+        timestamp: new Date(Date.now() - 1200000),
+        duration: 8,
+        success: true,
+        category: 'interaction'
+
+    ];
+
+    setUserActivities(activities)}, []);
+
+<<<<<<< HEAD
+  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)               => {
+    setPreferences(prev => prev.map(pref =>
+      pref.id === id ? { ...pref, value } : pref
+=======
+<<<<<<< HEAD
+  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)               => {;
+    setPreferences(prev => prev.map(pref => ;
+      pref.id === id ? { ...pref, value } : pref;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    ));
+
+    // Apply preference changes
+    const preference = preferences.find(p => p.id === id);
+    if (preference) {
+      switch (preference.name) {
+        case 'Theme':
+          setCurrentTheme(value as string);
+          document.documentElement.setAttribute('data-theme', value as string);
+          break;
+        case 'Font Size':
+          setFontSize(value as number);
+          document.documentElement.style.fontSize = `${value}px`;
+          break;
+        case 'High Contrast':
+          setContrast(value as boolean ? 'high' : 'normal');
+          document.documentElement.setAttribute('data-contrast', value as boolean ? 'high' : 'normal');
+          break;
+        case 'Language':
+          setLanguage(value as string);
+          // Here you would typically change the app language
+<<<<<<< HEAD
+          break;
+
+
+  }, [preferences]);
+
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setAccessibilityFeatures(prev => prev.map(feature =>
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
+=======
+          break}
+    }
+  }, [preferences]);
+
+<<<<<<< HEAD
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+    setAccessibilityFeatures(prev => prev.map(feature => ;
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
+    ))}, []);
+
+  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])                => {
+    switch (category) {;
+=======;
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    setAccessibilityFeatures(prev => prev.map(feature => ;
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    ));
+  }, []);
+
+  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])               => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      case 'navigation': return <MousePointer className="h-4 w-4" />;
+      case 'interaction': return <User className="h-4 w-4" />;
+      case 'search': return <Eye className="h-4 w-4" />;
+      case 'purchase': return <Heart className="h-4 w-4" />;
+<<<<<<< HEAD
+      default: return <User className="h-4 w-4" />;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const toggleAccessibilityFeature = useCallback((id: string) => {
     setAccessibilityFeatures(prev => 
@@ -187,6 +479,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
   const getActivityIcon = (category: string) => {
     switch (category) {
       case 'navigation': return <MousePointer className="w-4 h-4" />;
@@ -199,6 +492,12 @@ const InteractiveUserExperience: React.FC = () => {
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
+=======
+<<<<<<< HEAD
+  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilityFeature['impact'])               => {;
+    switch (impact) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';

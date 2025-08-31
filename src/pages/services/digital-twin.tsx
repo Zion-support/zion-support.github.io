@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link              } from 'react-router-dom.ts';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function DigitalTwin(...args: []):  {
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   return (
     <>
       <Helmet>
@@ -58,7 +75,16 @@ export default function DigitalTwin() {
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               {[
                 {
                   icon: Cpu,
@@ -89,6 +115,13 @@ export default function DigitalTwin() {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((feature, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -102,7 +135,142 @@ export default function DigitalTwin() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Applications Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Digital Twin Applications
+              </h2>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                Discover how digital twin technology can revolutionize different industries and operations.
+              </p>
+            </div>
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+              {[
+                {
+                  title: "Manufacturing",
+                  description: "Monitor production lines, predict maintenance, and optimize manufacturing processes.",
+                  icon: Settings,
+                  benefits: ["Production monitoring", "Predictive maintenance", "Quality control"]
+                },
+                {
+                  title: "Smart Cities",
+                  description: "Manage urban infrastructure, traffic systems, and public services efficiently.",
+                  icon: Globe,
+                  benefits: ["Traffic optimization", "Infrastructure monitoring", "Public services"]
+                },
+                {
+                  title: "Healthcare",
+                  description: "Patient monitoring, medical device management, and treatment optimization.",
+                  icon: Users,
+                  benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
+                },
+                {
+                  title: "Energy & Utilities",
+                  description: "Grid monitoring, renewable energy optimization, and infrastructure management.",
+                  icon: Zap,
+                  benefits: ["Grid monitoring", "Energy optimization", "Infrastructure management"]
+                },
+                {
+                  title: "Transportation",
+                  description: "Fleet management, route optimization, and vehicle performance monitoring.",
+                  icon: Target,
+                  benefits: ["Fleet management", "Route optimization", "Performance monitoring"]
+                },
+                {
+                  title: "Buildings & Facilities",
+                  description: "Building management, energy efficiency, and maintenance optimization.",
+                  icon: Activity,
+                  benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((application, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                }
+              ].map((application, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
+                    <application.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
+                  <p className="text-slate-300 mb-4">{application.description}</p>
+                  <ul className="space-y-1">
+                    {application.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">
+                        <CheckCircle className="w-3 h-3 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Technology Stack Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Technology Stack
+              </h2>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                Built on cutting-edge technologies for maximum performance, scalability, and reliability.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  {[
+                    "Real-time data processing and streaming analytics",
+                    "3D visualization and augmented reality integration",
+                    "Machine learning and AI-powered predictive models",
+                    "IoT sensor integration and edge computing",
+                    "Cloud-native architecture with microservices",
+                    "Advanced security and data privacy controls"
+                  ].map((technology, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-300">{technology}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
+                <div className="space-y-4">
+                  {[
+                    { component: anyanyanyanyanyanyanyanyanyanyanyanyany"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
+                    { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
+                    { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }
+                  ].map((item, index)               => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
+                        <item.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-slate-300">{item.component}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+=======
+
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

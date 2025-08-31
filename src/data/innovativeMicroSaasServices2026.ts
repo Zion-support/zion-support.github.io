@@ -1,7 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface InnovativeMicroSaasService {
+=======
+export interface InnovativeMicroSaasService2026 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
 // Innovative Micro SAAS Services 2026 - Zion Tech Group
 // Revolutionary AI-Powered Business Solutions with Real Market Data
 
 export interface InnovativeMicroSaasService2026 {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
   title: string;
   description: string;
@@ -19,6 +40,11 @@ export interface InnovativeMicroSaasService2026 {
   supportLevel: string;
   marketPrice: string;
   roi: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  implementationTime: string;
+  support: string;
+=======
   innovationLevel: string;
   contactInfo: {
     phone: string;
@@ -46,7 +72,38 @@ export interface InnovativeMicroSaasService2026 {
     testimonials?: string[];
     caseStudies?: string[];
   };
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 }
+=======
+  innovationLevel: string;
+contactInfo: {;
+    phone: string;
+    email: string;
+    website: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Customer Churn Prediction & Prevention Platform

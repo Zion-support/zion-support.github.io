@@ -1,10 +1,58 @@
 import React from 'react.ts';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion.ts';
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;
   gradient: string}
+=======
+import { motion                } from 'framer-motion.ts';
+
+interface HeroFeature {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+icon: React.ComponentType<{ className?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}>;
+  title: string;
+  description: string;
+<<<<<<< HEAD
+  gradient: string;
+
+interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
+
+  features: HeroFeature[];
+=======
+gradient: string;
+}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
   features: HeroFeature[]}
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
@@ -13,8 +61,14 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
       transition={{ duration: 0.8, delay: 0.6 }}
       {features.map((feature, index) => (
+=======
+      transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.6 }}
+
+      {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         <motion.div
           key={feature.title}
           className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"

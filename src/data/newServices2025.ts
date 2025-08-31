@@ -1,4 +1,17 @@
 export interface NewService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -12,31 +25,44 @@ export interface NewService {
   tags: string[];
   marketPrice: string;
 
-export const NEW_SERVICES_2025: NewService[] = [
+export const NEW_SERVICES_2025: NewService[] = [;
   {
-    id: 'rag-docs-chatbot',
-    title: 'RAG Chatbot for Your Docs',
-    description: 'Deploy a secure Retrieval-Augmented Generation chatbot over your knowledge base (PDFs, sites, Confluence).',
-    category: 'AI & Automation',
-    subcategory: 'Chatbots',
-    price: 299,
-    currency: '$',
-    pricingModel: 'monthly',
-    features: [
+id: 'rag-docs-chatbot',;
+title: 'RAG Chatbot for Your Docs',;
+description: 'Deploy a secure Retrieval-Augmented Generation chatbot over your knowledge base (PDFs, sites, Confluence).',;
+category: 'AI & Automation',;
+subcategory: 'Chatbots',;
+price: 299,;
+currency: '$',;
+pricingModel: 'monthly',;
+features: [;
       'Semantic search over docs',
       'Source-cited answers',
       'Admins upload and manage content',
       'Embeddings cache + nightly refresh',
       'Role & permission controls',
     ],
-    benefits: [
+benefits: [;
       'Deflect L1 support by 30–60%',
       'Instant employee answers',
       'Reduce onboarding time',
     ],
-    tags: ['RAG', 'Chatbot', 'Docs', 'Embeddings'],
-    marketPrice: '$299–$999/mo + setup $2k–$10k',
-  },
+tags: ['RAG', 'Chatbot', 'Docs', 'Embeddings'],;
+marketPrice: '$299–$999/mo + setup $2k–$10k',;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+},
   {
     id: 'ai-lead-scoring',
     title: 'AI Lead Scoring for CRM',

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -25,6 +26,44 @@ import {
   RefreshCw,
   Info
 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info interface PerformanceMetrics {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+import React, { useEffect, useState, useCallback, useMemo  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'react.ts';
+import { motion, AnimatePresence                } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info                } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface PerformanceMetrics {
   fcp: number;
@@ -41,6 +80,7 @@ interface PerformanceMetrics {
   cacheHitRatio: number;
 }
 
+<<<<<<< HEAD
 interface PerformanceScore {
   overall: number;
   fcp: number;
@@ -51,6 +91,100 @@ interface PerformanceScore {
 }
 
 export function AdvancedPerformanceMonitor() {
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  fps: number;
+  memory: number;
+  loadTime: number;
+  networkLatency: number;
+  cpuUsage: number;
+<<<<<<< HEAD
+  timestamp: number;
+=======
+timestamp: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface PerformanceAlert {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: string;
+  type: 'warning' | 'error' | 'info' | 'success';
+  message: string;
+  metric: string;
+  value: number;
+<<<<<<< HEAD
+  timestamp: number;
+=======
+timestamp: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
+  const [metrics, setMetrics] = useState<any>({;
+    fps: 0,;
+    memory: 0,;
+    loadTime: 0,;
+    networkLatency: 0,;
+    cpuUsage: 0,;
+    timestamp: Date.now();
+  });
+
+  const [alerts, setAlerts] = useState<any>([]);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [score, setScore] = useState<PerformanceScore | null>(null);
@@ -193,6 +327,7 @@ export function AdvancedPerformanceMonitor() {
     });
   }, []);
 
+<<<<<<< HEAD
   // Start monitoring
   const startMonitoring = useCallback(async () => {
     setIsMonitoring(true);
@@ -233,6 +368,141 @@ export function AdvancedPerformanceMonitor() {
   }, [collectMetrics, calculateScore, generateRecommendations]);
 
   // Auto-refresh metrics
+=======
+  // Network latency monitoring
+  const measureNetworkLatency = useCallback(async () => {;
+    try {;
+      const start = performance.now();
+      await fetch('/api/health', { method: 'HEAD' });
+      const end = performance.now();
+      const latency = end - start;
+<<<<<<< HEAD
+      setMetrics(prev => ({ ...prev, networkLatency: anyanyanyanyanyanyanyanyanyanyanyanyanyanylatency }));
+    } catch (error) {
+      // If health check fails, use a default value
+      setMetrics(prev               => ({ ...prev, networkLatency: 0 }));
+
+=======
+      setMetrics(prev = > ({ ...prev, networkLatency: anyanyanyanyanyanyanyanyanyanyanyanyanyanylatency }))} catch (error) {
+      // If health check fails, use a default value;
+      setMetrics(prev                => ({ ...prev, networkLatency: 0 }))};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }, []);
+
+  // CPU usage estimation
+  const estimateCPUUsage = useCallback(() => {;
+    let lastTime = performance.now();
+    let frameCount = 0;
+<<<<<<< HEAD
+
+    const measureFrame = () => {
+=======
+    
+    const measureFrame = () => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      frameCount++;
+      const currentTime = performance.now();
+
+      if (currentTime - lastTime >= 1000) {
+        const cpuUsage = Math.min(100, (frameCount / 60) * 100);
+        setMetrics(prev => ({ ...prev, cpuUsage }));
+        frameCount = 0;
+<<<<<<< HEAD
+        lastTime = currentTime;
+
+      requestAnimationFrame(measureFrame);
+    };
+
+    requestAnimationFrame(measureFrame);
+  }, []);
+=======
+        lastTime = currentTime};
+      ;
+      requestAnimationFrame(measureFrame)};
+    
+    requestAnimationFrame(measureFrame)}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  // Performance alerts
+<<<<<<< HEAD
+  const checkPerformanceAlerts = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const newAlerts: PerformanceAlert[] = [];
+
+    if (metrics.fps < 30) {
+      newAlerts.push({
+        id: `fps-${Date.now()}`,
+        type: 'error',
+        message: `Low FPS detected: ${metrics.fps}`,
+        metric: 'fps',
+        value: metrics.fps,
+        timestamp: Date.now()
+      })} else if (metrics.fps < 50) {
+      newAlerts.push({
+        id: `fps-${Date.now()}`,
+        type: 'warning',
+        message: `FPS below optimal: ${metrics.fps}`,
+        metric: 'fps',
+        value: metrics.fps,
+        timestamp: Date.now()
+<<<<<<< HEAD
+      });
+=======
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.memory > 100) {
+      newAlerts.push({
+        id: `memory-${Date.now()}`,
+        type: 'warning',
+        message: `High memory usage: ${metrics.memory.toFixed(1)}MB`,
+        metric: 'memory',
+        value: metrics.memory,
+        timestamp: Date.now()
+<<<<<<< HEAD
+      });
+=======
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.loadTime > 3000) {
+      newAlerts.push({
+        id: `load-${Date.now()}`,
+        type: 'warning',
+        message: `Slow load time: ${metrics.loadTime.toFixed(0)}ms`,
+        metric: 'loadTime',
+        value: metrics.loadTime,
+        timestamp: Date.now()
+<<<<<<< HEAD
+      });
+=======
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.networkLatency > 1000) {
+      newAlerts.push({
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany`network-${Date.now()}`,
+        type: 'warning',
+        message: `High network latency: ${metrics.networkLatency.toFixed(0)}ms`,
+        metric: 'networkLatency',
+        value: metrics.networkLatency,
+        timestamp: Date.now()
+<<<<<<< HEAD
+      });
+
+    if (newAlerts.length > 0) {
+      setAlerts(prev               => [...prev, ...newAlerts]);
+
+=======
+      })}
+
+    if (newAlerts.length > 0) {
+      setAlerts(prev = > [...prev, ...newAlerts])};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }, []);
+
+  // Auto-hide alerts after 5 seconds
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (isVisible) {
       startMonitoring();
@@ -252,12 +522,98 @@ export function AdvancedPerformanceMonitor() {
     return 'text-red-500';
   };
 
+<<<<<<< HEAD
   // Get score icon
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (score >= 50) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
     return <X className="w-5 h-5 text-red-500" />;
   };
+=======
+  // Initialize monitoring
+  useEffect(() => {
+    measureFPS();
+    measureMemory();
+    measureLoadTime();
+    measureNetworkLatency();
+    estimateCPUUsage();
+
+    const interval = setInterval(() => {;
+      measureMemory();
+      measureLoadTime();
+      measureNetworkLatency();
+      checkPerformanceAlerts(metrics)}, 2000);
+
+    return () => clearInterval(interval)}, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
+
+<<<<<<< HEAD
+  const getPerformanceScore = useMemo(() => {
+    const score = 100;
+
+=======
+  const getPerformanceScore = useMemo(() => {;
+    let score = 100;
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    if (metrics.fps < 30) score -= 30;
+    else if (metrics.fps < 50) score -= 15;
+
+    if (metrics.memory > 100) score -= 20;
+    else if (metrics.memory > 50) score -= 10;
+
+    if (metrics.loadTime > 3000) score -= 20;
+    else if (metrics.loadTime > 1000) score -= 10;
+
+    if (metrics.networkLatency > 1000) score -= 15;
+    else if (metrics.networkLatency > 500) score -= 5;
+<<<<<<< HEAD
+
+    return Math.max(0, score);
+  }, [metrics]);
+=======
+    
+    return Math.max(0, score)}, [metrics]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+  const getScoreColor = (score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    if (score >= 80) return 'text-green-400';
+    if (score >= 60) return 'text-yellow-400';
+    return 'text-red-400'};
+
+<<<<<<< HEAD
+  const getScoreIcon = (score: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    if (score >= 80) return <CheckCircle className="w-4 h-4" />;
+    if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
+    return <XCircle className="w-4 h-4" />};
+
+  if (!isVisible) {
+    return (
+      <motion.button
+        onClick = {() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
+<<<<<<< HEAD
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+
+        <Activity className="w-5 h-5 text-cyan-400" />
+      </motion.button>
+    )};
+=======;
+        whileHover={{ scale: 1.1 }};
+        whileTap={{ scale: 0.9 }};
+      >;
+        <Activity className="w-5 h-5 text-cyan-400" />;
+      </motion.button>;
+    );
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

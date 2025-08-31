@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-08-31T07:30:00.368Z",
+  "summary": {
+    "totalFilesAnalyzed": 0,
+    "codeSmells": 0,
+    "performanceIssues": 0,
+    "securityVulnerabilities": 0,
+    "maintainabilityScore": 100,
+    "complexityScore": 0
+  },
+  "details": {
+    "codeSmells": [],
+    "performanceIssues": [],
+    "securityVulnerabilities": [],
+    "maintainabilityScore": 100,
+    "complexityScore": 0,
+    "suggestions": []
+  },
+  "recommendations": []
+}

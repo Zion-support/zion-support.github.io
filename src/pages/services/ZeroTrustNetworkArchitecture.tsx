@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck               } from 'lucide-react.ts';
+=======
+import React from 'react.ts';
+import { SEO              } from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck export default function ZeroTrustNetworkArchitecture(...args: any[]): any {
+=======
+import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck              } from 'lucide-react.ts';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function ZeroTrustNetworkArchitecture(...args: []):  {
   const features = [
     {
@@ -150,8 +168,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
               security across your entire network infrastructure.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
@@ -199,8 +223,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
               security requirements and business objectives
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)  => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
                 initial = {
@@ -260,8 +290,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
               posture and protect your business from modern cyber threats
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
             {benefits.map((benefit, index)  => (
+=======
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.name}
                 initial = {

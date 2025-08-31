@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
 
 const Tutorials = () => {
+=======
+import React, { useState } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 const Tutorials = () => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tutorialCategories = [
     {
       title: "Beginner",
@@ -200,6 +206,7 @@ const Tutorials = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Tutorials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedTutorials.map((tutorial, index) => (
@@ -211,6 +218,17 @@ const Tutorials = () => {
               <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Play className="w-16 h-16 text-slate-400" />
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredTutorials.map((tutorial, index)              => (
+              <div
+                key={index}
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
+
+                {/* Tutorial Image Placeholder */}
+                <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-zion-cyan" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div className="absolute top-3 right-3">
                   <span className={`px-2 py-1 text-xs font-medium rounded-full ${
@@ -233,9 +251,31 @@ const Tutorials = () => {
                   {tutorial.description}
                 </p>
 
+<<<<<<< HEAD
                 {/* Meta */}
                 <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">
                   <div className="flex items-center gap-2">
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {learningPaths.map((path, index)              => (
+              <div
+                key={index}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4">{path.title}</h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{path.description}</p>
+
+                <div className="space-y-2 mb-6 text-zion-slate-light">
+                  <div className="flex items-center justify-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    {path.courses} courses
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <Clock className="w-4 h-4" />
                     <span>{tutorial.duration}</span>
                   </div>

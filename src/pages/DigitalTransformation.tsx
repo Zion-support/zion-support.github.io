@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -13,6 +14,16 @@ import {
   Globe, 
   Lock,
   ArrowRight,
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Rocket,
+  Zap,
+  Shield,
+  Users,
+  TrendingUp,
+  Globe,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle,
   Star,
   TrendingUp,
@@ -36,7 +47,20 @@ import {
 } from 'lucide-react';
 
 const DigitalTransformation = () => {
+<<<<<<< HEAD
   const phases = [
+=======
+=======
+              } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+const DigitalTransformation = () => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const [selectedPhase, setSelectedPhase] = useState(0);
+
+  const transformationServices = [
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       icon: <Eye className="w-8 h-8" />,
       title: "Assessment & Strategy",
@@ -165,6 +189,7 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Transformation Phases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -185,6 +210,13 @@ const DigitalTransformation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {phases.map((phase, index) => (
+=======
+      {/* Stats Section */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +260,13 @@ const DigitalTransformation = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {transformationServices.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -275,8 +312,130 @@ const DigitalTransformation = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
+=======
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {transformationPhases.map((phase, index)               => (
+                <motion.div
+                  key={index}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                  className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
+                    selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
+                  }`}
+                  onClick={() => setSelectedPhase(index)}
+
+                  {/* Phase Number */}
+                  <div className="absolute -top-4 left-6">
+                    <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {phase.phase}
+                    </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <h3 className="text-lg font-bold text-white mb-3">{phase.title}</h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{phase.description}</p>
+
+                    <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">
+                      <Clock className="w-4 h-4" />
+                      {phase.duration}
+                    </div>
+
+                    {/* Activities */}
+                    {selectedPhase === index && (
+                      <motion.div
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+
+
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+
+
+
+
+}}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-2"
+<<<<<<< HEAD
+
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyanyanyanyanyany</div>
+                        {phase.activities.map((activity, activityIndex)              => (
+=======
+                      >
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: anyanyanyanyanyanyanyanyanyanyanyanyanyany</div>
+                        {phase.activities.map((activity, activityIndex)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                          <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
+                            <Check className="w-3 h-3 text-zion-cyan" />
+                            {activity}
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Success Stories
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Hear from organizations that have transformed their business with our digital transformation services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

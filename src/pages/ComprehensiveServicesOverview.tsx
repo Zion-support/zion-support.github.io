@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,
@@ -28,9 +27,15 @@ import {
   Search,
   Filter,
   Sparkles
+<<<<<<< HEAD
 } from 'lucide-react';
 
 const getServicePrice = (service: any) => {
+=======
+             } from 'lucide-react.ts';
+  };
+  const getServicePrice = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof service.price === 'number') {
       return service.price;
     }

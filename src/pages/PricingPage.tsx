@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Check,
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Zap,
   Brain,
@@ -35,6 +41,7 @@ import {
   GraduationCap,
   HelpCircle,
   Settings,
+<<<<<<< HEAD
   Monitor,
   Smartphone,
   Watch,
@@ -88,6 +95,19 @@ import {
 
 export function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+=======
+  Cog,
+  Wrench,
+  Tool,
+  Hammer,
+  Screwdriver
+             } from 'lucide-react.ts';
+import { COMPREHENSIVE_PRICING_GUIDE_2025              } from '../data/comprehensivePricingGuide2025';
+
+export function PricingPage(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const services = [
     {
@@ -220,11 +240,23 @@ export function PricingPage() {
 
   const categories = ['All', 'AI & SaaS', 'Quantum & Trading', 'Security', 'Enterprise'];
 
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredServices = selectedCategory === 'All' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
+=======
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const categoryData = categories.find(cat => cat.id === category);
+    return categoryData ? categoryData.icon : Globe;
+  };
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const categoryData = categories.find(cat => cat.id === category);
+    return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
+  };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gray-900 text-white pt-20">
@@ -305,6 +337,7 @@ export function PricingPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Pricing */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -320,6 +353,23 @@ export function PricingPage() {
                 <div className="text-center mb-12">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
+=======
+        {/* Services Pricing Grid */}
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {filteredServices.map((service, index)              => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+            >
+              {/* Service Header */}
+              <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-6`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                                          {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white" })}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <h2 className="text-3xl font-bold mb-4">{service.name}</h2>
                   <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
@@ -396,9 +446,87 @@ export function PricingPage() {
                     to={service.link}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
+<<<<<<< HEAD
                     Learn more about {service.name}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
+=======
+                    Get Started
+                  </a>
+                  <a
+                    href={`tel:${service.contactInfo.phone}`}
+                    className="px-4 py-2 border border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-400 rounded-lg text-sm font-semibold transition-all duration-300"
+                  >
+                    Call
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Special Pricing Packages */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Special Pricing Packages</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Get more value with our bundled packages designed for different business needs and sizes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {SPECIAL_PRICING_PACKAGES.map((package_, index)              => (
+              <motion.div
+                key={package_.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 relative overflow-hidden"
+              >
+                {index === 1 && (
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold px-4 py-2 rounded-bl-lg">
+                    BEST VALUE
+                  </div>
+                )}
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{package_.name}</h3>
+                  <p className="text-gray-400 text-sm">{package_.description}</p>
+                </div>
+
+                {package_.pricing === "Custom pricing based on requirements" ? (
+                  <div className="text-center mb-6">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">Custom Pricing</div>
+                    <div className="text-sm text-gray-400">Based on your specific requirements</div>
+                  </div>
+                ) : (
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-white mb-2">${package_.discountedPrice?.toLocaleString()}</div>
+                    <div className="text-sm text-gray-400 line-through">${package_.originalPrice?.toLocaleString()}</div>
+                    <div className="text-sm text-green-400 font-semibold">{package_.savings}</div>
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">What's Included:</h4>
+                  <div className="space-y-2">
+                    {package_.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href={`mailto:${package_.contactInfo.email}?subject=Inquiry about ${package_.name} Package`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+                  >
+                    Get Started
+                  </a>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               </motion.div>
             ))}

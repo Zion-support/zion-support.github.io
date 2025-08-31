@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Search, 
   TrendingUp, 
   Target, 
   BarChart3, 
@@ -23,9 +22,9 @@ import {
   Brain,
   Zap,
   Shield
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-const AISEO: React.FC = () => {
+const AISEO: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -123,8 +122,8 @@ const AISEO: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

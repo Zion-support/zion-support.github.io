@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
   EyeOff, 
   Volume2, 
   VolumeX, 
-  Contrast, 
   Type, 
-  MousePointer,
+  Contrast, 
+  Move, 
   Keyboard,
   Accessibility,
-  HelpCircle,
+  Settings,
   X,
-  CheckCircle,
+  Check,
   AlertTriangle
 } from 'lucide-react';
 
@@ -22,38 +22,44 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
+  focusIndicators: boolean;
 }
 
 interface AccessibilityEnhancerProps {
-  enabled?: boolean;
-  showPanel?: boolean;
-  autoDetect?: boolean;
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableLargeText?: boolean;
+  enableReducedMotion?: boolean;
 }
 
 export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enabled = true,
-  showPanel = false,
-  autoDetect = true
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableLargeText = true,
+  enableReducedMotion = true,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicator: true
+    focusIndicators: false,
   });
-  
-  const [isPanelOpen, setIsPanelOpen] = useState(showPanel);
-  const [notifications, setNotifications] = useState<Array<{ id: string; type: 'success' | 'warning' | 'info'; message: string }>>([]);
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const focusHistoryRef = useRef<HTMLElement[]>([]);
-  const skipLinkRef = useRef<HTMLAnchorElement>(null);
+
+  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [isKeyboardMode, setIsKeyboardMode] = useState(false);
+  const [focusableElements, setFocusableElements] = useState<HTMLElement[]>([]);
+  const [currentFocusIndex, setCurrentFocusIndex] = useState(0);
 
   // Auto-detect user preferences
   useEffect(() => {
-    if (!enabled || !autoDetect) return;
+    if (!enableKeyboardNavigation) return;
 
     const mediaQueries = {
       prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
@@ -83,11 +89,11 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
       mediaQueries.prefersHighContrast.removeEventListener('change', handleMediaChange);
       mediaQueries.prefersLargeText.removeEventListener('change', handleMediaChange);
     };
-  }, [enabled, autoDetect]);
+  }, [enableKeyboardNavigation]);
 
   // Apply accessibility settings
   useEffect(() => {
-    if (!enabled) return;
+    if (!enableKeyboardNavigation) return;
 
     const root = document.documentElement;
     
@@ -127,28 +133,23 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
     }
 
     // Focus indicator
-    if (settings.focusIndicator) {
+    if (settings.focusIndicators) {
       root.style.setProperty('--focus-ring', '2px solid #06b6d4');
     } else {
       root.style.setProperty('--focus-ring', 'none');
     }
 
-  }, [enabled, settings]);
+  }, [enableKeyboardNavigation, settings]);
 
   // Keyboard navigation enhancement
   useEffect(() => {
-    if (!enabled || !settings.keyboardNavigation) return;
+    if (!enableKeyboardNavigation) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
+      // Ctrl/Cmd + Shift + A to toggle accessibility panel
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
         event.preventDefault();
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-        }
+        setIsOpen(prev => !prev);
       }
 
       // Enhanced tab navigation
@@ -157,7 +158,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
           'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
         );
         
-        const currentIndex = Array.from(focusableElements).indexOf(target);
+        const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as HTMLElement);
         const nextIndex = event.shiftKey ? currentIndex - 1 : currentIndex + 1;
         
         if (nextIndex >= 0 && nextIndex < focusableElements.length) {
@@ -178,26 +179,17 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enabled, settings.keyboardNavigation]);
+  }, [enableKeyboardNavigation]);
 
   // Focus management
   useEffect(() => {
-    if (!enabled) return;
+    if (!enableKeyboardNavigation) return;
 
     const handleFocusChange = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
-      setCurrentFocus(target);
       
-      // Track focus history
-      if (target && !focusHistoryRef.current.includes(target)) {
-        focusHistoryRef.current.push(target);
-        if (focusHistoryRef.current.length > 10) {
-          focusHistoryRef.current.shift();
-        }
-      }
-
       // Announce focus changes for screen readers
-      if (settings.screenReader && target) {
+      if (enableScreenReader && target) {
         const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
@@ -213,15 +205,14 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
 
     document.addEventListener('focusin', handleFocusChange);
     return () => document.removeEventListener('focusin', handleFocusChange);
-  }, [enabled, settings.screenReader]);
+  }, [enableKeyboardNavigation, enableScreenReader]);
 
   // Add notification
-  const addNotification = useCallback((type: 'success' | 'warning' | 'info', message: string) => {
-    const id = Date.now().toString();
-    setNotifications(prev => [...prev, { id, type, message }]);
+  const addNotification = useCallback((message: string) => {
+    setAnnouncements(prev => [...prev, message]);
     
     setTimeout(() => {
-      setNotifications(prev => prev.filter(n => n.id !== id));
+      setAnnouncements(prev => prev.filter(m => m !== message));
     }, 5000);
   }, []);
 
@@ -235,7 +226,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
       
       // Show notification
       const action = newSettings[key] ? 'enabled' : 'disabled';
-      addNotification('success', `${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${action}`);
+      addNotification(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${action}`);
       
       return newSettings;
     });
@@ -243,7 +234,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
 
   // Load saved settings
   useEffect(() => {
-    if (!enabled) return;
+    if (!enableKeyboardNavigation) return;
 
     const saved = localStorage.getItem('zion-accessibility-settings');
     if (saved) {
@@ -254,9 +245,35 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
         console.warn('Failed to load accessibility settings:', error);
       }
     }
-  }, [enabled]);
+  }, [enableKeyboardNavigation]);
 
-  if (!enabled) return null;
+  if (!enableKeyboardNavigation) return null;
+
+  // Get setting description
+  const getSettingDescription = (key: keyof AccessibilitySettings) => {
+    const descriptions = {
+      highContrast: 'Increases contrast for better visibility',
+      largeText: 'Makes text larger and easier to read',
+      reducedMotion: 'Reduces animations and motion',
+      screenReader: 'Optimizes for screen readers',
+      keyboardNavigation: 'Enhances keyboard navigation',
+      focusIndicators: 'Shows clear focus indicators'
+    };
+    return descriptions[key];
+  };
+
+  // Get keyboard shortcut
+  const getKeyboardShortcut = (key: keyof AccessibilitySettings) => {
+    const shortcuts = {
+      highContrast: 'Ctrl/Cmd + Shift + H',
+      largeText: 'Ctrl/Cmd + Shift + L',
+      reducedMotion: 'None',
+      screenReader: 'None',
+      keyboardNavigation: 'None',
+      focusIndicators: 'None'
+    };
+    return shortcuts[key];
+  };
 
   return (
     <>
@@ -271,7 +288,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isPanelOpen && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -285,7 +302,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
                   Accessibility
                 </h2>
                 <button
-                  onClick={() => setIsPanelOpen(false)}
+                  onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >
@@ -360,19 +377,19 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
                 {/* Focus Indicator */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <MousePointer className="w-5 h-5 text-zion-cyan" />
+                    <Move className="w-5 h-5 text-zion-cyan" />
                     <span className="text-sm font-medium">Focus Indicator</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('focusIndicator')}
+                    onClick={() => toggleSetting('focusIndicators')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.focusIndicator ? 'bg-zion-cyan' : 'bg-gray-200'
+                      settings.focusIndicators ? 'bg-zion-cyan' : 'bg-gray-200'
                     }`}
-                    aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
+                    aria-label={`${settings.focusIndicators ? 'Disable' : 'Enable'} focus indicator`}
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
+                        settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
                   </button>
@@ -399,13 +416,34 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
                   </button>
                 </div>
 
+                {/* Screen Reader */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Volume2 className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-sm font-medium">Screen Reader</span>
+                  </div>
+                  <button
+                    onClick={() => toggleSetting('screenReader')}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      settings.screenReader ? 'bg-zion-cyan' : 'bg-gray-200'
+                    }`}
+                    aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        settings.screenReader ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
                 {/* Help */}
                 <div className="pt-4 border-t border-gray-200">
                   <button
-                    onClick={() => addNotification('info', 'Keyboard shortcuts: Tab to navigate, Shift+Tab to go back, Escape to close modals')}
+                    onClick={() => addNotification('Keyboard shortcuts: Tab to navigate, Shift+Tab to go back, Escape to close modals')}
                     className="flex items-center gap-2 text-sm text-zion-cyan hover:text-zion-cyan-dark transition-colors"
                   >
-                    <HelpCircle className="w-4 h-4" />
+                    <Settings className="w-4 h-4" />
                     Keyboard Shortcuts
                   </button>
                 </div>
@@ -417,10 +455,10 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
 
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsPanelOpen(!isPanelOpen)}
+        onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 p-3 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-dark transition-colors z-40 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2"
         aria-label="Open accessibility panel"
-        aria-expanded={isPanelOpen}
+        aria-expanded={isOpen}
       >
         <Accessibility className="w-6 h-6" />
       </button>
@@ -428,22 +466,16 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
       {/* Notifications */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>
-          {notifications.map(notification => (
+          {announcements.map((message, index) => (
             <motion.div
-              key={notification.id}
+              key={index}
               initial={{ opacity: 0, x: 300 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 300 }}
-              className={`flex items-center gap-3 p-4 rounded-lg shadow-lg max-w-sm ${
-                notification.type === 'success' ? 'bg-green-500 text-white' :
-                notification.type === 'warning' ? 'bg-yellow-500 text-white' :
-                'bg-blue-500 text-white'
-              }`}
+              className="flex items-center gap-3 p-4 rounded-lg shadow-lg max-w-sm"
             >
-              {notification.type === 'success' && <CheckCircle className="w-5 h-5" />}
-              {notification.type === 'warning' && <AlertTriangle className="w-5 h-5" />}
-              {notification.type === 'info' && <HelpCircle className="w-5 h-5" />}
-              <span className="text-sm font-medium">{notification.message}</span>
+              <Check className="w-5 h-5 text-white" />
+              <span className="text-sm font-medium text-white">{message}</span>
             </motion.div>
           ))}
         </AnimatePresence>
@@ -471,3 +503,5 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
     </>
   );
 };
+
+export default EnhancedAccessibilityEnhancer;

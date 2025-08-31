@@ -1,9 +1,23 @@
 export interface PricingTier {
+
+
+
+
+
+
+
+
+
+
+
+
+
   name: string;
   price: number;
   currency: string;
   billingCycle: string;
   features: string[];
+<<<<<<< HEAD
   bestFor: string;
   popular?: boolean;
 }
@@ -11,11 +25,51 @@ export interface PricingTier {
 export interface ServicePricing {
   id: string;
   title: string;
+=======
+  limitations: string[];
+  bestFor: string[];
+  roi: string;
+  implementationTime: string;
+  supportLevel: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+export interface ServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  serviceId: string;
+  serviceName: string;
+  category: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   description: string;
   category: string;
   basePrice: number;
   currency: string;
   pricingTiers: PricingTier[];
+<<<<<<< HEAD
   marketPrice: string;
   roi: string;
   implementationTime: string;
@@ -25,6 +79,33 @@ export interface ServicePricing {
   competitorPricing: {
     name: string;
     price: string;
+=======
+marketComparison: {;
+    competitor: string;
+    competitorPrice: string;
+    ourPrice: string;
+    savings: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
+  volumeDiscounts: {
+    users: string;
+    discount: string;
+    additionalBenefits: string[];
+  }[];
+  customEnterprise: {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     features: string[];
   }[];
   roiBreakdown: {

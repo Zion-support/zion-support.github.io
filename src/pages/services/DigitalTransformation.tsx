@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,34 @@ import {
   Shield, 
   Users, 
   BarChart3, 
+=======
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function DigitalTransformation(...args: any[]): any {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
+      <section className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Digital Transformation</h1>
+        <p className="text-lg text-gray-300 max-w-3xl">
+          We partner with teams to reimagine workflows, build cloud-native systems, and scale data and AI capabilities across the enterprise.
+        </p>
+      </section>
+    </div>
+  );
+
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import {
+  Rocket,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  Users,
+  BarChart3,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap,
   ArrowRight,
   CheckCircle,
@@ -22,10 +51,15 @@ import {
   FileText,
   Monitor,
   Smartphone
+<<<<<<< HEAD
 } from 'lucide-react';
 
 export default function DigitalTransformation() {
   const services = [
+=======
+export default function DigitalTransformation(...args: any[]): any {
+  const features = [
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
@@ -149,9 +183,15 @@ export default function DigitalTransformation() {
               and position you for future success.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div 
+=======
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
+              <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 30 }}
@@ -161,6 +201,129 @@ export default function DigitalTransformation() {
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD
+=======
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Transformation Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From strategy to implementation, we provide 
+              end-to-end digital transformation solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
@@ -200,9 +363,15 @@ export default function DigitalTransformation() {
               Digital transformation delivers measurable benefits that impact every aspect of your business.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div 
+=======
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)              => (
+              <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -237,9 +406,15 @@ export default function DigitalTransformation() {
               each with unique challenges and opportunities.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div 
+=======
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {industries.map((industry, index)              => (
+              <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 20 }}
@@ -269,14 +444,19 @@ export default function DigitalTransformation() {
               A proven methodology that ensures successful digital transformation outcomes.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
               { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
               { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
+<<<<<<< HEAD
             ].map((phase, index) => (
               <motion.div 
+=======
+            ].map((phase, index)              => (
+              <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}

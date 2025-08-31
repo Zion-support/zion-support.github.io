@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Menu,
   X,
   Search,
   User,
@@ -49,6 +48,7 @@ import {
   MapPin,
   Satellite,
   FileText,
+<<<<<<< HEAD
   Sparkles as SparklesIcon,
   Leaf,
   Link as LinkIcon,
@@ -64,8 +64,17 @@ import {
   Link as LinkIcon2
 } from 'lucide-react';
 import { innovativeServices2025 } from '../data/innovativeServices2025';
+=======
+  Sparkles as SparklesIcon
+<<<<<<< HEAD
+import { enhancedServicesCatalog2025               } from '../data/enhancedServicesCatalog2025';
+=======
+} from 'lucide-react';
+import { enhancedServicesCatalog2025               } from '../data/enhancedServicesCatalog2025';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
-export function EnhancedHeader() {
+export function EnhancedHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -82,7 +91,11 @@ export function EnhancedHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
   const handleSearch = async (e: React.FormEvent) => {
+=======
+  const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -422,8 +435,8 @@ export function EnhancedHeader() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-8">
-              {navigation.slice(0, 6).map((item) => (
+            <nav className="hidden xl: anyanyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
+              {navigation.slice(0, 6).map((item)               => (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -542,6 +555,7 @@ export function EnhancedHeader() {
                       </div>
 
                       {/* View All Services Link */}
+<<<<<<< HEAD
                       <div className="mt-8 pt-6 border-t border-gray-700">
                         <div className="flex items-center justify-between">
                           <Link
@@ -559,6 +573,16 @@ export function EnhancedHeader() {
                             <span>24/7 Support</span>
                           </div>
                         </div>
+=======
+                      <div className="mt-6 pt-4 border-t border-gray-700">
+                        <Link
+                          to="/services"
+                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
+
+                          View All Services
+                          <ArrowRight className="ml-2 w-4 h-4 group-hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanytranslate-x-1 transition-transform" />
+                        </Link>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                       </div>
                     </motion.div>
                   )}
@@ -566,7 +590,7 @@ export function EnhancedHeader() {
               </div>
 
               {/* Additional Navigation Items */}
-              {navigation.slice(6, 10).map((item) => (
+              {navigation.slice(6, 10).map((item)               => (
                 <Link
                   key={item.name}
                   to={item.href}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -7,6 +8,44 @@ import {
   Play, 
   Copy, 
   Check, 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Code, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+              } from 'lucide-react.ts';
+=======
+import React from 'react.ts';
+import SEO from '../components/SEO';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink const API: React.FC = (): JSX.Element => {
+=======
+import { Link              } from 'react-router-dom.ts';
+import { Code,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search,
   Filter,
   ArrowRight,
@@ -17,6 +56,7 @@ import {
   Shield,
   Zap,
   Globe,
+<<<<<<< HEAD
   Lock,
   BookOpen,
   Github,
@@ -34,6 +74,29 @@ const API: React.FC = () => {
   };
 
   const apiEndpoints = [
+=======
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+             } from 'lucide-react.ts';
+
+const API: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const endpoints = [
+    {
+      method: 'GET',
+      path: '/api/v1/services',
+      description: 'Retrieve all available services',
+      auth: 'Required'
+    },
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'auth',
       name: 'Authentication',
@@ -151,12 +214,18 @@ const API: React.FC = () => {
 }`
   };
 
+<<<<<<< HEAD
   const tabs = [
     { id: 'overview', label: 'Overview', icon: BookOpen },
     { id: 'endpoints', label: 'Endpoints', icon: Code },
     { id: 'playground', label: 'Playground', icon: Play },
     { id: 'sdks', label: 'SDKs', icon: Download }
   ];
+=======
+export default function API(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -213,6 +282,7 @@ const API: React.FC = () => {
         className="px-4 sm:px-6 lg:px-8 mb-16"
       >
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               { label: 'API Endpoints', value: '50+', icon: Code, color: 'from-cyan-500 to-blue-500' },
@@ -220,6 +290,42 @@ const API: React.FC = () => {
               { label: 'Uptime', value: '99.9%', icon: Shield, color: 'from-purple-500 to-pink-500' },
               { label: 'Active Users', value: '10K+', icon: Globe, color: 'from-orange-500 to-red-500' }
             ].map((stat, index) => (
+=======
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              API Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Powerful tools for developers to build amazing applications
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {apiCategories.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -265,6 +371,7 @@ const API: React.FC = () => {
         </div>
       </motion.div>
 
+<<<<<<< HEAD
       {/* Tab Content */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -303,8 +410,85 @@ const API: React.FC = () => {
                     <div className="bg-gray-800 rounded-lg p-4 text-sm text-gray-300 font-mono">
                       https://api.ziontechgroup.com
                     </div>
+=======
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              API Endpoints
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our RESTful API endpoints
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {quickStartExamples.map((example, index)               => (
+              <motion.div
+                key={endpoint.path}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
+                      endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
+                      endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-red-500/20 text-red-400'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                    <code className="text-blue-300 font-mono text-lg">{endpoint.path}</code>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
               
               <div>
@@ -332,6 +516,97 @@ const API: React.FC = () => {
                       </div>
                     </motion.div>
                   ))}
+=======
+                <p className="text-gray-300 mt-3">{endpoint.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SDKs Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              SDKs & Libraries
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Official SDKs for popular programming languages
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sdks.map((sdk, index)              => (
+              <motion.div
+                key={sdk.name}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
+
+                <div className="text-4xl mb-4">{sdk.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
+                <div className="flex space-x-2">
+                  <button className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">
+                    <Download className="w-4 h-4 inline mr-1" />
+                    Download
+                  </button>
+                  <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors text-sm">
+                    <BookOpen className="w-4 h-4 inline mr-1" />
+                    Docs
+                  </button>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               </div>
             </div>

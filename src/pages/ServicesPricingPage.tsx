@@ -1,6 +1,41 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
  } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
+=======
+import React, { useState } from 'react.ts';
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+import { Badge              } from '@/components/ui/badge';
+import { Button              } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { Check,
+  X,
+  Star,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
+  Users,
+  Building,
+  Smartphone,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Truck,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  DollarSign,
+  Clock
+<<<<<<< HEAD
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS              } from '@/data/expandedServices';
+=======
+ } from 'lucide-react';
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS               } from '@/data/expandedServices';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Group services by category for better organization
   }
   acc[service.category].push(service);
@@ -16,13 +51,13 @@ const pricingFeatures = [
   "Security Compliance",;
   "Scalable Architecture";
 ];
-export default function ServicesPricingPage() {
+export default function ServicesPricingPage(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all'
     ? EXPANDED_SERVICES
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -46,9 +81,15 @@ export default function ServicesPricingPage() {
       'Supply Chain': <Truck className="h-5 w-5" />;
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />};
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Check, 
+=======
+=======
+import { motion              } from 'framer-motion.ts';
+import { Check, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star, 
   Zap, 
   Shield, 
@@ -62,11 +103,20 @@ import {
   Users,
   Clock,
   Award
+<<<<<<< HEAD
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const ServicesPricingPage: React.FC = () => {
+=======
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+
+const ServicesPricingPage: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedPlan, setSelectedPlan] = useState('starter');
   const [billingCycle, setBillingCycle] = useState('monthly');
   const pricingPlans = [
@@ -226,10 +276,19 @@ const ServicesPricingPage: React.FC = () => {
       company: 'Quantum Labs'
     }
   ];
+<<<<<<< HEAD
   const calculatePrice = (plan: any) => {
     return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
   };
   const calculateSavings = (plan: any) => {
+=======
+
+  const calculatePrice = (plan: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
+    return billingCycle === 'monthly' ? plan.price.monthly : plan.price.annual;
+  };
+
+  const calculateSavings = (plan: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (billingCycle === 'annual') {
       return Math.round((plan.price.monthly * 12 - plan.price.annual) / (plan.price.monthly * 12) * 100);
     }
@@ -308,8 +367,14 @@ const ServicesPricingPage: React.FC = () => {
                 All plans include our core features with different levels of support and customization.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={plan.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -369,8 +434,8 @@ const ServicesPricingPage: React.FC = () => {
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)  => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service)               => (
                   <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-3">
@@ -456,8 +521,14 @@ const ServicesPricingPage: React.FC = () => {
                 Each category can be customized to meet your specific requirements.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {serviceCategories.map((category, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {serviceCategories.map((category, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -522,8 +593,14 @@ const ServicesPricingPage: React.FC = () => {
                 Mix and match to create the perfect solution for your business.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {addOns.map((addon, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOns.map((addon, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={addon.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -579,8 +656,14 @@ const ServicesPricingPage: React.FC = () => {
                 about our services and pricing.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={testimonial.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -601,7 +684,12 @@ const ServicesPricingPage: React.FC = () => {
                       <div className="border-t border-white/20 pt-4">
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-zion-cyan-light">{testimonial.role}</div>
+<<<<<<< HEAD
                         <div className="text-xs text-zion-cyan-light">{testimonial.company}</div>
+=======
+                        <div className="text-xs text-zion-cyan-light">{testimonial.comp}</div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                       </div>
                     </CardContent>
                   </Card>

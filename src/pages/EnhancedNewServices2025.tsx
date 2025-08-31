@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain,
   Atom,
   Shield,
   Cloud,
@@ -166,9 +165,9 @@ import {
   Mail,
   MapPin,
   Package
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-export function EnhancedNewServices2025() {
+export function EnhancedNewServices2025(...args: any[]): any {
   const newServices = [
     {
       id: 'agent-ops-monitor',
@@ -752,9 +751,9 @@ export function EnhancedNewServices2025() {
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {newServices
-                .filter(service => service.category === category)
+                .filter(service              => service.category === category)
                 .map((service, index) => (
                   <motion.div
                     key={service.id}
