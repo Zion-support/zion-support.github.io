@@ -77,6 +77,24 @@ const featuredServices: Service[] = [
 
 const microSaaS: Service[] = [
   {
+    title: 'AI Project Management Platform',
+    description: 'AI-powered task prioritization, predictive timelines, and smart resource allocation.',
+    priceRange: '$29 - $199/mo',
+    learnMoreUrl: '/services/ai-powered-project-management-platform',
+  },
+  {
+    title: 'AI Financial Analytics Platform',
+    description: 'AI-powered financial forecasting, risk assessment, and portfolio optimization.',
+    priceRange: '$49 - $399/mo',
+    learnMoreUrl: '/services/ai-financial-analytics-platform',
+  },
+  {
+    title: 'AI Healthcare Analytics Platform',
+    description: 'AI-powered patient risk assessment, predictive analytics, and clinical decision support.',
+    priceRange: '$99 - $799/mo',
+    learnMoreUrl: '/services/ai-healthcare-analytics-platform',
+  },
+  {
     title: 'LeadGen AI Microsite',
     description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
     priceRange: '$99 - $499/mo',
@@ -325,6 +343,15 @@ const Services: React.FC = (): JSX.Element => {
           <p className="text-base md:text-xl text-slate-300">
             Practical, production-grade solutions with transparent pricing and modern stacks.
           </p>
+          <div className="mt-8">
+            <a
+              href="/comprehensive-services-showcase-2026"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300"
+            >
+              <Sparkles className="w-5 h-5 mr-2" />
+              View 2026 Services Showcase
+            </a>
+          </div>
         </header>
 
         <section className="mt-14">

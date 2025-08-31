@@ -72,6 +72,7 @@ const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServices
 
 // Comprehensive Services Showcase 2025
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2026 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2026'));
 
 // 2025 Services Showcase
 const ServicesShowcase2025 = createLazyComponent(() => import('./pages/services-showcase-2025'));
@@ -88,6 +89,9 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 // New Innovative Services
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
+const AIPoweredProjectManagementPlatform = lazy(() => import('./pages/services/AI-Powered-Project-Management-Platform'));
+const AIFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Financial-Analytics-Platform'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -437,6 +441,7 @@ function App() {
                   <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                   <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                  <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
                   <Route path="/services-showcase-2025" element={<ServicesShowcase2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
@@ -448,6 +453,9 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+                  <Route path="/services/ai-powered-project-management-platform" element={<AIPoweredProjectManagementPlatform />} />
+                  <Route path="/services/ai-financial-analytics-platform" element={<AIFinancialAnalyticsPlatform />} />
+                  <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />

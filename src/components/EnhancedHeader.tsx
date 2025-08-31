@@ -212,6 +212,30 @@ export function EnhancedHeader() {
       featured: true
     },
     {
+      name: 'AI Project Management Platform',
+      description: 'AI-powered project management and collaboration',
+      href: '/services/ai-powered-project-management-platform',
+      icon: Workflow,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Financial Analytics Platform',
+      description: 'Intelligent financial insights and portfolio management',
+      href: '/services/ai-financial-analytics-platform',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      featured: true
+    },
+    {
+      name: 'AI Healthcare Analytics Platform',
+      description: 'AI-powered healthcare insights and patient care',
+      href: '/services/ai-healthcare-analytics-platform',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      featured: true
+    },
+    {
       name: 'Micro SAAS Solutions',
       description: 'Innovative software-as-a-service solutions',
       href: '/services/micro-saas-solutions',
