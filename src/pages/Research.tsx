@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -255,6 +257,29 @@ export default function Research() {
     }
     return `$${amount.toLocaleString()}`;
   };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'ai-ml': return <Brain className="w-4 h-4" />;
+      case 'cloud': return <Cloud className="w-4 h-4" />;
+      case 'security': return <Shield className="w-4 h-4" />;
+      case 'data': return <Database className="w-4 h-4" />;
+      case 'emerging': return <Zap className="w-4 h-4" />;
+      case 'quantum': return <Cpu className="w-4 h-4" />;
+      case 'iot': return <Network className="w-4 h-4" />;
+      default: return <FlaskConical className="w-4 h-4" />;
+    }
+  };
+
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
+      case 'very-high': return 'text-red-400';
+      case 'high': return 'text-orange-400';
+      case 'medium': return 'text-yellow-400';
+      case 'low': return 'text-green-400';
+      default: return 'text-zion-slate-light';
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -440,6 +465,7 @@ export default function Research() {
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
@@ -468,6 +494,7 @@ export default function Research() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
+                      >
                         {tag}
                       </span>
                     ))}
