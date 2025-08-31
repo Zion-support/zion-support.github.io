@@ -88,39 +88,79 @@ export const securityMiddleware = (req: Request, res: Response, next: NextFuncti
     res.setHeader(key, value);
   });
 
-  // Set CSP header
-  res.setHeader('Content-Security-Policy', generateCSPHeader());
+  // Additional security measures
+  res.setHeader('X-Download-Options', 'noopen');
+  res.setHeader('X-Permitted-Cross-Domain-Policies', 'none');
+  res.setHeader('X-DNS-Prefetch-Control', 'off');
+
+  // Remove server information
+  res.removeHeader('X-Powered-By');
 
   next();
 };
 
-// Input sanitization
-export const sanitizeInput = (input: string): string => {
-  return input
-    .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+=/gi, '') // Remove event handlers
-    .trim();
+// Rate limiting middleware
+export const rateLimitMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  const { rateLimit } = securityConfig;
+  
+  // Simple in-memory rate limiting (use Redis in production)
+  const clientIP = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  
+  if (!req.app.locals.rateLimit) {
+    req.app.locals.rateLimit = new Map();
+  }
+  
+  const clientData = req.app.locals.rateLimit.get(clientIP) || { count: 0, resetTime: now + rateLimit.windowMs };
+  
+  if (now > clientData.resetTime) {
+    clientData.count = 1;
+    clientData.resetTime = now + rateLimit.windowMs;
+  } else if (clientData.count >= rateLimit.max) {
+    return res.status(429).json({ error: rateLimit.message });
+  } else {
+    clientData.count++;
+  }
+  
+  req.app.locals.rateLimit.set(clientIP, clientData);
+  
+  // Set rate limit headers
+  if (rateLimit.standardHeaders) {
+    res.setHeader('X-RateLimit-Limit', rateLimit.max);
+    res.setHeader('X-RateLimit-Remaining', Math.max(0, rateLimit.max - clientData.count));
+    res.setHeader('X-RateLimit-Reset', new Date(clientData.resetTime).toISOString());
+  }
+  
+  next();
 };
 
-// XSS Protection
-export const escapeHtml = (text: string): string => {
-  const map: { [key: string]: string } = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;',
-  };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
+// CORS configuration
+export const corsConfig = {
+  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['https://ziontechgroup.com'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  exposedHeaders: ['X-RateLimit-Limit', 'X-RateLimit-Remaining', 'X-RateLimit-Reset'],
 };
 
-// CSRF Token generation
-export const generateCSRFToken = (): string => {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+// Helmet configuration for additional security
+export const helmetConfig = {
+  contentSecurityPolicy: {
+    directives: securityConfig.csp,
+  },
+  hsts: {
+    maxAge: 31536000,
+    includeSubDomains: true,
+    preload: true,
+  },
+  noSniff: true,
+  referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
+  xssFilter: true,
+  frameguard: { action: 'deny' },
+  hidePoweredBy: true,
+  ieNoOpen: true,
+  noCache: false, // Set to true for sensitive routes
 };
 
-// Validate CSRF Token
-export const validateCSRFToken = (token: string, storedToken: string): boolean => {
-  return token === storedToken && token.length > 0;
-};
+// Export default configuration
+export default securityConfig;

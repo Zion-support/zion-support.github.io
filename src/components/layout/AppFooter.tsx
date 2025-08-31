@@ -54,7 +54,8 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor-platform" }
       ]
     },
     {
@@ -66,6 +67,7 @@ export function AppFooter() {
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "AI Cybersecurity Intelligence", href: "/services/ai-autonomous-cybersecurity-intelligence" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
@@ -90,7 +92,12 @@ export function AppFooter() {
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" }
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-autonomous-supply-chain-intelligence" },
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
+        { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
+        { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
+        { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
+        { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
       ]
     }
   ];
