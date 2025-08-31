@@ -14,16 +14,31 @@ import {
   Brain,
   Cloud,
   Cpu,
-  Zap
+  Zap,
+  Target,
+  Building,
+  Atom,
+  Eye,
+  Users,
+  FileText,
+  Briefcase,
+  Network,
+  Newspaper,
+  Activity
 } from 'lucide-react';
+
 interface HeaderProps {
   onMenuClick?: () => void;
 }
+
 export function Header({ onMenuClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
+
   const navigation = [
     { name: 'Home', href: '/' },
     {
@@ -83,7 +98,9 @@ export function Header({ onMenuClick }: HeaderProps) {
       icon: Phone
     }
   ];
+
   const isActive = (href: string) => location.pathname === href;
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -93,11 +110,17 @@ export function Header({ onMenuClick }: HeaderProps) {
       setSearchQuery('');
     }
   };
+
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +198,13 @@ export function Header({ onMenuClick }: HeaderProps) {
           </div>
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              aria-label="Toggle search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
             <Link
               to="/contact"
               className="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"

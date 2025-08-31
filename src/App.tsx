@@ -48,6 +48,18 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 const AIAutonomousBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-business-intelligence-platform'));
 const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence-platform'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+// Solution pages
+const EnterpriseSolutions = createLazyComponent(() => import('./pages/solutions/enterprise'));
+const AIBusinessIntelligence = createLazyComponent(() => import('./pages/solutions/ai-business-intelligence'));
+const QuantumAIPlatform = createLazyComponent(() => import('./pages/solutions/quantum-ai-platform'));
+const DigitalTwinSolutions = createLazyComponent(() => import('./pages/solutions/digital-twin'));
+const ZeroTrustSecurity = createLazyComponent(() => import('./pages/solutions/zero-trust-security'));
+// Additional pages
+const Careers = createLazyComponent(() => import('./pages/careers'));
+const Partners = createLazyComponent(() => import('./pages/partners'));
+const Blog = createLazyComponent(() => import('./pages/blog'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
+const Support = createLazyComponent(() => import('./pages/support'));
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 // Pricing page
@@ -127,6 +139,18 @@ function App() {
                     <Route path="/services/ai-autonomous-business-intelligence-platform" element={<AIAutonomousBusinessIntelligence />} />
                     <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalytics />} />
+                    {/* Solution Routes */}
+                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                    <Route path="/solutions/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/solutions/quantum-ai-platform" element={<QuantumAIPlatform />} />
+                    <Route path="/solutions/digital-twin" element={<DigitalTwinSolutions />} />
+                    <Route path="/solutions/zero-trust-security" element={<ZeroTrustSecurity />} />
+                    {/* Additional Routes */}
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/support" element={<Support />} />
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     {/* Pricing Route */}
