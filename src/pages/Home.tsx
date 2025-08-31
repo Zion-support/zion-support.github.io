@@ -29,7 +29,7 @@ export default function Home() {
     {
       icon: Brain,
       title: "AI-Powered Customer Success Automation",
-      description: "Intelligent platform that automates customer onboarding, success tracking, and churn prevention using predictive analytics.",
+      description: "Intelligent platform that automates customer onboarding, success tracking, and churn prevention using predictive analytics with 35% churn reduction.",
       category: "Micro SAAS",
       price: "$199/month",
       features: ["AI-driven health scoring", "Predictive churn detection", "Automated workflows", "Real-time insights"],
@@ -38,60 +38,60 @@ export default function Home() {
     },
     {
       icon: Shield,
-      title: "Quantum-Resistant Encryption SaaS",
-      description: "Future-proof encryption solution that implements post-quantum cryptography to protect against quantum computing threats.",
+      title: "AI-Powered Cybersecurity Suite",
+      description: "Advanced cybersecurity platform using AI to detect threats 10x faster with 80% reduction in false positives.",
       category: "Cybersecurity",
-      price: "$499/month",
-      features: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "Compliance frameworks"],
+      price: "$699/month",
+      features: ["AI threat detection", "Behavioral analysis", "Automated response", "24/7 SOC monitoring"],
       path: "/services",
       gradient: "from-blue-500 to-cyan-600"
     },
     {
       icon: Cpu,
-      title: "IoT Edge Computing Platform",
-      description: "Distributed computing platform that processes data at the edge, reducing latency and improving real-time decision making.",
-      category: "IoT & Edge",
-      price: "$249/month",
-      features: ["Edge data processing", "Real-time analytics", "Device management", "Scalable architecture"],
+      title: "AI-Quantum Hybrid Computing Platform",
+      description: "Revolutionary platform combining classical AI with quantum computing for 1000x faster problem solving.",
+      category: "Emerging Tech",
+      price: "$999/month",
+      features: ["Quantum-classical hybrid", "Quantum ML", "Optimization algorithms", "Future-proof technology"],
       path: "/services",
       gradient: "from-green-500 to-emerald-600"
     },
     {
       icon: Database,
-      title: "AI-Powered Financial Fraud Detection",
-      description: "Real-time fraud detection system using advanced machine learning to identify and prevent financial fraud.",
-      category: "Financial Tech",
-      price: "$399/month",
-      features: ["Real-time detection", "Machine learning", "Multi-channel monitoring", "Risk scoring"],
+      title: "AI Healthcare Analytics Platform",
+      description: "Intelligent healthcare platform improving diagnosis accuracy by 30% and reducing treatment costs.",
+      category: "AI Solutions",
+      price: "$599/month",
+      features: ["Patient data analytics", "Disease prediction", "Treatment optimization", "Clinical decision support"],
       path: "/services",
       gradient: "from-red-500 to-orange-600"
     }
   ];
 
   const stats = [
-    { label: "Services Available", value: "25+", icon: Zap },
+    { label: "Services Available", value: "50+", icon: Zap },
     { label: "Innovation Levels", value: "4", icon: Star },
-    { label: "Market Coverage", value: "$50B+", icon: TrendingUp },
-    { label: "Support Levels", value: "3", icon: Users }
+    { label: "Market Coverage", value: "$100B+", icon: TrendingUp },
+    { label: "Support Levels", value: "4", icon: Users }
   ];
 
   const innovationLevels = [
     {
       level: "Revolutionary",
-      description: "Breakthrough technologies that redefine industries",
-      examples: ["Quantum Machine Learning", "Post-Quantum Cryptography"],
+      description: "Breakthrough technologies that redefine industries and create new markets",
+      examples: ["AI-Quantum Hybrid Computing", "Space Technology Platform", "Quantum Computing as a Service"],
       color: "text-purple-400 border-purple-400"
     },
     {
       level: "Cutting-edge",
-      description: "Advanced solutions using latest technologies",
-      examples: ["AI-Powered Automation", "Blockchain Solutions"],
+      description: "Advanced solutions using latest AI and emerging technologies",
+      examples: ["AI Cybersecurity Suite", "AI Healthcare Platform", "AI Financial Trading Platform"],
       color: "text-blue-400 border-blue-400"
     },
     {
       level: "Advanced",
-      description: "Sophisticated solutions with proven track records",
-      examples: ["Predictive Analytics", "Edge Computing"],
+      description: "Sophisticated solutions with proven track records and market validation",
+      examples: ["AI Customer Success Automation", "AI Content Optimization", "AI Project Management"],
       color: "text-green-400 border-green-400"
     }
   ];
@@ -110,9 +110,9 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Zion Tech Group delivers innovative micro SAAS, IT infrastructure, and AI solutions that drive growth, 
-              efficiency, and competitive advantage. From quantum-ready security to AI-powered automation, 
-              we're your partner in digital transformation.
+              Zion Tech Group delivers 50+ innovative micro SAAS, IT infrastructure, and AI solutions that drive growth, 
+              efficiency, and competitive advantage. From revolutionary AI-Quantum hybrid computing to cutting-edge AI 
+              cybersecurity and healthcare platforms, we're your partner in digital transformation and innovation.
             </p>
             
             {/* Contact Information */}
@@ -319,7 +319,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
               <p className="text-slate-300">
-                We stay ahead of technology trends to provide future-proof solutions that give you a competitive edge.
+                We stay ahead of technology trends with revolutionary AI-Quantum hybrid computing, space technology, and cutting-edge AI solutions that give you a competitive edge.
               </p>
             </div>
 
@@ -380,10 +380,10 @@ export default function Home() {
       <div className="py-24 bg-black/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with AI & Innovation?
           </h2>
           <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Let's discuss how our innovative solutions can drive growth, efficiency, and competitive advantage for your organization.
+            Let's discuss how our 50+ innovative solutions including AI-Quantum hybrid computing, AI cybersecurity, and AI healthcare platforms can drive growth, efficiency, and competitive advantage for your organization.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">

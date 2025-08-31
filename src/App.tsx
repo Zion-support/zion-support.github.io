@@ -47,6 +47,7 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
+const InnovativeServicesHub = createLazyComponent(() => import('./pages/InnovativeServicesHub'));
 
 // New pages we created
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));

@@ -44,31 +44,34 @@ export function Footer() {
       title: "AI & Machine Learning",
       icon: Brain,
       services: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" },
-        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
-        { name: "AI Trading Platform", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
-        { name: "AI Customer Experience", href: "/services/ai-customer-experience-analytics" },
-        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
-        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
-        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
-        { name: "Micro SAAS Solutions", href: "/micro-saas" }
+        { name: "AI Customer Success Automation", href: "/services/ai-powered-customer-success-automation" },
+        { name: "AI Churn Predictor", href: "/services/ai-powered-churn-predictor" },
+        { name: "AI Interview Assessment", href: "/services/ai-interview-assessment-platform" },
+        { name: "AI Returns Management", href: "/services/ai-returns-management-saas" },
+        { name: "AI SEO Platform", href: "/services/ai-powered-seo-platform" },
+        { name: "AI Workflow Automation", href: "/services/ai-workflow-automation-platform" },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-suite" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics" },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Content Optimizer Pro", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation-platform" },
+        { name: "AI IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" }
       ]
     },
     {
-      title: "Cybersecurity",
+      title: "AI Cybersecurity & Infrastructure",
       icon: Shield,
       services: [
-        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform" },
-        { name: "Security Headers & CSP", href: "/services/security-headers-csp" },
-        { name: "DSR Privacy Portal", href: "/services/dsr-portal" },
-        { name: "Zero Trust Network", href: "/services/zero-trust-network-access" },
-        { name: "SOC2 Compliance", href: "/services/soc2-compliance-automation" }
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform" }
       ]
     },
     {
@@ -83,13 +86,13 @@ export function Footer() {
       ]
     },
     {
-      title: "Quantum Computing",
+      title: "Quantum Computing & Emerging Tech",
       icon: Atom,
       services: [
-        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing" },
-        { name: "Quantum Neural Networks", href: "/services/quantum-neural-networks" },
-        { name: "Quantum Financial Trading", href: "/services/quantum-financial-trading" },
-        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" }
+        { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" },
+        { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }
       ]
     }
   ];
