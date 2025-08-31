@@ -1,495 +1,189 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Rocket, 
-  TrendingUp, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Globe,
-  Database,
-  Lock,
-  Cpu,
-  Network,
-  Smartphone,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  GitFork,
-  Eye,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  MessageSquare,
-  FileText,
-  Search,
-  Clock
-             } from 'lucide-react.ts';
+import React from 'react';
 
-type Service = {
-  title: string;
-  description: string;
-  priceRange: string;
-  learnMoreUrl?: string;
-  ctaUrl?: string;
-};
-
-const featuredServices: Service[] = [
-  {
-    title: 'AI Development & MLOps',
-    description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
-    priceRange: '$8,000 - $120,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/machine-learning/',
-  },
-  {
-    title: 'Cloud Migration & Modernization',
-    description: 'Lift-and-shift, containerization, and serverless refactors with IaC.',
-    priceRange: '$15,000 - $250,000',
-    learnMoreUrl: 'https://aws.amazon.com/migration-hub/',
-  },
-  {
-    title: 'Zero-Trust Cybersecurity',
-    description: 'ZTA architecture, SOC hardening, SIEM, EDR/XDR integrations.',
-    priceRange: '$5,000 - $90,000',
-    learnMoreUrl: 'https://cloud.google.com/security-command-center',
-  },
-  {
-    title: 'Data Engineering & Analytics',
-    description: 'ELT/ETL, data lakes/warehouses, BI dashboards, KPI design.',
-    priceRange: '$7,500 - $140,000',
-    learnMoreUrl: 'https://cloud.google.com/bigquery/docs',
-  },
-  {
-    title: 'IoT & Edge Platforms',
-    description: 'Secure device onboarding, telemetry pipelines, OTA, and twin modeling.',
-    priceRange: '$12,000 - $180,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/iot-hub/',
-  },
-  {
-    title: 'Quantum Readiness Advisory',
-    description: 'PQ crypto readiness, QC PoCs, and quantum-inspired optimizations.',
-    priceRange: '$6,000 - $60,000',
-    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum',
-  },
-];
-
-const microSaaS: Service[] = [
-  {
-    title: 'LeadGen AI Microsite',
-    description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
-    priceRange: '$99 - $499/mo',
-    learnMoreUrl: 'https://vercel.com/ai',
-  },
-  {
-    title: 'Agentic Support Bot',
-    description: 'Retrieval-augmented agent with help center and Slack/Teams connectors.',
-    priceRange: '$149 - $999/mo',
-    learnMoreUrl: 'https://platform.openai.com/',
-  },
-  {
-    title: 'Automated Reporting Studio',
-    description: 'Auto-ingest spreadsheets/CSV, generate dashboards and scheduled PDFs.',
-    priceRange: '$79 - $399/mo',
-    learnMoreUrl: 'https://www.metabase.com/',
-  },
-  {
-    title: 'Security Posture Scanner',
-    description: 'Continuous cloud config checks and CIS benchmarks with alerts.',
-    priceRange: '$199 - $1,499/mo',
-    learnMoreUrl: 'https://www.aquasec.com/cloud-security/',
-  },
-  {
-    title: 'Image/Doc OCR Pipeline',
-    description: 'OCR + LLM extraction for invoices, IDs, and contracts at scale.',
-    priceRange: '$0.50 - $2.00 / 1k tokens + hosting',
-    learnMoreUrl: 'https://platform.openai.com/docs/guides/vision',
-  },
-  {
-    title: 'Synthetic Data Generator',
-    description: 'Privacy-safe tabular and text data generation to augment small datasets.',
-    priceRange: '$299 - $1,999/mo',
-    learnMoreUrl: 'https://huggingface.co/',
-  },
-];
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const Services: React.FC = (): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: Sparkles },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'digital', name: 'Digital Transformation', icon: Zap },
-    { id: 'micro-saas', name: 'Micro-SaaS', icon: Rocket }
-  ];
-
-  const coreServices = [
-    {
-      category: 'ai',
-      icon: Brain,
-      title: "AI Business Intelligence Elite",
-      description: "Advanced AI-powered analytics platform with real-time insights, predictive analytics, and automated reporting.",
-      features: ["GPT-4 & Claude 3.5 Integration", "Real-time BI", "Predictive Analytics", "Enterprise Security"],
-      pricing: "$2,500 - $12,000/month",
-      color: "from-purple-500 to-pink-500",
-      featured: true,
-      href: "/services/ai-business-intelligence-elite"
-    },
-    {
-      category: 'security',
-      icon: Shield,
-      title: "AI Cybersecurity Elite",
-      description: "Military-grade AI-powered cybersecurity platform with real-time threat detection and automated response.",
-      features: ["AI Threat Detection", "Zero-Day Protection", "Automated Response", "Compliance Ready"],
-      pricing: "$3,500 - $18,000/month",
-      color: "from-red-500 to-orange-500",
-      featured: true,
-      href: "/services/ai-cybersecurity-elite"
-    },
-    {
-      category: 'quantum',
-      icon: Atom,
-      title: "Quantum Computing Elite",
-      description: "Access to cutting-edge quantum computing with AI-quantum hybrid systems for complex problem solving.",
-      features: ["1000+ Qubit Access", "AI-Quantum Hybrid", "Quantum-Safe Crypto", "Global Network"],
-      pricing: "$8,500 - $45,000/month",
-      color: "from-blue-500 to-cyan-500",
-      featured: true,
-      href: "/services/quantum-computing-elite"
-    },
-    {
-      category: 'micro-saas',
-      icon: Rocket,
-      title: "Micro-SaaS Platform Elite",
-      description: "Complete platform to launch and scale your micro-SaaS business with proven templates and automation.",
-      features: ["Rapid Launch", "Built-in Payments", "AI Automation", "Multi-tenant Architecture"],
-      pricing: "$2,500 - $12,000/month",
-      color: "from-green-500 to-emerald-500",
-      featured: true,
-      href: "/services/micro-saas-platform-elite"
-    },
-    {
-      category: 'ai',
-      icon: Brain,
-      title: "AI Development & Strategy",
-      description: "Custom AI models, machine learning solutions, and strategic AI roadmapping for your business.",
-      features: ["Custom AI Models", "ML Strategy", "Data Analytics", "AI Integration"],
-      pricing: "$5,000 - $50,000",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      category: 'cloud',
-      icon: Cloud,
-      title: "Cloud Migration & Architecture",
-      description: "Seamless cloud migration, scalable architecture, and cost optimization strategies.",
-      features: ["AWS/Azure/GCP", "Cost Optimization", "Scalability", "Security"],
-      pricing: "$10,000 - $100,000",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      category: 'security',
-      icon: Shield,
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security assessments, threat detection, and compliance frameworks.",
-      features: ["Security Audits", "Threat Detection", "Compliance", "Incident Response"],
-      pricing: "$3,000 - $25,000",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      category: 'digital',
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "Strategic consulting and implementation to modernize your technology stack.",
-      features: ["Process Optimization", "Technology Stack", "Change Management", "ROI Analysis"],
-      pricing: "$15,000 - $75,000",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      category: 'ai',
-      icon: Users,
-      title: "AI-Powered Analytics",
-      description: "Advanced business intelligence and predictive analytics solutions.",
-      features: ["Predictive Models", "Real-time Insights", "Custom Dashboards", "Data Integration"],
-      pricing: "$8,000 - $40,000",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      category: 'cloud',
-      icon: Server,
-      title: "DevOps Automation",
-      description: "CI/CD pipelines, infrastructure as code, and automated deployment solutions.",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring", "Automation"],
-      pricing: "$6,000 - $35,000",
-      color: "from-indigo-500 to-purple-500"
-    }
-  ];
-
-  const microSaasServices = [
-    {
-      title: "AI Sales Email Optimizer",
-      description: "Auto-drafts and A/B tests emails based on CRM context to raise reply rates.",
-      features: [
-        "CRM integration (HubSpot, Salesforce)",
-        "Sequence testing and analytics",
-        "Compliance guardrails",
-        "AI-powered subject lines"
-      ],
-      pricing: "$299 - $799/month",
-      cta: "Get a demo",
-      ctaLink: "/contact",
-      icon: Mail,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Support Ticket Triage Copilot",
-      description: "Classifies, deduplicates, and suggests resolutions; integrates with Zendesk/Jira.",
-      features: [
-        "Auto-priority and routing",
-        "Knowledge base suggestions",
-        "First-response macros",
-        "Sentiment analysis"
-      ],
-      pricing: "$249 - $999/month",
-      cta: "See solution",
-      ctaLink: "/services",
-      icon: MessageSquare,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Invoice OCR + Reconciliation",
-      description: "Extracts line-items and auto-matches to POs; exports to QuickBooks/Xero.",
-      features: [
-        "Vendor anomaly detection",
-        "Tax and currency support",
-        "Audit trails",
-        "Multi-format support"
-      ],
-      pricing: "$199 - $799/month",
-      cta: "Learn more",
-      ctaLink: "/services",
-      icon: FileText,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "SEO Content Planner",
-      description: "Keyword clustering, brief generation, and on-page optimization recommendations.",
-      features: [
-        "Competitor gap analysis",
-        "Automatic internal linking",
-        "Publish to CMS",
-        "Performance tracking"
-      ],
-      pricing: "$99 - $399/month",
-      cta: "Pricing",
-      ctaLink: "/pricing",
-      icon: Search,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "HR Screening Assistant",
-      description: "Summarizes resumes, auto-screens candidates, and schedules interviews.",
-      features: [
-        "ATS integration",
-        "Bias-mitigation controls",
-        "Compliance exports",
-        "Interview scheduling"
-      ],
-      pricing: "$149 - $599/month",
-      cta: "Talk to sales",
-      ctaLink: "/contact",
-      icon: Users,
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-      title: "AI Project Management",
-      description: "Intelligent project tracking, resource allocation, and risk prediction.",
-      features: [
-        "AI-powered scheduling",
-        "Risk prediction",
-        "Resource optimization",
-        "Progress tracking"
-      ],
-      pricing: "$199 - $699/month",
-      cta: "Start free trial",
-      ctaLink: "/contact",
-      icon: Rocket,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
-
-  const innovativeAIServices = [
-    {
-      title: "AI Autonomous Research Assistant",
-      description: "AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources.",
-      features: [
-        "Autonomous Research",
-        "Multi-Source Analysis",
-        "Intelligent Summarization",
-        "Real-time Updates"
-      ],
-      pricing: "$299 - $1,999/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-autonomous-research-assistant",
-      icon: Brain,
-      color: "from-blue-500 to-purple-500"
-    },
-    {
-      title: "AI Supply Chain Optimization",
-      description: "Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs.",
-      features: [
-        "AI-Powered Forecasting",
-        "Real-time Visibility",
-        "Intelligent Routing",
-        "Risk Management"
-      ],
-      pricing: "$499 - $2,999/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-supply-chain-optimization",
-      icon: Network,
-      color: "from-green-500 to-blue-500"
-    },
-    {
-      title: "AI Content Marketing Suite",
-      description: "AI-powered content creation, optimization, and distribution for maximum engagement.",
-      features: [
-        "AI Content Generation",
-        "Audience Intelligence",
-        "SEO Optimization",
-        "Performance Analytics"
-      ],
-      pricing: "$199 - $1,499/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-content-marketing-suite",
-      icon: FileText,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "AI Workflow Orchestrator",
-      description: "Intelligent workflow automation that learns from your processes and optimizes them continuously.",
-      features: [
-        "Process Learning",
-        "Automated Optimization",
-        "Integration Hub",
-        "Performance Analytics"
-      ],
-      pricing: "$399 - $1,999/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-workflow-orchestrator",
-      icon: GitFork,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "AI Customer Experience Analytics",
-      description: "Deep insights into customer behavior with predictive analytics and personalized recommendations.",
-      features: [
-        "Behavioral Analysis",
-        "Predictive Insights",
-        "Personalization Engine",
-        "ROI Tracking"
-      ],
-      pricing: "$349 - $1,799/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-customer-experience-analytics",
-      icon: BarChart3,
-      color: "from-teal-500 to-cyan-500"
-    },
-    {
-      title: "AI Financial Risk Management",
-      description: "Intelligent financial risk assessment with AI-driven predictive analytics.",
-      features: [
-        "Risk Assessment",
-        "Predictive Analytics",
-        "Compliance Monitoring",
-        "Real-time Alerts"
-      ],
-      pricing: "$599 - $2,999/month",
-      cta: "Learn More",
-      ctaLink: "/services/ai-financial-risk-management",
-      icon: Shield,
-      color: "from-red-500 to-orange-500"
-    }
-  ];
-
-  const filteredServices = activeCategory === 'all' 
-    ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory);
-
+export default function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="container mx-auto px-4 py-20 text-white">
-        <header className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Services & Micro SaaS
-          </h1>
-          <p className="text-base md:text-xl text-slate-300">
-            Practical, production-grade solutions with transparent pricing and modern stacks.
-          </p>
-        </header>
-
-        <section className="mt-14">
-          <h2 className="text-2xl font-semibold text-cyan-300 mb-6">Enterprise Services</h2>
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredServices.map((s)              => (
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors">
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-slate-300 mb-4">{s.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-300 font-semibold">{s.priceRange}</span>
-                  {s.learnMoreUrl && (
-                    <a className="text-sm text-cyan-400 hover:text-cyan-300 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">
-                      Reference
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold text-purple-300 mb-6">Micro SaaS Products</h2>
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {microSaaS.map((s)              => (
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors">
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-slate-300 mb-4">{s.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-300 font-semibold">{s.priceRange}</span>
-                  {s.learnMoreUrl && (
-                    <a className="text-sm text-purple-300 hover:text-purple-200 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">
-                      Learn more
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6">
-            <p className="text-slate-300">Have a project in mind? Get a tailored proposal.</p>
-            <div className="flex gap-3 flex-wrap justify-center">
-              <a href="tel:+13024640950" className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Call +1 302 464 0950</a>
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Email kleber@ziontechgroup.com</a>
-              <a href="/request-quote" className="bg-white/10 hover:bg-white/15 border border-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Request a Quote</a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              Discover our comprehensive range of AI, IT, and micro SAAS solutions designed to transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/innovative-services-showcase-2029"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                View All Services
+              </a>
+              <a
+                href="/comprehensive-pricing-guide-2029"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
+              >
+                View Pricing
+              </a>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Service Categories
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              We offer cutting-edge solutions across multiple technology domains
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Solutions */}
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">AI Solutions</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+                Cutting-edge artificial intelligence solutions that automate, optimize, and transform your business processes.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Machine Learning & Analytics
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Natural Language Processing
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Computer Vision
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Predictive Analytics
+                </div>
+              </div>
+              <a
+                href="/innovative-services-showcase-2029"
+                className="block w-full text-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* IT Services */}
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">IT Services</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+                Comprehensive IT infrastructure, cloud solutions, and digital transformation services.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  Cloud Infrastructure
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  DevOps & Automation
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  Cybersecurity
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  Digital Transformation
+                </div>
+              </div>
+              <a
+                href="/innovative-services-showcase-2029"
+                className="block w-full text-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+
+            {/* Micro SAAS */}
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Micro SAAS</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+                Scalable software-as-a-service solutions designed for modern businesses and startups.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  Custom Development
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  API-First Design
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  Scalable Architecture
+                </div>
+                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  Cloud Deployment
+                </div>
+              </div>
+              <a
+                href="/innovative-services-showcase-2029"
+                className="block w-full text-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Contact us today to discuss how our innovative solutions can transform your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get Started
+            </a>
+            <a
+              href="/comprehensive-pricing-guide-2029"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              View Pricing
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
