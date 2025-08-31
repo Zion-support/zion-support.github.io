@@ -7,12 +7,11 @@ import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { AnalyticsManager } from './components/AnalyticsManager';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 
 // Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/EnhancedHome'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
@@ -150,7 +149,7 @@ const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlann
 
 function App() {
   return (
-    <EnhancedErrorBoundary showReportButton={true}>
+    <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
@@ -307,9 +306,9 @@ function App() {
           
           <Footer />
           <ChatAssistant />
-          <PerformanceOptimizer />
-          <AccessibilityEnhancer />
-          <AnalyticsManager />
+          <PerformanceOptimizer>
+            <EnhancedAccessibility />
+          </PerformanceOptimizer>
         </div>
       </Router>
     </ErrorBoundary>

@@ -1,28 +1,116 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { motion, useInView } from 'framer-motion';
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  className?: string;
 }
 
-export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+// Lazy loading wrapper component
+export const LazyLoadWrapper: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '50px',
+  className = ''
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { threshold, rootMargin });
+  
+  return (
+    <div ref={ref} className={className}>
+      {isInView ? (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {children}
+        </motion.div>
+      ) : (
+        <div className="min-h-[200px] bg-gradient-to-r from-zion-slate-dark to-zion-slate animate-pulse rounded-lg" />
+      )}
+    </div>
+  );
+};
 
-  // Performance monitoring
+// Image optimization component
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  lazy?: boolean;
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  lazy = true
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState(false);
+  
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+  }, []);
+  
+  const handleError = useCallback(() => {
+    setError(true);
+  }, []);
+
+  if (error) {
+    return (
+      <div className={`flex items-center justify-center bg-zion-slate-dark text-zion-cyan ${className}`}>
+        <span className="text-sm">Image failed to load</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-slate-dark to-zion-slate animate-pulse" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        loading={lazy && !priority ? 'lazy' : 'eager'}
+        onLoad={handleLoad}
+        onError={handleError}
+        decoding="async"
+      />
+    </div>
+  );
+};
+
+// Performance monitoring hook
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
+
   useEffect(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fcp = entries[entries.length - 1];
-        if (fcp) {
-          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-        }
+        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -30,9 +118,7 @@ export function PerformanceOptimizer() {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lcp = entries[entries.length - 1];
-        if (lcp) {
-          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-        }
+        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -40,9 +126,7 @@ export function PerformanceOptimizer() {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fid = entries[entries.length - 1];
-        if (fid) {
-          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-        }
+        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -58,6 +142,12 @@ export function PerformanceOptimizer() {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
+
       return () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
@@ -67,119 +157,72 @@ export function PerformanceOptimizer() {
     }
   }, []);
 
-  // TTFB measurement
+  return metrics;
+};
+
+// Main performance optimizer component
+export const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const metrics = usePerformanceMonitor();
+  const [showMetrics, setShowMetrics] = useState(false);
+
+  // Performance optimization effects
   useEffect(() => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
-    }
-  }, []);
-
-  // Performance optimization functions
-  const optimizeImages = useCallback(() => {
-    setIsOptimizing(true);
-    
-    // Lazy load images
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-
-    // Optimize existing images
-    const allImages = document.querySelectorAll('img');
-    allImages.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-
-    setIsOptimizing(false);
-  }, []);
-
-  const preloadCriticalResources = useCallback(() => {
-    // Preload critical CSS and JS
+    // Preload critical resources
     const criticalResources = [
-      '/src/styles/index.css',
-      '/src/components/AppHeader.tsx',
-      '/src/pages/Home.tsx'
+      '/fonts/inter-var.woff2',
+      '/images/zion-tech-group-logo.png'
     ];
 
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.includes('font') ? 'font' : 'image';
+      link.crossOrigin = resource.includes('font') ? 'anonymous' : '';
       document.head.appendChild(link);
     });
+
+    // Service worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(console.error);
+    }
   }, []);
-
-  const optimizeFonts = useCallback(() => {
-    // Font optimization
-    const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
-    fontLinks.forEach(link => {
-      link.setAttribute('crossorigin', 'anonymous');
-    });
-  }, []);
-
-  // Auto-optimize on mount
-  useEffect(() => {
-    optimizeImages();
-    preloadCriticalResources();
-    optimizeFonts();
-  }, [optimizeImages, preloadCriticalResources, optimizeFonts]);
-
-  if (!metrics) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50"
-    >
-      <div className="flex items-center space-x-2 mb-2">
-        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-        <span className="font-medium">Performance Monitor</span>
-      </div>
+    <>
+      {children}
       
-      <div className="space-y-1 text-xs">
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={metrics.fcp < 1800 ? 'text-green-400' : 'text-yellow-400'}>
-            {Math.round(metrics.fcp)}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={metrics.lcp < 2500 ? 'text-green-400' : 'text-yellow-400'}>
-            {Math.round(metrics.lcp)}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={metrics.cls < 0.1 ? 'text-green-400' : 'text-yellow-400'}>
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-      </div>
-
-      {isOptimizing && (
-        <div className="mt-2 text-center">
-          <div className="animate-spin w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full mx-auto"></div>
-          <span className="text-xs text-cyan-400">Optimizing...</span>
+      {/* Performance metrics display (development only) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 z-50">
+          <button
+            onClick={() => setShowMetrics(!showMetrics)}
+            className="bg-zion-cyan text-zion-slate-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-zion-cyan/80 transition-colors"
+          >
+            {showMetrics ? 'Hide' : 'Show'} Performance
+          </button>
+          
+          {showMetrics && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="absolute bottom-full right-0 mb-2 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-4 text-white text-sm min-w-[300px]"
+            >
+              <h4 className="font-semibold mb-2 text-zion-cyan">Performance Metrics</h4>
+              <div className="space-y-1">
+                <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+                <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+                <div>FID: {metrics.fid.toFixed(2)}ms</div>
+                <div>CLS: {metrics.cls.toFixed(3)}</div>
+                <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
+              </div>
+            </motion.div>
+          )}
         </div>
       )}
-    </motion.div>
+    </>
   );
-}
+};
+
+// Export individual components
+export { LazyLoadWrapper, OptimizedImage, usePerformanceMonitor };
