@@ -19,6 +19,8 @@
           // // // // // // // console.error('SW registration failed: ', registrationError);
         });
     });
+}
+
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
@@ -28,7 +30,8 @@ export function unregisterServiceWorker() {
       .catch((error) => {
         // // // // // // // console.error(error.message);
       });
-}}}}}}
+  }
+}
 // Service Worker for Zion Tech Group
 // Handles caching, offline functionality, and performance optimization
 const CACHE_NAME = 'zion-tech-group-v1';
