@@ -4,182 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-    <meta name="description" content="You're currently offline. Some features may not be available.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-            color: #f8fafc;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 2rem;
         }
-
+        
         .offline-container {
             text-align: center;
             max-width: 500px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.8);
+            padding: 40px;
             border-radius: 20px;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-
+        
         .offline-icon {
             width: 80px;
             height: 80px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(135deg, #0891b2, #06b6d4);
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 40px;
             color: white;
-            animation: pulse 2s infinite;
         }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
+        
         h1 {
             font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #06b6d4, #0891b2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 15px;
+            color: #06b6d4;
+            font-weight: 600;
         }
-
+        
         p {
             font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 2rem;
+            margin-bottom: 25px;
             color: #cbd5e1;
         }
-
-        .status-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            color: #fca5a5;
-            margin-bottom: 2rem;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #ef4444;
-            border-radius: 50%;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-
+        
         .retry-button {
             background: linear-gradient(135deg, #06b6d4, #0891b2);
             color: white;
             border: none;
-            padding: 0.75rem 2rem;
-            border-radius: 9999px;
+            padding: 12px 30px;
+            border-radius: 25px;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-right: 1rem;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
         }
-
+        
         .retry-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
         }
-
-        .home-button {
-            background: transparent;
-            color: #06b6d4;
-            border: 2px solid #06b6d4;
-            padding: 0.75rem 2rem;
-            border-radius: 9999px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .home-button:hover {
-            background: #06b6d4;
-            color: white;
-        }
-
+        
         .features {
-            margin-top: 2rem;
-            text-align: left;
-        }
-
-        .features h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: #06b6d4;
-        }
-
-        .feature-list {
-            list-style: none;
+            margin-top: 30px;
             display: grid;
-            gap: 0.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
-
-        .feature-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #cbd5e1;
+        
+        .feature {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+        
+        .feature h3 {
+            color: #06b6d4;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .feature p {
             font-size: 0.9rem;
+            margin: 0;
+            color: #94a3b8;
         }
-
-        .feature-list li::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        @media (max-width: 640px) {
+        
+        @media (max-width: 600px) {
             .offline-container {
-                padding: 2rem 1.5rem;
+                padding: 30px 20px;
             }
-
+            
             h1 {
                 font-size: 1.5rem;
             }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .retry-button,
-            .home-button {
-                display: block;
-                width: 100%;
-                margin: 0.5rem 0;
+            
+            .features {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -191,66 +126,51 @@
         </div>
         
         <h1>You're Offline</h1>
+        <p>Don't worry! Some of our content is available offline. Check your internet connection and try again.</p>
         
-        <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>No Internet Connection</span>
-        </div>
-        
-        <p>
-            Don't worry! You can still access previously loaded content and some basic features. 
-            We'll automatically reconnect when your internet is back.
-        </p>
-        
-        <div>
-            <button class="retry-button" onclick="window.location.reload()">
-                Try Again
-            </button>
-            <button class="home-button" onclick="window.location.href='/'">
-                Go Home
-            </button>
-        </div>
+        <button class="retry-button" onclick="window.location.reload()">
+            Try Again
+        </button>
         
         <div class="features">
-            <h3>Available Offline:</h3>
-            <ul class="feature-list">
-                <li>Previously visited pages</li>
-                <li>Basic navigation</li>
-                <li>Contact information</li>
-                <li>Service descriptions</li>
-            </ul>
+            <div class="feature">
+                <h3>🔄 Auto-Sync</h3>
+                <p>Your data will sync automatically when you're back online</p>
+            </div>
+            <div class="feature">
+                <h3>💾 Offline Access</h3>
+                <p>Key features remain available even without internet</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Fast Loading</h3>
+                <p>Optimized for quick access and smooth performance</p>
+            </div>
         </div>
     </div>
-
+    
     <script>
-        // Check connection status
-        function updateConnectionStatus() {
+        // Check if we're back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+        
+        // Add some interactivity
+        document.querySelector('.retry-button').addEventListener('click', () => {
             if (navigator.onLine) {
                 window.location.reload();
+            } else {
+                // Show a message that we're still offline
+                const button = document.querySelector('.retry-button');
+                const originalText = button.textContent;
+                button.textContent = 'Still Offline';
+                button.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'linear-gradient(135deg, #06b6d4, #0891b2)';
+                }, 2000);
             }
-        }
-
-        // Listen for connection changes
-        window.addEventListener('online', updateConnectionStatus);
-        window.addEventListener('focus', updateConnectionStatus);
-
-        // Auto-retry every 30 seconds
-        setInterval(() => {
-            if (navigator.onLine) {
-                window.location.reload();
-            }
-        }, 30000);
-
-        // Service Worker registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW registered: ', registration);
-                })
-                .catch(registrationError => {
-                    console.log('SW registration failed: ', registrationError);
-                });
-        }
+        });
     </script>
 </body>
 </html>

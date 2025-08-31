@@ -252,6 +252,8 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>)};
+    </div>
+  );
+}
+
 export default UltimateServicesShowcase2025;
-}}}

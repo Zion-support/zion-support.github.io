@@ -27,7 +27,7 @@ import {
   Workflow,
   Eye,
   Sparkles,
-  Microchip,
+  Cpu,
   Cloud
 } from 'lucide-react';
 
@@ -68,7 +68,7 @@ export default function AIQuantumHybridPlatform() {
     {
       title: "Drug Discovery",
       description: "Quantum-enhanced molecular simulation for pharmaceutical research",
-      icon: Microchip
+      icon: Cpu
     },
     {
       title: "Financial Modeling",
