@@ -1,10 +1,11 @@
 <<<<<<< HEAD
 import { Navigate, useLocation  } from 'react-router-dom';
 
-export default function Page() {
-  if(requireAuth && !isAuthenticated) {
-"
-    return <Navigate to="/login" state={{ from: location }} replace  />}
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 
   if(roles.length > 0 && user && !roles.includes(user.role || 'user')) {
 "
