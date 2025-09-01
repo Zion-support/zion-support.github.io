@@ -4,10 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-
-
-
-
 class LintErrorFixer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'lint-error-fixer.log');
@@ -52,7 +48,7 @@ class LintErrorFixer {
       // Filter out unused imports (basic check)
       const usedImports = imports.filter(importLine => {
         if (!importLine.trim().startsWith('import ')) return true;
-        
+
         // Extract import names
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {
@@ -68,7 +64,9 @@ class LintErrorFixer {
       this.log(`✅ Fixed unused imports in: ${filePath}`);
       return true;
     } catch (error) {
-      this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`);
+      this.log(
+        `❌ Error fixing unused imports in ${filePath}: ${error.message}`
+      );
       return false;
     }
   }
@@ -76,23 +74,31 @@ class LintErrorFixer {
   async fixTypeScriptErrors(filePath) {
     try {
       // Run TypeScript compiler to check for errors
-      const result = execSync(`npx tsc --noEmit --project .`, { 
+      const result = execSync(`npx tsc --noEmit --project .`, {
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log(`✅ TypeScript check passed for: ${filePath}`);
       return true;
     } catch (error) {
-      this.log(`❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`);
-      
+      this.log(
+        `❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`
+      );
+
       // Try to fix common TypeScript issues
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         let fixedContent = content;
 
         // Fix common TypeScript issues
-        fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =');
-        fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1()');
+        fixedContent = fixedContent.replace(
+          /const\s+(\w+)\s*:\s*any\s*=/g,
+          'const $1 ='
+        );
+        fixedContent = fixedContent.replace(
+          /function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,
+          'function $1()'
+        );
         fixedContent = fixedContent.replace(/:\s*any\s*[,)]/g, '$1');
 
         if (fixedContent !== content) {
@@ -101,7 +107,9 @@ class LintErrorFixer {
           return true;
         }
       } catch (fixError) {
-        this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`);
+        this.log(
+          `❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`
+        );
       }
       return false;
     }
@@ -109,42 +117,44 @@ class LintErrorFixer {
 
   async fixESLintErrors(filePath) {
     try {
-      const result = execSync(`npx eslint "${filePath}" --fix`, { 
+      const result = execSync(`npx eslint "${filePath}" --fix`, {
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log(`✅ Fixed ESLint errors in: ${filePath}`);
       return true;
     } catch (error) {
-      this.log(`❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`);
+      this.log(
+        `❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`
+      );
       return false;
     }
   }
 
   async fixFile(filePath) {
     this.log(`🔧 Fixing issues in: ${filePath}`);
-    
+
     const fixes = [
       this.fixUnusedImports(filePath),
       this.fixTypeScriptErrors(filePath),
-      this.fixESLintErrors(filePath)
+      this.fixESLintErrors(filePath),
     ];
 
     const results = await Promise.all(fixes);
     const successCount = results.filter(Boolean).length;
-    
+
     this.log(`📊 Fixed ${successCount}/3 issue types in: ${filePath}`);
     return successCount > 0;
   }
 
   async fixAllFiles() {
     this.log('🔧 Starting comprehensive lint error fix...');
-    
+
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
-      'hooks/**/*.{js,jsx,ts,tsx}'
+      'hooks/**/*.{js,jsx,ts,tsx}',
     ];
 
     let totalFixed = 0;
@@ -168,25 +178,29 @@ class LintErrorFixer {
     const files = [];
     const parts = pattern.split('/');
     const baseDir = parts[0];
-    
+
     if (fs.existsSync(baseDir)) {
       this.scanDirectory(baseDir, files, pattern);
     }
-    
-    return files.filter(file => 
-      !file.includes('node_modules') && 
-      !file.includes('.next') &&
-      (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.jsx'))
+
+    return files.filter(
+      file =>
+        !file.includes('node_modules') &&
+        !file.includes('.next') &&
+        (file.endsWith('.js') ||
+          file.endsWith('.ts') ||
+          file.endsWith('.tsx') ||
+          file.endsWith('.jsx'))
     );
   }
 
   scanDirectory(dir, files, pattern) {
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         this.scanDirectory(fullPath, files, pattern);
       } else {
@@ -197,29 +211,29 @@ class LintErrorFixer {
 
   async startContinuousMode() {
     this.log('🔄 Starting continuous lint error fixing mode...');
-    
+
     // Run initial fix
     await this.fixAllFiles();
-    
+
     // Set up file watcher
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
-      'hooks/**/*.{js,jsx,ts,tsx}'
+      'hooks/**/*.{js,jsx,ts,tsx}',
     ];
 
     const watcher = require('chokidar').watch(patterns, {
       ignored: /(node_modules|\.next)/,
-      persistent: true
+      persistent: true,
     });
 
-    watcher.on('change', async (filePath) => {
+    watcher.on('change', async filePath => {
       this.log(`📝 File changed: ${filePath}`);
       await this.fixFile(filePath);
     });
 
-    watcher.on('add', async (filePath) => {
+    watcher.on('add', async filePath => {
       this.log(`📝 New file detected: ${filePath}`);
       await this.fixFile(filePath);
     });

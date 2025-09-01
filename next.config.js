@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  
   // Image optimization
   images: {
     domains: ['ziontechgroup.com'],
@@ -22,7 +21,7 @@ const nextConfig = {
 
   // Bundle analyzer (optional)
   ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
+    webpack: config => {
       config.plugins.push(
         new (require('@next/bundle-analyzer'))({
           enabled: true,
@@ -31,7 +30,6 @@ const nextConfig = {
       return config;
     },
   }),
-
 };
 
 export default nextConfig;

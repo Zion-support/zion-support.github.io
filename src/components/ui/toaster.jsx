@@ -1,4 +1,6 @@
-import * as React from "react";
-import { Toaster as HotToaster } from "react-hot-toast";
+import * as React from 'react';'
+import { Toaster as HotToaster } from 'react-hot-toast';
 export function Toaster() {
-    return (<HotToaster position="top-right"/>)}
+  return <HotToaster position="top-right" />;
+}
+'"

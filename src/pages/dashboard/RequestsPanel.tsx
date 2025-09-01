@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { useTalentQuotes } from "@/hooks/useTalentQuotes";"
+import { useAuth } from "@/hooks/useAuth";"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import {
+
   RequestsHeader,
-  QuoteRequestsList
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
+  QuoteRequestsList"
+} from "@/components/quotes";"
+import type { QuoteRequest } from "@/types/quotes";'
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
 export default function RequestsPanel(...args[]):  {
+
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {
+
     quotes,
     unreadCount,
     isLoading,
@@ -32,7 +35,7 @@ export default function RequestsPanel(...args[]):  {
     markAsResponded,
     toggleArchive
   } = useTalentQuotes();
-
+'
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
 
@@ -41,11 +44,11 @@ export default function RequestsPanel(...args[]):  {
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
 
-  return (
+  return()
     <ProtectedRoute>
       <div>
-
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">"
           <div className="container mx-auto">
             <RequestsHeader
               unreadCount={unreadCount}
@@ -55,13 +58,13 @@ export default function RequestsPanel(...args[]):  {
               setArchiveFilter={setArchiveFilter}
             />
 
-            {/* Main Content */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Requests</TabsTrigger>
+            {/* Main Content */}"
+            <Tabs defaultValue="active" className="mb-6">"
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">"
+                <TabsTrigger value="active">Active Requests</TabsTrigger>"
                 <TabsTrigger value="archived">Archived</TabsTrigger>
               </TabsList>
-
+"
               <TabsContent value="active">
                 <QuoteRequestsList
                   quotes={activeQuotes}
@@ -72,7 +75,7 @@ export default function RequestsPanel(...args[]):  {
                   onToggleArchive={toggleArchive}
                 />
               </TabsContent>
-
+"
               <TabsContent value="archived">
                 <QuoteRequestsList
                   quotes={archivedQuotes}
@@ -100,3 +103,4 @@ export default function RequestsPanel(...args[]):  {
       </div>
     </ProtectedRoute>
   )}
+'"

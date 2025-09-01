@@ -1,43 +1,46 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react''
+import { Link } from 'react-router-dom''
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
-
-import { additionalEnhancedServices } from '../data/additional-real-services'
+'
+import { additionalEnhancedServices } from '../data/additional-real-services''
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
 
 export default function Services(...args[]):  {
-	const [searchTerm, setSearchTerm] = useState('')
-	const [selectedCategory, setSelectedCategory] = useState('all')
+'
+	const [searchTerm, setSearchTerm] = useState('')'
+	const [selectedCategory, setSelectedCategory] = useState('all')'
 	const [sortBy, setSortBy] = useState('popularity')
 	const [currentPage, setCurrentPage] = useState(1)
 	const [itemsPerPage] = useState(12) // Show 12 services per page
-
-	const title = 'Services — Zion Tech Group'
+'
+	const title = 'Services — Zion Tech Group''
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
 
 	// Combine all services
 	const allServices = [...additionalEnhancedServices, ...enhancedServices2025]
 
-	// Get unique categories
+	// Get unique categories'
 	const categories = ['all', ...new Set(allServices.map(service => service.category))]
 
 	// Filter and sort services
-	const filteredServices = allServices
-		.filter(service => 
+	const filteredServices = allServices;
+		.filter(service => '
 			(selectedCategory === 'all' || service.category === selectedCategory) &&
 			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())))
 		)
 		.sort((a, b) => {
+
 			switch (sortBy) {
+'
 				case 'popularity':
-					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
-				case 'price':
-					return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))
+					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
+				case 'price':'
+					return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))'
 				case 'rating':
-					return (b.rating || 0) - (a.rating || 0)
-				case 'newest':
+					return (b.rating || 0) - (a.rating || 0)'
+				case 'newest':'
 					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
 				default:
 					return 0
@@ -57,44 +60,47 @@ export default function Services(...args[]):  {
 
 	// Pagination controls
 	const goToPage = (page: number) => {
-		setCurrentPage(page)
+
+		setCurrentPage(page)'
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
 	const goToNextPage = () => {
 		if (currentPage < totalPages) {
+
 			goToPage(currentPage + 1)
 		}
 	}
 
 	const goToPreviousPage = () => {
 		if (currentPage > 1) {
+
 			goToPage(currentPage - 1)
 		}
 	}
 
-	return (
+	return()
 		<>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">"
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
+					<div className="mx-auto max-w-2xl text-center">"
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							Our Comprehensive Services
-						</h1>
+						</h1>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							From cutting-edge AI solutions to enterprise IT infrastructure, we deliver innovative micro SaaS and technology services that transform businesses.
-						</p>
-						<div className="mt-8 flex items-center justify-center gap-4">
-							<div className="flex items-center gap-2 text-sm text-gray-600">
+						</p>"
+						<div className="mt-8 flex items-center justify-center gap-4">"
+							<div className="flex items-center gap-2 text-sm text-gray-600">"
 								<Users2 className="h-4 w-4" />
 								<span>500+ Active Customers</span>
-							</div>
-							<div className="flex items-center gap-2 text-sm text-gray-600">
+							</div>"
+							<div className="flex items-center gap-2 text-sm text-gray-600">"
 								<Star className="h-4 w-4 text-yellow-500" />
 								<span>4.7/5 Rating</span>
-							</div>
-							<div className="flex items-center gap-2 text-sm text-gray-600">
+							</div>"
+							<div className="flex items-center gap-2 text-sm text-gray-600">"
 								<TrendingUp className="h-4 w-4 text-green-500" />
 								<span>99.9% Uptime</span>
 							</div>
@@ -103,49 +109,49 @@ export default function Services(...args[]):  {
 				</div>
 			</section>
 
-			{/* Search and Filter Section */}
-			<section className="bg-white py-12 border-b border-gray-200">
-				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			{/* Search and Filter Section */}"
+			<section className="bg-white py-12 border-b border-gray-200">"
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">"
 					<div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-						{/* Search */}
-						<div className="relative flex-1 max-w-md w-full">
+						{/* Search */}"
+						<div className="relative flex-1 max-w-md w-full">"
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-							<input
-								type="text"
+							<input"
+								type="text""
 								placeholder="Search services..."
 								value={searchTerm}
-								onChange={(e) => setSearchTerm(e.target.value)}
+								onChange={(e) => setSearchTerm(e.target.value)}"
 								className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
 							/>
 						</div>
 
-						{/* Category Filter */}
-						<div className="flex items-center gap-2 w-full sm:w-auto">
+						{/* Category Filter */}"
+						<div className="flex items-center gap-2 w-full sm:w-auto">"
 							<Filter className="h-4 w-4 text-gray-400" />
 							<select
 								value={selectedCategory}
-								onChange={(e) => setSelectedCategory(e.target.value)}
+								onChange={(e) => setSelectedCategory(e.target.value)}"
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								{categories.map(category  => (
-									<option key={category} value={category}>
+									<option key={category} value={category}>'
 										{category === 'all' ? 'All Categories' : category}
 									</option>
 								))}
 							</select>
 						</div>
 
-						{/* Sort */}
-						<div className="flex items-center gap-2 w-full sm:w-auto">
+						{/* Sort */}"
+						<div className="flex items-center gap-2 w-full sm:w-auto">"
 							<Clock className="h-4 w-4 text-gray-400" />
 							<select
 								value={sortBy}
-								onChange={(e) => setSortBy(e.target.value)}
+								onChange={(e) => setSortBy(e.target.value)}"
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
-							>
-								<option value="popularity">Most Popular</option>
-								<option value="price">Price: Low to High</option>
-								<option value="rating">Highest Rated</option>
+							>"
+								<option value="popularity">Most Popular</option>"
+								<option value="price">Price: Low to High</option>"
+								<option value="rating">Highest Rated</option>"
 								<option value="newest">Newest First</option>
 							</select>
 						</div>
@@ -153,125 +159,125 @@ export default function Services(...args[]):  {
 				</div>
 			</section>
 
-			{/* Services Grid */}
-			<section className="py-16 sm:py-20 lg:py-24">
+			{/* Services Grid */}"
+			<section className="py-16 sm:py-20 lg:py-24">"
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					{/* Market References */}
-					<div className="mb-12 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-						<h3 className="text-lg font-semibold text-gray-900 mb-3">Average Market Prices</h3>
-						<p className="text-sm text-gray-600 mb-4">Representative ranges for popular categories with public references:</p>
+					{/* Market References */}"
+					<div className="mb-12 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">"
+						<h3 className="text-lg font-semibold text-gray-900 mb-3">Average Market Prices</h3>"
+						<p className="text-sm text-gray-600 mb-4">Representative ranges for popular categories with public references:</p>"
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-							<div>
-								<div className="font-medium text-gray-800 mb-1">AI Platforms</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://openai.com/api/pricing" target="_blank" rel="noreferrer">openai.com/api/pricing</a></li>
-									<li><a className="underline" href="https://www.anthropic.com/pricing" target="_blank" rel="noreferrer">anthropic.com/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">AI Platforms</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://openai.com/api/pricing" target="_blank" rel="noreferrer">openai.com/api/pricing</a></li>"
+									<li><a className="underline" href="https://www.anthropic.com/pricing" target="_blank" rel="noreferrer">anthropic.com/pricing</a></li>"
 									<li><a className="underline" href="https://cloud.google.com/vertex-ai/pricing" target="_blank" rel="noreferrer">cloud.google.com/vertex-ai/pricing</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">SMB: $100–$2,000/mo+</div>
 							</div>
-							<div>
-								<div className="font-medium text-gray-800 mb-1">Security & Compliance</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://www.cloudflare.com/products/zero-trust/pricing/" target="_blank" rel="noreferrer">cloudflare.com/zero-trust/pricing</a></li>
-									<li><a className="underline" href="https://www.okta.com/pricing/" target="_blank" rel="noreferrer">okta.com/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">Security & Compliance</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://www.cloudflare.com/products/zero-trust/pricing/" target="_blank" rel="noreferrer">cloudflare.com/zero-trust/pricing</a></li>"
+									<li><a className="underline" href="https://www.okta.com/pricing/" target="_blank" rel="noreferrer">okta.com/pricing</a></li>"
 									<li><a className="underline" href="https://snyk.io/plans/" target="_blank" rel="noreferrer">snyk.io/plans</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">SMB: $200–$5,000/mo</div>
 							</div>
-							<div>
-								<div className="font-medium text-gray-800 mb-1">Vector & Search</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://www.pinecone.io/pricing/" target="_blank" rel="noreferrer">pinecone.io/pricing</a></li>
-									<li><a className="underline" href="https://weaviate.io/pricing" target="_blank" rel="noreferrer">weaviate.io/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">Vector & Search</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://www.pinecone.io/pricing/" target="_blank" rel="noreferrer">pinecone.io/pricing</a></li>"
+									<li><a className="underline" href="https://weaviate.io/pricing" target="_blank" rel="noreferrer">weaviate.io/pricing</a></li>"
 									<li><a className="underline" href="https://www.elastic.co/pricing/" target="_blank" rel="noreferrer">elastic.co/pricing</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">SMB: $50–$1,000/mo</div>
 							</div>
-							<div>
-								<div className="font-medium text-gray-800 mb-1">Cloud & DevOps</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://aws.amazon.com/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/pricing</a></li>
-									<li><a className="underline" href="https://azure.microsoft.com/pricing" target="_blank" rel="noreferrer">azure.microsoft.com/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">Cloud & DevOps</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://aws.amazon.com/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/pricing</a></li>"
+									<li><a className="underline" href="https://azure.microsoft.com/pricing" target="_blank" rel="noreferrer">azure.microsoft.com/pricing</a></li>"
 									<li><a className="underline" href="https://cloud.google.com/pricing" target="_blank" rel="noreferrer">cloud.google.com/pricing</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">SMB: $200–$20,000/mo</div>
 							</div>
-							<div>
-								<div className="font-medium text-gray-800 mb-1">Analytics & BI</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://www.snowflake.com/pricing/" target="_blank" rel="noreferrer">snowflake.com/pricing</a></li>
-									<li><a className="underline" href="https://cloud.google.com/bigquery/pricing" target="_blank" rel="noreferrer">cloud.google.com/bigquery/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">Analytics & BI</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://www.snowflake.com/pricing/" target="_blank" rel="noreferrer">snowflake.com/pricing</a></li>"
+									<li><a className="underline" href="https://cloud.google.com/bigquery/pricing" target="_blank" rel="noreferrer">cloud.google.com/bigquery/pricing</a></li>"
 									<li><a className="underline" href="https://www.tableau.com/pricing" target="_blank" rel="noreferrer">tableau.com/pricing</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">SMB: $300–$10,000/mo</div>
 							</div>
-							<div>
-								<div className="font-medium text-gray-800 mb-1">Quantum & Emerging Tech</div>
-								<ul className="text-blue-700 list-disc list-inside">
-									<li><a className="underline" href="https://aws.amazon.com/braket/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/braket/pricing</a></li>
-									<li><a className="underline" href="https://azure.microsoft.com/pricing/details/quantum/" target="_blank" rel="noreferrer">azure.microsoft.com/quantum/pricing</a></li>
+							<div>"
+								<div className="font-medium text-gray-800 mb-1">Quantum & Emerging Tech</div>"
+								<ul className="text-blue-700 list-disc list-inside">"
+									<li><a className="underline" href="https://aws.amazon.com/braket/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/braket/pricing</a></li>"
+									<li><a className="underline" href="https://azure.microsoft.com/pricing/details/quantum/" target="_blank" rel="noreferrer">azure.microsoft.com/quantum/pricing</a></li>"
 									<li><a className="underline" href="https://quantum-computing.ibm.com/pricing" target="_blank" rel="noreferrer">quantum-computing.ibm.com/pricing</a></li>
-								</ul>
+								</ul>"
 								<div className="text-gray-500 mt-1">Enterprise: $500–$5,000/mo+</div>
 							</div>
 						</div>
 					</div>
 					
-					{/* Results Count */}
-					<div className="mb-8">
+					{/* Results Count */}"
+					<div className="mb-8">"
 						<p className="text-gray-600">
 							Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services
 							{totalPages > 1 && ` (Page ${currentPage} of ${totalPages})`}
 						</p>
 					</div>
 
-					{/* Services Grid */}
+					{/* Services Grid */}"
 					<div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{currentServices.map((service) => (
+						{currentServices.map((service) => ("
 							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 								{/* Popular Badge */}
-								{service.popular && (
+								{service.popular && ("
 									<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
 										POPULAR
 									</div>
 								)}
 
-								{/* Service Icon and Header */}
-								<div className="flex items-center gap-x-3 mb-4">
+								{/* Service Icon and Header */}"
+								<div className="flex items-center gap-x-3 mb-4">"
 									<div className="text-3xl">{service.icon}</div>
-									<div>
+									<div>"
 										<h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
 											{service.name}
-										</h3>
+										</h3>"
 										<p className="text-sm text-gray-500">{service.tagline}</p>
 									</div>
 								</div>
 
-								{/* Price */}
-								<div className="mb-4">
-									<div className="flex items-baseline gap-2">
-										<span className="text-2xl font-bold text-gray-900">{service.price}</span>
+								{/* Price */}"
+								<div className="mb-4">"
+									<div className="flex items-baseline gap-2">"
+										<span className="text-2xl font-bold text-gray-900">{service.price}</span>"
 										<span className="text-gray-500">{service.period}</span>
 									</div>
-									{service.trialDays && (
+									{service.trialDays && ("
 										<p className="text-sm text-green-600 font-medium">
 											{service.trialDays}-day free trial
 										</p>
 									)}
 								</div>
 
-								{/* Description */}
+								{/* Description */}"
 								<p className="text-gray-600 text-sm mb-4 line-clamp-3">
 									{service.description}
 								</p>
 
-								{/* Features */}
-								<div className="mb-4">
-									<h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+								{/* Features */}"
+								<div className="mb-4">"
+									<h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>"
 									<ul className="space-y-1">
-										{service.features.slice(0, 3).map((feature, index) => (
-											<li key={index} className="flex items-center gap-2 text-xs text-gray-600">
+										{service.features.slice(0, 3).map((feature, index) => ("
+											<li key={index} className="flex items-center gap-2 text-xs text-gray-600">"
 												<Zap className="h-3 w-3 text-blue-500" />
 												{feature}
 											</li>
@@ -279,45 +285,45 @@ export default function Services(...args[]):  {
 									</ul>
 								</div>
 
-								{/* Category and Rating */}
-								<div className="flex items-center justify-between mb-4">
+								{/* Category and Rating */}"
+								<div className="flex items-center justify-between mb-4">"
 									<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
 										{service.category}
 									</span>
-									{service.rating && (
-										<div className="flex items-center gap-1">
-											<Star className="h-3 w-3 text-yellow-400 fill-current" />
-											<span className="text-xs text-gray-600">{service.rating}</span>
+									{service.rating && ("
+										<div className="flex items-center gap-1">"
+											<Star className="h-3 w-3 text-yellow-400 fill-current" />"
+											<span className="text-xs text-gray-600">{service.rating}</span>"
 											<span className="text-xs text-gray-400">({service.reviews})</span>
 										</div>
 									)}
 								</div>
 
-								{/* Market Info */}
-								<div className="mb-4 p-3 bg-gray-50 rounded-lg">
+								{/* Market Info */}"
+								<div className="mb-4 p-3 bg-gray-50 rounded-lg">"
 									<div className="grid grid-cols-2 gap-2 text-xs">
-										<div>
-											<span className="text-gray-500">Market:</span>
+										<div>"
+											<span className="text-gray-500">Market:</span>"
 											<p className="font-medium">{service.marketSize}</p>
 										</div>
-										<div>
-											<span className="text-gray-500">Growth:</span>
+										<div>"
+											<span className="text-gray-500">Growth:</span>"
 											<p className="font-medium text-green-600">{service.growthRate}</p>
 										</div>
 									</div>
 								</div>
 
-								{/* CTA Button */}
+								{/* CTA Button */}"
 								<div className="flex gap-2">
 									<Link
-										to={service.link}
+										to={service.link}"
 										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
 
-										Learn More
+										Learn More"
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
-									<Link
-										to="/contact"
+									<Link"
+										to="/contact""
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
 
 										Contact
@@ -328,30 +334,30 @@ export default function Services(...args[]):  {
 					</div>
 
 					{/* No Results */}
-					{filteredServices.length === 0 && (
-						<div className="text-center py-12">
-							<div className="text-gray-400 mb-4">
+					{filteredServices.length === 0 && ("
+						<div className="text-center py-12">"
+							<div className="text-gray-400 mb-4">"
 								<Search className="h-16 w-16 mx-auto" />
-							</div>
-							<h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
+							</div>"
+							<h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>"
 							<p className="text-gray-600">Try adjusting your search terms or filters.</p>
 						</div>
 					)}
 
 					{/* Pagination */}
-					{totalPages > 1 && (
+					{totalPages > 1 && ("
 						<div className="mt-12 flex items-center justify-center gap-2">
 							<button
 								onClick={goToPreviousPage}
-								disabled={currentPage === 1}
+								disabled={currentPage === 1}"
 								className="p-2 rounded-full text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-							>
+							>"
 								<ChevronLeft className="h-5 w-5" />
 							</button>
 							{Array.from({ length: totalPages }, (_, i) => (
 								<button
 									key={i + 1}
-									onClick={() => goToPage(i + 1)}
+									onClick={() => goToPage(i + 1)}'`
 									className={`p-2 rounded-full text-gray-600 hover:bg-gray-100 transition-all duration-200 ${currentPage === i + 1 ? 'bg-blue-600 text-white' : ''}`}
 								>
 									{i + 1}
@@ -359,9 +365,9 @@ export default function Services(...args[]):  {
 							))}
 							<button
 								onClick={goToNextPage}
-								disabled={currentPage === totalPages}
+								disabled={currentPage === totalPages}"
 								className="p-2 rounded-full text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-							>
+							>"
 								<ChevronRight className="h-5 w-5" />
 							</button>
 						</div>
@@ -369,61 +375,61 @@ export default function Services(...args[]):  {
 				</div>
 			</section>
 
-			{/* Contact Information */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm:py-20 lg:py-24">
-				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
+			{/* Contact Information */}"
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm:py-20 lg:py-24">"
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">"
+					<div className="mx-auto max-w-2xl text-center">"
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 							Ready to get started?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+						</h2>"
+						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">'
 							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
 
-						{/* Contact Details */}
+						{/* Contact Details */}"
 						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-							<div>
-								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+							<div>"
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">"
 									<Users className="h-6 w-6 text-white" />
-								</div>
-								<h3 className="text-lg font-semibold text-white">Contact Us</h3>
+								</div>"
+								<h3 className="text-lg font-semibold text-white">Contact Us</h3>"
 								<p className="mt-2 text-blue-100">
 									Mobile: +1 302 464 0950<br />
 									Email: kleber@ziontechgroup.com
 								</p>
 							</div>
-							<div>
-								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+							<div>"
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">"
 									<Globe className="h-6 w-6 text-white" />
-								</div>
-								<h3 className="text-lg font-semibold text-white">Visit Us</h3>
+								</div>"
+								<h3 className="text-lg font-semibold text-white">Visit Us</h3>"
 								<p className="mt-2 text-blue-100">
 									364 E Main St STE 1008<br />
 									Middletown DE 19709
 								</p>
 							</div>
-							<div>
-								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+							<div>"
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">"
 									<Zap className="h-6 w-6 text-white" />
-								</div>
-								<h3 className="text-lg font-semibold text-white">Get Started</h3>
+								</div>"
+								<h3 className="text-lg font-semibold text-white">Get Started</h3>"
 								<p className="mt-2 text-blue-100">
 									Free consultation<br />
 									Custom solutions
 								</p>
 							</div>
 						</div>
-
+"
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-							<Link
-								to="/contact"
+							<Link"
+								to="/contact""
 								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200"
 							>
-								Get in touch
+								Get in touch"
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
-							<a
-								href="tel:+13024640950"
+							<a"
+								href="tel:+13024640950""
 								className="w-full sm:w-auto rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-all duration-200"
 							>
 								Call Now
@@ -432,7 +438,8 @@ export default function Services(...args[]):  {
 					</div>;
 				</div>;
 			</section>;
-		</>;
+		</>
 	);
 };
 ;
+'"`

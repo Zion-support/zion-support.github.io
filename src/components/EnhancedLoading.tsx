@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
   Loader2,
   CheckCircle,
   AlertCircle,
@@ -10,58 +11,65 @@ import {
   Cpu,
   Database,
   Network,
-  Shield
+  Shield'
  } from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
+'
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean}
 
 export function LoadingSpinner({
-  size = 'md',
+'
+  size = 'md','
   text = 'Loading...',
-  fullScreen = false
+  fullScreen = false;
 }: LoadingSpinnerProps) {
+
   const sizeClasses = {
-  sm: 'w-8 h-8',
+'
+  sm: 'w-8 h-8','
     md: 'w-16 h-16',;
   ;
   ;
   ;
-  ;
+  ;'
   lg: 'w-32 h-32';
   ;
 
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
+  const containerClasses = fullScreen;'
+    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
-  return (
+  return()
     <div className = {containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
-        <motion.div
+        <motion.div"
           className="relative mx-auto mb-4"
           animate={{
+
             rotate: 360,
             scale: [1, 1.1, 1]
           }}
           transition={{
-            rotate: { duration: 2, repeat: Infinity, ease: "linear" },
+"
+            rotate: { duration: 2, repeat: Infinity, ease: "linear" },"
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
 
           <div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
-            <motion.div
+            <motion.div"
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
               animate = {
+
   {
-                background: [
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,
+
+                background: ['
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)','
+                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)','
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,'
   #0ea5e9)';
                 ]
               
@@ -73,6 +81,7 @@ export function LoadingSpinner({
 
 }}
               transition = {
+
   { duration: 3,
   repeat: Infinity 
 
@@ -82,14 +91,15 @@ export function LoadingSpinner({
 
 
 }}
-            />
+            />"
             <span className="text-2xl font-bold text-white relative z-10">Z</span>
           </div>
 
           {/* Glow Effect */}
-          <motion.div
+          <motion.div"
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
             animate = {
+
   { opacity: [0.3, 0.6,
   0.3] 
 
@@ -100,6 +110,7 @@ export function LoadingSpinner({
 
 }}
             transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -113,9 +124,10 @@ export function LoadingSpinner({
         </motion.div>
 
         {/* Loading Text */}
-        <motion.div
+        <motion.div"
           className="text-zion-cyan font-medium"
           animate = {
+
   { opacity: [0.5, 1,
   0.5] 
 
@@ -126,6 +138,7 @@ export function LoadingSpinner({
 
 }}
           transition = {
+
   { duration: 1.5,
   repeat: Infinity 
 
@@ -139,14 +152,16 @@ export function LoadingSpinner({
           {text}
         </motion.div>
 
-        {/* Loading Dots */}
+        {/* Loading Dots */}"
         <div className="flex justify-center mt-3 space-x-1">
           {[0, 1, 2].map((index) => (
             <motion.div
-              key={index}
+              key={index}"
               className="w-2 h-2 bg-zion-cyan rounded-full"
               animate = {
+
   {
+
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1,
   0.5]
@@ -159,7 +174,9 @@ export function LoadingSpinner({
 
 }}
               transition = {
+
   {
+
                 duration: 1.5,
                 repeat: Infinity,
   delay: index * 0.2
@@ -184,15 +201,18 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
   pageName?: string}
 
 export function PageLoader(...args[]):  {
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;
+
+  return ("
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;"
       <div className="text-center">
-        {/* Animated Background */}
+        {/* Animated Background */}"
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div
+          <motion.div"
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
             animate = {
+
   {
+
               scale: [1, 1.5, 1],
               opacity: [0.3, 0.6,
   0.3]
@@ -205,6 +225,7 @@ export function PageLoader(...args[]):  {
 
 }}
             transition = {
+
   { duration: 4,
   repeat: Infinity 
 
@@ -215,10 +236,12 @@ export function PageLoader(...args[]):  {
 
 }}
           />
-          <motion.div
+          <motion.div"
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
             animate = {
+
   {
+
               scale: [1.5, 1, 1.5],
               opacity: [0.6, 0.3,
   0.6]
@@ -231,6 +254,7 @@ export function PageLoader(...args[]):  {
 
 }}
             transition = {
+
   { duration: 4, repeat: Infinity,
   delay: 1 
 
@@ -246,6 +270,7 @@ export function PageLoader(...args[]):  {
         {/* Main Content */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -256,6 +281,7 @@ export function PageLoader(...args[]):  {
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -265,16 +291,17 @@ export function PageLoader(...args[]):  {
 
 
 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5 }}"
           className="relative z-10"
-
-          <div className="relative">
+"
+          <div className="relative">"
             <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full mx-auto mb-6"></div>
-            <motion.div
+            <motion.div"
               className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
               transition = {
-  { duration: 1, repeat: Infinity,
+
+  { duration: 1, repeat: Infinity,"
   ease: "linear" 
 
 
@@ -283,15 +310,16 @@ export function PageLoader(...args[]):  {
 
 
 }}
-            />
+            />"
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
               ZION
             </div>
           </div>
 
-          <motion.h2
+          <motion.h2"
             className="text-2xl font-bold text-white mb-2"
             animate = {
+
   { opacity: [0.7, 1,
   0.7] 
 
@@ -302,6 +330,7 @@ export function PageLoader(...args[]):  {
 
 }}
             transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -315,9 +344,10 @@ export function PageLoader(...args[]):  {
             Loading {pageName}
           </motion.h2>
 
-          <motion.p
+          <motion.p"
             className="text-zion-slate-light"
             animate = {
+
   { opacity: [0.5, 1,
   0.5] 
 
@@ -328,6 +358,7 @@ export function PageLoader(...args[]):  {
 
 }}
             transition = {
+
   { duration: 2, repeat: Infinity,
   delay: 0.5 
 
@@ -341,15 +372,16 @@ export function PageLoader(...args[]):  {
             Please wait while we prepare everything for you...
           </motion.p>
 
-          {/* Progress Bar */}
-          <div className="mt-6 w-64 mx-auto">
+          {/* Progress Bar */}"
+          <div className="mt-6 w-64 mx-auto">"
             <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">
-              <motion.div
+              <motion.div"
                 className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-                initial={{ width: 0 }}
+                initial={{ width: 0 }}"
                 animate={{ width: "100%" }}
                 transition = {
-  { duration: 3,
+
+  { duration: 3,"
   ease: "easeInOut" 
 
 
@@ -371,16 +403,19 @@ export function PageLoader(...args[]):  {
   className?: string}
 
 export function SkeletonLoader(...args[]):  {
-  return (
+
+  return()`
 <div className:  {`space-y-3 ${className}`}>;
       {Array.from({ length: lines }).map((_, index)  => (;
         <motion.div
-          key={index}
+          key={index}"
           className="h-4 bg-zion-slate-light/20 rounded"
           animate = {
+
   {
-            opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0',
+
+            opacity: [0.5, 1, 0.5],'
+            backgroundPosition: ['200% 0','
   '-200% 0']
           
 
@@ -391,7 +426,9 @@ export function SkeletonLoader(...args[]):  {
 
 }}
           transition = {
+
   {
+
             duration: 1.5,
             repeat: Infinity,
   delay: index * 0.1
@@ -404,5 +441,8 @@ export function SkeletonLoader(...args[]):  {
 
 }}
           style = {
+
   {
+'
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',
+'"`

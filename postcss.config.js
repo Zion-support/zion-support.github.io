@@ -1,8 +1,7 @@
 export default {
   plugins: {
-
-    'tailwindcss': {},
-    'autoprefixer': {
+    tailwindcss: {},
+    autoprefixer: {
       flexbox: 'no-2009',
       grid: 'autoplace',
       overrideBrowserslist: [
@@ -10,8 +9,8 @@ export default {
         'last 2 versions',
         'Firefox ESR',
         'not dead',
-        'not ie 11'
-      ]
+        'not ie 11',
+      ],
     },
     'postcss-preset-env': {
       stage: 3,
@@ -28,30 +27,32 @@ export default {
         'color-functional-notation': true,
         'cascade-layers': true,
         'is-pseudo-class': true,
-        'clamp': true,
+        clamp: true,
         'gap-properties': true,
-        'double-position-gradients': true
-      }
+        'double-position-gradients': true,
+      },
     },
-    'cssnano': {
-      preset: ['default', {
-        discardComments: {
-          removeAll: true,
+    cssnano: {
+      preset: [
+        'default',
+        {
+          discardComments: {
+            removeAll: true,
+          },
+          normalizeWhitespace: false,
+          colormin: true,
+          minifyFontValues: true,
+          minifyGradients: true,
+          minifySelectors: true,
+          mergeLonghand: true,
+          mergeRules: true,
+          reduceIdents: false,
+          reduceInitial: true,
+          reduceTransforms: true,
+          uniqueSelectors: true,
+          zindex: false,
         },
-        normalizeWhitespace: false,
-        colormin: true,
-        minifyFontValues: true,
-        minifyGradients: true,
-        minifySelectors: true,
-        mergeLonghand: true,
-        mergeRules: true,
-        reduceIdents: false,
-        reduceInitial: true,
-        reduceTransforms: true,
-        uniqueSelectors: true,
-        zindex: false
-      }]
-    }
-  }
-}
-
+      ],
+    },
+  },
+};

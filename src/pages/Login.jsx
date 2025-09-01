@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
-import { ErrorBoundary } from 'react-error-boundary';
+import { useEffect } from 'react';'
+import { useNavigate, useLocation } from 'react-router-dom';'
+import { useAuth } from '@/hooks/useAuth';'
+import { safeStorage } from '@/utils/safeStorage';'
+import { LoginContent } from '@/components/auth/login';'
+import { ErrorBoundary } from 'react-error-boundary';'
 import { useCart } from '@/context/CartContext';
-
-import { toast } from '@/hooks/use-toast';
-import { useDispatch } from 'react-redux';
+'
+import { toast } from '@/hooks/use-toast';'
+import { useDispatch } from 'react-redux';'
 import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
@@ -21,11 +21,12 @@ export default function Login() {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
     const queryString = location.search;
-    const params = new URLSearchParams(queryString);
+    const params = new URLSearchParams(queryString);'
     const token = params.get('token');
     if (token) {
+'
       safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing and clean up history
+      // Clear token from URL to prevent re-processing and clean up history'
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
@@ -34,7 +35,8 @@ export default function Login() {
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
+
+      reduxDispatch(setLoggedIn(true));'
       const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
     }
@@ -42,8 +44,11 @@ export default function Login() {
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
+
+    return()
+      <ErrorBoundary
+        fallback={<div>Something went wrong. Please try again.</div>}
+      >
         <LoginContent />
       </ErrorBoundary>
     );
@@ -51,6 +56,7 @@ export default function Login() {
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
+
     return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
   }
 
@@ -58,3 +64,4 @@ export default function Login() {
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
 }
+'"

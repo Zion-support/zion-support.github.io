@@ -14,11 +14,17 @@ const SHIPPING_COST = 9.99;
  * @param {Object} item - Cart item to validate
  * @returns {boolean} Whether item is valid
  */
-export const validateCartItem = (item) => {
+export const validateCartItem = item => {
+'
   if (!item || typeof item !== 'object') return false;
-  
+'
   const requiredFields = ['id', 'name', 'price', 'quantity'];
-  return requiredFields.every(field => item.hasOwnProperty(field) && item[field] !== null && item[field] !== undefined);
+  return requiredFields.every()
+    field =>
+      item.hasOwnProperty(field) &&
+      item[field] !== null &&
+      item[field] !== undefined
+  );
 };
 
 /**
@@ -28,22 +34,26 @@ export const validateCartItem = (item) => {
  * @returns {Array} Updated cart
  */
 export const addToCart = (cart, newItem) => {
+
   if (!validateCartItem(newItem)) {
-    console.error('Invalid cart item:', newItem);
+'
+    // console.error('Invalid cart item:', newItem);
     return cart;
   }
 
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
-  
+
   if (existingItemIndex !== -1) {
+
     // Update existing item quantity
     const updatedCart = [...cart];
     updatedCart[existingItemIndex] = {
+
       ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + newItem.quantity
-    };
+      quantity: updatedCart[existingItemIndex].quantity + newItem.quantity};
     return updatedCart;
   } else {
+
     // Add new item
     return [...cart, { ...newItem, addedAt: new Date().toISOString() }];
   }
@@ -56,6 +66,7 @@ export const addToCart = (cart, newItem) => {
  * @returns {Array} Updated cart
  */
 export const removeFromCart = (cart, itemId) => {
+
   return cart.filter(item => item.id !== itemId);
 };
 
@@ -67,12 +78,14 @@ export const removeFromCart = (cart, itemId) => {
  * @returns {Array} Updated cart
  */
 export const updateItemQuantity = (cart, itemId, quantity) => {
+
   if (quantity <= 0) {
+
     return removeFromCart(cart, itemId);
   }
 
-  return cart.map(item => 
-    item.id === itemId 
+  return cart.map(item =>
+    item.id === itemId
       ? { ...item, quantity, updatedAt: new Date().toISOString() }
       : item
   );
@@ -91,7 +104,8 @@ export const clearCart = () => {
  * @param {Array} cart - Cart array
  * @returns {boolean} Whether cart is empty
  */
-export const isCartEmpty = (cart) => {
+export const isCartEmpty = cart => {
+
   return !Array.isArray(cart) || cart.length === 0;
 };
 
@@ -100,7 +114,8 @@ export const isCartEmpty = (cart) => {
  * @param {Array} cart - Cart array
  * @returns {number} Total item count
  */
-export const getCartItemCount = (cart) => {
+export const getCartItemCount = cart => {
+
   if (isCartEmpty(cart)) return 0;
   return cart.reduce((total, item) => total + (item.quantity || 0), 0);
 };
@@ -110,9 +125,13 @@ export const getCartItemCount = (cart) => {
  * @param {Array} cart - Cart array
  * @returns {number} Subtotal amount
  */
-export const calculateCartSubtotal = (cart) => {
+export const calculateCartSubtotal = cart => {
+
   if (isCartEmpty(cart)) return 0;
-  return cart.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 0)), 0);
+  return cart.reduce()
+    (total, item) => total + (item.price || 0) * (item.quantity || 0),
+    0
+  );
 };
 
 /**
@@ -120,7 +139,8 @@ export const calculateCartSubtotal = (cart) => {
  * @param {number} subtotal - Cart subtotal
  * @returns {number} Tax amount
  */
-export const calculateTax = (subtotal) => {
+export const calculateTax = subtotal => {
+
   return subtotal * TAX_RATE;
 };
 
@@ -129,7 +149,8 @@ export const calculateTax = (subtotal) => {
  * @param {number} subtotal - Cart subtotal
  * @returns {number} Shipping cost
  */
-export const calculateShipping = (subtotal) => {
+export const calculateShipping = subtotal => {
+
   return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
 };
 
@@ -138,20 +159,21 @@ export const calculateShipping = (subtotal) => {
  * @param {Array} cart - Cart array
  * @returns {Object} Cart totals
  */
-export const calculateCartTotal = (cart) => {
+export const calculateCartTotal = cart => {
+
   const subtotal = calculateCartSubtotal(cart);
   const tax = calculateTax(subtotal);
   const shipping = calculateShipping(subtotal);
   const total = subtotal + tax + shipping;
 
   return {
+
     subtotal,
     tax,
     shipping,
     total,
     itemCount: getCartItemCount(cart),
-    uniqueItems: cart.length
-  };
+    uniqueItems: cart.length};
 };
 
 /**
@@ -159,16 +181,18 @@ export const calculateCartTotal = (cart) => {
  * @param {number} price - Price to format
  * @param {string} currency - Currency code (default: USD)
  * @returns {string} Formatted price
- */
+ */'
 export const formatPrice = (price, currency = 'USD') => {
+'
   if (typeof price !== 'number' || isNaN(price)) {
+'
     return '$0.00';
   }
-
+'
   return new Intl.NumberFormat('en-US', {
+'
     style: 'currency',
-    currency: currency
-  }).format(price);
+    currency: currency}).format(price);
 };
 
 /**
@@ -176,18 +200,19 @@ export const formatPrice = (price, currency = 'USD') => {
  * @param {Array} cart - Cart items array
  * @returns {Object} Cart summary
  */
-export const getCartSummary = (cart) => {
+export const getCartSummary = cart => {
+
   const total = calculateCartTotal(cart);
 
   return {
+
     itemCount: total.itemCount,
     uniqueItems: cart.length,
     subtotal: formatPrice(total.subtotal),
     tax: formatPrice(total.tax),
     shipping: formatPrice(total.shipping),
     total: formatPrice(total.total),
-    isEmpty: isCartEmpty(cart)
-  };
+    isEmpty: isCartEmpty(cart)};
 };
 
 /**
@@ -195,11 +220,13 @@ export const getCartSummary = (cart) => {
  * @param {Array} cart - Cart items array
  * @returns {string} JSON string of cart data
  */
-export const exportCartData = (cart) => {
+export const exportCartData = cart => {
+
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    console.error('Error exporting cart data:', error);
+'
+    // console.error('Error exporting cart data:', error);'
     return '[]';
   }
 };
@@ -209,15 +236,18 @@ export const exportCartData = (cart) => {
  * @param {string} cartData - JSON string of cart data
  * @returns {Array} Parsed cart array
  */
-export const importCartData = (cartData) => {
+export const importCartData = cartData => {
+
   try {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
+
       return parsed.filter(item => validateCartItem(item));
     }
     return [];
   } catch (error) {
-    console.error('Error importing cart data:', error);
+'
+    // console.error('Error importing cart data:', error);
     return [];
   }
 };
@@ -228,7 +258,9 @@ export const importCartData = (cartData) => {
  * @returns {string} Cart storage key
  */
 export const getCartKey = (userId = null) => {
+
   if (userId) {
+
     return `zion_cart_${userId}`;
   }
   return CART_STORAGE_KEY;
@@ -241,24 +273,30 @@ export const getCartKey = (userId = null) => {
  * @returns {Array} Merged cart
  */
 export const mergeCarts = (cart1, cart2) => {
+
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
-    return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
+
+    return Array.isArray(cart1) ? cart1 : Array.isArray(cart2) ? cart2 : [];
   }
 
   const merged = [...cart1];
-  
+
   cart2.forEach(item2 => {
+
     if (validateCartItem(item2)) {
+
       const existingIndex = merged.findIndex(item1 => item1.id === item2.id);
-      
+
       if (existingIndex !== -1) {
+
         // Merge quantities
         merged[existingIndex] = {
+
           ...merged[existingIndex],
           quantity: merged[existingIndex].quantity + item2.quantity,
-          updatedAt: new Date().toISOString()
-        };
+          updatedAt: new Date().toISOString()};
       } else {
+
         // Add new item
         merged.push({ ...item2, addedAt: new Date().toISOString() });
       }
@@ -275,5 +313,7 @@ export const mergeCarts = (cart1, cart2) => {
  * @returns {Array} Merged cart
  */
 export const mergeCartItems = (cart1, cart2) => {
+
   return mergeCarts(cart1, cart2);
 };
+'`

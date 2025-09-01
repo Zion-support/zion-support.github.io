@@ -1,7 +1,6 @@
 import React, { createContext, useContext } from 'react.ts';
 
 interface User {
-
   id: string;
   email: string;
   displayName?: string;
@@ -12,12 +11,10 @@ interface User {
   updatedAt?: string}
 
 interface AuthTokens {
-
   accessToken: string | null;
   refreshToken: string | null}
 
 interface AuthContextType {
-
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
@@ -37,11 +34,11 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const useAuth = () => {;
   const context = useContext(AuthContext);
-  if (context = == null) {;
+  if (context = == null) {;'
     throw new Error('useAuth must be used within an AuthProvider');
 
   return context;
 };
 
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };}}}}
+export type { User, AuthTokens, AuthContextType };}}}}'

@@ -1,4 +1,3 @@
-
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
@@ -66,7 +65,7 @@ const config: Config = {
           DEFAULT: '#17072b',
           light: '#451582',
           dark: '#000000',
-        }
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -74,12 +73,16 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
+        sans: [
+          'var(--font-inter)',
+          'Inter Fallback',
+          ...defaultTheme.fontFamily.sans,
+        ],
         heading: [
           'var(--font-poppins)',
           'Poppins Fallback',
-          ...defaultTheme.fontFamily.sans
-        ]
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       keyframes: {
         'accordion-down': {
@@ -89,13 +92,13 @@ const config: Config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
-        }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-      }
-    }
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -107,12 +110,11 @@ const config: Config = {
         '.ltr': {
           direction: 'ltr',
           textAlign: 'left',
-        }
+        },
       };
       addUtilities(newUtilities);
-    })
-  ]
+    }),
+  ],
 };
 
 export default config;
-

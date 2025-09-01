@@ -30,9 +30,18 @@ class AutomationFactory {
 
   loadExistingScripts() {
     const scriptTypes = {
-      'lint-monitor': { file: 'lint-monitor.js', description: 'Continuous lint monitoring' },
-      'lint-fixer': { file: 'lint-error-fixer.js', description: 'Automated lint error fixing' },
-      'lint-manager': { file: 'lint-automation-manager.js', description: 'Lint automation management' }
+      'lint-monitor': {
+        file: 'lint-monitor.js',
+        description: 'Continuous lint monitoring',
+      },
+      'lint-fixer': {
+        file: 'lint-error-fixer.js',
+        description: 'Automated lint error fixing',
+      },
+      'lint-manager': {
+        file: 'lint-automation-manager.js',
+        description: 'Lint automation management',
+      },
     };
 
     for (const [name, config] of Object.entries(scriptTypes)) {
@@ -41,7 +50,7 @@ class AutomationFactory {
         this.scripts.set(name, {
           ...config,
           path: scriptPath,
-          status: 'available'
+          status: 'available',
         });
       }
     }
@@ -100,9 +109,9 @@ monitor.analyzeCodeQuality();
       file: 'code-quality-monitor.js',
       path: scriptPath,
       description: 'Code quality analysis and monitoring',
-      status: 'available'
+      status: 'available',
     });
-    
+
     this.log('✅ Generated code quality monitoring script');
   }
 
@@ -156,9 +165,9 @@ optimizer.optimizeBundle();
       file: 'performance-optimizer.js',
       path: scriptPath,
       description: 'Performance optimization and bundle analysis',
-      status: 'available'
+      status: 'available',
     });
-    
+
     this.log('✅ Generated performance optimization script');
   }
 
@@ -279,10 +288,11 @@ console.log('Content generator ready');
     this.scripts.set('content-generator', {
       file: 'content-generator.js',
       path: scriptPath,
-      description: 'Automated content generation for blogs, components, and pages',
-      status: 'available'
+      description:
+        'Automated content generation for blogs, components, and pages',
+      status: 'available',
     });
-    
+
     this.log('✅ Generated content generation script');
   }
 
@@ -387,9 +397,9 @@ optimizer.analyzeSEO();
       file: 'seo-optimizer.js',
       path: scriptPath,
       description: 'SEO analysis and optimization',
-      status: 'available'
+      status: 'available',
     });
-    
+
     this.log('✅ Generated SEO optimization script');
   }
 
@@ -522,9 +532,9 @@ scanner.scanSecurity();
       file: 'security-scanner.js',
       path: scriptPath,
       description: 'Security vulnerability scanning and analysis',
-      status: 'available'
+      status: 'available',
     });
-    
+
     this.log('✅ Generated security scanning script');
   }
 
@@ -653,10 +663,11 @@ console.log('Test generator ready');
     this.scripts.set('test-generator', {
       file: 'test-generator.js',
       path: scriptPath,
-      description: 'Automated test generation for components, pages, and utilities',
-      status: 'available'
+      description:
+        'Automated test generation for components, pages, and utilities',
+      status: 'available',
     });
-    
+
     this.log('✅ Generated test generation script');
   }
 
@@ -669,12 +680,12 @@ console.log('Test generator ready');
 
     try {
       this.log(`🚀 Running script: ${scriptName}`);
-      const result = execSync(`node "${script.path}"`, { 
+      const result = execSync(`node "${script.path}"`, {
         encoding: 'utf8',
         stdio: 'pipe',
-        ...options
+        ...options,
       });
-      
+
       this.log(`✅ Script completed: ${scriptName}`);
       return { success: true, output: result };
     } catch (error) {
@@ -685,7 +696,7 @@ console.log('Test generator ready');
 
   async runAllScripts() {
     this.log('🚀 Running all automation scripts...');
-    
+
     const results = [];
     for (const [name, script] of this.scripts) {
       if (script.status === 'available') {
@@ -693,47 +704,50 @@ console.log('Test generator ready');
         results.push({ name, ...result });
       }
     }
-    
+
     this.log(`📊 Completed ${results.length} scripts`);
     return results;
   }
 
   generateAllScripts() {
     this.log('🔧 Generating all automation scripts...');
-    
+
     this.generateCodeQualityScript();
     this.generatePerformanceOptimizer();
     this.generateContentGenerator();
     this.generateSEOOptimizer();
     this.generateSecurityScanner();
     this.generateTestGenerator();
-    
+
     this.log('✅ All scripts generated successfully');
   }
 
   listScripts() {
     console.log('\n📋 Available Automation Scripts:');
     console.log('================================');
-    
+
     for (const [name, script] of this.scripts) {
       console.log(`\n🔧 ${name}`);
       console.log(`   Description: ${script.description}`);
       console.log(`   Status: ${script.status}`);
       console.log(`   File: ${script.file}`);
     }
-    
+
     console.log(`\nTotal scripts: ${this.scripts.size}`);
   }
 
   startContinuousMode() {
     this.log('🔄 Starting continuous automation mode...');
-    
+
     // Run all scripts every 10 minutes
-    setInterval(async () => {
-      this.log('🔄 Running continuous automation cycle...');
-      await this.runAllScripts();
-    }, 10 * 60 * 1000);
-    
+    setInterval(
+      async () => {
+        this.log('🔄 Running continuous automation cycle...');
+        await this.runAllScripts();
+      },
+      10 * 60 * 1000
+    );
+
     // Initial run
     this.runAllScripts();
   }
@@ -762,7 +776,9 @@ switch (command) {
     factory.startContinuousMode();
     break;
   default:
-    console.log('Usage: node automation-factory.js [generate|run|list|continuous] [script-name]');
+    console.log(
+      'Usage: node automation-factory.js [generate|run|list|continuous] [script-name]'
+    );
     console.log('\nCommands:');
     console.log('  generate    - Generate all automation scripts');
     console.log('  run         - Run all scripts or specific script');

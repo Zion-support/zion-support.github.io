@@ -1,8 +1,8 @@
-import { Gift import { useAuth } from '@/hooks/useAuth';
-import { useEffect, useState } from 'react';
-import { usePoints } from '@/hooks/usePoints';
-import { Link } from 'react-router-dom';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { Gift import { useAuth } from '@/hooks/useAuth';'
+import { useEffect, useState } from 'react';'
+import { usePoints } from '@/hooks/usePoints';'
+import { Link } from 'react-router-dom';'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 export function PointsBadge() {
     const { user, signOut, logout } = useAuth();
@@ -13,17 +13,20 @@ export function PointsBadge() {
     if (!user)
         return null;
     const breakdown = ledger.reduce((acc, e) => {
+'
         if (e.reason === 'purchase')
-            acc.purchase += e.delta;
+            acc.purchase += e.delta;'
         if (e.reason === 'post')
-            acc.post += e.delta;
+            acc.post += e.delta;'
         if (e.reason === 'referral')
             acc.referral += e.delta;
         return acc}, { purchase: 0, post: 0, referral: 0 });
     const handleLogout = async () => {
         if (signOut) {
+
             await signOut()}
         else if (logout) {
+
             await logout()}
     };
     return (<DropdownMenu>
@@ -31,14 +34,14 @@ export function PointsBadge() {
         <Tooltip>
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
-              <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">
+              <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">"
                 <Gift className="h-4 w-4"/>
                 <span>{`${points} pts`}</span>
               </button>
             </TooltipTrigger>
           </DropdownMenuTrigger>
-          <TooltipContent>
-            <p className="text-sm font-medium">Point Breakdown</p>
+          <TooltipContent>"
+            <p className="text-sm font-medium">Point Breakdown</p>"
             <ul className="text-xs mt-1 space-y-0.5">
               <li>Purchases: {breakdown.purchase}</li>
               <li>Posts: {breakdown.post}</li>
@@ -46,14 +49,15 @@ export function PointsBadge() {
             </ul>
           </TooltipContent>
         </Tooltip>
-      </TooltipProvider>
+      </TooltipProvider>"
       <DropdownMenuContent align="end">
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem asChild>"
           <Link to="/profile">Profile</Link>
         </DropdownMenuItem>
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem asChild>"
           <Link to="/orders">Orders</Link>
         </DropdownMenuItem>
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>)}
+'"`

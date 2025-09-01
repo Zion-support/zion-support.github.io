@@ -5,11 +5,13 @@ A comprehensive automated error fixing and monitoring system for the Zion Tech G
 ## 🚀 Quick Start
 
 ### Start the Automation System
+
 ```bash
 npm run automation:start
 ```
 
 ### Manual Error Fixing
+
 ```bash
 # Run comprehensive error fixing
 npm run automation:comprehensive
@@ -19,6 +21,7 @@ npm run automation:error-fix
 ```
 
 ### Monitor the System
+
 ```bash
 # Check status
 npm run automation:status
@@ -36,6 +39,7 @@ npm run automation:stop
 ## 📋 What This System Does
 
 ### 🔧 Error Fixing
+
 - **Merge Conflicts**: Automatically resolves Git merge conflicts
 - **Syntax Errors**: Fixes common JavaScript/TypeScript syntax issues
 - **Unused Imports**: Removes unused imports and variables
@@ -47,27 +51,29 @@ npm run automation:stop
 - **Console Statements**: Handles console.log statements in production
 
 ### 🔍 Code Quality Checks
+
 - **ESLint**: Runs linting with auto-fix
 - **TypeScript**: Type checking
 - **Prettier**: Code formatting
 - **Bundle Analysis**: Performance monitoring
 
 ### 🔒 Security & Dependencies
+
 - **Security Audits**: npm audit checks
 - **Dependency Updates**: Outdated package detection
 - **Vulnerability Scanning**: Security vulnerability detection
 
 ## 📊 Automation Schedule
 
-| Process | Frequency | Priority |
-|---------|-----------|----------|
+| Process                   | Frequency        | Priority   |
+| ------------------------- | ---------------- | ---------- |
 | Comprehensive Error Fixer | Every 10 minutes | 🔴 HIGHEST |
-| Error Fixer Automation | Every 15 minutes | 🔴 HIGH |
-| Console Error Fixer | Every 15 minutes | 🔴 HIGH |
-| Code Quality Checks | Every 30 minutes | 🟡 MEDIUM |
-| Security Checks | Every 4 hours | 🟡 MEDIUM |
-| Performance Monitoring | Every 2 hours | 🟢 LOW |
-| Dependency Updates | Every 6 hours | 🟢 LOW |
+| Error Fixer Automation    | Every 15 minutes | 🔴 HIGH    |
+| Console Error Fixer       | Every 15 minutes | 🔴 HIGH    |
+| Code Quality Checks       | Every 30 minutes | 🟡 MEDIUM  |
+| Security Checks           | Every 4 hours    | 🟡 MEDIUM  |
+| Performance Monitoring    | Every 2 hours    | 🟢 LOW     |
+| Dependency Updates        | Every 6 hours    | 🟢 LOW     |
 
 ## 📁 File Structure
 
@@ -89,6 +95,7 @@ reports/
 ## 🔧 Configuration
 
 ### PM2 Ecosystem Configuration
+
 The system uses `ecosystem.config.cjs` to manage PM2 processes:
 
 ```javascript
@@ -107,12 +114,14 @@ The system uses `ecosystem.config.cjs` to manage PM2 processes:
 ```
 
 ### Environment Variables
+
 - `NODE_ENV`: Set to 'production' for production mode
 - `AUTOMATION_INTERVAL`: Interval between runs in milliseconds
 
 ## 📈 Monitoring & Reports
 
 ### Real-time Monitoring
+
 ```bash
 # View all processes
 pm2 status
@@ -125,12 +134,14 @@ pm2 monit
 ```
 
 ### Generated Reports
+
 - **Comprehensive Reports**: `automation-reports/comprehensive-report-*.json`
 - **Error Reports**: `error-reports/error-fixer-report-*.json`
 - **Statistics**: `automation-reports/automation-stats.json`
 - **Error Logs**: `logs/error-log-*.json`
 
 ### Report Structure
+
 ```json
 {
   "timestamp": "2024-01-01T00:00:00.000Z",
@@ -163,16 +174,19 @@ pm2 monit
 ### Common Issues
 
 #### PM2 Not Installed
+
 ```bash
 npm install -g pm2
 ```
 
 #### Permission Issues
+
 ```bash
 sudo chmod +x scripts/start-error-automation.sh
 ```
 
 #### Process Not Starting
+
 ```bash
 # Check PM2 logs
 pm2 logs
@@ -185,6 +199,7 @@ pm2 monit
 ```
 
 #### High Memory Usage
+
 ```bash
 # Increase memory limit in ecosystem.config.cjs
 max_memory_restart: '2G'
@@ -194,6 +209,7 @@ pm2 restart all
 ```
 
 ### Debug Mode
+
 ```bash
 # Run with debug logging
 DEBUG=* npm run automation:comprehensive
@@ -205,12 +221,13 @@ pm2 logs --lines 100
 ## 🔄 Integration with CI/CD
 
 ### GitHub Actions Integration
+
 ```yaml
 name: Error Automation
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Every 10 minutes
-  workflow_dispatch:  # Manual trigger
+    - cron: '*/10 * * * *' # Every 10 minutes
+  workflow_dispatch: # Manual trigger
 
 jobs:
   error-fix:
@@ -226,6 +243,7 @@ jobs:
 ```
 
 ### Pre-commit Hooks
+
 ```bash
 #!/bin/sh
 # .git/hooks/pre-commit
@@ -243,6 +261,7 @@ fi
 ## 📚 Advanced Usage
 
 ### Custom Error Fixing Rules
+
 Create custom rules in `scripts/automation/error-fixer-automation.cjs`:
 
 ```javascript
@@ -251,12 +270,13 @@ const customFixes = [
   {
     pattern: /your-custom-pattern/g,
     replacement: 'your-replacement',
-    description: 'Custom fix description'
-  }
+    description: 'Custom fix description',
+  },
 ];
 ```
 
 ### Extending Automation
+
 Add new automation processes to `ecosystem.config.cjs`:
 
 ```javascript
@@ -275,6 +295,7 @@ Add new automation processes to `ecosystem.config.cjs`:
 ```
 
 ### Performance Optimization
+
 - Monitor memory usage with `pm2 monit`
 - Adjust `max_memory_restart` based on system resources
 - Use clustering for CPU-intensive operations
@@ -283,12 +304,14 @@ Add new automation processes to `ecosystem.config.cjs`:
 ## 🤝 Contributing
 
 ### Adding New Error Fixes
+
 1. Add fix logic to `ErrorFixerAutomation` class
 2. Update documentation
 3. Add tests
 4. Submit pull request
 
 ### Reporting Issues
+
 1. Check existing reports in `automation-reports/`
 2. Review logs in `logs/`
 3. Create issue with detailed error information
@@ -297,6 +320,7 @@ Add new automation processes to `ecosystem.config.cjs`:
 ## 📞 Support
 
 For issues or questions:
+
 - Check the logs: `npm run automation:logs`
 - Review reports: `automation-reports/`
 - Check PM2 status: `npm run automation:status`

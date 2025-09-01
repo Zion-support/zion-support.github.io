@@ -27,7 +27,7 @@ jest.mock('next/router', () => ({
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props) => {
+  default: props => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
   },
@@ -52,7 +52,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }));
 
-global.matchMedia = jest.fn().mockImplementation((query) => ({
+global.matchMedia = jest.fn().mockImplementation(query => ({
   matches: false,
   media: query,
   onchange: null,

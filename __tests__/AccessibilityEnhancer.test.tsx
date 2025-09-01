@@ -32,19 +32,16 @@ describe('AccessibilityEnhancer', () => {
 
   it('handles keyboard events correctly', () => {
     const mockOnKeyDown = jest.fn();
-    
+
     render(
-      <AccessibilityEnhancer
-        role="button"
-        onKeyDown={mockOnKeyDown}
-      >
+      <AccessibilityEnhancer role="button" onKeyDown={mockOnKeyDown}>
         <span>Button Text</span>
       </AccessibilityEnhancer>
     );
 
     const button = screen.getByRole('button');
     fireEvent.keyDown(button, { key: 'Enter' });
-    
+
     expect(mockOnKeyDown).toHaveBeenCalled();
   });
 
@@ -56,7 +53,11 @@ describe('AccessibilityEnhancer', () => {
     );
 
     const element = screen.getByText('Content').parentElement;
-    expect(element).toHaveClass('focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500');
+    expect(element).toHaveClass(
+      'focus:outline-none',
+      'focus:ring-2',
+      'focus:ring-blue-500'
+    );
   });
 
   it('disables focus when not focusable', () => {

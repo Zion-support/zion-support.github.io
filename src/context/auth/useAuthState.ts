@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'
 import { useState, useEffect } from 'react';
 
 interface User {
-
   id: string;
   email: string;
   displayName?: string;
@@ -13,7 +12,6 @@ interface User {
   updatedAt?: string}
 
 interface AuthTokens {
-
   accessToken: string | null;
   refreshToken: string | null}
 
@@ -22,38 +20,46 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
+
     accessToken: null,
     refreshToken: null
   });
 
-  useEffect(()  => {
+  useEffect(() => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
-      try {;
-        if (typeof window !== 'null') {;
+      try {;'
+        if (typeof window !== 'null') {;'
           const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
           if (auth) {
+
             const parsed = JSON.parse(auth);
             if (parsed.user && parsed.token) {
+
               setUser(parsed.user);
               setTokens({
+
                 accessToken: parsed.token,
-                refreshToken: parsed.refreshToken || null
-        // // // // // // // console.error('Error checking auth state:', error);
+                refreshToken: parsed.refreshToken || null'
+        // // // // // // // // console.error('Error checking auth state:', error);
       } finally {
+
         setIsLoading(false);
 
               })}
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error)} finally {
+'
+        // console.error('Error checking auth state:', error)} finally {
+
         setIsLoading(false)}
     };
 
     checkAuthState()}, []);
 
   return {
+
     user,
     setUser,
     isLoading,
@@ -63,3 +69,4 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
     tokens,
     setTokens
   }};
+'

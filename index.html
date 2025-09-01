@@ -1,47 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
-    <meta name="keywords" content="AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group" />
+    <meta
+      name="description"
+      content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+    />
+    <meta
+      name="keywords"
+      content="AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group"
+    />
     <meta name="author" content="Zion Tech Group" />
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
-    <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta
+      property="og:title"
+      content="Zion Tech Group - Technology Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+    />
     <meta property="og:image" content="/og-image.svg" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
-    <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta
+      property="twitter:title"
+      content="Zion Tech Group - Technology Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+    />
     <meta property="twitter:image" content="/og-image.svg" />
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ziontechgroup.com/" />
-    
+
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Fonts -->
 
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
 
-    
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
-    
+
     <title>Zion Tech Group - Technology Solutions</title>
 
     <script type="application/ld+json">
@@ -51,9 +80,7 @@
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com/",
         "logo": "https://ziontechgroup.com/favicon.svg",
-        "sameAs": [
-          "https://www.linkedin.com/company/ziontechgroup"
-        ],
+        "sameAs": ["https://www.linkedin.com/company/ziontechgroup"],
         "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
         "brand": {
           "@type": "Brand",
@@ -79,26 +106,29 @@
         }
       }
     </script>
-
   </head>
   <body class="antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
+
     <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then(registration => {
               console.log('SW registered: ', registration);
-              
+
               // Check for updates
               registration.addEventListener('updatefound', () => {
                 const newWorker = registration.installing;
                 newWorker.addEventListener('statechange', () => {
-                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  if (
+                    newWorker.state === 'installed' &&
+                    navigator.serviceWorker.controller
+                  ) {
                     // New content is available
                     if (confirm('New version available! Reload to update?')) {
                       window.location.reload();
@@ -107,7 +137,7 @@
                 });
               });
             })
-            .catch((registrationError) => {
+            .catch(registrationError => {
               console.log('SW registration failed: ', registrationError);
             });
         });

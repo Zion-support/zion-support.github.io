@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 interface VirtualScrollProps<T> {
+
   items: anyT[];
   height: number;
   itemHeight: number;
@@ -12,11 +13,12 @@ interface VirtualScrollProps<T> {
 }
 
 export function VirtualScroll<T>({
+
   items,
   height,
   itemHeight,
   renderItem,
-  overscan = 5,;
+  overscan = 5,;'
   className = '',;
   onScroll;
 }: VirtualScrollProps<T>) {;
@@ -30,6 +32,7 @@ export function VirtualScroll<T>({
     const end = start + visibleCount + overscan;
     
     return {
+
       start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
     };
@@ -59,17 +62,19 @@ export function VirtualScroll<T>({
   // Auto-scroll to specific item on mount if needed
   useEffect(() => {
     if (items.length > 0 && containerRef.current) {
+
       // You can add logic here to scroll to a specific item on mount
       // For example, scroll to the last viewed item
     }
   }, [items.length]);
 
-  return (
+  return()`
     <div className = {`relative ${className}`}>
       {/* Scroll to top button */}
       {scrollTop > 200 && (
         <motion.button
           initial = {
+
   { opacity: 0,
   scale: 0.8 
 
@@ -80,6 +85,7 @@ export function VirtualScroll<T>({
 
 }}
           animate = {
+
   { opacity: 1,
   scale: 1 
 
@@ -90,6 +96,7 @@ export function VirtualScroll<T>({
 
 }}
           exit = {
+
   { opacity: 0,
   scale: 0.8 
 
@@ -100,10 +107,10 @@ export function VirtualScroll<T>({
 
 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors""
           aria-label="Scroll to top"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        >"
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </motion.button>
@@ -111,13 +118,14 @@ export function VirtualScroll<T>({
 
       {/* Virtual scroll container */}
       <div
-        ref={containerRef}
+        ref={containerRef}"
         className="overflow-auto"
         style={{ height }}
         onScroll={handleScroll}
       >
         <div style = {
-  { height: totalHeight,
+
+  { height: totalHeight,'
   position: 'relative' 
 
 
@@ -132,6 +140,7 @@ export function VirtualScroll<T>({
                 <motion.div
                   key={visibleRange.start + index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -142,6 +151,7 @@ export function VirtualScroll<T>({
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -152,6 +162,7 @@ export function VirtualScroll<T>({
 
 }}
                   exit = {
+
   { opacity: 0,
   y: -20 
 
@@ -172,7 +183,7 @@ export function VirtualScroll<T>({
         </div>
       </div>;
 ;
-      {/* Scroll position indicator */};
+      {/* Scroll position indicator */};"
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
@@ -182,7 +193,6 @@ export function VirtualScroll<T>({
 
 // Specialized virtual scroll for service cards
 interface ServiceCard {
-
   id: anystring;
   name: string;
   description: string;
@@ -201,27 +211,28 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 }
 
 export function ServiceVirtualScroll(...args: any[]): any {
-  const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (
+
+  const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => ("
     <div className="p-4">
       <motion.div
         whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        whileTap={{ scale: 0.98 }}"
         className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => onServiceClick?.(service)}
-      >
+      >"
         <div className="flex items-start space-x-4">
-          {service.icon && (
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+          {service.icon && ("
+            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">"
               <span className="text-2xl">{service.icon}</span>
             </div>
-          )}
-          <div className="flex-1 min-w-0">
+          )}"
+          <div className="flex-1 min-w-0">"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               {service.name}
-            </h3>
+            </h3>"
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
-            </p>
+            </p>"
             <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;
               {service.category};
             </span>;
@@ -231,7 +242,7 @@ export function ServiceVirtualScroll(...args: any[]): any {
     </div>;
   ), [onServiceClick]);
 
-  return (
+  return()
     <VirtualScroll
       items = {services};
       height={height};
@@ -241,4 +252,4 @@ export function ServiceVirtualScroll(...args: any[]): any {
       className={className};
     />;
   );
-}
+}'"`

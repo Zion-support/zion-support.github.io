@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react.ts';'
+import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   GraduationCap, 
@@ -31,109 +31,114 @@ import { Brain,
   PenTool,
   Users as UsersIcon,
   Award,
-  Lightbulb
+  Lightbulb'
  } from 'lucide-react';
 
 export default function AIEducationPlatform(...args[]):  {
+
   const features = [
-    "AI-powered personalized learning paths",
-    "Intelligent content recommendation",
-    "Automated assessment and grading",
-    "Real-time student progress tracking",
-    "Adaptive learning algorithms",
-    "Interactive virtual classrooms",;
-    "AI tutoring and homework help",;
-    "Content creation and curation",;
-    "Student engagement analytics",;
-    "Parent and teacher dashboards",;
-    "Multi-language support",;
+    "AI-powered personalized learning paths","
+    "Intelligent content recommendation","
+    "Automated assessment and grading","
+    "Real-time student progress tracking","
+    "Adaptive learning algorithms","
+    "Interactive virtual classrooms",;"
+    "AI tutoring and homework help",;"
+    "Content creation and curation",;"
+    "Student engagement analytics",;"
+    "Parent and teacher dashboards",;"
+    "Multi-language support",;"
     "Accessibility and inclusion tools";
   ];
 
-  const benefits = [;
-    "Improve learning outcomes by 40%",;
-    "Reduce teacher workload by 50%",;
-    "Increase student engagement by 60%",;
-    "Personalize education for every student",;
+  const benefits = [;"
+    "Improve learning outcomes by 40%",;"
+    "Reduce teacher workload by 50%",;"
+    "Increase student engagement by 60%",;"
+    "Personalize education for every student",;"
     "Scale quality education globally";
   ];
 
-  const useCases = [
-    "K-12 schools and districts",
-    "Higher education institutions",;
-    "Corporate training programs",;
-    "Online learning platforms",;
-    "Special education programs",;
-    "Language learning schools",;
-    "Professional certification",;
+  const useCases = ["
+    "K-12 schools and districts","
+    "Higher education institutions",;"
+    "Corporate training programs",;"
+    "Online learning platforms",;"
+    "Special education programs",;"
+    "Language learning schools",;"
+    "Professional certification",;"
     "Skills development programs";
   ];
 
   const pricing = [
     {
-      name: "School",
-      price: "$299",
-      period: "/month",
+"
+      name: "School","
+      price: "$299","
+      period: "/month","
       description: "Perfect for individual schools and small districts",
-      features[;
-        "AI learning paths (up to 500 students)",
-        "Basic content recommendation",
-        "Assessment tools",
-        "Progress tracking",
-        "Email support",
+      features[;"
+        "AI learning paths (up to 500 students)","
+        "Basic content recommendation","
+        "Assessment tools","
+        "Progress tracking","
+        "Email support","
         "Up to 50 teachers"
-      ],;
+      ],;"
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "District",
-      price: "$799",
-      period: "/month",
+"
+      name: "District","
+      price: "$799","
+      period: "/month","
       description: "Ideal for school districts and larger institutions",
-      features[;
-        "AI learning paths (unlimited students)",
-        "Advanced content recommendation",
-        "Comprehensive analytics",
-        "Parent portals",
-        "Priority support",
-        "Up to 500 teachers",
+      features[;"
+        "AI learning paths (unlimited students)","
+        "Advanced content recommendation","
+        "Comprehensive analytics","
+        "Parent portals","
+        "Priority support","
+        "Up to 500 teachers","
         "API access"
-      ],;
+      ],;"
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
+"
+      name: "Enterprise","
+      price: "$1,999","
+      period: "/month","
       description: "For large educational organizations and corporations",
-      features[;
-        "Custom AI model training",
-        "White-label solutions",
-        "Advanced integrations",
-        "Custom content creation",
-        "Dedicated account manager",;
-        "24/7 phone support",;
+      features[;"
+        "Custom AI model training","
+        "White-label solutions","
+        "Advanced integrations","
+        "Custom content creation","
+        "Dedicated account manager",;"
+        "24/7 phone support",;"
         "Unlimited users";
-      ],;
+      ],;"
       cta: "Contact Sales",;
       popular: false;
     };
   ];
 
-  return (
+  return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Education Platform - Zion Tech Group"
+      <SEO "
+        title="AI Education Platform - Zion Tech Group""
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
       />
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}"
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -144,6 +149,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -154,32 +160,32 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6">
+"
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6">"
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Education
-            </div>
+            </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Education
-              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              AI Education"
+              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">"
                 {" "}Platform
               </span>
-            </h1>
+            </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.
               Improve outcomes, increase engagement, and scale quality education globally.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-200"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
 
                 Watch Demo
@@ -189,11 +195,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      {/* Features Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -204,6 +211,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -213,22 +221,23 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
+"
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Educational Intelligence
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Everything you need to create engaging, personalized learning experiences
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -239,6 +248,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -249,6 +259,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -257,12 +268,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
-}}
+}}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300"
-
-                <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+"
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>
+                </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
@@ -270,11 +281,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
+      {/* Benefits Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -285,6 +297,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -294,22 +307,23 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
+"
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Educational Outcomes
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               See measurable improvements in student learning and teacher effectiveness
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -320,6 +334,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -330,6 +345,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -338,12 +354,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
-}}
+}}"
                 className="text-center"
-
-                <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+"
+                <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <TrendingUp className="w-10 h-10 text-white" />
-                </div>
+                </div>"
                 <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -351,11 +367,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      {/* Use Cases Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -366,6 +383,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -375,22 +393,23 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
+"
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry-Leading Solutions
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Proven solutions across diverse educational institutions and programs
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -401,6 +420,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -411,6 +431,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -419,12 +440,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
-}}
+}}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+"
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <GraduationCap className="w-8 h-8 text-white" />
-                </div>
+                </div>"
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
@@ -432,11 +453,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
+      {/* Pricing Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -447,6 +469,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -456,22 +479,23 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
+"
             <h2 className="text-4xl font-bold text-white mb-4">
               Flexible Pricing for Every Institution
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Scale your educational platform as your institution grows
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -482,6 +506,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -492,6 +517,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -502,32 +528,33 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular
-                    ? 'border-teal-500 ring-2 ring-teal-500/20'
-                    : 'border-gray-700'
+
+                  plan.popular'
+                    ? 'border-teal-500 ring-2 ring-teal-500/20''
+                    : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (;"
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+"
+                <div className="text-center mb-8">"
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                  <p className="text-gray-400 mb-4">{plan.description}</p>"
+                  <div className="flex items-baseline justify-center">"
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>"
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
+"
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  {plan.features.map((feature, featureIndex) => ("
+                    <li key={featureIndex} className="flex items-start">"
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -535,11 +562,12 @@ export default function AIEducationPlatform(...args[]):  {
 
                 <motion.button
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileTap={{ scale: 0.98 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
+
+                    plan.popular'
+                      ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700''
+                      : 'bg-gray-700 text-white hover:bg-gray-600'`
                   }`}
 
                   {plan.cta}
@@ -550,11 +578,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      {/* CTA Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -565,6 +594,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -575,29 +605,29 @@ export default function AIEducationPlatform(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-
+"
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Education?
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of educational institutions that have already revolutionized learning with AI
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-200"
 
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
 
                 Schedule Demo
               </motion.button>
-            </div>
+            </div>"
             <p className="text-sm text-gray-400 mt-4">
               No credit card required • 14-day free trial • Cancel time
             </p>
@@ -605,12 +635,12 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Contact Info */}"
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;"
+        <div className="max-w-4xl mx-auto text-center">"
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team
-          </p>
+          </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
@@ -621,3 +651,4 @@ export default function AIEducationPlatform(...args[]):  {
     </div>;
   );
 }
+'"`

@@ -22,7 +22,10 @@ function isInternal(href, baseHost) {
 
 async function fetchPage(url) {
   try {
-    const res = await axios.get(url, { timeout: 15000, validateStatus: () => true });
+    const res = await axios.get(url, {
+      timeout: 15000,
+      validateStatus: () => true,
+    });
     return { status: res.status, html: res.data };
   } catch (e) {
     return { status: 0, html: '' };
@@ -70,6 +73,15 @@ async function fetchPage(url) {
   const outDir = path.join(process.cwd(), 'data', 'reports');
   fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir, 'link-crawl.json');
-  fs.writeFileSync(outPath, JSON.stringify({ start: START_URL, total: visited.size, broken, statuses }, null, 2));
-  console.log(`Crawl complete. URLs: ${visited.size}, broken: ${broken.length}. Report: ${outPath}`);
+  fs.writeFileSync(
+    outPath,
+    JSON.stringify(
+      { start: START_URL, total: visited.size, broken, statuses },
+      null,
+      2
+    )
+  );
+  console.log(
+    `Crawl complete. URLs: ${visited.size}, broken: ${broken.length}. Report: ${outPath}`
+  );
 })();

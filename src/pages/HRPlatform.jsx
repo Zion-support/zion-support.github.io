@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'
 import { motion } from 'framer-motion';
 import {
+
   Users,
   Zap,
   Shield,
@@ -139,7 +140,7 @@ import {
   Wifi,
   Bluetooth,
   Battery,
-  Signal
+  Signal'
 } from 'lucide-react';
 
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
@@ -148,146 +149,163 @@ import {
 
 const hrTechnologies = [
   {
-    name: "Employee Management",
+"
+    name: "Employee Management","
     description: "Comprehensive employee lifecycle management",
-    icon: Users,
-    useCase: "HR Operations",
+    icon: Users,"
+    useCase: "HR Operations","
     reliability: "Critical"
   },
   {
-    name: "AI & Automation",
+"
+    name: "AI & Automation","
     description: "Intelligent automation for HR processes",
-    icon: Brain,
-    useCase: "Process Automation",
+    icon: Brain,"
+    useCase: "Process Automation","
     reliability: "High"
   },
   {
-    name: "Data Security",
+"
+    name: "Data Security","
     description: "Enterprise-grade security and compliance",
-    icon: Shield,
-    useCase: "Data Protection",
+    icon: Shield,"
+    useCase: "Data Protection","
     reliability: "Critical"
   },
   {
-    name: "Cloud Platform",
+"
+    name: "Cloud Platform","
     description: "Scalable cloud infrastructure for HR applications",
-    icon: Cloud,
-    useCase: "Infrastructure",
+    icon: Cloud,"
+    useCase: "Infrastructure","
     reliability: "High"
 
 ];
 
 const successStories = [
   {
-    id: 1,
-    comp: "Global Corporation",
-    industry: "Technology",
-    challenge: "Needed unified HR platform for 10,000+ employees across 20 countries",
-    solution: "Built comprehensive HR platform with localization, compliance, and automation features",
-    results: "40% reduction in HR processing time, 60% improvement in employee satisfaction, streamlined global operations",
+
+    id: 1,"
+    comp: "Global Corporation","
+    industry: "Technology","
+    challenge: "Needed unified HR platform for 10,000+ employees across 20 countries","
+    solution: "Built comprehensive HR platform with localization, compliance, and automation features","
+    results: "40% reduction in HR processing time, 60% improvement in employee satisfaction, streamlined global operations","
     logo: "GC"
   },
   {
-    id: 2,
-    comp: "Healthcare Network",
-    industry: "Healthcare",
-    challenge: "Required automated recruitment and onboarding for 500+ annual hires",
-    solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking",
-    results: "70% faster hiring process, 50% reduction in administrative overhead, improved compliance",
+
+    id: 2,"
+    comp: "Healthcare Network","
+    industry: "Healthcare","
+    challenge: "Required automated recruitment and onboarding for 500+ annual hires","
+    solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking","
+    results: "70% faster hiring process, 50% reduction in administrative overhead, improved compliance","
     logo: "HN"
   },
   {
-    id: 3,
-    comp: "Manufacturing Comp",
-    industry: "Manufacturing",
-    challenge: "Needed performance management system for 2000+ production workers",
-    solution: "Built performance tracking platform with goal setting and development planning",
-    results: "35% improvement in productivity, 45% increase in employee engagement, better retention",
+
+    id: 3,"
+    comp: "Manufacturing Comp","
+    industry: "Manufacturing","
+    challenge: "Needed performance management system for 2000+ production workers","
+    solution: "Built performance tracking platform with goal setting and development planning","
+    results: "35% improvement in productivity, 45% increase in employee engagement, better retention","
     logo: "MC"
 
 ];
 
 const processSteps = [
   {
-    step: 1,
-    title: "HR Assessment",
+
+    step: 1,"
+    title: "HR Assessment","
     description: "Evaluate current HR processes and identify improvement opportunities",
-    icon: FileText,
+    icon: FileText,"
     duration: "2-4 weeks"
   },
   {
-    step: 2,
-    title: "Platform Design",
+
+    step: 2,"
+    title: "Platform Design","
     description: "Design HR platform architecture and user experience",
-    icon: Code,
+    icon: Code,"
     duration: "4-8 weeks"
   },
   {
-    step: 3,
-    title: "Development",
+
+    step: 3,"
+    title: "Development","
     description: "Build and integrate HR platform components",
-    icon: Wrench,
+    icon: Wrench,"
     duration: "16-32 weeks"
   },
   {
-    step: 4,
-    title: "Deployment & Training",
+
+    step: 4,"
+    title: "Deployment & Training","
     description: "Deploy platform and train HR teams and employees",
-    icon: Users,
+    icon: Users,"
     duration: "2-6 weeks"
 
 ];
 
 const hrBenefits = [
   {
-    title: "Operational Efficiency",
+"
+    title: "Operational Efficiency","
     description: "Streamlined HR processes reduce administrative overhead and improve productivity",
-    icon: Zap,
+    icon: Zap,"
     examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];
   },;
   {
-    title: "Employee Experience",
+"
+    title: "Employee Experience","
     description: "Improved self-service capabilities and better communication enhance employee satisfaction",
-    icon: Users,
+    icon: Users,"
     examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];
   },;
   {
-    title: "Data-Driven Decisions",
+"
+    title: "Data-Driven Decisions","
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",
-    icon: BarChart3,
+    icon: BarChart3,"
     examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];
   },;
   {
-    title: "Compliance & Security",
+"
+    title: "Compliance & Security","
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",
-    icon: Shield,
+    icon: Shield,"
     examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];
   }
 ];
 
 export default function HRPlatform() {
+'
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
+'
   const categories = ['All', 'Employee Management', 'Recruitment', 'Performance', 'Learning', 'Payroll', 'Analytics'];
-
+'
   const filteredSolutions = selectedCategory === 'All'
     ? hrPlatformSolutions
     : hrPlatformSolutions.filter(solution => solution.category === selectedCategory);
 
-  return (
+  return ("
     <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
+      {/* Hero Section */}"
+      <section className="relative pt-32 pb-20 overflow-hidden">"
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>"
+        <div className="absolute inset-0">"
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>"
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
+"
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -298,6 +316,7 @@ export default function HRPlatform() {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -307,11 +326,12 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8 
 
@@ -322,6 +342,7 @@ export default function HRPlatform() {
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1 
 
@@ -332,6 +353,7 @@ export default function HRPlatform() {
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -340,32 +362,32 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
+"
               <Users className="w-10 h-10 text-white" />
             </motion.div>
-
+"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              HR Technology &
+              HR Technology &"
               <span className="text-gradient block">People Platform</span>
             </h1>
-
+"
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your human resources operations with intelligent technology solutions.
               From recruitment to performance management, we help you build a modern HR ecosystem.
             </p>
-
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 text-zion-cyan">
+"
+            <div className="flex flex-wrap justify-center gap-4 text-sm">"
+              <div className="flex items-center gap-2 text-zion-cyan">"
                 <Users className="w-4 h-4" />
                 <span>Employee Management</span>
-              </div>
-              <div className="flex items-center gap-2 text-zion-purple">
+              </div>"
+              <div className="flex items-center gap-2 text-zion-purple">"
                 <Brain className="w-4 h-4" />
                 <span>AI Automation</span>
-              </div>
-              <div className="flex items-center gap-2 text-zion-blue">
+              </div>"
+              <div className="flex items-center gap-2 text-zion-blue">"
                 <Shield className="w-4 h-4" />
                 <span>Compliance & Security</span>
               </div>
@@ -374,11 +396,12 @@ export default function HRPlatform() {
         </div>
       </section>;
 
-      {/* HR Platform Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">;
+      {/* HR Platform Benefits */}"
+      <section className="py-20 bg-zion-blue-dark/50">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -389,6 +412,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -398,20 +422,21 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">HR Technology Benefits</h2>
+"
+            <h2 className="text-4xl font-bold text-white mb-4">HR Technology Benefits</h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make HR technology essential
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {hrBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -422,6 +447,7 @@ export default function HRPlatform() {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -432,6 +458,7 @@ export default function HRPlatform() {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -440,21 +467,21 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+"
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
+"
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-
-                <div className="space-y-2">
+"
+                <div className="space-y-2">"
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
-                  {benefit.examples.map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                  {benefit.examples.map((example, exampleIndex) => ("
+                    <div key={exampleIndex} className="flex items-center gap-3">"
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />"
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -465,11 +492,12 @@ export default function HRPlatform() {
         </div>
       </section>
 
-      {/* HR Technologies */}
-      <section className="py-20">;
+      {/* HR Technologies */}"
+      <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -480,6 +508,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -489,20 +518,21 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">HR Technologies We Support</h2>
+"
+            <h2 className="text-4xl font-bold text-white mb-4">HR Technologies We Support</h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading HR platforms and technologies
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {hrTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -513,6 +543,7 @@ export default function HRPlatform() {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -523,6 +554,7 @@ export default function HRPlatform() {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -531,23 +563,24 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+"
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
-                <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
+"
+                <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>"
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>"
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
 
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical'
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'
-                    : technology.reliability === 'High'
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'
+'
+                  technology.reliability === 'Critical''
+                    ? 'bg-red-500/20 text-red-400 border border-red-500/30''
+                    : technology.reliability === 'High''
+                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30''
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'`
                 }`}>
                   {technology.reliability} Reliability
                 </span>
@@ -557,11 +590,12 @@ export default function HRPlatform() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">;
+      {/* Process Section */}"
+      <section className="py-20 bg-zion-blue-dark/50">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -572,6 +606,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -581,20 +616,21 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">Our HR Platform Implementation Process</h2>
+"
+            <h2 className="text-4xl font-bold text-white mb-4">Our HR Platform Implementation Process</h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful HR technology implementation
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -605,6 +641,7 @@ export default function HRPlatform() {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -615,6 +652,7 @@ export default function HRPlatform() {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -623,20 +661,20 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
                 className="text-center"
-
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
+"
+                <div className="relative mb-6">"
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">"
                     <step.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </div>"
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
                   </div>
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
+"
+                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>"
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>"
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
@@ -646,11 +684,12 @@ export default function HRPlatform() {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-20">;
+      {/* Solutions Section */}"
+      <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -661,6 +700,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -670,37 +710,39 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">HR Platform Solutions</h2>
+"
+            <h2 className="text-4xl font-bold text-white mb-4">HR Platform Solutions</h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for modern human resources management
             </p>
           </motion.div>
 
-          {/* Category Filter */}
+          {/* Category Filter */}"
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => setSelectedCategory(category)}`
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
+
+                  selectedCategory === category'
+                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'`
                 }`}
 
                 {category}
               </button>
             ))}
           </div>
-
+"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -711,6 +753,7 @@ export default function HRPlatform() {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -721,6 +764,7 @@ export default function HRPlatform() {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -729,48 +773,48 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
+"
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">"
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
-                <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
+"
+                <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
+"
                 <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                  {solution.features.map((feature, featureIndex) => ("
+                    <div key={featureIndex} className="flex items-center gap-3">"
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
-
+"
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
-                      key={techIndex}
+                      key={techIndex}"
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {tech}
                     </span>
                   ))}
                 </div>
-
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-zion-cyan font-semibold">{solution.price}</span>
+"
+                <div className="flex items-center justify-between mb-4">"
+                  <span className="text-zion-cyan font-semibold">{solution.price}</span>"
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
-                <div className="flex items-center justify-between">
+"
+                <div className="flex items-center justify-between">"
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
-                  </span>
-                  <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
-                    <span className="text-sm font-medium">Learn More</span>
+                  </span>"
+                  <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">"
+                    <span className="text-sm font-medium">Learn More</span>"
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -780,11 +824,12 @@ export default function HRPlatform() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">;
+      {/* Success Stories */}"
+      <section className="py-20 bg-zion-blue-dark/50">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -795,6 +840,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -804,20 +850,21 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-4">HR Platform Success Stories</h2>
+"
+            <h2 className="text-4xl font-bold text-white mb-4">HR Platform Success Stories</h2>"
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their HR operations with technology
             </p>
           </motion.div>
-
+"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -828,6 +875,7 @@ export default function HRPlatform() {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -838,6 +886,7 @@ export default function HRPlatform() {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -846,38 +895,38 @@ export default function HRPlatform() {
 
 
 
-}}
+}}"
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
-                <div className="flex items-center gap-4 mb-6">
+"
+                <div className="flex items-center gap-4 mb-6">"
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
+                  <div>"
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>"
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
+"
                 <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
+                  <div>"
+                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>"
                     <p className="text-zion-slate-light text-sm">{story.challenge}</p>
                   </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>
+                  <div>"
+                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>"
                     <p className="text-zion-slate-light text-sm">{story.solution}</p>
                   </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-2">Results</h4>
+                  <div>"
+                    <h4 className="text-zion-cyan font-semibold mb-2">Results</h4>"
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
+"
                 <div className="flex items-center gap-2">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array(5)].map((_, i) => ("
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
+                  ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>;
@@ -886,11 +935,12 @@ export default function HRPlatform() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
+      {/* CTA Section */}"
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;"
         <div className="container-responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -901,6 +951,7 @@ export default function HRPlatform() {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -910,24 +961,24 @@ export default function HRPlatform() {
 
 
 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
-
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your HR Operations?</h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+"
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your HR Operations?</h2>"
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
               Let's discuss how HR technology can streamline your processes,
               improve employee experience, and drive better business outcomes.
             </p>
-
+"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <a"
+                href="/contact""
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                 Start HR Project
               </a>
-              <a
-                href="/contact"
+              <a"
+                href="/contact""
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 HR Technology Consultation
@@ -938,3 +989,4 @@ export default function HRPlatform() {
       </section>
     </div>
   )}
+'"`

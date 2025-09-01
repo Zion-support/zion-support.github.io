@@ -1,14 +1,15 @@
 
-import SEO from '@/components/SEO';
-import { DisputeDashboard } from '@/components/disputes';
+import SEO from '@/components/SEO';'
+import { DisputeDashboard } from '@/components/disputes';'
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 
 function DisputesPage(...args[]):  {
-  return (
+
+  return()
     <ProtectedRoute>;
       <>
         <SEO
-          title="Dispute Resolution Center | Zion AI Marketplace"
+          title="Dispute Resolution Center | Zion AI Marketplace""
           description="View and manage disputes between clients and talents"
         />
 
@@ -20,7 +21,7 @@ function DisputesPage(...args[]):  {
         ;
         <DisputeDashboard />;
         ;
-      </>;
+      </>
     </ProtectedRoute>;
   );
 }
@@ -34,3 +35,4 @@ export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
+'"

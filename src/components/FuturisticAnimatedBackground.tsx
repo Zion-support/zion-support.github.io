@@ -6,7 +6,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
+'
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -15,21 +15,23 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();
+    resizeCanvas();'
     window.addEventListener('resize', resizeCanvas);
 
-    // Add enhanced grid background
-    const gridCanvas = document.createElement('canvas');
+    // Add enhanced grid background'
+    const gridCanvas = document.createElement('canvas');'
     const gridCtx = gridCanvas.getContext('2d');
     if (gridCtx) {
+
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
       
-      // Draw enhanced grid
+      // Draw enhanced grid'
       gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       gridCtx.lineWidth = 1;
       
       for (let x = 0; x < gridCanvas.width; x += 40) {
+
         gridCtx.beginPath();
         gridCtx.moveTo(x, 0);
         gridCtx.lineTo(x, gridCanvas.height);
@@ -37,6 +39,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       }
       
       for (let y = 0; y < gridCanvas.height; y += 40) {
+
         gridCtx.beginPath();
         gridCtx.moveTo(0, y);
         gridCtx.lineTo(gridCanvas.width, y);
@@ -50,6 +53,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
     // Particle system
     const particles: Array<{
+
       x: number;
       y: number;
       vx: number;
@@ -68,6 +72,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       const speed = Math.random() * 0.5 + 0.1;
 
       particles.push({
+
         x,
         y,
         vx: Math.cos(angle) * speed,
@@ -83,16 +88,18 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     const animate = () => {;
       time += 0.01;
 
-      // Clear canvas with fade effect
+      // Clear canvas with fade effect'
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Create new particles
       if (particles.length < 100) {
+
         createParticle();
 
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
+
         const particle = particles[i];
 
         // Update position
@@ -102,6 +109,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
         // Remove dead particles
         if (particle.life > particle.maxLife) {
+
           particles.splice(i, 1);
           continue;
 
@@ -125,7 +133,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
         ctx.fill();
 
-      // Draw grid pattern
+      // Draw grid pattern'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
@@ -135,6 +143,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
       // Vertical lines
       for (let x = offsetX; x < canvas.width; x += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -142,13 +151,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
       // Horizontal lines
       for (let y = offsetY; y < canvas.height; y += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
 
       // Draw floating geometric shapes
-      ctx.globalAlpha = 0.1;
+      ctx.globalAlpha = 0.1;'
       ctx.strokeStyle = 'rgba(168, 85, 247, 0.5)';
       ctx.lineWidth = 2;
 
@@ -170,7 +180,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
       // Floating circle
       const circleSize = 20 + Math.sin(time * 2) * 10;
-
+'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
@@ -179,11 +189,12 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       // Reset global alpha
       ctx.globalAlpha = 1;
 
-      // Draw energy waves
+      // Draw energy waves'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
       ctx.lineWidth = 3;
 
       for (let i = 0; i < 3; i++) {
+
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
 
         ctx.beginPath();
@@ -198,18 +209,20 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     animate();
 
     return () => {
+'
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
   }, []);
 
-  return (
+  return()
     <canvas
       ref = {canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style = {
+'
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
-  ;
+  ;'
   transparent 60%)' ;
 ;
 ;
@@ -223,4 +236,4 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 };
 
 export default FuturisticAnimatedBackground;
-}}}}}}
+}}}}}}'"`

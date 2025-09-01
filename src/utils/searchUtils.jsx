@@ -2,10 +2,11 @@
  * Highlight search terms in text with HTML mark tags
  */
 export const highlightSearchTerms = (text, searchTerm) => {
+
     if (!searchTerm.trim())
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escaped})`, 'gi');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');'
+    const regex = new RegExp(`(${escaped})`, 'gi');'
     return text.replace(regex, '<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>');
 };
 
@@ -13,6 +14,7 @@ export const highlightSearchTerms = (text, searchTerm) => {
  * Check if a text contains the search term (case-insensitive)
  */
 export const matchesSearchTerm = (text, searchTerm) => {
+
     if (!text || !searchTerm.trim())
         return false;
     return text.toLowerCase().includes(searchTerm.toLowerCase());
@@ -22,6 +24,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
  * Calculate relevance score for search results
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
+
     let score = 0;
 
     const term = searchTerm.toLowerCase();
@@ -43,18 +46,22 @@ export const calculateRelevanceScore = (result, searchTerm) => {
         score += 30;
     // Tag matches
     if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
+
         score += 20;
     }
     // Category match
     if (result.category?.toLowerCase().includes(term)) {
+
         score += 15;
     }
     // Boost score based on rating
     if (result.rating) {
+
         score += result.rating * 2;
     }
     // Recent content gets slight boost
     if (result.date) {
+
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
     }
@@ -66,26 +73,30 @@ export const calculateRelevanceScore = (result, searchTerm) => {
  * Sort search results based on sort option
  */
 export const sortSearchResults = (results, sortBy, searchTerm) => {
+
     const sortedResults = [...results];
     
     switch (sortBy) {
+'
         case 'price_asc':
-            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
+            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));'
         case 'price_desc':
-            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));'
         case 'rating':
-            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));'
         case 'date':
             return sortedResults.sort((a, b) => {
+
                 const dateA = a.date ? new Date(a.date).getTime() : 0;
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
-            });
+            });'
         case 'alphabetical':
-            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
+            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));'
         case 'relevance':
         default:
             return sortedResults.sort((a, b) => {
+
                 const scoreA = calculateRelevanceScore(a, searchTerm);
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
@@ -97,21 +108,26 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
  * Filter search results based on active filters
  */
 export const filterSearchResults = (results, filters) => {
+
     let filteredResults = [...results];
     
     // Filter by type
     if (filters.types.length > 0) {
+
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     }
 
     // Filter by category
     if (filters.category) {
+
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     }
 
     // Filter by price range
     if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
+
         filteredResults = filteredResults.filter(result => {
+
             const price = result.price ?? 0;
             if (filters.minPrice !== undefined && price < filters.minPrice) return false;
             if (filters.maxPrice !== undefined && price > filters.maxPrice) return false;
@@ -121,6 +137,7 @@ export const filterSearchResults = (results, filters) => {
 
     // Filter by rating
     if (filters.minRating) {
+
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
     }
 
@@ -129,9 +146,11 @@ export const filterSearchResults = (results, filters) => {
 
 /**
  * Perform search with filtering and sorting
- */
+ */'
 export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {
+
     if (!searchTerm.trim()) {
+
         return sortSearchResults(data, sortBy, searchTerm);
     }
 
@@ -152,13 +171,15 @@ export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevanc
 
 /**
  * Get search suggestions based on search history and popular terms
- */
+ */'
 export const getSearchSuggestions = (searchHistory = [], popularTerms = [], currentInput = '') => {
+
     const suggestions = [];
 
     // Add matching search history
     if (currentInput) {
-        const matchingHistory = searchHistory
+
+        const matchingHistory = searchHistory;
             .filter(term => term.toLowerCase().includes(currentInput.toLowerCase()))
             .slice(0, 3);
         suggestions.push(...matchingHistory);
@@ -166,6 +187,7 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
 
     // Add popular terms if no current input
     if (!currentInput) {
+
         suggestions.push(...popularTerms.slice(0, 5));
     }
 
@@ -177,14 +199,17 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
  * Debounce search function to avoid excessive API calls
  */
 export const debounceSearch = (func, delay) => {
+
     let timeoutId;
     return (...args) => {
+
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => func.apply(null, args), delay);
     };
 };
 
 export default {
+
     highlightSearchTerms,
     matchesSearchTerm,
     calculateRelevanceScore,
@@ -196,3 +221,4 @@ export default {
 };
 
 
+'"`
