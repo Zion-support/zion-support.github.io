@@ -124,8 +124,25 @@ export function Footer() {
         { label: 'AI Solutions', path: '/services/ai' },
         { label: 'Cloud & DevOps', path: '/services/cloud' },
         { label: 'Cybersecurity', path: '/services/cybersecurity' },
-        { label: 'IT Infrastructure', path: '/services/infrastructure' },
-        { label: 'Digital Transformation', path: '/services/transformation' }
+        { label: 'All Services', path: '/services' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { label: 'About Us', path: '/about' },
+        { label: 'Careers', path: '/careers' },
+        { label: 'Partners', path: '/partners' },
+        { label: 'Blog', path: '/blog' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { label: 'FAQ', path: '/faq' },
+        { label: 'Sitemap', path: '/sitemap' },
+        { label: 'Contact', path: '/contact' },
+        { label: 'Pricing', path: '/pricing' }
       ]
     }
   ];
