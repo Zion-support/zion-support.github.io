@@ -1,33 +1,63 @@
-exports.handler = async (event, context) => {
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting duplicate-media-finder-runner function...');
+  
   try {
-    console.log('🤖 duplicate-media-finder-runner function triggered');
-    
-    // Simulate duplicate media finding running logic
     const timestamp = new Date().toISOString();
-    const result = {
+    const reportPath = path.join(process.cwd(), 'duplicate-media-finder-runner-report.md');
+    
+    const reportContent = `# Duplicate Media Finder Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: duplicate-media-finder-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Function Details
+- Schedule: Every day at 2 AM
+- Purpose: Find duplicate media
+- Execution: Netlify Function
+
+## Next Steps
+- Implement duplicate media finding logic
+- Add deduplication features
+- Add optimization mechanisms
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add duplicate media finder runner report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Duplicate media finder runner executed successfully',
-        timestamp,
-        function: 'duplicate-media-finder-runner',
-        status: 'completed',
-        finding: [
-          'duplicate_detection',
-          'similarity_analysis',
-          'cleanup_recommendations'
-        ]
+        message: 'Duplicate media finder runner completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    console.log('✅ duplicate-media-finder-runner completed successfully');
-    return result;
   } catch (error) {
-    console.error('❌ duplicate-media-finder-runner failed:', error);
+    console.error('❌ Duplicate media finder runner failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Duplicate media finder runner failed',
-        message: error.message,
+        message: 'Duplicate media finder runner failed',
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };

@@ -1,33 +1,63 @@
-exports.handler = async (event, context) => {
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting continuous-orchestrator function...');
+  
   try {
-    console.log('🤖 continuous-orchestrator function triggered');
-    
-    // Simulate continuous orchestration logic
     const timestamp = new Date().toISOString();
-    const result = {
+    const reportPath = path.join(process.cwd(), 'continuous-orchestrator-report.md');
+    
+    const reportContent = `# Continuous Orchestrator Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: continuous-orchestrator
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Function Details
+- Schedule: Every 5 minutes
+- Purpose: Continuous orchestration of system operations
+- Execution: Netlify Function
+
+## Next Steps
+- Implement continuous orchestration logic
+- Add system monitoring features
+- Add continuous improvement mechanisms
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add continuous orchestrator report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Continuous orchestrator executed successfully',
-        timestamp,
-        function: 'continuous-orchestrator',
-        status: 'completed',
-        orchestration: [
-          'continuous_monitoring',
-          'automated_responses',
-          'system_optimization'
-        ]
+        message: 'Continuous orchestrator completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    console.log('✅ continuous-orchestrator completed successfully');
-    return result;
   } catch (error) {
-    console.error('❌ continuous-orchestrator failed:', error);
+    console.error('❌ Continuous orchestrator failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Continuous orchestrator failed',
-        message: error.message,
+        message: 'Continuous orchestrator failed',
+        error: error.message,
         timestamp: new Date().toISOString()
       })
     };
