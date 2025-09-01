@@ -1,226 +1,241 @@
 import React, { useState } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
-export default function Page() {
-) => {
+import { Link, useLocation } from 'react-router-dom';
+import {
+  Home,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Settings,
+  ChevronRight,
+  ChevronDown
+} from 'lucide-react';
+
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
+  const [expandedSections, setExpandedSections] = useState<string[]>(['Services']);
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
 
-  const navigation: SidebarItem[] = [{
-      id: 'main',
-      title: 'Main Navigation',
-      icon: Home,
-      links: [
-        { name: 'Home', href: '/', icon: Home, description: 'Main dashboard' },
-        { name: 'About Us', href: '/about', icon: Building, description: 'Our story and mission' },
-        { name: 'Contact', href: '/contact', icon: PhoneCall, description: 'Get in touch' },
-        { name: 'Get Quote', href: '/request-quote', icon: DollarSign, description: 'Request pricing' }
-      ]
-    },
-    {
-      id: 'services',
-      title: 'Our Services',
-      icon: Rocket,
-      links: [{ name: 'AI Solutions', href: '/services/ai', icon: Brain, description: 'Artificial Intelligence' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security services' },
-        { name: 'Cloud Services', href: '/services/cloud', icon: Cloud, description: 'Cloud solutions' },
-        { name: 'Digital Transformation', href: '/services/digital', icon: Workflow, description: 'Digital solutions' },
-        { name: 'IT Consulting', href: '/services/consulting', icon: Briefcase, description: 'IT consulting' },
-        { name: 'Micro SAAS', href: '/services/micro-saas', icon: Package, description: 'Micro SAAS solutions' }
-      ]
-    },
-    {
-      id: 'solutions',
-      title: 'Industry Solutions',
-      icon: Target,
-      links: [
-        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building, description: 'Enterprise solutions' },
-        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Healthcare technology' },
-        { name: 'Financial', href: '/solutions/financial', icon: DollarSign, description: 'Financial services' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Workflow, description: 'Manufacturing tech' },
-        { name: 'Government', href: '/solutions/government', icon: Shield, description: 'Government solutions' },
-        { name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology' }
-      ]
-    },
-    {
-      id: 'resources',
-      title: 'Resources',
-      icon: BookOpen,
-      links: [
-        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Online events' },
-        { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical docs' },
-        { name: 'API Reference', href: '/api', icon: Code, description: 'API documentation' }
-      ]
-    },
-    {
-      id: 'support',
-      title: 'Support',
-      icon: HelpCircle,
-      links: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Get help' },
-        { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Contact us' },
-        { name: 'Training', href: '/training', icon: GraduationCap, description: 'Training programs' },
-        { name: 'Community', href: '/community', icon: Users, description: 'Join community' },
-        { name: 'System Status', href: '/status', icon: Gauge, description: 'System health' },
-        { name: 'Request Quote', href: '/request-quote', icon: DollarSign, description: 'Get pricing' }
-      ]
-    }
-  ];
-
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev =>
-      prev.includes(sectionId)
-        ? prev.filter(id => id !== sectionId)
-        : [...prev, sectionId]
+  const toggleSection = (sectionName: string) => {
+    setExpandedSections(prev => 
+      prev.includes(sectionName) 
+        ? prev.filter(name => name !== sectionName)
+        : [...prev, sectionName]
     );
   };
 
-  return (<>
-      {/* Mobile overlay */}      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onToggle}
-        />
-      )}
+  const isActive = (path: string) => location.pathname === path;
 
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-bold text-gray-800">Zion Tech</h2>
+  const sidebarItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home,
+      type: 'link'
+    },
+    {
+      name: 'Services',
+      type: 'section',
+      icon: Zap,
+      items: [
+        { name: 'AI & Automation', href: '/services/ai', icon: Brain },
+        { name: 'Cloud & DevOps', href: '/services/cloud', icon: HardDrive },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital', icon: TrendingUp },
+        { name: 'IT Consulting', href: '/services/consulting', icon: Users },
+        { name: 'Micro SAAS', href: '/services/micro-saas', icon: Building2 }
+      ]
+    },
+    {
+      name: 'Solutions',
+      type: 'section',
+      icon: Brain,
+      items: [
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2 },
+        { name: 'Healthcare', href: '/solutions/healthcare', icon: Users },
+        { name: 'Financial Services', href: '/solutions/financial', icon: TrendingUp },
+        { name: 'Government', href: '/solutions/government', icon: Shield },
+        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: HardDrive },
+        { name: 'Retail', href: '/solutions/retail', icon: BarChart3 }
+      ]
+    },
+    {
+      name: 'Company',
+      type: 'section',
+      icon: Building2,
+      items: [
+        { name: 'About Us', href: '/about', icon: Users },
+        { name: 'Leadership', href: '/about#team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users },
+        { name: 'Partners', href: '/partners', icon: Users },
+        { name: 'Press', href: '/press', icon: FileText }
+      ]
+    },
+    {
+      name: 'Resources',
+      type: 'section',
+      icon: FileText,
+      items: [
+        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Webinars', href: '/webinars', icon: FileText },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: FileText }
+      ]
+    },
+    {
+      name: 'Support',
+      type: 'section',
+      icon: HelpCircle,
+      items: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Contact Support', href: '/contact', icon: Users },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Community', href: '/community', icon: Users },
+        { name: 'System Status', href: '/status', icon: BarChart3 }
+      ]
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing',
+      icon: BarChart3,
+      type: 'link'
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Users,
+      type: 'link'
+    }
+  ];
+
+  const renderSidebarItem = (item: any) => {
+    if (item.type === 'link') {
+      return (
+        <Link
+          key={item.name}
+          to={item.href}
+          className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+            isActive(item.href)
+              ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
+              : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+          }`}
+          onClick={onClose}
+        >
+          <item.icon className="w-5 h-5" />
+          <span className="font-medium">{item.name}</span>
+        </Link>
+      );
+    }
+
+    if (item.type === 'section') {
+      const isExpanded = expandedSections.includes(item.name);
+      
+      return (
+        <div key={item.name} className="space-y-2">
           <button
-            onClick={onToggle}
-            className="lg:hidden p-2 rounded-md hover:bg-gray-100"
+            onClick={() => toggleSection(item.name)}
+            className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
           >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        <nav className="p-4 space-y-2">
-          {navigation.map((section) => (
-            <div key={section.id} className="space-y-2">
-              <button
-                onClick={() => toggleSection(section.id)}
-                className="flex items-center justify-between w-full p-2 text-left text-gray-700 hover:bg-gray-100 rounded-md"
-              >
-                <div className="flex items-center space-x-2">
-                  <section.icon className="w-5 h-5" />
-                  <span className="font-medium">{section.title}</span>
-                </div>
-                <ChevronRight
-                  className={`w-4 h-4 transition-transform ${expandedSections.includes(section.id) ? 'rotate-90' : ''
-                  }`}
-                />
-              </button>
-
-              {expandedSections.includes(section.id) && (
-                <div className="ml-6 space-y-1">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.href}
-                      to={link.href}
-                      className={`flex items-center space-x-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md ${location.pathname === link.href ? 'bg-blue-50 text-blue-600' : ''
-                      }`}
-                    >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}            </div>
-          </div>
-
-          {/* Navigation Sections */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigation.map((section) => (
-              <div key={section.id} className="space-y-2">
-                <button
-                  onClick={() => toggleSection(section.id)}
-                  className="flex items-center justify-between w-full p-2 text-left text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"
-                >
-                  <div className="flex items-center space-x-2">
-                    <section.icon className="w-5 h-5" />
-                    <span className="font-medium">{section.title}</span>
-                  </div>
-                  <ChevronDown 
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      expandedSections.includes(section.id) ? 'rotate-180' : ''
-                    }`} 
-                  />
-                </button>
-
-                {expandedSections.includes(section.id) && (
-                  <div className="ml-6 space-y-1">
-                    {section.links.map((link) => (
-                      <Link
-                        key={link.href}
-                        to={link.href}
-                        onClick={() => {
-                          // Close sidebar on mobile after navigation
-                          if (window.innerWidth < 1024) {
-                            onToggle();
-                          }
-                        }}
-                        className={`
-                          flex items-center space-x-2 p-2 rounded-lg transition-colors duration-200 text-sm
-                          ${isActive(link.href)
-                            ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                            : 'text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50'
-                          }
-                        `}
-                      >
-                        <link.icon className="w-4 h-4" />
-                        <span>{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* Sidebar Footer */}
-          <div className="p-4 border-t border-gray-800">
-            <div className="space-y-3">
-              {/* Quick Actions */}
-              <div className="space-y-2">
-                <Link
-                  to="/request-quote"
-                  className="flex items-center space-x-2 p-2 text-cyan-400 hover:text-cyan-300 hover:bg-cyan-400/10 rounded-lg transition-colors duration-200"
-                >
-                  <Plus className="w-4 h-4" />
-                  <span className="text-sm font-medium">Request Quote</span>
-                </Link>
-                <Link
-                  to="/contact"
-                  className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span className="text-sm">Contact Us</span>
-                </Link>
-              </div>
-
-              {/* Contact Info */}
-              <div className="pt-3 border-t border-gray-800 space-y-2 text-xs text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-3 h-3" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-3 h-3" />
-                  <span>contact@ziontechgroup.com</span>
-                </div>
-              </div>
+            <div className="flex items-center space-x-3">
+              <item.icon className="w-5 h-5" />
+              <span className="font-medium">{item.name}</span>
             </div>
+            {isExpanded ? (
+              <ChevronDown className="w-4 h-4" />
+            ) : (
+              <ChevronRight className="w-4 h-4" />
+            )}
+          </button>
+          
+          {isExpanded && (
+            <div className="ml-8 space-y-1">
+              {item.items.map((subItem: any) => (
+                <Link
+                  key={subItem.name}
+                  to={subItem.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                    isActive(subItem.href)
+                      ? 'text-blue-400 bg-blue-600/10'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800/30'
+                  }`}
+                  onClick={onClose}
+                >
+                  <subItem.icon className="w-4 h-4" />
+                  <span>{subItem.name}</span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    return null;
+  };
+
+  return (
+    <aside className={`bg-gray-900 text-white w-64 min-h-screen transition-transform duration-300 ${
+      isOpen ? 'translate-x-0' : '-translate-x-full'
+    }`}>
+      {/* Sidebar Header */}
+      <div className="p-4 border-b border-gray-800">
+        <div className="flex items-center space-x-3">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <Zap className="w-5 h-5 text-white" />
           </div>
+          <span className="font-bold text-lg">Zion Tech</span>
         </div>
       </div>
-    </>
-  );
-};
 
-export default Sidebar;
+      {/* Sidebar Content */}
+      <div className="p-4 space-y-2">
+        {sidebarItems.map(renderSidebarItem)}
+      </div>
+
+      {/* Quick Actions */}
+      <div className="p-4 border-t border-gray-800 mt-8">
+        <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-3">
+          Quick Actions
+        </h3>
+        <div className="space-y-2">
+          <Link
+            to="/request-quote"
+            className="flex items-center space-x-3 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            onClick={onClose}
+          >
+            <TrendingUp className="w-5 h-5" />
+            <span className="font-medium">Get Quote</span>
+          </Link>
+          <Link
+            to="/demo"
+            className="flex items-center space-x-3 px-4 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 hover:text-white transition-colors"
+            onClick={onClose}
+          >
+            <Settings className="w-5 h-5" />
+            <span className="font-medium">Request Demo</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="p-4 border-t border-gray-800 mt-auto">
+        <div className="text-center text-gray-400 text-sm">
+          <p>© 2024 Zion Tech Group</p>
+          <p className="mt-1">Empowering Innovation</p>
+        </div>
+      </div>
+    </aside>
+  );
+}
