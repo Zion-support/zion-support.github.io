@@ -24,21 +24,31 @@ declare module 'react' {
   export type Ref<T> = any;
   export type ElementRef<T> = any;
   export type ComponentPropsWithoutRef<T> = any;
-
-  // Commonly used hooks and utilities
+  export type ComponentProps<T> = any;
+  export type ComponentPropsWithRef<T> = any;
+  export type HTMLAttributes<T> = any;
+  export type ButtonHTMLAttributes<T> = any;
+  export type TextareaHTMLAttributes<T> = any;
+  export type ThHTMLAttributes<T> = any;
+  export type TdHTMLAttributes<T> = any;
   export function useState<S>(initialState: S | (() => S)): [
     S,
     (value: S | ((prev: S) => S)) => void
   ];
   export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
-  export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function createContext<T>(defaultValue: T): any;
-  export function useContext<T>(context: any): T;
-  export function useCallback<F extends (...args: any[]) => any>(fn: F, deps: any[]): F;
+  export function useRef<T>(initialValue?: T): { current: T };
   export function useMemo<T>(factory: () => T, deps: any[]): T;
-  export function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
-
-  // JSX runtime fragments and helpers
+  export function useCallback<T extends (...args: any[]) => any>(fn: T, deps: any[]): T;
+  export function createContext<T>(defaultValue?: T): any;
+  export function useContext<T>(context: any): T;
+  export function forwardRef<T, P = {}>(render: (props: P, ref: any) => ReactElement | null):
+    (props: P & { ref?: any }) => ReactElement | null;
+  export const Children: {
+    toArray(children: ReactNode): ReactNode[];
+    map(children: ReactNode, fn: (child: ReactNode, index: number) => ReactNode): ReactNode[];
+  };
+  export function isValidElement(object: any): object is ReactElement;
+  // JSX runtime fragments
   export const Fragment: any;
   export const StrictMode: any;
   export function cloneElement(element: ReactElement, props?: any, ...children: ReactNode[]): ReactElement;
@@ -98,18 +108,16 @@ declare module 'jspdf' {
   export default jsPDF;
 }
 
-// Minimal JSX definitions
-declare global {
-  namespace JSX {
-    interface Element {}
-    interface IntrinsicElements {
-      [elem: string]: any;
-    }
-  }
+declare module 'clsx' {
+  const clsx: (...classes: any[]) => string;
+  export default clsx;
 }
 
-// Fallback for other modules
-declare module '*' {
-  const value: any;
-  export default value;
+declare module 'lucide-react' {
+  export type LucideIcon = any;
+}
+
+declare module '@supabase/supabase-js' {
+  export type User = any;
+  export interface SupabaseClient {}
 }
