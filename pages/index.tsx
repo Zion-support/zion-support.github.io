@@ -1225,6 +1225,54 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </div>
           </section>
 
+          {/* Advanced Automation Systems */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Advanced Automation & Orchestration Systems</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🎯 Master Build Orchestrator</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Intelligent build management</li>
+                  <li>• Automated error recovery</li>
+                  <li>• Performance optimization</li>
+                  <li>• Health monitoring</li>
+                  <li>• Smart build strategies</li>
+                </ul>
+                <Link href="/automation/master-build-orchestrator.cjs" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View System →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔄 GitHub Actions Redundancy</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Multi-repository sync</li>
+                  <li>• Automated workflows</li>
+                  <li>• CI/CD redundancy</li>
+                  <li>• Error handling</li>
+                  <li>• Performance monitoring</li>
+                </ul>
+                <Link href="/automation/github-actions-redundancy-manager.cjs" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View System →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🌐 Netlify Functions Redundancy</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Serverless redundancy</li>
+                  <li>• Function orchestration</li>
+                  <li>• Auto-scaling</li>
+                  <li>• Health monitoring</li>
+                  <li>• Performance optimization</li>
+                </ul>
+                <Link href="/automation/netlify-functions-redundancy-manager.cjs" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View System →
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Latest Autonomous Content */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
