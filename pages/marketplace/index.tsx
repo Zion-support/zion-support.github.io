@@ -2,13 +2,33 @@ import Marketplace, { MarketplaceProps } from '../../src/pages/Marketplace';
 import type { GetStaticProps } from 'next'; // Changed import
 
 export const getStaticProps: GetStaticProps<MarketplaceProps> = async () => {
-  // const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  // const res = await fetch(`${appUrl}/api/marketplace/products?limit=20`);
-  // const products = res.ok ? await res.json() : [];
-  // For static export, API calls at build time need to be to an absolute URL if self-hosted,
-  // or data should be sourced differently (e.g., local file, CMS).
-  // Returning empty array as a placeholder.
-  return { props: { products: [] } };
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+
+  if (!appUrl || appUrl.includes('localhost')) {
+    console.warn(
+      'NEXT_PUBLIC_APP_URL is not configured for production. Skipping marketplace product fetch.'
+    );
+    return { props: { products: [] }, revalidate: 60 };
+  }
+  try {
+    const res = await fetch(`${appUrl}/api/marketplace?type=all`);
+    if (!res.ok) {
+      const errorText = await res.text();
+      console.error(
+        `API error fetching marketplace products: ${res.status} ${res.statusText}`,
+        errorText
+      );
+      throw new Error(`Failed to fetch marketplace products: ${res.status} ${errorText}`);
+    }
+    const products = await res.json();
+    return { props: { products }, revalidate: 60 };
+  } catch (error) {
+    Sentry.captureException(error);
+    console.error('Error in getStaticProps for marketplace index:', error);
+    // Always allow build to succeed with empty data if fetch fails
+    console.warn('getStaticProps failed, returning empty products');
+    return { props: { products: [] } };
+  }
 };
 
 export default Marketplace;

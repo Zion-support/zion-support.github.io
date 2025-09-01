@@ -36,8 +36,19 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": true,
-    "incremental": true
+    "allowJs": false,
+    "incremental": true,
+    "types": ["node"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "outDir": "dist",
+    "jsx": "preserve",
+    "declaration": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false
   },
   "include": [
     "src",
