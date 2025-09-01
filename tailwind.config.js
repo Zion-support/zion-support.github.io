@@ -35,13 +35,10 @@ module.exports = {
           900: '#701a75',
         },
       },
-      fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
-      },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in',
         'slide-up': 'slideUp 0.3s ease-out',
-        'tilt-on-hover': 'tilt 0.1s ease-in-out',
+        'tilt-on-hover': 'tiltOnHover 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -52,11 +49,9 @@ module.exports = {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        tilt: {
+        tiltOnHover: {
           '0%': { transform: 'rotate(0deg)' },
-          '25%': { transform: 'rotate(0.5deg)' },
-          '75%': { transform: 'rotate(-0.5deg)' },
-          '100%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(1deg)' },
         },
       },
       backdropBlur: {

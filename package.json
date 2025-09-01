@@ -18,7 +18,10 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "pm2:start": "pm2 start ecosystem.config.cjs --update-env",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "dev:analyze": "ANALYZE=true npm run build",
+    "dev:profile": "NODE_OPTIONS='--inspect' npm run dev",
+    "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env",
     "pm2:status": "pm2 status",
@@ -409,17 +412,12 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report",
-    "dev:clean": "rm -rf .next out tsconfig.tsbuildinfo && npm run dev",
-    "build:clean": "rm -rf .next out tsconfig.tsbuildinfo && npm run build",
-    "analyze": "ANALYZE=true npm run build",
-    "test:type": "npm run type-check && npm run lint",
-    "test:build": "npm run build:health-check && npm run build",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "security:audit": "npm audit --audit-level=moderate",
-    "deps:check": "npm outdated",
-    "deps:update": "npm update",
-    "deps:audit": "npm audit --audit-level=high"
+    "check:all": "npm run lint && npm run type-check && npm run build",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test:all": "npm run lint && npm run type-check && npm run build",
+    "health:check": "npm run build:health-check && npm run build:validate",
+    "clean:all": "rm -rf .next out tsconfig.tsbuildinfo node_modules/.cache"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

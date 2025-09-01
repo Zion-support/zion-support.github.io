@@ -52,18 +52,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .text-high-contrast-secondary {
@@ -204,7 +197,29 @@ body {
   @apply bg-blue-400;
 }
 
-/* Enhanced Selection */
+/* Focus styles */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection styles */
 ::selection {
   @apply bg-blue-300 text-white;
 }
@@ -678,9 +693,8 @@ body {
   }
 }
 
-/* Tilt on hover effect */
 .tilt-on-hover {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-out;
 }
 
 .tilt-on-hover:hover {
