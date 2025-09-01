@@ -514,23 +514,67 @@ export function HomePage() {
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Join hundreds of companies that have already transformed their operations 
-            with Zion Tech Group's innovative solutions.
+            with Zion Tech Group's innovative AI, micro SAAS, and IT solutions.
           </p>
+          
+          {/* Contact Information */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <MessageCircle className="w-6 h-6" />
+                </div>
+                <h3 className="font-semibold mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white/90 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Smartphone className="w-6 h-6" />
+                </div>
+                <h3 className="font-semibold mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-white/90 hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Home className="w-6 h-6" />
+                </div>
+                <h3 className="font-semibold mb-2">Visit Us</h3>
+                <p className="text-white/90 text-sm">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
+              Get Free Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               to="/pricing"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-all duration-300"
             >
-              View Pricing
+              View Pricing Plans
               <ChevronRight className="ml-2 w-5 h-5" />
             </Link>
+            <a
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-all duration-300"
+            >
+              Visit Our Website
+              <ExternalLink className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
