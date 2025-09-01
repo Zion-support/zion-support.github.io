@@ -494,7 +494,7 @@ export
       }) }
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -507,7 +507,7 @@ export
       }) }
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -520,7 +520,7 @@ export
       }) }
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({

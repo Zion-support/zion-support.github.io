@@ -1,5 +1,6 @@
 module.exports = {
   apps: [
+    // Main application
     {
       name: 'bolt-app',
       script: 'npm',
@@ -32,6 +33,23 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       }
+    },
+
+    // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'pm2-error-prevention',
+      script: './scripts/automation/pm2-error-prevention-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      log_file: './automation/logs/pm2-error-prevention.log',
+      error_file: './automation/logs/pm2-error-prevention-error.log',
+      out_file: './automation/logs/pm2-error-prevention-out.log'
     },
 
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
