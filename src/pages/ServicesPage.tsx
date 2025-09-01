@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
+import apiClient from "@/services/apiClient";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -224,10 +225,18 @@ const SERVICE_FILTERS = [
 export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap;
-  };
+  useEffect(() => {
+    async function load() {
+      const res = await apiClient.get('/services');
+      setListings(res.data as ProductListing[]);
+    }
+    load();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
+    }, 120000);
 
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
