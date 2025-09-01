@@ -17,129 +17,34 @@ export default function BlogPage() {
       featured: true
     },
     {
-      id: 2,
-      title: "Automation in Modern DevOps",
-      excerpt: "How automated CI/CD pipelines and infrastructure management are revolutionizing software development.",
-      date: "2025-01-18",
-      category: "DevOps",
-      readTime: "4 min read",
-      image: "⚡",
-      author: "Marcus Rodriguez",
+      id: 'digital-transformation-2025',
+      title: 'Digital Transformation Trends & Strategies for 2025',
+      excerpt: 'Discover the key digital transformation trends and strategies that will shape business success in 2025 and beyond.',
+      date: 'January 17, 2025',
+      readTime: '8 min read',
+      category: 'Digital Transformation',
       featured: false
     },
     {
-      id: 3,
-      title: "Cloud Automation: From Manual to Autonomous",
-      excerpt: "Discover the journey from traditional cloud management to fully automated, intelligent infrastructure.",
-      category: "Cloud Computing",
-      date: "2025-01-15",
-      readTime: "6 min read",
-      image: "☁️",
-      author: "Alex Thompson",
+      id: 'cloud-automation-best-practices',
+      title: 'Cloud Automation Best Practices: A Complete Guide',
+      excerpt: 'Master cloud automation with our comprehensive guide covering best practices, tools, and strategies for scalable, reliable cloud infrastructure.',
+      date: 'January 17, 2025',
+      readTime: '10 min read',
+      category: 'Cloud & Infrastructure',
       featured: false
     },
     {
-      id: 4,
-      title: "Machine Learning in Production",
-      excerpt: "Best practices for deploying and maintaining ML models in production environments.",
-      date: "2025-01-16",
-      category: "Machine Learning",
-      readTime: "7 min read",
-      image: "🧠",
-      author: "Dr. Priya Patel",
-      featured: true
-    },
-    {
-      id: 5,
-      title: "The Rise of Self-Healing Applications",
-      excerpt: "How modern applications are becoming more resilient through autonomous monitoring and recovery.",
-      date: "2025-01-15",
-      category: "Automation",
-      readTime: "5 min read",
-      image: "🔧",
-      author: "David Kim",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "AI Ethics and Responsible Development",
-      excerpt: "Important considerations for building AI systems that are fair, transparent, and beneficial to society.",
-      date: "2025-01-14",
-      category: "AI Ethics",
-      readTime: "8 min read",
-      image: "⚖️",
-      author: "Dr. Elena Rodriguez",
-      featured: true
-    },
-    {
-      id: 7,
-      title: "Edge Computing and IoT Automation",
-      excerpt: "How edge computing is enabling autonomous decision-making in IoT devices and smart infrastructure.",
-      date: "2025-01-13",
-      category: "IoT",
-      readTime: "6 min read",
-      image: "🌐",
-      author: "James Wilson",
-      featured: false
-    },
-    {
-      id: 8,
-      title: "Quantum Computing in AI Applications",
-      excerpt: "Exploring the potential of quantum computing to revolutionize AI algorithms and machine learning.",
-      date: "2025-01-12",
-      category: "Quantum AI",
-      readTime: "9 min read",
-      image: "⚛️",
-      author: "Dr. Michael Chang",
-      featured: true
-    },
-    {
-      id: 9,
-      title: "Cybersecurity in Autonomous Systems",
-      excerpt: "Protecting AI systems from emerging threats and ensuring secure autonomous operations.",
-      date: "2025-01-11",
-      category: "Cybersecurity",
-      readTime: "7 min read",
-      image: "🔒",
-      author: "Lisa Chen",
-      featured: false
-    },
-    {
-      id: 10,
-      title: "Sustainable AI: Green Computing Practices",
-      excerpt: "How AI can contribute to environmental sustainability and reduce carbon footprints in technology.",
-      date: "2025-01-10",
-      category: "Sustainability",
-      readTime: "5 min read",
-      image: "🌱",
-      author: "Dr. Robert Green",
-      featured: false
-    },
-    {
-      id: 11,
-      title: "Human-AI Collaboration in the Workplace",
-      excerpt: "Building effective partnerships between humans and AI systems for enhanced productivity and innovation.",
-      date: "2025-01-09",
-      category: "Collaboration",
-      readTime: "6 min read",
-      image: "🤝",
-      author: "Amanda Foster",
-      featured: false
-    },
-    {
-      id: 12,
-      title: "The Future of Autonomous Vehicles",
-      excerpt: "How AI is transforming transportation and creating safer, more efficient autonomous vehicle systems.",
-      date: "2025-01-08",
-      category: "Transportation",
-      readTime: "8 min read",
-      image: "🚗",
-      author: "Dr. Carlos Mendez",
-      featured: true
+      id: 'autonomous-content-generation',
+      title: 'Revolutionizing Content Creation with Autonomous AI Systems',
+      excerpt: 'How Zion Tech Group is transforming content generation through intelligent automation and machine learning.',
+      date: 'January 15, 2025',
+      readTime: '6 min read',
+      category: 'Content & AI'
     }
   ];
 
-  const categories = ["All", "AI Development", "DevOps", "Cloud", "Machine Learning", "Automation", "AI Ethics", "IoT", "Quantum AI", "Cybersecurity", "Sustainability", "Collaboration", "Transportation"];
+  const categories = ['All', 'AI & Automation', 'Digital Transformation', 'Cloud & Infrastructure', 'Content & AI'];
 
   return (
     <>

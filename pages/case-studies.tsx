@@ -4,64 +4,58 @@ import Head from 'next/head';
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      id: 'ai-automation-platform',
-      title: 'Enterprise AI Automation Platform',
-      client: 'Fortune 500 Manufacturing Company',
-      industry: 'Manufacturing',
-      duration: '6 months',
+      id: 'ai-automation-success',
+      title: 'AI-Powered Automation Success Story',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'Manual processes were consuming 40+ hours per week and causing delays in customer service.',
+      solution: 'Implemented intelligent automation workflows using AI and machine learning algorithms.',
       results: [
-        'Reduced operational costs by 34%',
-        'Improved efficiency by 67%',
-        'Deployed 45 autonomous workflows',
-        '99.9% system uptime achieved'
+        'Reduced manual processing time by 85%',
+        'Improved customer response time from 24 hours to 2 hours',
+        'Increased team productivity by 60%',
+        'ROI of 300% within 6 months'
       ],
-      description: 'Developed a comprehensive AI automation platform that streamlined manufacturing processes, reduced manual intervention, and provided real-time analytics for decision-making.',
-      technologies: ['Machine Learning', 'IoT Integration', 'Cloud Infrastructure', 'Real-time Analytics']
-    },
-    {
-      id: 'content-generation-system',
-      title: 'Autonomous Content Generation System',
-      client: 'Global Media Corporation',
-      industry: 'Media & Entertainment',
+      technologies: ['AI/ML', 'RPA', 'Workflow Automation', 'API Integration'],
       duration: '4 months',
-      results: [
-        'Generated 2,000+ articles monthly',
-        'Increased engagement by 89%',
-        'Reduced content creation time by 78%',
-        'SEO performance improved by 156%'
-      ],
-      description: 'Built an AI-powered content generation system that automatically creates high-quality, SEO-optimized content across multiple platforms and languages.',
-      technologies: ['Natural Language Processing', 'Content Optimization', 'Multi-language Support', 'SEO Automation']
+      teamSize: '8 developers + 2 business analysts',
+      featured: true
     },
     {
-      id: 'cloud-infrastructure-automation',
-      title: 'Cloud Infrastructure Automation',
-      client: 'E-commerce Platform',
-      industry: 'E-commerce',
-      duration: '3 months',
+      id: 'digital-transformation',
+      title: 'Complete Digital Transformation Journey',
+      company: 'Global Manufacturing Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Legacy systems were preventing growth and causing operational inefficiencies across 12 locations.',
+      solution: 'End-to-end digital transformation including cloud migration, process automation, and data analytics.',
       results: [
-        'Auto-scaling reduced costs by 42%',
-        'Deployment time reduced from 2 hours to 15 minutes',
-        'Zero-downtime deployments achieved',
-        '99.99% availability maintained'
+        'Unified operations across all locations',
+        'Reduced operational costs by 35%',
+        'Improved supply chain visibility by 90%',
+        'Enhanced decision-making with real-time analytics'
       ],
-      description: 'Implemented comprehensive cloud automation including auto-scaling, self-healing infrastructure, and automated deployment pipelines for a high-traffic e-commerce platform.',
-      technologies: ['Kubernetes', 'Terraform', 'CI/CD Pipelines', 'Monitoring & Alerting']
+      technologies: ['Cloud Computing', 'IoT', 'Data Analytics', 'Process Automation'],
+      duration: '18 months',
+      teamSize: '15 developers + 5 architects + 10 business users',
+      featured: false
     },
     {
-      id: 'data-analytics-platform',
-      title: 'Real-time Data Analytics Platform',
-      client: 'Financial Services Firm',
-      industry: 'Financial Services',
-      duration: '8 months',
+      id: 'startup-scaling',
+      title: 'Startup Scaling from 0 to 100K Users',
+      company: 'InnovateStart',
+      industry: 'SaaS',
+      challenge: 'Rapid user growth was overwhelming manual processes and causing system crashes.',
+      solution: 'Built scalable infrastructure and automated user onboarding, support, and analytics systems.',
       results: [
-        'Real-time data processing at 100,000+ events/second',
-        'Reduced reporting time from days to minutes',
-        'Improved decision-making speed by 300%',
-        'Compliance monitoring automated 100%'
+        'Successfully handled 100K+ concurrent users',
+        'Automated 95% of user onboarding',
+        'Reduced support tickets by 70%',
+        'Achieved 99.9% uptime'
       ],
-      description: 'Developed a real-time data analytics platform that processes financial transactions, provides instant insights, and ensures regulatory compliance through automated monitoring.',
-      technologies: ['Stream Processing', 'Machine Learning', 'Real-time Dashboards', 'Compliance Automation']
+      technologies: ['Microservices', 'Auto-scaling', 'CI/CD', 'Monitoring'],
+      duration: '6 months',
+      teamSize: '6 developers + 2 DevOps engineers',
+      featured: false
     }
   ];
 

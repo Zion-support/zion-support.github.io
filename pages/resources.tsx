@@ -5,20 +5,30 @@ export default function ResourcesPage() {
   const resources = [
     {
       id: 'ai-automation-guide',
-      title: 'Complete Guide to AI Automation',
-      type: 'PDF Guide',
-      size: '2.4 MB',
-      description: 'Comprehensive guide covering AI automation strategies, implementation best practices, and ROI measurement.',
-      category: 'Guides',
-      featured: true
+      title: 'Complete Guide to AI-Powered Automation',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      results: '85% reduction in manual processing time, 300% ROI within 6 months',
+      description: 'A comprehensive analysis of how AI automation transformed business processes at TechCorp Solutions.'
     },
     {
-      id: 'cloud-automation-checklist',
-      title: 'Cloud Automation Implementation Checklist',
-      type: 'Checklist',
-      size: '156 KB',
-      description: 'Step-by-step checklist for implementing cloud automation in your organization.',
-      category: 'Checklists'
+      id: 'digital-transformation-guide',
+      title: 'Digital Transformation: A Manufacturing Success Story',
+      company: 'Global Manufacturing Inc.',
+      industry: 'Manufacturing',
+      results: '35% reduction in operational costs, 90% improvement in supply chain visibility',
+      description: 'How Global Manufacturing Inc. achieved operational excellence through comprehensive digital transformation.'
+    }
+  ];
+
+  const whitepapers = [
+    {
+      id: 'autonomous-systems-guide',
+      title: 'The Complete Guide to Autonomous Systems',
+      description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
+      downloadUrl: '#',
+      pages: '45',
+      category: 'Technology'
     },
     {
       id: 'ai-ethics-framework',
@@ -54,7 +64,22 @@ export default function ResourcesPage() {
     }
   ];
 
-  const categories = ['All', 'Guides', 'Checklists', 'White Papers', 'Templates', 'Tools'];
+  const tools = [
+    {
+      id: 'automation-assessment-tool',
+      title: 'Business Process Automation Assessment Tool',
+      description: 'A comprehensive tool to evaluate your business processes and identify automation opportunities for maximum ROI.',
+      type: 'Assessment Tool',
+      estimatedTime: '15 minutes'
+    },
+    {
+      id: 'process-mapping-guide',
+      title: 'Process Mapping & Documentation Guide',
+      description: 'Step-by-step guide and templates for mapping business processes to identify automation opportunities.',
+      type: 'Documentation Tool',
+      estimatedTime: '30 minutes'
+    }
+  ];
 
   return (
     <>
