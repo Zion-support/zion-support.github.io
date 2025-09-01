@@ -11,7 +11,8 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-reac
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 interface EquipmentSpecification {
   name: string;
@@ -179,17 +180,15 @@ export default function EquipmentDetail() {
     );
   }
 
+  const dispatch = useAppDispatch();
   const handleAddToCart = () => {
-    setIsAdding(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
-      toast({
-        title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    }, 800);
+    dispatch(addItem({
+      id: equipment.id,
+      name: equipment.name,
+      price: equipment.price,
+      quantity,
+    }));
+    toast({ title: 'Added to cart 🛒' });
   };
 
   const handleBuyNow = async () => {

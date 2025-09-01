@@ -1,10 +1,14 @@
 
-interface AppHeaderProps {
-  // Add your props here
-
-  onSidebarToggle?: : unknown void;
-  isSidebarOpen?: boolean;
-export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
+import { useState } from 'react';
+import { useMessaging } from '@/context/MessagingContext';
+import { MainNavigation } from './MainNavigation';
+import { Logo } from '@/components/header/Logo';
+import { ModeToggle } from '@/components/ModeToggle';
+import { Menu, X } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { CartIcon } from '@/components/CartIcon';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -569,6 +573,25 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 {mobileMenuOpen ? <X className="w-5 h-5"  /> : <Menu className="w-5 h-5"  />}              </button>
             </div>
           </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle mobile menu"
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+          <CartIcon className="mx-4" />
+          <ModeToggle />
         </div>
         {/* Mobile menu */}
         {mobileMenuOpen && ("
