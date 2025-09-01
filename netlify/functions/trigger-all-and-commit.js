@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Trigger all and commit function triggered');
+    console.log('trigger-all-and-commit function triggered');
     
-    // Simulate trigger all and commit tasks
-    const triggerTasks = [
-      'Triggering all workflows',
-      'Coordinating commits',
-      'Managing system state'
-    ];
-    
-    return {
+    // Basic trigger all and commit logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Trigger all and commit function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'trigger-all-and-commit',
-        triggerTasks: triggerTasks,
-        status: 'completed'
+        action: 'triggering all processes and committing changes'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in trigger all and commit function:', error);
+    console.error('Error in trigger-all-and-commit:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

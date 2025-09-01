@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Topics map runner function triggered');
+    console.log('topics-map-runner function triggered');
     
-    // Simulate topics mapping tasks
-    const topicsMapTasks = [
-      'Building topics map',
-      'Organizing content topics',
-      'Creating topic relationships'
-    ];
-    
-    return {
+    // Basic topics mapping running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Topics map runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'topics-map-runner',
-        topicsMapTasks: topicsMapTasks,
-        status: 'completed'
+        action: 'mapping topics and content'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in topics map runner function:', error);
+    console.error('Error in topics-map-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

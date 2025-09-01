@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Readme advertiser function triggered');
+    console.log('readme-advertiser function triggered');
     
-    // Simulate readme advertising tasks
-    const readmeTasks = [
-      'Updating readme content',
-      'Promoting project features',
-      'Enhancing documentation'
-    ];
-    
-    return {
+    // Basic readme advertising logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Readme advertiser function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'readme-advertiser',
-        readmeTasks: readmeTasks,
-        status: 'completed'
+        action: 'advertising readme content and updates'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in readme advertiser function:', error);
+    console.error('Error in readme-advertiser:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

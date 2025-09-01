@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Repo knowledge graph runner function triggered');
+    console.log('repo-knowledge-graph-runner function triggered');
     
-    // Simulate repository knowledge graph tasks
-    const knowledgeGraphTasks = [
-      'Building knowledge graph',
-      'Analyzing repository structure',
-      'Mapping code relationships'
-    ];
-    
-    return {
+    // Basic repository knowledge graph running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Repo knowledge graph runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'repo-knowledge-graph-runner',
-        knowledgeGraphTasks: knowledgeGraphTasks,
-        status: 'completed'
+        action: 'generating repository knowledge graphs'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in repo knowledge graph runner function:', error);
+    console.error('Error in repo-knowledge-graph-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

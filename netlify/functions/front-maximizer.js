@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Front maximizer function triggered');
+    console.log('front-maximizer function triggered');
     
-    // Simulate front maximization tasks
-    const maximizationTasks = [
-      'Maximizing front performance',
-      'Optimizing user engagement',
-      'Enhancing conversion rates'
-    ];
-    
-    return {
+    // Basic front maximization logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Front maximizer function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'front-maximizer',
-        maximizationTasks: maximizationTasks,
-        status: 'completed'
+        action: 'maximizing front-end performance and content'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in front maximizer function:', error);
+    console.error('Error in front-maximizer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

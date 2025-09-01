@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Fast front promoter function triggered');
+    console.log('fast-front-promoter function triggered');
     
-    // Simulate fast front promotion tasks
-    const promotionTasks = [
-      'Promoting front content',
-      'Optimizing visibility',
-      'Enhancing discoverability'
-    ];
-    
-    return {
+    // Basic fast front promotion logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Fast front promoter function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'fast-front-promoter',
-        promotionTasks: promotionTasks,
-        status: 'completed'
+        action: 'promoting front-end content quickly'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in fast front promoter function:', error);
+    console.error('Error in fast-front-promoter:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

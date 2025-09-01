@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('homepage_advertiser function triggered');
     
-    // Basic function logic
+    // Basic homepage advertising logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({

@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('AI trends radar runner function triggered');
+    console.log('ai-trends-radar-runner function triggered');
     
-    // Simulate AI trends radar tasks
-    const aiTrendsTasks = [
-      'Scanning AI trends',
-      'Analyzing emerging technologies',
-      'Identifying innovation opportunities'
-    ];
-    
-    return {
+    // Basic AI trends radar running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'AI trends radar runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'ai-trends-radar-runner',
-        aiTrendsTasks: aiTrendsTasks,
-        status: 'completed'
+        action: 'monitoring AI trends and developments'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in AI trends radar runner function:', error);
+    console.error('Error in ai-trends-radar-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

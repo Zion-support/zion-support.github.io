@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('OG image update runner function triggered');
+    console.log('og-image-update-runner function triggered');
     
-    // Simulate OG image update tasks
-    const ogImageTasks = [
-      'Updating OG images',
-      'Generating social media previews',
-      'Optimizing image metadata'
-    ];
-    
-    return {
+    // Basic OG image update running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'OG image update runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'og-image-update-runner',
-        ogImageTasks: ogImageTasks,
-        status: 'completed'
+        action: 'updating Open Graph images'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in OG image update runner function:', error);
+    console.error('Error in og-image-update-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

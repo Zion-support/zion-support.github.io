@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Features capabilities benefits advertiser function triggered');
+    console.log('features-capabilities-benefits-advertiser function triggered');
     
-    // Simulate features capabilities benefits advertising tasks
-    const featuresTasks = [
-      'Advertising key features',
-      'Highlighting capabilities',
-      'Promoting benefits'
-    ];
-    
-    return {
+    // Basic features, capabilities, and benefits advertising logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Features capabilities benefits advertiser function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'features-capabilities-benefits-advertiser',
-        featuresTasks: featuresTasks,
-        status: 'completed'
+        action: 'advertising product features, capabilities, and benefits'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in features capabilities benefits advertiser function:', error);
+    console.error('Error in features-capabilities-benefits-advertiser:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

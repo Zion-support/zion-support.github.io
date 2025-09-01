@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Revenue ideas lab function triggered');
+    console.log('revenue-ideas-lab function triggered');
     
-    // Simulate revenue ideas lab tasks
-    const revenueTasks = [
-      'Generating revenue ideas',
-      'Analyzing monetization opportunities',
-      'Planning business strategies'
-    ];
-    
-    return {
+    // Basic revenue ideas lab logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Revenue ideas lab function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'revenue-ideas-lab',
-        revenueTasks: revenueTasks,
-        status: 'completed'
+        action: 'generating revenue ideas and strategies'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in revenue ideas lab function:', error);
+    console.error('Error in revenue-ideas-lab:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

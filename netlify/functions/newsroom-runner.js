@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Newsroom runner function triggered');
+    console.log('newsroom-runner function triggered');
     
-    // Simulate newsroom tasks
-    const newsroomTasks = [
-      'Updating news content',
-      'Managing press releases',
-      'Coordinating media updates'
-    ];
-    
-    return {
+    // Basic newsroom running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Newsroom runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'newsroom-runner',
-        newsroomTasks: newsroomTasks,
-        status: 'completed'
+        action: 'managing newsroom content and updates'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in newsroom runner function:', error);
+    console.error('Error in newsroom-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

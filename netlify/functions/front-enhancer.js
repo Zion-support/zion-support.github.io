@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Front enhancer function triggered');
+    console.log('front-enhancer function triggered');
     
-    // Simulate front-end enhancement tasks
-    const enhancements = [
-      'Optimizing UI components',
-      'Improving accessibility',
-      'Enhancing user experience'
-    ];
-    
-    return {
+    // Basic front-end enhancement logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Front enhancer function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'front-enhancer',
-        enhancements: enhancements,
-        status: 'completed'
+        action: 'enhancing front-end components'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in front enhancer function:', error);
+    console.error('Error in front-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

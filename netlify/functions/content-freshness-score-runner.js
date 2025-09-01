@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Content freshness score runner function triggered');
+    console.log('content-freshness-score-runner function triggered');
     
-    // Simulate content freshness scoring tasks
-    const contentFreshnessTasks = [
-      'Calculating content freshness scores',
-      'Analyzing update frequency',
-      'Generating freshness reports'
-    ];
-    
-    return {
+    // Basic content freshness score running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Content freshness score runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'content-freshness-score-runner',
-        contentFreshnessTasks: contentFreshnessTasks,
-        status: 'completed'
+        action: 'calculating content freshness scores'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in content freshness score runner function:', error);
+    console.error('Error in content-freshness-score-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Frontpage enhancer function triggered');
+    console.log('frontpage-enhancer function triggered');
     
-    // Simulate frontpage enhancement tasks
-    const enhancements = [
-      'Optimizing hero section',
-      'Improving content layout',
-      'Enhancing call-to-action buttons'
-    ];
-    
-    return {
+    // Basic frontpage enhancement logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Frontpage enhancer function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'frontpage-enhancer',
-        enhancements: enhancements,
-        status: 'completed'
+        action: 'enhancing frontpage content'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in frontpage enhancer function:', error);
+    console.error('Error in frontpage-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

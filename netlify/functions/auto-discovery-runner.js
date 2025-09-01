@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Auto discovery runner function triggered');
+    console.log('auto-discovery-runner function triggered');
     
-    // Simulate auto discovery tasks
-    const discoveryTasks = [
-      'Running auto discovery',
-      'Identifying new opportunities',
-      'Exploring system capabilities'
-    ];
-    
-    return {
+    // Basic auto discovery running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Auto discovery runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'auto-discovery-runner',
-        discoveryTasks: discoveryTasks,
-        status: 'completed'
+        action: 'running automatic discovery processes'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in auto discovery runner function:', error);
+    console.error('Error in auto-discovery-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

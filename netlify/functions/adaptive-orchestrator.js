@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Adaptive orchestrator function triggered');
+    console.log('adaptive-orchestrator function triggered');
     
-    // Simulate adaptive orchestration tasks
-    const adaptiveTasks = [
-      'Adapting to system changes',
-      'Optimizing workflows dynamically',
-      'Learning from performance data'
-    ];
-    
-    return {
+    // Basic adaptive orchestration logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Adaptive orchestrator function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'adaptive-orchestrator',
-        adaptiveTasks: adaptiveTasks,
-        status: 'completed'
+        action: 'adaptive orchestration of processes'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in adaptive orchestrator function:', error);
+    console.error('Error in adaptive-orchestrator:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

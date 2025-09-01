@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Marketing and features promo function triggered');
+    console.log('marketing-and-features-promo function triggered');
     
-    // Simulate marketing and promo tasks
-    const promoTasks = [
-      'Updating feature highlights',
-      'Optimizing marketing copy',
-      'Enhancing promotional content'
-    ];
-    
-    return {
+    // Basic marketing and features promotion logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Marketing and features promo function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'marketing-and-features-promo',
-        promoTasks: promoTasks,
-        status: 'completed'
+        action: 'promoting marketing content and features'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in marketing and features promo function:', error);
+    console.error('Error in marketing-and-features-promo:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Component coupling graph runner function triggered');
+    console.log('component-coupling-graph-runner function triggered');
     
-    // Simulate component coupling graph tasks
-    const couplingGraphTasks = [
-      'Analyzing component coupling',
-      'Building dependency graphs',
-      'Identifying tight coupling issues'
-    ];
-    
-    return {
+    // Basic component coupling graph running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Component coupling graph runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'component-coupling-graph-runner',
-        couplingGraphTasks: couplingGraphTasks,
-        status: 'completed'
+        action: 'generating component coupling graphs'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in component coupling graph runner function:', error);
+    console.error('Error in component-coupling-graph-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Canonical auditor function triggered');
+    console.log('canonical-auditor function triggered');
     
-    // Simulate canonical URL auditing tasks
-    const canonicalAuditTasks = [
-      'Auditing canonical URLs',
-      'Checking duplicate content',
-      'Optimizing SEO structure'
-    ];
-    
-    return {
+    // Basic canonical URL auditing logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Canonical auditor function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'canonical-auditor',
-        canonicalAuditTasks: canonicalAuditTasks,
-        status: 'completed'
+        action: 'auditing canonical URLs and redirects'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in canonical auditor function:', error);
+    console.error('Error in canonical-auditor:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

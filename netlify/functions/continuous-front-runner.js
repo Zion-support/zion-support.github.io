@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Continuous front runner function triggered');
+    console.log('continuous-front-runner function triggered');
     
-    // Simulate continuous front running tasks
-    const continuousFrontTasks = [
-      'Running front processes',
-      'Maintaining front performance',
-      'Coordinating front workflows'
-    ];
-    
-    return {
+    // Basic continuous front running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Continuous front runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'continuous-front-runner',
-        continuousFrontTasks: continuousFrontTasks,
-        status: 'completed'
+        action: 'continuously running front-end processes'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in continuous front runner function:', error);
+    console.error('Error in continuous-front-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

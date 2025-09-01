@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Home visionary expander function triggered');
+    console.log('home-visionary-expander function triggered');
     
-    // Simulate home visionary expansion tasks
-    const homeVisionaryTasks = [
-      'Expanding home capabilities',
-      'Innovating homepage experience',
-      'Pioneering home features'
-    ];
-    
-    return {
+    // Basic home visionary expansion logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Home visionary expander function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'home-visionary-expander',
-        homeVisionaryTasks: homeVisionaryTasks,
-        status: 'completed'
+        action: 'expanding home page visionary features'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in home visionary expander function:', error);
+    console.error('Error in home-visionary-expander:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

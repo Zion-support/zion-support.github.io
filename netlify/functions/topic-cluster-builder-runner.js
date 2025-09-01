@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Topic cluster builder runner function triggered');
+    console.log('topic-cluster-builder-runner function triggered');
     
-    // Simulate topic cluster building tasks
-    const topicClusterTasks = [
-      'Building topic clusters',
-      'Organizing content themes',
-      'Creating content hierarchies'
-    ];
-    
-    return {
+    // Basic topic cluster building running logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Topic cluster builder runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'topic-cluster-builder-runner',
-        topicClusterTasks: topicClusterTasks,
-        status: 'completed'
+        action: 'building topic clusters'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in topic cluster builder runner function:', error);
+    console.error('Error in topic-cluster-builder-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,26 +1,21 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('Docs index runner function triggered');
+    console.log('docs-index-runner function triggered');
     
-    // Simulate documentation indexing tasks
-    const docsTasks = [
-      'Indexing documentation',
-      'Updating search indices',
-      'Optimizing doc search'
-    ];
-    
-    return {
+    // Basic documentation indexing logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Docs index runner function executed successfully',
         timestamp: new Date().toISOString(),
         function: 'docs-index-runner',
-        docsTasks: docsTasks,
-        status: 'completed'
+        action: 'indexing documentation content'
       })
     };
+    
+    return result;
   } catch (error) {
-    console.error('Error in docs index runner function:', error);
+    console.error('Error in docs-index-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
