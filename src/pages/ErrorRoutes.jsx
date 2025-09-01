@@ -95,3 +95,11 @@ const ErrorRoutes = () => {
     </Routes>)};
 export default ErrorRoutes;
 }
+
+export { NotFound, ServerError, ErrorRoutes };
+
+export { NotFound, ServerError, ErrorRoutes };
+
+export { NotFound, ServerError, ErrorRoutes };
+
+export { NotFound, ServerError, ErrorRoutes };

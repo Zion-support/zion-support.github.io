@@ -191,3 +191,12 @@ export default function Support() {
         </div>
     );
 }
+
+
+export { Support };
+
+export { Support };
+
+export { Support };
+
+export { Support };

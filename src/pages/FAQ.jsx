@@ -144,3 +144,12 @@ export default function FAQ() {
     </>
   );
 }
+
+
+export { CustomAccordion, FAQ };
+
+export { CustomAccordion, FAQ };
+
+export { CustomAccordion, FAQ };
+
+export { CustomAccordion, FAQ };

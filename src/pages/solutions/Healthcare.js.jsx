@@ -180,3 +180,12 @@ const HealthcareSolutions = () => {
     </div>);
 };
 export default HealthcareSolutions;
+
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };

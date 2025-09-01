@@ -105,7 +105,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase() {
+export default function EnhancedServicesShowcase(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 

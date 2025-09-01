@@ -334,3 +334,12 @@ export default function CloudInfrastructure() {
         </div>
       </section>
     </div>)}
+
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };

@@ -32,3 +32,12 @@ export default function ExpensiveComponent() {
           </p>)}
       </div>
     </div>)}
+
+
+export { ExpensiveComponent };
+
+export { ExpensiveComponent };
+
+export { ExpensiveComponent };
+
+export { ExpensiveComponent };

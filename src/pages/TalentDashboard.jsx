@@ -185,3 +185,12 @@ export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)}
+
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };

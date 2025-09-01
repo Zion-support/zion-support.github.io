@@ -103,3 +103,12 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       <FloatingCTA />
       <Footer />
     </div>)}
+
+
+export { Index };
+
+export { Index };
+
+export { Index };
+
+export { Index };

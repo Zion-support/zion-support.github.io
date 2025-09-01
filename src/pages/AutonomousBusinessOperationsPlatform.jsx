@@ -3,7 +3,7 @@ import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 
 import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Network } from 'lucide-react';
-import SEOHead from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';
 import { Clock, Workflow, BarChart } from 'lucide-react';
 const AutonomousBusinessOperationsPlatform = () => {
@@ -1369,3 +1369,12 @@ export default function AutonomousBusinessOperationsPlatform() {}
   )};
 
 export default AutonomousBusinessOperationsPlatform;
+
+
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
+
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
+
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
+
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };

@@ -314,3 +314,12 @@ const AIAutonomousLegalResearchAssistant = () => {
       </section>
     </div>)};
 export default AIAutonomousLegalResearchAssistant;
+
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };

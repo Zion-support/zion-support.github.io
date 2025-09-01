@@ -205,3 +205,12 @@ export default function Careers() {
         </div>
       </main>
     </>)}
+
+
+export { Careers };
+
+export { Careers };
+
+export { Careers };
+
+export { Careers };

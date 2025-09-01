@@ -51,7 +51,7 @@ import {
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -97,7 +97,7 @@ export default function RevolutionaryServices2030() {
   });
 
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getIcon = (category: string) => {
@@ -276,7 +276,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
 };
 
 // Main Component
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
 
   const tabs = [
@@ -761,3 +761,12 @@ export default RevolutionaryServices2030;
     </div>
   );
 }
+
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };

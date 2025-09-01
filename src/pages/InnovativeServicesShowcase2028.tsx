@@ -63,7 +63,7 @@ import {
   Leaf as LeafIcon
 } from 'lucide-react';
 
-export default function InnovativeServicesShowcase2028() {
+export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -679,3 +679,12 @@ export default function InnovativeServicesShowcase2028() {
     </div>
   );
 }
+
+
+export { InnovativeServicesShowcase2028 };
+
+export { InnovativeServicesShowcase2028 };
+
+export { InnovativeServicesShowcase2028 };
+
+export { InnovativeServicesShowcase2028 };

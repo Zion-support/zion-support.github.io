@@ -21,3 +21,11 @@ const Progress = React.forwardRef(({ className, value, max = 100, ...props }, re
 Progress.displayName = 'Progress';
 
 export { Progress };
+
+export { Progress };
+
+export { Progress };
+
+export { Progress };
+
+export { Progress };

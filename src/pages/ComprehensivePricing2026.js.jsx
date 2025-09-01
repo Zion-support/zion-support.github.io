@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
-import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
+;
+;
 const ComprehensivePricing2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
@@ -382,3 +382,12 @@ const ComprehensivePricing2026 = () => {
       </section>
     </div>)};
 export default ComprehensivePricing2026;
+
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };

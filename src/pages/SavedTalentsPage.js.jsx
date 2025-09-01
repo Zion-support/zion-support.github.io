@@ -132,3 +132,12 @@ export default function SavedTalentsPage() {
       </div>
       
     </>)}
+
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };

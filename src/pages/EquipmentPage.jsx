@@ -137,3 +137,11 @@ const EquipmentPage = () => {
 
 export default EquipmentPage;
 }}
+
+export { EquipmentPage, EquipmentCard };
+
+export { EquipmentPage, EquipmentCard };
+
+export { EquipmentPage, EquipmentCard };
+
+export { EquipmentPage, EquipmentCard };

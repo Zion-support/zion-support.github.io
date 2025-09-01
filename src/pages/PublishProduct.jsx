@@ -32,3 +32,12 @@ export default function PublishProduct() {
       </main>
       
     </div>)}
+
+
+export { PublishProduct };
+
+export { PublishProduct };
+
+export { PublishProduct };
+
+export { PublishProduct };

@@ -249,3 +249,12 @@ export default function TranslationManager() {
       </main>
       
     </>)}
+
+
+export { TranslationManager };
+
+export { TranslationManager };
+
+export { TranslationManager };
+
+export { TranslationManager };

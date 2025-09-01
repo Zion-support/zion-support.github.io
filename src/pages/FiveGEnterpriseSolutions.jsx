@@ -1374,3 +1374,12 @@ export default function FiveGEnterpriseSolutions() {
       </section>
     </div>
   )}
+
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };

@@ -248,3 +248,12 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
         </div>
       </main>
     </>)}
+
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };

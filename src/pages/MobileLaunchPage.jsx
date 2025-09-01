@@ -1,14 +1,14 @@
 import React from 'react';
 import SEO from '../components/SEO';
-// import { Header } from '../components/header/Header';
+// import { Header } from '../components/header/Header.jsx';
 import { Footer } from '../components/Footer';
-import { MobileLaunchHero } from '../components/mobile-app/MobileLaunchHero';
-import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase';
-import { AppTestimonials } from '../components/mobile-app/AppTestimonials';
-import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture';
-import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner';
-import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload';
-import { CommunityTrust } from '../components/mobile-app/CommunityTrust';
+;
+import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase.jsx';
+import { AppTestimonials } from '../components/mobile-app/AppTestimonials.jsx';
+import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture.jsx';
+import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner.jsx';
+import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload.jsx';
+import { CommunityTrust } from '../components/mobile-app/CommunityTrust.jsx';
 
 export const MobileLaunchPage = () => {
   return (

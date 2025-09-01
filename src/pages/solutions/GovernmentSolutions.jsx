@@ -213,3 +213,11 @@ export default function GovernmentSolutions() {
       </section>
     </div>);
 }}}}
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };

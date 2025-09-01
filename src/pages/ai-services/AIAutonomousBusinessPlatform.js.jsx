@@ -334,3 +334,12 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>)}
+
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };

@@ -597,3 +597,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 };
 
 export default AICustomerChurnPrediction;}}}
+
+export { AICustomerChurnPrediction };
+
+export { AICustomerChurnPrediction };
+
+export { AICustomerChurnPrediction };
+
+export { AICustomerChurnPrediction };

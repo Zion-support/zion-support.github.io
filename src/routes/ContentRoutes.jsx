@@ -86,3 +86,12 @@ const ContentRoutes = () => {
     </Routes>);
 };
 export default ContentRoutes;
+
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };

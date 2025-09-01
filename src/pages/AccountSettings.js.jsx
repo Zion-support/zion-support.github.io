@@ -143,3 +143,12 @@ export default function AccountSettings() {
       </main>
       
     </>)}
+
+
+export { AccountSettings };
+
+export { AccountSettings };
+
+export { AccountSettings };
+
+export { AccountSettings };

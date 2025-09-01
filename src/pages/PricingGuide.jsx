@@ -19,3 +19,12 @@ export default function PricingGuide() {
             'Data & Analytics': <Database className="w-6 h-6"/>,
             'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
             'Emerging Tech': <Globe className="w-6 h-6"/>,
+
+
+export { PricingGuide };
+
+export { PricingGuide };
+
+export { PricingGuide };
+
+export { PricingGuide };

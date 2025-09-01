@@ -235,3 +235,12 @@ const ITServicesPage = () => {
 };
 
 export default ITServicesPage;
+
+
+export { ITServicesPage };
+
+export { ITServicesPage };
+
+export { ITServicesPage };
+
+export { ITServicesPage };

@@ -463,3 +463,12 @@ const AICodeReviewAssistant = () => {
       </div>
     </>)};
 export default AICodeReviewAssistant;
+
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };

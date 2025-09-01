@@ -160,3 +160,12 @@ export default function Marketplace() {
           </div>
         </div>
       </main>)}
+
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };

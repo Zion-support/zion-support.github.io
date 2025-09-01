@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { useAnalytics } from "./useAnalytics";
+;
 export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -448,7 +448,7 @@ console.log("Language:", "${options.language}");`};
     // Helper functions for test generation
     const generateJestTests = (_code) => {
         return `import { render, screen, fireEvent } from '@testing-library/react';
-import GeneratedComponent from "./GeneratedComponent";
+;
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {

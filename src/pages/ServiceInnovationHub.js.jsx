@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
-import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub";
+import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -321,3 +321,12 @@ const ServiceInnovationHub = () => {
       </section>
     </div>)};
 export default ServiceInnovationHub;
+
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };

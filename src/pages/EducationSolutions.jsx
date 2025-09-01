@@ -700,3 +700,12 @@ export default function EducationSolutions() {
       </section>
     </div>
   )}
+
+
+export { EducationSolutions };
+
+export { EducationSolutions };
+
+export { EducationSolutions };
+
+export { EducationSolutions };

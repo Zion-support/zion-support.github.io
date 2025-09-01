@@ -361,3 +361,12 @@ export default function ServicesPricingGuide() {
         </div>
       </div>
     </div>)}
+
+
+export { ServicesPricingGuide };
+
+export { ServicesPricingGuide };
+
+export { ServicesPricingGuide };
+
+export { ServicesPricingGuide };

@@ -496,3 +496,12 @@ const AdvancedServiceRecommendation = () => {
         </motion.div>)}
     </div>)};
 export default AdvancedServiceRecommendation;
+
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };

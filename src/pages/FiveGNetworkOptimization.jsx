@@ -186,3 +186,11 @@ import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu cons
     </>)};
 export default FiveGNetworkOptimization;
 }}}}
+
+export { FiveGNetworkOptimization };
+
+export { FiveGNetworkOptimization };
+
+export { FiveGNetworkOptimization };
+
+export { FiveGNetworkOptimization };

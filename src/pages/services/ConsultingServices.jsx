@@ -29,3 +29,12 @@ const ConsultingServices = () => {
       </section>
     </div>)};
 export default ConsultingServices;
+
+
+export { ConsultingServices };
+
+export { ConsultingServices };
+
+export { ConsultingServices };
+
+export { ConsultingServices };

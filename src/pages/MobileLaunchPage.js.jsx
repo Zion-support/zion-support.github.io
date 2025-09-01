@@ -24,3 +24,12 @@ const MobileLaunchPage = () => {
                                                         ,
                                                             <AppStoreBanner />)};
 export default MobileLaunchPage;
+
+
+export { MobileLaunchPage };
+
+export { MobileLaunchPage };
+
+export { MobileLaunchPage };
+
+export { MobileLaunchPage };

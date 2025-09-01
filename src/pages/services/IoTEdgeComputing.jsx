@@ -323,3 +323,12 @@ export default function IoTEdgeComputingServices() {
       </section>
     </div>);
 }
+
+
+export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices };

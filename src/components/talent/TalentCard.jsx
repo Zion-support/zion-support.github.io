@@ -157,3 +157,11 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
 };
 
 export default TalentCardComponent;
+
+export { TalentCardComponent };
+
+export { TalentCardComponent };
+
+export { TalentCardComponent };
+
+export { TalentCardComponent };

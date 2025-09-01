@@ -201,3 +201,12 @@ const ITInfrastructure = () => {
 };
 
 export default ITInfrastructure;
+
+
+export { ITInfrastructure };
+
+export { ITInfrastructure };
+
+export { ITInfrastructure };
+
+export { ITInfrastructure };

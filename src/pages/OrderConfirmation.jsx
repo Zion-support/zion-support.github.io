@@ -12,3 +12,12 @@ export default function OrderConfirmation() {
       <p className="mb-6">Your order ID is {orderId}.</p>
       <Link href="/orders" className="text-zion-purple underline">View Orders</Link>
     </div>)}
+
+
+export { OrderConfirmation };
+
+export { OrderConfirmation };
+
+export { OrderConfirmation };
+
+export { OrderConfirmation };

@@ -83,7 +83,7 @@ interface Service {
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
     starter: string;
@@ -435,7 +435,7 @@ const categories = [
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
 
-export default function ComprehensiveServicesShowcase2025() {
+export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
@@ -869,3 +869,12 @@ export default function ComprehensiveServicesShowcase2025() {
     </div>
   );
 }
+
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };

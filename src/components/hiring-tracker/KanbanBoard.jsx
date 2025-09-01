@@ -4,7 +4,7 @@ import { useJobApplications } from "@/hooks/useJobApplications";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
-import { KanbanColumn } from "./KanbanColumn";
+import { KanbanColumn } from "./KanbanColumn.jsx";
 import { useIsMobile } from "@/hooks/use-mobile";
 // Define the kanban board columns based on application statuses
 const COLUMNS = [

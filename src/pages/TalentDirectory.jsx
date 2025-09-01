@@ -302,3 +302,11 @@ const TalentDirectory = () => {
     </div>)};
 export default TalentDirectory;
 }}
+
+export { TalentDirectory };
+
+export { TalentDirectory };
+
+export { TalentDirectory };
+
+export { TalentDirectory };

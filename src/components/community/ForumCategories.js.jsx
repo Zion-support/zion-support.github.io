@@ -38,3 +38,12 @@ export default function ForumCategories() {
           </div>
         </div>))}
     </div>)}
+
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };

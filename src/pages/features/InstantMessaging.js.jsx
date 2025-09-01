@@ -53,3 +53,12 @@ export default function InstantMessaging() {
       </main>
       <Footer />
     </>)}
+
+
+export { InstantMessaging };
+
+export { InstantMessaging };
+
+export { InstantMessaging };
+
+export { InstantMessaging };

@@ -182,3 +182,12 @@ export default function UpdatePassword() {
       </div>
       
     </>)}
+
+
+export { UpdatePassword };
+
+export { UpdatePassword };
+
+export { UpdatePassword };
+
+export { UpdatePassword };

@@ -209,3 +209,12 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
         </div>
       </section>
     </div>)}
+
+
+export { FinancialSolutions };
+
+export { FinancialSolutions };
+
+export { FinancialSolutions };
+
+export { FinancialSolutions };

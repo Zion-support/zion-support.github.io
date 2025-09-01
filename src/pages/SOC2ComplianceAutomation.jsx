@@ -1339,3 +1339,12 @@ export default function SOC2ComplianceAutomation() {
       </section>
     </div>
   )}
+
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };

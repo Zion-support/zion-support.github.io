@@ -370,3 +370,12 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>)}
+
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };

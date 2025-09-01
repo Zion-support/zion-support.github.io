@@ -7,3 +7,12 @@ export default function EnhancedInnovativeServicesPage() {
 
       <EnhancedInnovativeServicesShowcase />
     </>)}
+
+
+export { EnhancedInnovativeServicesPage };
+
+export { EnhancedInnovativeServicesPage };
+
+export { EnhancedInnovativeServicesPage };
+
+export { EnhancedInnovativeServicesPage };

@@ -280,3 +280,12 @@ const QuantumEdgeComputingPlatform = () => {
       </section>
     </div>)};
 export default QuantumEdgeComputingPlatform;
+
+
+export { QuantumEdgeComputingPlatform };
+
+export { QuantumEdgeComputingPlatform };
+
+export { QuantumEdgeComputingPlatform };
+
+export { QuantumEdgeComputingPlatform };

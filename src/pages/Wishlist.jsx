@@ -193,3 +193,12 @@ export default function WishlistPage() {
         </div>
     );
 }
+
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };

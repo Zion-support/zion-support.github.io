@@ -212,3 +212,12 @@ export default function HelpCenter() {
     </>
   );
   }
+
+
+export { HelpCenter };
+
+export { HelpCenter };
+
+export { HelpCenter };
+
+export { HelpCenter };

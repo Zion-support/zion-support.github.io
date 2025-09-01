@@ -344,3 +344,12 @@ export default function Testimonials() {
     </div>
   );
 }
+
+
+export { Testimonials };
+
+export { Testimonials };
+
+export { Testimonials };
+
+export { Testimonials };

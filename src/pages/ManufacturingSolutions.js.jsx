@@ -210,3 +210,12 @@ export default function ManufacturingSolutions() {
         </div>
       </section>
     </div>)}
+
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };

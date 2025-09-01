@@ -24,3 +24,12 @@ const Solutions = () => {
       </div>
     </>)};
 export default Solutions;
+
+
+export { Solutions };
+
+export { Solutions };
+
+export { Solutions };
+
+export { Solutions };

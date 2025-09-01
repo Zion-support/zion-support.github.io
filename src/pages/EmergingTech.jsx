@@ -414,3 +414,11 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
     </div>)};
 export default EmergingTech;
 }}}}}}}}}}}}}}
+
+export { EmergingTech };
+
+export { EmergingTech };
+
+export { EmergingTech };
+
+export { EmergingTech };

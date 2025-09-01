@@ -411,3 +411,11 @@ const AIAutonomousResearchAssistant = () => {
 };
 
 export default AIAutonomousResearchAssistant;
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };

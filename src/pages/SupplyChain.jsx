@@ -369,3 +369,12 @@ const SupplyChain = () => {
 };
 
 export default SupplyChain;
+
+
+export { SupplyChain };
+
+export { SupplyChain };
+
+export { SupplyChain };
+
+export { SupplyChain };

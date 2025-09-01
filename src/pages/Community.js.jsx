@@ -25,3 +25,12 @@ const Community = () => {
       </div>
     </>)};
 export default Community;
+
+
+export { Community };
+
+export { Community };
+
+export { Community };
+
+export { Community };

@@ -172,3 +172,12 @@ export default function NotificationsPage() {
       </main>
       
     </>)}
+
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };

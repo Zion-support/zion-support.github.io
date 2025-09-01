@@ -105,3 +105,12 @@ const FloatingActionButton = ({ className = '' }) => {
       </motion.button>
     </div>)};
 export default FloatingActionButton;
+
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };

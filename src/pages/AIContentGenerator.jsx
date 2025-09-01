@@ -319,3 +319,11 @@ export default function AIContentGenerator() {
         </div>
     );
 </Card></Card></Card></Card></Card>}}}}}
+
+export { AIContentGenerator };
+
+export { AIContentGenerator };
+
+export { AIContentGenerator };
+
+export { AIContentGenerator };

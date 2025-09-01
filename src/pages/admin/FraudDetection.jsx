@@ -43,3 +43,12 @@ export default function FraudDetection() {
                 dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
                 false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
+
+
+export { FraudDetection };
+
+export { FraudDetection };
+
+export { FraudDetection };
+
+export { FraudDetection };

@@ -230,3 +230,12 @@ const EnhancedHero = () => {
       </div>
     </div>)};
 export default EnhancedHero;
+
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };

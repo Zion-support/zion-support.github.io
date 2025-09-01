@@ -220,3 +220,11 @@ class AuthService {
 
 const authService = new AuthService();
 export default authService;
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };

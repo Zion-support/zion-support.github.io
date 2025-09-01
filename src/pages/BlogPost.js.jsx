@@ -171,3 +171,12 @@ export default function BlogPost() {
         </div>
       </div>
     </>)}
+
+
+export { BlogPost };
+
+export { BlogPost };
+
+export { BlogPost };
+
+export { BlogPost };

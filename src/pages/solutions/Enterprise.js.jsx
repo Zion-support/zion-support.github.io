@@ -236,3 +236,12 @@ const EnterpriseSolutions = () => {
     </div>);
 };
 export default EnterpriseSolutions;
+
+
+export { EnterpriseSolutions, Icon, Icon, Icon };
+
+export { EnterpriseSolutions, Icon, Icon, Icon };
+
+export { EnterpriseSolutions, Icon, Icon, Icon };
+
+export { EnterpriseSolutions, Icon, Icon, Icon };

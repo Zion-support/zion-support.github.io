@@ -37,3 +37,12 @@ export default function ApplicationStatusTracker() {
         <ApplicationStatusTrackerContent />
       
     </ProtectedRoute>)}
+
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker };

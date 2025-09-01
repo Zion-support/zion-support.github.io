@@ -183,3 +183,11 @@ const HealthcareSolutions = () => {
 };
 
 export default HealthcareSolutions;
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };

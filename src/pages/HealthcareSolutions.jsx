@@ -789,3 +789,12 @@ export default function HealthcareSolutions() {
       </section>
     </div>
   )}
+
+
+export { HealthcareSolutions };
+
+export { HealthcareSolutions };
+
+export { HealthcareSolutions };
+
+export { HealthcareSolutions };

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from "../SEO";
+;
 const features = [
     {
         title: "AI-Powered Autonomous Healthcare Physician",
@@ -203,3 +203,12 @@ export default function AIAutonomousHealthcarePhysician() {
         </div>
       </section>
     </div>)}
+
+
+export { AIAutonomousHealthcarePhysician, IconComponent };
+
+export { AIAutonomousHealthcarePhysician, IconComponent };
+
+export { AIAutonomousHealthcarePhysician, IconComponent };
+
+export { AIAutonomousHealthcarePhysician, IconComponent };

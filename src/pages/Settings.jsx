@@ -25,3 +25,12 @@ const Settings = () => {
       </div>
     </>)};
 export default Settings;
+
+
+export { Settings };
+
+export { Settings };
+
+export { Settings };
+
+export { Settings };

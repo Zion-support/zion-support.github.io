@@ -4,12 +4,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide-react';
-import SEOHead from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 // Import all service data
-import { ADVANCED_AI_SERVICES } from "../data/advancedAIServices";
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from "../data/innovativeITInfrastructure";
-import { IOT_EDGE_COMPUTING_SERVICES } from "../data/iotEdgeComputingServices";
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from "../data/innovativeMicroSaasServices";
+;
+;
+;
+;
 const InnovativeServicesShowcase = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -49,3 +49,12 @@ const InnovativeServicesShowcase = () => {
             'Cybersecurity': <Shield className="h-5 w-5"/>,
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
+
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };

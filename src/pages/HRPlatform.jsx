@@ -938,3 +938,12 @@ export default function HRPlatform() {
       </section>
     </div>
   )}
+
+
+export { HRPlatform };
+
+export { HRPlatform };
+
+export { HRPlatform };
+
+export { HRPlatform };

@@ -111,3 +111,11 @@ const ZionHireAI = () => {
 
 export default ZionHireAI;
 }
+
+export { ZionHireAI };
+
+export { ZionHireAI };
+
+export { ZionHireAI };
+
+export { ZionHireAI };

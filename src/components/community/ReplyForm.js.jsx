@@ -16,3 +16,12 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
         </Button>
       </div>
     </form>)}
+
+
+export { ReplyForm };
+
+export { ReplyForm };
+
+export { ReplyForm };
+
+export { ReplyForm };

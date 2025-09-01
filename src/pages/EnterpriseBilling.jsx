@@ -24,3 +24,12 @@ export default function EnterpriseBilling() {
       </main>
       
     </ProtectedRoute>)}
+
+
+export { EnterpriseBilling };
+
+export { EnterpriseBilling };
+
+export { EnterpriseBilling };
+
+export { EnterpriseBilling };

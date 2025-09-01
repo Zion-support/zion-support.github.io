@@ -222,3 +222,11 @@ export default function MicroSAASSolutions() {
     </div>
   );
 }
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };

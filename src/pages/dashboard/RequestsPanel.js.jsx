@@ -53,3 +53,12 @@ export default function RequestsPanel() {
         
       </div>
     </ProtectedRoute>)}
+
+
+export { RequestsPanel };
+
+export { RequestsPanel };
+
+export { RequestsPanel };
+
+export { RequestsPanel };

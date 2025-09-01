@@ -22,3 +22,11 @@ export default function PrivacyPolicy() {
       <Footer />
     </>);
 }
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };

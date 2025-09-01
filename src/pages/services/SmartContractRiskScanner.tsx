@@ -826,3 +826,11 @@ export default function SmartContractRiskScanner(...args: []):  {
     </div>;
   );
 }}}}}
+
+export { SmartContractRiskScanner };
+
+export { SmartContractRiskScanner };
+
+export { SmartContractRiskScanner };
+
+export { SmartContractRiskScanner };

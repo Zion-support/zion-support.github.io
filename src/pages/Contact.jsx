@@ -505,3 +505,12 @@ export default function Contact() {
     </div>
   );
 }
+
+
+export { Contact };
+
+export { Contact };
+
+export { Contact };
+
+export { Contact };

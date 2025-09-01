@@ -6,3 +6,12 @@ function Skeleton({ className, ...props }) {
 
 } {...props}/>)}
 export { Skeleton };
+
+
+export { Skeleton };
+
+export { Skeleton };
+
+export { Skeleton };
+
+export { Skeleton };

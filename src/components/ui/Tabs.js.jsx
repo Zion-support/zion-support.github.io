@@ -27,3 +27,12 @@ const TabsContent = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2', className) }, props)))});
 TabsContent.displayName = 'TabsContent';
 export { Tabs, TabsList, TabsTrigger, TabsContent };
+
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };

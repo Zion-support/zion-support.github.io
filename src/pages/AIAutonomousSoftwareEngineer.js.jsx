@@ -170,3 +170,12 @@ const AIAutonomousSoftwareEngineer = () => {
       </div>
     </>)};
 export default AIAutonomousSoftwareEngineer;
+
+
+export { AIAutonomousSoftwareEngineer };
+
+export { AIAutonomousSoftwareEngineer };
+
+export { AIAutonomousSoftwareEngineer };
+
+export { AIAutonomousSoftwareEngineer };

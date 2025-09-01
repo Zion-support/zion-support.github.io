@@ -170,3 +170,12 @@ const AIAutonomousTranslation = () => {
       </div>
     </>)};
 export default AIAutonomousTranslation;
+
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };

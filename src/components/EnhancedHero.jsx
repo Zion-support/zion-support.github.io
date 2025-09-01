@@ -330,3 +330,11 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
     </div>)};
 export default EnhancedHero;
 }}}}
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };

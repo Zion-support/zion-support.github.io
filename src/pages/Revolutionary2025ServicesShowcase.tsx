@@ -85,8 +85,8 @@ import {
   PlayCircle,
   PauseCircle
 } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2";
-import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services";
+;
+;
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = () => {;
@@ -2847,3 +2847,11 @@ const List = ({ className }: { className?: string }) => (;
   </svg>;
 );
 export default Revolutionary2025ServicesShowcase;}}}}}}}}
+
+export { ALL_SERVICES, Revolutionary2025ServicesShowcase, Grid, List };
+
+export { ALL_SERVICES, Revolutionary2025ServicesShowcase, Grid, List };
+
+export { ALL_SERVICES, Revolutionary2025ServicesShowcase, Grid, List };
+
+export { ALL_SERVICES, Revolutionary2025ServicesShowcase, Grid, List };

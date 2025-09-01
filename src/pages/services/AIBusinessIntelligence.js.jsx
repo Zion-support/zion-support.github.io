@@ -327,3 +327,12 @@ const AIBusinessIntelligence = () => {
       </div>
     </div>)};
 export default AIBusinessIntelligence;
+
+
+export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence };

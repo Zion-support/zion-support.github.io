@@ -71,3 +71,12 @@ export default function VideoCall() {
       </main>
       
     </>)}
+
+
+export { VideoCall };
+
+export { VideoCall };
+
+export { VideoCall };
+
+export { VideoCall };

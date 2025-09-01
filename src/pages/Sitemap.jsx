@@ -137,3 +137,11 @@ const Sitemap = () => {
 
 
 export default Sitemap;
+
+export { Sitemap };
+
+export { Sitemap };
+
+export { Sitemap };
+
+export { Sitemap };

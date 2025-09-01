@@ -179,3 +179,11 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
 export default ContentQualityAnalyzer;
 }}}}}}}}}}}}}}}}
+
+export { ContentQualityAnalyzer };
+
+export { ContentQualityAnalyzer };
+
+export { ContentQualityAnalyzer };
+
+export { ContentQualityAnalyzer };

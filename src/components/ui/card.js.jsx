@@ -35,3 +35,12 @@ const CardFooter = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))});
 CardFooter.displayName = 'CardFooter';
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

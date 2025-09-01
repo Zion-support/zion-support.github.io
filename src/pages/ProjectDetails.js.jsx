@@ -519,3 +519,12 @@ export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)}
+
+
+export { ProjectDetailsContent, ProjectDetails };
+
+export { ProjectDetailsContent, ProjectDetails };
+
+export { ProjectDetailsContent, ProjectDetails };
+
+export { ProjectDetailsContent, ProjectDetails };

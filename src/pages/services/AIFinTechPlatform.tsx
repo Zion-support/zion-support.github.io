@@ -1,8 +1,8 @@
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
-import { Button  } from '../../components/ui/Button';
-import { Card  } from '../../components/ui/Card';
-import { Badge  } from '../../components/ui/Badge';
+import { Button  } from '../../components/ui/Button.jsx';
+import { Card  } from '../../components/ui/Card.jsx';
+import { Badge  } from '../../components/ui/Badge.jsx';
 import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart  } from 'lucide-react.ts';
 
 const AIFinTechPlatform: React.FC = (): JSX.Element => {
@@ -408,3 +408,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
 };
 
 export default AIFinTechPlatform;
+
+export { AIFinTechPlatform };
+
+export { AIFinTechPlatform };
+
+export { AIFinTechPlatform };
+
+export { AIFinTechPlatform };

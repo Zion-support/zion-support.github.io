@@ -104,3 +104,12 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
     </Helmet>)}
+
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };

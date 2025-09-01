@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from "../ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
-import { Input } from "../ui/Input";
-import { Textarea } from "../ui/Textarea";
+import { Button } from "../ui/Button.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card.jsx";
+import { Input } from "../ui/Input.jsx";
+import { Textarea } from "../ui/Textarea.jsx";
 import { DollarSign, MessageSquare } from 'lucide-react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);

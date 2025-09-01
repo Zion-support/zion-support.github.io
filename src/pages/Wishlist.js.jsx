@@ -50,3 +50,12 @@ export default function WishlistPage() {
               </div>) : null})}
         </div>)}
     </div>)}
+
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };

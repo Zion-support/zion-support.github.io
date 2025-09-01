@@ -66,3 +66,11 @@ const CloudServices = () => {
     </div>)};
 export default CloudServices;
 }
+
+export { CloudServices };
+
+export { CloudServices };
+
+export { CloudServices };
+
+export { CloudServices };

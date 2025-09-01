@@ -170,3 +170,12 @@ const AIAutonomousManufacturing = () => {
       </div>
     </>)};
 export default AIAutonomousManufacturing;
+
+
+export { AIAutonomousManufacturing };
+
+export { AIAutonomousManufacturing };
+
+export { AIAutonomousManufacturing };
+
+export { AIAutonomousManufacturing };

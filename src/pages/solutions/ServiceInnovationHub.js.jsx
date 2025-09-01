@@ -24,3 +24,12 @@ const ServiceInnovationHub = () => {
     </div>);
 };
 export default ServiceInnovationHub;
+
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };
+
+export { ServiceInnovationHub };

@@ -59,3 +59,12 @@ export default function AIPoweredContent() {
       </main>
       <Footer />
     </>)}
+
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };

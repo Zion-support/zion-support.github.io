@@ -14,3 +14,12 @@ export default function Terms() {
       <Footer />
     </>);
 }
+
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };

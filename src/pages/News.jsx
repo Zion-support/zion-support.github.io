@@ -245,3 +245,11 @@ const News = () => {
 }
 
 export default News;
+
+export { News };
+
+export { News };
+
+export { News };
+
+export { News };

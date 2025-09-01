@@ -144,3 +144,12 @@ const NotFound = () => {
       </motion.div>
     </div>)};
 export default NotFound;
+
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };

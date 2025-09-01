@@ -177,3 +177,12 @@ export default function Marketplace() {
     </main>
   );
 }
+
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };

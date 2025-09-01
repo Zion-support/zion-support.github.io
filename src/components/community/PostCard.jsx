@@ -17,3 +17,12 @@ export default function PostCard({ post }) {
         </div>
       </div>
     </div>)}
+
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };

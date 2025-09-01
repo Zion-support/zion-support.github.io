@@ -81,3 +81,12 @@ export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>)}
+
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };

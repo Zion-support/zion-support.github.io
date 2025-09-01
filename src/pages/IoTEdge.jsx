@@ -703,3 +703,12 @@ export default function IoTEdge() {
       </section>
     </div>
   )}
+
+
+export { IoTEdge };
+
+export { IoTEdge };
+
+export { IoTEdge };
+
+export { IoTEdge };

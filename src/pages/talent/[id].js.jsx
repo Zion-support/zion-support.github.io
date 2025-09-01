@@ -64,3 +64,12 @@ export default function TalentProfilePage() {
       </main>
     </>);
 }
+
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };

@@ -155,3 +155,12 @@ export default function JobDetails() {
 
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)}
+
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };

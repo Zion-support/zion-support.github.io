@@ -76,3 +76,12 @@ const WhitePapers = () => {
 };
 
 export default WhitePapers;
+
+
+export { WhitePapers };
+
+export { WhitePapers };
+
+export { WhitePapers };
+
+export { WhitePapers };

@@ -66,3 +66,11 @@ export default function Profile() {
 ;
 export default Profile;
 }}}}
+
+export { Profile };
+
+export { Profile };
+
+export { Profile };
+
+export { Profile };

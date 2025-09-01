@@ -21,3 +21,12 @@ const ServiceCategory = ({ category, services }) => {
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
             'Real Estate & Property': <Home className="w-6 h-6"/>,
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
+
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+
+export { ServiceCategory };

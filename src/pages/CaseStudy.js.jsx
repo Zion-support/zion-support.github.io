@@ -29,3 +29,12 @@ export default function CaseStudy() {
         </div>
       </div>
     </>)}
+
+
+export { CaseStudy };
+
+export { CaseStudy };
+
+export { CaseStudy };
+
+export { CaseStudy };

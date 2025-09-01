@@ -836,3 +836,12 @@ export default function DigitalTwin() {
       </section>
     </div>
   )}
+
+
+export { DigitalTwin };
+
+export { DigitalTwin };
+
+export { DigitalTwin };
+
+export { DigitalTwin };

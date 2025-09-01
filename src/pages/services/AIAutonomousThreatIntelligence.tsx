@@ -36,7 +36,7 @@ import { Shield,
   ShieldCheck
  } from 'lucide-react.ts';
 
-export default function AIAutonomousThreatIntelligence(...args: any[]): any {
+export default function AIAutonomousThreatIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,
@@ -204,7 +204,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -255,7 +255,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
             {threatTypes.map((threat, index)  => (
               <motion.div
                 key={index}
@@ -310,7 +310,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: unknowngrid-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -426,3 +426,12 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
     </div>
   );
 }
+
+
+export { AIAutonomousThreatIntelligence };
+
+export { AIAutonomousThreatIntelligence };
+
+export { AIAutonomousThreatIntelligence };
+
+export { AIAutonomousThreatIntelligence };

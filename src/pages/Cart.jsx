@@ -142,3 +142,12 @@ export default function CartPage() {
         </div>
     );
 }
+
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };

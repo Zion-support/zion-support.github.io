@@ -235,3 +235,11 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
     </div>)};
 export default GetStarted;
 }}}
+
+export { GetStarted };
+
+export { GetStarted };
+
+export { GetStarted };
+
+export { GetStarted };

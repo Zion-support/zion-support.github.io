@@ -466,3 +466,11 @@ export default function HealthcareTech(...args: []):  {
     </div>;
   );
 }}}}
+
+export { HealthcareTech };
+
+export { HealthcareTech };
+
+export { HealthcareTech };
+
+export { HealthcareTech };

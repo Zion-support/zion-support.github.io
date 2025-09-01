@@ -45,3 +45,12 @@ export default function HiringTracker() {
     return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>)}
+
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };

@@ -30,3 +30,12 @@ const TransformationServices = () => {
     </div>);
 };
 export default TransformationServices;
+
+
+export { TransformationServices };
+
+export { TransformationServices };
+
+export { TransformationServices };
+
+export { TransformationServices };

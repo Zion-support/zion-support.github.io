@@ -30,3 +30,12 @@ export default function PostJob() {
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
     </>)}
+
+
+export { PostJob };
+
+export { PostJob };
+
+export { PostJob };
+
+export { PostJob };

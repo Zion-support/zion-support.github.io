@@ -170,3 +170,12 @@ const AIAutonomousScientificResearcher = () => {
       </div>
     </>)};
 export default AIAutonomousScientificResearcher;
+
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };

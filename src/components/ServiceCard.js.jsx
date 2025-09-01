@@ -194,3 +194,12 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       </div>
     </motion.div>)};
 export default ServiceCard;
+
+
+export { ServiceCard };
+
+export { ServiceCard };
+
+export { ServiceCard };
+
+export { ServiceCard };

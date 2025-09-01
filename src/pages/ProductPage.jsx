@@ -26,3 +26,12 @@ export default function ProductPage() {
         {adding ? 'Adding...' : 'Add to Cart'}
       </Button>
     </div>)}
+
+
+export { ProductPage };
+
+export { ProductPage };
+
+export { ProductPage };
+
+export { ProductPage };

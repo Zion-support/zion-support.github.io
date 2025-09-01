@@ -86,3 +86,12 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
           </TooltipProvider>)}
       </div>
     </div>)}
+
+
+export { ProductCard };
+
+export { ProductCard };
+
+export { ProductCard };
+
+export { ProductCard };

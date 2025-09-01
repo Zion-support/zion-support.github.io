@@ -45,3 +45,12 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 };
 
 export { Badge };
+
+
+export { Badge, Badge };
+
+export { Badge, Badge };
+
+export { Badge, Badge };
+
+export { Badge, Badge };

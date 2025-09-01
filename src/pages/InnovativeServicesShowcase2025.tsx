@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function InnovativeServicesShowcase2025() {
+export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
   const services = [
     {
       id: 'ai-workflow-orchestrator',
@@ -644,3 +644,12 @@ export default function InnovativeServicesShowcase2025() {
     </div>
   );
 }
+
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };

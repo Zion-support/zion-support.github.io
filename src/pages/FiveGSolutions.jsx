@@ -844,3 +844,12 @@ export default function FiveGSolutions() {
       </section>
     </div>
   )}
+
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };

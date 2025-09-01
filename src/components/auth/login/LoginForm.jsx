@@ -163,3 +163,12 @@ function LoginForm() {
 }
 
 export default LoginForm;
+
+
+export { LoginForm };
+
+export { LoginForm };
+
+export { LoginForm };
+
+export { LoginForm };

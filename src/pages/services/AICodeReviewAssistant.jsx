@@ -664,3 +664,11 @@ const AICodeReviewAssistant = () => {
     </>)};
 export default AICodeReviewAssistant;
 }}}}
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant };

@@ -77,3 +77,12 @@ export default function Services() {
 				</div>
 			</main>
 		</>)}
+
+
+export { Services };
+
+export { Services };
+
+export { Services };
+
+export { Services };

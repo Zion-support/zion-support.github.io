@@ -13,3 +13,12 @@ export default function Terms() {
       </main>
       <Footer />
     </>)}
+
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };

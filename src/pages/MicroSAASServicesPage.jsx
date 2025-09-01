@@ -434,3 +434,12 @@ export default function MicroSaasServicesPage() { /* empty */ }
   );
 }</></></></></></>);
 }
+
+
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };

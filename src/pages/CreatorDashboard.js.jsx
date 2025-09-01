@@ -47,3 +47,12 @@ export default function CreatorDashboard() {
       </div>
       <SidebarTrigger />
     </SidebarProvider>)}
+
+
+export { CreatorDashboard };
+
+export { CreatorDashboard };
+
+export { CreatorDashboard };
+
+export { CreatorDashboard };

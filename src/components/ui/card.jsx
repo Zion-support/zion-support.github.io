@@ -30,3 +30,12 @@ const CardFooter = ({ children, className = '' }) => {
     </div>);
 };
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

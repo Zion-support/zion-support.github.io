@@ -38,3 +38,12 @@ export default function Home() {
     </>
   );
 }
+
+
+export { Home };
+
+export { Home };
+
+export { Home };
+
+export { Home };

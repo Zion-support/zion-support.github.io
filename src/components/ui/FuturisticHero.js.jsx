@@ -235,3 +235,12 @@ export default function FuturisticHero() {
 }}/>))}
       </div>
     </section>)}
+
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };

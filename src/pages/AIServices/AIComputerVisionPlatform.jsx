@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from "../SEO";
+;
 const features = [
     {
         title: "AI-Powered Computer Vision Platform",
@@ -273,3 +273,12 @@ export default function AIComputerVisionPlatform() {
         </div>
       </section>
     </div>)}
+
+
+export { AIComputerVisionPlatform, IconComponent };
+
+export { AIComputerVisionPlatform, IconComponent };
+
+export { AIComputerVisionPlatform, IconComponent };
+
+export { AIComputerVisionPlatform, IconComponent };

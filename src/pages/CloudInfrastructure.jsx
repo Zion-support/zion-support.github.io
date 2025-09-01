@@ -453,3 +453,12 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
         </div>
       </section>
     </div>)}
+
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };

@@ -234,3 +234,12 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>)}
+
+
+export { EquipmentDetail };
+
+export { EquipmentDetail };
+
+export { EquipmentDetail };
+
+export { EquipmentDetail };

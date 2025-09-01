@@ -385,3 +385,11 @@ import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircl
       </section>
     </div>);
 }}}}
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };

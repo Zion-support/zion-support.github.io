@@ -105,3 +105,12 @@ export default function EditPostPage() {
         
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>)}
+
+
+export { EditPostPage };
+
+export { EditPostPage };
+
+export { EditPostPage };
+
+export { EditPostPage };

@@ -181,3 +181,11 @@ const AISolutions = () => {
 };
 
 export default AISolutions;
+
+export { AISolutions };
+
+export { AISolutions };
+
+export { AISolutions };
+
+export { AISolutions };

@@ -403,3 +403,11 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
     </div>)};
 export default SEOOptimizer;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };

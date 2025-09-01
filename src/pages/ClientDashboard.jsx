@@ -115,3 +115,12 @@ export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>)}
+
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };

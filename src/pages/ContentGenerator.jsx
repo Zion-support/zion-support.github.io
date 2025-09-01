@@ -316,3 +316,12 @@ export default function ContentGenerator() {
       </div>
       
     </>)}
+
+
+export { ContentGenerator };
+
+export { ContentGenerator };
+
+export { ContentGenerator };
+
+export { ContentGenerator };

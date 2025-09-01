@@ -220,3 +220,12 @@ export default function HelpCenterPage() {
         </div>
       </main>
     </>)}
+
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button';
+import { Button } from './ui/Button.jsx';
 import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
+import { Textarea } from './ui/textarea.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';

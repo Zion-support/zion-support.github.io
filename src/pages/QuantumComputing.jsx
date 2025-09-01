@@ -826,3 +826,12 @@ export default function QuantumComputing() {
       </section>
     </div>
   )}
+
+
+export { QuantumComputing };
+
+export { QuantumComputing };
+
+export { QuantumComputing };
+
+export { QuantumComputing };

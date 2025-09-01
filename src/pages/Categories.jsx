@@ -21,3 +21,12 @@ export default function Featured() {
       </div>
       
     </>)}
+
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };

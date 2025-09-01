@@ -255,3 +255,12 @@ const AIPoweredSecurity = () => {
     </div>);
 };
 export default AIPoweredSecurity;
+
+
+export { AIPoweredSecurity };
+
+export { AIPoweredSecurity };
+
+export { AIPoweredSecurity };
+
+export { AIPoweredSecurity };

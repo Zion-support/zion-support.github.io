@@ -389,3 +389,12 @@ export default function Pricing() {
         </div>
       </div>
     </div>)}
+
+
+export { Pricing };
+
+export { Pricing };
+
+export { Pricing };
+
+export { Pricing };

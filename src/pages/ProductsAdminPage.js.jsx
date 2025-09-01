@@ -51,3 +51,12 @@ export default function ProductsAdminPage() {
         </div>
       </div>
     </AdminLayout>)}
+
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };

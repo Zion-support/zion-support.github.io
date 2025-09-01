@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
-import { innovativeITServices2025 } from "../data/innovativeITServices2025";
-import { innovativeAIServices2025 } from "../data/innovativeAIServices2025";
+;
+;
 const InnovativeServicesShowcase = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [selectedService, setSelectedService] = useState(null);
@@ -279,3 +279,11 @@ const InnovativeServicesShowcase = () => {
     </div>)};
 export default InnovativeServicesShowcase;
 }
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase };

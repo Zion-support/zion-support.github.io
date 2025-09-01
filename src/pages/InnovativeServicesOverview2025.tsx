@@ -163,7 +163,7 @@ const InnovativeServicesOverview2025 = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
             {serviceCategories.map((service, index)  => (
               <motion.div
                 key={service.id}
@@ -237,7 +237,7 @@ const InnovativeServicesOverview2025 = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
             {additionalServices.map((service, index)  => (
               <motion.div
                 key={index}
@@ -313,3 +313,11 @@ const InnovativeServicesOverview2025 = () => {
 };
 
 export default InnovativeServicesOverview2025;
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };

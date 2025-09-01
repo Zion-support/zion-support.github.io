@@ -20,3 +20,12 @@ const Badge = React.forwardRef((_a, ref) => {
         }, className) }, props)))});
 Badge.displayName = 'Badge';
 export { Badge };
+
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };

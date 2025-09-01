@@ -1,4 +1,4 @@
-import SEO from "../SEO";
+;
 const Mobile = () => {
     const mobileStats = [
         {
@@ -175,3 +175,11 @@ const Mobile = () => {
     </>)};
 export default Mobile;
 }}}}
+
+export { Mobile };
+
+export { Mobile };
+
+export { Mobile };
+
+export { Mobile };

@@ -546,3 +546,12 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
         </div>
       </div>
     </div>)}
+
+
+export { MicroSAASPage };
+
+export { MicroSAASPage };
+
+export { MicroSAASPage };
+
+export { MicroSAASPage };

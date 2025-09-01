@@ -6,8 +6,8 @@ import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 import { apiClient } from "@/utils/apiClient";
 import { Loader2, Send import { useEffect, useRef, useState } from "react";
-import { ChatMessage } from "./ChatMessage";
-import { QuickReplyButton } from "./QuickReplyButton";
+;
+;
 // Define suggested quick replies
 const QUICK_REPLIES = [
     { id: "hire", text: "How do I hire?" },

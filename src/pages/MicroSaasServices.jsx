@@ -86,3 +86,12 @@ export default function MicroSaasServices() {
       </div>
     </>)};
 export default MicroSAASServices;
+
+
+export { MicroSaasServices };
+
+export { MicroSaasServices };
+
+export { MicroSaasServices };
+
+export { MicroSaasServices };

@@ -179,3 +179,12 @@ export default function FuturisticNavigation() {
           </motion.div>)}
       </AnimatePresence>
     </nav>)}
+
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };

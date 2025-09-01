@@ -648,3 +648,12 @@ const QuantumAIPlatform = () => {
 };
 
 export default QuantumAIPlatform;
+
+
+export { QuantumAIPlatform };
+
+export { QuantumAIPlatform };
+
+export { QuantumAIPlatform };
+
+export { QuantumAIPlatform };

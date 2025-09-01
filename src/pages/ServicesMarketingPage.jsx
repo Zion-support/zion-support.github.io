@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
+;
+;
 const ServicesMarketingPage = () => {
     const allServices = [
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
@@ -327,3 +327,12 @@ const ServicesMarketingPage = () => {
       </section>
     </div>)};
 export default ServicesMarketingPage;
+
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };

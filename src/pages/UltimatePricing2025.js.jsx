@@ -446,3 +446,12 @@ const UltimatePricing2025 = () => {
       </section>
     </div>)};
 export default UltimatePricing2025;
+
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };

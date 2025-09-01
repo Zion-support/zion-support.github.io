@@ -15,3 +15,11 @@ export default DisputesPage;
 
 export default DisputesPage;
 export default DisputesPage;
+
+export { DisputesPage };
+
+export { DisputesPage };
+
+export { DisputesPage };
+
+export { DisputesPage };

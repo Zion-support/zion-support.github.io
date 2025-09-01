@@ -87,3 +87,12 @@ export default function ITOnsiteServicesPage() {
                     <TrustedBySection />
                         ,
                             <QuoteFormSection />)}
+
+
+export { ITOnsiteServicesPage };
+
+export { ITOnsiteServicesPage };
+
+export { ITOnsiteServicesPage };
+
+export { ITOnsiteServicesPage };

@@ -41,3 +41,12 @@ export default function TenantOnboarding() {
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
+
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };

@@ -200,3 +200,11 @@ const Pricing = () => {
 }
 
 export default Pricing;
+
+export { Pricing };
+
+export { Pricing };
+
+export { Pricing };
+
+export { Pricing };

@@ -164,3 +164,12 @@ const IndustrySolutions = () => {
       </div>
     </div>)};
 export default IndustrySolutions;
+
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };

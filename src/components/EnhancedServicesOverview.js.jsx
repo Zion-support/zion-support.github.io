@@ -309,3 +309,12 @@ export default function EnhancedServicesOverview() {
       {/* Contact Section */}
       <ContactSection />
     </div>)}
+
+
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };
+
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };
+
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };
+
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };

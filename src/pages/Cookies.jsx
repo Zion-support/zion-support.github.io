@@ -114,3 +114,12 @@ export default function Cookies() {
     </div>
   );
 }
+
+
+export { Cookies };
+
+export { Cookies };
+
+export { Cookies };
+
+export { Cookies };

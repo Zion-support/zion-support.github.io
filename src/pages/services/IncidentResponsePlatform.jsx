@@ -666,3 +666,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 };
 export default IncidentResponsePlatform;
 }}}}
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };

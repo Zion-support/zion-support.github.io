@@ -91,3 +91,12 @@ const NotFoundPage = () => {
       </div>
     </div>)};
 export default NotFoundPage;
+
+
+export { NotFoundPage };
+
+export { NotFoundPage };
+
+export { NotFoundPage };
+
+export { NotFoundPage };

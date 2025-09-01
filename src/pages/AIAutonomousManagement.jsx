@@ -170,3 +170,12 @@ const AIAutonomousManagement = () => {
       </div>
     </>)};
 export default AIAutonomousManagement;
+
+
+export { AIAutonomousManagement };
+
+export { AIAutonomousManagement };
+
+export { AIAutonomousManagement };
+
+export { AIAutonomousManagement };

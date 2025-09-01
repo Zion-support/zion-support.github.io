@@ -86,3 +86,12 @@ const FloatingActionButton = ({ className = '' }) => {
 };
 
 export default FloatingActionButton;
+
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };

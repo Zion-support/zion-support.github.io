@@ -170,3 +170,12 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         </div>)}
     </div>)};
 export default LinkHealthChecker;
+
+
+export { LinkHealthChecker };
+
+export { LinkHealthChecker };
+
+export { LinkHealthChecker };
+
+export { LinkHealthChecker };

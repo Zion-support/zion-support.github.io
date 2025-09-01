@@ -249,3 +249,12 @@ export default function HowItWorks() {
         </div>
       </main>
     </>)}
+
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };

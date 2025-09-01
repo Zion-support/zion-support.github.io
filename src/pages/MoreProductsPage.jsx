@@ -15,3 +15,12 @@ export default function MoreProductsPage() {
 
 }}/>);
 }
+
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };

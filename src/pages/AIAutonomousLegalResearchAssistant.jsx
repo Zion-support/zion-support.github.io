@@ -314,3 +314,11 @@ import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText
     </div>)};
 export default AIAutonomousLegalResearchAssistant;
 }}}}
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };

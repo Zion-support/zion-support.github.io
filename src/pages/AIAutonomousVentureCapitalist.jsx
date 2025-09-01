@@ -1374,3 +1374,12 @@ export default function AIAutonomousVentureCapitalist() {
       </section>
     </div>
   )}
+
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };

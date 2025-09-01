@@ -84,3 +84,12 @@ export default function QuoteManager() {
         
       </div>
     </ProtectedRoute>)}
+
+
+export { QuoteManager };
+
+export { QuoteManager };
+
+export { QuoteManager };
+
+export { QuoteManager };

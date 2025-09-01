@@ -19,9 +19,9 @@ import {
 import { Link } from 'react-router-dom';
 
 // Import the new service data
-import { revolutionary2027AdvancedMicroSaasServices } from "../../data/revolutionary-2027-advanced-micro-saas";
-import { revolutionary2027ITInfrastructureCybersecurityServices } from "../../data/revolutionary-2027-it-infrastructure-cybersecurity";
-import { revolutionary2027AIInnovationServices } from "../../data/revolutionary-2027-ai-innovation-services";
+;
+;
+;
 
 const serviceCategories = [
   {

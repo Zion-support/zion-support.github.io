@@ -365,3 +365,11 @@ export default function Accessibility() {
     </div>
   );
 }
+
+export { Accessibility };
+
+export { Accessibility };
+
+export { Accessibility };
+
+export { Accessibility };

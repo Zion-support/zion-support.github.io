@@ -39,7 +39,7 @@ import {
   Headphones
 } from 'lucide-react';
 
-export default function RequestQuote() {
+export default function RequestQuote(...args: unknown[]): unknown {
   const [formData, setFormData] = useState({
     companyName: '',
     contactName: '',
@@ -974,3 +974,12 @@ export default function RequestQuote() {
     </div>;
   );
 }
+
+
+export { RequestQuote };
+
+export { RequestQuote };
+
+export { RequestQuote };
+
+export { RequestQuote };

@@ -15,3 +15,12 @@ const Separator = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('shrink-0 bg-border', orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]', className) }, props)))});
 Separator.displayName = 'Separator';
 export { Separator };
+
+
+export { Separator };
+
+export { Separator };
+
+export { Separator };
+
+export { Separator };

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
+;
+import { UserMenu } from './UserMenu.jsx';
+import { LanguageSelector } from './LanguageSelector.jsx';
 import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
+import { MobileMenu } from './MobileMenu.jsx';
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";

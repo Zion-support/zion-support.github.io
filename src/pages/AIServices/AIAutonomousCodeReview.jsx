@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from "../SEO";
+;
 const features = [
     {
         title: "Automated Code Analysis",
@@ -351,3 +351,12 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
     </div>)}
+
+
+export { AIAutonomousCodeReview, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent };

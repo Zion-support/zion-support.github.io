@@ -121,3 +121,12 @@ export default function Onboarding() {
       </div>
       
     </>)}
+
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };

@@ -33,3 +33,12 @@ const Training = () => {
 };
 
 export default Training;
+
+
+export { Training };
+
+export { Training };
+
+export { Training };
+
+export { Training };

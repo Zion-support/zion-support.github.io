@@ -84,3 +84,12 @@ export default function Services() {
 			</main>
 		</>);
 }
+
+
+export { Services };
+
+export { Services };
+
+export { Services };
+
+export { Services };

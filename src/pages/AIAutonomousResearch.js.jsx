@@ -105,3 +105,12 @@ const AIAutonomousResearch = () => {
       </div>
     </>)};
 export default AIAutonomousResearch;
+
+
+export { AIAutonomousResearch };
+
+export { AIAutonomousResearch };
+
+export { AIAutonomousResearch };
+
+export { AIAutonomousResearch };

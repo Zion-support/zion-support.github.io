@@ -4,3 +4,12 @@ const EnhancedHome = () => {
       Enhanced Home is temporarily unavailable. Please use the Home page.
     </div>)};
 export default EnhancedHome;
+
+
+export { EnhancedHome };
+
+export { EnhancedHome };
+
+export { EnhancedHome };
+
+export { EnhancedHome };

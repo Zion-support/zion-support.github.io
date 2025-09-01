@@ -583,3 +583,11 @@ const AIHealthcarePredictiveAnalytics = () => {
 };
 
 export default AIHealthcarePredictiveAnalytics;
+
+export { AIHealthcarePredictiveAnalytics };
+
+export { AIHealthcarePredictiveAnalytics };
+
+export { AIHealthcarePredictiveAnalytics };
+
+export { AIHealthcarePredictiveAnalytics };

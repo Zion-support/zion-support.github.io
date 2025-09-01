@@ -289,3 +289,11 @@ const Soc2ComplianceAutomation = () => {
 };
 export default Soc2ComplianceAutomation;
 }}}}
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };

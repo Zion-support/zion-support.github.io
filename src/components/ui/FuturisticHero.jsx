@@ -181,3 +181,12 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
+
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };

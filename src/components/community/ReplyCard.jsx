@@ -23,3 +23,12 @@ export default function ReplyCard({ reply, className = '', onMarkAnswer, canMark
         </div>
       </div>
     </div>)}
+
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };

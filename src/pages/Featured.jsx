@@ -18,3 +18,12 @@ export default function Featured() {
         </div>
       </div>
     </>)}
+
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };

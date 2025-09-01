@@ -40,3 +40,11 @@ export default function TermsOfService() {
       </div>
     </div>);
 }
+
+export { TermsOfService };
+
+export { TermsOfService };
+
+export { TermsOfService };
+
+export { TermsOfService };

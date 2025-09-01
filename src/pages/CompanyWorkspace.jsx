@@ -37,3 +37,12 @@ export default function CompWorkspace() {
       </main>
       <Footer />
     </ProtectedRoute>)}
+
+
+export { CompWorkspace };
+
+export { CompWorkspace };
+
+export { CompWorkspace };
+
+export { CompWorkspace };

@@ -83,7 +83,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function ComprehensiveServicesShowcase2031() {
+export default function ComprehensiveServicesShowcase2031(...args: unknown[]): unknown {
   const featuredServices = [
     {
       id: "ai-quantum-hybrid-platform",
@@ -609,3 +609,11 @@ export default function ComprehensiveServicesShowcase2031() {
     </div>
   );
 }
+
+export { ComprehensiveServicesShowcase2031 };
+
+export { ComprehensiveServicesShowcase2031 };
+
+export { ComprehensiveServicesShowcase2031 };
+
+export { ComprehensiveServicesShowcase2031 };

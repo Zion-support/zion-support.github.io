@@ -110,3 +110,12 @@ export default function CartPage() {
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>)}
+
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };

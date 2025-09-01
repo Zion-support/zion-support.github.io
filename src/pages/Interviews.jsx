@@ -115,3 +115,12 @@ export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>)}
+
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };

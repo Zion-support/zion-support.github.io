@@ -155,3 +155,12 @@ export default function JobDetails() {
                 description: job.description,
                 comp_name: job.comp_name || "Comp",
                 budget: job.budget,
+
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };

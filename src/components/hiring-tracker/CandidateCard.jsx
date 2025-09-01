@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
+;
 export function CandidateCard({ application, index }) {
     const [showNotes, setShowNotes] = useState(false);
     const [notes, setNotes] = useState(application.notes || "");

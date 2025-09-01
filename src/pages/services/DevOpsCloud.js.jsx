@@ -509,3 +509,12 @@ export default function DevOpsCloudServices() {
       </section>
     </div>);
 }
+
+
+export { DevOpsCloudServices };
+
+export { DevOpsCloudServices };
+
+export { DevOpsCloudServices };
+
+export { DevOpsCloudServices };

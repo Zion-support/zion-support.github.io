@@ -24,3 +24,12 @@ const ThemeToggle = () => {
       {isDark ? (<SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300"/>) : (<MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)}
     </button>)};
 export default ThemeToggle;
+
+
+export { ThemeToggle };
+
+export { ThemeToggle };
+
+export { ThemeToggle };
+
+export { ThemeToggle };

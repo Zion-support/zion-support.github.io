@@ -116,3 +116,12 @@ export default function TokenIntegrations() {
       </div>
       <Footer />
     </div>)}
+
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };

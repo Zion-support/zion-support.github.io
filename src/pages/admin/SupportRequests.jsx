@@ -314,3 +314,12 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>)}
+
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };

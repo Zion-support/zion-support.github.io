@@ -1375,3 +1375,12 @@ export default function Infrastructure() {
       </section>
     </div>
   )}
+
+
+export { Infrastructure };
+
+export { Infrastructure };
+
+export { Infrastructure };
+
+export { Infrastructure };

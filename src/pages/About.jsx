@@ -189,3 +189,11 @@ const About = () => {
 }
 
 export default About;
+
+export { About };
+
+export { About };
+
+export { About };
+
+export { About };

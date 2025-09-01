@@ -71,3 +71,12 @@ const ResearchDevelopment = () => {
       </section>
     </div>)};
 export default ResearchDevelopment;
+
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };

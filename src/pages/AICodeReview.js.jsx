@@ -288,3 +288,12 @@ export default function AICodeReview() {
         </div>
       </section>
     </div>)}
+
+
+export { AICodeReview };
+
+export { AICodeReview };
+
+export { AICodeReview };
+
+export { AICodeReview };

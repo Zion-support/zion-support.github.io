@@ -24,3 +24,12 @@ const FiveGPrivateNetworkSolutions = () => {
     </div>);
 };
 export default FiveGPrivateNetworkSolutions;
+
+
+export { FiveGPrivateNetworkSolutions };
+
+export { FiveGPrivateNetworkSolutions };
+
+export { FiveGPrivateNetworkSolutions };
+
+export { FiveGPrivateNetworkSolutions };

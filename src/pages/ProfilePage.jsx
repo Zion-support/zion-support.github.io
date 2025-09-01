@@ -163,3 +163,12 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
       </div>
       
     </>)}
+
+
+export { ProfilePage };
+
+export { ProfilePage };
+
+export { ProfilePage };
+
+export { ProfilePage };

@@ -24,3 +24,12 @@ const LoadingSpinner = ({ size = 'md', color = 'blue', text, className = '' }) =
       {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
     </div>)};
 export default LoadingSpinner;
+
+
+export { LoadingSpinner };
+
+export { LoadingSpinner };
+
+export { LoadingSpinner };
+
+export { LoadingSpinner };
