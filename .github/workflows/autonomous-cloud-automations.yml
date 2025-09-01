@@ -40,5 +40,5 @@ jobs:
       
       - name: Clean git state
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           

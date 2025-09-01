@@ -35,5 +35,5 @@ jobs:
           fetch-depth: 0
       - name: Configure git"
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           

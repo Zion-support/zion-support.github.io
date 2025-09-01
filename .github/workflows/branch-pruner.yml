@@ -33,5 +33,5 @@ jobs:
           fetch-depth: 0
       - name: Fetch all branches
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           

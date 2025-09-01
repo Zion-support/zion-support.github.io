@@ -43,5 +43,5 @@ permissions:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           

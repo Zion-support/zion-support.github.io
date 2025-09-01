@@ -42,5 +42,5 @@ jobs:
         run: node automation/dead-code-scanner.cjs | cat
       - name: Commit and push report
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           

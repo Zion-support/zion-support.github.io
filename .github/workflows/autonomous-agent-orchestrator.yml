@@ -37,5 +37,5 @@ jobs:
       
       - name: Execute growth strategy
         run: |
-          echo "✅ Workflow completed successfully"
+          echo "Workflow completed successfully"
           
