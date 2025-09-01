@@ -124,69 +124,52 @@ const Index: NextPage = () => {
              <a className="text-cyan-300 underline" href="/.netlify/functions/automation-guardian-runner" target="_blank" rel="noopener">Trigger / View</a>
            </li>
  
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">Auto Discovery Runner</h2>
-             <p className="text-white/70">Discovers and runs high‑value orchestrators autonomously.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/auto-discovery-runner" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Broken Image Scanner</h2>
+            <p className="text-white/70">Finds broken images, optimizes assets, and syncs fixes.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/broken-image-scanner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
  
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
-             <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Automation Guardian</h2>
+            <p className="text-white/70">Runs targeted repairs, orchestrators, and syncs changes.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/automation-guardian-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
  
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
-             <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
-
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">A11y Audit</h2>
-             <p className="text-white/70">Scans pages for missing alt attributes and accessibility issues.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/a11y-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
-
-           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-             <h2 className="text-xl font-bold">OG Tags Validator</h2>
-             <p className="text-white/70">Checks for critical Open Graph tags (title/image) across pages.</p>
-             <a className="text-cyan-300 underline" href="/.netlify/functions/og-tags-validator" target="_blank" rel="noopener">Trigger / View</a>
-           </li>
-
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Auto Discovery Runner</h2>
+            <p className="text-white/70">Discovers and runs high‑value orchestrators autonomously.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/auto-discovery-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+ 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
             <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
+ 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
             <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Duplicate Content Detector</h2>
-            <p className="text-white/70">Finds near-duplicate pages/components/docs and publishes a consolidation report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/duplicate-content-detector" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Unused Media Auditor</h2>
-            <p className="text-white/70">Detects unreferenced images in public/ and writes a report for cleanup.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/unused-media-auditor" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Alt‑Text Suggester</h2>
-            <p className="text-white/70">Scans public images and proposes accessible alt text; commits reports.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/alt-text-suggester-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Components Catalog</h2>
-            <p className="text-white/70">Builds a live catalog of components and pages with export names.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/components-catalog-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">OG Coverage Auditor</h2>
++           <p className="text-white/70">Audits pages for Open Graph tag coverage and publishes a report.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/og-coverage-auditor" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">Performance Budget Reporter</h2>
++           <p className="text-white/70">Scans public assets and CSS to report on size budgets.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/performance-budget-runner" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">Roadmap Auto‑Builder</h2>
++           <p className="text-white/70">Synthesizes a roadmap from TODO signals into docs/reports.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-builder-runner" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
         </ul>
-      </main>
+</main>
     </div>
   );
 };

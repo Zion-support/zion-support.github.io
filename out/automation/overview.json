@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:13:02.495Z",
+  "generatedAt": "2025-08-11T23:12:53.670Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -72,8 +72,9 @@
     "netlify-auto-healer-runner",
     "newsroom-auto-publisher",
     "newsroom-runner",
+    "og-coverage-auditor",
     "og-image-update-runner",
-    "og-meta-audit-runner",
+    "performance-budget-runner",
     "readme-advertiser",
     "readme-badges-updater",
     "redirect-healer",
@@ -81,7 +82,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-    "revenue-cta-inserter-runner",
+    "roadmap-builder-runner",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
