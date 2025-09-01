@@ -14,52 +14,51 @@ class UltimateRedundancyStatusReporter {
     this.configFile = path.join(__dirname, 'ultimate-redundancy-config.json');
   }
 
-  async getStatus() {
+  getStatus() {
     try {
       if (fs.existsSync(this.statusFile)) {
-        const statusData = JSON.parse(fs.readFileSync(this.statusFile, 'utf8'));
-        return {
-          success: true,
-          status: statusData,
-          timestamp: new Date().toISOString()
-        };
-      } else {
-        return {
-          success: false,
-          error: 'Status file not found',
-          timestamp: new Date().toISOString()
-        };
+        const statusData = fs.readFileSync(this.statusFile, 'utf8');
+        return JSON.parse(statusData);
       }
+      return { status: 'unknown', message: 'Status file not found' };
     } catch (error) {
-      return {
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
+      return { status: 'error', message: error.message };
     }
   }
 
-  async generateReport() {
-    const status = await this.getStatus();
-    console.log('Ultimate Redundancy Status Report');
-    console.log('================================');
-    console.log(`Timestamp: ${status.timestamp}`);
-    console.log(`Status: ${status.success ? 'OK' : 'ERROR'}`);
-    
-    if (status.success) {
-      console.log('System Status:', JSON.stringify(status.status, null, 2));
-    } else {
-      console.log('Error:', status.error);
+  getConfig() {
+    try {
+      if (fs.existsSync(this.configFile)) {
+        const configData = fs.readFileSync(this.configFile, 'utf8');
+        return JSON.parse(configData);
+      }
+      return { config: 'unknown', message: 'Config file not found' };
+    } catch (error) {
+      return { config: 'error', message: error.message };
     }
+  }
+
+  generateReport() {
+    const status = this.getStatus();
+    const config = this.getConfig();
     
-    return status;
+    const report = {
+      timestamp: new Date().toISOString(),
+      status,
+      config,
+      system: 'ultimate-redundancy',
+      version: '2.0.0'
+    };
+
+    console.log(JSON.stringify(report, null, 2));
+    return report;
   }
 }
 
-// CLI execution
+// If run directly, generate and display report
 if (require.main === module) {
   const reporter = new UltimateRedundancyStatusReporter();
-  reporter.generateReport().catch(console.error);
+  reporter.generateReport();
 }
 
 module.exports = UltimateRedundancyStatusReporter;
