@@ -149,6 +149,11 @@ const Marketplace = () => (
   </div>
 );
 
+// New innovative micro SAAS services
+const AIRealEstateAnalytics = React.lazy(() => import('./pages/services/AIRealEstateAnalytics'));
+const AILogisticsOptimization = React.lazy(() => import('./pages/services/AILogisticsOptimization'));
+const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -198,14 +203,38 @@ function App() {
                 
                 {/* New AI-powered micro SaaS service routes */}
                 <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
-                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
-                <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
-                <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
-                <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
-                <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
-                <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                
+                {/* New AI services we added */}
+                <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
+                <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+                <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
+                
+                {/* New innovative micro SAAS services */}
+                <Route path="/services/ai-real-estate-analytics" element={<AIRealEstateAnalytics />} />
+                <Route path="/services/ai-logistics-optimization" element={<AILogisticsOptimization />} />
+                <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                
+                {/* Emerging Tech 2030 */}
+                <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
+                
+                {/* New comprehensive pricing guide 2026 */}
+                <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                
+                {/* New comprehensive pricing guide 2027 */}
+                <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                
+                {/* Revolutionary Services 2030 */}
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                
+                {/* Pricing Guide 2025 */}
+                <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                
+                {/* Schedule Demo */}
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                
+                {/* Service Pages */}
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
 
   return (
     <ErrorBoundary

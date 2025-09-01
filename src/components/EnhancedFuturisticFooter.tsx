@@ -122,7 +122,32 @@ import { motion } from 'framer - motion';
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-indigo-600',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Real Estate Analytics', href: '/services/ai-real-estate-analytics' },
+        { name: 'AI Logistics Optimization', href: '/services/ai-logistics-optimization' },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Zap,
+      color: 'from-blue-600 to-cyan-600',
+      links: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
+      ]
+    },
+    {
+      title: 'IoT & Digital Solutions',
       icon: Rocket,
       color: 'from - blue - 600 to - cyan - 600',
       links: [

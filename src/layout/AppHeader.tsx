@@ -219,11 +219,27 @@ export function AppHeader(...args: unknown[]): unknown {
     },
     { 
       name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
+      href: '/services/ai-cybersecurity-suite', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Real Estate Analytics', 
+      href: '/services/ai-real-estate-analytics', 
+      icon: Home, 
+      description: 'Property Investment AI',
+      featured: true,
+      color: 'from-blue-500 to-green-500'
+    },
+    { 
+      name: 'AI Logistics Optimization', 
+      href: '/services/ai-logistics-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     },
     { 
       name: 'Quantum Computing', 
