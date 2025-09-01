@@ -1,16 +1,11 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import Search from './Search';
 
 
 describe ('Search', () => {
   it ('renders without crashing', () => {
-    render (<Search />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<Search  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<Search />) ;
+    render (<Search  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

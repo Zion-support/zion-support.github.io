@@ -1,16 +1,11 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import Training from './Training';
 
 
 describe ('Training', () => {
   it ('renders without crashing', () => {
-    render (<Training />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<Training  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<Training />) ;
+    render (<Training  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

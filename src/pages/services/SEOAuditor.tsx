@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '../../components/SEO';
 import {
 
   Shield,
@@ -12,52 +10,8 @@ import {
 
 export default function SEOAuditor(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Search,
-      title: 'AI Crawl & Indexing',
-      desc: 'Automated site crawl, index status checks, and AI summaries of issues.'},
-    {
-
-      icon: BarChart3,
-      title: 'Page-level Scores',
-      desc: 'On-page SEO, Core Web Vitals, schema markup and accessibility scoring.'},
-    {
-
-      icon: LinkIcon,
-      title: 'Backlink Monitor',
-      desc: 'Backlink profile, toxic link detection, and anchor text analysis.'},
-    {
-
-      icon: Shield,
-      title: 'Security & Compliance',
-      desc: 'HTTPS, HSTS, mixed content, cookie, and privacy policy checks.'},
-    {
-
-      icon: Zap,
-      title: 'Quick Fixes',
-      desc: 'Auto-fix robots.txt, sitemap, meta tags, and structured data templates.'},
-  ];
-
-  const pricing = [
-    {
-
-      tier: 'Starter',
-      price: '$49/mo',
-      items: ['100 pages crawl',Weekly report',Basic fixes']},
-    {
-
-      tier: 'Growth',
-      price: '$149/mo',
-      items: ['2,500 pages crawl',Daily report',Auto-fix templates']},
-    {
-
-      tier: 'Pro',
-      price: '$399/mo',
-      items: ['25,000 pages',API access',Custom rules and alerts']},
-  ];
-
+  
+  
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
@@ -128,6 +82,5 @@ export default function SEOAuditor(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

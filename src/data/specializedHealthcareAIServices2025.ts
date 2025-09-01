@@ -39,8 +39,7 @@ const zionContact = {
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   {
@@ -85,8 +84,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Lung CT screening","
       "Emergency radiology"
     ],;"
-    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"];
-  },;  {
+    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]},;  {
 
     id: 2,"
     name: "GenomicAI Platform","
@@ -128,8 +126,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Pharmacogenomics","
       "Population genomics"
     ],;"
-    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"];
-  },;  {
+    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]},;  {
 
     id: 3,"
     name: "HealthTech Analytics Suite","
@@ -171,8 +168,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Population health","
       "Operational efficiency"
     ],;"
-    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"];
-  },;  {
+    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]},;  {
 
     id: 4,"
     name: "TeleMed AI Platform","
@@ -214,8 +210,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Follow-up care","
       "Chronic disease management"
     ],;"
-    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"];
-  },;  {
+    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]},;  {
 
     id: 5,"
     name: "PharmaAI Research Platform","
@@ -257,8 +252,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Clinical trial optimization","
       "Safety assessment"
     ],;"
-    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"];
-  },;  {
+    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]},;  {
 
     id: 6,"
     name: "MentalHealth AI Companion","
@@ -300,8 +294,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Stress reduction","
       "Crisis intervention"
     ],;"
-    technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"];
-  }
+    technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]}
 ];
 
-export default specializedHealthcareAIServices2025;}}"
+export default specializedHealthcareAIServices2025}}"

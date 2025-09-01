@@ -1,94 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-;
-const features = [
-  {
-
-    icon: "🚀","
-    title: "Cutting-Edge Technology","
-    description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
-  },
-  {
-"
-    icon: "⚡","
-    title: "Lightning Fast Performance","
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
-  },
-  {
-"
-    icon: "🔒","
-    title: "Enterprise Security","
-    description: "Bank-level security protocols and compliance standards to protect your valuable data"
-  },
-  {
-"
-    icon: "🌐","
-    title: "Global Scalability","
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
-  },
-  {
-"
-    icon: "🤖","
-    title: "AI-Powered Intelligence","
-    description: "Smart automation and predictive analytics that adapt to your business requirements";
-  },;
+},;
   {;"
     icon: "📊",;"
     title: "Real-Time Analytics",;"
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
-  };
-];
-
-      };
-    };
-  };
-
-  const itemVariants = {
-
-  hidden: { opacity: 0, y: 30,
-  scale: 0.95 
-
-},
-    visible: {
-
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-
-        duration: 0.6,"
-        ease: "easeOut"
-      };
-    };
-  };
-
-  const achievementVariants = {
-
-  hidden: { opacity: 0,
-  scale: 0.8 
-
-},
-    visible: {
-
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5 };
-    };
-  };
-
-  const techVariants = {
-
-  hidden: { opacity: 0,
-  x: -20 
-
-},
-    visible: {
-
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5 };
-    };
-  };
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
+]}}}}}}}}};
 export function FeatureHighlights() {
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -121,7 +36,7 @@ export function FeatureHighlights() {
           transition={{ duration: 0.6 }}
         >"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">"
-            <Award className="w-4 h-4" />            <span>Why Choose Zion</span>
+            <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>
           </div>
 "
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">

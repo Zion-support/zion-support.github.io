@@ -1,9 +1,4 @@
-import { Progress  } from '@/components/ui/progress';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency'
-import { Badge  } from '@/components/ui/badge'; // Badge not used, but kept for consistency'
 <<<<<<< HEAD
-import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react';
-import { Card  } from '@/components/ui/card'; // Added missing import
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -19,11 +14,10 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
   let max: number | null = null;
 
-  const kTo1000 = (val: string)  => parseFloat(val.replace('k',)) * 1000;
-
+  
   if (budgetString.includes('-')) {
 
-    const parts = budgetString.split('-');
+    
     min = parseFloat(parts[0].replace(/[$,\s]/g,));
     max = parseFloat(parts[1].replace(/[$,\s]/g,));
     if (parts[0].includes('k')) min = kTo1000(parts[0]);
@@ -35,8 +29,6 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));
 =======
-import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react';'
-import { Card  } from '@/components/ui/card'; // Added missing import  } else if (budgetString.startsWith('>') || budgetString.startsWith('over')) {
 '
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -54,9 +46,9 @@ import { Card  } from '@/components/ui/card'; // Added missing import  } else if
   return { min, max }};
 
 ;
-export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
-  const userBudget = parseBudget(projectBriefBudget);
-  const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
+export 
+  
+  
 <<<<<<< HEAD
 
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"
@@ -114,10 +106,10 @@ export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
   };
 
   const getIcon = () => {;'"
-    if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500" />;'"
-    if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500" />;'"
-    if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500" />; // Or AlertTriangle"
-    return <Info className="h-5 w-5 text-blue-500" />};
+    if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500"  />;'"
+    if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500"  />;'"
+    if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500"  />; // Or AlertTriangle"
+    return <Info className="h-5 w-5 text-blue-500"  />};
 
   const getProgressColor = () => {;'"
     if (status === 'good') return "bg-green-500";'"
@@ -133,7 +125,7 @@ export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
       <AlertDescription className="text-sm mb-3">{message}</AlertDescription>
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
         <>
-          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`} />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
+          <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`}  />"          <div className="flex justify-between text-xs text-muted-foreground mt-1">
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>
             <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
           </div>

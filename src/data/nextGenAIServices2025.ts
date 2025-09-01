@@ -59,8 +59,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance['AI Safety',Transparency',Accountability',Bias Prevention'];
-  },;
+    ethicalCompliance['AI Safety',Transparency',Accountability',Bias Prevention']},;
   {
 
     id: 'advanced-nlp-platform',
@@ -78,8 +77,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'beta','
     researchLevel: 'research','
-    ethicalCompliance['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention'];
-  },;  {
+    ethicalCompliance['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention']},;  {
 '
     id: 'advanced-nlp-platform','
     title: 'Advanced Natural Language Processing','
@@ -113,8 +111,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Bias Detection',Content Filtering',Privacy Protection',Transparency'];
-  },;
+    ethicalCompliance['Bias Detection',Content Filtering',Privacy Protection',Transparency']},;
   {
 
     id: 'computer-vision-ai',
@@ -132,8 +129,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     researchLevel: 'production','
-    ethicalCompliance['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency'];
-  },;  {
+    ethicalCompliance['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency']},;  {
 '
     id: 'computer-vision-ai','
     title: 'Advanced Computer Vision AI','
@@ -167,8 +163,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Privacy Protection',Bias Prevention',Transparency',Accountability'];
-  },;
+    ethicalCompliance['Privacy Protection',Bias Prevention',Transparency',Accountability']},;
   {
 
     id: 'ai-ethics-platform',
@@ -186,8 +181,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     researchLevel: 'production','
-    ethicalCompliance['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability'];
-  },;  {
+    ethicalCompliance['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability']},;  {
 '
     id: 'ai-ethics-platform','
     title: 'AI Ethics & Governance Platform','
@@ -221,8 +215,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Ethical Guidelines',Bias Prevention',Transparency',Accountability'];
-  },;
+    ethicalCompliance['Ethical Guidelines',Bias Prevention',Transparency',Accountability']},;
   {
 
     id: 'quantum-ai-hybrid',
@@ -240,8 +233,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     researchLevel: 'production','
-    ethicalCompliance['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability'];
-  },;  {
+    ethicalCompliance['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability']},;  {
 '
     id: 'quantum-ai-hybrid','
     title: 'Quantum-Classical AI Hybrid','
@@ -275,8 +267,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance['AI Safety',Quantum Ethics',Research Ethics',Transparency'];
-  },;
+    ethicalCompliance['AI Safety',Quantum Ethics',Research Ethics',Transparency']},;
   {
 
     id: 'federated-learning-platform',
@@ -294,8 +285,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'beta','
     researchLevel: 'research','
-    ethicalCompliance['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency'];
-  },;  {
+    ethicalCompliance['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency']},;  {
 '
     id: 'federated-learning-platform','
     title: 'Federated Learning Platform','
@@ -329,8 +319,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Privacy Protection',Data Security',Transparency',Accountability'];
-  },;
+    ethicalCompliance['Privacy Protection',Data Security',Transparency',Accountability']},;
   {
 
     id: 'ai-research-platform',
@@ -348,8 +337,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     researchLevel: 'production','
-    ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability'];
-  },;  {
+    ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']},;  {
 '
     id: 'ai-research-platform','
     title: 'AI Research & Development Platform','
@@ -383,8 +371,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'research',
-    ethicalCompliance['Research Ethics',Transparency',Reproducibility',Open Science'];
-  },;
+    ethicalCompliance['Research Ethics',Transparency',Reproducibility',Open Science']},;
   {
 
     id: 'ai-optimization-engine',
@@ -402,8 +389,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     researchLevel: 'research','
-    ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science'];
-  },;  {
+    ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']},;  {
 '
     id: 'ai-optimization-engine','
     title: 'AI Optimization Engine','
@@ -436,15 +422,12 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Fairness',Transparency',Bias Prevention',Accountability'];
-  }
+    ethicalCompliance['Fairness',Transparency',Bias Prevention',Accountability']}
 ];
-export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {;
+export 
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025;
 
-  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
-};
-export const getAllNextGenAIServices = (): NextGenAIService[] => {;
-  return NEXT_GEN_AI_SERVICES_2025;
-};
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
+export 
+  return NEXT_GEN_AI_SERVICES_2025};

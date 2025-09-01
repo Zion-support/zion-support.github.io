@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Brain, 
   TrendingUp, 
   BarChart3, 
@@ -22,49 +20,16 @@ import { Brain,
   LineChart,
   Activity'
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
 ;
 export { function };
 export default function AIBusinessIntelligencePlatform(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI-Powered Analytics","
-      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Real-time Monitoring","
-      description: "Live dashboards and alerts that keep you informed of critical business metrics and performance indicators."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Predictive Modeling","
-      description: "Forecast future trends and outcomes using historical data and advanced statistical models."
-    },
-    {
-
-      icon: Zap,"
-      title: "Automated Reporting","
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week."
-    },
-    {
-
-      icon: Shield,"
-      title: "Data Security","
-      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit.";
+  
     },;
     {;
       icon: Users,;"
       title: "Collaborative Insights",;"
-      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making.";
-    };
+      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."};
   ];
 
   const benefits = [;"
@@ -91,8 +56,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Data integration (3 sources)","
         "Monthly reports"
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';        "Monthly reports"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
@@ -153,12 +116,10 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
     {
 "
       industry: "Manufacturing",;"
-      description: "Predictive maintenance, quality control, and supply chain optimization";
-    },;
+      description: "Predictive maintenance, quality control, and supply chain optimization"},;
     {;"
       industry: "Retail",;"
-      description: "Demand forecasting, customer segmentation, and store performance analysis";
-    };  ];
+      description: "Demand forecasting, customer segmentation, and store performance analysis"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -166,7 +127,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
 <<<<<<< HEAD
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
-      />
+       />
 =======
         title="AI Business Intelligence Platform - Zion Tech Group""        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
        />
@@ -214,7 +175,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Schedule Demo
               </Button>
@@ -391,7 +352,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />"                <span className="text-gray-300">{benefit}</span>
+                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0"  />"                <span className="text-gray-300">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -501,7 +462,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -646,7 +607,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Contact Sales
               </Button>
@@ -693,17 +654,17 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="h-8 w-8 text-cyan-500 mb-4" />"
+                <Phone className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>"
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="h-8 w-8 text-cyan-500 mb-4" />"
+                <Mail className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>"
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="h-8 w-8 text-cyan-500 mb-4" />"
+                <MapPin className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
@@ -720,6 +681,5 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

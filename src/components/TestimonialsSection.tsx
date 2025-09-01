@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Star, 
   Quote, 
@@ -22,8 +20,7 @@ interface Testimonial {
   content: string;
   industry: string;
   results: string[];
-  verified: boolean;
-}
+  verified: boolean}
 ;
 const testimonials: Testimonial[] = [
   {
@@ -95,50 +92,25 @@ const testimonials: Testimonial[] = [
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;"
     industry: "Healthcare",;"
-    project: "Cloud Migration & Optimization";
-  };
+    project: "Cloud Migration & Optimization"};
 ];
 
-const stats = ["
-  { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },"
-  { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },"
-  { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },"
-  { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
-];
+
 ;
 export const TestimonialsSection: React.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
   const [currentTestimonial, setCurrentTestimonial] = useState (0) ;
-  const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
-  };
-
-  const goToTestimonial = (index: number) => {
-
-    setCurrentTestimonial(index);
-  };
+  const [isAutoPlaying, setIsAutoPlaying] = useState (true) }}};
 
   // Auto - play functionality
   React.useEffect ( () => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying) return}, 5000) ;
 
-    const interval = setInterval ( () => {
-      nextTestimonial () ;
-    }, 5000) ;
+    return () => clearInterval (interval) }, [isAutoPlaying, currentTestimonial]) ;
 
-    return () => clearInterval (interval) ;
-  }, [isAutoPlaying, currentTestimonial]) ;
-
-  const current = testimonials[currentTestimonial];
-
+  
   return ("
     <section className = "py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
@@ -157,11 +129,11 @@ export const TestimonialsSection: React.FC = props {
 
               {/* Quote icon */}"
               <div className="mb-4">"
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />              </div>
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60"  />              </div>
               {/* Rating */}"
               <div className="flex items-center mb-4">;
                 {[...Array(testimonial.rating)].map((_, i) => (;"
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>
               {/* Content */}"
               <p className="text-zion-slate-light mb-6 leading-relaxed">"
@@ -251,11 +223,11 @@ export const TestimonialsSection: React.FC = props {
                 <div className="flex-1">"
                   <div className="flex items-center gap-2 mb-4">
                     {[...Array(current.rating)].map((_, i) => ("
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                     ))}
                   </div>
                   "
-                  <Quote className="w-8 h-8 text-cyan-400 mb-4" />
+                  <Quote className="w-8 h-8 text-cyan-400 mb-4"  />
                   "
                   <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">"                    "{current.content}"
                   </blockquote>
@@ -273,7 +245,7 @@ export const TestimonialsSection: React.FC = props {
                   {/* Verification Badge */}
                   {current.verified && ("
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400" />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                      <CheckCircle className="w-5 h-5 text-green-400"  />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
                   )}
 
@@ -283,7 +255,7 @@ export const TestimonialsSection: React.FC = props {
                     <ul className="space-y-2">
                       {current.results.map((result, index) => ("
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />                          {result}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"  />                          {result}
                         </li>) ) }
                     </ul>
                   </div>
@@ -304,7 +276,7 @@ export const TestimonialsSection: React.FC = props {
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Previous testimonial"
             >"
-              <ChevronLeft className="w-5 h-5" />            </button>
+              <ChevronLeft className="w-5 h-5"  />            </button>
 
             {/* Dots */}"
             <div className="flex gap-2">
@@ -328,7 +300,7 @@ export const TestimonialsSection: React.FC = props {
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Next testimonial"
             >"
-              <ChevronRight className="w-5 h-5" />            </button>
+              <ChevronRight className="w-5 h-5"  />            </button>
           </div>
 
           {/* Auto-play Toggle */}"
@@ -371,6 +343,5 @@ export const TestimonialsSection: React.FC = props {
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
 '"`

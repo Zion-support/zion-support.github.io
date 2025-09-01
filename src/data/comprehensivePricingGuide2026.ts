@@ -8,16 +8,14 @@ export interface PricingTier {
   billing: string;
   features: string[];
   bestFor: string;
-  popular?: boolean;
-};
+  popular?: boolean};
 export type PricingCategory = {
   name: string;
   description: string;
   tiers: PricingTier[];
   marketSize: string;
   averageROI: string;
-  implementationTime: string;
-};
+  implementationTime: string};
 
 export type PricingBenefit = {
   title: string;
@@ -34,9 +32,7 @@ export type PricingBenefit = {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  
-};  technicalSpecs: {
+    address: string};  technicalSpecs: {
 
     technology: string[];
     integrations: string[];
@@ -45,8 +41,7 @@ export type PricingBenefit = {
     security: string[]};
   aiCapabilities: string[];
   complianceFeatures: string[];
-  scalabilityFeatures: string[];
-}
+  scalabilityFeatures: string[]}
 ;export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
 
@@ -426,11 +421,7 @@ export const blockchainForgePricing: ServicePricing = {
 };
 
 // Export all pricing guides;
-export const ALL_PRICING_GUIDES_2026 = [
-  quantumFlowProPricing,
-  neuroSyncAIPricing,
-  blockchainForgePricing
-];
+export 
 ;export const PRICING_SUMMARY_2026 = {
 "
   overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
@@ -455,11 +446,10 @@ export const ALL_PRICING_GUIDES_2026 = [
     website: "https://ziontechgroup.com","
     address: "364 E Main St STE 1008 Middletown DE 19709"
 
-};}}}}}}}}}}}}}}"
+}}}}}}}}}}}}}}}"
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],"
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;"
-    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"];
-  },  {
+    scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]},  {
 "
     id: "autonomous-supply-chain-platform-2026","
     title: "Autonomous Supply Chain Platform 2026",;"
@@ -585,19 +575,16 @@ export const ALL_PRICING_GUIDES_2026 = [
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
-      address: "364 E Main St STE 1008, Middletown DE 19709";
-    },    technicalSpecs: {
+      address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"],"
       integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],;
       apiEndpoints: 300,;"
       uptime: "99.9%",;"
-      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"];
-    },"
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]},"
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"],"
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],;"
-    scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"];
-  },  {
+    scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]},  {
 "
     id: "quantum-financial-trading-platform-2026","
     title: "Quantum Financial Trading Platform 2026",;"
@@ -723,19 +710,16 @@ export const ALL_PRICING_GUIDES_2026 = [
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
-      address: "364 E Main St STE 1008, Middletown DE 19709";
-    },    technicalSpecs: {
+      address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"],"
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
       apiEndpoints: 500,;"
       uptime: "99.99%",;"
-      security: ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"];
-    },"
+      security: ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"]},"
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"],"
     complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],;"
-    scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"];
-  },  {
+    scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"]},  {
 "
     id: "autonomous-healthcare-diagnostics-2026","
     title: "Autonomous Healthcare Diagnostics Platform 2026",;"
@@ -861,17 +845,14 @@ export const ALL_PRICING_GUIDES_2026 = [
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
-      address: "364 E Main St STE 1008, Middletown DE 19709";
-    },    technicalSpecs: {
+      address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"],"
       integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],;
       apiEndpoints: 400,;"
       uptime: "99.9%",;"
-      security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"];
-    },"
+      security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"]},"
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],"
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],;"
-    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"];
-  }};
+    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]}};
 "

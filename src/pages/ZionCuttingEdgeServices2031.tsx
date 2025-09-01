@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Brain,
@@ -43,7 +41,6 @@ import {
   Truck,
   ChevronDown,
   ChevronUp} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
 const ZionCuttingEdgeServices2031: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -51,20 +48,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'innovation'>('name');
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
-  const categories = useMemo(() => {
-    const cats = ['
-      'All',
-      ...Array.from()
-        new Set()
-          INNOVATIVE_MICRO_SAAS_SERVICES_2031.map(service => service.category)
-        )
-      ),
-    ];
-    return cats;
-  }, []) ;
+  
+    return cats}, []) ;
 
-  const filteredServices = useMemo ( () => {
-    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2031;
   
     if (searchQuery) {
 
@@ -77,15 +63,13 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           service.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           )
-      );
-    }
+      )}
 
     if (selectedCategory !== 'All') {
 
       filtered = filtered.filter()
         service => service.category === selectedCategory
-      );
-    }
+      )}
     // Sort services
     filtered.sort((a, b) => {
 
@@ -94,11 +78,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
         case 'price':
           return a.price - b.price;
         case 'innovation':
-          const innovationOrder = {
-
-            Revolutionary: 3,Cutting-edge': 2,
-            Advanced: 1,
-            Breakthrough: 3};
+          
           return()
             (innovationOrder = [
               b.innovationLevel as keyof typeof innovationOrder
@@ -108,35 +88,16 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
             ] || 0)
           );
         default:
-          return a.name.localeCompare (b.name) ;
-      }
+          return a.name.localeCompare (b.name) }
     }) ;
 
-    return filtered;
-  }, [searchQuery, selectedCategory, sortBy]) ;
+    return filtered}, [searchQuery, selectedCategory, sortBy]) ;
 
-  const getCategoryIcon = (category: string) => {
+  
+    return iconMap[category] || Globe};
 
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-
-      'FinTech & Trading': Coins,Healthcare & AI': Heart,Blockchain & Security': Lock,Supply Chain & Logistics': Truck,Content Creation & AI': BookOpen,Cybersecurity & AI': Shield,IoT & Predictive Analytics': Network,Customer Experience & AI': Users,Research & AI': Code,Business Intelligence & AI': BarChart3};
-    return iconMap[category] || Globe;
-  };
-
-  const getInnovationColor = (level: string) => {
-
-    const colorMap: { [key: string]: string } = {
-
-      Revolutionary: 'from-purple-500 to-pink-500',Cutting-edge': 'from-blue-500 to-indigo-500',
-      Advanced: 'from-green-500 to-teal-500',
-      Breakthrough: 'from-red-500 to-orange-500'};
-    return colorMap[level] || 'from-gray-500 to-slate-500';
-  };
-
-  const toggleServiceExpansion = (id: number) => {
-
-    setExpandedService(expandedService === id ? null : id);
-  };
+  
+    return colorMap[level] || 'from-gray-500 to-slate-500'}};
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
@@ -160,15 +121,15 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">"
               <div className="flex items-center gap-2">"
-                <Star className="w-5 h-5 text-yellow-400" />
+                <Star className="w-5 h-5 text-yellow-400"  />
                 <span>10+ Revolutionary Services</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <TrendingUp className="w-5 h-5 text-green-400" />
+                <TrendingUp className="w-5 h-5 text-green-400"  />
                 <span>40%+ Annual Growth</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <Globe className="w-5 h-5 text-blue-400" />                <span>Global Market Reach</span>
+                <Globe className="w-5 h-5 text-blue-400"  />                <span>Global Market Reach</span>
               </div>
             </div>
           </motion.div>
@@ -181,15 +142,15 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">"
             <div className="flex items-center gap-6 text-white">"
               <div className="flex items-center gap-2">"
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <MapPin className="w-5 h-5 text-cyan-400" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-cyan-400"  />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
             <a"
@@ -199,7 +160,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
               className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <span>Visit Website</span>"
-              <ExternalLink className="w-4 h-4" />            </a>
+              <ExternalLink className="w-4 h-4"  />            </a>
           </div>
         </div>
       </section>
@@ -210,7 +171,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Search */}"
             <div className="relative flex-1 max-w-md">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
 <<<<<<< HEAD
                 type="text"
@@ -266,7 +227,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map(service => {
 
-              const CategoryIcon = getCategoryIcon(service.category);
+              
               return()                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -281,7 +242,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         <div`
                           className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationColor(service.innovationLevel)}`}
                         >"
-                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>
                         <div>"
                           <span className="inline-block px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full mb-2">
                             {service.innovationLevel}
@@ -296,9 +257,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         className="text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         {expandedService === service.id ? ("
-                          <ChevronUp className="w-5 h-5" />
+                          <ChevronUp className="w-5 h-5"  />
                         ) : ("
-                          <ChevronDown className="w-5 h-5" />                        )}
+                          <ChevronDown className="w-5 h-5"  />                        )}
                       </button>
                     </div>
 "
@@ -362,7 +323,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         {/* Features */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <CheckCircle className="w-5 h-5 text-green-400" />                            Key Features
+                            <CheckCircle className="w-5 h-5 text-green-400"  />                            Key Features
                           </h4>"
                           <div className="grid grid-cols-1 gap-2">
                             {service.features.map((feature, index) => (
@@ -379,7 +340,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         {/* Benefits */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <TrendingUp className="w-5 h-5 text-blue-400" />                            Benefits
+                            <TrendingUp className="w-5 h-5 text-blue-400"  />                            Benefits
                           </h4>"
                           <div className="grid grid-cols-1 gap-2">
                             {service.benefits.map((benefit, index) => (
@@ -426,7 +387,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         {/* Target Audience */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <Target className="w-5 h-5 text-purple-400" />                            Target Audience
+                            <Target className="w-5 h-5 text-purple-400"  />                            Target Audience
                           </h4>"
                           <div className="flex flex-wrap gap-2">
                             {service.targetAudience.map((audience, index) => (
@@ -442,7 +403,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                         {/* Technologies */}
                         <div>"
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">"
-                            <Code className="w-5 h-5 text-orange-400" />                            Technologies
+                            <Code className="w-5 h-5 text-orange-400"  />                            Technologies
                           </h4>"
                           <div className="flex flex-wrap gap-2">
                             {service.technologies.map((tech, index) => (
@@ -462,13 +423,12 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                             className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
                           >
                             <span>Get Started</span>"
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
                           </a>
                         </div>
                       </div>
                     </motion.div>) }
-                </motion.div>) ;
-            }) }          </div>
+                </motion.div>) }) }          </div>
 
           {filteredServices.length === 0 && ("
             <div className="text-center py-20">"
@@ -505,20 +465,19 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                 href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
               >"
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>Contact Us</span>"
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="bg-white/10 border border-cyan-400/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >"
-                <Phone className="w-5 h-5" />                <span>Call Now</span>
+                <Phone className="w-5 h-5"  />                <span>Call Now</span>
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) };
 export default ZionCuttingEdgeServices2031;
 '"`

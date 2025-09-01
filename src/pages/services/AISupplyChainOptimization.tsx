@@ -1,7 +1,3 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import {
 
   Truck,
@@ -39,241 +35,13 @@ import {
   Store} from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI Demand Forecasting',
-      description:'
-        'Predict demand patterns with 95% accuracy using machine learning and historical data analysis.'},
-    {
-
-      icon: Route,
-      title: 'Route Optimization',
-      description:'
-        'Optimize delivery routes in real-time considering traffic, weather, and delivery windows.'},
-    {
-
-      icon: Warehouse,
-      title: 'Inventory Optimization',
-      description:'
-        'AI-powered inventory management with automated reordering and stock level optimization.'},
-    {
-
-      icon: Target,
-      title: 'Supplier Performance Analytics',
-      description:'
-        'Monitor supplier performance, quality metrics, and delivery reliability with predictive insights.'},
-    {
-
-      icon: PieChart,
-      title: 'Cost Optimization',
-      description:'
-        'Identify cost-saving opportunities across transportation, warehousing, and procurement.'},
-    {
-
-      icon: Activity,
-      title: 'Real-time Visibility',
-      description:'
-        'End-to-end supply chain visibility with real-time tracking and predictive analytics.'},
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,
-      title: 'Reduced Costs',
-      description:'
-        'Optimize transportation, inventory, and operational costs by up to 30% through AI insights.'},
-    {
-
-      icon: DollarSign,
-      title: 'Improved Efficiency',
-      description:'
-        'Streamline operations and reduce lead times with intelligent automation and optimization.'},
-    {
-
-      icon: Globe,
-      title: 'Global Optimization',
-      description:'
-        'Manage complex global supply chains with multi-location optimization and risk mitigation.'},
-    {
-
-      icon: Lock,
-      title: 'Risk Management',
-      description:'
-        'Identify and mitigate supply chain risks with predictive analytics and contingency planning.'},
-    {
-
-      icon: TrendingUp,
-      title: 'Increased Revenue',
-      description:'
-        'Improve customer satisfaction and increase sales through better inventory availability and faster delivery.'},
-    {
-
-      icon: Clock,
-      title: 'Time Savings',
-      description:'
-        'Automate routine supply chain tasks and focus on strategic decision-making.'},
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$599',
-      period: '/month',
-      description:'
-        'Perfect for small businesses with basic supply chain optimization needs',
-      features: ['
-        'Up to 5 locations',Basic demand forecasting',Email support',Standard integrations',Basic reporting',Route optimization',Mobile app access',
-      ],
-      cta: 'Start Free Trial',
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$1,499',
-      period: '/month',
-      description:'
-        'Ideal for growing companies with complex supply chain requirements',
-      features: ['
-        'Up to 25 locations',Advanced AI forecasting',Priority support',Custom integrations',Advanced analytics',Multi-modal optimization',API access',Supplier analytics',Risk management',
-      ],
-      cta: 'Start Free Trial',
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$4,999',
-      period: '/month',
-      description:'
-        'For large organizations requiring enterprise-grade supply chain solutions',
-      features: ['
-        'Unlimited locations',Custom AI models',Dedicated account manager',White-label solutions',Advanced security features',Custom reporting',On-premise deployment',SLA guarantees',24/7 support',
-      ],
-      cta: 'Contact Sales',
-      popular: false},
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'E-commerce',
-      description:'
-        'Optimize fulfillment networks, reduce delivery times, and improve customer satisfaction',
-      icon: Package},
-    {
-
-      industry: 'Manufacturing',
-      description:'
-        'Streamline production planning, optimize supplier networks, and reduce lead times',
-      icon: Factory},
-    {
-
-      industry: 'Retail',
-      description:'
-        'Optimize store replenishment, reduce stockouts, and improve inventory turnover',
-      icon: Store},
-    {
-
-      industry: 'Logistics',
-      description:'
-        'Optimize transportation networks, reduce costs, and improve delivery efficiency',
-      icon: Truck},
-    {
-
-      industry: 'Food & Beverage',
-      description:'
-        'Manage perishable supply chains, reduce waste, and ensure food safety',
-      icon: Package},
-    {
-
-      industry: 'Healthcare',
-      description:'
-        'Optimize medical supply chains, ensure availability, and reduce costs',
-      icon: Shield},
-  ];
-
-  const integrations = [
-    {
-
-      name: 'ERP Systems',
-      platforms: ['SAP',Oracle',Microsoft Dynamics',NetSuite']},
-    {
-
-      name: 'WMS Systems',
-      platforms: ['Manhattan Associates',HighJump',Softeon',JDA']},
-    {
-
-      name: 'Transportation',
-      platforms: ['FedEx',UPS',DHL',TMS Systems']},
-    {
-
-      name: 'E-commerce',
-      platforms: ['Shopify',WooCommerce',Magento',BigCommerce']},
-    {
-
-      name: 'Analytics',
-      platforms: ['Tableau',Power BI',Google Analytics',Custom APIs']},
-    {
-
-      name: 'IoT & Sensors',
-      platforms: ['
-        'RFID',GPS Tracking',Temperature Sensors',IoT Platforms',
-      ]},
-  ];
-
-  const useCases = [
-    {
-
-      metric: '30%',
-      label: 'Cost Reduction',
-      description: 'Average reduction in supply chain costs'},
-    {
-
-      metric: '50%',
-      label: 'Lead Time Reduction',
-      description: 'Faster delivery and reduced lead times'},
-    {
-
-      metric: '95%',
-      label: 'Forecast Accuracy',
-      description: 'AI-powered demand prediction accuracy'},
-    {
-
-      metric: '40%',
-      label: 'Inventory Optimization',
-      description: 'Reduction in excess inventory levels'},
-  ];
-
-  const optimizationAreas = [
-    {
-
-      category: 'Demand Planning',
-      areas: ['
-        'Forecasting',Seasonal Analysis',Trend Prediction',Demand Shaping',
-      ]},
-    {
-
-      category: 'Inventory Management',
-      areas: ['
-        'Stock Optimization',Reorder Points',Safety Stock',ABC Analysis',
-      ]},
-    {
-
-      category: 'Transportation',
-      areas: ['
-        'Route Optimization',Load Planning',Carrier Selection',Freight Optimization',
-      ]},
-    {
-
-      category: 'Supplier Management',
-      areas: ['
-        'Performance Tracking',Risk Assessment',Cost Analysis',Quality Monitoring',
-      ]},
-  ];
-
+  
+  
+  
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -292,7 +60,7 @@ export default function AISupplyChainOptimization() {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">"
-              <Truck className="w-4 h-4 mr-2" />              AI-Powered Optimization
+              <Truck className="w-4 h-4 mr-2"  />              AI-Powered Optimization
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Supply Chain"
@@ -308,11 +76,11 @@ export default function AISupplyChainOptimization() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>"
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -437,7 +205,7 @@ export default function AISupplyChainOptimization() {
                       key={areaIndex}"
                       className="flex items-center text-gray-300 text-sm"
                     >"
-                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />                      {area}
+                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />                      {area}
                     </li>
                   ))}
                 </ul>
@@ -561,7 +329,7 @@ export default function AISupplyChainOptimization() {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -702,7 +470,7 @@ export default function AISupplyChainOptimization() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />                Start Free Trial
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial
               </button>"
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -713,6 +481,5 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

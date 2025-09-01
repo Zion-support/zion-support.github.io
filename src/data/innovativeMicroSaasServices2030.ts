@@ -32,18 +32,15 @@ export interface MicroSaasService {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 // Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
@@ -55,8 +52,7 @@ const zionContact: ServiceContact = {
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 
 // Innovative Micro SAAS Services 2030;
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [
@@ -115,8 +111,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Cloud computing","
       "API integration"
     ],;"
-    compliance["GDPR", "SOC 2", "HIPAA", "ISO 27001"];
-  },;  {
+    compliance["GDPR", "SOC 2", "HIPAA", "ISO 27001"]},;  {
 
     id: 2,"
     name: "Quantum-Secure Supply Chain Optimization","
@@ -171,8 +166,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Blockchain","
       "Real-time analytics"
     ],;"
-    compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"];
-  },;  {
+    compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"]},;  {
 
     id: 3,"
     name: "AI-Powered Healthcare Analytics Platform","
@@ -227,8 +221,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time processing","
       "Secure data handling"
     ],;"
-    compliance["HIPAA", "HITECH", "SOC 2", "ISO 27001", "GDPR"];
-  },;  {
+    compliance["HIPAA", "HITECH", "SOC 2", "ISO 27001", "GDPR"]},;  {
 
     id: 4,"
     name: "AI-Driven Financial Trading Intelligence","
@@ -283,8 +276,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Blockchain","
       "Cloud computing"
     ],;"
-    compliance["SEC", "FINRA", "SOX", "GDPR", "SOC 2"];
-  },;  {
+    compliance["SEC", "FINRA", "SOX", "GDPR", "SOC 2"]},;  {
 
     id: 5,"
     name: "Sustainable Technology Optimization Platform","
@@ -339,8 +331,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time analytics","
       "Blockchain verification"
     ],;"
-    compliance["ISO 14001", "LEED", "BREEAM", "GRI", "SASB"];
-  },;  {
+    compliance["ISO 14001", "LEED", "BREEAM", "GRI", "SASB"]},;  {
 
     id: 6,"
     name: "Space Technology Analytics Platform","
@@ -395,8 +386,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "IoT sensors","
       "Cloud computing"
     ],;"
-    compliance["ITAR", "EAR", "ISO 27001", "SOC 2"];
-  },;  {
+    compliance["ITAR", "EAR", "ISO 27001", "SOC 2"]},;  {
 
     id: 7,"
     name: "Quantum Machine Learning Platform","
@@ -451,8 +441,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Hybrid computing","
       "Cloud quantum access"
     ],;"
-    compliance["ISO 27001", "SOC 2", "Research ethics", "Data privacy"];
-  },;  {
+    compliance["ISO 27001", "SOC 2", "Research ethics", "Data privacy"]},;  {
 
     id: 8,"
     name: "AI-Powered Cybersecurity Intelligence","
@@ -507,8 +496,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Automation","
       "Real-time processing"
     ],;"
-    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"];
-  },;  {
+    compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]},;  {
 
     id: 9,"
     name: "Autonomous Research Assistant Platform","
@@ -563,8 +551,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Collaboration tools","
       "Cloud computing"
     ],;"
-    compliance["Research ethics", "Data privacy", "Academic standards", "Open access"];
-  },;  {
+    compliance["Research ethics", "Data privacy", "Academic standards", "Open access"]},;  {
 
     id: 10,"
     name: "IoT Edge Computing Intelligence Platform","
@@ -619,8 +606,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time processing","
       "Cloud integration"
     ],;"
-    compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"];
-  }
+    compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]}
 ];
 
-export default innovativeMicroSaasServices2030;}}}"
+export default innovativeMicroSaasServices2030}}}"

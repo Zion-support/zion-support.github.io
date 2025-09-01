@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { Search, 
   Filter, 
@@ -29,7 +26,6 @@ import { Search,
   DollarSign,
   BarChart3'
  } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES_2028  } from '../data/innovativeServices2028';
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -42,10 +38,9 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
   const [expandedService, setExpandedService] = useState<any>(null);
 
   // Get unique categories'
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))];
-
+  
   // Filter and sort services
-  const filteredServices = INNOVATIVE_SERVICES_2028;
+  
     .filter(service =>
       selectedCategory === 'all' || service.category === selectedCategory
     )
@@ -72,69 +67,35 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
           return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
         default:
-          return a.title.localeCompare (b.title) ;
-      }
+          return a.title.localeCompare (b.title) }
     }) ;
 
   const getCategoryIcon = (category: anystring)  => {
 
     const icons: Record<string, any> = {
 
-      'AI & Enterprise': <Brain className="w-5 h-5" />,"
-      'Quantum Computing': <Zap className="w-5 h-5" />,"
-      'Cybersecurity': <Shield className="w-5 h-5" />,"
-      'Healthcare Technology': <Heart className="w-5 h-5" />,"
-      'Financial Technology': <DollarSign className="w-5 h-5" />,"
-      'Supply Chain': <Globe className="w-5 h-5" />,"
-      'Content Marketing': <Target className="w-5 h-5" />,"
-      'Project Management': <Rocket className="w-5 h-5" />,"
-      'Customer Support': <Users className="w-5 h-5" />,"
-      'Marketing Automation': <TrendingUp className="w-5 h-5" />
+      'AI & Enterprise': <Brain className="w-5 h-5"  />,"
+      'Quantum Computing': <Zap className="w-5 h-5"  />,"
+      'Cybersecurity': <Shield className="w-5 h-5"  />,"
+      'Healthcare Technology': <Heart className="w-5 h-5"  />,"
+      'Financial Technology': <DollarSign className="w-5 h-5"  />,"
+      'Supply Chain': <Globe className="w-5 h-5"  />,"
+      'Content Marketing': <Target className="w-5 h-5"  />,"
+      'Project Management': <Rocket className="w-5 h-5"  />,"
+      'Customer Support': <Users className="w-5 h-5"  />,"
+      'Marketing Automation': <TrendingUp className="w-5 h-5"  />
     };"
-    return icons[category] || <Sparkles className="w-5 h-5" />;
-  };
+    return icons[category] || <Sparkles className="w-5 h-5"  />};
 
-  const getInnovationLevelColor = (level: anystring)  => {
-
-    switch (level) {
-
-      case 'revolutionary':'
-        return 'from-purple-500 to-pink-500';
+  
       case 'cutting-edge':'
         return 'from-blue-500 to-cyan-500';
       default:'
-        return 'from-green-500 to-emerald-500';
-    }
+        return 'from-green-500 to-emerald-500'}
   };
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },
-    visible: {
-
-      opacity: 1,
-      transition: {
-
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-
-      y: 0,
-      opacity: 1,
-      transition: {
-
-        duration: 0.5,"
-        ease: "easeOut"
-      }
-    }
-  };
-
+  
+  
   return ("    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Futuristic Animated Background */}"
       <div className="fixed inset-0 overflow-hidden pointer-events-none">"
@@ -182,15 +143,15 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4 mb-8">"
               <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2">"
-                <Star className="w-5 h-5 text-yellow-400" />"
+                <Star className="w-5 h-5 text-yellow-400"  />"
                 <span className="text-cyan-400 font-medium">Cutting-Edge Innovation</span>
               </div>"
               <div className="flex items-center gap-2 bg-purple-500/20 border border-purple-400/30 rounded-full px-4 py-2">"
-                <Zap className="w-5 h-5 text-purple-400" />"
+                <Zap className="w-5 h-5 text-purple-400"  />"
                 <span className="text-purple-400 font-medium">Quantum Technology</span>
               </div>"
               <div className="flex items-center gap-2 bg-green-500/20 border border-green-400/30 rounded-full px-4 py-2">"
-                <Brain className="w-5 h-5 text-green-400" />"                <span className="text-green-400 font-medium">AI-Powered Solutions</span>
+                <Brain className="w-5 h-5 text-green-400"  />"                <span className="text-green-400 font-medium">AI-Powered Solutions</span>
               </div>
             </div>
           </motion.div>
@@ -204,7 +165,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
             <div className="flex flex-col lg:flex-row gap-4 items-center">
               {/* Search */}"
               <div className="flex-1 relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -231,7 +192,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none"  />              </div>
 
               {/* Sort */}"
               <div className="relative">
@@ -245,7 +206,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                   <option value="category">Sort by Category</option>"
                   <option value="innovation">Sort by Innovation</option>
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none"  />              </div>
 
               {/* View Mode Toggle */}"
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
@@ -328,11 +289,11 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         <span>ROI: {service.roi}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-gray-400">"
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>Delivery: {service.estimatedDelivery}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-gray-400">"
-                        <Award className="w-4 h-4" />                        <span>Support: {service.supportLevel}</span>
+                        <Award className="w-4 h-4"  />                        <span>Support: {service.supportLevel}</span>
                       </div>
                     </div>
 "
@@ -352,13 +313,13 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1"
                       >
                         {expandedService === service.id ? 'Show Less' : 'Learn More'}'`
-                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />                      </button>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`}  />                      </button>
                       <Link`
                         to={`/services/${service.id}`}"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                       >
                         Get Started"
-                        <ArrowRight className="w-4 h-4" />                      </Link>
+                        <ArrowRight className="w-4 h-4"  />                      </Link>
                     </div>
 
                     {/* Expanded Content */}
@@ -377,7 +338,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                               <ul className="space-y-1">
                                 {service.features.slice(0, 5).map((feature, index) => ("
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">"
-                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                                    {feature}
+                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"  />                                    {feature}
                                   </li>
                                 ))}
                               </ul>
@@ -387,7 +348,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                               <ul className="space-y-1">
                                 {service.benefits.slice(0, 3).map((benefit, index) => ("
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">"
-                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                                    {benefit}
+                                    <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"  />                                    {benefit}
                                   </li>
                                 ))}
                               </ul>
@@ -453,7 +414,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                       >
                         Get Started"
-                        <ArrowRight className="w-5 h-5" />                      </Link>
+                        <ArrowRight className="w-5 h-5"  />                      </Link>
                     </div>
                   </div>) }
               </motion.div>) ) }
@@ -482,13 +443,13 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 href="tel:+13024640950"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >"
-                <Phone className="w-5 h-5" />                +1 302 464 0950
+                <Phone className="w-5 h-5"  />                +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
               >"
-                <Mail className="w-5 h-5" />                kleber@ziontechgroup.com
+                <Mail className="w-5 h-5"  />                kleber@ziontechgroup.com
               </a>
             </div>"
             <div className="mt-6 text-sm text-gray-400">
@@ -498,7 +459,6 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) };
 export default UltimateServicesShowcase2028;
 '"`

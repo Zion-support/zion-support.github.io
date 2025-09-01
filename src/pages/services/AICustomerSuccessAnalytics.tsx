@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Users, 
@@ -33,190 +30,19 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
 export default function AICustomerSuccessAnalytics() {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Insights",
-      description: "Advanced machine learning algorithms that predict customer behavior and identify success opportunities."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live dashboards and metrics that provide instant visibility into customer success metrics and KPIs."
-    },
-    {
-      icon: Users,
-      title: "Customer Journey Mapping",
-      description: "Comprehensive tracking of customer interactions across all touchpoints and channels."
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast customer churn, expansion opportunities, and success milestones with high accuracy."
-    },
-    {
-      icon: Shield,
-      title: "Data Security & Compliance",
-      description: "Enterprise-grade security with GDPR, SOC2, and HIPAA compliance for sensitive customer data."
-    },
-    {
-      icon: Zap,
-      title: "Automated Workflows",
-      description: "Intelligent automation of customer success tasks, alerts, and follow-up actions."
-    }
-  ];
-
-  const analyticsModules = [
-    {
-      icon: Activity,
-      title: "Health Score Monitoring",
-      description: "Real-time customer health scoring based on usage patterns, engagement, and satisfaction metrics"
-    },
-    {
-      icon: LineChart,
-      title: "Usage Analytics",
-      description: "Deep insights into product adoption, feature utilization, and user behavior patterns"
-    },
-    {
-      icon: PieChart,
-      title: "Churn Prediction",
-      description: "AI-powered early warning system for customer churn with actionable retention strategies"
-    },
-    {
-      icon: UserCheck,
-      title: "Success Milestone Tracking",
-      description: "Automated tracking of customer success milestones and achievement of business outcomes"
-    },
-    {
-      icon: MessageSquare,
-      title: "Sentiment Analysis",
-      description: "Natural language processing to analyze customer feedback, support tickets, and communication sentiment"
-    },
-    {
-      icon: Target,
-      title: "Expansion Opportunities",
-      description: "Identify upsell and cross-sell opportunities based on usage patterns and success indicators"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for growing SaaS companies",
-      features: [
-        "Up to 1,000 customer profiles",
-        "Basic AI insights and predictions",
-        "Standard analytics dashboard",
-        "Email support",
-        "Basic integrations (5)",
-        "Monthly reports"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Ideal for established businesses",
-      features: [
-        "Up to 10,000 customer profiles",
-        "Advanced AI algorithms",
-        "Custom dashboards",
-        "Priority support",
-        "Advanced integrations (25)",
-        "Real-time alerts",
-        "API access",
-        "Team collaboration"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$2,499",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited customer profiles",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated success manager",
-        "Advanced analytics",
-        "Custom training",
-        "On-premise options",
-        "SLA guarantees"
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Reduce Customer Churn",
-      description: "Predict and prevent customer churn with AI-powered early warning systems and proactive interventions.",
-      icon: Heart
-    },
-    {
-      title: "Increase Customer Lifetime Value",
-      description: "Identify expansion opportunities and optimize customer success strategies to maximize revenue per customer.",
-      icon: TrendingUp
-    },
-    {
-      title: "Improve Customer Satisfaction",
-      description: "Proactively address customer needs and optimize the customer experience based on real-time insights.",
-      icon: Star
-    },
-    {
-      title: "Scale Success Operations",
-      description: "Automate routine tasks and focus your team on high-value customer relationships and strategic initiatives.",
-      icon: Users
-    }
-  ];
-
-  const useCases = [
-    {
-      icon: Users,
-      title: "SaaS Companies",
-      description: "Monitor subscription health, predict churn, and optimize customer success strategies"
-    },
-    {
-      icon: Building2,
-      title: "Enterprise B2B",
-      description: "Track complex customer journeys and manage multi-stakeholder relationships"
-    },
-    {
-      icon: Globe,
-      title: "E-commerce",
-      description: "Analyze customer behavior and optimize retention strategies"
-    },
-    {
-      icon: Server,
-      title: "Technology Companies",
-      description: "Monitor product adoption and identify expansion opportunities"
-    },
-    {
-      icon: Award,
-      title: "Consulting Firms",
-      description: "Track client success metrics and optimize service delivery"
-    },
-    {
-      icon: Target,
-      title: "Startups",
-      description: "Build data-driven customer success processes from the ground up"
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Customer Success Analytics Platform - Zion Tech Group"
+      <SEO title="AI Customer Success Analytics Platform - Zion Tech Group"
         description="Advanced AI-powered customer success analytics platform for predicting churn, tracking success metrics, and optimizing customer relationships with real-time insights."
         canonical="/services/ai-customer-success-analytics"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -381,7 +207,7 @@ export default function AICustomerSuccessAnalytics() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-center text-slate-300">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -518,7 +344,7 @@ export default function AICustomerSuccessAnalytics() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-6 h-6 text-white"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                   <a href="tel:+13024640950" className="text-slate-300 hover:text-green-400 transition-colors">
@@ -528,7 +354,7 @@ export default function AICustomerSuccessAnalytics() {
                 
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                   <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-green-400 transition-colors">
@@ -538,7 +364,7 @@ export default function AICustomerSuccessAnalytics() {
                 
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                   <p className="text-slate-300">
@@ -552,5 +378,4 @@ export default function AICustomerSuccessAnalytics() {
         </section>
       </div>
     </>
-  );
-}
+  )}

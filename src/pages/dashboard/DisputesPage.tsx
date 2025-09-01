@@ -1,18 +1,13 @@
-import React from 'react';
 
-import SEO from '@/components/SEO';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
 ;function DisputesPage(...args[]):  {
 
   return()
     <ProtectedRoute>;
       <>
-        <SEO
-<<<<<<< HEAD
+        <SEO <<<<<<< HEAD
           title="Dispute Resolution Center | Zion AI Marketplace"
           description="View and manage disputes between clients and talents"
-        />
+         />
 =======
           title="Dispute Resolution Center | Zion AI Marketplace""          description="View and manage disputes between clients and talents"
          />
@@ -28,8 +23,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
         ;
       </>
     </ProtectedRoute>;
-  );
-}
+  )}
 ;
 export { DisputesPage };export default DisputesPage;
 ;

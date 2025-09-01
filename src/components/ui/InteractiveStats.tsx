@@ -28,4 +28,4 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
     </div>;
   )};
 
-export default InteractiveStats;}}'"`
+export default InteractiveStats}}'"`

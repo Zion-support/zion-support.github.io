@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   CheckCircle,
@@ -16,144 +14,18 @@ import {
   Hand,
   Brain,
   Heart} from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 const Accessibility: React.FC = () => {
-  const complianceStandards = [
-    {
-
-      standard: 'WCAG 2.1 AA',
-      description:'
-        'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Fully Compliant',
-      icon: CheckCircle,
-      color: 'text-green-400'},
-    {
-
-      standard: 'Section 508',
-      description:'
-        'Federal accessibility requirements for electronic and information technology',
-      status: 'Fully Compliant',
-      icon: CheckCircle,
-      color: 'text-green-400'},
-    {
-
-      standard: 'ADA Title III',
-      description:'
-        'Americans with Disabilities Act requirements for public accommodations',
-      status: 'Fully Compliant',
-      icon: CheckCircle,
-      color: 'text-green-400'},
-    {
-
-      standard: 'EN 301 549',
-      description:'
-        'European accessibility requirements for ICT products and services',
-      status: 'Fully Compliant',
-      icon: CheckCircle,
-      color: 'text-green-400'},
-  ];
-
-  const assistiveTechnologies = [
-    {
-
-      name: 'Screen Readers',
-      description: 'Compatible with JAWS, NVDA, VoiceOver, and TalkBack',
-      icon: Monitor,
-      examples: ['JAWS',NVDA',VoiceOver',TalkBack',Narrator']},
-    {
-
-      name: 'Voice Control',
-      description:'
-        'Voice recognition software support for hands-free navigation',
-      icon: Volume2,
-      examples: ['
-        'Dragon NaturallySpeaking',Voice Control (macOS),Windows Speech Recognition',
-      ]},
-    {
-
-      name: 'Switch Devices',
-      description: 'Alternative input devices for users with limited mobility',
-      icon: Mouse,
-      examples: ['
-        'Head switches',Eye tracking',Sip and puff devices',Foot pedals',
-      ]},
-    {
-
-      name: 'Mobile Accessibility',
-      description: 'Optimized for mobile assistive technologies',
-      icon: Smartphone,
-      examples: ['
-        'iOS VoiceOver',Android TalkBack',Switch Control',AssistiveTouch',
-      ]},
-  ];
-
-  const accessibilityTools = [
-    {
-
-      name: 'High Contrast Mode',
-      icon: Contrast,
-      description: 'Toggle high contrast color schemes for better visibility',
-      shortcut: 'Ctrl + Shift + H'},
-    {
-
-      name: 'Font Size Adjustment',
-      icon: Type,
-      description: 'Increase or decrease text size for better readability',
-      shortcut: 'Ctrl + Plus/Minus'},
-    {
-
-      name: 'Zoom Controls',
-      icon: ZoomIn,
-      description: 'Zoom in and out of content for better visibility',
-      shortcut: 'Ctrl + Mouse Wheel'},
-    {
-
-      name: 'Color Blindness Support',
-      icon: Palette,
-      description:'
-        'Color schemes optimized for various types of color blindness',
-      shortcut: 'Ctrl + Shift + C'},
-  ];
-
-  const accessibilityFeatures = [
-    {
-
-      category: 'Visual Accessibility',
-      icon: Eye,
-      features: ['
-        'High contrast color schemes',Adjustable font sizes',Screen reader compatibility',Keyboard navigation support',Focus indicators and landmarks',
-      ]},
-    {
-
-      category: 'Auditory Accessibility',
-      icon: Ear,
-      features: ['
-        'Closed captions for videos',Audio descriptions',Visual alerts and notifications',Transcripts for audio content',Volume controls and audio alternatives',
-      ]},
-    {
-
-      category: 'Motor Accessibility',
-      icon: Hand,
-      features: ['
-        'Keyboard-only navigation',Voice control support',Switch device compatibility',Extended time limits',Large click targets',
-      ]},
-    {
-
-      category: 'Cognitive Accessibility',
-      icon: Brain,
-      features: ['
-        'Clear and simple language',Consistent navigation',Error prevention and recovery',Multiple ways to complete tasks',Reduced distractions and animations',
-      ]},
-  ];
-
+  
+  
+  
+  
   return()
     <>
-      <SEO
-        title="Accessibility - Zion Tech Group"
+      <SEO title="Accessibility - Zion Tech Group"
         description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA standards and ensure equal access for all users."
         keywords="accessibility, WCAG, ADA, Section 508, inclusive design, assistive technology, Zion Tech Group"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
@@ -165,7 +37,7 @@ const Accessibility: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Accessibility className="w-8 h-8 text-white" />                </div>
+                  <Accessibility className="w-8 h-8 text-white"  />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Accessibility
@@ -345,7 +217,7 @@ const Accessibility: React.FC = () => {
                   <ul className="space-y-3">
                     {category.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-start gap-3">"
-                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />"                        <span className="text-gray-300 text-sm">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"  />"                        <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -364,7 +236,7 @@ const Accessibility: React.FC = () => {
               transition={{ duration: 0.6 }}"
               className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50"
             >"
-              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />"
+              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6"  />"
               <h2 className="text-3xl font-bold text-white mb-4">
                 We Value Your Feedback
               </h2>"              <p className="text-gray-300 mb-6">
@@ -390,7 +262,6 @@ const Accessibility: React.FC = () => {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) };
 export default Accessibility;
 '"`

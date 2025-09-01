@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { motion } from 'framer-motion.ts';
 import {
 
   Search,
@@ -28,9 +26,6 @@ import {
 <<<<<<< HEAD
   Link,
   Box} from 'lucide-react.ts';
-import { SEO } from '@/components/SEO';
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';
 
 export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
 
@@ -38,42 +33,17 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const allServices = [
-    ...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES,
-    ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES,
-  ];
+  
+  
+  
+    
+    return matchesSearch && matchesCategory}) ;
 
-  const categories = ['
-    'all',AI & Analytics',AI & Automation',AI & Cybersecurity',AI & Marketing',AI & Healthcare',AI & Development',AI & Supply Chain',AI & FinTech',AI & Legal Tech',AI & Customer Success',Space Technology & AI',Quantum Technology & Security',Neurotechnology & AI',AI & Autonomous Systems',AI & Biotechnology',Quantum Computing & AI',AI & Autonomous Vehicles',AI & Digital Twins',AI & Blockchain',AI & Metaverse',
-  ];
-
-  const filteredServices = allServices.filter(service => {
-
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory ='
-      selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  }) ;
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-
-    switch (sortBy) {
-
-      case 'price-low':
-        return ('
-          parseFloat(a.price.replace('$',).replace(',,)) -'
-          parseFloat(b.price.replace('$',).replace(',,))
-        );
+  
       case 'price-high':
 =======
   Link,'
   Box} from 'lucide-react.ts';'
-import { SEO } from '@/components/SEO';'
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES } from '../../data/revolutionary-2029-cutting-edge-services';'
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolutionary-2029-emerging-tech-services';      case 'price-high':
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseFloat(b.price.replace('$',).replace(',,)) -'
@@ -84,8 +54,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
       case 'customers':
         return b.customers - a.customers;
       default:
-        return b.popular ? 1 : -1;
-    }
+        return b.popular ? 1 : -1}
   }) ;
 
   const getCategoryIcon = (category: anystring) => {
@@ -93,27 +62,26 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
     const iconMap: { [key: string]: React.ReactNode } = {
 
       'AI & Analytics': <BarChart3 className="w-5 h-5" />,"
-      'AI & Automation': <Zap className="w-5 h-5" />,"
-      'AI & Cybersecurity': <Shield className="w-5 h-5" />,"
-      'AI & Marketing': <Target className="w-5 h-5" />,"
-      'AI & Healthcare': <Brain className="w-5 h-5" />,"
-      'AI & Development': <Code className="w-5 h-5" />,"
-      'AI & Supply Chain': <Truck className="w-5 h-5" />,"
-      'AI & FinTech': <TrendingUp className="w-5 h-5" />,"
-      'AI & Legal Tech': <Shield className="w-5 h-5" />,"
-      'AI & Customer Success': <Users className="w-5 h-5" />,"
-      'Space Technology & AI': <Rocket className="w-5 h-5" />,"
-      'Quantum Technology & Security': <Atom className="w-5 h-5" />,"
-      'Neurotechnology & AI': <Brain className="w-5 h-5" />,"
-      'AI & Autonomous Systems': <Plane className="w-5 h-5" />,"
-      'AI & Biotechnology': <Dna className="w-5 h-5" />,"
-      'Quantum Computing & AI': <Atom className="w-5 h-5" />,"
-      'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,"
-      'AI & Digital Twins': <Box className="w-5 h-5" />,"
-      'AI & Blockchain': <Link className="w-5 h-5" />,"
-      'AI & Metaverse': <Globe className="w-5 h-5" />};"
-    return iconMap[category] || <Cpu className="w-5 h-5" />;
-  };
+      'AI & Automation': <Zap className="w-5 h-5"  />,"
+      'AI & Cybersecurity': <Shield className="w-5 h-5"  />,"
+      'AI & Marketing': <Target className="w-5 h-5"  />,"
+      'AI & Healthcare': <Brain className="w-5 h-5"  />,"
+      'AI & Development': <Code className="w-5 h-5"  />,"
+      'AI & Supply Chain': <Truck className="w-5 h-5"  />,"
+      'AI & FinTech': <TrendingUp className="w-5 h-5"  />,"
+      'AI & Legal Tech': <Shield className="w-5 h-5"  />,"
+      'AI & Customer Success': <Users className="w-5 h-5"  />,"
+      'Space Technology & AI': <Rocket className="w-5 h-5"  />,"
+      'Quantum Technology & Security': <Atom className="w-5 h-5"  />,"
+      'Neurotechnology & AI': <Brain className="w-5 h-5"  />,"
+      'AI & Autonomous Systems': <Plane className="w-5 h-5"  />,"
+      'AI & Biotechnology': <Dna className="w-5 h-5"  />,"
+      'Quantum Computing & AI': <Atom className="w-5 h-5"  />,"
+      'AI & Autonomous Vehicles': <Car className="w-5 h-5"  />,"
+      'AI & Digital Twins': <Box className="w-5 h-5"  />,"
+      'AI & Blockchain': <Link className="w-5 h-5"  />,"
+      'AI & Metaverse': <Globe className="w-5 h-5"  />};"
+    return iconMap[category] || <Cpu className="w-5 h-5"  />};
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -213,7 +181,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
             {/* Search */}"
             <div className="flex-1">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -348,12 +316,12 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
                 {/* Stats */}"
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                     <span>{service.rating}</span>
                     <span>({service.reviews})</span>
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Users className="w-4 h-4" />                    <span>{service.customers} customers</span>
+                    <Users className="w-4 h-4"  />                    <span>{service.customers} customers</span>
                   </div>
                 </div>
 
@@ -401,7 +369,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
                     Learn More
                   </a>"
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">"
-                    <Star className="w-4 h-4" />                  </button>
+                    <Star className="w-4 h-4"  />                  </button>
                 </div>
               </div>
             </motion.div>) ) }
@@ -442,6 +410,5 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data/revolution
         </div>
       </div>
     </div>
-  );
-}
+  )}
 '"

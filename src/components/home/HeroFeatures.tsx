@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
@@ -102,11 +100,8 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
         </motion.div>;
       ))};
     </motion.div>;
-  );
-};
+  )};
 
-export default HeroFeatures;}}'"`
+export default HeroFeatures}}'"`
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

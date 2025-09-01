@@ -1,14 +1,6 @@
-import React from 'react';
-import { ADDED_SERVICES_2025 } from '@/data/addedServices2025';
 
 export default function AddedServicesDirectory(): JSX.Element {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
+  
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10">
@@ -113,6 +105,5 @@ export default function AddedServicesDirectory(): JSX.Element {
         </div>
       </footer>
     </div>
-  );
-}
+  )}
 

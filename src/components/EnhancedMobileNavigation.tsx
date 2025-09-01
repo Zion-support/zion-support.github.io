@@ -1,6 +1,3 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
 import {
   Menu, 
   X, 
@@ -32,8 +29,7 @@ interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
-}>;
-} from 'lucide-react';
+}>} from 'lucide-react';
 
 interface NavigationItem {
 
@@ -123,27 +119,12 @@ const navigationItems: NavigationItem[] = [
 
 ];
 ;
-const quickActions = [
-  {
 
-    label: 'Get Quote',
-    path: '/request-quote',
-    icon: MessageCircle,
-    color: 'bg-zion-cyan'
-  },
-  {
-
-    label: 'Support',
-    path: '/help',
-    icon: HelpCircle,
-    color: 'bg-zion-purple'
-  },;
   {;
     label: 'Documentation',;
     path: '/docs',;
     icon: FileText,;
-    color: 'bg-zion-blue';
-  };];
+    color: 'bg-zion-blue'};];
 
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -159,15 +140,14 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
-        setIsOpen(false);      }
+        setIsOpen(false)}
     };
 
 export default function EnhancedMobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
-
+  
   const navigationItems: NavigationItem[] = [
     {
       label: 'Home',
@@ -207,8 +187,7 @@ export default function EnhancedMobileNavigation() {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
-    setActiveSubmenu(null);
-  }, [location.pathname]);
+    setActiveSubmenu(null)}, [location.pathname]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -232,28 +211,16 @@ export default function EnhancedMobileNavigation() {
         newSet.add(label)}
       return newSet})};
 
-  const handleNavigation = (path: string) => {
-
-    setIsOpen(false);
+  
     setExpandedItems(new Set())};
 
-  const isActive = (path: string) => {;
-    if (path === '/') {;
-  const isActive = (path: string) => {
+  
+    if (path === '/') {};
 
-    if (path === '/') {
-
-      return activePath === '/';
-
-  const toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label);
-  };
-
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
-    const isExpanded = expandedItems.has (item.label) ;
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive (item.path) ;
-
+  
+    
+    
+    
     return()      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
@@ -369,8 +336,7 @@ export default function EnhancedMobileNavigation() {
                 </div>
               </motion.div>;) };
           </AnimatePresence>;) };
-      </div>;) ;
-  };
+      </div>;) };
   return()
     <>
       {/* Mobile Menu Toggle */}
@@ -379,7 +345,7 @@ export default function EnhancedMobileNavigation() {
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
 
-        <Menu size={24}  />
+        <Menu size={24}   />
       </button>
 
       {/* Mobile Menu Overlay */}
@@ -413,7 +379,7 @@ export default function EnhancedMobileNavigation() {
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">"
                 <div className="flex items-center gap-3">"
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">"
-                    <Zap size={20} className="text-white" />                  </div>
+                    <Zap size={20} className="text-white"  />                  </div>
                   <div>"
                     <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>"
                     <p className="text-sm text-zion-slate-light">Technology Solutions</p>
@@ -425,7 +391,7 @@ export default function EnhancedMobileNavigation() {
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
 
-                  <X size={24}  />
+                  <X size={24}   />
                 </button>
               </div>;
 
@@ -469,19 +435,19 @@ export default function EnhancedMobileNavigation() {
                   </h3>"
                   <div className="space-y-3 text-sm">"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Mail size={16}  />
+                      <Mail size={16}   />
                       <span>info@ziontechgroup.com</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Phone size={16}  />
+                      <Phone size={16}   />
                       <span>+1 (555) 123-4567</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <MapPin size={16}  />
+                      <MapPin size={16}   />
                       <span>123 Tech Street, Innovation City</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Clock size={16} />
+                      <Clock size={16}  />
                       <span > Mon - Fri 9AM - 6PM EST</span>                    </div>
                   </div>
                 </div>
@@ -505,7 +471,5 @@ export default function EnhancedMobileNavigation() {
           </motion.div>;) };
       </AnimatePresence>;
     </>
-  );
-};
-};
+  )}};
 '"`

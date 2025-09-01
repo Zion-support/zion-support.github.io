@@ -1,33 +1,27 @@
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";"
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";"
-import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";"
 <<<<<<< HEAD
-import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";
 
 const AdvancedServicesShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const allServices = [;
+  
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;
     ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;
     ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
   ];
 
-  const filteredServices = allServices.filter (service => {;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+  
+    
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  const categories = [;
+  
     { id: 'all', name: 'All Services', count: allServices.length },;
     { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
     { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
     { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
 =======
-import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
@@ -37,7 +31,7 @@ import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";    {
 <<<<<<< HEAD
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
-      />
+       />
 =======
         title="Advanced Services Showcase 2025 - Zion Tech Group""        description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
        />
@@ -262,8 +256,7 @@ import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";    {
             <button;
               onClick={() => {;
                 setSearchTerm('');
-                setSelectedCategory('all');
-              }}"              className = "text-blue-400 hover:text-blue-300 underline"
+                setSelectedCategory('all')}}"              className = "text-blue-400 hover:text-blue-300 underline"
             >
               Clear filters
             </button>
@@ -329,6 +322,5 @@ import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";    {
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 export default AdvancedServicesShowcase2025;'"`

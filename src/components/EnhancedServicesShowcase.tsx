@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import {
 
@@ -94,22 +91,15 @@ import {
       features: ['Lead scoring',CRM automation',Sales analytics',Predictive insights'],;
       benefits: ['Reduce admin time by 40-60%',Improve conversion rates',Shorten sales cycles'],;
       color: 'from-pink-500 to-rose-600',;
-      glowColor: 'pink';
-    };
+      glowColor: 'pink'};
   ];
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1}}};
 
-const categories = ['All',AI & Analytics',Quantum Computing',Cybersecurity',Cloud & DevOps',Data & Analytics',Blockchain & Web3'];
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -118,10 +108,7 @@ export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-  const filteredServices = selectedCategory === 'All'
-    ? services
-    : services.filter (service => service.category === selectedCategory) ;
-
+  
   return()    <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0">"
@@ -193,7 +180,7 @@ export default function EnhancedServicesShowcase() {
                   <div className="text-right">"
                     <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>"
                     <div className="flex items-center text-zion-slate-light text-sm">"
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />                      <span>5.0</span>
+                      <Star className="w-4 h-4 text-yellow-400 mr-1"  />                      <span>5.0</span>
                     </div>
                   </div>
                 </div>
@@ -210,7 +197,7 @@ export default function EnhancedServicesShowcase() {
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.map((feature, idx) => ("
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                        {feature}
                       </div>) ) }
                   </div>
                 </div>
@@ -222,19 +209,18 @@ export default function EnhancedServicesShowcase() {
                   <div className="space-y-2">
                     {service.benefits.map((benefit, idx) => ("
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
-                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />                        {benefit}
+                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0"  />                        {benefit}
                       </div>) ) }
                   </div>
                 </div>
               </div>
 
                 {/* CTA Button */}
-                <Link
-                  to={service.path}`
+                <Link to={service.path}`
                   className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold text-center block hover:shadow-lg hover:shadow-${service.glowColor}-500/25 transition-all duration-300 group-hover:scale-105`}
 
                   Explore Service"
-                  <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
+                  <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"  />                </Link>
 
                 {/* Hover Glow Effect */}`
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
@@ -303,7 +289,7 @@ export default function EnhancedServicesShowcase() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: featureIndex * 0.1 }}
                       >"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                        {feature}
                       </motion.div>) ) }
                   </div>
 
@@ -333,7 +319,7 @@ export default function EnhancedServicesShowcase() {
                       className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
                     >
                       Learn More"
-                      <ArrowRight className="ml-2 w-5 h-5" />                    </Link>
+                      <ArrowRight className="ml-2 w-5 h-5"  />                    </Link>
                   </div>
 
                   {/* Hover effect overlay */}
@@ -354,9 +340,7 @@ export default function EnhancedServicesShowcase() {
           initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-}}          whileInView = {
+  y: 20 }}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
@@ -369,9 +353,7 @@ export default function EnhancedServicesShowcase() {
           transition = {
 
   { duration: 0.6,
-  delay: 0.3 ;
-
-}}        >
+  delay: 0.3 }}        >
           {categories.map ( (category, index) => (;
             <motion.button
               key={category}
@@ -405,7 +387,7 @@ export default function EnhancedServicesShowcase() {
 }}
             >
               View All Services"
-              <ArrowRight className="ml-2 w-5 h-5" />            </Link>
+              <ArrowRight className="ml-2 w-5 h-5"  />            </Link>
             <a"
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -418,11 +400,10 @@ export default function EnhancedServicesShowcase() {
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
             >
               View All Services;"
-              <ArrowRight className="ml-2 w-5 h-5" />;            </Link>
+              <ArrowRight className="ml-2 w-5 h-5"  />;            </Link>
             <a "
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -442,6 +423,5 @@ export default function EnhancedServicesShowcase() {
           </div>
         )}
       </div>
-    </section>) ;
-};
+    </section>) };
 '"`

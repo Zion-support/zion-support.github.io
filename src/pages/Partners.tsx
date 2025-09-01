@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Handshake, 
   Users, 
@@ -19,153 +16,17 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export const Partners: React.FC = () => {
-  const partnershipTypes = [
-    {
-      title: 'Technology Partners',
-      icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Leading technology companies providing cutting-edge solutions',
-      benefits: [
-        'Access to latest technologies',Joint product development',Technical expertise sharing',Market expansion support'
-      ]
-    },
-    {
-      title: 'Channel Partners',
-      icon: Users,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Resellers and distributors expanding our market reach',
-      benefits: [
-        'Revenue sharing opportunities',Marketing support',Training and certification',Dedicated partner portal'
-      ]
-    },
-    {
-      title: 'Strategic Partners',
-      icon: Building,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Long-term strategic relationships driving mutual growth',
-      benefits: [
-        'Joint go-to-market strategies',Shared innovation initiatives',Cross-selling opportunities',Strategic planning collaboration'
-      ]
-    },
-    {
-      title: 'Global Partners',
-      icon: Globe,
-      color: 'from-orange-600 to-red-600',
-      description: 'International partners expanding our global presence',
-      benefits: [
-        'Local market expertise',Cultural understanding',Regulatory compliance',Regional support networks'
-      ]
-    }
-  ];
-
-  const currentPartners = [
-    {
-      name: 'Microsoft',
-      logo: 'M',
-      category: 'Technology Partner',
-      description: 'Leading cloud and AI solutions provider',
-      partnership: 'Azure cloud services and AI integration'
-    },
-    {
-      name: 'Amazon Web Services',
-      logo: 'AWS',
-      category: 'Technology Partner',
-      description: 'Premier cloud computing platform',
-      partnership: 'Cloud infrastructure and AI services'
-    },
-    {
-      name: 'Google Cloud',
-      logo: 'GC',
-      category: 'Technology Partner',
-      description: 'Innovative cloud and AI platform',
-      partnership: 'Machine learning and data analytics'
-    },
-    {
-      name: 'IBM',
-      logo: 'IBM',
-      category: 'Strategic Partner',
-      description: 'Enterprise technology solutions',
-      partnership: 'AI and quantum computing initiatives'
-    },
-    {
-      name: 'Oracle',
-      logo: 'O',
-      category: 'Technology Partner',
-      description: 'Database and enterprise software',
-      partnership: 'Enterprise data management solutions'
-    },
-    {
-      name: 'Salesforce',
-      logo: 'SF',
-      category: 'Strategic Partner',
-      description: 'Customer relationship management',
-      partnership: 'AI-powered CRM integration'
-    }
-  ];
-
-  const partnershipBenefits = [
-    {
-      title: 'Revenue Growth',
-      icon: TrendingUp,
-      description: 'Increase your revenue through our proven solutions and market expertise',
-      metrics: 'Average 40% revenue increase'
-    },
-    {
-      title: 'Technical Excellence',
-      icon: Star,
-      description: 'Access to cutting-edge AI and technology solutions',
-      metrics: '100+ technology patents'
-    },
-    {
-      title: 'Market Expansion',
-      icon: Globe,
-      description: 'Expand into new markets with our global presence',
-      metrics: '25+ countries served'
-    },
-    {
-      title: 'Innovation Support',
-      icon: Rocket,
-      description: 'Collaborate on innovative solutions and research',
-      metrics: '$50M+ R&D investment'
-    }
-  ];
-
-  const partnerPrograms = [
-    {
-      name: 'Silver Partner',
-      requirements: 'Basic partnership agreement',
-      benefits: [
-        'Access to partner portal',Basic marketing materials',Email support',Training resources'
-      ],
-      revenue: 'Up to $100K annually'
-    },
-    {
-      name: 'Gold Partner',
-      requirements: 'Demonstrated success and commitment',
-      benefits: [
-        'All Silver benefits',Dedicated partner manager',Advanced training programs',Marketing development funds',Joint marketing campaigns'
-      ],
-      revenue: '$100K - $500K annually'
-    },
-    {
-      name: 'Platinum Partner',
-      requirements: 'Strategic partnership with proven results',
-      benefits: [
-        'All Gold benefits',Executive relationship management',Custom development support',Exclusive market access',Strategic planning sessions'
-      ],
-      revenue: '$500K+ annually'
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Partners - Zion Tech Group"
+      <SEO title="Partners - Zion Tech Group"
         description="Strategic partnerships and collaboration opportunities with leading technology companies. Join our partner ecosystem and grow together."
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -252,7 +113,7 @@ const Partners = () => {
                 <div className="space-y-3">
                   {type.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />
                       <span className="text-sm text-slate-300">{benefit}</span>
                     </div>
                   ))}
@@ -326,7 +187,7 @@ const Partners = () => {
                 <ul className="space-y-3 mb-6">
                   {program.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />
                       <span className="text-sm text-slate-300">{benefit}</span>
                     </li>
                   ))}
@@ -341,7 +202,7 @@ const Partners = () => {
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -414,7 +275,7 @@ const Partners = () => {
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4"  />
                 Call +1 302 464 0950
               </a>
             </div>
@@ -428,7 +289,7 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-white" />
+                <Phone className="w-6 h-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
@@ -438,7 +299,7 @@ const Partners = () => {
             
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-white" />
+                <Mail className="w-6 h-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
               <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
@@ -448,7 +309,7 @@ const Partners = () => {
             
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-white" />
+                <MapPin className="w-6 h-6 text-white"  />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
               <div className="text-slate-300 text-sm">
@@ -460,7 +321,7 @@ const Partners = () => {
         </div>
       </section>
     </div>
-  );};
+  )};
 
 export default Partners;
 '"

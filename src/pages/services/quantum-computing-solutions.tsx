@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion.ts';
 import {
 
   Atom,
@@ -18,76 +15,9 @@ import {
 
 export default function QuantumComputingSolutions(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Atom,
-      title: 'Quantum Processing',
-      description:'
-        'Advanced quantum computing solutions for complex computational problems and simulations.'},
-    {
-
-      icon: Brain,
-      title: 'Quantum Machine Learning',
-      description:'
-        'Quantum-enhanced ML algorithms that outperform classical approaches for specific applications.'},
-    {
-
-      icon: Target,
-      title: 'Optimization Solutions',
-      description:'
-        'Quantum optimization algorithms for logistics, finance, and complex system design.'},
-    {
-
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description:'
-        'Real-time monitoring and analysis of quantum computing performance and results.'},
-    {
-
-      icon: Shield,
-      title: 'Quantum Security',
-      description:'
-        'Quantum-resistant cryptography and quantum key distribution for enhanced security.'},
-    {
-
-      icon: Users,
-      title: 'Expert Consultation',
-      description:'
-        'Access to quantum computing experts and specialized implementation support.'},
-  ];
-
-  const benefits = ['
-    'Solve previously intractable problems',Exponential speedup for specific algorithms',Enhanced machine learning capabilities',Improved optimization and simulation',Future-proof security solutions',Competitive advantage in research',
-  ];
-
-  const solutions = [
-    {
-
-      title: 'Quantum Algorithm Development',
-      description:'
-        'Custom quantum algorithms designed for your specific business challenges and use cases.',
-      icon: Brain},
-    {
-
-      title: 'Quantum Cloud Access',
-      description:'
-        'Access to leading quantum computing platforms through our managed cloud services.',
-      icon: Cloud},
-    {
-
-      title: 'Quantum Software Integration',
-      description:'
-        'Seamless integration of quantum computing capabilities into existing software systems.',
-      icon: Cpu},
-    {
-
-      title: 'Quantum Research & Development',
-      description:'
-        'Collaborative R&D programs to explore quantum computing applications for your industry.',
-      icon: Lightbulb},
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -105,7 +35,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />              Next-Generation Computing
+              <Atom className="w-4 h-4 mr-2"  />              Next-Generation Computing
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Solutions
@@ -236,7 +166,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                    <span className="text-slate-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                    <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -251,7 +181,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               <div className="bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30">"
                 <div className="text-center">"
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-                    <Zap className="w-10 h-10 text-white" />
+                    <Zap className="w-10 h-10 text-white"  />
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Quantum Ready?
@@ -297,6 +227,5 @@ export default function QuantumComputingSolutions(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

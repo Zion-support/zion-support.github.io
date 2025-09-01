@@ -1,8 +1,5 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Calculator, 
-import { SEO } from "../components / SEO";
 
 
   Check, 
@@ -20,27 +17,18 @@ import { SEO } from "../components / SEO";
   Atom,
   Satellite'
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
 
 export default function PricingGuide(...args[]):  {
 
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
-  const currencyRates = {
-
-  USD: { symbol: '$',
-  rate: 1 ;
+  
 ;
 ;
-;
-
-
-
 },;
     EUR: { symbol: '€', rate: 0.85 },;
-    GBP: { symbol: '£', rate: 0.73 };
-  };
+    GBP: { symbol: '£', rate: 0.73 }};
 
 export const PricingGuide: React.FC = () => {
   const pricingTiers = [
@@ -57,8 +45,6 @@ export const PricingGuide: React.FC = () => {
         "Monthly Reports","
         "2 User Licenses"
 =======
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       notIncluded[;"
@@ -169,7 +155,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
 <<<<<<< HEAD
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
-      />
+       />
 =======
         title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
        />
@@ -180,7 +166,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center">"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">"
-              <Calculator className="h-10 w-10 text-white" />
+              <Calculator className="h-10 w-10 text-white"  />
             </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pricing Guide
             </h1>"
@@ -298,7 +284,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                     }`}
                   >
                     {tier.cta}
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </Link>
                 </div>
 "
@@ -306,7 +292,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)  => ("
                     <div key={featureIndex} className="flex items-center text-slate-300">"
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </div>
                   ))}
 
@@ -315,7 +301,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => ("
                         <div key={featureIndex} className="flex items-center text-slate-500">"
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />"                          <span className="text-sm">{feature}</span>
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />"                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </>
@@ -432,7 +418,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 "
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2"  />
                 Get Custom Quote
               </Link>
               <Link"
@@ -445,6 +431,5 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

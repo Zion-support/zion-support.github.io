@@ -18,56 +18,18 @@ import {
   Award} from 'lucide-react';
 
 export default function AIESGCompliancePlatform() {
-  const features = ['
-    'AI-powered ESG data collection and analysis',Automated compliance reporting and monitoring',Real-time sustainability performance tracking',Carbon footprint calculation and optimization',Social responsibility metrics and reporting',Governance risk assessment and monitoring',Regulatory compliance automation',Stakeholder engagement tracking',ESG scoring and benchmarking',Custom sustainability dashboard creation',
-  ];
-
-  const benefits = ['
-    'Reduce ESG reporting time by 85%',Improve compliance accuracy by 90%',Cut carbon emissions tracking costs by 70%',Real-time sustainability performance insights',Automated regulatory compliance updates',Enhanced stakeholder transparency and trust',
-  ];
-
-  const pricing = [
-    {
-
-      name: 'Starter',
-      price: '$399/mo',
-      features: ['
-        'Up to 50 ESG metrics',Basic compliance reporting',Standard dashboards',Email support',Monthly sustainability reports',
-      ],
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$899/mo',
-      features: ['
-        'Up to 200 ESG metrics',Advanced AI analytics',Real-time monitoring',Priority support',Custom dashboards',API access',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$2,999/mo',
-      features: ['
-        'Unlimited ESG metrics',Full AI suite',Custom compliance models',Dedicated support',White-label solutions',Advanced integrations',
-      ],
-      popular: false},
-  ];
-
-  const useCases = ['
-    'Corporate sustainability reporting',ESG investment portfolio analysis',Supply chain sustainability tracking',Regulatory compliance automation',Stakeholder ESG communication',Sustainability performance benchmarking',
-  ];
-
-  const esgCategories = ['
-    'Environmental Impact Assessment',Carbon Footprint Management',Renewable Energy Tracking',Waste Management Analytics',Social Responsibility Metrics',Diversity & Inclusion Tracking',Governance Risk Assessment',Compliance Monitoring',
-  ];
-
+  
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-white">
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-800 py-20 text-center text-white">"
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <Leaf className="w-4 h-4 mr-2" /> AI-Powered ESG Compliance Platform
+            <Leaf className="w-4 h-4 mr-2"  /> AI-Powered ESG Compliance Platform
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             AI ESG Compliance Platform
@@ -116,7 +78,7 @@ export default function AIESGCompliancePlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -132,7 +94,7 @@ export default function AIESGCompliancePlatform() {
                   key={index}"
                   className="flex items-center p-3 bg-gray-50 rounded-lg"
                 >"
-                  <Award className="w-4 h-4 text-green-500 mr-3" />"                  <span className="text-gray-700">{category}</span>
+                  <Award className="w-4 h-4 text-green-500 mr-3"  />"                  <span className="text-gray-700">{category}</span>
                 </div>
               ))}
             </div>
@@ -160,7 +122,7 @@ export default function AIESGCompliancePlatform() {
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
               >"
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">"
-                  <TrendingUp className="w-6 h-6 text-green-600" />
+                  <TrendingUp className="w-6 h-6 text-green-600"  />
                 </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
             ))}
@@ -186,7 +148,7 @@ export default function AIESGCompliancePlatform() {
               className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
             >"
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">"
-                <Database className="w-5 h-5 text-green-600" />
+                <Database className="w-5 h-5 text-green-600"  />
               </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
@@ -235,7 +197,7 @@ export default function AIESGCompliancePlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -325,7 +287,7 @@ export default function AIESGCompliancePlatform() {
         </h2>"
         <div className="grid md:grid-cols-2 gap-8">"
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
-            <Phone className="w-8 h-8 text-green-500 mx-auto mb-4" />"
+            <Phone className="w-8 h-8 text-green-500 mx-auto mb-4"  />"
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Call Us
             </h3>"
@@ -341,7 +303,7 @@ export default function AIESGCompliancePlatform() {
           </div>
 "
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
-            <Mail className="w-8 h-8 text-green-500 mx-auto mb-4" />"
+            <Mail className="w-8 h-8 text-green-500 mx-auto mb-4"  />"
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               Email Us
             </h3>"
@@ -369,10 +331,9 @@ export default function AIESGCompliancePlatform() {
             rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />          </a>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

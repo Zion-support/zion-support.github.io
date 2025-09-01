@@ -1,5 +1,3 @@
-import React, { useState } from 'react.ts';
-import { motion } from 'framer-motion.ts';
 import {
 
   Phone,  Mail,
@@ -31,19 +29,7 @@ export function ContactPage(...args: any[]): any {
     message: ''});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-
-  const handleInputChange = (
-    e: anyReact.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-
-    setFormData({
-
-      ...formData,
-      [e.target.name]: e.target.value});
-  };
+  const [isSubmitted, setIsSubmitted] = useState (false) };
 
   const handleSubmit = async (e: anyReact.FormEvent) => {
 
@@ -66,71 +52,8 @@ export function ContactPage(...args: any[]): any {
         company: '',
         phone: '',
         service: '',
-        message: ''});
-    }, 3000);
-  };
+        message: ''})}, 3000)};
 
-  const contactMethods = [
-    {
-
-      title: 'Phone',
-      value: '+1 302 464 0950',
-      icon: Phone,
-      description: 'Call us anytime',
-      color: 'from-blue-500 to-cyan-600',
-      link: 'tel:+13024640950'},
-    {
-
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      icon: Mail,
-      description: 'Send us a message',
-      color: 'from-purple-500 to-pink-600',
-      link: 'mailto:kleber@ziontechgroup.com'},
-    {
-
-      title: 'Office',
-      value: '364 E Main St STE 1008 Middletown DE 19709',
-      icon: MapPin,
-      description: 'Visit our headquarters',
-      color: 'from-green-500 to-teal-600',
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
-    {
-
-      title: 'Hours',
-      value: '24/7 Support',
-      icon: Clock,
-      description: 'Always here for you',
-      color: 'from-orange-500 to-red-600'},
-  ];
-
-  const services = ['
-    'AI Solutions',Quantum Computing',Cybersecurity',Cloud & DevOps',Digital Transformation',Data Analytics',IoT & Edge Computing',Space Technology',AI Healthcare Platform',AI Sales Copilot',AI Marketing Automation',AI Project Management',Quantum AI Hybrid Platform',AI Cybersecurity Platform',Quantum AI Trading Platform',Space Technology Solutions',Digital Twin Solutions',Green IT Solutions',Zero Trust Network Access',AI Creative Studio',AI Health Monitoring',AI Financial Advisor',AI Education Platform',AI Legal Assistant',AI Real Estate Platform',AI Supply Chain Optimizer',AI Energy Management',AI Manufacturing Platform',AI Customer Intelligence',AI Data Governance',Custom Development',Consulting',
-  ];
-
-  const socialLinks = [
-    {
-
-      icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',
-      label: 'LinkedIn'},
-    {
-
-      icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',
-      label: 'Twitter'},
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-    {
-
-      icon: Facebook,
-      href: 'https://facebook.com/ziontechgroup',
-      label: 'Facebook'},
-    {
-
-      icon: Instagram,
-      href: 'https://instagram.com/ziontechgroup',
-      label: 'Instagram'},
-  ];
   
   
   
@@ -146,7 +69,7 @@ export function ContactPage(...args: any[]): any {
             className="bg-gray-800 rounded-2xl p-12 border border-gray-700"
           >"
             <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-              <CheckCircle className="w-10 h-10 text-white" />
+              <CheckCircle className="w-10 h-10 text-white"  />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">
               Message Sent Successfully!
@@ -164,8 +87,7 @@ export function ContactPage(...args: any[]): any {
             </div>
           </motion.div>
         </div>
-      </div>) ;
-  }
+      </div>) }
   return ("
     <div className="min-h-screen py-8">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -387,7 +309,7 @@ export function ContactPage(...args: any[]): any {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />                    <span>Send Message</span>
+                    <Send className="w-5 h-5"  />                    <span>Send Message</span>
                   </>
                 )}
               </button>
@@ -415,15 +337,15 @@ export function ContactPage(...args: any[]): any {
 "
               <div className="space-y-4">"
                 <div className="flex items-center space-x-3 text-gray-300">"
-                  <Building className="w-5 h-5 text-cyan-400" />
+                  <Building className="w-5 h-5 text-cyan-400"  />
                   <span>Founded in 2020</span>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
-                  <Users className="w-5 h-5 text-cyan-400" />
+                  <Users className="w-5 h-5 text-cyan-400"  />
                   <span>100+ Team Members</span>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
-                  <Globe className="w-5 h-5 text-cyan-400" />                  <span>25+ Countries Served</span>
+                  <Globe className="w-5 h-5 text-cyan-400"  />                  <span>25+ Countries Served</span>
                 </div>
               </div>
             </div>
@@ -438,26 +360,26 @@ export function ContactPage(...args: any[]): any {
                   href="tel:+13024640950"
                   className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
                 >"
-                  <Phone className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />"
+                  <Phone className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"  />"
                   <span className="text-white">Call Now</span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />                </a>
+                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform"  />                </a>
 
                 <a"
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
                 >"
-                  <Mail className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />"
+                  <Mail className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform"  />"
                   <span className="text-white">Send Email</span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform"  />
                 </a>
 
                 <a"
                   href="/request-quote"
                   className="flex items-center space-x-3 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group"
                 >"
-                  <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />"
+                  <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform"  />"
                   <span className="text-white font-medium">Request Quote</span>"
-                  <ArrowRight className="w-4 h-4 text-white ml-auto group-hover:translate-x-1 transition-transform" />                </a>
+                  <ArrowRight className="w-4 h-4 text-white ml-auto group-hover:translate-x-1 transition-transform"  />                </a>
               </div>
             </div>
 
@@ -484,6 +406,5 @@ export function ContactPage(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}
 '"`

@@ -464,36 +464,15 @@ export const innovativeServices2026: InnovativeService[] = [
 ];
 
 // Combine original services with new services
-const allServices = [...innovativeServices2026, ...newServices];
 
 export default allServices;
 
-export const serviceCategories = [
-  {
-
-    name: 'Micro SaaS',
-    description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
-  },
-  {
-
-    name: 'AI Solutions',
-    description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
-  },
-  {
-
-    name: 'IT Services',
-    description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s  => s.category === 'IT Services')
-  },
-    services: innovativeServices2026.filter(s  => ['Quantum Computing',Blockchain & Web3',Metaverse & AR/VR'].includes(s.category));
+export 
   };
   {;
     name: 'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
-    services: innovativeServices2026.filter(s => ['Quantum Computing',Blockchain & Web3',Metaverse & AR/VR'].includes(s.category));
-  };
+    services: innovativeServices2026.filter(s => ['Quantum Computing',Blockchain & Web3',Metaverse & AR/VR'].includes(s.category))};
 ];
 
-export default innovativeServices2026;}}
+export default innovativeServices2026}}

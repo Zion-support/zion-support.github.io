@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
 
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -9,36 +7,10 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
   useEffect ( () => {
     // Show CTA after 5 seconds
-    const timer = setTimeout ( () => {;
+    
       setIsVisible (true) }, 5000) ;
 
-    return () => clearTimeout (timer) }, []) ;
-
-  const contactMethods = [
-    {
-
-      icon: Phone,
-      title: "Call Us","
-      description: "Speak with an expert","
-      action: "+1 (555) 123-4567","
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-
-      icon: Mail,"
-      title: "Email Us","
-      description: "Send us a message","
-      action: "info@ziontechgroup.com","
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-
-      icon: Calendar,"
-      title: "Schedule Demo","
-      description: "Book a consultation","
-      action: "Book Now","
-      color: "from-purple-500 to-pink-500";
-    };
+    return () => clearTimeout (timer) }, []) };
   ];
 
   const quickServices = ["
@@ -49,11 +21,8 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   ];
 
   if (!isVisible) return null;
-import { Link } from 'react-router-dom';
 
 =======
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isExpanded, setIsExpanded] = useState (false) ;
 
@@ -177,6 +146,5 @@ import { motion, AnimatePresence } from 'framer-motion';'
           />;) };
       </AnimatePresence>;
     </>
-  );
-}
+  )}
 '"

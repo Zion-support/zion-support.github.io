@@ -1,88 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { PenTool, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Cpu, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, FileText, Image, Video, Music, Code } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function AIContentCreation() {
-  const features = [
-    {
-      icon: PenTool,
-      title: 'AI Writing Assistant',
-      description: 'Generate high-quality content for blogs, articles, marketing copy, and social media'
-    },
-    {
-      icon: Image,
-      title: 'Visual Content Generation',
-      description: 'Create stunning images, graphics, and visual assets with AI-powered design tools'
-    },
-    {
-      icon: Video,
-      title: 'Video Content Creation',
-      description: 'Generate video scripts, storyboards, and automated video content'
-    },
-    {
-      icon: Brain,
-      title: 'Content Optimization',
-      description: 'AI-powered SEO optimization and content performance analysis'
-    },
-    {
-      icon: Users,
-      title: 'Multi-Channel Publishing',
-      description: 'Automated content distribution across multiple platforms and formats'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Comprehensive content performance tracking and optimization insights'
-    }
-  ];
-
-  const benefits = [
-    'Increase content production by 10x',Improve SEO rankings and organic traffic',Reduce content creation costs by 60%',Maintain consistent brand voice and quality',Scale content marketing operations efficiently',Generate personalized content for different audiences'
-  ];
-
-  const useCases = [
-    {
-      title: 'Blog & Article Writing',
-      description: 'AI-powered content creation for blogs, articles, and long-form content'
-    },
-    {
-      title: 'Marketing Copy',
-      description: 'Generate compelling marketing copy, ads, and promotional content'
-    },
-    {
-      title: 'Social Media Content',
-      description: 'Create engaging social media posts, captions, and visual content'
-    },
-    {
-      title: 'Email Marketing',
-      description: 'Personalized email campaigns and automated content generation'
-    }
-  ];
-
-  const contentTypes = [
-    {
-      icon: FileText,
-      title: 'Written Content',
-      items: ['Blog posts',Articles',Whitepapers',Case studies',Product descriptions']
-    },
-    {
-      icon: Image,
-      title: 'Visual Content',
-      items: ['Infographics',Social media graphics',Banner ads',Product images',Illustrations']
-    },
-    {
-      icon: Video,
-      title: 'Video Content',
-      items: ['Video scripts',Storyboards',Tutorial videos',Product demos',Social media videos']
-    },
-    {
-      icon: Code,
-      title: 'Technical Content',
-      items: ['Documentation',API guides',Tutorials',Code examples',Technical blogs']
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -96,7 +17,7 @@ export default function AIContentCreation() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
-              <PenTool className="w-4 h-4" />
+              <PenTool className="w-4 h-4"  />
               AI Content Creation
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -115,7 +36,7 @@ export default function AIContentCreation() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -200,7 +121,7 @@ export default function AIContentCreation() {
                 <ul className="space-y-2">
                   {type.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-400" />
+                      <CheckCircle className="w-4 h-4 text-blue-400"  />
                       {item}
                     </li>
                   ))}
@@ -230,7 +151,7 @@ export default function AIContentCreation() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -302,7 +223,7 @@ export default function AIContentCreation() {
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -332,7 +253,7 @@ export default function AIContentCreation() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Your Quote
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -345,5 +266,4 @@ export default function AIContentCreation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

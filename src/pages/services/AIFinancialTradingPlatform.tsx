@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
 import { Brain, 
   TrendingUp, 
   DollarSign, 
@@ -82,9 +79,6 @@ export default function AIFinancialTradingPlatform(...args[]):  {
         "Basic risk management","
         "Email support"
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';        "Email support"
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
@@ -133,7 +127,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
 <<<<<<< HEAD
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
-      />
+       />
 =======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
        />
@@ -168,7 +162,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />              AI-Powered Trading
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Trading
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Financial"
@@ -277,7 +271,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
@@ -362,7 +356,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="text-center"
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <TrendingUp className="w-10 h-10 text-white" />
+                  <TrendingUp className="w-10 h-10 text-white"  />
                 </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -447,7 +441,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
@@ -556,7 +550,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -650,6 +644,5 @@ import { SEO  } from '@/components/SEO';        "Email support"
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

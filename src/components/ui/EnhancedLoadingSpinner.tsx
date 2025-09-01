@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
 
 interface EnhancedLoadingSpinnerProps {
@@ -20,19 +18,8 @@ export function EnhancedLoadingSpinner({
   progress = 0,
   variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {
 
-  const sizeClasses = {
-
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-32 h-32',
-    xl: 'w-48 h-48'};
-
-  const textSizes = {
-
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-lg',
-    xl: 'text-xl'};
+  
+  
 <<<<<<< HEAD
 
   if (variant === 'minimal') {
@@ -51,8 +38,7 @@ export function EnhancedLoadingSpinner({
           </span>
         )}
       </div>
-    );
-  }
+    )}
 <<<<<<< HEAD
 
   if (variant === 'default') {

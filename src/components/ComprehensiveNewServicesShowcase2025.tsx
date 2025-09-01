@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';
 import { Search,
   Filter,
   Star,
@@ -36,59 +33,31 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
-  const categories = ['
-    { id: 'all', name: 'All Services', icon: Globe },
-    { id: 'ai-services', name: 'AI Services', icon: Brain },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom },
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: Lock },
-    { id: 'biotech-ai', name: 'HealthTech & BioTech', icon: Heart },
-    { id: 'fintech', name: 'FinTech', icon: DollarSign },
-    { id: 'edutech', name: 'EduTech', icon: GraduationCap },
-    { id: 'martech', name: 'MarTech', icon: BarChart3 },
-    { id: 'space-tech', name: 'Space Tech', icon: Satellite },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Cpu }
-  ];
-
-  const filteredServices = comprehensiveNewServices2025;
+  
+  
     .filter(service => {
 
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
+      
+      
+      return matchesSearch && matchesCategory})
     .sort((a, b) => {
 
       if (sortBy === 'featured') return b.featured ? 1 : -1;
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,));
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,));
 =======
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';    .sort((a, b) => {
 '
       if (sortBy === 'featured') return b.featured ? 1 : -1;'
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      return 0;
-    }) ;
+      return 0}) ;
 
-  const getCategoryIcon = (category: anystring)  => {
+  
+    return categoryData ? categoryData.icon : Globe};
 
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
-
-  const getCategoryColor = (category: anystring)  => {
-
-    const colors: { [key: string]: string } = {
-
-      'ai-services': 'from-purple-500 to-pink-600',quantum-computing': 'from-indigo-500 to-purple-600',blockchain-web3': 'from-green-500 to-teal-600',biotech-ai': 'from-red-500 to-pink-600',fintech': 'from-orange-500 to-red-600',edutech': 'from-blue-500 to-indigo-600',martech': 'from-green-500 to-emerald-600',space-tech': 'from-purple-500 to-indigo-600',emerging-tech': 'from-teal-500 to-cyan-600'
-    };
-    return colors[category] || 'from-gray-500 to-gray-600';
-  };
+  
+    return colors[category] || 'from-gray-500 to-gray-600'};
   return()
     <div className="min-h-screen py-8 bg-gray-900">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,7 +83,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}"
             <div className="relative flex-1 max-w-md">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
 <<<<<<< HEAD
                 type="text"
@@ -184,7 +153,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
                 </div>
                 {service.featured && ("
                   <div className="flex items-center space-x-1 text-yellow-400">"
-                    <Star className="w-4 h-4 fill-current" />"                    <span className="text-xs">Featured</span>
+                    <Star className="w-4 h-4 fill-current"  />"                    <span className="text-xs">Featured</span>
                   </div>
                 )}
               </div>
@@ -217,7 +186,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
                 <div className="space-y-1">
                   {service.features.slice(0, 3).map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-300">"
-                      <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />                      <span>{feature}</span>
+                      <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0"  />                      <span>{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -233,7 +202,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
                 <div className="space-y-1">
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center space-x-2 text-xs text-gray-300">"
-                      <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0" />                      <span>{benefit}</span>
+                      <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0"  />                      <span>{benefit}</span>
                     </div>) ) }
                 </div>
               </div>
@@ -277,7 +246,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
                   className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Learn More"
-                  <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />                </a>
+                  <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform"  />                </a>
                 <a`
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}"
                   className="block w-full text-center bg-transparent text-cyan-400 px-4 py-2 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-200"
@@ -308,7 +277,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
               <p className="text-cyan-100">+1 302 464 0950</p>"
@@ -317,7 +286,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
               <p className="text-cyan-100">kleber@ziontechgroup.com</p>"
@@ -326,7 +295,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
               <p className="text-cyan-100">364 E Main St STE 1008</p>"              <p className="text-cyan-200 text-sm">Middletown DE 19709</p>
@@ -340,7 +309,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >"
-              <Globe className="w-5 h-5" />              <span>Visit Our Website</span>
+              <Globe className="w-5 h-5"  />              <span>Visit Our Website</span>
             </a>
           </div>
         </motion.div>
@@ -356,7 +325,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">"
-                  <Rocket className="w-8 h-8 text-white" />                </div>
+                  <Rocket className="w-8 h-8 text-white"  />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">15+</div>"
               <div className="text-gray-400">New Services</div>
@@ -370,7 +339,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">"
-                  <Brain className="w-8 h-8 text-white" />                </div>
+                  <Brain className="w-8 h-8 text-white"  />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">10+</div>"
               <div className="text-gray-400">AI-Powered</div>
@@ -384,7 +353,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">"
-                  <Shield className="w-8 h-8 text-white" />                </div>
+                  <Shield className="w-8 h-8 text-white"  />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
               <div className="text-gray-400">Uptime</div>
@@ -398,7 +367,7 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
             >"
               <div className="flex justify-center mb-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center">"
-                  <Zap className="w-8 h-8 text-white" />                </div>
+                  <Zap className="w-8 h-8 text-white"  />                </div>
               </div>"
               <div className="text-3xl font-bold text-white mb-2">24/7</div>"
               <div className="text-gray-400">Support</div>
@@ -406,6 +375,5 @@ import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2
           </div>
         </div>
       </div>
-    </div>) ;
-}
+    </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`

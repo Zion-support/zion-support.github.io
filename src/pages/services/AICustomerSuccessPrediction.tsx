@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Brain,
@@ -34,135 +32,42 @@ import {
   AlertTriangle,
   Star'
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
 ;
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Prediction Engine',
-      description: 'Advanced machine learning algorithms that predict customer churn, upsell opportunities, and success probability with 95%+ accuracy.'
-    },
-    {
-
-      icon: TrendingUp,
-      title: 'Real-time Risk Scoring',
-      description: 'Continuous monitoring and scoring of customer health, engagement, and satisfaction levels in real-time.'
-    },
-    {
-
-      icon: Users,
-      title: 'Behavioral Analytics',
-      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.';
+  
     },;
     {;
       icon: Zap,;
       title: 'Automated Alerts',;
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
-    };
+      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'};
   ];
 
-  const capabilities = [
-    {
-
-      title: 'Predictive Analytics',
-      description: 'Machine learning models that forecast customer behavior and business outcomes',
-      icon: Brain,
-      benefits: ['Churn prediction',Upsell opportunities',Customer lifetime value',Engagement scoring']
-    },
-    {
-
-      title: 'Customer Health Monitoring',
-      description: 'Comprehensive dashboard showing real-time customer health metrics',
-      icon: Activity,
-      benefits: ['Health scoring',Risk assessment',Trend analysis',Performance tracking']
-    },
-    {
-
-      title: 'Automated Interventions',
-      description: 'AI-driven recommendations for customer success actions',
-      icon: Zap,
-      benefits: ['Actionable insights',Timing optimization',Resource allocation',Success probability']
-    },;
+  
     {;
       title: 'Integration Hub',;
       description: 'Seamless integration with your existing CRM, support, and analytics tools',;
       icon: Database,;
-      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation'];
-    };
+      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation']};
   ];
 
-  const useCases = [
-    {
-
-      industry: 'SaaS & Technology',
-      description: 'Predict subscription renewals, identify expansion opportunities, and reduce churn through proactive engagement',
-      icon: Users,
-      metrics: ['Churn Rate Reduction',Expansion Revenue',Customer Satisfaction',Lifetime Value']
-    },
-    {
-
-      industry: 'E-commerce & Retail',
-      description: 'Forecast customer purchasing behavior, optimize retention campaigns, and increase repeat purchases',
-      icon: ShoppingCart,
-      metrics: ['Repeat Purchase Rate',Customer Retention',Average Order Value',Loyalty Score']
-    },
-    {
-
-      industry: 'Financial Services',
-      description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
-      icon: DollarSign,
-      metrics: ['Default Risk Score',Customer Value',Product Adoption',Risk Mitigation']
-    },;
+  
     {;
       industry: 'Healthcare',;
       description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
       icon: Heart,;
-      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization'];
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: TrendingUp,
-      title: 'Increase Customer Retention',
-      description: 'Reduce churn by up to 40% through proactive intervention and personalized engagement strategies.'
-    },
-    {
-
-      icon: DollarSign,
-      title: 'Boost Revenue Growth',
-      description: 'Identify and capitalize on upsell opportunities, increasing average customer value by 25-35%.'
-    },
-    {
-
-      icon: Users,
-      title: 'Improve Customer Satisfaction',
-      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.';
-    },;
+      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization']};
+  ]},;
     {;
       icon: Zap,;
       title: 'Optimize Resource Allocation',;
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
-    };
+      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'};
   ];
 
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for growing SaaS companies',
-      features[;
+  
         'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
       ],;
 =======
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';        'Email support'
       ],;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
@@ -192,34 +97,21 @@ import { motion } from 'framer-motion';        'Email support'
         'Advanced security';
       ],;
       cta: 'Contact Sales',;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-
-      title: 'SaaS Companies',
-      description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
-      metrics['Reduce churn by 25%',Increase expansion revenue by 40%',Improve NPS scores'];
-    },;
+      popular: false};
+  ]},;
     {
 
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
-      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases'];
-    },;
+      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},;
     {
 
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
-      metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores'];
-    };
+      metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']};
   ];
 
-  const integrations = ['
-<<<<<<< HEAD
-    'Salesforce',HubSpot',Intercom',Zendesk',Slack',Microsoft Teams',;
+  
     'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
 =======
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
@@ -233,7 +125,7 @@ import { motion } from 'framer-motion';        'Email support'
         title="AI Customer Success Prediction Platform | Zion Tech Group"
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
         keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
-      />
+       />
 =======
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
@@ -333,7 +225,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">25% Churn Reduction</h3>
               <p className="text-slate-300">Identify at-risk customers before they leave and take proactive action</p>
@@ -346,7 +238,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">40% Revenue Growth</h3>
               <p className="text-slate-300">Uncover expansion opportunities and increase customer lifetime value</p>
@@ -359,7 +251,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">95% Prediction Accuracy</h3>
               <p className="text-slate-300">Advanced AI algorithms provide reliable insights for better decision-making</p>
@@ -517,7 +409,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <div className="space-y-2">
                   {capability.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </div>
                   ))}
                 </ul>
@@ -625,7 +517,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {metric}
+                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -825,7 +717,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -995,27 +887,27 @@ import { motion } from 'framer-motion';        'Email support'
             <div className="flex flex-wrap justify-center gap-4">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a "
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Us
               </a>
             </div>
             "
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>14-day free trial</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>No credit card required</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
@@ -1028,7 +920,7 @@ import { motion } from 'framer-motion';        'Email support'
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-6 h-6 text-white" />
+                <Phone className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
                 +1 302 464 0950
@@ -1037,7 +929,7 @@ import { motion } from 'framer-motion';        'Email support'
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-6 h-6 text-white" />
+                <Mail className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
                 kleber@ziontechgroup.com
@@ -1046,7 +938,7 @@ import { motion } from 'framer-motion';        'Email support'
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-6 h-6 text-white" />
+                <MapPin className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-slate-300">
                 364 E Main St STE 1008<br />
@@ -1058,6 +950,5 @@ import { motion } from 'framer-motion';        'Email support'
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

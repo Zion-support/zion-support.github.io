@@ -59,8 +59,7 @@ const zionContact = {
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
@@ -538,4 +537,4 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true};
 ];
 
-export default innovativeCybersecurityServices2030;}}"
+export default innovativeCybersecurityServices2030}}"

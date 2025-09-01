@@ -837,37 +837,29 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     contactInfo: {"
       phone: "+1 302 464 0950",;"
       email: "kleber@ziontechgroup.com",;"
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    };
-  };
+      address: "364 E Main St STE 1008 Middletown DE 19709"}};
 ];
 
 // Helper functions;
-export const getEnhancedServiceById = (...args: unknown[]): unknown => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id)};
 ;
-export const getEnhancedServicesByCategory = (...args: unknown[]): unknown => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category)};
 ;
-export const getEnhancedServiceCategories = (...args: unknown[]): unknown => {;
-  return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))];
-};
+export 
+  return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))]};
 ;
-export const getFeaturedEnhancedServices = (...args: unknown[]): unknown => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured);
-};
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured)};
 ;
-export const getEnhancedServicesByPriceRange = (...args: unknown[]): unknown => {;
+export 
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
-  );
-};
+  )};
 ;
-export const getEnhancedServicesByAIScore = (...args: unknown[]): unknown => {;
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};}}}}}}}}}}}}}}}}"
+export 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore)}}}}}}}}}}}}}}}}}"
     contactInfo: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;

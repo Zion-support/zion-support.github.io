@@ -1,29 +1,19 @@
-import React, { useRef } from "react";
-import { Popover } from "@headlessui/react";
-import { Link } from "react-router-dom";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 
 export interface AvatarMenuProps {
   avatarUrl?: string;
-  onLogout?: () => void;
-}
+  onLogout?: () => void}
 
 export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
-  const itemRefs = useRef<(HTMLAnchorElement | HTMLButtonElement | null)[]>([]);
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    const items = itemRefs.current.filter(Boolean);
-    const index = items.indexOf(document.activeElement as any);
+  
+  
+    
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      const next = index < items.length - 1 ? index + 1 : 0;
-      items[next]?.focus();
-    } else if (e.key === "ArrowUp") {
+      
+      items[next]?.focus()} else if (e.key === "ArrowUp") {
       e.preventDefault();
-      const prev = index > 0 ? index - 1 : items.length - 1;
-      items[prev]?.focus();
-    }
+      
+      items[prev]?.focus()}
   };
 
   return (
@@ -32,7 +22,7 @@ export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
         <>
           <Popover.Button as={Button} variant="ghost" className="h-8 w-8 rounded-full" aria-expanded={open}>
             <Avatar className="h-8 w-8">
-              <AvatarImage src={avatarUrl || ""} alt="User Avatar" />
+              <AvatarImage src={avatarUrl || ""} alt="User Avatar"  />
               <AvatarFallback>U</AvatarFallback>
             </Avatar>
             <span className="sr-only">Open user menu</span>
@@ -61,12 +51,10 @@ export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
                 <button
                   type="button"
                   ref={(el) => {
-                    itemRefs.current[2] = el;
-                  }}
+                    itemRefs.current[2] = el}}
                   onClick={() => {
                     close();
-                    onLogout?.();
-                  }}
+                    onLogout?.()}}
                   className="rounded px-2 py-1 text-left hover:bg-zion-blue-light focus:bg-zion-blue-light"
                 >
                   Logout
@@ -77,5 +65,4 @@ export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
         </>
       )}
     </Popover>
-  );
-}
+  )}

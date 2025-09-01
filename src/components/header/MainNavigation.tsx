@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { NavLink } from 'react-router-dom';
 import {
 
   ChevronDown,
@@ -43,12 +39,12 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsServicesOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <Zap className="w-4 h-4" />
+          <Zap className="w-4 h-4"  />
           <span>Services</span>"
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"  />
 =======
   HelpCircle,'
-  BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3" />
+  BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </button>
         {isServicesOpen && (
@@ -60,7 +56,7 @@ export function MainNavigation({ className }) {
             <div className="p-4">"
               <div className="grid grid-cols-3 gap-4">
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Zap className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Zap className="w-4 h-4 mr-2"  />
                     Micro SAAS
                   </h4>"
                   <ul className="space-y-2 text-sm">
@@ -115,7 +111,7 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Shield className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Shield className="w-4 h-4 mr-2"  />
                     IT Services
                   </h4>"
                   <ul className="space-y-2 text-sm">
@@ -170,7 +166,7 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Brain className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Brain className="w-4 h-4 mr-2"  />
                     AI Solutions
                   </h4>"
                   <ul className="space-y-2 text-sm">
@@ -230,7 +226,7 @@ export function MainNavigation({ className }) {
                   to="/enhanced-services"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
-                  View All Services"                  <TrendingUp className="w-4 h-4 ml-2" />
+                  View All Services"                  <TrendingUp className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -245,8 +241,8 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsSolutionsOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <Brain className="w-4 h-4" />
-          <span>Solutions</span>"          <ChevronDown className="w-3 h-3" />
+          <Brain className="w-4 h-4"  />
+          <span>Solutions</span>"          <ChevronDown className="w-3 h-3"  />
         </button>
         {isSolutionsOpen && (
           <div
@@ -257,7 +253,7 @@ export function MainNavigation({ className }) {
             <div className="p-4">"
               <div className="grid grid-cols-2 gap-4">
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Users className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <Users className="w-4 h-4 mr-2"  />
                     Talent
                   </h4>"
                   <ul className="space-y-2 text-sm">
@@ -296,7 +292,7 @@ export function MainNavigation({ className }) {
                   </ul>
                 </div>
                 <div>"
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <HardDrive className="w-4 h-4 mr-2" />
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">"                    <HardDrive className="w-4 h-4 mr-2"  />
                     Resources
                   </h4>"
                   <ul className="space-y-2 text-sm">
@@ -340,7 +336,7 @@ export function MainNavigation({ className }) {
                   to="/request-quote"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
-                  Get Custom Quote"                  <TrendingUp className="w-4 h-4 ml-2" />
+                  Get Custom Quote"                  <TrendingUp className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -357,7 +353,7 @@ export function MainNavigation({ className }) {
         >"
           <Building2 className="w-4 h-4" />
           <span>Company</span>"
-          <ChevronDown className="w-3 h-3" />        </button>
+          <ChevronDown className="w-3 h-3"  />        </button>
         {isCompanyOpen && (
           <div
             onMouseEnter={() => setIsCompanyOpen(true)}
@@ -435,9 +431,9 @@ export function MainNavigation({ className }) {
           onMouseLeave={() => setIsResourcesOpen(false)}"
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >"
-          <FileText className="w-4 h-4" />
+          <FileText className="w-4 h-4"  />
           <span>Resources</span>"
-          <ChevronDown className="w-3 h-3" />        </button>
+          <ChevronDown className="w-3 h-3"  />        </button>
         {isResourcesOpen && (
           <div
             onMouseEnter={() => setIsResourcesOpen(true)}
@@ -513,7 +509,7 @@ export function MainNavigation({ className }) {
         to="/help"
         className="text-zion-slate-light hover:text-white transition-colors flex items-center"
       >"
-        <HelpCircle className="w-4 h-4 mr-1" />        Support
+        <HelpCircle className="w-4 h-4 mr-1"  />        Support
       </Link>
 
       {/* Pricing */}
@@ -537,6 +533,5 @@ export function MainNavigation({ className }) {
         Get Started
       </NavLink>
     </nav>
-  );
-}
+  )}
 '"

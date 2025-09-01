@@ -1,8 +1,4 @@
 :src/store/index.tsx
-import { configureStore  } from '@reduxjs/toolkit';
-import cartReducer from "./cartSlice";"
-import wishlistReducer from "./wishlistSlice";"
-import authReducer from "./authSlice";
 ;
 
 export const store:  configureStore({;
@@ -10,9 +6,7 @@ export const store:  configureStore({;
     cart: cartReducer,;
     wishlist: wishlistReducer,;
 :src/store/index.tsx
-    auth: authReducer,;
-  },;
-});
+    auth: authReducer,},});
 ;
     auth: authReducer,},});
 

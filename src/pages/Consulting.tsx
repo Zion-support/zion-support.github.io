@@ -1,85 +1,38 @@
-import React from 'react.ts';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
 
-const Consulting = () => {
-  const consultingServices = [
-    {
 
-      icon: Lightbulb,
-      title: "Technology Strategy","
-      description: "Strategic technology planning and digital transformation roadmaps","
-      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"];
     },;
     {
 
       icon: Target,"
       title: "AI & ML Consulting","
       description: "Expert guidance on AI implementation and machine learning strategies","
-      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"];
-    },;
+      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]},;
     {
 
       icon: Shield,"
       title: "Cybersecurity Consulting","
       description: "Comprehensive security assessments and risk management strategies","
-      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"];
-    },;
+      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]},;
     {
 
       icon: Globe,"
       title: "Cloud Strategy","
       description: "Cloud migration planning and multi-cloud optimization strategies","
-      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"];
-    },;
+      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]},;
     {
 
       icon: Database,"
       title: "Data Strategy","
       description: "Data governance, analytics, and business intelligence consulting","
-      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"];
-    },;
+      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]},;
     {
 "
-      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
-    };
+      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]};
       icon: Zap,;"
       title: "Digital Innovation",;"
       description: "Emerging technology consulting and innovation acceleration",;"
-      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
-    };
-  ];
-
-  const industries = [
-    {
-"
-      title: "Financial Services","
-      description: "Banking, insurance, and fintech consulting",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Healthcare","
-      description: "Digital health and medical technology consulting",
-      icon: Shield
-    },
-    {
-"
-      title: "Manufacturing","
-      description: "Industry 4.0 and smart manufacturing consulting",
-      icon: Cpu
-    },
-    {
-"
-      title: "Retail & E-commerce","
-      description: "Digital commerce and customer experience consulting",
-      icon: Users
-    },
-    {
-"
-      title: "Energy & Utilities","
-      description: "Smart grid and sustainability consulting",
-      icon: Globe;
-    },;
+      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]};
+  ]},;
     {;"
       title: "Government",;"      description: "Public sector digital transformation consulting",;
       icon: Briefcase};
@@ -92,32 +45,11 @@ const Consulting = () => {
     "Long-term strategic partnerships",;"
     "Measurable results and ROI",;"
     "Access to cutting-edge technology insights";
-  ];
-
-  const process = [
-    {
-"
-      phase: "Discovery","
-      description: "Understanding your business needs and objectives","
-      duration: "1-2 weeks"
-    },
-    {
-"
-      phase: "Assessment","
-      description: "Comprehensive analysis of current state and opportunities","
-      duration: "2-4 weeks"
-    },
-    {
-"
-      phase: "Strategy","
-      description: "Developing customized solutions and implementation plans","
-      duration: "3-6 weeks";
-    },;
+  ]},;
     {;"
       phase: "Implementation",;"
       description: "Executing the strategy with ongoing support and guidance",;"
-      duration: "Ongoing";
-    };  ];
+      duration: "Ongoing"};  ];
 
   return ("
     <div className = "min-h-screen bg-slate-900 text-white">
@@ -126,7 +58,7 @@ const Consulting = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2"/>              Consulting Services
+              <Users className="w-4 h-4 mr-2" />              Consulting Services
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert Technology"
@@ -230,7 +162,7 @@ const Consulting = () => {
             </div>"
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-8 border border-orange-500/30">"
               <div className="text-center">"
-                <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>"
+                <Award className="w-24 h-24 text-orange-400 mx-auto mb-4" />"
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>"                <p className="text-gray-300 mb-6">
                   Our consultants bring decades of combined experience
                   and proven track records of success.
@@ -292,7 +224,6 @@ const Consulting = () => {
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default Consulting;}}}}'"
+export default Consulting}}}}'"

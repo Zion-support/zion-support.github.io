@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
 import { Truck, 
   Brain, 
   Shield, 
@@ -32,49 +30,12 @@ import { Truck,
   Leaf'
  } from 'lucide-react.ts';
 ;
-const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
-  const features = [
-    {
 
-      title: "AI Demand Forecasting","
-      description: "Machine learning algorithms predict demand with 95% accuracy, optimizing inventory levels and reducing waste",
-      icon: Brain,"
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-"
-      title: "Autonomous Route Optimization","
-      description: "AI-powered logistics optimization reduces delivery times by 30% and fuel costs by 25%",
-      icon: Route,"
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-"
-      title: "Real-time Inventory Management","
-      description: "IoT sensors and AI analytics provide real-time visibility across all warehouses and distribution centers",
-      icon: Warehouse,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      title: "Predictive Maintenance","
-      description: "AI monitors equipment health and predicts failures before they occur, reducing downtime by 40%",
-      icon: AlertTriangle,"
-      color: "from-red-500 to-orange-500"
-    },
-    {
-"
-      title: "Supplier Risk Assessment","
-      description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
-      icon: Shield,"
-      color: "from-yellow-500 to-orange-500"
-    },;
     {;"
       title: "End-to-End Visibility",;"
       description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
       icon: Eye,;"
-      color: "from-cyan-500 to-blue-500";
-    };
+      color: "from-cyan-500 to-blue-500"};
   ];
 
   const pricingPlans = [
@@ -126,68 +87,22 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
         "On-premise deployment",;"
         "White-label solutions";
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Cost Reduction","
-      description: "Optimize operations and reduce supply chain costs significantly","
-      metric: "25-40% savings"
-    },
-    {
-"
-      title: "Improved Efficiency","
-      description: "Streamline processes and increase productivity across operations","
-      metric: "35% efficiency gain"
-    },
-    {
-"
-      title: "Better Customer Service","
-      description: "Faster delivery times and improved order accuracy","
-      metric: "50% faster delivery";
-    },;
+      popular: false};
+  ]},;
     {;"
       title: "Risk Mitigation",;"
       description: "Identify and prevent supply chain disruptions proactively",;"
-      metric: "80% risk reduction";
-    };
+      metric: "80% risk reduction"};
   ];
 
-  const useCases = [
-    {
-"
-      title: "Manufacturing","
-      description: "Optimize production schedules, manage raw materials, and coordinate with suppliers",
-      icon: Package,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-"
-      title: "Retail & E-commerce","
-      description: "Manage inventory across multiple locations, optimize fulfillment, and improve customer experience",
-      icon: ShoppingCart,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      title: "Healthcare","
-      description: "Ensure critical medical supplies are always available and properly distributed",
-      icon: Heart,"
-      color: "from-red-500 to-pink-500"
-    },;
+  
     {;"
       title: "Food & Beverage",;"
       description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
       icon: Leaf,;"
-      color: "from-green-500 to-emerald-500";
-    };
+      color: "from-green-500 to-emerald-500"};
   ];
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';  ];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ("
@@ -222,7 +137,7 @@ import { motion  } from 'framer-motion.ts';  ];
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Truck className="w-12 h-12 text-blue-400 mr-3" />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
+              <Truck className="w-12 h-12 text-blue-400 mr-3"  />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
                 AI Autonomous Supply Chain
               </h1>
             </div>"
@@ -236,7 +151,7 @@ import { motion  } from 'framer-motion.ts';  ];
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Optimize Supply Chain"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="#demo"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
@@ -617,7 +532,7 @@ import { motion  } from 'framer-motion.ts';  ];
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -680,12 +595,12 @@ import { motion  } from 'framer-motion.ts';  ];
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="mr-2 w-5 h-5" />                Call Now
+                <Phone className="mr-2 w-5 h-5"  />                Call Now
               </a>
             </div>
           </motion.div>
@@ -698,21 +613,21 @@ import { motion  } from 'framer-motion.ts';  ];
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-blue-400 mb-4" />"
+              <Phone className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Phone</p>"
               <a href="tel:+13024640950" className="text-white hover:text-blue-400 transition-colors">
                 +1 302 464 0950
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-blue-400 mb-4" />"
+              <Mail className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Email</p>"
               <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-blue-400 mb-4" />"
+              <MapPin className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;

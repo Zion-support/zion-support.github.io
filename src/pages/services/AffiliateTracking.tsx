@@ -1,9 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
 export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [
     {
@@ -38,41 +32,12 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
   ];
 
-  const plans = [
-    {
-
-      name: 'Starter',
-      price: 49,
-      unit: 'month',
-      bestFor: 'Founders validating their first affiliate program',
-      bullets: ['
-        'Up to 200 partners',Basic tracking links and coupons',Manual approvals and payouts',Email support'
-      ]
-    },
-    {
-
-      name: 'Growth',
-      price: 199,
-      unit: 'month',
-      bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
-      bullets: ['
-        'Up to 2,500 partners',Attribution across links, QR and coupons',Fraud prevention + sandbox',Automated Stripe/PayPal payouts',Slack alerts and webhooks'
-      ]
-    },
-    {
-
-      name: 'Enterprise',
-      price: 599,
-      unit: 'month',
-      bestFor: 'Global programs, agencies and marketplaces',
-<<<<<<< HEAD
-      bullets: [;
+  
         'Unlimited partners and campaigns',;
         'SAML SSO and audit trails',;
         'Custom data retention + warehouse sync',;
         'Dedicated CSM and 99.9% SLA';
-      ];
-    };
+      ]};
 =======
       bullets: [;'
         'Unlimited partners and campaigns',;'
@@ -138,7 +103,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">"
               <Link to="/request-quote">
                 Request a demo"
-                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
             </Button>"
             <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">"
               <a href="tel:+13024640950">Call +1 302 464 0950</a>
@@ -181,7 +146,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                 className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
 "
                 <div className="flex items-start gap-3">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5"  />
                   <div>"
                     <h3 className="text-white font-semibold mb-1">{f.title}</h3>"                    <p className="text-zion-slate-light text-sm">{f.description}</p>
                   </div>
@@ -273,14 +238,14 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
                 <div className="space-y-2 mb-6">
                   {plan.bullets.map((b) => ("
                     <div key={b} className="flex items-start gap-2">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5" />"                      <span className="text-zion-slate-light text-sm">{b}</span>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5"  />"                      <span className="text-zion-slate-light text-sm">{b}</span>
                     </div>
                   ))}
                 </div>"
                 <Button asChild className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white">"
                   <Link to="/contact">
                     Get started"
-                    <ArrowRight className="ml-2 w-4 h-4" />                  </Link>
+                    <ArrowRight className="ml-2 w-4 h-4"  />                  </Link>
                 </Button>
               </motion.div>;
             ))}
@@ -313,17 +278,17 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           <ul className="space-y-2">
             <li>"
               <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> Tapfiliate pricing <ExternalLink className="w-4 h-4" />
+                <Link2 className="w-4 h-4" /> Tapfiliate pricing <ExternalLink className="w-4 h-4"  />
               </a>
             </li>
             <li>"
               <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> FirstPromoter pricing <ExternalLink className="w-4 h-4" />
+                <Link2 className="w-4 h-4" /> FirstPromoter pricing <ExternalLink className="w-4 h-4"  />
               </a>
             </li>
             <li>"
               <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">"
-                <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4" />;              </a>;
+                <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4"  />;              </a>;
             </li>;
           </ul>;
         </div>;

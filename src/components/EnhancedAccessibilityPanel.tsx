@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Accessibility,
@@ -41,9 +39,7 @@ interface AccessibilitySettings {
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
-  wordSpacing: number;
-
-}
+  wordSpacing: number}
 interface AccessibilityIssue {
   id: string;
   type: 'error' | 'warning' | 'info';
@@ -72,48 +68,37 @@ export function EnhancedAccessibilityPanel() {
   const [keyboardMode, setKeyboardMode] = useState(false);
 
   // Apply accessibility settings
-  const applySettings = useCallback()
-    (newSettings: Partial<AccessibilitySettings>) => {
-
-      const updatedSettings = { ...settings, ...newSettings };
+  
       setSettings(updatedSettings);
 
       // Apply high contrast
       if (updatedSettings.highContrast) {
 
-        document.documentElement.classList.add('high-contrast');
-      } else {
+        document.documentElement.classList.add('high-contrast')} else {
 
-        document.documentElement.classList.remove('high-contrast');
-      }
+        document.documentElement.classList.remove('high-contrast')}
 
       // Apply large text
       if (updatedSettings.largeText) {
 
-        document.documentElement.style.fontSize = '18px';
-      } else {
+        document.documentElement.style.fontSize = '18px'} else {
 
-        document.documentElement.style.fontSize = '16px';
-      }
+        document.documentElement.style.fontSize = '16px'}
 
       // Apply reduced motion
       if (updatedSettings.reducedMotion) {
         document.documentElement.style.setProperty('
           '--reduced-motion',reduce'
-        );
-      } else {
+        )} else {
 
-        document.documentElement.style.removeProperty('--reduced-motion');
-      }
+        document.documentElement.style.removeProperty('--reduced-motion')}
 
       // Apply focus indicator
       if (updatedSettings.focusIndicator) {
 
-        document.documentElement.classList.add('focus-visible');
-      } else {
+        document.documentElement.classList.add('focus-visible')} else {
 
-        document.documentElement.classList.remove('focus-visible');
-      }
+        document.documentElement.classList.remove('focus-visible')}
 
       // Apply color blindness simulation
       document.documentElement.style.setProperty('
@@ -143,8 +128,7 @@ export function EnhancedAccessibilityPanel() {
       localStorage.setItem('
         'accessibility-settings',
         JSON.stringify(updatedSettings)
-      );
-    },
+      )},
     [settings]
   );
 
@@ -152,7 +136,7 @@ export function EnhancedAccessibilityPanel() {
   useEffect(() => {
 <<<<<<< HEAD
 
-    const saved = localStorage.getItem('accessibility-settings');
+    
     if (saved) {
 =======
 '
@@ -160,40 +144,27 @@ export function EnhancedAccessibilityPanel() {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       try {
-        const savedSettings = JSON.parse (saved) ;
+        
         setSettings (savedSettings) ;
-        applySettings (savedSettings) ;
-      } catch (error) {
+        applySettings (savedSettings) } catch (error) {
 
-        // console.warn('Failed to load accessibility settings:', error);
-      }    }
+        // console.warn('Failed to load accessibility settings:', error)}    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
   useEffect ( () => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-
-      // Tab key navigation'
-      if (event.key === 'Tab') {
-
-        setKeyboardMode(true);
-        document.body.classList.add('keyboard-navigation');
-      }
+    
+        document.body.classList.add('keyboard-navigation')}
       // Escape key to close panel'
       if (event.key === 'Escape' && isVisible) {
 
-        setIsVisible(false);
-      }
+        setIsVisible(false)}
 
       // Arrow keys for navigation
       if (keyboardMode) {
 
-        const focusableElements = document.querySelectorAll('
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])
-        );
-        const currentIndex = Array.from(focusableElements).findIndex()
-          el => el === document.activeElement
-        );
+        
+        
         switch (event.key) {
 
           case 'ArrowDown':
@@ -211,10 +182,8 @@ export function EnhancedAccessibilityPanel() {
       }
     };
 
-    const handleMouseDown = () => {
-      setKeyboardMode(false);
-      document.body.classList.remove('keyboard-navigation');
-    };
+    
+      document.body.classList.remove('keyboard-navigation')};
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
@@ -222,19 +191,16 @@ export function EnhancedAccessibilityPanel() {
     return () => {
 
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [isVisible, keyboardMode]) ;
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isVisible, keyboardMode]) ;
 
   // Accessibility audit
-  const runAccessibilityAudit = useCallback (async () => {
-    setIsScanning (true) ;
+  
     const newIssues: AccessibilityIssue[] = [];
 
     try {
       // Check for missing alt text'
 <<<<<<< HEAD
-      const images = document.querySelectorAll('img');
+      
       images.forEach((img, index) => {
 
 =======
@@ -251,12 +217,11 @@ export function EnhancedAccessibilityPanel() {
             element: img.tagName.toLowerCase(),
             recommendation:'
               'Add descriptive alt text or aria-label for screen readers',
-            severity: 'high'});
-        }
+            severity: 'high'})}
       }) ;
 
       // Check for proper heading structure'
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      
       let previousLevel = 0;
       headings.forEach((heading, index) => {
 
@@ -269,19 +234,16 @@ export function EnhancedAccessibilityPanel() {
             message: 'Heading level skipped',
             element: heading.tagName.toLowerCase(),
             recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3),
-            severity: 'medium'});
-        }
-        previousLevel = level;
-      }) ;
+            severity: 'medium'})}
+        previousLevel = level}) ;
 
       // Check for proper form labels'
-      const formInputs = document.querySelectorAll('input, select, textarea');
+      
       formInputs.forEach((input, index) => {
 
         const id = input.getAttribute('id');"`
-        const label = document.querySelector(`label[for="${id}"]`);
-        const ariaLabel = input.getAttribute('aria-label');
-
+        
+        
         if (!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
 
           newIssues.push({
@@ -291,17 +253,16 @@ export function EnhancedAccessibilityPanel() {
             message: 'Form input missing label',
             element: input.tagName.toLowerCase(),
             recommendation: 'Add label element or aria-label attribute',
-            severity: 'high'});
-        }
+            severity: 'high'})}
       }) ;
 
       // Check for proper ARIA attributes'
-      const ariaElements = document.querySelectorAll('[aria-*]');
+      
       ariaElements.forEach((element, index) => {
 
-        const ariaExpanded = element.getAttribute('aria-expanded');
-        const ariaControls = element.getAttribute('aria-controls');
-        const ariaOwns = element.getAttribute('aria-owns');
+        
+        
+        
         if (ariaExpanded && !ariaControls && !ariaOwns) {
 
           newIssues.push({
@@ -313,19 +274,16 @@ export function EnhancedAccessibilityPanel() {
             element: element.tagName.toLowerCase(),
             recommendation:'
               'Add aria-controls or aria-owns to indicate controlled content',
-            severity: 'medium'});
-        }
+            severity: 'medium'})}
       }) ;
 
       // Check for sufficient color contrast (simplified)
-      const textElements = document.querySelectorAll('
-        'p, span, div, h1, h2, h3, h4, h5, h6'
-      );
+      
       textElements.forEach((element, index) => {
 
-        const style = window.getComputedStyle(element);
-        const color = style.color;
-        const backgroundColor = style.backgroundColor;
+        
+        
+        
 <<<<<<< HEAD
 
         // This is a simplified check - in production you'd want a proper contrast ratio calculation
@@ -342,15 +300,11 @@ export function EnhancedAccessibilityPanel() {
             element: element.tagName.toLowerCase(),
             recommendation:'
               'Ensure sufficient contrast between text and background colors',
-            severity: 'medium'});
-        }
+            severity: 'medium'})}
       }) ;
 
       // Check for keyboard navigation
-      const interactiveElements = document.querySelectorAll('
-        'button, a, input, select, textarea'
-<<<<<<< HEAD
-      );
+      
       interactiveElements.forEach((element, index) => {
 
 =======
@@ -366,48 +320,32 @@ export function EnhancedAccessibilityPanel() {
             message: 'Button missing type attribute',
             element: element.tagName.toLowerCase(),"
             recommendation: 'Add type="button" to prevent form submission',
-            severity: 'medium'});
-        }
-      });
-    } catch (error) {
+            severity: 'medium'})}
+      })} catch (error) {
 
-      // console.error('Accessibility audit failed:', error);
-    }
+      // console.error('Accessibility audit failed:', error)}
 
     setIssues (newIssues) ;
-    setIsScanning (false) ;
-  }, []) ;
+    setIsScanning (false) }, []) ;
 
   // Get issue icon
-  const getIssueIcon = (type: string) => {
-
-    switch (type) {
-
-      case 'error':"
-        return <XCircle className="w-4 h-4 text-red-500" />;
+  
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
       case 'info':"
-        return <Info className="w-4 h-4 text-blue-500" />;
+        return <Info className="w-4 h-4 text-blue-500"  />;
       default:"
-        return <Info className="w-4 h-4 text-gray-500" />;
-    }
+        return <Info className="w-4 h-4 text-gray-500"  />}
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
-
-    switch (severity) {
-
-      case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
+  
       case 'medium':'
         return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       case 'low':'
         return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
       default:'
-        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
-    }  };
+        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
 
   return()
     <>
@@ -420,7 +358,7 @@ export function EnhancedAccessibilityPanel() {
         title="Accessibility Panel"
         aria-label="Open accessibility panel"
       >"
-        <Accessibility className="w-6 h-6" />      </motion.button>
+        <Accessibility className="w-6 h-6"  />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -436,7 +374,7 @@ export function EnhancedAccessibilityPanel() {
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <div className="flex items-center space-x-2">"
-                  <Accessibility className="w-6 h-6 text-zion-blue" />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Accessibility className="w-6 h-6 text-zion-blue"  />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Accessibility
                   </h2>
                 </div>"
@@ -447,16 +385,16 @@ export function EnhancedAccessibilityPanel() {
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? ("
-                      <ChevronUp className="w-4 h-4" />
+                      <ChevronUp className="w-4 h-4"  />
                     ) : ("
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4"  />
                     )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close accessibility panel"
                   >"
-                    <X className="w-5 h-5" />                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
 
@@ -478,7 +416,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.highContrast}
                   >"
-                    <Contrast className="w-4 h-4" />"                    <span className="text-sm">High Contrast</span>
+                    <Contrast className="w-4 h-4"  />"                    <span className="text-sm">High Contrast</span>
                   </button>
 
                   <button
@@ -493,7 +431,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.largeText}
                   >"
-                    <Type className="w-4 h-4" />"                    <span className="text-sm">Large Text</span>
+                    <Type className="w-4 h-4"  />"                    <span className="text-sm">Large Text</span>
                   </button>
 
                   <button
@@ -508,7 +446,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.reducedMotion}
                   >"
-                    <Pause className="w-4 h-4" />"                    <span className="text-sm">Reduced Motion</span>
+                    <Pause className="w-4 h-4"  />"                    <span className="text-sm">Reduced Motion</span>
                   </button>
 
                   <button
@@ -525,7 +463,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.focusIndicator}
                   >"
-                    <Keyboard className="w-4 h-4" />"                    <span className="text-sm">Focus Indicator</span>
+                    <Keyboard className="w-4 h-4"  />"                    <span className="text-sm">Focus Indicator</span>
                   </button>
                 </div>
               </div>
@@ -630,7 +568,7 @@ export function EnhancedAccessibilityPanel() {
                       </>
                     ) : (
                       <>"
-                        <Eye className="w-4 h-4" />                        <span>Run Audit</span>
+                        <Eye className="w-4 h-4"  />                        <span>Run Audit</span>
                       </>
                     )}
                   </button>
@@ -690,15 +628,13 @@ export function EnhancedAccessibilityPanel() {
                     letterSpacing: 0,
                     wordSpacing: 0};
                   setSettings(defaultSettings);
-                  applySettings(defaultSettings);
-                }}"
+                  applySettings(defaultSettings)}}"
                 className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
               >"
-                <RotateCcw className="w-4 h-4" />                <span>Reset to Defaults</span>
+                <RotateCcw className="w-4 h-4"  />                <span>Reset to Defaults</span>
               </button>
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </>) ;
-}
+    </>) }
 '"`

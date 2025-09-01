@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
 
@@ -22,11 +20,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
   useEffect(() => {
     // Update meta tags dynamically
-    const updateMetaTags = (...args: unknown[]): unknown => {;
+    
       // Update title;
 =======
-import React, { useEffect } from 'react';'
-import { Helmet } from 'react-helmet-async';      // Update title;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       document.title = seoData.title;
 
@@ -56,10 +52,8 @@ import { Helmet } from 'react-helmet-async';      // Update title;
 
           ogTag = document.createElement('meta');
           ogTag.setAttribute('property', property);
-          document.head.appendChild(ogTag);
-        }
-        ogTag.setAttribute('content', content);
-      };
+          document.head.appendChild(ogTag)}
+        ogTag.setAttribute('content', content)};
       '
       if (seoData.ogImage) updateOGTag('og:image', seoData.ogImage);
       if (seoData.ogType) updateOGTag('og:type', seoData.ogType);
@@ -73,10 +67,8 @@ import { Helmet } from 'react-helmet-async';      // Update title;
 
           twitterTag = document.createElement('meta');
           twitterTag.setAttribute('name', name);
-          document.head.appendChild(twitterTag);
-        }
-        twitterTag.setAttribute('content', content);
-      };
+          document.head.appendChild(twitterTag)}
+        twitterTag.setAttribute('content', content)};
       '
 <<<<<<< HEAD
       updateTwitterTag('twitter:card',summary_large_image');
@@ -97,10 +89,8 @@ import { Helmet } from 'react-helmet-async';      // Update title;
 
           canonical = document.createElement('link');
           canonical.setAttribute('rel',canonical');
-          document.head.appendChild(canonical);
-        }
-        canonical.setAttribute('href', seoData.canonicalUrl);
-      }      
+          document.head.appendChild(canonical)}
+        canonical.setAttribute('href', seoData.canonicalUrl)}      
       // Add structured data
       if (seoData.structuredData) {
 '"
@@ -109,20 +99,16 @@ import { Helmet } from 'react-helmet-async';      // Update title;
 
           script = document.createElement('script');
           script.setAttribute('type',application/ld+json');
-          document.head.appendChild(script);
-        }
-        script.textContent = JSON.stringify (seoData.structuredData) ;
-      }    };
+          document.head.appendChild(script)}
+        script.textContent = JSON.stringify (seoData.structuredData) }    };
     
     updateMetaTags () ;
     
     // Cleanup function
     return () => {
       // Remove dynamically added meta tags on unmount'"
-      const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]');
-      dynamicTags.forEach(tag => tag.remove());
-    };
-  }, [seoData]) ;  
+      
+      dynamicTags.forEach(tag => tag.remove())}}, [seoData]) ;  
   return()
     <>
       <Helmet>
@@ -130,14 +116,7 @@ import { Helmet } from 'react-helmet-async';      // Update title;
         <meta name = "description" content={seoData.description} />"
         <meta name="keywords" content = {
 
-  seoData.keywords.join(',);
-
-
-
-
-
-
-} />;"
+  seoData.keywords.join(',)} />;"
         <meta name="robots" content="index, follow" />;"
         <meta name="author" content="Zion Tech Group" />;"        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
         ;
@@ -165,8 +144,7 @@ import { Helmet } from 'react-helmet-async';      // Update title;
       </Helmet>;
       {children};
     </>
-  );
-};
+  )};
 export default EnhancedSEOManager;
 export default function;
     return;

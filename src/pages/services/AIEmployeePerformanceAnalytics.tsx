@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
 import { Users, 
   TrendingUp, 
   BarChart3, 
@@ -42,80 +39,17 @@ import { Users,
 
 export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI Performance Scoring","
-      description: "Advanced algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Real-time Analytics Dashboard","
-      description: "Live performance metrics, productivity trends, and engagement scores with customizable KPIs and reporting."
-    },
-    {
-
-      icon: Users,"
-      title: "360-Degree Feedback Analysis","
-      description: "Comprehensive feedback collection and analysis from peers, managers, and self-assessments."
-    },
-    {
-
-      icon: Target,"
-      title: "Goal Tracking & Alignment","
-      description: "Monitor individual and team goal progress, identify alignment issues, and suggest performance improvements."
-    },
-    {
-
-      icon: PieChart,"
-      title: "Predictive Performance Insights","
-      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities.";
+  
     },;
     {;
       icon: Activity,;"
       title: "Engagement & Wellness Monitoring",;"
-      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being.";
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,"
-      title: "Improved Performance","
-      description: "Identify performance gaps and provide targeted coaching to enhance individual and team productivity."
-    },
-    {
-
-      icon: DollarSign,"
-      title: "Increased Retention","
-      description: "Predict and prevent employee turnover by identifying at-risk employees and implementing retention strategies."
-    },
-    {
-
-      icon: Globe,"
-      title: "Data-Driven Decisions","
-      description: "Make informed HR decisions based on comprehensive performance analytics and predictive insights."
-    },
-    {
-
-      icon: Lock,"
-      title: "Privacy & Compliance","
-      description: "Enterprise-grade security with GDPR compliance and role-based access control for sensitive performance data."
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Enhanced Productivity","
-      description: "Optimize team performance through data-driven insights and targeted development programs.";
-    },;
+      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."};
+  ]},;
     {;
       icon: Clock,;"
       title: "Time Savings",;"
-      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month.";
-    };
+      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."};
   ];
 
   const pricingPlans = [
@@ -174,47 +108,11 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
         "SLA guarantees",;"
         "24/7 support";
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';        "24/7 support";
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-"
-      industry: "Technology","
-      description: "Track developer productivity, code quality metrics, and project completion rates for engineering teams",
-      icon: Cpu
-    },
-    {
-"
-      industry: "Sales","
-      description: "Monitor sales performance, conversion rates, and pipeline metrics to optimize revenue generation",
-      icon: TrendingUp
-    },
-    {
-"
-      industry: "Healthcare","
-      description: "Track patient outcomes, clinical performance, and healthcare provider efficiency metrics",
-      icon: Heart
-    },
-    {
-"
-      industry: "Education","
-      description: "Analyze teaching effectiveness, student outcomes, and educational program performance",
-      icon: GraduationCap
-    },
-    {
-"
-      industry: "Manufacturing","
-      description: "Monitor production efficiency, quality metrics, and operational performance across manufacturing teams",
-      icon: Settings;
-    },;
+      popular: false};
+  ]},;
     {;"
       industry: "Finance",;"      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
       icon: DollarSign};
@@ -244,38 +142,15 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
     {
 "
       name: "Learning Platforms",;"
-      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"];
-    },;
+      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]},;
     {;"
       name: "Time Tracking",;"
-      platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"];
-    };
-  ];
-
-  const keyMetrics = [
-    {
-"
-      metric: "85%","
-      label: "Performance Improvement","
-      description: "Average improvement in employee performance scores"
-    },
-    {
-"
-      metric: "40%","
-      label: "Retention Increase","
-      description: "Reduction in employee turnover rates"
-    },
-    {
-"
-      metric: "60%","
-      label: "Time Savings","
-      description: "Reduction in manual performance review time";
-    },;
+      platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"]};
+  ]},;
     {;"
       metric: "3.2x",;"
       label: "ROI",;"
-      description: "Return on investment for performance analytics";
-    };
+      description: "Return on investment for performance analytics"};
   ];
 
   const performanceIndicators = [
@@ -292,12 +167,10 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
     {
 "
       category: "Collaboration Metrics",;"
-      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"];
-    },;
+      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]},;
     {;"
       category: "Growth Metrics",;"
-      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"];
-    };  ];
+      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -342,7 +215,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2" />              AI-Powered Analytics
+              <Users className="w-4 h-4 mr-2"  />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Employee Performance"
@@ -356,11 +229,11 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>"
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -612,7 +485,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
                 <ul className="space-y-2">
                   {category.indicators.map((indicator, indicatorIndex) => ("
                     <li key={indicatorIndex} className="flex items-center text-gray-300 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {indicator}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {indicator}
                     </li>
                   ))}
                 </ul>
@@ -828,7 +701,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1085,7 +958,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />                Start Free Trial
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial
               </button>"
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -1096,5 +969,4 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
         </div>;
       </section>;
     </div>;
-  );
-}'"`
+  )}'"`

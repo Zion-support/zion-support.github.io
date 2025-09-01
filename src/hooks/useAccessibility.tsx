@@ -1,6 +1,4 @@
 :src/hooks/useAccessibility.tsx
-import React from 'react';
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface UseAccessibilityOptions {
   enableKeyboardNavigation?: boolean;
@@ -18,9 +16,7 @@ interface AccessibilityFeatures {
   isScreenReader: boolean}
 
 :src/hooks/useAccessibility.tsx
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
-
-  const {;
+export 
 export 
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;
@@ -34,9 +30,6 @@ export
   
   // Detect accessibility preferences
 :src/hooks/useAccessibility.tsx
-  const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
-
-    if (typeof window === 'null') {;
   
       return {;
         isHighContrast: false,;
@@ -45,12 +38,7 @@ export
         isScreenReader: false}}
 
 :src/hooks/useAccessibility.tsx
-    const mediaQueries = {
-<<<<<<< HEAD
-
-  highContrast: window.matchMedia('(prefers-contrast: high)),
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)),
-      largeText: window.matchMedia('(prefers-reduced-motion: reduce)),;
+    
 =======
 '
   highContrast: window.matchMedia('(prefers-contrast: high)'),'
@@ -62,8 +50,7 @@ export
   ;
   ;
   ;
-  // Placeholder;
-    };
+  // Placeholder};
 
     return {
 
@@ -125,7 +112,6 @@ export
 
   // Remove focus trap
 :src/hooks/useAccessibility.tsx
-  const removeFocusTrap = useCallback(: unknown {;
   
     if (focusTrapRef.current && lastFocusedElementRef.current) {;
       lastFocusedElementRef.current.focus();
@@ -134,11 +120,7 @@ export
 
   // Get all focusable elements
 :src/hooks/useAccessibility.tsx
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
-
-    const selector = ['
-<<<<<<< HEAD
-      'button:not([disabled]),;
+  
       'input:not([disabled]),;
       'select:not([disabled]),;
       'textarea:not([disabled]),;
@@ -169,11 +151,9 @@ export
   // Navigate focus'
     if (direction = == 'forward') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-    } else {
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
 
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    }
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
@@ -182,11 +162,9 @@ export
   // Vertical navigation'
     if (direction = == 'up') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
 
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
@@ -199,11 +177,9 @@ export
   // Horizontal navigation'
     if (direction = == 'left') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    } else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
 
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
@@ -215,12 +191,11 @@ export
 
   // Close active elements
 :src/hooks/useAccessibility.tsx
-  const closeActiveElements = useCallback(() => {;
+  
     // Close modals, dropdowns, etc.;
-    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
+    
 activeElements.forEach(element:  > {;
-      element.classList.remove('active');
-    });
+      element.classList.remove('active')});
   
     // Close modals, dropdowns, etc.;
     
@@ -232,11 +207,11 @@ activeElements.forEach(element:  > {;
 
 :src/hooks/useAccessibility.tsx
   // Screen reader announcements'
-  const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
+  
     if (!enableScreenReaderSupport) return;
 <<<<<<< HEAD
 
-    const announcement = document.createElement('div');
+    
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic',true');
 =======
@@ -263,12 +238,11 @@ activeElements.forEach(element:  > {;
 
   // High contrast mode
 :src/hooks/useAccessibility.tsx
-  const toggleHighContrast = useCallback(: unknown {;
+  
     if (!enableHighContrast) return;
 
     document.documentElement.classList.toggle('high-contrast');
-    const isEnabled = document.documentElement.classList.contains('high-contrast');
-
+    
     // Announce change to screen reader'
   
     if (!enableHighContrast) return;
@@ -283,12 +257,11 @@ activeElements.forEach(element:  > {;
 
   // Reduced motion mode
 :src/hooks/useAccessibility.tsx
-  const toggleReducedMotion = useCallback(: unknown {;
+  
     if (!enableReducedMotion) return;
 
     document.documentElement.classList.toggle('reduced-motion');
-    const isEnabled = document.documentElement.classList.contains('reduced-motion');
-
+    
     // Announce change to screen reader'`
   
     if (!enableReducedMotion) return;
@@ -303,12 +276,11 @@ activeElements.forEach(element:  > {;
 
   // Large text mode
 :src/hooks/useAccessibility.tsx
-  const toggleLargeText = useCallback(: unknown {;
+  
     if (!enableLargeText) return;
 
     document.documentElement.classList.toggle('large-text');
-    const isEnabled = document.documentElement.classList.contains('large-text');
-
+    
     // Announce change to screen reader'`
   
     if (!enableLargeText) return;
@@ -325,9 +297,9 @@ activeElements.forEach(element:  > {;
   useEffect(() => {
 :src/hooks/useAccessibility.tsx
     // Load saved preferences'
-    const highContrast = localStorage.getItem('highContrast') === 'true';
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
-    const largeText = localStorage.getItem('largeText') === 'true';
+    
+    
+    
 <<<<<<< HEAD
 
 =======

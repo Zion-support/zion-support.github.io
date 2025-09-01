@@ -1,54 +1,12 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
 
 export function SitemapPage(...args: any[]): any {
 
-  const sitemapData = [
-    {
-
-      title: 'Main Pages',
-      links: ['
-        { name: 'Home', url: '/' },
-        { name: 'About', url: '/about' },
-        { name: 'Services', url: '/services' },
-        { name: 'Contact', url: '/contact' },
-        { name: 'Blog', url: '/blog' },
-        { name: 'Careers', url: '/careers' },
-      ]
-    },
-    {
-
-      title: 'Services',
-      links: ['
-        { name: 'AI Services', url: '/services/ai' },
-        { name: 'IT Services', url: '/services/it' },
-        { name: 'Cloud Solutions', url: '/services/cloud' },
-        { name: 'Cybersecurity', url: '/services/cybersecurity' },
-        { name: 'Digital Transformation', url: '/services/digital-transformation' },
-      ]
-    },
-    {
-
-      title: 'Solutions',
-      links: ['
-        { name: 'Enterprise', url: '/solutions/enterprise' },
-        { name: 'Healthcare', url: '/solutions/healthcare' },
-        { name: 'Financial Services', url: '/solutions/financial' },
-        { name: 'Manufacturing', url: '/solutions/manufacturing' },
-      ]
-    },
-    {
-
-      title: 'Resources',
-      links: ['
-<<<<<<< HEAD
-        { name: 'Case Studies', url: '/case-studies' },;
+  
         { name: 'White Papers', url: '/white-papers' },;
         { name: 'Webinars', url: '/webinars' },;
         { name: 'Documentation', url: '/docs' },;
         { name: 'API Reference', url: '/api' },;
-      ];
-    };
+      ]};
 =======
         { name: 'Case Studies', url: '/case-studies' },;'
         { name: 'White Papers', url: '/white-papers' },;'
@@ -63,7 +21,7 @@ export function SitemapPage(...args: any[]): any {
       <SEO "
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
-      />
+       />
       "
       <div className="container mx-auto px-4 max-w-6xl">"
         <div className="text-center mb-16">"          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -104,6 +62,5 @@ export function SitemapPage(...args: any[]): any {
           </p>;
         </div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"

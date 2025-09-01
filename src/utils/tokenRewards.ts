@@ -1,4 +1,3 @@
-import { apiClient } from '@/utils/apiClient';
 
 export async function rewardOnboarding(...args: any[]): any {
 <<<<<<< HEAD
@@ -41,7 +40,6 @@ export async function rewardOnboarding(...args: any[]): any {
           userId,
           action: 'referral',
           referredUserId,
-          amount: 100})});
-    }
+          amount: 100})})}
   }
 }

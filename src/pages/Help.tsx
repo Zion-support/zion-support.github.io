@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Search, 
   BookOpen, 
@@ -36,126 +34,11 @@ export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
-  const helpCategories = [
-    {
-
-      title: 'Getting Started',
-      icon: Rocket,
-      color: 'from-blue-600 to-cyan-600',
-      items: ['
-        { name: 'Quick Start Guide', href: '/help/quick-start', description: 'Get up and running in minutes' },
-        { name: 'Account Setup', href: '/help/account-setup', description: 'Configure your account and preferences' },
-        { name: 'First Project', href: '/help/first-project', description: 'Create your first project with Zion Tech' },
-        { name: 'API Keys', href: '/help/api-keys', description: 'Generate and manage your API keys' }
-      ]
-    },
-    {
-
-      title: 'Core Services',
-      icon: Settings,
-      color: 'from-green-600 to-emerald-600',
-      items: ['
-        { name: 'AI Business Intelligence', href: '/help/ai-business-intelligence', description: 'AI-powered analytics and insights' },
-        { name: 'Cloud DevOps', href: '/help/cloud-devops', description: 'Infrastructure and automation' },
-        { name: 'Cybersecurity', href: '/help/cybersecurity', description: 'Security and compliance solutions' },
-        { name: 'Digital Twin', href: '/help/digital-twin', description: 'Simulation and monitoring' },
-        { name: 'IoT Edge', href: '/help/iot-edge', description: 'IoT and edge computing' },
-        { name: 'Micro SaaS', href: '/help/micro-saas', description: 'Scalable software solutions' }
-      ]
-    },
-    {
-
-      id: 'billing-account',
-      title: 'Billing & Account',
-      icon: Users,
-      description: 'Account management and billing information',
-      articles: [
-        {
-
-          title: 'Billing Overview',
-          description: 'Understanding your billing structure and charges',
-          url: '/help/billing/overview',
-          type: 'guide'
-        },
-        {
-
-          title: 'Payment Methods',
-          description: 'Adding and managing payment methods',
-          url: '/help/billing/payment-methods',
-          type: 'guide'
-        },
-        {
-
-          title: 'Invoice Management',
-          description: 'Accessing and managing your invoices',
-          url: '/help/billing/invoices',
-          type: 'guide'
-        },
-        {
-
-          title: 'Account Settings',
-          description: 'Managing your account preferences and settings',
-          url: '/help/billing/account-settings',
-          type: 'guide'
-        }
-      ]
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'How quickly can I get started with your AI services?',
-      answer: 'Most AI services can be implemented within 2-4 weeks, depending on complexity. We offer rapid deployment options for standard solutions.'
-    },
-    {
-      question: 'What kind of support do you provide?',
-      answer: 'We offer 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.'
-    },
-    {
-      question: 'Can I customize the AI solutions for my specific needs?',
-      answer: 'Absolutely! We specialize in custom AI development and can tailor solutions to your exact business requirements and industry specifications.'
-    },
-    {
-      question: 'What security measures do you have in place?',
-      answer: 'We implement enterprise-grade security including SOC 2 Type II compliance, ISO 27001 certification, and end-to-end encryption for all data.'
-    },
-    {
-      question: 'Do you offer training for my team?',
-      answer: 'Yes, we provide comprehensive training programs, workshops, and ongoing support to ensure your team can effectively use our solutions.'
-    },
-    {
-
-      name: 'Live Chat',
-      icon: MessageCircle,
-      description: 'Chat with our support team',
-      response: 'Usually responds in 2 minutes',
-      href: '/help/live-chat'
-    },
-    {
-
-      name: 'Email Support',
-      icon: Mail,
-      url: 'mailto:support@ziontechgroup.com',
-      color: 'from-orange-500 to-orange-600'
-    }
-  ];
-
-  const supportHours = ['
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
-    { day: 'Sunday', hours: 'Emergency Support Only', available: false }
-  ];
-
-  const filteredArticles = helpArticles.filter(article => 
-    selectedCategory === 'all' || article.category === selectedCategory
-  );
-
-  const searchResults = filteredArticles.filter(article =>
-    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
+  
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}"
       <div className="bg-slate-800/50 border-b border-slate-700">"
@@ -171,7 +54,7 @@ export default function Help() {
             {/* Search Bar */}"
             <form onSubmit={handleSearch} className="max-w-2xl mx-auto">"
               <div className="relative">"
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -228,7 +111,7 @@ export default function Help() {
               transition={{ duration: 0.6 }}
               className="text-center py-12"
             >
-              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4"  />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-slate-300 mb-4">Try adjusting your search terms or browse our categories.</p>
               <button
@@ -266,7 +149,7 @@ export default function Help() {
                   }`}
                 >"
                   <div className="flex items-center space-x-3">'`
-                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />"                    <span className="text-white font-medium">{schedule.day}</span>
+                    <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`}  />"                    <span className="text-white font-medium">{schedule.day}</span>
                   </div>"
                   <div className="text-right">'`
                     <span className={`text-sm ${schedule.available ? 'text-gray-300' : 'text-orange-400'}`}>
@@ -319,9 +202,9 @@ export default function Help() {
                       </div>
                     </div>
                     {expandedCategory === category.id ? ("
-                      <ChevronDown className="w-6 h-6 text-cyan-400" />
+                      <ChevronDown className="w-6 h-6 text-cyan-400"  />
                     ) : ("
-                      <ChevronRight className="w-6 h-6 text-cyan-400" />                    )}
+                      <ChevronRight className="w-6 h-6 text-cyan-400"  />                    )}
                   </div>
                 </button>
               </div>
@@ -413,7 +296,7 @@ export default function Help() {
                 href="mailto:support@ziontechgroup.com"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4"  />
                 Call +1 302 464 0950
               </a>
             </div>
@@ -421,5 +304,4 @@ export default function Help() {
         </div>
       </section>
     </div>
-  );
-}'"`
+  )}'"`

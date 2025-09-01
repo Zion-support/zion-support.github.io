@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
 import {
 
   Shield,
@@ -26,103 +24,10 @@ import {
 
 const AICybersecurityElite: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Threat Detection',
-      description:'
-        'Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7'},
-    {
-
-      icon: Shield,
-      title: 'Zero-Day Vulnerability Protection',
-      description:'
-        'Proactive defense against unknown threats using behavioral analysis and AI pattern recognition'},
-    {
-
-      icon: Lock,
-      title: 'End-to-End Encryption',
-      description:'
-        'Military-grade encryption for data at rest and in transit with quantum-resistant algorithms'},
-    {
-
-      icon: Zap,
-      title: 'Automated Incident Response',
-      description:'
-        'Instant threat containment and automated remediation workflows to minimize damage'},
-    {
-
-      icon: Users,
-      title: 'Identity & Access Management',
-      description:'
-        'Multi-factor authentication, biometric verification, and role-based access control'},
-    {
-
-      icon: Globe,
-      title: 'Global Threat Intelligence',
-      description:'
-        'Real-time threat feeds from 200+ global sources and dark web monitoring'},
-  ];
-
-  const pricing = [
-    {
-
-      name: 'Essential',
-      price: '$3,500',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: ['
-        'Basic AI threat detection',Firewall & intrusion prevention',Email security & spam filtering',Vulnerability scanning',24/7 monitoring',Basic incident response',
-      ]},
-    {
-
-      name: 'Professional',
-      price: '$7,500',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      features: ['
-        'Advanced AI threat detection',Behavioral analytics',Advanced endpoint protection',Threat intelligence feeds',Automated incident response',Compliance reporting',API access',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$18,000',
-      period: '/month',
-      description: 'For large organizations with complex needs',
-      features: ['
-        'Full AI cybersecurity suite',Custom threat modeling',Advanced forensics',Dedicated security team',Custom integrations',White-label options',On-premise deployment',
-      ]},
-  ];
-
-  const securityFeatures = [
-    {
-
-      title: 'Advanced Threat Hunting',
-      description:'
-        'AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage'},
-    {
-
-      title: 'Behavioral Analytics',
-      description:'
-        'Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks'},
-    {
-
-      title: 'Cloud Security',
-      description:'
-        'Comprehensive cloud security including container security, serverless protection, and multi-cloud management'},
-    {
-
-      title: 'Compliance & Governance',
-      description:'
-        'Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks'},
-  ];
-
-  const complianceStandards = ['
-    'SOC 2 Type II',ISO 27001',GDPR',HIPAA',PCI DSS',NIST Cybersecurity Framework',CIS Controls',FedRAMP',
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -134,7 +39,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">"
-                <Shield className="h-12 w-12 text-white" />              </div>
+                <Shield className="h-12 w-12 text-white"  />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity Elite
@@ -150,12 +55,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Secure Your Business"
-                <ArrowRight className="ml-2 h-5 w-5" />              </a>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
-                <Phone className="mr-2 h-5 w-5" />                Call Security Team
+                <Phone className="mr-2 h-5 w-5"  />                Call Security Team
               </a>
             </div>
           </motion.div>
@@ -276,7 +181,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
               >"
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4">"
-                  <Award className="h-6 w-6 text-white" />
+                  <Award className="h-6 w-6 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white">{standard}</h3>
               </motion.div>
             ))}
@@ -347,7 +252,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -387,7 +292,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">"
-                <Phone className="h-8 w-8 text-white" />
+                <Phone className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Call Security Team
@@ -406,7 +311,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">"
-                <Mail className="h-8 w-8 text-white" />
+                <Mail className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Security Team
@@ -425,7 +330,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4">"
-                <MapPin className="h-8 w-8 text-white" />
+                <MapPin className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Security Center
@@ -443,7 +348,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Security Assessment"
-              <ArrowRight className="ml-2 h-5 w-5" />            </a>
+              <ArrowRight className="ml-2 h-5 w-5"  />            </a>
           </div>
         </div>
       </section>
@@ -460,7 +365,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
-              <ExternalLink className="inline ml-1 h-4 w-4" />            </a>
+              <ExternalLink className="inline ml-1 h-4 w-4"  />            </a>
             <a"
               href="https://ziontechgroup.com/privacy"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"

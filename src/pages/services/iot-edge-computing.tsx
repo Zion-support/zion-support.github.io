@@ -1,88 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Cpu, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, Server, Network, Wifi, Cloud, Activity, Gauge, Shield, CircuitBoard } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function IoTEdgeComputing() {
-  const features = [
-    {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing and analytics at the network edge for instant insights'
-    },
-    {
-      icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models deployed directly on IoT devices for intelligent decision making'
-    },
-    {
-      icon: Zap,
-      title: 'Low Latency',
-      description: 'Ultra-fast response times with local processing and minimal network dependency'
-    },
-    {
-      icon: Server,
-      title: 'Distributed Computing',
-      description: 'Intelligent workload distribution across edge nodes and cloud infrastructure'
-    },
-    {
-      icon: Network,
-      title: '5G Integration',
-      description: 'Seamless integration with 5G networks for high-speed, low-latency connectivity'
-    },
-    {
-      icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for edge devices and data transmission'
-    }
-  ];
-
-  const benefits = [
-    'Reduce latency by up to 90%',Lower bandwidth costs by 60%',Improve reliability with offline capabilities',Enable real-time decision making',Scale IoT deployments efficiently',Reduce cloud dependency and costs'
-  ];
-
-  const useCases = [
-    {
-      title: 'Smart Manufacturing',
-      description: 'Real-time monitoring and control of production processes with edge AI'
-    },
-    {
-      title: 'Connected Vehicles',
-      description: 'Autonomous driving systems with edge computing for instant response'
-    },
-    {
-      title: 'Smart Cities',
-      description: 'Intelligent infrastructure management with distributed edge computing'
-    },
-    {
-      title: 'Healthcare IoT',
-      description: 'Patient monitoring and medical device management at the edge'
-    }
-  ];
-
-  const edgeServices = [
-    {
-      icon: CircuitBoard,
-      title: 'Edge Hardware',
-      items: ['Custom edge devices',Gateway solutions',Sensor integration',Power management']
-    },
-    {
-      icon: Cloud,
-      title: 'Edge Software',
-      items: ['Edge operating systems',Containerization',Orchestration',Application deployment']
-    },
-    {
-      icon: Network,
-      title: 'Connectivity',
-      items: ['5G integration',WiFi 6',LoRaWAN',Satellite connectivity']
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      items: ['Local storage',Data synchronization',Real-time analytics',Edge databases']
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -96,7 +17,7 @@ export default function IoTEdgeComputing() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
-              <Cpu className="w-4 h-4" />
+              <Cpu className="w-4 h-4"  />
               IoT Edge Computing
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -115,7 +36,7 @@ export default function IoTEdgeComputing() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -200,7 +121,7 @@ export default function IoTEdgeComputing() {
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />
                       {item}
                     </li>
                   ))}
@@ -230,7 +151,7 @@ export default function IoTEdgeComputing() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0"  />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -302,7 +223,7 @@ export default function IoTEdgeComputing() {
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -332,7 +253,7 @@ export default function IoTEdgeComputing() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Your Quote
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -345,5 +266,4 @@ export default function IoTEdgeComputing() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

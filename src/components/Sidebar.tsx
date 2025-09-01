@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import {
 
   Menu,
@@ -55,7 +53,7 @@ import {
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
-  const location = useLocation();
+  
   const [expandedSections, setExpandedSections] = useState<string[]>(['
     'main',services',
   ]);
@@ -566,16 +564,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           icon: Heart,
           description: 'Accessibility features'},
       ]},
-  ];
-
-  const isActive = (href: string) => {
-
-    if (href === '/') {
-
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith (href) ;
-  };
+  ]}
+    return location.pathname.startsWith (href) };
   if (!isOpen) {
 
     return()
@@ -583,18 +573,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         <div className="flex flex-col items-center py-4 space-y-4">
           {navigationSections.slice(0, 6).map(section => {
 
-            const Icon = section.icon;
+            
             return()              <button
                 key={section.id}
                 onClick={onToggle}"
                 className="p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 title={section.title}
               >"
-                <Icon className="w-5 h-5" />              </button>
+                <Icon className="w-5 h-5"  />              </button>
             )})}
         </div>
-      </div>) ;
-  }
+      </div>) }
   return ("
     <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">"
       <div className="p-4">"
@@ -604,22 +593,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             onClick={onToggle}"
             className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
           >"
-            <X className="w-5 h-5" />          </button>
+            <X className="w-5 h-5"  />          </button>
         </div>
 "
         <div className="space-y-2">
           {navigationSections.map(section => {
 
-            const Icon = section.icon;
-            const isExpanded = expandedSections.includes (section.id) ;
-
+            
+            
             return ("              <div key={section.id} className="space-y-1">
                 <button
                   onClick={() => toggleSection(section.id)}"
                   className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 >"
                   <div className="flex items-center space-x-3">"
-                    <Icon className="w-5 h-5" />"
+                    <Icon className="w-5 h-5"  />"
                     <span className="font-medium">{section.title}</span>
                   </div>
                   <ChevronDown'
@@ -630,9 +618,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                   <div className="ml-4 space-y-1">
                     {section.links.map(link => {
 
-                      const LinkIcon = link.icon;
-                      const active = isActive (link.href) ;
-
+                      
+                      
                       return()                        <Link
                           key={link.href}
                           to={link.href}`
@@ -644,7 +631,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                           }`}
                         >"
                           <div className="flex items-center space-x-3">"
-                            <LinkIcon className="w-4 h-4" />"
+                            <LinkIcon className="w-4 h-4"  />"
                             <div className="flex-1 min-w-0">"                              <div className="font-medium">{link.name}</div>
                               {link.description && (
                                 <div'`
@@ -654,13 +641,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                                 </div>
                               )}
                             </div>"
-                            {active && <ChevronRight className="w-4 h-4" />}
+                            {active && <ChevronRight className="w-4 h-4"  />}
                           </div>
-                        </Link>) ;
-                    }) }
+                        </Link>) }) }
                   </div>) }
-              </div>) ;
-          }) }        </div>
+              </div>) }) }        </div>
 
         {/* Quick Actions */}"
         <div className="mt-8 pt-6 border-t border-slate-700">"
@@ -673,18 +658,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
               className="block p-3 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white hover:from-cyan-700 hover:to-blue-700 transition-colors"
             >"
               <div className="flex items-center space-x-3">"
-                <DollarSign className="w-4 h-4" />"
+                <DollarSign className="w-4 h-4"  />"
                 <span className="font-medium">Get Quote</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />              </div>
+                <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
             </Link>
             <Link"
               to="/schedule-demo"
               className="block p-3 rounded-lg border border-slate-600 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
             >"
               <div className="flex items-center space-x-3">"
-                <Calendar className="w-4 h-4" />"
+                <Calendar className="w-4 h-4"  />"
                 <span className="font-medium">Schedule Demo</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />              </div>
+                <ExternalLink className="w-4 h-4 ml-auto"  />              </div>
             </Link>
           </div>
         </div>
@@ -696,15 +681,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           </div>"
           <div className="space-y-2 text-xs text-slate-400">"
             <div className="flex items-center space-x-2">"
-              <Mail className="w-3 h-3" />
+              <Mail className="w-3 h-3"  />
               <span>contact@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <PhoneCall className="w-3 h-3" />              <span>+1 (555) 123-4567</span>
+              <PhoneCall className="w-3 h-3"  />              <span>+1 (555) 123-4567</span>
             </div>
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) };
 '"`

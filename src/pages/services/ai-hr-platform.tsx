@@ -1,61 +1,19 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI Recruitment',
-      description: 'Intelligent candidate screening and matching'
-    },
-    {
-
-      icon: Users,
-      title: 'Talent Management',
-      description: 'Comprehensive employee lifecycle management'
-    },
-    {
-
-      icon: Target,
-      title: 'Performance Analytics',
-      description: 'Data-driven insights for better decisions';
+  
     },;
     {;
       icon: Shield,;
       title: 'Compliance Automation',;
-      description: 'Automated HR compliance and reporting';
-    };
-  ];
-
-  const modules = [
-    {
-
-      title: 'Recruitment & Onboarding',
-      description: 'Streamlined hiring process with AI assistance',
-      icon: '🎯'
-    },
-    {
-
-      title: 'Performance Management',
-      description: '360-degree feedback and goal tracking',
-      icon: '📊'
-    },
-    {
-
-      title: 'Learning & Development',
-      description: 'Personalized training and skill development',
-      icon: '🎓';
-    },;
+      description: 'Automated HR compliance and reporting'};
+  ]},;
     {;
       title: 'Employee Engagement',;
       description: 'Monitor and improve workplace satisfaction',;
-      icon: '❤️';
-    };
+      icon: '❤️'};
   ];
 
 <<<<<<< HEAD
-  const benefits = [;
+  
     'Reduce time-to-hire by 50% with AI screening',;
     'Improve candidate quality and retention rates',;
     'Automate routine HR tasks and workflows',;
@@ -78,7 +36,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 <<<<<<< HEAD
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
-      />
+       />
 =======
         title="AI HR Platform Services - Zion Tech Group""        description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
        />
@@ -114,7 +72,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full border border-blue-400/30 mb-6">"
-              <Users className="w-5 h-5 text-blue-400 mr-2" />"              <span className="text-blue-300 font-medium">AI HR Platform</span>
+              <Users className="w-5 h-5 text-blue-400 mr-2"  />"              <span className="text-blue-300 font-medium">AI HR Platform</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -385,7 +343,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -478,4 +436,4 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     </div>;
   )};
 
-export default AIHRPlatform;}}}'"
+export default AIHRPlatform}}}'"

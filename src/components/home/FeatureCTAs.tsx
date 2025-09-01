@@ -1,9 +1,4 @@
 
-import React from "react";"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { Badge } from "@/components/ui/badge";"
-import { Link } from "react-router-dom";  ];
 
   return ("
     <section className = "py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
@@ -45,7 +40,7 @@ import { Link } from "react-router-dom";  ];
                 <Link to={feature.link} className="w-full">"
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
                     Learn More"
-                    <ArrowRight className="w-4 h-4 ml-2" />                  </Button>
+                    <ArrowRight className="w-4 h-4 ml-2"  />                  </Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -64,7 +59,7 @@ import { Link } from "react-router-dom";  ];
               <Link to="/contact">"
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3">
                   Contact Us"
-                  <ArrowRight className="w-4 h-4 ml-2" />                </Button>
+                  <ArrowRight className="w-4 h-4 ml-2"  />                </Button>
               </Link>"
               <Link to="/services">"
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-3">
@@ -76,6 +71,5 @@ import { Link } from "react-router-dom";  ];
         </div>;
       </div>;
     </section>;
-  );
-}
+  )}
 '"

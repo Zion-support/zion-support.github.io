@@ -22,8 +22,7 @@ export interface UltimateInnovativeService2027 {
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
+    address: string};
   technicalSpecs?: {
 
     technology: string[];
@@ -31,8 +30,7 @@ export interface UltimateInnovativeService2027 {
     apiEndpoints: number;
     uptime: string;
     security: string[];
-    compliance: string[];
-  };
+    compliance: string[]};
   competitors: string[];
   marketTrend: string;
   aiModel?: string;

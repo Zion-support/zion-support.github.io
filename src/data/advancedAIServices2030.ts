@@ -34,8 +34,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],;"
     roi: "800% within 12 months","
     setupTime: "6-8 weeks","
-    integrations["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"];
-  },;
+    integrations["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"]},;
   // AI-Powered Metaverse Development Platform
   {
 "
@@ -67,8 +66,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["Unity", "Unreal Engine", "Roblox Studio"],;"
     roi: "1000% within 18 months","
     setupTime: "8-10 weeks","
-    integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"];
-  },;
+    integrations["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"]},;
   // AI-Powered Space Technology Analytics
   {
 "
@@ -100,8 +98,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["Maxar Technologies", "Planet Labs", "SpaceX"],;"
     roi: "1200% within 24 months","
     setupTime: "10-12 weeks","
-    integrations["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"];
-  },;
+    integrations["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"]},;
   // AI-Powered Quantum Machine Learning Platform
   {
 "
@@ -133,8 +130,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],;"
     roi: "2000% within 36 months","
     setupTime: "12-16 weeks","
-    integrations["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"];
-  },;
+    integrations["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"]},;
   // AI-Powered Environmental Technology Platform
   {
 "
@@ -166,8 +162,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["Climate Corp", "Carbon Engineering", "Pachama"],;"
     roi: "600% within 15 months","
     setupTime: "5-7 weeks","
-    integrations["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"];
-  },;
+    integrations["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"]},;
   // AI-Powered Entertainment Content Generation
   {
 "
@@ -199,8 +194,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["Runway ML", "Synthesia", "Descript"],;"
     roi: "700% within 18 months","
     setupTime: "6-8 weeks","
-    integrations["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"];
-  },;
+    integrations["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"]},;
   // AI-Powered Education Personalization Platform
   {
 "
@@ -232,6 +226,5 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     competitors["Knewton", "DreamBox", "Carnegie Learning"],;"
     roi: "500% within 12 months","
     setupTime: "4-6 weeks","
-    integrations["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"];
-  }];
+    integrations["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"]}];
 '"

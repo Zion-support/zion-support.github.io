@@ -1,6 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   MessageCircle, 
   X, 
@@ -50,9 +48,7 @@ interface Message {
     type: 'image' | 'file' | 'video';
     url: string;
     name: string;
-    size?: string;
-  
-}[];  metadata?: {
+    size?: string}[];  metadata?: {
 
     confidence?: number;
     sources?: string[];
@@ -79,8 +75,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   maxMessages = 100,
   enableVoice = false,
   enableFileUpload = false,
-  enableSuggestions = true;
-}) => {
+  enableSuggestions = true}) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -92,38 +87,27 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const [currentTheme, setCurrentTheme] = useState (theme) ;
   const [showSuggestions, setShowSuggestions] = useState (false) ;
 
-  const messagesEndRef = useRef < HTMLDivElement> (null) ;
-  const inputRef = useRef < HTMLInputElement> (null) ;
-  const recognitionRef = useRef < any> (null) ;
-
+  
+  
+  
   // Auto-scroll to bottom when new messages arrive
-  const scrollToBottom = useCallback(() => {
-
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  
   }, []);
 
   useEffect ( () => {
-    scrollToBottom () ;
-  }, [messages, scrollToBottom]) ;
+    scrollToBottom () }, [messages, scrollToBottom]) ;
   // Theme management
   useEffect(() => {
 
     if (theme === 'auto') {
 
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark));
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: MediaQueryListEvent) => {
-
-        setCurrentTheme(e.matches ? 'dark' : 'light');
-      };
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
       '
       mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    } else {
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {
 
-      setCurrentTheme(theme);
-    }
+      setCurrentTheme(theme)}
   }, [theme]) ;
   // Initialize with welcome message
   useEffect ( () => {
@@ -142,13 +126,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           ]
         }
       };
-      setMessages ([welcomeMessage]) ;
-    }
+      setMessages ([welcomeMessage]) }
   }, []) ;
 
-  const handleSendMessage = async (content: string) => {
-
-    if (!content.trim()) return;
+  
     const userMessage: Message = {
 
       id: Date.now().toString(),
@@ -178,51 +159,26 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         }
       };
       setMessages (prev => [...prev, aiMessage]) ;
-      setIsTyping (false) ;
-    }, 1500) ;
+      setIsTyping (false) }, 1500) };
+
+  
+      handleSendMessage(inputValue)}
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-
-    if (e.key === 'Enter' && !e.shiftKey) {
-
-      e.preventDefault();
-      handleSendMessage(inputValue);
-    }
-  };
-
-  const toggleChat = () => {
-    setIsOpen (!isOpen) ;
+  
     if (!isOpen) {
 
-      inputRef.current?.focus();
-    }
-  };
+      inputRef.current?.focus()}
+  }};
 
-  const toggleMinimize = () => {
-    setIsMinimized (!isMinimized) ;
-  };
-
-  const getPositionClasses = (...args: unknown[]): unknown => {
-    switch (position) {
-
-      case 'bottom-left':'
-        return 'bottom-4 left-4';
+  
       case 'top-right':'
         return 'top-4 right-4';
       case 'top-left':'
         return 'top-4 left-4';
       default:'
-        return 'bottom-4 right-4';
-    }
-  };
-
-  const getThemeClasses = () => {
-
-    return currentTheme === 'dark' '
-      ? 'bg-gray-900 text-white border-gray-700' '
-      : 'bg-white text-gray-900 border-gray-200 shadow-lg';
-  };
+        return 'bottom-4 right-4'}
+  }};
   if (!enabled) return null;
 
   return()`
@@ -239,7 +195,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
 
         >"
-          <MessageCircle className="w-6 h-6" />        </motion.button>
+          <MessageCircle className="w-6 h-6"  />        </motion.button>
       )}
 
       {/* Chat Window */}
@@ -255,7 +211,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
               <div className="flex items-center space-x-2">"
-                <Bot className="w-5 h-5 text-blue-500" />"                <span className="font-semibold">AI Assistant</span>
+                <Bot className="w-5 h-5 text-blue-500"  />"                <span className="font-semibold">AI Assistant</span>
               </div>"
               <div className="flex items-center space-x-2">
                 <button
@@ -271,7 +227,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
 
                 >"
-                  <X className="w-4 h-4" />                </button>
+                  <X className="w-4 h-4"  />                </button>
               </div>
             </div>
 
@@ -345,12 +301,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
 
                     >"
-                      <Send className="w-4 h-4" />                    </button>
+                      <Send className="w-4 h-4"  />                    </button>
                   </div>
                 </div>
               </>) }
           </motion.div>) }
       </AnimatePresence>
-    </div>) ;
-};
+    </div>) };
 '"`

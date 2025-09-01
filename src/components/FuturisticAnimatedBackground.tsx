@@ -1,29 +1,26 @@
-import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
 
-  const canvasRef = useRef < HTMLCanvasElement> (null) ;
-
+  
   useEffect ( () => {
-    const canvas = canvasRef.current;
+    
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = (...args: unknown[]): unknown => {;
+    
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
     // Add enhanced grid background'
 <<<<<<< HEAD
-    const gridCanvas = document.createElement('canvas');
-    const gridCtx = gridCanvas.getContext('2d');
+    
+    
     if (gridCtx) {
 =======
     const gridCanvas = document.createElement('canvas');'
@@ -65,15 +62,14 @@ export default FuturisticAnimatedBackground;
       size: number;
       color: string;
       life: number;
-      maxLife: number;
-    }[] = [];
+      maxLife: number}[] = [];
 
     // Create particles
-    const createParticle = () => {;
-      const x = Math.random () * canvas.width;
-      const y = Math.random () * canvas.height;
-      const angle = Math.random () * Math.PI * 2;
-      const speed = Math.random () * 0.5 + 0.1;
+    
+      
+      
+      
+      
       particles.push({
 
         x,
@@ -84,8 +80,7 @@ export default FuturisticAnimatedBackground;
         color: `hsl (${200 + Math.random () * 60}, 70%, 60%) `,
         life: 1,
         maxLife: Math.random () * 100 + 50
-      }) ;
-    };
+      }) };
 
     // Update and draw particles
     const animate = (...args: unknown[]): unknown => {;      time += 0.01;
@@ -102,7 +97,7 @@ export default FuturisticAnimatedBackground;
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
 
-        const particle = particles[i];
+        
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -115,8 +110,8 @@ export default FuturisticAnimatedBackground;
           continue;
 
         // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife) ;
-        const size = particle.size * (1 - alpha * 0.5) ;
+        
+        
         // Outer glow
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
@@ -162,10 +157,9 @@ export default FuturisticAnimatedBackground;
       ctx.lineWidth = 2;
 
       // Rotating triangle
-      const centerY = canvas.height * 0.3;
-      const triangleSize = 30;
-      const rotation = time * 0.5;
-
+      
+      
+      
       ctx.save () ;
       ctx.translate (centerX, centerY) ;
       ctx.rotate (rotation) ;
@@ -178,7 +172,7 @@ export default FuturisticAnimatedBackground;
       ctx.restore () ;
 
       // Floating circle
-      const circleSize = 20 + Math.sin(time * 2) * 10;
+      
 <<<<<<< HEAD
 
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
@@ -198,24 +192,20 @@ export default FuturisticAnimatedBackground;
 
       for (let i = 0; i < 3; i++) {
 
-        const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
-
+        
         ctx.beginPath () ;
         ctx.moveTo (waveOffset - 100, waveY) ;
         ctx.lineTo (waveOffset, waveY + 20) ;
         ctx.lineTo (waveOffset + 100, waveY) ;
         ctx.stroke () ;
 
-      animationId = requestAnimationFrame (animate) ;
-    };
+      animationId = requestAnimationFrame (animate) };
     animate () ;
 
     return () => {
 
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationId);
-    };
-  }, []) ;
+      cancelAnimationFrame(animationId)}}, []) ;
   return()
     <canvas
       ref = {canvasRef}
@@ -226,11 +216,7 @@ export default FuturisticAnimatedBackground;
   ;
   transparent 60%);
 ;
-;
-
 }};
-    />;) ;
-};
+    />;) };
 
-export default FuturisticAnimatedBackground;
-}}}}}}'"`
+export default FuturisticAnimatedBackground}}}}}}'"`

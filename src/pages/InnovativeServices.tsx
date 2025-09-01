@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Brain,
@@ -27,20 +25,11 @@ import {
 
 const InnovativeServices: React.FC = (): JSX.Element => {
 
-  const innovations = [
-    {
-
-      id: 'ai-automation',
-      title: 'AI Business Automation',
-      description: 'Revolutionary AI-powered business process automation that transforms your operations',
-      icon: Brain,
-      features[;
+  
         'Intelligent workflow automation',Predictive analytics integration',Real-time decision making',Scalable AI infrastructure'
       ],;
       benefits['300% efficiency increase',24/7 autonomous operation',Cost reduction up to 60%'],;
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';        'Scalable AI infrastructure'
       ],;'
       benefits['300% efficiency increase', '24/7 autonomous operation', 'Cost reduction up to 60%'],;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -129,12 +118,11 @@ import { motion } from 'framer-motion';        'Scalable AI infrastructure'
         'Green data centers';
       ],;
       benefits: ['Environmental impact',Cost savings',Regulatory compliance'],;
-      color: 'from-zion-blue to-zion-green';
-    };
+      color: 'from-zion-blue to-zion-green'};
   ];
 
 <<<<<<< HEAD
-  const stats = [;
+  
     { label: 'Innovation Projects', value: '500+', icon: Rocket },;
     { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
     { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
@@ -325,7 +313,7 @@ import { motion } from 'framer-motion';        'Scalable AI infrastructure'
                     <ul className="space-y-2">
                       {innovation.benefits.map((benefit, idx) => ("
                         <li key={idx} className="flex items-center text-zion-slate-light">"
-                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />                          {benefit}
+                          <TrendingUp className="w-4 h-4 text-zion-green mr-3"  />                          {benefit}
                         </li>) ) }
                     </ul>
                   </div>
@@ -386,7 +374,6 @@ import { motion } from 'framer-motion';        'Scalable AI infrastructure'
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default InnovativeServices;}}'"`
+export default InnovativeServices}}'"`

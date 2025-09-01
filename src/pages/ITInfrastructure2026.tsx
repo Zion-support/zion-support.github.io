@@ -1,170 +1,33 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { innovativeITInfrastructure2026 } from '../data/innovativeITInfrastructure2026';
 
 const ITInfrastructure2026: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {
-    let services = innovativeITInfrastructure2026;
-
+  
     // Filter by search query
     if (searchQuery) {
       services = services.filter(service => 
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
+      )}
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory);
-    }
+      services = services.filter(service => service.category === selectedCategory)}
 
-    return services;
-  };
+    return services};
 
-  const getCategories = () => {
-    const categories = [...new Set(innovativeITInfrastructure2026.map(service => service.category))];
-    return categories;
-  };
+  
+    return categories};
 
-  const renderServiceCard = (service: any) => (
-    <motion.div
-      key={service.id}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden"
-    >
-      <div className="p-6">
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-          <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full">
-            {service.pricing}
-          </span>
-        </div>
-        
-        <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.description}</p>
-        
-        <div className="mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">Price:</span>
-            <span className="text-lg font-bold text-gray-900">${service.price.toLocaleString()}</span>
-          </div>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">Model:</span>
-            <span className="text-sm text-gray-700">{service.pricingModel}</span>
-          </div>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">Users:</span>
-            <span className="text-sm text-gray-700">{service.userLimit}</span>
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-          <div className="grid grid-cols-1 gap-1">
-            {service.features.slice(0, 4).map((feature: string, index: number) => (
-              <div key={index} className="flex items-center text-sm text-gray-600">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                {feature}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-          <div className="grid grid-cols-1 gap-1">
-            {service.benefits.slice(0, 3).map((benefit: string, index: number) => (
-              <div key={index} className="flex items-center text-sm text-gray-600">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                {benefit}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">Market Price:</span>
-            <span className="text-sm font-semibold text-gray-700">{service.marketPrice}</span>
-          </div>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">ROI:</span>
-            <span className="text-sm font-semibold text-green-600">{service.roi}</span>
-          </div>
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-500">Setup:</span>
-            <span className="text-sm text-gray-700">{service.setupTime}</span>
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>
-          <div className="flex flex-wrap gap-1">
-            {service.targetAudience.slice(0, 3).map((audience: string, index: number) => (
-              <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded">
-                {audience}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-          <div className="flex flex-wrap gap-1">
-            {service.technologies.slice(0, 4).map((tech: string, index: number) => (
-              <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="border-t pt-4">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm text-gray-500">Free Tier:</span>
-            <span className={`text-sm font-semibold ${service.freeTier ? 'text-green-600' : 'text-red-600'}`}>
-              {service.freeTier ? 'Available' : 'Not Available'}
-            </span>
-          </div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm text-gray-500">Trial Period:</span>
-            <span className="text-sm text-gray-700">{service.trialPeriod}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-500">Innovation Level:</span>
-            <span className="text-sm font-semibold text-blue-600">{service.innovationLevel}</span>
-          </div>
-        </div>
-
-        <div className="mt-6 pt-4 border-t">
-          <div className="text-center">
-            <p className="text-sm text-gray-500 mb-2">Contact Zion Tech Group</p>
-            <div className="space-y-1 text-xs text-gray-600">
-              <p>📞 {service.contactInfo.phone}</p>
-              <p>✉️ {service.contactInfo.email}</p>
-              <p>🌐 {service.contactInfo.website}</p>
-              <p>📍 {service.contactInfo.address}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
-      <SEO 
-        title="IT Infrastructure Services 2026 - Zion Tech Group"
+      <SEO title="IT Infrastructure Services 2026 - Zion Tech Group"
         description="Discover our modern IT infrastructure solutions for 2026. From cloud optimization to edge computing, we deliver scalable, secure, and efficient infrastructure services."
         keywords="IT infrastructure 2026, cloud computing, edge computing, data center, Zion Tech Group, infrastructure solutions"
-      />
+       />
       
       <div className="container mx-auto px-4 py-12">
         {/* Header Section */}
@@ -278,7 +141,6 @@ const ITInfrastructure2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default ITInfrastructure2026;

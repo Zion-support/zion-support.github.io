@@ -1,12 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
-import { safeStorage } from '@/utils/safeStorage';
-import { Button } from '@/components/ui/button';
-import { getStripe } from '@/utils/getStripe';
-import { CheckoutShippingOptions } from '@/components/CheckoutShippingOptions';
-import type { ShippingRate } from '@/components/CheckoutShippingOptions';
 import {
   Form,
   FormField,
@@ -20,69 +11,49 @@ interface CartItem {
   id: string;
   name: string;
   price: number;
-  quantity: number;
-}
+  quantity: number}
 
 interface CheckoutForm {
   name: string;
   email: string;
   address: string;
   city: string;
-  country: string;
-}
+  country: string}
 
 export default function Checkout() {
-  const navigate = useNavigate();
+  
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
-  const watchAddr = form.watch(['name', 'address', 'city', 'country']);
-
+  
+  
   useEffect(() => {
-    const sku = searchParams.get('sku');
+    
     if (sku) {
       setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
+      return}
 
-    const stored = safeStorage.getItem('guestCart');
+    
     if (stored) {
       try {
-        setItems(JSON.parse(stored) as CartItem[]);
-      } catch {
-        setItems([]);
-      }
+        setItems(JSON.parse(stored) as CartItem[])} catch {
+        setItems([])}
     }
   }, [searchParams]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  
   const [shippingRate, setShippingRate] = useState<ShippingRate | null>(null);
-  const total = subtotal + (shippingRate ? parseFloat(shippingRate.rate) : 0) + (shippingRate?.tax ? parseFloat(shippingRate.tax) : 0);
-
-  const onSubmit = async (data: CheckoutForm) => {
-    try {
-      const res = await fetch('/api/create-payment-intent', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: total }),
-      });
-      const result = await res.json();
+  
+  
+      
       if (!res.ok) throw new Error(result.error || 'Failed');
-      const stripe = await getStripe();
+      
       if (stripe && result.clientSecret) {
-        const payment = await stripe.confirmCardPayment(result.clientSecret, {
-          payment_method: {
-            card: { token: 'tok_visa' },
-            billing_details: { name: data.name, email: data.email },
-          },
-        });
+        
         if (payment.error) throw payment.error;
         safeStorage.removeItem('cart');
-        navigate(`/orders/${result.id}`);
-      }
+        navigate(`/orders/${result.id}`)}
     } catch (err) {
-      console.error('Payment failed', err);
-    }
+      console.error('Payment failed', err)}
   };
 
   return (
@@ -95,56 +66,55 @@ export default function Checkout() {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )} />
             <FormField name="email" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input type="email" {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )} />
             <FormField name="address" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Address</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )} />
             <FormField name="city" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>City</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )} />
             <FormField name="country" control={form.control} render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>
             )} />
-            <CheckoutShippingOptions
-              toAddress={{
+            <CheckoutShippingOptions toAddress={{
                 name: watchAddr[0],
                 address: watchAddr[1],
                 city: watchAddr[2],
                 country: watchAddr[3],
               }}
               onSelect={setShippingRate}
-            />
+             />
             <div className="border-t pt-4">
               <div className="flex justify-between font-semibold mb-4">
                 <span>Subtotal</span>
@@ -174,5 +144,4 @@ export default function Checkout() {
         </Form>
       </div>
     </div>
-  );
-}
+  )}

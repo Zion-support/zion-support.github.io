@@ -1,51 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Mail } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setErrorMsg("Please enter a valid email address.");
-      return;
-    }
+      return}
 
     setErrorMsg("");
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/newsletter/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
+      
       if (res.ok) {
         toast.success("Thanks for subscribing!");
-        setEmail("");
-      } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data.error || "Subscription failed");
-      }
+        setEmail("")} else {
+        
+        toast.error(data.error || "Subscription failed")}
     } catch (err: any) {
-      toast.error(err.message || "Subscription failed");
-    } finally {
-      setIsSubmitting(false);
-    }
+      toast.error(err.message || "Subscription failed")} finally {
+      setIsSubmitting(false)}
   };
 
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
-          <Mail className="h-6 w-6" />
+          <Mail className="h-6 w-6"  />
         </div>
         <div>
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>
@@ -87,5 +70,4 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  );
-}
+  )}

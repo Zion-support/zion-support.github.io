@@ -1,4 +1,3 @@
-import React from 'react.ts';
 export default React.memo (function AiSolutions (...args: any[]) : any {
 
   return()
@@ -89,7 +88,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
                       key={featureIndex}"
                       className="flex items-center text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -159,7 +158,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
                       key={benefitIndex}"
                       className="flex items-center text-sm text-gray-400"
                     >"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                      {benefit}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -342,7 +341,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
 
                 {index < 3 && ("
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-cyan-400" />                  </div>
+                    <ArrowRight className="w-8 h-8 text-cyan-400"  />                  </div>
                 )}
               </motion.div>
             ))}
@@ -381,6 +380,5 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-}
+    </div>) }
 '"`

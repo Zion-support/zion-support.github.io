@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
 export function ServiceWorker(...args: any[]): any {
 
   const [swState, setSwState] = useState<any>({
@@ -19,7 +16,7 @@ export function ServiceWorker(...args: any[]): any {
         .register('/sw.js')
         .then((registration) => {
 
-          // console.log('SW registered: any', registration);
+          // console.log('SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates'
@@ -34,43 +31,31 @@ export function ServiceWorker(...args: any[]): any {
 setSwState (prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
-                    hasUpdate: true ;
-                  }) ) ;
-                }
-              }) ;
-            }
+                    hasUpdate: true }) ) }
+              }) }
           }) ;
 
           // Handle updates'
           navigator.serviceWorker.addEventListener('controllerchange', () => {
-            window.location.reload();
-          });
-        })
+            window.location.reload()})})
         .catch((registrationError) => {
 
-          // console.log('SW registration failed: ', registrationError);
-        });
-    }
+          // console.log('SW registration failed: ', registrationError)})}
 
     // Online/offline detection
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
-
+    
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
     return () => {
 
       window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []) ;
+      window.removeEventListener('offline', handleOffline)}}, []) ;
 
-  const handleUpdate = () => {;
+  
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
-      });
-    }  };
+        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
 
   if (!swState.isInstalled) return null;
 
@@ -101,9 +86,9 @@ setSwState (prev: > ({ ;
           <div className="flex items-center space-x-3">"
             <div className="flex-shrink-0">
               {swState.isOnline ? ("
-                <Wifi className="h-5 w-5 text-green-500" />
+                <Wifi className="h-5 w-5 text-green-500"  />
               ) : ("
-                <WifiOff className="h-5 w-5 text-red-500" />              )}
+                <WifiOff className="h-5 w-5 text-red-500"  />              )}
             </div>"
             <div className="flex-1 min-w-0">"
               <p className="text-sm font-medium text-gray-900 dark:text-white">
@@ -124,5 +109,4 @@ setSwState (prev: > ({ ;
         </motion.div>;
       )};
     </AnimatePresence>;
-  );
-}'"
+  )}'"

@@ -20,6 +20,5 @@ export function Checkbox(...args[]):  {
       />;"
       {label && <span className="text-sm text-gray-700">{label}</span>};
     </label>;
-  );
-}
+  )}
 '"`

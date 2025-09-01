@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Home, 
   TrendingUp, 
@@ -30,125 +27,18 @@ import {
   Mail,
   MapPin as MapPinIcon
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const AIRealEstateAnalytics: React.FC = () => {
-  const features = [
-    {
-      title: 'AI-Powered Market Analysis',
-      description: 'Advanced machine learning algorithms analyze market trends, property values, and investment opportunities in real-time',
-      icon: Brain,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      title: 'Predictive Property Valuation',
-      description: 'Accurate property value predictions using historical data, market conditions, and neighborhood analytics',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Investment ROI Calculator',
-      description: 'Comprehensive ROI analysis including rental yields, appreciation potential, and market timing recommendations',
-      icon: Calculator,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Neighborhood Intelligence',
-      description: 'Deep insights into neighborhood demographics, crime rates, school ratings, and future development plans',
-      icon: MapPin,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'Risk Assessment Engine',
-      description: 'AI-powered risk analysis for market volatility, property condition, and investment timing',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Portfolio Optimization',
-      description: 'Intelligent portfolio management with diversification strategies and rebalancing recommendations',
-      icon: ChartBar,
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: 199,
-      period: 'month',
-      description: 'Perfect for individual investors and small portfolios',
-      features: [
-        'Up to 100 property analyses per month',Basic market trend reports',Property value estimates',Email support',Mobile app access',Basic portfolio tracking'
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: 499,
-      period: 'month',
-      description: 'Ideal for real estate professionals and active investors',
-      features: [
-        'Up to 1,000 property analyses per month',Advanced predictive analytics',Custom market reports',Priority support',API access',Advanced portfolio management',Risk assessment tools',Investment recommendations'
-      ],
-      color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 1299,
-      period: 'month',
-      description: 'Comprehensive solution for large investment firms and corporations',
-      features: [
-        'Unlimited property analyses',Custom AI model training',White-label solutions',Dedicated account manager',Custom integrations',Advanced reporting suite',Multi-user access',Onsite training'
-      ],
-      color: 'from-amber-500 to-orange-500',
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Real Estate Investors',
-      description: 'Make data-driven investment decisions with AI-powered market insights and property valuations',
-      icon: Users,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Property Developers',
-      description: 'Identify optimal development opportunities and assess market demand for new projects',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Real Estate Agents',
-      description: 'Provide clients with comprehensive market analysis and accurate property pricing',
-      icon: Target,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Financial Institutions',
-      description: 'Assess property collateral values and manage real estate investment portfolios',
-      icon: DollarSign,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <SEO 
-        title="AI Real Estate Analytics Platform | Zion Tech Group"
+      <SEO title="AI Real Estate Analytics Platform | Zion Tech Group"
         description="Transform real estate investment decisions with AI-powered market analysis, predictive valuations, and portfolio optimization. Get comprehensive insights for smarter property investments."
         keywords="AI real estate analytics, property valuation, real estate investment, market analysis, portfolio optimization, predictive analytics"
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -269,7 +159,7 @@ const AIRealEstateAnalytics: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -366,17 +256,17 @@ const AIRealEstateAnalytics: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-gray-600">{contactInfo.phone}</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600">{contactInfo.email}</p>
               </div>
               <div className="text-center">
-                <MapPinIcon className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <MapPinIcon className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">{contactInfo.address}</p>
               </div>
@@ -385,7 +275,6 @@ const AIRealEstateAnalytics: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIRealEstateAnalytics;

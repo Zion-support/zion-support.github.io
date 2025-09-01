@@ -35,8 +35,7 @@ contactInfo: {
   }
 ];
 
-export const enhancedInnovativeServices2027Categories = ['
-  'Web3 Solutions',Metaverse Solutions',Sustainable Tech',NeuroTech Solutions',Fusion Energy Solutions',;
+export 
   'OceanTech Solutions',;
   'AgriTech Solutions',;
   'Smart City Solutions',;
@@ -45,8 +44,6 @@ export const enhancedInnovativeServices2027Categories = ['
   'Federated Learning Solutions';
 ];
 ;
-export const getEnhancedInnovativeServices2027 = : unknown enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = category: string
-  enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = id: string
-  enhancedInnovativeServices2027.find(service => service.id === id);
+export 
+export 
+export 

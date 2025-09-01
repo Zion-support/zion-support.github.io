@@ -1,7 +1,4 @@
 
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
 import { 
   FormField, 
   FormItem, 
@@ -10,16 +7,9 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
 
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-}
+  form: UseFormReturn<ContractFormValues>}
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
@@ -31,9 +21,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Project Title</FormLabel> {/* Renamed */}
             <FormControl>
-              <Input placeholder="Enter the project title" {...field} /> {/* Updated placeholder */}
+              <Input placeholder="Enter the project title" {...field}  /> {/* Updated placeholder */}
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -45,9 +35,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Client Name</FormLabel>
             <FormControl>
-              <Input placeholder="Enter client's full name or company name" {...field} />
+              <Input placeholder="Enter client's full name or company name" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -59,9 +49,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Talent Name</FormLabel>
             <FormControl>
-              <Input placeholder="Enter talent's full name" {...field} />
+              <Input placeholder="Enter talent's full name" {...field}  />
             </FormControl>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -73,16 +63,15 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Deliverables</FormLabel>
             <FormControl>
-              <Textarea
-                placeholder="Describe the project deliverables in detail, including specific outcomes, reports, software features, etc."
+              <Textarea placeholder="Describe the project deliverables in detail, including specific outcomes, reports, software features, etc."
                 className="min-h-[120px]"
                 {...field}
-              />
+               />
             </FormControl>
             <FormDescription>
               Be very specific about what will be delivered.
             </FormDescription>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -94,12 +83,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Jurisdiction</FormLabel>
             <FormControl>
-              <Input placeholder="e.g., State of California, USA" {...field} />
+              <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
               The governing law for the contract.
             </FormDescription>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -111,12 +100,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Jurisdiction</FormLabel>
             <FormControl>
-              <Input placeholder="e.g., State of California, USA" {...field} />
+              <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
               The governing law for the contract.
             </FormDescription>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -140,7 +129,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -154,7 +143,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                   />
                 </PopoverContent>
               </Popover>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
@@ -177,7 +166,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       ) : (
                         <span>Pick a date</span>
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -194,11 +183,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormDescription>
                 Leave empty if the end date is flexible
               </FormDescription>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>
           )}
         />
       </div>
     </>
-  );
-}
+  )}

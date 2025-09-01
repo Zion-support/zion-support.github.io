@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Heart, 
   TrendingUp, 
@@ -26,97 +23,17 @@ import {
 } from 'lucide-react';
 
 export default function AICustomerExperienceOptimization() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    "AI-powered customer journey mapping",
-    "Real-time sentiment analysis",
-    "Personalized experience recommendations",
-    "Predictive customer behavior modeling",
-    "Multi-channel experience optimization",
-    "Customer satisfaction prediction",
-    "Automated experience personalization",
-    "Real-time feedback analysis",
-    "Customer lifetime value optimization",
-    "Cross-platform experience consistency"
-  ];
-
-  const benefits = [
-    "Increase customer satisfaction by 45%",
-    "Improve customer retention by 35%",
-    "Boost customer lifetime value by 50%",
-    "Reduce customer churn by 40%",
-    "Enhance brand loyalty and advocacy",
-    "Data-driven experience optimization"
-  ];
-
-  const useCases = [
-    "E-commerce platforms",
-    "SaaS companies",
-    "Financial services",
-    "Healthcare providers",
-    "Travel and hospitality",
-    "Retail chains",
-    "Telecommunications",
-    "Educational institutions"
-  ];
-
-  const pricing = [
-    {
-      plan: "Growth",
-      price: "$3,499",
-      period: "month",
-      description: "Perfect for growing businesses",
-      features: [
-        "Up to 10,000 customers",
-        "Basic experience analytics",
-        "Email support",
-        "Standard reporting",
-        "Mobile app access"
-      ]
-    },
-    {
-      plan: "Professional",
-      price: "$6,999",
-      period: "month",
-      description: "Ideal for established businesses",
-      features: [
-        "Up to 100,000 customers",
-        "Advanced AI optimization",
-        "Real-time personalization",
-        "Custom dashboards",
-        "Priority support",
-        "API access"
-      ]
-    },
-    {
-      plan: "Enterprise",
-      price: "$14,999",
-      period: "month",
-      description: "For large-scale operations",
-      features: [
-        "Unlimited customers",
-        "Full AI suite",
-        "Custom AI models",
-        "Dedicated support team",
-        "On-site consultation",
-        "White-label options"
-      ]
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Customer Experience Optimization - Zion Tech Group"
+      <SEO title="AI Customer Experience Optimization - Zion Tech Group"
         description="Transform your customer experience with AI-powered optimization. Increase satisfaction by 45%, improve retention by 35%, and boost customer lifetime value with our intelligent platform."
         canonical="/services/ai-customer-experience-optimization"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -131,7 +48,7 @@ export default function AICustomerExperienceOptimization() {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-pink-500/20 rounded-full">
-                  <Heart className="h-12 w-12 text-pink-400" />
+                  <Heart className="h-12 w-12 text-pink-400"  />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -148,7 +65,7 @@ export default function AICustomerExperienceOptimization() {
                   className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Start Free Trial
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5"  />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -191,7 +108,7 @@ export default function AICustomerExperienceOptimization() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-pink-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-pink-400" />
+                      <CheckCircle className="h-5 w-5 text-pink-400"  />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -229,7 +146,7 @@ export default function AICustomerExperienceOptimization() {
                   className="text-center"
                 >
                   <div className="p-4 bg-pink-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-pink-400" />
+                    <TrendingUp className="h-8 w-8 text-pink-400"  />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </motion.div>
@@ -278,7 +195,7 @@ export default function AICustomerExperienceOptimization() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-pink-400 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-pink-400 flex-shrink-0"  />
                         <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
@@ -329,11 +246,11 @@ export default function AICustomerExperienceOptimization() {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-pink-500/50 transition-colors"
                 >
                   <div className="p-3 bg-pink-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    {index === 0 && <Smile className="h-8 w-8 text-pink-400" />}
-                    {index === 1 && <Target className="h-8 w-8 text-pink-400" />}
-                    {index === 2 && <Zap className="h-8 w-8 text-pink-400" />}
-                    {index === 3 && <Award className="h-8 w-8 text-pink-400" />}
-                    {index > 3 && <Heart className="h-8 w-8 text-pink-400" />}
+                    {index === 0 && <Smile className="h-8 w-8 text-pink-400"  />}
+                    {index === 1 && <Target className="h-8 w-8 text-pink-400"  />}
+                    {index === 2 && <Zap className="h-8 w-8 text-pink-400"  />}
+                    {index === 3 && <Award className="h-8 w-8 text-pink-400"  />}
+                    {index > 3 && <Heart className="h-8 w-8 text-pink-400"  />}
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </motion.div>
@@ -368,7 +285,7 @@ export default function AICustomerExperienceOptimization() {
                 className="text-center"
               >
                 <div className="p-4 bg-pink-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-pink-400" />
+                  <Phone className="h-8 w-8 text-pink-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
@@ -381,7 +298,7 @@ export default function AICustomerExperienceOptimization() {
                 className="text-center"
               >
                 <div className="p-4 bg-pink-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-pink-400" />
+                  <Mail className="h-8 w-8 text-pink-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
@@ -394,7 +311,7 @@ export default function AICustomerExperienceOptimization() {
                 className="text-center"
               >
                 <div className="p-4 bg-pink-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-pink-400" />
+                  <MapPin className="h-8 w-8 text-pink-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
@@ -413,12 +330,11 @@ export default function AICustomerExperienceOptimization() {
                 className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 Schedule a Consultation
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-5 w-5"  />
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  );
-}
+  )}

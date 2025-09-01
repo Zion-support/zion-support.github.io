@@ -1,11 +1,4 @@
-export const generateCSPHeader = () : string => {
-export const sanitizeInput = {
-export const securityConfig = {
-export const securityMiddleware = {
-export const validateInput = {
-export default securityConfig;
-
-
+export 
 // Security Configuration and Utilities
   // Content Security Policy
   csp: {
@@ -59,34 +52,27 @@ export default securityConfig;
   // Remove potentially dangerous HTML tags
   html: (input: string) : string => {
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) ;
-  },
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
 
   // Remove SQL injection patterns
   sql: (input: string) : string => {
-    return input.replace (/['";\\]/g,) ;
-  },
+    return input.replace (/['";\\]/g,) },
 
   // Remove XSS patterns
   xss: (input: string) : string => {
     return input
-      .replace (/javascript:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) ;
-  },
+      .replace (/javascript:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
 
   // General sanitization
   general: (input: string) : string => {
-    return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) ;
-  },
+    return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) },
 };
 
 // Helper function to generate CSP header string
   return Object.entries (securityConfig.csp) .map ( ([key, values]) => {
       if (Array.isArray (values) ) {
-        return `${key} ${values.join (' ') }`;
-      }
-      return `${key} ${values}`;
-    }) .join ('; ') ;
-};
+        return `${key} ${values.join (' ') }`}
+      return `${key} ${values}`}) .join ('; ') };
 
 // Validate input against patterns
 

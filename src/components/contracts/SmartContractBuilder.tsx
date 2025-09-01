@@ -1,24 +1,4 @@
 
-import { useState, useEffect, useRef } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save, FileText, Download, CheckCircle, XCircle, Loader2, ExternalLink } from "lucide-react"; // Added more icons
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues, Milestone } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview"; // This might need adjustments or be specific to Solidity preview
-import { TemplateManager } from "./templates/TemplateManager";
-import { DeploymentOptions, SmartContractInfo, ContractType } from "@/types/smart-contracts"; // Added ContractType
-import { useSmartContracts } from "@/hooks/useSmartContracts"; // This hook might be for Solidity templates, review usage
-import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
-import ReactMarkdown from 'react-markdown';
-import html2pdf from 'html2pdf.js';
-import { ethers } from 'ethers'; // Import ethers
-import { Input } from "@/components/ui/input"; // For wallet inputs
-import { Label } from "@/components/ui/label"; // For labels
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"; // For network selection
-import { Switch } from "@/components/ui/switch"; // For enable on-chain toggle
 
 // Placeholder ABIs - these should be generated from compiled contracts
 const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = [
@@ -57,21 +37,12 @@ interface SmartContractBuilderProps {
   clientName: string; // Assuming clientName is passed as a prop
   onContractGenerated?: (contractContent: string) => void; // For Solidity
   onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown
-  onDeploy?: (contractContent: string) => void;
-}
+  onDeploy?: (contractContent: string) => void}
 
 // Helper to ensure milestones are always an array
-const ensureMilestonesArray = (milestones: any): Milestone[] => {
-  if (Array.isArray(milestones)) {
-    return milestones.map(m => ({
-      description: m.description || '',
-      dueDate: m.dueDate || '',
-      amount: m.amount || 0,
-      // Ensure other required fields of Milestone are present
-    }));
+
   }
-  return [];
-};
+  return []};
 
 
 export function SmartContractBuilder({
@@ -103,8 +74,7 @@ export function SmartContractBuilder({
   });
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
-  const legalDraftPreviewRef = useRef<HTMLDivElement>(null);
-
+  
   // States for on-chain agreement UI and deployment
   const [enableOnChainAgreement, setEnableOnChainAgreement] = useState<boolean>(false);
   const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>('');
@@ -144,34 +114,27 @@ export function SmartContractBuilder({
         deadline: prev?.deadline || '',
         governingLaw: prev?.governingLaw || '',
         disputeResolution: prev?.disputeResolution || '',
-      }));
-    }
+      }))}
   }, [talent, clientName, isOpen]); // Re-run if talent, clientName, or isOpen changes and formValues not set.
 
 
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData);
+  
     // Clear any previously generated contracts when a new template is loaded
     setGeneratedMarkdownContract(null);
     setGeneratedSolidityContract(null);
     setLegalDraftError(null);
-    setActiveTab("form");
-  };
+    setActiveTab("form")};
 
   // For generating Solidity (existing logic, adapted)
-  const handleGenerateSolidity = async () => {
-    if (!formValues) {
-      toast.error("Please fill in the contract details first.");
-      return;
-    }
+  
+      return}
     try {
       // Assuming generateSolidityContract now primarily uses formValues
       // and talent/clientName are for context or specific template variables.
-      const solidityCode = await generateSolidityContract(formValues, talent, clientName);
+      
       setGeneratedSolidityContract(solidityCode);
       if (onContractGenerated) { // Existing prop for Solidity
-        onContractGenerated(solidityCode);
-      }
+        onContractGenerated(solidityCode)}
       // Potentially switch to a Solidity preview tab if that's different
       // For now, let's assume the main "Preview" tab can show Solidity if deployOptions.deployToChain is true
       // Or if there's a specific action for "Preview Solidity"
@@ -179,90 +142,52 @@ export function SmartContractBuilder({
       // setActiveTab("preview"); // Or a specific solidity preview tab
     } catch (error) {
       console.error("Error generating Solidity contract:", error);
-      toast.error("Failed to generate Solidity contract.");
-    }
+      toast.error("Failed to generate Solidity contract.")}
   };
   
   // New function for generating Markdown legal draft
-  const handleGenerateLegalDraft = async () => {
-    if (!formValues) {
-      toast.error("Please fill in the contract details first.");
-      return;
-    }
+  
+      return}
     setIsLoadingLegalDraft(true);
     setLegalDraftError(null);
     setGeneratedMarkdownContract(null);
 
     try {
-      const payload = {
-        // These field names must match the Supabase function's expected body
-        projectName: formValues.projectTitle,
-        clientName: formValues.clientName,
-        talentName: formValues.talentName,
-        scopeSummary: formValues.deliverables, // Or a dedicated scopeSummary field if available in ContractFormValues
-        paymentTerms: formValues.paymentStructure, // Or map milestones to a payment terms string
-        paymentAmount: formValues.paymentAmount, // This might be a total or derived from milestones
-        milestones: ensureMilestonesArray(formValues.milestones), // Ensure milestones is an array
-        // Add other fields as required by your 'generate-contract' Supabase function
-        // e.g., clientWalletAddress, talentWalletAddress, etc. if they are part of the text prompt
-        // deliverables: formValues.deliverables,
-        // additionalClauses: formValues.additionalClauses // if you add this to form
-      };
-
+      
       const { data, error } = await supabase.functions.invoke('generate-contract', {
         body: payload,
       });
 
       if (error) {
-        throw error;
-      }
+        throw error}
 
       if (data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent);
         if (onLegalDraftGenerated) {
-          onLegalDraftGenerated(data.markdownContent);
-        }
+          onLegalDraftGenerated(data.markdownContent)}
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview
-        toast.success("Legal draft generated successfully!");
-      } else {
-        throw new Error("No content received from draft generator.");
-      }
+        toast.success("Legal draft generated successfully!")} else {
+        throw new Error("No content received from draft generator.")}
     } catch (err: any) {
       console.error("Error generating legal draft:", err);
       setLegalDraftError(err.message || "Failed to generate legal draft.");
-      toast.error(err.message || "Failed to generate legal draft.");
-    } finally {
-      setIsLoadingLegalDraft(false);
-    }
+      toast.error(err.message || "Failed to generate legal draft.")} finally {
+      setIsLoadingLegalDraft(false)}
   };
 
-  const handleDownloadPdf = () => {
-    if (legalDraftPreviewRef.current && formValues) {
-      const element = legalDraftPreviewRef.current;
-      const opt = {
-        margin:       10,
-        filename:     `${formValues.projectTitle || 'contract'}_legal_draft.pdf`,
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, logging: false },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
+  
+      
       toast.info("Generating PDF...");
       html2pdf().from(element).set(opt).save()
         .then(() => toast.success("PDF downloaded successfully!"))
         .catch((err) => {
           toast.error("PDF generation failed.");
-          console.error("Error generating PDF:", err);
-        });
-    } else {
-      toast.warn("No draft content available to download or form values missing.");
-    }
+          console.error("Error generating PDF:", err)})} else {
+      toast.warn("No draft content available to download or form values missing.")}
   };
 
-  const handleDeployOnChainContract = async () => {
-    if (!formValues || !selectedNetwork || !formValues.clientWalletAddress || !formValues.talentWalletAddress) {
-      toast.error("Missing required fields for on-chain deployment: network, client/talent wallet addresses.");
-      return;
-    }
+  
+      return}
 
     setOnChainDeploymentStatus('connecting');
     setDeploymentError(null);
@@ -272,14 +197,12 @@ export function SmartContractBuilder({
 
     try {
       if (!window.ethereum) {
-        throw new Error("MetaMask is not installed. Please install it to continue.");
-      }
+        throw new Error("MetaMask is not installed. Please install it to continue.")}
 
       await window.ethereum.request({ method: 'eth_requestAccounts' });
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = await provider.getSigner();
-
-      const currentNetwork = await provider.getNetwork();
+      
+      
+      
       const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89'; // 1 for Ethereum Mainnet, 137 for Polygon
 
       if (currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {
@@ -289,14 +212,11 @@ export function SmartContractBuilder({
             params: [{ chainId: targetChainId }],
           });
           // Re-initialize provider and signer after network switch
-          // const newProvider = new ethers.BrowserProvider(window.ethereum);
-          // signer = await newProvider.getSigner();
-        } catch (switchError: any) {
+          // 
+          // signer = await newProvider.getSigner()} catch (switchError: any) {
           if (switchError.code === 4902) { // Chain not added
-            throw new Error(`Please add ${selectedNetwork} to MetaMask and switch to it.`);
-          }
-          throw new Error(`Failed to switch network: ${switchError.message}`);
-        }
+            throw new Error(`Please add ${selectedNetwork} to MetaMask and switch to it.`)}
+          throw new Error(`Failed to switch network: ${switchError.message}`)}
       }
 
       setOnChainDeploymentStatus('fetching_code');
@@ -305,11 +225,7 @@ export function SmartContractBuilder({
       const contractTypeToDeploy: ContractType = formValues.contractType || 'simple'; // Default to 'simple'
 
       // Create a temporary projectDetailsIPFSHash (replace with actual IPFS hashing later)
-      const projectDetailsString = JSON.stringify({
-        title: formValues.projectTitle,
-        deliverables: formValues.deliverables,
-        milestones: formValues.milestones,
-      });
+      
       const projectDetailsIPFSHash = ethers.id(projectDetailsString); // Simple hash
 
       const { data, error: funcError } = await supabase.functions.invoke('generate-smart-contract', {
@@ -329,7 +245,7 @@ export function SmartContractBuilder({
       // In reality, the Supabase function should return bytecode and ABI.
       // Or, if it returns Solidity, we'd compile it client-side (not recommended for production).
 
-      const currentAbi = contractTypeToDeploy === 'simple' ? SIMPLE_AGREEMENT_ABI : ESCROW_AGREEMENT_ABI;
+      
       setContractAbi(currentAbi);
 
       setOnChainDeploymentStatus('deploying');
@@ -340,34 +256,28 @@ export function SmartContractBuilder({
       // This is a placeholder for the actual deployment flow.
       // We need a compile step or the Supabase function must return bytecode.
       // For now, this will fail if populatedSolidityCode is not bytecode.
-      const factory = new ethers.ContractFactory(currentAbi, populatedSolidityCode /* THIS MUST BE BYTECODE */, signer);
-
+      
       let contract;
       // Adjust constructor arguments based on contractTypeToDeploy
       if (contractTypeToDeploy === 'simple') {
-        contract = await factory.deploy(formValues.clientWalletAddress, formValues.talentWalletAddress, projectDetailsIPFSHash);
-      } else { // escrow
+        contract = await factory.deploy(formValues.clientWalletAddress, formValues.talentWalletAddress, projectDetailsIPFSHash)} else { // escrow
         // EscrowAgreement constructor: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client)
         // The Ownable(_client) is handled by OpenZeppelin's constructor if `initialOwner` is the first arg to Ownable's constructor.
         // Or, if our EscrowAgreement's constructor directly calls Ownable(_client), then that's fine.
         // Based on EscrowAgreement.sol: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client)
         // The ethers.js deploy will pass these args to the Solidity constructor.
-        contract = await factory.deploy(formValues.talentWalletAddress, formValues.clientWalletAddress, projectDetailsIPFSHash);
-      }
+        contract = await factory.deploy(formValues.talentWalletAddress, formValues.clientWalletAddress, projectDetailsIPFSHash)}
 
       await contract.waitForDeployment();
-      const deployedAddr = await contract.getAddress();
+      
       setDeployedContractAddress(deployedAddr);
       setTransactionHash(contract.deploymentTransaction()?.hash || null);
       setOnChainDeploymentStatus('success');
-      toast.success(`Contract deployed successfully at ${deployedAddr}`);
-
-    } catch (err: any) {
+      toast.success(`Contract deployed successfully at ${deployedAddr}`)} catch (err: any) {
       console.error("Deployment error:", err);
       setDeploymentError(err.message || "An unknown error occurred during deployment.");
       setOnChainDeploymentStatus('error');
-      toast.error(err.message || "Deployment failed.");
-    }
+      toast.error(err.message || "Deployment failed.")}
   };
 
   // This function is passed to ContractForm.
@@ -408,21 +318,20 @@ export function SmartContractBuilder({
               onClick={() => setTemplateManagerOpen(true)}
               className="flex gap-1"
             >
-              <Save className="h-4 w-4" />
+              <Save className="h-4 w-4"  />
               Templates
             </Button>
           </div>
           
           <TabsContent value="form" className="pt-4 space-y-6">
-            <ContractForm 
-              talent={talent}
+            <ContractForm talent={talent}
               clientName={clientName}
               initialValues={formValues} // Pass the potentially prefilled/template-loaded values
               onFormValuesChange={setFormValues} // Keep SmartContractBuilder's state in sync
               onContractGenerated={handleFormSubmitFromContractForm} // This will now trigger Solidity generation
               deployOptions={deployOptions}
               onDeployOptionsChange={setDeployOptions}
-            />
+             />
             <div className="flex justify-end pt-4">
               <Button
                 onClick={handleGenerateLegalDraft}
@@ -430,7 +339,7 @@ export function SmartContractBuilder({
                 size="lg"
                 className="flex items-center gap-2 bg-green-600 hover:bg-green-700"
               >
-                <FileText className="h-5 w-5" />
+                <FileText className="h-5 w-5"  />
                 {isLoadingLegalDraft ? "Generating Draft..." : "Generate Legal Draft (GPT)"}
               </Button>
             </div>
@@ -447,7 +356,7 @@ export function SmartContractBuilder({
                 </div>
                 <div className="mt-4 flex justify-end">
                   <Button onClick={handleDownloadPdf} variant="outline" className="flex items-center gap-2">
-                    <Download className="h-4 w-4" />
+                    <Download className="h-4 w-4"  />
                     Download as PDF
                   </Button>
                 </div>
@@ -458,11 +367,10 @@ export function SmartContractBuilder({
 
           <TabsContent value="preview_solidity" className="pt-4 space-y-6">
             <div className="flex items-center space-x-2 p-4 border rounded-md">
-              <Switch
-                id="enable-on-chain"
+              <Switch id="enable-on-chain"
                 checked={enableOnChainAgreement}
                 onCheckedChange={setEnableOnChainAgreement}
-              />
+               />
               <Label htmlFor="enable-on-chain" className="text-lg font-medium">Enable On-Chain Agreement</Label>
             </div>
 
@@ -476,11 +384,11 @@ export function SmartContractBuilder({
                     className="mt-2 flex space-x-4"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="ethereum" id="ethereum" />
+                      <RadioGroupItem value="ethereum" id="ethereum"  />
                       <Label htmlFor="ethereum">Ethereum</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="polygon" id="polygon" />
+                      <RadioGroupItem value="polygon" id="polygon"  />
                       <Label htmlFor="polygon">Polygon</Label>
                     </div>
                   </RadioGroup>
@@ -527,15 +435,15 @@ export function SmartContractBuilder({
                       {onChainDeploymentStatus === 'connecting' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Connecting to wallet...</>}
                       {onChainDeploymentStatus === 'fetching_code' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Fetching contract code...</>}
                       {onChainDeploymentStatus === 'deploying' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Deploying to {selectedNetwork}...</>}
-                      {onChainDeploymentStatus === 'success' && <CheckCircle className="mr-2 h-4 w-4 text-green-500" />}
-                      {onChainDeploymentStatus === 'error' && <XCircle className="mr-2 h-4 w-4 text-red-500" />}
+                      {onChainDeploymentStatus === 'success' && <CheckCircle className="mr-2 h-4 w-4 text-green-500"  />}
+                      {onChainDeploymentStatus === 'error' && <XCircle className="mr-2 h-4 w-4 text-red-500"  />}
                       {onChainDeploymentStatus.charAt(0).toUpperCase() + onChainDeploymentStatus.slice(1).replace('_', ' ')}
                     </p>
                     {transactionHash && (
-                      <p>Transaction Hash: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/tx/${transactionHash}` : `https://polygonscan.com/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{transactionHash.substring(0,10)}...{transactionHash.substring(transactionHash.length - 8)} <ExternalLink className="h-3 w-3"/></a></p>
+                      <p>Transaction Hash: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/tx/${transactionHash}` : `https://polygonscan.com/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{transactionHash.substring(0,10)}...{transactionHash.substring(transactionHash.length - 8)} <ExternalLink className="h-3 w-3" /></a></p>
                     )}
                     {deployedContractAddress && (
-                      <p>Contract Address: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/address/${deployedContractAddress}` : `https://polygonscan.com/address/${deployedContractAddress}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{deployedContractAddress} <ExternalLink className="h-3 w-3"/></a></p>
+                      <p>Contract Address: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/address/${deployedContractAddress}` : `https://polygonscan.com/address/${deployedContractAddress}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{deployedContractAddress} <ExternalLink className="h-3 w-3" /></a></p>
                     )}
                     {deploymentError && (
                       <p className="text-red-500">Error: {deploymentError}</p>
@@ -565,5 +473,4 @@ export function SmartContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  );
-}
+  )}

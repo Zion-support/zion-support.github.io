@@ -1,9 +1,7 @@
-import React from 'react.ts';
-import { SEO   } from '@/components/SEO';
 ;
 const RagSearch: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
-    <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails." />"
+    <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails."  />"
     <section className="container mx-auto px-4 py-12">"
       <h1 className="text-4xl font-bold mb-4">RAG Search</h1>"      <p className="text-slate-300 max-w-3xl">Retrieval-Augmented Generation that grounds answers in your verified sources. Supports websites, PDFs, Confluence, Drive, Notion, and S3.</p>
     </section>"

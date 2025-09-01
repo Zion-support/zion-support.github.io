@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
 
@@ -10,36 +8,17 @@ interface LoadingSpinnerProps {
   showText?: boolean;
   className?: string;
 ;
-const sizeClasses = {
 
-  sm: 'w-8 h-8',
-  md: 'w-12 h-12',
-  lg: 'w-16 h-16',;
   ;
 =======
-import React from 'react';'
-import { motion } from 'framer-motion';  ;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   xl: 'w-32 h-32';
-;
-
-
-
-
-
-
-
 };
 ;
-const colorClasses = {
-<<<<<<< HEAD
 
-  primary: 'border-cyan-400',
-  secondary: 'border-blue-400',
-  white: 'border-white',;
   ;
 =======
 '
@@ -50,8 +29,7 @@ const colorClasses = {
   ;
   ;
   ;
-  cyan: 'border-cyan-400';
-};
+  cyan: 'border-cyan-400'};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
@@ -136,7 +114,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
       
 
 ;
-;
 }};
     />;"
     <span className="sr-only">Loading</span>;
@@ -148,8 +125,7 @@ export const FullScreenLoader: React.FC<{
 
   text?: string;
   showLogo?: boolean;
-  className?: string;
-}> = ({
+  className?: string}> = ({
 <<<<<<< HEAD
 
   text = 'Loading amazing experiences...',
@@ -172,7 +148,7 @@ export const FullScreenLoader: React.FC<{
         </div>;
       )};
       ;"
-      <LoadingSpinner size="lg" color="cyan" text={text} />;    </div>;
+      <LoadingSpinner size="lg" color="cyan" text={text}  />;    </div>;
   </div>;
 );
 
@@ -180,16 +156,14 @@ export const FullScreenLoader: React.FC<{
 export const SkeletonLoader: React.FC<{
 
   className?: string;
-  lines?: number;
-}> = ({
+  lines?: number}> = ({
 <<<<<<< HEAD
 
   className = '',
 =======
 '  className = '',
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  lines = 3;
-}) => (`
+  lines = 3}) => (`
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div

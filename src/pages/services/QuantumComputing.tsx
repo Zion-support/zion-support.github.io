@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Zap, 
@@ -24,79 +21,18 @@ import {
   CircuitBoard,
   Microchip'
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
 export default function QuantumComputing(...args: []):  {
 
-  const features = [
-    {
-
-      icon: Atom,
-      title: "Quantum Processing","
-      description: "Advanced quantum algorithms for complex computational problems"
-    },
-    {
-
-      icon: Brain,"
-      title: "AI Integration","
-      description: "Seamless integration with machine learning and AI systems"
-    },
-    {
-
-      icon: Shield,"
-      title: "Quantum Security","
-      description: "Unbreakable encryption using quantum key distribution"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Cloud Quantum","
-      description: "Access quantum computing power through our cloud platform"
-    }
-  ];
-
-  const useCases = [
-    {
-"
-      title: "Financial Modeling","
-      description: "Quantum algorithms for risk assessment and portfolio optimization",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Drug Discovery","
-      description: "Molecular simulation and protein folding for pharmaceutical research",
-      icon: Brain
-    },
-    {
-"
-      title: "Cryptography","
-      description: "Quantum-resistant encryption and secure communications",
-      icon: Lock
-    },
-    {
-"
-      title: "Optimization","
-      description: "Solving complex logistics and supply chain problems",
-      icon: Network
-    }
-  ];
-
-  const technologies = ["
-    "Quantum Annealing","
-    "Quantum Machine Learning","
-    "Quantum Cryptography","
-    "Quantum Error Correction","
-    "Quantum-Classical Hybrid Systems","
-    "Quantum Cloud Infrastructure"
-  ];
-
+  
+  
+  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO "
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for complex computational problems. AI integration, quantum security, and cloud quantum services."
-      />
+       />
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -134,7 +70,7 @@ export default function QuantumComputing(...args: []):  {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">"
-              <Star className="w-4 h-4 mr-2" />
+              <Star className="w-4 h-4 mr-2"  />
               Revolutionary Technology
             </div>
 "
@@ -156,7 +92,7 @@ export default function QuantumComputing(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
               >
                 Get Started"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <Link"
                 to="/services"
@@ -269,7 +205,7 @@ export default function QuantumComputing(...args: []):  {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-cyan-400/30 transition-all duration-200"
               >"
-                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />"
+                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />"
                 <span className="text-white">{tech}</span>
               </motion.div>
             ))}
@@ -298,7 +234,7 @@ export default function QuantumComputing(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
               >
                 Start Your Quantum Journey"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
               <Link"
                 to="/services"
@@ -311,8 +247,7 @@ export default function QuantumComputing(...args: []):  {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default QuantumComputing;
 '"

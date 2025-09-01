@@ -1,8 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '../../components/SEO';
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
-import { Badge } from '../../components/ui/Badge';
 import {
 
   CheckCircle,
@@ -38,7 +33,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <Badge variant="secondary" className="mb-4">"
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2"  />
               AI-Powered CX Platform
 =======
   Headphones,'
@@ -84,7 +79,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Heart className="w-8 h-8 text-pink-400" />
+                <Heart className="w-8 h-8 text-pink-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 95% Customer Satisfaction
@@ -97,7 +92,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <TrendingUp className="w-8 h-8 text-purple-400" />
+                <TrendingUp className="w-8 h-8 text-purple-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 300% CLV Increase
@@ -110,7 +105,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Zap className="w-8 h-8 text-indigo-400" />
+                <Zap className="w-8 h-8 text-indigo-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 80% Faster Resolution
@@ -123,7 +118,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Users className="w-8 h-8 text-blue-400" />
+                <Users className="w-8 h-8 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 24/7 Availability
@@ -146,7 +141,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     AI-Powered Personalization
@@ -159,7 +154,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Predictive Customer Analytics
@@ -172,7 +167,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Intelligent Chatbots
@@ -185,7 +180,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Sentiment Analysis
@@ -200,7 +195,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Omnichannel Integration
@@ -213,7 +208,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Proactive Customer Service
@@ -226,7 +221,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Customer Journey Mapping
@@ -239,7 +234,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Voice & Video Analytics
@@ -264,7 +259,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <ShoppingBag className="w-6 h-6 text-pink-400" />
+                <ShoppingBag className="w-6 h-6 text-pink-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 E-commerce & Retail
@@ -277,7 +272,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Headphones className="w-6 h-6 text-purple-400" />
+                <Headphones className="w-6 h-6 text-purple-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Contact Centers
@@ -290,7 +285,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <MessageCircle className="w-6 h-6 text-indigo-400" />
+                <MessageCircle className="w-6 h-6 text-indigo-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Social Media
@@ -303,7 +298,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Globe className="w-6 h-6 text-blue-400" />
+                <Globe className="w-6 h-6 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Financial Services
@@ -316,7 +311,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Target className="w-6 h-6 text-green-400" />
+                <Target className="w-6 h-6 text-green-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Healthcare
@@ -363,19 +358,19 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Up to 10,000 customers
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Basic AI personalization
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Standard chatbots
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  Email support
                 </li>
               </ul>"
               <Button className="w-full bg-pink-600 hover:bg-pink-700">
@@ -396,23 +391,23 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Up to 100,000 customers
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Advanced AI features
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Custom dashboards
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Priority support
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  API access
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />                  API access
                 </li>
               </ul>"
               <Button className="w-full bg-white text-pink-600 hover:bg-gray-100">
@@ -431,23 +426,23 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Unlimited customers
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Full AI capabilities
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Custom integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   24/7 dedicated support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  White-label options
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  White-label options
                 </li>
               </ul>"
               <Button className="w-full bg-purple-600 hover:bg-purple-700">
@@ -503,15 +498,15 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Phone className="w-5 h-5 text-pink-400" />
+              <Phone className="w-5 h-5 text-pink-400"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Mail className="w-5 h-5 text-pink-400" />
+              <Mail className="w-5 h-5 text-pink-400"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Globe className="w-5 h-5 text-pink-400" />              <span>ziontechgroup.com</span>
+              <Globe className="w-5 h-5 text-pink-400"  />              <span>ziontechgroup.com</span>
             </div>
           </div>
 "

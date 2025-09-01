@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 interface Address {
   name: string;
   address: string;
   city: string;
-  country: string;
-}
+  country: string}
 
 interface ShippingRate {
   id: string;
@@ -15,24 +12,13 @@ interface ShippingRate {
   rate: string;
   currency: string;
   delivery_days?: number | null;
-  tax?: string;
-}
+  tax?: string}
 
 interface Props {
   toAddress: Address | null;
-  onSelect?: (rate: ShippingRate) => void;
-}
+  onSelect?: (rate: ShippingRate) => void}
 
-const fromAddress = {
-  name: 'Store',
-  street1: '123 Market St',
-  city: 'San Francisco',
-  state: 'CA',
-  zip: '94103',
-  country: 'US',
-};
 
-const parcel = { weight: 1, length: 10, width: 10, height: 10 };
 
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
@@ -41,34 +27,22 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
 
   useEffect(() => {
     if (!toAddress) return;
-    const fetchRates = async () => {
-      setLoading(true);
+    
       try {
-        const res = await fetch('/api/shipping-rates', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fromAddress, toAddress, parcel }),
-        });
-        const data = await res.json();
+        
+        
         if (res.ok) {
-          setRates(data.rates || []);
-        } else {
-          console.error('Rates error', data);
-        }
+          setRates(data.rates || [])} else {
+          console.error('Rates error', data)}
       } catch (err) {
-        console.error('Rates error', err);
-      } finally {
-        setLoading(false);
-      }
+        console.error('Rates error', err)} finally {
+        setLoading(false)}
     };
-    fetchRates();
-  }, [toAddress]);
+    fetchRates()}, [toAddress]);
 
-  const handleChange = (value: string) => {
-    setSelected(value);
-    const rate = rates.find(r => r.id === value);
-    if (rate && onSelect) onSelect(rate);
-  };
+  
+    
+    if (rate && onSelect) onSelect(rate)};
 
   if (!toAddress) return null;
 
@@ -80,7 +54,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
         <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
           {rates.map(rate => (
             <label key={rate.id} className="flex items-center gap-2">
-              <RadioGroupItem value={rate.id} />
+              <RadioGroupItem value={rate.id}  />
               <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>
               {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
             </label>
@@ -88,7 +62,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
         </RadioGroup>
       )}
     </div>
-  );
-}
+  )}
 
 export type { ShippingRate };

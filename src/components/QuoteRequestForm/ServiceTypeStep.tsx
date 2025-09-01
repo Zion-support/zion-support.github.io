@@ -1,34 +1,12 @@
-import { useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useQuery } from "@tanstack/react-query";
-import { fetchServices } from "@/api/services";
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
-}
-
-const serviceListSchema = z.array(
-  z.object({
-    id: z.string(),
-    title: z.string(),
-    category: z.string(),
-    image: z.string().optional(),
-    description: z.string().optional(),
-  })
-);
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
+  
   const {
     data: listings = [],
     isPending: loading,
@@ -39,39 +17,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       fetchServices(formData.serviceType, debouncedQuery),
     enabled: !!formData.serviceType,
     retry: 2,
-  });
-
-  const fallbackListings = SAMPLE_SERVICES.filter(
-    (item) =>
-      item.category === formData.serviceType &&
-      item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
-  );
+  })}};
   
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  };
   
-  const handleItemSelect = (item: ListingItem) => {
-    updateFormData({ 
-      specificItem: item,
-      serviceCategory: item.category,
-      serviceType: item.category.toLowerCase() as ServiceType
-    });
-  };
   
-  const sourceListings = error ? fallbackListings : listings.length > 0 ? listings : SAMPLE_SERVICES;
-
-  const filteredListings = sourceListings.filter(item => {
-    // Filter by category only when a service type has been selected
-    if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
-    }
+      if (!categoryMatch) return false}
     
     if (searchQuery.trim() === "") return true;
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())});
 
   return (
     <div className="space-y-6">
@@ -121,7 +75,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
           
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"  />
             <Input
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -139,9 +93,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (
               <>
-                <Skeleton className="h-[120px] w-full" />
-                <Skeleton className="h-[120px] w-full" />
-                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full"  />
+                <Skeleton className="h-[120px] w-full"  />
+                <Skeleton className="h-[120px] w-full"  />
               </>
             ) : filteredListings.length > 0 ? (
               filteredListings.map((item) => (
@@ -152,15 +106,14 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >
-                  <ListingScoreCard
-                    title={item.title}
+                  <ListingScoreCard title={item.title}
                     category={item.category}
                     aiScore={Math.floor(Math.random() * 30) + 70}
                     rating={Math.floor(Math.random() * 2) + 3}
                     reviewCount={Math.floor(Math.random() * 50) + 10}
                     image={item.image}
                     description="Sample listing description"
-                  />
+                   />
                 </div>
               ))
             ) : (
@@ -172,5 +125,4 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  );
-}
+  )}

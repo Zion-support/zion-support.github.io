@@ -1,4 +1,3 @@
-import React from 'react';
 // Minimal type declarations for offline development
 
 // React stubs
@@ -14,13 +13,11 @@ declare module 'react' {
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
   const react: ;
-  export default react;
-}
+  export default react}
 <<<<<<< HEAD
 
 declare module 'react/jsx-runtime' {
-  export {};
-}
+  export {}}
 =======
 'declare module 'react/jsx-runtime' {
   export {}}
@@ -30,15 +27,12 @@ declare namespace JSX {
   interface Element {
 }
   interface IntrinsicElements {
-    [elemName: string]: ;
-  
-}
+    [elemName: string]: }
 }
 
 declare module 'react-dom' {
   export function reactDom: ;
-  export default reactDom;
-}
+  export default reactDom}
 <<<<<<< HEAD
 
 declare module 'react-router-dom' {
@@ -50,8 +44,7 @@ declare module 'react-router-dom' {
   export const Routes: ;
   export const Navigate: ;
   const rr: ;
-  export default rr;
-}
+  export default rr}
 <<<<<<< HEAD
 
 declare module 'react-hook-form' {
@@ -60,12 +53,10 @@ declare module 'react-hook-form' {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
-  export default rhf;
-}
+  export default rhf}
 
 declare module '@hookform/resolvers/zod' {
-  export function zodResolver(...args: unknown[]): ;
-}
+  export function zodResolver(...args: unknown[]): }
 <<<<<<< HEAD
 
 declare module '@tanstack/react-query' {
@@ -74,8 +65,7 @@ declare module '@tanstack/react-query' {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
-  export default rq;
-}
+  export default rq}
 
 declare module 'jspdf' {
   export class jsPDF {
@@ -91,13 +81,11 @@ declare module 'jspdf' {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 declare module 'path' {
   const path: ;
-  export default path;
-}
+  export default path}
 
 declare module 'jspdf-autotable' {
   const autotable: ;
-  export default autotable;
-}
+  export default autotable}
 <<<<<<< HEAD
 
 declare module 'zod' {

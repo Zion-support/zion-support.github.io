@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
@@ -15,8 +13,7 @@ import {
   Network'
 } from 'lucide-react';
 
-      color: 'from-red-500 to-pink-500';
-    };
+      color: 'from-red-500 to-pink-500'};
   ];
 const technologyCategories = [
   {
@@ -65,18 +62,9 @@ const technologyCategories = [
       { name: "Docker", icon: "🐳", proficiency: 90 },;"
       { name: "Kubernetes", icon: "⚓", proficiency: 85 };
     ],;"
-    color: "from-orange-500 to-red-500";
-  };
+    color: "from-orange-500 to-red-500"};
 ];
 
-const emergingTech = ["
-  { name: "Quantum Computing", icon: "⚛️", status: "Research" },"
-  { name: "Blockchain", icon: "🔗", status: "Production" },"
-  { name: "Edge Computing", icon: "🌐", status: "Development" },"
-  { name: "5G Networks", icon: "📡", status: "Integration" },"
-  { name: "IoT Platforms", icon: "📱", status: "Production" },"
-  { name: "AR/VR", icon: "🥽", status: "Research" }
-];
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -293,11 +281,11 @@ export function TechnologyStackSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
-                <Code className="ml-2 h-5 w-5" />
+                <Code className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Tech Specs"
-                <Server className="ml-2 h-5 w-5" />              </button>
+                <Server className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -309,8 +297,7 @@ export default TechnologyStackSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default TechnologyStackSection;
 export default TechnologyStackSection;
 '"`

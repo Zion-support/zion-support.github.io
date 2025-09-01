@@ -1,14 +1,10 @@
-import React from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
 
 export interface TalentProfileProps {
   id: string;
   full_name: string;
   bio?: string;
   skills?: string[];
-  profile_picture_url?: string;
-}
+  profile_picture_url?: string}
 
 export default function TalentProfile({
   full_name,
@@ -21,7 +17,7 @@ export default function TalentProfile({
       <div className="container mx-auto px-4 flex flex-col items-center space-y-4">
         <Avatar className="h-24 w-24">
           {profile_picture_url ? (
-            <AvatarImage src={profile_picture_url} alt={full_name} />
+            <AvatarImage src={profile_picture_url} alt={full_name}  />
           ) : (
             <AvatarFallback>{full_name.charAt(0)}</AvatarFallback>
           )}
@@ -42,5 +38,4 @@ export default function TalentProfile({
         </Button>
       </div>
     </main>
-  );
-}
+  )}

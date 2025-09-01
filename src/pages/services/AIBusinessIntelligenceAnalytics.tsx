@@ -1,6 +1,3 @@
-import React from 'react.ts';
-import { motion } from 'framer-motion.ts';
-import { SEO } from '@/components/SEO';
 import {
 
   Brain,
@@ -33,73 +30,11 @@ import {
   DollarSign,
   Percent} from 'lucide-react.ts';
 
-const AIBusinessIntelligenceAnalytics = () => {
-  const features = ['
-    'AI-Powered Predictive Analytics',Real-time Data Visualization',Intelligent Business Insights',Automated Report Generation',Advanced Data Mining',Natural Language Query Interface',Multi-Source Data Integration',Custom Dashboard Creation',
-  ];
 
-  const benefits = ['
-    'Increase revenue by 25% through data-driven insights',Reduce decision-making time by 70% with instant analytics',Improve operational efficiency by 40%',Identify new business opportunities with predictive modeling',Reduce costs by 30% through optimization insights',Enhance customer satisfaction by 35%',Achieve 95% forecast accuracy',Enable real-time business monitoring',
-  ];
-
-  const capabilities = [
-    {
-
-      category: 'Data Analytics',
-      items: ['
-        'Real-time data processing and analysis',Advanced statistical modeling',Machine learning algorithms',Predictive analytics and forecasting',Anomaly detection and alerting',
-      ]},
-    {
-
-      category: 'Business Intelligence',
-      items: ['
-        'Interactive dashboards and reports',KPI tracking and monitoring',Performance benchmarking',Trend analysis and insights',Competitive intelligence',
-      ]},
-    {
-
-      category: 'Data Integration',
-      items: ['
-        'Multi-source data connectors',ETL/ELT data pipelines',Real-time data streaming',Data quality management',Master data management',
-      ]},
-    {
-
-      category: 'AI & Machine Learning',
-      items: ['
-        'Natural language processing',Automated insights generation',Intelligent recommendations',Pattern recognition',Cognitive analytics',
-      ]},
-  ];
-
-  const useCases = ['
-    'Financial Performance Analysis',Customer Behavior Insights',Supply Chain Optimization',Sales Forecasting & Planning',Marketing Campaign Analytics',Operational Performance Monitoring',Risk Assessment & Management',Product Performance Analysis',
-  ];
-
-  const pricing = [
-    {
-
-      name: 'Starter',
-      price: '$19,999',
-      period: 'one-time setup',
-      features: ['
-        'Basic AI analytics platform',Up to 5 data sources',Standard dashboards',Basic reporting',Email support',Cloud deployment',
-      ]},
-    {
-
-      name: 'Professional',
-      price: '$39,999',
-      period: 'one-time setup',
-      features: ['
-        'Advanced AI analytics',Up to 20 data sources',Custom dashboards',Advanced reporting',Priority support',On-premise deployment option',Advanced security features',
-      ]},
-    {
-
-      name: 'Enterprise',
-      price: '$79,999',
-      period: 'one-time setup',
-      features: ['
-        'Full AI BI platform',Unlimited data sources',Custom analytics workflows',24/7 dedicated support',Hybrid deployment options',Advanced analytics & ML',Custom integrations',White-label solutions',
-      ]},
-  ];
-
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
       <SEO"
@@ -125,7 +60,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30">"
-              <Brain className="w-10 h-10 text-green-400" />
+              <Brain className="w-10 h-10 text-green-400"  />
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold mb-8">"              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 AI Business Intelligence
@@ -146,13 +81,13 @@ const AIBusinessIntelligenceAnalytics = () => {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Phone className="w-5 h-5 mr-2" />                Get Started Today
+                <Phone className="w-5 h-5 mr-2"  />                Get Started Today
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2" />                Contact Us
+                <Mail className="w-5 h-5 mr-2"  />                Contact Us
               </a>
             </div>
           </motion.div>
@@ -229,7 +164,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                 className="flex items-start space-x-4"
               >"
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"
-                  <CheckCircle className="w-5 h-5 text-white" />
+                  <CheckCircle className="w-5 h-5 text-white"  />
                 </div>"                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
@@ -272,13 +207,13 @@ const AIBusinessIntelligenceAnalytics = () => {
                       <BarChart3 className="w-6 h-6 text-green-400" />
                     )}
                     {index === 1 && ("
-                      <TrendingUp className="w-6 h-6 text-green-400" />
+                      <TrendingUp className="w-6 h-6 text-green-400"  />
                     )}
                     {index === 2 && ("
-                      <Database className="w-6 h-6 text-green-400" />
+                      <Database className="w-6 h-6 text-green-400"  />
                     )}
                     {index === 3 && ("
-                      <Brain className="w-6 h-6 text-green-400" />
+                      <Brain className="w-6 h-6 text-green-400"  />
                     )}
                   </div>"
                   <h3 className="text-2xl font-bold text-white">
@@ -291,7 +226,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                       key={itemIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />                      {item}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5"  />                      {item}
                     </li>
                   ))}
                 </ul>
@@ -330,7 +265,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                 className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300 text-center"
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30">"
-                  <Target className="w-6 h-6 text-emerald-400" />
+                  <Target className="w-6 h-6 text-emerald-400"  />
                 </div>"                <h3 className="text-white font-semibold">{useCase}</h3>
               </motion.div>
             ))}
@@ -393,7 +328,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -402,7 +337,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started"
-                  <ArrowRight className="w-5 h-5 ml-2" />                </a>
+                  <ArrowRight className="w-5 h-5 ml-2"  />                </a>
               </motion.div>
             ))}
           </div>
@@ -437,7 +372,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">"
-                <Phone className="w-8 h-8 text-green-400" />
+                <Phone className="w-8 h-8 text-green-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
@@ -456,7 +391,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">"
-                <Mail className="w-8 h-8 text-green-400" />
+                <Mail className="w-8 h-8 text-green-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
@@ -475,7 +410,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               className="text-center"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">"
-                <MapPin className="w-8 h-8 text-green-400" />
+                <MapPin className="w-8 h-8 text-green-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>"
               <p className="text-gray-300 mb-4">

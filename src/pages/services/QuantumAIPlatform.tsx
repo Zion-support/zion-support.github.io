@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
 import { Atom, 
   Brain, 
   Zap, 
@@ -22,23 +20,14 @@ import { Atom,
   Users,
   Shield'
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
 ;
-const QuantumAIPlatform = (...args: unknown[]): unknown => {
-  const features = [
-    {
 
-      icon: Atom,
-      benefits: [;
         "Molecular modeling",;"
         "Chemical reaction simulation",;"
         "Material property prediction",;"
         "Drug discovery acceleration";
-      ];
-    };
+      ]};
 =======
-import React from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration";
       ]};
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
@@ -119,34 +108,12 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
       ]};
   ];
 
-  const quantumAdvantages = [
-    {
-"
-      title: "Exponential Speedup","
-      description: "Quantum algorithms provide exponential speedup for specific problems",
-      icon: Zap,"
-      metric: "1000x+"
-    },
-    {
-"
-      title: "Quantum Supremacy","
-      description: "Achieve computational tasks impossible for classical computers",
-      icon: Star,"
-      metric: "Unlimited"
-    },
-    {
-"
-      title: "Parallel Processing","
-      description: "Process multiple possibilities simultaneously using superposition",
-      icon: CpuIcon,"
-      metric: "∞"
-    },;
+  
     {;"
       title: "Quantum Entanglement",;"
       description: "Leverage quantum correlations for secure communication",;
       icon: Network,;"
-      metric: "100%";
-    };  ];
+      metric: "100%"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -154,7 +121,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
 <<<<<<< HEAD
         title="Quantum AI Platform - Zion Tech Group"
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-      />
+       />
 =======
         title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
        />
@@ -190,7 +157,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />              Next-Generation Quantum Technology
+              <Atom className="w-4 h-4 mr-2"  />              Next-Generation Quantum Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum AI Platform"
@@ -400,7 +367,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -510,7 +477,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -612,7 +579,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">"
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />                      {application}
+                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"  />                      {application}
                     </li>
                   ))}
                 </div>"
@@ -683,8 +650,7 @@ import { Link  } from 'react-router-dom.ts';        "Drug discovery acceleration
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 ;
 export { QuantumAIPlatform };export default QuantumAIPlatform;
 '"`

@@ -1,25 +1,16 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import api from "@/services/apiClient";
-import { toast } from "@/hooks/use-toast";
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  
     setIsSubmitting(true);
     try {
       await api.post('/newsletter', { email });
       toast.success('¡Gracias por suscribirte!');
-      setEmail('');
-    } catch {
-      toast.error('Subscription failed. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+      setEmail('')} catch {
+      toast.error('Subscription failed. Please try again.')} finally {
+      setIsSubmitting(false)}
   };
 
   return (
@@ -42,5 +33,4 @@ export function NewsletterForm() {
         </Button>
       </form>
     </div>
-  );
-}
+  )}

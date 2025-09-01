@@ -1,12 +1,9 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-import { motion } from 'framer-motion.ts';
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  retryCount: number;
-}
+  retryCount: number}
 class ErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
@@ -15,16 +12,14 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
 
       hasError: false,
-      retryCount: 0};
-  }
+      retryCount: 0}}
   static getDerivedStateFromError(error: Error): State {
 
     return {
 
       hasError: true,
       error,
-      retryCount: 0};
-  }
+      retryCount: 0}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     // console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -34,8 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo});
 
     // Log error to external service
-    this.logError (error, errorInfo) ;
-  }
+    this.logError (error, errorInfo) }
   logError = (error: anyError, errorInfo: ErrorInfo) => {
 
     // Log to console for development'
@@ -44,8 +38,7 @@ class ErrorBoundary extends Component<Props, State> {
       console.group('Error Boundary Error');
       // console.error('Error:', error);
       // console.error('Error Info:', errorInfo);
-      console.groupEnd();
-    }
+      console.groupEnd()}
     // In production, you could send to error reporting service
     // Example: Sentry, LogRocket, etc.
   };
@@ -56,19 +49,16 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: undefined,
       errorInfo: undefined,
-      retryCount: prevState.retryCount + 1}));
-  };
+      retryCount: prevState.retryCount + 1}))};
 
   handleReload = () => {
-    window.location.reload () ;
-  };
+    window.location.reload () };
   render () {
     if (this.state.hasError) {
 
       if (this.props.fallback) {
 
-        return this.props.fallback;
-      }
+        return this.props.fallback}
       return()
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -161,8 +151,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </motion.div>
           </div>
-        </motion.div>) ;
-    }
+        </motion.div>) }
     return this.props.children}
 }
 

@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-export default EnhancedZionTechServices2025;}
+export default EnhancedZionTechServices2025}
 <<<<<<< HEAD
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
 
 
 const EnhancedZionTechServices2025: React.FC = () => {;
@@ -9,21 +7,18 @@ const EnhancedZionTechServices2025: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
 
-  const categories = ['All', ...getEnhancedServiceCategories()];
   
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+  
+    
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+    return matchesCategory && matchesSearch}) ;
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
 =======
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";      case 'price':;
         return a.price - b.price;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':;
@@ -31,9 +26,7 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
-        return a.title.localeCompare (b.title) ;
-
-  }) ;
+        return a.title.localeCompare (b.title) }) ;
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"
@@ -289,7 +282,6 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default EnhancedZionTechServices2025;}'"`
+export default EnhancedZionTechServices2025}'"`

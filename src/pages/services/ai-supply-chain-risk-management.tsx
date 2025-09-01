@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import {
 
   Shield,
@@ -36,135 +33,10 @@ import {
   Cloud,
   Server} from 'lucide-react';
 
-const AISupplyChainRiskManagement = () => {
-  const features = [
-    {
 
-      icon: Brain,
-      title: 'AI-Powered Risk Detection',
-      description:'
-        'Advanced machine learning algorithms identify potential supply chain disruptions before they occur'},
-    {
-
-      icon: Globe,
-      title: 'Global Supply Chain Mapping',
-      description:'
-        'Real-time visualization of your entire supply network with risk hotspots and vulnerability analysis'},
-    {
-
-      icon: AlertTriangle,
-      title: 'Early Warning System',
-      description:'
-        'Proactive alerts for potential disruptions, delays, and supply chain vulnerabilities'},
-    {
-
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description:'
-        'Forecast supply chain risks using historical data and external factors like weather, politics, and economics'},
-    {
-
-      icon: Shield,
-      title: 'Compliance Monitoring',
-      description:'
-        'Automated tracking of regulatory requirements and industry standards across your supply chain'},
-    {
-
-      icon: BarChart3,
-      title: 'Risk Scoring Dashboard',
-      description:'
-        'Comprehensive risk assessment with real-time scoring and actionable insights'},
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small businesses with basic supply chain needs',
-      features: ['
-        'Up to 50 suppliers',Basic risk monitoring',Email alerts',Standard reporting',Email support',
-      ],
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing companies with complex supply chains',
-      features: ['
-        'Up to 500 suppliers',Advanced AI risk detection',Real-time alerts',Custom risk scoring',Priority support',API access',Advanced analytics',Multi-user access',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large corporations with global supply networks',
-      features: ['
-        'Unlimited suppliers',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
-      ],
-      popular: false},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Manufacturing',
-      description:'
-        'Monitor supplier performance and identify potential disruptions in manufacturing supply chains',
-      icon: Factory},
-    {
-
-      title: 'Retail & E-commerce',
-      description:'
-        'Ensure product availability and manage inventory risks across retail networks',
-      icon: Truck},
-    {
-
-      title: 'Healthcare',
-      description:'
-        'Maintain critical medical supply chains and ensure patient safety',
-      icon: Shield},
-    {
-
-      title: 'Logistics',
-      description:'
-        'Optimize transportation routes and manage carrier risks in global logistics',
-      icon: Ship},
-  ];
-
-  const riskTypes = [
-    {
-
-      title: 'Supplier Risk',
-      description:'
-        'Financial stability, operational capacity, and geographic location risks',
-      icon: Factory,
-      color: 'from-red-500 to-orange-500'},
-    {
-
-      title: 'Geopolitical Risk',
-      description: 'Political instability, trade wars, and regulatory changes',
-      icon: Globe,
-      color: 'from-blue-500 to-purple-500'},
-    {
-
-      title: 'Environmental Risk',
-      description:'
-        'Natural disasters, climate change, and sustainability issues',
-      icon: AlertTriangle,
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      title: 'Financial Risk',
-      description: 'Currency fluctuations, inflation, and economic instability',
-      icon: DollarSign,
-      color: 'from-yellow-500 to-orange-500'},
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -192,7 +64,7 @@ const AISupplyChainRiskManagement = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />              AI-Powered Risk Management
+              <Shield className="w-4 h-4 mr-2"  />              AI-Powered Risk Management
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -215,7 +87,7 @@ const AISupplyChainRiskManagement = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -412,7 +284,7 @@ const AISupplyChainRiskManagement = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -462,7 +334,7 @@ const AISupplyChainRiskManagement = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
@@ -475,7 +347,7 @@ const AISupplyChainRiskManagement = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
@@ -490,7 +362,7 @@ const AISupplyChainRiskManagement = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <MapPinIcon className="w-8 h-8 text-white" />
+                <MapPinIcon className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
@@ -514,7 +386,7 @@ const AISupplyChainRiskManagement = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
           </motion.div>
         </div>
       </section>

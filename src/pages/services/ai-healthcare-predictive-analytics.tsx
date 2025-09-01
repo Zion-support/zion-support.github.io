@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import {
 
   Heart,
@@ -54,159 +51,11 @@ import {
   Tablet,
   Laptop} from 'lucide-react';
 
-const AIHealthcarePredictiveAnalytics = () => {
-  const features = [
-    {
 
-      icon: Brain,
-      title: 'AI-Powered Disease Prediction',
-      description:'
-        'Advanced machine learning algorithms predict disease progression and patient outcomes'},
-    {
-
-      icon: Activity,
-      title: 'Real-time Patient Monitoring',
-      description:'
-        'Continuous monitoring of vital signs and health metrics with predictive alerts'},
-    {
-
-      icon: TrendingUp,
-      title: 'Treatment Optimization',
-      description:'
-        'AI-driven recommendations for personalized treatment plans and medication dosages'},
-    {
-
-      icon: Shield,
-      title: 'Early Warning System',
-      description:'
-        'Proactive alerts for potential health complications before they become critical'},
-    {
-
-      icon: BarChart3,
-      title: 'Population Health Analytics',
-      description:'
-        'Comprehensive insights into population health trends and risk factors'},
-    {
-
-      icon: Users,
-      title: 'Patient Risk Stratification',
-      description:'
-        'Automated patient risk assessment and prioritization for care management'},
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small clinics and medical practices',
-      features: ['
-        'Up to 1,000 patients',Basic predictive analytics',Standard reporting',Email alerts',Email support',
-      ],
-      popular: false},
-    {
-
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing hospitals and healthcare networks',
-      features: ['
-        'Up to 10,000 patients',Advanced AI predictions',Real-time monitoring',Custom analytics',Priority support',API access',Advanced reporting',Multi-user access',
-      ],
-      popular: true},
-    {
-
-      name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large healthcare systems and research institutions',
-      features: ['
-        'Unlimited patients',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
-      ],
-      popular: false},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Hospitals',
-      description: 'Predict patient outcomes and optimize resource allocation',
-      icon: Hospital},
-    {
-
-      title: 'Clinics',
-      description: 'Early detection and preventive care management',
-      icon: Stethoscope},
-    {
-
-      title: 'Research Institutions',
-      description: 'Clinical trial optimization and research insights',
-      icon: Microscope},
-    {
-
-      title: 'Insurance Companies',
-      description: 'Risk assessment and claims prediction',
-      icon: Shield},
-  ];
-
-  const analyticsTypes = [
-    {
-
-      title: 'Clinical Analytics',
-      description:'
-        'Patient outcomes, treatment effectiveness, and clinical decision support',
-      icon: Activity,
-      color: 'from-blue-500 to-purple-500'},
-    {
-
-      title: 'Operational Analytics',
-      description:'
-        'Resource utilization, workflow optimization, and operational efficiency',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      title: 'Financial Analytics',
-      description:'
-        'Revenue optimization, cost analysis, and financial forecasting',
-      icon: DollarSign,
-      color: 'from-yellow-500 to-orange-500'},
-    {
-
-      title: 'Population Analytics',
-      description:'
-        'Community health trends, risk factors, and preventive care insights',
-      icon: Users,
-      color: 'from-red-500 to-pink-500'},
-  ];
-
-  const benefits = [
-    {
-
-      title: 'Improve Patient Outcomes',
-      description:'
-        'Predictive insights lead to better treatment decisions and patient care',
-      icon: Heart},
-    {
-
-      title: 'Reduce Healthcare Costs',
-      description:'
-        'Preventive care and early intervention reduce expensive treatments',
-      icon: DollarSign},
-    {
-
-      title: 'Enhance Operational Efficiency',
-      description:'
-        'Optimize resource allocation and streamline healthcare workflows',
-      icon: TrendingUp},
-    {
-
-      title: 'Ensure Data Security',
-      description: 'HIPAA-compliant platform with advanced security features',
-      icon: Lock},
-  ];
-
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
@@ -234,7 +83,7 @@ const AIHealthcarePredictiveAnalytics = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">"
-              <Heart className="w-4 h-4 mr-2" />              AI-Powered Healthcare Analytics
+              <Heart className="w-4 h-4 mr-2"  />              AI-Powered Healthcare Analytics
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -257,7 +106,7 @@ const AIHealthcarePredictiveAnalytics = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -494,7 +343,7 @@ const AIHealthcarePredictiveAnalytics = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -544,7 +393,7 @@ const AIHealthcarePredictiveAnalytics = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
@@ -557,7 +406,7 @@ const AIHealthcarePredictiveAnalytics = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
@@ -572,7 +421,7 @@ const AIHealthcarePredictiveAnalytics = () => {
               viewport={{ once: true }}
             >"
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
@@ -596,7 +445,7 @@ const AIHealthcarePredictiveAnalytics = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
           </motion.div>
         </div>
       </section>

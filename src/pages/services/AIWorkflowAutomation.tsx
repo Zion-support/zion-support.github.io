@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
   Workflow, 
   Zap, 
@@ -27,166 +25,15 @@ import {
   Code,
   Terminal'
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
 ;
 export { function };
 export default function AIWorkflowAutomation(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Decision Making',
-      description: 'Intelligent workflows that automatically make decisions based on data patterns and business rules.'
-    },
-    {
-
-      icon: Workflow,
-      title: 'Visual Workflow Designer',
-      description: 'Drag-and-drop interface to create complex workflows without coding knowledge.'
-    },
-    {
-
-      icon: Zap,
-      title: 'Real-time Automation',
-      description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
-    },
-    {
-
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
-    }
-  ];
-
-  const capabilities = [
-    {
-
-      title: 'Workflow Orchestration',
-      description: 'Coordinate complex multi-step processes across different systems and platforms',
-      icon: GitBranch,
-      benefits: ['Multi-system integration',Conditional branching',Error handling']
-    },
-    {
-
-      title: 'AI Decision Engine',
-      description: 'Machine learning models that make intelligent decisions within workflows',
-      icon: Brain,
-      benefits: ['Predictive decisions',Pattern recognition',Continuous learning']
-    },
-    {
-
-      title: 'Real-time Monitoring',
-      description: 'Live visibility into workflow execution and performance metrics',
-      icon: Monitor,
-      benefits: ['Live dashboards',Alert system',Performance tracking']
-    },
-    {
-
-      title: 'Integration Hub',
-      description: 'Connect to 500+ applications and services via pre-built connectors',
-      icon: Database,
-      benefits: ['API integration',Webhook support',Custom connectors']
-    }
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'E-commerce',
-      description: 'Automated order processing, inventory management, and customer service workflows',
-      icon: ShoppingCart,
-      metrics: ['Order Processing Time',Inventory Accuracy',Customer Satisfaction']
-    },
-    {
-
-      industry: 'Finance',
-      description: 'Automated loan processing, compliance checks, and risk assessment workflows',
-      icon: Shield,
-      metrics: ['Processing Speed',Compliance Rate',Risk Detection']
-    },
-    {
-
-      industry: 'Healthcare',
-      description: 'Patient intake, appointment scheduling, and medical record management workflows',
-      icon: Activity,
-      metrics: ['Patient Wait Time',Appointment Efficiency',Record Accuracy']
-    },
-    {
-
-      industry: 'Manufacturing',
-      description: 'Production scheduling, quality control, and maintenance workflows',
-      icon: Settings,
-      metrics: ['Production Efficiency',Quality Score',Downtime Reduction']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams getting started with automation',
-      features: ['
-        'Up to 10 workflows',5 user accounts',Basic integrations',Email support',Standard templates'
-      ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses with complex automation needs',
-      features: ['
-        'Up to 100 workflows',25 user accounts',Advanced integrations',Priority support',Custom templates',Advanced analytics',API access'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations requiring enterprise-grade automation',
-      features: ['
-        'Unlimited workflows',Unlimited users',All integrations',24/7 support',Custom development',Advanced security',SLA guarantees'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-
-      icon: Clock,
-      title: 'Save 40+ Hours Weekly',
-      description: 'Automate repetitive tasks and focus on strategic work that drives growth.'
-    },
-    {
-
-      icon: TrendingUp,
-      title: 'Increase Efficiency by 300%',
-      description: 'Streamline processes and eliminate bottlenecks for faster delivery.'
-    },
-    {
-
-      icon: Shield,
-      title: 'Reduce Errors by 95%',
-      description: 'AI-powered validation ensures accuracy and consistency across all workflows.'
-    },
-    {
-
-      icon: Users,
-      title: 'Improve Team Productivity',
-      description: 'Empower teams with self-service automation tools and real-time insights.'
-    }
-  ];
-
+  
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
@@ -194,7 +41,7 @@ export default function AIWorkflowAutomation(...args[]):  {
         title="AI Workflow Automation - Zion Tech Group"
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
         keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
-      />
+       />
 =======
         title="AI Workflow Automation - Zion Tech Group""
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.""        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
@@ -211,7 +58,7 @@ export default function AIWorkflowAutomation(...args[]):  {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">"
-              <Workflow className="w-4 h-4 mr-2" />              AI-Powered Automation
+              <Workflow className="w-4 h-4 mr-2"  />              AI-Powered Automation
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Workflow Automation
@@ -227,13 +74,13 @@ export default function AIWorkflowAutomation(...args[]):  {
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
-                <Play className="w-5 h-5 inline mr-2" />
+                <Play className="w-5 h-5 inline mr-2"  />
                 Watch Demo
               </Link>
             </div>
@@ -313,7 +160,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                     <ul className="space-y-2">
                       {capability.benefits.map((benefit, benefitIndex) => ("
                         <li key={benefitIndex} className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -422,7 +269,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -521,25 +368,25 @@ export default function AIWorkflowAutomation(...args[]):  {
         <div className="container mx-auto px-4">"
           <div className="grid md:grid-cols-3 gap-8 text-center">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />"
+              <Phone className="w-8 h-8 text-purple-400 mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>"
               <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
                 +1 302 464 0950
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />"
+              <Mail className="w-8 h-8 text-purple-400 mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>"
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
                 kleber@ziontechgroup.com
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Globe className="w-8 h-8 text-purple-400 mb-4" />"
+              <Globe className="w-8 h-8 text-purple-400 mb-4"  />"
               <h3 className="text-xl font-semibold text-white mb-2">Website</h3>"
               <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
                 ziontechgroup.com"
-                <ExternalLink className="w-4 h-4" />              </a>
+                <ExternalLink className="w-4 h-4"  />              </a>
             </div>
           </div>
         </div>
@@ -552,6 +399,5 @@ export default function AIWorkflowAutomation(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

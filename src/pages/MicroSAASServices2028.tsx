@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   Brain,
@@ -152,22 +149,9 @@ import {
   Calendar'
  } from 'lucide-react';
 
-const microSAASServices2028 = [
-  // AI - Powered Content Creation
-  {
 
-    id: 'ai-content-creator-pro',
-    name: 'AI Content Creator Pro',
-    tagline: 'AI-powered content creation for all platforms',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
-    features[;
       'AI article generation',Social media content creation',Marketing copy optimization',SEO content optimization',Multi-language support',Content scheduling',Brand voice customization',Plagiarism detection',Content analytics',Team collaboration tools'
 =======
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Link } from 'react-router-dom';      'Team collaboration tools'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
@@ -516,7 +500,7 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-64 px-4 py-2 pl-10 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                 />"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />              </div>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />              </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
@@ -596,7 +580,7 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan"  />                      {feature}
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -608,18 +592,17 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
                 {/* Stats */}"
                 <div className="flex items-center justify-between text-sm text-zion-slate-light mb-6">"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />                    {service.rating} ({service.reviews} reviews)
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />                    {service.rating} ({service.reviews} reviews)
                   </div>
                   <div>{service.customers} customers</div>
                 </div>
 
                 {/* CTA Button */}
-                <Link
-                  to={service.link}"
+                <Link to={service.link}"
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                   Learn More"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                </Link>
 
                 {/* Market Info */}"
                 <div className="mt-6 pt-6 border-t border-zion-slate/30">"
@@ -668,18 +651,17 @@ import { Link } from 'react-router-dom';      'Team collaboration tools'
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
-              <Phone className="w-5 h-5" />              +1 302 464 0950
+              <Phone className="w-5 h-5"  />              +1 302 464 0950
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 "
-              <Mail className="w-5 h-5" />              kleber@ziontechgroup.com
+              <Mail className="w-5 h-5"  />              kleber@ziontechgroup.com
             </a>;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default MicroSAASServices2028;}}}'"`
+export default MicroSAASServices2028}}}'"`

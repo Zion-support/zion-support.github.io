@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
 
   HelpCircle,
@@ -29,109 +26,17 @@ import {
   VideoCall,
   Mailbox} from 'lucide-react';
 
-const Support = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
-  const supportCategories = [
-    {
-
-      id: 'help',
-      name: 'Help Center',
-      icon: HelpCircle,
-      description: 'Find answers to common questions',
-      color: 'from-blue-500 to-cyan-500'},
-    {
-
-      id: 'contact',
-      name: 'Contact Support',
-      icon: MessageCircle,
-      description: 'Get in touch with our team',
-      color: 'from-purple-500 to-pink-500'},
-    {
-
-      id: 'resources',
-      name: 'Resources',
-      icon: BookOpen,
-      description: 'Documentation and guides',
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      id: 'status',
-      name: 'System Status',
-      icon: Zap,
-      description: 'Check service status',
-      color: 'from-orange-500 to-red-500'},
-  ];
-
-  const supportResources = [
-    {
-
-      title: 'Knowledge Base',
-      description: 'Browse our comprehensive documentation and guides',
-      icon: BookOpen,
-      action: 'Browse Docs',
-      color: 'from-indigo-500 to-purple-500'},
-    {
-
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all services',
-      icon: Video,
-      action: 'Watch Videos',
-      color: 'from-pink-500 to-rose-500'},
-    {
-
-      title: 'Community Forum',
-      description: 'Connect with other users and share knowledge',
-      icon: Users,
-      action: 'Join Forum',
-      color: 'from-teal-500 to-cyan-500'},
-    {
-
-      title: 'Training Programs',
-      description: 'Professional training and certification courses',
-      icon: Star,
-      href: '/training',
-      color: 'from-yellow-500 to-orange-500'},
-  ];
-
-  const faqItems = [
-    {
-
-      question: 'How do I get started with Zion Tech Group services?',
-      answer:'
-        "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and provide a customized solution."},
-    {
-
-      question: 'What is your typical response time for support requests?',
-      answer:'
-        'We prioritize support based on urgency. Emergency issues get immediate attention, while general inquiries are typically resolved within 2-4 hours during business hours.'},
-    {
-
-      question: 'Do you provide 24/7 support?',
-      answer:'
-        'Yes, we provide 24/7 emergency support for critical issues. Our team is always available to handle urgent system problems and outages.'},
-    {
-
-      question: 'What types of training do you offer?',
-      answer:'
-        'We offer comprehensive training programs including technical training, user adoption programs, and ongoing support to ensure your team gets the most out of our solutions.'},
-    {
-
-      question: 'How do you handle data security and compliance?',
-      answer:'
-        'Security is our top priority. We implement enterprise-grade security measures and maintain compliance with industry standards including SOC 2, GDPR, and HIPAA where applicable.'},
-  ];
-
-  const handleSearch = (e: React.FormEvent) => {
-
-    e.preventDefault();
+  
+  
+  
+  
     if (searchQuery.trim()) {
 
       // Implement search functionality'
-      // console.log('Searching for:', searchQuery);
-    }  };
+      // console.log('Searching for:', searchQuery)}  };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -145,7 +50,7 @@ const Support = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6">"
-              <HelpCircle className="w-10 h-10 text-white" />
+              <HelpCircle className="w-10 h-10 text-white"  />
             </div>"            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Support Center
             </h1>"
@@ -157,7 +62,7 @@ const Support = () => {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
@@ -180,7 +85,7 @@ const Support = () => {
           className="max-w-2xl mx-auto"
         >"
           <form onSubmit={handleSearch} className="relative">"
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
             <input"
 <<<<<<< HEAD
               type="text"
@@ -280,7 +185,7 @@ const Support = () => {
                         <span className="text-gray-300 group-hover:text-white transition-colors">
                           {topic.title}
                         </span>"
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />                      </Link>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors"  />                      </Link>
                     ))}
                   </div>
                 </motion.div>) ) }
@@ -348,7 +253,7 @@ const Support = () => {
                   <p className="text-lg text-cyan-400 mb-2">{method.details}</p>"
                   <p className="text-gray-300 mb-3">{method.description}</p>"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <CheckCircle className="w-4 h-4 text-green-400" />                    <span>{method.response}</span>
+                    <CheckCircle className="w-4 h-4 text-green-400"  />                    <span>{method.response}</span>
                   </div>
                 </motion.div>) ) }
             </div>
@@ -359,7 +264,7 @@ const Support = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Team"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </motion.div>) }
 
@@ -402,7 +307,7 @@ const Support = () => {
                     <p className="text-gray-300 mb-4">{resource.description}</p>"
                     <div className="flex items-center text-cyan-400 font-medium group">
                       <span>Access Resource</span>"
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                    </div>
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -484,11 +389,10 @@ const Support = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Detailed Status"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </motion.div>) }
       </div>
     </div>
-  );
-};
+  )};
 '"`

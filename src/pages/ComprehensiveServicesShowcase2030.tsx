@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";"
-import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";"
-import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";"
 <<<<<<< HEAD
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
 
 const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = (...args: unknown[]): unknown => {;
+  
     let services: unknown[] = [];
     
 =======
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";    
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     switch (activeTab) {
 
@@ -34,8 +28,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      );
-    }
+      )}
 <<<<<<< HEAD
 
     if (selectedCategory !== 'all') {
@@ -47,7 +40,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
 ;
     return services};
 
-  const getCategories = (...args: unknown[]): unknown => {;
+  
     let services: unknown[] = [];    
     switch (activeTab) {
 
@@ -61,9 +54,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
         services = comprehensiveAIServices2030;
         break}
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Quantum Computing & AI': return Atom;
+  
       case 'Space Technology': return Rocket;
       case 'Sustainability & Climate Tech': return Leaf;
       case 'Healthcare AI': return Heart;
@@ -74,8 +65,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
       case 'EdTech': return BookOpen;
       case 'Marketing AI': return TrendingUp;
       case 'Project Management': return Building2;
-      default: return Lightbulb;
-    }
+      default: return Lightbulb}
   };
 
   const renderServiceCard = (service)  => {
@@ -180,8 +170,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
             </div>;
           </div>;
         </div>;
-      );
-    } else if (activeTab = == 'it') {
+      )} else if (activeTab = == 'it') {
 
       return ("
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
@@ -278,8 +267,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
               </div>;
             </div>;
           </div>;
-        </div>;) ;
-    } else {
+        </div>;) } else {
 
       return ("
         <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
@@ -300,7 +288,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
-                <Search className="w-12 h-12 text-gray-400" />
+                <Search className="w-12 h-12 text-gray-400"  />
               </div>
             </div>
 "
@@ -396,8 +384,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
               </div>;
             </div>;
           </div>;
-        </div>;) ;
-    }  };
+        </div>;) }  };
 
   return()
     <>
@@ -454,14 +441,14 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
               to="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
             >
-              <MessageCircle className="mr-2" />
+              <MessageCircle className="mr-2"  />
               Start Your Journey
             </Link>
             <Link
               to="/schedule-demo"
               className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
             >
-              <Play className="mr-2" />
+              <Play className="mr-2"  />
               Schedule Demo
             </Link>
           </div>
@@ -573,8 +560,7 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-                  setSelectedCategory('all');
-                }}"                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  setSelectedCategory('all')}}"                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -604,7 +590,6 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
         </div>;
       </div>;
     </>
-  );
-};
+  )};
 
-export default ComprehensiveServicesShowcase2030;}}}}}'"`
+export default ComprehensiveServicesShowcase2030}}}}}'"`

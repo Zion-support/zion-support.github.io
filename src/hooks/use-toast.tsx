@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
 =======
 :src/hooks/use-toast.tsx
-import React, { useState } from 'react';'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-import { useState, useCallback } from 'react';
 
 interface Toast {
   id: string;
@@ -19,8 +16,6 @@ export function useToast(...args[]):  {
 :src/hooks/use-toast.tsx
   const [toasts, setToasts] = useState<any>([]);
 
-  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast,id'>) => {;
-    const id = Math.random().toString(36).substr(2, 9);
   
     
     const newToast: Toast = { id, title, description, variant, duration };
@@ -35,13 +30,11 @@ export function useToast(...args[]):  {
     return id}, []);
 
 :src/hooks/use-toast.tsx
-  const dismiss = useCallback(id: string {;
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
+  
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
-  const dismissAll = useCallback(: unknown {;
-    setToasts([]);
-  }, []);
+  
+    setToasts([])}, []);
   
     setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
@@ -55,15 +48,12 @@ export function useToast(...args[]):  {
     dismiss,
 :src/hooks/use-toast.tsx
     dismissAll'
-  // // // // // // // // console.log('Toast:', { title, description, variant, duration });
-};
-  }}
+  // // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
 
 // Export a default toast function for backward compatibility'
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast,id'>) => {;
+export 
   // In a real implementation, this would dispatch to a global toast system;
-  // console.log('Toast:', { title, description, variant, duration });
-};
+  // console.log('Toast:', { title, description, variant, duration })};
 <<<<<<< HEAD
 =======
 '

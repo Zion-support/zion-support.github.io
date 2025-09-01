@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Search,
@@ -62,13 +60,9 @@ import {
   Info,
   AlertTriangle,
   Zap'
-import { SEO } from '@/components/SEO';
-import {
 
   ALL_EXPANDED_SERVICES_PRICING,
 =======
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_PRICING,
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   type ExpandedServicePricing'
 } from '@/data/expandedServicesPricing2027';
@@ -83,20 +77,15 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string)  => {
-
-    switch (category) {
-
-      case 'Cybersecurity':;
+  
       pricing = pricing.filter (p => ;
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
         p.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
         p.subcategory.toLowerCase () .includes (searchQuery.toLowerCase () ) ;) ;
 
-    setFilteredPricing (pricing) ;
-  }, [selectedCategory, searchQuery]) ;
+    setFilteredPricing (pricing) }, [selectedCategory, searchQuery]) ;
 
-  const getCategoryIcon = (category: string) => {;
+  
 <<<<<<< HEAD
     switch (category) {;
       case 'Cybersecurity':;
@@ -129,8 +118,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
@@ -229,21 +217,21 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 "
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
                 <div className="flex items-center space-x-3">"
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</p>"                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</p>
@@ -263,7 +251,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             {/* Search */}"
             <div className="flex-1 max-w-md">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -308,7 +296,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         ) : ("
           <div className="text-center py-16">"
             <div className="text-gray-400 dark:text-gray-500 mb-4">"
-              <Search className="w-16 h-16 mx-auto" />
+              <Search className="w-16 h-16 mx-auto"  />
             </div>"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No pricing plans found</h3>"            <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
@@ -331,18 +319,17 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Mail className="w-5 h-5" />              <span>Get Custom Quote</span>
+              <Mail className="w-5 h-5"  />              <span>Get Custom Quote</span>
             </a>
             <a"
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Phone className="w-5 h-5" />              <span>Call Sales Team</span>
+              <Phone className="w-5 h-5"  />              <span>Call Sales Team</span>
             </a>;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ExpandedServicesPricingGuide2027;}}}}}}'"
+export default ExpandedServicesPricingGuide2027}}}}}}'"

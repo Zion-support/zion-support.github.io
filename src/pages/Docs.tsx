@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   BookOpen, 
   FileText, 
@@ -21,88 +18,8 @@ import {
 } from 'lucide-react';
 
 export default function Docs() {
-  const documentationCategories = [
-    {
-      title: 'Getting Started',
-      icon: Rocket,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Quick start guides and onboarding',
-      links: [
-        { name: 'Quick Start Guide', href: '/docs/quick-start', description: 'Get up and running in minutes' },
-        { name: 'Installation Guide', href: '/docs/installation', description: 'Step-by-step setup instructions' },
-        { name: 'First Project', href: '/docs/first-project', description: 'Create your first project' },
-        { name: 'Configuration', href: '/docs/configuration', description: 'Configure your environment' }
-      ]
-    },
-    {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      description: 'AI services documentation and guides',
-      links: [
-        { name: 'AI Business Intelligence', href: '/docs/ai-business-intelligence', description: 'ML & Data Science guides' },
-        { name: 'AI Sales Copilot', href: '/docs/ai-sales-copilot', description: 'Sales automation documentation' },
-        { name: 'LLM Content Studio', href: '/docs/llm-content-studio', description: 'Content generation guides' },
-        { name: 'AI Compliance Assistant', href: '/docs/ai-compliance-assistant', description: 'Compliance automation docs' }
-      ]
-    },
-    {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Infrastructure and deployment guides',
-      links: [
-        { name: 'Cloud DevOps', href: '/docs/cloud-devops', description: 'Infrastructure automation' },
-        { name: 'FinOps Optimization', href: '/docs/finops-optimization', description: 'Cost optimization guides' },
-        { name: 'MLOps Pipeline', href: '/docs/mlops-pipeline', description: 'ML operations documentation' },
-        { name: 'Edge Computing', href: '/docs/edge-computing', description: 'Edge deployment guides' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-600 to-pink-600',
-      description: 'Security and compliance documentation',
-      links: [
-        { name: 'Zero Trust Architecture', href: '/docs/zero-trust', description: 'Security implementation' },
-        { name: 'AI Cybersecurity Suite', href: '/docs/ai-cybersecurity', description: 'AI security tools' },
-        { name: 'Compliance Automation', href: '/docs/compliance-automation', description: 'Regulatory compliance' },
-        { name: 'Incident Response', href: '/docs/incident-response', description: 'Security incident handling' }
-      ]
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      icon: Zap,
-      color: 'from-yellow-600 to-orange-600',
-      description: 'SaaS product documentation',
-      links: [
-        { name: 'AI Lead Scoring', href: '/docs/ai-lead-scoring', description: 'Lead prioritization guides' },
-        { name: 'Website AI Chatbot', href: '/docs/ai-chatbot', description: 'Chatbot implementation' },
-        { name: 'RAG Search Platform', href: '/docs/rag-search', description: 'Search implementation' },
-        { name: 'E-commerce Personalization', href: '/docs/ecommerce-personalization', description: 'Personalization setup' }
-      ]
-    },
-    {
-      title: 'API Reference',
-      icon: Code,
-      color: 'from-indigo-600 to-purple-600',
-      description: 'Technical API documentation',
-      links: [
-        { name: 'REST API Reference', href: '/docs/api/rest', description: 'Complete API documentation' },
-        { name: 'GraphQL API', href: '/docs/api/graphql', description: 'GraphQL endpoint docs' },
-        { name: 'SDK Documentation', href: '/docs/sdk', description: 'Client library guides' },
-        { name: 'Webhook Integration', href: '/docs/webhooks', description: 'Webhook setup guides' }
-      ]
-    }
-  ];
-
-  const quickLinks = [
-    { name: 'API Status', href: '/status', icon: Globe },
-    { name: 'Support Portal', href: '/support', icon: Users },
-    { name: 'Community Forum', href: '/community', icon: Users },
-    { name: 'Training Resources', href: '/training', icon: BookOpen }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
       {/* Hero Section */}
@@ -116,7 +33,7 @@ export default function Docs() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <BookOpen className="w-10 h-10 text-white" />
+                <BookOpen className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -127,7 +44,7 @@ export default function Docs() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search documentation..."
@@ -192,7 +109,7 @@ export default function Docs() {
                           </div>
                           <div className="text-sm text-slate-500">{link.description}</div>
                         </div>
-                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" />
+                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors"  />
                       </Link>
                     ))}
                   </div>
@@ -278,5 +195,4 @@ export default function Docs() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

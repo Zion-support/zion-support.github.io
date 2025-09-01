@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   GraduationCap,
@@ -47,7 +45,6 @@ import {
   Smartphone,
   Eye,
   Star as StarIcon} from 'lucide-react';
-import { SEO } from '../components/SEO';
 const Training: React.FC = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -55,142 +52,11 @@ const Training: React.FC = () => {
   const [activeLevel, setActiveLevel] = useState('all');
   const [activeFormat, setActiveFormat] = useState('all');
 
-  const categories = ['
-    { id: 'all', name: 'All Categories', icon: GraduationCap, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 3 },
-    {
-
-      id: 'leadership',
-      name: 'Leadership & Management',
-      icon: Users,
-      count: 4},
-  ];
-
-  const levels = ['
-    { id: 'all', name: 'All Levels', count: 0 },
-    { id: 'beginner', name: 'Beginner', count: 0 },
-    { id: 'intermediate', name: 'Intermediate', count: 0 },
-    { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 },
-  ];
-
-  const formats = ['
-    { id: 'all', name: 'All Formats', count: 0 },
-    { id: 'online', name: 'Online', count: 0 },
-    { id: 'in-person', name: 'In-Person', count: 0 },
-    { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self-paced', name: 'Self-Paced', count: 0 },
-  ];
-
-  const featuredCourses = [
-    {
-
-      id: 1,
-      title: 'AI Fundamentals & Machine Learning',
-      description:'
-        'Master the basics of artificial intelligence and machine learning algorithms',
-      category: 'ai-ml',
-      level: 'beginner',
-      format: 'online',
-      duration: '8 weeks',
-      instructor: 'Dr. Sarah Chen',
-      rating: 4.9,
-      students: 1250,
-      price: '$1,299',
-      originalPrice: '$1,599',
-      features: ['Live Sessions',Project Portfolio',Certificate',1-on-1 Mentoring'],
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      link: '/training/ai-business-intelligence'
-    },
-    {
-      title: 'Cloud Migration & DevOps Excellence',
-      description: 'Master cloud migration strategies and DevOps best practices',
-      category: 'Cloud & DevOps',
-      level: 'Advanced',
-      duration: '10 weeks',
-      format: 'Hybrid',
-      instructor: 'Mike Rodriguez',
-      rating: 4.8,
-      students: 1247,
-      price: '$299',
-      image: '/images/training/ai-fundamentals.jpg',
-      tags: ['Python',TensorFlow',Neural Networks',Data Science'],
-      features: ['
-        'Hands-on projects with real datasets',Live Q&A sessions with experts',Certificate upon completion',Lifetime access to materials',
-      ]},
-    {
-
-      id: 2,
-      title: 'Advanced Cloud Architecture',
-      description:'
-        'Design and implement scalable cloud solutions for enterprise applications',
-      category: 'cloud',
-      level: 'advanced',
-      format: 'hybrid',
-      duration: '12 weeks',
-      instructor: 'Michael Rodriguez',
-      rating: 4.9,
-      students: 892,
-      price: '$499',
-      image: '/images/training/cloud-architecture.jpg',
-      tags: ['AWS',Azure',Kubernetes',Microservices'],
-      features: ['
-        'Real-world case studies',Architecture design workshops',Industry best practices',Networking opportunities',
-      ]},
-    {
-
-      id: 3,
-      title: 'Cybersecurity Masterclass',
-      description:'
-        'Comprehensive security training covering threat detection and prevention',
-      category: 'security',
-      level: 'intermediate',
-      format: 'in-person',
-      duration: '6 weeks',
-      instructor: 'Lisa Thompson',
-      rating: 4.7,
-      students: 1563,
-      price: '$399',
-      image: '/images/training/cybersecurity.jpg',
-      tags: ['
-        'Penetration Testing',Incident Response',Compliance',Risk Management',
-      ],
-      features: ['
-        'Hands-on security labs',Industry certifications',Expert-led workshops',Career guidance',
-      ]},
-    {
-
-      id: 4,
-      title: 'Data Science & Analytics',
-      description:'
-        'Learn data analysis, visualization, and statistical modeling techniques',
-      category: 'data',
-      level: 'intermediate',
-      format: 'online',
-      duration: '10 weeks',
-      instructor: 'Dr. James Wilson',
-      rating: 4.6,
-      students: 2034,
-      price: '$349',
-      image: '/images/training/data-science.jpg',
-      tags: ['R',Python',SQL',Tableau'],
-      features: ['
-        'Real-world data projects',Statistical analysis tools',Data visualization skills',Portfolio development',
-      ]},
-  ];
-
-  const getLevelColor = (level: string) => {
-
-    switch (level) {
-
-      case 'beginner':'
-        return 'bg-green-500/20 text-green-400';
+  
+  
+  
+  
+  
       case 'intermediate':'
         return 'bg-yellow-500/20 text-yellow-400';
       case 'advanced':'
@@ -198,16 +64,10 @@ const Training: React.FC = () => {
       case 'expert':'
         return 'bg-red-500/20 text-red-400';
       default:'
-        return 'bg-gray-500/20 text-gray-400';
-    }
+        return 'bg-gray-500/20 text-gray-400'}
   ];
 
-  const getFormatColor = (format: string) => {
-
-    switch (format) {
-
-      case 'online':'
-        return 'bg-blue-500/20 text-blue-400';
+  
       case 'in-person':'
         return 'bg-purple-500/20 text-purple-400';
       case 'hybrid':'
@@ -215,73 +75,52 @@ const Training: React.FC = () => {
       case 'self-paced':'
         return 'bg-teal-500/20 text-teal-400';
       default:'
-        return 'bg-gray-500/20 text-gray-400';
-    }
+        return 'bg-gray-500/20 text-gray-400'}
   };
 
-  const filteredPrograms = trainingPrograms.filter(program => {
-
-    const matchesSearch =
-      program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      program.tags.some(tag =>
-        tag.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-
-    const matchesCategory ='
-      activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
-    const matchesFormat ='
-      activeFormat === 'all' || program.format === activeFormat;
-
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
-  }) ;
+  
+    
+    
+    
+    return matchesSearch && matchesCategory && matchesLevel && matchesFormat}) ;
   // Update counts
   categories.forEach(cat => {
 
     if (cat.id === 'all') {
 
-      cat.count = trainingPrograms.length;
-    } else {
+      cat.count = trainingPrograms.length} else {
 
       cat.count = trainingPrograms.filter()
         program => program.category === cat.id
-      ).length;
-    }
+      ).length}
   ];
   levels.forEach(level => {
 
     if (level.id === 'all') {
 
-      level.count = trainingPrograms.length;
-    } else {
+      level.count = trainingPrograms.length} else {
 
       level.count = trainingPrograms.filter()
         program => program.level === level.id
-      ).length;
-    }
+      ).length}
   }) ;
   formats.forEach(format => {
 
     if (format.id === 'all') {
 
-      format.count = trainingPrograms.length;
-    } else {
+      format.count = trainingPrograms.length} else {
       format.count = trainingPrograms.filter()
         program => program.format === format.id
-      ).length;
-    }
+      ).length}
     
-    return courses;
-  };
+    return courses};
 
   return()
     <>
-      <SEO
-        title="Training & Education - Zion Tech Group"
+      <SEO title="Training & Education - Zion Tech Group"
         description="Comprehensive training programs and educational resources in AI, cloud computing, cybersecurity, data analytics, and emerging technologies."
         keywords="training, education, courses, AI training, cloud computing, cybersecurity, data analytics, Zion Tech Group"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
@@ -293,7 +132,7 @@ const Training: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <GraduationCap className="w-8 h-8 text-white" />                </div>
+                  <GraduationCap className="w-8 h-8 text-white"  />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Training & Education
@@ -313,7 +152,7 @@ const Training: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
               {/* Search Bar */}"
               <div className="relative mb-6">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
 <<<<<<< HEAD
                   type="text"
@@ -423,7 +262,7 @@ const Training: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">"
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">"
-                        <BookOpen className="w-6 h-6 text-white" />                      </div>
+                        <BookOpen className="w-6 h-6 text-white"  />                      </div>
                       <div>"
                         <h3 className="text-white font-semibold text-lg">
                           {program.title}
@@ -476,15 +315,15 @@ const Training: React.FC = () => {
                   {/* Stats */}"
                   <div className="flex items-center justify-between mb-4 text-sm text-gray-400">"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                       <span>{program.rating}</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Users className="w-4 h-4" />
+                      <Users className="w-4 h-4"  />
                       <span>{program.students.toLocaleString()} students</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Clock className="w-4 h-4" />                      <span>{program.duration}</span>
+                      <Clock className="w-4 h-4"  />                      <span>{program.duration}</span>
                     </div>
                   </div>
                 </Link>
@@ -516,23 +355,23 @@ const Training: React.FC = () => {
                           key={idx}"
                           className="flex items-center gap-2 text-gray-300 text-sm"
                         >"
-                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0"  />
                           {feature}
                         </li>) ) }
                     </ul>
                   </div>
                   {workshop.location && (
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4" />
+                      <MapPin className="w-4 h-4"  />
                       <span>{workshop.location}</span>
                     </div>
                   )}
                   <div className="flex items-center space-x-2">
-                    <Users className="w-4 h-4" />
+                    <Users className="w-4 h-4"  />
                     <span>Capacity: {workshop.capacity}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <UserCheck className="w-4 h-4" />
+                    <UserCheck className="w-4 h-4"  />
                     <span>Instructor: {workshop.instructor}</span>
                   </div>
                 </div>
@@ -563,11 +402,11 @@ const Training: React.FC = () => {
                   {/* Action Buttons */}"
                   <div className="flex gap-2">"
                     <button className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">"
-                      <Play className="w-4 h-4" />
+                      <Play className="w-4 h-4"  />
                       Enroll Now
                     </button>"
                     <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors">"
-                      <Download className="w-4 h-4" />                    </button>
+                      <Download className="w-4 h-4"  />                    </button>
                   </div>
                 </Link>
               </motion.div>
@@ -578,7 +417,7 @@ const Training: React.FC = () => {
 
             {filteredPrograms.length === 0 && ("
               <div className="text-center py-12">"
-                <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+                <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
                 <h3 className="text-white text-xl font-semibold mb-2">
                   No training programs found
                 </h3>"
@@ -623,7 +462,6 @@ const Training: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 export default Training;
 '"`

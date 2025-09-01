@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Helmet  } from 'react-helmet-async.ts';
 import { Workflow, 
   Brain, 
   Zap, 
@@ -24,44 +21,11 @@ import { Workflow,
   Server,
   ShoppingCart'
  } from 'lucide-react.ts';
-;
-const AIWorkflowOrchestrator = (...args: unknown[]): unknown => {
-  const features = [
-    {
-
-      icon: Brain,
-      title: "Intelligent Decision Making","
-      description: "AI-powered workflow decisions based on real-time data analysis and predictive modeling"
-    },
-    {
-
-      icon: Zap,"
-      title: "Lightning Fast Execution","
-      description: "Optimized workflow execution with parallel processing and intelligent resource allocation"
-    },
-    {
-
-      icon: Shield,"
-      title: "Enterprise Security","
-      description: "Bank-level security with encryption, access controls, and compliance monitoring"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Scalable Infrastructure","
-      description: "Auto-scaling cloud infrastructure that grows with your business needs"
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Advanced Analytics","
-      description: "Comprehensive insights into workflow performance and optimization opportunities";
-    },;
+},;
     {;
       icon: Users,;"
       title: "Team Collaboration",;"
-      description: "Seamless team coordination with real-time updates and communication tools";
-    };
+      description: "Seamless team coordination with real-time updates and communication tools"};
   ];
 
   const benefits = [;"
@@ -71,36 +35,12 @@ const AIWorkflowOrchestrator = (...args: unknown[]): unknown => {
     "Ensure compliance and audit trail maintenance",;"
     "Real-time monitoring and alerting capabilities",;"
     "Seamless integration with existing systems";
-  ];
-
-  const useCases = [
-    {
-"
-      title: "Financial Services","
-      description: "Automate loan processing, fraud detection, and compliance workflows",
-      icon: BarChart3
-    },
-    {
-"
-      title: "Healthcare","
-      description: "Streamline patient care coordination and medical record management",
-      icon: Users
-    },
-    {
-"
-      title: "Manufacturing","
-      description: "Optimize production scheduling and quality control processes",
-      icon: Settings;
-    },;
+  ]},;
     {;"
       title: "Retail",;"
       description: "Automate inventory management and customer service workflows",;
-      icon: ShoppingCart;
-    };
+      icon: ShoppingCart};
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inventory management and customer service workflows",;
       icon: ShoppingCart};
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
@@ -190,7 +130,7 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
               className="text-center"
             >"
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"
-                <Workflow className="w-10 h-10 text-white" />              </div>
+                <Workflow className="w-10 h-10 text-white"  />              </div>
               "
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
                 AI Workflow Orchestrator
@@ -203,7 +143,7 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                   Start Free Trial"
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"  />
                 </button>"                <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
                   Schedule Demo
                 </button>
@@ -386,7 +326,7 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
 }}"
                     className="flex items-center gap-3"
                   >"
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                    <span className="text-slate-700">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                    <span className="text-slate-700">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
@@ -593,7 +533,7 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
                     <ul className="space-y-3 mb-6">
                       {plan.features.map((feature, idx) => ("
                         <li key={idx} className="flex items-center gap-2">"
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />"                          <span className="text-slate-700 text-sm">{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0"  />"                          <span className="text-slate-700 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -671,6 +611,5 @@ import { Helmet  } from 'react-helmet-async.ts';      description: "Automate inv
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 export default AIWorkflowOrchestrator;'"`

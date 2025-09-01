@@ -1,4 +1,3 @@
-import React from 'react';
 const TermsOfService = () => {
   return()
     <div className="max-w-4xl mx-auto space-y-8"><div className="text-center">"

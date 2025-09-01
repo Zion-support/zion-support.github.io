@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
 import { MessageSquare, 
   TrendingUp, 
   BarChart3, 
@@ -35,80 +32,17 @@ import { MessageSquare,
 
 export default function AICustomerFeedbackAnalytics(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI Sentiment Analysis","
-      description: "Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Real-time Analytics Dashboard","
-      description: "Live insights into customer satisfaction trends, sentiment scores, and feedback patterns with customizable metrics."
-    },
-    {
-
-      icon: MessageSquare,"
-      title: "Multi-Channel Integration","
-      description: "Seamlessly collect and analyze feedback from surveys, reviews, social media, support tickets, and more."
-    },
-    {
-
-      icon: Target,"
-      title: "Predictive Customer Insights","
-      description: "AI-powered predictions for customer churn, satisfaction trends, and actionable recommendations."
-    },
-    {
-
-      icon: PieChart,"
-      title: "Advanced Segmentation","
-      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies.";
+  
     },;
     {;
       icon: Activity,;"
       title: "Automated Reporting",;"
-      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,"
-      title: "Improved Customer Retention","
-      description: "Identify at-risk customers early and implement proactive retention strategies."
-    },
-    {
-
-      icon: Globe,"
-      title: "Enhanced Customer Experience","
-      description: "Understand customer pain points and optimize touchpoints across the entire customer journey."
-    },
-    {
-
-      icon: Lock,"
-      title: "Data Security & Privacy","
-      description: "Enterprise-grade security with GDPR/CCPA compliance and data encryption at rest and in transit."
-    },
-    {
-
-      icon: Eye,"
-      title: "Actionable Insights","
-      description: "Transform raw feedback into actionable business intelligence with AI-powered recommendations."
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Increased Revenue","
-      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value.";
-    },;
+      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."};
+  ]},;
     {;
       icon: Clock,;"
       title: "Time Savings",;"
-      description: "Automate feedback analysis and reporting, saving hours of manual work each week.";
-    };
+      description: "Automate feedback analysis and reporting, saving hours of manual work each week."};
   ];
 
   const pricingPlans = [
@@ -164,47 +98,11 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
         "On-premise deployment options",;"
         "SLA guarantees";
 =======
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';        "SLA guarantees";
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-"
-      industry: "E-commerce","
-      description: "Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates",
-      icon: ShoppingCart
-    },
-    {
-"
-      industry: "SaaS","
-      description: "Monitor user satisfaction, feature requests, and churn indicators to improve product-market fit",
-      icon: Cpu
-    },
-    {
-"
-      industry: "Healthcare","
-      description: "Track patient satisfaction, service quality feedback, and improve healthcare delivery",
-      icon: Users
-    },
-    {
-"
-      industry: "Financial Services","
-      description: "Monitor customer satisfaction with banking services, investment products, and support quality",
-      icon: Shield
-    },
-    {
-"
-      industry: "Education","
-      description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",
-      icon: Award;
-    },;
+      popular: false};
+  ]},;
     {;"
       industry: "Manufacturing",;"      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
       icon: Settings};
@@ -234,12 +132,10 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
     {
 "
       name: "Review Platforms",;"
-      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"];
-    },;
+      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},;
     {;"
       name: "Analytics Tools",;"
-      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
-    };  ];
+      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -284,7 +180,7 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />              AI-Powered Analytics
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback"
@@ -298,11 +194,11 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -618,7 +514,7 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -875,7 +771,7 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />                Start Free Trial
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -886,5 +782,4 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
         </div>;
       </section>;
     </div>;
-  );
-}'"`
+  )}'"`

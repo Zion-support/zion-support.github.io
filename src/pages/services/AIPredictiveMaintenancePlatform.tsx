@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Wrench, 
   TrendingUp, 
@@ -26,97 +23,17 @@ import {
 } from 'lucide-react';
 
 export default function AIPredictiveMaintenancePlatform() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    "AI-powered equipment health monitoring",
-    "Predictive failure detection algorithms",
-    "Real-time sensor data analysis",
-    "Automated maintenance scheduling",
-    "Performance optimization recommendations",
-    "Condition-based monitoring",
-    "Mobile app for field technicians",
-    "Integration with CMMS systems",
-    "Advanced analytics and reporting",
-    "Custom alert and notification system"
-  ];
-
-  const benefits = [
-    "Reduce unplanned downtime by 70%",
-    "Extend equipment lifespan by 30%",
-    "Cut maintenance costs by 25%",
-    "Improve operational efficiency by 40%",
-    "Real-time equipment health visibility",
-    "Proactive maintenance planning"
-  ];
-
-  const useCases = [
-    "Manufacturing plants",
-    "Power generation facilities",
-    "Oil and gas operations",
-    "Mining and construction",
-    "Transportation fleets",
-    "Healthcare equipment",
-    "Data center infrastructure",
-    "Building management systems"
-  ];
-
-  const pricing = [
-    {
-      plan: "Basic",
-      price: "$2,499",
-      period: "month",
-      description: "Perfect for small facilities",
-      features: [
-        "Up to 50 equipment sensors",
-        "Basic predictive analytics",
-        "Mobile app access",
-        "Email alerts",
-        "Standard support"
-      ]
-    },
-    {
-      plan: "Professional",
-      price: "$4,999",
-      period: "month",
-      description: "Ideal for growing operations",
-      features: [
-        "Up to 200 equipment sensors",
-        "Advanced AI predictions",
-        "Automated scheduling",
-        "CMMS integration",
-        "Priority support",
-        "Custom dashboards"
-      ]
-    },
-    {
-      plan: "Enterprise",
-      price: "$9,999",
-      period: "month",
-      description: "For large-scale operations",
-      features: [
-        "Unlimited equipment sensors",
-        "Full AI suite",
-        "Custom AI models",
-        "Dedicated support team",
-        "On-site consultation",
-        "White-label options"
-      ]
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Predictive Maintenance Platform - Zion Tech Group"
+      <SEO title="AI Predictive Maintenance Platform - Zion Tech Group"
         description="Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 70%, extend equipment lifespan, and optimize maintenance costs with our intelligent platform."
         canonical="/services/ai-predictive-maintenance-platform"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -131,7 +48,7 @@ export default function AIPredictiveMaintenancePlatform() {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-orange-500/20 rounded-full">
-                  <Wrench className="h-12 w-12 text-orange-400" />
+                  <Wrench className="h-12 w-12 text-orange-400"  />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -148,7 +65,7 @@ export default function AIPredictiveMaintenancePlatform() {
                   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Start Free Trial
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5"  />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -191,7 +108,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-orange-400" />
+                      <CheckCircle className="h-5 w-5 text-orange-400"  />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -229,7 +146,7 @@ export default function AIPredictiveMaintenancePlatform() {
                   className="text-center"
                 >
                   <div className="p-4 bg-orange-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-orange-400" />
+                    <TrendingUp className="h-8 w-8 text-orange-400"  />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </motion.div>
@@ -278,7 +195,7 @@ export default function AIPredictiveMaintenancePlatform() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-orange-400 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-orange-400 flex-shrink-0"  />
                         <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
@@ -329,11 +246,11 @@ export default function AIPredictiveMaintenancePlatform() {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-orange-500/50 transition-colors"
                 >
                   <div className="p-3 bg-orange-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    {index === 0 && <Settings className="h-8 w-8 text-orange-400" />}
-                    {index === 1 && <Gauge className="h-8 w-8 text-orange-400" />}
-                    {index === 2 && <Activity className="h-8 w-8 text-orange-400" />}
-                    {index === 3 && <Shield className="h-8 w-8 text-orange-400" />}
-                    {index > 3 && <Wrench className="h-8 w-8 text-orange-400" />}
+                    {index === 0 && <Settings className="h-8 w-8 text-orange-400"  />}
+                    {index === 1 && <Gauge className="h-8 w-8 text-orange-400"  />}
+                    {index === 2 && <Activity className="h-8 w-8 text-orange-400"  />}
+                    {index === 3 && <Shield className="h-8 w-8 text-orange-400"  />}
+                    {index > 3 && <Wrench className="h-8 w-8 text-orange-400"  />}
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </motion.div>
@@ -368,7 +285,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-orange-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-orange-400" />
+                  <Phone className="h-8 w-8 text-orange-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
@@ -381,7 +298,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-orange-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-orange-400" />
+                  <Mail className="h-8 w-8 text-orange-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
@@ -394,7 +311,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-orange-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-orange-400" />
+                  <MapPin className="h-8 w-8 text-orange-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
@@ -413,12 +330,11 @@ export default function AIPredictiveMaintenancePlatform() {
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 Schedule a Consultation
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-5 w-5"  />
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  );
-}
+  )}

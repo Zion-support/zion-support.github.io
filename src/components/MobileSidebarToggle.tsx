@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
-import { Link, useLocation  } from 'react-router-dom.ts';
 
       newExpanded.delete(section)} else {
 
@@ -13,8 +9,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
       newExpanded.add (section) }
     setExpandedSections (newExpanded) };
 
-  const isActive = (path: string) => location.pathname === path;
-
+  
   const navigationSections = [
     {
 
@@ -27,10 +22,6 @@ import { Link, useLocation  } from 'react-router-dom.ts';
         { name: "Partners", href: "/partners", icon: Users },"
         { name: "Careers", href: "/careers", icon: Briefcase }
 =======
-import React, { useState } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';'
-import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Careers", href: "/careers", icon: Briefcase }
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
@@ -82,7 +73,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}      </motion.button>
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </motion.button>
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
@@ -133,7 +124,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                    <X className="w-5 h-5" />                  </button>
+                    <X className="w-5 h-5"  />                  </button>
                 </div>
 
                 {/* Quick Actions */}"
@@ -212,9 +203,9 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? ("
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronDown className="w-4 h-4 transition-transform duration-300"  />
                         ) : ("
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />                        )}
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300"  />                        )}
                       </button>
 
                       <AnimatePresence>
@@ -302,6 +293,5 @@ import { Link, useLocation  } from 'react-router-dom.ts';        { name: "Career
         )};
       </AnimatePresence>;
     </>
-  );
-};
+  )};
 '"`

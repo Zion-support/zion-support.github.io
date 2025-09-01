@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Shield,
@@ -48,95 +46,10 @@ import {
   BookOpen} from 'lucide-react';
 
 export default function AIComplianceAssistant() {
-  const features = [
-    {
-
-      icon: Shield,
-      title: 'Automated Compliance Monitoring',
-      description:'
-        '24/7 monitoring of regulatory requirements and compliance status across all systems'},
-    {
-
-      icon: CheckCircle,
-      title: 'Real-time Risk Assessment',
-      description:'
-        'Instant identification and evaluation of compliance risks and violations'},
-    {
-
-      icon: FileText,
-      title: 'Document Management',
-      description:'
-        'Intelligent document review, classification, and compliance verification'},
-    {
-
-      icon: Brain,
-      title: 'AI-Powered Auditing',
-      description:'
-        'Machine learning algorithms that continuously improve compliance detection accuracy'},
-    {
-
-      icon: AlertTriangle,
-      title: 'Proactive Alerts',
-      description:'
-        'Early warning system for potential compliance issues before they become violations'},
-    {
-
-      icon: BarChart3,
-      title: 'Comprehensive Reporting',
-      description:'
-        'Detailed compliance reports and analytics for stakeholders and regulators'},
-  ];
-
-  const benefits = ['
-    'Reduce compliance violations by up to 90% through proactive monitoring',Automate 80% of routine compliance tasks and documentation',Achieve 100% audit readiness with real-time compliance tracking',Reduce compliance costs by 60% through intelligent automation',Improve regulatory reporting accuracy and timeliness',Ensure consistent compliance across all business units and locations',
-  ];
-
-  const complianceAreas = [
-    {
-
-      title: 'GDPR & Data Privacy',
-      description:'
-        'Personal data protection, consent management, and privacy compliance'},
-    {
-
-      title: 'SOX & Financial Compliance',
-      description:'
-        'Financial reporting, internal controls, and audit requirements'},
-    {
-
-      title: 'HIPAA & Healthcare',
-      description:'
-        'Patient data protection and healthcare information security'},
-    {
-
-      title: 'ISO Standards',
-      description:'
-        'Quality management, information security, and environmental standards'},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Financial Services',
-      description:'
-        'Banks, insurance companies, and fintech firms with strict regulatory requirements'},
-    {
-
-      title: 'Healthcare Organizations',
-      description:'
-        'Hospitals, clinics, and health tech companies handling sensitive patient data'},
-    {
-
-      title: 'E-commerce & Retail',
-      description:'
-        'Online businesses managing customer data and payment compliance'},
-    {
-
-      title: 'Manufacturing & Supply Chain',
-      description:'
-        'Companies with complex regulatory requirements across multiple jurisdictions'},
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
@@ -148,7 +61,7 @@ export default function AIComplianceAssistant() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4" />              <span>AI-Powered Compliance</span>
+              <Shield className="w-4 h-4"  />              <span>AI-Powered Compliance</span>
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -168,7 +81,7 @@ export default function AIComplianceAssistant() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -256,7 +169,7 @@ export default function AIComplianceAssistant() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
                   </span>                </motion.div>
@@ -272,7 +185,7 @@ export default function AIComplianceAssistant() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
                   </span>                </motion.div>
@@ -310,7 +223,7 @@ export default function AIComplianceAssistant() {
               >"
                 <div className="flex items-start space-x-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <Scale className="w-6 h-6 text-white" />                  </div>
+                    <Scale className="w-6 h-6 text-white"  />                  </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {area.title}
@@ -351,7 +264,7 @@ export default function AIComplianceAssistant() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Shield className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {useCase.title}
@@ -387,7 +300,7 @@ export default function AIComplianceAssistant() {
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Compliant Today"
-                <Rocket className="inline ml-2 w-5 h-5" />              </motion.button>
+                <Rocket className="inline ml-2 w-5 h-5"  />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -395,12 +308,11 @@ export default function AIComplianceAssistant() {
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
               >
                 Contact Sales"
-                <MessageCircle className="inline ml-2 w-5 h-5" />              </motion.button>
+                <MessageCircle className="inline ml-2 w-5 h-5"  />              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

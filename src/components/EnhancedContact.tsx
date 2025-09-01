@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Mail,
@@ -40,13 +38,11 @@ export function EnhancedContact(...args[]):  {
     message: ''
   }) ;
 
-  const [errors, setErrors] = useState < any> ({}) ;
+  const [errors, setErrors] = useState<any> ({}) ;
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
-  const services = ['
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'ai-solutions', label: 'AI Solutions' },;
+  
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
@@ -55,11 +51,9 @@ export function EnhancedContact(...args[]):  {
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
 
-  const validateForm = () : boolean => {;
+  
     const newErrors: ContactFormErrors = {};
 =======
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';    const newErrors: ContactFormErrors = {};
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (!formData.name.trim()) {
@@ -81,8 +75,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-      // // // // // // // // console.error('Error submitting form:', error);
-    } finally {
+      // // // // // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false);
 <<<<<<< HEAD
@@ -98,34 +91,12 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
       setIsSubmitting(false)}
   };
 
-  const contactInfo = [
-    {
-
-      icon: Mail,
-      title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Get in touch via email'
-    },
-    {
-
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (302) 464-0950',
-      description: 'Call us directly'
-    },
-    {
-
-      icon: MapPin,
-      title: 'Address',
-      value: '364 E Main St STE 1008, Middletown, DE 19709',
-      description: 'Visit our office'
-    },;
+  
     {;
       icon: Clock,;
       title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
-      description: 'Available during these hours';
-    };  ];
+      description: 'Available during these hours'};  ];
 
   if (isSubmitted) {
 
@@ -162,7 +133,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
-            <CheckCircle className="w-10 h-10 text-white" />          </motion.div>
+            <CheckCircle className="w-10 h-10 text-white"  />          </motion.div>
 
           <motion.h2
             initial = {
@@ -222,8 +193,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
             Send Another Message;
           </motion.button>;
         </div>;
-      </motion.div>;) ;
-  }
+      </motion.div>;) }
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,10 +392,10 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
 <<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['name']}
 =======
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['name']}
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['name']}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
@@ -488,10 +458,10 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
 <<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['email']}
 =======
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['email']}
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['email']}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
@@ -630,10 +600,10 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
 <<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <AlertCircle className="w-4 h-4 mr-1"  />
                       {errors['message']}
 =======
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['message']}
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['message']}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
@@ -654,7 +624,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />                    <span>Send Message</span>
+                    <Send className="w-5 h-5"  />                    <span>Send Message</span>
                   </>
                 )}
               </motion.button>
@@ -662,6 +632,5 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
           </motion.div>;
         </div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

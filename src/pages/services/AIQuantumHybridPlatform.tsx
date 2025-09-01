@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Atom,
@@ -22,125 +20,13 @@ import {
   Target,
   Workflow,
   Phone} from 'lucide-react';
-import { SEO } from '../../components/SEO';
 ;
 export { function };
 export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      icon: Atom,
-      title: 'Quantum-Classical Hybrid Processing',
-      description:'
-        'Seamlessly integrate quantum algorithms with classical computing for optimal performance'},
-    {
-
-      icon: Brain,
-      title: 'AI-Quantum Algorithm Optimization',
-      description:'
-        'Machine learning algorithms that automatically optimize quantum circuit designs'},
-    {
-
-      icon: Zap,
-      title: 'Real-time Quantum Error Correction',
-      description:'
-        'Advanced error correction algorithms for reliable quantum computations'},
-    {
-
-      icon: Shield,
-      title: 'Quantum-Safe Cryptography',
-      description:'
-        'Post-quantum cryptographic solutions for future-proof security'},
-    {
-
-      icon: TrendingUp,
-      title: 'Quantum Machine Learning',
-      description: 'Quantum neural networks and quantum-enhanced ML algorithms'},
-    {
-
-      icon: Database,
-      title: 'Quantum Database Optimization',
-      description:'
-        'Quantum algorithms for database search and optimization problems'},
-  ];
-
-  const pricingTiers = [
-    {
-
-      name: 'Quantum Starter',
-      price: '$2,999',
-      period: 'monthly',
-      description: 'Perfect for research institutions and quantum startups',
-      features: ['
-        'Up to 100 quantum circuit executions per month',Basic quantum algorithm library',Standard error correction',Email support',Basic analytics dashboard',
-      ],
-      bestFor:'
-        'Research institutions, quantum startups, educational organizations'},
-    {
-
-      name: 'Quantum Professional',
-      price: '$7,999',
-      period: 'monthly',
-      description: 'Advanced features for growing quantum computing companies',
-      features: ['
-        'Up to 1,000 quantum circuit executions per month',Advanced quantum algorithm library',Custom error correction algorithms',Priority support',Advanced analytics and reporting',API access',Custom quantum circuit design',
-      ],
-      bestFor: 'Quantum computing companies, research labs, enterprise R&D'},
-    {
-
-      name: 'Quantum Enterprise',
-      price: '$19,999',
-      period: 'monthly',
-      description:'
-        'Full-scale quantum computing platform for large enterprises',
-      features: ['
-        'Unlimited quantum circuit executions',Custom quantum algorithm development',Advanced quantum error correction',24/7 dedicated support',Custom integrations',White-label solutions',On-premise deployment options',Quantum consulting services',
-      ],
-      bestFor:'
-        'Large enterprises, government agencies, quantum computing leaders'},
-  ];
-
-  const useCases = [
-    {
-
-      title: 'Financial Modeling',
-      description:'
-        'Quantum algorithms for portfolio optimization, risk assessment, and derivative pricing',
-      icon: TrendingUp},
-    {
-
-      title: 'Drug Discovery',
-      description:'
-        'Quantum chemistry simulations for pharmaceutical research and molecular modeling',
-      icon: Atom},
-    {
-
-      title: 'Logistics Optimization',
-      description:'
-        'Quantum algorithms for supply chain optimization and route planning',
-      icon: Workflow},
-    {
-
-      title: 'Cryptography',
-      description:'
-        'Quantum-safe encryption and post-quantum cryptographic solutions',
-      icon: Lock},
-    {
-
-      title: 'Machine Learning',
-      description: 'Quantum-enhanced neural networks and pattern recognition',
-      icon: Brain},
-    {
-
-      title: 'Climate Modeling',
-      description: 'Complex climate simulations using quantum computing power',
-      icon: Globe},
-  ];
-
-  const benefits = ['
-    '10-100x faster computation for specific problems',Future-proof quantum-safe security solutions',Competitive advantage in research and development',Access to cutting-edge quantum technologies',Scalable quantum computing infrastructure',Expert quantum computing consultation',
-  ];
-
+  
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO"
@@ -158,7 +44,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />              Revolutionary Quantum-AI Technology
+              <Atom className="w-4 h-4 mr-2"  />              Revolutionary Quantum-AI Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Quantum Hybrid Platform
@@ -181,7 +67,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
               className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
             >
               Get Started"
-              <ArrowRight className="ml-2 w-5 h-5" />            </a>
+              <ArrowRight className="ml-2 w-5 h-5"  />            </a>
             <a"
               href="#demo"
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
@@ -270,7 +156,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1" />                    Most Popular
+                    <Star className="w-4 h-4 mr-1"  />                    Most Popular
                   </div>
                 )}
 "
@@ -288,7 +174,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -387,7 +273,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 className="flex items-start space-x-4"
               >"
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
-                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                  <CheckCircle className="w-5 h-5 text-purple-400"  />
                 </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
             ))}
@@ -417,18 +303,17 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Your Quantum Journey"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
               >"
-                <Phone className="mr-2 w-5 h-5" />                Call +1 302 464 0950
+                <Phone className="mr-2 w-5 h-5"  />                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

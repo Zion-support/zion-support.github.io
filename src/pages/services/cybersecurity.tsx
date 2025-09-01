@@ -1,7 +1,5 @@
 
 <<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
 import { Shield, 
   Brain, 
   Zap, 
@@ -66,14 +64,12 @@ export default function Cybersecurity(...args: any[]): any {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Get Started"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>"
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">"
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
 =======
-import React from 'react.ts';'
-import { SEO  } from '../../components/SEO';                Watch Demo
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </button>
             </div>
@@ -115,7 +111,7 @@ import { SEO  } from '../../components/SEO';                Watch Demo
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-slate-300">"
-                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>"
@@ -206,7 +202,7 @@ import { SEO  } from '../../components/SEO';                Watch Demo
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule Security Assessment"
-                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
               <Link"
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"

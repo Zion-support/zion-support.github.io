@@ -1,5 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
 import {
 
   AlertTriangle,
@@ -28,16 +26,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null,
       isReporting: false,
-      reportSent: false};
-  }
+      reportSent: false}}
   static getDerivedStateFromError(error: Error): Partial<State> {
 
     return {
 
       hasError: true,
       error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`};
-  }
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({ errorInfo });
@@ -48,31 +44,15 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Call custom error handler if provided
     if (this.props.onError) {
 
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
 
     // Send error to error reporting service
-    this.reportError (error, errorInfo) ;
-  }
+    this.reportError (error, errorInfo) }
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
       // You can integrate with services like Sentry, LogRocket, etc.
-      const errorReport = {
-
-        error: {
-
-          name: error.name,
-          message: error.message,
-          stack: error.stack},
-        errorInfo: {
-
-          componentStack: errorInfo.componentStack},
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        errorId: this.state.errorId};
-
+      
 <<<<<<< HEAD
       // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
@@ -84,11 +64,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         method: 'POST','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(errorReport)});
-    } catch (reportError) {
+        body: JSON.stringify(errorReport)})} catch (reportError) {
 
-      // console.error('Failed to report error:', reportError);
-    }  }
+      // console.error('Failed to report error:', reportError)}  }
 
   private handleRetry = () => {
     this.setState({
@@ -97,17 +75,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: null,
-      reportSent: false});
-  };
+      reportSent: false})};
 
   private handleGoHome = () => {
 
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
 
   private handleGoBack = () => {
-    window.history.back () ;
-  };
+    window.history.back () };
   private handleReportError = async () => {
     this.setState({ isReporting: true });
 
@@ -117,15 +92,11 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Reset report status after 3 seconds
       setTimeout ( () => {
-        this.setState ({ reportSent: false }) ;
-      }, 3000) ;
-    } catch (error) {
+        this.setState ({ reportSent: false }) }, 3000) } catch (error) {
 
-      // console.error('Failed to report error:', error);
-    } finally {
+      // console.error('Failed to report error:', error)} finally {
 
-      this.setState({ isReporting: false });
-    }  };
+      this.setState({ isReporting: false })}  };
 
   private handleRetry = () => {
     this.setState({
@@ -138,45 +109,32 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       isRecovering: true});
 
     // Force a re - render of children
-    this.forceUpdate () ;
-  };
+    this.forceUpdate () };
 
   private handleGoHome = () => {
 
-    window.location.href = '/';
-  };
+    window.location.href = '/'};
   private handleCopyError = async : unknown {
     if (this.state.error) {
 `
-      const errorText = `
-Error Details:
-Message: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo?.componentStack}
-Error ID: ${this.state.errorId}
-URL: ${window.location.href}
-Timestamp: ${new Date().toISOString()}`
-      `;
+      
       try {
         await navigator.clipboard.writeText (errorText) ;
         // You could show a toast notification here
       } catch (err) {
 
-        // console.error('Failed to copy error details:', err);
-      }    }
+        // console.error('Failed to copy error details:', err)}    }
   };
 
   private toggleDetails = () => {
-    this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
-  };
+    this.setState (prev => ({ showDetails: !prev.showDetails }) ) };
   render () {
     if (this.state.hasError) {
 
       // Custom fallback UI
       if (this.props.fallback) {
 
-        return this.props.fallback;
-      }
+        return this.props.fallback}
       return()
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -191,7 +149,7 @@ Timestamp: ${new Date().toISOString()}`
               transition={{ delay: 0.2, type: 'spring' }}"
               className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6"
             >"
-              <AlertTriangle className="w-10 h-10 text-red-400" />            </motion.div>
+              <AlertTriangle className="w-10 h-10 text-red-400"  />            </motion.div>
 
             {/* Error Message */}
             <motion.h1
@@ -253,21 +211,21 @@ Timestamp: ${new Date().toISOString()}`
                 onClick={this.handleRetry}"
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <RefreshCw className="w-5 h-5" />                <span>Try Again</span>
+                <RefreshCw className="w-5 h-5"  />                <span>Try Again</span>
               </button>
 
               <button
                 onClick={this.handleGoBack}"
                 className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <ArrowLeft className="w-5 h-5" />                <span>Go Back</span>
+                <ArrowLeft className="w-5 h-5"  />                <span>Go Back</span>
               </button>
 
               <button
                 onClick={this.handleGoHome}"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >"
-                <Home className="w-5 h-5" />                <span>Go Home</span>
+                <Home className="w-5 h-5"  />                <span>Go Home</span>
               </button>
             </motion.div>
 
@@ -290,18 +248,18 @@ Timestamp: ${new Date().toISOString()}`
                   >
                     {this.state.isReporting ? (
                       <>"
-                        <RefreshCw className="w-5 h-5 animate-spin" />
+                        <RefreshCw className="w-5 h-5 animate-spin"  />
                         <span>Reporting...</span>
                       </>
                     ) : (
                       <>"
-                        <Bug className="w-5 h-5" />                        <span>Report Error</span>
+                        <Bug className="w-5 h-5"  />                        <span>Report Error</span>
                       </>
                     )}
                   </button>
                 ) : ("
                   <div className="flex items-center justify-center space-x-2 text-green-400">"
-                    <Send className="w-5 h-5" />                    <span>Error reported successfully!</span>
+                    <Send className="w-5 h-5"  />                    <span>Error reported successfully!</span>
                   </div>
                 )}
               </motion.div>
@@ -325,8 +283,7 @@ Timestamp: ${new Date().toISOString()}`
               </p>
             </motion.div>
           </div>
-        </motion.div>) ;
-    }
+        </motion.div>) }
     return this.props.children}
 }
 '"`

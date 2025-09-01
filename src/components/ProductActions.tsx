@@ -1,26 +1,18 @@
-import { useState } from 'react';
-import { Loader2 } from 'lucide-react';
-import { toast } from 'react-toastify';
-import { Button } from '@/components/ui/button';
 
 interface ProductActionsProps {
-  onAddToCart: () => Promise<void> | void;
-}
+  onAddToCart: () => Promise<void> | void}
 
 export function ProductActions({ onAddToCart }: ProductActionsProps) {
   const [loading, setLoading] = useState(false);
   const [label, setLabel] = useState('Add to Cart');
 
-  const addToCart = async () => {
-    setLoading(true);
+  
     try {
       await onAddToCart();
       toast('2U Rack Mount Server added to cart');
       setLabel('Added!');
-      setTimeout(() => setLabel('Add to Cart'), 1500);
-    } finally {
-      setLoading(false);
-    }
+      setTimeout(() => setLabel('Add to Cart'), 1500)} finally {
+      setLoading(false)}
   };
 
   return (
@@ -34,5 +26,4 @@ export function ProductActions({ onAddToCart }: ProductActionsProps) {
         label
       )}
     </Button>
-  );
-}
+  )}

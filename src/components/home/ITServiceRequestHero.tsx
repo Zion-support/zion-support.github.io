@@ -1,16 +1,8 @@
-import React, { useState } from 'react.ts';
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
 ;export function ITServiceRequestHero(...args[]):  {
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-
+  
   const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
     if (location.trim()) {
 
@@ -18,39 +10,7 @@ import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
       // Simulate API call
       setTimeout(: unknown {
         setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}};
-
-  const containerVariants = {
-
-  hidden: { opacity: 0,
-  y: 20 
-
-},
-    visible: {
-
-      opacity: 1,
-      y: 0,
-      transition: {
-
-        duration: 0.6,
-        staggerChildren: 0.2
-      };
-    };
-  };
-
-  const itemVariants = {
-
-  hidden: { opacity: 0,
-  y: 20 
-
-},
-    visible: {
-
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 };
-    };
-  };
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
 
   const features = ["
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },"
@@ -59,9 +19,6 @@ import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 export function ITServiceRequestHero() {
   return ("
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
@@ -83,7 +40,7 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
               <div className="p-2 bg-zion-cyan/20 rounded-lg">"
-                <Zap className="w-6 h-6 text-zion-cyan" />
+                <Zap className="w-6 h-6 text-zion-cyan"  />
               </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
               </span>
@@ -125,7 +82,7 @@ export function ITServiceRequestHero() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
 
                 Request Service Now"
-                <MapPin className="w-5 h-5 ml-2" />              </Button>
+                <MapPin className="w-5 h-5 ml-2"  />              </Button>
               <Button"
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
@@ -231,6 +188,5 @@ export function ITServiceRequestHero() {
         </div>;
       </div>;
     </section>;
-  );
-}
+  )}
 '"`

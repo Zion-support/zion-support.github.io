@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import {
 
   Brain,
@@ -49,112 +47,10 @@ import {
   ShoppingBag} from 'lucide-react';
 
 export default function AIBusinessIntelligence() {
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description:'
-        'AI-powered forecasting and trend analysis for strategic decision making'},
-    {
-
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description:'
-        'Live data visualization and interactive reporting across all business metrics'},
-    {
-
-      icon: Target,
-      title: 'Goal Tracking',
-      description:'
-        'Automated monitoring and progress tracking for business objectives and KPIs'},
-    {
-
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description:'
-        'Comprehensive insights into business performance and operational efficiency'},
-    {
-
-      icon: Zap,
-      title: 'Automated Insights',
-      description:'
-        'AI-generated recommendations and actionable insights from your data'},
-    {
-
-      icon: Shield,
-      title: 'Data Security',
-      description:'
-        'Enterprise-grade security and compliance for sensitive business data'},
-  ];
-
-  const benefits = ['
-    'Increase decision-making speed by 300% with real-time insights',Improve business performance by 40% through predictive analytics',Reduce reporting time by 80% with automated dashboards',Identify new opportunities with AI-powered trend analysis',Optimize operations with data-driven recommendations',Achieve better ROI through intelligent business insights',
-  ];
-
-  const analyticsTypes = [
-    {
-
-      icon: BarChart3,
-      title: 'Descriptive Analytics',
-      description: 'What happened? Historical data analysis and reporting',
-      features: ['Data visualization',KPI tracking',Performance reporting']},
-    {
-
-      icon: TrendingUp,
-      title: 'Diagnostic Analytics',
-      description: 'Why did it happen? Root cause analysis and investigation',
-      features: ['
-        'Drill-down analysis',Correlation studies',Anomaly detection',
-      ]},
-    {
-
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'What will happen? AI-powered forecasting and modeling',
-      features: ['Trend forecasting',Risk assessment',Scenario planning']},
-    {
-
-      icon: Target,
-      title: 'Prescriptive Analytics',
-      description:'
-        'What should we do? Actionable recommendations and optimization',
-      features: ['
-        'Automated recommendations',Optimization algorithms',Decision support',
-      ]},
-  ];
-
-  const useCases = [
-    {
-
-      industry: 'Finance',
-      icon: Coins,
-      applications: ['
-        'Risk assessment and fraud detection',Portfolio optimization and investment strategies',Credit scoring and loan approval',Market trend analysis and trading insights',
-      ]},
-    {
-
-      industry: 'Healthcare',
-      icon: Shield,
-      applications: ['
-        'Patient outcome prediction and treatment optimization',Resource allocation and capacity planning',Disease outbreak forecasting',Clinical trial optimization',
-      ]},
-    {
-
-      industry: 'Retail',
-      icon: ShoppingBag,
-      applications: ['
-        'Demand forecasting and inventory optimization',Customer behavior analysis and personalization',Price optimization and dynamic pricing',Supply chain optimization',
-      ]},
-    {
-
-      industry: 'Manufacturing',
-      icon: Cpu,
-      applications: ['
-        'Predictive maintenance and equipment monitoring',Quality control and defect prediction',Production optimization and efficiency improvement',Supply chain management and logistics',
-      ]},
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
@@ -166,7 +62,7 @@ export default function AIBusinessIntelligence() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4" />              <span>AI-Powered Business Intelligence</span>
+              <Brain className="w-4 h-4"  />              <span>AI-Powered Business Intelligence</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Business Intelligence
@@ -183,7 +79,7 @@ export default function AIBusinessIntelligence() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -257,7 +153,7 @@ export default function AIBusinessIntelligence() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"  />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -301,7 +197,7 @@ export default function AIBusinessIntelligence() {
                 <ul className="space-y-3">
                   {type.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -345,7 +241,7 @@ export default function AIBusinessIntelligence() {
                 <ul className="space-y-3">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"
                       <span className="text-gray-300 text-sm">
                         {application}
                       </span>                    </li>
@@ -381,7 +277,7 @@ export default function AIBusinessIntelligence() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Get Started Now"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -394,6 +290,5 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

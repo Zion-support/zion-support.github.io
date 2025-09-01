@@ -1,23 +1,11 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
 
 const PricingComparison: React.FC = (): JSX.Element => {;
   const [selectedPlan, setSelectedPlan] = useState('monthly');
 
-  const pricingData = [
-    {
-
-      category: "AI-Powered Micro SAAS Services",
-      services[;
+  
         {
 =======
-import React, { useState } from 'react.ts';'
-import { SEO   } from '../components/SEO';'
-import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';        {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           name: "AI Code Review & Security","
@@ -365,9 +353,9 @@ import { Link   } from 'react-router-dom.ts';        {
       ]};
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number) => {;
-    const monthlyTotal = monthlyPrice * 12;
-    const yearlyTotal = yearlyPrice * 12;
+  
+    
+    
     const savingsPercent = Math.round ( (savings / monthlyTotal) * 100) ;    return { savings, savingsPercent }};
 
   return()
@@ -501,7 +489,7 @@ import { Link   } from 'react-router-dom.ts';        {
 "
                       <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">;
                         {service.plans.map((plan, planIndex)   => {;
-                          const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
+                          
                           return()                            <motion.div
                               key = {plan.name}
                               initial = {

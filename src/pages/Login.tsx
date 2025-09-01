@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   Mail,
   Lock,
@@ -54,14 +51,11 @@ export default function Login() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-    const { name, value, type, checked } = e.target;
+  
     setFormData(prev => ({
 
       ...prev,
-      [name]: type === 'checkbox' ? checked : value}));
-  };
+      [name]: type === 'checkbox' ? checked : value}))};
 
   const handleSubmit = async (e: React.FormEvent) => {
 
@@ -86,9 +80,7 @@ export default function Login() {
         company: '',
         phone: '',
         acceptTerms: false,
-        acceptMarketing: false});
-    }, 5000);
-  };
+        acceptMarketing: false})}, 5000)};
   
     setFormData({
 
@@ -100,14 +92,7 @@ export default function Login() {
       company: '',
       phone: '',
       acceptTerms: false,
-      acceptMarketing: false});
-  };
-
-  const isFormValid = (...args: unknown[]): unknown => {
-    if (isLogin) {
-
-      return formData.email && formData.password;
-    } else {
+      acceptMarketing: false})}} else {
 
       return()
         formData.email &&
@@ -116,8 +101,7 @@ export default function Login() {
         formData.firstName &&
         formData.lastName &&
         formData.acceptTerms
-      );
-    }  };
+      )}  };
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">"
@@ -153,7 +137,7 @@ export default function Login() {
               animate={{ opacity: 1, scale: 1 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-3"
             >"
-              <CheckCircle className="w-6 h-6 text-green-400" />"              <span className="text-green-400">
+              <CheckCircle className="w-6 h-6 text-green-400"  />"              <span className="text-green-400">
                 {isLogin'
                   ? 'Successfully logged in!''
                   : 'Account created successfully!'}
@@ -169,7 +153,7 @@ export default function Login() {
                     htmlFor="firstName"
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />                    First Name *
+                    <User className="w-4 h-4 inline mr-2"  />                    First Name *
                   </label>
                   <input"
                     type="text"
@@ -187,7 +171,7 @@ export default function Login() {
                     htmlFor="lastName"
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />                    Last Name *
+                    <User className="w-4 h-4 inline mr-2"  />                    Last Name *
                   </label>
                   <input"
                     type="text"
@@ -207,7 +191,7 @@ export default function Login() {
                 htmlFor="email"
                 className="block text-white font-medium mb-2"
               >"
-                <Mail className="w-4 h-4 inline mr-2" />                Email Address *
+                <Mail className="w-4 h-4 inline mr-2"  />                Email Address *
               </label>
               <input"
                 type="email"
@@ -227,7 +211,7 @@ export default function Login() {
                   htmlFor="company"
                   className="block text-white font-medium mb-2"
                 >"
-                  <Building className="w-4 h-4 inline mr-2" />                  Company
+                  <Building className="w-4 h-4 inline mr-2"  />                  Company
                 </label>
                 <input"
                   type="text"
@@ -245,7 +229,7 @@ export default function Login() {
                 htmlFor="password"
                 className="block text-white font-medium mb-2"
               >"
-                <Lock className="w-4 h-4 inline mr-2" />                Password *
+                <Lock className="w-4 h-4 inline mr-2"  />                Password *
               </label>"
               <div className="relative">
                 <input'
@@ -264,9 +248,9 @@ export default function Login() {
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                 >
                   {showPassword ? ("
-                    <EyeOff className="w-5 h-5" />
+                    <EyeOff className="w-5 h-5"  />
                   ) : ("
-                    <Eye className="w-5 h-5" />
+                    <Eye className="w-5 h-5"  />
                   )}                </button>
               </div>
             </div>
@@ -277,7 +261,7 @@ export default function Login() {
                   htmlFor="confirmPassword"
                   className="block text-white font-medium mb-2"
                 >"
-                  <Lock className="w-4 h-4 inline mr-2" />                  Confirm Password *
+                  <Lock className="w-4 h-4 inline mr-2"  />                  Confirm Password *
                 </label>"
                 <div className="relative">
                   <input'
@@ -296,9 +280,9 @@ export default function Login() {
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                   >
                     {showConfirmPassword ? ("
-                      <EyeOff className="w-5 h-5" />
+                      <EyeOff className="w-5 h-5"  />
                     ) : ("
-                      <Eye className="w-5 h-5" />
+                      <Eye className="w-5 h-5"  />
                     )}                  </button>
                 </div>
               </div>) }
@@ -365,7 +349,7 @@ export default function Login() {
               ) : (
                 <>
                   <span>{isLogin ? 'Sign In' : 'Create Account'}</span>"
-                  <ArrowRight className="w-5 h-5" />                </>
+                  <ArrowRight className="w-5 h-5"  />                </>
               )}
             </button>
           </form>
@@ -399,11 +383,11 @@ export default function Login() {
             </div>"
             <div className="mt-6 grid grid-cols-2 gap-3">"
               <button className="w-full inline-flex justify-center py-3 px-4 border border-white/20 rounded-lg shadow-sm bg-white/10 text-white hover:bg-white/20 transition-colors">"
-                <Google className="w-5 h-5" />"
+                <Google className="w-5 h-5"  />"
                 <span className="ml-2">Google</span>
               </button>"
               <button className="w-full inline-flex justify-center py-3 px-4 border border-white/20 rounded-lg shadow-sm bg-white/10 text-white hover:bg-white/20 transition-colors">"
-                <Github className="w-5 h-5" />"                <span className="ml-2">GitHub</span>
+                <Github className="w-5 h-5"  />"                <span className="ml-2">GitHub</span>
               </button>
             </div>
           </div>
@@ -432,6 +416,5 @@ export default function Login() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-}
+    </div>) }
 '"`

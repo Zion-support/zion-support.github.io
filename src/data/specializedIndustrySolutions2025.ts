@@ -59,8 +59,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['HIPAA',FDA',CE Mark',GDPR'],;
-    certifications['ISO 13485',ISO 27001',SOC 2 Type II'];
-  },;
+    certifications['ISO 13485',ISO 27001',SOC 2 Type II']},;
   {
 
     id: 'fintech-solutions',
@@ -78,8 +77,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['HIPAA', 'FDA', 'CE Mark', 'GDPR'],;'
-    certifications['ISO 13485', 'ISO 27001', 'SOC 2 Type II'];
-  },;  {
+    certifications['ISO 13485', 'ISO 27001', 'SOC 2 Type II']},;  {
 '
     id: 'fintech-solutions','
     title: 'FinTech Solutions Platform','
@@ -113,8 +111,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['PCI DSS',SOX',GLBA',GDPR',CCPA'],;
-    certifications['ISO 27001',SOC 2 Type II',PCI DSS Level 1'];
-  },;
+    certifications['ISO 27001',SOC 2 Type II',PCI DSS Level 1']},;
   {
 
     id: 'smart-manufacturing',
@@ -132,8 +129,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['PCI DSS', 'SOX', 'GLBA', 'GDPR', 'CCPA'],;'
-    certifications['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1'];
-  },;  {
+    certifications['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1']},;  {
 '
     id: 'smart-manufacturing','
     title: 'Smart Manufacturing Platform','
@@ -167,8 +163,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['ISO 9001',ISO 14001',OSHA',FDA'],;
-    certifications['ISO 9001',ISO 14001',ISO 45001'];
-  },;
+    certifications['ISO 9001',ISO 14001',ISO 45001']},;
   {
 
     id: 'retail-ai-platform',
@@ -186,8 +181,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['ISO 9001', 'ISO 14001', 'OSHA', 'FDA'],;'
-    certifications['ISO 9001', 'ISO 14001', 'ISO 45001'];
-  },;  {
+    certifications['ISO 9001', 'ISO 14001', 'ISO 45001']},;  {
 '
     id: 'retail-ai-platform','
     title: 'Retail AI Platform','
@@ -221,8 +215,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['PCI DSS',GDPR',CCPA',SOX'],;
-    certifications['PCI DSS Level 1',ISO 27001',SOC 2 Type II'];
-  },;
+    certifications['PCI DSS Level 1',ISO 27001',SOC 2 Type II']},;
   {
 
     id: 'education-technology',
@@ -240,8 +233,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['PCI DSS', 'GDPR', 'CCPA', 'SOX'],;'
-    certifications['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II'];
-  },;  {
+    certifications['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II']},;  {
 '
     id: 'education-technology','
     title: 'Education Technology Platform','
@@ -275,8 +267,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['FERPA',COPPA',GDPR',CCPA'],;
-    certifications['ISO 27001',SOC 2 Type II',EdTech Certification'];
-  },;
+    certifications['ISO 27001',SOC 2 Type II',EdTech Certification']},;
   {
 
     id: 'government-solutions',
@@ -294,8 +285,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['FERPA', 'COPPA', 'GDPR', 'CCPA'],;'
-    certifications['ISO 27001', 'SOC 2 Type II', 'EdTech Certification'];
-  },;  {
+    certifications['ISO 27001', 'SOC 2 Type II', 'EdTech Certification']},;  {
 '
     id: 'government-solutions','
     title: 'Government Technology Solutions','
@@ -329,8 +319,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['FedRAMP',FISMA',NIST',CJIS',HIPAA'],;
-    certifications['FedRAMP High',FISMA High',ISO 27001',SOC 2 Type II'];
-  },;
+    certifications['FedRAMP High',FISMA High',ISO 27001',SOC 2 Type II']},;
   {
 
     id: 'energy-optimization',
@@ -348,8 +337,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['FedRAMP', 'FISMA', 'NIST', 'CJIS', 'HIPAA'],;'
-    certifications['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II'];
-  },;  {
+    certifications['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II']},;  {
 '
     id: 'energy-optimization','
     title: 'Energy Optimization Platform','
@@ -383,8 +371,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['NERC',FERC',ISO',Grid Standards'],;
-    certifications['ISO 27001',SOC 2 Type II',Energy Management'];
-  },;
+    certifications['ISO 27001',SOC 2 Type II',Energy Management']},;
   {
 
     id: 'transportation-logistics',
@@ -402,8 +389,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['NERC', 'FERC', 'ISO', 'Grid Standards'],;'
-    certifications['ISO 27001', 'SOC 2 Type II', 'Energy Management'];
-  },;  {
+    certifications['ISO 27001', 'SOC 2 Type II', 'Energy Management']},;  {
 '
     id: 'transportation-logistics','
     title: 'Transportation & Logistics Platform','
@@ -437,8 +423,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['DOT',FMCSA',OSHA',ISO'],;
-    certifications['ISO 27001',SOC 2 Type II',Transportation Safety'];
-  },;
+    certifications['ISO 27001',SOC 2 Type II',Transportation Safety']},;
   {
 
     id: 'real-estate-tech',
@@ -456,8 +441,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['DOT', 'FMCSA', 'OSHA', 'ISO'],;'
-    certifications['ISO 27001', 'SOC 2 Type II', 'Transportation Safety'];
-  },;  {
+    certifications['ISO 27001', 'SOC 2 Type II', 'Transportation Safety']},;  {
 '
     id: 'real-estate-tech','
     title: 'Real Estate Technology Platform','
@@ -491,8 +475,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['Real Estate Laws',Data Privacy',Financial Regulations',Local Compliance'],;
-    certifications['ISO 27001',SOC 2 Type II',Real Estate Technology'];
-  },;
+    certifications['ISO 27001',SOC 2 Type II',Real Estate Technology']},;
   {
 
     id: 'media-entertainment',
@@ -510,8 +493,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact','
     status: 'active','
     compliance['Real Estate Laws', 'Data Privacy', 'Financial Regulations', 'Local Compliance'],;'
-    certifications['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology'];
-  },;  {
+    certifications['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology']},;  {
 '
     id: 'media-entertainment','
     title: 'Media & Entertainment Platform','
@@ -544,15 +526,12 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     compliance['Copyright Laws',Data Privacy',Content Regulations',Streaming Standards'],;
-    certifications['ISO 27001',SOC 2 Type II',Content Management'];
-  }
+    certifications['ISO 27001',SOC 2 Type II',Content Management']}
 ];
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
+export 
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 
-  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);
-};
-export const getAllIndustrySolutions = (): IndustrySolution[] => {;
-  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-};
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
+export 
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};

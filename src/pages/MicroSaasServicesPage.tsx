@@ -1,14 +1,11 @@
-import React from 'react';
-import SEO from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return()
     <>
-      <SEO
-        title="Micro SAAS Services - Zion Tech Group"
+      <SEO title="Micro SAAS Services - Zion Tech Group"
         description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."
         keywords="micro SAAS, specialized solutions, niche services, business software"
-      />
+       />
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white">"
         <div className="max-w-7xl mx-auto px-6 py-20">"
@@ -92,7 +89,7 @@ const MicroSAASServicesPage = () => {
                     <div className="grid grid-cols-2 gap-2 mb-4">
                       {service.features.slice(0, 4).map((feature, index) => ("
                         <div key={index} className="flex items-center text-xs text-zion-cyan">"
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <CheckCircle className="w-3 h-3 mr-2"  />
                           {feature}
                         </div>
                       ))}
@@ -114,7 +111,7 @@ const MicroSAASServicesPage = () => {
                     </div>"
                     <div className="flex items-center justify-center gap-1 mb-3">
                       {[...Array(5)].map((_, i) => ('`
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`} />
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`}  />
                       ))}"
                       <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
                     </div>
@@ -131,7 +128,7 @@ const MicroSAASServicesPage = () => {
                 <CardFooter className="pt-0">"
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">"
                     <a href={service.link} target="_blank" rel="noopener noreferrer">"
-                      <ExternalLink className="h-4 w-4 mr-2" />
+                      <ExternalLink className="h-4 w-4 mr-2"  />
                       Start Free Trial
                     </a>
                   </Button>
@@ -152,15 +149,14 @@ const MicroSAASServicesPage = () => {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">"
-              <TrendingUp className="h-5 w-5 mr-2" />
+              <TrendingUp className="h-5 w-5 mr-2"  />
               Start Free Trial
             </Button>"
             <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">"
-              <Phone className="h-5 w-5 mr-2" />;              Call +1 302 464 0950;
+              <Phone className="h-5 w-5 mr-2"  />;              Call +1 302 464 0950;
             </Button>;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

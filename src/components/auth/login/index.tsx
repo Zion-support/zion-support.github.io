@@ -1,5 +1,3 @@
-import React from 'react';
-import { LoginForm } from "./LoginForm";
 ;export function LoginContent(...args[]):  {
 
   return ("
@@ -24,6 +22,5 @@ import { LoginForm } from "./LoginForm";
         </div>;
       </div>;
     </div>;
-  );
-}
+  )}
 '"

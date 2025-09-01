@@ -13,13 +13,10 @@ export interface PricingTier2031 {
 
     name: string;
     price: number;
-    description: string;
-  
-}[];
+    description: string}[];
   roi: string;
   implementationTime: string;
-  supportLevel: string;
-}
+  supportLevel: string}
 ;export interface ServiceCategory2031 {
 
   id: string;
@@ -44,11 +41,7 @@ export interface PricingTier2031 {
 
       phone: string;
       email: string;
-      website: string;
-    
-};
-  }[];
-}
+      website: string}}[]}
 ;export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   {
 
@@ -583,25 +576,4 @@ export interface PricingTier2031 {
     ]},
 ];
 ;
-export const PRICING_SUMMARY_2031 = {
-
-  totalServices: COMPREHENSIVE_PRICING_GUIDE_2031.reduce()
-    (acc, category) => acc + category.services.length,
-    0
-  ),
-  totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
-  priceRange: {
-
-    min: '$399/month',
-    max: '$150,000/project'},
-  averageROI: '300-500%',
-  implementationTime: {
-
-    min: '2-4 weeks',
-    max: '24-48 weeks'},
-  contactInfo: {
-
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    website: 'https://ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'}};
+export 

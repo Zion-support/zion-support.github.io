@@ -1,4 +1,3 @@
-import React from 'react.ts';
 ;const AISEOOptimizer: React.FC = (): JSX.Element => {
 
   return()
@@ -99,7 +98,6 @@ import React from 'react.ts';
         </section>
       </div>
     </div>
-  );
-};
+  )};
 export default AISEOOptimizer;
 '"

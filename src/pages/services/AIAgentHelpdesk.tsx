@@ -1,5 +1,3 @@
-import React from 'react.ts';
-import { SEO } from '../../components/SEO';
 import {
 
   Bot,
@@ -12,47 +10,8 @@ import {
 
 export default function AIAgentHelpdesk(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Bot,
-      title: 'Autonomous Triage',
-      desc: 'Understands intent, routes to flows, escalates with full context.'},
-    {
-
-      icon: MessageSquare,
-      title: 'Omnichannel',
-      desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.'},
-    {
-
-      icon: Headphones,
-      title: 'Agent Assist',
-      desc: 'Real-time suggested replies, macro generation, and knowledge lookups.'},
-    {
-
-      icon: PieChart,
-      title: 'Insights',
-      desc: 'CSAT, first response time, deflection, and topic clustering.'},
-  ];
-
-  const pricing = [
-    {
-
-      tier: 'Starter',
-      price: '$99/mo',
-      items: ['1,000 conversations',Web chat',FAQ auto-build']},
-    {
-
-      tier: 'Growth',
-      price: '$299/mo',
-      items: ['10,000 conversations',All channels',Agent assist']},
-    {
-
-      tier: 'Enterprise',
-      price: 'Custom',
-      items: ['SLA',SAML/SSO',Private model']},
-  ];
-
+  
+  
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
@@ -125,6 +84,5 @@ export default function AIAgentHelpdesk(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

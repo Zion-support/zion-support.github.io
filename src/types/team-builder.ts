@@ -1,4 +1,3 @@
-import { TalentProfile } from './talent';  weeklyHours: number; // Estimated
   matchedTalent: TalentProfile[]; // Talent profiles matching this role
 }
 ;
@@ -11,22 +10,18 @@ export interface TeamRecommendation {
 
     // Sum of (hourlyRateRange.avg * weeklyHours) for all roles;
     min: number;
-    max: number;
-  };
+    max: number};
   totalWeeklyBurn: {
 
     // Sum of (hourlyRateRange.avg * weeklyHours) for all roles - same as totalEstimatedRate for now
     min: number;
-    max: number;
-  };
+    max: number};
   totalProjectEstimate: {
 
     // Based on timeline from brief and weekly burn
     min: number;
-    max: number;
-  };
-  createdAt?: string;
-}
+    max: number};
+  createdAt?: string}
 "// Optional: For "Invite to Team"
 export interface TeamInvite {
   id?: string;
@@ -35,6 +30,5 @@ export interface TeamInvite {
   role: string; // The role they are being invited for'
   status: 'pending' | 'accepted' | 'declined';
   createdAt?: string;
-  updatedAt?: string;
-}
+  updatedAt?: string}
 '"

@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
 
   Home,
@@ -110,10 +107,9 @@ import {
 
 export const EnhancedSidebar: React.FC = () => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-  const toggleSection = (section: string) => {;
-    const newExpanded = new Set(expandedSections);
+  
+  
+    
     if (newExpanded.has(section)) {
 
       newExpanded.delete(section)} else {
@@ -121,8 +117,7 @@ export const EnhancedSidebar: React.FC = () => {;
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string) => location.pathname === path;
-
+  
   const navigationSections = [
     {
 
@@ -140,9 +135,6 @@ export const EnhancedSidebar: React.FC = () => {;
         { name: "Careers", href: "/careers", icon: Briefcase },"
         { name: "Partners", href: "/partners", icon: Handshake }
 =======
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
-import { motion, AnimatePresence } from 'framer-motion';        { name: "Partners", href: "/partners", icon: Handshake }
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
@@ -181,12 +173,7 @@ import { motion, AnimatePresence } from 'framer-motion';        { name: "Partner
 
   ];
 
-  const quickActions = ["
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },"
-    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },"
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
-  ];
-
+  
   return ("
     <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
         {/* Logo */}"
@@ -224,7 +211,7 @@ import { motion, AnimatePresence } from 'framer-motion';        { name: "Partner
         >"
           <Link to="/" className="flex items-center space-x-3 group">"
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-              <Zap className="w-6 h-6 text-white" />
+              <Zap className="w-6 h-6 text-white"  />
             </div>"            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
               Zion Tech Group
             </h1>
@@ -285,7 +272,7 @@ import { motion, AnimatePresence } from 'framer-motion';        { name: "Partner
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
                   }`}
 "
-                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"                  <span className="font-medium">{action.name}</span>
+                  <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">{action.name}</span>
                 </Link>
               </motion.div>;) ) }
           </div>
@@ -331,7 +318,7 @@ import { motion, AnimatePresence } from 'framer-motion';        { name: "Partner
 
                     expandedSections.has(section.title) ? 'rotate-180' : ''`
                   }`} 
-                />
+                 />
 =======
 '
                     expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
@@ -421,19 +408,18 @@ import { motion, AnimatePresence } from 'framer-motion';        { name: "Partner
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
-              <Phone className="w-3 h-3" />
+              <Phone className="w-3 h-3"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center space-x-3 text-sm text-slate-400">"
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className = "flex items-center space-x-2">"
-              <MapPin className="w-3 h-3" />;              <span>Middletown, DE</span>;
+              <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </aside>;) ;
-};
+    </aside>;) };
 '"`

@@ -22,4 +22,4 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
     </div>;
   )};
 
-export default EnhancedMarketplaceCard;}'"`
+export default EnhancedMarketplaceCard}'"`

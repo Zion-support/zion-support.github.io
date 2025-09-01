@@ -23,14 +23,12 @@ export type ServiceItem = {
   features: string[];
   ctaLabel: string;
   href: string; // internal path or external URL
-  external?: boolean;
-};
+  external?: boolean};
 ;
 export type ServiceCategory = {
   name: string;
   slug: string;
-  items: ServiceItem[];
-};
+  items: ServiceItem[]};
 ;export const servicesCatalog: ServiceCategory[] = [
   {
 

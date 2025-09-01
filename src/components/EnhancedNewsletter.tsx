@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';
 
 interface NewsletterFormData {
   email: string;
@@ -9,7 +6,7 @@ interface NewsletterFormData {
   interests: string[];
   frequency: 'weekly' | 'monthly' | 'quarterly'}
 
-const interests = [;
+
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
   { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
   { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
@@ -18,14 +15,11 @@ const interests = [;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
 
-const frequencies = [;
+
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 =======
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
@@ -33,7 +27,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
 
-  const validateForm = () : boolean => {;
+  
     const newErrors: Partial < NewsletterFormData> = {};
     if (!formData.email) {
 
@@ -46,8 +40,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
       newErrors.firstName = 'First name is required'}
 
     if (formData.interests.length = == 0) {;
-      newErrors.interests = 'Please select at least one interest';
-    }
+      newErrors.interests = 'Please select at least one interest'}
     setErrors (newErrors) ;
     return Object.keys (newErrors) .length === 0};
 
@@ -89,11 +82,10 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
       // console.error('Newsletter subscription error:', error)}
   };
 
-      setErrors (prev => ({ ...prev, interests: null }) ) ;
-    }
+      setErrors (prev => ({ ...prev, interests: null }) ) }
   };
 
-  const handleInputChange = useCallback ( (field: keyof NewsletterFormData, value: string | string[]) => {;
+  
     setFormData (prev => ({ ...prev, [field]: value }) ) ;
 
     // Clear error when user starts typing
@@ -126,18 +118,17 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
 "
-        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
+        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4"  />"        <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
         </h3>"
         <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>"
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
-          <Mail className="h-4 w-4" />;
+          <Mail className="h-4 w-4"  />;
           <span>Check your email for a confirmation message</span>;
         </div>;
-      </motion.div>;) ;
-  }
+      </motion.div>;) }
   return ("
     <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
       <div className="text-center mb-8">
@@ -157,7 +148,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 }}"
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
 "
-          <Mail className="h-8 w-8 text-white" />        </motion.div>
+          <Mail className="h-8 w-8 text-white"  />        </motion.div>
 
         <motion.h2
           initial = {
@@ -246,7 +237,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
             />
             {errors.firstName && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-                <AlertCircle className="h-4 w-4" />                {errors.firstName}
+                <AlertCircle className="h-4 w-4"  />                {errors.firstName}
               </p>) }
           </div>
 
@@ -279,7 +270,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
             />
             {errors.email && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-                <AlertCircle className="h-4 w-4" />                {errors.email}
+                <AlertCircle className="h-4 w-4"  />                {errors.email}
               </p>) }
           </div>
         </div>
@@ -291,9 +282,8 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
           </label>;"
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-              const Icon = interest.icon;
-              const isSelected = formData.interests.includes (interest.id) ;
-
+              
+              
               return()                <motion.button
                   key = {interest.id}"
                   type="button"
@@ -307,13 +297,13 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }};
                 >;'`
-                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />;"                  <span className="text-sm font-medium">{interest.label}</span>;
+                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
               )})}
           </div>
           {errors.interests && ("
             <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-              <AlertCircle className="h-4 w-4" />              {errors.interests}
+              <AlertCircle className="h-4 w-4"  />              {errors.interests}
             </p>) }
         </div>
 
@@ -391,7 +381,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             </>
           ) : (
             <>"
-              <Send className="h-5 w-5" />              Subscribe to Newsletter
+              <Send className="h-5 w-5"  />              Subscribe to Newsletter
             </>) }
         </motion.button>
 
@@ -418,7 +408,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
 "
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">"
-              <AlertCircle className="h-4 w-4" />              Something went wrong. Please try again later.
+              <AlertCircle className="h-4 w-4"  />              Something went wrong. Please try again later.
             </p>
           </motion.div>;) }
 
@@ -428,6 +418,5 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
           You can unsubscribe at any time. We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
-    </div>;) ;
-};
+    </div>;) };
 '"`
