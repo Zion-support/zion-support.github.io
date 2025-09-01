@@ -12,6 +12,7 @@
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -26,16 +27,16 @@
       "@/scripts/*": ["./scripts/*"]
     },
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "exactOptionalPropertyTypes": false,
     "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": false
   },
   "include": [
     "next-env.d.ts",
+    "types/**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
@@ -45,6 +46,7 @@
     "node_modules",
     "zion.app/recovered-content/**",
     ".next",
-    "out"
+    "out",
+    "dist"
   ]
 }
