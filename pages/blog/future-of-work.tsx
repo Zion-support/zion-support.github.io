@@ -36,192 +36,143 @@ export default function FutureOfWork() {
                   The Future of Work: Human-AI Collaboration
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                  Discover how autonomous systems are reshaping the workplace and creating new opportunities 
-                  for human-AI collaboration that enhances productivity and creativity.
+                  Discover how autonomous systems are reshaping the workplace and creating new 
+                  opportunities for human-AI collaboration.
                 </p>
               </header>
               
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Collaboration Revolution</h2>
                 <p className="text-white/90 mb-4">
-                  The future of work isn't about AI replacing humans—it's about AI augmenting human capabilities 
-                  and creating new forms of collaboration that leverage the best of both worlds. 
-                  At Zion Tech Group, we're building the tools and systems that make this collaboration 
-                  seamless and productive.
+                  The future of work isn't about AI replacing humans—it's about AI augmenting human 
+                  capabilities and creating new forms of collaboration. At Zion Tech Group, we're 
+                  building systems that enhance human creativity, productivity, and decision-making 
+                  rather than replacing them.
                 </p>
                 <p className="text-white/90 mb-4">
-                  This revolution is already happening across industries, from healthcare to finance, 
-                  from manufacturing to creative services. The question isn't whether AI will change work—it's 
-                  how we can best harness its potential to create better outcomes for everyone.
+                  This collaborative approach is transforming how we work, learn, and solve complex 
+                  problems across industries.
                 </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Augmentation, Not Replacement</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Augmented Intelligence</h2>
                 <p className="text-white/90 mb-4">
-                  The most successful AI implementations focus on augmenting human capabilities rather than 
-                  replacing them. Our autonomous systems are designed to handle routine, repetitive tasks, 
-                  freeing humans to focus on what they do best: creative problem-solving, strategic thinking, 
-                  and human interaction.
+                  Augmented intelligence represents a paradigm shift from artificial intelligence to 
+                  intelligence augmentation. Instead of building systems that operate independently, 
+                  we're creating tools that enhance human cognitive abilities.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Key areas where AI augmentation excels:
+                  Key benefits of augmented intelligence include:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Data analysis and pattern recognition</li>
-                  <li>• Routine administrative tasks</li>
-                  <li>• Quality control and monitoring</li>
-                  <li>• Customer service and support</li>
+                  <li>• Enhanced decision-making with AI-powered insights</li>
+                  <li>• Accelerated learning and skill development</li>
+                  <li>• Improved creativity through AI-assisted ideation</li>
+                  <li>• Better problem-solving with collaborative AI tools</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">New Job Categories and Roles</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-400">New Work Patterns</h2>
                 <p className="text-white/90 mb-4">
-                  As AI becomes more integrated into the workplace, new job categories are emerging that 
-                  didn't exist before. These roles focus on managing, optimizing, and collaborating with 
-                  AI systems rather than competing against them.
+                  Autonomous systems are creating entirely new work patterns and job roles. Rather 
+                  than eliminating jobs, AI is creating new opportunities for human workers to focus 
+                  on higher-value, creative, and strategic tasks.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Emerging job categories include:
+                  Emerging work patterns include:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                     <h4 className="font-semibold text-cyan-400 mb-2">AI Trainers</h4>
                     <p className="text-white/80 text-sm">
-                      Professionals who teach AI systems to perform specific tasks and improve their accuracy.
+                      Professionals who teach and refine AI systems for specific domains and use cases.
                     </p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                     <h4 className="font-semibold text-fuchsia-400 mb-2">AI-Human Coordinators</h4>
                     <p className="text-white/80 text-sm">
-                      Specialists who manage the workflow between human workers and AI systems.
+                      Specialists who manage the interaction between AI systems and human workers.
                     </p>
                   </div>
                 </div>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Skills for the AI-Enhanced Workplace</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Skills for the AI Era</h2>
                 <p className="text-white/90 mb-4">
-                  The skills needed in the AI-enhanced workplace are evolving. While technical skills remain 
-                  important, there's growing emphasis on skills that complement AI capabilities and 
-                  enable effective human-AI collaboration.
+                  As AI becomes more integrated into the workplace, new skill sets are emerging. 
+                  Workers need to develop both technical skills for working with AI systems and 
+                  soft skills for effective human-AI collaboration.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Essential skills for the future include:
+                  Essential skills for the AI era include:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Critical thinking and problem-solving</li>
-                  <li>• Emotional intelligence and empathy</li>
+                  <li>• AI literacy and understanding of system capabilities</li>
+                  <li>• Critical thinking and AI output evaluation</li>
+                  <li>• Emotional intelligence and human-AI interaction</li>
                   <li>• Adaptability and continuous learning</li>
-                  <li>• Cross-cultural communication</li>
-                  <li>• AI literacy and understanding</li>
                 </ul>
               </section>
               
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Workplace Transformation</h2>
                 <p className="text-white/90 mb-4">
-                  The physical and virtual workplace is transforming to accommodate new ways of working 
-                  with AI. This includes changes to office design, work processes, and organizational structures 
-                  that optimize human-AI collaboration.
+                  The physical and virtual workplace is evolving to accommodate new forms of 
+                  human-AI collaboration. This includes changes to office design, work processes, 
+                  and organizational structures.
                 </p>
                 <p className="text-white/90 mb-4">
                   Key transformations include:
                 </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Flexible workspaces designed for collaboration</li>
+                  <li>• AI-powered meeting and communication tools</li>
+                  <li>• Real-time collaboration platforms</li>
+                  <li>• Adaptive work environments</li>
+                </ul>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Ethical Considerations</h2>
+                <p className="text-white/90 mb-4">
+                  As we build the future of work, ethical considerations must be at the forefront. 
+                  This includes ensuring fair access to AI tools, protecting worker privacy, and 
+                  maintaining human dignity and agency in the workplace.
+                </p>
+                <p className="text-white/90 mb-4">
+                  Our ethical framework includes:
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Flexible Workspaces</h4>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Fair Access</h4>
                     <p className="text-white/80 text-sm">
-                      Environments designed to support both individual focus and collaborative AI interaction.
+                      Ensuring all workers have access to AI tools and training regardless of role or level.
                     </p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Digital Collaboration Tools</h4>
+                    <h4 className="font-semibold text-fuchsia-400 mb-2">Privacy Protection</h4>
                     <p className="text-white/80 text-sm">
-                      Platforms that seamlessly integrate human and AI contributions to projects.
+                      Protecting worker privacy while enabling effective AI collaboration.
                     </p>
                   </div>
                 </div>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Ethical Considerations in the Workplace</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Looking Ahead</h2>
                 <p className="text-white/90 mb-4">
-                  As AI becomes more integrated into the workplace, ethical considerations become increasingly 
-                  important. This includes ensuring fair treatment of workers, maintaining privacy, 
-                  and creating inclusive environments that benefit everyone.
+                  The future of work is not predetermined—it's something we're actively creating. 
+                  By focusing on human-AI collaboration rather than replacement, we can build a 
+                  workplace that leverages the best of both human creativity and AI efficiency.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our approach to workplace ethics includes:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Transparent AI decision-making processes</li>
-                  <li>• Fair evaluation and promotion systems</li>
-                  <li>• Privacy protection for employee data</li>
-                  <li>• Inclusive design for diverse workforces</li>
-                </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Success Stories and Case Studies</h2>
-                <p className="text-white/90 mb-4">
-                  Across industries, we're seeing remarkable success stories of human-AI collaboration 
-                  that demonstrate the potential of this new paradigm. These examples show how 
-                  thoughtful implementation can create win-win scenarios for both workers and organizations.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Notable examples include:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Healthcare</h4>
-                    <p className="text-white/80 text-sm">
-                      AI-assisted diagnosis that helps doctors make better decisions while maintaining human oversight.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Creative Industries</h4>
-                    <p className="text-white/80 text-sm">
-                      AI tools that enhance human creativity rather than replace it, leading to new artistic possibilities.
-                    </p>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Preparing for the Future</h2>
-                <p className="text-white/90 mb-4">
-                  Organizations and individuals need to prepare for the AI-enhanced workplace of the future. 
-                  This includes investing in education and training, updating policies and procedures, 
-                  and creating cultures that embrace change and innovation.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Key preparation strategies include:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Continuous learning and skill development</li>
-                  <li>• Experimentation with AI tools and processes</li>
-                  <li>• Building inclusive and adaptable cultures</li>
-                  <li>• Investing in infrastructure and training</li>
-                </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Looking Forward</h2>
-                <p className="text-white/90 mb-4">
-                  The future of work is being written now, and it's a future of collaboration, 
-                  augmentation, and human-AI partnership. At Zion Tech Group, we're excited to be 
-                  part of this transformation and to help organizations navigate the changes ahead.
-                </p>
-                <p className="text-white/90 mb-4">
-                  The key to success in this new era is not to fear change, but to embrace it thoughtfully 
-                  and strategically. By focusing on human-AI collaboration rather than competition, 
-                  we can create workplaces that are more productive, more creative, and more human.
+                  At Zion Tech Group, we're committed to building systems that enhance human 
+                  potential and create new opportunities for meaningful work in the AI era.
                 </p>
               </section>
               
