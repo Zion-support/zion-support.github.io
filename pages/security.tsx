@@ -1,195 +1,124 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function SecurityPage() {
   return (
     <>
       <Head>
         <title>Security — Zion Tech Group</title>
-        <meta name="description" content="Security practices, certifications, and compliance information for Zion Tech Group." />
+        <meta name="description" content="Security practices, policies, and information about Zion Tech Group's commitment to protecting your data." />
         <meta property="og:title" content="Security — Zion Tech Group" />
-        <meta property="og:description" content="Security practices, certifications, and compliance information for Zion Tech Group." />
+        <meta property="og:description" content="Security practices, policies, and information about Zion Tech Group's commitment to protecting your data." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <header className="text-center mb-12">
-              <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Security & Compliance
-              </h1>
-              <p className="text-xl text-white/80">
-                Enterprise-grade security for autonomous innovation
-              </p>
-            </header>
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Security
+            </h1>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              Your security is our top priority. Learn about our comprehensive security measures and practices.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">🔒 Data Protection</h3>
+          {/* Navigation */}
+          <div className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </Link>
+          </div>
+
+          {/* Security Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all">
+              <div className="text-cyan-400 text-3xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-cyan-400 mb-3">Data Encryption</h3>
+              <p className="text-white/70">All data is encrypted in transit and at rest using industry-standard AES-256 encryption.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-fuchsia-400/30 transition-all">
+              <div className="text-fuchsia-400 text-3xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold text-fuchsia-400 mb-3">Access Control</h3>
+              <p className="text-white/70">Multi-factor authentication and role-based access controls ensure secure system access.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-purple-400/30 transition-all">
+              <div className="text-purple-400 text-3xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-purple-400 mb-3">Continuous Monitoring</h3>
+              <p className="text-white/70">24/7 security monitoring and threat detection systems protect against potential attacks.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-yellow-400/30 transition-all">
+              <div className="text-yellow-400 text-3xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold text-yellow-400 mb-3">Regular Audits</h3>
+              <p className="text-white/70">Comprehensive security audits and penetration testing conducted regularly.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400/30 transition-all">
+              <div className="text-green-400 text-3xl mb-4">🌐</div>
+              <h3 className="text-xl font-bold text-green-400 mb-3">Secure Infrastructure</h3>
+              <p className="text-white/70">Cloud infrastructure built with security-first principles and compliance standards.</p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-blue-400/30 transition-all">
+              <div className="text-blue-400 text-3xl mb-4">📋</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-3">Compliance</h3>
+              <p className="text-white/70">Adherence to SOC 2, GDPR, and other industry security and privacy standards.</p>
+            </div>
+          </div>
+
+          {/* Security Policies */}
+          <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 mb-12">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Security Policies
+            </h2>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-cyan-400 mb-3">Information Security Policy</h3>
                 <p className="text-white/80">
-                  End-to-end encryption, secure data centers, and comprehensive backup systems ensure your data remains protected at all times.
+                  Our comprehensive information security policy ensures the confidentiality, integrity, and availability of all data and systems.
                 </p>
               </div>
-              
-              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">🛡️ Access Control</h3>
+
+              <div>
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-3">Incident Response Plan</h3>
                 <p className="text-white/80">
-                  Multi-factor authentication, role-based access control, and continuous monitoring protect against unauthorized access.
+                  Rapid response procedures for security incidents with clear escalation paths and communication protocols.
                 </p>
               </div>
-              
-              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-3 text-green-400">🔐 Compliance</h3>
+
+              <div>
+                <h3 className="text-xl font-bold text-purple-400 mb-3">Data Protection</h3>
                 <p className="text-white/80">
-                  SOC 2 Type II, ISO 27001, and GDPR compliance ensure we meet the highest security standards.
+                  Strict data handling procedures, retention policies, and secure disposal methods for sensitive information.
                 </p>
               </div>
-              
-              <div className="bg-white/10 p-6 rounded-lg border border-white/20 backdrop-blur-xl">
-                <h3 className="text-xl font-semibold mb-3 text-blue-400">🚨 Incident Response</h3>
+
+              <div>
+                <h3 className="text-xl font-bold text-yellow-400 mb-3">Employee Training</h3>
                 <p className="text-white/80">
-                  24/7 security monitoring with automated threat detection and rapid response protocols.
+                  Regular security awareness training for all employees to maintain a security-conscious culture.
                 </p>
               </div>
             </div>
+          </div>
 
-            <div className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Security Architecture</h2>
-                <p className="text-white/80 mb-4">
-                  Our security architecture is built on multiple layers of protection, from network security to application-level safeguards.
-                </p>
-                <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                  <h4 className="text-lg font-semibold mb-2 text-fuchsia-400">Infrastructure Security</h4>
-                  <ul className="list-disc list-inside text-white/80 ml-6">
-                    <li>DDoS protection and mitigation</li>
-                    <li>Network segmentation and isolation</li>
-                    <li>Intrusion detection and prevention</li>
-                    <li>Regular security audits and penetration testing</li>
-                  </ul>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-fuchsia-400">Data Security</h2>
-                <p className="text-white/80 mb-4">
-                  We implement industry-leading data security measures to protect sensitive information.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                    <h4 className="text-lg font-semibold mb-2 text-green-400">Encryption</h4>
-                    <ul className="list-disc list-inside text-white/80 ml-6 text-sm">
-                      <li>AES-256 encryption at rest</li>
-                      <li>TLS 1.3 for data in transit</li>
-                      <li>End-to-end encryption for communications</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                    <h4 className="text-lg font-semibold mb-2 text-blue-400">Backup & Recovery</h4>
-                    <ul className="list-disc list-inside text-white/80 ml-6 text-sm">
-                      <li>Automated daily backups</li>
-                      <li>Geographic redundancy</li>
-                      <li>Point-in-time recovery</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-green-400">Compliance & Certifications</h2>
-                <p className="text-white/80 mb-4">
-                  Our commitment to security is validated through rigorous third-party audits and certifications.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20 text-center">
-                    <div className="text-3xl mb-2">🏆</div>
-                    <h4 className="font-semibold text-cyan-400">SOC 2 Type II</h4>
-                    <p className="text-white/80 text-sm">Service Organization Control</p>
-                  </div>
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20 text-center">
-                    <div className="text-3xl mb-2">🌐</div>
-                    <h4 className="font-semibold text-fuchsia-400">ISO 27001</h4>
-                    <p className="text-white/80 text-sm">Information Security Management</p>
-                  </div>
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20 text-center">
-                    <div className="text-3xl mb-2">🔒</div>
-                    <h4 className="font-semibold text-green-400">GDPR</h4>
-                    <p className="text-white/80 text-sm">Data Protection Regulation</p>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-blue-400">Security Monitoring</h2>
-                <p className="text-white/80 mb-4">
-                  Continuous monitoring and automated threat detection ensure rapid response to security incidents.
-                </p>
-                <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                  <ul className="list-disc list-inside text-white/80 ml-6">
-                    <li>Real-time security event monitoring</li>
-                    <li>Automated threat intelligence feeds</li>
-                    <li>Behavioral analysis and anomaly detection</li>
-                    <li>24/7 security operations center</li>
-                  </ul>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-yellow-400">Security Best Practices</h2>
-                <p className="text-white/80 mb-4">
-                  We follow industry best practices and continuously improve our security posture.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                    <h4 className="text-lg font-semibold mb-2 text-purple-400">Development Security</h4>
-                    <ul className="list-disc list-inside text-white/80 ml-6 text-sm">
-                      <li>Secure coding practices</li>
-                      <li>Regular security code reviews</li>
-                      <li>Automated vulnerability scanning</li>
-                      <li>Dependency vulnerability management</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/10 p-4 rounded-lg border border-white/20">
-                    <h4 className="text-lg font-semibold mb-2 text-red-400">Incident Response</h4>
-                    <ul className="list-disc list-inside text-white/80 ml-6 text-sm">
-                      <li>Documented response procedures</li>
-                      <li>Regular incident response drills</li>
-                      <li>Customer notification protocols</li>
-                      <li>Post-incident analysis and lessons learned</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-purple-400">Contact Security Team</h2>
-                <p className="text-white/80 mb-4">
-                  For security-related inquiries or to report security concerns, please contact our dedicated security team.
-                </p>
-                <div className="bg-white/10 p-6 rounded-lg border border-white/20">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="text-lg font-semibold mb-3 text-cyan-400">Security Contacts</h4>
-                      <p className="text-white/90">
-                        <strong>Security Team:</strong> security@zion.tech<br />
-                        <strong>Emergency:</strong> +1 (555) 123-4567<br />
-                        <strong>PGP Key:</strong> Available upon request
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold mb-3 text-fuchsia-400">Reporting Security Issues</h4>
-                      <p className="text-white/90">
-                        We encourage responsible disclosure of security vulnerabilities. Please report any issues to our security team for immediate attention.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div className="text-center mt-12">
-              <a href="/" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105">
-                Return to Homepage
+          {/* Security Contact */}
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-6 text-white">Report Security Issues</h2>
+            <p className="text-white/70 mb-6">
+              If you've discovered a security vulnerability, please report it to our security team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors">
+                Contact Security Team
+              </Link>
+              <a href="mailto:security@zion.tech" className="px-6 py-3 bg-fuchsia-500 hover:bg-fuchsia-600 text-white rounded-lg transition-colors">
+                security@zion.tech
               </a>
             </div>
           </div>
