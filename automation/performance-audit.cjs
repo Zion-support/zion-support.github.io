@@ -1,73 +1,124 @@
 #!/usr/bin/env node
 
-const { spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const http = require('http');
+const https = require('https');
 
-const REPORT_DIR = path.join(__dirname, '..', 'data', 'reports', 'performance');
+const OUT_DIR = path.join(__dirname, '..', 'public', 'reports', 'performance');
 
-function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
-
-function run(cmd, args, opts = {}) {
-  const res = spawnSync(cmd, args, { stdio: 'pipe', encoding: 'utf8', ...opts });
-  return { code: res.status ?? 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+function getBaseUrl() {
+  const url = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
+  return url || '';
 }
 
-async function measure(url) {
-  return new Promise((resolve) => {
-    const start = Date.now();
-    const req = http.get(url, (res) => {
-      const ttfbMs = Date.now() - start;
-      let bytes = 0;
-      res.on('data', (chunk) => (bytes += chunk.length));
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function fetchJson(url) {
+  return new Promise((resolve, reject) => {
+    const req = https.get(url, { headers: { 'User-Agent': 'zion.app-automation' } }, (res) => {
+      let data = '';
+      res.on('data', (chunk) => { data += chunk; });
       res.on('end', () => {
-        resolve({ url, statusCode: res.statusCode, ttfbMs, bytes });
+        try {
+          const json = JSON.parse(data);
+          resolve(json);
+        } catch (e) {
+          reject(new Error(`Invalid JSON from ${url}: ${e.message}`));
+        }
       });
     });
-    req.on('error', () => resolve({ url, statusCode: 0, ttfbMs: -1, bytes: 0 }));
+    req.on('error', (err) => reject(err));
+    req.setTimeout(15000, () => { req.destroy(new Error('timeout')); });
   });
 }
 
-async function main() {
-  ensureDir(REPORT_DIR);
-
-  const build = run('npm', ['run', 'build']);
-  const buildOk = build.code === 0;
-
-  // Start Next.js server on port 3000 in background for measurement
-  let serverPid = null;
-  if (buildOk) {
-    const child = spawnSync('sh', ['-lc', 'nohup npm run start >/dev/null 2>&1 & echo $!'], { encoding: 'utf8' });
-    serverPid = parseInt((child.stdout || '').trim(), 10) || null;
-    // wait briefly for server to boot
-    await new Promise((r) => setTimeout(r, 6000));
+function scoreOf(json, category) {
+  try {
+    const cat = json.lighthouseResult.categories[category];
+    return typeof cat.score === 'number' ? Math.round(cat.score * 100) : null;
+  } catch (_) {
+    return null;
   }
-
-  const targets = ['http://localhost:3000/', 'http://localhost:3000/enhanced-home'];
-  const results = [];
-  for (const url of targets) {
-    // retry a couple times in case server not ready
-    let r = await measure(url);
-    if (r.statusCode === 0) { await new Promise((x) => setTimeout(x, 1500)); r = await measure(url); }
-    results.push(r);
-  }
-
-  if (serverPid) {
-    try { process.kill(serverPid); } catch {}
-  }
-
-  const report = {
-    generatedAt: new Date().toISOString(),
-    build: { ok: buildOk, code: build.code, stderr: build.stderr?.slice(0, 8000) },
-    metrics: results,
-    thresholds: { ttfbMs: 800, bytesHtml: 250000 },
-    alerts: results.filter(r => r.statusCode === 200 && (r.ttfbMs > 800 || r.bytes > 250000))
-  };
-
-  const outFile = path.join(REPORT_DIR, `performance-${Date.now()}.json`);
-  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-  console.log('Performance audit report written to', outFile);
 }
 
-main().catch((e) => { console.error('Performance audit failed', e); process.exitCode = 1; });
+function renderHTML(results) {
+  const rows = results.map(r => `
+    <tr>
+      <td><a href="${r.page}" target="_blank" rel="noopener">${r.page}</a></td>
+      <td>${r.strategy}</td>
+      <td>${r.performance ?? ''}</td>
+      <td>${r.accessibility ?? ''}</td>
+      <td>${r.seo ?? ''}</td>
+      <td>${r.bestPractices ?? ''}</td>
+    </tr>`).join('\n');
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Performance Audit</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; margin: 24px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px; font-size: 14px; }
+  th { background: #f3f4f6; text-align: left; }
+</style>
+</head>
+<body>
+  <h1>Performance Audit</h1>
+  <p>Autonomously generated via Google PageSpeed Insights. Strategies: mobile and desktop.</p>
+  <table>
+    <thead>
+      <tr><th>Page</th><th>Strategy</th><th>Performance</th><th>Accessibility</th><th>SEO</th><th>Best Practices</th></tr>
+    </thead>
+    <tbody>
+      ${rows}
+    </tbody>
+  </table>
+</body>
+</html>`;
+}
+
+async function main() {
+  const base = getBaseUrl();
+  if (!base) {
+    console.log('No base URL available; skipping performance audit');
+    return;
+  }
+  const key = process.env.GOOGLE_API_KEY || '';
+  const pages = ['/', '/main/front', '/newsroom', '/site-health'];
+  const strategies = ['mobile', 'desktop'];
+
+  const results = [];
+  for (const page of pages) {
+    for (const strategy of strategies) {
+      const fullUrl = encodeURIComponent(`${base}${page}`);
+      const api = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${fullUrl}&strategy=${strategy}${key ? `&key=${key}` : ''}`;
+      try {
+        const json = await fetchJson(api);
+        results.push({
+          page: `${base}${page}`,
+          strategy,
+          performance: scoreOf(json, 'performance'),
+          accessibility: scoreOf(json, 'accessibility'),
+          seo: scoreOf(json, 'seo'),
+          bestPractices: scoreOf(json, 'best-practices'),
+        });
+      } catch (e) {
+        results.push({ page: `${base}${page}`, strategy, error: String(e.message || e) });
+      }
+    }
+  }
+
+  ensureDir(OUT_DIR);
+  const payload = { generatedAt: new Date().toISOString(), base, results };
+  fs.writeFileSync(path.join(OUT_DIR, 'latest.json'), JSON.stringify(payload, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderHTML(results));
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exitCode = 1;
+});

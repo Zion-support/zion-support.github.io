@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:43:40.635Z",
+  "generatedAt": "2025-08-11T22:44:03.564Z",
   "functions": [
     "accessibility-quickscan",
     "ai-changelog-runner",
@@ -65,8 +65,7 @@
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",
-    "og-preview-validator",
-    "performance-budget-checker",
+    "performance-audit-runner",
     "readme-advertiser",
     "redirect-404-suggester",
     "repo-knowledge-graph-runner",
@@ -81,7 +80,7 @@
     "security-audit-runner",
     "seo-schema-audit-runner",
     "site-crawler",
-    "sitemap-prioritizer",
+    "sitemap-pinger",
     "sitemap_runner",
     "stale-content-auditor-runner",
     "terminology-consistency-runner",
@@ -93,7 +92,7 @@
     "ui-evolution-runner",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "venture-runner",
+    "unused-deps-runner",
     "website-search-index-runner"
   ]
 }
