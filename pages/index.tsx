@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
 
 const HomePage = React.memo(function);
 export default HomePage HomePage() {
@@ -61,23 +64,7 @@ const Index: NextPage = () => {
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        {/* Navigation */}
-        <nav className="border-b border-white/10 bg-black/20 backdrop-blur-sm">
-          <div className="container mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-white hover:text-cyan-400 transition-colors">Home</Link>
-                <Link href="/about" className="text-white/80 hover:text-cyan-400 transition-colors">About</Link>
-                <Link href="/services" className="text-white/80 hover:text-cyan-400 transition-colors">Services</Link>
-                <Link href="/contact" className="text-white/80 hover:text-cyan-400 transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
+        <Header />
         <main className="container mx-auto px-6 py-12">
           {/* Navigation */}
           <nav className="flex justify-center mb-12">
@@ -95,144 +82,64 @@ const Index: NextPage = () => {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/automation" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                Explore Solutions
-              </a>
-              <a href="/about" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <Button href="/about" variant="secondary">
                 About Us
-              </a>
-              <a href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                Get in Touch
-              </a>
+              </Button>
+              <Button href="/services" variant="secondary">
+                Our Services
+              </Button>
+              <Button href="/resources" variant="secondary">
+                Resources
+              </Button>
+              <Button href="/case-studies" variant="secondary">
+                Case Studies
+              </Button>
+              <Button href="/blog" variant="secondary">
+                Blog
+              </Button>
+              <Button href="/contact" variant="secondary">
+                Contact
+              </Button>
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Core Capabilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">Autonomous Systems</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Self-running automation workflows that maintain, optimize, and improve systems without human intervention.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 p-6 rounded-2xl border border-green-500/30">
-                <div className="text-3xl mb-3">🏭</div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">Manufacturing</h3>
-                <p className="text-white/70 text-sm mb-3">35% increase in efficiency</p>
-                <div className="text-2xl font-bold text-white">$4.1M</div>
-                <div className="text-xs text-white/60">Annual ROI</div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-6 rounded-2xl border border-purple-500/30">
-                <div className="text-3xl mb-3">💳</div>
-                <h3 className="text-lg font-semibold text-purple-400 mb-2">Finance</h3>
-                <p className="text-white/70 text-sm mb-3">95% fraud detection accuracy</p>
-                <div className="text-2xl font-bold text-white">$8.7M</div>
-                <div className="text-xs text-white/60">Fraud prevented</div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 p-6 rounded-2xl border border-orange-500/30">
-                <div className="text-3xl mb-3">🚚</div>
-                <h3 className="text-lg font-semibold text-orange-400 mb-2">Logistics</h3>
-                <p className="text-white/70 text-sm mb-3">45% faster delivery</p>
-                <div className="text-2xl font-bold text-white">$6.2M</div>
-                <div className="text-xs text-white/60">Annual savings</div>
-              </div>
-            </div>
-          </section>
-
-          {/* Technology Stack Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Technology Stack</h2>
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">Next.js</span>
-                  </div>
-                  <p className="text-white/80">React Framework</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">GitHub</span>
-                  </div>
-                  <p className="text-white/80">Actions & CI/CD</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">AI/ML</span>
-                  </div>
-                  <p className="text-white/80">Machine Learning</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">Cloud</span>
-                  </div>
-                  <p className="text-white/80">Native Architecture</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Latest Updates Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Latest Autonomous Updates</h2>
-            <div className="text-center mb-8">
-              <a href="/reports" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                View All Reports →
-              </a>
-            </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="/reports/updates/update-2025-08-15-0406" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0406</h3>
-                <p className="text-sm text-white/75 mb-3">Latest system status and performance metrics from our autonomous agents.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0405" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0405</h3>
-                <p className="text-sm text-white/75 mb-3">System enhancements and performance improvements overview.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="text-sm text-white/75 mb-3">Recent developments in AI content generation and security.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0111" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0111</h3>
-                <p className="text-sm text-white/75 mb-3">Infrastructure scaling and content management improvements.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0403" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0403</h3>
-                <p className="text-sm text-white/75 mb-3">Automation efficiency and content quality enhancements.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0402" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0402</h3>
-                <p className="text-sm text-white/75 mb-3">Redundancy systems and AI integration updates.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">View Report <span aria-hidden>→</span></div>
-              </a>
+          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <Card href="/reports/updates/update-2025-08-15-0406" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0406</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
+              <Card href="/reports/updates/update-2025-08-15-0405" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0405</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
+              <Card href="/reports/updates/update-2025-08-15-0404" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0404</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
+              <Card href="/reports/updates/update-2025-08-15-0111" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0111</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
+              <Card href="/reports/updates/update-2025-08-15-0403" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0403</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
+              <Card href="/reports/updates/update-2025-08-15-0402" gradient>
+                <h3 className="text-lg font-semibold">Autonomous Update — 2025: 08: 15: 0402</h3>
+                <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Card>
             </div>
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
