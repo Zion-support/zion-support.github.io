@@ -18,6 +18,12 @@ interface AnalyticsTrackerProps {
   }>;
 }
 
+interface AnalyticsTrackerProps {
+  pageTitle?: string;
+  pagePath?: string;
+  customEvents?: Array<{ action: string; parameters: Record<string, unknown> }>;
+}
+
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageTitle,
   pagePath,

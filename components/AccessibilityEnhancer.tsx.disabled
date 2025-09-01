@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Eye, EyeOff, Volume2, VolumeX, FileText, 
-  Circle, Plus, RotateCcw,
+  Eye, EyeOff, Volume2, VolumeX, 
   Settings, X, Sun, Moon
 } from 'lucide-react';
 
@@ -14,7 +13,6 @@ interface AccessibilitySettings {
   fontSize: number;
   lineSpacing: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  speechRate: number;
   keyboardNavigation: boolean;
   screenReader: boolean;
   focusIndicators: boolean;
@@ -35,10 +33,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     fontSize: 16,
     lineSpacing: 1.5,
     colorBlindMode: 'none',
-    speechRate: 1,
     keyboardNavigation: false,
     screenReader: false,
-    focusIndicators: false,
+    focusIndicators: false
   });
 
   const updateSettings = (updater: (prev: AccessibilitySettings) => AccessibilitySettings) => {
@@ -48,8 +45,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const [speechRate, setSpeechRate] = useState(1.0);
   const [isReading, setIsReading] = useState(false);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
   
   const focusRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
@@ -143,6 +140,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
   };
 
+  // Auto-optimize accessibility
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+    // Apply the settings to the document
+    const root = document.documentElement;
+    
+    if (newSettings.highContrast) {
+      root.style.setProperty('--text-color', '#ffffff');
+      root.style.setProperty('--bg-color', '#000000');
+      root.style.setProperty('--accent-color', '#ffff00');
+    }
+    
+    if (newSettings.largeText) {
+      root.style.fontSize = '18px';
+    }
+    
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--reduced-motion', 'reduce');
+    }
+  }, []);
+
   // Screen reader mode
   const toggleScreenReader = () => {
     if (isReading) {
@@ -191,12 +208,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setTimeout(() => {
       // Cleanup
     }, 5000);
-  }, []);
-
-  // Auto-optimize accessibility
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    // Apply settings logic here
-    console.log('Applying accessibility settings:', newSettings);
   }, []);
 
   useEffect(() => {
@@ -296,23 +307,41 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         aria-label="Accessibility options"
         aria-expanded={isVisible}
       >
-        <Eye className="w-6 h-6" />
+                        <Settings className="w-6 h-6" />
       </motion.button>
 
       {/* Accessibility Panel */}
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          className="fixed bottom-20 right-4 z-50 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden"
-          ref={focusRef}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-            <div className="flex items-center space-x-2">
-              <Eye className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-semibold">Accessibility</span>
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="fixed bottom-20 right-4 z-50 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden"
+            ref={settingsRef}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
+              <div className="flex items-center space-x-2">
+                <Settings className="w-5 h-5 text-purple-400" />
+                <span className="text-white font-semibold">Accessibility</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
+                  aria-label="Settings"
+                >
+                  <Settings className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setIsVisible(false)}
+                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
+                  aria-label="Close"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
             </div>
             <div className="flex items-center space-x-2">
               <button
@@ -327,47 +356,109 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Close"
               >
-                <X className="w-4 h-4" />
+                <span className="flex items-center space-x-2">
+                  <Eye className="w-4 h-4" />
+                  <span>High Contrast</span>
+                </span>
+                <div className={`w-4 h-4 rounded border-2 ${
+                  settings.highContrast ? 'bg-yellow-400 border-yellow-400' : 'border-gray-500'
+                }`} />
+              </button>
+
+              {/* Large Text Toggle */}
+              <button
+                onClick={() => setSettings(prev => ({ ...prev, largeText: !prev.largeText }))}
+                className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
+                  settings.largeText 
+                    ? 'bg-blue-500/20 border border-blue-500/50 text-blue-400' 
+                    : 'bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50'
+                }`}
+                aria-label="Toggle large text"
+              >
+                                  <span className="flex items-center space-x-2">
+                    <Settings className="w-4 h-4" />
+                    <span>Large Text</span>
+                  </span>
+                <div className={`w-4 h-4 rounded border-2 ${
+                  settings.largeText ? 'bg-blue-400 border-blue-400' : 'border-gray-500'
+                }`} />
+              </button>
+
+              {/* Reduced Motion Toggle */}
+              <button
+                onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
+                className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
+                  settings.reducedMotion 
+                    ? 'bg-green-500/20 border border-green-500/50 text-green-400' 
+                    : 'bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50'
+                }`}
+                aria-label="Toggle reduced motion"
+              >
+                <span className="flex items-center space-x-2">
+                  <EyeOff className="w-4 h-4" />
+                  <span>Reduced Motion</span>
+                </span>
+                <div className={`w-4 h-4 rounded border-2 ${
+                  settings.reducedMotion ? 'bg-green-400 border-green-400' : 'border-gray-500'
+                }`} />
               </button>
             </div>
           </div>
 
-          {/* Quick Actions */}
-          <div className="p-4 space-y-3">
-            {/* Screen Reader */}
-            <button
-              onClick={toggleScreenReader}
-              className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
-                isReading 
-                  ? 'bg-red-500/20 border border-red-500/50 text-red-400' 
-                  : 'bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50'
-              }`}
-              aria-label={isReading ? 'Stop reading' : 'Start reading'}
-            >
-              <span className="flex items-center space-x-2">
-                {isReading ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span>{isReading ? 'Stop Reading' : 'Screen Reader'}</span>
-              </span>
-            </button>
+            {/* Settings Panel */}
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="border-t border-gray-700/50"
+                >
+                  <div className="p-4 space-y-4">
+                    {/* Font Size Controls */}
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-white">Font Size</h4>
+                      <div className="flex items-center space-x-2">
+                        <button
+                          onClick={decreaseFontSize}
+                          className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
+                          aria-label="Decrease font size"
+                        >
+                          <Settings className="w-4 h-4" />
+                        </button>
+                        <span className="text-white min-w-[3rem] text-center">{settings.fontSize}px</span>
+                        <button
+                          onClick={increaseFontSize}
+                          className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
+                          aria-label="Increase font size"
+                        >
+                          <Settings className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
 
-            {/* High Contrast Toggle */}
-            <button
-              onClick={() => updateSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
-              className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
-                settings.highContrast 
-                  ? 'bg-yellow-500/20 border border-yellow-500/50 text-yellow-400' 
-                  : 'bg-gray-800/50 border border-gray-700/50 text-gray-300 hover:bg-gray-700/50'
-              }`}
-              aria-label="Toggle high contrast"
-            >
-              <span className="flex items-center space-x-2">
-                <Circle className="w-4 h-4" />
-                <span>High Contrast</span>
-              </span>
-              <div className={`w-4 h-4 rounded border-2 ${
-                settings.highContrast ? 'bg-yellow-400 border-yellow-400' : 'border-gray-500'
-              }`} />
-            </button>
+                    {/* Line Spacing Controls */}
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-white">Line Spacing</h4>
+                      <div className="flex items-center space-x-2">
+                        <button
+                          onClick={decreaseLineSpacing}
+                          className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
+                          aria-label="Decrease line spacing"
+                        >
+                          <Settings className="w-4 h-4" />
+                        </button>
+                        <span className="text-white min-w-[3rem] text-center">{settings.lineSpacing.toFixed(1)}</span>
+                        <button
+                          onClick={increaseLineSpacing}
+                          className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
+                          aria-label="Increase line spacing"
+                        >
+                          <Settings className="w-4 h-4 rotate-90" />
+                        </button>
+                      </div>
+                    </div>
 
             {/* Large Text Toggle */}
             <button
@@ -427,15 +518,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
                       aria-label="Decrease font size"
                     >
-                      <Circle className="w-4 h-4" />
-                    </button>
-                    <span className="text-white min-w-[3rem] text-center">{settings.fontSize}px</span>
-                    <button
-                      onClick={increaseFontSize}
-                      className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-300 hover:text-white transition-colors duration-200"
-                      aria-label="Increase font size"
-                    >
-                      <Plus className="w-4 h-4" />
+                      <Settings className="w-4 h-4" />
+                      <span>Reset All Settings</span>
                     </button>
                   </div>
                 </div>

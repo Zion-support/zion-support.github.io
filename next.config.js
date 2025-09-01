@@ -1,12 +1,19 @@
-const path = require('path');
+const os = require('os');
 
-// Define assetPrefix based on environment
-const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
+let withSentryConfig = (cfg) => cfg;
+try {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const sentry = require('@sentry/nextjs');
+  withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
+} catch {}
 
 const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
+  bundlePagesRouterDependencies: true,
+  eslint: { ignoreDuringBuilds: true },
 
   // Disable ESLint during build to avoid parsing errors
   eslint: {
@@ -93,6 +100,12 @@ const nextConfig = {
   ],
 
   webpack: (config, { dev, isServer, webpack }) => {
+    // Exclude apps directory from the build to prevent TypeScript errors
+    config.module.rules.push({
+      test: /apps\/api\/src\/index\.ts$/,
+      use: 'ignore-loader'
+    });
+    
     // Fix EventEmitter memory leak by increasing max listeners
     // events.EventEmitter.defaultMaxListeners = 20; // Will be set by build script
     
@@ -737,4 +750,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withSentryConfig(nextConfig);

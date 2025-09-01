@@ -78,10 +78,23 @@
     "isolatedModules": true
   },
   "include": [
-    "src/**/*",
-    "pages/**/*",
-    "components/**/*",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "context/**/*.ts",
+    "context/**/*.tsx",
+    "services/**/*.ts",
+    "services/**/*.tsx"
   ],
   "exclude": [
     "node_modules",

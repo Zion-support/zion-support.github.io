@@ -60,6 +60,11 @@
     "h1": ""
   },
   {
+    "route": "/5g-enterprise-solutions",
+    "title": "5G Enterprise Solutions | Zion Tech Group",
+    "h1": "5G Enterprise Solutions"
+  },
+  {
     "route": "/[slug]",
     "title": "{service.name} - Zion Tech Group",
     "h1": "Service not found"
@@ -76,13 +81,33 @@
   },
   {
     "route": "/about",
-    "title": "About Us - Zion Tech Group",
-    "h1": "We build practical AI and platform solutions"
+    "title": "About Us | Zion Tech Group",
+    "h1": "About Zion Tech Group"
+  },
+  {
+    "route": "/advanced-ai-automation-services",
+    "title": "Advanced AI Automation Services | Zion Tech Group",
+    "h1": "Advanced AI Automation Services"
+  },
+  {
+    "route": "/advanced-cybersecurity-suite",
+    "title": "Advanced Cybersecurity Suite | Zion Tech Group",
+    "h1": "Advanced Cybersecurity Suite"
+  },
+  {
+    "route": "/advanced-it-infrastructure-services",
+    "title": "Advanced IT Infrastructure Services | Zion Tech Group",
+    "h1": "Advanced IT Infrastructure Services"
   },
   {
     "route": "/agency-dashboard",
     "title": "",
     "h1": "Agency Dashboard"
+  },
+  {
+    "route": "/ai-autonomous-research-assistant",
+    "title": "AI Autonomous Research Assistant | Zion Tech Group",
+    "h1": "AI Autonomous Research Assistant"
   },
   {
     "route": "/ai-business-tools",
@@ -221,8 +246,8 @@
   },
   {
     "route": "/blog",
-    "title": "Blog - Zion Tech Group | Latest Insights on AI, Quantum Computing & Technology",
-    "h1": "Our Blog"
+    "title": "Blog | Zion Tech Group",
+    "h1": "Blog & Insights"
   },
   {
     "route": "/browser-automation-cloud",
@@ -241,7 +266,7 @@
   },
   {
     "route": "/careers",
-    "title": "Careers - Zion Tech Group | Join Our Revolutionary Technology Team",
+    "title": "Careers | Zion Tech Group",
     "h1": "Join Our Team"
   },
   {
@@ -535,11 +560,6 @@
     "h1": ""
   },
   {
-    "route": "/portfolio",
-    "title": "Portfolio - Zion Tech Group | Our Projects & Success Stories",
-    "h1": "Our Portfolio"
-  },
-  {
     "route": "/pricing-2025",
     "title": "2025 Pricing & Services — Zion Tech Group",
     "h1": "2025 Pricing & Services"
@@ -553,11 +573,6 @@
     "route": "/pricing",
     "title": "Revolutionary 2029 Technology Pricing | Zion Tech Group",
     "h1": ""
-  },
-  {
-    "route": "/privacy",
-    "title": "Privacy Policy - Zion Tech Group | Data Protection & Privacy",
-    "h1": "Privacy Policy"
   },
   {
     "route": "/products",
@@ -661,8 +676,8 @@
   },
   {
     "route": "/services",
-    "title": "Services - Zion Tech Group | AI, Quantum Computing, Cybersecurity & More",
-    "h1": "Our Services"
+    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",
+    "h1": ""
   },
   {
     "route": "/site-health",
@@ -671,8 +686,8 @@
   },
   {
     "route": "/sitemap",
-    "title": "Sitemap - Zion Tech Group | Complete Website Structure",
-    "h1": "Website Sitemap"
+    "title": "Sitemap | Zion Tech Group",
+    "h1": "Sitemap"
   },
   {
     "route": "/soc2-compliance-automation",
@@ -691,18 +706,13 @@
   },
   {
     "route": "/team",
-    "title": "Our Team - Zion Tech Group | Meet the Experts Behind Innovation",
+    "title": "Our Team | Zion Tech Group",
     "h1": "Meet Our Team"
   },
   {
     "route": "/technology-insights",
     "title": "Technology Insights | Zion Tech Group - Research & Innovation",
     "h1": "Technology Insights"
-  },
-  {
-    "route": "/terms",
-    "title": "Terms of Service - Zion Tech Group | Service Terms & Conditions",
-    "h1": "Terms of Service"
   },
   {
     "route": "/tool-comparison",
